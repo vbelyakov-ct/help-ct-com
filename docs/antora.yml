@@ -1,4 +1,10 @@
-name: my-website  # Замените на название вашего сайта
-version: master
-start_page: ROOT:index.adoc
-
+name: root
+title: CT Software Documentation Portal
+version: 1.0
+start_page: index.adoc
+asciidoc:
+  attributes:
+    source-language: asciidoc@
+    table-caption: false
+nav:
+- modules/ROOT/nav.adoc
