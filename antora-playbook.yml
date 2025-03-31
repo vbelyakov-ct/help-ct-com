@@ -11,5 +11,7 @@ ui:
     # url: ./ui-bundle-ct.zip
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
     snapshot: true
-  supplemental_files: 
-    - modules/ROOT/nav.adoc
+ # supplemental_files: 
+  #  - modules/ROOT/nav.adoc
+  output:
+  dir: ./build/site
