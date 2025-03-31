@@ -1,0 +1,13 @@
+site:
+  title: CT Vision
+  # start_page: ROOT:index.adoc
+content:
+  sources:
+  - url: https://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@github.com/vbelyakov-ct/docs.git
+    branches: main
+    start_path: docs
+ui:
+  bundle:
+    # url: ./ui-bundle-ct.zip
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
