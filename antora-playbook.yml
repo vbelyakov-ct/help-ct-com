@@ -1,13 +1,15 @@
 site:
-  title: CT Vision
+  title: CT Software Help Portal
   # start_page: ROOT:index.adoc
 content:
   sources:
   - url: https://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@github.com/vbelyakov-ct/help-ct-com.git
     branches: main
-    start_path: /
+    # start_path: /
 ui:
   bundle:
     # url: ./ui-bundle-ct.zip
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
     snapshot: true
+  supplemental_files: 
+    - modules/ROOT/nav.adoc
