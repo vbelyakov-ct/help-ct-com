@@ -1,0 +1,30 @@
+The Tag object is responsible for the photo tags that users can apply to
+the taken photos
+in link:working-with-ct-vision-in-salesforce.html#h3_491461789[Salesforce] and link:working-with-ct-vision-in-the-ct-mobile-app.html#h2_491461789[the
+CT Mobile app].
+
+'''''
+
+Object API Name: ctv__Tag__c 
+
+'''''
+
+The following fields must be created on the Tag object:
+
+[width="100%",cols="25%,25%,25%,25%",]
+|=======================================================================
+|*Field* |*API Name* |*Type* |*Description*
+
+|Color |ctv__Color__c |Text(255) |Specify the photo tag color in the
+HEX format, for example, #EB4034.
+
+|Label |ctv__Label__c |Text(255) |Specify photo tag label.
+
+|Object |ctv__Object__c |Text(255) |Specify the API name of the object
+to apply the setting, for example, CTCPG__Activity__c. 
+
+|Object Record Type |ctv__ObjectRecordType__c |Text(255) |If needed,
+specify the API name of the record type for the object in
+the ctv__Object__c field to apply the setting for the corresponding
+record type. 
+|=======================================================================

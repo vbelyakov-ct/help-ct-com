@@ -1,0 +1,37 @@
+To use a third-party provider for product image recognition:
+
+1.  Go to the *CT Vision Setup* tab.
+2.  In the *Provider Configuration* section, select the required
+provider from the *Provider* picklist.
+Select the *Vision light* provider if image recognition is not required.
+In this case, there are no settings for the provider list. For better
+experience with the Vision light, link:adding-photo-tags.html[specify
+photo tags].
+3.  Click the *Plus* button to add a new *Provider*.
+4.  In the *Add Provider* window:
+1.  Enter *Username* and *Password*.
+2.  Specify the *Provider Endpoint*.
+3.  Activate the provider.
+5.  Click *Add Provider*.
+image:Add-Third-Party-Provider.png[]
+6.  Repeat steps 3–5 to add more models if necessary.
+7.  Click the
+image:about-ct-vision-2021-07-13-1.png[] button.
+8.  In the *Provider List* window:
+1.  Click *Active* to activate the desired providers.
+image:Provider-List.png[]
+2.  Click
+the image:Screenshot-2021-08-11-at-17.27.33.png[] button
+to *Change* or *Delete* the *Provider* if necessary.
+1.  Edit the *Username* and *Password*.
+2.  Verify the *Provider Endpoint*.
+3.  Click *Close*.
+9.  Click *Save*.
+
+The third-party provider is added.
+
+* In the *Provider List* field, only the active providers are listed.
+* Specify link:setting-up-integration-with-the-image-recognition-providers.html#h2_1620541365[product
+fields].
+
+image:Third-Party-Provider-Connection.png[]

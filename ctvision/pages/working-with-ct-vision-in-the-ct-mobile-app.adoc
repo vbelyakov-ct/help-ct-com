@@ -1,0 +1,292 @@
+To work with CT Vision in the CT Mobile app:
+
+1.  link:getting-started.html[Configure the CT Vision solution].
+2.  link:administrator-guide.html[]link:configuring-ct-mobile-for-work-with-ct-vision.html[Add
+the CT Vision module].
+3.  https://help.customertimes.com/articles/ct-mobile-ios-en/logging-in[Log
+in] to the CT Mobile app.
+
+
+
+In the CT Mobile app, a sales representative:
+
+* takes photos of the shelves in the stores,
+* checks the status of the recognized photos,
+* verifies the recognized products,
+* clarifies the number of the products on the shelves,
+* adds photo tags to filter photos if needed.
+
+
+
+* link:working-with-ct-vision-in-the-ct-mobile-app.html#h2__1221438961[Create
+a Report Summary]
+* link:working-with-ct-vision-in-the-ct-mobile-app.html#h2_691734370[Status
+Indicator]
+* link:working-with-ct-vision-in-the-ct-mobile-app.html#h2__1442951234[Image
+Recognition Tools]
+* link:working-with-ct-vision-in-the-ct-mobile-app.html#h3_2072273480[Clickable
+Realogram]
+* link:working-with-ct-vision-in-the-ct-mobile-app.html#h3_1017582017[Shelf
+Product List]
+* link:working-with-ct-vision-in-the-ct-mobile-app.html#h2_491461789[Photo
+Tags]
+* link:working-with-ct-vision-in-the-ct-mobile-app.html#h2_566778463[Pictures
+Gallery]
+
+[[h2__1221438961]]
+== Create a Report Summary 
+
+If the link:vision-visit-field-reference.html[Enable Simple View] option
+is enabled, the header with the report data (the actual and planned
+number of photos, the number of errors, and the actual number of the
+required report summaries) and the final summary report will not be
+displayed. Also,
+link:working-with-ct-vision-in-the-ct-mobile-app.html#h2_566778463[previewing
+pictures in full size] will be disabled.
+
+To create a report summary:
+
+Open an _Activity_ record in the CT Mobile app and tap the CT Vision
+icon.
+image:Start-CT-Vision.png[]
+
+Select the shelf type on the left side of the screen.
+If there is a shelf with _Master_ name, it will be the only shelf
+displayed. For more information, refer to
+link:vision-shelf-field-reference.html[Vision Shelf Field Reference].
+
+Point the tablet at the desired shelf and tap the *Photo* button.
+
+* The *Photo* button is active when the indicator that displays the
+position of a device relative to the horizon is green:
+** image:ct-orders-spring-21-2021-03-12.png[]: the
+device is tilted.
+** image:ct-orders-spring-21-2021-03-12-1.png[]:
+the device is aligned with the horizon.
+* Hints for the selected shelf will be displayed at the bottom of the
+screen or in the pop-up.
+For more information, refer to
+link:vision-hint-field-reference.html[Vision Hint Field Reference].
+
+Take a photo of the shelf.
+
+Use the *Photo* type to create a photo of the shelf.
+
+Retake the photo when the warning indicates that the image quality is
+not satisfactory.
+
+If the photo size is more than 2.5 MB, the photo will be compressed.
+
+The actual and planned number of photos, the number of errors, and the
+actual number of the required report summaries are displayed on the
+header of the screen.
+When an indicator *(3)* is green, tap the *Photo* button *(2)* for the
+selected shelf *(1)*. 
+
+* The taken photo will be displayed in the *Miniatures* gallery at the
+bottom of the screen.
+* The photo is sent for recognition and the appropriate status indicator
+is displayed on the photo in the *Miniatures* gallery.
+
+image:working-with-ct-vision-2021-03-24-3.png[]
+
+If link:vision-visit-field-reference.html[Enable Gallery = true], add
+photos from the device gallery by long-tapping the *Photo* button.
+Select up to 9 photos and tap *Done*.
+
+Repeat steps 4–5 to take the planned number of photos for the current
+visit.
+
+If needed, manage errors and products:
+
+1.  Review products
+with link:working-with-ct-vision-in-the-ct-mobile-app.html#h2_2072273480[the
+clickable realogram].
+2.  On
+the link:working-with-ct-vision-in-the-ct-mobile-app.html#h2_1017582017[Shelf
+Product List], add shelves, unrecognized products, and/or correct the
+amount of product on the shelf.
+3.  Manage
+errors link:working-with-ct-vision-in-the-ct-mobile-app.html#h2_691734370[according
+to the status indicator] on the photo in the *Miniatures* gallery.
+4.  Manage link:working-with-ct-vision-in-the-ct-mobile-app.html#h2_491461789[photo
+tags].
+
+After all photos for all shelves are taken, tap *Done* to create a
+report summary.
+
+The final report summary will be displayed.
+
+* Review the report:
+** In the *Pictures Total*, compare the planned and taken number of
+photos.
+If there are no shelves or the planned number is not set, the planned
+number of photos is taken from the *Plan* field of the
+https://help.customertimes.com/smart/project-ct-vision-lite-en/vision-object-field-reference[Vision
+Object] record. Otherwise, the planned number is the sum of the values
+from the *Plan* field
+of the https://help.customertimes.com/smart/project-ct-vision-lite-en/vision-shelf-field-reference-2-9[Vision
+Shelf] records.
+** In the *Pictures Absence*, verify shelves, for which there is no
+photo or the actual number of photos is less than the number specified
+in the *Plan* field of the _CTM Settings_ record with
+the link:vision-shelf-field-reference.html[Visit Shelf] record type.
+* Tap** Accept** to save the report.
+* Tap *Try again* to go back to taking photos and managing errors.
+
+image:working-with-ct-vision-2021-03-24.jpg[]
+
+[[h2_691734370]]
+== Status Indicator 
+
+The statuses can acquire the following values:
+
+[width="100%",cols="50%,50%",]
+|=======================================================================
+|*Status* |*Description*
+
+|*Yellow* (arrow up) |The photo is being sent for recognition.
+
+|*Yellow* (arrow down) |The recognition result is being received.
+
+|*Red* |An error has occurred.
+
+|*Green* |Successfully recognized.
+
+|*Purple* |The photo is successfully recognized, but no required
+products are detected.
+
+|*Orange* |Displayed after the user confirms a photo with an error.
+|=======================================================================
+
+
+
+The status indicator is displayed on the taken photo in
+the *Miniatures* gallery.
+
+If an error occurred during photo processing, the status indicator
+changes to red. Tap on the miniature with the error to select further
+action:
+
+* Tap *Confirm* to confirm the photo with an error.
+* Tap *Retake* to delete the taken photo with an error and make a new
+photo.
+* Tap *Delete* to remove the taken photo. If the first photo has been
+deleted, the camera opens. Otherwise, the previous photo opens.
+The photo will be deleted if the device has access to the Internet, as
+the photo is physically on the server.
+
+image:working-with-ct-vision-2021-03-24-2.png[]
+
+[[h2__1442951234]]
+== Image Recognition Tools 
+
+Review the taken photos and clarify the details of the recognized
+products.
+
+
+
+Tap the desired photo in the *Miniatures* gallery to open it.
+
+[[h3_2072273480]]
+=== Clickable Realogram 
+
+To view the clickable realogram:
+
+1.  Tap
+the image:ct-orders-spring-21-2021-03-12-4.png[] icon *(1)* on
+the photo to turn on the clickable realogram.
+* each shelf will be highlighted with a specific color, and the
+recognized products will be highlighted with the frame of another
+specific color.
+* link:vision-info-field-reference.html[If specified], tap the
+recognized product to see the
+details. link:product-image-field-reference.html[The product
+previews] are loaded from the CT Vision server.
+image:Recognized-Product-at-Clickable-Realogram.png[]
+* tap
+the image:ct-orders-spring-21-2021-03-12-3.png[] icon *(2)* to
+delete a photo.
+* tap
+the image:working-with-ct-vision-2021-03-24-1.png[] icon *(3)* to
+go back to taking photo mode.
+* tap *Done (4)* to open the Report Summary.
+
+image:working-with-ct-vision-2021-03-24-2.jpg[]
+
+[[h3_1017582017]]
+=== Shelf Product List 
+
+To view the Shelf Product list:
+
+1.  Tap
+the image:Shelf-Product-List-Button.png[] button.
+2.  Review products on the shelves on the *Shelf Product List* screen:
+To set up fields to display, refer
+to link:vision-product-list-field-reference.html[Vision Product List
+Field Reference].  
+1.  In the *Product Info* column, tap the shelf name to expand the shelf
+and review products.
+2.  Tap the *Plus* button next to the desired shelf to add the
+unrecognized product. The product will be highlighted with a red
+color.
+image:Shelf-Product-List-Add-Product.png[]
+3.  In the *Facing* column, change the number of the desired product, if
+necessary. The updated number will be highlighted in red color.
+4.  The *Shelf Share* and *Length* parameters are calculated per shelf,
+not per each product.
+image:Shelf-Product-List.png[]
+3.  Tap *Save*.
+
+[[h2_491461789]]
+== Photo Tags 
+
+To enable photo tags for the CT Mobile application, add the *Tag*
+offline object in the
+https://help.customertimes.com/smart/project-ct-mobile-en/ct-mobile-control-panel-offline-objects[CT
+Mobile Control
+Panel]/https://help.customertimes.com/smart/project-ct-mobile-en/ct-mobile-control-panel-offline-objects-new[CT
+Mobile Control Panel 2.0].
+
+If enabled, add a photo tag to the desired photos.
+
+1.  Tap a photo in the *Miniatures* gallery.
+2.  Click on the photo tag icon on the selected photo.
+3.  In the pop-up, tap to select tags
+from link:specifying-product-objects-and-fields.html#h2_553985630[the
+list of available tags] to add them to a photo.
+image:Tags-01.png[]
+4.  Click image:working-with-ct-vision-2021-03-24-1.png[] *(3)* to
+go back to taking photos.
+
+The tag is added. In the *Miniatures* gallery, the photo tag icon is
+displayed on the photo.
+
+image:Tags-02.png[]
+
+[[h2__1267691643]]
+
+[[h2_566778463]]
+== Pictures Gallery 
+
+link:configuring-ct-mobile-for-work-with-ct-vision.html#h2__521416285[Add
+the Pictures gallery] to the _Account_ mobile layout to view photos that
+you have taken.
+The gallery is displayed when at least one photo is taken.
+
+* In the case of many photos, scroll them horizontally.
+* Filter photos by dates and tags.
+* Tap the photo to open the gallery and view photos in a full size. This
+feature is disabled if the link:vision-visit-field-reference.html[Enable
+Simple View] option is turned on.
+* While viewing photos in a full size, tap
+the image:fullsize-photo-tag-icon.png[]
+icon to see the photo tags.
+Photo tags are displayed according to their object and/or its record
+type. For example, if a photo was created on the Account object, you
+will see only photo tags that are also created for the Account object.
+Or, if a photo was created on the _Customer_ record type of the Account
+object, you will see only photo tags that are also created for the
+_Customer_ record type. 
+
+image:ctvision-ios-accounts-pictures-filter.png[]

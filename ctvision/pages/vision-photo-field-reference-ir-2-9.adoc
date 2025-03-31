@@ -1,0 +1,56 @@
+The Vision Photo object is used to store data for photos taken in CT
+Vision. For each taken photo, its own _Vision Photo_ record is created.
+
+Do not edit or delete _Vision Photo_ records manually. To delete a
+photo, do it in
+link:working-with-ct-vision-ir-in-salesforce-2-9.html#h2_1552458132[Picture
+Gallery] or
+link:working-with-ct-vision-ir-in-salesforce-2-9.html#h2_787411710[Photo
+Carousel], and its _Vision Photo_ record will be deleted automatically. 
+
+'''''
+
+Record Type API Name: ctv__VisionPhoto__c
+
+'''''
+
+The following fields must be created on the Vision Photo object:
+
+[width="100%",cols="25%,25%,25%,25%",]
+|=======================================================================
+|*Field* |*API Name* |*Type* |*Description*
+
+|External ID |​ctv__ExternalID__c  |Text(255) |ID of the taken
+photo.
+
+|File extension |ctv__FileExtension__c |Text(255) |File format of
+the taken photo.
+
+|Original URL |ctv__OriginalURL__c |Text(500) |URL to the taken
+photo.
+
+|Photo Name |ctv__PhotoName__c |Text(255) |Name of the taken
+photo.
+
+|Provider |ctv__Provider__c |Text(255) a|
+Available values: 
+
+* _cg_cloud_
+* _vision_
+* _vision_light_
+* _vertex_
+* _easypicky_
+* _einstein_
+* _planorama_
+* _intelligence_retail_
+
+|Related Object ID |ctv__RelatedObjectId__c |Text(255) |Salesforce
+or mobile ID of the record that was used to take the photo.
+
+|(Vision Object ID) |\{VisionObjectid} |Lookup a|
+Salesforce ID of the record that was used to take the photo.
+
+Must be manually created for each
+link:vision-object-field-reference-ir-2-9.html[Vision Object] record.
+
+|=======================================================================

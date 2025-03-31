@@ -1,0 +1,61 @@
+Specify the product fields to send their values for processing and
+storing on the server.
+
+
+
+Go to the *CT Vision* app and open the *CT Vision Setup* tab.
+
+Before the first entry to the *CT Vision Setup* tab, go
+to https://help.customertimes.com/articles/ct-mobile-ios-en/ct-mobile-control-panel-tools/a/h3_2011978[CT
+Mobile Control Panel:
+Tools]/https://help.customertimes.com/smart/project-ct-mobile-en/ct-mobile-control-panel-tools-new/a/h2_2011978[CT
+Mobile Control Panel 2.0: Tools] tab and check that the cloud token is
+added. Currently, the cloud token may be stored in two custom settings,
+and the CT Vision IR retrieves it based on the combination of the CT
+Mobile package version and the used CT Mobile app version. For more
+information, refer to
+the https://help.customertimes.com/articles/ct-mobile-ios-en/ct-mobile-managed-package-update-to-v-3-54[CT
+Mobile Managed Package Update to v. 3.54] description. 
+
+* link:3-specifying-product-objects-and-fields-2-9.html#h2__1981203353[Authorization]
+* link:3-specifying-product-objects-and-fields-2-9.html#h2__1362989108[Product
+Object Setting]
+
+
+
+[[h2__1981203353]]
+
+If the Salesforce org was not yet registered on the CT Vision service
+side, click the *Authorize* button in the *General
+Configuration* section to connect to the CT Vision server.
+
+In case of any errors, contact the Customertimes team.
+
+image:fields-mapping-on-product-and-product-image-objects-2021-09-29-2.png[]
+
+[[h2__1362989108]]
+== Product Object Setting
+
+To specify the corresponding Product object:
+
+1.  On the *Product Object Setting* tab, specify the required fields:
+* In the **Product Object **picklist, select the
+desired Product__ __object.
+* In the** Product Key Code** picklist, select the desired field.
+Use any suitable field that contains a unique product identifier, such
+as EAN or CTCPG__ExternalId__c. This field is used for mapping
+the Product object in Salesforce and the server.
+2.  Click *Save*.
+image:General-Configuration-Product-Object-2.9.png[]
+3.  Allow Salesforce to create a field with the *Lookup* type when
+prompted for the specified Product object.
+
+The setup is complete. The field with the *Lookup* type will be
+automatically created on the Product Image object to relate it with the
+specified Product object.
+
+
+
+Check the user profile permissions to make sure the newly created lookup
+is available for all required users:
+image:about-ct-vision-2021-12-21.png[]

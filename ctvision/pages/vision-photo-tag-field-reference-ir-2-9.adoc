@@ -1,0 +1,24 @@
+The Vision Photo Tag object is intended for the connection between
+link:tag-field-reference-ir-2-9.html[Tag] and
+link:vision-photo-field-reference-ir-2-9.html[Vision Photo]
+objectshttps://help.customertimes.com/smart/project-ct-vision-lite-en/adding-photo-tags-2-9[].
+
+'''''
+
+Object API Name: ctv__VisionPhotoTag__c 
+
+'''''
+
+The following fields must be created on the Vision Photo Tag object:
+
+[width="100%",cols="25%,25%,25%,25%",]
+|=======================================================================
+|*Field* |*API Name* |*Type* |*Description*
+
+|Vision Photo |ctv__VisionPhoto__c |Master-Detail(Vision Photo)
+|Specify the link:vision-photo-field-reference-ir-2-9.html[Vision
+Photo] record.
+
+|Tag |ctv__Tag__c |Master-Detail(Tag) |Specify the
+link:tag-field-reference-ir-2-9.html[Tag] record.
+|=======================================================================

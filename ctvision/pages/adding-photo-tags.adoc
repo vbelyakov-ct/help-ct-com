@@ -1,0 +1,84 @@
+[[h2_804337916]]
+
+Photo tag is an additional parameter for the taken photos
+in https://help.customertimes.com/articles/ct-vision-en/working-with-ct-vision-in-salesforce/a/h3_491461789[Salesforce] and https://help.customertimes.com/articles/ct-vision-en/working-with-ct-vision-in-the-ct-mobile-app/a/h2_491461789[the
+CT Mobile app]. Each tag has its label and color.
+
+* link:adding-photo-tags.html#h2_804337916[Creating Photo Tags]
+* link:adding-photo-tags.html#h2_1953806123[Create a New Tag]
+* link:adding-photo-tags.html#h2__1869476137[Editing a Tag]
+* link:adding-photo-tags.html#h2__117227442[Managing Access to Photo
+Tags]
+
+[[h2_1953806123]]
+
+To create a new tag:
+
+1.  Go to the *Tags* tab. If this tab is not displayed, add it to the
+panel.
+2.  Click *New*.
+image:new_tag.png[]
+3.  Select a *Vision Object* (required) and *Vision Object Record
+Type *(if needed):
+* If you selected only a vision object, the tag will be available for
+all records on this object.
+* If you selected vision object and its record type, the tag will be
+available for all records matching this record type. 
+Photo tags can be added only to photos that are created for the same
+object and/or its record type. For example, if the photo was created for
+the Account object, you can add only photo tags that are also created
+for the Account object. Or, if the photo was created for
+the _Customer_ record type of the Account object, you can add only photo
+tags that are also created for the _Customer_ record type.
+4.  Type in a *Tag Label*.
+5.  If needed, pick a *Tag Color* and click *Done*.
+6.  Click *Save*. 
+
+[[h2__1869476137]]
+
+To edit a tag:
+
+1.  Go to the *Tags* tab. If this tab is not displayed, add it to the
+panel.
+2.  Click on desired tag record.
+3.  Click image:SF-edit-icon.png[] on
+the tag parameter you want to change.
+4.  To change the tag color, use the *Color view* panel on the right
+side:
+1.  Pick the new color or type its hex code.
+2.  Click *Save*.
+
+image:ctv-editing-tag.png[]
+
+[[h2__117227442]]
+== Managing Access to Photo Tags 
+
+To allow a user working with the specific photo tag
+in link:working-with-ct-vision-in-salesforce.html[Salesforce], link:working-with-ct-vision-in-the-ct-mobile-app.html[CT
+Mobile], and
+while link:working-with-ct-vision-in-salesforce.html#h3_717556108[searching
+in the Feedback Loop], share access to the tag:
+
+1.  Go to the *Tags* tab. If this tab is not displayed, add it to the
+panel.
+2.  Click on the desired tag from the list.
+3.  Click image:dropdown-icon.png[] and
+select *Sharing*.
+image:share_tag.png[]
+4.  *Search* for users, roles, or groups to share the tag with.
+5.  Select the _Read/Write_ *Tag Access Level*.
+6.  Click *Save*.
+
+To view the sharing hierarchy:
+
+1.  Go to the *Tags* tab. If this tab is not displayed, add it to the
+panel.
+2.  Click on the desired tag from the list.
+3.  Click image:dropdown-icon.png[] and
+select *Sharing hierarchy*.
+image:sharing_hierarchy.png[]
+4.  The list of users, groups, and roles, which have access to the tag
+will be displayed. Click the *View* link to see access details for each
+user.
+Users with the _System Administrator_ profile has the full access by
+default.
