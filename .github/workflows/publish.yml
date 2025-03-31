@@ -36,11 +36,11 @@ jobs:
     - name: Debug Playbook Location
       run: ls -R  
     - name: Generate Site
-      run: npx antora --stacktrace docs/antora-playbook.yml     
+      run: npx antora --stacktrace ./antora-playbook.yml     
     - name: Upload Artifacts
       uses: actions/upload-pages-artifact@v3      
       with:
-         path: docs/build/site
+         path: ./build/site
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v4
