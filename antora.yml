@@ -1,10 +1,7 @@
-name: help-portal
-title: CT Software Documentation Portal
-version: 1.0
+name: my-website  # Замените на название вашего сайта
+version: master
 start_page: ROOT:index.adoc
-asciidoc:
-  attributes:
-    source-language: asciidoc@
-    table-caption: false
+
 nav:
-- modules/ROOT/nav.adoc
+  - Главная: index.adoc
+  - Ctvision: ctvision:index.adoc # Предполагается, что у модуля ctvision есть страница index.adoc
