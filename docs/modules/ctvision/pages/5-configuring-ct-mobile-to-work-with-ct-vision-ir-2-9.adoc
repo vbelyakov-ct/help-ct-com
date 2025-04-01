@@ -49,9 +49,10 @@ not be sent to the server.
 Specify the following to enable CT Vision IR logic within the CT Mobile
 app:
 
-[width="100%",cols="50%,50%",]
-|=======================================================================
-|In CT Mobile Control Panel a|
+[tabs]
+=====
+In CT Mobile Control Panel::
++
 1.  Go
 to https://help.customertimes.com/articles/ct-mobile-ios-en/ct-mobile-control-panel-general[CT
 Mobile Control Panel: General] tab.
@@ -66,7 +67,8 @@ Mobile Control Panel: Offline Objects] tab.
 the *Selected* field.
 6.  Click *Save*.
 
-|In CT Mobile Control Panel 2.0 a|
+In CT Mobile Control Panel 2.0::
++
 1.  Go
 to https://help.customertimes.com/smart/project-ct-mobile-en/ct-mobile-control-panel-app-menu-new[CT
 Mobile Control Panel 2.0: App Menu].
@@ -81,8 +83,7 @@ Vision IR module] and objects used as
 link:vision-object-field-reference-ir-2-9.html[Vision objects] to
 the *Selected* field.
 5.  Click *Save*. 
-
-|=======================================================================
+====
 
 The setup is complete.
 
@@ -139,10 +140,10 @@ screen.
 For example, to add the *Pictures* tab to the mobile layout of
 the Account object:
 
-1.  Go to **Setup → Object Manager  → **select the Account object.
+1.  Go to **Setup → Object Manager → **select the Account object.
 2.  Go to *Page Layouts →* click the required page layout.
 3.  Drag and drop the *Section* element to the *Account Detail* area.
- The *Section Properties* window opens.
+The *Section Properties* window opens.
 1.  Type in _PICTURES_ in the *Section Name* field, and select the
 1-Column layout.
 2.  Click *OK*.
