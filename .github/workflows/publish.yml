@@ -24,23 +24,29 @@ jobs:
     - name: Configure Pages
       uses: actions/configure-pages@v5
       with:
-        enablement: true    
+        enablement: true      
     - name: Install Node.js
       uses: actions/setup-node@v4
       with:
         node-version: '18'
     - name: Install Antora
       run: npm i antora
+    - name: Install Ruby and Asciidoctor Tabs
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.x' # Или желаемая версия Ruby
+    - name: Install Asciidoctor Tabs
+      run: gem install --pre-release asciidoctor-tabs
     - name: Debug Working Directory
       run: pwd
     - name: Debug Playbook Location
-      run: ls -R  
+      run: ls -R      
     - name: Generate Site
-      run: npx antora --stacktrace docs/antora-playbook.yml     
+      run: npx antora --stacktrace docs/antora-playbook.yml        
     - name: Upload Artifacts
-      uses: actions/upload-pages-artifact@v3      
+      uses: actions/upload-pages-artifact@v3        
       with:
-         path: docs/build/site
+          path: docs/build/site
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v4
