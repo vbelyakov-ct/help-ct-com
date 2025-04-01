@@ -33,6 +33,8 @@ jobs:
       run: npm i asciidoctor @asciidoctor/tabs  
     - name: Debug Installed Packages
       run: npm list
+    - name: Register Tabs Extension
+      run:  npx asciidoctor -r @asciidoctor/tabs tabs.adoc
     - name: Generate Site
       run: npx antora --stacktrace docs/antora-playbook.yml
     - name: Upload Artifacts
