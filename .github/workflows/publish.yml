@@ -32,7 +32,7 @@ jobs:
     - name: Install Antora
       run: npm i antora
     - name: Install Asciidoctor Tabs
-      run: npm install asciidoctor-tabs
+      run: npm i asciidoctor @asciidoctor/tabs
     - name: Debug Working Directory
       run: pwd
     - name: Debug Playbook Location
