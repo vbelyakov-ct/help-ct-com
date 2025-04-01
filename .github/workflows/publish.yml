@@ -27,14 +27,10 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: '18'
-    - name: Install Antora
-      run: npm i antora
-    - name: Install Tabs Extension
-      run: npm i asciidoctor @asciidoctor/tabs  
+    - name: Install Antora, AsciiDoctor and Tabs
+      run: npm i antora @asciidoctor/tabs asciidoctor
     - name: Debug Installed Packages
       run: npm list
-    - name: Register Tabs Extension
-      run:  npx asciidoctor -r @asciidoctor/tabs tabs.adoc
     - name: Generate Site
       run: npx antora --stacktrace docs/antora-playbook.yml
     - name: Upload Artifacts
