@@ -34,9 +34,9 @@ jobs:
     - name: Install Ruby and Asciidoctor Tabs
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: '3.2' 
+        ruby-version: '3.2'
     - name: Install Asciidoctor Tabs
-      run: gem install --pre-release asciidoctor-tabs
+      run: gem install --prerelease asciidoctor-tabs # Исправлено: --prerelease
     - name: Debug Working Directory
       run: pwd
     - name: Debug Playbook Location
