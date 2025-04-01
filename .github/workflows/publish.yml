@@ -33,6 +33,8 @@ jobs:
       run: npm list
     - name: Generate Site
       run: npx antora --stacktrace docs/antora-playbook.yml
+    - name: Debug Output Directory JS
+      run: ls -R docs/build/site/js  
     - name: Upload Artifacts
       uses: actions/upload-pages-artifact@v3
       with:
