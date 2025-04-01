@@ -34,7 +34,7 @@ jobs:
     - name: Debug Playbook Content
       run: cat docs/antora-playbook.yml || true
     - name: Debug Asciidoc Content (first file with tabs)
-      run: find docs/content -name "*.adoc" -print -exec head {} \; || true
+      run: find docs/ -name "*.adoc" -print -exec head {} \; || true
     - name: Generate Site
       run: npx antora --stacktrace docs/antora-playbook.yml
     - name: Upload Artifacts
