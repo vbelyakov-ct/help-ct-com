@@ -25,7 +25,7 @@ Filters]
 image:CT-Vision-General-Configuration.png[]
 
 [[h2__1981203353]]
-== Authorization 
+== == Authorization 
 
 If the Salesforce org was not yet registered on the CT Vision service
 side, click the *Authorize* button in the *General Configuration*
@@ -36,7 +36,7 @@ In case of any errors, contact the Customertimes team.
 image:fields-mapping-on-product-and-product-image-objects-2021-09-29-2.png[]
 
 [[h2_1194545519]]
-== Cloud Token
+== == Cloud Token
 
 To download all required CT Vision IR objects and apply the CT Vision IR
 module logic, go
@@ -54,7 +54,7 @@ the https://help.customertimes.com/articles/ct-mobile-ios-en/ct-mobile-managed-p
 Mobile Managed Package Update to v. 3.54] description.
 
 [[h2__1362989108]]
-== Product Object Setting 
+== == Product Object Setting 
 
 To specify the corresponding [.object]#Product# object: 1. On the *Product Object Setting* tab, specify the required fields: * In the *Product Object* picklist, select the desired [.object]#Product# __ object.
 * In the *Product Key Code* picklist, select the desired field.
@@ -63,7 +63,7 @@ To specify the corresponding [.object]#Product# object: 1. On the *Product Objec
 Use any suitable field that contains a unique product identifier, such as EAN
 ====
 
- or CTCPG__ExternalId__c. This field is used
+ or CTCPG__ExternalId\__c. This field is used
 for mapping the [.object]#Product# object in Salesforce and the server. 2. Specify additional fields, such as product size, group, or category, if needed. 3. In the *Select fields for mapping* section, add the fields from step 2 from the *Available* section to the *Selected* section to send them to the server. 4. Click *Save*. image:General-Configuration-Product-Object.png[] 5. Allow Salesforce to create a field with the *Lookup* type when prompted for the specified [.object]#Product# object.
 
 The setup is complete. The field with the *Lookup* type will be
@@ -76,7 +76,7 @@ is available for all required users:
 image:about-ct-vision-2021-12-21.png[]
 
 [[h2__2130197288]]
-== Product Image Setting 
+== == Product Image Setting 
 
 Select fields of the [.object]#Product Image# object that store all required information to send them to the CT Vision server to train the provider's neural networks. This information along with the marketing photo of a product can be displayed on the _Product_ record. [TIP]
 ====
@@ -92,7 +92,7 @@ The name of an [.object]#Activity# object or link:configuring-ct-vision-to-work
 default and cannot be removed or replaced.
 
 [[h3_1366151624]]
-=== Photo Description 
+=== === Photo Description 
 
 To set up fields to display:
 
@@ -110,7 +110,7 @@ The setup is complete.
 the setting.
 
 [[h3_1711109790]]
-=== Custom Filters 
+=== === Custom Filters 
 
 Specify desired criteria to filter records for the selected
 [.object]#Activity# object on the *Feedback Loop* page. Criteria are

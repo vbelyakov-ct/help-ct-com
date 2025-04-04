@@ -32,6 +32,6 @@ Record Type API Name: [.apiobject]#VisionInfo# ''''' The following fields must 
 |=======================================================================
 |*Field* |*API Name* |*Type* |*Description*
 
-|Fields To Display |[.apiobject]#FieldsToDisplay__c# |Text(255) |Specify API names of fields on the [.object]#Product# object whose values should be displayed when a mobile user taps the recognized product on a shelf (separated by a comma, without a blank space). |Object |[.apiobject]#clm__Object__c# |Text(255) |Specify the API name of the object to apply the setting, for example, CTCPG__Activity__c. |Object Record Type |clm__ObjectRecordType__c |Text(255) |If needed, specify the API name of the record type for the object in the [.apiobject]#clm__Object__c# field to apply the setting for the
+|Fields To Display |[.apiobject]#FieldsToDisplay\__c# |Text(255) |Specify API names of fields on the [.object]#Product# object whose values should be displayed when a mobile user taps the recognized product on a shelf (separated by a comma, without a blank space). |Object |[.apiobject]#clm__Object\__c# |Text(255) |Specify the API name of the object to apply the setting, for example, CTCPG__Activity\__c. |Object Record Type |clm__ObjectRecordType\__c |Text(255) |If needed, specify the API name of the record type for the object in the [.apiobject]#clm__Object\__c# field to apply the setting for the
 corresponding record type. 
 |=======================================================================

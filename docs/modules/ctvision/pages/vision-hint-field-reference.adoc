@@ -17,9 +17,9 @@ The following fields must be created on the [.object]#CTM Settings# (for versio
 |*Field* |*API Name* |*Type* |*Description*
 
 |Component a|
-clm__Component__c (versions lower than 2.9)
+clm__Component\__c (versions lower than 2.9)
 
-ctv__Component__c (since version 2.9)
+ctv__Component\__c (since version 2.9)
 
  |Text(255) a|
 Specify one of the values below to display a hint in the specific place
@@ -35,11 +35,11 @@ gallery.
 * *PopUp* is to display a hint next to the *Start* button when a mobile
 user takes a photo of the shelf.
 
-|Default View |[.apiobject]#clm__View__c# |Text(255) a| Not in use since version 2.9. Specify the short hint text. |Label a| [.apiobject]#clm__Label__c (versions lower than 2.9)#
+|Default View |[.apiobject]#clm__View\__c# |Text(255) a| Not in use since version 2.9. Specify the short hint text. |Label a| [.apiobject]#clm__Label\__c (versions lower than 2.9)#
 
-[.apiobject]#ctv__Label__c (since version 2.9)# |Text(255) |Specify the setting name, for example, the shelf label. |Type a| [.apiobject]#clm__Type__c (versions lower than 2.9)#
+[.apiobject]#ctv__Label\__c (since version 2.9)# |Text(255) |Specify the setting name, for example, the shelf label. |Type a| [.apiobject]#clm__Type\__c (versions lower than 2.9)#
 
-[.apiobject]#ctv__Type__c (since version 2.9)#
+[.apiobject]#ctv__Type\__c (since version 2.9)#
 
  |Text(255) a|
 Specify the shelf type to display the hint when a mobile user selects

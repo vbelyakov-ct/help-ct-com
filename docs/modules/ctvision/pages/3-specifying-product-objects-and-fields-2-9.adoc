@@ -29,7 +29,7 @@ In case of any errors, contact the Customertimes team.
 image:fields-mapping-on-product-and-product-image-objects-2021-09-29-2.png[]
 
 [[h2__1362989108]]
-== Product Object Setting
+== == Product Object Setting
 
 To specify the corresponding [.object]#Product# object: 1. On the *Product Object Setting* tab, specify the required fields: * In the **Product Object **picklist, select the desired [.object]#Product#__ __object.
 * In the** Product Key Code** picklist, select the desired field.
@@ -38,7 +38,7 @@ To specify the corresponding [.object]#Product# object: 1. On the *Product Obje
 Use any suitable field that contains a unique product identifier, such as EAN
 ====
 
-  or CTCPG__ExternalId__c. This field is
+  or CTCPG__ExternalId\__c. This field is
 used for mapping the [.object]#Product# object in Salesforce and the server. 2. Click *Save*. image:General-Configuration-Product-Object-2.9.png[] 3. Allow Salesforce to create a field with the *Lookup* type when prompted for the specified [.object]#Product# object.
 
 The setup is complete. The field with the *Lookup* type will be

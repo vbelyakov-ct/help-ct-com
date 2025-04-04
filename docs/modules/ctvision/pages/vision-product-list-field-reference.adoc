@@ -27,14 +27,14 @@ Record Type API Name: [.apiobject]#VisionProductList# ''''' The following field
 |=======================================================================
 |*Field* |*API Name* |*Type* |*Description*
 
-|Editable |[.apiobject]#IsEditable__c# |Checkbox |If active, the field is available for editing in the CT Mobile Product List. |Field Key |[.apiobject]#FieldKey__c# |Text(255) |Specify the key from
+|Editable |[.apiobject]#IsEditable\__c# |Checkbox |If active, the field is available for editing in the CT Mobile Product List. |Field Key |[.apiobject]#FieldKey\__c# |Text(255) |Specify the key from
 the JSON that is received in the provider's response to display the key
 value per each product in this column in CT Mobile.
 
-|Label |clm__Label__c |Text(255) |Stores the label for the field
+|Label |[.apiobject]#clm\__Label__c# |Text(255) |Stores the label for the field
 to display instead of the key from JSON.
 
-|Order |clm__Order__c |Number(18,0) a|
+|Order |clm__Order\__c |Number(18,0) a|
 Defines the order number of the column in the *Shelf Product
 List* table.
 
@@ -43,10 +43,10 @@ List* table.
 * If more than 3 custom fields are set, then only 3 of them will be
 displayed according to their order.
 
-|Provider |Provider__c |Text(255) |Stores the provider name for which
+|Provider | `Provider__c` |Text(255) |Stores the provider name for which
 this setting should be applied.
 
-|Type |clm__Type__c |Picklist a|
+|Type |clm\__Type__c |Picklist a|
 Defines the type of field to display. 
 
 Values must be manually created by the administrator.
