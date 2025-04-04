@@ -18,9 +18,9 @@ Pictures Gallery to the Mobile Layout]
 [[h2_395000743]]
 == System Label 
 
-Not in use in case of the integration with the CG Cloud solution.
+Not in use in case of the integration with the CG Cloud solution. `MobileId__c`
 
-Create the [.apiobject]#MobileId__c# field on the required *Vision* object in order to identify whether a record has been created on a mobile device or in Salesforce. Photos taken on a mobile device will be attached only to the records with the specified Mobile Id, and the taken photos will be stored on a mobile device up to 7 days. For more information, go to the https://help.customertimes.com/articles/ct-mobile-ios-en/system-label[System Label] article. [[h2__242242597]] JSON Web Token link:5-configuring-ct-mobile-to-work-with-ct-vision-ir-2-9.html#h2__242242597[]
+Create the `[.apiobject]#MobileId__c# field on the required *Vision* object in order to identify whether a record has been created on a mobile device or in Salesforce. Photos taken on a mobile device will be attached only to the records with the specified Mobile Id, and the taken photos will be stored on a mobile device up to 7 days. For more information, go to the https://help.customertimes.com/articles/ct-mobile-ios-en/system-label[System Label] article. [[h2__242242597]] JSON Web Token link:5-configuring-ct-mobile-to-work-with-ct-vision-ir-2-9.html#h2__242242597[]
 
 Photos taken in CT Mobile using the CT Vision IR module are sent to the
 server. To connect to the server, the CT Mobile app sends that pair of
