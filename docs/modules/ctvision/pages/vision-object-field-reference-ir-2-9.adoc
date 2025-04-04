@@ -1,3 +1,5 @@
+= Vision Object Field Reference
+
 The _Vision Object_ record type is used to specify an object, from which
 a mobile user launches CT Vision.
 
@@ -6,72 +8,37 @@ supposed to take and view photos. 
 
 '''''
 
-Record Type API Name: VisionObject
-
-'''''
-
-The following fields must be created on the Vision Settings object for
-this record type:
+Record Type API Name: [.apiobject]#VisionObject# ''''' The following fields must be created on the [.object]#Vision Settings# object for this record type:
 
 [width="100%",cols="25%,25%,25%,25%",]
 |=======================================================================
 |*Field* |*API Name* |*Type* |*Description*
 
-|Vision Object |ctv__VisionObject__c |Text(255) a|
-Required field.
+|Vision Object |[.apiobject]#ctv__VisionObject__c# |Text(255) a| Required field. Specify the API name of the object on the layout of which you want to add the *CT Vision* button. |Vision Object Record Type |[.apiobject]#ctv__VisionObjectRecordType__c#
+|Text(255) a|
+If there is at least one record type for the [.object]#Vision# object, specify its API name to apply the setting for the corresponding record type. Leave empty, if there are no record types for the [.object]#Vision#
+object.
 
-Specify the API name of the object on the layout of which you want to
-add the *CT Vision* button.
-
-|Vision Object Record Type |ctv__VisionObjectRecordType__c |Text(255) a|
-If there is at least one record type for the Vision object, specify its
-API name to apply the setting for the corresponding record type.
-
-Leave empty, if there are no record types for the Vision object.
-
-|Vision Photo Lookup |ctv__VisionPhotoLookup__c |Text(255) a|
-Required field.
-
-Specify the API name of the \{VisionObjectid} field on
+|Vision Photo Lookup |[.apiobject]#ctv__VisionPhotoLookup__c# |Text(255) a| Required field. Specify the API name of the [.apiobject]#\{VisionObjectid}# field on
 the link:vision-photo-field-reference-ir-2-9.html[Vision Photo] object. 
 
-|Parent Object |ctv__ParentObject__c |Text(255) a|
+|Parent Object |[.apiobject]#ctv__ParentObject__c# |Text(255) a| Applies only to CT Vision Mobile. Specify the API name of the object used for aggregating photos from related records (for example, photos from _Activities_ with specified _Accounts_). |Parent Object Lookup |[.apiobject]#ctv__ParentObjectLookup__c#
+|Text(255) a|
 Applies only to CT Vision Mobile.
 
-Specify the API name of the object used for aggregating photos from
-related records (for example, photos from _Activities_ with specified
-_Accounts_). 
-
-|Parent Object Lookup |ctv__ParentObjectLookup__c |Text(255) a|
-Applies only to CT Vision Mobile.
-
-Specify the API name of the lookup field from the Vision object to its
-parent object. For example: CTCPG__AccountId__c
-
-|Enable Gallery |ctv__IsGalleryEnabled__c |Checkbox a|
+Specify the API name of the lookup field from the [.object]#Vision# object to its parent object. For example: [.apiobject]#CTCPG__AccountId__c# |Enable Gallery |[.apiobject]#ctv__IsGalleryEnabled__c# |Checkbox a|
 Applies only to CT Vision Mobile.
 
 If active, a mobile user can add photos from the device gallery by long
 tapping the camera icon.
 
-|Enable Simple View |ctv__IsSimpleViewEnabled__c |Checkbox a|
-Applies only to CT Vision Mobile.
-
-If active, the information from the header of the
-link:working-with-ct-vision-ir-in-the-ct-mobile-app-2-9.html#h2__41293257[Report
+|Enable Simple View |[.apiobject]#ctv__IsSimpleViewEnabled__c# |Checkbox a| Applies only to CT Vision Mobile. If active, the information from the header of the link:working-with-ct-vision-ir-in-the-ct-mobile-app-2-9.html#h2__41293257[Report
 Summary] screen (actual and planned number of photos, the number of
 errors, and the actual number of the required report summaries) and the
 final summary report will not be displayed.
 
-|Plan |ctv__Plan__c |Number(18,0) a|
-Applies only to CT Vision Mobile.
-
-Planned number of photos to take during the visit. If not specified,
-then the planned number of photos is got from the *Plan* field of
-the link:vision-shelf-field-reference-ir-2-9.html[Vision Shelf] object.
-
-|Interface Fields |ctv__InterfaceFields__с |Long Text Area(32768)
-a|
+|Plan |[.apiobject]#ctv__Plan__c# |Number(18,0) a| Applies only to CT Vision Mobile. Planned number of photos to take during the visit. If not specified, then the planned number of photos is got from the *Plan* field of the link:vision-shelf-field-reference-ir-2-9.html[Vision Shelf] object. |Interface Fields |[.apiobject]#ctv__InterfaceFields__с# |Long Text
+Area(32768) a|
 Applies only to CT Vision Salesforce.
 
 Specify API names of the fields from the Vision object that should be
@@ -80,20 +47,14 @@ link:working-with-ct-vision-ir-in-salesforce-2-9.html#h2_1552458132[Picture
 Gallery] (maximum 3 fields). The *Name* field is always displayed, even
 if not specified.
 
-|Filter Fields |ctv__FilterFields__c |Long Text Area(32768) a|
-Applies only to CT Vision Salesforce.
-
-Specify API names of the fields (in one string, comma separated) from
-the Vision object that should be displayed as filters in the separate
-section of
-the link:working-with-ct-vision-ir-in-salesforce-2-9.html#h2_1552458132[Picture
+|Filter Fields |[.apiobject]#ctv__FilterFields__c# |Long Text Area(32768) a| Applies only to CT Vision Salesforce. Specify API names of the fields (in one string, comma separated) from the [.object]#Vision# object that should be displayed as filters in the separate section of the link:working-with-ct-vision-ir-in-salesforce-2-9.html#h2_1552458132[Picture
 Gallery]. The following field types cannot be used for filtering:
 
 * Text area
 * Time
 * Geolocation
 
-|Provider |ctv__Provider__c |Text(255) a|
+|Provider |[.apiobject]#ctv__Provider__c# |Text(255) a|
 Available values: 
 
 * _cg_cloud_

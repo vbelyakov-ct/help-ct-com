@@ -1,3 +1,5 @@
+= Vision Shelf Field Reference
+
 The _Vision Shelf_ record type is used to define the different shelf
 types and specify the shelf display in the CT Mobile app. Before taking
 a photo of the shelf, a mobile user selects the required shelf type.
@@ -8,20 +10,8 @@ Record Type API Name: VisionShelf
 
 '''''
 
-The following fields must be created on the Vision Settings object for
-this record type:
-
-[width="100%",cols="25%,25%,25%,25%",]
-|=======================================================================
-|*Field* |*API Name* |*Type* |*Description*
-
-|Vision Object |ctv__VisionObject__c |Text(255) |Specify the API name of
-the object to apply the setting, for example, CTCPG__Activity__c. 
-
-|Vision Object Record Type |ctv__VisionObjectRecordType__c
-|Text(255) |If needed, specify the API name of the record type for the
-object in the ctv__VisionObject__c field to apply the setting for the
-corresponding record type.
+The following fields must be created on the [.object]#Vision Settings# object for this record type: [width="100%",cols="25%,25%,25%,25%",] |======================================================================= |*Field* |*API Name* |*Type* |*Description* |Vision Object |ctv__VisionObject__c |Text(255) |Specify the API name of the object to apply the setting, for example, CTCPG__Activity__c. |Vision Object Record Type |[.apiobject]#ctv__VisionObjectRecordType__c# |Text(255) |If needed, specify the API name of the record type for the object in the [.apiobject]#ctv__VisionObject__c# field to apply the setting for
+the corresponding record type.
 
 |Plan |ctv__Plan__c |Number(18,0) a|
 Planned number of photos to take for the shelf that is displayed as a
@@ -32,7 +22,7 @@ If not specified, then the number of planned photos will be got from the
 *Plan* field of the
 link:vision-object-field-reference-ir-2-9.html[Vision Object].
 
-|Type |ctv__Type__c |Picklist a|
+|Type |[.apiobject]#ctv__Type__c# |Picklist a|
 Shooting mode applied for the shelf:
 
 * *Photo* to create a single photo for an ordinary shelf.

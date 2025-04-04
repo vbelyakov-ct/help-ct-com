@@ -1,9 +1,11 @@
-The
-link:working-with-ct-vision-ir-in-the-ct-mobile-app-2-9.html#h3_2072273480[clickable
-realogram] is available only in the CT Mobile app.
+= Working with CT Vision IR in Salesforce
 
-A manager or supervisor reviews
-link:working-with-ct-vision-ir-in-the-ct-mobile-app-2-9.html[the taken
+[NOTE]
+====
+The link:working-with-ct-vision-ir-in-the-ct-mobile-app-2-9.html#h3_2072273480[clickable realogram] is available only in the CT Mobile app. A manager or supervisor reviews link:working-with-ct-vision-ir-in-the-ct-mobile-app-2-
+====
+
+9.html[the taken
 photos by the mobile user] in Salesforce. Go to the CT Vision app and
 open the *Photo Gallery* tab.
 
@@ -26,8 +28,12 @@ the main screen, and the filters to apply on the right side of the page.
 
 * One page displays 50 photos. Use page navigation buttons in case of
 several pages and view the number of the received photos.
-Maximum 50,000 photos can be loaded at a
-time.image:ctv-photo-gallery.png[]
+[TIP]
+====
+Maximum 50,000 photos can be loaded at a time. image:../Storage/ct-vision-ir-en-publication/ctv-photo-gallery.png
+====
+
+[image]
 
 * Under the photo, the information specified on the *Interface Fields*
 of the link:vision-object-field-reference-ir-2-9.html[Vision Object] is
@@ -74,9 +80,10 @@ To apply a filter, specify the required criteria and click the *Apply*
 button. To reset the filter and erase all criteria, click the *Clear
 All* button.
 
-If the search has too many results, the warning message will be
-displayed. In this case, try to specify more filter criteria to narrow
-the search.
+[NOTE]
+====
+If the search has too many results, the warning message will be displayed. In this case, try to specify more filter criteria to narrow the search.
+====
 
 [[h3_717556108]]
 === Base Filters
@@ -135,12 +142,14 @@ image:tag-selection-icon.png[]
 
 Add a link:7-specifying-photo-tags-2-9.html#h3__759435562[photo tag] by
 clicking in the upper right corner of the taken photo.
-You can add only photo tags that are created for the same object and/or
-its record type. For example, if the photo was created for the Account
-object, you can add only photo tags that are also created for the
-Account object. Or, if the photo was created for the _Customer_ record
-type of the Account object, you can add only photo tags that are also
-created for the _Customer_ record type.
+[NOTE]
+====
+You can add only photo tags that are created for the same object and/or its record type. For example, if the photo was created for the [.object]#Account
+====
+
+ object, you can add only photo tags that are also created for the Account# object. Or, if the photo was created for
+the _Customer_ record type of the Account object, you can add only photo
+tags that are also created for the _Customer_ record type.
 
 image:ctv-lite-fbl-taken-photos.png[]
 

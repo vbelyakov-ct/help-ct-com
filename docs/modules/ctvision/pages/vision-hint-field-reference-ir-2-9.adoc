@@ -1,3 +1,5 @@
+= Vision Hint Field Reference
+
 The _Vision Hint_ record type is responsible for displaying hints when a
 user selects the shelf type and takes a photo on the CT Vision screen.
 
@@ -7,8 +9,7 @@ Record Type API Name: VisionHint
 
 '''''
 
-The following fields must be created on the Vision Settings object for
-this record type:
+The following fields must be created on the [.object]##[.object]#Vision Settings# object for this record type:
 
 [width="100%",cols="25%,25%,25%,25%",]
 |=======================================================================
@@ -28,9 +29,7 @@ gallery.
 * *PopUp* is to display a hint next to the *Start* button when a mobile
 user takes a photo of the shelf.
 
-|Label |ctv__Label__c |Text(255) |Specify the text of the hint.
-
-|Type |ctv__Type__c  |Picklist a|
+|Label |[.apiobject]#ctv__Label__c# |Text(255) |Specify the text of the hint. |Type |[.apiobject]#ctv__Type__c # |Picklist a|
 Specify the shelf type to display the hint when a mobile user selects
 the corresponding shelf type.
 

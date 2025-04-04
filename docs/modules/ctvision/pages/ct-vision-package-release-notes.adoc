@@ -1,3 +1,5 @@
+= CT Vision Package Release Notes
+
 Here you find a feature, the link to the corresponding article, and the
 CT Vision package version since the feature is available. 
 
@@ -24,7 +26,7 @@ https://help.customertimes.com/smart/project-ct-vision-lite-en/working-with-ct-v
 Gallery] and has updated interface to be more convenient and
 user-friendly, including:
 ** You can specify which *Interface Fields* of
-the https://help.customertimes.com/articles/ct-vision-lite-en/vision-object-field-reference[Vision
+the https://help.customertimes.com/articles/ct-vision-lite-en/vision-object-field-reference[Vision
 Object] are displayed under photos in the *Photo Gallery*.
 ** https://help.customertimes.com/smart/project-ct-vision-lite-en/working-with-ct-vision-lite-in-salesforce-2-9/a/h2__1484451922[Filtering]
 by tags, date, users, and user managers. Also, you can create your own
@@ -37,10 +39,7 @@ Photo Uploader] is added, allowing you to upload photos to Salesforce
 for desired object record. Also, you can add *Photo Carousel* component
 to view photos taken for this object record and its child records. 
 * Upgraded data model:
-** CTM Settings object is
-now https://help.customertimes.com/smart/project-ct-vision-lite-en/ctm-settings-field-reference-1[Vision
-Settings].
-** Any object, not only Activity objects, can now be a
+** [.object]#CTM Settings# object is now https://help.customertimes.com/smart/project-ct-vision-lite-en/ctm-settings-field-reference-1[Vision Settings]. ** Any object, not only [.object]#Activity# objects, can now be a
 https://help.customertimes.com/smart/project-ct-vision-lite-en/vision-object-field-reference[Vision]
 object.
 ** New
@@ -52,9 +51,8 @@ https://help.customertimes.com/smart/project-ct-vision-lite-en/vision-object-fie
 object, allowing to view photos from related records.
 * New photo tags data model:
 ** Instead of using the _Vision Tag_ record type in
-the clm_CTMSettingObject__c object, now photo tags using their own
-link:tag-field-reference.html[ctv_Tag__c] object on the
-link:adding-photo-tags.html[Tags] tab.  
+the [.apiobject]#clm_CTMSettingObject__c# object, now photo tags using their own [.apiobject]#link:tag-field-reference.html[ctv_Tag__c]#
+object on the link:adding-photo-tags.html[Tags] tab.  
 ** link:adding-photo-tags.html#h2__117227442[Granular access management]
 to each photo tag.
 
@@ -88,9 +86,7 @@ criteria to the CT Vision server.
 * Preparing for the CG Cloud support.
 ** https://help.customertimes.com/smart/project-ct-vision-en/vision-tag-field-refernce[The
 new CTM Settings record type] will be used to specify
-the Account object.
-** Ability to attach photos to the _Activity_ records, for which
-no link:configuring-ct-mobile-for-work-with-ct-vision.html#h2_395000743[Mobile
+the [.object]#Account# object. ** Ability to attach photos to the _Activity_ records, for which no link:configuring-ct-mobile-for-work-with-ct-vision.html#h2_395000743[Mobile
 ID is specified]. 
 ** The CG Cloud provider is added to the list of available providers.​
 
@@ -104,8 +100,7 @@ Improvements for the *Feedback Loop* functionality.
 * Review recognized products on the shelves using
 the link:working-with-ct-vision-in-salesforce.html#h3_1017582017[Shelf
 Product List] functionality.
-* Use any custom Activity object
-as link:working-with-ct-vision-in-salesforce.html#h3_717556108[the
+* Use any custom [.object]#Activity# object as link:working-with-ct-vision-in-salesforce.html#h3_717556108[the
 filter criteria].
 *  Sort taken photos
 by link:working-with-ct-vision-in-salesforce.html#h3_491461789[adding

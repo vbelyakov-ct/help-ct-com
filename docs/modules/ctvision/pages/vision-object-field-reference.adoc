@@ -1,0 +1,44 @@
+= Vision Object Field Reference
+
+Available since version 2.9.
+
+The _Vision Object_ record type is used to specify an object, from which
+a mobile user launches CT Vision.
+
+'''''
+
+Record Type API Name: [.apiobject]#VisionObject# ''''' The following fields must be created on the [.object]#Vision Settings# object for this record type:
+
+[width="100%",cols="25%,25%,25%,25%",]
+|=======================================================================
+|*Field* |*API Name* |*Type* |*Description*
+
+|Enable Gallery |[.apiobject]#ctv__IsGalleryEnabled__c# |Checkbox |If active, a mobile user can add photos from the device gallery to the shelf. |Enable Simple View |[.apiobject]#ctv__Enable_simple_view__c#
+|Checkbox |If active, the information from the header of the
+link:working-with-ct-vision-in-the-ct-mobile-app.html#h2__1221438961[Report
+Summary] screen  (actual and planned number of photos, the number of
+errors, and the actual number of the required report summaries) and the
+final summary report will not be displayed.
+
+|Object |[.apiobject]#ctv__Object__c# |Text(255) a| Specify the API name of the activity object to apply the setting, for example, [.apiobject]#CTCPG__Activity__c#.
+
+Specify [.apiobject]#Visit# in case of the integration with CG Cloud solution. Also, link:vision-account-object-field-reference.html[set up the account object] for the correct operation of Feedback Loop in Salesforce. |Object Record Type |[.apiobject]#ctv__ObjectRecordType__c# |Text(255)
+|Specify the API name of the record type for the object in the
+[.apiobject]#clm__Object__c# field to apply the setting for the corresponding record type. |Plan |[.apiobject]#ctv__Plan__c# |Number(18,0) |Planned number of
+photos to take during the visit.
+
+|Provider |[.apiobject]#ctv__Provider__c# |Text(255) a| Specify the name of the image recognition provider. Available values: * cg_cloud * vision * vision_light * vertex * easypicky * einstein * planorama * intelligence_retail |Vision Object |[.apiobject]#VisionObject__c# |Text(255) a|
+Specify the API name of the object on the layout of which you want to
+add the *CT Vision* button. Also, you can filter records by this field
+on the
+link:working-with-ct-vision-in-salesforce.html#h2__1484451922[Feedback
+Loop] page.
+
+[NOTE]
+====
+If this object differs from the [.object]#Activity
+====
+
+ object selected in the CT Mobile Control Panel, contact your Customertimes team manager to perform an additional configuration.# |===================================================================
+====
+

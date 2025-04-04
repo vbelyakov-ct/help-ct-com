@@ -1,3 +1,5 @@
+= Working with CT Vision IR in Salesforce
+
 A manager or supervisor reviews
 link:working-with-ct-vision-in-the-ct-mobile-app.html[the taken photos
 by the mobile user] in Salesforce. Go to the CT Vision app and open the
@@ -25,11 +27,14 @@ the main screen, and the filters to apply on the right side of the page.
 * One page displays 20 photos. Use page navigation buttons in case of
 several pages and view the number of the received photos next to *Total
 Records*.
-Maximum 500 photos can be loaded at a time. More photos (another 500)
-will be loaded after clicking on the last page in the navigation
-panel.image:Feedback-Loop-Tab-v.3.png[]
-* Under the photo, the information specified for the Vision object in
-the link:specifying-product-objects-and-fields.html#h3_1366151624[Photo
+[TIP]
+====
+Maximum 500 photos can be loaded at a time. More photos (another 500) will be loaded after clicking on the last page in the navigation panel. image:Feedback-Loop-Tab-v.
+====
+
+3.png[]
+* Under the photo, the information specified for the
+[.object]#Vision# object in the link:specifying-product-objects-and-fields.html#h3_1366151624[Photo
 Description] tab is displayed.
 * Click
 the image:realogram-icon.png[]
@@ -77,9 +82,10 @@ button.
 * To reset the filter and erase all criteria, click the *Clear
 All* button.
 
-If the search has too many results, the warning message will be
-displayed. In this case, try to specify more filter criterias to narrow
-the search.
+[NOTE]
+====
+If the search has too many results, the warning message will be displayed. In this case, try to specify more filter criterias to narrow the search.
+====
 
 [[h3_717556108]]
 === Base Filters 
@@ -88,44 +94,18 @@ the search.
 Object** field.
 * To search photos by records of the Vision object, select them in
 the *Record Name* field.
-Vision objects and their records must be defined in the _CTM
-Settings_ record with the link:vision-visit-field-reference.html[Vision
-Visit] record type. 
-* Specify the *Start Date (from)* and *End Date (to)* of the Vision
-object. These fields are displayed only if in the **Select Vision
-Object** field the Activity object is selected (or any object set up as
-the _Activity_ in the
-https://help.customertimes.com/smart/project-ct-mobile-en/ct-mobile-control-panel-calendar[CT
-Mobile Control Panel:
-Calendar]/https://help.customertimes.com/smart/project-ct-mobile-en/ct-mobile-control-panel-activities-new[CT
-Mobile Control Panel 2.0: Activities]). 
-* Use the *Tags* filter to select the desired photo tag(s) and display
-only appropriate photos.
-* Add multiple *Users* of the desired _Activity_ records. The filter
-uses the OR operator.
+[NOTE]
+====
+Vision
+====
 
-[[h3_929593309]]
-=== Advanced Filters 
+====
 
-Click *Advanced Search* to expand additional filter criteria. Use the
-following criteria:
+[Product Object Settings].
+====
 
-* Select the desired *Recognition Engine*. Only
-link:setting-up-integration-with-the-image-recognition-providers.html[configured]
-recognition engines are available for selection.
-* Select the specific *Activity* *Object* and *Activity Object Name*.
-* Select an Account that is linked to the *Activity* records. The filter
-uses the OR operator.
-** Create a _CTM Settings_ record with
-the link:vision-account-object-field-reference.html[Vision
-Account] record type to add desired accounts to the picklist.
-** Search an organization by a specific *Account Field Value* in the
-selected *Account Field*. 
-* Specify the *Product* criteria:
-** Enter the unique ID of the product in the *Product Key Code* field.
-For more information, refer to
-link:specifying-product-objects-and-fields.html#h2__1362989108[Product
-Object Settings].
+
+
 ** Select the *Product* record.
 ** Select the *Product Record Type*.
 ** Search a product by a specific *Product Field Value* in the selected
@@ -194,29 +174,16 @@ image:tag-selection-icon.png[]
 
 Add a link:adding-photo-tags.html#h3__759435562[photo tag] by clicking
 in the upper right corner of the taken photo.
-You can add only photo tags that are created for the same object and/or
-its record type. For example, if the photo was created for the Account
-object, you can add only photo tags that are also created for the
-Account object. Or, if the photo was created for the _Customer_ record
-type of the Account object, you can add only photo tags that are also
-created for the _Customer_ record type.
+[NOTE]
+====
+You can add only photo tags that are created for the same object and/or its record type. For example, if the photo was created for the [.object]#Account
+====
 
-image:Photos-on-the-Feedback-Loop-page-v.3.png[]
+====
+Available only for link:setting-up-integration-with-the-image-recognition-providers.html[providers with recognition]. If the _vision_light_ provider is selected, the realogram is not available. Click the image:Salesforce-Realogram-button-v.
+====
 
-
-
-
-
-[[h3_1235535035]]
-=== Verify Recognized Products on Realogram 
-
-Available only for
-link:setting-up-integration-with-the-image-recognition-providers.html[providers
-with recognition]. If the _vision_light_ provider is selected, the
-realogram is not available.
-
-Click the 
-image:Salesforce-Realogram-button-v.2.png[] button
+2.png[] button
 to open a *Preview* window.
 
 

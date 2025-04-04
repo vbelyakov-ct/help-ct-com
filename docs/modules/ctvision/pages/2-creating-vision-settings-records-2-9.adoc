@@ -1,30 +1,14 @@
+= 2. Creating Vision Settings Records
+
 After installing the CT Vision package, create required _Vision
 Settings_ records:
 
 Go to the *Vision Settings* tab → click *New*.
-If the tab is missing,
-https://help.salesforce.com/s/articleView?id=sf.creating_custom_object_tabs.htm&type=5[create
-a custom tab] for the Vision Settings object.
+[TIP]
+====
+If the tab is missing, https://help.salesforce.com/s/articleView?id=sf.creating_custom_object_tabs.htm&type=5[create a custom tab] for the [.object]#Vision Settings
+====
 
-In the *New Vision Setting* window, select the record type and click
-*Next*.
-
-The link:vision-object-field-reference-ir-2-9.html[Vision
-Object] record is required for CT Vision IR operation. The following
-records extend the CT Vision IR functionality:
-
-* link:vision-shelf-field-reference-ir-2-9.html[Vision Shelf]
-* link:vision-hint-field-reference-ir-2-9.html[Vision Hint]
-
-Specify parameters and click *Save*.
-
-Repeat steps 2–3 to create all required and, if needed, additional
-_Vision Settings_ records.
-
-On the link:vision-photo-field-reference-ir-2-9.html[Vision
-Photo] object, create **Vision Object ID **field for each
-link:vision-object-field-reference-ir-2-9.html[Vision Object] record and
-then specify its API name on the *Vision Photo Lookup* field on the
-Vision Object.
+ object.# In the *New Vision Setting* window, select the record type and click *Next*. The link:vision-object-field-reference-ir-2-9.html[Vision Object] record is required for CT Vision IR operation. The following records extend the CT Vision IR functionality: * link:vision-shelf-field-reference-ir-2-9.html[Vision Shelf] * link:vision-hint-field-reference-ir-2-9.html[Vision Hint] Specify parameters and click *Save*. Repeat steps 2–3 to create all required and, if needed, additional _Vision Settings_ records. On the link:vision-photo-field-reference-ir-2-9.html[Vision Photo] object, create **Vision Object ID **field for each link:vision-object-field-reference-ir-2-9.html[Vision Object] record and then specify its API name on the *Vision Photo Lookup* field on the [.object]#Vision Object#.
 
 The setup is complete.

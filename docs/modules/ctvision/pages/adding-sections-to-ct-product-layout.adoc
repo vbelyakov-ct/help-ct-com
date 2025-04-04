@@ -1,0 +1,27 @@
+= Adding Sections to CT Product Layout
+
+To add and view link:product-image-field-reference.html[marketing photos
+of products] set up the following sections on the desired _Product_
+Lightning page layout:
+
+* Add *Product Image Uploader* for uploading a *Product Image* file or
+providing a URL-address to it.
+* Add *Product Image Viewer* for viewing loaded *Product Images* and
+statuses of recognition of training provider or Einstein model.
+
+To edit the _Product_ Lightning page layout:
+
+1.  Go to *Setup →* *Object Manager* → the desired _Product_
+object → *Lightning Record Pages*.
+2.  Click on the desired record layout name.
+3.  Click *Edit* on the record details page.
+4.  In the Lightning App Builder, drag the *Product Image Uploader* and
+*Product Image Viewer* sections from the components tab on the left to
+the record page layout.
+image:2021-08-13_12-04-47.png[]
+5.  Click *Save*.
+
+The setup is complete. Load and view marketing images for your *Product*
+records.
+
+image:2021-08-12_17-26-29.png[]

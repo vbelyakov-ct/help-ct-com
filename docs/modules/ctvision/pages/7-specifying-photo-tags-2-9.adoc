@@ -1,3 +1,5 @@
+= 7. Specifying Photo Tags
+
 Photo tag is an additional parameter for the taken photos
 in link:working-with-ct-vision-ir-in-salesforce-2-9.html#h3_1235535035[Salesforce] and link:working-with-ct-vision-ir-in-the-ct-mobile-app-2-9.html[the
 CT Mobile app]. Each tag has its label and color.
@@ -21,61 +23,11 @@ Type *(if needed):
 all records on this object.
 * If you selected vision object and its record type, the tag will be
 available for all records matching this record type. 
-Photo tags can be added only to photos that are created for the same
-object and/or its record type. For example, if the photo was created for
-the Account object, you can add only photo tags that are also created
-for the Account object. Or, if the photo was created for
-the _Customer_ record type of the Account object, you can add only photo
-tags that are also created for the _Customer_ record type.
-4.  Type in a *Tag Label*.
-5.  If needed, pick a *Tag Color* and click *Done*.
-6.  Click *Save*. 
+[NOTE]
+====
+Photo tags can be added only to photos that are created for the same object and/or its record type. For example, if the photo was created for the [.object]#Account
+====
 
-[[h2__1869476137]]
+====
 
-To edit a tag:
 
-1.  Go to the *Tags* tab. If this tab is not displayed, add it to the
-panel.
-2.  Click on desired tag record.
-3.  Click image:SF-edit-icon.png[] on
-the tag parameter you want to change.
-4.  To change the tag color, use the *Color view* panel on the right
-side:
-1.  Pick the new color or type its hex code.
-2.  Click *Save*.
-
-image:ctv-editing-tag.png[]
-
-[[h2__117227442]]
-== Managing Access to Photo Tags 
-
-To allow a user working with the specific photo tag
-in link:working-with-ct-vision-ir-in-salesforce-2-9.html[Salesforce], link:working-with-ct-vision-ir-in-the-ct-mobile-app-2-9.html[CT
-Mobile], and
-while link:working-with-ct-vision-ir-in-salesforce-2-9.html#h2__1484451922[searching
-in the Photo Gallery], share access to the tag:
-
-1.  Go to the *Tags* tab. If this tab is not displayed, add it to the
-panel.
-2.  Click on the desired tag from the list.
-3.  Click image:dropdown-icon.png[] and
-select *Sharing*.
-image:share_tag.png[]
-4.  *Search* for users, roles, or groups to share the tag with.
-5.  Select the _Read/Write_ *Tag Access Level*.
-6.  Click *Save*.
-
-To view the sharing hierarchy:
-
-1.  Go to the *Tags* tab. If this tab is not displayed, add it to the
-panel.
-2.  Click on the desired tag from the list.
-3.  Click image:dropdown-icon.png[] and
-select *Sharing hierarchy*.
-image:sharing_hierarchy.png[]
-4.  The list of users, groups, and roles, which have access to the tag
-will be displayed. Click the *View* link to see access details for each
-user.
-Users with the _System Administrator_ profile has the full access by
-default.

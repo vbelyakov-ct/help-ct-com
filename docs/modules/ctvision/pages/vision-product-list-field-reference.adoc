@@ -1,3 +1,5 @@
+= Vision Product List Field Reference
+
 Available since CT Mobile 2.6.
 
 The _Vision Product List_ record type is responsible for displaying
@@ -19,23 +21,15 @@ following fields are set and cannot be changed: *Product Info*,
 
 '''''
 
-Record Type API Name: VisionProductList
-
-'''''
-
-The following fields must be created on the Vision Settings object for
-this record type:
+Record Type API Name: [.apiobject]#VisionProductList# ''''' The following fields must be created on the [.object]#Vision Settings# object for this record type:
 
 [width="100%",cols="25%,25%,25%,25%",]
 |=======================================================================
 |*Field* |*API Name* |*Type* |*Description*
 
-|Editable |IsEditable__c |Checkbox |If active, the field is
-available for editing in the CT Mobile Product List.
-
-|Field Key |FieldKey__c |Text(255) |Specify the key from the JSON that
-is received in the provider's response to display the key value per each
-product in this column in CT Mobile.
+|Editable |[.apiobject]#IsEditable__c# |Checkbox |If active, the field is available for editing in the CT Mobile Product List. |Field Key |[.apiobject]#FieldKey__c# |Text(255) |Specify the key from
+the JSON that is received in the provider's response to display the key
+value per each product in this column in CT Mobile.
 
 |Label |clm__Label__c |Text(255) |Stores the label for the field
 to display instead of the key from JSON.

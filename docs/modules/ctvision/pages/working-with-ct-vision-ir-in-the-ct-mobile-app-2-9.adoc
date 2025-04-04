@@ -1,3 +1,5 @@
+= Working with CT Vision IR in the CT Mobile app
+
 To work with CT Vision in the CT Mobile app:
 
 1.  link:getting-started-2-9.html[Configure the CT Vision solution].
@@ -38,7 +40,12 @@ Gallery]
 [[h2__1221438961]]
 == Take a Photo of a Product Shelf
 
-If the link:vision-object-field-reference-ir-2-9.html[Enable Simple
+[NOTE]
+====
+If the link:vision-object-field-reference-ir-2-
+====
+
+9.html[Enable Simple
 View] option is enabled, the header with the report data (the actual and
 planned number of photos, the number of errors, and the actual number of
 the required report summaries) and the final summary report will not be
@@ -53,10 +60,12 @@ icon.
 image:Start-CT-Vision.png[]
 
 Select the shelf type on the left side of the screen.
-If there are no link:vision-shelf-field-reference-ir-2-9.html[Vision
-Shelf] records, no shelf types will be displayed.
+[TIP]
+====
+If there are no link:vision-shelf-field-reference-ir-2-9.html[Vision Shelf] records, no shelf types will be displayed. Point the tablet at the desired shelf and tap the
+====
 
-Point the tablet at the desired shelf and tap the *Photo* button.
+*Photo* button.
 
 * The *Photo* button is active when the indicator that displays the
 position of a device relative to the horizon is green:
@@ -66,13 +75,12 @@ device is tilted.
 the device is aligned with the horizon.
 * Hints for the selected shelf will be displayed at the bottom of the
 screen or in the pop-up.
-For more information, refer to
-link:vision-hint-field-reference-ir-2-9.html[Vision Hint Field
-Reference].
+[TIP]
+====
+For more information, refer to link:vision-hint-field-reference-ir-2-9.html[Vision Hint Field Reference]. Take a photo of the shelf. Use the
+====
 
-Take a photo of the shelf.
-
-Use the *Photo* type to create a photo of the shelf.
+*Photo* type to create a photo of the shelf.
 
 Retake the photo when the warning indicates that the image quality is
 not satisfactory. 
@@ -155,10 +163,12 @@ action:
 photo.
 * Tap *Delete* to remove the taken photo. If the first photo has been
 deleted, the camera opens. Otherwise, the previous photo opens.
-The photo will be deleted if the device has access to the Internet, as
-the photo is physically on the server.
+[TIP]
+====
+The photo will be deleted if the device has access to the Internet, as the photo is physically on the server. image:working-with-ct-vision-2021-03-24-
+====
 
-image:working-with-ct-vision-2021-03-24-2.png[]
+2.png[]
 
 [[h2__1442951234]]
 == Image Recognition Tools 
@@ -227,7 +237,7 @@ To enable photo tags for the CT Mobile application, add the *Tag*
 offline object in the
 https://help.customertimes.com/smart/project-ct-mobile-en/ct-mobile-control-panel-offline-objects[CT
 Mobile Control
-Panel]/https://help.customertimes.com/smart/project-ct-mobile-en/ct-mobile-control-panel-offline-objects-new[CT
+Panel] / https://help.customertimes.com/smart/project-ct-mobile-en/ct-mobile-control-panel-offline-objects-new[CT
 Mobile Control Panel 2.0].
 
 If enabled, add a photo tag to the desired photos.
@@ -254,13 +264,11 @@ image:Tags-02.png[]
 * Review the report:
 ** In the *Pictures Total*, compare the planned and taken number of
 photos.
-If there are no shelves or the planned number is not set, the planned
-number of photos is taken from the *Plan* field of the
-link:vision-object-field-reference-ir-2-9.html[Vision Object] record.
-Otherwise, the planned number is the sum of the values from
-the *Plan* field
-of the link:vision-shelf-field-reference-ir-2-9.html[Vision
-Shelf] records.
+[TIP]
+====
+If there are no shelves or the planned number is not set, the planned number of photos is taken from the *Plan* field of the link:vision-object-field-reference-ir-2-9.html[Vision Object] record. Otherwise, the planned number is the sum of the values from the *Plan* field of the link:vision-shelf-field-reference-ir-2-9.html[Vision Shelf] records.
+====
+
 ** In the *Pictures Absence*, verify shelves, for which there is no
 photo or the actual number of photos is less than the number specified
 in the *Plan* field of the _CTM Settings_ record with
@@ -289,11 +297,13 @@ View] option is turned on.
 * While viewing photos in a full size, tap
 the image:fullsize-photo-tag-icon.png[]
 icon to see the photo tags.
-Photo tags are displayed according to their object and/or its record
-type. For example, if a photo was created on the Account object, you
-will see only photo tags that are also created for the Account object.
-Or, if a photo was created on the _Customer_ record type of the Account
-object, you will see only photo tags that are also created for the
-_Customer_ record type. 
+[NOTE]
+====
+Photo tags are displayed according to their object and/or its record type. For example, if a photo was created on the [.object]#Account
+====
+
+ object, you will see only photo tags that are also created for the Account# object. Or, if a photo was created on the
+_Customer_ record type of the Account object, you will see only photo
+tags that are also created for the _Customer_ record type. 
 
 image:ctvision-ios-accounts-pictures-filter.png[]

@@ -1,3 +1,5 @@
+= Vision Info Field Reference
+
 The *Vision Info* record type is responsible for viewing the product
 details when
 link:working-with-ct-vision-in-the-ct-mobile-app.html#h2_2072273480[the
@@ -24,27 +26,12 @@ synchronization, CT Mobile will not download it. 
 
 '''''
 
-Record Type API Name: VisionInfo
-
-'''''
-
-The following fields must be created on the Vision Settings object for
-this record type:
+Record Type API Name: [.apiobject]#VisionInfo# ''''' The following fields must be created on the [.object]#Vision Settings# object for this record type:
 
 [width="100%",cols="25%,25%,25%,25%",]
 |=======================================================================
 |*Field* |*API Name* |*Type* |*Description*
 
-|Fields To Display |FieldsToDisplay__c |Text(255) |Specify API names
-of fields on the Product object whose values should be displayed when a
-mobile user taps the recognized product on a shelf (separated by a
-comma, without a blank space).
-
-|Object |clm__Object__c |Text(255) |Specify the API name of the object
-to apply the setting, for example, CTCPG__Activity__c. 
-
-|Object Record Type |clm__ObjectRecordType__c |Text(255) |If needed,
-specify the API name of the record type for the object in
-the clm__Object__c field to apply the setting for the corresponding
-record type. 
+|Fields To Display |[.apiobject]#FieldsToDisplay__c# |Text(255) |Specify API names of fields on the [.object]#Product# object whose values should be displayed when a mobile user taps the recognized product on a shelf (separated by a comma, without a blank space). |Object |[.apiobject]#clm__Object__c# |Text(255) |Specify the API name of the object to apply the setting, for example, CTCPG__Activity__c. |Object Record Type |clm__ObjectRecordType__c |Text(255) |If needed, specify the API name of the record type for the object in the [.apiobject]#clm__Object__c# field to apply the setting for the
+corresponding record type. 
 |=======================================================================

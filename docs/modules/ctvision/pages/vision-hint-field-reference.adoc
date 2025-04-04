@@ -1,3 +1,5 @@
+= Vision Hint Field Reference
+
 The _Vision Hint_ record type is responsible for displaying hints when a
 user selects the shelf type and takes a photo on the CT Vision screen.
 
@@ -7,9 +9,8 @@ Record Type API Name: VisionHint
 
 '''''
 
-The following fields must be created on the CTM Settings (for versions
-prior to 2.9) or Vision Settings (since version 2.9) object for this
-record type:
+The following fields must be created on the [.object]#CTM Settings# (for versions prior to 2.9) [.object]#or Vision Settings# (since version
+2.9) object for this record type:
 
 [width="100%",cols="25%,25%,25%,25%",]
 |=======================================================================
@@ -34,22 +35,11 @@ gallery.
 * *PopUp* is to display a hint next to the *Start* button when a mobile
 user takes a photo of the shelf.
 
-|Default View |clm__View__c |Text(255) a|
-Not in use since version 2.9.
+|Default View |[.apiobject]#clm__View__c# |Text(255) a| Not in use since version 2.9. Specify the short hint text. |Label a| [.apiobject]#clm__Label__c (versions lower than 2.9)#
 
-Specify the short hint text.
+[.apiobject]#ctv__Label__c (since version 2.9)# |Text(255) |Specify the setting name, for example, the shelf label. |Type a| [.apiobject]#clm__Type__c (versions lower than 2.9)#
 
-|Label a|
-clm__Label__c (versions lower than 2.9)
-
-ctv__Label__c (since version 2.9)
-
- |Text(255) |Specify the setting name, for example, the shelf label.
-
-|Type a|
-clm__Type__c (versions lower than 2.9)
-
-ctv__Type__c (since version 2.9)
+[.apiobject]#ctv__Type__c (since version 2.9)#
 
  |Text(255) a|
 Specify the shelf type to display the hint when a mobile user selects

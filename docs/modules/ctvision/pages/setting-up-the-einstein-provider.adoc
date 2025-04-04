@@ -1,3 +1,5 @@
+= 5.1 Setting up the Einstein Provider
+
 To use
 https://developer.salesforce.com/docs/analytics/einstein-vision-language/overview[the
 Salesforce Einstein provider] for product image recognition:
@@ -24,7 +26,11 @@ the image:Screenshot-2021-08-11-at-17.27.33.png[] button
 to *Edit* or *Delete* the *Model* if necessary.
 1.  Edit the user *Email* and the *Model* name.
 2.  Activate the *External Model* checkbox.
+[NOTE]
+====
 Currently, only external models are supported.
+====
+
 3.  Verify the *Private Access Key*.
 4.  Click on *Test* to view the indication on top of the screen
 signaling if the connection was successful or not.
