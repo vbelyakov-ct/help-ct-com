@@ -1,0 +1,15 @@
+= Tag Field Reference
+
+The [.object]#Tag# object is responsible for the photo tags that users can apply to the taken photos in link:working-with-ct-vision-in-salesforce.html#h3_491461789[Salesforce] and link:working-with-ct-vision-in-the-ct-mobile-app.html#h2_491461789[the
+CT Mobile app].
+
+'''''
+
+Object API Name: [.apiobject]#ctv__Tag\__c# ''''' The following fields must be created on the [.object]#Tag# object: [width="100%",cols="25%,25%,25%,25%",] |=== |*Field* |*API Name* |*Type* |*Description* |Color |[.apiobject]#ctv__Color\__c# |Text(255) |Specify the photo tag color in the HEX format, for example,#EB4034.
+
+|Label |[.apiobject]#ctv__Label\__c# |Text(255) |Specify photo tag label. |Object |[.apiobject]#ctv__Object\__c# |Text(255) |Specify the API name
+of the object to apply the setting, for example, CTCPG__Activity\__c. 
+
+|Object Record Type |[.apiobject]#ctv__ObjectRecordType\__c# |Text(255) |If needed, specify the API name of the record type for the object in the [.apiobject]#ctv__Object\__c# field to apply the setting for the
+corresponding record type. 
+|===

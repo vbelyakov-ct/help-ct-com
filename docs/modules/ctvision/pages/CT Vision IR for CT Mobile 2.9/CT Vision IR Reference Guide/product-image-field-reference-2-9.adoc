@@ -1,0 +1,29 @@
+= Product Image Field Reference
+
+The [.object]#Product Image# object is intended to link:6-adding-information-for-products-to-be-recognized-2-9.html[store all required information] for recognition of photos by the selected provider in one place. Also, these records with product images can be displayed in https://help.customertimes.com/articles/ct-mobile-ios-en/custom-related-lists[custom related lists] in the CT Mobile app, or in catalogs and orders of the https://help.customertimes.com/smart/project-order-module/ct-orders-solution[CT Orders] solution, if necessary. ''''' Object API Name: [.apiobject]#ctv__ProductImage\__c# ''''' The following fields must be created on the [.object]#Product Image#object:
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|CT Product |[.apiobject]#ProductId\__c# |Lookup(CT Product) a| The parent _CT Product_ record. The field must be manually created by the administrator. |Document Id |[.apiobject]#ctv__DocumentId\__c# |Text(255) |The unique Id
+of the product image.
+
+|Document URL |[.apiobject]#ctv__DocumentUrl\__c# |Text(255) |The product image name when it is stored in https://help.salesforce.com/s/articleView?id=pages_static_resources.htm&language=en_US&type=5[static resources] in your Salesforce org or its URL. |External Id |[.apiobject]#ctv__ExternalId\__c# |Text(255) (External Id)
+(Unique Case Sensetive) |The product image external identifier.
+
+|Main Product Image |ctv__Main\__c |Checkbox |Active, if there is a
+product label in the picture (frontal picture of the package).
+
+|Preview URL |ctv__PreviewUrl\__c |Text(255) |The provider creates the
+preview of product images and then packed them into a ZIP archive.
+Previews are used in
+link:working-with-ct-vision-ir-in-the-ct-mobile-app-2-9.html#h3_2072273480[the
+clickable realogram] when the mobile user taps the recognized product to
+see its details.
+
+|Provider |ctv__Provider\__c |Picklist |The provider that uses the
+product image.
+
+|Product Image Name |Name |Text(80) |The product label.
+|===

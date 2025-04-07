@@ -1,0 +1,22 @@
+= Vision Hint Field Reference
+
+The _Vision Hint_ record type is responsible for displaying hints when a
+user selects the shelf type and takes a photo on the CT Vision screen.
+
+'''''
+
+Record Type API Name: VisionHint
+
+'''''
+
+The following fields must be created on
+the [.object]#[.object]###[.object]#[.object]#Vision Settings## object for this record type: [width="100%",cols="25%,25%,25%,25%",] |=== |*Field* |*API Name* |*Type* |*Description* |Component |ctv__Component\__c |Picklist a| Specify one of the values below to display a hint in the specific place on the CT Vision screen: Hints at the bottom of the screen are displayed only when there is no taken photo in the Miniatures gallery. * *BottomRight* is to display a hint on the right side of the *Miniatures* gallery. * *BottomLeft* is to display a hint on the left side of the *Miniatures* gallery. * *PopUp* is to display a hint next to the *Start* button when a mobile user takes a photo of the shelf. |Label |[.apiobject]#ctv__Label\__c# |Text(255) |Specify the text of the hint. |Type |[.apiobject]#ctv__Type\__c # |Picklist a|
+Specify the shelf type to display the hint when a mobile user selects
+the corresponding shelf type.
+
+* *Photo* to create a single photo for an ordinary shelf.
+* *Collection* to create a photo of the outsize shelf that cannot be
+captured in a single shot. The photos of the collection will be merged
+and sent as an indivisible photo for recognition.
+
+|===

@@ -1,0 +1,24 @@
+= 4. Setting up Integration with the Image Recognition Providers
+
+For the correct CT Vision IR work, valid Image Recognition Service
+Provider credentials and necessary information must be specified in your
+Salesforce org. There can be multiple providers, and they can be
+assigned to the specific group of _Users_, _Accounts_, or any object
+that has a *Lookup* type field to associate with a
+specific [.object]#Activity# object. Go to the CT Vision app and open the *CT Vision Setup* tab. image:Provider-Comfiguration-v.2.png[] [[h2_1620541365]] == Set up Providers Set up a provider and click the *Add Provider* button to add another on. Refer to the articles: * 
+corresponding value for the image recognition provider.
+
+The list of available providers in the *Recognition Engine* picklist:
+
+* CG Cloud Einstein. This provider is used in case of integration
+with https://help.customertimes.com/articles/ct-mobile-ios-en/cg-cloud[the
+CG Cloud solution].
+* CT Vision
+* EasyPicky
+* Einstein
+* Intelligence Retail
+* Planorama
+* https://help.customertimes.com/smart/project-ct-vision-lite-en/about-ct-vision-lite[Vision
+Light]. Select this provider when image recognition is not required.
+
+The setup is complete.

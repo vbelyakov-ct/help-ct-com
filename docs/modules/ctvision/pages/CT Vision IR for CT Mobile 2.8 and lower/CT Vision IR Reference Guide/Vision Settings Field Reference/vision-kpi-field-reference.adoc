@@ -1,0 +1,33 @@
+= Vision KPI Field Reference
+
+The _Vision KPI_ record type is responsible for the required KPIs that
+should be applied to the photo report of the visit.
+
+'''''
+
+Record Type API Name: VisionKPI
+
+'''''
+
+The following fields must be created on the [.object]#Vision Settings# object for this record type:
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Label |clm__Label\__c |Text(255) |Set the setting name to distinguish
+which products' KPIs are calculated, for example, Lotions.
+
+|KPI |KPI\__c |Text(255) |Set the goal KPI value.
+
+|Object |[.apiobject]#clm__Object\__c# |Text(255) |Specify the API name of the object to apply the setting, for example, CTCPG__Activity\__c. |Object Record Type |[.apiobject]#clm__ObjectRecordType\__c# |Text(255)
+|If needed, specify the API name of the record type for the object in
+the [.apiobject]#clm__Object\__c# field to apply the setting for the corresponding record type. |Type |[.apiobject]#clm__Type\__c# |Picklist a|
+Select the type of the required KPIs:
+
+Values must be manually created by the administrator.
+
+* Amount
+* Percent
+
+|===

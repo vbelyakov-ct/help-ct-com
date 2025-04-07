@@ -1,0 +1,162 @@
+= Working with CT Vision IR in Salesforce
+
+[NOTE]
+====
+The link:working-with-ct-vision-ir-in-the-ct-mobile-app-2-9.html#h3_2072273480[clickable realogram] is available only in the CT Mobile app. A manager or supervisor reviews link:working-with-ct-vision-ir-in-the-ct-mobile-app-2-
+====
+
+9.html[the taken
+photos by the mobile user] in Salesforce. Go to the CT Vision app and
+open the *Photo Gallery* tab.
+
+* link:working-with-ct-vision-ir-in-salesforce-2-9.html#h2_1552458132[Photo
+Gallery Overview]
+* link:working-with-ct-vision-ir-in-salesforce-2-9.html#h2__1484451922[Photo
+Gallery Filters]
+* link:working-with-ct-vision-ir-in-salesforce-2-9.html#h3_717556108[Base
+Filters]
+* link:working-with-ct-vision-ir-in-salesforce-2-9.html#h3_929593309[Custom
+Filters]
+* link:working-with-ct-vision-ir-in-salesforce-2-9.html#h2_1822655793[Working
+with Taken Photos]
+
+[[h2_1552458132]]
+== == Photo Gallery Overview 
+
+The taken photos received from the CT Vision server will be displayed on
+the main screen, and the filters to apply on the right side of the page.
+
+* One page displays 50 photos. Use page navigation buttons in case of
+several pages and view the number of the received photos.
+[TIP]
+====
+Maximum 50,000 photos can be loaded at a time. image:../Storage/ct-vision-ir-en-publication/ctv-photo-gallery.png
+====
+
+[image]
+
+* Under the photo, the information specified on the *Interface Fields*
+of the link:vision-object-field-reference-ir-2-9.html[Vision Object] is
+displayed, as well as *Created Date* value from the
+link:vision-photo-field-reference-ir-2-9.html[Vision Photo] object.
+* Click the checkbox above the desired photos (or click *Select on page*
+checkbox to select all images on the current page) and then click the
+*Export to archive* button to build an archive with the desired photos.
+** The archive will be saved on the user's device.
+** Photos are saved in the .png format.
+** Maximum 500 photos can be added to archive.
+
+Once the archive is created, click
+image:ctv-lite-feedback-loop-archive-download-icon-2.9.png[] to
+download it. You can create multiple archives and download them later. 
+    
+
+* Click the checkbox above the desired photos and then click
+the *Delete* button to delete the photo. You can also delete a photo by
+clicking
+the image:delete-icon-gallery.png[] icon
+in the photo gallery.
+* Click the desired photo to view it. In the opened viewer,
+click image:gallery-right-arrow.png[] and image:gallery-left-arrow.png[] buttons
+to list other photos of the gallery.
+* Click
+the image:tag-selection-icon.png[]
+button and select the
+desired link:7-specifying-photo-tags-2-9.html[photo tag].
+image:tags-list.png[]
+
+
+
+[[h2__1484451922]]
+== == Photo Gallery Filters 
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+Use filters on the right side of the *Photo Gallery* page to search the
+taken photos based on criteria.
+
+To apply a filter, specify the required criteria and click the *Apply*
+button. To reset the filter and erase all criteria, click the *Clear
+All* button.
+
+[NOTE]
+====
+If the search has too many results, the warning message will be displayed. In this case, try to specify more filter criteria to narrow the search.
+====
+
+[[h3_717556108]]
+=== ==== Base Filters
+
+Use base filters in the *Photo* section:
+
+* To search photos by a Vision object, select it in the* Vision
+Object* field.
+* Specify the photo creation date range in *Date from* and *Date to*.
+* Use the *Tags* filter to select the desired photo tag(s) and display
+only appropriate photos.
+* If needed, specify *User* and *User Manager*.
+
+[[h3_929593309]]
+=== ==== Custom Filters 
+
+If the *Filter Fields* are specified in the
+link:vision-object-field-reference-ir-2-9.html[Vision object], you can
+use them to search the taken photos. Click the corresponding filter
+group to expand additional filter criteria.
+
+
+
+Click *Apply* to save filters.
+
+|image:ctv-lite-photo-filters.png[]
+|===
+
+[[h2_1822655793]]
+== == 
+
+[[h2_1822655793]]
+== == Working with Taken Photos
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+Photos that met the filter criteria are displayed with the
+description. To customize the description, refer
+to link:vision-product-list-field-reference.html[]link:vision-photo-field-reference-ir-2-9.html[Vision
+Photo] object.
+
+The following buttons are available under a photo:
+
+
+
+[width="100%",cols="50%,50%",]
+!===
+!*Buttons* !*Description*
+
+! !Select a photo to delete it, to include it in a ZIP archive or send
+it to the Chatter users.
+
+! !
+
+! !Add a link:7-specifying-photo-tags-2-9.html#h3__759435562[photo
+tag] by clicking in the upper right corner of the taken photo.
+[NOTE]
+====
+You can add only photo tags that are created for the same object and/or its record type. For example, if the photo was created for the [.object]#Account
+====
+
+ object, you can add only photo tags that are also created for the Account# object. Or, if the photo was created for
+the _Customer_ record type of the Account object, you can add only photo
+tags that are also created for the _Customer_ record type.
+!===
+
+|image:ctv-lite-fbl-taken-photos.png[]
+|===
+
+
+
+
+
+[[h3_1235535035]]
+=== === 

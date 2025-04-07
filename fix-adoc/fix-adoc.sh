@@ -1,8 +1,5 @@
 #!/bin/bash
 
-echo "Running fix-headings-simple.py..."
-python3 fix-headings-simple.py
-
 echo "Running remove-links-in-headings.py..."
 python3 remove-links-in-headings.py 
 
@@ -23,5 +20,8 @@ python3 replace-non-breaking-space.py
 
 echo "Running fix-underscores.py"
 python3 fix-underscores.py
+
+echo "Running fix-unordered-lists.py"
+python3 fix-unordered-lists.py
 
 echo "All the scripts done"
