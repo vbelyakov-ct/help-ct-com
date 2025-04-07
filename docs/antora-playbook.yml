@@ -3,9 +3,12 @@ site:
   start_page: root::index.adoc
 content:
   sources:
-  - url: https://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@github.com/vbelyakov-ct/help-ct-com.git
+  - url: https://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@github.com/vbelyakov-ct/help-ct-com.git/
     branches: main
-    start_path: docs
+    start_path: docs/modules/root
+   - url: https://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@github.com/vbelyakov-ct/help-ct-com.git/
+    branches: main
+    start_path: docs/modules/ctvision
 ui:
   bundle:
     url: ./ui-bundle-ct.zip
