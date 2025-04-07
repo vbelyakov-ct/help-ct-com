@@ -99,7 +99,7 @@ function generateNavItems(dirPath, level = 0, relativePath = '') {
         if (hasIndex) {
           dirTitle = getTitleFromFile(indexPath);
           // Добавляем директорию как ссылку на index.adoc
-          navItems += `${indentation}xref:${path.join(itemRelativePath, 'index')}[${dirTitle}]\n`;
+          navItems += `${indentation}xref:${path.join(itemRelativePath, 'index.adoc')}[${dirTitle}]\n`;
         } else {
           // Добавляем директорию как заголовок
           navItems += `${indentation}${dirTitle}\n`;
@@ -118,7 +118,8 @@ function generateNavItems(dirPath, level = 0, relativePath = '') {
           !config.excludedFiles.includes(item.name)) {
         
         const title = getTitleFromFile(itemPath);
-        const link = itemRelativePath.replace(/\.adoc$/, '');
+        // Оставляем расширение .adoc для правильных ссылок
+        const link = itemRelativePath;
         
         navItems += `${indentation}xref:${link}[${title}]\n`;
       }
