@@ -29,7 +29,7 @@ const config = {
   maxDepth: 0,
   
   // Заголовок для nav.adoc
-  navTitle: 'CT Vision IR',
+  navTitle: 'CT Vision',
 };
 
 /**
@@ -68,63 +68,59 @@ function generateNavItems(dirPath, level = 0, relativePath = '') {
   }
   
   let navItems = '';
-  const indentation = '  '.repeat(level);
+  const indentation = '*'.repeat(level + 1) + ' ';
   
   // Получаем все файлы и директории в текущей директории
   const items = fs.readdirSync(dirPath, { withFileTypes: true });
   
-  // Сначала обрабатываем файлы
-  const files = items
-    .filter(item => item.isFile())
-    .filter(item => config.includedExtensions.includes(path.extname(item.name)))
-    .filter(item => !config.excludedFiles.includes(item.name))
-    .map(item => ({
-      name: item.name,
-      path: path.join(dirPath, item.name),
-      relativePath: path.join(relativePath, item.name)
-    }));
+  // Сортируем элементы: сначала директории, потом файлы
+  const sortedItems = [
+    ...items.filter(item => item.isDirectory()),
+    ...items.filter(item => item.isFile())
+  ];
   
-  for (const file of files) {
-    const title = getTitleFromFile(file.path);
-    const link = file.relativePath.replace(/\.adoc$/, '');
-    navItems += `${indentation}* xref:${link}[${title}]\n`;
-  }
-  
-  // Затем обрабатываем директории
-  const directories = items
-    .filter(item => item.isDirectory())
-    .map(item => ({
-      name: item.name,
-      path: path.join(dirPath, item.name),
-      relativePath: path.join(relativePath, item.name)
-    }));
-  
-  for (const dir of directories) {
-    // Проверяем, есть ли index.adoc в директории
-    const indexPath = path.join(dir.path, 'index.adoc');
-    const hasIndex = fs.existsSync(indexPath);
+  // Обрабатываем все элементы
+  for (const item of sortedItems) {
+    const itemPath = path.join(dirPath, item.name);
+    const itemRelativePath = path.join(relativePath, item.name);
     
-    let dirTitle = dir.name.charAt(0).toUpperCase() + dir.name.slice(1);
-    
-    if (hasIndex) {
-      dirTitle = getTitleFromFile(indexPath);
-    }
-    
-    // Проверяем, есть ли файлы или директории внутри текущей директории
-    const subItems = fs.readdirSync(dir.path, { withFileTypes: true });
-    const hasContent = subItems.length > 0;
-    
-    if (hasContent) {
-      if (hasIndex) {
-        navItems += `${indentation}* xref:${path.join(dir.relativePath, 'index')}[${dirTitle}]\n`;
-      } else {
-        navItems += `${indentation}.${dirTitle}\n`;
-      }
+    if (item.isDirectory()) {
+      // Проверяем, есть ли index.adoc в директории
+      const indexPath = path.join(itemPath, 'index.adoc');
+      const hasIndex = fs.existsSync(indexPath);
       
-      // Рекурсивно обрабатываем содержимое директории
-      const subNav = generateNavItems(dir.path, level + 1, dir.relativePath);
-      if (subNav) {
-        navItems += subNav;
+      // Проверяем, есть ли файлы или директории внутри текущей директории
+      const subItems = fs.readdirSync(itemPath, { withFileTypes: true });
+      const hasContent = subItems.length > 0;
+      
+      if (hasContent) {
+        let dirTitle = item.name.charAt(0).toUpperCase() + item.name.slice(1).replace(/-/g, ' ');
+        
+        if (hasIndex) {
+          dirTitle = getTitleFromFile(indexPath);
+          // Добавляем директорию как ссылку на index.adoc
+          navItems += `${indentation}xref:${path.join(itemRelativePath, 'index')}[${dirTitle}]\n`;
+        } else {
+          // Добавляем директорию как заголовок
+          navItems += `${indentation}${dirTitle}\n`;
+        }
+        
+        // Рекурсивно обрабатываем содержимое директории
+        const subNav = generateNavItems(itemPath, level + 1, itemRelativePath);
+        if (subNav) {
+          navItems += subNav;
+        }
+      }
+    } 
+    else if (item.isFile()) {
+      // Проверяем, что это adoc файл и не в списке исключений
+      if (config.includedExtensions.includes(path.extname(item.name)) && 
+          !config.excludedFiles.includes(item.name)) {
+        
+        const title = getTitleFromFile(itemPath);
+        const link = itemRelativePath.replace(/\.adoc$/, '');
+        
+        navItems += `${indentation}xref:${link}[${title}]\n`;
       }
     }
   }
@@ -139,7 +135,15 @@ function generateNavItems(dirPath, level = 0, relativePath = '') {
 function generateNav() {
   const pagesPath = path.join(config.modulePath, config.pagesDir);
   
-  let navContent = `\n.${config.navTitle}\n`;
+  // Формат для стандарта Antora
+  let navContent = '';
+  
+  // Если указан заголовок, добавляем его
+  if (config.navTitle) {
+    navContent += `.${config.navTitle}\n`;
+  }
+  
+  // Добавляем элементы навигации
   navContent += generateNavItems(pagesPath);
   
   return navContent;
