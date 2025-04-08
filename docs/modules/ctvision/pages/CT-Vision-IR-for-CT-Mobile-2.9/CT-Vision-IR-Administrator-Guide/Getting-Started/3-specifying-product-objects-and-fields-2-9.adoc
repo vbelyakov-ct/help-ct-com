@@ -27,7 +27,7 @@ Configuration* section to connect to the CT Vision server.
 
 In case of any errors, contact the Customertimes team.
 
-image:../../../../images/fields-mapping-on-product-and-product-image-objects-2021-09-29-2.png[]
+image:fields-mapping-on-product-and-product-image-objects-2021-09-29-2.png[]
 
 [[h2__1362989108]]
 == Product Object Setting
@@ -40,7 +40,7 @@ Use any suitable field that contains a unique product identifier, such as EAN
 ====
 
   or CTCPG__ExternalId\__c. This field is
-used for mapping the [.object]#Product# object in Salesforce and the server. . Click *Save*. image:../../../../images/General-Configuration-Product-Object-2.9.png[] . Allow Salesforce to create a field with the *Lookup* type when prompted for the specified [.object]#Product# object.
+used for mapping the [.object]#Product# object in Salesforce and the server. . Click *Save*. image:General-Configuration-Product-Object-2.9.png[] . Allow Salesforce to create a field with the *Lookup* type when prompted for the specified [.object]#Product# object.
 
 The setup is complete. The field with the *Lookup* type will be
 automatically created on the [.object]#Product Image# object to relate it with the specified [.object]#Product# object.
@@ -49,4 +49,4 @@ automatically created on the [.object]#Product Image# object to relate it with 
 
 Check the user profile permissions to make sure the newly created lookup
 is available for all required users:
-image:../../../../images/about-ct-vision-2021-12-21.png[]
+image:about-ct-vision-2021-12-21.png[]

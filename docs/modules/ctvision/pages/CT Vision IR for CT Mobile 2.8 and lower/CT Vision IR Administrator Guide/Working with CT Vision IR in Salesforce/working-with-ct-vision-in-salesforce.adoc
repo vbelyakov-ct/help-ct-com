@@ -29,7 +29,7 @@ several pages and view the number of the received photos next to *Total
 Records*.
 [TIP]
 ====
-Maximum 500 photos can be loaded at a time. More photos (another 500) will be loaded after clicking on the last page in the navigation panel. image:../../../../images/Feedback-Loop-Tab-v.
+Maximum 500 photos can be loaded at a time. More photos (another 500) will be loaded after clicking on the last page in the navigation panel. image:Feedback-Loop-Tab-v.
 ====
 
 3.png[]
@@ -37,7 +37,7 @@ Maximum 500 photos can be loaded at a time. More photos (another 500) will be lo
 [.object]#Vision# object in the link:specifying-product-objects-and-fields.html#h3_1366151624[Photo
 Description] tab is displayed.
 * Click
-the image:../../../../images/realogram-icon.png[]
+the image:realogram-icon.png[]
 icon to open a photo for
 verifying link:working-with-ct-vision-in-salesforce.html#h3_1235535035[its
 realogram and recognized products]. 
@@ -48,21 +48,21 @@ zip* button to build an archive with the desired photos.
 * Click the checkbox above the desired photos and then click the **Post
 to Chatter **button to send a new message with attached photos to the
 Chatter.  You must select *Chatter Group(s)* to send the message. 
-image:../../../../images/Feedback-Loop-Post-to-Chatter-v.2.png[]
+image:Feedback-Loop-Post-to-Chatter-v.2.png[]
 * Click the checkbox above the desired photos and then click
 the *Delete* button to delete the photo. You can also delete a photo by
 clicking
-the image:../../../../images/delete-icon-gallery.png[] icon
+the image:delete-icon-gallery.png[] icon
 in the photo gallery.
 * Click
-the image:../../../../images/eye-icon.png[]
+the image:eye-icon.png[]
 button to view the desired photo. In the opened viewer,
-click image:../../../../images/gallery-right-arrow.png[] and image:../../../../images/gallery-left-arrow.png[] buttons
+click image:gallery-right-arrow.png[] and image:gallery-left-arrow.png[] buttons
 to list other photos of the gallery.
 * Click
-the image:../../../../images/tag-selection-icon.png[]
+the image:tag-selection-icon.png[]
 button and select the desired link:adding-photo-tags.html[photo tag].
-image:../../../../images/tags-list.png[]
+image:tags-list.png[]
 
 [[h2__1484451922]]
 == Feedback Loop Filters 
@@ -116,7 +116,7 @@ Vision
 
 Click *Apply* to save filters.
 
-|image:../../../../images/Feedback-Loop-Filter-v.3.png[]
+|image:Feedback-Loop-Filter-v.3.png[]
 |===
 
 [[h2_1822655793]]
@@ -169,9 +169,9 @@ clicking in the upper right corner of the taken photo.
 You can add only photo tags that are created for the same object and/or its record type. For example, if the photo was created for the [.object]#Account
 ====
 
- object, you can add only photo tags that are also created for the Account# object. Or, if the photo was created for the _Customer_ record type of the Account object, you can add only photo tags that are also created for the _Customer_ record type. !=== |image:../../../../images/Photos-on-the-Feedback-Loop-page-v.3.png[] |=== [[h3_1235535035]] === Verify Recognized Products on Realogram 
+ object, you can add only photo tags that are also created for the Account# object. Or, if the photo was created for the _Customer_ record type of the Account object, you can add only photo tags that are also created for the _Customer_ record type. !=== |image:Photos-on-the-Feedback-Loop-page-v.3.png[] |=== [[h3_1235535035]] === Verify Recognized Products on Realogram 
 ====
-Available only for link:setting-up-integration-with-the-image-recognition-providers.html[providers with recognition]. If the _vision_light_ provider is selected, the realogram is not available. Click the image:../../../../images/Salesforce-Realogram-button-v.
+Available only for link:setting-up-integration-with-the-image-recognition-providers.html[providers with recognition]. If the _vision_light_ provider is selected, the realogram is not available. Click the image:Salesforce-Realogram-button-v.
 ====
 
 2.png[] button
@@ -187,7 +187,7 @@ record.
 located on the *Fact* tab.
 * Zoom a photo if needed.
 
-image:../../../../images/The-Preview-window-with-the-Realogram.png[]
+image:The-Preview-window-with-the-Realogram.png[]
 
 
 
@@ -200,11 +200,11 @@ The following tools are available:
 |*Tool* |*Example* |*Description*
 
 |Filters a|
-image:../../../../images/FBL-Realogram-Filters.png[]
+image:FBL-Realogram-Filters.png[]
 
 a|
 Click
-the image:../../../../images/Realogram-Open-Filters-.png[]
+the image:Realogram-Open-Filters-.png[]
 button and select details to display.
 
 * Recognized *Products*
@@ -222,32 +222,32 @@ probability that the product was recognized correctly.
 a realogram.
 
 |Information a|
-image:../../../../images/FBL-Realogram-Information.png[]
+image:FBL-Realogram-Information.png[]
 
 |Click
-the image:../../../../images/information_vision.png[]
+the image:information_vision.png[]
 button to review the total number of recognized products and prices.
 
 |Delete a photo a|
 —
 
 |Click
-the image:../../../../images/Delete-Realogram-Photo.png[]
+the image:Delete-Realogram-Photo.png[]
 button to remove a photo from the CT Vision server. 
 
 |Share
-|image:../../../../images/FBL-Realogram-Product-Share-v.2.png[]
+|image:FBL-Realogram-Product-Share-v.2.png[]
 a|
 Verify the shelf share.
 
 * Specify the color that highlights a shelf on a realogram in Salesforce
 and the CT Mobile app.
-image:../../../../images/Shelf-Color.png[]
+image:Shelf-Color.png[]
 * Expand the shelf to review products. Only the selected shelf will be
 highlighted on the realogram.
 
 |Product List a|
-image:../../../../images/FBL-Realogram-Product-List.png[]
+image:FBL-Realogram-Product-List.png[]
 
 |Review the list of recognized products and their number on shelves.
 |===
