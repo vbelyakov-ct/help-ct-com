@@ -22,7 +22,7 @@ link:preparing-the-salesforce-instance.html#h2__682569336[5. Assign
 Permission Set for Administrators]
 
 [[h2__200909819]]
-== == 1. Create CTM Settings Fields 
+== 1. Create CTM Settings Fields 
 
 Check that the following fields are created on the [.object]#CTM Settings# object that will be used in the CT Vision IR logic. If any of
 these fields is missing, create it manually:
@@ -56,13 +56,13 @@ Specify new values for the clm__Type\__c picklist:
 ** Text
 
 [[h2__242260294]]
-== == 4. Prepare Layout for the Vision Setup 
+== 4. Prepare Layout for the Vision Setup 
 
 Add the *Product Synchronization Criteria* field to the layout of the
 *Vision Setup* custom metadata type.
 
 [[h2__682569336]]
-== == 5. Assign Permission Set for Administrators
+== 5. Assign Permission Set for Administrators
 
 Assign the _CT Vision Administrator_ permission set to administrators.
 The permission set contains all required permissions for the correct
