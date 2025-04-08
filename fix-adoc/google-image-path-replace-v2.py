@@ -15,12 +15,12 @@ def заменить_путь_к_изображению(путь_к_файлу):
             содержимое = файл.read()
 
         # Регулярное выражение для поиска путей к изображениям
-        шаблон = r'image:\.\./Storage/[^\]]+/(?P<filename>[^/]+\.(?:jpg|jpeg|png|gif))\[.*?\]'
+        шаблон = r'image:../../../../images/\.\./Storage/[^\]]+/(?P<filename>[^/]+\.(?:jpg|jpeg|png|gif))\[.*?\]'
 
         def заменить(match):
             filename = match.group("filename")
             replaced_filename = filename.replace('%20', '-')
-            return f'image:{replaced_filename}[]'
+            return f'image:../../../../images/{replaced_filename}[]'
 
         # Выполняем замену путей к изображениям
         новое_содержимое = re.sub(шаблон, заменить, содержимое)

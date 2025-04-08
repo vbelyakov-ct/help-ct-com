@@ -199,14 +199,14 @@ def post_process_files(output_folder):
                 # 2. Fix broken admonition blocks where opening and closing are separated
                 for block_type in ['TIP', 'NOTE', 'WARNING', 'INFO']:
                     # Pattern to match a block that's cut off
-                    pattern = re.compile(f'\\[{block_type}\\]\\s*\n*====\\s*(.*?)\\s*====\\s*\n+(.*?)(?=\\[|\\d+\\.|\\*|\\+\\s+image:|$)', re.DOTALL)
+                    pattern = re.compile(f'\\[{block_type}\\]\\s*\n*====\\s*(.*?)\\s*====\\s*\n+(.*?)(?=\\[|\\d+\\.|\\*|\\+\\s+image:../../../../images/|$)', re.DOTALL)
                     
                     def fix_split_block(match):
                         inside_content = match.group(1).strip()
                         after_content = match.group(2).strip() if match.group(2) else ""
                         
                         # Check if the after content seems to be a continuation
-                        if after_content and not (re.match(r'^(\d+\.|\*|\+\s+image:)', after_content) or 
+                        if after_content and not (re.match(r'^(\d+\.|\*|\+\s+image:../../../../images/)', after_content) or 
                                                  re.search(r'\[(?:TIP|NOTE|WARNING|INFO)\]', after_content)):
                             # Check if after_content is likely a list item or a new paragraph
                             if re.match(r'^\d+\.', after_content) or after_content.startswith('*') or '+' in after_content[:10]:

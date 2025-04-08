@@ -22,7 +22,7 @@ Description]
 * link:specifying-product-objects-and-fields.html#h3_1711109790[Custom
 Filters]
 
-image:CT-Vision-General-Configuration.png[]
+image:../../../../images/CT-Vision-General-Configuration.png[]
 
 [[h2__1981203353]]
 == Authorization 
@@ -33,7 +33,7 @@ section to connect to the CT Vision server.
 
 In case of any errors, contact the Customertimes team.
 
-image:fields-mapping-on-product-and-product-image-objects-2021-09-29-2.png[]
+image:../../../../images/fields-mapping-on-product-and-product-image-objects-2021-09-29-2.png[]
 
 [[h2_1194545519]]
 == Cloud Token
@@ -64,7 +64,7 @@ Use any suitable field that contains a unique product identifier, such as EAN
 ====
 
  or CTCPG__ExternalId\__c. This field is used
-for mapping the [.object]#Product# object in Salesforce and the server. . Specify additional fields, such as product size, group, or category, if needed. . In the *Select fields for mapping* section, add the fields from step 2 from the *Available* section to the *Selected* section to send them to the server. . Click *Save*. image:General-Configuration-Product-Object.png[] . Allow Salesforce to create a field with the *Lookup* type when prompted for the specified [.object]#Product# object.
+for mapping the [.object]#Product# object in Salesforce and the server. . Specify additional fields, such as product size, group, or category, if needed. . In the *Select fields for mapping* section, add the fields from step 2 from the *Available* section to the *Selected* section to send them to the server. . Click *Save*. image:../../../../images/General-Configuration-Product-Object.png[] . Allow Salesforce to create a field with the *Lookup* type when prompted for the specified [.object]#Product# object.
 
 The setup is complete. The field with the *Lookup* type will be
 automatically created on the [.object]#Product Image# object to relate it with the specified [.object]#Product# object.
@@ -73,7 +73,7 @@ automatically created on the [.object]#Product Image# object to relate it with t
 
 Check the user profile permissions to make sure the newly created lookup
 is available for all required users:
-image:about-ct-vision-2021-12-21.png[]
+image:../../../../images/about-ct-vision-2021-12-21.png[]
 
 [[h2__2130197288]]
 == Product Image Setting 
@@ -83,7 +83,7 @@ Select fields of the [.object]#Product Image# object that store all required inf
 For more information, refer to link:adding-information-for-products-to-be-recognized.html[Adding Information for Products to be Recognized].
 ====
 
- . On the *Product Image Setting* tab, add desired fields from the *Available* to *Selected* section. image:General-Configuration-Product-Image.png[] . Click *Save*. The setup is complete. [[h2_553985630]] == [[h2_166351641]] == Feedback Loop 
+ . On the *Product Image Setting* tab, add desired fields from the *Available* to *Selected* section. image:../../../../images/General-Configuration-Product-Image.png[] . Click *Save*. The setup is complete. [[h2_553985630]] == [[h2_166351641]] == Feedback Loop 
 
 Specify the fields to display under the taken photo on the
 link:working-with-ct-vision-in-salesforce.html[Feedback Loop] page.
@@ -100,7 +100,7 @@ To set up fields to display:
 . In the *Activity Object* field, select the required object.
 . Add fields to display from the *Available* section to
 the *Selected* section. 
-image:General-Configuration-Feedback-Loop.png[]
+image:../../../../images/General-Configuration-Feedback-Loop.png[]
 . Click *Save*.
 
 The setup is complete.
@@ -117,4 +117,4 @@ Specify desired criteria to filter records for the selected
 specified by the help of the SOQL builder and has up to 5 nested levels
 of related objects.
 
-image:General-Configuration-Feedback-Loop-Custom-Filters.png[]
+image:../../../../images/General-Configuration-Feedback-Loop-Custom-Filters.png[]
