@@ -1,0 +1,145 @@
+= CT Vision Package Release Notes
+
+Here you find a feature, the link to the corresponding article, and the
+CT Vision package version since the feature is available.
+
+* link:ct-vision-package-release-notes.html#h2__441053885[CT Vision
+package v. 2.3.0.1 24 R1]
+* link:ct-vision-package-release-notes.html#h2_1034579388[CT Vision
+package v. 1.22 Autumn '21]
+* link:ct-vision-package-release-notes.html#h3__1717775038[General
+Settings]
+* link:ct-vision-package-release-notes.html#h3_1573181099[Image
+Recognition Tools]
+* link:ct-vision-package-release-notes.html#h2__2005490110[CT Vision
+package v. 1.10 Summer '21]
+* link:ct-vision-package-release-notes.html#h3_1086671697[General
+Settings]
+* link:ct-vision-package-release-notes.html#h3__1848120530[Image
+Recognition Tools]
+
+[[h2__441053885]]
+== CT Vision package v. 2.3.0.1 24 R1
+
+* The  *Feedback Loop*  tab is now
+https://help.customertimes.com/smart/project-ct-vision-lite-en/working-with-ct-vision-lite-in-salesforce-2-9/a/h2_1552458132[Photo
+Gallery] and has updated interface to be more convenient and
+user-friendly, including:
+** You can specify which  *Interface Fields*  of
+the https://help.customertimes.com/articles/ct-vision-lite-en/vision-object-field-reference[Vision
+Object]  are displayed  under photos in the *Photo Gallery*.
+** https://help.customertimes.com/smart/project-ct-vision-lite-en/working-with-ct-vision-lite-in-salesforce-2-9/a/h2__1484451922[Filtering]
+by tags, date, users, and user managers. Also, you can create your own
+custom filters in the *Filter Fields* of the
+https://help.customertimes.com/smart/project-ct-vision-lite-en/vision-object-field-reference[Vision
+object].
+** You can add up to 500 photos to archive and download it.
+* https://help.customertimes.com/smart/project-ct-vision-lite-en/working-with-ct-vision-lite-in-salesforce-2-9/a/h2_787411710[Vision
+Photo Uploader] is added, allowing you to upload photos  to Salesforce
+for desired object record. Also,  you can add  *Photo Carousel*  component
+to view photos taken for this object record and its child records.
+* Upgraded data model:
+** [.object]#CTM Settings# object is now https://help.customertimes.com/smart/project-ct-vision-lite-en/ctm-settings-field-reference-1[Vision Settings]. ** Any object, not only [.object]#Activity# objects, can now be a
+https://help.customertimes.com/smart/project-ct-vision-lite-en/vision-object-field-reference[Vision]
+object.
+** New
+https://help.customertimes.com/smart/project-ct-vision-lite-en/vision-photo-field-reference-lite[Vision
+Photo] object  added to improve performance in *Photo Gallery* and use
+standard Salesforce reports.​
+** New *Parent object* field added to
+https://help.customertimes.com/smart/project-ct-vision-lite-en/vision-object-field-reference[Vision]
+object, allowing to view photos from related records.
+* New  photo tags data model:
+** Instead of using the _Vision Tag_ record type in
+the  [.apiobject]#clm_CTMSettingObject__c# object, now photo tags using their own [.apiobject]#link:tag-field-reference.html[ctv_Tag__c]#
+object  on the link:adding-photo-tags.html[Tags] tab.
+** link:adding-photo-tags.html#h2__117227442[Granular access management]
+to each photo tag.
+
+[[h2_1034579388]]
+== CT Vision package v. 1.22 Autumn '21 
+
+[[h3__1717775038]]
+==== General Settings 
+
+* Use  link:administrator-guide.html[the preconfigured permission
+set]  for administrators to provide access to work with CT Vision.
+* UI improvements for the  *CT Vision Setup*  tab.
+* Set up additional CT Vision functionality by creating  *CTM
+Settings*  records of the following record type:
+** https://help.customertimes.com/smart/project-ct-vision-en/vision-tag-field-refernce[Vision
+Tag]
+** link:vision-visit-field-reference.html[Vision Visit]
+* Improvements for provider support.
+** The  *Vision Light*  provider is supported. Use it when there is no
+need for image recognition functionality.
+** link:setting-up-integration-with-the-image-recognition-providers.html#h2__725014364[Assign
+the group]  of  _Users_,  _Accounts_, or any specified object to the
+selected provider.
+* link:setting-up-integration-with-the-image-recognition-providers.html#h2__445124742[New
+setting to customize the fields]  to display in the  *Shelf Product List*.​
+* Use the  *Vision Setup*  custom metadata
+type  link:setting-up-integration-with-the-image-recognition-providers.html#h2_1759621515[to
+filter products for sending images]  of the products that met the
+criteria to the CT Vision server.
+* Preparing for the CG Cloud support.
+** https://help.customertimes.com/smart/project-ct-vision-en/vision-tag-field-refernce[The
+new CTM Settings record type]  will be used to specify
+the  [.object]#Account# object. ** Ability to attach photos to the _Activity_ records, for which no link:configuring-ct-mobile-for-work-with-ct-vision.html#h2_395000743[Mobile
+ID is specified].
+** The CG Cloud provider is added to the list of available providers.​
+
+
+
+[[h3_1573181099]]
+==== Image Recognition Tools 
+
+Improvements for the  *Feedback Loop*  functionality.
+
+* Review recognized products on the shelves using
+the  link:working-with-ct-vision-in-salesforce.html#h3_1017582017[Shelf
+Product List]  functionality.
+* Use any custom  [.object]#Activity# object as link:working-with-ct-vision-in-salesforce.html#h3_717556108[the
+filter criteria].
+*   Sort taken photos
+by  link:working-with-ct-vision-in-salesforce.html#h3_491461789[adding
+the photo tags]  to them.
+
+[[h2__2005490110]]
+== CT Vision package v. 1.10 Summer '21 
+
+[[h3_1086671697]]
+==== General Settings 
+
+* link:specifying-product-objects-and-fields.html[Specify product
+settings]  and  link:setting-up-integration-with-the-image-recognition-providers.html[configure
+available providers]  on the  *CT Vision Setup*  tab.
+* Set up CT Vision by creating  *CTM Settings*  records of the following
+record types:
+** link:vision-shelf-field-reference.html[Vision Shelf]
+** link:vision-kpi-field-reference.html[Vision KPI]
+** link:vision-hint-field-reference.html[Vision Hint]
+** link:vision-info-field-reference.html[Vision Info]
+* Use the  link:product-image-field-reference.html[Product Image]  object
+to store images and previews of the products that should be recognized
+on shelves.
+* For future purposes, the  link:vision-setup-field-reference.html[Vision
+Setup]  custom metadata type is added to have the ability  to filter
+product images that should be sent  from the CT Vision server to the
+Image Recognition provider.
+* The standard  *Salesforce Product*  is supported.
+* The CT Vision server creates previews for  _Product_  records to
+display  link:working-with-ct-vision-in-the-ct-mobile-app.html#h3_2072273480[in
+the clickable realogram].
+
+[[h3__1848120530]]
+==== Image Recognition Tools 
+
+* The  *link:working-with-ct-vision-in-the-ct-mobile-app.html[Feedback
+Loop]*  tab helps you manage taken photos and verify recognition results.
+** Select the desired
+photos  link:working-with-ct-vision-in-salesforce.html#h2_1552458132[to
+publish in the Chatter]  or the appropriate Chatter group.
+** link:working-with-ct-vision-in-salesforce.html#h3_929593309[Ability
+to sort photos]  by selecting multiple  _Accounts_  and  _Users_  as
+criteria.

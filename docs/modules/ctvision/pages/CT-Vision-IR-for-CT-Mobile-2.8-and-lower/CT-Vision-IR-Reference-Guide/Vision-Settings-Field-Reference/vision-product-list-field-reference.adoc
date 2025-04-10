@@ -1,0 +1,59 @@
+= Vision Product List Field Reference
+
+Available since CT Mobile 2.6.
+
+The _Vision Product List_ record type is responsible for displaying
+additional
+fields  link:setting-up-integration-with-the-image-recognition-providers.html#h2__445124742[for
+the selected provider]  in the *Shelf Product List* in
+your  link:working-with-ct-vision-in-the-ct-mobile-app.html#h3_1017582017[CT
+Mobile app]  and in
+link:corrections-in-shelf-product-list.html#h3_1017582017[the
+corrections window] in  Salesforce.
+
+* One record contains settings for one additional field.
+* The maximum number of displayed fields is 5.
+* By default, the *Product Info*  (with the product name)
+and  *Facing*  (with product quantity) fields are displayed.
+* For CT Mobile 2.5 users and along with the default fields, the
+following fields are set and cannot be changed: *Product Info*,
+*Facing*, *Shelf Share*, *Length*.
+
+'''''
+
+Record Type API Name:  [.apiobject]#VisionProductList# ''''' The following fields must be created on the [.object]#Vision Settings#  object for this record type:
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Editable |[.apiobject]#IsEditable__c# |Checkbox |If active, the field is available for editing in the CT Mobile Product List. |Field Key |[.apiobject]#FieldKey__c# |Text(255) |Specify the key from
+the JSON that is received in the provider's response to display the key
+value per each product in this column in CT Mobile.
+
+|Label |clm__Label__c |Text(255) |Stores the label for the field
+to display instead of the key from JSON.
+
+|Order |clm__Order__c |Number(18,0) a|
+Defines the order number of the column in the *Shelf Product
+List*  table.
+
+* Fields will be displayed to the right side of the fields by default.
+* The maximum number of custom fields is 3.
+* If more than 3 custom fields are set, then only 3 of them will be
+displayed according to their order.
+
+|Provider |Provider__c |Text(255) |Stores the provider name for which
+this setting should be applied.
+
+|Type |clm__Type__c |Picklist a|
+Defines the type of field to display.
+
+Values must be manually created by the administrator.
+
+* Checkbox
+* Double(16,2)
+* Number(18,0)
+* Text
+
+|===

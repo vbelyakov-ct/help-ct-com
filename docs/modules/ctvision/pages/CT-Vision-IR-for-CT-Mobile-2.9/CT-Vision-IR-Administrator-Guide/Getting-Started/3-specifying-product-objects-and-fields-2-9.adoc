@@ -31,12 +31,12 @@ image:fields-mapping-on-product-and-product-image-objects-2021-09-29-2.png[]
 To specify the corresponding [.object]#Product# object:
 
 . On the *Product Object Setting* tab, specify the required fields:
-* In the **Product Object **picklist, select the desired [.object]#Product#__ __object.
-* In the** Product Key Code** picklist, select the desired field.
+* In the **Product Object **picklist, select the desired [.object]#Product# object.
+* In the **Product Key Code** picklist, select the desired field.
 +
 [TIP]
 ====
-Use any suitable field that contains a unique product identifier, such as EAN or CTCPG\__ExternalId__c. This field is used for mapping the [.object]#Product# object in Salesforce and the server.
+Use any suitable field that contains a unique product identifier, such as EAN or [.apiobject]#CTCPG__ExternalId__c#. This field is used for mapping the [.object]#Product# object in Salesforce and the server.
 ====
 +
 . Click *Save*.
