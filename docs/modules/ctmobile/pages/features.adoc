@@ -1,0 +1,20 @@
+= Возможности CT Mobile
+:navtitle: Возможности
+
+== Общие возможности
+Эта часть видна всем пользователям.
+
+ifdef::platform-ios[]
+== Возможности iOS
+Эта часть видна только пользователям iOS.
+endif::[]
+
+ifdef::platform-android[]
+== Возможности Android
+Эта часть видна только пользователям Android.
+endif::[]
+
+ifndef::platform-android[]
+== Для всех, кроме Android
+Эта часть видна пользователям iOS и Windows, но не Android.
+endif::[]

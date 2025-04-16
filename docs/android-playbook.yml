@@ -1,0 +1,11 @@
+site:
+  title: CT Mobile для Android
+content:
+  sources:
+    - url: .
+      start_path: docs
+asciidoc:
+  attributes:
+    platform-android: ''
+output:
+  dir: ./build/android
