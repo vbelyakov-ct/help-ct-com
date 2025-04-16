@@ -17,7 +17,35 @@ jobs:
       - name: Install Antora
         run: npm i antora @asciidoctor/tabs
 
-      # Создаем временные плейбуки
+      # Определяем расположение ui-bundle.zip
+      - name: Locate UI Bundle
+        run: |
+          # Ищем упоминание ui-bundle в основном плейбуке
+          UI_BUNDLE_PATH=$(grep -o "url:.*ui-bundle.zip" docs/antora-playbook.yml | sed 's/url: //')
+          echo "UI Bundle path from playbook: $UI_BUNDLE_PATH"
+          
+          # Проверяем существование файла
+          if [[ "$UI_BUNDLE_PATH" == ./* ]]; then
+            # Относительный путь
+            if [ -f "docs/$UI_BUNDLE_PATH" ]; then
+              echo "UI bundle found at docs/$UI_BUNDLE_PATH"
+              echo "UI_BUNDLE_PATH=docs/$UI_BUNDLE_PATH" >> $GITHUB_ENV
+            elif [ -f "$UI_BUNDLE_PATH" ]; then
+              echo "UI bundle found at $UI_BUNDLE_PATH"
+              echo "UI_BUNDLE_PATH=$UI_BUNDLE_PATH" >> $GITHUB_ENV
+            else
+              echo "UI bundle not found at expected locations!"
+              find . -name "ui-bundle.zip" -type f
+              # Устанавливаем значение по умолчанию
+              echo "UI_BUNDLE_PATH=docs/ui-bundle.zip" >> $GITHUB_ENV
+            fi
+          else
+            # Абсолютный URL
+            echo "UI bundle is an external URL: $UI_BUNDLE_PATH"
+            echo "UI_BUNDLE_PATH=$UI_BUNDLE_PATH" >> $GITHUB_ENV
+          fi
+
+      # Создаем временные плейбуки с корректным путем к UI bundle
       - name: Create Platform Playbooks
         run: |
           # iOS
@@ -29,7 +57,8 @@ jobs:
           echo "    start_path: docs" >> ios-playbook.yml
           echo "ui:" >> ios-playbook.yml
           echo "  bundle:" >> ios-playbook.yml
-          echo "    url: ./ui-bundle.zip" >> ios-playbook.yml
+          echo "    url: ${{ env.UI_BUNDLE_PATH }}" >> ios-playbook.yml
+          echo "    snapshot: false" >> ios-playbook.yml
           echo "asciidoc:" >> ios-playbook.yml
           echo "  extensions:" >> ios-playbook.yml
           echo "    - '@asciidoctor/tabs'" >> ios-playbook.yml
@@ -38,30 +67,255 @@ jobs:
           echo "output:" >> ios-playbook.yml
           echo "  dir: ./build/ios" >> ios-playbook.yml
           
-          # Аналогично для Android и Windows...
+          # Android
+          echo "site:" > android-playbook.yml
+          echo "  title: CT Mobile для Android" >> android-playbook.yml
+          echo "content:" >> android-playbook.yml
+          echo "  sources:" >> android-playbook.yml
+          echo "  - url: ." >> android-playbook.yml
+          echo "    start_path: docs" >> android-playbook.yml
+          echo "ui:" >> android-playbook.yml
+          echo "  bundle:" >> android-playbook.yml
+          echo "    url: ${{ env.UI_BUNDLE_PATH }}" >> android-playbook.yml
+          echo "    snapshot: false" >> android-playbook.yml
+          echo "asciidoc:" >> android-playbook.yml
+          echo "  extensions:" >> android-playbook.yml
+          echo "    - '@asciidoctor/tabs'" >> android-playbook.yml
+          echo "  attributes:" >> android-playbook.yml
+          echo "    platform-android: ''" >> android-playbook.yml
+          echo "output:" >> android-playbook.yml
+          echo "  dir: ./build/android" >> android-playbook.yml
+          
+          # Windows
+          echo "site:" > windows-playbook.yml
+          echo "  title: CT Mobile для Windows" >> windows-playbook.yml
+          echo "content:" >> windows-playbook.yml
+          echo "  sources:" >> windows-playbook.yml
+          echo "  - url: ." >> windows-playbook.yml
+          echo "    start_path: docs" >> windows-playbook.yml
+          echo "ui:" >> windows-playbook.yml
+          echo "  bundle:" >> windows-playbook.yml
+          echo "    url: ${{ env.UI_BUNDLE_PATH }}" >> windows-playbook.yml
+          echo "    snapshot: false" >> windows-playbook.yml
+          echo "asciidoc:" >> windows-playbook.yml
+          echo "  extensions:" >> windows-playbook.yml
+          echo "    - '@asciidoctor/tabs'" >> windows-playbook.yml
+          echo "  attributes:" >> windows-playbook.yml
+          echo "    platform-windows: ''" >> windows-playbook.yml
+          echo "output:" >> windows-playbook.yml
+          echo "  dir: ./build/windows" >> windows-playbook.yml
 
       # Генерируем все версии
       - name: Generate All Versions
         run: |
-          npx antora --stacktrace ios-playbook.yml
-          npx antora --stacktrace android-playbook.yml
-          npx antora --stacktrace windows-playbook.yml
+          # Сначала генерируем основную версию документации
+          npx antora --stacktrace docs/antora-playbook.yml
+          
+          mkdir -p build
+          
+          # Затем генерируем платформенные версии
+          echo "Generating iOS version..."
+          npx antora --stacktrace ios-playbook.yml || echo "iOS generation failed but continuing"
+          
+          echo "Generating Android version..."
+          npx antora --stacktrace android-playbook.yml || echo "Android generation failed but continuing"
+          
+          echo "Generating Windows version..."
+          npx antora --stacktrace windows-playbook.yml || echo "Windows generation failed but continuing"
+          
+          # Копируем основную документацию в итоговую директорию
+          echo "Copying main documentation to build directory..."
+          cp -r docs/build/site/* build/ || echo "Main site not found, continuing..."
           
           # Создаем страницу-переключатель
           mkdir -p build/ctmobile
           echo '<!DOCTYPE html>' > build/ctmobile/index.html
-          echo '<html><head><title>CT Mobile</title></head>' >> build/ctmobile/index.html
+          echo '<html><head><title>CT Mobile</title>' >> build/ctmobile/index.html
+          echo '<style>' >> build/ctmobile/index.html
+          echo 'body { font-family: sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }' >> build/ctmobile/index.html
+          echo 'h1 { color: #0366d6; }' >> build/ctmobile/index.html
+          echo '.platform-btn { display: inline-block; margin: 10px; padding: 10px 20px; background-color: #0366d6; color: white; text-decoration: none; border-radius: 4px; }' >> build/ctmobile/index.html
+          echo '.platform-btn:hover { background-color: #0256b4; }' >> build/ctmobile/index.html
+          echo '</style></head>' >> build/ctmobile/index.html
           echo '<body>' >> build/ctmobile/index.html
-          echo '<h1>Выберите платформу</h1>' >> build/ctmobile/index.html
-          echo '<ul>' >> build/ctmobile/index.html
-          echo '<li><a href="../ios/">iOS</a></li>' >> build/ctmobile/index.html
-          echo '<li><a href="../android/">Android</a></li>' >> build/ctmobile/index.html
-          echo '<li><a href="../windows/">Windows</a></li>' >> build/ctmobile/index.html
-          echo '</ul></body></html>' >> build/ctmobile/index.html
+          echo '<h1>Выберите платформу CT Mobile</h1>' >> build/ctmobile/index.html
+          echo '<div>' >> build/ctmobile/index.html
+          echo '<a href="../ios/ctmobile/1.0/" class="platform-btn">iOS</a>' >> build/ctmobile/index.html
+          echo '<a href="../android/ctmobile/1.0/" class="platform-btn">Android</a>' >> build/ctmobile/index.html
+          echo '<a href="../windows/ctmobile/1.0/" class="platform-btn">Windows</a>' >> build/ctmobile/index.html
+          echo '</div>' >> build/ctmobile/index.html
+          echo '<p><a href="../">&larr; Вернуться на главную</a></p>' >> build/ctmobile/index.html
+          echo '</body></html>' >> build/ctmobile/index.html
+          
+          # Вывод информации о структуре сгенерированных файлов
+          echo "Generated structure:"
+          find build -type d | sort
 
-      # Публикация
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      # Публикация на GitHub Pages
+      - name: Upload Artifacts
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+          path: build
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4name: Publish Documentation
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Install Antora
+        run: npm i antora @asciidoctor/tabs
+
+      # Определяем расположение ui-bundle.zip
+      - name: Locate UI Bundle
+        run: |
+          # Ищем упоминание ui-bundle в основном плейбуке
+          UI_BUNDLE_PATH=$(grep -o "url:.*ui-bundle.zip" docs/antora-playbook.yml | sed 's/url: //')
+          echo "UI Bundle path from playbook: $UI_BUNDLE_PATH"
+          
+          # Проверяем существование файла
+          if [[ "$UI_BUNDLE_PATH" == ./* ]]; then
+            # Относительный путь
+            if [ -f "docs/$UI_BUNDLE_PATH" ]; then
+              echo "UI bundle found at docs/$UI_BUNDLE_PATH"
+              echo "UI_BUNDLE_PATH=docs/$UI_BUNDLE_PATH" >> $GITHUB_ENV
+            elif [ -f "$UI_BUNDLE_PATH" ]; then
+              echo "UI bundle found at $UI_BUNDLE_PATH"
+              echo "UI_BUNDLE_PATH=$UI_BUNDLE_PATH" >> $GITHUB_ENV
+            else
+              echo "UI bundle not found at expected locations!"
+              find . -name "ui-bundle.zip" -type f
+              # Устанавливаем значение по умолчанию
+              echo "UI_BUNDLE_PATH=docs/ui-bundle.zip" >> $GITHUB_ENV
+            fi
+          else
+            # Абсолютный URL
+            echo "UI bundle is an external URL: $UI_BUNDLE_PATH"
+            echo "UI_BUNDLE_PATH=$UI_BUNDLE_PATH" >> $GITHUB_ENV
+          fi
+
+      # Создаем временные плейбуки с корректным путем к UI bundle
+      - name: Create Platform Playbooks
+        run: |
+          # iOS
+          echo "site:" > ios-playbook.yml
+          echo "  title: CT Mobile для iOS" >> ios-playbook.yml
+          echo "content:" >> ios-playbook.yml
+          echo "  sources:" >> ios-playbook.yml
+          echo "  - url: ." >> ios-playbook.yml
+          echo "    start_path: docs" >> ios-playbook.yml
+          echo "ui:" >> ios-playbook.yml
+          echo "  bundle:" >> ios-playbook.yml
+          echo "    url: ${{ env.UI_BUNDLE_PATH }}" >> ios-playbook.yml
+          echo "    snapshot: false" >> ios-playbook.yml
+          echo "asciidoc:" >> ios-playbook.yml
+          echo "  extensions:" >> ios-playbook.yml
+          echo "    - '@asciidoctor/tabs'" >> ios-playbook.yml
+          echo "  attributes:" >> ios-playbook.yml
+          echo "    platform-ios: ''" >> ios-playbook.yml
+          echo "output:" >> ios-playbook.yml
+          echo "  dir: ./build/ios" >> ios-playbook.yml
+          
+          # Android
+          echo "site:" > android-playbook.yml
+          echo "  title: CT Mobile для Android" >> android-playbook.yml
+          echo "content:" >> android-playbook.yml
+          echo "  sources:" >> android-playbook.yml
+          echo "  - url: ." >> android-playbook.yml
+          echo "    start_path: docs" >> android-playbook.yml
+          echo "ui:" >> android-playbook.yml
+          echo "  bundle:" >> android-playbook.yml
+          echo "    url: ${{ env.UI_BUNDLE_PATH }}" >> android-playbook.yml
+          echo "    snapshot: false" >> android-playbook.yml
+          echo "asciidoc:" >> android-playbook.yml
+          echo "  extensions:" >> android-playbook.yml
+          echo "    - '@asciidoctor/tabs'" >> android-playbook.yml
+          echo "  attributes:" >> android-playbook.yml
+          echo "    platform-android: ''" >> android-playbook.yml
+          echo "output:" >> android-playbook.yml
+          echo "  dir: ./build/android" >> android-playbook.yml
+          
+          # Windows
+          echo "site:" > windows-playbook.yml
+          echo "  title: CT Mobile для Windows" >> windows-playbook.yml
+          echo "content:" >> windows-playbook.yml
+          echo "  sources:" >> windows-playbook.yml
+          echo "  - url: ." >> windows-playbook.yml
+          echo "    start_path: docs" >> windows-playbook.yml
+          echo "ui:" >> windows-playbook.yml
+          echo "  bundle:" >> windows-playbook.yml
+          echo "    url: ${{ env.UI_BUNDLE_PATH }}" >> windows-playbook.yml
+          echo "    snapshot: false" >> windows-playbook.yml
+          echo "asciidoc:" >> windows-playbook.yml
+          echo "  extensions:" >> windows-playbook.yml
+          echo "    - '@asciidoctor/tabs'" >> windows-playbook.yml
+          echo "  attributes:" >> windows-playbook.yml
+          echo "    platform-windows: ''" >> windows-playbook.yml
+          echo "output:" >> windows-playbook.yml
+          echo "  dir: ./build/windows" >> windows-playbook.yml
+
+      # Генерируем все версии
+      - name: Generate All Versions
+        run: |
+          # Сначала генерируем основную версию документации
+          npx antora --stacktrace docs/antora-playbook.yml
+          
+          mkdir -p build
+          
+          # Затем генерируем платформенные версии
+          echo "Generating iOS version..."
+          npx antora --stacktrace ios-playbook.yml || echo "iOS generation failed but continuing"
+          
+          echo "Generating Android version..."
+          npx antora --stacktrace android-playbook.yml || echo "Android generation failed but continuing"
+          
+          echo "Generating Windows version..."
+          npx antora --stacktrace windows-playbook.yml || echo "Windows generation failed but continuing"
+          
+          # Копируем основную документацию в итоговую директорию
+          echo "Copying main documentation to build directory..."
+          cp -r docs/build/site/* build/ || echo "Main site not found, continuing..."
+          
+          # Создаем страницу-переключатель
+          mkdir -p build/ctmobile
+          echo '<!DOCTYPE html>' > build/ctmobile/index.html
+          echo '<html><head><title>CT Mobile</title>' >> build/ctmobile/index.html
+          echo '<style>' >> build/ctmobile/index.html
+          echo 'body { font-family: sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }' >> build/ctmobile/index.html
+          echo 'h1 { color: #0366d6; }' >> build/ctmobile/index.html
+          echo '.platform-btn { display: inline-block; margin: 10px; padding: 10px 20px; background-color: #0366d6; color: white; text-decoration: none; border-radius: 4px; }' >> build/ctmobile/index.html
+          echo '.platform-btn:hover { background-color: #0256b4; }' >> build/ctmobile/index.html
+          echo '</style></head>' >> build/ctmobile/index.html
+          echo '<body>' >> build/ctmobile/index.html
+          echo '<h1>Выберите платформу CT Mobile</h1>' >> build/ctmobile/index.html
+          echo '<div>' >> build/ctmobile/index.html
+          echo '<a href="../ios/ctmobile/1.0/" class="platform-btn">iOS</a>' >> build/ctmobile/index.html
+          echo '<a href="../android/ctmobile/1.0/" class="platform-btn">Android</a>' >> build/ctmobile/index.html
+          echo '<a href="../windows/ctmobile/1.0/" class="platform-btn">Windows</a>' >> build/ctmobile/index.html
+          echo '</div>' >> build/ctmobile/index.html
+          echo '<p><a href="../">&larr; Вернуться на главную</a></p>' >> build/ctmobile/index.html
+          echo '</body></html>' >> build/ctmobile/index.html
+          
+          # Вывод информации о структуре сгенерированных файлов
+          echo "Generated structure:"
+          find build -type d | sort
+
+      # Публикация на GitHub Pages
+      - name: Upload Artifacts
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: build
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
