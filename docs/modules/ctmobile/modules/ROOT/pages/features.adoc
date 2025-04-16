@@ -1,20 +1,50 @@
 = Возможности CT Mobile
 :navtitle: Возможности
 
-== Общие возможности
-Общие функции для всех платформ...
+// Отладочная информация
+[.debuginfo]
+--
+*Активные атрибуты:*
 
 ifdef::platform-ios[]
-== Особенности iOS-версии
-Функции только для iOS...
+* platform-ios: АКТИВЕН
+endif::[]
+ifndef::platform-ios[]
+* platform-ios: НЕ АКТИВЕН
 endif::[]
 
 ifdef::platform-android[]
-== Особенности Android-версии
-Функции только для Android...
+* platform-android: АКТИВЕН
+endif::[]
+ifndef::platform-android[]
+* platform-android: НЕ АКТИВЕН
 endif::[]
 
 ifdef::platform-windows[]
-== Особенности Windows-версии
-Функции только для Windows...
+* platform-windows: АКТИВЕН
+endif::[]
+ifndef::platform-windows[]
+* platform-windows: НЕ АКТИВЕН
+endif::[]
+--
+
+// Основной контент
+...
+
+// Вариант 1: с прямым указанием атрибута
+ifeval::["{platform}" == "ios"]
+== iOS Content
+iOS-specific content here.
+endif::[]
+
+// Вариант 2: с проверкой присутствия атрибута
+ifdef::show-ios-content[]
+== iOS Content (Alternative)
+This should show only for iOS.
+endif::[]
+
+// Вариант 3: с отрицанием
+ifndef::hide-ios-content[]
+== iOS Content (Another Alternative)
+This should show for iOS.
 endif::[]

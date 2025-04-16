@@ -19,11 +19,11 @@ asciidoc:
   extensions:
     - '@asciidoctor/tabs'
   attributes:
-    platform: ios
+    platform: 'ios'
     platform-ios: ''
     # Отключаем атрибуты для других платформ
-    platform-android: null
-    platform-windows: null
+    platform-android: '!'
+    platform-windows: '!'
     page-product-name: 'CT Mobile для iOS'
 
 output:
