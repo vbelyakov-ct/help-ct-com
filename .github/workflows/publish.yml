@@ -29,54 +29,104 @@ jobs:
       - name: Install Antora
         run: npm i antora @asciidoctor/tabs
 
+      # Проверяем текущую структуру
+      - name: Check Current Structure
+        run: |
+          echo "Current repository structure:"
+          find docs -type f -name "antora*.yml" -exec cat {} \;
+          
+          if [ -d "docs/modules/ctmobile" ]; then
+            echo "Content of ctmobile module:"
+            find docs/modules/ctmobile -type f | sort
+          
+            if [ -f "docs/modules/ctmobile/antora.yml" ]; then
+              echo "Current antora.yml content:"
+              cat docs/modules/ctmobile/antora.yml
+            fi
+          fi
+
+      # Модифицируем плейбук для добавления атрибутов платформы
+      - name: Create Platform-Specific Playbooks
+        run: |
+          # Сохраняем оригинальный плейбук
+          cp docs/antora-playbook.yml docs/antora-playbook-orig.yml
+          
+          # iOS плейбук
+          cat docs/antora-playbook-orig.yml > docs/antora-playbook-ios.yml
+          echo "asciidoc:" >> docs/antora-playbook-ios.yml
+          echo "  attributes:" >> docs/antora-playbook-ios.yml
+          echo "    platform-ios: ''" >> docs/antora-playbook-ios.yml
+          
+          # Android плейбук
+          cat docs/antora-playbook-orig.yml > docs/antora-playbook-android.yml
+          echo "asciidoc:" >> docs/antora-playbook-android.yml
+          echo "  attributes:" >> docs/antora-playbook-android.yml
+          echo "    platform-android: ''" >> docs/antora-playbook-android.yml
+          
+          # Windows плейбук
+          cat docs/antora-playbook-orig.yml > docs/antora-playbook-windows.yml
+          echo "asciidoc:" >> docs/antora-playbook-windows.yml
+          echo "  attributes:" >> docs/antora-playbook-windows.yml
+          echo "    platform-windows: ''" >> docs/antora-playbook-windows.yml
+          
+          echo "Created platform-specific playbooks:"
+          ls -la docs/antora-playbook*.yml
+
       # Генерируем все версии
       - name: Generate Documentation
         run: |
           # Сохраняем оригинальный antora.yml
           if [ -f "docs/modules/ctmobile/antora.yml" ]; then
             cp docs/modules/ctmobile/antora.yml docs/modules/ctmobile/antora.yml.orig
+          else
+            echo "WARNING: ctmobile/antora.yml not found!"
+            mkdir -p docs/modules/ctmobile
+            echo "name: ctmobile" > docs/modules/ctmobile/antora.yml
+            echo "title: CT Mobile" >> docs/modules/ctmobile/antora.yml
+            echo "version: '1.0'" >> docs/modules/ctmobile/antora.yml
           fi
           
           # iOS версия
-          cat > docs/modules/ctmobile/antora.yml << EOF
-          name: ctmobile
-          title: CT Mobile for iOS
-          version: '1.0-ios'
-          nav:
-          - modules/ROOT/nav.adoc
-          EOF
-
-          # Генерируем iOS версию
-          npx antora --stacktrace docs/antora-playbook.yml
+          echo "Generating iOS version..."
+          echo "name: ctmobile" > docs/modules/ctmobile/antora.yml
+          echo "title: CT Mobile for iOS" >> docs/modules/ctmobile/antora.yml
+          echo "version: '1.0-ios'" >> docs/modules/ctmobile/antora.yml
+          echo "nav:" >> docs/modules/ctmobile/antora.yml
+          echo "- modules/ROOT/nav.adoc" >> docs/modules/ctmobile/antora.yml
+          
+          cat docs/modules/ctmobile/antora.yml
+          npx antora --stacktrace docs/antora-playbook-ios.yml
           
           # Android версия
-          cat > docs/modules/ctmobile/antora.yml << EOF
-          name: ctmobile
-          title: CT Mobile for Android
-          version: '1.0-android'
-          nav:
-          - modules/ROOT/nav.adoc
-          EOF
-
-          # Генерируем Android версию
-          npx antora --stacktrace docs/antora-playbook.yml
+          echo "Generating Android version..."
+          echo "name: ctmobile" > docs/modules/ctmobile/antora.yml
+          echo "title: CT Mobile for Android" >> docs/modules/ctmobile/antora.yml
+          echo "version: '1.0-android'" >> docs/modules/ctmobile/antora.yml
+          echo "nav:" >> docs/modules/ctmobile/antora.yml
+          echo "- modules/ROOT/nav.adoc" >> docs/modules/ctmobile/antora.yml
+          
+          cat docs/modules/ctmobile/antora.yml
+          npx antora --stacktrace docs/antora-playbook-android.yml
           
           # Windows версия
-          cat > docs/modules/ctmobile/antora.yml << EOF
-          name: ctmobile
-          title: CT Mobile for Windows
-          version: '1.0-windows'
-          nav:
-          - modules/ROOT/nav.adoc
-          EOF
-
-          # Генерируем Windows версию
-          npx antora --stacktrace docs/antora-playbook.yml
+          echo "Generating Windows version..."
+          echo "name: ctmobile" > docs/modules/ctmobile/antora.yml
+          echo "title: CT Mobile for Windows" >> docs/modules/ctmobile/antora.yml
+          echo "version: '1.0-windows'" >> docs/modules/ctmobile/antora.yml
+          echo "nav:" >> docs/modules/ctmobile/antora.yml
+          echo "- modules/ROOT/nav.adoc" >> docs/modules/ctmobile/antora.yml
+          
+          cat docs/modules/ctmobile/antora.yml
+          npx antora --stacktrace docs/antora-playbook-windows.yml
           
           # Восстанавливаем оригинальный antora.yml
           if [ -f "docs/modules/ctmobile/antora.yml.orig" ]; then
             mv docs/modules/ctmobile/antora.yml.orig docs/modules/ctmobile/antora.yml
           fi
+          
+          # Проверяем сгенерированные файлы
+          echo "Generated files:"
+          find docs/build/site -type d | grep -E "ctmobile/(1\.0|1\.0-ios|1\.0-android|1\.0-windows)" || echo "No ctmobile versions found!"
 
       # Публикация на GitHub Pages
       - name: Upload Artifacts
