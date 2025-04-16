@@ -43,19 +43,13 @@ jobs:
       - name: Generate Main Site
         run: npx antora --stacktrace docs/antora-playbook.yml
 
-      # Извлекаем URL репозитория и конфигурацию
+      # Извлекаем URL репозитория
       - name: Extract Repository URL
         run: |
           # Получаем URL репозитория из основного плейбука
           REPO_URL=$(grep -o "url:.*github.com.*git" docs/antora-playbook.yml | head -1 | sed 's/url: //')
           echo "Repository URL: $REPO_URL"
           echo "REPO_URL=$REPO_URL" >> $GITHUB_ENV
-          
-          # Получаем другие параметры для копирования
-          echo "Extracting UI bundle path..."
-          UI_BUNDLE=$(grep -o "url:.*ui-bundle.zip" docs/antora-playbook.yml | sed 's/url: //')
-          echo "UI Bundle: $UI_BUNDLE"
-          echo "UI_BUNDLE=$UI_BUNDLE" >> $GITHUB_ENV
 
       # Создаем плейбуки для каждой платформы с правильным URL репозитория
       - name: Create Platform-Specific Playbooks
@@ -72,7 +66,7 @@ jobs:
           echo "      - docs" >> docs/antora-playbook-ios.yml
           echo "ui:" >> docs/antora-playbook-ios.yml
           echo "  bundle:" >> docs/antora-playbook-ios.yml
-          echo "    url: ${{ env.UI_BUNDLE }}" >> docs/antora-playbook-ios.yml
+          echo "    url: ./ui-bundle.zip" >> docs/antora-playbook-ios.yml
           echo "    snapshot: false" >> docs/antora-playbook-ios.yml
           echo "asciidoc:" >> docs/antora-playbook-ios.yml
           echo "  extensions:" >> docs/antora-playbook-ios.yml
@@ -96,7 +90,7 @@ jobs:
           echo "      - docs" >> docs/antora-playbook-android.yml
           echo "ui:" >> docs/antora-playbook-android.yml
           echo "  bundle:" >> docs/antora-playbook-android.yml
-          echo "    url: ${{ env.UI_BUNDLE }}" >> docs/antora-playbook-android.yml
+          echo "    url: ./ui-bundle.zip" >> docs/antora-playbook-android.yml
           echo "    snapshot: false" >> docs/antora-playbook-android.yml
           echo "asciidoc:" >> docs/antora-playbook-android.yml
           echo "  extensions:" >> docs/antora-playbook-android.yml
@@ -120,7 +114,7 @@ jobs:
           echo "      - docs" >> docs/antora-playbook-windows.yml
           echo "ui:" >> docs/antora-playbook-windows.yml
           echo "  bundle:" >> docs/antora-playbook-windows.yml
-          echo "    url: ${{ env.UI_BUNDLE }}" >> docs/antora-playbook-windows.yml
+          echo "    url: ./ui-bundle.zip" >> docs/antora-playbook-windows.yml
           echo "    snapshot: false" >> docs/antora-playbook-windows.yml
           echo "asciidoc:" >> docs/antora-playbook-windows.yml
           echo "  extensions:" >> docs/antora-playbook-windows.yml
@@ -131,16 +125,6 @@ jobs:
           echo "    platform-windows: ''" >> docs/antora-playbook-windows.yml
           echo "output:" >> docs/antora-playbook-windows.yml
           echo "  dir: docs/build/site" >> docs/antora-playbook-windows.yml
-          
-          # Выводим содержимое файлов для проверки
-          echo "iOS playbook content:"
-          cat docs/antora-playbook-ios.yml
-          
-          echo "Android playbook content:"
-          cat docs/antora-playbook-android.yml
-          
-          echo "Windows playbook content:"
-          cat docs/antora-playbook-windows.yml
 
       # Подготавливаем модуль ctmobile к сборке
       - name: Prepare ctmobile module
