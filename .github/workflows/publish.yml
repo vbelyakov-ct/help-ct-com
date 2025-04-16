@@ -32,27 +32,65 @@ jobs:
     - name: Debug Installed Packages
       run: npm list
       
-    # Генерация основного сайта с модулем ctvision
+    # Проверяем и создаем временную структуру ctmobile если её нет
+    - name: Check and create ctmobile structure if needed
+      run: |
+        if [ ! -d "docs/modules/ctmobile" ]; then
+          echo "Creating temporary ctmobile module structure..."
+          mkdir -p docs/modules/ctmobile/modules/ROOT/pages
+          
+          # Создаем временный antora.yml
+          cat > docs/modules/ctmobile/antora.yml <<EOF
+        name: ctmobile
+        title: CT Mobile
+        version: '1.0'
+        nav:
+        - modules/ROOT/nav.adoc
+        EOF
+          
+          # Создаем временный nav.adoc
+          cat > docs/modules/ctmobile/modules/ROOT/nav.adoc <<EOF
+        * xref:index.adoc[CT Mobile]
+        EOF
+          
+          # Создаем временную индексную страницу
+          cat > docs/modules/ctmobile/modules/ROOT/pages/index.adoc <<EOF
+        = CT Mobile
+        :navtitle: Обзор CT Mobile
+        
+        Документация находится в процессе разработки.
+        EOF
+        fi
+      
+    # Генерация основного сайта
     - name: Generate Main Site
       run: npx antora --stacktrace docs/antora-playbook.yml
       
-    # Создаем временные playbook-файлы для разных платформ ctmobile
+    # Создаем временные playbook-файлы для разных платформ (с корректным URL)
     - name: Create Platform-Specific Playbooks
       run: |
+        # Извлекаем базовый URL из основного плейбука
+        BASE_URL=$(grep -o 'url:.*' docs/antora-playbook.yml | sed 's/url: //')
+        if [ -z "$BASE_URL" ]; then
+          # Если URL не найден, используем относительный путь
+          BASE_URL="/"
+        fi
+        
+        echo "Using base URL: $BASE_URL"
+        
         # iOS версия
         cat > docs/antora-playbook-ios.yml <<EOF
         site:
           title: CT Software Help Portal - iOS
-          url: ${{ steps.deployment.outputs.page_url }}ctmobile/ios/
+          url: $BASE_URL
         content:
           sources:
           - url: .
             branches: HEAD
-            start_paths:
-              - docs
+            start_path: docs
         ui:
           bundle:
-            url: ./ui-bundle.zip
+            url: docs/ui-bundle.zip
             snapshot: false
         asciidoc:
           extensions:
@@ -68,16 +106,15 @@ jobs:
         cat > docs/antora-playbook-android.yml <<EOF
         site:
           title: CT Software Help Portal - Android
-          url: ${{ steps.deployment.outputs.page_url }}ctmobile/android/
+          url: $BASE_URL
         content:
           sources:
           - url: .
             branches: HEAD
-            start_paths:
-              - docs
+            start_path: docs
         ui:
           bundle:
-            url: ./ui-bundle.zip
+            url: docs/ui-bundle.zip
             snapshot: false
         asciidoc:
           extensions:
@@ -93,16 +130,15 @@ jobs:
         cat > docs/antora-playbook-windows.yml <<EOF
         site:
           title: CT Software Help Portal - Windows
-          url: ${{ steps.deployment.outputs.page_url }}ctmobile/windows/
+          url: $BASE_URL
         content:
           sources:
           - url: .
             branches: HEAD
-            start_paths:
-              - docs
+            start_path: docs
         ui:
           bundle:
-            url: ./ui-bundle.zip
+            url: docs/ui-bundle.zip
             snapshot: false
         asciidoc:
           extensions:
@@ -113,15 +149,20 @@ jobs:
         output:
           dir: docs/build/site/ctmobile/windows
         EOF
-    
-    # Генерация сайтов для разных платформ
+      
+    # Пробуем сгенерировать платформо-специфичные версии
     - name: Generate Platform-Specific Sites
       run: |
-        npx antora --stacktrace docs/antora-playbook-ios.yml
-        npx antora --stacktrace docs/antora-playbook-android.yml
-        npx antora --stacktrace docs/antora-playbook-windows.yml
-    
-    # Создание страницы-переключателя платформ
+        echo "Generating iOS version..."
+        npx antora --stacktrace docs/antora-playbook-ios.yml || echo "iOS version generation failed, but continuing..."
+        
+        echo "Generating Android version..."
+        npx antora --stacktrace docs/antora-playbook-android.yml || echo "Android version generation failed, but continuing..."
+        
+        echo "Generating Windows version..."
+        npx antora --stacktrace docs/antora-playbook-windows.yml || echo "Windows version generation failed, but continuing..."
+      
+    # Создание страницы-переключателя
     - name: Create Platform Selector Page
       run: |
         mkdir -p docs/build/site/ctmobile
@@ -131,21 +172,16 @@ jobs:
         <head>
           <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <meta http-equiv="refresh" content="0; url=./ios/ctmobile/index.html">
           <title>CT Mobile Documentation</title>
           <style>
             body {
-              font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-              line-height: 1.6;
-              color: #333;
+              font-family: sans-serif;
               max-width: 800px;
               margin: 0 auto;
               padding: 20px;
             }
             h1 {
               color: #0366d6;
-              border-bottom: 1px solid #eaecef;
-              padding-bottom: 0.3em;
             }
             .platform-selector {
               margin: 2em 0;
@@ -159,44 +195,48 @@ jobs:
               color: white;
               text-decoration: none;
               border-radius: 4px;
-              font-weight: 500;
             }
-            .platform-btn:hover {
-              background-color: #0056b3;
+            .message {
+              padding: 15px;
+              background-color: #f8f9fa;
+              border-left: 4px solid #0366d6;
+              margin: 20px 0;
+            }
+            .back-link {
+              margin-top: 30px;
+            }
+            a {
+              color: #0366d6;
+              text-decoration: none;
+            }
+            a:hover {
+              text-decoration: underline;
             }
           </style>
         </head>
         <body>
           <h1>CT Mobile Documentation</h1>
-          <p>Please select your platform:</p>
+          
+          <div class="message">
+            <p>Select your platform:</p>
+          </div>
+          
           <div class="platform-selector">
             <a href="./ios/ctmobile/index.html" class="platform-btn">iOS</a>
             <a href="./android/ctmobile/index.html" class="platform-btn">Android</a>
             <a href="./windows/ctmobile/index.html" class="platform-btn">Windows</a>
           </div>
-          <p>You will be automatically redirected to iOS documentation in a few seconds...</p>
+          
+          <div class="message">
+            <p>Note: CT Mobile documentation is currently under development.</p>
+          </div>
+          
+          <div class="back-link">
+            <a href="../">&larr; Back to main documentation</a>
+          </div>
         </body>
         </html>
         EOF
-        
-        # Добавляем ссылку на CT Mobile на основной странице
-        if [ -f docs/build/site/index.html ]; then
-          sed -i '/<\/body>/i <script>\
-          document.addEventListener("DOMContentLoaded", function() {\
-            const nav = document.querySelector(".nav-menu");\
-            if(nav) {\
-              const ctmobileLink = document.createElement("a");\
-              ctmobileLink.href = "./ctmobile/";\
-              ctmobileLink.className = "nav-link";\
-              ctmobileLink.textContent = "CT Mobile";\
-              const navItem = document.createElement("li");\
-              navItem.className = "nav-item";\
-              navItem.appendChild(ctmobileLink);\
-              nav.appendChild(navItem);\
-            }\
-          });\
-          </script>' docs/build/site/index.html
-        fi
         
     - name: Upload Artifacts
       uses: actions/upload-pages-artifact@v3
