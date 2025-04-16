@@ -31,35 +31,39 @@ jobs:
         run: npm i antora @asciidoctor/tabs asciidoctor@~2.2.8
       - name: Debug Installed Packages
         run: npm list
-      
-      # Проверяем и создаем временную структуру ctmobile
+
+      # Генерация основного сайта (ctvision и другие модули)
+      - name: Generate Main Site
+        run: npx antora --stacktrace docs/antora-playbook.yml
+
+      # Создаем временную структуру ctmobile если её ещё нет
       - name: Check and create ctmobile structure if needed
         run: |
           if [ ! -d "docs/modules/ctmobile" ]; then
             echo "Creating temporary ctmobile module structure..."
             mkdir -p docs/modules/ctmobile/modules/ROOT/pages
           
+            # Создаем временный antora.yml
             echo "name: ctmobile" > docs/modules/ctmobile/antora.yml
             echo "title: CT Mobile" >> docs/modules/ctmobile/antora.yml
             echo "version: '1.0'" >> docs/modules/ctmobile/antora.yml
             echo "nav:" >> docs/modules/ctmobile/antora.yml
             echo "- modules/ROOT/nav.adoc" >> docs/modules/ctmobile/antora.yml
           
+            # Создаем временный nav.adoc
             echo "* xref:index.adoc[CT Mobile]" > docs/modules/ctmobile/modules/ROOT/nav.adoc
           
+            # Создаем временную индексную страницу
             echo "= CT Mobile" > docs/modules/ctmobile/modules/ROOT/pages/index.adoc
             echo ":navtitle: Обзор CT Mobile" >> docs/modules/ctmobile/modules/ROOT/pages/index.adoc
             echo "" >> docs/modules/ctmobile/modules/ROOT/pages/index.adoc
             echo "Документация находится в процессе разработки." >> docs/modules/ctmobile/modules/ROOT/pages/index.adoc
           fi
-      
-      # Генерация основного сайта
-      - name: Generate Main Site
-        run: npx antora --stacktrace docs/antora-playbook.yml
-      
-      # Создаем плейбуки для платформ отдельными шагами
-      - name: Create iOS Playbook
+
+      # Создаем плейбуки для каждой платформы
+      - name: Create Platform-Specific Playbooks
         run: |
+          # iOS версия
           echo "site:" > docs/antora-playbook-ios.yml
           echo "  title: CT Software Help Portal - iOS" >> docs/antora-playbook-ios.yml
           echo "  url: /" >> docs/antora-playbook-ios.yml
@@ -77,13 +81,12 @@ jobs:
           echo "    - '@asciidoctor/tabs'" >> docs/antora-playbook-ios.yml
           echo "  attributes:" >> docs/antora-playbook-ios.yml
           echo "    platform-ios: ''" >> docs/antora-playbook-ios.yml
-          echo "    platform-android: ~" >> docs/antora-playbook-ios.yml
-          echo "    platform-windows: ~" >> docs/antora-playbook-ios.yml
+          echo "    platform-android: '!'" >> docs/antora-playbook-ios.yml
+          echo "    platform-windows: '!'" >> docs/antora-playbook-ios.yml
           echo "output:" >> docs/antora-playbook-ios.yml
-          echo "  dir: docs/build/site/ctmobile/ios" >> docs/antora-playbook-ios.yml
-
-      - name: Create Android Playbook
-        run: |
+          echo "  dir: docs/build/site" >> docs/antora-playbook-ios.yml
+          
+          # Android версия
           echo "site:" > docs/antora-playbook-android.yml
           echo "  title: CT Software Help Portal - Android" >> docs/antora-playbook-android.yml
           echo "  url: /" >> docs/antora-playbook-android.yml
@@ -100,14 +103,13 @@ jobs:
           echo "  extensions:" >> docs/antora-playbook-android.yml
           echo "    - '@asciidoctor/tabs'" >> docs/antora-playbook-android.yml
           echo "  attributes:" >> docs/antora-playbook-android.yml
-          echo "    platform-ios: ~" >> docs/antora-playbook-android.yml
+          echo "    platform-ios: '!'" >> docs/antora-playbook-android.yml
           echo "    platform-android: ''" >> docs/antora-playbook-android.yml
-          echo "    platform-windows: ~" >> docs/antora-playbook-android.yml
+          echo "    platform-windows: '!'" >> docs/antora-playbook-android.yml
           echo "output:" >> docs/antora-playbook-android.yml
-          echo "  dir: docs/build/site/ctmobile/android" >> docs/antora-playbook-android.yml
-
-      - name: Create Windows Playbook
-        run: |
+          echo "  dir: docs/build/site" >> docs/antora-playbook-android.yml
+          
+          # Windows версия
           echo "site:" > docs/antora-playbook-windows.yml
           echo "  title: CT Software Help Portal - Windows" >> docs/antora-playbook-windows.yml
           echo "  url: /" >> docs/antora-playbook-windows.yml
@@ -124,25 +126,68 @@ jobs:
           echo "  extensions:" >> docs/antora-playbook-windows.yml
           echo "    - '@asciidoctor/tabs'" >> docs/antora-playbook-windows.yml
           echo "  attributes:" >> docs/antora-playbook-windows.yml
-          echo "    platform-ios: ~" >> docs/antora-playbook-windows.yml
-          echo "    platform-android: ~" >> docs/antora-playbook-windows.yml
+          echo "    platform-ios: '!'" >> docs/antora-playbook-windows.yml
+          echo "    platform-android: '!'" >> docs/antora-playbook-windows.yml
           echo "    platform-windows: ''" >> docs/antora-playbook-windows.yml
           echo "output:" >> docs/antora-playbook-windows.yml
-          echo "  dir: docs/build/site/ctmobile/windows" >> docs/antora-playbook-windows.yml
-      
-      # Генерация платформенных сайтов
-      - name: Generate Platform-Specific Sites
+          echo "  dir: docs/build/site" >> docs/antora-playbook-windows.yml
+
+      # Создаем платформенные версии документации
+      - name: Generate Platform-Specific Versions
         run: |
+          # Сохраняем оригинальный antora.yml если он есть
+          if [ -f "docs/modules/ctmobile/antora.yml" ]; then
+            cp docs/modules/ctmobile/antora.yml docs/modules/ctmobile/antora.yml.orig
+          fi
+          
+          # =====================
+          # iOS версия
+          # =====================
+          # Создаем версию antora.yml для iOS
+          echo "name: ctmobile" > docs/modules/ctmobile/antora.yml
+          echo "title: CT Mobile for iOS" >> docs/modules/ctmobile/antora.yml
+          echo "version: '1.0-ios'" >> docs/modules/ctmobile/antora.yml
+          echo "nav:" >> docs/modules/ctmobile/antora.yml
+          echo "- modules/ROOT/nav.adoc" >> docs/modules/ctmobile/antora.yml
+          
+          # Генерируем iOS версию
           echo "Generating iOS version..."
           npx antora --stacktrace docs/antora-playbook-ios.yml || echo "iOS generation failed but continuing"
           
+          # =====================
+          # Android версия
+          # =====================
+          # Создаем версию antora.yml для Android
+          echo "name: ctmobile" > docs/modules/ctmobile/antora.yml
+          echo "title: CT Mobile for Android" >> docs/modules/ctmobile/antora.yml
+          echo "version: '1.0-android'" >> docs/modules/ctmobile/antora.yml
+          echo "nav:" >> docs/modules/ctmobile/antora.yml
+          echo "- modules/ROOT/nav.adoc" >> docs/modules/ctmobile/antora.yml
+          
+          # Генерируем Android версию
           echo "Generating Android version..."
           npx antora --stacktrace docs/antora-playbook-android.yml || echo "Android generation failed but continuing"
           
+          # =====================
+          # Windows версия
+          # =====================
+          # Создаем версию antora.yml для Windows
+          echo "name: ctmobile" > docs/modules/ctmobile/antora.yml
+          echo "title: CT Mobile for Windows" >> docs/modules/ctmobile/antora.yml
+          echo "version: '1.0-windows'" >> docs/modules/ctmobile/antora.yml
+          echo "nav:" >> docs/modules/ctmobile/antora.yml
+          echo "- modules/ROOT/nav.adoc" >> docs/modules/ctmobile/antora.yml
+          
+          # Генерируем Windows версию
           echo "Generating Windows version..."
           npx antora --stacktrace docs/antora-playbook-windows.yml || echo "Windows generation failed but continuing"
-      
-      # Создание простой страницы-переключателя
+          
+          # Восстанавливаем оригинальный antora.yml
+          if [ -f "docs/modules/ctmobile/antora.yml.orig" ]; then
+            mv docs/modules/ctmobile/antora.yml.orig docs/modules/ctmobile/antora.yml
+          fi
+
+      # Создание страницы-переключателя
       - name: Create Platform Selector
         run: |
           mkdir -p docs/build/site/ctmobile
@@ -175,9 +220,9 @@ jobs:
           echo '  <h1>CT Mobile Documentation</h1>' >> docs/build/site/ctmobile/index.html
           echo '  <p>Please select your platform:</p>' >> docs/build/site/ctmobile/index.html
           echo '  <div>' >> docs/build/site/ctmobile/index.html
-          echo '    <a href="./ios/ctmobile/index.html" class="platform-btn">iOS</a>' >> docs/build/site/ctmobile/index.html
-          echo '    <a href="./android/ctmobile/index.html" class="platform-btn">Android</a>' >> docs/build/site/ctmobile/index.html
-          echo '    <a href="./windows/ctmobile/index.html" class="platform-btn">Windows</a>' >> docs/build/site/ctmobile/index.html
+          echo '    <a href="../ctmobile/1.0-ios/index.html" class="platform-btn">iOS</a>' >> docs/build/site/ctmobile/index.html
+          echo '    <a href="../ctmobile/1.0-android/index.html" class="platform-btn">Android</a>' >> docs/build/site/ctmobile/index.html
+          echo '    <a href="../ctmobile/1.0-windows/index.html" class="platform-btn">Windows</a>' >> docs/build/site/ctmobile/index.html
           echo '  </div>' >> docs/build/site/ctmobile/index.html
           echo '  <p><a href="../">&larr; Back to main documentation</a></p>' >> docs/build/site/ctmobile/index.html
           echo '</body>' >> docs/build/site/ctmobile/index.html
