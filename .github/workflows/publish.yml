@@ -32,6 +32,36 @@ jobs:
       - name: Debug Installed Packages
         run: npm list
 
+      # Изучаем текущую структуру и файлы для отладки
+      - name: Debug Current Repository Structure
+        run: |
+          echo "Checking current repository structure..."
+          if [ -d "docs/modules/ctmobile" ]; then
+            echo "ctmobile module exists."
+            echo "Contents of docs/modules/ctmobile:"
+            ls -la docs/modules/ctmobile
+          
+            if [ -f "docs/modules/ctmobile/antora.yml" ]; then
+              echo "antora.yml contents:"
+              cat docs/modules/ctmobile/antora.yml
+            fi
+          
+            if [ -d "docs/modules/ctmobile/modules/ROOT" ]; then
+              echo "Contents of ROOT module:"
+              ls -la docs/modules/ctmobile/modules/ROOT
+          
+              if [ -f "docs/modules/ctmobile/modules/ROOT/nav.adoc" ]; then
+                echo "nav.adoc contents:"
+                cat docs/modules/ctmobile/modules/ROOT/nav.adoc
+              fi
+            fi
+          else
+            echo "ctmobile module does not exist yet."
+          fi
+          
+          echo "Current antora-playbook.yml contents:"
+          cat docs/antora-playbook.yml
+
       # Генерация основного сайта (ctvision и другие модули)
       - name: Generate Main Site
         run: npx antora --stacktrace docs/antora-playbook.yml
@@ -58,6 +88,56 @@ jobs:
             echo ":navtitle: Обзор CT Mobile" >> docs/modules/ctmobile/modules/ROOT/pages/index.adoc
             echo "" >> docs/modules/ctmobile/modules/ROOT/pages/index.adoc
             echo "Документация находится в процессе разработки." >> docs/modules/ctmobile/modules/ROOT/pages/index.adoc
+          fi
+
+      # Модифицируем навигацию для использования соответствующих версий
+      - name: Update Navigation for Platform Versions
+        run: |
+          if [ -f "docs/modules/ctmobile/modules/ROOT/nav.adoc" ]; then
+            # Сохраняем оригинальный nav.adoc
+            cp docs/modules/ctmobile/modules/ROOT/nav.adoc docs/modules/ctmobile/modules/ROOT/nav.adoc.orig
+          
+            # Создаем новый nav.adoc с платформо-специфичными ссылками
+            echo "* xref:index.adoc[CT Mobile]" > docs/modules/ctmobile/modules/ROOT/nav.adoc
+          
+            echo "ifdef::platform-ios[]" >> docs/modules/ctmobile/modules/ROOT/nav.adoc
+            echo "* iOS" >> docs/modules/ctmobile/modules/ROOT/nav.adoc
+            echo "** xref:features.adoc[Возможности iOS]" >> docs/modules/ctmobile/modules/ROOT/nav.adoc
+            echo "endif::[]" >> docs/modules/ctmobile/modules/ROOT/nav.adoc
+          
+            echo "ifdef::platform-android[]" >> docs/modules/ctmobile/modules/ROOT/nav.adoc
+            echo "* Android" >> docs/modules/ctmobile/modules/ROOT/nav.adoc
+            echo "** xref:features.adoc[Возможности Android]" >> docs/modules/ctmobile/modules/ROOT/nav.adoc
+            echo "endif::[]" >> docs/modules/ctmobile/modules/ROOT/nav.adoc
+          
+            echo "ifdef::platform-windows[]" >> docs/modules/ctmobile/modules/ROOT/nav.adoc
+            echo "* Windows" >> docs/modules/ctmobile/modules/ROOT/nav.adoc
+            echo "** xref:features.adoc[Возможности Windows]" >> docs/modules/ctmobile/modules/ROOT/nav.adoc
+            echo "endif::[]" >> docs/modules/ctmobile/modules/ROOT/nav.adoc
+          
+            # Проверяем наличие файла features.adoc, создаем если нет
+            if [ ! -f "docs/modules/ctmobile/modules/ROOT/pages/features.adoc" ]; then
+              echo "= Возможности CT Mobile" > docs/modules/ctmobile/modules/ROOT/pages/features.adoc
+              echo ":navtitle: Возможности" >> docs/modules/ctmobile/modules/ROOT/pages/features.adoc
+              echo "" >> docs/modules/ctmobile/modules/ROOT/pages/features.adoc
+              echo "== Общие возможности" >> docs/modules/ctmobile/modules/ROOT/pages/features.adoc
+              echo "Общие функции для всех платформ." >> docs/modules/ctmobile/modules/ROOT/pages/features.adoc
+              echo "" >> docs/modules/ctmobile/modules/ROOT/pages/features.adoc
+              echo "ifdef::platform-ios[]" >> docs/modules/ctmobile/modules/ROOT/pages/features.adoc
+              echo "== Особенности iOS" >> docs/modules/ctmobile/modules/ROOT/pages/features.adoc
+              echo "Функции, доступные только в iOS-версии." >> docs/modules/ctmobile/modules/ROOT/pages/features.adoc
+              echo "endif::[]" >> docs/modules/ctmobile/modules/ROOT/pages/features.adoc
+              echo "" >> docs/modules/ctmobile/modules/ROOT/pages/features.adoc
+              echo "ifdef::platform-android[]" >> docs/modules/ctmobile/modules/ROOT/pages/features.adoc
+              echo "== Особенности Android" >> docs/modules/ctmobile/modules/ROOT/pages/features.adoc
+              echo "Функции, доступные только в Android-версии." >> docs/modules/ctmobile/modules/ROOT/pages/features.adoc
+              echo "endif::[]" >> docs/modules/ctmobile/modules/ROOT/pages/features.adoc
+              echo "" >> docs/modules/ctmobile/modules/ROOT/pages/features.adoc
+              echo "ifdef::platform-windows[]" >> docs/modules/ctmobile/modules/ROOT/pages/features.adoc
+              echo "== Особенности Windows" >> docs/modules/ctmobile/modules/ROOT/pages/features.adoc
+              echo "Функции, доступные только в Windows-версии." >> docs/modules/ctmobile/modules/ROOT/pages/features.adoc
+              echo "endif::[]" >> docs/modules/ctmobile/modules/ROOT/pages/features.adoc
+            fi
           fi
 
       # Создаем плейбуки для каждой платформы
@@ -143,6 +223,7 @@ jobs:
           # =====================
           # iOS версия
           # =====================
+          echo "Creating and generating iOS version..."
           # Создаем версию antora.yml для iOS
           echo "name: ctmobile" > docs/modules/ctmobile/antora.yml
           echo "title: CT Mobile for iOS" >> docs/modules/ctmobile/antora.yml
@@ -150,13 +231,17 @@ jobs:
           echo "nav:" >> docs/modules/ctmobile/antora.yml
           echo "- modules/ROOT/nav.adoc" >> docs/modules/ctmobile/antora.yml
           
+          # Показываем содержимое файла для отладки
+          echo "iOS antora.yml content:"
+          cat docs/modules/ctmobile/antora.yml
+          
           # Генерируем iOS версию
-          echo "Generating iOS version..."
           npx antora --stacktrace docs/antora-playbook-ios.yml || echo "iOS generation failed but continuing"
           
           # =====================
           # Android версия
           # =====================
+          echo "Creating and generating Android version..."
           # Создаем версию antora.yml для Android
           echo "name: ctmobile" > docs/modules/ctmobile/antora.yml
           echo "title: CT Mobile for Android" >> docs/modules/ctmobile/antora.yml
@@ -164,13 +249,17 @@ jobs:
           echo "nav:" >> docs/modules/ctmobile/antora.yml
           echo "- modules/ROOT/nav.adoc" >> docs/modules/ctmobile/antora.yml
           
+          # Показываем содержимое файла для отладки
+          echo "Android antora.yml content:"
+          cat docs/modules/ctmobile/antora.yml
+          
           # Генерируем Android версию
-          echo "Generating Android version..."
           npx antora --stacktrace docs/antora-playbook-android.yml || echo "Android generation failed but continuing"
           
           # =====================
           # Windows версия
           # =====================
+          echo "Creating and generating Windows version..."
           # Создаем версию antora.yml для Windows
           echo "name: ctmobile" > docs/modules/ctmobile/antora.yml
           echo "title: CT Mobile for Windows" >> docs/modules/ctmobile/antora.yml
@@ -178,8 +267,11 @@ jobs:
           echo "nav:" >> docs/modules/ctmobile/antora.yml
           echo "- modules/ROOT/nav.adoc" >> docs/modules/ctmobile/antora.yml
           
+          # Показываем содержимое файла для отладки
+          echo "Windows antora.yml content:"
+          cat docs/modules/ctmobile/antora.yml
+          
           # Генерируем Windows версию
-          echo "Generating Windows version..."
           npx antora --stacktrace docs/antora-playbook-windows.yml || echo "Windows generation failed but continuing"
           
           # Восстанавливаем оригинальный antora.yml
@@ -187,7 +279,22 @@ jobs:
             mv docs/modules/ctmobile/antora.yml.orig docs/modules/ctmobile/antora.yml
           fi
 
-      # Создание страницы-переключателя
+      # Проверка сгенерированной структуры
+      - name: Check Generated Site Structure
+        run: |
+          echo "Generated site structure:"
+          find docs/build/site -type d | sort
+          
+          echo "Checking for iOS version files:"
+          ls -la docs/build/site/ctmobile/1.0-ios || echo "iOS version not found"
+          
+          echo "Checking for Android version files:"
+          ls -la docs/build/site/ctmobile/1.0-android || echo "Android version not found"
+          
+          echo "Checking for Windows version files:"
+          ls -la docs/build/site/ctmobile/1.0-windows || echo "Windows version not found"
+
+      # Создание страницы-переключателя с актуальными ссылками
       - name: Create Platform Selector
         run: |
           mkdir -p docs/build/site/ctmobile
