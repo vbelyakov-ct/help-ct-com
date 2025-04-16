@@ -1,247 +1,103 @@
-name: Publish to GitHub Pages
-on:
-  push:
-    branches: [main]
-  workflow_dispatch:
-concurrency:
-  group: github-pages
-  cancel-in-progress: false
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
-        with:
-          enablement: true
-      - name: Install Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-      - name: Install Antora, AsciiDoctor and Tabs
-        run: npm i antora @asciidoctor/tabs asciidoctor@~2.2.8
-      - name: Debug Installed Packages
-        run: npm list
-      
-      # Проверяем и создаем временную структуру ctmobile если её нет
-      - name: Check and create ctmobile structure if needed
-        run: |
-          if [ ! -d "docs/modules/ctmobile" ]; then
-            echo "Creating temporary ctmobile module structure..."
-            mkdir -p docs/modules/ctmobile/modules/ROOT/pages
-          
-            # Создаем временный antora.yml
-            cat > docs/modules/ctmobile/antora.yml <<EOF
-          name: ctmobile
-          title: CT Mobile
-          version: '1.0'
-          nav:
-          - modules/ROOT/nav.adoc
-          EOF
-          
-            # Создаем временный nav.adoc
-            cat > docs/modules/ctmobile/modules/ROOT/nav.adoc <<EOF
-          * xref:index.adoc[CT Mobile]
-          EOF
-          
-            # Создаем временную индексную страницу
-            cat > docs/modules/ctmobile/modules/ROOT/pages/index.adoc <<EOF
-          = CT Mobile
-          :navtitle: Обзор CT Mobile
-          
-          Документация находится в процессе разработки.
-          EOF
-          fi
-      
-      # Генерация основного сайта
-      - name: Generate Main Site
-        run: npx antora --stacktrace docs/antora-playbook.yml
-      
-      # Создаем временные playbook-файлы для разных платформ (с корректным URL)
-      - name: Create Platform-Specific Playbooks
-        run: |
-          # Извлекаем базовый URL из основного плейбука
-          BASE_URL=$(grep -o 'url:.*' docs/antora-playbook.yml | sed 's/url: //')
-          if [ -z "$BASE_URL" ]; then
-            # Если URL не найден, используем относительный путь
-            BASE_URL="/"
-          fi
-          
-          echo "Using base URL: $BASE_URL"
-          
-          # iOS версия
-          cat > docs/antora-playbook-ios.yml <<EOF
-          site:
-            title: CT Software Help Portal - iOS
-            url: $BASE_URL
-          content:
-            sources:
-            - url: .
-              branches: HEAD
-              start_path: docs
-          ui:
-            bundle:
-              url: docs/ui-bundle.zip
-              snapshot: false
-          asciidoc:
-            extensions:
-              - '@asciidoctor/tabs'
-            attributes:
-              platform: ios
-              platform-ios: ''
-          output:
-            dir: docs/build/site/ctmobile/ios
-          EOF
-          
-          # Android версия
-          cat > docs/antora-playbook-android.yml <<EOF
-          site:
-            title: CT Software Help Portal - Android
-            url: $BASE_URL
-          content:
-            sources:
-            - url: .
-              branches: HEAD
-              start_path: docs
-          ui:
-            bundle:
-              url: docs/ui-bundle.zip
-              snapshot: false
-          asciidoc:
-            extensions:
-              - '@asciidoctor/tabs'
-            attributes:
-              platform: android
-              platform-android: ''
-          output:
-            dir: docs/build/site/ctmobile/android
-          EOF
-          
-          # Windows версия
-          cat > docs/antora-playbook-windows.yml <<EOF
-          site:
-            title: CT Software Help Portal - Windows
-            url: $BASE_URL
-          content:
-            sources:
-            - url: .
-              branches: HEAD
-              start_path: docs
-          ui:
-            bundle:
-              url: docs/ui-bundle.zip
-              snapshot: false
-          asciidoc:
-            extensions:
-              - '@asciidoctor/tabs'
-            attributes:
-              platform: windows
-              platform-windows: ''
-          output:
-            dir: docs/build/site/ctmobile/windows
-          EOF
-      
-      # Пробуем сгенерировать платформо-специфичные версии
-      - name: Generate Platform-Specific Sites
-        run: |
-          echo "Generating iOS version..."
-          npx antora --stacktrace docs/antora-playbook-ios.yml || echo "iOS version generation failed, but continuing..."
-          
-          echo "Generating Android version..."
-          npx antora --stacktrace docs/antora-playbook-android.yml || echo "Android version generation failed, but continuing..."
-          
-          echo "Generating Windows version..."
-          npx antora --stacktrace docs/antora-playbook-windows.yml || echo "Windows version generation failed, but continuing..."
-      
-      # Создание страницы-переключателя
-      - name: Create Platform Selector Page
-        run: |
-          mkdir -p docs/build/site/ctmobile
-          cat > docs/build/site/ctmobile/index.html <<EOF
-          <!DOCTYPE html>
-          <html lang="en">
-          <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>CT Mobile Documentation</title>
-            <style>
-              body {
-                font-family: sans-serif;
-                max-width: 800px;
-                margin: 0 auto;
-                padding: 20px;
-              }
-              h1 {
-                color: #0366d6;
-              }
-              .platform-selector {
-                margin: 2em 0;
-                display: flex;
-                gap: 10px;
-              }
-              .platform-btn {
-                display: inline-block;
-                padding: 10px 20px;
-                background-color: #0366d6;
-                color: white;
-                text-decoration: none;
-                border-radius: 4px;
-              }
-              .message {
-                padding: 15px;
-                background-color: #f8f9fa;
-                border-left: 4px solid #0366d6;
-                margin: 20px 0;
-              }
-              .back-link {
-                margin-top: 30px;
-              }
-              a {
-                color: #0366d6;
-                text-decoration: none;
-              }
-              a:hover {
-                text-decoration: underline;
-              }
-            </style>
-          </head>
-          <body>
-            <h1>CT Mobile Documentation</h1>
-          
-            <div class="message">
-              <p>Select your platform:</p>
-            </div>
-          
-            <div class="platform-selector">
-              <a href="./ios/ctmobile/index.html" class="platform-btn">iOS</a>
-              <a href="./android/ctmobile/index.html" class="platform-btn">Android</a>
-              <a href="./windows/ctmobile/index.html" class="platform-btn">Windows</a>
-            </div>
-          
-            <div class="message">
-              <p>Note: CT Mobile documentation is currently under development.</p>
-            </div>
-          
-            <div class="back-link">
-              <a href="../">&larr; Back to main documentation</a>
-            </div>
-          </body>
-          </html>
-          EOF
-
-      - name: Upload Artifacts
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: docs/build/site
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+# Создаем временные playbook-файлы для разных платформ (с корректным URL)
+- name: Create Platform-Specific Playbooks
+  run: |
+    # Извлекаем базовый URL из основного плейбука
+    BASE_URL=$(grep -o 'url:.*' docs/antora-playbook.yml | sed 's/url: //')
+    if [ -z "$BASE_URL" ]; then
+      # Если URL не найден, используем относительный путь
+      BASE_URL="/"
+    fi
+    
+    echo "Using base URL: $BASE_URL"
+    
+    # iOS версия
+    cat > docs/antora-playbook-ios.yml << 'EOF'
+site:
+  title: CT Software Help Portal - iOS
+  url: BASE_URL_PLACEHOLDER
+content:
+  sources:
+    - url: .
+      branches: HEAD
+      start_path: docs
+ui:
+  bundle:
+    url: docs/ui-bundle.zip
+    snapshot: false
+asciidoc:
+  extensions:
+    - '@asciidoctor/tabs'
+  attributes:
+    platform-ios: ''
+    platform-android: ~
+    platform-windows: ~
+output:
+  dir: docs/build/site/ctmobile/ios
+  EOF
+  
+  # Заменяем плейсхолдер на реальный URL
+  sed -i "s|BASE_URL_PLACEHOLDER|$BASE_URL|g" docs/antora-playbook-ios.yml
+  
+  # Android версия
+  cat > docs/antora-playbook-android.yml << 'EOF'
+site:
+  title: CT Software Help Portal - Android
+  url: BASE_URL_PLACEHOLDER
+content:
+  sources:
+    - url: .
+      branches: HEAD
+      start_path: docs
+ui:
+  bundle:
+    url: docs/ui-bundle.zip
+    snapshot: false
+asciidoc:
+  extensions:
+    - '@asciidoctor/tabs'
+  attributes:
+    platform-ios: ~
+    platform-android: ''
+    platform-windows: ~
+output:
+  dir: docs/build/site/ctmobile/android
+  EOF
+  
+  # Заменяем плейсхолдер на реальный URL
+  sed -i "s|BASE_URL_PLACEHOLDER|$BASE_URL|g" docs/antora-playbook-android.yml
+  
+  # Windows версия
+  cat > docs/antora-playbook-windows.yml << 'EOF'
+site:
+  title: CT Software Help Portal - Windows
+  url: BASE_URL_PLACEHOLDER
+content:
+  sources:
+    - url: .
+      branches: HEAD
+      start_path: docs
+ui:
+  bundle:
+    url: docs/ui-bundle.zip
+    snapshot: false
+asciidoc:
+  extensions:
+    - '@asciidoctor/tabs'
+  attributes:
+    platform-ios: ~
+    platform-android: ~
+    platform-windows: ''
+output:
+  dir: docs/build/site/ctmobile/windows
+  EOF
+  
+  # Заменяем плейсхолдер на реальный URL
+  sed -i "s|BASE_URL_PLACEHOLDER|$BASE_URL|g" docs/antora-playbook-windows.yml
+  
+  # Проверка созданных файлов
+  echo "Checking created playbooks:"
+  for file in docs/antora-playbook-ios.yml docs/antora-playbook-android.yml docs/antora-playbook-windows.yml; do
+  echo "=== $file ==="
+  cat $file
+  echo ""
+  done
