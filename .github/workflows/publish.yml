@@ -11,79 +11,93 @@
     echo "Using base URL: $BASE_URL"
     
     # iOS версия
-    cat > docs/antora-playbook-ios.yml <<EOF
-    site:
-      title: CT Software Help Portal - iOS
-      url: $BASE_URL
-    content:
-      sources:
-      - url: .
-        branches: HEAD
-        start_path: docs
-    ui:
-      bundle:
-        url: docs/ui-bundle.zip
-        snapshot: false
-    asciidoc:
-      extensions:
-        - '@asciidoctor/tabs'
-      attributes:
-        # Активируем только iOS, отключаем другие
-        platform-ios: ''
-        platform-android: null
-        platform-windows: null
-    output:
-      dir: docs/build/site/ctmobile/ios
-    EOF
-    
-    # Android версия
-    cat > docs/antora-playbook-android.yml <<EOF
-    site:
-      title: CT Software Help Portal - Android
-      url: $BASE_URL
-    content:
-      sources:
-      - url: .
-        branches: HEAD
-        start_path: docs
-    ui:
-      bundle:
-        url: docs/ui-bundle.zip
-        snapshot: false
-    asciidoc:
-      extensions:
-        - '@asciidoctor/tabs'
-      attributes:
-        # Активируем только Android, отключаем другие
-        platform-ios: null
-        platform-android: ''
-        platform-windows: null
-    output:
-      dir: docs/build/site/ctmobile/android
-    EOF
-    
-    # Windows версия
-    cat > docs/antora-playbook-windows.yml <<EOF
-    site:
-      title: CT Software Help Portal - Windows
-      url: $BASE_URL
-    content:
-      sources:
-      - url: .
-        branches: HEAD
-        start_path: docs
-    ui:
-      bundle:
-        url: docs/ui-bundle.zip
-        snapshot: false
-    asciidoc:
-      extensions:
-        - '@asciidoctor/tabs'
-      attributes:
-        # Активируем только Windows, отключаем другие
-        platform-ios: null
-        platform-android: null
-        platform-windows: ''
-    output:
-      dir: docs/build/site/ctmobile/windows
-    EOF
+    cat > docs/antora-playbook-ios.yml << 'EOF'
+site:
+  title: CT Software Help Portal - iOS
+  url: BASE_URL_PLACEHOLDER
+content:
+  sources:
+    - url: .
+      branches: HEAD
+      start_path: docs
+ui:
+  bundle:
+    url: docs/ui-bundle.zip
+    snapshot: false
+asciidoc:
+  extensions:
+    - '@asciidoctor/tabs'
+  attributes:
+    platform-ios: ''
+    platform-android: ~
+    platform-windows: ~
+output:
+  dir: docs/build/site/ctmobile/ios
+  EOF
+  
+  # Заменяем плейсхолдер на реальный URL
+  sed -i "s|BASE_URL_PLACEHOLDER|$BASE_URL|g" docs/antora-playbook-ios.yml
+  
+  # Android версия
+  cat > docs/antora-playbook-android.yml << 'EOF'
+site:
+  title: CT Software Help Portal - Android
+  url: BASE_URL_PLACEHOLDER
+content:
+  sources:
+    - url: .
+      branches: HEAD
+      start_path: docs
+ui:
+  bundle:
+    url: docs/ui-bundle.zip
+    snapshot: false
+asciidoc:
+  extensions:
+    - '@asciidoctor/tabs'
+  attributes:
+    platform-ios: ~
+    platform-android: ''
+    platform-windows: ~
+output:
+  dir: docs/build/site/ctmobile/android
+  EOF
+  
+  # Заменяем плейсхолдер на реальный URL
+  sed -i "s|BASE_URL_PLACEHOLDER|$BASE_URL|g" docs/antora-playbook-android.yml
+  
+  # Windows версия
+  cat > docs/antora-playbook-windows.yml << 'EOF'
+site:
+  title: CT Software Help Portal - Windows
+  url: BASE_URL_PLACEHOLDER
+content:
+  sources:
+    - url: .
+      branches: HEAD
+      start_path: docs
+ui:
+  bundle:
+    url: docs/ui-bundle.zip
+    snapshot: false
+asciidoc:
+  extensions:
+    - '@asciidoctor/tabs'
+  attributes:
+    platform-ios: ~
+    platform-android: ~
+    platform-windows: ''
+output:
+  dir: docs/build/site/ctmobile/windows
+  EOF
+  
+  # Заменяем плейсхолдер на реальный URL
+  sed -i "s|BASE_URL_PLACEHOLDER|$BASE_URL|g" docs/antora-playbook-windows.yml
+  
+  # Проверка созданных файлов
+  echo "Checking created playbooks:"
+  for file in docs/antora-playbook-ios.yml docs/antora-playbook-android.yml docs/antora-playbook-windows.yml; do
+  echo "=== $file ==="
+  cat $file
+  echo ""
+  done
