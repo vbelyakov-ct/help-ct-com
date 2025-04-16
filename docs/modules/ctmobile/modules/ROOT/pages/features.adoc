@@ -1,37 +1,20 @@
 = Возможности CT Mobile
-:page-layout: default
+:navtitle: Возможности
 
 == Общие возможности
-
-CT Mobile предоставляет следующие возможности для всех платформ:
-
-* Распознавание текста
-* Обработка изображений
-* Облачная синхронизация
+Общие функции для всех платформ...
 
 ifdef::platform-ios[]
-[#ios-features]
-== Возможности iOS-версии
-
-* Интеграция с Siri
-* Поддержка Live Photos
-* Интеграция с Apple Photos
+== Особенности iOS-версии
+Функции только для iOS...
 endif::[]
 
 ifdef::platform-android[]
-[#android-features]
-== Возможности Android-версии
-
-* Интеграция с Google Assistant
-* Поддержка приложений Google
-* Виджеты для главного экрана
+== Особенности Android-версии
+Функции только для Android...
 endif::[]
 
 ifdef::platform-windows[]
-[#windows-features]
-== Возможности Windows-версии
-
-* Интеграция с Windows Hello
-* Работа с проводником Windows
-* Поддержка сенсорного и клавиатурного ввода
+== Особенности Windows-версии
+Функции только для Windows...
 endif::[]
