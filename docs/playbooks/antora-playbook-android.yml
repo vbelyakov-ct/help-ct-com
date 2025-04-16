@@ -1,0 +1,30 @@
+site:
+  title: CT Software Help Portal - Android
+  start_page: root::index.adoc
+content:
+  sources:
+    - url: https://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@github.com/vbelyakov-ct/help-ct-com.git
+      branches: main
+      start_paths:
+        - docs
+        - docs/modules/ctmobile
+        - docs/modules/ctvision
+
+ui:
+  bundle:
+    url: ./ui-bundle.zip
+    snapshot: false
+
+asciidoc:
+  extensions:
+    - '@asciidoctor/tabs'
+  attributes:
+    platform: android
+    platform-android: ''
+    # Отключаем атрибуты для других платформ
+    # platform-ios: ''
+    # platform-windows: ''
+    page-product-name: 'CT Mobile для Android'
+
+output:
+  dir: ./public/android

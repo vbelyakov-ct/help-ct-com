@@ -8,6 +8,7 @@ content:
     start_paths:
       - docs
       - docs/modules/ctvision
+      - docs/modules/ctmobile
 
 ui:
   bundle:
@@ -18,3 +19,7 @@ ui:
 asciidoc:
   extensions:
     - '@asciidoctor/tabs'
+  attributes:
+    platform-ios: ''
+    platform-android: ''
+    platform-windows: ''
