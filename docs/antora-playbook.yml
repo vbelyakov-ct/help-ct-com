@@ -15,11 +15,7 @@ ui:
     url: ./ui-bundle.zip
     # url: https://github.com/vbelyakov-ct/help-ct-com/blob/d902e82af4cc2f4844c13b7dcd029dc5150c88ad/ct-antora-ui/build/ui-bundle.zip
     # url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
-    snapshot: false
+    snapshot: true
 asciidoc:
   extensions:
     - '@asciidoctor/tabs'
-  attributes:
-    platform-ios: ''  # Для iOS-версии
-    # platform-android: ''  # Для Android-версии
-    # platform-windows: ''  # Для Windows-версии

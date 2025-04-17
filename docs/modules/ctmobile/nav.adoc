@@ -1,20 +1,7 @@
-* xref:index.adoc[Обзор CT Mobile>]
-//* xref:installation.adoc[Установка]
+.iOS
+* xref:ios/index.adoc[About CT Mobile iOS]
+** xref:ios/features.adoc[CT Mobile iOS Features]
 
-ifdef::platform-ios[]
-* iOS
-** xref:features.adoc[Возможности iOS]
-//** xref:troubleshooting.adoc#ios-issues[Решение проблем в iOS]
-endif::[]
-
-ifdef::platform-android[]
-* Android
-** xref:features.adoc[Возможности Android]
-//** xref:troubleshooting.adoc#android-issues[Решение проблем в Android]
-endif::[]
-
-ifdef::platform-windows[]
-* Windows
-** xref:features.adoc[Возможности Windows]
-//** xref:troubleshooting.adoc#windows-issues[Решение проблем в Windows]
-endif::[]
+.Android
+* xref:android/index.adoc[About CT Mobile Android]
+** xref:android/features.adoc[CT Mobile Android Features]
