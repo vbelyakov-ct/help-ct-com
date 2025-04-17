@@ -1,97 +1,42 @@
-name: Publish Documentation
+name: Publish to GitHub Pages
 on:
   push:
     branches: [main]
   workflow_dispatch:
-
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
       - name: Configure Pages
         uses: actions/configure-pages@v5
-
+        with:
+          enablement: true
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
-
-      - name: Install Antora
-        run: npm i antora @asciidoctor/tabs
-
-      # Генерируем разные версии документации
-      - name: Generate Documentation
-        run: |
-          # Сохраняем оригинальный antora.yml
-          if [ -f "docs/modules/ctmobile/antora.yml" ]; then
-            cp docs/modules/ctmobile/antora.yml docs/modules/ctmobile/antora.yml.orig
-          else
-            echo "WARNING: ctmobile/antora.yml not found!"
-            mkdir -p docs/modules/ctmobile
-            echo "name: ctmobile" > docs/modules/ctmobile/antora.yml
-            echo "title: CT Mobile" >> docs/modules/ctmobile/antora.yml
-            echo "version: '1.0'" >> docs/modules/ctmobile/antora.yml
-          fi
-          
-          # Генерируем основную документацию сначала
-          echo "Generating main documentation..."
-          npx antora --stacktrace docs/antora-playbook.yml
-          
-          # iOS версия
-          echo "Generating iOS version..."
-          echo "name: ctmobile" > docs/modules/ctmobile/antora.yml
-          echo "title: CT Mobile for iOS" >> docs/modules/ctmobile/antora.yml
-          echo "version: '1.0-ios'" >> docs/modules/ctmobile/antora.yml
-          echo "nav:" >> docs/modules/ctmobile/antora.yml
-          echo "- modules/ROOT/nav.adoc" >> docs/modules/ctmobile/antora.yml
-          
-          ANTORA_PLATFORM=ios npx antora --stacktrace --attribute platform-ios='' docs/antora-playbook.yml
-          
-          # Android версия
-          echo "Generating Android version..."
-          echo "name: ctmobile" > docs/modules/ctmobile/antora.yml
-          echo "title: CT Mobile for Android" >> docs/modules/ctmobile/antora.yml
-          echo "version: '1.0-android'" >> docs/modules/ctmobile/antora.yml
-          echo "nav:" >> docs/modules/ctmobile/antora.yml
-          echo "- modules/ROOT/nav.adoc" >> docs/modules/ctmobile/antora.yml
-          
-          ANTORA_PLATFORM=android npx antora --stacktrace --attribute platform-android='' docs/antora-playbook.yml
-          
-          # Windows версия
-          echo "Generating Windows version..."
-          echo "name: ctmobile" > docs/modules/ctmobile/antora.yml
-          echo "title: CT Mobile for Windows" >> docs/modules/ctmobile/antora.yml
-          echo "version: '1.0-windows'" >> docs/modules/ctmobile/antora.yml
-          echo "nav:" >> docs/modules/ctmobile/antora.yml
-          echo "- modules/ROOT/nav.adoc" >> docs/modules/ctmobile/antora.yml
-          
-          ANTORA_PLATFORM=windows npx antora --stacktrace --attribute platform-windows='' docs/antora-playbook.yml
-          
-          # Восстанавливаем оригинальный antora.yml
-          if [ -f "docs/modules/ctmobile/antora.yml.orig" ]; then
-            mv docs/modules/ctmobile/antora.yml.orig docs/modules/ctmobile/antora.yml
-          fi
-          
-          # Проверяем сгенерированные файлы
-          echo "Generated files:"
-          find docs/build/site -type d | grep -E "ctmobile/(1\.0|1\.0-ios|1\.0-android|1\.0-windows)" || echo "No ctmobile versions found!"
-
-      # Публикация на GitHub Pages
+      - name: Install Antora, AsciiDoctor and Tabs
+        run: npm i antora @asciidoctor/tabs asciidoctor@~2.2.8
+      - name: Debug Installed Packages
+        run: npm list
+      - name: Generate Site
+        run: npx antora --stacktrace docs/antora-playbook.yml
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
         with:
           path: docs/build/site
-
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
