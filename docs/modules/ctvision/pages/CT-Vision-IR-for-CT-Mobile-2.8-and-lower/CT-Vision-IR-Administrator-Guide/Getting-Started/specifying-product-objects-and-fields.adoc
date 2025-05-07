@@ -1,9 +1,7 @@
 = 4. Specifying Product Objects and Fields
 :toc:
 
-To recognize products on the shelves, the IR provider must be allowed to
-interact with product data in Salesforce. Specify the product fields to
-send their values for processing and storing on the server.
+To recognize products on the shelves, the IR provider must be allowed to interact with product data in Salesforce. Specify the product fields to send their values for processing and storing on the server.
 
 Go to the *CT Vision* app and open the *CT Vision Setup* tab.
 
@@ -12,9 +10,7 @@ image:CT-Vision-General-Configuration.png[]
 [[h2__1981203353]]
 == Authorization 
 
-If the Salesforce org was not yet registered on the CT Vision service
-side, click the *Authorize* button in the *General Configuration*
-section to connect to the CT Vision server.
+If the Salesforce org was not yet registered on the CT Vision service side, click the *Authorize* button in the *General Configuration* section to connect to the CT Vision server.
 
 [NOTE]
 ====
@@ -27,10 +23,9 @@ image:fields-mapping-on-product-and-product-image-objects-2021-09-29-2.png[]
 == Cloud Token
 
 To download all required CT Vision IR objects and apply the CT Vision IR module logic, go to https://help.customertimes.com/articles/ct-mobile-ios-en/ct-mobile-control-panel-tools/a/h3_2011978[CT
-Mobile Control Panel:Tools] / https://help.customertimes.com/smart/project-ct-mobile-en/ct-mobile-control-panel-tools-new/a/h2_2011978[CT Mobile Control Panel 2.0: Tools]  tab and check that the cloud token is added.
+Mobile Control Panel:Tools] / https://help.customertimes.com/smart/project-ct-mobile-en/ct-mobile-control-panel-tools-new/a/h2_2011978[CT Mobile Control Panel 2.0: Tools] tab and check that the cloud token is added.
 
-Currently, the cloud token may be stored in two custom settings, and the CT Vision IR retrieves it based on the combination of the CT Mobile package version and the used CT Mobile app version. For more
-information, refer to the https://help.customertimes.com/articles/ct-mobile-ios-en/ct-mobile-managed-package-update-to-v-3-54[CT Mobile Managed Package Update to v. 3.54] description.
+Currently, the cloud token may be stored in two custom settings, and the CT Vision IR retrieves it based on the combination of the CT Mobile package version and the used CT Mobile app version. For more information, refer to the https://help.customertimes.com/articles/ct-mobile-ios-en/ct-mobile-managed-package-update-to-v-3-54[CT Mobile Managed Package Update to v. 3.54] description.
 
 [[h2__1362989108]]
 == Product Object Setting 
@@ -55,8 +50,7 @@ image:General-Configuration-Product-Object.png[]
 +
 . Allow Salesforce to create a field with the *Lookup* type when prompted for the specified [.object]#Product# object.
 
-The setup is complete. The field with the *Lookup* type will be
-automatically created on the [.object]#Product Image# object to relate it with the specified [.object]#Product# object.
+The setup is complete. The field with the *Lookup* type will be automatically created on the [.object]#Product Image# object to relate it with the specified [.object]#Product# object.
 
 Check the user profile permissions to make sure the newly created lookup is available for all required users:
 
@@ -69,7 +63,7 @@ Select fields of the [.object]#Product Image# object that store all required inf
 
 [TIP]
 ====
-For more information, refer to link:adding-information-for-products-to-be-recognized.html[Adding Information for Products to be Recognized].
+For more information, refer to link:adding-information-for-products-to-be-recognized[Adding Information for Products to be Recognized].
 ====
 
 . On the *Product Image Setting* tab, add desired fields from the *Available* to *Selected* section
@@ -83,13 +77,12 @@ The setup is complete.
 [[h2_166351641]]
 == Feedback Loop
 
-Specify the fields to display under the taken photo on the
-link:../../CT-Vision-IR-Administrator-Guide/Working-with-CT-Vision-IR-in-Salesforce/index[Feedback Loop] page.
+Specify the fields to display under the taken photo on the link:../../CT-Vision-IR-Administrator-Guide/Working-with-CT-Vision-IR-in-Salesforce/index[Feedback Loop] page.
 
 The name of an  [.object]#Activity# object or  link:../../CT-Vision-IR-Administrator-Guide/Getting-Started/Creating-Vision-Settings-Records/configuring-ct-vision-to-work-with-a-custom-activity-object[a custom [.object]#Activity#  object]  is displayed under the taken photo by default and cannot be removed or replaced.
 
 [[h3_1366151624]]
-==== Photo Description 
+=== Photo Description
 
 To set up fields to display:
 
@@ -97,22 +90,18 @@ To set up fields to display:
 . In the *Activity Object* field, select the required object.
 . Add fields to display from the  *Available*  section to
 the  *Selected*  section.
++
 image:General-Configuration-Feedback-Loop.png[]
 . Click *Save*.
 
 The setup is complete.
 
-* Click the *Add Object* button to specify fields to display to another
-[.object]#Activity# object if needed.
-* Click the bin next to the desired [.object]#Activity# object to delete
-the setting.
+* Click the *Add Object* button to specify fields to display to another [.object]#Activity# object if needed.
+* Click the bin next to the desired [.object]#Activity# object to delete the setting.
 
 [[h3_1711109790]]
-==== Custom Filters 
+=== Custom Filters
 
-Specify desired criteria to filter records for the selected
-[.object]#Activity# object on the *Feedback Loop* page. Criteria are
-specified by the help of the SOQL builder and has up to 5 nested levels
-of related objects.
+Specify desired criteria to filter records for the selected [.object]#Activity# object on the *Feedback Loop* page. Criteria are specified by the help of the SOQL builder and has up to 5 nested levels of related objects.
 
 image:General-Configuration-Feedback-Loop-Custom-Filters.png[]
