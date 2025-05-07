@@ -18,12 +18,9 @@ For more information, go to the https://help.customertimes.com/articles/ct-mobil
 [[h2__242242597]]
 == JSON Web Token
 
-Photos taken in CT Mobile using the CT Vision IR module are sent to the server for recognition. To connect to the server, the CT Mobile app sends that pair of the Salesforce Org Id in the 18-digit format and the valid cloud token to the server, and the server generates a JSON Web
-token.
+Photos taken in CT Mobile using the CT Vision IR module are sent to the server for recognition. To connect to the server, the CT Mobile app sends that pair of the Salesforce Org Id in the 18-digit format and the valid cloud token to the server, and the server generates a JSON Web token.
 
-* The JSON Web token is used each time the CT Mobile app connects to the
-server. If the JSON Web token is not received or is invalid, photos will
-not be sent to the server.
+* The JSON Web token is used each time the CT Mobile app connects to the server. If the JSON Web token is not received or is invalid, photos will not be sent to the server.
 * The generated JSON Web Token lifetime is 1 year.
 
 [[h2_1279472645]]
@@ -32,17 +29,14 @@ not be sent to the server.
 Specify the following to enable CT Vision IR logic within the CT Mobile
 app:
 
-. Go to
-https://help.customertimes.com/articles/ct-mobile-ios-en/ct-mobile-control-panel-general[CT
-Mobile Control Panel: General] tab.
+. Go to https://help.customertimes.com/articles/ct-mobile-ios-en/ct-mobile-control-panel-general[CT Mobile Control Panel: General] tab.
 . Under the *Object Mappings* section, specify the API name of the [.object]#Product# object used by CT Vision IR in the *Product Object API Name* field.
 . Click *Save*.
 . Go to https://help.customertimes.com/articles/ct-mobile-ios-en/ct-mobile-control-panel-offline-objects[CT Mobile Control Panel: Offline Objects] tab.
 . Add the objects used by the CT Vision IR module to the *Selected* field:
-* An object (or objects) that you use as [.object]#Activity#  and
-[.object]#Activity Data#.
+* An object (or objects) that you use as [.object]#Activity# and [.object]#Activity Data#.
 * If you use CT Vision IR for training the recognition model, also add the [.object]#Product Image# object to the selection.
-* If you use link:adding-photo-tags.html[photo tags], also add the [.object]#Tag# object to the selection.
+* If you use link:adding-photo-tags[photo tags], also add the [.object]#Tag# object to the selection.
 . Click *Save*.
 . Go to https://help.customertimes.com/articles/ct-mobile-ios-en/ct-mobile-control-panel-calendar[CT Mobile Control Panel: Calendar] tab.
 . Create an *Activity Setting* for each of the API names of the [.object]#Activity# object used by CT Vision IR and specified in the *Activity Object API Name* field.
@@ -53,9 +47,7 @@ The setup is complete.
 [[h2__59853629]]
 == Add CT Vision IR to CT Mobile app 
 
-To add the CT Vision IR module to the
-https://help.customertimes.com/articles/ct-mobile-ios-en/app-menu[application
-menu]:
+To add the CT Vision IR module to the https://help.customertimes.com/articles/ct-mobile-ios-en/app-menu[application menu]:
 
 [tabs]
 ====
@@ -86,7 +78,7 @@ Mobile Control Panel 2.0: App Menu] tab.
 . Select the required profile in the  *Profile*  picklist. To apply
 settings to all the profiles, select  *General Settings*.
 . Click  *Show Module Menu*.
-. On the  *All*  or  *Integrations*  tab, select the  *Vision*  item.
+. On the *All*  or  *Integrations*  tab, select the  *Vision*  item.
 . Click  *Save*.
 --
 ====
@@ -100,14 +92,12 @@ link:../working-with-ct-vision-in-the-ct-mobile-app#h2_566778463[Pictures]
 allows users to view the photos they have taken on the _Account_ record
 details screen.
 
-
-
 To add the *Pictures* tab to the mobile layout:
 
-. Go to *Setup → Object Manager  →* select the [.object]#Account#
+. Go to *Setup → Object Manager →* select the [.object]#Account#
 object.
 . Go to *Page Layouts →* click the required page layout.
-. Drag and drop the *Section* element to the *Account Detail* area.  The
+. Drag and drop the *Section* element to the *Account Detail* area. The
 *Section Properties* window opens.
 .. Type in _PICTURES_ in the *Section Name* field, and select the
 1-Column layout.
