@@ -1,100 +1,62 @@
 = 7. Adding Information for Products to be Recognized
+:toc:
 
-To recognize products in photos taken, train the provider's neural
-networks by uploading marketing photos of the product to the CT Vision
-server. You also can use these photos
-in https://help.customertimes.com/articles/ct-mobile-ios-en/custom-related-lists[custom
-related lists]  in the CT Mobile app or add them to catalogs and orders
-for
-the https://help.customertimes.com/articles/ct-orders-3-0/ct-orders-solution[CT
-Orders]  solution.
-
-* link:adding-information-for-products-to-be-recognized.html#h2__1751244368[Adding
-and Viewing Product Photos in Salesforce]
-* link:adding-information-for-products-to-be-recognized.html#h2__518870114[Setting
-up Product Image Uploads]
-* link:adding-information-for-products-to-be-recognized.html#h3_1021024571[Filtering
-Products to Upload Their Images]
-* link:adding-information-for-products-to-be-recognized.html#h2_285464100[Testing
-Image Recognition]
+To recognize products in photos taken, train the provider's neural networks by uploading marketing photos of the product to the CT Vision server. You also can use these photos in https://help.customertimes.com/articles/ct-mobile-ios-en/custom-related-lists[custom related lists] in the CT Mobile app or add them to catalogs and orders for the https://help.customertimes.com/articles/ct-orders-3-0/ct-orders-solution[CT Orders] solution.
 
 [[h2__1751244368]]
 == Adding and Viewing Product Photos in Salesforce 
 
-When you added all required products to your Salesforce org, upload
-marketing photos and additional information about the product to the CT
-Vision server. The  [.object]#Product Image #object is intended to store all required information for recognition of photos by the selected provider in one place. For more information, refer to link:product-image-field-reference.html[Product Image Field Reference]. To upload and view marketing photos of products, add the following sections on the desired Product Lightning page layout: * Add *Product Image Uploader* for uploading a product image or providing a URL-address to it. * Add *Product Image Viewer* for viewing marketing photos with additional product information specified in the [.object]#Product#
-fields and statuses of recognition of training provider or Einstein
-model.
+When you added all required products to your Salesforce org, upload marketing photos and additional information about the product to the CT Vision server. The  [.object]#Product Image# object is intended to store all required information for recognition of photos by the selected provider in one place. For more information, refer to link:../../CT-Vision-IR-Reference-Guide/product-image-field-referencel[Product Image Field Reference].
+
+To upload and view marketing photos of products, add the following sections on the desired Product Lightning page layout:
+
+* Add *Product Image Uploader* for uploading a product image or providing a URL-address to it.
+* Add *Product Image Viewer* for viewing marketing photos with additional product information specified in the [.object]#Product# fields and statuses of recognition of training provider or Einstein model.
++
 [TIP]
 ====
-To specify the additional product information, refer to link:specifying-product-objects-and-fields.html#h2__2130197288[Specifying Product Objects and Fields: Product Image Information].
+To specify the additional product information, refer to link:../specifying-product-objects-and-fields#h2__2130197288[Specifying Product Objects and Fields: Product Image Information].
 ====
 
+To edit the [.object]#Product# Lightning page layout:
 
-
-To edit the
-
-[.object]#Product# Lightning page layout: . Go to *Setup → Object Manager →* the desired [.object]#Product#
-object  →  *Lightning Record Pages*.
+. Go to *Setup → Object Manager →* the desired [.object]#Product# object → *Lightning Record Pages*.
 . Click on the desired record layout name.
 . Click *Edit* on the record details page.
-. In the *Lightning App Builder*, drag the  *Product Image Uploader* and
-*Product Image Viewer* sections from the components tab on the left to
-the record page layout.
+. In the *Lightning App Builder*, drag the  *Product Image Uploader* and *Product Image Viewer* sections from the components tab on the left to the record page layout.
++
 image:2021-08-13_12-04-47.png[]
 . Click *Save*.
 
-The setup is complete. On the corresponding *Product* record, you can
+The setup is complete. On the corresponding _Product_ record, you can
 upload new photos or change them.
 
-
-
-For example, if a product has a packaging change, the administrator
-manually replaces a photo with a new one. Next,
-link:adding-information-for-products-to-be-recognized.html#h2__518870114[if
-customized], a process sends updated records from Salesforce to the
-provider. The provider will process product images on a separate
-endpoint for training, and then a new version of the product design can
-be used to recognize the product on the shelves.
+For example, if a product has a packaging change, the administrator manually replaces a photo with a new one. Next, <<h2__518870114, if customized>>, a process sends updated records from Salesforce to the provider. The provider will process product images on a separate endpoint for training, and then a new version of the product design can be used to recognize the product on the shelves.
 
 image:Product-Image-section-on-Product-page.png[]
 
 [[h2__518870114]]
 == Setting up Product Image Uploads 
 
-To use product images to recognize products in the taken photos, set up
-uploading them to the CT Vision server:
+To use product images to recognize products in the taken photos, set up uploading them to the CT Vision server:
 
-. On the [.object]#Product Image# object, create a field with the *Lookup* type to link it with the corresponding [.object]#Product#
-object.
-. Go to *Setup → Custom Code → Apex Triggers →* check that
-the  [.apiobject]#ProductImageProcess# and [.apiobject]#Product2VisionProcess# triggers are active.
-. Go to *Setup → Custom Code → Custom Settings* → click *Manage* next to
-*Trigger Settings* of the CT Mobile package (*Namespase Prefix* is
-*clm*).
+. On the [.object]#Product Image# object, create a field with the *Lookup* type to link it with the corresponding [.object]#Product# object.
+. Go to *Setup → Custom Code → Apex Triggers →* check that the [.apiobject]#ProductImageProcess# and [.apiobject]#Product2VisionProcess# triggers are active.
+. Go to *Setup → Custom Code → Custom Settings* → click *Manage* next to *Trigger Settings* of the CT Mobile package (*Namespase Prefix* is *clm*).
 . Click *New*:
-.. In the *Name* field, specify Product2VisionProcess.
+.. In the *Name* field, specify [.apiobject]#Product2VisionProcess#.
 .. Select *Active*.
 . Click *Save*.
 
-The setup is complete. Marketing photos will be stored on a server side
-and,
-link:adding-information-for-products-to-be-recognized.html#h2__1751244368[if
-customized], displayed for the *Product* record tab.
+The setup is complete. Marketing photos will be stored on a server side and, <<#h2__1751244368, if customized>>, displayed for the *Product* record tab.
 
 [[h3_1021024571]]
-==== Filtering Products to Upload Their Images
+=== Filtering Products to Upload Their Images
 
-Specify the criteria to send product images only of the required
-products. To set the criteria:
+Specify the criteria to send product images only of the required products. To set the criteria:
 
-. Make sure, that the  *Product Synchronization Criteria*  field is added
-on the  *Vision Setup*  page layout for
-the  link:vision-setup-field-reference.html[Vision Setup]  custom metadata
-type.
-. Go to  *Setup → Custom Code → Custom Metadata Types →*  click  *Manage
-Records*  next to  *Vision Setup*.
+. Make sure, that the  *Product Synchronization Criteria*  field is added on the  *Vision Setup*  page layout for the link:../../CT-Vision-IR-Reference-Guide/vision-setup-field-reference[Vision Setup] custom metadata type.
+. Go to  *Setup → Custom Code → Custom Metadata Types →*  click  *Manage Records*  next to *Vision Setup*.
 . Click  *New*.
 . Specify the criteria.
 .. Enter  *Label.*
@@ -108,9 +70,7 @@ The setup is complete.
 [[h2_285464100]]
 == Testing Image Recognition 
 
-Optionally, you can test the loading and recognition of photos before
-setting up the integration with the CT Mobile app. Add the following
-sections on the desired [.object]#Activity#__  __Lightning page layout:
+Optionally, you can test the loading and recognition of photos before setting up the integration with the CT Mobile app. Add the following sections on the desired [.object]#Activity# Lightning page layout:
 
 * *CT Vision: Photo Uploader* is designed for uploading images of
 shelves with the desired products to the CT Vision server.
