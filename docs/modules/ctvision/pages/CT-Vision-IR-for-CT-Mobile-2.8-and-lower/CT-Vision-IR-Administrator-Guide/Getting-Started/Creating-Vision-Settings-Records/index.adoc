@@ -3,24 +3,32 @@
 After all the necessary record types are created, you can start
 configuring CT Vision  settings for the CT Mobile app.
 
-
-
 To create a new *Vision Settings* record:
 
 . Go to the *Vision Settings* tab → click *New*.
++
 [TIP]
 ====
-If the tab is missing, https://help.salesforce.com/s/articleView?id=sf.creating_custom_object_tabs.htm&type=5[create a custom tab] for the [.object]#Vision Settings
+If the tab is missing, https://help.salesforce.com/s/articleView?id=sf.creating_custom_object_tabs.htm&type=5[create a custom tab] for the [.object]#Vision Settings# object.
 ====
 
- object.# . In the *New Vision Settings* window, select the record type and click *Next*. .. The following records are required for CT Vision operation: * link:vision-visit-field-reference.html[Vision Visit] * link:vision-shelf-field-reference.html[Vision Shelf] .. The following records extend the CT Vision functionality: * link:vision-kpi-field-reference.html[Vision KPI] * link:vision-hint-field-reference.html[Vision Hint] * link:vision-info-field-reference.html[Vision Info] * link:vision-product-list-field-reference.html[Vision Product List] * link:vision-account-object-field-reference.html[Vision Account Object] [NOTE]
+. In the *New Vision Settings* window, select the record type and click *Next*.
+.. The following records are required for CT Vision operation:
+* link:../../../CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-visit-field-reference[Vision Visit]
+* link:../../../CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-shelf-field-reference[Vision Shelf]
+.. The following records extend the CT Vision functionality:
+* link:../../../CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-kpi-field-reference[Vision KPI]
+* link:../../../CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-hint-field-reference[Vision Hint]
+* link:../../../CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-info-field-reference[Vision Info]
+* link:../../../CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-product-list-field-reference[Vision Product List]
+* link:../../../CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-account-object-field-reference[Vision Account Object]
++
+[NOTE]
 ====
-This setting should be configured in case you are not using the standard [.object]#Account
+This setting should be configured in case you are not using the standard [.object]#Account# object in your data model
 ====
 
- object in your data model.#
 . Specify parameters and click *Save*.
-. Repeat steps 2–3 to create all required and, if needed, additional
-_Vision  Settings_ records.
+. Repeat steps 2–3 to create all required and, if needed, additional _Vision  Settings_ records.
 
 The setup is complete.
