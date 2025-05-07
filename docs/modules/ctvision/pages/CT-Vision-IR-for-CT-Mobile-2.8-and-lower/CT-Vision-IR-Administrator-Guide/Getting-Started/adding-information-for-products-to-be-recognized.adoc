@@ -6,7 +6,7 @@ To recognize products in photos taken, train the provider's neural networks by u
 [[h2__1751244368]]
 == Adding and Viewing Product Photos in Salesforce 
 
-When you added all required products to your Salesforce org, upload marketing photos and additional information about the product to the CT Vision server. The  [.object]#Product Image# object is intended to store all required information for recognition of photos by the selected provider in one place. For more information, refer to link:../../CT-Vision-IR-Reference-Guide/product-image-field-referencel[Product Image Field Reference].
+When you added all required products to your Salesforce org, upload marketing photos and additional information about the product to the CT Vision server. The  [.object]#Product Image# object is intended to store all required information for recognition of photos by the selected provider in one place. For more information, refer to link:../../CT-Vision-IR-Reference-Guide/product-image-field-reference[Product Image Field Reference].
 
 To upload and view marketing photos of products, add the following sections on the desired Product Lightning page layout:
 
@@ -15,7 +15,7 @@ To upload and view marketing photos of products, add the following sections on t
 +
 [TIP]
 ====
-To specify the additional product information, refer to link:../specifying-product-objects-and-fields#h2__2130197288[Specifying Product Objects and Fields: Product Image Information].
+To specify the additional product information, refer to link:./specifying-product-objects-and-fields#h2__2130197288[Specifying Product Objects and Fields: Product Image Information].
 ====
 
 To edit the [.object]#Product# Lightning page layout:
@@ -48,7 +48,7 @@ To use product images to recognize products in the taken photos, set up uploadin
 .. Select *Active*.
 . Click *Save*.
 
-The setup is complete. Marketing photos will be stored on a server side and, <<#h2__1751244368, if customized>>, displayed for the *Product* record tab.
+The setup is complete. Marketing photos will be stored on a server side and, <<h2__1751244368, if customized>>, displayed for the *Product* record tab.
 
 [[h3_1021024571]]
 === Filtering Products to Upload Their Images
