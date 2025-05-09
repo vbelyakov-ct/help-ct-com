@@ -1,86 +1,56 @@
 = Vision Shelf Field Reference
 
 The _Vision Shelf_ record type is used to define the different shelf
-types and specify the shelf display in the CT Mobile app. Before taking
-a photo of the shelf, a mobile user selects the required shelf type.
+types and specify the shelf display in the CT Mobile app. Before taking a photo of the shelf, a mobile user selects the required shelf type.
 
-To use CT Vision in the no-shelf mode, set the *Label* field value to
-_Master_.
+To use CT Vision in the no-shelf mode, set the *Label* field value to _Master_.
 
 '''''
 
-Record Type API Name: VisionShelf
+Record Type API Name: [.apiobject]#VisionShelf#
 
 '''''
 
-The following fields must be created on the [.object]#CTM Settings# (for versions prior to 2.9) or [.object]#Vision Settings# (since version
-2.9)  object for this record type:
+The following fields must be created on the [.object]#CTM Settings# (for versions prior to 2.9) or [.object]#Vision Settings# (since version 2.9) object for this record type:
 
-[width="100%",cols="25%,25%,25%,25%",]
+[width="100%",cols="10%,25%,10%,55%"]
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Icon a|
-Icon__c (versions lower than 2.9)
+|Icon a| [.apiobject]#Icon__c# (versions lower than 2.9)
 
-ctv__Icon__c    (since version  2.9)
+[.apiobject]#ctv\__Icon__c# (since version  2.9) |Text(255) a| For a better visibility, set an icon for a shelf. This icon will be displayed on the shelf button on the left side of the CT Vision screen, where a user creates a photo with products that should be recognized on a shelf.
 
-|Text(255) a|
-For a better visibility, set an icon for a shelf. This icon will be
-displayed on the shelf button on the left side of the CT Vision screen,
-where a user creates a photo with products that should be recognized on
-a shelf.
+Specify an icon name if it is stored in https://help.salesforce.com/s/articleView?id=pages_static_resources.htm&language=en_US&type=5[static resources] in your Salesforce org or its URL.
 
+|Label a| [.apiobject]#clm\__Label__c# (versions lower than 2.9)
 
+[.apiobject]#ctv\__Label__c# (since version  2.9)
 
-Specify an icon name if it is stored in
-https://help.salesforce.com/s/articleView?id=pages_static_resources.htm&language=en_US&type=5[static
-resources] in your Salesforce org or its URL.
+|Text(255) a| Specify a shelf name that will be displayed in the CT Mobile app.
 
-|Label a|
-clm__Label__c    (versions lower than 2.9)
+If the shelf name is set as _Master_, it will be the only shelf displayed in the link:../../CT-Vision-IR-Administrator-Guide/working-with-ct-vision-in-the-ct-mobile-app#h2__1221438961[list of shelves] on the left part of the report summary creation screen.
 
-ctv__Label__c   (since version  2.9)
+|Object a| [.apiobject]#clm\__Object__c# (versions lower than 2.9)
 
-|Text(255) a|
-Specify a shelf name that will be displayed in the CT Mobile app.
+[.apiobject]#ctv\__Object__c# (since version  2.9) |Text(255) |Specify the API name of the object to apply the setting, for example, [.apiobject]#CTCPG\__Activity__c#.
 
-If the shelf name is set as _Master_, it will be the only shelf
-displayed in the
-link:working-with-ct-vision-in-the-ct-mobile-app.html#h2__1221438961[list
-of shelves] on  the left part of the report summary creation screen.
+|Object Record Type |[.apiobject]#ctv\__VisionObjectRecordType__c# |Text(255) a| NOTE: Not in use since version 2.9.
 
-|Object a|
-clm__Object__c   (versions lower than 2.9)
+If needed, specify the API name of the record type for the object in the [.apiobject]#clm\__Object__c# field to apply the setting for the corresponding record type.
 
-ctv__Object__c   (since version  2.9)
+|Plan a| [.apiobject]#clm\__Plan__c# (versions lower than 2.9)
 
-|Text(255) |Specify the API name of the object to apply the setting, for
-example, CTCPG__Activity__c.
+[.apiobject]#ctv\__Plan__c# (since version  2.9) |Number(18,0) |Planned number of photos to take for the shelf that is displayed as a line on the shelf button. The left pointer is 0 and the right one is the planned number.
 
-|Object Record Type |[.apiobject]#ctv__VisionObjectRecordType__c# |Text(255) a| Not in use since version 2.9. If needed, specify the API name of the record type for the object in the [.apiobject]#clm__Object__c# field to apply the setting for the
-corresponding record type.
+|Type a| [.apiobject]#clm\__Type__c# (versions lower than 2.9)
 
-|Plan a|
-clm__Plan__c   (versions lower than 2.9)
+[.apiobject]#ctv\__Type__c# (since version  2.9)
 
-ctv__Plan__c   (since version  2.9)
-
-|Number(18,0) |Planned number of photos to take for the shelf that is
-displayed as a line on the shelf button. The left pointer is 0 and the
-right one is the planned number.
-
-|Type a|
-[.apiobject]#clm__Type__c (versions lower than 2.9)# [.apiobject]#ctv__Type__c   (since version  2.9)#
-
-|Picklist a|
-Shooting mode applied for the shelf:
+|Picklist a| Shooting mode applied for the shelf:
 
 Values must be manually created by the administrator.
 
 * *Photo* to create a single photo for an ordinary shelf.
-* *Collection* to create a photo of the outsize shelf that cannot be
-captured in a single shot. The photos of the collection will be merged
-and sent as an indivisible photo for recognition.
-
+* *Collection* to create a photo of the outsize shelf that cannot be captured in a single shot. The photos of the collection will be merged and sent as an indivisible photo for recognition.
 |===
