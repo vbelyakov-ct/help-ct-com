@@ -89,22 +89,22 @@ image:working-with-ct-vision-2021-03-24.jpg[800,600]
 
 The statuses can acquire the following values:
 
-[width="100%",cols="50%,50%",]
+[width="100%",cols="30%,70%",]
 |===
 |*Status* |*Description*
 
-|[.yellow-text]#*Yellow*# (arrow up) |The photo is being sent for recognition.
+| [.yellow-text]#*Yellow*# (arrow up) |The photo is being sent for recognition.
 
-|[.yellow-text]#*Yellow*# (arrow down) |The recognition result is being received.
+| [.yellow-text]#*Yellow*# (arrow down) |The recognition result is being received.
 
-|[.red-text]*Red* |An error has occurred.
+| [.red-text]*Red* |An error has occurred.
 
-|[.green-text]#*Green*# |Successfully  recognized.
+| [.green-text]#*Green*# |Successfully  recognized.
 
-|[.purple-text]#*Purple*# |The photo is successfully recognized, but no required
+| [.purple-text]#*Purple*# |The photo is successfully recognized, but no required
 products are detected.
 
-|[.orange-text]#*Orange*# |Displayed after the user confirms a photo with an error.
+| [.orange-text]#*Orange*# |Displayed after the user confirms a photo with an error.
 |===
 
 The status indicator is displayed on the taken photo in the  *Miniatures* gallery.
