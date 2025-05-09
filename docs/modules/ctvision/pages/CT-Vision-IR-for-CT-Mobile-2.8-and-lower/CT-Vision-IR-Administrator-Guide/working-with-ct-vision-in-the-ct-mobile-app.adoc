@@ -27,7 +27,7 @@ To create a report summary:
 
 . Open an _Activity_ record in the CT Mobile app and tap the CT Vision icon.
 +
-image:Start-CT-Vision.png[]
+image:Start-CT-Vision.png[266,900]
 . Select the shelf type on the left side of the screen.
 +
 [TIP]
@@ -57,7 +57,7 @@ For more information, refer to link:../CT-Vision-IR-Reference-Guide/Vision-Setti
 ** The taken photo will be displayed in the  *Miniatures*  gallery at the bottom of the screen.
 ** The photo is sent for recognition and the appropriate status indicator is displayed on the photo in the  *Miniatures* gallery.
 +
-image:working-with-ct-vision-2021-03-24-3.png[]
+image:working-with-ct-vision-2021-03-24-3.png[741,556]
 
 . If link:../CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-visit-field-reference[Enable Gallery = true], add photos from the device gallery by long-tapping the  *Photo* button. Select up to 9 photos and tap *Done*.
 . Repeat steps 4–5 to take the planned number of photos for the current visit.
@@ -82,7 +82,7 @@ If there are no shelves or the planned number is not set, the planned number of 
 * Tap *Accept* to save the report.
 * Tap *Try again* to go back to taking photos and managing errors.
 +
-image:working-with-ct-vision-2021-03-24.jpg[]
+image:working-with-ct-vision-2021-03-24.jpg[800,600]
 
 [[h2_691734370]]
 == Status Indicator 
@@ -120,7 +120,7 @@ If an error occurred during photo processing, the status indicator changes to re
 The photo will be deleted if the device has access to the Internet, as the photo is physically on the server.
 ====
 
-image:working-with-ct-vision-2021-03-24-2.png[align="center"]
+image::working-with-ct-vision-2021-03-24-2.png[align="center"]
 
 [[h2__1442951234]]
 == Image Recognition Tools 
@@ -143,7 +143,7 @@ image:Recognized-Product-at-Clickable-Realogram.png[]
 * tap the image:working-with-ct-vision-2021-03-24-1.png[25,25] icon *(3)* to go back to taking photo mode.
 * tap *Done (4)* to open the Report Summary.
 
-image:working-with-ct-vision-2021-03-24-2.jpg[align="center"]
+image::working-with-ct-vision-2021-03-24-2.jpg[align="center"]
 
 [[h3_1017582017]]
 === Shelf Product List
@@ -161,11 +161,11 @@ To set up fields to display, refer to link:../CT-Vision-IR-Reference-Guide/Visio
 .. In the *Product Info* column, tap the shelf name to expand the shelf and review products.
 .. Tap the *Plus* button next to the desired shelf to add the unrecognized product. The product will be highlighted with a red color.
 +
-image:Shelf-Product-List-Add-Product.png[]
+image:Shelf-Product-List-Add-Product.png[561,800]
 .. In the  *Facing*  column, change the number of the desired product, if necessary. The updated number will be highlighted in red color.
 .. The  *Shelf Share*  and  *Length*  parameters are calculated per shelf, not per each product.
 +
-image:Shelf-Product-List.png[]
+image:Shelf-Product-List.png[933,700]
 . Tap *Save*.
 
 [[h2_491461789]]
@@ -187,7 +187,7 @@ image:Tags-01.png[]
 
 The tag is added. In the *Miniatures* gallery, the photo tag icon is displayed on the photo.
 
-image:Tags-02.png[]
+image::Tags-02.png[align="center"]
 
 [[h2_566778463]]
 == Pictures Gallery 
@@ -209,4 +209,4 @@ The gallery is displayed when at least one photo is taken.
 Photo tags are displayed according to their object and/or its record type. For example, if a photo was created on the [.object]#Account# object, you will see only photo tags that are also created for the [.object]#Account# object. Or, if a photo was created on the _Customer_ record type of the [.object]#Account# object, you will see only photo tags that are also created for the _Customer_ record type.
 ====
 
-image:ctvision-ios-accounts-pictures-filter.png[]
+image::ctvision-ios-accounts-pictures-filter.png[675,900, align="center"]
