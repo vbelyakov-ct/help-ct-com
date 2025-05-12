@@ -15,9 +15,9 @@ If the tab is missing, https://help.salesforce.com/s/articleView?id=sf.creating_
 The link:../../CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-object-field-reference-ir-2-9[Vision Object] record is required for CT Vision IR operation. The following records extend the CT Vision IR functionality:
 
 * link:../../CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-shelf-field-reference-ir-2-9[Vision Shelf]
-* link:../../CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-hint-field-reference-ir-2-9.[Vision Hint]
+* link:../../CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-hint-field-reference-ir-2-9[Vision Hint]
 . Specify parameters and click *Save*.
 . Repeat steps 2–3 to create all required and, if needed, additional _Vision Settings_ records.
-. sOn the link:../../CT-Vision-IR-Reference-Guide/vision-photo-field-reference-ir-2-9[Vision Photo] object, create **Vision Object ID **field for each link:../../CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-object-field-reference-ir-2-9[Vision Object] record and then specify its API name on the *Vision Photo Lookup* field on the [.object]#Vision Object#.
+. On the link:../../CT-Vision-IR-Reference-Guide/vision-photo-field-reference-ir-2-9[Vision Photo] object, create **Vision Object ID **field for each link:../../CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-object-field-reference-ir-2-9[Vision Object] record and then specify its API name on the *Vision Photo Lookup* field on the [.object]#Vision Object#.
 
 The setup is complete.
