@@ -23,7 +23,7 @@ The following fields must be created on the [.object]#Product Image#  object:
 
 |Main Product Image |[.apiobject]#ctv\__Main__c# |Checkbox |Active, if there is a product label in the picture (frontal picture of the package).
 
-|Preview URL |[.apiobject]#ctv\__PreviewUrl__c# |Text(255) |The provider creates the preview of product images and then packed them into a ZIP archive. Previews are used in link:../CT-Vision-IR-Administrator-Guide/working-with-ct-vision-in-the-ct-mobile-app#h2_2072273480[the clickable realogram] when the mobile user taps the recognized product link:../CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-info-field-reference[to see its details].
+|Preview URL |[.apiobject]#ctv\__PreviewUrl__c# |Text(255) |The provider creates the preview of product images and then packed them into a ZIP archive. Previews are used in link:../CT-Vision-IR-Administrator-Guide/working-with-ct-vision-in-the-ct-mobile-app#h3_2072273480[the clickable realogram] when the mobile user taps the recognized product link:../CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-info-field-reference[to see its details].
 
 |Provider |[.apiobject]#ctv\__Provider__c# |Picklist |The provider that uses the product image.
 
