@@ -27,9 +27,8 @@
   color: orange;
 }
 
-body {
-  -webkit-hyphens: none;
-  -moz-hyphens: none; /* Firefox */
-  -ms-hyphens: none;
-  hyphens: none;
+p,
+li,
+td {
+  word-break: keep-all;
 }
