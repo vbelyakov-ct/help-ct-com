@@ -28,12 +28,7 @@
 }
 
 .doc .article-content p,
-.doc .article-content li,
-.doc .article-content td, /* Добавьте другие элементы, где это нужно */
-.doc .article-content code /* Особенно важно для таких слов, как ваше */ {
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-  word-break: keep-all; /* Это может помочь предотвратить разрыв слова */
+.doc .article-content code {
+  hyphens: none !important;
+  word-break: keep-all !important;
 }
