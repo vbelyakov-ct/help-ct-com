@@ -31,3 +31,25 @@
 .orange-text {
   color: orange;
 }
+
+.article-content p,
+.article-content li,
+.article-content dd,
+.article-content dt,
+.article-content td,
+.article-content th,
+.article-content span,
+.article-content div,
+.article-content .admonitionblock td.content,
+.article-content .exampleblock > .content,
+.article-content .sidebarblock > .content,
+.article-content .quoteblock .paragraph,
+.article-content figcaption,
+.article-content blockquote,
+.article-content pre,
+.article-content code {
+  -webkit-hyphens: none; /* Safari */
+  -moz-hyphens: none; /* Firefox (старые версии) */
+  -ms-hyphens: none; /* IE/Edge (старые версии) */
+  hyphens: none; /* Стандартное свойство */
+}
