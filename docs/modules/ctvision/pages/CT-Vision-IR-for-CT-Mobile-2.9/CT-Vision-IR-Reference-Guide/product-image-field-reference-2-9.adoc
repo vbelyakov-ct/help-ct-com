@@ -10,18 +10,18 @@ Object API Name: [.apiobject]#ctv\__ProductImage__c#
 
 The following fields must be created on the [.object]#Product Image# object:
 
-[width="100%",cols="15%,20%,10%,55%"]
+[width="100%",cols="15%,15%,15%,55%"]
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|CT Product |[.apiobject]#ProductId__c# |Lookup(CT Product) a| The parent _CT Product_ record. The field must be manually created by the administrator.
+|CT Product |[.apiobject]#ProductId__c# |Lookup (CT Product) a| The parent _CT Product_ record. The field must be manually created by the administrator.
 
 |Document Id |[.apiobject]#ctv\__DocumentId__c# |Text(255) |The unique Id of the product image.
 
 |Document URL |[.apiobject]#ctv\__DocumentUrl__c# |Text(255) |The product image name when it is stored in link:https://help.salesforce.com/s/articleView?id=pages_static_resources.htm&language=en_US&type=5[static resources] in your Salesforce org or its URL.
 
 |External Id |[.apiobject]#ctv\__ExternalId__c# |Text(255) (External Id)
-(Unique Case Sensetive) |The product image external identifier.
+(Unique Case Sensitive) |The product image external identifier.
 
 |Main Product Image |[.apiobject]#ctv\__Main__c# |Checkbox |Active, if there is a product label in the picture (frontal picture of the package).
 
