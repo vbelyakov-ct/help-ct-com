@@ -19,7 +19,7 @@ The following fields must be created on the [.object]#Product Image#  object:
 
 |Document URL |[.apiobject]#ctv\__DocumentUrl__c# |Text(255) |The product image name when it is stored in https://help.salesforce.com/s/articleView?id=pages_static_resources.htm&language=en_US&type=5[static resources] in your Salesforce org or its URL.
 |External Id |[.apiobject]#ctv\__ExternalId__c# |Text(255) (External Id)
-(Unique Case Sensetive) |The product image external identifier.
+(Unique Case Sensitive) |The product image external identifier.
 
 |Main Product Image |[.apiobject]#ctv\__Main__c# |Checkbox |Active, if there is a product label in the picture (frontal picture of the package).
 
