@@ -1,20 +1,14 @@
 = Working with CT Vision IR in Salesforce
 :toc:
 
-A manager or supervisor reviews
-link:../working-with-ct-vision-in-the-ct-mobile-app[the taken photos
-by the mobile user] in Salesforce. Go to the CT Vision app and open the
-*Feedback Loop* tab.
+A manager or supervisor reviews xref:CT-Vision-IR-for-CT-Mobile-2.8-and-lower/CT-Vision-IR-Administrator-Guide/working-with-ct-vision-in-the-ct-mobile-app.adoc[the taken photos by the mobile user] in Salesforce. Go to the CT Vision app and open the *Feedback Loop* tab.
 
 [[h2_1552458132]]
 == Feedback Loop Overview 
 
-The taken photos received from the CT Vision server will be displayed on
-the main screen, and the filters to apply on the right side of the page.
+The taken photos received from the CT Vision server will be displayed on the main screen, and the filters to apply on the right side of the page.
 
-* One page displays 20 photos. Use page navigation buttons in case of
-several pages and view the number of the received photos next to  *Total
-Records*.
+* One page displays 20 photos. Use page navigation buttons in case of several pages and view the number of the received photos next to *Total Records*.
 +
 [TIP]
 ====
@@ -22,20 +16,20 @@ Maximum 500 photos can be loaded at a time. More photos (another 500) will be lo
 ====
 +
 image:Feedback-Loop-Tab-v.3.png[]
-* Under the photo, the information specified for the
-[.object]#Vision# object in the link:../Getting-Started/specifying-product-objects-and-fields#h3_1366151624[Photo Description] tab is displayed.
-* Click the  image:realogram-icon.png[] icon to open a photo for
-verifying <<h3_1235535035, its realogram and recognized products>>.
+
+* Under the photo, the information specified for the [.object]#Vision# object in the xref:CT-Vision-IR-for-CT-Mobile-2.8-and-lower/CT-Vision-IR-Administrator-Guide/Getting-Started/specifying-product-objects-and-fields.adoc#h3_1366151624[Photo Description] tab is displayed.
+* Click the image:realogram-icon.png[] icon to open a photo for verifying <<h3_1235535035, its realogram and recognized products>>.
 * Click the checkbox  above the desired photos and then click the *Create zip* button to build an archive with the desired photos.
 ** The archive will be saved on the user's device.
 ** Images are saved in the `.png` format.
-* Click the checkbox  above the desired photos and then click the **Post to Chatter **button to send a new message with attached photos to the Chatter. You must select *Chatter Group(s)* to send the message.
+* Click the checkbox above the desired photos and then click the **Post to Chatter** button to send a new message with attached photos to the Chatter. You must select *Chatter Group(s)* to send the message.
 +
 image:Feedback-Loop-Post-to-Chatter-v.2.png[]
+
 * Click the checkbox  above the desired photos and then click the *Delete*  button to delete the photo. You can also delete a photo by clicking
 the image:delete-icon-gallery.png[25,25] icon in the photo gallery.
 * Click the image:eye-icon.png[] button to view the desired photo. In the opened viewer, click  image:gallery-right-arrow.png[25,25] and image:gallery-left-arrow.png[25,25] buttons to list other photos of the gallery.
-* Click the image:tag-selection-icon.png[] button and select the desired link:../Getting-Started/adding-photo-tags[photo tag].
+* Click the image:tag-selection-icon.png[] button and select the desired xref:CT-Vision-IR-for-CT-Mobile-2.8-and-lower/CT-Vision-IR-Administrator-Guide/Getting-Started/adding-photo-tags.adoc[photo tag].
 +
 image:tags-list.png[]
 
@@ -45,11 +39,9 @@ image:tags-list.png[]
 [width="100%",cols="70%,30%",frame=none, grid=none]
 |===
 a|
-Use filters on the right side of the *Feedback Loop* page to search the
-taken photos based on criteria.
+Use filters on the right side of the *Feedback Loop* page to search the taken photos based on criteria.
 
-To apply a filter, specify the required criteria and click the *Apply*
-button.
+To apply a filter, specify the required criteria and click the *Apply* button.
 
 * Photos that met the criteria are displayed in a group.
 * To reset the filter and erase all criteria, click the *Clear All* button.
@@ -62,35 +54,34 @@ If the search has too many results, the warning message will be displayed. In th
 [[h3_717556108]]
 === Base Filters
 
-* To search photos by a  Vision  object, select  it in the *Select Vision
-Object* field.
-* To search photos by records of the  Vision  object, select  them  in
-the *Record Name* field.
+* To search photos by a [.object]#Vision# object, select it in the *Select Vision Object* field.
+* To search photos by records of the [.object]#Vision# object, select them in the *Record Name* field.
 +
 [NOTE]
 ====
-Vision objects and their records must be defined in the _CTM Settings_ record with the link:../../CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-visit-field-reference[Vision Visit] record type.
+Vision objects and their records must be defined in the _CTM Settings_ record with the xref:CT-Vision-IR-for-CT-Mobile-2.8-and-lower/CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-visit-field-reference.adoc[Vision Visit] record type.
 ====
 
-* Specify the *Start Date (from)* and *End Date (to)* of the [.object]#Vision# object. These fields are displayed only if in the *Select Vision Object* field the [.object]#Activity# object is selected (or any object set up as the _Activity_ in the https://help.customertimes.com/smart/project-ct-mobile-en/ct-mobile-control-panel-calendar[CT Mobile Control Panel: Calendar] / https://help.customertimes.com/smart/project-ct-mobile-en/ct-mobile-control-panel-activities-new[CT Mobile Control Panel 2.0: Activities]).
+* Specify the *Start Date (from)* and *End Date (to)* of the [.object]#Vision# object. These fields are displayed only if in the *Select Vision Object* field the [.object]#Activity# object is selected (or any object set up as the _Activity_ in the link:https://help.customertimes.com/smart/project-ct-mobile-en/ct-mobile-control-panel-calendar[CT Mobile Control Panel: Calendar] / link:https://help.customertimes.com/smart/project-ct-mobile-en/ct-mobile-control-panel-activities-new[CT Mobile Control Panel 2.0: Activities]).
 * Use the *Tags* filter to select the desired photo tag(s) and display only appropriate photos.
-* Add multiple *Users* of the desired _Activity_ records. The filter uses the OR operator. [[h3_929593309]]
+* Add multiple *Users* of the desired _Activity_ records. The filter uses the OR operator.
 
+[[h3_929593309]]
 === Advanced Filters
 
 Click *Advanced Search* to expand additional filter criteria. Use the following criteria:
 
-* Select the desired *Recognition Engine*. Only link:../Getting-Started/Setting-up-Integration-with-the-Image-Recognition-Providers/index[configured] recognition engines are available for selection.
+* Select the desired *Recognition Engine*. Only xref:CT-Vision-IR-for-CT-Mobile-2.8-and-lower/CT-Vision-IR-Administrator-Guide/Getting-Started/Setting-up-Integration-with-the-Image-Recognition-Providers/index.adoc[configured] recognition engines are available for selection.
 * Select the specific *Activity Object* and *Activity Object Name*.
 * Select an [.object]#Account# that is linked to the *Activity* records. The filter uses the OR operator.
-** Create a _CTM Settings_ record with the link:../../CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-account-object-field-reference[Vision Account] record type to add desired accounts to the picklist.
+** Create a _CTM Settings_ record with the xref:CT-Vision-IR-for-CT-Mobile-2.8-and-lower/CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-account-object-field-reference.adoc[Vision Account] record type to add desired accounts to the picklist.
 ** Search an organization by a specific *Account Field Value* in the selected *Account Field*.
 * Specify the *Product* criteria:
-** Enter the unique ID of the product in the *Product Key Code* field. +
+** Enter the unique ID of the product in the *Product Key Code* field.
 +
 [TIP]
 ====
-For more information, refer to link:../Getting-Started/specifying-product-objects-and-fields#h2__1362989108[Product Object Settings].
+For more information, refer to xref:CT-Vision-IR-for-CT-Mobile-2.8-and-lower/CT-Vision-IR-Administrator-Guide/Getting-Started/specifying-product-objects-and-fields.adoc#h2__1362989108[Product Object Settings].
 ====
 
 ** Select the *Product* record.
@@ -105,15 +96,13 @@ For more information, refer to link:../Getting-Started/specifying-product-object
 
 [TIP]
 ====
-To make changes to recognized products, refer
-to link:corrections-in-shelf-product-list[Corrections in Shelf
-Product List].
+To make changes to recognized products, refer to xref:CT-Vision-IR-for-CT-Mobile-2.8-and-lower/CT-Vision-IR-Administrator-Guide/Working-with-CT-Vision-IR-in-Salesforce/corrections-in-shelf-product-list.adoc[Corrections in Shelf Product List].
 ====
 
 [width="100%",cols="50%,50%",frame=none, grid=none]
 |===
 a|
-Photos that met the filter criteria are displayed with the description. To customize the description, refer to link:../Getting-Started/specifying-product-objects-and-fields#h3_1366151624[Feedback Loop tab] in the  *CT Vision Setup*.
+Photos that met the filter criteria are displayed with the description. To customize the description, refer to xref:CT-Vision-IR-for-CT-Mobile-2.8-and-lower/CT-Vision-IR-Administrator-Guide/Getting-Started/specifying-product-objects-and-fields.adoc#h3_1366151624[Feedback Loop tab] in the *CT Vision Setup*.
 
 The following buttons are available under a photo:
 
@@ -121,14 +110,12 @@ The following buttons are available under a photo:
 !===
 ! *Buttons* ! *Description*
 
-^! image:Salesforce-Realogram-button-v.2.png[] ! Open a photo for
-verifying <<h3_1235535035, its realogram and recognized products>>.
+^! image:Salesforce-Realogram-button-v.2.png[] ! Open a photo for verifying <<h3_1235535035, its realogram and recognized products>>.
 
 ^! image:Salesforce-Shelf-Product-List-Button-v.2.png[] .3+a! Open the <<h2_1552458132, Shelf Product List>> of the recognized products and their number on the shelves.
 
 * If products details have been edited, the red warning is displayed.
 * If products details have been verified, the green warning is displayed.
-
 
 ^! image:Salesforce-Shelf-Product-List-Button-2-v.2.png[]
 
@@ -138,7 +125,7 @@ verifying <<h3_1235535035, its realogram and recognized products>>.
 
 ^! image:checkbox-selected.png[]
 
-^! image:tag-selection-icon.png[] a! Add a link:../Getting-Started/adding-photo-tags#h3__759435562[photo tag] by clicking in the upper right corner of the taken photo.
+^! image:tag-selection-icon.png[] a! Add a xref:CT-Vision-IR-for-CT-Mobile-2.8-and-lower/CT-Vision-IR-Administrator-Guide/Getting-Started/adding-photo-tags.adoc[photo tag] by clicking in the upper right corner of the taken photo.
 
 [NOTE]
 ====
@@ -155,15 +142,15 @@ You can add only photo tags that are created for the same object and/or its reco
 
 [NOTE]
 ====
-Available only for link:../Getting-Started/Setting-up-Integration-with-the-Image-Recognition-Providers[providers with recognition]. If the _vision_light_ provider is selected, the realogram is not available.
+Available only for xref:CT-Vision-IR-for-CT-Mobile-2.8-and-lower/CT-Vision-IR-Administrator-Guide/Getting-Started/Setting-up-Integration-with-the-Image-Recognition-Providers/index.adoc[providers with recognition]. If the _vision_light_ provider is selected, the realogram is not available.
 ====
 
 Click the image:Salesforce-Realogram-button-v.2.png[40,60] button to open a *Preview* window.
 
 Use the navigation arrows to scroll photos of the current *Activity* record.
 
-* View the recognized products and price tags on the  *Realogram*  tab.
-* The originally taken photo without any recognition information is located on the  *Fact*  tab.
+* View the recognized products and price tags on the *Realogram* tab.
+* The originally taken photo without any recognition information is located on the *Fact* tab.
 * Zoom a photo if needed.
 
 image:The-Preview-window-with-the-Realogram.png[]
@@ -194,8 +181,7 @@ Select the *Show Probability* button to display the percentage of probability th
 |Information a|
 image:FBL-Realogram-Information.png[]
 
-|Click
-the image:information_vision.png[15,15] button to review the total number of recognized products and prices.
+|Click the image:information_vision.png[15,15] button to review the total number of recognized products and prices.
 
 |Delete a photo ^| —
 
@@ -203,8 +189,7 @@ the image:information_vision.png[15,15] button to review the total number of rec
 
 |Share
 |image:FBL-Realogram-Product-Share-v.2.png[]
-a|
-Verify the shelf share.
+a| Verify the shelf share.
 
 * Specify the color that highlights a shelf on a realogram in Salesforce and the CT Mobile app.
 image:Shelf-Color.png[]
