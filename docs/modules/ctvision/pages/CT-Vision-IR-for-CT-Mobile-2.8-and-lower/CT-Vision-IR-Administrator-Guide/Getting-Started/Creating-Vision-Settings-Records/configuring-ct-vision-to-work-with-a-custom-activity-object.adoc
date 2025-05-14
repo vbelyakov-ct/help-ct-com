@@ -7,12 +7,12 @@ object.
 [[h2__335662800]]
 == CT Mobile Customization 
 
-Check that the [.object]#Activity# object is specified on the https://help.customertimes.com/articles/ct-mobile-ios-en/ct-mobile-control-panel-calendar/a/h3_1397263211[CT Mobile Control Panel: Calendar] tab.
+Check that the [.object]#Activity# object is specified on the link:https://help.customertimes.com/articles/ct-mobile-ios-en/ct-mobile-control-panel-calendar/a/h3_1397263211[CT Mobile Control Panel: Calendar] tab.
 
 [[h3_395000743]]
 === System Label
 
-Create the  [.apiobject]#MobileId\__c# field on the desired object, for example, [.apiobject]#CustomMeeting__c#, in order to identify whether a record has been created on a mobile device or in Salesforce. The photo taken on a mobile device will be attached only to the records with the specified Mobile Id. For more information, go to the https://help.customertimes.com/articles/ct-mobile-ios-en/system-label[System Label] article.
+Create the  [.apiobject]#MobileId\__c# field on the desired object, for example, [.apiobject]#CustomMeeting__c#, in order to identify whether a record has been created on a mobile device or in Salesforce. The photo taken on a mobile device will be attached only to the records with the specified Mobile Id. For more information, go to the link:https://help.customertimes.com/articles/ct-mobile-ios-en/system-label[System Label] article.
 
 [[h3__601076877]]
 === Activity Lookup
@@ -33,7 +33,7 @@ Specify the desired object as the [.object]#Activity# object to display the *CT 
 +
 [TIP]
 ====
-The full description of the fields is available link:../../../CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-visit-field-reference[here].
+The full description of the fields is available xref:CT-Vision-IR-for-CT-Mobile-2.8-and-lower/CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-visit-field-reference.adoc[here].
 ====
 
 . Click *Save*. The setup is complete.

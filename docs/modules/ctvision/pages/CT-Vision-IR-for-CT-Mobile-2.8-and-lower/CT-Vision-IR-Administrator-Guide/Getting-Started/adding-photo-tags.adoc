@@ -4,24 +4,20 @@
 [[h2_804337916]]
 == Creating Photo Tags 
 
-Photo tag is an additional parameter for  the taken photos in link:../Working-with-CT-Vision-IR-in-Salesforce/index#h3_491461789[Salesforce] and link:../working-with-ct-vision-in-the-ct-mobile-app#h2_491461789[the CT Mobile app]. Each tag has its label and color.
+Photo tag is an additional parameter for  the taken photos in xref:CT-Vision-IR-for-CT-Mobile-2.8-and-lower/CT-Vision-IR-Administrator-Guide/Working-with-CT-Vision-IR-in-Salesforce/index.adoc[Salesforce] and xref:CT-Vision-IR-for-CT-Mobile-2.8-and-lower/CT-Vision-IR-Administrator-Guide/working-with-ct-vision-in-the-ct-mobile-app.adoc#h2_491461789[the CT Mobile app]. Each tag has its label and color.
 
 [[h2_1953806123]]
 == Create a New Tag 
 
 To create a new tag:
 
-. Go to the  *Tags*  tab. If this tab is not displayed, add it to the
-panel.
-. Click  *New*.
+. Go to the *Tags* tab. If this tab is not displayed, add it to the panel.
+. Click *New*.
 +
 image:new_tag.png[]
-. Select a  *Vision Object*  (required) and  *Vision Object Record
-Type* (if needed):
-* If you selected only a vision object, the tag will be available for
-all records  on this object.
-* If you selected vision object and its record type,  the tag will be
-available for all records matching this record type.
+. Select a *Vision Object* (required) and *Vision Object Record Type* (if needed):
+* If you selected only a vision object, the tag will be available for all records on this object.
+* If you selected vision object and its record type, the tag will be available for all records matching this record type.
 +
 [NOTE]
 ====
@@ -49,14 +45,14 @@ image:ctv-editing-tag.png[]
 [[h2__117227442]]
 == Managing Access to Photo Tags
 
-To allow a user working with the specific photo tag in link:../Working-with-CT-Vision-IR-in-Salesforce/index[Salesforce], link:../working-with-ct-vision-in-the-ct-mobile-app[CT Mobile], and while link:../Working-with-CT-Vision-IR-in-Salesforce/index#h3_717556108[searching in the Feedback Loop], share access to the tag:
+To allow a user working with the specific photo tag in xref:CT-Vision-IR-for-CT-Mobile-2.8-and-lower/CT-Vision-IR-Administrator-Guide/Working-with-CT-Vision-IR-in-Salesforce/index.adoc[Salesforce], xref:CT-Vision-IR-for-CT-Mobile-2.8-and-lower/CT-Vision-IR-Administrator-Guide/working-with-ct-vision-in-the-ct-mobile-app.adoc[CT Mobile], and while xref:CT-Vision-IR-for-CT-Mobile-2.8-and-lower/CT-Vision-IR-Administrator-Guide/Working-with-CT-Vision-IR-in-Salesforce/index.adoc#h3_717556108[searching in the Feedback Loop], share access to the tag:
 
 . Go to the *Tags* tab. If this tab is not displayed, add it to the panel.
 . Click on the desired tag from the list.
 . Click image:dropdown-icon.png[25,25] and select *Sharing*.
 +
 image:share_tag.png[]
-+
+
 . *Search* for users, roles, or groups to share the tag with.
 . Select the _Read/Write_ *Tag Access Level*.
 . Click *Save*.
@@ -67,8 +63,9 @@ To view the sharing hierarchy:
 . Click on the desired tag from the list.
 . Click image:dropdown-icon.png[25,25] and select *Sharing hierarchy*.
 +
-image:sharing_hierarchy.png[] +
-. The list of users, groups, and roles, which have access to the tag will be displayed. Click the *View* link to see access details for each user. +
+image:sharing_hierarchy.png[]
+
+. The list of users, groups, and roles, which have access to the tag will be displayed. Click the *View* link to see access details for each user.
 +
 [TIP]
 ====

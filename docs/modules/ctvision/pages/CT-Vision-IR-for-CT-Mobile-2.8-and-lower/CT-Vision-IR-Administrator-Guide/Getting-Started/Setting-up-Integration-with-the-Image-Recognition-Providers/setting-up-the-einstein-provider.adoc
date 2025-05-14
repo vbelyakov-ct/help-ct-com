@@ -1,12 +1,10 @@
 = 5.1 Setting up the Einstein Provider
 
-To use
-https://developer.salesforce.com/docs/analytics/einstein-vision-language/overview[the
-Salesforce Einstein provider] for product image recognition:
+To use link:https://developer.salesforce.com/docs/analytics/einstein-vision-language/overview[the Salesforce Einstein provider] for product image recognition:
 
-. Go to the  *CT Vision Setup* tab.
-. In the *Provider Configuration* section, select  **Einstein  **from
-the  *Provider*  picklist.
+. Go to the *CT Vision Setup* tab.
+. In the *Provider Configuration* section, select **Einstein** from
+the *Provider* picklist.
 . Click the *Plus* button to add a new *Model ID*.
 . In the *Add New Model* window:
 .. Enter the *Model ID*.
@@ -21,9 +19,9 @@ image:Add-Einstein-Model-ID.png[196,900]
 .. *Activate* the desired models.
 +
 image:Activate-Einstein-Models.png[227,900]
-.. Click the  image:Screenshot-2021-08-11-at-17.27.33.png[] button to *Edit*  or *Delete* the *Model*  if necessary.
+.. Click the image:Screenshot-2021-08-11-at-17.27.33.png[] button to *Edit*  or *Delete* the *Model* if necessary.
 ... Edit the user *Email* and the *Model* name.
-... Activate the *External Model*  checkbox.
+... Activate the *External Model* checkbox.
 +
 [NOTE]
 ====
@@ -31,7 +29,7 @@ Currently, only external models are supported.
 ====
 
 ... Verify the *Private Access Key*.
-... Click on  *Test*  to view the indication on top of the screen signaling if the connection was successful or not.
+... Click on *Test* to view the indication on top of the screen signaling if the connection was successful or not.
 +
 image:Einstein-Model-Details.png[274,900]
 .. Click *Close*.
