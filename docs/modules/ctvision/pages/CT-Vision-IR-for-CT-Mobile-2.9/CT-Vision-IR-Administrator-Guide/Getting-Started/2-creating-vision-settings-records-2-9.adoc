@@ -7,17 +7,17 @@ Settings_ records:
 +
 [TIP]
 ====
-If the tab is missing, https://help.salesforce.com/s/articleView?id=sf.creating_custom_object_tabs.htm&type=5[create a custom tab] for the [.object]#Vision Settings# object.
+If the tab is missing, link:https://help.salesforce.com/s/articleView?id=sf.creating_custom_object_tabs.htm&type=5[create a custom tab] for the [.object]#Vision Settings# object.
 ====
 
 . In the *New Vision Setting* window, select the record type and click *Next*.
 +
-The link:../../CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-object-field-reference-ir-2-9[Vision Object] record is required for CT Vision IR operation. The following records extend the CT Vision IR functionality:
+The xref:CT-Vision-IR-for-CT-Mobile-2.9/CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-object-field-reference-ir-2-9.adoc[Vision Object] record is required for CT Vision IR operation. The following records extend the CT Vision IR functionality:
 
-* link:../../CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-shelf-field-reference-ir-2-9[Vision Shelf]
-* link:../../CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-hint-field-reference-ir-2-9[Vision Hint]
+* xref:CT-Vision-IR-for-CT-Mobile-2.9/CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-shelf-field-reference-ir-2-9.adoc[Vision Shelf]
+* xref:CT-Vision-IR-for-CT-Mobile-2.9/CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-hint-field-reference-ir-2-9.adoc[Vision Hint]
 . Specify parameters and click *Save*.
 . Repeat steps 2–3 to create all required and, if needed, additional _Vision Settings_ records.
-. On the link:../../CT-Vision-IR-Reference-Guide/vision-photo-field-reference-ir-2-9[Vision Photo] object, create **Vision Object ID **field for each link:../../CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-object-field-reference-ir-2-9[Vision Object] record and then specify its API name on the *Vision Photo Lookup* field on the [.object]#Vision Object#.
+. On the xref:CT-Vision-IR-for-CT-Mobile-2.9/CT-Vision-IR-Reference-Guide/vision-photo-field-reference-ir-2-9.adoc[Vision Photo] object, create **Vision Object ID **field for each xref:CT-Vision-IR-for-CT-Mobile-2.9/CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-object-field-reference-ir-2-9.adoc[Vision Object] record and then specify its API name on the *Vision Photo Lookup* field on the [.object]#Vision Object#.
 
 The setup is complete.

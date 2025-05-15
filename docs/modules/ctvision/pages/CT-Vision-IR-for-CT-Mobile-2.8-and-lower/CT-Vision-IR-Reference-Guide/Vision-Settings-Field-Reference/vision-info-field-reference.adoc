@@ -2,11 +2,11 @@
 
 The *Vision Info* record type is responsible for viewing the product
 details when
-link:../../CT-Vision-IR-Administrator-Guide/working-with-ct-vision-in-the-ct-mobile-app#h2_2072273480[the clickable realogram is active].
+xref:CT-Vision-IR-for-CT-Mobile-2.8-and-lower/CT-Vision-IR-Administrator-Guide/working-with-ct-vision-in-the-ct-mobile-app.adoc#h3_2072273480[the clickable realogram is active].
 
-When the mobile user taps the recognized photo on a shelf, the product details with the product preview are displayed. The product previews are stored in the same folder as the link:../product-image-field-reference[Product Images] records (if they exist) on the server.
+When the mobile user taps the recognized photo on a shelf, the product details with the product preview are displayed. The product previews are stored in the same folder as the xref:../product-image-field-reference.adoc[Product Images] records (if they exist) on the server.
 
-* When link:../../CT-Vision-IR-Administrator-Guide/Working-with-CT-Vision-IR-in-Salesforce/../Getting-Started/specifying-product-objects-and-fields#h2__1362989108[the Product Code value] has been changed, Salesforce rebuilds the archive with the *Product Images* records.
+* When xref:CT-Vision-IR-for-CT-Mobile-2.8-and-lower/CT-Vision-IR-Administrator-Guide/Getting-Started/specifying-product-objects-and-fields.adoc#h2__1362989108[the Product Code value] has been changed, Salesforce rebuilds the archive with the *Product Images* records.
 * CT Mobile downloads the archive during the first or full synchronization.
 * If the archive has been rebuilt, CT Mobile downloads it during the next synchronization.
 * If the archive is still the same since the first or full synchronization, CT Mobile will not download it.
@@ -17,13 +17,15 @@ Record Type API Name: [.apiobject]#VisionInfo#
 
 '''''
 
-The following fields must be created on the [.object]#Vision Settings#  object for this record type:
+The following fields must be created on the [.object]#Vision Settings# object for this record type:
 
 [width="100%",cols="15%,20%,10%,55%"]
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
 |Fields To Display |[.apiobject]#FieldsToDisplay__c# |Text(255) |Specify API names of fields on the [.object]#Product# object whose values should be displayed when a mobile user taps the recognized product on a shelf (separated by a comma, without a blank space).
+
 |Object |[.apiobject]#clm\__Object__c# |Text(255) |Specify the API name of the object to apply the setting, for example, [.apiobject]#CTCPG\__Activity__c#.
+
 |Object Record Type |[.apiobject]#clm\__ObjectRecordType__c# |Text(255) |If needed, specify the API name of the record type for the object in the [.apiobject]#clm\__Object__c# field to apply the setting for the corresponding record type.
 |===

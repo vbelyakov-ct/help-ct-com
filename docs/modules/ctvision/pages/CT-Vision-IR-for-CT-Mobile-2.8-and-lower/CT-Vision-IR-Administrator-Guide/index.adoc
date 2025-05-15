@@ -1,29 +1,20 @@
+[#_ct_vision_ir_administrator_guide]
 = CT Vision IR Administrator Guide
 
 To configure CT Vision IR:
 
-. link:Getting-Started/installing-the-ct-vision-package[Install the CT Vision
-managed package] to your Salesforce organization.
-. link:Getting-Started/preparing-the-salesforce-instance[Set up CTM Settings
-object] and required page layouts.
-. link:Getting-Started/Creating-Vision-Settings-Records/index[Create the CTM Settings
-records] for working with the CT Mobile app.
-. link:Getting-Started/specifying-product-objects-and-fields[Perform general
-configuration] on the Salesforce side.
-. link:Getting-Started/Setting-up-Integration-with-the-Image-Recognition-Providers/index[Add
-the desired providers] and set up a connection.
-. link:Getting-Started/configuring-ct-mobile-for-work-with-ct-vision[Add CT Vision
-to the CT Mobile app].
-. link:Getting-Started/adding-information-for-products-to-be-recognized[Add
-marketing photos] and additional information for products to be
-recognized, configure uploading them to the CT Vision server, and
-customize the layout for the required [.object]#Product#  object.
-. link:Getting-Started/adding-photo-tags[Specify photo tags].
+. xref:./Getting-Started/installing-the-ct-vision-package.adoc[Install the CT Vision managed package] to your Salesforce organization.
+. xref:./Getting-Started/preparing-the-salesforce-instance.adoc[Set up CTM Settings object] and required page layouts.
+. xref:./Getting-Started/Creating-Vision-Settings-Records/index.adoc[Create the CTM Settings records] for working with the CT Mobile app.
+. xref:./Getting-Started/specifying-product-objects-and-fields.adoc[Perform general configuration] on the Salesforce side.
+. xref:./Getting-Started/Setting-up-Integration-with-the-Image-Recognition-Providers/index.adoc[Add the desired providers] and set up a connection.
+. xref:./Getting-Started/configuring-ct-mobile-for-work-with-ct-vision.adoc[Add CT Vision to the CT Mobile app].
+. xref:./Getting-Started/adding-information-for-products-to-be-recognized.adoc[Add marketing photos] and additional information for products to be recognized, configure uploading them to the CT Vision server, and customize the layout for the required [.object]#Product# object.
+. xref:./Getting-Started/adding-photo-tags.adoc[Specify photo tags].
 
-When the CT Vision IR is configured, work with it in link:Working-with-CT-Vision-IR-in-Salesforce/index[Salesforce] and link:working-with-ct-vision-in-the-ct-mobile-app[the CT Mobile app].
+When the CT Vision IR is configured, work with it in xref:./Working-with-CT-Vision-IR-in-Salesforce/index.adoc[Salesforce] and xref:./working-with-ct-vision-in-the-ct-mobile-app.adoc[the CT Mobile app].
 
 [NOTE]
 ====
-Integration with https://help.customertimes.com/articles/ct-mobile-ios-en/cg-cloud[the CG
-Cloud solution] is currently not supported.
+Integration with link:https://help.customertimes.com/articles/ct-mobile-ios-en/cg-cloud[the CG Cloud solution] is currently not supported.
 ====

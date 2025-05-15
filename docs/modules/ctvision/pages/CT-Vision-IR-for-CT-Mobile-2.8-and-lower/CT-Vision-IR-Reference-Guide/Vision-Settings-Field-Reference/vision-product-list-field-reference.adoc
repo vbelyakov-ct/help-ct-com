@@ -5,12 +5,11 @@
 Available since CT Mobile 2.6.
 ====
 
-The _Vision Product List_ record type is responsible for displaying additional fields link:../../CT-Vision-IR-Administrator-Guide/Getting-Started/Setting-up-Integration-with-the-Image-Recognition-Providers/index#h2__445124742[for the selected provider] in the *Shelf Product List* in
-your link:../../CT-Vision-IR-Administrator-Guide/working-with-ct-vision-in-the-ct-mobile-app#h3_1017582017[CT Mobile app] and in link:../../CT-Vision-IR-Administrator-Guide/Working-with-CT-Vision-IR-in-Salesforce/corrections-in-shelf-product-list#h3_1017582017[the corrections window] in Salesforce.
+The _Vision Product List_ record type is responsible for displaying additional fields xref:CT-Vision-IR-for-CT-Mobile-2.8-and-lower/CT-Vision-IR-Administrator-Guide/Getting-Started/Setting-up-Integration-with-the-Image-Recognition-Providers/index.adoc[for the selected provider] in the *Shelf Product List* in your xref:CT-Vision-IR-for-CT-Mobile-2.8-and-lower/CT-Vision-IR-Administrator-Guide/working-with-ct-vision-in-the-ct-mobile-app.adoc#h3_1017582017[CT Mobile app] and in xref:CT-Vision-IR-for-CT-Mobile-2.8-and-lower/CT-Vision-IR-Administrator-Guide/Working-with-CT-Vision-IR-in-Salesforce/corrections-in-shelf-product-list.adoc[the corrections window] in Salesforce.
 
 * One record contains settings for one additional field.
 * The maximum number of displayed fields is 5.
-* By default, the *Product Info*  (with the product name) and  *Facing* (with product quantity) fields are displayed.
+* By default, the *Product Info* (with the product name) and *Facing* (with product quantity) fields are displayed.
 * For CT Mobile 2.5 users and along with the default fields, the following fields are set and cannot be changed: *Product Info*, *Facing*, *Shelf Share*, *Length*.
 
 '''''
@@ -19,7 +18,7 @@ Record Type API Name:  [.apiobject]#VisionProductList#
 
 '''''
 
-The following fields must be created on the [.object]#Vision Settings#  object for this record type:
+The following fields must be created on the [.object]#Vision Settings# object for this record type:
 
 [width="100%",cols="10%,20%,10%,60%"]
 |===

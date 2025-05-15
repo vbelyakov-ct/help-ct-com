@@ -3,10 +3,10 @@
 
 [NOTE]
 ====
-The link:working-with-ct-vision-ir-in-the-ct-mobile-app-2-9#h3_2072273480[clickable realogram] is available only in the CT Mobile app.
+The xref:./working-with-ct-vision-ir-in-the-ct-mobile-app-2-9.adoc#h3_2072273480[clickable realogram] is available only in the CT Mobile app.
 ====
 
-A manager or supervisor reviews link:working-with-ct-vision-ir-in-the-ct-mobile-app-2-9[the taken photos by the mobile user] in Salesforce. Go to the CT Vision app and open the *Photo Gallery* tab.
+A manager or supervisor reviews xref:./working-with-ct-vision-ir-in-the-ct-mobile-app-2-9.adoc[the taken photos by the mobile user] in Salesforce. Go to the CT Vision app and open the *Photo Gallery* tab.
 
 [[h2_1552458132]]
 == Photo Gallery Overview 
@@ -22,7 +22,7 @@ Maximum 50,000 photos can be loaded at a time.
 
 image::ctv-photo-gallery.png[]
 
-* Under the photo, the information specified on the *Interface Fields* of the link:../CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-object-field-reference-ir-2-9[Vision Object] is displayed, as well as *Created Date* value from the link:../CT-Vision-IR-Reference-Guide/vision-photo-field-reference-ir-2-9[Vision Photo] object.
+* Under the photo, the information specified on the *Interface Fields* of the xref:CT-Vision-IR-for-CT-Mobile-2.9/CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-object-field-reference-ir-2-9.adoc[Vision Object] is displayed, as well as *Created Date* value from the xref:CT-Vision-IR-for-CT-Mobile-2.9/CT-Vision-IR-Reference-Guide/vision-photo-field-reference-ir-2-9.adoc[Vision Photo] object.
 * Click the checkbox above the desired photos (or click *Select on page* checkbox to select all images on the current page) and then click the *Export to archive* button to build an archive with the desired photos.
 ** The archive will be saved on the user's device.
 ** Photos are saved in the .png format.
@@ -30,10 +30,9 @@ image::ctv-photo-gallery.png[]
 
 Once the archive is created, click image:ctv-lite-feedback-loop-archive-download-icon-2.9.png[25,25] to download it. You can create multiple archives and download them later.
 
-
 * Click the checkbox  above the desired photos and then click the *Delete*  button to delete the photo. You can also delete a photo by clicking the image:delete-icon-gallery.png[25,25] icon in the photo gallery.
 * Click the  desired photo to view it. In the opened viewer, click image:gallery-right-arrow.png[25,25] and image:gallery-left-arrow.png[25,25] buttons to list other photos of the gallery.
-* Click the image:tag-selection-icon.png[] button and select the desired link:../CT-Vision-IR-Administrator-Guide/Getting-Started/7-specifying-photo-tags-2-9[photo tag].
+* Click the image:tag-selection-icon.png[] button and select the desired xref:./Getting-Started/7-specifying-photo-tags-2-9.adoc[photo tag].
 +
 image:tags-list.png[]
 
@@ -65,7 +64,7 @@ Use base filters in the *Photo* section:
 [[h3_929593309]]
 === Custom Filters
 
-If the  *Filter Fields* are specified in the link:../CT-Vision-IR-Administrator-Guide/Getting-Started/../../CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-object-field-reference-ir-2-9[Vision object], you can use them to search the taken photos. Click the corresponding filter group to expand additional filter criteria.
+If the *Filter Fields* are specified in the xref:CT-Vision-IR-for-CT-Mobile-2.9/CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-object-field-reference-ir-2-9.adoc[Vision object], you can use them to search the taken photos. Click the corresponding filter group to expand additional filter criteria.
 
 Click *Apply* to save filters.
 
@@ -77,8 +76,7 @@ Click *Apply* to save filters.
 
 [width="100%",cols="50%,50%",frame=none, grid=none]
 |===
-a|
-Photos that met the filter criteria are displayed with the description. To customize the description, refer to link:../CT-Vision-IR-Reference-Guide/vision-photo-field-reference-ir-2-9[Vision Photo] object.
+a| Photos that met the filter criteria are displayed with the description. To customize the description, refer to xref:CT-Vision-IR-for-CT-Mobile-2.9/CT-Vision-IR-Reference-Guide/vision-photo-field-reference-ir-2-9.adoc[Vision Photo] object.
 
 The following buttons are available under a photo:
 
@@ -90,7 +88,7 @@ The following buttons are available under a photo:
 
 ^! image:checkbox-selected.png[]
 
-^! image:tag-selection-icon.png[] a! Add a link:../CT-Vision-IR-Administrator-Guide/Getting-Started/7-specifying-photo-tags-2-9#h3__759435562[photo tag] by clicking in the upper right corner of the taken photo.
+^! image:tag-selection-icon.png[] a! Add a xref:./Getting-Started/7-specifying-photo-tags-2-9.adoc[photo tag] by clicking in the upper right corner of the taken photo.
 
 [NOTE]
 ====

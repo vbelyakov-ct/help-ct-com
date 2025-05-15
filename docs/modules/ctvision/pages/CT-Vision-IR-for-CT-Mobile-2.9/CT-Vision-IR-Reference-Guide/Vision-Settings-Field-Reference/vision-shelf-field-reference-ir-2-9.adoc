@@ -20,7 +20,7 @@ The following fields must be created on the [.object]#Vision Settings# object fo
 |Plan |[.apiobject]#ctv\__Plan__c# |Number(18,0) a| Planned number of photos to take for the shelf that is displayed as a line on the shelf button. The left pointer is 0 and the right one is the planned number.
 
 If not specified, then the number of planned photos will be got from the
-*Plan* field of the link:vision-object-field-reference-ir-2-9[Vision Object].
+*Plan* field of the xref:./vision-object-field-reference-ir-2-9.adoc[Vision Object].
 
 |Type |[.apiobject]#ctv\__Type__c# |Picklist a| Shooting mode applied for the shelf:
 
@@ -31,5 +31,5 @@ If not specified, then the number of planned photos will be got from the
 
 |Icon |[.apiobject]#ctv\__Icon__c# |Text(255) a| For a better visibility, set an icon for a shelf. This icon will be displayed on the shelf button on the left side of the CT Vision screen, where a user creates a photo with products that should be recognized on a shelf.
 
-Specify an icon name if it is stored in https://help.salesforce.com/s/articleView?id=pages_static_resources.htm&language=en_US&type=5[static resources] in your Salesforce org or its URL.
+Specify an icon name if it is stored in link:https://help.salesforce.com/s/articleView?id=pages_static_resources.htm&language=en_US&type=5[static resources] in your Salesforce org or its URL.
 |===

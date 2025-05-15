@@ -1,6 +1,6 @@
 = Vision Photo Tag Field Reference
 
-The [.object]#Vision Photo Tag# object is intended for the connection between xref:CT-Vision-IR-for-CT-Mobile-2.9/CT-Vision-IR-Reference-Guide/tag-field-reference-ir-2-9.adoc[Tag] and xref:CT-Vision-IR-for-CT-Mobile-2.9/CT-Vision-IR-Reference-Guide/vision-photo-field-reference-ir-2-9.adoc[Vision Photo] objects.
+The [.object]#Vision Photo Tag# object is intended for the connection between xref:./tag-field-reference-ir-2-9.adoc[Tag] and xref:./vision-photo-field-reference-ir-2-9.adoc[Vision Photo] objects.
 
 '''''
 
@@ -15,7 +15,7 @@ The following fields must be created on the [.object]#Vision Photo Tag# object:
 |*Field* |*API Name* |*Type* |*Description*
 
 |Vision Photo |[.apiobject]#ctv\__VisionPhoto__c# |Master-Detail(Vision
-Photo) |Specify the xref:CT-Vision-IR-for-CT-Mobile-2.9/CT-Vision-IR-Reference-Guide/vision-photo-field-reference-ir-2-9.adoc[Vision Photo] record.
+Photo) |Specify the xref:./vision-photo-field-reference-ir-2-9.adoc[Vision Photo] record.
 
-|Tag |[.apiobject]#ctv\__Tag__c# |Master-Detail(Tag) |Specify the xref:CT-Vision-IR-for-CT-Mobile-2.9/CT-Vision-IR-Reference-Guide/tag-field-reference-ir-2-9.adoc[Tag] record.
+|Tag |[.apiobject]#ctv\__Tag__c# |Master-Detail(Tag) |Specify the xref:./tag-field-reference-ir-2-9.adoc[Tag] record.
 |===

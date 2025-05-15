@@ -3,9 +3,9 @@
 
 To work with CT Vision in the CT Mobile app:
 
-. link:../CT-Vision-IR-Administrator-Guide/Getting-Started/index[Configure the CT Vision solution].
-. link:../CT-Vision-IR-Administrator-Guide/Getting-Started/5-configuring-ct-mobile-to-work-with-ct-vision-ir-2-9[Add the CT Vision module].
-. https://help.customertimes.com/articles/ct-mobile-ios-en/logging-in[Log in]  to the CT Mobile app.
+. xref:./Getting-Started/index.adoc[Configure the CT Vision solution].
+. xref:./Getting-Started/5-configuring-ct-mobile-to-work-with-ct-vision-ir-2-9.adoc[Add the CT Vision module].
+. link:https://help.customertimes.com/articles/ct-mobile-ios-en/logging-in[Log in]  to the CT Mobile app.
 
 In the CT Mobile app, a sales representative:
 
@@ -20,14 +20,12 @@ In the CT Mobile app, a sales representative:
 
 [NOTE]
 ====
-If the link:../CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-object-field-reference-ir-2-9[Enable Simple View]  option is enabled, the header with the report data (the actual and planned number of photos, the number of errors, and the actual number of the required report summaries) and the final summary report will not be displayed. Also,
-<<h2_566778463, previewing pictures in full size>> will be disabled.
+If the xref:CT-Vision-IR-for-CT-Mobile-2.9/CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-object-field-reference-ir-2-9.adoc[Enable Simple View] option is enabled, the header with the report data (the actual and planned number of photos, the number of errors, and the actual number of the required report summaries) and the final summary report will not be displayed. Also, <<h2_566778463, previewing pictures in full size>> will be disabled.
 ====
 
 To take a photo of the shelf:
 
-. Open an  _Activity_  record in the CT Mobile app and tap the CT Vision
-icon.
+. Open an _Activity_ record in the CT Mobile app and tap the CT Vision icon.
 +
 image:Start-CT-Vision.png[266,900]
 
@@ -35,7 +33,7 @@ image:Start-CT-Vision.png[266,900]
 +
 [TIP]
 ====
-If there are no link:../CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-shelf-field-reference-ir-2-9[Vision Shelf] records, no shelf types will be displayed.
+If there are no xref:CT-Vision-IR-for-CT-Mobile-2.9/CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-shelf-field-reference-ir-2-9.adoc[Vision Shelf] records, no shelf types will be displayed.
 ====
 
 . Point the tablet at the desired shelf and tap the *Photo* button.
@@ -47,7 +45,7 @@ If there are no link:../CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Refer
 +
 [TIP]
 ====
-For more information, refer to link:../CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-hint-field-reference-ir-2-9[Vision Hint Field Reference].
+For more information, refer to xref:CT-Vision-IR-for-CT-Mobile-2.9/CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-hint-field-reference-ir-2-9.adoc[Vision Hint Field Reference].
 ====
 
 . Take a photo of the shelf.
@@ -65,7 +63,7 @@ selected shelf *(1)*.
 +
 image::working-with-ct-vision-2021-03-24-3.png[741,556,align="center"]
 
-. If link:../CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-object-field-reference-ir-2-9[Enable Gallery = true], add photos from the device gallery by long-tapping the *Photo* button. Select up to 9 photos and tap *Done*.
+. If xref:CT-Vision-IR-for-CT-Mobile-2.9/CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-object-field-reference-ir-2-9.adoc[Enable Gallery = true], add photos from the device gallery by long-tapping the *Photo* button. Select up to 9 photos and tap *Done*.
 
 . Repeat steps 4–5 to take the planned number of photos for the current
 visit.
@@ -101,13 +99,13 @@ The statuses can acquire the following values:
 | [.orange-text]#*Orange*# |Displayed after the user confirms a photo with an error.
 |===
 
-The status indicator is displayed on the taken photo in the  *Miniatures* gallery.
+The status indicator is displayed on the taken photo in the *Miniatures* gallery.
 
 If an error occurred during photo processing, the status indicator changes to red. Tap on the miniature with the error to select further action:
 
-* Tap  *Confirm*  to confirm the photo with an error.
-* Tap  *Retake*  to delete the taken photo with an error and make a new photo.
-* Tap  *Delete*  to remove the taken photo. If the first photo has been deleted, the camera opens. Otherwise, the previous photo opens.
+* Tap *Confirm* to confirm the photo with an error.
+* Tap *Retake* to delete the taken photo with an error and make a new photo.
+* Tap *Delete* to remove the taken photo. If the first photo has been deleted, the camera opens. Otherwise, the previous photo opens.
 +
 [TIP]
 ====
@@ -130,7 +128,7 @@ To view the clickable realogram:
 
 . Tap the image:ct-orders-spring-21-2021-03-12-4.png[25,25] icon *(1)* on the photo to turn on the clickable realogram.
 * each shelf will be highlighted with a specific color, and the recognized products will be highlighted with the frame of another specific color.
-* Tap the recognized product to see the details.  link:../CT-Vision-IR-Reference-Guide/product-image-field-reference-2-9[The product previews] are loaded from the CT Vision server.
+* Tap the recognized product to see the details. xref:CT-Vision-IR-for-CT-Mobile-2.9/CT-Vision-IR-Reference-Guide/product-image-field-reference-2-9.adoc[The product previews] are loaded from the CT Vision server.
 +
 image:Recognized-Product-at-Clickable-Realogram.png[]
 * tap the image:ct-orders-spring-21-2021-03-12-3.png[25,25] icon *(2)* to delete a photo.
@@ -163,14 +161,14 @@ image:Shelf-Product-List.png[933,700]
 
 [NOTE]
 ====
-To enable photo tags for the CT Mobile application, add the *Tag* offline object in the https://help.customertimes.com/smart/project-ct-mobile-en/ct-mobile-control-panel-offline-objects[CT Mobile Control Panel] / https://help.customertimes.com/smart/project-ct-mobile-en/ct-mobile-control-panel-offline-objects-new[CT Mobile Control Panel 2.0].
+To enable photo tags for the CT Mobile application, add the *Tag* offline object in the link:https://help.customertimes.com/smart/project-ct-mobile-en/ct-mobile-control-panel-offline-objects[CT Mobile Control Panel] / link:https://help.customertimes.com/smart/project-ct-mobile-en/ct-mobile-control-panel-offline-objects-new[CT Mobile Control Panel 2.0].
 ====
 
 If enabled, add a photo tag to the desired photos.
 
 . Tap a photo in the *Miniatures* gallery.
 . Click on the photo tag icon on the selected photo.
-. In the pop-up, tap to select tags from link:../CT-Vision-IR-Administrator-Guide/Getting-Started/7-specifying-photo-tags-2-9#h2_553985630[the list of available tags] to add them to a photo.
+. In the pop-up, tap to select tags from xref:./Getting-Started/7-specifying-photo-tags-2-9.adoc[the list of available tags] to add them to a photo.
 +
 image:Tags-01.png[]
 . Click image:working-with-ct-vision-2021-03-24-1.png[25,25] to go back to taking photos.
@@ -183,14 +181,14 @@ image::Tags-02.png[align="center"]
 == Create a Report Summary
 
 * Review the report:
-** In the  *Pictures Total*, compare the planned and taken number of photos.
+** In the *Pictures Total*, compare the planned and taken number of photos.
 +
 [TIP]
 ====
-If there are no shelves or the planned number is not set, the planned number of photos is taken from the *Plan* field of the link:../CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-object-field-reference-ir-2-9[Vision Object] record. Otherwise, the planned number is the sum of the values from the *Plan* field of the link:../CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-shelf-field-reference-ir-2-9[Vision Shelf] records.
+If there are no shelves or the planned number is not set, the planned number of photos is taken from the *Plan* field of the xref:CT-Vision-IR-for-CT-Mobile-2.9/CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-object-field-reference-ir-2-9.adoc[Vision Object] record. Otherwise, the planned number is the sum of the values from the *Plan* field of the xref:CT-Vision-IR-for-CT-Mobile-2.9/CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-shelf-field-reference-ir-2-9.adoc[Vision Shelf] records.
 ====
 
-** In the *Pictures Absence*, verify shelves, for which there is no photo or the actual number of photos is less than the number specified in the *Plan*  field of the _CTM Settings_ record with the link:../CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-shelf-field-reference-ir-2-9[Visit Shelf] record type.
+** In the *Pictures Absence*, verify shelves, for which there is no photo or the actual number of photos is less than the number specified in the *Plan*  field of the _CTM Settings_ record with the xref:CT-Vision-IR-for-CT-Mobile-2.9/CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-shelf-field-reference-ir-2-9.adoc[Visit Shelf] record type.
 * Tap** Accept** to save the report.
 * Tap *Try again* to go back to taking photos and managing errors.
 
@@ -204,11 +202,11 @@ image::working-with-ct-vision-2021-03-24.jpg[800,600,align="center"]
 Realogram view is not available while seeing photos in Picture Gallery.
 ====
 
-link:../CT-Vision-IR-Administrator-Guide/Getting-Started/5-configuring-ct-mobile-to-work-with-ct-vision-ir-2-9#h2__521416285[Add the Pictures gallery] to the  object (e.g., _Account_) mobile layout to view photos that you have taken.
+xref:./Getting-Started/5-configuring-ct-mobile-to-work-with-ct-vision-ir-2-9.adoc#h2__521416285[Add the Pictures gallery] to the  object (e.g., _Account_) mobile layout to view photos that you have taken.
 
 * In the case of many photos, scroll them horizontally.
 * Filter photos by  dates and tags.
-* Tap  the photo to open the gallery and view photos in a full size. This feature is disabled if the link:../CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-object-field-reference-ir-2-9[Enable Simple View] option is turned on.
+* Tap  the photo to open the gallery and view photos in a full size. This feature is disabled if the xref:CT-Vision-IR-for-CT-Mobile-2.9/CT-Vision-IR-Reference-Guide/Vision-Settings-Field-Reference/vision-object-field-reference-ir-2-9.adoc[Enable Simple View] option is turned on.
 * While viewing photos in a full size, tap the image:fullsize-photo-tag-icon.png[] icon to see the photo tags.
 +
 [NOTE]
