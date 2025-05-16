@@ -1,30 +1,21 @@
 = Vision Photo Tag Field Reference
 
-The[.object]#Vision Photo Tag# object is intended for the
-connection between link:ref-guide/tag-field-reference-1[Tag] and
-link:ref-guide/vision-photo-field-reference-lite[Vision Photo]
-objectslink:adding-photo-tags-2-9.html[].
+The [.object]#Vision Photo Tag# object is intended for the connection between xref:./tag-field-reference-1.adoc[Tag] and xref:./vision-photo-field-reference-lite.adoc[Vision Photo] objects.
 
 '''''
 
-Object API Name: [.apiobject]#ctv__VisionPhotoTag\__c# 
+Object API Name: [.apiobject]#ctv\__VisionPhotoTag__c#
 
 '''''
 
-The following fields must be created on the [.object]#Vision
-Photo Tag # object:
+The following fields must be created on the [.object]#Vision Photo Tag# object:
 
 [width="100%",cols="25%,25%,25%,25%",]
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|[.ui-provider .a .b .c .d .e .f .g .h .i .j .k .l .m .n .o .p .q .r .s .t .u .v .w .x .y .z .ab .ac .ae .af .ag .ah .ai .aj .ak]#Vision
-Photo# |[.apiobject]#ctv__VisionPhoto#\__c
-|[.ui-provider .a .b .c .d .e .f .g .h .i .j .k .l .m .n .o .p .q .r .s .t .u .v .w .x .y .z .ab .ac .ae .af .ag .ah .ai .aj .ak]#Master-Detail(Vision
-Photo)# |Specify the
-link:ref-guide/vision-photo-field-reference-lite[Vision Photo] record.
+|Vision Photo|[.apiobject]#ctv\__VisionPhoto__c# |Master-Detail(Vision Photo) |Specify the xref:./vision-photo-field-reference-lite.adoc[Vision Photo] record.
 
-|Tag |[.apiobject]#ctv__Tag\__c#
-|[.ui-provider .a .b .c .d .e .f .g .h .i .j .k .l .m .n .o .p .q .r .s .t .u .v .w .x .y .z .ab .ac .ae .af .ag .ah .ai .aj .ak]#Master-Detail(Tag)#
-|Specify the link:ref-guide/tag-field-reference-1[Tag] record.
+|Tag |[.apiobject]#ctv\__Tag__c# |Master-Detail(Tag)
+|Specify the xref:./tag-field-reference-1.adoc[Tag] record.
 |===

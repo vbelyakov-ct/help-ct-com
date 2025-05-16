@@ -3,119 +3,71 @@
 The _Vision Object_ record type is used to specify an object, from which
 a mobile user launches CT Vision Lite.
 
-Create a separate _Vision Object_ record for each object, which is
-supposed to take and view photos. 
+Create a separate _Vision Object_ record for each object, which is
+supposed to take and view photos.
 
 '''''
 
-Record Type API Name:[.apiobject]#VisionObject#
+Record Type API Name: [.apiobject]#VisionObject#
 
 '''''
 
-The following fields must be created on the [.object]#Vision
-Settings# object for this record type:
+The following fields must be created on the [.object]#Vision Settings# object for this record type:
 
 [width="100%",cols="25%,25%,25%,25%",]
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Vision Object |[.apiobject]#ctv__VisionObject\__c#
-|Text(255) a|
-Required field.
+|Vision Object |[.apiobject]#ctv\__VisionObject__c# |Text(255) a| NOTE: Required field.
 
-Specify the API name of the object on the layout of which you want to
-add the *CT Vision* button.
+Specify the API name of the object on the layout of which you want to add the *CT Vision* button.
 
-|Vision Object Record Type
-|[.apiobject]#ctv__VisionObjectRecordType\__c# |Text(255)
-a|
-If there is at least one record type for the [.object]#Vision#
-object, specify its API name to apply the setting for the corresponding
-record type.
+|Vision Object Record Type |[.apiobject]#ctv\__VisionObjectRecordType__c# |Text(255) a| If there is at least one record type for the [.object]#Vision# object, specify its API name to apply the setting for the corresponding record type.
 
-Leave empty, if there are no record types for the
-[.object]#Vision# object.
+Leave empty, if there are no record types for the [.object]#Vision# object.
 
-|Vision Photo Lookup
-|[.apiobject]#ctv__VisionPhotoLookup\__c# |Text(255)
-a|
-Required field.
+|Vision Photo Lookup |[.apiobject]#ctv\__VisionPhotoLookup__c# |Text(255) a| NOTE: Required field.
 
-Specify the API name of
-the [.apiobject]#{VisionObjectid}# field on
-the link:ref-guide/vision-photo-field-reference-lite[Vision Photo] object. 
+Specify the API name of the [.apiobject]#\{VisionObjectid}# field on the xref:ref-guide/vision-photo-field-reference-lite.adoc[Vision Photo] object.
 
-|Parent Object |[.apiobject]#ctv__ParentObject\__c#
-|Text(255) a|
-Applies only to CT Vision Mobile.
+|Parent Object |[.apiobject]#ctv\__ParentObject__c# |Text(255) a| NOTE: Applies only to CT Vision Mobile.
 
-Specify the API name of the object used for aggregating photos from
-related records (for example, photos from _Activities_ with specified
-_Accounts_). 
+Specify the API name of the object used for aggregating photos from related records (for example, photos from _Activities_ with specified _Accounts_).
 
-|Parent Object Lookup
-|[.apiobject]#ctv__ParentObjectLookup\__c# |Text(255)
-a|
-[.confluence-information-macro-note]#Applies only to CT Vision Mobile.#
+|Parent Object Lookup |[.apiobject]#ctv\__ParentObjectLookup__c# |Text(255) a| NOTE: Applies only to CT Vision Mobile.
 
-Specify the API name of the lookup field from the
-[.object]#Vision# object to its parent object. For
-example: [.apiobject]#CTCPG__AccountId\__c#
+Specify the API name of the lookup field from the [.object]#Vision# object to its parent object. For example: [.apiobject]#CTCPG\__AccountId__c#
 
-|Enable Gallery |[.apiobject]#ctv__IsGalleryEnabled\__c#
-|Checkbox a|
-[.confluence-information-macro-note]#Applies only to CT Vision Mobile.#
+|Enable Gallery |[.apiobject]#ctv\__IsGalleryEnabled__c# |Checkbox a| NOTE: Applies only to CT Vision Mobile.
 
-If active, a mobile user can add photos from the device gallery by long
-tapping the camera icon.
+If active, a mobile user can add photos from the device gallery by long tapping the camera icon.
 
-|Enable Simple View
-|[.apiobject]#ctv__IsSimpleViewEnabled\__c# |Checkbox
-a|
-[.confluence-information-macro-note]#Applies only to CT Vision Mobile.#
+|Enable Simple View |[.apiobject]#ctv\__IsSimpleViewEnabled__c# |Checkbox a| NOTE: Applies only to CT Vision Mobile.
 
-If active, the information from the header of the
-link:working-with-ct-vision-lite-in-the-ct-mobile-app-2-9#h2__1221438961[Report
-Summary] screen (actual and planned number of photos, the number of
-errors, and the actual number of the required report summaries) and the
-final summary report will not be displayed.
+If active, the information from the header of the xref:admin-guide/working-with-ct-vision-lite-in-the-ct-mobile-app-2-9.adoc#h2__1221438961[Report Summary] screen (actual and planned number of photos, the number of
+errors, and the actual number of the required report summaries) and the final summary report will not be displayed.
 
-|Plan |[.apiobject]#ctv__Plan\__c# |Number(18,0) a|
-[.confluence-information-macro-note]#Applies only to CT Vision Mobile.#
+|Plan |[.apiobject]#ctv\__Plan__c# |Number(18,0) a| NOTE: Applies only to CT Vision Mobile.
 
-Planned number of photos to take during the visit. If not specified,
-then the planned number of photos is got from the *Plan* field of
-the link:vision-shelf-field-reference-2-9[Vision Shelf] object.
+Planned number of photos to take during the visit. If not specified, then the planned number of photos is got from the *Plan* field of the xref:./vision-shelf-field-reference-2-9.adoc[Vision Shelf] object.
 
-|Interface Fields
-|[.apiobject]#ctv__InterfaceFields__с# |Long Text
-Area(32768) a|
-Applies only to CT Vision Salesforce.
+|Interface Fields |[.apiobject]#ctv\__InterfaceFields__с# |Long Text Area(32768) a| Applies only to CT Vision Salesforce.
 
-Specify API names of the fields from the Vision object that should be
-displayed under the photos in the
-link:working-with-ct-vision-in-salesforce-1.html#h2_1552458132[Picture
-Gallery] (maximum 3 fields). The *Name* field is always displayed, even
-if not specified.
+Specify API names of the fields from the Vision object that should be displayed under the photos in the xref:admin-guide/working-with-ct-vision-lite-in-salesforce-2-9.adoc#h2_1552458132[Picture Gallery] (maximum 3 fields). The *Name* field is always displayed, even if not specified.
 
-|Filter Fields |[.apiobject]#ctv__FilterFields\__c#
+|Filter Fields |[.apiobject]#ctv\__FilterFields__c#
 |Long Text Area(32768) a|
 [.confluence-information-macro-note]#Applies only to CT Vision
 Salesforce.#
 
 Specify API names of the fields (in one string, comma separated) from
-the[.object]#Vision# object that should be displayed as filters
-in the separate section of
-the link:working-with-ct-vision-in-salesforce-1.html#h2_1552458132[Picture
-Gallery]. The following field types cannot be used for filtering:
+the [.object]#Vision# object that should be displayed as filters in the separate section of the xref:admin-guide/working-with-ct-vision-lite-in-salesforce-2-9.adoc#h2_1552458132[Picture Gallery]. The following field types cannot be used for filtering:
 
 * Text area
 * Time
 * Geolocation
 
-|Provider |[.apiobject]#ctv__Provider\__c#
-|Text(255) a|
-Available values: 
+|Provider |[.apiobject]#ctv\__Provider__c# |Text(255) a| Available values:
 
 * _vision_light_
 
