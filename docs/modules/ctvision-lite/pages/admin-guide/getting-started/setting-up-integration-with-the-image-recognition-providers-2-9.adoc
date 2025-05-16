@@ -33,8 +33,9 @@ Use any suitable field that contains a unique product identifier, such as [.apio
  or [.apiobject]#CTCPG\__ExternalId__c#. This field is used for mapping the [.object]#Product# object in Salesforce and the server.
 ====
 . Click *Save*.
-
++
 image:ctvision:General-Configuration-Product-Object-2.9.png[]
+
 . Allow Salesforce to create a field with the *Lookup* type when prompted for the specified [.object]#Product# object.
 
 The setup is complete. The field with the *Lookup* type will be automatically created on the [.object]#Product Image# object to relate it with the specified [.object]#Product# object.
