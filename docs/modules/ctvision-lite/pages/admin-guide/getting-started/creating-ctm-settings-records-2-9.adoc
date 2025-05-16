@@ -1,0 +1,28 @@
+= 3. Creating Vision Settings Records
+
+After installing the CT Vision package, create required _Vision
+Settings_ records:
+
+. On the link:vision-photo-field-reference-lite[Vision
+Photo] object, create a lookup field to each object, on which you will
+make photos (the link:vision-object-field-reference[Vision
+Object]).
+. Go to the *Vision Settings* tab → click *New*.
+[TIP] ==== If the tab is missing,
+https://help.salesforce.com/s/articleView?id=sf.creating_custom_object_tabs.htm&type=5[create
+a custom tab] for the[.object]#Vision Settings ==== object.#
+. In the *New Vision Setting* window, select the record type and click
+*Next*.
+. Create the link:vision-object-field-reference[Vision
+Object] record, it is required for CT Vision Lite operation. On
+the *Vision Photo Lookup* field on the[.object]#Vision Object#,
+specify API name of the lookup field created on the step 1. 
+. If necessary, create the following records which extend the CT
+Vision Lite functionality:
+* link:vision-shelf-field-reference-2-9[Vision Shelf]
+* link:vision-hint-field-reference-2-9[Vision Hint]
+. Specify parameters and click *Save*.
+. Repeat steps 2–3 to create all required and, if needed, additional
+_Vision Settings_ records.
+
+The setup is complete.

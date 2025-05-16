@@ -1,0 +1,311 @@
+= Working with CT Vision Lite in the CT Mobile App
+
+To work with CT Vision Lite in the CT Mobile app:
+
+. link:admin-guide/getting-started/index[Configure the CT Vision solution].
+. link:admin-guide/getting-started/configuring-ct-mobile-for-work-with-ct-vision-2-9[Add the CT
+Vision module].
+. https://help.customertimes.com/articles/ct-mobile-ios-en/logging-in[Log
+in] to the CT Mobile app.
+
+
+
+In the CT Mobile app, a sales representative:
+
+* takes photos of the shelves in the stores,
+* checks the status of the photos,
+* adds photo tags to filter photos if needed.
+
+
+
+In this article, you will learn about opportunities of the CT Vision
+Lite module in the CT Mobile app:
+
+:toc: :toclevels: 3
+
+[[h2__1221438961]]
+=== Creating a Report Summary
+
+[NOTE] ==== In the
+link:admin-guide/working-with-ct-vision-lite-in-the-ct-mobile-app-2-9#h3__585482629[Simple
+View] ==== , the report data and the final summary report will not be
+displayed
+and link:admin-guide/working-with-ct-vision-lite-in-the-ct-mobile-app-2-9#h2_566778463[previewing
+pictures in full size] will be disabled.
+
+To create a report summary:
+
+. Open a link:ref-guide/vision-settings-ref/vision-object-field-reference[Vision Object] record
+(for example, _Activity)_ in the CT Mobile app and tap the *CT Vision*
+icon.
+image:Start-CT-Vision.png[]
+. Select the shelf type on the left side of the screen. Hints for the
+selected shelf will be displayed at the bottom of the screen or in the
+pop-up. For more information, refer
+to link:ref-guide/vision-settings-ref/vision-hint-field-reference-2-9[Vision Hint Field
+Reference].
+[TIP] ==== If the
+link:ref-guide/vision-settings-ref/vision-shelf-field-reference-2-9[Vision Shelf Field] setting
+is not created, shelves will not be displayed. ====
+. Point the tablet at the desired shelf and tap the *Photo* button.
+* The *Photo* button is active when the indicator that displays the
+position of a device relative to the horizon is green:
+** image:ct-orders-spring-21-2021-03-12.png[]: the
+device is tilted.
+** image:ct-orders-spring-21-2021-03-12-1.png[]: the
+device is aligned with the horizon.
+. Take a photo depending on the shelf type.
+* Use the *Photo* type for a standard shelf, or select the *Collection*
+mode to create a photo from multiple shots at the custom size shelf.
+* Retake the photo when the warning indicates that the image quality is
+not satisfactory. 
+* If the photo size is more than 2.5 MB, the photo will be compressed.
+* The actual and planned number of photos, the number of errors, and the
+actual number of the required report summaries are displayed on the
+header of the screen.
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+*Photo*
+
+a|
+*Collection*
+
+a|
+When an indicator *(3)* is green, tap the *Photo* button *(2)* for the
+selected shelf type *(1)*.
+
+** The taken photo will be displayed in the *Miniatures* gallery at the
+bottom of the screen.
+** The photo is sent to the server and the appropriate status indicator
+is displayed on the photo in the *Miniatures* gallery.
+
+
+
+image:working-with-ct-vision-lite-report-summary1.png[]
+
+a|
+Use this mode when you cannot fit the shelf in one photo, so you have to
+take multiple shots of adjacent shelf sections. Taken photos will be
+merged on your device on the go and are sent to the server as a single
+long shot.
+
+
+
+When an indicator is green, tap the *Start* button *(2)* for the
+selected shelf type *(1)* to initialize the making of the photo
+collection.
+
+.. Tap the *Photo* button *(3)* to take photos. A half-translucent
+colored block covers the area you have already shot. Move your device so
+that the area is still visible on the edge and take the next shot.
+[NOTE] ==== In the *Collection* mode, only the last taken photo
+may be removed. ====
+.. When all photos are taken, tap the *Finish* button *(2)* to complete
+the collection.
+** All photos are displayed as miniatures with statuses and
+the image:about-ct-vision-2021-04-09-2.png[] icon
+in the *Miniatures* gallery.
+** To view the merged photo, tap on photo *(4)* in
+the *Miniatures* gallery. Use scroll to see all parts of the image.
+
+image:working-with-ct-vision-lite-report-summary2.png[]
+
+|===
+. If link:ref-guide/vision-settings-ref/vision-object-field-reference[Enable Gallery = true], add
+photos from the device gallery by long-tapping the *Photo* button.
+Select up to 9 photos and tap *Done*.
+. Repeat steps 4–5 to take the planned number of photos for the current
+visit.
+. If needed, manage errors:
+.. Manage
+errors link:admin-guide/working-with-ct-vision-lite-in-the-ct-mobile-app-2-9#h2_691734370[according
+to the status indicator] on the photo in the *Miniatures* gallery.
+.. Manage link:admin-guide/working-with-ct-vision-lite-in-the-ct-mobile-app-2-9[photo
+tags].
+. After all photos for all shelves are taken, tap *Done* to create a
+report summary.
+
+The final report summary will be displayed.
+
+* Review the report:
+** In the *Pictures Total*, compare the planned and taken number of
+photos.
+[TIP] ==== If there are no shelves or the planned number is not
+set, the planned number of photos is taken from the *Plan* field of the
+link:ref-guide/vision-settings-ref/vision-object-field-reference[Vision Object] record.
+Otherwise, the planned number is the sum of the values from
+the *Plan* field
+of the link:ref-guide/vision-settings-ref/vision-shelf-field-reference-2-9[Vision Shelf] records.
+====
+** In the *Pictures Absence*, verify shelves, for which there is no
+photo or the actual number of photos is less than the number specified
+in the *Plan* field of
+the link:ref-guide/vision-settings-ref/vision-shelf-field-reference-2-9[Vision Shelf] record.
+* Tap** Accept** to save the report.
+* Tap *Try again* to go back to taking photos and managing errors.
+
+image:ct-vision-lite-report-summary-dialog.png[]
+
+[[h3__585482629]]
+==== Simple View
+
+If the link:ref-guide/vision-settings-ref/vision-object-field-reference[Enable Simple
+View] option is enabled, the header with the report data (the actual and
+planned number of photos, the number of errors, and the actual number of
+the required report summaries) and the final summary report will not be
+displayed.
+Also, link:admin-guide/working-with-ct-vision-lite-in-the-ct-mobile-app-2-9#h2_566778463[previewing
+pictures in full size] will be disabled:
+
+image:ctv-lite-simple-view.png[]
+
+[[h2_691734370]]
+=== Status Indicator
+
+The statuses can acquire the following values:
+
+[width="100%",cols="50%,50%",]
+|===
+|*Status* |*Description*
+
+|*Yellow* |Waiting for server response.
+
+|*Red* |An error has occurred.
+
+|*Purple* |The photo is successfully uploaded.
+
+|*Green* |The photo is successfully uploaded and full sync is
+completed.
+|===
+
+
+
+The status indicator is displayed on the taken photo in
+the *Miniatures* gallery.
+
+If an error occurred during photo processing, the status indicator
+changes to red. Tap on the miniature with the error to select further
+action:
+
+* Tap *Confirm* to confirm the photo with an error.
+* Tap *Retake* to delete the taken photo with an error and make a new
+photo.
+* Tap *Delete* to remove the taken photo. If the first photo has been
+deleted, the camera opens. Otherwise, the previous photo opens.
+[TIP] ==== The photo will be deleted if the device has access to
+the Internet, as the photo is physically on the server. ====
+
+image:ctvision-lite-status.png[]
+
+[[h2__1442951234]]
+=== Image Management Tools
+
+Tap the desired photo in the *Miniatures * gallery to open it.
+
+* Tap
+the image:ct-orders-spring-21-2021-03-12-3.png[] icon *(1)* to
+delete a photo.
+* Tap
+the image:working-with-ct-vision-2021-03-24-1.png[] icon *(2)* to
+go back to taking photo mode.
+* Tap
+the image:vision-phototag-icon.jpeg[]
+icon *(3)* to add a
+link:admin-guide/working-with-ct-vision-lite-in-the-ct-mobile-app-2-9#h2_491461789[photo
+tag].
+* Tap *Done (4)* to open the Report Summary.
+
+image:ctvision-mobile-2024.png[]
+
+
+
+[[h2_491461789]]
+==== Photo Tags
+
+To enable photo tags for the CT Mobile application, add
+the *Tag* offline object in
+the https://help.customertimes.com/smart/project-ct-mobile-en/ct-mobile-control-panel-offline-objects[CT
+Mobile Control
+Panel] / https://help.customertimes.com/smart/project-ct-mobile-en/ct-mobile-control-panel-offline-objects-new[CT
+Mobile Control Panel 2.0: Offline Objects].
+
+If enabled, add a photo tag to the desired photos.
+
+. Tap a photo in the *Miniatures* gallery.
+. Click on
+the image:vision-phototag-icon.jpeg[]
+icon on the selected photo.
+. In the pop-up, tap to select tags
+from link:admin-guide/getting-started/adding-photo-tags-2-9[the list of available tags] to add
+them to a photo.
+image:ct-vision-lite-photo-tags.jpeg[]
+. Click image:working-with-ct-vision-2021-03-24-1.png[] to
+go back to taking photos.
+
+The tag is added. In the *Miniatures* gallery, the photo tag icon is
+displayed on the photo.
+
+image:Tags-02.png[]
+
+[[h2__1267691643]]
+=== 
+
+ifdef::hidden[]
+
+[[h2__1267691643]]
+=== Augmented Reality Tools
+
+When you take a photo in the *Collection* mode, a half-translucent
+colored block covers the area you have already shot.
+
+* The color block corresponds to the main theme.
+* For this purpose,
+the https://developer.apple.com/documentation/arkit/content_anchors/tracking_and_altering_images[Tracking
+and Altering Images] technology is implemented.
+
+
+
+Technical requirements:
+
+* iOS devices with an A9 (or later) processor, for example, iPad 5
+(2017), iPhone 6S, etc.
+* iOS 12 and higher.
+
+[[h2_566778463]]
+=== 
+
+[[h2_566778463]]
+=== Pictures Gallery
+
+link:admin-guide/getting-started/configuring-ct-mobile-for-work-with-ct-vision-2-9#h2__521416285[Add
+the Pictures gallery] to the _Vision object_ mobile layout to view
+photos that you have taken. Also, you can specify the *Parent object*
+and *Parent Object Lookup* fields on the
+link:ref-guide/vision-settings-ref/vision-object-field-reference[Vision object] to view photos
+taken for another object (for example, to view photos from all
+_Activities_ related to the selected _Account_ record).
+[NOTE] ==== The gallery is displayed when at least one photo is
+taken. ====
+
+* In the case of many photos, scroll them horizontally.
+* Filter photos by dates and tags.
+* Tap the photo to open the gallery and view photos in a full size. This
+feature is disabled
+if the link:ref-guide/vision-settings-ref/vision-object-field-reference[Enable Simple
+View] option is turned on.
+* While viewing photos in a full size, tap
+the image:fullsize-photo-tag-icon.png[]
+icon to see the photo tags.
+[NOTE] ==== Photo tags are displayed according to their object
+and/or its record type. For example, if a photo was created on the
+[.object]#Account ==== object, you will see only photo tags that
+are also created for the Account# object. Or, if a photo was created on
+the _Customer_ record type of the Account object, you will see only
+photo tags that are also created for the _Customer_ record type. 
+
+image:ctvision-ios-accounts-pictures-filter.png[]
+
+[[h2__585482629]]
+=== 
