@@ -1,0 +1,108 @@
+= 5. Configuring CT Mobile to Work with CT Vision IR
+:toc:
+
+To use CT Vision IR as a module  within the CT Mobile app, set up the
+integration on the *CT Mobile Control Panel*/**CT Mobile Control Panel
+2.0 **tab.
+
+[[h2_395000743]]
+== System Label 
+
+[NOTE]
+====
+Not in use in case of the integration with the CG Cloud solution.
+====
+
+Create the  [.apiobject]#MobileId__c# field on the required *Vision* object in order to identify whether a record has been created on a mobile device or in Salesforce. Photos taken on a mobile device will be attached only to the records with the specified Mobile Id, and the taken photos will be stored on a mobile device up to 7 days. For more information, go to the link:https://help.customertimes.com/articles/ct-mobile-ios-en/system-label[System Label] article.
+
+[[h2__242242597]]
+== JSON Web Token
+
+Photos taken in CT Mobile using the CT Vision IR module are sent to the server. To connect to the server, the CT Mobile app sends that pair of the Salesforce Org Id in the 18-digit format and the valid cloud token to the server, and the server generates a JSON Web token.
+
+* The JSON Web token is used each time the CT Mobile app connects to the server. If the JSON Web token is not received or is invalid, photos will not be sent to the server.
+* The generated JSON Web Token lifetime is 1 year.
+
+[[h2_1279472645]]
+== Specify CT Vision Objects to Use in the CT Mobile App 
+
+Specify the following to enable CT Vision IR logic within the CT Mobile app:
+
+[tabs]
+====
+In CT Mobile Control Panel::
++
+--
+. Go to link:https://help.customertimes.com/articles/ct-mobile-ios-en/ct-mobile-control-panel-general[CT
+Mobile Control Panel: General] tab.
+. Under the *Object Mappings* section, specify the API name of the [.object]#Product# object used by CT Vision IR in the *Product Object API Name* field.
+. Click *Save*.
+. Go to link:https://help.customertimes.com/articles/ct-mobile-ios-en/ct-mobile-control-panel-offline-objects[CT Mobile Control Panel: Offline Objects] tab.
+. Add the objects used by the CT Vision IR module to the *Selected* field.
+. Click *Save*.
+--
+In CT Mobile Control Panel 2.0::
++
+--
+. Go to link:https://help.customertimes.com/smart/project-ct-mobile-en/ct-mobile-control-panel-app-menu-new[CT Mobile Control Panel 2.0: App Menu].
+. Select the required profile in the *Profile* picklist. To apply settings to all the profiles, select *General Settings*.
+. Go to link:https://help.customertimes.com/smart/project-ct-mobile-en/ct-mobile-control-panel-offline-objects-new[CT Mobile Control Panel 2.0: Offline Objects] tab.
+. Add the product objects xref:./3-specifying-product-objects-and-fields-2-9.adoc[used by the CT Vision IR module] and objects used as xref:2.9/ref-guide/vision-settings-ref/vision-object-field-reference-ir-2-9.adoc[Vision objects] to the *Selected* field.
+. Click *Save*.
+--
+====
+
+The setup is complete.
+
+[[h2__59853629]]
+== Add CT Vision to CT Mobile app
+
+To add the CT Vision IR module to the link:https://help.customertimes.com/articles/ct-mobile-ios-en/app-menu[application menu]:
+
+[tabs]
+====
+In CT Mobile Control Panel::
++
+--
+. Go to link:https://help.customertimes.com/articles/ct-mobile-ios-en/ct-mobile-control-panel-app-menu[CT Mobile Control Panel: App Menu] tab.
+. Select the required profile in the *Location* picklist.
++
+[TIP]
+=====
+*General Settings* will be applied to all the profiles without individual settings.
+=====
++
+. Click the image:62562571.png[] button to open the *Add menu item* tool.
+. Click *Add custom* and enter _ctvision_ in the appeared field.
+. Click *Add*.
+. Click *Save*.
+--
+In CT Mobile Control Panel 2.0::
++
+--
+. Go to link:https://help.customertimes.com/smart/project-ct-mobile-en/ct-mobile-control-panel-app-menu-new[CT Mobile Control Panel 2.0: App Menu] tab.
+. Select the required profile in the *Profile* picklist. To apply settings to all the profiles, select *General Settings*.
+. Click *Show Module Menu*.
+. On the *All* or *Integrations* tab, select the *Vision* item.
+. Click  *Save*.
+--
+====
+
+The CT Vision IR module is added to the CT Mobile app.
+
+[[h2__521416285]]
+== Add Pictures Gallery to the Mobile Layout 
+
+xref:2.9/admin-guide/working-with-ct-vision-ir-in-the-ct-mobile-app-2-9.adoc#h2_566778463[Pictures] allows users to view the photos they have taken on an object record details screen.
+
+For example, to add the *Pictures* tab to the mobile layout of the  [.object]#Account# object:
+
+. Go to **Setup → Object Manager →** select the [.object]#Account# object.
+. Go to *Page Layouts →* click the required page layout.
+. Drag and drop the *Section* element to the *Account Detail* area. The  *Section Properties* window opens.
+.. Type in _PICTURES_ in the *Section Name* field, and select the 1-Column layout.
+.. Click *OK*.
+. Drag and drop the *Blank Space* element below the *Pictures* element.
+. Click *Save*.
+
+The setup is complete.

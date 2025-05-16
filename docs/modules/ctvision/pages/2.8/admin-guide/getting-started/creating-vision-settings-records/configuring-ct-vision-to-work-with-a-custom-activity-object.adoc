@@ -1,0 +1,58 @@
+= 3.1 Configuring CT Vision IR to Work with a Custom Activity Object
+:toc:
+
+With additional configuration, CT Vision IR can work with a custom object that will have a *CT Vision* button to take photos, and the photos taken will be linked to that object to work on the *Feedback Loop* page. Visit records are still created for the selected Activity
+object.
+
+[[h2__335662800]]
+== CT Mobile Customization 
+
+Check that the [.object]#Activity# object is specified on the link:https://help.customertimes.com/articles/ct-mobile-ios-en/ct-mobile-control-panel-calendar/a/h3_1397263211[CT Mobile Control Panel: Calendar] tab.
+
+[[h3_395000743]]
+=== System Label
+
+Create the  [.apiobject]#MobileId\__c# field on the desired object, for example, [.apiobject]#CustomMeeting__c#, in order to identify whether a record has been created on a mobile device or in Salesforce. The photo taken on a mobile device will be attached only to the records with the specified Mobile Id. For more information, go to the link:https://help.customertimes.com/articles/ct-mobile-ios-en/system-label[System Label] article.
+
+[[h3__601076877]]
+=== Activity Lookup
+
+Create a field with the *Lookup* type, for example, [.apiobject]#ActivityId\__c#, on the [.apiobject]#CustomMeeting__c# object to link it with the __Activity__ specified on the https://help.customertimes.com/articles/ct-mobile-ios-en/ct-mobile-control-panel-calendar/a/h3_1397263211[CT Mobile Control Panel: Calendar] tab.
+
+[[h2_1769605814]]
+== CT Vision Setup
+
+[[h3__1047703678]]
+=== CTM Settings: Visit Vision
+
+Specify the desired object as the [.object]#Activity# object to display the *CT Vision* button and take photos for recognition:
+
+. Go to the *CTM Settings* tab and click *New*.
+. Select the __Vision Visit__ record type and click *Next*.
+. Fill out all fields and add the API name of the desired object, for example, [.apiobject]#CustomMeeting__c#, in the *Vision Object* field.
++
+[TIP]
+====
+The full description of the fields is available xref:2.8/ref-guide/vision-settings-ref/vision-visit-field-reference.adoc[here].
+====
+
+. Click *Save*. The setup is complete.
+
+[[h3__706735509]]
+=== Feedback Loop: Custom Filters
+
+To have the ability to filter records of the custom object on the *Feedback Loop* page and set up the order of its records:
+
+. Go to the *CT Vision Setup* tab → *Feedback Loop* → *Custom Filters*.
+. Select the custom object, for example, [.apiobject]#CustomMeeting__c#.
+. In the SOQL builder, specify the desired criteria.
++
+[TIP]
+====
+You can set up filters based on field of the parent and child objects.
+====
+
+. Click *Save*.
+
+The setup is complete. Photos on the *Feedback Loop* page will be
+automatically sorted according to the specified criteria.

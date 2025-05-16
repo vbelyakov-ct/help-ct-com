@@ -1,0 +1,20 @@
+[#_ct_vision_ir_administrator_guide]
+= CT Vision IR Administrator Guide
+
+To configure CT Vision IR:
+
+. xref:./getting-started/installing-the-ct-vision-package.adoc[Install the CT Vision managed package] to your Salesforce organization.
+. xref:./getting-started/preparing-the-salesforce-instance.adoc[Set up CTM Settings object] and required page layouts.
+. xref:./getting-started/creating-vision-settings-records/index.adoc[Create the CTM Settings records] for working with the CT Mobile app.
+. xref:./getting-started/specifying-product-objects-and-fields.adoc[Perform general configuration] on the Salesforce side.
+. xref:./getting-started/setting-up-integration-with-the-image-recognition-providers/index.adoc[Add the desired providers] and set up a connection.
+. xref:./getting-started/configuring-ct-mobile-for-work-with-ct-vision.adoc[Add CT Vision to the CT Mobile app].
+. xref:./getting-started/adding-information-for-products-to-be-recognized.adoc[Add marketing photos] and additional information for products to be recognized, configure uploading them to the CT Vision server, and customize the layout for the required [.object]#Product# object.
+. xref:./getting-started/adding-photo-tags.adoc[Specify photo tags].
+
+When the CT Vision IR is configured, work with it in xref:./working-in-salesforce/index.adoc[Salesforce] and xref:./working-with-ct-vision-in-the-ct-mobile-app.adoc[the CT Mobile app].
+
+[NOTE]
+====
+Integration with link:https://help.customertimes.com/articles/ct-mobile-ios-en/cg-cloud[the CG Cloud solution] is currently not supported.
+====
