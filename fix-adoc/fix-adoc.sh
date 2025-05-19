@@ -9,8 +9,8 @@ python3 google-image-path-replace-v2.py
 echo "Running plus-fix.py..."
 python3 plus-fix.py
 
-echo "Running replace-spaces.py"
-python3 replace-spaces.py
+# echo "Running replace-spaces.py"
+# python3 replace-spaces.py
 
 echo "Running add-spaces.py"
 python3 add-spaces.py
