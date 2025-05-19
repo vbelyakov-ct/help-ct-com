@@ -31,7 +31,7 @@ jobs:
         #run: npm i antora @antora/lunr-extension @asciidoctor/tabs asciidoctor@~2.2.8
         run: npm i antora @asciidoctor/tabs asciidoctor@~2.2.8
       - name: Install Lunr
-        run: npm install antora-lunr
+        run: npm install @antora/lunr-extension
       - name: Debug Installed Packages
         run: npm list
       - name: Generate Site
