@@ -27,11 +27,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18'
-      - name: Install Antora, AsciiDoctor, Lunr and Tabs
-        #run: npm i antora @antora/lunr-extension @asciidoctor/tabs asciidoctor@~2.2.8
+      - name: Install Antora, AsciiDoctor and Tabs
         run: npm i antora @asciidoctor/tabs asciidoctor@~2.2.8
-      - name: Install Lunr
-        run: npm install @antora/lunr-extension
       - name: Debug Installed Packages
         run: npm list
       - name: Generate Site
