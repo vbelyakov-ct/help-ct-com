@@ -24,7 +24,7 @@ asciidoc:
 
 antora:
   extensions:
-    - require: @antora/lunr-extension
+    - require: antora/lunr-extension
       index_all_pages: true
       languages: [ru, en]
       snippets_to_index:
