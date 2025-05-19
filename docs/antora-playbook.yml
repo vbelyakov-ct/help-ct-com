@@ -21,5 +21,18 @@ ui:
 asciidoc:
   extensions:
     - '@asciidoctor/tabs'
-#extensions:
-#  - require: '@antora/lunr-extension'
+
+antora:
+  extensions:
+    - require: antora-lunr
+      index_all_pages: true
+      languages: [ru, en]
+      snippets_to_index:
+        - sidebartext
+        - paragraphs
+      attributes_to_ignore:
+        - example
+
+urls:
+  html_extension_style: default
+  redirect_facility: static
