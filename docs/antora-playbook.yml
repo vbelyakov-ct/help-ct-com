@@ -21,3 +21,5 @@ ui:
 asciidoc:
   extensions:
     - '@asciidoctor/tabs'
+extensions:
+  - require: '@antora/lunr-extension'
