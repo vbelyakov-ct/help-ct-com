@@ -28,7 +28,7 @@ jobs:
         with:
           node-version: '18'
       - name: Install Antora, AsciiDoctor and Tabs
-        run: npm i antora @asciidoctor/tabs asciidoctor@~2.2.8
+        run: npm i antora @antora/lunr-extension @asciidoctor/tabs asciidoctor@~2.2.8
       - name: Debug Installed Packages
         run: npm list
       - name: Generate Site
