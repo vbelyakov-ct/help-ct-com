@@ -1,0 +1,109 @@
+= CT Sign for CT Mobile iOS Release Notes
+
+Here you could find a CT Sign feature, the link to the corresponding
+article, and the CT Mobile version in which the feature is available.
+Add the CT Sign module to the CT Mobile iOS app to have the ability to
+sign documents on the mobile device.
+
+:toc: :toclevels: 2
+
+[[h2__523563164]]
+=== CT Sign 2.0 for CT Mobile 2.6
+
+[[h3_1590465207]]
+==== New Features and Improvements
+
+link:create-a-new-template[Templates]:
+
+* Support fields of the *Date
+* and *Formula* types.
+* For localization purposes, the ability to use a custom label for the
+*Sign Document
+* button.
+
+
+
+link:template-editor-feature-reference#h3__99476489[Salesforce
+tables]:
+
+* Support of several Salesforce tables on a template.
+* Titles of columns now display labels for selected fields instead of
+their API names.
+
+[[h3__892195453]]
+==== Fixes
+
+* Fixed filling out status and date of signing for the completed
+documents on the device.
+* Fixed attaching a signed document. The signed document is available on
+the *Files
+* tab link:object-setting-field-reference[on the
+appropriate object].
+
+[[h2__523563167]]
+=== CT Sign 2.0 for CT Mobile 2.5
+
+[[h3_1642576463]]
+==== New Features and Improvements
+
+Sign documents offline
+link:sign-a-document-the-ct-mobile-app#h2__1603366204[using a
+simple signature].
+
+* All signatories must sign the document, or it will not be saved.
+* The document may not need to be signed when generated based on a
+template without the *Signature
+* button(s).
+* The finished document will be saved in the *Files
+* section of the
+parent object and the _Sign Document_ object.
+* Add the handwritten signature, select a photo from the device gallery,
+or take a new one with the signature.
+
+
+
+When creating a template in the Template Editor, use
+link:template-editor-feature-reference#h3__99476489[Salesforce
+Table] for displaying values from the related records.
+
+[[h3__649865195]]
+==== Fixes
+
+Only documents from
+https://help.customertimes.com/articles/ct-sign-en/configuring-the-ct-sign-package/a/h2__1469899678[the
+specified workspaces] will be downloaded on the mobile device.
+
+[[h2_51713154]]
+=== CT Sign 2.0 for CT Mobile 2.4
+
+[[h3_2016045752]]
+==== New Features and Improvements
+
+link:add-the-ct-sign-to-the-ct-mobile-app[Add CT Sign to the
+menu] to sign documents in the CT Mobile app.
+
+* Templates available for the mobile user are automatically
+downloaded.
+* The *Sign Document
+* records available for the mobile user are
+automatically downloaded.
+
+
+
+The ability to create a document on the _Account_, _Contact_, or
+_Activity_ record via
+link:add-the-ct-sign-to-the-ct-mobile-app#h1_1946616521[the Sign
+Document button].
+
+
+
+The ability to sign documents with a legally binding signature:
+
+* Sign a document with the e-mail or SMS verification.
+* Sign a document with the Phone or SMS verification via an in-app
+browser (embedded signing).
+
+
+
+Support signing documents in the CT Mobile app in case of internet
+connection loss.

@@ -1,0 +1,91 @@
+= 3.1 Create and Add the Form Document button to the Custom Object
+
+To start document signing, go to the desired object and click the *Form
+Document
+* button. By default, the *Form Document* button is available
+for the[.object]#Account# and[.object]#Contact#
+objects.
+
+
+
+[[h3_1711999155]]
+==== Add the Form Document Button to the Custom Object
+
+To add the *Form Document
+* button to the _Custom Object_ page layout:
+
+. Go to *Setup → Object Manager*.
+. Click the desired custom object.
+. Go to *Buttons, Links, and Actions*.
+. Click *New Button or Link*.
+. Enter the following:
+* In the *Label
+* field, type *Form Document*.
+* The *Name
+* field will be automatically filled out with the
+[.apiobject]#Form_Document# value.
+* For *Display Type
+* choose *Detail Page button*.
+* In the *Select Field Type
+* list select your _Custom Object_.
+* In the code window, add the code listed below:
+[TIP] ==== Instead of[.apiobject]#CustomObject\__c
+==== , specify the API name of the desired custom object. Please note
+that the [.apiobject]#!# sign is mandatory before the custom object name.#
+image:Add-Form-Button-to-Custom-Object.png[]
+. Click *Save*.
+. Go to *Setup → Object Manager →
+* click the desired custom object *→
+Page Layouts →
+* click *Edit* next to the required page layout.
+. Click *Mobile & Lightning Actions
+* and drag and drop the *Form
+Document
+* button on the page layout.
+
+[cols=",",]
+|===
+|image:warning.png[] | *Mobile &
+Lightning Actions
+* may be locked for editing by Salesforce and prevent.
+If yes, click the *override the predefined actions
+* link.
+|===
+. Click *Save*.
+
+The *Form Document
+* button is created and added to the _Custom Object_
+page layout.
+
+image:Form-Document-on-Page-Layout.png[]
+
+[[h3__845986478]]
+==== Add Sign Document object as a Related List to a Custom Object
+
+You can view and share signed documents on the custom object records in
+the link:sign-a-document-the-ct-mobile-app[CT mobile application].
+To do that, add the link:sign-document-field-reference[Sign
+Document] object as a related list to a custom object.
+
+For example, to work with signed documents in CT Orders records, create
+a lookup relationship
+between [.apiobject]#orders__Order\__c#
+and [.apiobject]#ctsign__SignDocument\__c# objects. After
+that, you will see the *Sign Documents
+* tab in the CT Orders records and
+will be able to share the documents. Please note that:
+
+* Documents signed by _Simple Sign_ will be available for sharing
+immediately.
+* Documents signed by DocuSign online will be available after performing
+the
+https://help.customertimes.com/smart/project-ct-mobile-en/synchronization-launch[fast
+synchronization].
+* Documents signed by DocuSign offline will be available:
+*
+* In Salesforce: as soon as all signatories sign the document.
+*
+* In the mobile application: after all signatories sign the document
+and after performing the
+https://help.customertimes.com/smart/project-ct-mobile-en/synchronization-launch[fast
+synchronization].

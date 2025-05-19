@@ -1,0 +1,136 @@
+= CT Sign F.A.Q.
+
+Here is a list of frequently asked questions divided by category:
+
+:toc: :toclevels: 3
+
+[[h2__851376343]]
+=== CT Sign Control Panel
+
+[[h3_145803103]]
+==== An error occurred when connecting to DocuSign
+
+* The *«Redirect URI is not registered properly with DocuSign»
+* error
+occurs on the
+link:admin-guide/connect-salesforce-with-the-application-service-and-e-signature-provider#h2__504595247[DocuSign
+App] tab when a user has specified an incorrect URL address in the *URL
+to Publish
+* field
+for link:create-and-set-up-the-docusign-account#h2__1715948824[DocuSign
+Connect].
+
+
+
+* The *«Refused to connect to
+'https://sign.customertimes.com/api/v1/salesforce/org' because it
+violates the following Content Security Policy directive: ... »* error
+occurs when a user tries to connect with DocuSign before the security
+policy has been applied. Please wait 10-15 minutes after
+link:admin-guide/installing-the-ct-sign-package[the installation of the CT Sign
+package] before starting to configure the connection to DocuSign.
+
+[[h3__1969137310]]
+==== An error after clicking Send button in the DocuSign tab
+
+In
+the https://help.customertimes.com/articles/ct-sign-en/connect-salesforce-with-the-application-service-and-e-signature-provider/a/redirect-uri[DocuSign
+App
+configuration], add [.apiobject]#http://localhost:5000/auth/docusign/callback# as
+a second redirect URI and try again.
+
+
+
+image:/resources/Storage/ct-sign-en/ctsign-two-uris-docusign.png[/resources/Storage/ct-sign-en/ctsign-two-uris-docusign]
+
+
+
+[[h3__84718323]]
+==== Forms are cleared when connecting the CT Sign app on the DocuSign App tab
+
+Currently, there is no info message about a successful connection.
+
+[[h2__1716492775]]
+=== Template Editor
+
+[[h3__2028520727]]
+==== Template Editor is not displayed
+
+Check the following:
+
+* The link:admin-guide/configuring-the-ct-sign-package/index#h2_283394407[Sign
+Settings] records with the *Layout Settings
+* record type are created for
+link:admin-guide/configuring-the-ct-sign-package/index#h2__236049169[the object to
+sign] as well as for the _Contact_ and _User_ objects. On these records,
+the *Read-Only
+* and *Required* attributes should be specified for all
+listed fields.
+* The libraries for document and email templates are listed in the
+link:admin-guide/configuring-the-ct-sign-package/index#h2__1469899678[Sign Settings]
+records with the *Library Settings
+* record type.
+
+[[h2_1205469386]]
+=== PDF Generation on the Salesforce Side
+
+[[h3_1538147976]]
+==== The Form Document button isn't displayed on the record of the object to sign
+
+The *Form Document
+* button should be added to the corresponding page
+layout.
+
+[[h3__790861070]]
+==== The list of signatories isn't displayed
+
+Check the following:
+
+* Thelink:configuring-the-ct-sign-package.html#h2_283394407[ Sign
+Settings] records with the *Layout Settings* record type are created for
+the _Contact_ and _User_ objects.
+* The *Sign Document
+* button has
+link:ref-guide/template-editor-feature-reference#h3_1829063711[all required
+parameters] specified.
+*
+* There is a lookup field on the _Sign Document_ object to link it
+with link:admin-guide/configuring-the-ct-sign-package/index#h2__236049169[the object
+to sign].
+*
+* The object to sign has the related *Contact* records.
+*
+* The location of the button is specified in the *X-Offset* and
+*Y-Offset
+* fields.
+
+[[h2__1921609086]]
+=== PDF Generation on the CT Mobile side
+
+[[h3__2132868241]]
+==== The Sign Document button isn't displayed on the record of the object to sign
+
+Check the following:
+
+* The mobile user has access to the templates.
+* Templates have been downloaded on a mobile device.
+
+[[h2_1606476593]]
+=== I can not set up any Sign Setting — the dialog window does not have necessary options, why?
+
+If the Sign Settings functionality does not work properly, check the
+following:
+
+. Go to **Users**→ *Profiles* and click on your user profile.
+. Go to *Custom Record Type Settings* → *Sign Settings* and
+click *Edit*.
+. Check that following settings are moved to the *Selected Record
+Types* list:
+* _Layout Setting_;
+* _Library Setting_;
+* _Object Setting_.
+If necessary, move them by clicking the *Add* button.
+image:/resources/Storage/ct-sign-en/custom-record-types-sign-settings.png[/resources/Storage/ct-sign-en/custom-record-types-sign-settings]
+. Click *Save*. 
+
+

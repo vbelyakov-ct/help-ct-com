@@ -1,0 +1,67 @@
+= 6. Sign a Document: Salesforce Side
+
+[NOTE] ==== This article is applicable only if you use  ====
+link:admin-guide/create-a-new-template#h2__296611947[template with the DocuSign
+sign method]. Simple sign method supports
+only link:sign-a-document-the-ct-mobile-app[signing in the CT
+Mobile app].
+
+To sign a document:
+
+. Open a record of the
+link:admin-guide/configuring-the-ct-sign-package/index#h2__236049169[Object to Sign].
+For example, if you added [.object]#Account# as an object to
+sing, open the *Accounts
+* tab.
+. Click the picklist on the right and
+select *link:admin-guide/configuring-the-ct-sign-package/index#h2__549128247[Form
+Document]*. The page with the signing details opens.
+
+image:ctsign-form-document.png[]
+
+
+
+If you use a custom
+object, link:admin-guide/configuring-the-ct-sign-package/create-and-add-the-form-document-button-to-the-custom-object[manually
+create and add this button] to the page layout.
+. Select one of the available templates from the picklist. 
+[.confluence-information-macro-tip .confluence-information-macro-note]#If
+you do not see templates in the picklist, the cause may be that
+this [.object]#Account# object has been created before
+creating link:admin-guide/configuring-the-ct-sign-package/index#h2_1882524551[Record
+types]. Use the *Change Record Type* button on the Account object page
+or create a new Account object.#
+
+image:prepare_document.png[]
+. According to the template, select one or more signatories to sign a
+document. If empty, add their e-mail and phone number.
+image:prepare_signatories.png[]
+. Click *Generate PDF*. The notification appears, and the PDF document
+based on the selected HTML template is displayed under signatories.
+[NOTE] ==== If signatories are not displayed and the  ====
+*Generate PDF* button is inactive, make sure that
+link:admin-guide/configuring-the-ct-sign-package/index#h2_283394407[Layout settings]
+are properly configured.
+. Click *Sign Document* to send the PDF document for signing via
+DocuSign.
+. According to the specified signatory place, a signatory receives an
+email from DocuSign to review and sign a document.​ Follow the link.
+The user who is selected as an associated user will receive emails at
+each step of the signing process. 
+. According to the specified authorization type, a signatory may need to
+confirm his action by SMS or phone.
+. Click *Continue*.
+. Review the document and click *Sign*.
+
+image:docusign-sign-button.png[]
+. Adopt your signature and click *Adopt and Sign*.
+
+image:docusign-adopt-and-sign.png[]
+
+The document is signed.
+
+* Signatories receive the completed document by email.
+* The document is stored within the linked production DocuSign account.
+* In Salesforce, the *Sign Document
+* record with the signed PDF document
+is linked to the record that started the signing process.

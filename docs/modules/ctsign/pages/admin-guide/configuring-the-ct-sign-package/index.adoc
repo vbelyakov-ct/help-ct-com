@@ -1,0 +1,180 @@
+= 3. Configure the CT Sign Package
+
+To use the CT Sign functionality:
+
+. link:admin-guide/configuring-the-ct-sign-package/configuring-the-ct-sign-package#h2__236049169[Specify
+objects] to sign documents.
+. link:admin-guide/configuring-the-ct-sign-package/configuring-the-ct-sign-package#h2__1469899678[Specify those
+libraries] that will be used to store templates.
+. link:admin-guide/configuring-the-ct-sign-package/configuring-the-ct-sign-package#h2_283394407[Create a Form
+Document layout] to display the information about signatories or object
+to sign.
+
+[TIP] ==== In this article, [.object]#Account ====
+ object is used as an example of the object to sign documents. You can
+use any object for signing documents, including custom objects. In this
+case, add
+the link:create-and-add-the-form-document-button-to-the-custom-object[Form
+Document button] for the custom object.#
+
+{empty}1. Add Objects
+
+. Assign permissions for the current user to the following record types
+of the[.object]#Sign Settings# object:
+* _Layout Setting_
+* _Library Setting_
+* _Object Setting_
+. Create a separate record for each required object. To specify an
+object for which users can create templates and sign documents:
+.. Go to *Sign Settings
+* and click *New*.
+.. Select the *Object Setting
+* record type and click *Next.*
+.. Specify the API name of the object to sign.
+image:Create-Object-Setting.png[]
+.. Click *Save*.
+. On the[.object]#Sign Document# object, create a field with
+the _Lookup_ type to the object from step 3 to link the signed document
+with the specific object:
+[TIP] ==== If you use the[.object]#Account ==== object
+for signing, you can skip this step, as the required lookup connection
+for this object is already created in the CT Sign package.#
+.. Go to *Setup → Object Manager →* the [.object]#Sign
+Document #object**→ Fields and Relationships**.
+.. Click *New*.
+.. Select *Lookup Relationship
+* data type and click *Next*.
+.. In the *Related To
+* picklist, select your specific object and
+click *Next*.
+.. In the *Field Label* and *Field Name
+* fields**,** type in *Account*
+and click *Next*.
+.. Select the *Visible
+* checkbox to enable checkboxes for the required
+profiles and click *Next*.
+.. On the next step, click *Next, Next, and* *Save.*
+
+[[h2_1882524551]]
+=== 2. Add Accounts and Contacts
+
+. Add at least one[.object]#Account# with associated
+[.object]#Record type# to sign documents.
+.. Go to *Accounts
+* tab.
+.. Click *New*.
+.. Fill out the form (at least required fields).
+.. Click *Save*.
+.. The page with just created account will be opened. In the *Contacts*
+section, click *New*.
+.. Fill out the form (at least *Salutation*, *First Name
+* and *Last
+Name*).
+.. Click *Save*.
+. Add a record type to the[.object]#Account# object:
+.. Go to *Setup
+* → *Object Manager*.
+.. Open the [.object]#Account# object.
+.. Click *Record Types*.
+.. Click *New*.
+.. Fill in *Record Type Label
+* and *Record Type Name* fields, for
+example, _Pharmacy_.
+.. Click *Next*.
+.. From the *Select Page Layout
+* picklist, choose _Account Layout_.
+.. Click *Save*.
+
+[[h2__1469899678]]
+=== 3. Specify Libraries
+
+To use CT Sign templates, it is necessary to specify desired libraries
+as workspaces for storing document and email templates. To have access
+to libraries and the ability to share them using sharing rules, create
+and https://help.salesforce.com/articleView?id=sf.assigning_users_to_roles.htm&type=5[assign
+the CT Sign role] to administrators and users. To specify libraries as
+workspaces for CT Sign templates:
+
+. Create libraries and specify library members:
+.. Go to *Files
+* → *Libraries*.
+
+image:Libraries-menu.png[]
+.. Click *New Library*.
+.. In the *Name
+* field, type the library name (for example,
+_Document Templates)_.
+.. Click *Save*.
+.. Find the created library in the *Libraries
+* list,
+click image:dropdown-icon.png[]
+and select *Manage Members*.
+.. In the dialog window, *Add Members
+* who must have access to templates
+in this library and assign them the *Viewer
+* permission.
+Click image:sign_public-groups-switch.png[]
+and image:sign_people-switch.png[]
+to switch between adding public groups or certain users.
+image:sign_manage-library-members.png[]
+.. Click *Add*.
+.. In the same way, create a new library for signing documents by email
+(for example, with the name _Email Templates_) and specify its members.
+. Go to *Sign Settings* and click *New*.
+. Select the *Library Setting* record type and click *Next*.
+. In the *Type* field, select *Document Templates*.
+. In the *Workspaces* field, specify desired libraries to store
+templates of the selected type (separated by a comma, without a blank
+space).
+image:Create-Library-Setting.png[]
+. Click *Save*.
+. Repeat steps 2–6 to create _Library Setting_ record type with *Type*
+= _Email Templates_*.* 
+
+[[h2_283394407]]
+=== 4. Create the Layout settings
+
+Layouts are used to display data about the object to sign and data about
+signatories. Create layouts for each object that is used for signing.
+Below is an example for creating layouts
+for [.object]#Account#, [.object]#Contact#, and
+[.object]#User# objects. 
+
+To set up a layout:
+
+. Go to *Sign Settings
+* and click *New*.
+. Select the *Layout Setting
+* record type and click *Next*.
+. Specify options:
+[TIP] ==== Parameters listed below are just a working example.
+You can specify your own parameters for [.object]#Account ====
+, User, [.object]#Contact# and other objects, which are used for signing.#
+
+[width="100%",cols="50%,50%",]
+|===
+|For[.object]#Account# object a|
+* *Type*: _Header_
+* *Object*: _Account_
+* *Fields To Display*: _Name_,_Industry_
+* *Required Attributes*: _true_,_false_
+* *Read Only Attributes*: _true_,_true_
+
+|For [.object]#User #object a|
+* *Type*: _List_
+* *Object*: _User_
+* *Fields To Display*: _FirstName_,_LastName,Email,Phone_
+* *Required Attributes*: _true_,_true,false,_false__
+* *Read Only Attributes*: _true_,_true,_false,_false___
+
+|For [.object]#Contact# object a|
+* *Type*: _List_
+* *Object*: _Contact_
+* *Fields To Display*: __FirstName_,_LastName,Email,Phone__
+* *Required Attributes*: __true_,_true,false,_false___
+* *Read Only Attributes*: __true_,_true,_false,_false____
+
+|===
+. Click *Save*.
+
+The setup is complete.

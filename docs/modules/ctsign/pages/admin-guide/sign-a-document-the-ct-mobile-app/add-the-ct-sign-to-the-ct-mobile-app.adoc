@@ -1,0 +1,155 @@
+= 7.1 Add the CT Sign to the CT Mobile app
+
+[NOTE] ==== Available since CT Mobile 2.4. ====
+
+To add the CT Sign to the CT Mobile application:
+
+
+
+link:admin-guide/sign-a-document-the-ct-mobile-app/add-the-ct-sign-to-the-ct-mobile-app#h2__1079380618[1. Add CT
+Sign to the Menu]
+
+link:admin-guide/sign-a-document-the-ct-mobile-app/add-the-ct-sign-to-the-ct-mobile-app#h1_1946616521[2. Add the
+Sign Document button in the Actions Menu]
+
+link:admin-guide/sign-a-document-the-ct-mobile-app/add-the-ct-sign-to-the-ct-mobile-app#h2__842279340[3.
+Grant User Permissions to CT Sign Objects]
+
+[[h2__1079380618]]
+=== 1. Add CT Sign to the Menu
+
+To add the CT Sign module to the
+https://help.customertimes.com/articles/ct-mobile-ios-en/app-menu[app
+menu]:
+
+[width="100%",cols="50%,50%",]
+|===
+|In CT Mobile Control Panel a|
+. Go to
+https://help.customertimes.com/articles/ct-mobile-ios-en/ct-mobile-control-panel-app-menu[CT
+Mobile Control Panel: App Menu] tab.
+.  Select the required profile in the *Location
+* picklist.
+.  Click the
+image:/resources/Storage/project-ct-mobile-en/CMPD/attachments/26613385/62562483.png[/resources/Storage/project-ct-mobile-en/CMPD/attachments/26613385/62562483]
+button to open the *Add menu item
+* tool.
+.  Select the *Sign
+* item. 
+. Click *Add
+* to close the *Add menu item* tool.
+. Specify the position of the CT Sign module in the app menu by dragging
+the items in the list.
+. Click *Save*.
+. https://help.customertimes.com/smart/project-ct-mobile-en/synchronization-launch[Launch
+synchronization] in the CT Mobile app.
+. The CT Sign module is now available in the CT Mobile app. The *Sign
+Documents
+* menu item with available for the mobile user records is added
+to https://help.customertimes.com/articles/ct-mobile-ios-en/app-menu[the
+app menu].
+
+|In CT Mobile Control Panel 2.0 a|
+. Go
+to https://help.customertimes.com/articles/project-ct-mobile-en/ct-mobile-control-panel-app-menu-new[CT
+Mobile Control Panel 2.0: App Menu] tab.
+. Select the required profile in the *Profile* picklist. To apply
+settings to all the profiles, select *General Settings*.
+. Click *Show Module Menu*.
+. On the *All* or *Integrations* tab, select the *Sign* item.
+. Click *Save*.
+
+|===
+
+The CT Sign module is now available in the CT Mobile app. The *Sign
+Documents
+* menu item with available for the mobile user records is added
+to https://help.customertimes.com/articles/ct-mobile-ios-en/app-menu[the
+app menu].
+
+[[h1_1946616521]]
+=== 2. Add the Sign Document button in the Actions Menu
+
+To display the *Sign Document
+* button in the
+https://help.customertimes.com/articles/ct-mobile-ios-en/actions[Actions]
+combo menu on the object record screen:
+
+. There should be a link:object-setting-field-reference[Sign
+Settings] record with the *Object Setting
+* record type for the required
+offline object.
+. There should be link:admin-guide/create-a-new-template[templates]:
+* available for the mobile user;
+* with *Sign Document
+* button to sign on the mobile device (*Signature
+Place*: _Device_) or by email (*Signature Place*: _Email_);
+* link:content-version-field-reference[available for the offline
+object&#44; and&#44; optionally&#44; for its specific record type];
+
+If necessary, create a new template and
+then https://help.customertimes.com/smart/project-ct-mobile-en/synchronization-launch[launch
+synchronization] in the CT Mobile app.
+
+To override the translation of the *Sign Document
+* button,
+https://help.salesforce.com/s/articleView?id=sf.cl_edit.htm&type=5[create
+a new custom label] for the
+[.apiobject]#CTM_Layout_Button_SignDocument# name. 
+
+[[h2__842279340]]
+=== 3. Grant User Permissions to CT Sign Objects
+
+Consider link:admin-guide/configuring-the-ct-sign-package/index#h2__549128247[the
+general user permissions] to the CT Sign solution.
+
+The mobile user should have access to the following Apex class:
+ApplicationConnectorRest. The *Sign Document
+* menu item will be added
+automatically to the left menu.
+
+
+
+The mobile user should have access to objects and fields required for
+proper work with CT Sign.
+
+
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Object API Name
+* |*Field API Name* |*Required Access for User*
+|*Comments*
+
+|[.apiobject]#ctsign_SignSettings\__c# | |Read |
+
+| |[.apiobject]#ctsign__FieldsToDisplay\__c# |Read |
+
+| |[.apiobject]#ctsign__Object\__c# |Read |
+
+| |[.apiobject]#ctsign__ReadOnlyAttributes\__c# |Read
+|
+
+| |[.apiobject]#ctsign__RequiredAttributes\__c# |Read
+|
+
+| |[.apiobject]#ctsign__Types\__c# |Read |
+
+| |[.apiobject]#ctsign__Workspaces\__c# |Read |Only
+documents from
+link:admin-guide/configuring-the-ct-sign-package/index#h2__1469899678[the specified
+workspaces] will be downloaded on the mobile device.
+
+|[.apiobject]#ctsign__SignDocument\__c# | | |
+
+| |[.apiobject]#ctsign__FailedMessage\__c# |Read
+|
+
+| |[.apiobject]#ctsign__RejectionDate\__c# |Read |
+
+| |[.apiobject]#ctsign__SignDate\__c# |Read |
+
+| |[.apiobject]#ctsign__Status\__c# |Read |
+
+| |[.apiobject]#ctsign__TransactionId\__c# |Read |
+|===
