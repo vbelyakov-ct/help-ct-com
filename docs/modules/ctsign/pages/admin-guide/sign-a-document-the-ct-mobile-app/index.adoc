@@ -1,262 +1,166 @@
 = 7. Sign a Document: the CT Mobile app
-
-link:add-the-ct-sign-to-the-ct-mobile-app#h2__1079380618[After
-adding CT Sign to the CT Mobile app] and
-link:add-the-ct-sign-to-the-ct-mobile-app#h2__842279340[granting
-user permissions&#44;] a mobile user can sign a document in the CT
-Mobile app.
-
-:toc: :toclevels: 3
+:toc:
 
 [[h2__1603366204]]
-=== Sign a Document with a Simple Signature
+== Sign a Document with a Simple Signature
 
-To sign documents with a simple signature, the *Simple
-* provider should
-be set for a template. One of the following options should be specified
-in the *Signatory Type
-* field on the template.
+To sign documents with a simple signature, the *Simple* provider should be set for a template. One of the following options should be specified in the *Signatory Type* field on the template.
 
-* In the case of a *Handwritten signature*, add the signature manually
-in the signature pop-up.
-* In the case of *Proof of Consent*, select a photo from the device
-gallery or take a new one.
-[NOTE] ==== This type is currently unavailable for CT Mobile iOS
-users. ====
+* In the case of a *Handwritten signature*, add the signature manually in the signature pop-up.
+* In the case of *Proof of Consent*, select a photo from the device gallery or take a new one.
++
+[NOTE]
+====
+This type is currently unavailable for CT Mobile iOS users. 
+====
 
 To sign a document:
 
-. Tap link:admin-guide/configuring-the-ct-sign-package/index#h2__236049169[the object
-to sign] in the left menu.
+. Tap xref:admin-guide/configuring-the-ct-sign-package/index.adoc#h2__236049169[the object to sign] in the left menu.
 . Select a record in the left record list.
-. In the
-https://help.customertimes.com/articles/ct-mobile-ios-en/actions[Actions]
-menu, tap the *Sign Document
-* button.
+. In the link:https://help.customertimes.com/articles/ct-mobile-ios-en/actions[Actions] menu, tap the *Sign Document* button.
 . Select the required template from the list.
-. In the open template, tap the *Signature
-* button to sign a document.
-In the case of several signatories, each of them should do one of the
-following actions:
+. In the open template, tap the *Signature* button to sign a document. In the case of several signatories, each of them should do one of the following actions:
 * manually add a signature in the corresponding pop-up;
 * select a photo with the signature from the device gallery;
 * take a photo with the signature.
-. Click the *Finish
-* button.
+. Click the *Finish* button.
 
 The document is signed, and the confirmation is displayed.
 
-* The document will be successfully signed only when all required fields
-are filled out. All signatories should add their signatures to the
-template.
-* When a document is successfully signed, the _Sign Document_ record
-with the *Completed on device
-* status is created. On the related
-link:object-setting-field-reference[Object] record, the
-_ContentVersion_ record with the generated PDF is created in the *Files*
-section.
-[TIP] ==== The document may be generated based on a template
-without the *Signature
-* button(s). In this case, the finished document
-will also be saved in *Files*. ====
-* Learn more
-link:admin-guide/sign-a-document-the-ct-mobile-app/sign-a-document-the-ct-mobile-app#h2__1087930188[about records
-related to] the _Sign Document_ record.
+* The document will be successfully signed only when all required fields are filled out. All signatories should add their signatures to the template.
+* When a document is successfully signed, the _Sign Document_ record with the *Completed on device* status is created. On the related xref:ref-guide/ct-sign-custom-settings-and-objects/sign-settings-field-reference/object-setting-field-reference.adoc[Object] record, the _ContentVersion_ record with the generated PDF is created in the *Files* section.
++
+[TIP]
+====
+The document may be generated based on a template without the *Signature* button(s). In this case, the finished document will also be saved in *Files*.
+====
+* Learn more <<h2__1032724594, about records related to>> the _Sign Document_ record.
 
 [[h2_579938729]]
-=== Sign a Document with a Legally Binding Signature
+== Sign a Document with a Legally Binding Signature
 
-[NOTE] ==== Available for CT Mobile iOS users. ====
+[NOTE]
+====
+Available for CT Mobile iOS users.
+====
 
 [[h3__1112955983]]
-==== Sign a Document on a Mobile Device
+=== Sign a Document on a Mobile Device
 
-To sign documents with a legally binding signature, the *DocuSign*
-provider should be set for a template. The *Device
-* option should be
-selected in the *Signatory Place
-* field via
-link:template-editor-feature-reference#h3_1829063711[adding the
-Signature button] on the template.
-
-
+To sign documents with a legally binding signature, the *DocuSign* provider should be set for a template. The *Device* option should be selected in the *Signatory Place* field via xref:ref-guide/template-editor-feature-reference.adoc#h3_1829063711[adding the Signature button] on the template.
 
 To sign a document:
 
-. Tap link:admin-guide/configuring-the-ct-sign-package/index#h2__236049169[the object
-to sign] in the left menu.
+. Tap xref:admin-guide/configuring-the-ct-sign-package/index.adoc#h2__236049169[the object to sign] in the left menu.
 . Select a record in the left record list.
-. In the
-https://help.customertimes.com/articles/ct-mobile-ios-en/actions[Actions]
-menu, tap *Sign Document*.
-
+. In the link:https://help.customertimes.com/articles/ct-mobile-ios-en/actions[Actions] menu, tap *Sign Document*.
++
 image:ctsign-mobile-sign-document.png[]
 . Select the required template from the list.
-
++
 image:ctsign-mobile-choose-template.png[]
-. In the opened template, tap the *Signature* button to select the
-signatory (if there are many).
+. In the opened template, tap the *Signature* button to select the signatory (if there are many).
 . Tap *Sign Document*.
++
+image:ctsign-mobile-signature-button.PNG[]
+. If the authentication type was selected for the template, wait until the *DocuSign Authentication* window opens in the app-browser window. According to the authorization type, tap *Send code* or wait for the phone call.
+. Tap *Continue*, sign a document in the proper place, and click *Finish*.
++
+image:ctsign-mobile-sign-finish.PNG[]
 
-image:../Storage/project-ct-sign-en/ctsign-mobile-signature-button.PNG[../Storage/project-ct-sign-en/ctsign-mobile-signature-button]
-. If the authentication type was selected for the template, wait until
-the *DocuSign Authentication
-* window opens in the app-browser window.
-According to the authorization type, tap *Send code
-* or wait for the
-phone call.
-. Tap *Continue*, sign a document in the proper place, and click
-*Finish*.
+The document is signed. The confirmation email is sent xref:admin-guide/connect-salesforce-with-the-application-service-and-e-signature-provider.adoc#associate-users[to the associated user(s)] and the _Sign Document_ record with the attached PDF is available in the CT Mobile app.
 
-image:../Storage/project-ct-sign-en/ctsign-mobile-sign-finish.PNG[../Storage/project-ct-sign-en/ctsign-mobile-sign-finish]
-
-The document is signed. The confirmation email is sent
-link:create-and-set-up-the-docusign-account#h2__1715948824[to the
-associated user(s)] and the _Sign Document_ record with the attached PDF
-is available in the CT Mobile app.
-
-* On the mobile device, perform the synchronization to send the _Sign
-Document_ record to Salesforce.
-* In Salesforce, the signed PDF document will be attached to this record
-when all signers have signed the document.
-* On the mobile device, perform the synchronization to receive the _Sign
-Document_ record with the attached signed PDF document.
+* On the mobile device, perform the synchronization to send the _Sign Document_ record to Salesforce.
+* In Salesforce, the signed PDF document will be attached to this record when all signers have signed the document.
+* On the mobile device, perform the synchronization to receive the _Sign Document_ record with the attached signed PDF document.
 
 [[h3__1085191960]]
 ==== Sharing the Signed Document
 
-If needed, you can share the signed PDF file:
+If needed, you can share the signed PDF file:
 
-. Select the file in the *Files* section. If you
-link:admin-guide/configuring-the-ct-sign-package/create-and-add-the-form-document-button-to-the-custom-object#h3__845986478[configured
-a lookup] between the link:sign-document-field-reference[Sign
-Document] object and a custom object:
-. Select a record of the custom object.
-. Tap *Sign Documents
-* tab and then *Files* Tab. 
-. Select the signed document.
-
-
+. Select the file in the *Files* section. If you xref:admin-guide/configuring-the-ct-sign-package/create-and-add-the-form-document-button-to-the-custom-object.adoc#h3__845986478[configured a lookup] between the xref:ref-guide/ct-sign-custom-settings-and-objects/sign-document-field-reference.adoc[Sign Document] object and a custom object:
+.. Select a record of the custom object.
+.. Tap *Sign Documents* tab and then *Files* Tab.
+.. Select the signed document.
+. Tap image:ctmobile-ios-share-icon.png[25,25] icon.
+. (Optional) select an link:https://help.customertimes.com/smart/project-ct-mobile-en/email-templates[Email template], if you want to use it for sharing the document by email. Otherwise, tap *Skip*.
+. (Optional) select a contact from the list. Please note, that:
+* You can send an email only to contacts who have a specified email address in Salesforce:
+** fill out the standard *Email* field for the desired _Contact_ record;
+** if you use Person Accounts, fill out the standard *Email* field for the desired _Person Account_ record.
+* You can send an email using a third-party mail client (like Microsoft Outlook), if it is set as default in your iOS settings. In this case:
+** The recipient's address will not be inserted automatically, but will be copied to clipboard. Please paste it manually.
+** The subject string will be duplicated in the message body.
+. Tap **Send**. The standard iOS sharing dialog window will be opened. Select the desired way to share the file.
 
 [[h3__1013196918]]
-==== Sign a Document by Email
+=== Sign a Document by Email
 
-To sign documents with a legally binding signature, the *DocuSign*
-provider should be set for a template. The *Email
-* option should be
-selected in the *Signatory Place
-* field by
-link:template-editor-feature-reference#h3_1829063711[adding the
-Signature button] on the template.
-
-
+To sign documents with a legally binding signature, the *DocuSign* provider should be set for a template. The *Email* option should be selected in the *Signatory Place* field by xref:ref-guide/template-editor-feature-reference.adoc#h3_1829063711[adding the Signature button] on the template.
 
 To sign a document:
 
-. Tap link:admin-guide/configuring-the-ct-sign-package/index#h2__236049169[the object
-to sign] in the left menu.
+. Tap xref:admin-guide/configuring-the-ct-sign-package/index#h2__236049169[the object to sign] in the left menu.
 . Tap the desired record in the left record list.
-. In the
-https://help.customertimes.com/articles/ct-mobile-ios-en/actions[Actions]
-menu, tap the *Sign Document
-* button.
+. In the link:https://help.customertimes.com/articles/ct-mobile-ios-en/actions[Actions] menu, tap the *Sign Document* button.
 . Select the required template from the list.
-. In the open template, tap the *Signature
-* button to select the
-signatory (if there are many).
-. Click the *Sign Document
-* button.
-* A signatory receives an email from DocuSign to review and sign a
-document.​
-* According to the specified authorization type, a signatory may need to
-confirm his action by SMS or phone.
+. In the open template, tap the *Signature* button to select the signatory (if there are many).
+. Click the *Sign Document* button.
+* A signatory receives an email from DocuSign to review and sign a document.
+* According to the specified authorization type, a signatory may need to confirm his action by SMS or phone.
 
-The document is signed. The confirmation email is sent
-link:create-and-set-up-the-docusign-account#h2__1715948824[to the
-associated user(s)].
+The document is signed. The confirmation email is sent xref:admin-guide/connect-salesforce-with-the-application-service-and-e-signature-provider.adoc#associate-users[to the associated user(s)].
 
 [[h3_1646327293]]
-==== Handle Offline Flow
+=== Handle Offline Flow
 
-If there is no internet connection when a user signs a document, the
-request and the corresponding _Sign Document_ record will be saved on
-the device and sent to Salesforce via the next synchronization.
+If there is no internet connection when a user signs a document, the request and the corresponding _Sign Document_ record will be saved on the device and sent to Salesforce via the next synchronization.
 
-. The[.apiobject]#Batch_DocumentSender# Apex class runs
-every 15 minutes and sends the corresponding request and record to
-Application Service to complete the signing. For versions 1.22 and
-later, the Apex job may not launch. To fix it:
+. The [.apiobject]#Batch_DocumentSender# Apex class runs every 15 minutes and sends the corresponding request and record to Application Service to complete the signing. For versions 1.22 and later, the Apex job may not launch. To fix it:
 .. Remove the Apex job from the schedule:
-... Go to *Setup
-* → *Environments* → *Jobs* → *Scheduled Jobs*.
-... Find the *Batch_DocumentSender
-* job.
-... Click *Del
-* to remove it and click *OK* to confirm. 
-.. https://help.salesforce.com/articleView?id=sf.code_schedule_batch_apex.htm&type=5[Schedule
-the Apex job manually]:
-. Signatories receive the email from DocuSign to complete signing, even
-if the *Device
-* option is selected in the *Signatory Place* field for
-the *Signature
-* button.
-. The final document will be attached to the corresponding _Sign
-Document_ record.
-. The _Sign Document_ record with the final PDF will be linked to the
-record that started the signing process.
-* If the parent record has not been synced yet, launch the
-synchronization to send the record to Salesforce and link it to the
-parent record.
-* If the parent recording has been synced, no additional sync is
-required.
+... Go to *Setup* → *Environments* → *Jobs* → *Scheduled Jobs*.
+... Find the *Batch_DocumentSender* job.
+... Click *Del* to remove it and click *OK* to confirm.
+.. link:https://help.salesforce.com/articleView?id=sf.code_schedule_batch_apex.htm&type=5[Schedule the Apex job manually]:
++
+[source,apex]
+----
+ctsign.Schedule_BatchDocumentSender schbatchDocumentSender = new ctsign.Schedule_BatchDocumentSender();
+System.schedule('Batch_DocumentSender started at 0 minutes of the hour', '0 0 * * * ?', schbatchDocumentSender);
+System.schedule('Batch_DocumentSender started at 15 minutes of the hour', '0 15 * * * ?', schbatchDocumentSender);
+System.schedule('Batch_DocumentSender started at 30 minutes of the hour', '0 30 * * * ?', schbatchDocumentSender);
+System.schedule('Batch_DocumentSender started at 45 minutes of the hour', '0 45 * * * ?', schbatchDocumentSender);
+----
+. Signatories receive the email from DocuSign to complete signing, even if the *Device* option is selected in the *Signatory Place* field for the *Signature* button.
+. The final document will be attached to the corresponding _Sign Document_ record.
+. The _Sign Document_ record with the final PDF will be linked to the record that started the signing process.
+* If the parent record has not been synced yet, launch the synchronization to send the record to Salesforce and link it to the parent record.
+* If the parent recording has been synced, no additional sync is required.
 
 [[h3_294308259]]
-==== Handle Online Flow
+=== Handle Online Flow
 
-When a user has signed a document in the CT Mobile app, the status of
-the _Sign Document_ record will change to *Completed on Device*. Given
-the status, the[.apiobject]#SignDocumentProcess# trigger will
-fire to attach the final document to the _Sign Document_ record.
+When a user has signed a document in the CT Mobile app, the status of the _Sign Document_ record will change to *Completed on Device*. Given the status, the [.apiobject]#SignDocumentProcess# trigger will fire to attach the final document to the _Sign Document_ record.
 
 [[h3_1634586017]]
-==== Handle Errors
+=== Handle Errors
 
-If any errors occur on the records described above, the sync process
-will include
-https://help.customertimes.com/articles/ct-mobile-ios-en/sync-recovery[the
+If any errors occur on the records described above, the sync process will include link:https://help.customertimes.com/articles/ct-mobile-ios-en/sync-recovery[the
 Sync Recovery functionality].
 
-. If an error occurs while sending the _Sign Document_ record (or any of
-the records that it refers to via reference fields), then the _Sign
-Document_ record will be sent with the help of the
-https://help.customertimes.com/articles/ct-mobile-ios-en/sync-recovery/a/h3_459631233[Direct
-access] option.
-. The related _ContentVersion_ record will be sent as usual via
-synchronization.
-. The _ContentDocumentLink_ record, which is linked to the _Sign
-Document_ record, will be sent with the help of the *Direct access*
-option.
-. If records in steps 1 or 3 could not be sent via the *Direct access*
-option, the CT Mobile app tries to send them using the
-https://help.customertimes.com/articles/ct-mobile-ios-en/sync-recovery/a/h3_356910769[Proxy
-object] option. If unsuccessful, a corresponding error will be listed on
-the
-https://help.customertimes.com/articles/ct-mobile-ios-en/errors-screen[Errors]
-screen.
+. If an error occurs while sending the _Sign Document_ record (or any of the records that it refers to via reference fields), then the _Sign Document_ record will be sent with the help of the link:https://help.customertimes.com/articles/ct-mobile-ios-en/sync-recovery/a/h3_459631233[Direct access] option.
+. The related _ContentVersion_ record will be sent as usual via synchronization.
+. The _ContentDocumentLink_ record, which is linked to the _Sign Document_ record, will be sent with the help of the *Direct access* option.
+. If records in steps 1 or 3 could not be sent via the *Direct access* option, the CT Mobile app tries to send them using the link:https://help.customertimes.com/articles/ct-mobile-ios-en/sync-recovery/a/h3_356910769[Proxy object] option. If unsuccessful, a corresponding error will be listed on the link:https://help.customertimes.com/articles/ct-mobile-ios-en/errors-screen[Errors] screen.
 
 [[h2__1032724594]]
-=== Document Storage
+== Document Storage
 
-When a user signs a document, a _ContentVersion_ record and the
-_ContentDocumentLink_ record are created. These records and the
-_ContentDocument_ record represent a _File_ that links to the _Sign
-Document_ record.
+When a user signs a document, a _ContentVersion_ record and the _ContentDocumentLink_ record are created. These records and the _ContentDocument_ record represent a _File_ that links to the _Sign Document_ record.
 
-* _ContentDocument_ is the information about the file and a link to the
-latest published version. The _ContentDocument_ record is automatically
-created on the Salesforce side when the _ContentVersion_ record is
-inserted.
-* link:content-version-field-reference[ContentVersion] is the
-content of the file in the base64 format and the template attributes.
-* _ContentDocumentLink_ stores the link between the _ContentDocument_
-and the record to which this file is attached.
+* _ContentDocument_ is the information about the file and a link to the latest published version. The _ContentDocument_ record is automatically created on the Salesforce side when the _ContentVersion_ record is inserted.
+
+* xref:ref-guide/ct-sign-custom-settings-and-objects/content-version-field-reference.adoc[ContentVersion] is the content of the file in the base64 format and the template attributes.
+* _ContentDocumentLink_ stores the link between the _ContentDocument_ and the record to which this file is attached.

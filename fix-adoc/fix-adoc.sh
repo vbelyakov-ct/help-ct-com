@@ -18,8 +18,8 @@ python3 add-spaces.py
 echo "Running replace-non-breaking-space.py"
 python3 replace-non-breaking-space.py 
 
-echo "Running fix-underscores.py"
-python3 fix-underscores.py
+#echo "Running fix-underscores.py"
+#python3 fix-underscores.py
 
 echo "Running fix-unordered-lists.py"
 python3 fix-unordered-lists.py

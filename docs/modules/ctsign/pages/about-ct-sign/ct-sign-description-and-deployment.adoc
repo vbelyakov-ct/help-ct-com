@@ -1,117 +1,91 @@
 = CT Sign Description and Deployment
-
-Here you can find the CT Sign solution description and a step-by-step
-guide to configure your Salesforce organization.
-
 :toc: :toclevels: 3
 
-[[h2_1478584389]]
-=== CT Sign
+Here you can find the CT Sign solution description and a step-by-step guide to configure your Salesforce organization.
 
-CT Sign is provided as two connected components:​
+[[h2_1478584389]]
+== CT Sign
+
+CT Sign is provided as two connected components:
 
 . The CT Sign managed package.
 . The Application Service, also known as the CT Sign app, is intended to
 connect with the e-signature provider.
-.
-* The native CT Mobile app for iOS and Windows​ with added CT Sign
+. * The native CT Mobile app for iOS and Windows with added CT Sign
 module.
-[NOTE] ==== CT Mobile Android does not support the CT Sign
-module. ====
-.
-* An e-signature provider.
-[NOTE] ==== CT Mobile Windows does not support the integration
-with e-signature providers. ====
++
+[NOTE]
+====
+CT Mobile Android does not support the CT Sign
+module.
+====
+. * An e-signature provider.
++
+[NOTE]
+====
+CT Mobile Windows does not support the integration
+with e-signature providers.
+====
 
-
-
-The following scheme covers the case of using a legally binding
-signature. When using simple signing, data exchange only takes place
-between the mobile device and Salesforce.
-
-
+The following scheme covers the case of using a legally binding signature. When using simple signing, data exchange only takes place between the mobile device and Salesforce.
 
 image:CT-Sign-Architecture.png[]
 
 [[h2_327527696]]
-=== CT Sign Package Description
+== CT Sign Package Description
 
-[TIP] ==== Available for the following Salesforce editions:
-Enterprise, Unlimited, Force.com, Developer, Performance. ====
+[TIP]
+====
+Available for the following Salesforce editions: Enterprise, Unlimited, Force.com, Developer, Performance.
+====
 
-[width="100%",cols="50%,50%",]
+[width="100%",cols="70%,30%",frame="none",grid="none"]
 |===
 a|
 [[h3_1423918535]]
-==== UI Tools
+=== UI Tools
 
-* link:ref-guide/ct-sign-control-panel[CT Sign Control Panel]​ is a tool to
-provide clear and convenient UI to connect the Salesforce organization
-with the Application Service and e-signature provider;
-* link:ref-guide/template-editor-feature-reference[Template Editor] is a tool
-for creating and configuring templates that will be used to form
-documents based on Salesforce data.
-
-
+* xref:ref-guide/ct-sign-control-panel.adoc[CT Sign Control Panel] is a tool to provide clear and convenient UI to connect the Salesforce organization with the Application Service and e-signature provider;
+* xref:ref-guide/template-editor-feature-reference.adoc[Template Editor] is a tool for creating and configuring templates that will be used to form documents based on Salesforce data.
 
 [[h3__1873686521]]
-==== Custom Objects and Fields
+=== Custom Objects and Fields
 
-[NOTE] ==== There custom CT Sign fields on the _Contact_ and
-_User_ objects, such as
-[.apiobject]#ctsign__CompanyName\__c ==== ,
-[.apiobject]#ctsign__ContraliaIdentityID\__c#, and ctsign__ContraliaIdentityPIN\__c are no longer in use.#
+[NOTE]
+====
+There custom CT Sign fields on the _Contact_ and _User_ objects, such as [.apiobject]#ctsign\__CompanyName__c, [.apiobject]#ctsign\__ContraliaIdentityID__c#, and [.apiobject]#ctsign\__ContraliaIdentityPIN__c# are no longer in use.
+====
 
-* link:ref-guide/sign-settings-field-reference/index[Sign Settings] is intended for
-template access management and to store the main CT Sign settings, such
-as objects to sign and layouts for the Form Document page.
-* link:ref-guide/ct-sign-custom-settings-and-objects/sign-document-field-reference[Sign Document] is intended to
-store the statuses of the outgoing transaction with the attached
+* xref:ref-guide/ct-sign-custom-settings-and-objects/sign-settings-field-reference/index.adoc[Sign Settings] is intended for template access management and to store the main CT Sign settings, such as objects to sign and layouts for the Form Document page.
+* xref:ref-guide/ct-sign-custom-settings-and-objects/sign-document-field-reference.adoc[Sign Document] is intended to store the statuses of the outgoing transaction with the attached
 document being signed.
 * The custom fields of the standard
-link:ref-guide/ct-sign-custom-settings-and-objects/content-version-field-reference[Content Version] object are
-intended to store the attributes of the templates for documents being
-signed and to send them as document parameters.
-* The generated documents are saved as
-https://help.salesforce.com/articleView?id=collab_salesforce_files_parent.htm&type=5[files]
-to allow users to attach the same document to different records. Until a
-transaction (a *Sign Document
-* record) receives a successful completion
-status, the document is attached only to this transaction. Next, the
-document is additionally attached to the record from which the signing
+xref:ref-guide/ct-sign-custom-settings-and-objects/content-version-field-reference.adoc[Content Version] object are intended to store the attributes of the templates for documents being signed and to send them as document parameters.
+* The generated documents are saved as link:https://help.salesforce.com/articleView?id=collab_salesforce_files_parent.htm&type=5[files] to allow users to attach the same document to different records. Until a transaction (a _Sign Document_ record) receives a successful completion status, the document is attached only to this transaction. Next, the document is additionally attached to the record from which the signing
 process was started.
-* The *Signing Contact
-* field is used as a link between _Account_ and
-_Contact_ who should sign the generated document.
-
-
+* The *Signing Contact* field is used as a link between _Account_ and _Contact_ who should sign the generated document.
 
 [[h3__2038128731]]
-==== Custom Setting
+=== Custom Setting
 
-* The protected link:ref-guide/ct-sign-custom-settings-and-objects/sign-credentials[Sign Credentials] custom
-setting is intended to store the Application Service credentials. To
-fill out the custom setting, the system uses the custom web service.
-Users have no access to this custom setting.
-
-
+* The protected xref:ref-guide/ct-sign-custom-settings-and-objects/sign-credentials.adoc[Sign Credentials] custom setting is intended to store the Application Service credentials. To
+fill out the custom setting, the system uses the custom web service. Users have no access to this custom setting.
 
 [[h3_789622594]]
-==== Components
+=== Components
 
 * Apex classes:
-**[.apiobject]#TemplateEditorCommonController#
-**[.apiobject]#TemplateEditorController#
-**[.apiobject]#TemplateObjectsSetting#
-**[.apiobject]#TemplateSelectionAuraController#
-**[.apiobject]#ApplicationConnectorRest#
-**[.apiobject]#Batch_DocumentSender#
+** [.apiobject]#TemplateEditorCommonController#
+** [.apiobject]#TemplateEditorController#
+** [.apiobject]#TemplateObjectsSetting#
+** [.apiobject]#TemplateSelectionAuraController#
+** [.apiobject]#ApplicationConnectorRest#
+** [.apiobject]#Batch_DocumentSender#
 * Apex triggers:
-**[.apiobject]#SignDocumentProcess#
+** [.apiobject]#SignDocumentProcess#
 * Visualforce and Lightning components for UI Tools.
 * Web service to get authorization data of the Application Service.
-*
-* Custom Labels to provide multilingual support.
+* * Custom Labels to provide multilingual support.
 
 a|
 image:CT-Sign-Package.png[]
@@ -119,63 +93,30 @@ image:CT-Sign-Package.png[]
 |===
 
 [[h2_463801188]]
-=== Application Service and e-Signature Provider
+== Application Service and e-Signature Provider
 
-Users can add handwritten signatures to a document without additional
-integration.
+Users can add handwritten signatures to a document without additional integration.
 
+To use a legally binding e-signature, connect the Salesforce organization with the installed CT Sign package, the Application Service, and the e-signature provider.
 
-
-To use a legally binding e-signature, connect the Salesforce
-organization with the installed CT Sign package, the Application
-Service, and the e-signature provider.
-
-* Application Service, provided by the Customertimes team, is used as a
-third-party service to connect your Salesforce org or CT Mobile app with
-an e-signature provider for sending and receiving transactions and
-signed documents.
-* As the e-signature provider, each customer should
-https://developers.docusign.com/platform/building-integration/[prepare
-the DocuSign account] to connect with the Application Service and
-Salesforce organization.
-. Create the developer account with the configured DocuSign app and the
-enabled DocuSign
-Connect link:create-and-set-up-the-docusign-account[to test the
-e-signature process].
-. link:create-and-set-up-the-docusign-account#h2__1670861794[Obtain
-the production account] and go live with the DocuSign app to allow the
-legally binding signing.
+* Application Service, provided by the Customertimes team, is used as a third-party service to connect your Salesforce org or CT Mobile app with an e-signature provider for sending and receiving transactions and signed documents.
+* As the e-signature provider, each customer should link:https://developers.docusign.com/platform/building-integration/[prepare the DocuSign account] to connect with the Application Service and Salesforce organization.
+. Create the developer account with the configured DocuSign app and the enabled DocuSign
+Connect xref:admin-guide/connect-salesforce-with-the-application-service-and-e-signature-provider.adoc[to test the e-signature process].
+. xref:admin-guide/connect-salesforce-with-the-application-service-and-e-signature-provider.adoc[Obtain the production account] and go live with the DocuSign app to allow the legally binding signing.
 
 [[h2__426184834]]
-=== Deployment Steps
+== Deployment Steps
 
-Users may sign documents with legally binding or simple signatures in
-Salesforce and on a mobile device. Depending on the purpose and the
-platform of a mobile device, skip the unnecessary steps, for example, if
-there is no need to give iOS users the ability to sign documents with a
-legally binding signature.
-
-
+Users may sign documents with legally binding or simple signatures in Salesforce and on a mobile device. Depending on the purpose and the platform of a mobile device, skip the unnecessary steps, for example, if there is no need to give iOS users the ability to sign documents with a legally binding signature.
 
 Deployment of CT Sign solution is performed in the following order:
 
-. link:admin-guide/installing-the-ct-sign-package[Install the CT Sign
-package] in your Salesforce organization and assign the CT Sign license
-to the users.
-. link:admin-guide/configuring-the-ct-sign-package/index[Configure the main
-parameters of the CT Sign package]: objects to sign, libraries to store
-documents, and layouts for a forming document page.
-. link:admin-guide/create-a-new-template[Create templates] for contracts,
-e-mails, or any other form.
-. link:create-and-set-up-the-docusign-account[Set up the DocuSign
-integration] if needed.
-.. link:admin-guide/connect-salesforce-with-the-application-service-and-e-signature-provider[Connect
-your Salesforce organization] with the Application Service and DocuSign
-account.
-. Form and sign documents with legally binding or simple
-signatures link:admin-guide/sign-a-document-salesforce-side[in Salesforce].
-. link:admin-guide/sign-a-document-the-ct-mobile-app/add-the-ct-sign-to-the-ct-mobile-app[Add the CT Sign module
-to the CT Mobile app] for signing documents in the CT Mobile app.
-. Form and sign documents with legally binding or simple
-signatures link:admin-guide/sign-a-document-the-ct-mobile-app/index[on a mobile
-device].
+. xref:admin-guide/installing-the-ct-sign-package.adoc[Install the CT Sign package] in your Salesforce organization and assign the CT Sign license to the users.
+. xref:admin-guide/configuring-the-ct-sign-package/index.adoc[Configure the main parameters of the CT Sign package]: objects to sign, libraries to store documents, and layouts for a forming document page.
+. xref:admin-guide/create-a-new-template.adoc[Create templates] for contracts, e-mails, or any other form.
+. xref:admin-guide/connect-salesforce-with-the-application-service-and-e-signature-provider.adoc[Set up the DocuSign integration] if needed.
+.. xref:admin-guide/connect-salesforce-with-the-application-service-and-e-signature-provider.adoc[Connect your Salesforce organization] with the Application Service and DocuSign account.
+. Form and sign documents with legally binding or simple signatures xref:admin-guide/sign-a-document-salesforce-side.adoc[in Salesforce].
+. xref:admin-guide/sign-a-document-the-ct-mobile-app/add-the-ct-sign-to-the-ct-mobile-app.adoc[Add the CT Sign module to the CT Mobile app] for signing documents in the CT Mobile app.
+. Form and sign documents with legally binding or simple signatures xref:admin-guide/sign-a-document-the-ct-mobile-app/index.adoc[on a mobile device].

@@ -1,214 +1,156 @@
 = 5. Connect Salesforce with the Application Service and DocuSign
+:toc:
 
-[cols=",",]
-|===
-|image:warning.png[] | This article
-is applicable only if you use
-link:admin-guide/create-a-new-template#h2__296611947[template with the DocuSign
-sign method].
-|===
+[NOTE]
+====
+This article is applicable only if you use xref:admin-guide/create-a-new-template.adoc#h2__296611947[template with the DocuSign sign method].
+====
 
-
-
-In case to process signatures by an e-Signature provider, it is
-necessary to connect the Salesforce organization with the App Service
-and the e-signature provider. Currently, you can connect only to the
-DocuSign provider. Read more
-at https://support.docusign.com/s/document-item?language=en_US&bundleId=pik1583277475390&topicId=vkq1583277322201.html&_LANG=enus[DocuSign
-support portal].
-
-link:admin-guide/connect-salesforce-with-the-application-service-and-e-signature-provider#h2__1758912760[1.
-Generate 8-character Code for DocuSign Account].
-
-link:admin-guide/connect-salesforce-with-the-application-service-and-e-signature-provider#h2_1605320361[2.
-Create DocuSign Account and Set Up Connect Configuration].
-
-link:admin-guide/connect-salesforce-with-the-application-service-and-e-signature-provider#h2_1289993850[3.
-Connect the Salesforce Instance with the Application Service].
-
-link:admin-guide/connect-salesforce-with-the-application-service-and-e-signature-provider#h2__327227725[4.
-Connect DocuSign App].
-
-link:admin-guide/connect-salesforce-with-the-application-service-and-e-signature-provider#h2_1383675368[5.
-Send Authentication Data to DocuSign].
+In case to process signatures by an e-Signature provider, it is necessary to connect the Salesforce organization with the App Service and the e-signature provider. Currently, you can connect only to the DocuSign provider. Read more at link:https://support.docusign.com/s/document-item?language=en_US&bundleId=pik1583277475390&topicId=vkq1583277322201.html&_LANG=enus[DocuSign support portal].
 
 [[h2__1758912760]]
-=== 1. Save 18-character Code of your Salesforce Organization
+== 1. Save 18-character Code of your Salesforce Organization
 
 . Go to Setup → Company Settings → Company Information.
-. Copy and save the *Salesforce.com Organization ID
-* value.
-
+. Copy and save the *Salesforce.com Organization ID* value.
++
 image:sf-org-id.png[]
-. Open any of Salesforce 15 to 18 characters converters, for example,
-https://www.adminbooster.com/tool/15to18[this one].
-. Convert the *Salesforce.com Organization ID* value to 18-character
-format and save it. 
+. Open any of Salesforce 15 to 18 characters converters, for example, link:https://www.adminbooster.com/tool/15to18[this one].
+. Convert the *Salesforce.com Organization ID* value to 18-character format and save it.
 
 [[h2_1605320361]]
-=== 2. Create DocuSign Account and Set Up Connect Configuration
+== 2. Create DocuSign Account and Set Up Connect Configuration
 
-. Go to https://developers.docusign.com.
-.  In the *Developer account
-* picklist, select *Create account*.
-
+. Go to link:https://developers.docusign.com[].
+.  In the *Developer account* picklist, select *Create account*.
++
 image:docusign-create-account.png[]
 . Fill out the form and click *Get Started*.
 . Proceed to the account activation link from your email box.
 . Set password and click *Log In*.
 . Click on your account icon and select *My Apps & Keys*.
-
++
 image:docusign-my-apps-keys.png[]
 . Click *Add App and Integration Key*.
-. In the *App Name field*, type in an application name (for example, _CT
-Sign_).
+. In the *App Name field*, type in an application name (for example, _CT Sign_).
 . Click *Create App*.
-. Copy and save the *Integration Key
-* value.
-. In the *Authentication
-* section, click *Add Secret Key*. Copy and save
-the secret key.
+. Copy and save the *Integration Key* value.
+. In the *Authentication* section, click *Add Secret Key*. Copy and save the secret key.
 . Click *Generate RSA*.
-. Copy and save the *Private Key
-* value.
-. In the *Additional Settings
-* section, click *Add URI*.
-. In the Redirect URIs field, type
-in [.apiobject]#https://sign.customertimes.com/auth/docusign/callback#. 
+. Copy and save the *Private Key* value.
+. In the *Additional Settings* section, click *Add URI*.
+[[redirect-uri]]
+. In the Redirect URIs field, type in `https://sign.customertimes.com/auth/docusign/callback`.
 . Click *Save*.
-. In the left menu, in the *Integrations
-* section, click *Connect*.
-
+. In the left menu, in the *Integrations* section, click *Connect*.
++
 image:docusign-integrations-connect.png[]
-. In the *Add configuration
-* picklist, select *Custom*.
+. In the *Add configuration* picklist, select *Custom*.
 . Fill out the fields:
-* In the *Listener Settings
-* section:
-
+* In the *Listener Settings* section:
++
 image:docusign-listener-settings.png[]
-*
-* *Name*: _DocuSign Connect_.
-*
-* *URL to
-Publish*: [.apiobject]#https://sign.customertimes.com/api/docusign/connect/<18-character
-Organization ID>
-#Use
-the link:admin-guide/connect-salesforce-with-the-application-service-and-e-signature-provider#h2__1758912760[18-character
-Organization ID you saved before].
-* In the *Event Settings* section:
 
+** *Name*: _DocuSign Connect_.
+** *URL to Publish*: `https://sign.customertimes.com/api/docusign/connect/<18-character Organization ID>`
++
+Use the xref:admin-guide/connect-salesforce-with-the-application-service-and-e-signature-provider.adoc#h2__1758912760[18-character Organization ID you saved before].
+* In the *Event Settings* section:
++
 image:docusign-event-settings.png[]
-*
-* *Data Format*: _Legacy_.
-*
-* In the *Trigger Events* subsection:
-.. In the *Envelope and Recipients
-* list, select all available
-checkboxes.
-.. In the *Include Data
-* list, select checkboxes:
-**
-* *Time Zone Information*;
-**
-* *Envelope Voided Reason*;
-**
-* *Document fields*;
-* In the *Associated Users/Groups
-* section:
 
+** *Data Format*: _Legacy_.
+** In the *Trigger Events* subsection:
+.. In the *Envelope and Recipients* list, select all available checkboxes.
+.. In the *Include Data* list, select checkboxes:
+*** *Time Zone Information*;
+*** *Envelope Voided Reason*;
+*** *Document fields*;
+[[associate-users]]
+* In the *Associated Users/Groups* section:
++
 image:docusign-users-groups.png[]
-.. Click *Select Users/Groups to include*.
-.. Select your account. 
-* In the *Integration and Security Settings
-* section:
 
+.. Click *Select Users/Groups to include*.
+.. Select your account. 
+* In the *Integration and Security Settings* section:
++
 image:docusign-integration-security-settings.png[]
-.. Select *Include Basic Authentication Header
-* checkbox.
-.. Fill in the *User Name
-* and *Password* fields. 
 
-[width="100%",cols="50%,50%",]
-|===
-|image:info.png[] |It does not
-have to be username and password from your DocuSign account, you can
-specify any username and password. But they must match the username and
-password you will specify in
-the *link:admin-guide/connect-salesforce-with-the-application-service-and-e-signature-provider#h2_1383675368[DocuSign
-Connect]*link:admin-guide/connect-salesforce-with-the-application-service-and-e-signature-provider#h2_1383675368[ tab]. 
-|===
+.. Select *Include Basic Authentication Header* checkbox.
+[[docusign-username-password]]
+.. Fill in the *User Name* and *Password* fields.
++
+[TIP]
+====
+It does not have to be username and password from your DocuSign account, you can specify any username and password. But they must match the username and password you will specify in the xref:admin-guide/connect-salesforce-with-the-application-service-and-e-signature-provider.adoc#h2_1383675368[DocuSign Connect] tab.
+====
+
 . Click *Add Configuration*.
 
 [[h2_1289993850]]
-=== 3. Connect the Salesforce Instance with the Application Service 
+== 3. Connect the Salesforce Instance with the Application Service
 
-. Go to *Setup
-* → *CSP Trusted Sites*.
+. Go to *Setup* → *CSP Trusted Sites*.
 . Click on _AWS_.
-
++
 image:trusted-sites-aws.png[]
-. Click *Edit*.
-. In the *CSP Directives
-* section, select all checkboxes.
 
+. Click *Edit*.
+. In the *CSP Directives* section, select all checkboxes.
++
 image:CSP-Directives.png[]
+
 . Click *Save*.
-. Go to *CT Sign Control Panel
-* → *CT Sign App*.
-. In the *Application Url
-* field, specify the path
-[.apiobject]#https://sign.customertimes.com# and click
-*Connect*.
+. Go to *CT Sign Control Panel* → *CT Sign App*.
+. In the *Application Url* field, specify the path `https://sign.customertimes.com` and click *Connect*.
 . On the next page, enter your Salesforce credentials and log in.
-. Allow CT Sign to access your data and perform requests.
+. *Allow* CT Sign to access your data and perform requests.
++
 image:App-Service-Allow-Access.png[]
 
+If successful, you will be redirected to the *CT Sign app* tab, and the token to access the Application Service will be added to the protected xref:ref-guide/ct-sign-custom-settings-and-objects/sign-credentials.adoc[Sign Credentials] custom setting.
 
-
-If successful, you will be redirected to the *CT Sign app
-* tab, and the
-token to access the Application Service will be added to the protected
-link:sign-credentials[Sign Credentials] custom setting.
+[WARNING]
+====
+Please re-enter DocuSign parameters after promoting your integration key from your developer account to a production DocuSign account. Documents sent from the developer DocuSign account are not legally binding and are watermarked.
+====
 
 [[h2__327227725]]
-=== 4. Connect DocuSign App
+== 4. Connect DocuSign App
 
-. Go to *CT Sign Control Panel* → *DocuSign App*.
-. Enter
-link:admin-guide/connect-salesforce-with-the-application-service-and-e-signature-provider#h2_1605320361[keys
-of the DocuSign app] in the DocuSign account:
+. Go to *CT Sign Control Panel* → *DocuSign App*.
+. Enter xref:admin-guide/connect-salesforce-with-the-application-service-and-e-signature-provider.adoc#h2_1605320361[keys of the DocuSign app] in the DocuSign account:
 * *Client Id*.
 * *Client Secret*.
 * *Client Private Key*.
-[NOTE] ==== The value should be entered with the specific header
-and footer:[.apiobject]#-----BEGIN RSA PRIVATE KEY----- ====
-and [.apiobject]#-----END RSA PRIVATE KEY-----#.# . Select the *Production
-* checkbox if you use the DocuSign production account. . Click *Send*. [cols=",",] |=== |image:warning.png[] |If you see an error message, add[.apiobject]#http://localhost:5000/auth/docusign/callback# as a
-second redirect URI in the
-link:admin-guide/connect-salesforce-with-the-application-service-and-e-signature-provider#redirect-uri[DocuSign
-App configuration] and try again.
-|===
-. On the new page, enter your credentials of
-link:create-and-set-up-the-docusign-account[the developer or
-production DocuSign account].
++
+[NOTE]
+====
+The value should be entered with the specific header and [.apiobject]#-----BEGIN RSA PRIVATE KEY-----# and [.apiobject]#-----END RSA PRIVATE KEY-----#.
+====
+
+. Select the *Production* checkbox if you use the DocuSign production account.
+. Click *Send*.
++
+[NOTE]
+====
+If you see an error message, add `http://localhost:5000/auth/docusign/callback` as a
+second redirect URI in the <<redirect-uri, DocuSign App configuration>> and try again.
+====
+
+. On the new page, enter your credentials of <<h2_1605320361, the developer or production DocuSign account>>.
 . Allow CT Sign to access your data and perform requests.
 
-If successful, you will be redirected to the *DocuSign App
-* tab.
+If successful, you will be redirected to the *DocuSign App* tab.
 
 [[h2_1383675368]]
-=== 5. Send Authentication Data to DocuSign
+== 5. Send Authentication Data to DocuSign
 
-On the *DocuSign Connect
-* tab, specify the following to receive the
-current status of the document sent to sign in the DocuSign:
+On the *DocuSign Connect* tab, specify the following to receive the current status of the document sent to sign in the DocuSign:
 
-. Go to *CT Sign Control Panel* → *DocuSign Connect*.
-. Enter the *Username
-* and *Password* of the
-link:admin-guide/connect-salesforce-with-the-application-service-and-e-signature-provider#docusign-username-password[DocuSign
-Connect].
+. Go to *CT Sign Control Panel* → *DocuSign Connect*.
+. Enter the *Username* and *Password* of the xref:admin-guide/connect-salesforce-with-the-application-service-and-e-signature-provider.adoc#docusign-username-password[DocuSign Connect].
 . Click *Connect*.
 
 The setup is complete.
