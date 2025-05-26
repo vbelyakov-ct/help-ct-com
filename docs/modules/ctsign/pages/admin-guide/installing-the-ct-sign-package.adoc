@@ -1,37 +1,24 @@
 = 1. Install the CT Sign Package
 
-To install the *CT Sign
-* managed package:
+To install the *CT Sign* managed package:
 
-. Contact the Customertimes team to obtain a direct link for the CT Sign
-managed package installation:
+. Contact the Customertimes team to obtain a direct link for the CT Sign managed package installation:
 * *in your sandboxes*;
 * *in your production environment*.
 . Log in to Salesforce.
-. Select the security level of installation.[NOTE] ==== It is
-recommended to select *Install for Admins Only
-* security level. Admin
-can set the permissions for specific users after the package
-installation. ====
-. Select the checkbox to confirm the installation of a non-Salesforce
-application.
+. Select the security level of installation.
++
+[NOTE]
+====
+It is recommended to select *Install for Admins Only* security level. Admin can set the permissions for specific users after the package installation.
+====
+. Select the checkbox to confirm the installation of a non-Salesforce application.
 . Click *Install*.
-. Approve third-party access by selecting a checkbox and clicking
-*Continue*.
+. Approve third-party access by selecting a checkbox and clicking *Continue*.
 . Click *Done*.
++
+It will take some time for the CT Sign package to install. You will receive the email at the specified email address when the process is finished.
 
-It will take some time for the CT Sign package to install. You will
-receive the email at the specified email address when the process is
-finished.
-. Check that the *Application
-* remote site is active. Go to *Setup →
-Security → Remote Site Settings →
-* check if the *Active* checkbox is
-selected next to *Application*.
-. Assign link:managing-ct-sign-licenses[the CT Sign license] to
-users.
-. If you use the e-signature provider, wait for 10-15 minutes after
-installation until security politics are applied, and then set up the
-connection on the
-link:connect-salesforce-with-the-application-service-and-e-signature-provider[CT
-Sign Control Panel] tab.
+. Check that the *Application* remote site is active. Go to *Setup* → *Security* → *Remote Site Settings* → check if the *Active* checkbox is selected next to *Application*.
+. Assign xref:./managing-ct-sign-licenses.adoc[the CT Sign license] to users.
+. If you use the e-signature provider, wait for 10-15 minutes after installation until security politics are applied, and then set up the connection on the xref:./connect-salesforce-with-the-application-service-and-e-signature-provider.adoc[CT Sign Control Panel] tab.

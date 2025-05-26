@@ -1,55 +1,35 @@
 = Layout Setting Field Reference
 
-The *Layout Setting
-* record type is used to set up the Form Document
-page layout in Salesforce, for example, to display the information about
-signers or an object to sign.
+The *Layout Setting* record type is used to set up the Form Document page layout in Salesforce, for example, to display the information about signers or an object to sign.
 
 '''''
 
-API name in Salesforce:[.apiobject]#LayoutSetting#
+API name in Salesforce: [.apiobject]#LayoutSetting#
 
 '''''
 
-[width="100%",cols="25%,25%,25%,25%",]
+[width="100%",cols="15%,20%,10%,55%"]
 |===
-|*Field
-* |*API Name* |*Type* |*Description*
+|*Field* |*API Name* |*Type* |*Description*
 
-|Fields to Display
-|[.apiobject]#ctsign__FieldsToDisplay\__c# |Long Text
-Area (32768) |Specify the fields to display on the Form Document page
-(separated by a comma, without blank space).
+|Fields to Display |[.apiobject]#ctsign\__FieldsToDisplay__c# |Long Text Area (32768) |Specify the fields to display on the Form Document page (separated by a comma, without blank space).
 
-|Object |[.apiobject]#ctsign__Object\__c# |Text(255) a|
-The API name of the object and which fields should be displayed in the
-document.
+|Object |[.apiobject]#ctsign\__Object__c# |Text(255) a| The API name of the object and which fields should be displayed in the document.
 
-[NOTE] ==== A separate record should be created for each object
-to sign. ====
+NOTE: A separate record should be created for each object to sign.
 
-|Read Only Attributes
-|[.apiobject]#ctsign__ReadOnlyAttributes\__c# |Text(255)
+|Read Only Attributes |[.apiobject]#ctsign\__ReadOnlyAttributes__c# |Text(255)
 |Whether the specific field is read-only.
-List of true/false values (separated by a comma, without blank space)
-for every field specified in
-[.apiobject]#ctsign__FieldsToDisplay\__c#.
 
-|Required Attributes
-|[.apiobject]#ctsign__RequiredAttributes\__c#
-|Text(255) |Whether the specific field is required.
-List of true/false values (separated by a comma, without blank space)
-for every field specified in
-[.apiobject]#ctsign__FeldsToDisplay\__c#.
+List of true/false values (separated by a comma, without blank space) for every field specified in [.apiobject]#ctsign\__FieldsToDisplay__c#.
 
-|Type |[.apiobject]#ctsign__Type\__c# |Picklist a|
-Specify the location to place fields listed in the
-[.apiobject]#ctsign__FieldsToDisplay\__c#. Available
-values:
+|Required Attributes |[.apiobject]#ctsign\__RequiredAttributes__c# |Text(255) |Whether the specific field is required.
 
-* The *Header
-* is used for adding fields of the object to sign;
-* The *List
-* is used for adding fields of the signers.
+List of true/false values (separated by a comma, without blank space) for every field specified in [.apiobject]#ctsign\__FeldsToDisplay__c#.
+
+|Type |[.apiobject]#ctsign\__Type__c# |Picklist a| Specify the location to place fields listed in the [.apiobject]#ctsign\__FieldsToDisplay__c#. Available values:
+
+* The *Header* is used for adding fields of the object to sign;
+* The *List* is used for adding fields of the signers.
 
 |===

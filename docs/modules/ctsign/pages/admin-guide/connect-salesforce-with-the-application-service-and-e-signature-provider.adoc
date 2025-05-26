@@ -22,7 +22,7 @@ image:sf-org-id.png[]
 == 2. Create DocuSign Account and Set Up Connect Configuration
 
 . Go to link:https://developers.docusign.com[].
-.  In the *Developer account* picklist, select *Create account*.
+. In the *Developer account* picklist, select *Create account*.
 +
 image:docusign-create-account.png[]
 . Fill out the form and click *Get Started*.
@@ -135,8 +135,7 @@ The value should be entered with the specific header and [.apiobject]#-----BEGIN
 +
 [NOTE]
 ====
-If you see an error message, add `http://localhost:5000/auth/docusign/callback` as a
-second redirect URI in the <<redirect-uri, DocuSign App configuration>> and try again.
+If you see an error message, add `http://localhost:5000/auth/docusign/callback` as a second redirect URI in the <<redirect-uri, DocuSign App configuration>> and try again.
 ====
 
 . On the new page, enter your credentials of <<h2_1605320361, the developer or production DocuSign account>>.

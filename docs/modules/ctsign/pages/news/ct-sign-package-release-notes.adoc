@@ -1,165 +1,99 @@
 = CT Sign Package Release Notes
+:toc:
+:toclevels: 1
 
-Here you could find a feature, the link to the corresponding article,
-and the version of the CT Sign package in which the feature is
-available.
-
-:toc: :toclevels: 2
+Here you could find a feature, the link to the corresponding article, and the version of the CT Sign package in which the feature is available.
 
 [[h2_644677997]]
-=== The CT Sign package v. 1.29 '23
+== The CT Sign package v. 1.29 '23
 
 [[h3__1117270046]]
-==== Fixes
+=== Fixes
 
-* Previously, if at least one of the templates had a related
-_ContentVersion_ object record with specific package fields set to null,
-the list of available templates was empty (even templates, which are
-properly set, were not displayed). Now, templates with undefined fields
-are not displayed, and templates with proper settings are displayed in
-the list. 
+* Previously, if at least one of the templates had a related _ContentVersion_ object record with specific package fields set to null, the list of available templates was empty (even templates, which are properly set, were not displayed). Now, templates with undefined fields are not displayed, and templates with proper settings are displayed in the list.
 
 [[h2__2022207603]]
-=== The CT Sign package v. 1.28 '23
+== The CT Sign package v. 1.28 '23
 
 [[h3_1221479694]]
-==== New Features and Improvements
+=== New Features and Improvements
 
-link:create-a-new-template[Templates]:
+xref:admin-guide/create-a-new-template.adoc[Templates]:
 
-* The _No Auth_ option is added for the *Authorization Type* of
-the *Signature* button when using the *DocuSign* sign type. If
-specified, no confirmation will be required during the signing process.
+* The _No Auth_ option is added for the *Authorization Type* of the *Signature* button when using the *DocuSign* sign type. If specified, no confirmation will be required during the signing process.
 
 [[h3__1014887477]]
-==== Fixes
+=== Fixes
 
-* Previously, during the signing, it was impossible to select a
-template, for which no record type is specified. Now, such template will
-be available for all object record types and can be selected.
-* Some read-only attributes, specified on
-the link:configuring-the-ct-sign-package#h2_283394407[Form Document
-layout], were available for editing. Now, all read-only attributes
-cannot be edited during the signing process.
-* Some required attributes, specified on
-the link:configuring-the-ct-sign-package#h2_283394407[]link:configuring-the-ct-sign-package#h2_283394407[Form
-Document layout], could be ignored during the signing process. Now, all
-required attributes must be filled out to complete the signing
-process.  
-* Fixed displaying date and time on the generated PDF document instead
-of just date.
-* The *Save Draft* button has been removed from the *Form
-Document* page, because it does not launch any action.
+* Previously, during the signing, it was impossible to select a template, for which no record type is specified. Now, such template will be available for all object record types and can be selected.
+* Some read-only attributes, specified on the xref:admin-guide/configuring-the-ct-sign-package/index.adoc#h2_283394407[Form Document layout], were available for editing. Now, all read-only attributes cannot be edited during the signing process.
+* Some required attributes, specified on the xref:admin-guide/configuring-the-ct-sign-package/index.adoc#h2_283394407[]xref:admin-guide/configuring-the-ct-sign-package/index.adoc#h2_283394407[Form Document layout], could be ignored during the signing process. Now, all required attributes must be filled out to complete the signing process.
+* Fixed displaying date and time on the generated PDF document instead of just date.
+* The *Save Draft* button has been removed from the *Form Document* page, because it does not launch any action.
 
-
-ifdef::hidden[]
-
+////
 [[h2_2092714824]]
-=== The CT Sign package v. 1.15 Winter '22
+== The CT Sign package v. 1.15 Winter '22
 
 [[h3__649865195]]
-==== Fixes
+=== Fixes
 
-Fixed the *EU Advanced
-* signature type.
+Fixed the *EU Advanced* signature type.
+////
 
 [[h2_216632692]]
-=== The CT Sign package v. 1.13 Autumn '21
+== The CT Sign package v. 1.13 Autumn '21
 
 [[h3_1958571322]]
-==== New Features and Improvements
+=== New Features and Improvements
 
 Template Editor supports the
-link:template-editor-feature-reference#h3__99476489[Salesforce
-table].
+xref:ref-guide/template-editor-feature-reference.adoc#h3__99476489[Salesforce table].
 
-* Use the Salesforce table to display values from the fields of the
-selected object according to the criteria.
-* The rows of the table are filled out with real values from the
-selected object when you start to sign a document. If the field is
-empty, the marker will be replaced with a blank space.
+* Use the Salesforce table to display values from the fields of the selected object according to the criteria.
+* The rows of the table are filled out with real values from the selected object when you start to sign a document. If the field is empty, the marker will be replaced with a blank space.
 
 [[h2__1232987765]]
-=== The CT Sign package v. 1.12 Spring '21
+== The CT Sign package v. 1.12 Spring '21
 
 [[h3__1709842500]]
-==== New Features and Improvements
+=== New Features and Improvements
 
-When the *EU Advanced
-* signature type is selected for the *Signature*
-button:
+When the *EU Advanced* signature type is selected for the *Signature* button:
 
-* to verify the signatory, use either the *Email
-* or *Device* option as
-the *Signatory Place*. Previously, only the *Device
-* option was
-available.
-* SMS confirmation is used as the *Authorization Type*. Previously,
-authorization types were not used.
+* to verify the signatory, use either the *Email* or *Device* option as the *Signatory Place*. Previously, only the *Device* option was available.
+* SMS confirmation is used as the *Authorization Type*. Previously, authorization types were not used.
 
 [[h2_1887409335]]
-=== The CT Sign package v. 1.10 Spring '21
+== The CT Sign package v. 1.10 Spring '21
 
 [[h3_1642576463]]
-==== New Features and Improvements
+=== New Features and Improvements
 
-link:ct-sign-description-and-deployment#h2_327527696[The revised
-object model] provides a better user experience and performance.
+xref:about-ct-sign/ct-sign-description-and-deployment.adoc#h2_327527696[The revised object model] provides a better user experience and performance.
 
+The xref:ref-guide/ct-sign-control-panel.adoc[CT Sign Control Panel] is used to
+connect the Salesforce organization with the Application Service and e-signature provider.
 
+* Integration with xref:admin-guide/connect-salesforce-with-the-application-service-and-e-signature-provider.adoc[the DocuSign provider].
+* The xref:admin-guide/connect-salesforce-with-the-application-service-and-e-signature-provider.adoc#h2__1758912760[Application Service] for sending the transaction statuses and signed documents.
 
-The link:ct-sign-control-panel[CT Sign Control Panel] is used to
-connect the Salesforce organization with the Application Service and
-e-signature provider.
+The xref:ref-guide/template-editor-feature-reference.adoc[Template Editor] is used as a comprehensive tool for creating templates and setting up signatories for documents being signed.
 
-* Integration
-with link:setting-up-integration-with-e-signature-provider[the
-DocuSign provider].
-* The link:connect-salesforce-with-the-application-service-and-e-signature-provider#h2__1758912760[Application
-Service] for sending the transaction statuses and signed documents.
+* xref:admin-guide/configuring-the-ct-sign-package/index.adoc#h2__1469899678[Define libraries] for storing templates and signed documents.
+* xref:admin-guide/configuring-the-ct-sign-package/index.adoc#h2__236049169[Set up objects to sign] and, optionally, the required record types.
+* Specify the _User_ or _Contact_ object as the signatory for the sign button.
 
+Tap the xref:admin-guide/configuring-the-ct-sign-package/index.adoc[Form Document] button to generate a PDF based on a template to sign a document.
 
-
-The link:template-editor-feature-reference[Template Editor] is used
-as a comprehensive tool for creating templates and setting up
-signatories for documents being signed.
-
-* link:configuring-the-ct-sign-package#h2__1469899678[Define
-libraries] for storing templates and signed documents.
-* link:configuring-the-ct-sign-package#h2__236049169[Set up objects
-to sign] and, optionally, the required record types.
-* Specify the _User_ or _Contact_ object as the signatory for the sign
-button.
-
-
-
-Tap the link:configuring-the-ct-sign-package[Form Document] button
-to generate a PDF based on a template to sign a document.
-
-* link:configuring-the-ct-sign-package#h2_283394407[Сustomize
-layouts] to view all required info.
+* xref:admin-guide/configuring-the-ct-sign-package/index.adoc#h2_283394407[Сustomize layouts] to view all required info.
 * The ability to convert an HTML template to a PDF document.
 * The ability to save the generated PDF locally.
-* Error validation: integration with the e-signature provider, filling
-of fields, and selecting a signatory.
-* Validation of the template availability according to the record type
-if it was specified for the selected template.
-
-
+* Error validation: integration with the e-signature provider, filling of fields, and selecting a signatory.
+* Validation of the template availability according to the record type if it was specified for the selected template.
 
 Other features
 
-* The[.apiobject]#Batch_DocumentSender# Apex class is
-designed to complete the document signing process launched in the CT
-Mobile app if the internet connection has been lost on the mobile
-device. The Apex class will operate every 15 minutes.
-* The new *Complete on Device
-* status is set if the document signing
-process has been finished in the CT Mobile app. The
-[.apiobject]#SignDocumentProcess# trigger will attach the signed
-document to the *Sign Document
-* record according to this status.
-* Notification for the processes launched by clicking *Generate PDF
-* and
-*Sign Document
-* buttons.
+* The [.apiobject]#Batch_DocumentSender# Apex class is designed to complete the document signing process launched in the CT Mobile app if the internet connection has been lost on the mobile device. The Apex class will operate every 15 minutes.
+* The new *Complete on Device* status is set if the document signing process has been finished in the CT Mobile app. The [.apiobject]#SignDocumentProcess# trigger will attach the signed document to the _Sign Document_ record according to this status.
+* Notification for the processes launched by clicking *Generate PDF* and *Sign Document* buttons.

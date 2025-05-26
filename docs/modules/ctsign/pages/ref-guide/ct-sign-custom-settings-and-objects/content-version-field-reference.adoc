@@ -1,43 +1,27 @@
 = Content Version Field Reference
 
-The standard _Content Version_ object is used to store template
-attributes.
-
-
+The standard _Content Version_ object is used to store template attributes.
 
 Standard fields in use.
 
-
-
-[cols=",,,",]
+[cols="15%,20%,10%,55%"]
 |===
-|*Field
-* |*API Name* |*Type* |*Description*
+|*Field* |*API Name* |*Type* |*Description*
 
-|PathOnClient |[.apiobject]#PathOnClient# |string |The
-document's name and the extension, for example,
-[.apiobject]#docusign_request.json#.
+|PathOnClient |[.apiobject]#PathOnClient# |string |The document's name and the extension, for example, [.apiobject]#docusign_request.json#.
 
-|Title |[.apiobject]#Title# |string |The name of the document
-being signed.
+|Title |[.apiobject]#Title# |string |The name of the document being signed.
 
-|VersionData |[.apiobject]#VersionData# |base64 |The JSON file
-is in the[.apiobject]#base64# format.
+|VersionData |[.apiobject]#VersionData# |base64 |The JSON file is in the [.apiobject]#base64# format.
 |===
 
+The following fields are created on the standard _Content Version_ object during the CT Sign installation:
 
-
-The following fields are created on the standard _Content Version_
-object during the CT Sign installation:
-
-
-
-[width="100%",cols="25%,25%,25%,25%",]
+[width="100%",cols="15%,20%,10%,55%"]
 |===
-|*Field
-* |*API Name* |*Type* |*Description*
+|*Field* |*API Name* |*Type* |*Description*
 
-|Format |[.apiobject]#ctsign__Format\__c# |Text(255) a|
+|Format |[.apiobject]#ctsign\__Format__c# |Text(255) a|
 The paper size of the document. Available values:
 
 * Letter
@@ -46,12 +30,9 @@ The paper size of the document. Available values:
 * Ledger
 * A0 / A / A2 / A3 / A4 / A5 / A6
 
-
-
 If left blank, the A4 paper size is set.
 
-|Margin Bottom |[.apiobject]#ctsign__MarginBottom\__c#
-|Text(255) a|
+|Margin Bottom |[.apiobject]#ctsign\__MarginBottom__c# |Text(255) a|
 Bottom indent. Available values:
 
 * px
@@ -59,12 +40,9 @@ Bottom indent. Available values:
 * cm
 * mm
 
-
-
 If left blank, the 0 value is set.
 
-|Margin Left |[.apiobject]#ctsign__MarginLeft\__c#
-|Text(255) a|
+|Margin Left |[.apiobject]#ctsign\__MarginLeft__c# |Text(255) a|
 Left indent. Available values:
 
 * px
@@ -72,12 +50,9 @@ Left indent. Available values:
 * cm
 * mm
 
-
-
 If left blank, the 0 value is set.
 
-|Margin Right |[.apiobject]#ctsign__MarginRight\__c#
-|Text(255) a|
+|Margin Right |[.apiobject]#ctsign\__MarginRight__c# |Text(255) a|
 Right indent. Available values:
 
 * px
@@ -85,12 +60,9 @@ Right indent. Available values:
 * cm
 * mm
 
-
-
 If left blank, the 0 value is set.
 
-|Margin Top |[.apiobject]#ctsign__MarginTop\__c#
-|Text(255) a|
+|Margin Top |[.apiobject]#ctsign\__MarginTop__c# |Text(255) a|
 Top indent. Available values:
 
 * px
@@ -98,40 +70,28 @@ Top indent. Available values:
 * cm
 * mm
 
-
-
 If left blank, the 0 value is set.
 
-|Object |[.apiobject]#ctsign__Object\__c# |Text(255) |The
-API name of the object to sign.
+|Object |[.apiobject]#ctsign\__Object__c# |Text(255) |The API name of the object to sign.
 
-|Orientation |[.apiobject]#ctsign__Orientation\__c#
-|Text(255) a|
+|Orientation |[.apiobject]#ctsign\__Orientation__c# |Text(255) a|
 The document orientation. Available values:
 
 * *Portrait*
 * *Landscape*
 
-
-
 If left blank, the portrait orientation is set.
 
-|Provider |[.apiobject]#ctsign__Provider\__c# |Picklist
-a|
+|Provider |[.apiobject]#ctsign\__Provider__c# |Picklist a|
 Available providers:
 
 * *DocuSign*
-* *Simple
-* – the provider is not connected.
+* *Simple*: the provider is not connected.
 
-|Record Type |[.apiobject]#ctsign__RecordType\__c#
-|Text(255) a|
-The record type for the object is specified in the
-[.apiobject]#ctsign__Object\__c# field.
+|Record Type |[.apiobject]#ctsign\__RecordType__c# |Text(255) a|
+The record type for the object is specified in the [.apiobject]#ctsign\__Object__c# field.
 
-* *Empty
-* – applied to any available record type of the object.
-* *--Master--
-* – applied to the *Master* record type.
+* *Empty*: applied to any available record type of the object.
+* *--Master--*: applied to the *Master* record type.
 
 |===

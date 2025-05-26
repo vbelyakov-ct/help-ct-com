@@ -1,141 +1,98 @@
 = 4. Create a New Template
+:toc:
 
-After link:admin-guide/configuring-the-ct-sign-package/index#h2__1469899678[creating
-libraries&#44; assigning members to them], and
-link:admin-guide/configuring-the-ct-sign-package/index#h2_283394407[creating record
-types], create templates and specify their availability.
+After xref:admin-guide/configuring-the-ct-sign-package/index.adoc#h2__1469899678[creating libraries, assigning members to them], and xref:admin-guide/configuring-the-ct-sign-package/index.adoc#h2_283394407[creating record types], create templates and specify their availability.
 
 [[h2__549128247]]
-=== Prerequisites
+== Prerequisites
 
 User Permissions:
 
-* The
-https://help.salesforce.com/articleView?id=sf.collab_admin_crm_content.htm&type=5[Salesforce
-CRM Content User] checkbox should be selected on the required _User_
-record. You can check it by going to *Setup
-* → *User* → *Users* → _Your
-User Account_.
-* The user should have access to at least one of the workspaces listed
-in the link:library-setting-field-reference[Sign Settings] record
-with the *Library Setting
-* record type.
-* ​The user should have access to the following Apex classes:
-**[.apiobject]#TemplateEditorCommonController#;
-**[.apiobject]#TemplateEditorController#;
-**[.apiobject]#TemplateObjectsSetting#;
-**[.apiobject]#TemplateSelectionAuraController#.
-* To use the *No Auth
-* option for a template, the user should have the
-following
-https://help.salesforce.com/s/articleView?id=sf.custom_perms_create.htm&type=5[custom
-permission]:
-*
-* *Label*: _CTSign Allow Disability 2FA In Templates_
-*
-* *Name*: _CTSign_Allow_Disability_2FA_In_Templates_
+* The link:https://help.salesforce.com/articleView?id=sf.collab_admin_crm_content.htm&type=5[Salesforce CRM Content User] checkbox should be selected on the required _User_
+record. You can check it by going to *Setup* → *User* → *Users* → _Your User Account_.
+* The user should have access to at least one of the workspaces listed in the xref:ref-guide/ct-sign-custom-settings-and-objects/sign-settings-field-reference/library-setting-field-reference.adoc[Sign Settings] record with the *Library Setting* record type.
+* The user should have access to the following Apex classes:
+** [.apiobject]#TemplateEditorCommonController#
+** [.apiobject]#TemplateEditorController#
+** [.apiobject]#TemplateObjectsSetting#
+** [.apiobject]#TemplateSelectionAuraController#
+* To use the *No Auth* option for a template, the user should have the following link:https://help.salesforce.com/s/articleView?id=sf.custom_perms_create.htm&type=5[custom permission]:
+** *Label*: _CTSign Allow Disability 2FA In Templates_
+** *Name*: _CTSign_Allow_Disability_2FA_In_Templates_
 
 [[h2__296611947]]
-=== Create a Template
+== Create a Template
 
-[TIP] ==== Get familiar with
-link:template-editor-feature-reference[the Template Editor
-features]. ====
+[TIP]
+====
+Get familiar with xref:ref-guide/template-editor-feature-reference.adoc[the Template Editor features].
+====
 
-. Go to the *Template Editor
-* tab.
-. Click the *New Document
-* button. Also, you can select an existing
-template and click *Next
-* to edit it.
-. On the *Create new document
-* page, specify the following:
-* *Folder*: select[.object]#Library# for document templates you
-have previously created.
-* *Select Sign for SObjects*: select *Simple
-* or *DocuSign* sign type.
-[NOTE] ==== CT Mobile Windows supports only the *Simple
-* sign
-type. ====
-* *Select
-* *Object for template:* select according to the
-[.object]#Sign Settings# record with the *Object Setting* record
-type. If enabled and needed, select the available record types. For our
-example, choose _Account_ as the only available option.
+. Go to the *Template Editor* tab.
+. Click the *New Document* button. Also, you can select an existing template and click *Next* to edit it.
+. On the *Create new document* page, specify the following:
+* *Folder*: select *Library* for document templates you have previously created.
+* *Select Sign for SObjects*: select *Simple* or *DocuSign* sign type.
++
+[NOTE]
+====
+CT Mobile Windows supports only the *Simple* sign type.
+====
+
+* *Select Object for template:* select according to the _Sign Settings_ record with the _Object Setting_ record type. If enabled and needed, select the available record types. For our example, choose _Account_ as the only available option.
 * *Title*.
-* *Select
-* *Record Types*.
+* *Select* *Record Types*.
 * Optionally, specify the description.
++
 image:template_param.png[]
-. ​Click *Next*.
+. Click *Next*.
 . Fill out the template.
-* The maximum size of the template is 10 MB. We recommend using small
-images (logos, product photos, or graphic elements in the header and
-footer) so that the size of the template does not exceed 1-2 MB.
-* If needed, you can edit the source of the template by clicking
-the *Source* button. For example, when you need to edit a child table
-(add fields, rename columns etc.):
+* The maximum size of the template is 10 MB. We recommend using small images (logos, product photos, or graphic elements in the header and footer) so that the size of the template does not exceed 1-2 MB.
+* If needed, you can edit the source of the template by clicking the *Source* button. For example, when you need to edit a child table (add fields, rename columns etc.):
++
 image:template-source.png[]
-. Add the *Signature
-* button for each signer:
-
-[width="100%",cols="50%,50%",]
-|===
-|*Simple
-* sign type a|
-.. Click image:simple-sign-button.png[] button.
+. Add the *Signature* button for each signer:
++
+[tabs]
+====
+*Simple* sign type::
++
+--
+.. Click image:simple-sign-button.png[] button.
 .. Fill out the form:
-* *Title* (example: _Signature-User1_).
-* *Signatory type*: _User_ or _Contact_. If you selected _Contact_ type,
-fill in the following fields:
-*
-* *Signatory source type*: _List_. 
-*
-* **Signatory Source Referenc**e: _Reference_.
-*
-* *Select Signatory*: _Parent Account ID Contacts_.
-* *Signature type*: _Handwritten Signature_.
-* *X-Offset*, *Y-Offset*: set the button position in pixels relative to
-the left top corner.
-* *Signature Require Notification*, *Document Signed
-Notification*: _Email Templates_.
-.. Click *OK*.
-.. Click *Save*.
-
-|*DocuSign* sign type a|
-.. Click image:new-sign-button.png[] button.
+* *Title* (example: _Signature-User1_).
+* *Signatory type*: _User_ or _Contact_. If you selected _Contact_ type, fill in the following fields:
+** *Signatory source type*: _List_.
+** **Signatory Source Referenc**e: _Reference_.
+** *Select Signatory*: _Parent Account ID Contacts_.
+* *Signature type*: _Handwritten Signature_.
+* *X-Offset*, *Y-Offset*: set the button position in pixels relative to the left top corner.
+* *Signature Require Notification*, *Document Signed Notification*: _Email Templates_.
+.. Click *OK*.
+.. Click *Save*.
+--
+*DocuSign* sign type::
++
+--
+.. Click image:new-sign-button.png[] button.
 .. Fill out the form:
-* *Title* (example: _Signature-User1_).
-* *Signatory type*: _User_ or _Contact_. If you selected _Contact_ type,
-fill in the following fields:
-*
-* *Signatory source type*: _List_. 
-*
-* **Signatory Source Referenc**e: _Reference_.
-*
-* *Select Signatory*: _Parent Account ID Contacts_.
-* *Signature type*: _Electronic_.
-* *Signature Place*: select _Email_ to sign documents in Salesforce
-and _Device_ to sign documents on a mobile device.
+* *Title* (example: _Signature-User1_).
+* *Signatory type*: _User_ or _Contact_. If you selected _Contact_ type, fill in the following fields:
+** *Signatory source type*: _List_.
+** **Signatory Source Referenc**e: _Reference_.
+** *Select Signatory*: _Parent Account ID Contacts_.
+* *Signature type*: _Electronic_.
+* *Signature Place*: select _Email_ to sign documents in Salesforce and _Device_ to sign documents on a mobile device.
 * *Authorization Type*:
-*
-* _SMS_, _Phone_ to ask confirmation during the sign process.
-*
-* _No Auth_ if no confirmation is required.
-* *X-Offset*, *Y-Offset*: set the button position in pixels relative to
-the left top corner.
-* *Signature Require Notification*, *Document Signed
-Notification*: _Email Templates_.
-.. Click *OK*.
-.. Click *Save*.
+** _SMS_, _Phone_ to ask confirmation during the sign process.
+** _No Auth_ if no confirmation is required.
+* *X-Offset*, *Y-Offset*: set the button position in pixels relative to the left top corner.
+* *Signature Require Notification*, *Document Signed Notification*: _Email Templates_.
+.. Click *OK*.
+.. Click *Save*.
+--
+====
 
-|===
-
-
-image:template_editor.png[]
-
-
-
-
+image::template_editor.png[align="center"]
 
 The template is created.

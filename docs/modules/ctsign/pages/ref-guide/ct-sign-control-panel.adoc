@@ -1,27 +1,11 @@
 = CT Sign Control Panel
 
-*CT Sign Control Panel
-* is a Visuaforce page applied to connect the
-Salesforce organization with the Application Service and an e-signature
-provider. Get familiar with
-link:ct-sign-description-and-deployment#h2_1478584389[the
-architecture o the CT Sign solution] to understand the document signing
-flow.
+*CT Sign Control Panel* is a Visuaforce page applied to connect the Salesforce organization with the Application Service and an e-signature provider. Get familiar with xref:about-ct-sign/ct-sign-description-and-deployment.adoc#h2_1478584389[the architecture o the CT Sign solution] to understand the document signing flow.
 
-* On the *CT Sign app
-* tab, connect the Salesforce Instance with the
-Application Service. This setting is applied only once.
-* On the *DocuSign App
-* tab, specify the integration key and OAuth 2.0
-tokens of the DocuSign app.
-* On the *DocuSign Connect
-* tab, enter your DocuSign Connect credentials
-to receive statuses of requests, such as Signed, Rejected, etc.
+* On the *CT Sign app* tab, connect the Salesforce Instance with the Application Service. This setting is applied only once.
+* On the *DocuSign App* tab, specify the integration key and OAuth 2.0 tokens of the DocuSign app.
+* On the *DocuSign Connect* tab, enter your DocuSign Connect credentials to receive statuses of requests, such as Signed, Rejected, etc.
 
+Read the xref:admin-guide/connect-salesforce-with-the-application-service-and-e-signature-provider.adoc[Create and Set Up the DocuSign Account] article to create a DocuSign app, obtain the required values and the DocuSign Connect credentials.
 
-
-Read the link:create-and-set-up-the-docusign-account[Create and Set
-Up the DocuSign Account] article to create a DocuSign app, obtain the
-required values and the DocuSign Connect credentials.
-
-image:CT-Sign-Control-Panel-Overview.png[]
+image::CT-Sign-Control-Panel-Overview.png[align="center"]

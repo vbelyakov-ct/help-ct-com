@@ -1,34 +1,22 @@
 = Object Setting Field Reference
 
-The *Object Setting
-* record type is used to specify objects for records
-of which users can create templates on the basis of which documents for
-signing will be formed. When creating a template, a user should select
-an object for signing from the list that is generated based on this
-setting.
+The *Object Setting* record type is used to specify objects for records of which users can create templates on the basis of which documents for signing will be formed. When creating a template, a user should select an object for signing from the list that is generated based on this setting.
 
-* in Salesforce, add the *Form Document
-* button on the page layout for
-the given objects.
-* in the CT Mobile app, the *Sign Document
-* button will be displayed on
-the record of such an object.
+* in Salesforce, add the *Form Document* button on the page layout for the given objects.
+* in the CT Mobile app, the *Sign Document* button will be displayed on the record of such an object.
 
 '''''
 
-API name in Salesforce:[.apiobject]#ObjectSetting#
+API name in Salesforce: [.apiobject]#ObjectSetting#
 
 '''''
 
-[width="100%",cols="25%,25%,25%,25%",]
+[width="100%",cols="15%,20%,10%,55%"]
 |===
-|*Field
-* |*API Name* |*Type* |*Description*
+|*Field* |*API Name* |*Type* |*Description*
 
-|Object |[.apiobject]#ctsign__Object\__c# |Text(255) a|
-The API name of the object to sign.
+|Object |[.apiobject]#ctsign\__Object__c# |Text(255) a| The API name of the object to sign.
 
-[NOTE] ==== A separate record should be created for each object
-to sign. ====
+NOTE: A separate record should be created for each object to sign.
 
 |===

@@ -18,24 +18,20 @@ To add the CT Sign module to the link:https://help.customertimes.com/articles/ct
 In CT Mobile Control Panel::
 +
 --
-. Go to https://help.customertimes.com/articles/ct-mobile-ios-en/ct-mobile-control-panel-app-menu[CT
-Mobile Control Panel: App Menu] tab.
+. Go to https://help.customertimes.com/articles/ct-mobile-ios-en/ct-mobile-control-panel-app-menu[CT Mobile Control Panel: App Menu] tab.
 . Select the required profile in the *Location* picklist.
 . Click the image:62562483.png[] button to open the *Add menu item* tool.
 . Select the *Sign* item.
 . Click *Add* to close the *Add menu item* tool.
-. Specify the position of the CT Sign module in the app menu by dragging
-the items in the list.
+. Specify the position of the CT Sign module in the app menu by dragging the items in the list.
 . Click *Save*.
 . link:https://help.customertimes.com/smart/project-ct-mobile-en/synchronization-launch[Launch synchronization] in the CT Mobile app.
-. The CT Sign module is now available in the CT Mobile app. The *Sign
-Documents* menu item with available for the mobile user records is added to link:https://help.customertimes.com/articles/ct-mobile-ios-en/app-menu[the app menu].
+. The CT Sign module is now available in the CT Mobile app. The *Sign Documents* menu item with available for the mobile user records is added to link:https://help.customertimes.com/articles/ct-mobile-ios-en/app-menu[the app menu].
 --
 In CT Mobile Control Panel 2.0::
 +
 --
-. Go to link:https://help.customertimes.com/articles/project-ct-mobile-en/ct-mobile-control-panel-app-menu-new[CT
-Mobile Control Panel 2.0: App Menu] tab.
+. Go to link:https://help.customertimes.com/articles/project-ct-mobile-en/ct-mobile-control-panel-app-menu-new[CT Mobile Control Panel 2.0: App Menu] tab.
 . Select the required profile in the *Profile* picklist. To apply settings to all the profiles, select *General Settings*.
 . Click *Show Module Menu*.
 . On the *All* or *Integrations* tab, select the *Sign* item.
@@ -43,8 +39,7 @@ Mobile Control Panel 2.0: App Menu] tab.
 --
 ====
 
-The CT Sign module is now available in the CT Mobile app. The *Sign
-Documents* menu item with available for the mobile user records is added to link:https://help.customertimes.com/articles/ct-mobile-ios-en/app-menu[the app menu].
+The CT Sign module is now available in the CT Mobile app. The *Sign Documents* menu item with available for the mobile user records is added to link:https://help.customertimes.com/articles/ct-mobile-ios-en/app-menu[the app menu].
 
 [[h1_1946616521]]
 == 2. Add the Sign Document button in the Actions Menu
@@ -77,9 +72,7 @@ The mobile user should have access to objects and fields required for proper wor
 
 [width="100%",cols="25%,25%,25%,25%",]
 |===
-|*Object API Name
-* |*Field API Name* |*Required Access for User*
-|*Comments*
+|*Object API Name* |*Field API Name* |*Required Access for User*|*Comments*
 
 |[.apiobject]#ctsign\__SignSettings__c# | |Read |
 
@@ -87,11 +80,9 @@ The mobile user should have access to objects and fields required for proper wor
 
 | |[.apiobject]#ctsign\__Object__c# |Read |
 
-| |[.apiobject]#ctsign\__ReadOnlyAttributes__c# |Read
-|
+| |[.apiobject]#ctsign\__ReadOnlyAttributes__c# |Read|
 
-| |[.apiobject]#ctsign\__RequiredAttributes__c# |Read
-|
+| |[.apiobject]#ctsign\__RequiredAttributes__c# |Read|
 
 | |[.apiobject]#ctsign\__Types__c# |Read |
 
@@ -99,8 +90,7 @@ The mobile user should have access to objects and fields required for proper wor
 
 |[.apiobject]#ctsign\__SignDocument__c# | | |
 
-| |[.apiobject]#ctsign\__FailedMessage__c# |Read
-|
+| |[.apiobject]#ctsign\__FailedMessage__c# |Read|
 
 | |[.apiobject]#ctsign\__RejectionDate__c# |Read |
 

@@ -1,34 +1,25 @@
 = Library Setting Field Reference
 
-The *Library Setting
-* record type is used to store available libraries
-where a user will store templates of the specific type.
+The *Library Setting* record type is used to store available libraries where a user will store templates of the specific type.
 
 '''''
 
-API name in Salesforce:[.apiobject]#LibrarySetting#
+API name in Salesforce: [.apiobject]#LibrarySetting#
 
 '''''
 
-[width="100%",cols="25%,25%,25%,25%",]
+[width="100%",cols="15%,20%,10%,55%"]
 |===
-|*Field
-* |*API Name* |*Type* |*Description*
+|*Field* |*API Name* |*Type* |*Description*
 
-|Type |[.apiobject]#ctsign__Type\__c# |Picklist a|
-Specify the template type of templates stored in the library. Available
-values:
+|Type |[.apiobject]#ctsign\__Type__c# |Picklist a| Specify the template type of templates stored in the library. Available values:
 
 * *Email Templates*
 * *Document Templates*
 
-[NOTE] ==== A separate record should be created for each
-template type. ====
+NOTE: A separate record should be created for each template type.
 
-|Workspaces |[.apiobject]#ctsign__Workspaces\__c# |Long
-Text Area (32768) |Specify available libraries by entering a value from
-the[.apiobject]#Name# field of the
-https://developer.salesforce.com/docs/atlas.en-us.sfFieldRef.meta/sfFieldRef/salesforce_field_reference_ContentWorkspace.htm[ContentWorkspace]
-object that represents a library (separated by a comma, without blank
-space).
+|Workspaces |[.apiobject]#ctsign\__Workspaces__c# |Long Text Area (32768) |Specify available libraries by entering a value from the [.apiobject]#Name# field of the
+link:https://developer.salesforce.com/docs/atlas.en-us.sfFieldRef.meta/sfFieldRef/salesforce_field_reference_ContentWorkspace.htm[ContentWorkspace]
+object that represents a library (separated by a comma, without blank space).
 |===

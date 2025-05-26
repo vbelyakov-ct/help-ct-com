@@ -1,264 +1,192 @@
 = Template Editor Feature Reference
+:toc:
 
-*Template Editor
-* is intended to create and edit HTML-based templates
-for documents being signed. It has several sections grouped by
-functionalities.
+*Template Editor* is intended to create and edit HTML-based templates for documents being signed. It has several sections grouped by functionalities.
 
 [[h2_1619883740]]
-=== Available Features
+== Available Features
 
-Template Editor is based on the open-source project, CKEditor 5. To view
-the basic features, go to the
-https://ckeditor.com/docs/ckeditor5/latest/features/index.html[CKEditor
-5 Documentation] portal.
+Template Editor is based on the open-source project, CKEditor 5. To view the basic features, go to the link:https://ckeditor.com/docs/ckeditor5/latest/features/index.html[CKEditor 5 Documentation] portal.
 
 Also, there are dedicated Salesforce-specific features.
 
-[NOTE] ==== If you want to add 
-your HTML template, use the
-https://help.salesforce.com/s/articleView?id=000393233&type=1#:~:text=Obtain-the-Salesforce-Record-ID-for-the-image-file.[18-digit
-IDs] for these images. ====
+[NOTE]
+====
+If you want to add your HTML template, use the link:https://help.salesforce.com/s/articleView?id=000393233&type=1#:~:text=Obtain-the-Salesforce-Record-ID-for-the-image-file.[18-digit IDs] for these images.
+====
 
-image:Template-Editor-Features.png[]
+image::Template-Editor-Features.png[align="center"]
 
 [[h3__2142589530]]
-==== Salesforce Fields
+=== Salesforce Fields
 
-Add a marker to display the value of the selected field of
-link:ref-guide/sign-settings-field-reference/object-setting-field-reference[the object to sign]. A marker
-will be replaced by the value of the indicated field while forming a
-document. If the required field is empty, the marker will be replaced
+Add a marker to display the value of the selected field of xref:ref-guide/ct-sign-custom-settings-and-objects/sign-settings-field-reference/index.adoc[the object to sign]. A marker will be replaced by the value of the indicated field while forming a document. If the required field is empty, the marker will be replaced
 with a blank space.
-
-
 
 To add a field:
 
-. Click the *Salesforce Field
-* button –
-image:Salesforce-Fields.png[].
-. Select an available field in the *Field token to Insert
-* picklist.
+. Click the *Salesforce Field* button – image:Salesforce-Fields.png[].
+. Select an available field in the *Field token to Insert* picklist.
++
 image:Add-Salesforce-Fields.png[]
 . Click *OK*.
 
-The Salesforce field is added. On the template layout, the API name of
-the field is shown.
+The Salesforce field is added. On the template layout, the API name of the field is shown.
 
 [[h3__99476489]]
-==== Salesforce Table
+=== Salesforce Table
 
-Salesforce table allows displaying values from the fields of the related
-object. The rows of the table are filled out with the *Value* word
-during the editing of a template and replaced with real value while
-forming a document. If the related field of the object's record is
-empty, the marker will be replaced with a blank space.
+Salesforce table allows displaying values from the fields of the related object. The rows of the table are filled out with the *Value* word during the editing of a template and replaced with real value while forming a document. If the related field of the object's record is empty, the marker will be replaced with a blank space.
 
+Use the Salesforce table to display Salesforce data in a document for signing according to the specified conditions.
 
-
-Use the Salesforce table to display Salesforce data in a document for
-signing according to the specified conditions.
-
-. Click the Salesforce table
-image:Salesforce-Table.png[]
-icon.
+. Click the Salesforce table image:Salesforce-Table.png[] icon.
 . Fill in the information:
-* Define *Columns*, *Width
-* and *Height*, and the size of the outside
-*Borders*.
-* Define the space between cells in *Cell spacing
-* and a cell height in
-*Cell padding*.
-* Define the *Alignment
-* of the text in the table.
+* Define *Columns*, *Width* and *Height*, and the size of the outside *Borders*.
+* Define the space between cells in *Cell spacing* and a cell height in *Cell padding*.
+* Define the *Alignment* of the text in the table.
 * Add the table name in the *Caption*.
-* Add a description in the *Summary*. The description will not be shown
-in a template.
+* Add a description in the *Summary*. The description will not be shown in a template.
 * Select the object from which the values will be added to the table.
-. On the *Salesforce Table Properties
-* tab:
-* In the *objectCondition
-* field, enter a SOQL filter to display only
-eligible records of the selected child object.
-* In the *showCondition
-* field, enter a SOQL filter to display the
-Salesforce table only on the matched records of the parent object.
+. On the *Salesforce Table Properties* tab:
+* In the *objectCondition* field, enter a SOQL filter to display only eligible records of the selected child object.
+* In the *showCondition* field, enter a SOQL filter to display the Salesforce table only on the matched records of the parent object.
 . Click *OK*. The table is added to the template.
-. To define fields that will be displayed in the Salesforce table, click
-the *Source* button and edit the HTML code. For example, to define 3
-headers (_Delivery Date_, _Address_, _Total Price_), insert the
-following code:
+. To define fields that will be displayed in the Salesforce table, click the *Source* button and edit the HTML code. For example, to define 3 headers (_Delivery Date_, _Address_, _Total Price_), insert the following code:
++
+[source,html]
+----
+<table border="1" cellpadding="1" cellspacing="1" child-table="orders__Delivery__c" objectcondition="SELECT orders__DeliveryDate__c, Address__c, orders__TotalPrice__c FROM orders__Delivery__c" style="width:500px;" summary="delivery-table">
+<caption>Delivery</caption>
+<thead>
+<tr>
+<th scope="col">Delivery Date</th>
+<th scope="col">Address</th>
+<th scope="col">Total Price</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+----
 
++
 As a result, you will get the following:
++
 image:ctsign-table-headers.png[]
 . Click *OK*.
 
 The Salesforce table is set.
 
-
-
 Here are some examples:
 
-* SOQL filter to output the template only to the matching contacts of
-the parent _Organization_ record.  
-* SOQL filter to display the table only on matching _Visit_ records.  
+* SOQL filter to output the template only to the matching contacts of the parent _Organization_ record.
++
+[source,html]
+----
+<table border="1" cellpadding="1" cellspacing="1" child-table="orders_OrderLineItem_c" class="forcetable" id="forcetable-6"&nbsp;objectCondition="SELECT Name, FirstName FROM Contact WHERE AccountId = '{!MainObjectId}'">
+----
+* SOQL filter to display the table only on matching _Visit_ records.
++
+[source,html]
+----
+<table border="1" cellpadding="1" cellspacing="1" child-table="orders_OrderLineItem_c" class="forcetable" id="forcetable-6"&nbsp;showCondition="FROM RetailVisitKpi WHERE AssessmentTaskId.TaskType = 'PlanogramCheck' AND ParentId = '{!Visit.Id}'">
+----
 
 [[h3_1829063711]]
-==== Create a Signature button
+=== Create a Signature button
 
-The *Signature
-* button should be specified for each signer to the
-template. The selected parameters of the button will affect the list of
-available signers, signature type, authorization type, etc.
-
-
+The *Signature* button should be specified for each signer to the template. The selected parameters of the button will affect the list of available signers, signature type, authorization type, etc.
 
 The list of parameters that should be specified:
 
-[width="100%",cols="50%,50%",]
+[width="100%",cols="30%,70%",]
 |===
-|*Parameter
-* |*Description*
+|*Parameter* |*Description*
 
-|*Signatory
-* |
+2+| *Signatory*
 
 |Title |The button name is displayed on the generated PDF document.
 
-|Signatory Type a|
-Select the object to add as a signatory. Available values:
+|Signatory Type a| Select the object to add as a signatory. Available values:
 
-* *Contact
-* – the _Contact_ record;
-* *User
-* – the _User_ record specified in the
-[.apiobject]#OwnerId# field of the selected record of the object
-to sign.
+* *Contact*: the _Contact_ record;
+* *User*: the _User_ record specified in the [.apiobject]#OwnerId# field of the selected record of the object to sign.
 
-|Signatory Source Type a|
-Available when *Contact
-* is selected as *Signatory Type*.
+|Signatory Source Type a| Available when *Contact* is selected as *Signatory Type*.
 
 Available values:
 
-* *Field
-* – if there is only one signatory linked to the record of the
-object to sign via the *Signing Contact
-* field on the _Account_ object;
-* *List
-* – select a signing contact from the picklist of all available
-contacts of the *Contact
-* from the *Signatory Type* field. 
+* *Field*: if there is only one signatory linked to the record of the object to sign via the *Signing Contact* field on the [.object]#Account# object;
+* *List*: select a signing contact from the picklist of all available contacts of the *Contact* from the *Signatory Type* field.
 
-|Signatory Source Reference a|
-It defines with which object the signatory is associated. Available
-values:
+|Signatory Source Reference a| It defines with which object the signatory is associated. Available values:
 
-* *Direct
-* – a link via the reference field on the _Account_ object.
-* *Reference
-* – one or more signatories are linked to the record of the
-parent object of the object to sign via the reference field, for
-example, *Parent Account ID Contacts*.
+* *Direct*: a link via the reference field on the [.object]#Account# object.
+* *Reference*: one or more signatories are linked to the record of the parent object of the object to sign via the reference field, for example, *Parent Account ID Contacts*.
 
-|Select Signatory a|
-Select a field that stores the signatory records according to the
-*Signatory Source Reference
-* value:
+|Select Signatory a| Select a field that stores the signatory records according to the
+*Signatory Source Reference* value:
 
-* for *Direct*: the *Signing Contact
-* field.
+* for *Direct*: the *Signing Contact* field.
 * for *Reference*, select one of the available fields:
-*
-* *Parent Account ID Contacts*
-*
-* *Owner ID Contacts*
-*
-* *Signing Contacts Contacts*
+** *Parent Account ID Contacts*
+** *Owner ID Contacts*
+** *Signing Contacts Contacts*
 
-|Signature Type a|
-Select a verification type. Available values:
+|Signature Type a| Select a verification type. Available values:
 
 * without an e-signature provider:
-*
-* *Handwritten signature*
-*
-* *Proof of Consent*
-[NOTE] ==== Currently, this type is not available for CT Mobile
-iOS users. ====
-* using an e-signature provider provides two types of legally binding
-signatures:
-*
-* *Electronic* – simple electronic signature with the additional
-verification by SMS/Phone;
-*
-* *EU Advanced* –
-https://en.wikipedia.org/wiki/Advanced_electronic_signature[advanced
+** *Handwritten signature*
+** *Proof of Consent*
++
+NOTE: Currently, this type is not available for CT Mobile iOS users.
+
+* using an e-signature provider provides two types of legally binding signatures:
+** *Electronic*: simple electronic signature with the additional verification by SMS/Phone;
+** *EU Advanced*: link:https://en.wikipedia.org/wiki/Advanced_electronic_signature[advanced
 electronic signature] under EU Regulation No 910/2014.
 
-|Signature Place a|
-Available when the *Provider
-* is *DocuSign*.
+|Signature Place a| Available when the *Provider* is *DocuSign*.
 
 Select how to confirm the signature. Available values:
 
-* *Device
-* – via the in-app browser of the CT Mobile app (embedded
-signing).
-[.confluence-information-macro-information]#If there is no internet
-connection, a mobile user cannot use the embedded signing. To learn
-more, go to
-link:admin-guide/sign-a-document-the-ct-mobile-app/index#h2_1646327293[Handle Offline
-Flow].#
+* *Device*: via the in-app browser of the CT Mobile app (embedded signing).
+NOTE: If there is no internet connection, a mobile user cannot use the embedded signing. To learn more, go to xref:admin-guide/sign-a-document-the-ct-mobile-app/index.adoc#h3_1646327293[Handle Offline Flow].
 * *Email*
 
-|Authorization Type a|
-Available when the *Provider
-* is *DocuSign*.
+|Authorization Type a| Available when the *Provider* is *DocuSign*.
 
 Select how to authorize a signatory. Available values:
 
 * *SMS*
-* *Phone
-*[NOTE] ==== Not applied when *Signature Type
-* is *EU Advanced*.
-====
-* *No Auth
-* (authorization is not required)
+* *Phone*
++
+NOTE: Not applied when *Signature Type* is *EU Advanced*.
 
-|Image Width, px a|
-Available when the *Provider
-* is *Simple*.
+* *No Auth* (authorization is not required)
+
+|Image Width, px a| NOTE: Available when the *Provider* is *Simple*.
 
 Specify the width of the attached signature.
 
-|Image Height, px a|
-Available when the *Provider
-* is *Simple*.
+|Image Height, px a| NOTE: Available when the *Provider* is *Simple*.
 
 Specify the height of the attached signature.
 
-|X-Offset a|
-Required when the *Provider
-* is *DocuSign*.
+|X-Offset a| NOTE: Required when the *Provider* is *DocuSign*.
 
 The horizontal indent.
 
-|Y-Offset a|
-Required when the *Provider
-* is *DocuSign*.
+|Y-Offset a| NOTE: Required when the *Provider* is *DocuSign*.
 
 The vertical indent.
 
-|*Notification
-* |
+2+|*Notification*
 
-|Signature Require Notification |The template title according to which
-the notification letter is generated with signing demand.
+|Signature Require Notification |The template title according to which the notification letter is generated with signing demand.
 
-|Document Signed Notification |The template title according to which the
-letter is generated with the notification about signing.
+|Document Signed Notification |The template title according to which the letter is generated with the notification about signing.
 |===
 
 

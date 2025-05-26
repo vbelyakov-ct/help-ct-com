@@ -1,49 +1,32 @@
 = Sign Document Field Reference
 
-The _Sign Documents_ object is used to store the current status of the
-request. Also, documents that are not signed yet are attached to the
-*Sign Documents
-* record which presents as a transaction record.
+The _Sign Documents_ object is used to store the current status of the request. Also, documents that are not signed yet are attached to the *Sign Documents* record which presents as a transaction record.
 
 '''''
 
-API name in Salesforce:
-[.apiobject]#ctsign__SignDocuments\__c#
+API name in Salesforce: [.apiobject]#ctsign\__SignDocuments__c#
 
 '''''
 
-[width="100%",cols="25%,25%,25%,25%",]
+[width="100%",cols="15%,20%,10%,55%"]
 |===
-|*Field
-* |*API Name* |*Type* |*Description*
+|*Field* |*API Name* |*Type* |*Description*
 
-|Failed Message |[.apiobject]#ctsign__FailedMessage\__c#
-|Long Text Area(131072) a|
+|Failed Message |[.apiobject]#ctsign\__FailedMessage__c# |Long Text Area(131072) a|
 The info message about an error that occurred during the transaction
 sending.
 
-The[.apiobject]#ctsign__Status\__c# field will contain
-the *Sending Error
-* value.
+The [.apiobject]#ctsign\__Status__c# field will contain the *Sending Error* value.
 
-|Lookup to Object to Sign |[.apiobject]#ObjectToSignId__с#
-|Lookup(Object) |Create a field with the *Lookup
-* type to the object
-from the Object Setting record to have the ability to link the signed
-document with this object.
+|Lookup to Object to Sign |[.apiobject]#ObjectToSignId__с# |Lookup(Object) |Create a field with the _Lookup_ type to the object from the _Object Setting_ record to have the ability to link the signed document with this object.
 
-|Rejection Date |[.apiobject]#ctsign__RejectionDate\__c#
-|Date/Time |Date of rejecting the document.
+|Rejection Date |[.apiobject]#ctsign\__RejectionDate__c# |Date/Time |Date of rejecting the document.
 
-|Sign Date |[.apiobject]#ctsign__SignDate\__c# |Date/Time
-|Date of signing the document.
+|Sign Date |[.apiobject]#ctsign\__SignDate__c# |Date/Time |Date of signing the document.
 
-|Status |[.apiobject]#ctsign__Status\__c# |Picklist a|
-The status of the transaction. Available values:
+|Status |[.apiobject]#ctsign\__Status__c# |Picklist a| The status of the transaction. Available values:
 
-[TIP] ==== If DocuSign is connected, some statuses are
-inherited https://support.docusign.com/en/guides/ndse-user-guide-document-status[from
-DocuSign].  ====
+TIP: If DocuSign is connected, some statuses are inherited link:https://support.docusign.com/en/guides/ndse-user-guide-document-status[from DocuSign].
 
 * Created
 * Sent
@@ -52,12 +35,7 @@ DocuSign].  ====
 * Voided
 * Declined
 * Completed
-* Completed on Device will be set for all documents signed on the mobile
-device regardless of link:ref-guide/ct-sign-custom-settings-and-objects/content-version-field-reference[the
-specified provider type].
+* Completed on Device will be set for all documents signed on the mobile device regardless of xref:ref-guide/ct-sign-custom-settings-and-objects/content-version-field-reference.adoc[the specified provider type].
 
-|Transaction ID |[.apiobject]#ctsign__TransactionID\__c#
-|Text (255) / (External ID) |Transaction ID received from the
-e-signature provider. Left blank in case of signing without third-party
-services.
+|Transaction ID |[.apiobject]#ctsign\__TransactionID__c# |Text (255) / (External ID) |Transaction ID received from the e-signature provider. Left blank in case of signing without third-party services.
 |===

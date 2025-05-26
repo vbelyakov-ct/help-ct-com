@@ -3,23 +3,12 @@
 There is a list of current limitations:
 
 * CT Mobile Windows supports only a simple signature.
-* The *Proof of Consent
-* signature type is currently unavailable for CT
-Mobile iOS users.
-* A legally binding signing is supported only via
-link:create-and-set-up-the-docusign-account[the DocuSign provider
-after the go-live process].
-* Documents sent from the developer DocuSign account are not legally
-binding and are watermarked.
-* To avoid incorrect work, do not specify the same signatory for several
-link:template-editor-feature-reference#h3_1829063711[Sign
-Document] buttons on a template.
+* The *Proof of Consent* signature type is currently unavailable for CT Mobile iOS users.
+* A legally binding signing is supported only via xref:admin-guide/connect-salesforce-with-the-application-service-and-e-signature-provider.adoc[the DocuSign provider after the go-live process].
+* Documents sent from the developer DocuSign account are not legally binding and are watermarked.
+* To avoid incorrect work, do not specify the same signatory for several xref:ref-guide/template-editor-feature-reference.adoc#h3_1829063711[Sign Document] buttons on a template.
 * E-mail templates are supported only in Salesforce.
 * Please follow these rules when naming a document to sign:
-*
-* use the Latin alphabet;
-*
-* use digits, blank spaces, underscores, hyphens, parentheses, and
-periods if needed;
-*
-* keep the length from 1 to 120 characters.
+** use the Latin alphabet;
+** use digits, blank spaces, underscores, hyphens, parentheses, and periods if needed;
+** keep the length from 1 to 120 characters.

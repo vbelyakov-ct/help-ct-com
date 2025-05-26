@@ -102,7 +102,7 @@ To sign documents with a legally binding signature, the *DocuSign* provider shou
 
 To sign a document:
 
-. Tap xref:admin-guide/configuring-the-ct-sign-package/index#h2__236049169[the object to sign] in the left menu.
+. Tap xref:admin-guide/configuring-the-ct-sign-package/index.adoc#h2__236049169[the object to sign] in the left menu.
 . Tap the desired record in the left record list.
 . In the link:https://help.customertimes.com/articles/ct-mobile-ios-en/actions[Actions] menu, tap the *Sign Document* button.
 . Select the required template from the list.
@@ -147,8 +147,7 @@ When a user has signed a document in the CT Mobile app, the status of the _Sign 
 [[h3_1634586017]]
 === Handle Errors
 
-If any errors occur on the records described above, the sync process will include link:https://help.customertimes.com/articles/ct-mobile-ios-en/sync-recovery[the
-Sync Recovery functionality].
+If any errors occur on the records described above, the sync process will include link:https://help.customertimes.com/articles/ct-mobile-ios-en/sync-recovery[the Sync Recovery functionality].
 
 . If an error occurs while sending the _Sign Document_ record (or any of the records that it refers to via reference fields), then the _Sign Document_ record will be sent with the help of the link:https://help.customertimes.com/articles/ct-mobile-ios-en/sync-recovery/a/h3_459631233[Direct access] option.
 . The related _ContentVersion_ record will be sent as usual via synchronization.

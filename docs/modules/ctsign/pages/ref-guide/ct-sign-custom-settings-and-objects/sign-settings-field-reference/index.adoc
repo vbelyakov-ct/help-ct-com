@@ -1,14 +1,16 @@
 = Sign Settings Field Reference
 
-The _Sign Settings_ object is used to store the CT Sign configuration
-for each object to sign.
+The _Sign Settings_ object is used to store the CT Sign configuration for each object to sign.
 
 '''''
 
 API name in Salesforce:
-[.apiobject]#ctsign__SignSettings\__c#
+[.apiobject]#ctsign\__SignSettings__c#
 
 '''''
 
-The object has several record types per each required setting. See the
-field references for each record type.
+The object has several record types per each required setting. See the field references for each record type.
+
+* xref:./layout-setting-field-reference.adoc[]
+* xref:./library-setting-field-reference.adoc[]
+* xref:./object-setting-field-reference.adoc[]
