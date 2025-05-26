@@ -27,7 +27,7 @@ xref:admin-guide/create-a-new-template.adoc[Templates]:
 
 * Previously, during the signing, it was impossible to select a template, for which no record type is specified. Now, such template will be available for all object record types and can be selected.
 * Some read-only attributes, specified on the xref:admin-guide/configuring-the-ct-sign-package/index.adoc#h2_283394407[Form Document layout], were available for editing. Now, all read-only attributes cannot be edited during the signing process.
-* Some required attributes, specified on the xref:admin-guide/configuring-the-ct-sign-package/index.adoc#h2_283394407[]xref:admin-guide/configuring-the-ct-sign-package/index.adoc#h2_283394407[Form Document layout], could be ignored during the signing process. Now, all required attributes must be filled out to complete the signing process.
+* Some required attributes, specified on the xref:admin-guide/configuring-the-ct-sign-package/index.adoc#h2_283394407[Form Document layout], could be ignored during the signing process. Now, all required attributes must be filled out to complete the signing process.
 * Fixed displaying date and time on the generated PDF document instead of just date.
 * The *Save Draft* button has been removed from the *Form Document* page, because it does not launch any action.
 
