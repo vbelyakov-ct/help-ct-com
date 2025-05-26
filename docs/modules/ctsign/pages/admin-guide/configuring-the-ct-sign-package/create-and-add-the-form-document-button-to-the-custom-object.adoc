@@ -20,15 +20,15 @@ To add the *Form Document* button to the _Custom Object_ page layout:
 * In the *Select Field Type* list select your _Custom Object_.
 * In the code window, add the code listed below:
 +
-[TIP]
-====
-Instead of [.apiobject]#CustomObject__c#, specify the API name of the desired custom object. Please note that the [.apiobject]#!# sign is mandatory before the custom object name.
-====
-+
 [source,apex]
 ----
 /apex/ctsign__SignatoryList?sobject=CustomObject__c&id={!CustomObject__c.Id}
 ----
++
+[TIP]
+====
+Instead of [.apiobject]#CustomObject__c#, specify the API name of the desired custom object. Please note that the [.apiobject]#!# sign is mandatory before the custom object name.
+====
 +
 image:Add-Form-Button-to-Custom-Object.png[]
 . Click *Save*.
