@@ -9,15 +9,14 @@ Here is a list of frequently asked questions divided by category:
 [[h3_145803103]]
 === An error occurred when connecting to DocuSign
 
-* The *«Redirect URI is not registered properly with DocuSign»
-* error occurs on the xref:admin-guide/connect-salesforce-with-the-application-service-and-e-signature-provider.adoc[DocuSign App] tab when a user has specified an incorrect URL address in the *URL to Publish* field for xref:admin-guide/connect-salesforce-with-the-application-service-and-e-signature-provider.adoc[DocuSign Connect].
+* The *«Redirect URI is not registered properly with DocuSign»* error occurs on the xref:admin-guide/connect-salesforce-with-the-application-service-and-e-signature-provider.adoc[DocuSign App] tab when a user has specified an incorrect URL address in the *URL to Publish* field for xref:admin-guide/connect-salesforce-with-the-application-service-and-e-signature-provider.adoc[DocuSign Connect].
 
 * The *«Refused to connect to 'https://sign.customertimes.com/api/v1/salesforce/org' because it violates the following Content Security Policy directive: ... »* error occurs when a user tries to connect with DocuSign before the security policy has been applied. Please wait 10-15 minutes after xref:admin-guide/installing-the-ct-sign-package.adoc[the installation of the CT Sign package] before starting to configure the connection to DocuSign.
 
 [[h3__1969137310]]
 === An error after clicking Send button in the DocuSign tab
 
-In the xref:admin-guide/connect-salesforce-with-the-application-service-and-e-signature-provider.adoc[DocuSign App configuration], add `http://localhost:5000/auth/docusign/callback` as a second redirect URI and try again.
+In the xref:admin-guide/connect-salesforce-with-the-application-service-and-e-signature-provider.adoc#redirect-uri[DocuSign App configuration], add `http://localhost:5000/auth/docusign/callback` as a second redirect URI and try again.
 
 image:ctsign-two-uris-docusign.png[]
 
