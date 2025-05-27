@@ -2707,3 +2707,9 @@ nav.pagination .next a::after {
     --z-index-page-version-menu: 3;
     --z-index-navbar: 4;
 }
+
+div.listingblock pre {
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
