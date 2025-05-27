@@ -2717,3 +2717,9 @@ div.listingblock pre {
 table.tableblock > thead > tr {
     background-color: #c0c0c0;
 }
+
+table.highlighted-table > thead > tr,
+table.highlighted-table > tbody > tr:first-child {
+    background-color: #c0c0c0;
+    font-weight: bold;
+}
