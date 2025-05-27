@@ -1,0 +1,64 @@
+= CPG Group Field Reference
+
+The[.object]#CPG Group# object is intended to store appropriate
+objects' records in alignment with SOQL filters applied to these objects
+and their child objects. 
+
+'''''
+
+Object API name: `CTCPG__Group__c`
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|BatchJobId |CTCPG__BatchJobId__c |Text(18) |The appropriate
+batch job to update group members.
+
+|Dynamic Group |CTCPG__IsDynamic__c |Checkbox a|
+If selected, the group is dynamic.
+
+* _Static_
+A static group is a snapshot of records per specific time.
+* _Dynamic_
+A dynamic group keeps the lists of records for different objects up to
+date.
+
+|Field List |CTCPG__FieldList__c |TextArea(255)  |Fields to
+display group members table (separated by a comma, without blank space).
+
+|For Group Update |​​CTCPG__IsForUpdate__c |Checkbox
+|Defines if the group should be automatically recalculated.
+
+|Group Filter |CTCPG__GroupFilter__c |LongTextArea(32768)
+|Stores SOQL filter for a group record.
+
+|Group Filter JSON |CTCPG__GroupFilerJson__c
+|LongTextArea(131072) |Stores a JSON with SOQL filter for a group
+record.
+
+|Group Type a|
+CTCPG__ObjectType__c
+
+
+
+|Picklist a|
+Select the group type:
+
+To specify a new group type, refer to
+link:admin-guide/cpg-groups-management/specify-a-custom-object-for-a-cpg-group[Specify a Custom
+Object for a CPG Group].
+
+* _Accounts_ and their child objects,
+e.g., [.object]#CT Orders#, [.object]#Activities#, etc.
+* _Contacts_ and their child objects,
+e.g., Activities, [.object]#Target Frequencies#, etc. 
+* _CT Products_ and their child objects,
+e.g., [.object]#Assortments#, [.object]#Activity
+Data#, etc.
+* _Users_ and their child objects, e.g., [.object]#CT
+Orders#, Activities, etc.
+
+|===

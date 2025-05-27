@@ -1,0 +1,64 @@
+= Calendar Tab Settings
+
+*Calendar Tab Settings* is intended to define the display and
+availability of the link:admin-guide/calendar-management/legacy-calendar-management/index[Legacy Calendar] tabs
+for profiles.
+
+'''''
+
+API name in Salesforce:
+[.apiobject]#CTCPG__CalendarTabSettings__c#
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Default Tab |[.apiobject]#CTCPG__DefaultTab__c#
+|Text(255) a|
+Specify the default tab. Available values:
+
+* *tabletab* for the Table View
+* *​treetab* for the Hierarchy View
+* *usertab* for the Employee Calendar
+
+|Employee Calendar Tab
+|[.apiobject]#CTCPG__IsUserCalendarTabEnabled__c#
+|Checkbox |If enabled, the
+link:admin-guide/calendar-management/legacy-calendar-management/calendar-interface#h2_989699835[Employee Calendar] tab is
+displayed.
+
+|Hierarchy View Tab
+|[.apiobject]#CTCPG__IsHierarchyViiewTabEnabled__c#
+|Checkbox |If enabled,
+the link:admin-guide/calendar-management/legacy-calendar-management/calendar-interface#h2__1884555900[Hierarchy View] tab is
+displayed.
+
+|List Views Tab
+|[.apiobject]#CTCPG__IsListViewsTabEnabled__c#
+|Checkbox |If enabled,
+the link:admin-guide/calendar-management/legacy-calendar-management/calendar-interface#h2__661653765[List Views] tab is
+displayed. 
+
+|Settings Tab
+|[.apiobject]#CTCPG__IsSettingsEnabled__c# |Checkbox
+|If enabled,
+the link:admin-guide/calendar-management/legacy-calendar-management/calendar-interface#h2_681682073[Settings] tab is
+displayed.
+
+|Show page header
+|[.apiobject]#CTCPG__IsPageHeaderEnabled__c#
+|Checkbox |If enabled, the standard Salesforce header menu is
+displayed.
+
+|Show Sidebar
+|[.apiobject]#CTCPG__IsSidebarEnabled__c# |Checkbox
+|Not in use.
+
+|Table View Tab
+|[.apiobject]#CTCPG__IsTableViewTabEnabled__c#
+|Checkbox |If enabled,
+the link:admin-guide/calendar-management/legacy-calendar-management/calendar-interface#h2__1638660003[Table View] tab is
+available.
+|===

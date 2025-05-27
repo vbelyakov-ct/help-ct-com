@@ -1,0 +1,83 @@
+= POS Material Tab Settings
+
+*POS Material Tab Settings* is used to display
+link:admin-guide/targeting-and-marketing-cycles-management/create-a-new-record-of-marketing-detail-tracking#h2_726145408[tracking
+POS materials] on the tab of the
+_link:activity-report-interface.html#h2_683681312[Activity Report]_ page
+for the specific user or profile link:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[based on
+the division category]. 
+
+By default, there is the setting for the whole Salesforce organization.
+To enhance or restrict a particular user or profile access,
+link:admin-guide/activity-report-management/configure-ct-product-tabs[create a new record].
+
+'''''
+
+API name in Salesforce: CTCPG__POSMaterialTab__c
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Active  |CTCPG__IsActive__c |Checkbox  |If selected, the
+setting is active, and _link:ct-product-field-reference.html[CT
+Products]_ will be pulled to the corresponding _Activity Report_.
+
+|Additional Parameter  |CTCPG__AdditionalParam__c |Text (255) 
+a|
+Additional SOQL-criterion to filter available _CT Product_ records to
+select in the CTCPG__FieldToShowAsPicklist__c field.
+
+* To filter records, the criteria line should start with the
+[.apiobject]#WHERE# keyword.
+* The [.apiobject]#CTCPG__ShowLookupAsPicklist__c# checkbox
+should be active, and the
+[.apiobject]#CTCPG__FieldToShowAsPicklist__c# field
+should be populated. 
+
+|Allow Record Management  |CTCPG__AllowRecordManagement__c
+|Text (255) a|
+Specify if the user is allowed to create and delete records on the __POS
+Material __tab of the _Activity Report_ page for each specified
+_Activity_ record type in the CTCPG__RecordTypeDeveloperName__c
+field (separated by a comma, without blank spaces):
+
+* *true* to enable;
+* **false **to restrict.
+
+|Field Set Name  |CTCPG__FieldSetName__c |Text (255)
+|link:admin-guide/activity-report-management/configure-ct-product-tabs[Specify the API name of the field
+set] for the _Activity Report_ page for each
+specified _Activity_ record type in
+the CTCPG__RecordTypeDeveloperName__c field (separated by a
+comma, without a blank space).
+
+|Field To Show As Picklist  |CTCPG__FieldToShowAsPicklist__c
+|Text (255) |The field API name with lookup type to the _CT Product_
+record of the link:admin-guide/activity-report-management/ref-guide/activity-field-reference[Activity] object that
+should be displayed as a picklist, for example, ProductId__c.
+
+|Read Only ProductId |CTCPG__FieldSetName__c |Text (255)
+a|
+Specify if the lookup field to the _CT Product_ record should be
+read-only or available to modify on the _Activity Report_ page for each
+specified _Activity_ record type in
+the CTCPG__RecordTypeDeveloperName__c field (separated by a
+comma, without blank spaces):  
+
+* *true* to enable read-only mode;
+* **false **to enable the edit mode.
+
+|Record Type Developer Name
+|CTCPG__RecordTypeDeveloperName__c |Text (255) |Specify the
+list of API names of _Activity_ record types to display the __POS
+Material __tab on the _Activity Report_ page (separated by a comma,
+without blank spaces).
+
+|Show Lookup As Picklist |CTCPG__ShowLookupAsPicklist__c
+|Checkbox  |If selected, available _CT Product_ records will be shown
+as a picklist according to conditions specified in
+the CTCPG__AdditionalParam__c field.
+|===

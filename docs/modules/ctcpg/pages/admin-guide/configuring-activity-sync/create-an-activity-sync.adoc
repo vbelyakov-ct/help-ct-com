@@ -1,0 +1,61 @@
+= Create an Activity Sync
+
+To create an Activity Sync:
+
+. Go to *Setup → Custom Code → Custom Metadata Types.*
+. Click *Manage Records* next to *Activity Sync*.  
+. Click *New* to create a new Activity Sync.  
+. Fill in the required fields.
+* Read the description of each
+parameter link:custom-metadata-type-activity-sync[here]. 
+* If you want to link activities with a specific type,
+link:admin-guide/configuring-activity-sync/set-up-global-actions-new-task-and-new-event[set up global
+actions].
+. Click *Save*.
+
+The setup is complete. Get familiar with the _Activity Sync_ examples.
+
+:toc: :toclevels: 3
+
+[[h2__243952492]]
+=== One-way synchronization
+
+When creating an _Activity_ object record with the _Visit_** **record
+type:
+
+* a standard _Event_ record will be created with the _Other_ value in
+the *Type* field.
+* the value from the *Objective* field will be copied to
+the *Description* field of the newly created _Event_ record.
+
+image:one-way.png[]
+
+
+
+[[h2__1458391187]]
+=== Both-ways synchronization using the Standard Activity Type field
+
+When creating a _Task_ record with the _Meeting_ type, the __CT CPG
+Activit__y record with the _Visit_ record type will be created.
+
+[NOTE] ==== The *Status* will be selected according to the
+link:admin-guide/calendar-management/legacy-calendar-management/configuring-calendar/configure-settings-for-the-calendar/index[Calendar Settings]. ====
+
+When creating a __CT CPG Activity_ _ record with the _Visit_ record
+type, the _Task_ record with the _Meeting_ type will be created:
+
+image:588234471.png[]
+
+[[h2_1063646808]]
+=== Both-ways synchronization using Standard and Custom object record criteria
+
+When an _Event_ record with the *Subject* name is created, the _CT CPG
+Activity_ record with the _Visit_ record type is created.
+
+[NOTE] ==== The *Status* will be selected according to the
+link:admin-guide/calendar-management/legacy-calendar-management/configuring-calendar/configure-settings-for-the-calendar/index[Calendar Settings]. ====
+
+When a ___CT CPG Activity_ __record with the _Visit_** **record type and
+with the _Planned_ status is created, the _Event_ record is created.
+
+image:both-ways.png[]

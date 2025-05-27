@@ -1,0 +1,56 @@
+= TaskProcess
+
+The _TaskProcess_ trigger is responsible for the _CT CPG Activity_
+records management if there is an active
+_link:activity-sync-management.html[Activity Sync]_ setting with a
+[.object]#Task# object.
+
+'''''
+
+API name in Salesforce: TaskProcess
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Context* |*Method* |*Codename* |*Description*
+
+|after insert  |afterInsert |ai a|
+Create a _CT CPG Activity_ record according to the
+parent ___Task ___record and the _Activity Sync_ setting.
+
+Fields to update:
+
+* CTCPG__AccountId__c 
+* CTCPG__ContactId__c
+* OwnerId
+* CTCPG__StartDate__c
+* CTCPG__EndDate__c
+* link:admin-guide/configuring-activity-sync/activity-sync-management/custom-metadata-type-activity-sync[fields specified] in
+the CTCPG__FieldValues__c
+
+|after update  |afterUpdate |au a|
+Update a _CT CPG Activity_ record after changing the value in the
+CTCPG__ActivityDte__c field of the parent _Event_ record. 
+
+Fields to update:
+
+* CTCPG__AccountId__c 
+* CTCPG__ContactId__c
+* OwnerId
+* CTCPG__StartDate__c
+* CTCPG__EndDate__c
+* link:admin-guide/configuring-activity-sync/activity-sync-management/custom-metadata-type-activity-sync[fields specified] in
+the CTCPG__FieldValues__c
+
+|after delete   | | |Reserved.
+
+|before insert | | |Reserved.
+
+|before update  | | |Reserved.
+
+|before delete  |beforeDelete |bd |Delete the related records of
+the _Activity Sync_ functionality.
+|===
+
+

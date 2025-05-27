@@ -1,0 +1,64 @@
+= Inventory Field Reference
+
+The[.object]#Inventory# object is used to store records of the
+rented items for the point-of-sales and relate them with the _Account_
+and _Contact_ of the corresponding _Activity_ record.
+
+* The _CallReportInventory_ field set is responsible
+for link:activity-report-interface[the
+Inventory tab displaying] on link:configuring-activity-report[the
+configured _Activity Report_ page] for the corresponding _Activity_
+record type;
+* The__ CT Product__ with the _Inventory_ record type is used as the
+Inventory record that can be selected on the *Inventory* tab of the
+_Activity Report_ page.
+
+'''''
+
+API name in Salesforce: CTCPG__Inventory__c
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Account          |CTCPG__AccountId__c |Lookup(Account)     
+   |The related _Account_ record to which the _Inventory_ is assigned.
+
+|Active |CTCPG__IsActive__c |Checkbox |If selected,
+the record is active and applied in business logic.
+
+|Category |CTCPG__Category__c |Picklist a|
+_Inventory_ categories. The available values by default:
+
+* Dairy
+* Nutrition
+
+|Contact         |CTCPG__ContactId__c |Lookup(Contact)     
+   |The related _Contact_ record to which the__ Inventory__ is
+assigned.
+
+|Description |CTCPG__Description__c |Long Text Area(32768)   
+     |_Inventory_ description.
+
+|Install Date |CTCPG__InstallDate__c |Date |The date of the
+_Inventory_ delivery to the point-of-sales.
+
+|Product |CTCPG__ProductId__c |Lookup(CT Product)  |The
+related _CT Product_ record, if applied.
+
+|Serial |CTCPG__Serial__c  |Text(255) |The serial number of
+the _Inventory_.
+
+|Shelf Space |CTCPG__ShelfSpace__c  |Number(16,2) |A number of
+shelves.
+
+|Status |CTCPG__Status__c  |Picklist a|
+Status of the Inventory record. The available values by default: 
+
+* Installed
+* Maintenance
+* Broken
+
+|===

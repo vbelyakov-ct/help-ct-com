@@ -1,0 +1,67 @@
+= Target Frequency Field Reference
+
+The[.object]#Target Frequency# object is intended to store the
+number of planned and actual activities for the _Account_ or _Contact_
+record. 
+
+'''''
+
+API name in Salesforce: CTCPG__TargetFrequency__c
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Account         |CTCPG__AccountId__c |Lookup(Account)
+|The related _link:account-field-reference.html[Account]_ record.
+
+|Active |CTCPG__IsActive__c |Checkbox |If selected,
+the _Target Frequency_ record is active.
+
+|Actual Calls         |CTCPG__ActualCalls__c |Number(18,0)
+a|
+The number of finished activities of
+the __Account __or _Contact_ record. 
+
+|Category |CTCPG__Category__c |Text(255) |The category of
+the related _Account_ or _Contact_ record.
+
+|Contact |CTCPG__ContactId__c |Lookup(Contact)         |The
+related _link:contact-field-reference.html[Contact]_ record.
+
+|Deactivation Date / Time |CTCPG__DeactivationDateTime__c
+|Date/Time |The date when the __Target Frequency __record will be
+deactivated and the value in the CTCPG__IsActive__c field will
+be False.
+
+|Description |CTCPG__Description__c |Long Text Area(32768)
+|If needed, specify the description. 
+
+|Last Call Date |CTCPG__LastCallDate__c |Date |Specify the
+last date when the user can create _Activity_ of the current _Target
+Frequency_ record.
+
+|Marketing Cycle |CTCPG__MarketingCycleId__c |Lookup(Marketing
+Cycle) |The related _link:marketing-cycle-field-reference.html[Marketing
+Cycle]_ record.
+
+|Marketing Detail Tracking
+|CTCPG__MarketingDetailTrackingId__c |Lookup(Marketing Detail
+Tracking) |The
+related _link:marketing-detail-tracking-field-reference.html[Marketing
+Detail Tracking]_ record.
+
+|Owner |CTCPG__OwnerId__c |Lookup(User) |The related
+_link:user-field-reference.html[User]_ record.
+
+|Planned Calls |CTCPG__PlannedCalls__c  |Number(18,0)  |The
+number of planned activities of the _Account_ or _Contact_ record.
+
+|Unique User Number |CTCPG__UniqUserNumber__c |Formula(Text)
+|The unique number of the _User_ record.
+
+|User Division |CTCPG__UserDivision__c |Formula(Text) |The
+assigned division on the _User_ record. 
+|===

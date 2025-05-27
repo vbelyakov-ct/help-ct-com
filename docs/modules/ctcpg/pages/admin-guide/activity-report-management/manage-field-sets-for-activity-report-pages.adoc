@@ -1,0 +1,91 @@
+= Manage Field Sets for Activity Report Pages
+
+Field sets of the _CT CPG Activity_ object are used to store the main
+information about the _Activity_ record on the
+_link:activity-report-interface.html[Activity Report]_ page for the
+appropriate record type.
+
+[.confluence-information-macro-information]# The field sets for each
+available CT CPG Activity record type
+link:activity-report-management#h2__1515393312[are configured by
+default].#
+
+image:588221461.png[]
+ It is possible to create a new _CT CPG Activity_ record type with the
+related field set. To assign a field set to the _Activity Report_ page:
+
+. link:admin-guide/activity-report-management/manage-field-sets-for-activity-report-pages#h2_2045948811[Create
+a new _Activity_ record type].
+. link:admin-guide/activity-report-management/manage-field-sets-for-activity-report-pages#h2__1946781807[Create
+a field set] for the new record type and customize fields in a set.
+. link:admin-guide/activity-report-management/manage-field-sets-for-activity-report-pages#h2_1877288261[Link
+the field set] with the _Activity Report_ page for the _Activity_ of the
+corresponding record type.
+
+[TIP] ====
+link:admin-guide/activity-report-management/manage-field-sets-for-activity-report-pages#h2_1639795417[Customize
+any preconfigured field set] if needed. ====
+
+[[h2_2045948811]]
+=== Create a new record type
+
+To create a new record type:
+
+. Go to *Setup → Object Manager → CT CPG Activity → Record Types →*
+click *New*.
+. https://help.salesforce.com/articleView?id=creating_record_types.htm&type=5[Create
+a new record type], for example, CTCPGActivity, and specify profiles
+that have access to the record type and page layout for the record of
+this type.
+. Click *Save*.
+
+The record type is added.
+
+[[h2__1946781807]]
+=== Create a field set
+
+To create a field set and manage its fields:
+
+. Go to *Setup → Object Manager → CT CPG Activity → Field Sets →* click
+*New*.
+. Specify the label, field set API name, for example, CTCPGActivityset,
+and the info where it is used.
+. Drag-n-drop fields you want to use on the field set. 
+image:new-field-set.png[]
+. ​Click *Save*.
+
+The field set is created.
+
+[[h2_1877288261]]
+=== Create Activity Layout Setting
+
+To display the field set on the Activity Report page for the
+corresponding record type, it is necessary to add a new record of
+link:activity-layout-settings[Activity Layout Settings]:
+
+. Go to *Setup → Custom Code → Custom Settings.*
+. Click *Manage* next to *Activity Layout Settings*.
+. Click *New*.
+. Fill out the fields:
+* In the *Name* field, enter any name you like.
+* In the *Fieldset API Name* field, enter the API name of the required
+field set, for example, CTCPGActivityset.
+. Click *Save*.
+image:new-activity-layout-settings.png[]
+
+
+
+The setup is complete.
+
+[[h2_1639795417]]
+=== Customize preconfigured field sets
+
+To customize link:activity-report-interface#h2_184470718[any field
+set]:
+
+. Go to **Setup → Object Manager → CT CPG Activity → Field Sets
+→ **click the *CT CPG Activity set*.
+. In the page layout editor, drag-n-drop or remove fields.
+. Click *Save*.
+
+The field set is customized.

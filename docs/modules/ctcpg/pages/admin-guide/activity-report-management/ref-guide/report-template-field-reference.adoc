@@ -1,0 +1,43 @@
+= Report Template Field Reference
+
+The[.object]#Report Template# object represents the set of
+skills grouped by criteria to estimate the representative work during
+the _Joint Visit_.[TIP] ====
+link:admin-guide/activity-report-management/configure-a-report-template[Template Editor] is intended to
+create and edit report templates. ====
+
+'''''
+
+API name in Salesforce: CTCPG__ReportTemplate__c
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Active |CTCPG__IsActive__c |Checkbox |If selected,
+the record is active and applied in business logic.
+
+|Available for        |CTCPG__RecordTypePicklist__c
+|Picklist(Multi-Select) a|
+Select the _Activity_ record types for which the _Report Template_
+record will be available:
+
+* Visit
+* Event
+* Joint Visit
+* Timeoff
+
+|Date    |CTCPG__Date__c  |Date |The date of the _Report_.
+
+|Description |CTCPG__Description__c |Long Text Area(32768)
+|Specify information about the _Report Template_ record.
+
+|Status |CTCPG__Status__c |Picklist a|
+The available values of the _Report Template_ status:
+
+* Draft
+* Approved
+
+|===

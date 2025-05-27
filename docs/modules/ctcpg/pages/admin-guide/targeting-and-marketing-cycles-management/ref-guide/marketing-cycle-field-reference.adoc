@@ -1,0 +1,55 @@
+= Marketing Cycle Field Reference
+
+The [.object]#Marketing Cycle# object is intended to store the
+parameters of the marketing cycle records.
+
+'''''
+
+API name in Salesforce: CTCPG__MarketingCycle__c
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Active |CTCPG__IsActive__c |Checkbox |If selected, the
+_Marketing Cycle_ record is active.
+
+|Description |CTCPG__Description__c |Long Text Area(32768)
+|If needed, specify the description.
+
+|End Date |CTCPG__EndDate__c |Date |Specify the end date of
+the marketing cycle.
+The Marketing Cycle period should be within the value of
+the CTCPG__MaxPlanningDays__c field of
+the _link:application-settings.html[Application Settings]_ record.
+
+|Link Visit 1:1 |CTCPG__LinkVisit__c |Checkbox a|
+If selected, the related _Activity_ records with the _Visit_ record type
+will be linked to the _Marketing Cycle_ record.
+
+* The CTCPG__AllowLinkSegmentation__c on the _Application
+Settings_ record should be checked. 
+* You
+can specify link:admin-guide/configuring-targeting-and-marketing-cycles/enable-activity-linking-to-the-marketing-cycle[another
+activity linking].
+
+|Start Date |CTCPG__StartDate__c |Date |Specify the start date
+of the marketing cycle.
+
+|Status |CTCPG__Status__c |Picklist a|
+Specify the current status of the _Marketing Cycle_ record. Available
+values:
+
+* Planned
+* In Progress
+* Finished
+* Canceled
+
+You can specify the behavior of the system for the related status on the
+record of link:application-settings[Application Settings].
+
+|User Division |CTCPG__UserDivision__c |Formula(Text) |The
+assigned division on the _Marketing Cycle_ record. 
+|===

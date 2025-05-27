@@ -1,0 +1,30 @@
+= Marketing Cycle Linking Settings
+
+*Marketing Cycle Linking Settings* is intended to enable the automatic
+linking of _Activities_ with the specific record type to the active
+marketing cycle.
+
+* The automatic linking of the _Activities_ with the _Visit_** **record
+type is
+link:admin-guide/targeting-and-marketing-cycles-management/ref-guide/index#h2__1482834092[available
+by default].
+* You can
+link:admin-guide/targeting-and-marketing-cycles-management/enable-activity-linking-to-the-marketing-cycle[specify other
+Activity record types] to enable automatic linking.
+
+'''''
+
+API name in Salesforce: CTCPG__MarketingLinkSettings__c
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Active |CTCPG__IsActive__c |Checkbox |If selected, the
+automatic linking is enabled.
+
+|Field API Name |CTCPG__FieldAPIName__c |Text Area(255)
+|Specify the *Record Type Name* of the _Activity_ record type.
+|===

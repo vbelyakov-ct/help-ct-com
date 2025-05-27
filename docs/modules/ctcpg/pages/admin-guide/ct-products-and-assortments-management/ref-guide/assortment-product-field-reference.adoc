@@ -1,0 +1,29 @@
+= Assortment Product Field Reference
+
+The *Assortment Product* object
+link:admin-guide/configuring-ct-products-and-assortments/create-an-assortment#h2__1291616949[represents product
+records] in the _Assortment_ record.
+
+'''''
+
+API name in Salesforce: CTCPG__AssortmentProduct__c
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Assortment  |CTCPG__AssortmentId__c |Lookup(Assortment) 
+|The related _Assortment_ record.
+
+|Product |CTCPG__ProductId__c |Lookup(CT Product) |The
+related _CT Product_ record that is included in the assortment.
+
+|Required         |CTCPG__IsRequired__c |Checkbox        
+|The _CT Product_ cannot be excluded from the _Assortment_ assigned to
+the _Account_.
+
+|Sort Order |CTCPG__SortOrder__c |Number(18,0) |The order
+number of _CT Product_ in the _Assortment_ record.
+|===

@@ -1,0 +1,63 @@
+= 4. Managing CT CPG Licenses
+
+Salesforce License options:
+
+* Lightning Platform
+* Sales Cloud
+* Service Cloud​
+* Community Cloud
+* Consumer Goods Cloud​
+* Health Cloud​
+* E-Commerce​.
+
+The administrator can grant or restrict access to users who can
+use the CT CPG package functionality by managing licenses.
+
+:toc: :toclevels: 3
+
+[[h2__898975961]]
+=== Grant Access to Users
+
+To select users who can use the CT CPG package functionality:
+
+. Go to *Setup* (1) → **Apps **→ *Installed Packages *(2). 
+. Click *Manage Licenses* (3)** **next to *CT CPG*.
+image:Managing-Licenses.png[] 
+      
+. Click the *Add Users* button.
+The *Add Users* page opens.
+. Select users from the *Available Users* list. 
+. Click *Add*. 
+[TIP] ==== Also, you can click *Add All Users* if you want to
+grant access to all users.    ====
+
+image:Add-Users-Licenses.png[]
+
+
+
+Selected users appear in the list of users who have access to the CT CPG
+package.
+
+[[h2_1361513113]]
+=== Restrict Access to Users
+
+To restrict access to the user(s): 
+
+. Go to *Setup* (1) → **Apps **→ *Installed Packages *(2).  
+. Click *Manage Licenses* (3)** **next to *CT CPG*.
+image:Managing-Licenses.png[] 
+      
+. Click *Remove Multiple Users*.
+Also, you can remove a single user by clicking *Remove* next to the
+user's *Full Name*.
+. Select users from the *Available Users* list.
+. Click *Remove*.
+Also, you can click *Remove All Users* if you want to restrict access to
+the package for all users.
+
+image:Remove-Users-Licenses.png[]
+
+
+
+The user(s) are removed from the list of users who have access to the CT
+CPG package.

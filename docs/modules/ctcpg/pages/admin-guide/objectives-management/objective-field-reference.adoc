@@ -1,0 +1,33 @@
+= Objective Field Reference
+
+The[.object]#Objective# ** object is used to store objectives
+details and map objectives with accounts.
+
+'''''
+
+API name in Salesforce: CTCPG__Objective__c
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Account |CTCPG__AccountId__c |Lookup(Account) |The
+_Account_ record to which the _Objective_ is assigned.
+
+|Active |CTCPG__IsActive__c |Checkbox |If selected,
+the record is active and applied in business logic.
+
+|Activity Index Number  |CTCPG__ActiveIndexNumber__c
+|Number(18,0) |The identifier of related _CT CPG Activity_ record.
+
+|Contact |CTCPG__ContactId__c  |Lookup(Contact) |The
+related _Contact_ record.
+
+|Description  |CTCPG__Description__c |Long Text
+Area(32768) |Specify the additional information.
+
+|Objective |CTCPG__Objective__c |Text Area(255) |The
+Objective message.
+|===

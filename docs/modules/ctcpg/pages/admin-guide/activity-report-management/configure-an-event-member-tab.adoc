@@ -1,0 +1,54 @@
+= Configure an Event Member Tab
+
+Add the *Event Member* tab for managing participants and their
+role during the _Activity_ on
+link:activity-report-management#h2__1515393312[the _Activity
+Report_ page for the _Event_ record type].
+
+. link:admin-guide/activity-report-management/configure-an-event-member-tab#h2_899645149[Map the Event
+Member tab and the _Activity Report_ page] for the
+corresponding _Activity_ record type via the appropriate custom setting.
+. link:admin-guide/activity-report-management/configure-an-event-member-tab[Customize fields to display]
+on the *Event Member* tab.
+. link:admin-guide/activity-report-management/work-with-the-activity-report-page#h2_867056578[Add members]
+manually on the _Activity Report_ page or select participants on the
+*Contacts* tab.
+
+[[h2_899645149]]
+=== Manage Event Tab Settings Records
+
+To display the *Event Member* tab on the _Activity Report_ page:
+
+. Go to *Setup → Custom Code → Custom Settings.*
+. Click *Manage* next to *Event Member Tab Settings*.
+. Specify a new record for the specific user/profile or edit the record
+for the whole Salesforce organization.
+[TIP] ==== Read the description of each parameter
+link:event-member-tab-settings[here]. ====
+* specify the user/profile;
+* specify the required _Activity_ record type;
+* specify the API name of the lookup to the[.object]#Contact#
+object;
+* specify the API name of the *Event Members Tab* field set to display:
+CTCPG__EventMembersTab;
+* set active.
+. ​Click *Save*.
+image:ct-event-product-tab-settings-example.png[]
+
+
+
+The setup is complete.
+
+[[h2_1658041598]]
+=== Customize Fields to Display on the Event Member Tab
+
+To customize fields to display non the _Event Member_ tab:
+
+. Go to *Setup → Object Manager → CT CPG Activity Data → Field Sets*.
+. Click one of the *Event Members Tab* field set.
+. On the page layout editor, drag-n-drop or remove fields to display.
+. Click *Save*. 
+
+The setup is complete.
+
+image:event-member-tab-example.png[]

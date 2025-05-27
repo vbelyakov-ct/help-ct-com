@@ -1,0 +1,156 @@
+= Manage Activities on the Employees Calendar Tab
+
+When the administrator customized the _CT CPG Activity_ display on
+the link:configure-settings-for-the-calendar[Settings tab] and
+created the list views on
+the link:admin-guide/new-calendar-management/legacy-calendar-management/configuring-calendar/manage-list-views-for-the-calendar[List View tab], a
+representative created a__ CT CPG Activity__ record related to
+the _Account_ or _Contact_ record on
+the link:admin-guide/new-calendar-management/legacy-calendar-management/calendar-interface#h2_817238099[Table View] or
+link:admin-guide/new-calendar-management/legacy-calendar-management/calendar-interface#h2__528606302[Hierarchy View] tab, a
+supervisor can create
+link:activity-report-interface#h2__1426808308[a _Joint
+Visit_ record] to one of their representative's _CT CPG activity_ on the
+link:admin-guide/new-calendar-management/legacy-calendar-management/calendar-interface#h2_989699835[Employees Calendar] tab.
+
+:toc: :toclevels: 3
+
+[[h2__2034850802]]
+=== Planning Joint Visits with a Left-click
+
+[NOTE] ==== Enable the left-click action in
+the link:calendar-settings-calendar-setup[Calendar Settings:
+Calendar Setup] section.  ====
+
+To create a _Joint Visit_:
+
+. Go to *Calendar → Employees Calendar*.
+. In the *Select user* field, select the representative and click *Go*.
+* Representatives are grouped by user roles.
+* Select the *Use employee **timezone* checkbox if needed.
+. Left-click on a cell in the Calendar grid next to the representative's
+_CT CPG Activity_ record.
+[TIP] ==== We recommended
+link:calendar-settings-customize-events#h2__1740967952[to set up a
+color] for another user's activities. ====
+. In the open pop-up, select a _Joint Visit_ record type from the
+picklist and click *Select*.
+. link:calendar-settings-event-creation-pop-up-window-setup[If
+customized], fill out fields in the *Joint Visit Creation* pop-up and
+click *Create*.
+. Click *Save* on the *Employees Calendar* tab.
+
+The _Joint Visit_ is created.
+
+* According to link:calendar-settings-calendar-setup[the *Invert
+click
+logic* checkbox] and link:calendar-settings-customize-events#h2__1740967955[the
+specified layout], click/double-click the _Joint Visit_ record to open
+the _Joint Visit_ details page.
+* According to the *Invert click logic* checkbox, click/double-click
+the _Joint Visit_ record to delete it.
+* link:calendar-settings-drag-drop-settings[If enabled],
+drag-and-drop the _Join Visit_ record on another day.
+* Drag the bottom border of the _Joint Visit_ record to change its
+duration. 
+
+image:duration-employ-activity.png[]
+
+
+
+link:admin-guide/new-calendar-management/legacy-calendar-management/configuring-calendar/manage-activities-on-the-employees-calendar-tab#employlistofactions[Go
+to] the list of actions.
+
+[[h2_540787025]]
+=== Planning Joint Visits with a Right-click
+
+[NOTE] ==== Add available record types in
+the link:calendar-settings-customize-context[Calendar Settings:
+Customize Context] section. ====
+
+To create a__ Joint Visit__:
+
+. Go to *Calendar → Employees Calendar*.
+. Right-click on a cell in the Calendar grid next to the
+representative's _CT CPG Activity_ record.
+We
+recommended link:calendar-settings-customize-events#h2__1740967952[to
+set up a color] for another user's activities.
+. Click the *Joint Visit* record type from the actions.
+We recommended link:calendar-settings-customize-context[restricting
+the available record types] on the *Employees Calendar* tab.
+. link:calendar-settings-event-creation-pop-up-window-setup[If
+customized], fill out fields in the *Joint Visit Creation* pop-up and
+click *Create*.
+. Click *Save* on the *Employees Calendar* tab.
+
+The _Joint Visit_ is created.
+
+* According to link:calendar-settings-calendar-setup[the *Invert
+click
+logic* checkbox] and link:calendar-settings-customize-events#h2__1740967955[the
+specified layout], click/double-click the ___Joint Visit ___record to
+open the _CT CPG Activity_ details page.
+* According to the *Invert click logic* checkbox, click/double-click
+the ___Joint Visit ___record to delete it.
+* link:calendar-settings-drag-drop-settings[If enabled],
+drag-and-drop the _Joint Visit_ record on another day.
+* Drag the bottom border of the ___Joint Visit ___record to change its
+duration. 
+
+image:duration-employ-activity.png[]
+
+
+
+link:admin-guide/new-calendar-management/legacy-calendar-management/configuring-calendar/manage-activities-on-the-employees-calendar-tab#employlistofactions[Go
+to] the list of actions.
+
+[[h2__1144528364]]
+=== Planning Joint Visits with a Mass Action
+
+[NOTE] ==== Allow mass actions for the user profile in
+the link:calendar-settings-mass-actions[Calendar Settings: Mass
+Actions] section.  ====
+
+[[h3_632475968]]
+==== Mass Actions: Copy and Move
+
+To manage _Joint Visits_ using a mass action:
+
+. Go to *Calendar → Hierarchy View*_._
+. Right-click a cell on the Calendar grid.
+. Click the appropriate mass action from the actions.
+* *Copy*: to copy activities of the day (where you click the cell) or of
+the whole week, if enabled.
+* *Move*: to move activities of the day (where you click the cell) or of
+the whole week, if enabled.
+. If the *Day and Week* option enabled, click *Day* or *Week* in the
+pop-up to apply the mass action for _CT CPG Activities_ of a single
+selected day or of the whole week started from the selected day.
+. In the next pop-up, select a day to copy or move__ Joint Visits__ to
+that day or to the week started from the selected day, and click *Copy
+events/Move events*.
+. Click *Save* on the *Employees Calendar* tab. 
+
+_Joint Visits_ are copied or moved.
+
+[[h3__1934690656]]
+==== Mass Actions: Delete
+
+To manage__ Joint Visits__ using a mass action:
+
+. Go to *Calendar → Hierarchy View*_._
+. Right-click a cell on the Calendar grid.
+. Click the *Delete* action from the actions.
+. If the *Day and Week* option enabled, click *Day* or *Week* in the
+pop-up to delete _Joint Visits_ of a single selected day or of the whole
+week started from the selected day.
+. Click *Delete events*.
+. Click *Save* on the *Employees Calendar* tab. 
+
+_Joint Visits_ are deleted.
+
+
+
+link:admin-guide/new-calendar-management/legacy-calendar-management/configuring-calendar/manage-activities-on-the-hierarchy-view-tab#treelistofactions[Go
+to] the list of actions.

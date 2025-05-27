@@ -177,15 +177,36 @@ Specify the height of the attached signature.
 
 The horizontal indent.
 
-|Y-Offset a| NOTE: Required when the *Provider* is *DocuSign*.
+
+ |Y-Offset a| NOTE: Required when the *Provider* is *DocuSign*.
 
 The vertical indent.
 
-2+|*Notification*
+
+2+| *Notification*
 
 |Signature Require Notification |The template title according to which the notification letter is generated with signing demand.
 
 |Document Signed Notification |The template title according to which the letter is generated with the notification about signing.
+|===
+
+
+.test
+|===
+|Header 1 |Header 2 |Header 3
+
+|Column 1, row 1
+|Column 2, row 1
+|Column 3, row 1
+
+[.highlight-row]
+|Column 1, row 2
+|Column 2, row 2
+|Column 3, row 2
+
+|Column 1, row 3
+|Column 2, row 3
+|Column 3, row 3
 |===
 
 

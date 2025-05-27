@@ -1,0 +1,33 @@
+= Next Call Settings
+
+*Next Call Settings* is responsible for transferring values from the
+selected fields of the previous _CT CPG Activity_ record to the
+corresponding fields of the next _CT CPG_ Activity record. 
+
+The CTCPG__NextCallDate__c field on the previous _CT CPG
+Activity_ record should be filled out with
+link:admin-guide/next-activity-management/index[the future date]. 
+
+'''''
+
+API name in Salesforce: CTCPG__NextCallSettings__c
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Fields |CTCPG__Fields__c |Text Area(255) |Specify field API
+names of the[.object]#CT CPG Activity# object that should be
+populated on the next _CT CPG Activity_ record (separated by a comma,
+without a blank space).
+
+|Name |Name |Text(255) |The _CT CPG Activity_ record type for which the
+_Next Call Setting_ record is applied.
+
+|Values |CTCPG__Values__c |Text Area(255) |Specify field API
+names of the previous _CT CPG Activity_ record whose values should be
+copied into the fields added in the CTCPG__Fields__c field
+(separated by a comma, without a blank space).
+|===

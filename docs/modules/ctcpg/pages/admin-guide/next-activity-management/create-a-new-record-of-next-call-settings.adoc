@@ -1,0 +1,28 @@
+= Create a new Record of Next Call Settings
+
+Create a _link:next-call-settings.html[Next Call Settings]_ record to
+link the fields between the previous and the next _CT CPG Activity_
+records.
+
+
+
+To create a new _Next Call Settings_ record:
+
+. Go to **Setup → Custom Code → Custom Settings **→ click *Manage* next
+to *Next Call Settings*. 
+. On the next page, click *New* to create a new record:
+* In the *Name* field, enter the API name of the corresponding _CT
+CPG Activity_ record type, e.g., _Visit_. 
+* In *Fields*, specify fields of the next _CT CPG Activity_ record to
+populate it with specific values (separated by a comma, without a blank
+space).
+* In *Values*, specify fields of the parent _CT CPG Activity_
+record (separated by a comma, without a blank space). Values from these
+fields will be copied to the next _CT CPG Activity_ record.
+
+Add the **AccountId **and **ContactId **fields to copy the
+related _Account_ and _Contact_ record from the parent _CT CPG
+Activity_ record.
+. Click *Save*.
+
+The setup is complete.

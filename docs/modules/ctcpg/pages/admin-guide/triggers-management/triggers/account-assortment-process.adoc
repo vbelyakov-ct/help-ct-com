@@ -1,0 +1,29 @@
+= AccountAssortmentProcess
+
+_AccountAssortmentProcess_ is intended to support
+link:admin-guide/ct-products-and-assortments-management/assign-assortments-to-accounts[Assortmets] logic.
+
+'''''
+
+API name in Salesforce: AccountAssortment
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Context* |*Method* |*Codename* |*Description*
+
+|after insert  |managePrimary() |managePr |Verify that the
+_Account_ record has no more than one related _Assortment_ record with
+the selected CTCPG__IsPrimary__c checkbox concurrently.  
+
+|after update  |managePrimary() |managePr |Verify that
+the _Account_ record has no more than one related _Assortment_ record
+with the selected CTCPG__IsPrimary__c checkbox concurrently.  
+
+|before insert | | |Reserved.
+
+|before update | | |Reserved.
+|===
+
+

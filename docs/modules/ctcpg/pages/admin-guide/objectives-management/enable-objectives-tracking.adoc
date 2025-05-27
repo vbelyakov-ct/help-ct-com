@@ -1,0 +1,36 @@
+= Enable Objectives Tracking
+
+To track objectives for the particular _Account_ or _Contact_ record for
+further generating reports via
+https://help.salesforce.com/articleView?id=rd_reports_overview.htm&type=5[standard
+Salesforce functionality]:
+
+* https://help.salesforce.com/articleView?id=admin_files_related_list_setup.htm&type=5[add
+the _Objectives_ related list] on the _Account_ and/or _Contact_ page
+layout;
+* set up the _Objectives_ options for the
+_link:application-settings.html[Application Settings]_ record.
+
+[[h2_798634107]]
+=== Configure Application Settings
+
+To set up the _Objectives_ options an _Application Settings_ record:
+
+. Go to *Setup → Custom Code → Custom Settings →* click *Manage* next to
+*Application Settings* → click the required _Application Settings_
+record.
+. Specify the following:
+* Select *Enable Objectives*;
+* Select *Enable* *Objective History Tracking* to view objectives
+history in the reports;
+* Set up *Objective Tracking History* to track objectives for the
+specified period;
+* Select *Create Next Activity* if you want to copy objectives to the
+next activities via
+link:/articles/project-ct-cpg/next-activity-management[the Next Activity
+functionality].
+
+image:588244431.png[]
+. Click *Save*.
+
+The setup is complete.

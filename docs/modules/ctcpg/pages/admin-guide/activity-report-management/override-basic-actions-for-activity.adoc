@@ -1,0 +1,22 @@
+= Override Basic Actions for Activity
+
+By default, when a user opens any _CT CPG Activity_ record, the standard
+page will be displayed. To launch the
+_link:activity-report-interface.html[Activity Report]_ page instead of
+having a standard Salesforce page, override the behavior of
+the *New*, *Edit*, and *View* buttons:
+
+. Go to *Setup → Object Manager → CT CPG Activity → Buttons, Links, and
+Actions*.
+. Click *Edit* next to the *Edit* label.
+. In the *Override Properties* section, select *Visualforce page* and
+*ActivityReport [CTCPG__ActivityReport]* next to *Salesforce
+Classic Override*.
+image:588222481.png[]
+. Click *Save*.
+. Repeat steps 2–4 to the *New* and *View* buttons.
+
+The setup is complete. Now, when you click one of the buttons above, the
+_Activity Report_ page will be open.
+
+image:override-buttons.png[]

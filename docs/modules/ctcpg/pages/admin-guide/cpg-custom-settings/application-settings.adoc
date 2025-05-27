@@ -1,0 +1,152 @@
+= Application Settings
+
+*Application Settings* is a setup where the CT CPG mapping data is
+stored. This is the primary setting of the CT CPG package.
+
+* link:application-settings-management[The Global record] should be
+applied to your Salesforce organization. The record is available for
+editing.
+* Create additional records in case of need to use
+link:admin-guide/targeting-and-marketing-cycles-management/create-a-marketing-cycle[more than one marketing cycle] with
+different parameters;
+* For each record, it is necessary to specify custom fields that should
+be created for
+the link:account-field-reference[Account], link:contact-field-reference[Contact],
+and link:user-field-reference[User] objects and used to divide
+settings by divisions.
+
+'''''
+
+API name in Salesforce: CTCPG__ApplicationSettings__c
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Account Category Fields API names
+|CTCPG__AccountCategoryFields__c |Text Area(255) |Specify the
+list of API names of fields that represent the picklist with division
+categories for
+thelink:account-field-reference.html[ Account] object (separated by a
+comma, without blank space). 
+
+Used in link:admin-guide/targeting-and-marketing-cycles-management/ref-guide/target-frequency-field-reference[Target Frequencies].
+
+|Account Target Flags API names
+|CTCPG__AccountTargetFlagsFields__c |Text Area(255) |Specify
+the list of API names of checkbox fields that are responsible for
+link:account-field-reference[the selection of a division] for the
+_Account_ record.
+
+|Advanced TF Logic |CTCPG__EnableAdvancedTFLogic__c
+|Checkbox |If selected, the data from records of
+the link:admin-guide/targeting-and-marketing-cycles-management/ref-guide/target-frequency-field-reference[Target Frequency] object,
+for example, the values in
+the CTCPG__ActualCalls__c and CTCPG__PlannedCalls__c,
+may be used for creating additional list views for the *Account* or
+[.object]#Contact# object.
+
+|Allow Segmentation by linking
+|CTCPG__AllowLinkSegmentation__c |Checkbox a|
+If selected, the additional algorithm is enabled that automatically
+links the matched _Activity_ record to the active _Marketing Cycle_
+record.
+
+
+
+Used in case of more than one active marketing cycle for different
+division categories.
+[.confluence-information-macro-note]#You can to specify different
+link:admin-guide/targeting-and-marketing-cycles-management/enable-activity-linking-to-the-marketing-cycle[linking
+parameters].#
+
+|Contact Category Fields API names
+|CTCPG__ContactCategoryFields__c |Text Area(255) |Specify
+the list of API names of fields that represent the picklist with
+division categories for
+the link:contact-field-reference[Contact] object (separated by a
+comma, without blank space). 
+
+|Contact Target Flags API names
+|CTCPG__ContactTargetFlagsFields__c |Text Area(255) |Specify
+the list of API names of checkbox fields that are responsible for
+link:contact-field-reference[the selection of a division] for the
+_Contact_ record.
+
+|Create Next Activity |CTCPG__CreateNextActivity__c
+|Checkbox a|
+If selected, a new Activity record will be automatically created on the
+specific date from the CTCPG__NextCallDate__c field of
+link:admin-guide/activity-report-management/ref-guide/activity-field-reference[an _Activity_ record] after changing
+link:admin-guide/next-activity-management/creating-the-next-activity[the activity status to Finished].
+
+Create a record of link:admin-guide/cpg-custom-settings/next-call-settings[Next Call Settings] for
+the required _Activity_ record type.
+
+|Create Related Activity Data records
+|CTCPG__CreateRelatedActivityDataRecords__c |Checkbox |If
+selected, link:admin-guide/activity-report-management/ref-guide/activity-data-field-reference[the _Activity Data_
+record] based on parameters of an active _Marketing Cycle_ and
+_Marketing Detail Tracking_ records will be created for the
+corresponding _Activity_ record.
+
+If unselected, the related _Activity Data_ will be pulled to the
+_Activity_ record after opening
+link:admin-guide/activity-report-management/work-with-the-activity-report-page[the Activity Report
+page]. Only _Activities_ with the completed _Activity Data_ will be
+saved to not take up space in the Salesforce organization by records
+without details.
+
+|Enable Objective History tracking
+|CTCPG__EnableObjectiveHistoryTracking__c |Checkbox a|
+If selected, the previous _Objective_ values for the _Activity_ records
+will be saved. According to
+the link:admin-guide/objectives-management/objective-creating#h2_1011142261[Next Call
+Settings] record, a new active Activity record will be created and the
+previous record will be deactivated in
+the link:admin-guide/objectives-management/objective-field-reference[Objective] object.
+
+[NOTE] ==== The user should have a _Next Call Settings_[#ebm]#
+====  record for populating the Objective field on the _Activity
+Report_ page.#
+
+|Enable Objectives |CTCPG__IsObjectivesEnabled__c
+|Checkbox |If selected, you're
+allowed link:admin-guide/objectives-management/index[to create objectives] for the
+_Activity_ records.
+
+|Max days for activity planning |CTCPG__MaxPlanningDays__c
+|Number(18,0) a|
+Specify the maximum period of marketing cycles.
+
+[NOTE] ==== The value cannot be more than 800 days. ====
+
+|Objective Tracking Period
+|CTCPG__ObjectiveTrackingPeriod__c |Text Area(255) a|
+Specify how long to store the history of objectives. The available
+values:
+
+* month
+* quarter
+* year
+* a marketing cycle
+
+|Recalculate TF Records |CTCPG__EnableTFRecalculate__c
+|Checkbox |If selected, when a new marketing cycle is activated, the
+active _Target Frequency_ records will be copied and the old and
+inactive ones will be deactivated.
+
+|Share Activity with Joint Visit Users
+|CTCPG__IsJointActivityShareEnabled__c |Checkbox |If
+selected, access for a representative to view the corresponding _Joint
+Visit_ record is granted.
+
+|Show Page Headers |CTCPG__IsPageHeaderEnabled__c
+|Checkbox |If selected, headers with the standard Salesforce tabs are
+shown on the _link:calendar-interface.html[Calendar]_ and
+_link:activity-report-interface.html[Activity Report]_ pages.
+If not selected, the _Calendar_ and _Activity Report_ pages are open in
+a full-screen mode.
+|===

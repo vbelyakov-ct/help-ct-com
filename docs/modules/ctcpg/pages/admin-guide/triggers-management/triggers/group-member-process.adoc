@@ -1,0 +1,29 @@
+= GroupMemberProcess
+
+The _GroupMemberProcess_ trigger is responsible for removing duplicate
+_link:configuring-cpg-groups.html[CPG Group Member]_
+link:admin-guide/cpg-groups-management/index[] records that were manually added.
+
+'''''
+
+API name in Salesforce: GroupMemberProcess
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Context* |*Method* |*Codename* |*Description*
+
+|before insert  |deduplicateManualGroupMembers()
+|[.apiobject]#bi# |In case of the _CPG Group Member_ record
+link:admin-guide/cpg-groups-management/create-and-update-a-dynamic-cpg-group#h2_1766846133[is being
+manually created] to the _CPG Group_ with the same record existed, it
+generates an error to not create a duplicate record.
+
+|after undelete   |deduplicateManualGroupMembers()
+|[.apiobject]#aud# |In case of the _CPG Group Member_
+record is being restored from _Recycle Bin_ to the _CPG Group_ with the
+same record existed, an error occurs to not create a duplicate record.
+|===
+
+

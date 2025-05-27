@@ -1,0 +1,82 @@
+= Specify Categories for Marketing Detail Tracking
+
+[[h1__1106186938]]
+== 
+
+For each _Marketing Detail Tracking_ record type, specify the required
+_Account_ and _Contact_ division category and assign the object type on
+which the required record type of Marketing Detail Tracking will be
+available.
+
+* link:admin-guide/configuring-targeting-and-marketing-cycles/specify-categories-for-marketing-detail-tracking#h2_1104532017[Add
+the new division categories] for the
+link:marketing-detail-tracking-field-reference[Marketing Detail
+Tracking] object;
+* link:admin-guide/configuring-targeting-and-marketing-cycles/specify-categories-for-marketing-detail-tracking#h2_566398107[Assign division
+categories] to
+the link:targeting-and-marketing-cycle-management#h2_83089996[record
+types of the Marketing Detail Object].
+* link:admin-guide/configuring-targeting-and-marketing-cycles/specify-categories-for-marketing-detail-tracking#h2__1618421469[Update
+dependent picklist] for the *Type* field to have an ability to select
+new division categories when
+link:admin-guide/configuring-targeting-and-marketing-cycles/create-a-new-record-of-marketing-detail-tracking[creating new
+Marketing Detail Tracking records].
+
+[[h2_1104532017]]
+=== Add a Division Category
+
+link:admin-guide/configuring-targeting-and-marketing-cycles/add-a-new-division[After the new division creation], add
+division categories to available values of the
+[.object]#Marketing Detail Tracking# object:
+
+. Go to *Setup → Object Manager → Marketing Detail Tracking → Fields &
+Relationships →* click *Category*.
+. In the** Values** section, click** New**.
+. Add link:admin-guide/configuring-targeting-and-marketing-cycles/add-a-new-division#h2__81078948[the new division
+categories] of the[.object]#Account# and
+[.object]#Contact# objects.
+. Click *Save*.
+image:new-categories-on-MDT.png[]
+
+The setup is complete.
+
+[[h2_566398107]]
+=== Assign Division Category to the Record Type
+
+To assign new division categories for the specific record type:
+
+. Go to *Setup → Object Manager → Marketing Detail Tracking → Record
+Types →* click the required record type.[TIP] ==== You can also
+https://help.salesforce.com/articleView?id=creating_record_types.htm&language=en&r=https%3A%2F%2Fwww.google.com%2F&type=5[create
+new record types] for the Marketing Detail Object. ====
+. In the *Picklist Available for Editing* section, click *Edit* next to
+the **Category **field.
+image:specify-type-and-category-for-MDT-record-type.png[]
+. Add new division categories to which a user can create a new record of
+the selected record type to the *Selected Values*.
+image:specify-category-for-MDT-record-type.png[]
+. Click *Save*.
+
+The setup is complete.
+
+[[h2__1618421469]]
+=== Update Dependent Picklist for the Type field
+
+The *Type* field has three values to which you can add the new division
+categories: Account, Contact, and Global. Use
+https://help.salesforce.com/articleView?id=fields_defining_field_dependencies.htm&type=5[field
+dependencies] to manage available categories per each type.
+
+
+
+To update field dependencies for the *Type* field:
+
+. Go to **Setup → Object Manager → Marketing Detail Tracking → Fields &
+Relationships → **click *Type*.
+. In the *Field Dependencies* section, click *Edit* next to *Category*.
+. Select the required categories and click for each type and click
+*Include Values*.
+image:Type-Dependencies.png[]
+. Click *Save*.
+
+The setup is complete.

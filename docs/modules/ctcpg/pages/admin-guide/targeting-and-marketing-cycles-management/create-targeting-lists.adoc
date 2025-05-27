@@ -1,0 +1,77 @@
+= Create Targeting Lists
+
+When link:admin-guide/configuring-targeting-and-marketing-cycles/add-a-new-division[the new division is specified] and
+link:admin-guide/configuring-targeting-and-marketing-cycles/create-a-marketing-cycle[assigned for the new marketing
+cycle]:
+
+* link:admin-guide/configuring-targeting-and-marketing-cycles/create-targeting-lists#h2__542322944[target Account and
+Contact records] that a user should visit during
+link:admin-guide/configuring-targeting-and-marketing-cycles/create-a-marketing-cycle[the marketing cycle period];
+* link:admin-guide/configuring-targeting-and-marketing-cycles/create-targeting-lists#h2__682035545[use a filter] to find
+untargeted records or to find records
+link:admin-guide/configuring-targeting-and-marketing-cycles/create-targeting-lists#h2_1108913478[that should be removed
+from targets].
+
+[[h2__542322944]]
+=== Specify Target Accounts and Contacts
+
+To target _Account_ and _Contact_ records:
+
+. Go to the *Accounts* tab.
+. Select a list view.
+. Select all records that should be targeted.
+. In the Lightning Experience, click the *Mass Manage Account Targets*
+button. In Salesforce Classic, use the *Manage Targets* button. 
+. In the *Targeting Management* window, select the _Account_ category
+and click the *Add as targets* button.
+[NOTE] ==== Categories will be available if
+the link:division-target-frequency-settings[Enable Category
+selection] is allowed. ====
+image:target-accounts.png[]
+. Go to the *Contacts* tab and repeat steps 2–5.
+image:target-cotacts.png[]
+
+The selected records are targeted. For selected _Account_ and _Contact_
+records, the _Target Frequency_ records will be created. 
+
+* The corresponding _Marketing Detail Tracking_ record will be related
+to the _Target Frequency_ record.
+For example, the _Account_ record with the *division category D* will be
+linked to link:admin-guide/configuring-targeting-and-marketing-cycles/create-a-new-record-of-marketing-detail-tracking[the
+created Marketing Detail Tracking record] with
+link:admin-guide/configuring-targeting-and-marketing-cycles/specify-categories-for-marketing-detail-tracking[the assigned
+division category D].
+* The _Marketing Detail Tracking_ record with the _Call Rate_ record
+type is segmented with the _Account/Contact_ reference to the client.
+
+[[h2__682035545]]
+=== Filtering Target Records
+
+To find untargeted records:
+
+. Go to the *Accounts (Contacts)* tab and click the funnel icon to show
+filter settings.
+. Click *Add Filter*.
+* Select _Is Target_** **in *Field*.
+* Select _equals_ in *Operator*.
+* Enter _false_** **in *Value*.
+. Click *Save*.
+
+Now, the untargeted records are displayed.
+
+[[h2_1108913478]]
+=== Remove Target Account and Contacts
+
+To target _Account_ and _Contact_ records:
+
+. Go to the *Accounts* tab.
+. Select a list view and use the filter to find targeted records, or
+manually select the required records.
+. In the Lightning Experience, click the *Mass Manage Account
+Targets* button. In Salesforce Classic, use the *Manage Targets*
+button. 
+. Click the *Remove from targets* button.
+. Click *OK* in the confirmation message.
+. Go to the *Contacts* tab and repeat steps 2–5.
+
+Records are removed from targets.

@@ -1,0 +1,66 @@
+= Work with Change Request: Update
+
+To update data of the _Account_ or _Contact_ record, users with the
+following roles are allowed to:
+
+. link:admin-guide/change-request-management/configure-a-new-change-request-update[As the administrator]:
+* reuse or create the fields to update on the _Change Request_ object;
+* create the _Change Request Mapping_ record.
+. link:admin-guide/change-request-management/work-with-change-request#h2__1795631670[As the
+representative], create a new _Change Request_ record and send it for
+approval.
+. link:admin-guide/change-request-management/work-with-change-request#ChangeRequestCreating-UpdateChangeRequestApproval[As
+the manager/supervisor], approve or reject the representative's _Change
+Request_ record.
+
+
+
+We
+recommend https://help.salesforce.com/articleView?id=admin_files_related_list_setup.htm&type=5[adding
+the _Change Request_ related list] on the__ Account__ and _Contact_ page
+layout to have an ability to manage change requests for
+an _Account_ or _Contact_ record.
+
+[[h2_1798626951]]
+=== Representative: Create a Change Request
+
+If the representative has
+link:/articles/project-ct-cpg/change-requests-management/a/h2__1657289809[the
+corresponding permissions], they can create a new _Change Request:
+Update_ record:
+
+. Go to the *Change Requests* tab, click *New*.
+[TIP] ==== Also, you can create a new record under the _Change
+Requests_ related lists on the specific _Account_ or _Contact_ record.
+====
+. Select the *Update* record type and click *Next*.
+. Add new value(s) for the specific field(s).
+. Click *Save*.
+
+The new _Change Request: Update_ record is created. The *Status* should
+be _Sent for verification_ if the representative wants to approve their
+request.
+
+[[h2__690152387]]
+=== Supervisor: Approve or Reject the Change Request
+
+When a representative created a new _Change Request: Update_ record with
+the _Sent for verification_ status, it is sent to
+link:/articles/project-ct-cpg/change-requests-management/a/h2__1657289809[the
+supervisor in charge].
+
+
+
+To approve a _Change Request: Update_ record:
+
+. Go to the *Change Requests* tab and select the required _Change
+Request_ record.
+. Click *Edit*.
+. Double-click a pencil next to the **Status **field and select
+link:admin-guide/change-request-management/change-request-field-reference[the required Status value from
+the picklist].
+. Click *Save*.
+
+If the _Change Request: Update_ record is approved, the representative
+sees the new value(s) in the target field(s) of the target object
+record. 

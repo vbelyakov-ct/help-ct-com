@@ -1,0 +1,77 @@
+= Reference Guide
+
+[TIP] ==== These settings are optional. ====
+
+In this section:
+
+* Get familiar with the link:cpg-group-field-reference[CPG Group]
+and link:cpg-group-member-field-reference[CPG Group Members]
+objects.
+* Take a look at the difference between
+link:admin-guide/cpg-groups-management/ref-guide/cpg-groups-management#h3__1554410513[static CPG groups] and
+link:admin-guide/cpg-groups-management/ref-guide/cpg-groups-management#h3__1007999912[dynamic CPG groups].
+* Learn link:admin-guide/cpg-groups-management/ref-guide/cpg-groups-management#h2_514682594[the SOQL builder
+options] to create criteria for a group.
+
+
+
+link:admin-guide/cpg-groups-management/index[Configure CT CPG groups] for managing
+[.object]#Contacts#,[.object]#Accounts#,
+[.object]#CT Products#_,_ [.object]#Users# or your
+custom object per single tasks or scheduled processes.
+
+[[h2_398360046]]
+=== Group Types
+
+The limit is equal to 500 thousand records per group. If there are more
+records, a warning is displayed.
+
+[[h3__1554410513]]
+==== Static Group
+
+A static group is a snapshot of records per specific time. It can be
+used to send ad hoc emails such as:
+
+* announcements;
+* invitations to the events;
+* special offers of products;
+* etc.
+
+[[h3__1007999912]]
+==== Dynamic Group
+
+Use dynamic groups to keep the lists of record per different objects up
+to date, e.g.:
+
+* to create a group of users for the onboarding process;
+* to create a group of clients who meet specific criteria, for example,
+were not visited during the last 2 weeks but have orders for more than $
+100 000;
+* to derive the list of the most popular products based on product sales
+or numeric distribution;
+* etc.
+
+[[h2_514682594]]
+=== SOQL Builder to Filter CPG Group Records
+
+SOQL Builder is used for creating a SOQL query to filter records in a
+CPG group.
+
+. On a high level, set up a query based on the parent object.
+. Add up to a maximum of two subqueries applied to children's records if
+needed.
+
+
+
+The SOQL builder buttons:
+
+* Click image:62558834.png[] to
+add criteria based on the fields of the object's record;
+* Click image:62558835.png[] to
+add criteria in the brackets;
+* Click image:62558838.png[] to
+add criteria based on the fields of the child object record;
+* Click image:62558844.png[]
+to launch validation of the query;
+
+image:62558847.png[]

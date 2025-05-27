@@ -1,0 +1,157 @@
+= Activity Report Interface
+
+*Activity Report* displays all information for the _CT CPG_ _Activity_
+record within one page and can help you to manage activities related to
+the particular user.
+
+. The main section displays details
+link:admin-guide/activity-report-management/ref-guide/activity-report-interface#h2_184470718[organized in a field
+set] for the selected _Activity_ record type. Click the link to view the
+configured _Activity Report_ page per each __CT CPG_ _Activity__ record
+type:
+:toc: :toclevels: 3
+. List of filters
+link:admin-guide/activity-report-management/create-a-new-filter-for-the-activities-list[that can be
+customized] for the current user's activities. The *Today* and *This
+Month* filters are available by default. 
+. List of the available activities that are matched the selected
+filter.
+[.confluence-information-macro-information]#Only not finished activities
+are displayed.#
+. According to the __CT CPG_ _Activity__ record type,
+link:admin-guide/activity-report-management/ref-guide/activity-data-field-reference[list of related tracking
+products] or event members
+link:admin-guide/targeting-and-marketing-cycles-management/index[based on the]
+_link:configuring-targeting-and-marketing-cycles.html[Marketing
+Cycle]_link:configuring-targeting-and-marketing-cycles.html[ record] if
+applied.
+.* The additional section with the available representative's _CT
+CPG Activities_ is available on the _Activity Report_ specified for the
+____CT CPG_ _Activity__ __with the _Joint Visit_ ** record type.
+
+
+image:588221171.png[]
+
+[[h2_683681312]]
+=== Activity Report: Visit
+
+Manage details of the _Activity_ with the _Visit_ record type within
+the _Activity Report Visit_ page.
+
+. The preconfigured field set with all required fields is used to fill
+out information during the visit;
+. The section with available activities helps to quickly jump to another
+activity of the current user. Use filters to display only matched
+activities;
+. The customized tabs show tracking products during the visit, such as
+company products, competitor products, POS materials, and inventory.
+Optionally, configure special tracking for objectives. 
+
+image:Activity-Report-Visit.png[]
+
+
+
+Go back to link:admin-guide/activity-report-management/ref-guide/activity-report-interface#ActivityReportpages[the
+list of Activity Report pages].
+
+[[h2_1673179481]]
+=== Activity Report: Event
+
+Manage details of the ___CT CPG_ _Activity___ with the _Event_ record
+type within the _Activity Report Event_ page.
+
+. The preconfigured field set with all required fields is used to fill
+out information during the event;
+. The section with available activities helps to quickly jump to another
+activity of the current user. Use filters to display only matched
+activities;
+. The customized tabs show participants of the event and expenses, such
+as roll-stands, promo materials, etc.
+
+image:Activity-Report-Event.png[]
+
+
+
+Go back to link:admin-guide/activity-report-management/ref-guide/activity-report-interface#ActivityReportpages[the
+list of Activity Report pages].
+
+[[h2__192515681]]
+=== Activity Report: Timeoff
+
+Manage details of the ___CT CPG_ _Activity___ with
+the _Timeoff_** **record type within the __Activity Report
+Timeoff __page.
+
+. The preconfigured field set with all required fields is used to fill
+out information during the visit.
+. The section with available activities helps to quickly jump to another
+activity of the current user. Use filters to display only matched
+activities.
+
+image:Activity-Report-Timeoff.png[]
+
+
+
+Go back to link:admin-guide/activity-report-management/ref-guide/activity-report-interface#ActivityReportpages[the
+list of Activity Report pages].
+
+[[h2__1426808308]]
+=== Activity Report: Joint Visit
+
+Manage details of the ___CT CPG_ _Activity___ with the _Joint
+Visit_** **record type within the _Activity Report Joint Visit_ page.
+
+. The preconfigured field set with all required fields is used to fill
+out information during the visit.
+. The section with available activities helps to quickly jump to another
+activity of the current user. Use filters to display only matched
+activities.
+. Select the representative's _CT CPG Activity_ that should relate to
+the__ Joint Visit__ record.
+. Add the _Report Template_ from the picklist with the assessment
+skills.
+
+image:Activity-Report-Joint-Visit.png[]
+
+
+
+Go back to link:admin-guide/activity-report-management/ref-guide/activity-report-interface#ActivityReportpages[the
+list of Activity Report pages].
+
+[[h2_184470718]]
+=== Field Sets Types
+
+_Visit_, _Event_, _Time Off_, and _Joint Visit_ are used to display
+required fields in the main section of the __Activity Report __page for
+the corresponding record type.
+
+image:field-set-example.png[]
+
+
+
+_Activities List_ is used for specifying columns of the list with
+available activities for the current user. This field set will be added
+to any _Activity Report_ pages regardless of the selected record
+type. 
+
+
+
+_CT CPG Activities_ whose status is finished are not displayed. The open
+_CT CPG Activity_ will be highlighted with *green* color. [TIP]
+==== link:admin-guide/activity-report-management/create-a-new-filter-for-the-activities-list[Add new
+filters] to display only matched _CT CPG Activity_ records. ====
+image:new-activities-list.png[]
+
+
+
+*Joint user activities* is used to display required columns of the list
+with the representative's _CT CPG Activities_ that can be selected to
+relate the _Joint Visit_ record on the _Activity Report_ page for
+the __Joint Visit __record type.  
+
+image:joint-user-activities-example.png[]
+
+
+
+Go back to link:admin-guide/activity-report-management/ref-guide/activity-report-interface#ActivityReportpages[the
+list of Activity Report pages]. 

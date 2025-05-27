@@ -1,0 +1,63 @@
+= Create a new Record of Calendar Tab Settings
+
+Calendar tab settings are responsible for the visibility of the CT CPG
+Calendar tabs. Create a customized calendar tab view for required user
+roles and profiles.
+
+
+
+We recommended the following visibility of the tabs:
+
+
+
+[width="100%",cols="34%,33%,33%",]
+|===
+|*Representative* |*Supervisor / Manager* |*Administrator*
+
+a|
+The representative should have the ability to manage their activities
+and Activity Reports.
+
+* Table View
+* Hierarchy View (optional)
+
+a|
+The supervisors should have the ability to view representatives'
+activities, train representatives, and estimate their work by using
+Joint Visit Reports. 
+
+* Table View
+* Hierarchy View (optional)
+* Employees Calendar
+* List Views (optional)
+
+a|
+The administrator should have the ability to customize Calendar for each
+user role and creates the list views.
+
+* Table View
+* Hierarchy View
+* Employees Calendar
+* Settings
+* List Views
+
+|===
+
+[[h2__718662688]]
+=== Create a Calendar Tab Settings Record
+
+To create a new calendar tab setting:
+
+. Go to *Setup* → **Custom Code **→ *Custom Settings.*
+. Click *Manage* next to *Calendar Tab Settings*.
+. On the next page, click *New* to create a new record or click Edit to
+manage the global record for the whole Salesforce organization:
+[TIP] ==== Read the description of each
+parameter link:calendar-tab-settings[here].   ====
+* Specify *The Default Tab* to open when a user goes to the Calendar
+tab;
+* Select available tabs to view according to the user role, for example,
+*Hierarchy View Tab* and *List Views Tab*.
+. Click *Save*.
+
+The setup is complete.

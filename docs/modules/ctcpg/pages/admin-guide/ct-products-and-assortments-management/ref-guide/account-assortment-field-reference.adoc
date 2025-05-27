@@ -1,0 +1,39 @@
+= Account Assortment Field Reference
+
+The[.object]#Account Assortment# ** object is used
+link:admin-guide/configuring-ct-products-and-assortments/assign-assortments-to-accounts[to map assortments and
+accounts].
+
+'''''
+
+API name in Salesforce: CTCPG__AccountAssortment__c
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Account |CTCPG__AccountId__c |Lookup(Account) |The
+_Account_ record to which the
+_link:assortment-field-reference.html[Assortment]_ is assigned.
+
+|Active |CTCPG__IsActive__c |Checkbox |If selected,
+the record is active and applied in business logic.
+
+|Assortment         |CTCPG__AssortmentId__c
+|Lookup(Assortment)         |The related _Assortment_ record.
+
+|Description  |CTCPG__Description__c |Long Text
+Area(32768) |Specify the additional information.
+
+|End Date |CTCPG__EndDate__c |Checkbox |Specify the last day
+when the _Assortment_ can be selected for the _Account_ record.
+
+|Primary |CTCPG__IsTarget__c |Formula(Text) |If selected, the
+_Assortment_ will be displayed first on the *Activity Report* tab.
+
+|Start Date |CTCPG__TargetUserIds__c |Text Area(255)
+|Specify the first day when the _Assortment_ can be selected for
+the _Account_ record.
+|===

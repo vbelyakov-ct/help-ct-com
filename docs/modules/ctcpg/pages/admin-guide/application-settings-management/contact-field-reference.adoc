@@ -1,0 +1,54 @@
+= Contact Field Reference
+
+The following fields are created on the standard
+[.object]#Contact# object during the CT CPG installation.
+
+[NOTE] ==== In case of link:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[creating new
+divisions], the Division[.underline]#Name#Category__c ====  field
+with the category picklist and
+the Division[.underline]#Name#TargetCheck__c checkbox, where Name is
+the new division name, should be created.   
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Division Alpha Category |CTCPG__DivisionAlphaCategory__c
+|Picklist a|
+The C__ontact__ category that used to assign the target frequency to the
+selected C__ontact__ record. Available values by default:
+
+* Store manager
+* Category manager
+* Supervisor
+
+[NOTE] ==== It is possible link:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[to
+create a new division]. ====
+
+|Division Alpha Target |CTCPG__DivisionAlphaTargetCheck__c
+|Checkbox |The field is checked if the C__ontact__ record has been
+assigned to the specified category.
+
+|Division Beta Category |CTCPG__DivisionBetaCategory__c
+|Picklist a|
+The _Contact_ category that used to assign the target frequency to the
+selected C__ontact__ record. Available values by default:
+
+* Store manager
+* Category manager
+* Supervisor
+
+|Division Beta Target |CTCPG__DivisionBetaTargetCheck__c
+|Checkbox |The field is checked if the C__ontact__ record has been
+assigned to the specified category.
+
+|Is Auto Target Field Check? |CTCPG__IsAutoTargetCheck__c
+|Checkbox |
+
+|Is Target? |CTCPG__IsTarget__c |Formula(Text) |The field is
+checked if the C__ontact__ record has been selected as a target.
+
+|Target User Ids |CTCPG__TargetUserIds__c |Text Area(255)
+|Store the values from the CTCPG__UniqUserNumber__c field of
+the _User_ record that targeted the__ Contact__ record.
+|===

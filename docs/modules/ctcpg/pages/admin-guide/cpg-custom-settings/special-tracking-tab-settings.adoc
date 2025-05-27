@@ -1,0 +1,55 @@
+= Special Tracking Tab Settings
+
+*Special Tracking Tab Settings* is used to display
+link:admin-guide/targeting-and-marketing-cycles-management/create-a-new-record-of-marketing-detail-tracking#h2_726145408[tracking tasks
+and objectives] on the tab of
+the link:admin-guide/activity-report-management/ref-guide/activity-report-interface#h2_683681312[Activity
+Report] page for the specific user or
+profile link:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[based on the division category]. 
+
+By default, there is the setting for the whole Salesforce organization.
+To enhance or restrict a particular user or profile access,
+link:admin-guide/activity-report-management/configure-ct-product-tabs[create a new record].
+
+'''''
+
+API name: CTCPG__SpecialTrackingTab__c
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Active  |CTCPG__IsActive__c |Checkbox  |If selected, the
+setting is active, and created records will be pulled to the
+corresponding _Activity Report_.
+
+|Boolean Answer Field Name |CTCPG__BooleanAnswerFieldName__c
+|Text (255)  |Specify the field API name with the checkbox type on the
+link:admin-guide/activity-report-management/ref-guide/activity-data-field-reference[Activity Data] __ object, which
+is used to store logical values in created records.
+
+|Currency Answer Field Name |CTCPG__CurrencyAnswerFieldName__c
+|Text (255) |Specify the field API name with the currency type on
+the link:admin-guide/activity-report-management/ref-guide/activity-data-field-reference[Activity Data] object, which
+is used to store currency values in created records.
+
+|Number Answer Field Name |CTCPG__NumberAnswerFieldName__c
+|Text (255) |Specify the field API name with the number type on the
+link:admin-guide/activity-report-management/ref-guide/activity-data-field-reference[Activity Data] object, which is
+used to store number values in created records.
+
+|Record Type Developer Name
+|CTCPG__RecordTypeDeveloperName__c |Text (255) |Specify the
+list of API names of _Activity_ record types to display the *Special
+Tracking* tab on the _Activity Report_ page (separated by a comma,
+without blank spaces).
+
+|Text Answer Field Name |CTCPG__textAnswerFieldName__c |Text
+(255)  |Specify the field API name with the text type on the
+link:admin-guide/activity-report-management/ref-guide/activity-data-field-reference[Activity Data]__ __object, which
+is used to store text values in created records.
+|===
+
+

@@ -1,0 +1,53 @@
+= ProductProcess
+
+[[h1__1139156842]]
+== 
+
+The ** _ProductProcess_ trigger is responsible for recalculating
+link:admin-guide/cpg-groups-management/ref-guide/index[CPG Groups] of
+_link:ct-products-and-assortments-management.html[CT Products]_.
+
+'''''
+
+API name: ProductProcess
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Context* |*Method* |*Codename* |*Description*
+
+|after insert[au]  |calculateGroupMembers() |gm a|
+Verify that the created record of the CTCPG__Product__с object
+is matched the conditions of the existing _CPG Group_ records.
+
+
+
+If found, a _CPG Group Member_ record is created for this particular
+record and the corresponding _CPG Group_. 
+
+|after update[au]  |calculateGroupMembers() |gm a|
+Verify that the updated record of the  CTCPG__Product__с object
+is matched the conditions of the existing _CPG Group_ records.
+
+
+
+If found, a _CPG Group Member_ record is created for this particular
+record and the corresponding _CPG Group_. 
+
+|[.apiobject]#after undelete [aud]#
+|calculateGroupMembers() |gm a|
+Verify that the restored record of the CTCPG__Product__с object
+is matched the conditions of the existing _CPG Group_ records.
+
+
+
+If found, a _CPG Group Member_ record is created for this particular
+record and the corresponding _CPG Group_.
+
+|before delete[bd]  |deleteteGroupMembers() |gm |Search and
+delete the _CPG Group Members_ records of CTCPG__Product__с
+object that are being deleted. 
+|===
+
+

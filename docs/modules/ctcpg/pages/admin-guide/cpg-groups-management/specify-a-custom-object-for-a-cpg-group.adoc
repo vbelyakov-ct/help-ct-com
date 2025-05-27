@@ -1,0 +1,61 @@
+= Specify a Custom Object for a CPG Group
+
+It is possible to specify desired objects that should be used in a
+static or dynamic group.
+
+[[h2_1226814596]]
+=== Add a Custom Object
+
+Add a required object as a new group type:
+
+. Go to *Setup → Object Manager → CPG Group → Fields & Relationships →
+Group Type*.
+. In the *Values* section, click *New*.
+. As the picklist values, add the API name of an object you like to use
+and click *Save*.
+The API name must be written with a namespace prefix (if any) and
+postfix (if any). You may set any label for this picklist value.
+. Go to *Object Manager → CPG Group Member →* click *New*.
+. Create a lookup from the *CPG Group Member* to the object you
+specified in step 3.
+[NOTE] ==== There must be only one lookup field for one object.
+Otherwise, we may not guarantee which lookup will be in use. ====
+
+The setup is complete.
+
+[[h2_1560790028]]
+=== Set up Apex Class and Trigger
+
+We recommend changing names of the given below Apex class and trigger to
+match your naming convention.
+
+To apply the dynamic group logic to objects, customize and add Apex
+class and trigger.
+
+. In the Test_DynamicGroupExtension.cls Apex class, check the
+package name and specify API name of the required group object
+within /** SETUP THIS*/ and /** FINISH SETUP*/ . 
+
+.Click to view[%collapsible] ==== *Click to see the Apex class*
+==== .Click to hide[%collapsible] ====
+
+
+
+====
+. In the DynamicGroupExtensionProcess.trigger Apex trigger:
+* Check the package name.
+* Instead of OBJECT_API_NAME, enter the API name of the required
+group object.
+
+.Click to view[%collapsible] ==== *Click to see the Apex
+trigger* ==== .Click to hide[%collapsible] ====
+
+
+
+====
+. Deploy the customized Apex class and trigger to your Salesforce
+instance using your
+IDE, https://workbench.developerforce.com/metadataDeploy.php[Workbench], https://developer.salesforce.com/tools/sfdxcli[SFDX],
+or any other tool.
+
+The setup is complete.

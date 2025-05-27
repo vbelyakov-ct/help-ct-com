@@ -1,0 +1,27 @@
+= MarketingCycleProcess
+
+*MarketingCycleProcess* is intended to mass deactivate _Target
+Frequency_ records if link:admin-guide/targeting-and-marketing-cycles-management/create-a-marketing-cycle[a _Marketing
+Cycle_ record] is no more active.
+
+'''''
+
+API name in Salesforce: MarketingCycleProcess
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Context* |*Method* |*Codename* |*Description*
+
+|after update  |deactivateTargetFrequency() |deactivateTF a|
+Deactivate all _Target Frequency_ records after the related _Marketing
+Cycle_ record deactivation.
+
+
+
+The used Apex class: Batch_MarketingCycleProcessor.
+
+|===
+
+

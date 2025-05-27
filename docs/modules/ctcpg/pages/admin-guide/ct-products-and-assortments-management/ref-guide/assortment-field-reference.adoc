@@ -1,0 +1,37 @@
+= Assortment Field Reference
+
+The *Assortment* object represents link:admin-guide/configuring-ct-products-and-assortments/create-an-assortment[a
+unique set of products] available during a specific period, based on the
+brands, families, and hierarchy sets in your product catalogs, and
+promoted for the particular accounts. 
+
+'''''
+
+API name in Salesforce: CTCPG__Assortment__c
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Active |CTCPG__IsActive__c |Checkbox |If selected,
+the record is active and applied in business logic.
+
+|Default Assortment |CTCPG__IsDefault__c |Checkbox |If
+selected, the _Assortment_ record will be used as the default for
+_Accounts_ without assigned assortments.
+
+|Description |CTCPG__Description__c |Long Text Area(32768)
+|Specify information about the assortment.
+
+|End Date         |CTCPG__EndDate__c |Date |Specify the
+last date of the _Assortment_ availability.
+
+|Start Date |CTCPG__StartDate__c |Date |Specify the first date
+of the _Assortment_ availability.
+
+|Total products |CTCPG__TotalProducts__c |Roll-Up Summary
+(COUNT Assortment Product) |Used to view the total products in the
+_Assortment_ record.
+|===

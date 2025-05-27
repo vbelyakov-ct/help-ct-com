@@ -1,0 +1,37 @@
+= Activity Report Filters
+
+*Activity Report Filters* is a setup to
+link:admin-guide/activity-report-management/create-a-new-filter-for-the-activities-list[manage filters]
+for the available activities in the *Activities List* __ section on the
+_link:activity-report-interface.html[Activity Report]_ page.
+
+[.confluence-information-macro-information]# By default, the *Today* and
+*This Month* filters are available. #
+
+'''''
+
+API name: CTCPG__ActivityReportFiters__c
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Default Filter |CTCPG__IsDefault__c |Checkbox |If enabled,
+the filter will be shown as default. 
+
+|Filter Is Active |CTCPG__IsActive__c |Checkbox |If enabled,
+the filter is available on the _Activity Report_ page.
+
+|Filter Label |CTCPG__Label__c |Text(255) |The filter name in
+the list on the _Activity Report_ page. 
+
+|Filter Order |CTCPG__Order__c |Number(18,0) |The order number
+for the filter on the _Activity Report_ page.  
+
+|Filter Query |CTCPG__FilterQuery__c |Text(255) |Specify the
+SOQL filter.
+[.confluence-information-macro-note]#To filter records, the criteria
+line should start with the[.apiobject]#WHERE# keyword.#
+|===

@@ -1,0 +1,28 @@
+= QuizProcess
+
+_QuizProcess_ is intended to manage object records that take part in
+link:admin-guide/quizzes-management/ref-guide/index[Quiz Management].
+
+[NOTE] ==== The trigger updates records without specifying any
+additional logic. ====
+
+'''''
+
+API name in Salesforce: QuizProcess
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Context* |*Method* |*Codename* |*Description*
+
+|after insert  | |[.apiobject]#ai# |For the _Quiz_ record,
+create the related _Quiz Answer_, _Quiz Completion_, _Quiz Partaker_,
+_Quiz Question_ records.
+
+|after update | |[.apiobject]#au# |For the _Quiz_ record,
+update _Quiz Answer_, _Quiz Completion_, _Quiz Partaker_, _Quiz
+Question_ records.
+|===
+
+

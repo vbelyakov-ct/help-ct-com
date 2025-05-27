@@ -1,0 +1,50 @@
+= List of Metadata Components Removed from CT CPG Package
+
+To view metadata components included in the current installed CT CPG
+version in your Salesforce org:
+
+. Go to *Setup → Apps → Packaging → Installed Packages*.
+. Click _CT CPG_ in the *Package Name* field.
+. Click the *View Components* button.
+
+The list of metadata components opens.
+
+
+
+The list of metadata components that were removed from the CT CPG
+managed package:
+
+
+
+[width="100%",cols="^25%,^25%,^25%,25%",]
+|===
+|*Name* |*Parent Object* |*Type* a|
+*Available in Versions*
+
+|activityid |Report Template |Custom Field |1.4 - 1.8
+
+|cutanswersto255characters |Question |Validation Rule |1.0 - 1.14
+
+|deliverydates |Account |Custom Field |1.20 - 1.26
+
+|fcdev | |Static Resource |1.0 - 1.15
+
+|groupprocess | |Apex Trigger |1.16 - 1.23
+
+|groupprocesshandler | |Apex Class |1.23
+
+|pharma activity data layout |Activity Data |Page Layout |1.0 -
+1.8
+
+|pharma product layout |CT Product |Page Layout |1.0 - 1.30
+
+|queueabledynamicgroup | |Apex Class |1.16 - 1.22
+
+|schedule_deletedynamicgroup | |Apex Class |1.16 - 1.22
+
+|test_groupprocess | |Apex Class |1.23
+
+|test_queueabledynamicgroup | |Apex Class |1.16 - 1.22
+
+|userid |Report Template |Custom Field |1.4 - 1.8
+|===

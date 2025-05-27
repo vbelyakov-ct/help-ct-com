@@ -1,0 +1,74 @@
+= Create the Next Activity
+
+According to your purpose, create the new _CT CPG Activity_ record based
+on the data from the finished _CT CPG Activity_ record. The _Next
+Activity_ functionality should
+link:admin-guide/next-activity-management/enable-the-next-activity-functionality[be enabled].
+
+:toc: :toclevels: 3
+
+[[h2_1866342880]]
+=== Create the Next Activity without filling out the preconfigured fields
+
+Use the *Next Call Date* field of the _CT CPG Activity_ record to
+automatically create a new _CT CPG Activity_ record on the specific date
+when the status of the previous _CT PG Activity_ record changed to
+finished.
+
+
+
+To create the _Next Activity_ record only once:
+
+. Go to the CT CPG Calendar and create a new _CT CPG Activity_ record
+with the _Visit_ record type.
+. Open the created _CT CPG Activity_ record.
+
+[TIP] ==== Also, you can open the required _CT CPG Activity_
+from the *Calendar* or *Activity Reports* tab. ====
+. In the *Next Call Date* field, specify the date and time of the next
+_CT CPG Activity_.
+. Click *Save*.
+
+The _CT CPG Activity_ is created.
+
+
+
+When a representative finishes the created _CT CPG Activity_ record, a
+next _CT CPG Activity_ record for the same _Account_ and/or _Contact_
+record will be created on the date and time specified in the *Next Call
+Date* field of the finished _CT CPG Activity_ record.
+
+[[h2__59151681]]
+=== Create the Next Activity and fill out the preconfigured fields
+
+[NOTE] ==== Before creating the _CT CPG Activity_ records,
+specify the required fields and values
+link:admin-guide/next-activity-management/create-a-new-record-of-next-call-settings[in the Next Call
+Settings record]. ====
+
+To create the _Next Activity_ record:
+
+. Go to the CT CPG Calendar and create a new _CT CPG Activity_ record
+with the _Visit_ record type.
+. Open the created _CT CPG Activity_ record.
+
+[TIP] ==== Also, you can open the required _CT CPG Activity_
+from the *Calendar* or *Activity Reports* tab. ====
+. Specify the required fields:
+* In the *Next Call Date* field, specify the date and time of the next
+_CT CPG Activity_.
+* Fill out the field(s) that are selected for the _Next Activity_
+functionality.
+. Click *Save*.
+
+The _CT CPG Activity_ is created.
+
+
+
+When a representative finishes the created _CT CPG Activity_ record, a
+next _CT CPG Activity_ record for the same _Account_ and/or _Contact_
+record will be created on the date and time specified in the *Next Call
+Date* field of the finished _CT CPG Activity_ record. Value(s) from the
+field(s) that are selected for the _Next Activity_ functionality of the
+finished _CT CPG Activity_ record will be copied to the corresponding
+field(s) of the next _CT CPG Activity_ record.

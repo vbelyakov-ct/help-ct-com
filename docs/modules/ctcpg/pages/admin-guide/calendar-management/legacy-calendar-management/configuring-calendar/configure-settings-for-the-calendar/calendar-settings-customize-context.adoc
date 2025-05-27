@@ -1,0 +1,59 @@
+= Calendar Settings: Customize Context
+
+In this section, specify the available _CT CPG Activity_ record types
+when a user right-clicks to create a _CT CPG Activity_ record on the
+Calendar grid on
+the link:admin-guide/new-calendar-management/legacy-calendar-management/configuring-calendar/manage-activities-on-the-table-view-tab[Table View],
+link:admin-guide/new-calendar-management/legacy-calendar-management/configuring-calendar/manage-activities-on-the-hierarchy-view-tab[Hierarchy View],
+and/or
+link:admin-guide/new-calendar-management/legacy-calendar-management/configuring-calendar/manage-activities-on-the-employees-calendar-tab[Employees
+Calendar] tab.
+
+
+
+To set up click actions and available _CT CPG Activity_ record types:
+
+. On the Calendar__:__ *Settings* tab, in the *Customize Context*
+section, select a profile.
+If you do not have any configured profiles, the** Global** setting will
+be displayed in the field and will be applied to all non-configured
+profiles.
+. Click the *Add Context Action* button to add a new setting line.
+. Specify the following:
+* In the *Action Name* field, enter the name for the _CT CPG Activity_
+type. For example, you can use labels of the corresponding record type,
+such as _Event_ or _Visit_.
+* In the *Activity Type* field, select the _CT CPG Activity_ record
+type. 
+* Select the *Table*, *Hierarchy*, and/or *Employee* checkbox to have
+the ability to create a _CT CPG Activity_ record of the selected record
+type on the selected *Table View*, *Hierarchy View*, and/or *Employees
+Calendar* tab. 
+[NOTE] ==== Record types added as a context action are available
+by left-clicking regardless of the selected checkboxes.
+
+link:calendar-settings-calendar-setup[Set the *Disable Left Click*
+checkbox] to restrict the creation of the _CT CPG Activity_ by a
+left-click. Users will then be able to create the _CT CPG Activity_
+records only with specific record types and only by a right-click. ====
+image:Settings-Customize-Context.png[]
+. Click *Save*.
+
+The setup is complete.
+
+
+
+When a user left-clicks on the Calendar grid of the *Calendar* tab, all
+added record types are available to select.
+
+image:Customize-Context-Example-1.png[]
+
+
+
+When a user right-clicks on the Calendar grid of the specific *Calendar*
+tab, only allowed record types are available to select.
+
+[.confluence-information-macro-information]#
+link:admin-guide/new-calendar-management/legacy-calendar-management/configuring-calendar/configure-settings-for-the-calendar/calendar-settings-mass-actions[If the _Mass Actions_ are
+enabled], the available actions will be displayed too. #
+image:Customize-Context-Example-2.png[]

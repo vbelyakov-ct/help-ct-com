@@ -1,0 +1,40 @@
+= Manage CT CPG Triggers
+
+It is possible not only link:admin-guide/triggers-management/enabling-the-bypass-logic[the restrict
+the trigger event] but also to manage the whole CT CPG trigger.
+
+* create a new Trigger Setting record to activate the CT CPG trigger;
+* deactivate the CT CPG trigger in case of using the custom trigger
+logic.
+
+[[h2_527552279]]
+=== Activate a CT CPG trigger
+
+Some CT CPG triggers are active by default. If you have updated the CT
+CPG package and new triggers have been added, specify a _Trigger
+Settings_ record for each one to activate them. 
+
+. Go to *Setup → Custom Code → Custom Settings*.
+. Click *Manage* next to *Trigger Settings*. 
+. Click *New*.
+. Specify a new record for the specific CT CPG trigger.
+[TIP] ==== Read the description of each
+parameter link:trigger-settings[here]. ====
+* specify the trigger name;
+* set active.
+. ​Click *Save*.
+
+The setup is complete.
+
+[[h2__1834731254]]
+=== Deactivate a CT CPG trigger
+
+To deactivate a CT CPG trigger:
+
+. Go to *Setup → Custom Code → Custom Settings*.
+. Click *Manage* next to *Trigger Settings*. 
+. Click *Edit* next to _a CT CPG trigger_ you want to configure.
+. Deselect the *Active* field. 
+. [.confluence-embedded-file-wrapper .confluence-embedded-manual-size]#Click *Save*.#
+
+The setup is complete.

@@ -1,0 +1,25 @@
+= UserProcess
+
+The _UserProcess_ trigger is intended to
+manage _link:user-field-reference.html[User]_ records.
+
+'''''
+
+API name in Salesforce: UserProcess
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Context* |*Method* |*Codename* |*Description*
+
+|after insert[ai] |setUniqUserNumber() |setUUNF
+|Populate the CTCPG__UniqUserNumber__c field on
+the _User_ record. 
+
+|before update[bd] |setUniqUserNumber() |setUUN
+|Update the CTCPG__UniqUserNumber__c field on the _User_
+record.
+|===
+
+

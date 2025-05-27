@@ -1,0 +1,33 @@
+= Enabling the Bypass Logic
+
+The *Bypass Logic* functionality is intended to restrict the execution
+of one or several trigger methods by deactivating the specific trigger
+context(s) or methods. 
+To restrict execution of a method invoked by the trigger context:
+
+. Go to *Setup → Custom Code → Custom Settings*.
+. Click *Manage* next to *Trigger Settings*. 
+image:/resources/Storage/project-snippets-drafts/bypass-logic/cpg-manage-trigger-settings.png[/resources/Storage/project-snippets-drafts/bypass-logic/cpg-manage-trigger-settings]
+. Click *Edit* next to _a CT CPG trigger_ you want to configure.
+[TIP] ==== If you updated the CT CPG package, some triggers will
+not be added to the *Trigger
+Settings* list. link:admin-guide/triggers-management/manage-ct-cpg-triggers[Add a record] with the
+specific CT CPG trigger name.  ====
+. In the *Bypass Logic* field, specify the trigger contexts or methods
+that should not be invoked. For example: ai,bd (where ai stands for
+after insert and bd stands for before delete)
+or [.apiobject]#au_createRD# (where[.apiobject]#au#
+stands for[.apiobject]#after update# and
+[.apiobject]#createRD# stands for
+[.apiobject]#createRelatedData#). 
+[TIP] ==== In order to disable the logic of creating
+_Activity_ objects' records (either for standard or custom _Activity_
+objects), for *ActivityProcess* trigger
+specify `createRelatedActivities` in the *Bypass logic* field. ====
+. Select the *Active* checkbox.
+. [.confluence-embedded-file-wrapper .confluence-embedded-manual-size]#Click
+*Save*.
+image:/resources/Storage/project-snippets-drafts/bypass-logic/cpg-pharma-bypass-trigger-setting.png[/resources/Storage/project-snippets-drafts/bypass-logic/cpg-pharma-bypass-trigger-setting]
+#
+
+The setup is complete.

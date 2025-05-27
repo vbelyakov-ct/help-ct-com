@@ -1,0 +1,32 @@
+= Calendar Settings: Event Creation Pop-up Window Setup
+
+In this section, customize a pop-up that will be displayed after a user
+selects a record type to create a CT CPG Activity record. 
+
+
+
+To create a pop-up:
+
+. On the Calendar: __ *Settings* tab, in the *Event Creation Pop-up
+Window Setup* section, select a record type.
+. Set the **Show popup **checkbox to enable the pop-up to display.
+. Specify the following:
+* In the *Field Value* field, select a field. Specify up to 10 fields to
+display in a pop-up.
+* Set the *Required* attribute if the field should be filled out in the
+pop-up. If the representative leaves this field blank, the *Create*
+button will be locked.
+image:Settings-Event-Creation-Pop-up-Window-Setup.png[]
+. Click *Save*.
+
+The setup is complete.
+
+
+link:admin-guide/new-calendar-management/legacy-calendar-management/configuring-calendar/configure-settings-for-the-calendar/calendar-settings-customize-context[When a representative
+left-clicks/right-clicks] on the Calendar grid and selects the
+appropriate _CT CPG Activity_ record type, the pop-up will be displayed.
+
+The *Start Date* and *End Date* fields are displayed by default and
+cannot be hidden.
+
+[.confluence-embedded-file-wrapper .confluence-embedded-manual-size]#image:Settings-Event-Creation-Pop-up-Window-Setup-Example.png[]#

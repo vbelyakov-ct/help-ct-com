@@ -1,0 +1,53 @@
+= Create an Assortment
+
+Use assortments based on the clients' business size, contracts, loyalty,
+or other attributes to promote your lists of products for different
+types of clients. 
+
+* link:admin-guide/configuring-ct-products-and-assortments/create-an-assortment#h2_1975088561[Create a new assortment]
+that represents the list of available products as a unit.
+* link:admin-guide/configuring-ct-products-and-assortments/create-an-assortment#h2__1291616949[Add CT Products] to the
+assortment:
+** the same products can be used in more than one assortment;
+** the _Assortment_ record and _CT Product_ records should be active.
+
+[[h2_1975088561]]
+=== Create an Assortment
+
+To create an assortment:
+
+. Go to the *Assortments* tab and click *New*.
+. Fill in the assortment parameters, such as: 
+[TIP] ==== Read the description of each parameter
+link:assortment-field-reference[here]. ====
+* Enter the *Assortment* name;
+* Specify the *Start Date* and *End Date* of the assortment promotion;
+* Set *Default Assortment* to use this record as default for
+all _Accounts_ link:admin-guide/configuring-ct-products-and-assortments/assign-assortments-to-accounts[without personal
+assortments];
+* Set *Active*.
+image:new-assortment.png[]
+. Click *Save*.
+
+The setup is complete. Now, add products to the new assortment.
+
+[[h2__1291616949]]
+=== Add CT Products to Assortment
+
+To add a product to the assortment:
+
+. Go to the *Assortments* tab and click on the required _Assortment_
+record.
+. On the *Related* tab, click *New* in the *Assortment Products*
+section.
+. Specify parameters:
+[TIP] ==== Read the description of each
+parameter link:assortment-product-field-reference[here]. ====
+* In the *CT Product* picklist, select the required product.
+* In the *Sort Order* field, enter a number of the product position in
+the assortment.
+* Set *Required* if needed.
+image:new-assortment-product.png[]
+. Click *Save*.
+
+The assortment is created.
