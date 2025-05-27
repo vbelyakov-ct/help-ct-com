@@ -55,3 +55,9 @@
   hyphens: none; /* Стандартное свойство */
   word-break: keep-all;
 }
+
+div.listingblock pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
