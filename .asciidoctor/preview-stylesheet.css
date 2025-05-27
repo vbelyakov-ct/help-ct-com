@@ -2629,11 +2629,13 @@ nav.pagination .next a::after {
     --caution-on-color: var(--color-white);
     --important-color: #d32f2f;
     --important-on-color: var(--color-white);
-    --note-color: #217ee7;
+    --note-color: #f0c36d;
+    /* --note-color: #217ee7;  default */
     --note-on-color: var(--color-white);
     --tip-color: #41af46;
     --tip-on-color: var(--color-white);
-    --warning-color: #e18114;
+    --warning-color: #e0705c;
+    /* --warning-color: #e18114; /* default */
     --warning-on-color: var(--color-white);
     /* doc */
     --doc-font-color: var(--color-jet-50);
@@ -2722,4 +2724,8 @@ table.highlighted-table > thead > tr,
 table.highlighted-table > tbody > tr:first-child {
     background-color: #c0c0c0;
     font-weight: bold;
+}
+
+div.admonitionblock.note td.icon .title {
+    color: #f4b400; /* насыщенно-жёлтый (можно поменять) */
 }

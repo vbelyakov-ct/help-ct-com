@@ -8,4 +8,9 @@
 
 Read the xref:admin-guide/connect-salesforce-with-the-application-service-and-e-signature-provider.adoc[Create and Set Up the DocuSign Account] article to create a DocuSign app, obtain the required values and the DocuSign Connect credentials.
 
+[WARNING]
+====
+Please re-enter DocuSign parameters after promoting your integration key from your developer account to a production DocuSign account. Documents sent from the developer DocuSign account are not legally binding and are watermarked.
+====
+
 image::CT-Sign-Control-Panel-Overview.png[align="center"]
