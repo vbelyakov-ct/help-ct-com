@@ -6,24 +6,24 @@ configuring the targeting and marketing cycles process.  ====
 In this section:
 
 * Get familiar with the default Targeting settings, such as records of
- xref:admin-guide/configuring-targeting-and-marketing-cycles/ref-guide/targeting-and-marketing-cycle-management#h2__1971775911[Division
+link:admin-guide/configuring-targeting-and-marketing-cycles/ref-guide/targeting-and-marketing-cycle-management#h2__1971775911[Division
 Target Frequency Settings] and
- xref:admin-guide/configuring-targeting-and-marketing-cycles/ref-guide/targeting-and-marketing-cycle-management#h2_890863050[Target
+link:admin-guide/configuring-targeting-and-marketing-cycles/ref-guide/targeting-and-marketing-cycle-management#h2_890863050[Target
 Frequency Settings].
 * Learn about
-the  xref:admin-guide/configuring-targeting-and-marketing-cycles/ref-guide/targeting-and-marketing-cycle-management#h2__252001192[Marketing
+the link:admin-guide/configuring-targeting-and-marketing-cycles/ref-guide/targeting-and-marketing-cycle-management#h2__252001192[Marketing
 Detail Tracking object] and
-the  xref:admin-guide/configuring-targeting-and-marketing-cycles/ref-guide/targeting-and-marketing-cycle-management#h2__1482834092[preconfigured
+the link:admin-guide/configuring-targeting-and-marketing-cycles/ref-guide/targeting-and-marketing-cycle-management#h2__1482834092[preconfigured
 Marketing Cycle record].
 * Read field description for
-the  xref:marketing-detail-tracking-field-reference[Marketing Detail
-Tracking],  xref:marketing-cycle-field-reference[Marketing
-Cycle], and  xref:target-frequency-field-reference[Target
-Frequency] xref:skill-mark-field-reference[ ]objects.
+the link:marketing-detail-tracking-field-reference[Marketing Detail
+Tracking], link:marketing-cycle-field-reference[Marketing
+Cycle], and link:target-frequency-field-reference[Target
+Frequency]link:skill-mark-field-reference[ ]objects.
 
 
 
- xref:admin-guide/configuring-targeting-and-marketing-cycles/index[Configure targeting
+link:admin-guide/configuring-targeting-and-marketing-cycles/index[Configure targeting
 based on a marketing cycle] according to your business needs.  
 
 [[h2__1971775911]]
@@ -31,7 +31,7 @@ based on a marketing cycle] according to your business needs.  
 
 By default, the *Alpha* and *Beta* records of the _Division Target
 Frequency Settings_ are created. These divisions are specified
-in  xref:application-settings-management[the default _Global_ record
+in link:application-settings-management[the default _Global_ record
 of the Application Settings]. 
 
 * *Alpha*
@@ -41,13 +41,13 @@ image:beta-division-target-frequency.png[]
 
 
 
-You can create  xref:admin-guide/configuring-targeting-and-marketing-cycles/add-a-new-division[new divisions] and specify
+You can create link:admin-guide/configuring-targeting-and-marketing-cycles/add-a-new-division[new divisions] and specify
 them in the _Default Target Frequency Settings_ records.
 
 [[h2_890863050]]
 === Target Frequency Settings
 
-The  xref:target-frequency-settings[Target Frequency Settings]
+The link:target-frequency-settings[Target Frequency Settings]
 records are not in use. 
 
 [[h2__1482834092]]
@@ -63,16 +63,16 @@ image:sample-marketing-cycle.png[]
 
 
 
- xref:admin-guide/configuring-targeting-and-marketing-cycles/create-a-marketing-cycle[Create a new Marketing Cycle
+link:admin-guide/configuring-targeting-and-marketing-cycles/create-a-marketing-cycle[Create a new Marketing Cycle
 record] with the appropriate parameters
-and  xref:admin-guide/configuring-targeting-and-marketing-cycles/enable-activity-linking-to-the-marketing-cycle[enable the
+and link:admin-guide/configuring-targeting-and-marketing-cycles/enable-activity-linking-to-the-marketing-cycle[enable the
 required activity linking].
 
 [[h2__252001192]]
 === Marketing Detail Tracking
 
 For the [.object]#Marketing Detail Tracking# object, there
-are  xref:admin-guide/configuring-targeting-and-marketing-cycles/ref-guide/targeting-and-marketing-cycle-management#h2_83089996[a few
+are link:admin-guide/configuring-targeting-and-marketing-cycles/ref-guide/targeting-and-marketing-cycle-management#h2_83089996[a few
 pre-configured record types].
 
 For the *Category* field on the Marketing Detail Tracking object, the
@@ -86,15 +86,15 @@ image:MDT-categories.png[]
 
 By default, the following record types are available. 
 
-*  xref:admin-guide/configuring-targeting-and-marketing-cycles/ref-guide/targeting-and-marketing-cycle-management#h3_2015528788[Call
+* link:admin-guide/configuring-targeting-and-marketing-cycles/ref-guide/targeting-and-marketing-cycle-management#h3_2015528788[Call
 Rate]
-*  xref:admin-guide/configuring-targeting-and-marketing-cycles/ref-guide/targeting-and-marketing-cycle-management#h3_2122917811[Company
+* link:admin-guide/configuring-targeting-and-marketing-cycles/ref-guide/targeting-and-marketing-cycle-management#h3_2122917811[Company
 Product Tracking]
-*  xref:admin-guide/configuring-targeting-and-marketing-cycles/ref-guide/targeting-and-marketing-cycle-management#h3_669576096[Competitor
+* link:admin-guide/configuring-targeting-and-marketing-cycles/ref-guide/targeting-and-marketing-cycle-management#h3_669576096[Competitor
 Product Tracking]
-*  xref:admin-guide/configuring-targeting-and-marketing-cycles/ref-guide/targeting-and-marketing-cycle-management#h3__2056569094[POS
+* link:admin-guide/configuring-targeting-and-marketing-cycles/ref-guide/targeting-and-marketing-cycle-management#h3__2056569094[POS
 Material]
-*  xref:admin-guide/configuring-targeting-and-marketing-cycles/ref-guide/targeting-and-marketing-cycle-management#h3__843668850[Special
+* link:admin-guide/configuring-targeting-and-marketing-cycles/ref-guide/targeting-and-marketing-cycle-management#h3__843668850[Special
 Tracking]
 
 [[h3_2015528788]]
@@ -107,7 +107,7 @@ or _Contact_ record.
 
 
 The _Target Frequency_ record,
- xref:admin-guide/configuring-targeting-and-marketing-cycles/creating-a-new-record-of-target-frequency[which is
+link:admin-guide/configuring-targeting-and-marketing-cycles/creating-a-new-record-of-target-frequency[which is
 automatically created] to the target _Account_ or _Contact_ record,
 inherit the values from the *Planned Calls*, *Category*, and *Marketing
 Cycle* fields of the _Call Rate_ record, if:
@@ -129,7 +129,7 @@ activities.
 
 image:588241951.png[]
 Go back to
- xref:admin-guide/configuring-targeting-and-marketing-cycles/ref-guide/targeting-and-marketing-cycle-management#MDTRecordTypes[the
+link:admin-guide/configuring-targeting-and-marketing-cycles/ref-guide/targeting-and-marketing-cycle-management#MDTRecordTypes[the
 list of the Marketing Detail Tracking record types].
 
 [[h3_2122917811]]
@@ -143,7 +143,7 @@ target _Account_ or _Contact_ record. 
 For example, you can track products and assortments quantities and
 actual presence at customers.
 
- xref:configure-ct-product-tabs[Customize the Activity Report page]
+link:configure-ct-product-tabs[Customize the Activity Report page]
 to view the tracking company products for the _Activity_ record.
 
 While creating the _Marketing Detail Tracking_ record:
@@ -161,7 +161,7 @@ image:588241961.png[]
 
 
 Go back
-to  xref:admin-guide/configuring-targeting-and-marketing-cycles/ref-guide/targeting-and-marketing-cycle-management#MDTRecordTypes[the
+to link:admin-guide/configuring-targeting-and-marketing-cycles/ref-guide/targeting-and-marketing-cycle-management#MDTRecordTypes[the
 list of the Marketing Detail Tracking record types]. 
 
 [[h3_669576096]]
@@ -172,7 +172,7 @@ required products or assortments of other companies (competitors) within
 the _Activity_ record with the _Visit_ record type of the
 target _Account_ or _Contact_ record. 
 
- xref:configure-ct-product-tabs[Customize the Activity Report
+link:configure-ct-product-tabs[Customize the Activity Report
 page] to view the tracking competitor products for the _Activity_
 record.
 
@@ -193,7 +193,7 @@ image:588241971.png[]
 
 
 Go
-back to  xref:admin-guide/configuring-targeting-and-marketing-cycles/ref-guide/targeting-and-marketing-cycle-management#MDTRecordTypes[the
+back to link:admin-guide/configuring-targeting-and-marketing-cycles/ref-guide/targeting-and-marketing-cycle-management#MDTRecordTypes[the
 list of the Marketing Detail Tracking record types].
 
 [[h3__2056569094]]
@@ -203,7 +203,7 @@ The _POS Material_ record type is intended to track marketing materials
 distributed during the _Activity_ record with the _Visit_ record type of
 the target _Account_ or _Contact_ record. 
 
- xref:configure-ct-product-tabs[Customize the Activity Report
+link:configure-ct-product-tabs[Customize the Activity Report
 page] to view the tracking POS Materials for the _Activity_ record.
 
 While creating the _Marketing Detail Tracking_ record:
@@ -220,7 +220,7 @@ image:588246471.png[]
 
 
 Go back
-to  xref:admin-guide/configuring-targeting-and-marketing-cycles/ref-guide/targeting-and-marketing-cycle-management#MDTRecordTypes[the
+to link:admin-guide/configuring-targeting-and-marketing-cycles/ref-guide/targeting-and-marketing-cycle-management#MDTRecordTypes[the
 list of the Marketing Detail Tracking record types].
 
 [[h3__843668850]]
@@ -233,7 +233,7 @@ the *Special Tracking* tab of the _Activity Report_ page by creating a
 few _Marketing Detail Tracking_ records of the *Special Tracking* record
 type.
 
- xref:configure-a-special-trackings-tab[Customize the Activity
+link:configure-a-special-trackings-tab[Customize the Activity
 Report page] to view the special tracking for the _Activity_ record.
 
 While creating the _Marketing Detail Tracking_ record:
@@ -250,5 +250,5 @@ answers), number, currency.
 
 image:588222931.png[]
 Go
-back to  xref:admin-guide/configuring-targeting-and-marketing-cycles/ref-guide/targeting-and-marketing-cycle-management#MDTRecordTypes[the
+back to link:admin-guide/configuring-targeting-and-marketing-cycles/ref-guide/targeting-and-marketing-cycle-management#MDTRecordTypes[the
 list of the Marketing Detail Tracking record types].

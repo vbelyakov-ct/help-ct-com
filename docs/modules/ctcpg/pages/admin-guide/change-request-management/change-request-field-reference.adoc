@@ -7,7 +7,7 @@ changes to the related parent object.
 ** *Create*: creating a record of the target object;
 ** *Succession*: succeeding a record of the target object;
 ** *Update*: updating a record of the target object.
-* For changing certain fields  xref:change-request-mapping[of the
+* For changing certain fields link:change-request-mapping[of the
 target object], it is necessary to create the related field on the
 Change Request object. For example, if you want to change the value in
 the Website field of the Account object, you should create the
@@ -28,11 +28,11 @@ related _Account_ record.
 
 |Account Name |CTCPG__AccountName__c |Text(255)             
    |This field relates to the Name field of the standard
- xref:account-field-reference[Account] object.
+link:account-field-reference[Account] object.
 
 |Account Number |CTCPG__Account_Number__c |Text(40)
 |This field relates to the AccountNumber field of the standard
- xref:account-field-reference[Account] object.
+link:account-field-reference[Account] object.
 
 |Account Type            |CTCPG__Account_Type__c
 |Picklist a|
@@ -58,7 +58,7 @@ space).
 related _Contact_ record.
 
 |Email |CTCPG__Email__c  |Email |The field relates to the
-Email field of the  xref:contact-field-reference[Contact] object.
+Email field of the link:contact-field-reference[Contact] object.
 
 |Industry |CTCPG__Industry__c |Picklist a|
 The _Change Request_ industry type. The available values by default:

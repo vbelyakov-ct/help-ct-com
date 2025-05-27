@@ -2,7 +2,7 @@
 
 For the correct operation of the _Activity Sync_ functionality:
 
-*  xref:admin-guide/configuring-activity-sync/set-up-global-actions-new-task-and-new-event#h2_1382380833[configure
+* link:admin-guide/configuring-activity-sync/set-up-global-actions-new-task-and-new-event#h2_1382380833[configure
 the display of the *Type* field] for the following
 https://help.salesforce.com/articleView?id=actions_overview_global.htm&language=en_us&r=https%3A%2F%2Fwww.google.com%2F&type=5[global
 actions]: __New Event __and _New Task_;[NOTE] ====
@@ -12,10 +12,10 @@ If you create a new *Activity Sync* setting with the filled 
 CTCPG__StandardObjectCriteria__c ====
  or** **CTCPG__CustomObjectCriteria__c, the *Type* field will
 not affect the _Activity Sync_ process. 
-*  xref:admin-guide/configuring-activity-sync/set-up-global-actions-new-task-and-new-event#h2__142637281[add
+* link:admin-guide/configuring-activity-sync/set-up-global-actions-new-task-and-new-event#h2__142637281[add
 global actions] on the *Accounts* and *Contacts* tabs;
 * specify the EventProcess and TaskProcess records
-in  xref:configuring-triggers[Trigger Settings]. Also, check that
+in link:configuring-triggers[Trigger Settings]. Also, check that
 the ActivityProcess setting is active.
 
 [[h2_1382380833]]
@@ -27,7 +27,7 @@ To display the *Type* field on the *Accounts* and *Contacts* tabs:
 . Click *Layout* next to *New Event*.
 . Drag-n-drop the *Type* field to the layout and click *Save*.
 . Go to **Setup → Users → Profiles → **select
- xref:admin-guide/getting-started/permission-settings[the required profile].
+link:admin-guide/getting-started/permission-settings[the required profile].
 . Go to the **Field-Level Security **section and click **View **next to
 *Event.*
 . Add _Read_ and _Edit_ permissions to the** Type** field. 

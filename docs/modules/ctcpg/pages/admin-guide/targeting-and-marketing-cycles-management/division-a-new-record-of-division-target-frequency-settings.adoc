@@ -8,9 +8,9 @@ required to create a record of the *Division Target Frequency
 Settings* for the division specified for the _Account_ and _Contact_
 records.
 [NOTE] ==== To use these settings, the same division should be
-added to the _ xref:user-field-reference.html[User]_
- xref:user-field-reference[] and
-_ xref:marketing-cycle-field-reference.html[Marketing Cycle]_ records.
+added to the _link:user-field-reference.html[User]_
+link:user-field-reference[] and
+_link:marketing-cycle-field-reference.html[Marketing Cycle]_ records.
 ====
 
 
@@ -22,18 +22,18 @@ click *Manage* next to *Division Target Frequency Settings*. 
 * In the **Name **section, specify the related division name, for
 example, _Gamma, Delta_, etc.
 * In the *Account Target Category field*, add the field API Name field
-of  xref:account-field-reference[the _Account_ record], that
+of link:account-field-reference[the _Account_ record], that
 responsible for the new division, for
 example, Division_Gamma_Category__c;
 * In the *Account Target Flag field*, add the field API Name field of
 the _Account_ record, that responsible for the selection of the new
 division, for example, Division_Gamma_Target_Check__c;
 * Specify the same division fields of
- xref:contact-field-reference[the _Contact_ record] in the *Contact
+link:contact-field-reference[the _Contact_ record] in the *Contact
 Target Category field* and *Contact Target Flag field*.
 * Set a flag next to *Enable Category Selection* if you want to add the
 division's categories to
- xref:../Storage/project-ct-cpg/CTCPGDOC/attachments/58822346/588320221.png[available
+link:../Storage/project-ct-cpg/CTCPGDOC/attachments/58822346/588320221.png[available
 values of mass targeting], accounts, and contacts. 
 image:new-division-target-frequency-settings.png[]
 . Click *Save*.

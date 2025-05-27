@@ -7,7 +7,7 @@ result in data inconsistency or loss of data.  ====
 * Records CT CPG triggers are available by default and active. 
 * If you updated the CT CPG package, some triggers may not be present in
 the *Trigger
-Settings* list. Unless  xref:admin-guide/triggers-management/manage-ct-cpg-triggers#h2_527552279[the
+Settings* list. Unless link:admin-guide/triggers-management/manage-ct-cpg-triggers#h2_527552279[the
 corresponding Trigger Settings record is present], the CT CPG trigger is
 deactivated and will not in operation. 
 
@@ -25,7 +25,7 @@ API name in Salesforce: CTCPG__TriggerSettings__c
 trigger is active.
 
 |Bypass Logic |CTCPG__BypassLogic__c |Text Area (255)  |Enter
- xref:admin-guide/triggers-management/triggers/trigger-contexts[the trigger event API name] to prevent the
+link:admin-guide/triggers-management/triggers/trigger-contexts[the trigger event API name] to prevent the
 trigger event from execution (separated by a comma, without blank
 spaces).
 

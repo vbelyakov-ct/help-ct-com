@@ -15,7 +15,7 @@ API name in Salesforce: CTCPG__TargetFrequency__c
 |*Field* |*API Name* |*Type* |*Description*
 
 |Account         |CTCPG__AccountId__c |Lookup(Account)
-|The related _ xref:account-field-reference.html[Account]_ record.
+|The related _link:account-field-reference.html[Account]_ record.
 
 |Active |CTCPG__IsActive__c |Checkbox |If selected,
 the _Target Frequency_ record is active.
@@ -29,7 +29,7 @@ the __Account __or _Contact_ record. 
 the related _Account_ or _Contact_ record.
 
 |Contact |CTCPG__ContactId__c |Lookup(Contact)         |The
-related _ xref:contact-field-reference.html[Contact]_ record.
+related _link:contact-field-reference.html[Contact]_ record.
 
 |Deactivation Date / Time |CTCPG__DeactivationDateTime__c
 |Date/Time |The date when the __Target Frequency __record will be
@@ -44,17 +44,17 @@ last date when the user can create _Activity_ of the current _Target
 Frequency_ record.
 
 |Marketing Cycle |CTCPG__MarketingCycleId__c |Lookup(Marketing
-Cycle) |The related _ xref:marketing-cycle-field-reference.html[Marketing
+Cycle) |The related _link:marketing-cycle-field-reference.html[Marketing
 Cycle]_ record.
 
 |Marketing Detail Tracking
 |CTCPG__MarketingDetailTrackingId__c |Lookup(Marketing Detail
 Tracking) |The
-related _ xref:marketing-detail-tracking-field-reference.html[Marketing
+related _link:marketing-detail-tracking-field-reference.html[Marketing
 Detail Tracking]_ record.
 
 |Owner |CTCPG__OwnerId__c |Lookup(User) |The related
-_ xref:user-field-reference.html[User]_ record.
+_link:user-field-reference.html[User]_ record.
 
 |Planned Calls |CTCPG__PlannedCalls__c  |Number(18,0)  |The
 number of planned activities of the _Account_ or _Contact_ record.

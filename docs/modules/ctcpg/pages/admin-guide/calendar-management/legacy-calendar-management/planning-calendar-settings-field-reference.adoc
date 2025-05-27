@@ -1,7 +1,7 @@
 = Legacy Calendar Settings Field Reference
 
 The [.object]#Planning Calendar Settings# object is intended to
-store  xref:configure-settings-for-the-calendar[the CT CPG Calendar
+store link:configure-settings-for-the-calendar[the CT CPG Calendar
 parameters specified per each user division].
 
 '''''
@@ -16,7 +16,7 @@ API name in Salesforce: CTCPG__CalendarSettings__c
 
 |Account Block      |CTCPG__AccountBlock__c |Text(255) a|
 The API name of the *Account* field for the *Account* title in the
-* xref:manage-activities-on-the-hierarchy-view-tab[Hierarchy View]*
+*link:manage-activities-on-the-hierarchy-view-tab[Hierarchy View]*
 tab.
 
 [.confluence-information-macro-information]#Stored within
@@ -37,7 +37,7 @@ for example, CTCPG__Status__c.
 |Calendar Day Source Object
 |CTCPG__CalendarDaySourceObject__c |Text(50) a|
 The API name of the custom
-[.object]# xref:add-the-custom-holidays-dictionary[Dictionary]
+[.object]#link:add-the-custom-holidays-dictionary[Dictionary]
 #object.
 
 * Used if the CTCPG__UseCalendarObject__c field is selected.
@@ -67,10 +67,10 @@ the _Global_ and _Color_** **setting types.#
 |ContextMenuPoints |CTCPG__ContextMenuPoints__c |Long Text
 Area(3000) |If true, the _CT CPG Activity_ record type is available to
 create on the
-corresponding  xref:manage-activities-on-the-table-view-tab[Table
-View],  xref:manage-activities-on-the-hierarchy-view-tab[Hierarchy
+corresponding link:manage-activities-on-the-table-view-tab[Table
+View], link:manage-activities-on-the-hierarchy-view-tab[Hierarchy
 View], and
- xref:manage-activities-on-the-employees-calendar-tab[Employees]
+link:manage-activities-on-the-employees-calendar-tab[Employees]
 tabs (separated by a comma, without a blank space).
 
 |Date field name |CTCPG__DateFieldName__c |Text(50) a|
@@ -102,7 +102,7 @@ custom Dictionary__ __object.
 enabled, the left-click action is restricted.
 
 |Division |CTCPG__Division__c |Picklist a|
- xref:admin-guide/configuring-targeting-and-marketing-cycles/add-a-new-division[The calendar division]. Available values by
+link:admin-guide/configuring-targeting-and-marketing-cycles/add-a-new-division[The calendar division]. Available values by
 default:
 
 * Alpha;
@@ -225,7 +225,7 @@ Activity_ record type to select for the popup displaying.
 the _CT CPG Activity_ icon or for the useful link.
 
 |Use calendar object |CTCPG__UseCalendarObject__c |Checkbox
-|If enabled,  xref:add-the-custom-holidays-dictionary[the additional
+|If enabled, link:add-the-custom-holidays-dictionary[the additional
 custom dictionary] is in use.
 
 |Use Frequency |CTCPG__UseFrequency__c |Checkbox a|
@@ -243,7 +243,7 @@ record.
 
 |View Criteria Fields |CTCPG__CriteriaField__c |Long Text
 Area(131072) a|
-The API names of  xref:manage-list-views-for-the-calendar[the list
+The API names of link:manage-list-views-for-the-calendar[the list
 view] fields (separated by a comma, without a blank space).
 
 [.confluence-information-macro-information]#Stored within

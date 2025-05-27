@@ -1,7 +1,7 @@
 = Account Assortment Field Reference
 
 The[.object]#Account Assortment# ** object is used
- xref:admin-guide/configuring-ct-products-and-assortments/assign-assortments-to-accounts[to map assortments and
+link:admin-guide/configuring-ct-products-and-assortments/assign-assortments-to-accounts[to map assortments and
 accounts].
 
 '''''
@@ -16,7 +16,7 @@ API name in Salesforce: CTCPG__AccountAssortment__c
 
 |Account |CTCPG__AccountId__c |Lookup(Account) |The
 _Account_ record to which the
-_ xref:assortment-field-reference.html[Assortment]_ is assigned.
+_link:assortment-field-reference.html[Assortment]_ is assigned.
 
 |Active |CTCPG__IsActive__c |Checkbox |If selected,
 the record is active and applied in business logic.
