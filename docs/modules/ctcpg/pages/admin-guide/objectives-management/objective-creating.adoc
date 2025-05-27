@@ -1,7 +1,7 @@
 = Creating an Objective
 
 Objectives can be specified in different ways according to business
-purpose. link:admin-guide/objectives-management/enable-objectives-tracking[Track objectives] for
+purpose. xref:admin-guide/objectives-management/enable-objectives-tracking[Track objectives] for
 up-to-date reports.
 
 :toc: :toclevels: 3
@@ -11,7 +11,7 @@ https://help.salesforce.com/articleView?id=admin_files_related_list_setup.htm&ty
 the _Objectives_ related list] on the__ Account__ and _Contact_ page
 layout to have an ability to manage objectives for an _Account_ or
 _Contact_ record and
-link:admin-guide/activity-report-management/manage-field-sets-for-activity-report-pages[add to the
+xref:admin-guide/activity-report-management/manage-field-sets-for-activity-report-pages[add to the
 corresponding _CT CPG Activity_ field
 set(s)] the CTCPG__Objective__c and CTCPG__NextCallObjective__c fields 
 
@@ -31,7 +31,7 @@ record:
 . On the *Related* tab, click *New* under the *Objectives* related list.
 . Specify the following:
 [TIP] ==== Read the description of each
-parameter link:admin-guide/objectives-management/objective-field-reference[here].   ====
+parameter xref:admin-guide/objectives-management/objective-field-reference[here].   ====
 * Add *Contact* if needed.
 * Set *Active*.
 * Add** Objective**.
@@ -59,7 +59,7 @@ particular _Contact_ record to overwrite the _Account_ objective.  ====
 Set an objective for the particular _CT CPG Activity_, __ and it will be
 automatically assigned to the related _Account_ and/or _Contact_ record.
 Manage activities via a Standard layout or by using a
-pre-configured _link:activity-report-management.html[Activity
+pre-configured _xref:activity-report-management.html[Activity
 Report]_ page. 
 
 
@@ -91,7 +91,7 @@ related _Account_ and/or _Contact_ record.
 Copy the objective from the finished _CT CPG Activity_ record to the
 next _CT CPG Activity_ record that is related to the same _Account_
 and/or __Contact __record. Manage activities via a Standard layout or by
-using a pre-configured _link:activity-report-management.html[Activity
+using a pre-configured _xref:activity-report-management.html[Activity
 Report]_ page.  
 
 
@@ -121,12 +121,12 @@ the next _CT CPG Activity_ record. 
 [[h2__1099816968]]
 === Create an Objective using the Next Activity functionality
 
-Use the link:configuring-next-activity[Next Activity] functionality
+Use the xref:configuring-next-activity[Next Activity] functionality
 to copy an objective from the specified field of the finished _CT CPG
 Activity_ record to the next _CT CPG Activity_ record that is related to
 the same _Account_ and/or __Contact __record. Manage activities via a
 Standard layout or by using a
-pre-configured _link:activity-report-management.html[Activity
+pre-configured _xref:activity-report-management.html[Activity
 Report]_ page.   
 
 
@@ -156,7 +156,7 @@ the next _CT CPG Activity_ record. 
 [[h2_97080500]]
 === Objectives in the Marketing Cycle
 
-link:admin-guide/targeting-and-marketing-cycles-management/create-a-new-record-of-marketing-detail-tracking#h2_726145408[Create the _Marketing
+xref:admin-guide/targeting-and-marketing-cycles-management/create-a-new-record-of-marketing-detail-tracking#h2_726145408[Create the _Marketing
 Detail Tracking_ record] of the _Special Tracking_ record type to track
-objectives link:admin-guide/targeting-and-marketing-cycles-management/ref-guide/index[within the
+objectives xref:admin-guide/targeting-and-marketing-cycles-management/ref-guide/index[within the
 active marketing cycle].

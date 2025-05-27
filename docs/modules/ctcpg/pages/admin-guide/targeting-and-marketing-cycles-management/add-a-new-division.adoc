@@ -1,30 +1,30 @@
 = Add a New Division
 
 By default, the *Alpha* and *Beta* divisions are
-available, the link:account-field-reference[Account] and link:contact-field-reference[Contact] objects
+available, the xref:account-field-reference[Account] and xref:contact-field-reference[Contact] objects
 have the corresponding division fields that are present in the *Global*
-record of the link:application-settings[Application Settings]. 
+record of the xref:application-settings[Application Settings]. 
 
 
 
 To specify a new division:
 
-* link:admin-guide/configuring-targeting-and-marketing-cycles/add-a-new-division#h2_1913837055[Specify the new division]
+* xref:admin-guide/configuring-targeting-and-marketing-cycles/add-a-new-division#h2_1913837055[Specify the new division]
 in the *User Division* picklist of the[.object]#User# and
 [.object]#Marketing Cycle# objects, for example,
 [.underline]#Gamma#;
-* link:admin-guide/configuring-targeting-and-marketing-cycles/add-a-new-division#h2__1661054417[Add the custom User
+* xref:admin-guide/configuring-targeting-and-marketing-cycles/add-a-new-division#h2__1661054417[Add the custom User
 Division field] on the *User* page layout and specify the new
 [.underline]#Gamma# division for the required _User_ record;
-* link:admin-guide/configuring-targeting-and-marketing-cycles/add-a-new-division#h2__81078948[Create the new division
+* xref:admin-guide/configuring-targeting-and-marketing-cycles/add-a-new-division#h2__81078948[Create the new division
 fields] on the __[.object]#Account# and
 [.object]#Contact# objects using the same division category
 name, for
 example, Division_[.underline]#Gamma#_Category__c and Division_[.underline]#Gamma#_Target_Check__c;
-* link:admin-guide/configuring-targeting-and-marketing-cycles/add-a-new-division#h2__1236380249[Add new division fields],
+* xref:admin-guide/configuring-targeting-and-marketing-cycles/add-a-new-division#h2__1236380249[Add new division fields],
 Division_[.underline]#Gamma#_Category__c and Division_[.underline]#Gamma#_Target_Check__c, in
 the corresponding record of the
-link:application-settings[Application Settings].
+xref:application-settings[Application Settings].
 
 [[h2_704810426]]
 === Add Division to the User and Marketing Cycle objects
@@ -122,7 +122,7 @@ or another existed one.
 . Update the following fields:
 * In the *Account Category Fields API names* field, add the new division
 field API Name field
-of link:account-field-reference[the _Account_ record], that is
+of xref:account-field-reference[the _Account_ record], that is
 responsible for the new division, for
 example, Division_Gamma_Category__c (separated by a comma,
 without blank spaces);
@@ -132,7 +132,7 @@ responsible for the selection of the new division, for
 example, Division_Gamma_Target_Check__c (separated by a
 comma, without blank spaces);
 * Specify the same division fields
-of link:contact-field-reference[the _Contact_ record] in
+of xref:contact-field-reference[the _Contact_ record] in
 the *Contact *Category Fields API names** and *Contact *Target Flags API
 names** fields (separated by a comma, without blank spaces).
 . Click *Save*.
@@ -143,5 +143,5 @@ The setup is complete.
 
 
 Next, configure
-link:admin-guide/configuring-targeting-and-marketing-cycles/division-a-new-record-of-division-target-frequency-settings[a
+xref:admin-guide/configuring-targeting-and-marketing-cycles/division-a-new-record-of-division-target-frequency-settings[a
 new record of the Division Target Frequency Settings].

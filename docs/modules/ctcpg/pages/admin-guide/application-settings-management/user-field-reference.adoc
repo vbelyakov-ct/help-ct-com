@@ -3,7 +3,7 @@
 The following fields are created on the standard _User_ object during
 the CT CPG installation.
 
-[NOTE] ==== In case of link:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[creating new
+[NOTE] ==== In case of xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[creating new
 divisions], add the new division to the values of
 the CTCPG__UserDivision__c ====  picklist.
 
@@ -17,7 +17,7 @@ en.
 
 |User Division for Calendar |CTCPG__CalendarUserDivision__c
 |Formula(Text)         |In the CT CPG Calendar,
-select link:admin-guide/calendar-management/legacy-calendar-management/configuring-calendar/configure-settings-for-the-calendar/index[the assigned
+select xref:admin-guide/calendar-management/legacy-calendar-management/configuring-calendar/configure-settings-for-the-calendar/index[the assigned
 division].
 
 |Uniq User Number |CTCPG__UniqUserNumber__c |Text(30)  |The
@@ -26,6 +26,6 @@ last 5 symbols of the _User_ record ID.
 |User Division |CTCPG__UserDivision__c |Picklist |The picklist
 with all assigned divisions for the _User_ record.
 [NOTE] ==== This field should
-link:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division#h2__1661054417[be added to the page layout
+xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division#h2__1661054417[be added to the page layout
 and populated] with the required division. ====
 |===

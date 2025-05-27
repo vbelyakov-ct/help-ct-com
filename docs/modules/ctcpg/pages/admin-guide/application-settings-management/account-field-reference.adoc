@@ -3,7 +3,7 @@
 The following fields are created on the standard
 [.object]#Account# object during the CT CPG installation.
 
-[NOTE] ==== In case of link:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[creating new
+[NOTE] ==== In case of xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[creating new
 divisions], create the Division[.underline]#Name#Category__c ====
 field with the category picklist and the
 **Division[.underline]#Name#TargetCheck__c **checkbox, where Name is
@@ -32,7 +32,7 @@ selected _Account_ record. Available values by default:
 * Discounter
 * Minimarket
 
-[NOTE] ==== It is possible link:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[to
+[NOTE] ==== It is possible xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[to
 create a new division]. ====
 
 |Division Alpha Target |CTCPG__DivisionAlphaTargetCheck__c
@@ -63,7 +63,7 @@ __Account __record has been synchronized from the external ERP-system.
 |The field is checked if the _Account_ record has child _Account_
 records. That _Account_ with child records will be displayed as
 hierarchy on the *Hierarchy* tab of the *Calendar* tab (refer to
-the link:admin-guide/calendar-management/legacy-calendar-management/index[Legacy Calendar Management] for more
+the xref:admin-guide/calendar-management/legacy-calendar-management/index[Legacy Calendar Management] for more
 details).
 
 |Is Auto Target Field Check? |CTCPG__IsAutoTargetCheck__c

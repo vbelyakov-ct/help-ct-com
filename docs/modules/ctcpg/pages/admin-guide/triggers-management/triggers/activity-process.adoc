@@ -2,7 +2,7 @@
 
 _ActivityProcess_ is intended to manage custom __CT CPG
 Activity __records, as well as standard __Event __and __Task __records
-in case of using the _link:activity-sync-management.html[Activity
+in case of using the _xref:activity-sync-management.html[Activity
 Sync]_ functionality, according to the specified business logic.
 
 '''''
@@ -22,7 +22,7 @@ based on:
 * the _Marketing Detail Tracking_ records of the related _Marketing
 Cycle_ record;
 * the value in the CTCPG__CreateRelatedActivityDataRecords__c
-checkbox of the _link:application-settings.html[Application Settings]_
+checkbox of the _xref:application-settings.html[Application Settings]_
 record.
 
 | a|
@@ -80,7 +80,7 @@ createRA
 
 |Create the related _Event_ or _Task_ record according to the parent _CT
 CPG Activity_ record and the
-_link:configuring-activity-sync.html[Activity Sync]_ setting.
+_xref:configuring-activity-sync.html[Activity Sync]_ setting.
 
 |after update[au]  |createRelatedData()  |createRD a|
 For the _CT CPG Activity_ record, update the__ Activity Data__ records
@@ -138,8 +138,8 @@ Activity __record.
 
 | |fillMarketingCycle() |fillCycle a|
 Link the _CT CPG Activity_ record to the active _Marketing Cycle_ record
-based on link:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[the _User_ division] and the
-_link:marketing-cycle-linking-settings.html[Marketing Cycle Linking
+based on xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[the _User_ division] and the
+_xref:marketing-cycle-linking-settings.html[Marketing Cycle Linking
 Settings]_ record.
 
 | |fillTargetFrequency() |fillTF |Link to the _Target

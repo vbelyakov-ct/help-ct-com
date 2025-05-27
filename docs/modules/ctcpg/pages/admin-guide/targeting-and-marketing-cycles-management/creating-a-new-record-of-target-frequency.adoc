@@ -2,12 +2,12 @@
 
 The[.object]#Target Frequency# object is intended to store and
 track the number of activities to the target _Account_ or _Contact_
-record within link:admin-guide/configuring-targeting-and-marketing-cycles/create-a-marketing-cycle[the active and given
+record within xref:admin-guide/configuring-targeting-and-marketing-cycles/create-a-marketing-cycle[the active and given
 marketing cycle].
 
-The link:target-frequency-process[TargetFrequencyProcess] trigger
+The xref:target-frequency-process[TargetFrequencyProcess] trigger
 automatically creates active _Target Frequency_ records when
-the _Account_ or Contact records link:admin-guide/configuring-targeting-and-marketing-cycles/create-targeting-lists[are
+the _Account_ or Contact records xref:admin-guide/configuring-targeting-and-marketing-cycles/create-targeting-lists[are
 added to the targeting list].
 
 The _Target Frequency_ record contains the following information:
@@ -18,9 +18,9 @@ target _Account_ or _Contact_ record within the marketing cycle.
 
 The planned calls and category of the _Target Frequency_ record can be
 automatically filled out with the *Planned Calls* and *Category* values
-from the link:marketing-detail-tracking-field-reference[Marketing
+from the xref:marketing-detail-tracking-field-reference[Marketing
 Detail Tracking] record of
-the link:targeting-and-marketing-cycle-management#h3_2015528788[Call
+the xref:targeting-and-marketing-cycle-management#h3_2015528788[Call
 Rate] record type if:
 ** ​the _Account_ or _Contact_ record is in the targeting list;
 ** the _Call_ __Rate __record is assigned for the same division category

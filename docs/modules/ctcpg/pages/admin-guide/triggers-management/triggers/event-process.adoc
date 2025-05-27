@@ -2,7 +2,7 @@
 
 The _EventProcess_ trigger is responsible for the _CT CPG Activity_
 records management if there is an active
-_link:activity-sync-management.html[Activity Sync]_ setting with an
+_xref:activity-sync-management.html[Activity Sync]_ setting with an
 _Event_ object.
 
 '''''
@@ -26,7 +26,7 @@ Fields to update:
 * OwnerId
 * CTCPG__StartDate__c
 * CTCPG__EndDate__c
-* link:admin-guide/configuring-activity-sync/activity-sync-management/custom-metadata-type-activity-sync[fields specified] in
+* xref:admin-guide/configuring-activity-sync/activity-sync-management/custom-metadata-type-activity-sync[fields specified] in
 the CTCPG__FieldValues__c
 
 |after update  |afterUpdate |au a|
@@ -40,7 +40,7 @@ Fields to update:
 * OwnerId
 * CTCPG__StartDate__c
 * CTCPG__EndDate__c
-* link:admin-guide/configuring-activity-sync/activity-sync-management/custom-metadata-type-activity-sync[fields specified] in
+* xref:admin-guide/configuring-activity-sync/activity-sync-management/custom-metadata-type-activity-sync[fields specified] in
 the CTCPG__FieldValues__c
 
 |after delete   | | |Reserved.
