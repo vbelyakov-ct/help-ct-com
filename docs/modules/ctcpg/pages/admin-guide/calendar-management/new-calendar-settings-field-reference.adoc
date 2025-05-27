@@ -1,7 +1,7 @@
 = Calendar Settings Field Reference
 
 The [.object]#Planning Calendar Settings# object is intended to
-store link:admin-guide/new-calendar-management/calendar-settings-ct-cpg-settings-panel[the CT CPG
+store  xref:admin-guide/new-calendar-management/calendar-settings-ct-cpg-settings-panel[the CT CPG
 Calendar parameters specified per each user division].
 
 '''''
@@ -17,7 +17,7 @@ API name in Salesforce: CTCPG__CalendarSettings__c
 |Activate Quick Creation
 |[.apiobject]#CTCPG__IsQuickCreate__c# |Checkbox a|
 Defines if the
-link:admin-guide/new-calendar-management/calendar-settings-ct-cpg-settings-panel#compact-form[Compact
+ xref:admin-guide/new-calendar-management/calendar-settings-ct-cpg-settings-panel#compact-form[Compact
 form] is used for the specified record type or not. Available values:
 
 * true (Compact form is used)
@@ -76,7 +76,7 @@ Stored within the _Global_ setting type.
 |Direct Lookup |[.apiobject]#CTCPG__DirectLookup__c#
 |Text(255) |API name of the field, which is used as a lookup between
 child and parent objects, if the
-link:admin-guide/new-calendar-management/calendar-settings-ct-cpg-settings-panel#show-hierarchy[Hierarchy]
+ xref:admin-guide/new-calendar-management/calendar-settings-ct-cpg-settings-panel#show-hierarchy[Hierarchy]
 is enabled and *Connection Type* is set to _Direct_.
 [.confluence-information-macro-information]#Used in the _Target
 Object_ record type.#
@@ -85,14 +85,14 @@ Object_ record type.#
 |[.apiobject]#CTCPG__RecordsPreview__c# |Number(3,
 0) a|
 Number of records that are displayed as preview for 1 day in
-link:admin-guide/new-calendar-management/calendar-settings-ct-cpg-settings-panel#h3_951662406[Month]
+ xref:admin-guide/new-calendar-management/calendar-settings-ct-cpg-settings-panel#h3_951662406[Month]
 view. Default value is _3_.
 
 [.confluence-information-macro-information]#Used in the _General_ record
 type. #
 
 |Division |CTCPG__Division__c |Picklist a|
-link:admin-guide/configuring-targeting-and-marketing-cycles/add-a-new-division[The calendar division]. Available values by
+ xref:admin-guide/configuring-targeting-and-marketing-cycles/add-a-new-division[The calendar division]. Available values by
 default:
 
 * Alpha;
@@ -117,7 +117,7 @@ Used in the _Record Settings_ record type. 
 |[.apiobject]#CTCPG__EnableHierarchyView__c#
 |Checkbox a|
 Defines if
-the link:admin-guide/new-calendar-management/calendar-settings-ct-cpg-settings-panel#show-hierarchy[Hierarchy] is
+the  xref:admin-guide/new-calendar-management/calendar-settings-ct-cpg-settings-panel#show-hierarchy[Hierarchy] is
 enabled or not. Available values:
 
 * true (Hierarchy is enabled)
@@ -135,12 +135,12 @@ Object_ record type.#
 
 |Fields |CTCPG__Fields__c |Long Text Area(131072) |API names of
 the fields used on the
-link:admin-guide/new-calendar-management/calendar-settings-ct-cpg-settings-panel#compact-form[Compact
+ xref:admin-guide/new-calendar-management/calendar-settings-ct-cpg-settings-panel#compact-form[Compact
 form]. 
 
 |Is Active |CTCPG__IsActive__c |Checkbox |If selected, the
 corresponding
-link:admin-guide/new-calendar-management/calendar-settings-ct-cpg-settings-panel#h3_1454440899[Pop-Up] setting
+ xref:admin-guide/new-calendar-management/calendar-settings-ct-cpg-settings-panel#h3_1454440899[Pop-Up] setting
 is active on the _Pop-up_ record type.
 
 |Json User Settings
@@ -150,7 +150,7 @@ Area(131072) |Maintenance field, not editable.
 |Mass Drag and Drop Gap
 |[.apiobject]#CTCPG__DragDropGap__c# |Number(3, 0)
 |Defines the default interval between activities created by
-link:admin-guide/new-calendar-management/calendar-interface-and-activities#h4_2089059603[drag-and-drop]
+ xref:admin-guide/new-calendar-management/calendar-interface-and-activities#h4_2089059603[drag-and-drop]
 of target objects.
 
 |Object |[.apiobject]#CTCPG__Object__c# |Text(255)
@@ -205,7 +205,7 @@ Drop_ and _Record Settings_ record types.#
 |[.apiobject]#CTCPG__ReferenceObject__c# |Text(255)
 |API name of the object, which is used as a lookup between child and
 parent objects, if
-the link:admin-guide/new-calendar-management/calendar-settings-ct-cpg-settings-panel#show-hierarchy[Hierarchy] is
+the  xref:admin-guide/new-calendar-management/calendar-settings-ct-cpg-settings-panel#show-hierarchy[Hierarchy] is
 enabled and *Connection Type* is set to _Junction_.
 [.confluence-information-macro-information]#Used in the _Target
 Object_ record type.#
@@ -243,7 +243,7 @@ Used in the _Activity Object_ record type.
 |Value |CTCPG__Value__c |Long Text Area(131072) a|
 Values of statuses from the *Status field mapping* field, which is used
 for
-link:admin-guide/new-calendar-management/calendar-settings-ct-cpg-settings-panel#h3__1948960707[mapping
+ xref:admin-guide/new-calendar-management/calendar-settings-ct-cpg-settings-panel#h3__1948960707[mapping
 statuses with colors].
 
 [.confluence-information-macro-information]#Used in the _Activity

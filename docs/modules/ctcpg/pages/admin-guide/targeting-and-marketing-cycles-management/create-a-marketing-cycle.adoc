@@ -2,7 +2,7 @@
 
 Create a new marketing cycle for the new division. The Application
 Settings affect the Marketing Cycle operation. If needed,
-edit link:admin-guide/getting-started/configuring-application-settings[t]link:admin-guide/getting-started/configuring-application-settings[he
+edit  xref:admin-guide/getting-started/configuring-application-settings[t] xref:admin-guide/getting-started/configuring-application-settings[he
 corresponding record of Application Settings].  
 
 When a user creates an _Activity_ record, it will be automatically
@@ -14,9 +14,9 @@ Cycle_ period;
 division;
 * the _Marketing Cycle_ record is related to the specific record type of
 the _Activity_ record according to the
-link:marketing-cycle-linking-settings[Marketing Cycle Linking
+ xref:marketing-cycle-linking-settings[Marketing Cycle Linking
 Setting];
-* the _link:marketing-cycle-field-reference.html[Marketing Cycle]_
+* the _ xref:marketing-cycle-field-reference.html[Marketing Cycle]_
 record is active.
 
 
@@ -26,15 +26,15 @@ To create a marketing cycle:
 . Go to the *Marketing Cycles* tab and click *New*.
 . Specify the required parameters:
 [TIP] ==== Read the description of each
-parameter link:marketing-cycle-field-reference[here].   ====
+parameter  xref:marketing-cycle-field-reference[here].   ====
 * Enter *the name*.
 * Specify the *Start Date* and *End Date*. The marketing cycle period
 should be no longer than the maximum marketing cycle period on the
-link:application-settings[Application Settings] record. 
+ xref:application-settings[Application Settings] record. 
 * Select *Status*.
 * Select *User Division*, for example, Gamma.
 * Specify
-link:admin-guide/configuring-targeting-and-marketing-cycles/enable-activity-linking-to-the-marketing-cycle[Activity
+ xref:admin-guide/configuring-targeting-and-marketing-cycles/enable-activity-linking-to-the-marketing-cycle[Activity
 Linking].
 * Select *Active*.
 image:new-marketing-cycle.png[]

@@ -2,13 +2,13 @@
 
 *Expenses Tab Settings* is used to display rental items for the event,
 for example, promo materials or mobile stands, on the tab of the
-_link:activity-report-interface.html#h2_1673179481[Activity Report]_
-page for the specific user or profile link:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[based
+_ xref:activity-report-interface.html#h2_1673179481[Activity Report]_
+page for the specific user or profile  xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[based
 on the division category]. 
 
 By default, there is the setting for the whole Salesforce organization.
 To enhance or restrict a particular user or profile access,
-link:admin-guide/activity-report-management/configure-an-event-member-tab[create a new record].
+ xref:admin-guide/activity-report-management/configure-an-event-member-tab[create a new record].
 
 '''''
 
@@ -38,7 +38,7 @@ field (separated by a comma, without blank spaces):
 * **false **to restrict.
 
 |Field Set Name  |CTCPG__FieldSetName__c |Text (255)
-|link:admin-guide/activity-report-management/configure-an-expenses-tab[Specify the API name of the field
+| xref:admin-guide/activity-report-management/configure-an-expenses-tab[Specify the API name of the field
 set] for the _Activity Report_ page for each
 specified _Activity_ record type in
 the CTCPG__RecordTypeDeveloperName__c field (separated by a

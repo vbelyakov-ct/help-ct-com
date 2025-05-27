@@ -2,12 +2,12 @@
 
 For the _Change Request: Update_ process:
 
-. link:admin-guide/change-request-management/configure-a-new-change-request-update#h2__315694290[Create
+.  xref:admin-guide/change-request-management/configure-a-new-change-request-update#h2__315694290[Create
 fields for the Change Request object] that will be changed via the
 _Change Request: Update_ process. These fields represent fields of the
 __[.object]#Account# __ or[.object]#Contact# __
 object.
-. link:admin-guide/change-request-management/configure-a-new-change-request-update#h2__1624561601[Create a
+.  xref:admin-guide/change-request-management/configure-a-new-change-request-update#h2__1624561601[Create a
 new _Change Request Mapping_ record] to map the _Change Request_ record
 and the target object.
 
@@ -45,7 +45,7 @@ Request Mapping_ record:
 click **Manage **next to *Change Request Mapping*.
 . On the next page, click *New* to create a new record:
 [TIP] ==== Read the description of each
-parameter link:change-request-mapping[here].  ====
+parameter  xref:change-request-mapping[here].  ====
 * In the **Name **section, specify the name.
 * In the *Change Request Field*, enter the API name of the field that
 you have to change via the _Change Request: Update_ process;

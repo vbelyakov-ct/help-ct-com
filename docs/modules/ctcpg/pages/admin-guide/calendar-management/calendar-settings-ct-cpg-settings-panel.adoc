@@ -30,7 +30,7 @@ pay attention to which division is selected before modifying settings.
 Before editing settings, select *User Division* from the list:
 
 * [#h3_951662406]#By default, _Alpha_ and _Beta_ divisions are included
-in the CT CPG package. You can link:admin-guide/configuring-targeting-and-marketing-cycles/add-a-new-division[create your
+in the CT CPG package. You can  xref:admin-guide/configuring-targeting-and-marketing-cycles/add-a-new-division[create your
 own divisions].#
 * [#h3_951662406]#Select __Global __to apply settings to all users,
 which do not belong to any divisions.#
@@ -72,10 +72,10 @@ image:cpg_settings_general.png[]
 
 [NOTE] ==== Editing the *Parent Object* and *Child object*
 fields require
-the link:admin-guide/new-calendar-management/custom-permissions-for-using-calendar#h3__260496953[Allow
+the  xref:admin-guide/new-calendar-management/custom-permissions-for-using-calendar#h3__260496953[Allow
 to delete Calendar Setting records] custom permission. ==== In this
 section, you can set up target objects that will be displayed on the
-link:admin-guide/new-calendar-management/calendar-interface-and-activities#h3__115958815[left sidebar]
+ xref:admin-guide/new-calendar-management/calendar-interface-and-activities#h3__115958815[left sidebar]
 of the calendar:
 
 * *Parent object* (Account by default) and *Child object* (Contact by
@@ -85,15 +85,15 @@ child object, do the following:
 the [.apiobject]#CTCPG_Activity__c# object.
 . Select new object(s) in the *Target Objects* section.
 . Select created lookup fields to the new parent/child object in the
-link:admin-guide/new-calendar-management/calendar-settings-ct-cpg-settings-panel#h3__362695117[Activity
+ xref:admin-guide/new-calendar-management/calendar-settings-ct-cpg-settings-panel#h3__362695117[Activity
 Objects] section.
 . (Optional) edit settings in the *Target Objects* tab of the
-link:admin-guide/new-calendar-management/calendar-settings-ct-cpg-settings-panel#h3_1454440899[Pop-Up]
+ xref:admin-guide/new-calendar-management/calendar-settings-ct-cpg-settings-panel#h3_1454440899[Pop-Up]
 section.
 *  *Object label* defines how the names of parent and child objects tabs
 in the left sidebar (10 symbols max).
 * *Show hierarchy* activates the *Hierarchy* tab in the
-link:calendar-interface#h3__115958815[]link:admin-guide/new-calendar-management/calendar-interface-and-activities#h3__115958815[left
+ xref:calendar-interface#h3__115958815[] xref:admin-guide/new-calendar-management/calendar-interface-and-activities#h3__115958815[left
 sidebar] of the calendar. Then select the *Connection type*:
 ** *Direct*: lookup from child object to parent object. Select lookup
 field from the *Lookup from child object* list.
@@ -110,13 +110,13 @@ image:cpg_settings_target_objects.png[]
 ==== Activity Objects
 
 In this section, select parent and child objects lookup fields, if
-link:admin-guide/new-calendar-management/calendar-settings-ct-cpg-settings-panel#h3__1934044513[target
+ xref:admin-guide/new-calendar-management/calendar-settings-ct-cpg-settings-panel#h3__1934044513[target
 objects] are not set as default ([.object]#Account# and
 [.object]#Contact#). 
 
 In the *Subject* list, select a text field to store value from the
 *Subject* field of the
-link:admin-guide/new-calendar-management/calendar-interface-and-activities#h3_1752519442[Create
+ xref:admin-guide/new-calendar-management/calendar-interface-and-activities#h3_1752519442[Create
 Activity] form. 
 
 image:cpg_settings_activity_objects.png[]
@@ -134,7 +134,7 @@ image:cpg_activity_preview.png[]
 **End Time **for new activities (from 15 to 780 minutes).
 * In the *Add Compact Form For Creation* section, select an option to
 enable the compact form for
-the link:calendar-interface#h3_1752519442[]link:admin-guide/new-calendar-management/calendar-interface-and-activities#h3_1752519442[Create
+the  xref:calendar-interface#h3_1752519442[] xref:admin-guide/new-calendar-management/calendar-interface-and-activities#h3_1752519442[Create
 Activity] form:
 ** *None* (the compact form will be disabled).
 ** *Optional* (the compact form can be enabled by switching the toggle).
@@ -153,7 +153,7 @@ to remove the field.
 [TIP] ==== You do not need to add *Start Date*, *End Date*,
 *AllDay* and *Record* *Type ID* fields, because they are displayed on
 the
-link:calendar-interface#h3_1752519442[]link:admin-guide/new-calendar-management/calendar-interface-and-activities#h3_1752519442[Create
+ xref:calendar-interface#h3_1752519442[] xref:admin-guide/new-calendar-management/calendar-interface-and-activities#h3_1752519442[Create
 Activity] by default. ====
 
 Click *Save* to apply changes on this tab.
@@ -164,7 +164,7 @@ image:cpg_settings_record_types.png[]
 ==== Pop-Up
 
 In this section, you can turn on/off pop-ups for target objects (on the
-link:calendar-interface#h3__115958815[left sidebar]) and activity
+ xref:calendar-interface#h3__115958815[left sidebar]) and activity
 objects (in the calendar grid).
 
 . Select the appropriate tab, *Target objects* or *Activity objects*.
@@ -172,13 +172,13 @@ objects (in the calendar grid).
 objects ([.object]#Account# and [.object]#Contact# by
 default).
 * If the
-link:admin-guide/new-calendar-management/calendar-settings-ct-cpg-settings-panel#show-hierarchy[hierarchy]
+ xref:admin-guide/new-calendar-management/calendar-settings-ct-cpg-settings-panel#show-hierarchy[hierarchy]
 is enabled and connection type is _Junction_, also an additional tab of
 the linking object will be displayed (*Activity* in the example below).
 On this tab, you can select fields to show in the pop-up for the target
 objects in the *Hierarchy* tab.
 * If
-the link:admin-guide/new-calendar-management/calendar-settings-ct-cpg-settings-panel#show-hierarchy[hierarchy] is
+the  xref:admin-guide/new-calendar-management/calendar-settings-ct-cpg-settings-panel#show-hierarchy[hierarchy] is
 enabled and connection type is _Direct_, then the pop-up for the target
 objects in the *Hierarchy* tab will display fields specified for the
 child object (*Contact* in the example below). 
@@ -196,11 +196,11 @@ image:cpg_settings_pop-up.png[]
 
 In this section, you can set up default record types for drag-and-drop
 creation of activities. If default record typers are not set, then
-the link:calendar-interface#h3_1752519442[]link:admin-guide/new-calendar-management/calendar-interface-and-activities#h3_1752519442[Create
+the  xref:calendar-interface#h3_1752519442[] xref:admin-guide/new-calendar-management/calendar-interface-and-activities#h3_1752519442[Create
 Activity] form will be opened after dragging and dropping an object from
 the left sidebar to the calendar grid. You can specify drag-and-drop
 settings globally for all users of the
-link:admin-guide/new-calendar-management/calendar-settings-ct-cpg-settings-panel#h3_932595492[selected
+ xref:admin-guide/new-calendar-management/calendar-settings-ct-cpg-settings-panel#h3_932595492[selected
 division], or for a specific user profile. Settings for a specific user
 profile have higher priority than global settings.
 
@@ -217,7 +217,7 @@ Settings*:
 Click image:cpg_trash_icon.png[] to
 remove settings for a specific user profile.
 [NOTE] ==== This action requires
-the link:admin-guide/new-calendar-management/custom-permissions-for-using-calendar#h3__260496953[Allow
+the  xref:admin-guide/new-calendar-management/custom-permissions-for-using-calendar#h3__260496953[Allow
 to delete Calendar Setting records] custom permission. ====
 
 Click *Save* to apply changes on this tab.

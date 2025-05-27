@@ -23,7 +23,7 @@ _Marketing Cycle_ record is active.
 the marketing cycle.
 The Marketing Cycle period should be within the value of
 the CTCPG__MaxPlanningDays__c field of
-the _link:application-settings.html[Application Settings]_ record.
+the _ xref:application-settings.html[Application Settings]_ record.
 
 |Link Visit 1:1 |CTCPG__LinkVisit__c |Checkbox a|
 If selected, the related _Activity_ records with the _Visit_ record type
@@ -32,7 +32,7 @@ will be linked to the _Marketing Cycle_ record.
 * The CTCPG__AllowLinkSegmentation__c on the _Application
 Settings_ record should be checked. 
 * You
-can specify link:admin-guide/configuring-targeting-and-marketing-cycles/enable-activity-linking-to-the-marketing-cycle[another
+can specify  xref:admin-guide/configuring-targeting-and-marketing-cycles/enable-activity-linking-to-the-marketing-cycle[another
 activity linking].
 
 |Start Date |CTCPG__StartDate__c |Date |Specify the start date
@@ -48,7 +48,7 @@ values:
 * Canceled
 
 You can specify the behavior of the system for the related status on the
-record of link:application-settings[Application Settings].
+record of  xref:application-settings[Application Settings].
 
 |User Division |CTCPG__UserDivision__c |Formula(Text) |The
 assigned division on the _Marketing Cycle_ record. 

@@ -20,7 +20,7 @@ a|
 [[h3_1557136213]]
 ==== Custom Objects
 
-link:ct-cpg-solution/ct-cpg-object-model[The CT CPG object model] consists
+ xref:ct-cpg-solution/ct-cpg-object-model[The CT CPG object model] consists
 of custom CT CPG objects have the CTCPG prefix and are divided by group
 according to purpose:
 
@@ -125,11 +125,11 @@ Custom metadata types are used to store the *Activity Sync* settings. 
 
 * To view the list of Apex Classes, go to *Setup → Custom Code → Apex
 Classes.*
-* To view the list of link:triggers[Apex Triggers], go to *Setup →
+* To view the list of  xref:triggers[Apex Triggers], go to *Setup →
 Custom Code → Apex Triggers.*
 
 [TIP] ==== Triggers can be
-link:trigger-settings[deactivated].  ====
+ xref:trigger-settings[deactivated].  ====
 
 [[h2__426184834]]
 === Deployment Steps
@@ -137,42 +137,42 @@ link:trigger-settings[deactivated].  ====
 Deployment of CT CPG solution for the field sales force is performed in
 the following order where steps with an asterisk (*) are optional: 
 
-. link:ct-cpg-solution/ct-cpg-description-and-deployment#h3__692457807[Install the
+.  xref:ct-cpg-solution/ct-cpg-description-and-deployment#h3__692457807[Install the
 CT CPG package] in your Salesforce organization.
-. link:ct-cpg-solution/ct-cpg-description-and-deployment#h3__1324800910[Assign
+.  xref:ct-cpg-solution/ct-cpg-description-and-deployment#h3__1324800910[Assign
 licenses and permissions] to users.
-. Specify link:ct-cpg-solution/ct-cpg-description-and-deployment#h3__1862566713[the
+. Specify  xref:ct-cpg-solution/ct-cpg-description-and-deployment#h3__1862566713[the
 main application settings].
-. link:ct-cpg-solution/ct-cpg-description-and-deployment#h3_398962205[Add
+.  xref:ct-cpg-solution/ct-cpg-description-and-deployment#h3_398962205[Add
 products].
 .* Categorize your
-clients, link:ct-cpg-solution/ct-cpg-description-and-deployment#h3__1438761666[set
+clients,  xref:ct-cpg-solution/ct-cpg-description-and-deployment#h3__1438761666[set
 the marketing cycle up], and target accounts and contacts.
-. ​link:ct-cpg-solution/ct-cpg-description-and-deployment#h3_1423379549[Configure
+. ​ xref:ct-cpg-solution/ct-cpg-description-and-deployment#h3_1423379549[Configure
 the CT CPG calendar].
-.* link:ct-cpg-solution/ct-cpg-description-and-deployment#h3__115994772[​Streamline
+.*  xref:ct-cpg-solution/ct-cpg-description-and-deployment#h3__115994772[​Streamline
 the representatives' activities].
-.* link:ct-cpg-solution/ct-cpg-description-and-deployment#h3__28788001[Specify
+.*  xref:ct-cpg-solution/ct-cpg-description-and-deployment#h3__28788001[Specify
 goals] to Accounts.
 .*
-link:ct-cpg-solution/ct-cpg-description-and-deployment#h3_1656217633[Schedule
+ xref:ct-cpg-solution/ct-cpg-description-and-deployment#h3_1656217633[Schedule
 activities].
-.* link:ct-cpg-solution/ct-cpg-description-and-deployment#h3_1927205111[Set up
+.*  xref:ct-cpg-solution/ct-cpg-description-and-deployment#h3_1927205111[Set up
 the Activity Sync process] to view all your activities in one place.
 .* Control the data quality
-with link:ct-cpg-solution/ct-cpg-description-and-deployment#h3_1569917463[the
+with  xref:ct-cpg-solution/ct-cpg-description-and-deployment#h3_1569917463[the
 Change Request process]. 
-.* link:ct-cpg-solution/ct-cpg-description-and-deployment#h3_626062174[Configure
+.*  xref:ct-cpg-solution/ct-cpg-description-and-deployment#h3_626062174[Configure
 CPG groups].
-.* link:ct-cpg-solution/ct-cpg-description-and-deployment#h3_1485440664[Create
+.*  xref:ct-cpg-solution/ct-cpg-description-and-deployment#h3_1485440664[Create
 quizzes] to estimate your representatives.
-.* link:ct-cpg-solution/ct-cpg-description-and-deployment#h3_994439749[​Integrate
+.*  xref:ct-cpg-solution/ct-cpg-description-and-deployment#h3_994439749[​Integrate
 the CT CPG solution with the CT Mobile solution] to provide full CT CPG
 and Salesforce offline functionality along with an advanced interactive
 Digital Sales Ais for field sales representatives via the CT Mobile
 app. 
 .*
-link:ct-cpg-solution/ct-cpg-description-and-deployment#h3__1152226206[Integrate the
+ xref:ct-cpg-solution/ct-cpg-description-and-deployment#h3__1152226206[Integrate the
 CT CPG solution with the CT Orders solution] to have the ability for
 using a powerful and comprehensive order management solution.
 
@@ -190,57 +190,57 @@ package.
 
 
 CT CPG is an add-on to Salesforce, provided as an Appexchange ISV
-product. link:installing-ct-cpg-package[Follow the guide] to
+product.  xref:installing-ct-cpg-package[Follow the guide] to
 install the CT CPG package.
 
 * Before installation,
-link:preparing-the-salesforce-organization[enable Contacts to
+ xref:preparing-the-salesforce-organization[enable Contacts to
 Multiple Accounts Settings].
-* After installation, link:remote-site-settings[specify an
+* After installation,  xref:remote-site-settings[specify an
 additional remote site]. 
 
 [[h3__1324800910]]
 ==== 2. Assigning User Licenses and Permissions
 
 To give CT CPG access to users,
-link:managing-ct-cpg-licenses[specify user licenses]. Also, each
-user has link:permission-settings[the assigned profile] and, if
+ xref:managing-ct-cpg-licenses[specify user licenses]. Also, each
+user has  xref:permission-settings[the assigned profile] and, if
 necessary, permission set. 
 
 Make sure that users
-have link:salesforce-winter-20-release-critical-updates[access to
+have  xref:salesforce-winter-20-release-critical-updates[access to
 all custom settings and custom metadata types].
 
 [[h3__1862566713]]
 ==== 3. Global Application Setting
 
 The first step of configuring the managed CT CPG package is
-link:application-settings-management[to manage records of
+ xref:application-settings-management[to manage records of
 Application Settings] according to your business purpose. It can be a
 few records in case of need to use more than one marketing cycle. For
 more information, refer to
-the link:configuring-application-settings[Configuring Application
+the  xref:configuring-application-settings[Configuring Application
 Settings] section.
 
 [[h3_398962205]]
 ==== 4. Adding Sales Products
 
-link:ct-products-and-assortments-management[CT Products and
+ xref:ct-products-and-assortments-management[CT Products and
 Assortments management] is intended to manage customer products
 according to their business logic. For more information, please refer to
-the link:configuring-ct-products-and-assortments[Configuring CT
+the  xref:configuring-ct-products-and-assortments[Configuring CT
 Products and Assortments] section.
 
 [[h3__1438761666]]
 ==== 5. Creating the Marketing Cycle and Targeting Clients
 
-link:targeting-and-marketing-cycle-management[Targeting and
+ xref:targeting-and-marketing-cycle-management[Targeting and
 Marketing Cycle management] is designed to tailor your strategy to each
 client segment. Set up the frequency of planned activities to clients,
 products promoted for sale, assortments audit, and objectives to meet
 your clients' needs during the _Marketing Cycle_ period. For more
 information and detailed guidelines, please refer to
-the link:configuring-targeting-and-marketing-cycles[Configuring
+the  xref:configuring-targeting-and-marketing-cycles[Configuring
 Targeting and Marketing Cycles] section.
 
 You can configure your custom business logic without configuring the
@@ -249,10 +249,10 @@ targeting and marketing cycles process.
 [[h3_1423379549]]
 ==== 6. Configure CT CPG Calendar
 
-link:calendar-management[Calendar Management] is intended to
+ xref:calendar-management[Calendar Management] is intended to
 manage activities for the specific needs of each user division and
 role. For more information and detailed guidelines, please refer to
-the link:configuring-calendar[Configuring Calendar] section. 
+the  xref:configuring-calendar[Configuring Calendar] section. 
 
 [[h3__115994772]]
 ==== 7. Streamline Representatives' Activities
@@ -261,12 +261,12 @@ These settings are optional.
 
 
 
-link:activity-report-management[Activity Report management] is
+ xref:activity-report-management[Activity Report management] is
 intended to set _Activity Reports_ up for displaying details about the
 _CT CPG Activity_ record and to force the detailing based on your
 products and business goals. For more information and detailed
 guidelines, please refer to
-the link:configuring-activity-report[Configuring Activity
+the  xref:configuring-activity-report[Configuring Activity
 Report] section.  
 
 [[h3__28788001]]
@@ -276,11 +276,11 @@ These settings are optional.
 
 
 
-link:/articles/project-ct-cpg/objectives-management[Objectives
+ xref:/articles/project-ct-cpg/objectives-management[Objectives
 management] is intended to track goals reached on the representatives'
 activities for the corresponding Account records. For more information
 and detailed guidelines, please refer to
-the link:configuring-objectives[Configuring Objectives] section.  
+the  xref:configuring-objectives[Configuring Objectives] section.  
 
 [[h3_1656217633]]
 ==== 9. Set up Agenda Based on Previous Activities
@@ -289,11 +289,11 @@ These settings are optional.
 
 
 
-link:/articles/project-ct-cpg/next-activity-management[Next Activity
+ xref:/articles/project-ct-cpg/next-activity-management[Next Activity
 management] is intended to add some data from the previous activities to
 the next one on a routine basis or create a single visit based on the
 previous one. For more information and detailed guidelines, please refer
-to the link:configuring-next-activity[Configuring Next
+to the  xref:configuring-next-activity[Configuring Next
 Activity] section.  
 
 [[h3_1927205111]]
@@ -303,11 +303,11 @@ These settings are optional.
 
 
 
-link:activity-sync-management[Activity Sync management] is intended
+ xref:activity-sync-management[Activity Sync management] is intended
 to synchronize the standard _Event/Task_ and _CT CPG Activity_ records
 to work with them in one place, CT CPG Calendar. For more information
 and detailed guidelines, please refer to
-the link:configuring-activity-sync[Configuring Activity
+the  xref:configuring-activity-sync[Configuring Activity
 Sync] section.  
 
 [[h3_1569917463]]
@@ -317,11 +317,11 @@ These settings are optional.
 
 
 
-link:/articles/project-ct-cpg/change-requests-management[Change Request
+ xref:/articles/project-ct-cpg/change-requests-management[Change Request
 Management] is intended to control the data quality within an
 organization. You can apply your company-specific approval process to
 update the records or to add the cloned records to the new one by
-succession process. link:configuring-change-request[Configure the
+succession process.  xref:configuring-change-request[Configure the
 Change Request process] to control the data quality within the
 organization. 
 
@@ -332,11 +332,11 @@ These settings are optional.
 
 
 
-link:cpg-groups-management[CPG Group management] is intended for
+ xref:cpg-groups-management[CPG Group management] is intended for
 creating and using the CPG groups for ad hoc tasks or scheduled
 procedures according to specific criteria. For more information and
 detailed guidelines, please refer to
-the link:configuring-cpg-groups[Configuring CPG Groups] section.  
+the  xref:configuring-cpg-groups[Configuring CPG Groups] section.  
 
 [[h3_1485440664]]
 ==== 13. Estimate field forces
@@ -345,10 +345,10 @@ These settings are optional.
 
 
 
-link:ct-cpg-quizzes-management[Quiz Management] is intended to
+ xref:ct-cpg-quizzes-management[Quiz Management] is intended to
 receive feedback from the field force representatives. For more
 information and detailed guidelines, please refer to
-the link:configuring-quizzes[Configuring Quizzes] section.   
+the  xref:configuring-quizzes[Configuring Quizzes] section.   
 
 [[h3_994439749]]
 ==== 14. Integration of CT CPG with the CT Mobile solution

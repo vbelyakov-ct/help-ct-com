@@ -1,30 +1,30 @@
 = Reference Guide
 
 [TIP] ==== You can use preconfigured
-link:standard-layout-interface[Standard Layouts] without
-configuring link:activity-report-interface[Activity Reports]. ====
+ xref:standard-layout-interface[Standard Layouts] without
+configuring  xref:activity-report-interface[Activity Reports]. ====
 
 In this section:
 
-* Get familiar link:activity-report-interface[with the interface of
+* Get familiar  xref:activity-report-interface[with the interface of
 the _Activity Report_ page] according to the specific _Activity_ record
 type;
 * View the default
-_link:activity-report-management.html#h2__1515393312[Activity Layout]_
+_ xref:activity-report-management.html#h2__1515393312[Activity Layout]_
 and
-_link:activity-report-management.html#DefaultConfiguration-AR-BasicActionsforActivity[Buttons]_
+_ xref:activity-report-management.html#DefaultConfiguration-AR-BasicActionsforActivity[Buttons]_
 settings.
-* Read field description for link:activity-field-reference[CT CPG
-Activity], link:activity-data-field-reference[CT CPG Activity
+* Read field description for  xref:activity-field-reference[CT CPG
+Activity],  xref:activity-data-field-reference[CT CPG Activity
 Data],
-[.object]#link:report-template-field-reference[Report
-Template], #[.object]#link:skill-field-reference[Skill],#
-and link:skill-mark-field-reference[Skill Mark]
-link:skill-mark-field-reference[] objects.
+[.object]# xref:report-template-field-reference[Report
+Template], #[.object]# xref:skill-field-reference[Skill],#
+and  xref:skill-mark-field-reference[Skill Mark]
+ xref:skill-mark-field-reference[] objects.
 
 
 
-link:admin-guide/activity-report-management/index[Configure _Activity Report_ pages]
+ xref:admin-guide/activity-report-management/index[Configure _Activity Report_ pages]
 for each required _Activity_ record type.
 
 [[h2__1515393312]]
@@ -35,10 +35,10 @@ Activity# object.
 
 * *Activity List* is used for displaying available activities for the
 current user;
-* link:activity-report-interface#h2_683681312[Visit],
-link:activity-report-interface#h2_1673179481[Event],
-link:activity-report-interface#h2__192515681[Time Off],
-link:activity-report-interface#h2__1426808308[Joint Visit] is used
+*  xref:activity-report-interface#h2_683681312[Visit],
+ xref:activity-report-interface#h2_1673179481[Event],
+ xref:activity-report-interface#h2__192515681[Time Off],
+ xref:activity-report-interface#h2__1426808308[Joint Visit] is used
 for displaying the main section with all detailed information about the
 open _Activity_ record;
 ** *Visit* is intended to track _CT Products_ on the point-of-sales,
@@ -55,7 +55,7 @@ open activities to relate one of them to the _Joint Visit_ record.
 
 
 
-If needed, link:admin-guide/activity-report-management/manage-field-sets-for-activity-report-pages[create
+If needed,  xref:admin-guide/activity-report-management/manage-field-sets-for-activity-report-pages[create
 a new record type with the appropriate field set] or customize the
 configured field sets.
 
@@ -63,7 +63,7 @@ configured field sets.
 === Basic Actions for Activity
 
 By default, the *New*, *Edit*, and *View* buttons on the tabs, for
-example, the link:admin-guide/calendar-management/legacy-calendar-management/configuring-calendar/index[Calendar] or *Activities*
+example, the  xref:admin-guide/calendar-management/legacy-calendar-management/configuring-calendar/index[Calendar] or *Activities*
 tab, related to the[.object]#CT CPG Activity# object redirect
 users to the standard pages instead of _Activity Report_ pages.
 
@@ -71,10 +71,10 @@ users to the standard pages instead of _Activity Report_ pages.
 fields are set up within the page layout customization;
 * *ActivityReport* is responsible for displaying the Visualforce page
 with the corresponding field set and customized related tabs, e.g., the
-link:admin-guide/activity-report-management/configure-ct-product-tabs[Company Products] or
-link:admin-guide/activity-report-management/configure-an-event-member-tab[Event Members].
+ xref:admin-guide/activity-report-management/configure-ct-product-tabs[Company Products] or
+ xref:admin-guide/activity-report-management/configure-an-event-member-tab[Event Members].
 
 
 
-link:admin-guide/activity-report-management/override-basic-actions-for-activity[Override the button
+ xref:admin-guide/activity-report-management/override-basic-actions-for-activity[Override the button
 action] if you want to use the _Activity Report_ pages.

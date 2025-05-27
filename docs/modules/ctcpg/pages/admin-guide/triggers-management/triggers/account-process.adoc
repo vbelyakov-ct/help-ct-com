@@ -1,8 +1,8 @@
 = AccountProcess
 
 _AccountProcess_ is intended to display the _Account_ hierarchy
-link:admin-guide/calendar-management/legacy-calendar-management/calendar-interface#h2__1884555900[on the _Calendar_ tab] and
-link:admin-guide/targeting-and-marketing-cycles-management/create-targeting-lists[manage target _Account_ records].
+ xref:admin-guide/calendar-management/legacy-calendar-management/calendar-interface#h2__1884555900[on the _Calendar_ tab] and
+ xref:admin-guide/targeting-and-marketing-cycles-management/create-targeting-lists[manage target _Account_ records].
 
 '''''
 
@@ -20,7 +20,7 @@ the CTCPG__HasChildAccounts__c field on this _Account_ record. 
 
 |after update[au]  |manageTargetFrequency()  |manageTF a|
 In case of changes in
-the link:division-target-frequency-settings[Division Target
+the  xref:division-target-frequency-settings[Division Target
 Frequency Settings] record for the__ User__ division:
 
 * create a new _Target Frequency_ record related to the

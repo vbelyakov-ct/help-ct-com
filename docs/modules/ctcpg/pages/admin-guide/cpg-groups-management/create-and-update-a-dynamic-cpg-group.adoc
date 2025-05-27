@@ -13,7 +13,7 @@ To create a static CPG group:
 . Click *New*.
 . Fill in the _CPG group_ parameters, such as:
 [TIP] ==== Read the description of each
-parameter link:cpg-group-field-reference[here]. ====
+parameter  xref:cpg-group-field-reference[here]. ====
 * Enter *Group Name*;
 * Select *Group Type*;
 [NOTE] ==== *Group Type* cannot be changed after saving the
@@ -59,7 +59,7 @@ recalculation manually.
 
 If a user creates, updates, or removes a record of the object that
 matches the criteria of the dynamic group, the
-link:group-member-process[GroupMemberProcess] trigger immediately
+ xref:group-member-process[GroupMemberProcess] trigger immediately
 recalculates the dynamic group. It checks specific fields of the record
 and updates the corresponding dynamic group(s). 
 

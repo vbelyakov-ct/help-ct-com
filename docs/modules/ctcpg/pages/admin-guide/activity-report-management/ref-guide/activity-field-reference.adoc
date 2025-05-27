@@ -14,7 +14,7 @@ The following field is created on the standard
 
 |Activity |CTCPG__ActivityId__c |Lookup(Activity) |The
 related _CT CPG Activity_ record is created in case of using
-link:configuring-activity-sync[the Activity Sync functionality].
+ xref:configuring-activity-sync[the Activity Sync functionality].
 |===
 
 [[h2_573063013]]
@@ -22,7 +22,7 @@ link:configuring-activity-sync[the Activity Sync functionality].
 
 The[.object]#CT CPG Activity# object is used to store visit
 details, such as a date, client, and goals,
-link:admin-guide/activity-report-management/ref-guide/index#h2__1589666022[for each configured
+ xref:admin-guide/activity-report-management/ref-guide/index#h2__1589666022[for each configured
 record type].
 
 '''''
@@ -40,7 +40,7 @@ related _Account_ record.
 
 |Activity |CTCPG__ActivityId__c |Lookup(Activity)  |The
 related standard _Activity_ record is created in case of
-using link:configuring-activity-sync[the Activity Sync
+using  xref:configuring-activity-sync[the Activity Sync
 functionality].
 
 |Activity Name  |CTCPG__ActivityName__c |Formula(Text) |If
@@ -76,18 +76,18 @@ Cycle) |The related _Marketing Cycle_ record.
 
 |Next Call Date |CTCPG__NextCallDate__c |Date/Time  a|
 The date of the next Activity
-record according link:next-call-settings[to the Next Call Date
+record according  xref:next-call-settings[to the Next Call Date
 settings]. 
 
 |Next Call Objective |CTCPG__NextCallObjective__c |Text
 Area(255) |The _Objective_ that will be copied to the next _Activity_
-according link:next-call-settings[to the Next Call Date settings].
+according  xref:next-call-settings[to the Next Call Date settings].
 
 |Objective |CTCPG__Objective__c  |Text Area(255)  |The
-link:configuring-objectives[Objective] for the _Activity_ record.
+ xref:configuring-objectives[Objective] for the _Activity_ record.
 
 |OriginalId |CTCPG__OriginalId__c  |Lookup(Activity) |It used
-to clone the _Activity_ record on the link:admin-guide/calendar-management/legacy-calendar-management/configuring-calendar/index[CT
+to clone the _Activity_ record on the  xref:admin-guide/calendar-management/legacy-calendar-management/configuring-calendar/index[CT
 CPG Calendar] tab.
 
 |Report Template |CTCPG__ReportTemplateId__c  |Lookup(Report

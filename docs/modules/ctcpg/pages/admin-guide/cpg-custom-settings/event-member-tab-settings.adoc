@@ -1,15 +1,15 @@
 = Event Member Tab Settings
 
 *Event Member Tab Settings* is used to display
-link:admin-guide/activity-report-management/work-with-the-activity-report-page#h2_867056578[participants
+ xref:admin-guide/activity-report-management/work-with-the-activity-report-page#h2_867056578[participants
 of the particular event] on the tab of the
-_link:activity-report-interface.html#h2_1673179481[Activity Report]_
-page for the specific user or profile link:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[based
+_ xref:activity-report-interface.html#h2_1673179481[Activity Report]_
+page for the specific user or profile  xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[based
 on the division category]. 
 
 By default, there is the setting for the whole Salesforce organization.
 To enhance or restrict a particular user or profile access,
-link:admin-guide/activity-report-management/configure-an-event-member-tab[create a new record].
+ xref:admin-guide/activity-report-management/configure-an-event-member-tab[create a new record].
 
 '''''
 
@@ -28,7 +28,7 @@ _Activity Report_.
 |Additional Parameter  |CTCPG__AdditionalParam__c |Text (255) 
 a|
 Additional SOQL-criterion to filter available
-_link:contact-field-reference.html[Contact]_ records to select
+_ xref:contact-field-reference.html[Contact]_ records to select
 in the CTCPG__FieldToShowAsPicklist__c field.
 
 * To filter records, the criteria line should start with the
@@ -49,7 +49,7 @@ field (separated by a comma, without blank spaces):
 * **false **to restrict.
 
 |Field Set Name  |CTCPG__FieldSetName__c |Text (255)
-|link:admin-guide/activity-report-management/configure-an-event-member-tab[Specify the API name of the
+| xref:admin-guide/activity-report-management/configure-an-event-member-tab[Specify the API name of the
 field set] for the _Activity Report_ page for each
 specified _Activity_ record type in
 the CTCPG__RecordTypeDeveloperName__c field (separated by a
@@ -57,7 +57,7 @@ comma, without a blank space).
 
 |Field To Show As Picklist  |CTCPG__FieldToShowAsPicklist__c
 |Text (255) |The field API name with lookup type to the _Contact_
-record of the link:admin-guide/activity-report-management/ref-guide/activity-field-reference[Activity] object that
+record of the  xref:admin-guide/activity-report-management/ref-guide/activity-field-reference[Activity] object that
 should be displayed as a picklist, for example, ContactId__c.
 
 |Read Only ContactId |CTCPG__FieldSetName__c |Text (255)

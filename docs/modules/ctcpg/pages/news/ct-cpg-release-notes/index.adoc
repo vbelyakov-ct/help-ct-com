@@ -14,7 +14,7 @@ version. 
 [[h3__1009797845]]
 ==== *Fixes*
 
-* link:create-an-activity-sync[Activity Sync] does not create the
+*  xref:create-an-activity-sync[Activity Sync] does not create the
 _Even_/_Task_ record for Type set as _Custom to Standard_ or _Both_,
 even if the conditions are met.
 * Calendar**:**
@@ -41,10 +41,10 @@ for the user.
 ==== *New Features*
 
 * Connection to Self API is now required for
-accessing link:calendar-settings-ct-cpg-settings-panel[CPG Settings
+accessing  xref:calendar-settings-ct-cpg-settings-panel[CPG Settings
 Panel]​.
 * *Required* option added to the
-link:calendar-settings-ct-cpg-settings-panel#h3__1888339674[Compact
+ xref:calendar-settings-ct-cpg-settings-panel#h3__1888339674[Compact
 form] in CPG Settings Panel.
 * Calendar**:**​
 ** Improved the visual design and added translation support for target
@@ -58,7 +58,7 @@ objects.
 ==== *New Features*
 
 * Add
-link:ct-product-field-reference[isIgnoreComponentAvailability] flag
+ xref:ct-product-field-reference[isIgnoreComponentAvailability] flag
 for product availability validation.
 
 [[h3__478012756]]
@@ -72,10 +72,10 @@ for product availability validation.
 [[h3__2112656071]]
 ==== New Features and Improvements
 
-New link:new-calendar-management[Calendar] with improved usability
+New  xref:new-calendar-management[Calendar] with improved usability
 and interface. Now you can
-link:calendar-interface-and-activities[manage activities] and
-link:calendar-settings-ct-cpg-settings-panel[configure] the
+ xref:calendar-interface-and-activities[manage activities] and
+ xref:calendar-settings-ct-cpg-settings-panel[configure] the
 calendar in a faster and more convenient way.
 
 [[h2__1451186373]]
@@ -345,7 +345,7 @@ package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n000
 
 * Fixed the _Event_ creation on the *Calendar* tab.
 * Fixed triggers launch in case of
-the link:trigger-settings[Trigger Settings] record is absent for
+the  xref:trigger-settings[Trigger Settings] record is absent for
 the corresponding trigger. 
 * Fixed Product Layout name.
 
@@ -358,7 +358,7 @@ package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n000
 [[h3_1642576463]]
 ==== New Features and Improvements
 
-​The link:dynamic-group-settings[Dynamic Group Settings] custom
+​The  xref:dynamic-group-settings[Dynamic Group Settings] custom
 setting for managing the batch size of recalculating records in dynamic
 groups.
 
@@ -441,5 +441,5 @@ Fixed the creation of the *Activity* records.
 === CT CPG Solution Summer '19
 
 Download the
-link:/resources/Storage/Files/CT-CPG-Summer-%2719-Release-Notes.pdf[CT
+ xref:/resources/Storage/Files/CT-CPG-Summer-%2719-Release-Notes.pdf[CT
 CPG Summer '19 Release Notes].

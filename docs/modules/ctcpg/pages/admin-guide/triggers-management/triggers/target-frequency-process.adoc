@@ -1,7 +1,7 @@
 = TargetFrequencyProcess
 
 *TargetFrequencyProcess* is intended to
-link:admin-guide/targeting-and-marketing-cycles-management/index[manage _Target
+ xref:admin-guide/targeting-and-marketing-cycles-management/index[manage _Target
 Frequency_ records].
 
 '''''
@@ -16,8 +16,8 @@ API name in Salesforce: TargetFrequencyProcess
 
 |after insert[ai]  |concatenateUsersOnTarget() |conTarget
 |If the CTCPG__EnableAdvancedTFLogic__c checkbox enabled on the
-_link:application-settings.html[Application Settings]_ record,
-link:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[the fields with division values] will be
+_ xref:application-settings.html[Application Settings]_ record,
+ xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[the fields with division values] will be
 updated on the related _Account_ and _Contact_ records.
 
 | a|
@@ -47,8 +47,8 @@ be updated on the related _Account_ and _Contact_ records.
 
 |after undelete[aud]   |concatenateUsersOnTarget()
 |conTarget |If the CTCPG__EnableAdvancedTFLogic__c checkbox
-enabled on the _link:application-settings.html[Application
-Settings]_ record, link:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[the fields with division
+enabled on the _ xref:application-settings.html[Application
+Settings]_ record,  xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[the fields with division
 values] will be updated on the related _Account_ and _Contact_ records. 
 
 | | | |
@@ -78,8 +78,8 @@ changed. 
 
 |before delete[bd]  |concatenateUsersOnTarget() |conTarget
 |If the CTCPG__EnableAdvancedTFLogic__c checkbox enabled on
-the _link:application-settings.html[Application
-Settings]_ record, link:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[the fields with division
+the _ xref:application-settings.html[Application
+Settings]_ record,  xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[the fields with division
 values] will be updated on the
 related _Account_ and _Contact_ records.
 |===

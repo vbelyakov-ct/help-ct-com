@@ -31,17 +31,17 @@ the *Quizzes* tab.
 [NOTE] ==== Available only for the CT Mobile iOS. ====
 * Configure your custom process, for example, to link a quiz to the _CT
 Pharma Activity_ record.
-. link:override-basic-action-for-quiz[Override Basic Action for
+.  xref:override-basic-action-for-quiz[Override Basic Action for
 Quiz] of the [.object]#Quiz# object to have the ability to add
 questions and assign users.
 . https://help.salesforce.com/articleView?id=creating_custom_object_tabs.htm&type=5[Add
 the Quizzes tab].
-. Define the __Quiz __purpose and link:create-a-new-quiz[create a
+. Define the __Quiz __purpose and  xref:create-a-new-quiz[create a
 new Quiz] with the required options:
-* link:specify-questions-for-quiz[create questions] for the quiz;
+*  xref:specify-questions-for-quiz[create questions] for the quiz;
 * specify the order of the questions;
 * activate the _Quiz_ record.
-. link:assign-the-quiz-partaker[Assign representatives] to pass the
+.  xref:assign-the-quiz-partaker[Assign representatives] to pass the
 quiz.
 [TIP] ==== You can test the quiz as the administrator and next
 assign it to users. ====
