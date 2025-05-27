@@ -3,11 +3,11 @@
 The following fields are created on the standard
 [.object]#Contact# object during the CT CPG installation.
 
-[NOTE] ==== In case of xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[creating new
-divisions], the Division[.underline]#Name#Category__c ====  field
+[NOTE] ==== In case of xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[creating new
+divisions], the Division[.underline]#Name#Category__c ====  field
 with the category picklist and
-the Division[.underline]#Name#TargetCheck__c checkbox, where Name is
-the new division name, should be created.   
+the Division[.underline]#Name#TargetCheck__c checkbox, where Name is
+the new division name, should be created.
 
 [width="100%",cols="25%,25%,25%,25%",]
 |===
@@ -31,7 +31,7 @@ assigned to the specified category.
 
 |Division Beta Category |CTCPG__DivisionBetaCategory__c
 |Picklist a|
-The _Contact_ category that used to assign the target frequency to the
+The _Contact_ category that used to assign the target frequency to the
 selected C__ontact__ record. Available values by default:
 
 * Store manager
@@ -49,6 +49,6 @@ assigned to the specified category.
 checked if the C__ontact__ record has been selected as a target.
 
 |Target User Ids |CTCPG__TargetUserIds__c |Text Area(255)
-|Store the values from the CTCPG__UniqUserNumber__c field of
-the _User_ record that targeted the__ Contact__ record.
+|Store the values from the CTCPG__UniqUserNumber__c field of
+the _User_ record that targeted the__ Contact__ record.
 |===

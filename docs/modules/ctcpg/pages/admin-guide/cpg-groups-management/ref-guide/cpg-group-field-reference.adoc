@@ -2,7 +2,7 @@
 
 The[.object]#CPG Group# object is intended to store appropriate
 objects' records in alignment with SOQL filters applied to these objects
-and their child objects. 
+and their child objects.
 
 '''''
 
@@ -26,7 +26,7 @@ A static group is a snapshot of records per specific time.
 A dynamic group keeps the lists of records for different objects up to
 date.
 
-|Field List |CTCPG__FieldList__c |TextArea(255)  |Fields to
+|Field List |CTCPG__FieldList__c |TextArea(255)  |Fields to
 display group members table (separated by a comma, without blank space).
 
 |For Group Update |​​CTCPG__IsForUpdate__c |Checkbox
@@ -51,14 +51,14 @@ To specify a new group type, refer to
 xref:admin-guide/cpg-groups-management/specify-a-custom-object-for-a-cpg-group[Specify a Custom
 Object for a CPG Group].
 
-* _Accounts_ and their child objects,
-e.g., [.object]#CT Orders#, [.object]#Activities#, etc.
-* _Contacts_ and their child objects,
-e.g., Activities, [.object]#Target Frequencies#, etc. 
-* _CT Products_ and their child objects,
-e.g., [.object]#Assortments#, [.object]#Activity
-Data#, etc.
-* _Users_ and their child objects, e.g., [.object]#CT
-Orders#, Activities, etc.
+* _Accounts_ and their child objects,
+e.g., [.object]#CT Orders#, [.object]#Activities#, etc.
+* _Contacts_ and their child objects,
+e.g., Activities, [.object]#Target Frequencies#, etc.
+* _CT Products_ and their child objects,
+e.g., [.object]#Assortments#, [.object]#Activity
+Data#, etc.
+* _Users_ and their child objects, e.g., [.object]#CT
+Orders#, Activities, etc.
 
 |===

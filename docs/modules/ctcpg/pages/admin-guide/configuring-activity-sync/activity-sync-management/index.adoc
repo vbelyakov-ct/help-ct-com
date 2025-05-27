@@ -14,7 +14,7 @@ will be updated] on the[.object]#Event# and
 
 
 
-xref:admin-guide/configuring-activity-sync/index[Configure Activity Sync] for
+xref:admin-guide/configuring-activity-sync/index[Configure Activity Sync] for
 managing activities between the standard Salesforce calendar and CT CPG
 Calendar.
 
@@ -23,17 +23,17 @@ Calendar.
 
 Activity Sync is used to:
 
-* Automatically synchronize the standard _Event/Task_ and _CT CPG
-Activity_ records. A corresponding record based on the
-standard _Event/Task_ or _CT CPG Activity_ record will be created.
+* Automatically synchronize the standard _Event/Task_ and _CT CPG
+Activity_ records. A corresponding record based on the
+standard _Event/Task_ or _CT CPG Activity_ record will be created.
 
-If you have a few _Activity Sync_ records, make sure that active
-settings do not affect each other to avoid failures during the _Activity
-Sync_ processes. 
+If you have a few _Activity Sync_ records, make sure that active
+settings do not affect each other to avoid failures during the _Activity
+Sync_ processes.
 * Synchronize changes in records.
-* Map fields to update them with the values from the
-parent _Event/Task_ or _CT CPG Activity_ record via the _Activity
-Sync_ process. 
+* Map fields to update them with the values from the
+parent _Event/Task_ or _CT CPG Activity_ record via the _Activity
+Sync_ process.
 
 
 
@@ -45,9 +45,9 @@ image:activity-sync-records-.png[]
 === The Event and Task fields to update
 
 The values from the following fields will be updated on the creating
-_Activity_ record via the _Activity Sync_ process. The
+_Activity_ record via the _Activity Sync_ process. The
 [.apiobject]#CTCPG__ActivityId__c field# is used to
-relate the synced standard _Event_/_Task_ or CT CPG Activity records.
+relate the synced standard _Event_/_Task_ or CT CPG Activity records.
 
 
 

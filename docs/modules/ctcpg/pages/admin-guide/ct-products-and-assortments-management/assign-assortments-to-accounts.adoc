@@ -2,58 +2,58 @@
 
 Specify clients to whom you wish to sell the assortments by creating the
 _Account Assortment_ record that ties the required _Account_ records
-with _Assortment_ records. Multiple _Assortment_ records can be assigned
+with _Assortment_ records. Multiple _Assortment_ records can be assigned
 for the same _Account_ record, and vice versa.
 
 
 
-To assign the _Assortment_ record to the _Account_ record, go to the
-_Assortments_ or _Accounts_ tab.
+To assign the _Assortment_ record to the _Account_ record, go to the
+_Assortments_ or _Accounts_ tab.
 
 [NOTE] ====
 https://help.salesforce.com/articleView?id=admin_files_related_list_setup.htm&type=5[The
 _Assortments_ related list] should be available on the _Account_ page
 layout. ====
 
-The assigned _Assortment_ records will be available to select
+The assigned _Assortment_ records will be available to select
 xref:configuring-activity-report[on the _Activity Report_ page]
-or, xref:create-a-new-record-of-marketing-detail-tracking[in case
+or, xref:create-a-new-record-of-marketing-detail-tracking[in case
 of using the marketing cycle], will be
 xref:create-a-marketing-cycle[automatically pulled] to
-the _Activity Report_.
+the _Activity Report_.
 
 [[h2_2040275419]]
 === The Assortments Tab
 
-To assign __Assortment __to the _Account_ record:
+To assign __Assortment __to the _Account_ record:
 
-. Go to the *Assortments* tab and click the required _Assortment_
+. Go to the *Assortments* tab and click the required _Assortment_
 record.
-. In the *Accounts* section, click *New*.
+. In the *Accounts* section, click *New*.
 . Fill in the required fields.
-* Select *Account*.
-* Set *Active* to use the _Assortment_ record.
-* Set **Primary **to see the _Assortment_ record first
+* Select *Account*.
+* Set *Active* to use the _Assortment_ record.
+* Set **Primary **to see the _Assortment_ record first
 xref:configure-ct-product-tabs[on the _CT Product_ related tab] on
 the _Activity Report_ page.
-* Add *Start Date* and **End Date **to set up the period when the
-selected _Assortment_ record will be available for the
-particular _Account_ record.
+* Add *Start Date* and **End Date **to set up the period when the
+selected _Assortment_ record will be available for the
+particular _Account_ record.
 image:assign-assortment-to-account.png[]
-. Click *Save*.
+. Click *Save*.
 
 The assortment is assigned.
 
 [[h2_1205414247]]
 === The Account tab
 
-To assign __Assortment __to the _Account_ record:
+To assign __Assortment __to the _Account_ record:
 
-. Go to the *Accounts* tab and click the required _Account_ record.
-. In the *Assortments* section, click *New*.
-. Fill in the required fields. 
-* Select *Assortment*.
-* Set *Active* to use the _Assortment_ record.
+. Go to the *Accounts* tab and click the required _Account_ record.
+. In the *Assortments* section, click *New*.
+. Fill in the required fields.
+* Select *Assortment*.
+* Set *Active* to use the _Assortment_ record.
 * Specify dates that the selected _Assortment_ record will be available
 for the particular _Account_ record.
 image:assign-account-to-assortment.png[]

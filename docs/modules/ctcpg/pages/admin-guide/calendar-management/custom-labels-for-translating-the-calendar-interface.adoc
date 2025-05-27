@@ -5,9 +5,9 @@ xref:admin-guide/new-calendar-management/calendar-interface-and-activities[Calen
 
 . Go to *Setup* → *User Interface* → *Custom Labels*.
 . Select a label category to translate:
-* _Calendar_ category to translate interface elements of the
+* _Calendar_ category to translate interface elements of the
 xref:admin-guide/new-calendar-management/calendar-interface-and-activities[Calendar].
-* _Settings Panel_ category to translate interface elements of the
+* _Settings Panel_ category to translate interface elements of the
 xref:admin-guide/new-calendar-management/calendar-settings-ct-cpg-settings-panel[Calendar Settings (CT
 CPG Settings Panel)].
 . Click *Edit* on the desired label.
@@ -15,17 +15,17 @@ CPG Settings Panel)].
 . Click *Save*.
 
 [TIP] ==== Time zone, language of the calendar (days, months,
-weeks) and starting day of the week depend on the  ====
+weeks) and starting day of the week depend on the  ====
 https://help.salesforce.com/s/articleView?id=sf.usersetup_lang_time_zone.htm&type=5[user's
 language and locale settings].
 
 For your convenience, you can create a new View for the Calendar
 interface elements:
 
-. Go to *Setup* → *User Interface* → *Custom Labels*.
+. Go to *Setup* → *User Interface* → *Custom Labels*.
 . Click *Create New View*.
-. Fill in *View Name* and *View Unique Name* fields. 
-. In the *Filter By Additional Fields (Optional)* section, add 2
+. Fill in *View Name* and *View Unique Name* fields.
+. In the *Filter By Additional Fields (Optional)* section, add 2
 filters:
 
 [width="100%",cols="34%,33%,33%",options="header",]
@@ -34,10 +34,10 @@ filters:
 |Categories |equals |Calendar
 |Categories |equals |Settings Panel
 |===
-. Click *Add Filter Logic* and, in the *Filter Logic* field, type _1 OR
+. Click *Add Filter Logic* and, in the *Filter Logic* field, type _1 OR
 2_.
 . If needed, *Restrict Visibility* of this View.
-. Click *Save*. 
+. Click *Save*.
 
 
 

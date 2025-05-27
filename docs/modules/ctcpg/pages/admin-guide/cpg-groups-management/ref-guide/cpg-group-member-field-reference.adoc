@@ -1,6 +1,6 @@
 = CPG Group Member Field Reference
 
-The[.object]#CPG Group Member# object is intended to store
+The[.object]#CPG Group Member# object is intended to store
 static or dynamic group members.
 
 '''''
@@ -17,17 +17,17 @@ Object API name: `CTCPG__GroupMember__c`
 _Account_ record if the group type is _Account_.
 
 |Contact |​​`CTCPG__ContactId__c` |Lookup(Contact) |The related
-_Contact_ __ record if the group type is _Contact_. 
+_Contact_ __ record if the group type is _Contact_.
 
 |CPG Group |`CTCPG__GroupId__c` |Lookup(CPG Group) |The related
 _CPG Group_ record.
 
-|Manual |`CTCPG__IsManual__c` |Checkbox       |Defines if the
+|Manual |`CTCPG__IsManual__c` |Checkbox       |Defines if the
 member was added to the resulting list manually.
 
 |Product |`CTCPG__ProductId__c` |Lookup(CT Product) |The
-related _Product_ record if the group type is _Product_.  
+related _Product_ record if the group type is _Product_.
 
-|User   |`​​CTCPG__UserId__c` |Lookup(User) |The related
-User ** record if the group type is _User_. 
+|User   |`​​CTCPG__UserId__c` |Lookup(User) |The related
+User ** record if the group type is _User_.
 |===

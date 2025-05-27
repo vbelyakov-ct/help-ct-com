@@ -3,8 +3,8 @@
 [[h2_11378874]]
 === The standard Activity object
 
-The following field is created on the standard
-[.object]#Activity# object during the CT CPG installation.
+The following field is created on the standard
+[.object]#Activity# object during the CT CPG installation.
 
 
 
@@ -21,7 +21,7 @@ xref:configuring-activity-sync[the Activity Sync functionality].
 === The custom CT CPG Activity object
 
 The[.object]#CT CPG Activity# object is used to store visit
-details, such as a date, client, and goals,
+details, such as a date, client, and goals,
 xref:admin-guide/activity-report-management/ref-guide/index#h2__1589666022[for each configured
 record type].
 
@@ -38,69 +38,69 @@ API name in Salesforce: CTCPG__Activity__c
 |Account |CTCPG__AccountId__c |Lookup(Account) |The
 related _Account_ record.
 
-|Activity |CTCPG__ActivityId__c |Lookup(Activity)  |The
+|Activity |CTCPG__ActivityId__c |Lookup(Activity)  |The
 related standard _Activity_ record is created in case of
-using xref:configuring-activity-sync[the Activity Sync
+using xref:configuring-activity-sync[the Activity Sync
 functionality].
 
-|Activity Name  |CTCPG__ActivityName__c |Formula(Text) |If
+|Activity Name  |CTCPG__ActivityName__c |Formula(Text) |If
 specified, it stores the _Account_ record name and _Contact_ full name.
 
 |Contact |CTCPG__ContactId__c |Lookup(Contact) |The
-related _Contact_ record.
+related _Contact_ record.
 
 |Description |CTCPG__Description__c |Long Text Area(32768)
 |Add the _Activity_ description if needed.
 
-|End Date         |CTCPG__EndDate__c |Date/Time |The end
+|End Date         |CTCPG__EndDate__c |Date/Time |The end
 date and time of the _Activity_ record.
 
 |Event Name |CTCPG__EventName__c |Formula(Text) |Used in
 custom dialog «Add contacts as event participants».
 
 |Is Approved |CTCPG__IsApproved__c |Checkbox |If selected,
-the _Activity_ record is approved.
+the _Activity_ record is approved.
 
-|Is Done |CTCPG__IsDone__c  |Checkbox  |If selected, the
+|Is Done |CTCPG__IsDone__c  |Checkbox  |If selected, the
 _Activity_ record is done.
 
-|Is Locked |CTCPG__IsLocked__c  |Checkbox  |If selected,
-the _Activity_ record is locked and cannot be modified.
+|Is Locked |CTCPG__IsLocked__c  |Checkbox  |If selected,
+the _Activity_ record is locked and cannot be modified.
 
 |Joint User |CTCPG__UserId__c |Lookup(User) |It is used for
-a record of the _Joint Visit_ record type and stores the related _User_
+a record of the _Joint Visit_ record type and stores the related _User_
 record.
 
 |Marketing Cycle |CTCPG__MarketingCycleId__c |Lookup(Marketing
 Cycle) |The related _Marketing Cycle_ record.
 
-|Next Call Date |CTCPG__NextCallDate__c |Date/Time  a|
+|Next Call Date |CTCPG__NextCallDate__c |Date/Time  a|
 The date of the next Activity
-record according xref:next-call-settings[to the Next Call Date
-settings]. 
+record according xref:next-call-settings[to the Next Call Date
+settings].
 
 |Next Call Objective |CTCPG__NextCallObjective__c |Text
 Area(255) |The _Objective_ that will be copied to the next _Activity_
 according xref:next-call-settings[to the Next Call Date settings].
 
-|Objective |CTCPG__Objective__c  |Text Area(255)  |The
+|Objective |CTCPG__Objective__c  |Text Area(255)  |The
 xref:configuring-objectives[Objective] for the _Activity_ record.
 
-|OriginalId |CTCPG__OriginalId__c  |Lookup(Activity) |It used
+|OriginalId |CTCPG__OriginalId__c  |Lookup(Activity) |It used
 to clone the _Activity_ record on the xref:admin-guide/calendar-management/legacy-calendar-management/configuring-calendar/index[CT
 CPG Calendar] tab.
 
-|Report Template |CTCPG__ReportTemplateId__c  |Lookup(Report
+|Report Template |CTCPG__ReportTemplateId__c  |Lookup(Report
 Template) |The related _Report Template_ for a record of the _Joint
 Visit_ record type.
 
-|Result |CTCPG__Result__c  |Long Text Area(32768)  |For
+|Result |CTCPG__Result__c  |Long Text Area(32768)  |For
 describing the result details of the _Activity_.
 
-|Start Date |CTCPG__StartDate__c  |Date/Time |The start date
-and time of the _Activity_ record.
+|Start Date |CTCPG__StartDate__c  |Date/Time |The start date
+and time of the _Activity_ record.
 
-|Status |CTCPG__Status__c  |Picklist a|
+|Status |CTCPG__Status__c  |Picklist a|
 The _Activity_ record status. The available values by default:
 
 * Planned
@@ -108,11 +108,11 @@ The _Activity_ record status. The available values by default:
 * Finished
 * Canceled
 
-|Target Frequency |CTCPG__TargetFrequencyId__c  |Lookup(Target
+|Target Frequency |CTCPG__TargetFrequencyId__c  |Lookup(Target
 Frequency) |The related _Target Frequency_ record, if the related
 _Account_ or _Contact_ record is targeted.
 
-|Type |CTCPG__Type__c  |Picklist a|
+|Type |CTCPG__Type__c  |Picklist a|
 The Activity type. The available values by default:
 
 * Type 1

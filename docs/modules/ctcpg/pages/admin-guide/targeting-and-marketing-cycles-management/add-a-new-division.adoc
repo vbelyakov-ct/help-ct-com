@@ -1,9 +1,9 @@
 = Add a New Division
 
 By default, the *Alpha* and *Beta* divisions are
-available, the xref:account-field-reference[Account] and xref:contact-field-reference[Contact] objects
+available, the xref:account-field-reference[Account] and xref:contact-field-reference[Contact] objects
 have the corresponding division fields that are present in the *Global*
-record of the xref:application-settings[Application Settings]. 
+record of the xref:application-settings[Application Settings].
 
 
 
@@ -14,15 +14,15 @@ in the *User Division* picklist of the[.object]#User# and
 [.object]#Marketing Cycle# objects, for example,
 [.underline]#Gamma#;
 * xref:admin-guide/configuring-targeting-and-marketing-cycles/add-a-new-division#h2__1661054417[Add the custom User
-Division field] on the *User* page layout and specify the new
-[.underline]#Gamma# division for the required _User_ record;
+Division field] on the *User* page layout and specify the new
+[.underline]#Gamma# division for the required _User_ record;
 * xref:admin-guide/configuring-targeting-and-marketing-cycles/add-a-new-division#h2__81078948[Create the new division
 fields] on the __[.object]#Account# and
-[.object]#Contact# objects using the same division category
+[.object]#Contact# objects using the same division category
 name, for
-example, Division_[.underline]#Gamma#_Category__c and Division_[.underline]#Gamma#_Target_Check__c;
+example, Division_[.underline]#Gamma#_Category__c and Division_[.underline]#Gamma#_Target_Check__c;
 * xref:admin-guide/configuring-targeting-and-marketing-cycles/add-a-new-division#h2__1236380249[Add new division fields],
-Division_[.underline]#Gamma#_Category__c and Division_[.underline]#Gamma#_Target_Check__c, in
+Division_[.underline]#Gamma#_Category__c and Division_[.underline]#Gamma#_Target_Check__c, in
 the corresponding record of the
 xref:application-settings[Application Settings].
 
@@ -31,8 +31,8 @@ xref:application-settings[Application Settings].
 
 To add a new division:
 
-. Go to **Setup → Object Manager → User → Fields & Relationships
-→ **click *User Division*.
+. Go to **Setup → Object Manager → User → Fields & Relationships
+→ **click *User Division*.
 . In the *Values* section, click *New*.
 . Add the new category name, for example, Gamma.
 . Click *Save*.
@@ -40,16 +40,16 @@ To add a new division:
 this value the default for the master picklist* if you want to use this
 category by default. ====
 image:new-division-category.png[]
-. Click **Object Manager → Marketing Cycle → **click *User Division*.
+. Click **Object Manager → Marketing Cycle → **click *User Division*.
 . Repeat steps 2–4.
 
 The division is added.
 
 [[h2__1661054417]]
-=== Specify Division on the User Record
+=== Specify Division on the User Record
 
-To target _Accounts_ and _Contacts_ of the specific division, assign the
-required _User_ record to the division.
+To target _Accounts_ and _Contacts_ of the specific division, assign the
+required _User_ record to the division.
 
 By default, the standard *Division* field is on the user page layout.
 Add and fill the custom *User Division* field on the *User* page layout.
@@ -69,38 +69,38 @@ example, Gamma.
 The division is assigned.
 
 [[h2__81078948]]
-=== Add Division to the Account and Contact Objects
+=== Add Division to the Account and Contact Objects
 
-There should be a picklist to contain division categories and a checkbox
-that represents belonging to the new division on
-both [.object]#Account# and [.object]#Contact# objects.
+There should be a picklist to contain division categories and a checkbox
+that represents belonging to the new division on
+both [.object]#Account# and [.object]#Contact# objects.
 
 
 
-To add a new division: 
+To add a new division:
 
-. Go to **Setup → Object Manager  → Account → Fields & Relationships
-→ **click *New*.
+. Go to **Setup → Object Manager  → Account → Fields & Relationships
+→ **click *New*.
 . Create a field with the *Picklist* type and set the values up.
-* Select *Picklist* and click *Next*.
-* Enter Division Gamma Category** **in** Field Label**, select *a global
+* Select *Picklist* and click *Next*.
+* Enter Division Gamma Category** **in** Field Label**, select *a global
 picklist value set* (that should be created), or *manually enter values*
-(division categories) and click *Next*. 
+(division categories) and click *Next*.
 * Select the profiles to which you want to grant edit access to this
 field and click *Next*.
 * Select the page layouts that should include this field and click *Save
 & New*.
 . Create a field with the *Checkbox* type.
-* Select *Checkbox* and click *Next*.
-* Enter Division Gamma Target Check** **in** Field Label**, leave the
-*Unchecked* field selected and click *Next*.  
+* Select *Checkbox* and click *Next*.
+* Enter Division Gamma Target Check** **in** Field Label**, leave the
+*Unchecked* field selected and click *Next*.
 * Select the profiles to which you want to grant edit access to this
 field and click *Next*.
 * Select the page layouts that should include this field and click
-*Save*. 
+*Save*.
 image:division-fileds.png[]
-. Click *Object Manager → Contact → Fields & Relationships
-→* click *New*. 
+. Click *Object Manager → Contact → Fields & Relationships
+→* click *New*.
 . Repeat steps 2–3.
 
 The division is added.
@@ -109,32 +109,32 @@ The division is added.
 === Editing the Application Settings record
 
 To finish the setting, update a corresponding record of the Application
-Settings with new division fields. 
+Settings with new division fields.
 
 
 
 To update the record:
 
-. Go to *Setup → Custom Code → Custom Settings → Application Settings →*
-click *Manage* next to *Application Settings*. 
-. Click **Edit **next to the required record, for example, the *Global*
+. Go to *Setup → Custom Code → Custom Settings → Application Settings →*
+click *Manage* next to *Application Settings*.
+. Click **Edit **next to the required record, for example, the *Global*
 or another existed one.
 . Update the following fields:
-* In the *Account Category Fields API names* field, add the new division
-field API Name field
-of xref:account-field-reference[the _Account_ record], that is
+* In the *Account Category Fields API names* field, add the new division
+field API Name field
+of xref:account-field-reference[the _Account_ record], that is
 responsible for the new division, for
-example, Division_Gamma_Category__c (separated by a comma,
+example, Division_Gamma_Category__c (separated by a comma,
 without blank spaces);
-* In the *Account Target Flags API names* field, add the new
-division field API Name field of the _Account_ record, that is
+* In the *Account Target Flags API names* field, add the new
+division field API Name field of the _Account_ record, that is
 responsible for the selection of the new division, for
-example, Division_Gamma_Target_Check__c (separated by a
+example, Division_Gamma_Target_Check__c (separated by a
 comma, without blank spaces);
 * Specify the same division fields
-of xref:contact-field-reference[the _Contact_ record] in
-the *Contact *Category Fields API names** and *Contact *Target Flags API
-names** fields (separated by a comma, without blank spaces).
+of xref:contact-field-reference[the _Contact_ record] in
+the *Contact *Category Fields API names** and *Contact *Target Flags API
+names** fields (separated by a comma, without blank spaces).
 . Click *Save*.
 image:updat-the-application-settings-record.png[]
 

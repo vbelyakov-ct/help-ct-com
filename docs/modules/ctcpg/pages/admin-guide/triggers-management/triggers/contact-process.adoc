@@ -13,20 +13,20 @@ API name in Salesforce: ContactProcess
 |===
 |*Context* |*Method* |*Codename* |*Description*
 
-|after insert[ai]  | | |Reserved.
+|after insert[ai]  | | |Reserved.
 
-|after update[ai] |manageTargetFrequency()  |manageTF a|
+|after update[ai] |manageTargetFrequency()  |manageTF a|
 In case of changes in
-the xref:division-target-frequency-settings[Division Target
-Frequency Settings] record for the__ User__ division:
+the xref:division-target-frequency-settings[Division Target
+Frequency Settings] record for the__ User__ division:
 
-* create a new _Target Frequency_ record related to the
-specific _Contact_ record for the current user;
-** if the __Target Frequency __record already exists, this record will
-be deactivated and its CTCPG__DeactivationDateTime__c field will
+* create a new _Target Frequency_ record related to the
+specific _Contact_ record for the current user;
+** if the __Target Frequency __record already exists, this record will
+be deactivated and its CTCPG__DeactivationDateTime__c field will
 be populated with the deactivation date;
-* update the CTCPG__TargetUserIds__c field on
-this _Contact_ record.
+* update the CTCPG__TargetUserIds__c field on
+this _Contact_ record.
 
 |===
 

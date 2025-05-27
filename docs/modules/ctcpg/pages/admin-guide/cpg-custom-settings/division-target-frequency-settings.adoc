@@ -1,7 +1,7 @@
 = Division Target Frequency Settings
 
-*Division Target Frequency Settings* is intended to specify
-the *Account* and *Contact* target fields for each division.
+*Division Target Frequency Settings* is intended to specify
+the *Account* and *Contact* target fields for each division.
 
 * The *Alpha* and *Beta* records are
 xref:admin-guide/targeting-and-marketing-cycles-management/ref-guide/index[available by
@@ -9,7 +9,7 @@ default].
 * In case of xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[creating new divisions], you
 should
 xref:admin-guide/targeting-and-marketing-cycles-management/division-a-new-record-of-division-target-frequency-settings[create
-a record of the Division Target Frequency Setting] for each one.
+a record of the Division Target Frequency Setting] for each one.
 
 '''''
 
@@ -21,14 +21,14 @@ API name in Salesforce: CTCPG__DivisionTFSettings__c
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Account  Target Category field
+|Account  Target Category field
 |CTCPG__AccountTargetCategoryField__c |Text Area(255) |Specify
 the *Account* field API name that represents the division and contains
 the division categories.
 
 |Account Target Flag field |CTCPG__AccountTargetFlagField__c
-|Text Area(255) |Specify the *Account* field API name of the checkbox
-that indicates the selected division. 
+|Text Area(255) |Specify the *Account* field API name of the checkbox
+that indicates the selected division.
 
 |Contact Target Category field
 |CTCPG__ContactTargetCategoryField__c |Text Area(255)
@@ -36,18 +36,18 @@ that indicates the selected division. 
 contains the division categories.
 
 |Contact Target Flag field |CTCPG__ContactTargetFlagField__c
-|Text Area(255) |Specify the *Contact* field API name of the checkbox
+|Text Area(255) |Specify the *Contact* field API name of the checkbox
 that indicates the selected division.
 
 |Enable Category selection |CTCPG__EnableCategorySelection__c
 |Checkbox a|
 * If enabled, you can select the available division category in
 xref:admin-guide/targeting-and-marketing-cycles-management/add-the-manage-targets-button[the Target Assignment dialog
-box] on the *Account* or *Contact* tab.
+box] on the *Account* or *Contact* tab.
 * If disabled, the division categories are not in use.
 
 For example, if you have
-a xref:admin-guide/targeting-and-marketing-cycles-management/ref-guide/index#h3_2015528788[Call
+a xref:admin-guide/targeting-and-marketing-cycles-management/ref-guide/index#h3_2015528788[Call
 Rate] record for the specific division category,
 xref:admin-guide/targeting-and-marketing-cycles-management/creating-a-new-record-of-target-frequency[planned calls] from
 this record will not be copied into the Target Frequency record for the

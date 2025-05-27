@@ -1,8 +1,8 @@
 = Activity Report Filters
 
-*Activity Report Filters* is a setup to
+*Activity Report Filters* is a setup to
 xref:admin-guide/activity-report-management/create-a-new-filter-for-the-activities-list[manage filters]
-for the available activities in the *Activities List* __ section on the
+for the available activities in the *Activities List* __ section on the
 _xref:activity-report-interface.html[Activity Report]_ page.
 
 [.confluence-information-macro-information]# By default, the *Today* and
@@ -10,7 +10,7 @@ _xref:activity-report-interface.html[Activity Report]_ page.
 
 '''''
 
-API name: CTCPG__ActivityReportFiters__c
+API name: CTCPG__ActivityReportFiters__c
 
 '''''
 
@@ -19,19 +19,19 @@ API name: CTCPG__ActivityReportFiters__c
 |*Field* |*API Name* |*Type* |*Description*
 
 |Default Filter |CTCPG__IsDefault__c |Checkbox |If enabled,
-the filter will be shown as default. 
+the filter will be shown as default.
 
 |Filter Is Active |CTCPG__IsActive__c |Checkbox |If enabled,
 the filter is available on the _Activity Report_ page.
 
 |Filter Label |CTCPG__Label__c |Text(255) |The filter name in
-the list on the _Activity Report_ page. 
+the list on the _Activity Report_ page.
 
 |Filter Order |CTCPG__Order__c |Number(18,0) |The order number
-for the filter on the _Activity Report_ page.  
+for the filter on the _Activity Report_ page.
 
 |Filter Query |CTCPG__FilterQuery__c |Text(255) |Specify the
 SOQL filter.
 [.confluence-information-macro-note]#To filter records, the criteria
-line should start with the[.apiobject]#WHERE# keyword.#
+line should start with the[.apiobject]#WHERE# keyword.#
 |===

@@ -14,7 +14,7 @@ API name in Salesforce: TargetFrequencyProcess
 |===
 |*Context* |*Method* |*Codename* |*Description*
 
-|after insert[ai]  |concatenateUsersOnTarget() |conTarget
+|after insert[ai]  |concatenateUsersOnTarget() |conTarget
 |If the CTCPG__EnableAdvancedTFLogic__c checkbox enabled on the
 _xref:application-settings.html[Application Settings]_ record,
 xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[the fields with division values] will be
@@ -40,48 +40,48 @@ _Target Frequency_ record is the same as for the related _User_ record.
 Create the cloned _Target Frequency_ record linked to the _Marketing
 Cycle_ record.
 
-|after update[au]  |concatenateUsersOnTarget() |conTarget
-|If the CTCPG__EnableAdvancedTFLogic__c checkbox enabled on
-the _Application Settings_ record, the fields with division values will
-be updated on the related _Account_ and _Contact_ records.
+|after update[au]  |concatenateUsersOnTarget() |conTarget
+|If the CTCPG__EnableAdvancedTFLogic__c checkbox enabled on
+the _Application Settings_ record, the fields with division values will
+be updated on the related _Account_ and _Contact_ records.
 
-|after undelete[aud]   |concatenateUsersOnTarget()
-|conTarget |If the CTCPG__EnableAdvancedTFLogic__c checkbox
-enabled on the _xref:application-settings.html[Application
-Settings]_ record, xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[the fields with division
-values] will be updated on the related _Account_ and _Contact_ records. 
+|after undelete[aud]   |concatenateUsersOnTarget()
+|conTarget |If the CTCPG__EnableAdvancedTFLogic__c checkbox
+enabled on the _xref:application-settings.html[Application
+Settings]_ record, xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[the fields with division
+values] will be updated on the related _Account_ and _Contact_ records.
 
 | | | |
 
-|before insert[bi] |fillOwnerField()  |fillOwner |On
-the _Target Frequency_ record, update
-the CTCPG__OwnerId__c field if the owner of the record is
-changed. 
+|before insert[bi] |fillOwnerField()  |fillOwner |On
+the _Target Frequency_ record, update
+the CTCPG__OwnerId__c field if the owner of the record is
+changed.
 
 | |fillDetailsField() |fillDetails a|
-* Define the active _Marketing Cycle_ record to link the _Target
-Frequency_ record. 
+* Define the active _Marketing Cycle_ record to link the _Target
+Frequency_ record.
 
-* Based on the found _Marketing Cycle_ record and the division category
-of the _Account_ and _Contact_ records, define the related _Marketing
+* Based on the found _Marketing Cycle_ record and the division category
+of the _Account_ and _Contact_ records, define the related _Marketing
 Detail Tracking_ record with the *Call Rate* record type to link
-the _Target Frequency_ record.
+the _Target Frequency_ record.
 
-* Based on the value in the found _Marketing Detail Tracking_ record,
+* Based on the value in the found _Marketing Detail Tracking_ record,
 update the CTCPG__PlannedCalls__c field on the linked _Target
 Frequency_ record.
 
-|before update[bd]  |fillOwnerField() |fillOwner |On
-the _Target Frequency_ record, update
-the CTCPG__OwnerId__c field if the owner of the record is
-changed. 
+|before update[bd]  |fillOwnerField() |fillOwner |On
+the _Target Frequency_ record, update
+the CTCPG__OwnerId__c field if the owner of the record is
+changed.
 
-|before delete[bd]  |concatenateUsersOnTarget() |conTarget
-|If the CTCPG__EnableAdvancedTFLogic__c checkbox enabled on
-the _xref:application-settings.html[Application
-Settings]_ record, xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[the fields with division
-values] will be updated on the
-related _Account_ and _Contact_ records.
+|before delete[bd]  |concatenateUsersOnTarget() |conTarget
+|If the CTCPG__EnableAdvancedTFLogic__c checkbox enabled on
+the _xref:application-settings.html[Application
+Settings]_ record, xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[the fields with division
+values] will be updated on the
+related _Account_ and _Contact_ records.
 |===
 
 

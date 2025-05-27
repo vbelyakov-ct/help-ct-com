@@ -8,12 +8,12 @@ up-to-date reports.
 
 We recommend
 https://help.salesforce.com/articleView?id=admin_files_related_list_setup.htm&type=5[adding
-the _Objectives_ related list] on the__ Account__ and _Contact_ page
-layout to have an ability to manage objectives for an _Account_ or
+the _Objectives_ related list] on the__ Account__ and _Contact_ page
+layout to have an ability to manage objectives for an _Account_ or
 _Contact_ record and
 xref:admin-guide/activity-report-management/manage-field-sets-for-activity-report-pages[add to the
 corresponding _CT CPG Activity_ field
-set(s)] the CTCPG__Objective__c and CTCPG__NextCallObjective__c fields 
+set(s)] the CTCPG__Objective__c and CTCPG__NextCallObjective__c fields
 
 [[h2__1347415082]]
 === Create a regular Objective for the Account or Contact
@@ -24,17 +24,17 @@ _CT CPG Activity_ record.
 
 
 
-To create an objective for the particular _Account_ or _Contact_
+To create an objective for the particular _Account_ or _Contact_
 record:
 
-. Go to the *Accounts* tab and click the required _Account_ record.
+. Go to the *Accounts* tab and click the required _Account_ record.
 . On the *Related* tab, click *New* under the *Objectives* related list.
 . Specify the following:
 [TIP] ==== Read the description of each
-parameter xref:admin-guide/objectives-management/objective-field-reference[here].   ====
-* Add *Contact* if needed.
-* Set *Active*.
-* Add** Objective**.
+parameter xref:admin-guide/objectives-management/objective-field-reference[here].   ====
+* Add *Contact* if needed.
+* Set *Active*.
+* Add** Objective**.
 . Click *Save*.
 . Repeat steps 1–4 for the _Contact_ records.
 
@@ -42,36 +42,36 @@ The objective is set.
 
 
 
-When a representative creates a _CT CPG Activity_ record related to
-the _Account_ or _Contact_ record with the specified _Objective_ record,
-the _Objective_ value will be automatically set in
-the CTCPG__Objective__c field of this _CT CPG Activity_ record. 
+When a representative creates a _CT CPG Activity_ record related to
+the _Account_ or _Contact_ record with the specified _Objective_ record,
+the _Objective_ value will be automatically set in
+the CTCPG__Objective__c field of this _CT CPG Activity_ record.
 
-[NOTE] ==== If the related _Account_ record has a
-relative _Objective_ record, the objective will be added to
-the _Objective_ related list for all _Contact_ records of
-that _Account_. Specify another _Objective_ record for the
-particular _Contact_ record to overwrite the _Account_ objective.  ====
+[NOTE] ==== If the related _Account_ record has a
+relative _Objective_ record, the objective will be added to
+the _Objective_ related list for all _Contact_ records of
+that _Account_. Specify another _Objective_ record for the
+particular _Contact_ record to overwrite the _Account_ objective.  ====
 
 [[h2__280478342]]
 === Create an Objective for Activity
 
-Set an objective for the particular _CT CPG Activity_, __ and it will be
+Set an objective for the particular _CT CPG Activity_, __ and it will be
 automatically assigned to the related _Account_ and/or _Contact_ record.
-Manage activities via a Standard layout or by using a
-pre-configured _xref:activity-report-management.html[Activity
-Report]_ page. 
+Manage activities via a Standard layout or by using a
+pre-configured _xref:activity-report-management.html[Activity
+Report]_ page.
 
 
 
 To create an objective for the particular _CT CPG Activity_ record:
 
-. Go to the CT CPG Calendar and create a new _CT CPG Activity_ record
-with the _Visit_ record type.
+. Go to the CT CPG Calendar and create a new _CT CPG Activity_ record
+with the _Visit_ record type.
 . Open the created _CT CPG Activity_ record.
 [TIP] ==== Also, you can open the required _CT CPG Activity_
-from the *Calendar* or *Activity Reports* tab. ====
-. In the CTCPG__Objective__c field, specify the required notes
+from the *Calendar* or *Activity Reports* tab. ====
+. In the CTCPG__Objective__c field, specify the required notes
 and/or goals.
 . Click *Save*.
 
@@ -79,31 +79,31 @@ The objective is set.
 
 
 
-When a representative creates a _CT CPG Activity_ record with the
-specific _Objective_ record and related to
-the _Account_ or _Contact_ record, the _Objective_ record will be added
-to the__ Objectives__ related list of the
-related _Account_ and/or _Contact_ record.
+When a representative creates a _CT CPG Activity_ record with the
+specific _Objective_ record and related to
+the _Account_ or _Contact_ record, the _Objective_ record will be added
+to the__ Objectives__ related list of the
+related _Account_ and/or _Contact_ record.
 
 [[h2_2098968334]]
 === Create an Objective using Next Call Objective
 
 Copy the objective from the finished _CT CPG Activity_ record to the
 next _CT CPG Activity_ record that is related to the same _Account_
-and/or __Contact __record. Manage activities via a Standard layout or by
-using a pre-configured _xref:activity-report-management.html[Activity
-Report]_ page.  
+and/or __Contact __record. Manage activities via a Standard layout or by
+using a pre-configured _xref:activity-report-management.html[Activity
+Report]_ page.
 
 
 
-To set up an objective for the next _CT CPG Activity_ record:
+To set up an objective for the next _CT CPG Activity_ record:
 
-. Go to the CT CPG Calendar and create a new _CT CPG Activity_ record
-with the _Visit_ record type.
-. Open the created _CT CPG Activity_ record.
-[TIP] ==== Also, you can open the required _CT CPG
-Activity_ from the *Calendar* or *Activity Reports* tab. ====
-. In the CTCPG__NextCallObjective__c field, specify the required
+. Go to the CT CPG Calendar and create a new _CT CPG Activity_ record
+with the _Visit_ record type.
+. Open the created _CT CPG Activity_ record.
+[TIP] ==== Also, you can open the required _CT CPG
+Activity_ from the *Calendar* or *Activity Reports* tab. ====
+. In the CTCPG__NextCallObjective__c field, specify the required
 notes and/or goals.
 . Click *Save*.
 
@@ -111,52 +111,52 @@ The objective is set.
 
 
 
-When a representative finishes the created _CT CPG Activity_ record and
-creates a next _CT CPG Activity_ record for the
-same _Account_ and/or __Contact __record, a value from
-the CTCPG__NextCallObjective__c field of the finished _CT CPG
-Activity_ record is copied to the CTCPG__Objective__c field of
-the next _CT CPG Activity_ record. 
+When a representative finishes the created _CT CPG Activity_ record and
+creates a next _CT CPG Activity_ record for the
+same _Account_ and/or __Contact __record, a value from
+the CTCPG__NextCallObjective__c field of the finished _CT CPG
+Activity_ record is copied to the CTCPG__Objective__c field of
+the next _CT CPG Activity_ record.
 
 [[h2__1099816968]]
 === Create an Objective using the Next Activity functionality
 
 Use the xref:configuring-next-activity[Next Activity] functionality
-to copy an objective from the specified field of the finished _CT CPG
-Activity_ record to the next _CT CPG Activity_ record that is related to
-the same _Account_ and/or __Contact __record. Manage activities via a
-Standard layout or by using a
-pre-configured _xref:activity-report-management.html[Activity
-Report]_ page.   
+to copy an objective from the specified field of the finished _CT CPG
+Activity_ record to the next _CT CPG Activity_ record that is related to
+the same _Account_ and/or __Contact __record. Manage activities via a
+Standard layout or by using a
+pre-configured _xref:activity-report-management.html[Activity
+Report]_ page.
 
 
 
 To create an objective using the _Next Activity_ functionality:
 
-. Go to the CT CPG Calendar and create a new _CT CPG Activity_ record
-with the _Visit_ record type.
-. Open the created _CT CPG Activity_ record.
-[TIP] ==== Also, you can open the required _CT CPG
-Activity_ from the *Calendar* or *Activity Reports* tab. ====
+. Go to the CT CPG Calendar and create a new _CT CPG Activity_ record
+with the _Visit_ record type.
+. Open the created _CT CPG Activity_ record.
+[TIP] ==== Also, you can open the required _CT CPG
+Activity_ from the *Calendar* or *Activity Reports* tab. ====
 . In the field that is selected for the _Next Activity_
-functionality, specify the required notes and/or goals. 
-. Click *Save*.
+functionality, specify the required notes and/or goals.
+. Click *Save*.
 
 The objective is set.
 
 
 
-When a representative finishes the created _CT CPG Activity_ record and
-creates a next _CT CPG Activity_ record for the
-same _Account_ and/or __Contact __record, a value from the field that is
-selected for the _Next Activity_ functionality of the finished _CT CPG
-Activity_ record is copied to the CTCPG__Objective__c field of
-the next _CT CPG Activity_ record. 
+When a representative finishes the created _CT CPG Activity_ record and
+creates a next _CT CPG Activity_ record for the
+same _Account_ and/or __Contact __record, a value from the field that is
+selected for the _Next Activity_ functionality of the finished _CT CPG
+Activity_ record is copied to the CTCPG__Objective__c field of
+the next _CT CPG Activity_ record.
 
 [[h2_97080500]]
 === Objectives in the Marketing Cycle
 
-xref:admin-guide/targeting-and-marketing-cycles-management/create-a-new-record-of-marketing-detail-tracking#h2_726145408[Create the _Marketing
-Detail Tracking_ record] of the _Special Tracking_ record type to track
-objectives xref:admin-guide/targeting-and-marketing-cycles-management/ref-guide/index[within the
+xref:admin-guide/targeting-and-marketing-cycles-management/create-a-new-record-of-marketing-detail-tracking#h2_726145408[Create the _Marketing
+Detail Tracking_ record] of the _Special Tracking_ record type to track
+objectives xref:admin-guide/targeting-and-marketing-cycles-management/ref-guide/index[within the
 active marketing cycle].

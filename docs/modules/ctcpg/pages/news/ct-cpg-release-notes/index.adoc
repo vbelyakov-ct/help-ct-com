@@ -6,10 +6,10 @@ with release notes.
 :toc: :toclevels: 2
 
 [[h2_2023121804]]
-=== CT CPG 25-R1-March (starting with package 1.66)
+=== CT CPG 25-R1-March (starting with package 1.66)
 
-Install the intermediate patch v. 1.61.6 before installing this package
-version. 
+Install the intermediate patch v. 1.61.6 before installing this package
+version.
 
 [[h3__1009797845]]
 ==== *Fixes*
@@ -19,9 +19,9 @@ _Even_/_Task_ record for Type set as _Custom to Standard_ or _Both_,
 even if the conditions are met.
 * Calendar**:**
 ** _SObject row was retrieved via SOQL without querying the requested
-field: CTCPG_Activity_c.Name_ error when opening Calendar.
+field: CTCPG_Activity_c.Name_ error when opening Calendar.
 ** Missing translation for *Activity* label in *My Calendar* section.
-** _Attempt to de-reference a null object_ error in Calendar if user
+** _Attempt to de-reference a null object_ error in Calendar if user
 does not have access to one of[.apiobject]#CTCPG__
 Activity__c# object's record types.
 ** Need to refresh Calendar page to display actual activity information
@@ -34,16 +34,16 @@ displayed.
 ** Page freezes when saving drag-n-drop settings.
 ** *Last Sync Date* in *User Calendars* section is displayed even if the
 user does not have access to this field.
-** Calendar shows the *All* list view when this list view is not created
+** Calendar shows the *All* list view when this list view is not created
 for the user.
 
 [[h3__1177309407]]
 ==== *New Features*
 
 * Connection to Self API is now required for
-accessing xref:calendar-settings-ct-cpg-settings-panel[CPG Settings
+accessing xref:calendar-settings-ct-cpg-settings-panel[CPG Settings
 Panel]​.
-* *Required* option added to the
+* *Required* option added to the
 xref:calendar-settings-ct-cpg-settings-panel#h3__1888339674[Compact
 form] in CPG Settings Panel.
 * Calendar**:**​
@@ -52,7 +52,7 @@ objects.
 ** Added custom label for the *Search* field placeholder.
 
 [[h2__1542134375]]
-=== CT CPG Version 1.61 Spring '24
+=== CT CPG Version 1.61 Spring '24
 
 [[h3__923493340]]
 ==== *New Features*
@@ -67,7 +67,7 @@ for product availability validation.
 * Bug Fixing.
 
 [[h2_1456822043]]
-=== CT CPG Solution Autumn '23 (1.60)
+=== CT CPG Solution Autumn '23 (1.60)
 
 [[h3__2112656071]]
 ==== New Features and Improvements
@@ -82,13 +82,13 @@ calendar in a faster and more convenient way.
 === CT CPG Solution Summer '22 (1.54)
 
 ifdef::hidden[] Download the CT CPG
-package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n0000025SBe[here].
+package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n0000025SBe[here].
 
 [[h2_1277696982]]
 === CT CPG Solution Summer '22 (1.53)
 
 ifdef::hidden[] Download the CT CPG
-package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n0000025SBZ[here].
+package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n0000025SBZ[here].
 
 [[h3_1836908411]]
 ==== Fixes
@@ -100,7 +100,7 @@ names in the SOQL builder.
 === CT CPG Solution Summer '22 (1.52)
 
 ifdef::hidden[] Download the CT CPG
-package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n000002Gul6[here].
+package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n000002Gul6[here].
 
 [[h3_1836908411]]
 ==== Fixes
@@ -117,7 +117,7 @@ When creating a dynamic group:
 === CT CPG Solution Spring '22 (1.51)
 
 ifdef::hidden[] Download the CT CPG
-package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n000002Gujt&isdtp=p1[here].
+package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n000002Gujt&isdtp=p1[here].
 
 [[h3_1836908411]]
 ==== Fixes
@@ -129,7 +129,7 @@ tab.
 === CT CPG Solution Spring '22 (1.49)
 
 ifdef::hidden[] Download the CT CPG
-package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n000002Gufc[here].
+package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n000002Gufc[here].
 
 [[h3__392528872]]
 ==== New Features and Improvements
@@ -140,7 +140,7 @@ Add logic to support the CT Orders features.
 === CT CPG Solution Winter '22 (1.48)
 
 ifdef::hidden[] Download the CT CPG
-package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n000002GufX[here].
+package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n000002GufX[here].
 
 [[h3__1024821384]]
 ==== Fixes
@@ -151,7 +151,7 @@ Check Test Context when Chaining QueueableGroupMembers.
 === CT CPG Solution Winter '22 (1.47)
 
 ifdef::hidden[] Download the CT CPG
-package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n000002GufN[here].
+package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n000002GufN[here].
 
 [[h3__632582020]]
 ==== New Features and Improvements
@@ -163,7 +163,7 @@ integration with the CT Orders solution.
 === CT CPG Solution Winter '22 (1.46)
 
 ifdef::hidden[] Download the CT CPG
-package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n000002GufI[here].
+package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n000002GufI[here].
 
 [[h3_1915707799]]
 ==== New Features and Improvements
@@ -178,7 +178,7 @@ Orders solution.
 === CT CPG Solution Winter '22 (1.44)
 
 ifdef::hidden[] Download the CT CPG
-package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n000002Gudq[here].
+package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n000002Gudq[here].
 
 [[h3__595973573]]
 ==== New Features and Improvements
@@ -190,7 +190,7 @@ Availability feature in case of integration with the CT Orders solution.
 === CT CPG Solution Winter '22 (1.43)
 
 ifdef::hidden[] Download the CT CPG
-package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n000002GucE[here].
+package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n000002GucE[here].
 
 [[h3_1223988393]]
 ==== Fixes
@@ -201,7 +201,7 @@ Fixed working with _Quizzes_ in Lightning Experience.
 === CT CPG Solution Autumn '21 (1.42)
 
 ifdef::hidden[] Download the CT CPG
-package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n0000028O70[here].
+package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n0000028O70[here].
 
 [[h3_1223988393]]
 ==== Fixes
@@ -212,19 +212,19 @@ Fixed _Quiz Answer_ creation.
 === CT CPG Solution Summer ’21 (1.41)
 
 Download the CT CPG
-package https://appexchange.salesforce.com/appxListingDetail?listingId=a0N3A00000EJHB6UAP[from
+package https://appexchange.salesforce.com/appxListingDetail?listingId=a0N3A00000EJHB6UAP[from
 the App Exchange].
 
 [[h3__520293130]]
 ==== Fixes
 
-Fix CheckMarx notes for Security Review passings. 
+Fix CheckMarx notes for Security Review passings.
 
 [[h2__439658788]]
 === CT CPG Solution Spring '21 (1.40)
 
 ifdef::hidden[] Download the CT CPG
-package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n0000028O62[here].
+package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n0000028O62[here].
 
 [[h3_854079789]]
 ==== New Features and Improvements
@@ -235,47 +235,47 @@ SDK for Dynamic Groups.
 === CT CPG Solution Spring '21 (1.39)
 
 ifdef::hidden[] Download the CT CPG
-package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n0000028O5s[here].
+package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n0000028O5s[here].
 
 [[h3__1376360019]]
 ==== New Features and Improvements
 
-SDK for Dynamic Groups. 
+SDK for Dynamic Groups.
 
 [[h2_823897182]]
 === CT CPG Solution Spring '21 (1.37)
 
 ifdef::hidden[] Download the CT CPG
-package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n0000028O5O[here].
+package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n0000028O5O[here].
 
 [[h3_83822764]]
 ==== New Features and Improvements
 
-Add the [.apiobject]#Bundle2Id# and
+Add the [.apiobject]#Bundle2Id# and
 [.apiobject]#Product2Id# fields to on __Product Componen__t to
 support _Product2_.
 
 [[h3_1399444682]]
 ==== Fixes
 
-Fixed CheckMarx notes for Security Review passing.
+Fixed CheckMarx notes for Security Review passing.
 
 [[h2_823897181]]
 === CT CPG Solution Spring '21 (1.36)
 
 ifdef::hidden[] Download the CT CPG
-package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n0000028O4a[here].  
+package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n0000028O4a[here].
 
 [[h3_289322742]]
 ==== New Features and Improvements
 
-Disable the *CreateRelatedActivities* logic using Trigger Setting.
+Disable the *CreateRelatedActivities* logic using Trigger Setting.
 
 [[h2_823897180]]
 === CT CPG Solution Spring '21 (1.35)
 
 ifdef::hidden[] Download the CT CPG
-package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n000002NZEk[here].  
+package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n000002NZEk[here].
 
 [[h3__254574036]]
 ==== New Features and Improvements
@@ -285,80 +285,80 @@ Call Sync Activities Logic from Global Class.
 [[h3_252912768]]
 ==== Fixes
 
-Fixed CheckMarx notes for Security Review passing.
+Fixed CheckMarx notes for Security Review passing.
 
 [[h2__1009984947]]
 === CT CPG Solution Winter '21 (1.34)
 
 ifdef::hidden[] Download the CT CPG
-package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n000002NZAx[here].  
+package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n000002NZAx[here].
 
 [[h3_162807435]]
 ==== Fixes
 
-* Fixed CheckMarx notes for Security Review passing.
-* Fixed label for the CTCPG__UniqUserNumber__c field on the
+* Fixed CheckMarx notes for Security Review passing.
+* Fixed label for the CTCPG__UniqUserNumber__c field on the
 _User_ object.
 
 [[h2__2133914123]]
 === CT CPG Solution Winter ’20 (1.33)
 
 ifdef::hidden[] Download the CT CPG
-package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n000002NZAE[here].  
+package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n000002NZAE[here].
 
 [[h3__544880446]]
 ==== Fixes
 
 For integration with
-the _https://help.customertimes.com/articles/project-order-module/ct-orders-solution[CT
-Orders]_ package:
+the _https://help.customertimes.com/articles/project-order-module/ct-orders-solution[CT
+Orders]_ package:
 
-* Fixed validation for the value in the *Units In Package* field of _CT
-Product_ object according to the *UnitsCountStep* field
-of _Promotion_, _Catalog_, and _Price Book Line Item_ objects. 
+* Fixed validation for the value in the *Units In Package* field of _CT
+Product_ object according to the *UnitsCountStep* field
+of _Promotion_, _Catalog_, and _Price Book Line Item_ objects.
 
 [[h2__1347372727]]
 === CT CPG Solution Autumn ’20 (1.32)
 
 ifdef::hidden[] Download the CT CPG
-package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n000002NZ8w[here]. 
+package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n000002NZ8w[here].
 
 [[h3_384147609]]
 ==== New Features and Improvements
 
 For integration with
-the _https://help.customertimes.com/articles/project-order-module/ct-orders-solution[CT
-Orders]_ package:
+the _https://help.customertimes.com/articles/project-order-module/ct-orders-solution[CT
+Orders]_ package:
 
-* Add validation for the value in the *Units In Package* field of _CT
-Product_ object according to the *UnitsCountStep* field
-of _Promotion_, _Catalog_, and _Price Book Line Item_ objects.
+* Add validation for the value in the *Units In Package* field of _CT
+Product_ object according to the *UnitsCountStep* field
+of _Promotion_, _Catalog_, and _Price Book Line Item_ objects.
 
 [[h2__1347372726]]
 === CT CPG Solution Autumn ’20 (1.31)
 
 ifdef::hidden[] Download the CT CPG
-package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n000002NZ7P[here].
+package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n000002NZ7P[here].
 
 [[h3__1883508767]]
 ==== Fixes
 
-* Fixed the _Event_ creation on the *Calendar* tab.
+* Fixed the _Event_ creation on the *Calendar* tab.
 * Fixed triggers launch in case of
-the xref:trigger-settings[Trigger Settings] record is absent for
-the corresponding trigger. 
+the xref:trigger-settings[Trigger Settings] record is absent for
+the corresponding trigger.
 * Fixed Product Layout name.
 
 [[h2__1347372725]]
 === CT CPG Solution Autumn ’20 (1.30)
 
 ifdef::hidden[] Download the CT CPG
-package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n000002NZ6g[here]. 
+package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n000002NZ6g[here].
 
 [[h3_1642576463]]
 ==== New Features and Improvements
 
-​The xref:dynamic-group-settings[Dynamic Group Settings] custom
+​The xref:dynamic-group-settings[Dynamic Group Settings] custom
 setting for managing the batch size of recalculating records in dynamic
 groups.
 
@@ -367,13 +367,13 @@ groups.
 
 For integration with CT Mobile Quizzes:
 
-* Fixed label for the IsWriteAnswersOnExit__c field.
+* Fixed label for the IsWriteAnswersOnExit__c field.
 
 [[h2__1206210217]]
 === CT CPG Solution Autumn ’20 (1.29)
 
 ifdef::hidden[] Download the CT CPG
-package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n000002NZ4k[here]. 
+package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n000002NZ4k[here].
 
 [[h3_1911988938]]
 ==== New Features and Improvements
@@ -391,20 +391,20 @@ For integration with CT Mobile Quizzes:
 === CT CPG Solution Summer ’20 (1.28)
 
 ifdef::hidden[] Download the CT CPG
-package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n000001pGKL[here].
+package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n000001pGKL[here].
 
 [[h3_133145501]]
 ==== Fixes
 
 For integration with CT Mobile Quizzes:
 
-* Fixed the user access to Quizzes if they are not administrators. 
+* Fixed the user access to Quizzes if they are not administrators.
 
 [[h2__1471468910]]
 === CT CPG Solution Summer ’20 (1.27)
 
 ifdef::hidden[] Download the CT CPG
-package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n0000028NsZ[here]. 
+package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n0000028NsZ[here].
 
 [[h3__1755612025]]
 ==== Fixes
@@ -412,8 +412,8 @@ package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n000
 For integration with CT Mobile Quizzes:
 
 * Fixed the display of more than 1 000 records in Quizzes, for example,
-the number of _Contacts_.
-* Fixed the logic of the *Clone Quiz* button.
+the number of _Contacts_.
+* Fixed the logic of the *Clone Quiz* button.
 
 [[h2__1203154969]]
 === CT CPG Solution Spring '20

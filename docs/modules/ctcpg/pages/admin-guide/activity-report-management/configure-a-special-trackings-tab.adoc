@@ -3,25 +3,25 @@
 Add the *Special Trackings* tab for tracking objectives and tasks within
 the _Marketing Cycle_ period during the _Activity_ on
 xref:activity-report-management#h2__1515393312[the _Activity
-Report_ page for the __Visit __record type].
+Report_ page for the __Visit __record type].
 
 . xref:admin-guide/activity-report-management/configure-a-special-trackings-tab#h2_1832965105[Configure a
-Special Trackings Tab] for the corresponding _Activity_ record type via
+Special Trackings Tab] for the corresponding _Activity_ record type via
 the appropriate custom setting.
 . xref:admin-guide/targeting-and-marketing-cycles-management/create-a-new-record-of-marketing-detail-tracking[Create the
 _Marketing Detail Tracking_ records] with the *Special Tracking* record
-type. These __Marketing Detail Tracking __will be automatically added on
-the *Special Trackings* tab after _Activity_ record creation if: 
-* The *Start Date* of the _Activity_ record is within the period of the
-active _Marketing Cycle_ record;
-* The _User_ division is the same as the _Marketing Cycle_ division;
-* The _Account_ division category is the same as the division category
-specified for the _Marketing Detail Tracking_ record. 
-* The activity inking is enabled for the appropriate _Activity_ record
-type and the active _Marketing Cycle_.
+type. These __Marketing Detail Tracking __will be automatically added on
+the *Special Trackings* tab after _Activity_ record creation if:
+* The *Start Date* of the _Activity_ record is within the period of the
+active _Marketing Cycle_ record;
+* The _User_ division is the same as the _Marketing Cycle_ division;
+* The _Account_ division category is the same as the division category
+specified for the _Marketing Detail Tracking_ record.
+* The activity inking is enabled for the appropriate _Activity_ record
+type and the active _Marketing Cycle_.
 
 [[h2_1832965105]]
-=== Manage Special Tracking Tab Settings Records
+=== Manage Special Tracking Tab Settings Records
 
 To display the _CT Product_ tab on the _Activity Report_ page:
 
@@ -33,7 +33,7 @@ for the whole Salesforce organization.
 xref:special-tracking-tab-settings[here]. ====
 * specify the user/profile;
 * specify the required _Activity_ record type;
-* specify the API name of the corresponding _Activity Data_ fields:
+* specify the API name of the corresponding _Activity Data_ fields:
 ** CTCPG__TextAnswer__c;
 ** CTCPG__BooleanAnswer__c;
 ** CTCPG__CurrencyAnswer__c;

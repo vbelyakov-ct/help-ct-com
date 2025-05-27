@@ -24,17 +24,17 @@ API name in Salesforce: CTCPG__ChangeRequest__c
 |*Field* |*API Name* |*Type* |*Description*
 
 |Account |CTCPG__AccountId__c |Lookup(Account) |The
-related _Account_ record.
+related _Account_ record.
 
-|Account Name |CTCPG__AccountName__c |Text(255)             
-   |This field relates to the Name field of the standard
+|Account Name |CTCPG__AccountName__c |Text(255)
+   |This field relates to the Name field of the standard
 xref:account-field-reference[Account] object.
 
 |Account Number |CTCPG__Account_Number__c |Text(40)
-|This field relates to the AccountNumber field of the standard
+|This field relates to the AccountNumber field of the standard
 xref:account-field-reference[Account] object.
 
-|Account Type            |CTCPG__Account_Type__c
+|Account Type            |CTCPG__Account_Type__c
 |Picklist a|
 The available _Account_ types by default:
 
@@ -44,24 +44,24 @@ The available _Account_ types by default:
 * Channel Partner / Reseller
 * Technology Partner
 
-|City  |CTCPG__City__c |Text(40) |Field to relate with any
+|City  |CTCPG__City__c |Text(40) |Field to relate with any
 additional field of the target object.
 
-|ClearFields |CTCPG__ClearFields__c |Long Text Area (32768) 
+|ClearFields |CTCPG__ClearFields__c |Long Text Area (32768)
 |Fields to clear their value (separated by a comma, without a blank
 space).
 
-|Comments       |CTCPG__Comments__c |Long Text Area
+|Comments       |CTCPG__Comments__c |Long Text Area
 (32768) |The additional description.
 
-|Contact |CTCPG__ContactId__c  |Lookup(Contact)  |The
-related _Contact_ record.
+|Contact |CTCPG__ContactId__c  |Lookup(Contact)  |The
+related _Contact_ record.
 
-|Email |CTCPG__Email__c  |Email |The field relates to the
+|Email |CTCPG__Email__c  |Email |The field relates to the
 Email field of the xref:contact-field-reference[Contact] object.
 
 |Industry |CTCPG__Industry__c |Picklist a|
-The _Change Request_ industry type. The available values by default:
+The _Change Request_ industry type. The available values by default:
 
 * Agriculture
 * Communications
@@ -77,10 +77,10 @@ The field relates to the Phone field of the[.object]#Account#
 or[.object]#Contact# object.
 
 |SIC Code |CTCPG__SIC_Code__c |Text(40) |The field
-relates to the Sic field of the Account object.
+relates to the Sic field of the Account object.
 
-|Status |CTCPG__Status__c  |Picklist a|
-The _Change Request_ status. The available values by default:
+|Status |CTCPG__Status__c  |Picklist a|
+The _Change Request_ status. The available values by default:
 
 * On Hold
 * New
@@ -89,6 +89,6 @@ The _Change Request_ status. The available values by default:
 * Approved
 * Canceled
 
-|Street |CTCPG__Street__c  |Text(40) |Field to relate with any
+|Street |CTCPG__Street__c  |Text(40) |Field to relate with any
 additional field of the target object.
 |===

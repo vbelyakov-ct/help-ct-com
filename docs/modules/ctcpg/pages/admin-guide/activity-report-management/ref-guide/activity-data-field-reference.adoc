@@ -5,16 +5,16 @@ information captured during the _Activity_, such as tracked
 xref:admin-guide/ct-products-and-assortments-management/index[_CT Products_ and
 _Assortments_] within
 xref:admin-guide/targeting-and-marketing-cycles-management/index[the _Marketing
-Cycle_ period according to the configured _Target Frequency_ records] or
+Cycle_ period according to the configured _Target Frequency_ records] or
 not.
 
 * The _Activity Data_ field sets are responsible for
 xref:admin-guide/activity-report-management/ref-guide/activity-report-interface[the related tabs displaying] on
 xref:admin-guide/activity-report-management/index[the configured _Activity Report_
 page] for the corresponding _Activity_ record type.
-* The _Activity Data_ record types are used for
+* The _Activity Data_ record types are used for
 xref:admin-guide/activity-report-management/configure-ct-product-tabs[tracking _CT Products_],
-displaying xref:admin-guide/activity-report-management/configure-an-event-member-tab[event participants]
+displaying xref:admin-guide/activity-report-management/configure-an-event-member-tab[event participants]
 and xref:admin-guide/activity-report-management/configure-an-expenses-tab[expenses], and
 xref:admin-guide/activity-report-management/configure-a-special-trackings-tab[tracking tasks and
 objectives].
@@ -29,24 +29,24 @@ API name in Salesforce: CTCPG__ActivityData__c
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Activity |CTCPG__ActivityId__c |Master-Detail(Activity)  |The
-parent _Activity_ record.
+|Activity |CTCPG__ActivityId__c |Master-Detail(Activity)  |The
+parent _Activity_ record.
 
-|Answer         |CTCPG__TextAnswer__c |Text(255)           
-     |The _Text_ answer type for a record of the _Special
-Tracking_ record type. 
+|Answer         |CTCPG__TextAnswer__c |Text(255)
+     |The _Text_ answer type for a record of the _Special
+Tracking_ record type.
 
 |Answer (boolean) |CTCPG__BooleanAnswer__c |Checkbox
-|The _Boolean_ answer type (True or False) for a record of the _Special
-Tracking_ record type. 
+|The _Boolean_ answer type (True or False) for a record of the _Special
+Tracking_ record type.
 
-|Answer (currency)                 |CTCPG__CurrencyAnswer__c
-|Currency(18,0) |The _Currency_ answer type for a record of
-the _Special Tracking_ record type. 
+|Answer (currency)                 |CTCPG__CurrencyAnswer__c
+|Currency(18,0) |The _Currency_ answer type for a record of
+the _Special Tracking_ record type.
 
-|Answer (number)         |CTCPG__NumberAnswer__c
-|Number(16,2) |The _Number_ answer type for a record of the _Special
-Tracking_ record type. 
+|Answer (number)         |CTCPG__NumberAnswer__c
+|Number(16,2) |The _Number_ answer type for a record of the _Special
+Tracking_ record type.
 
 |Answer Type |CTCPG__AnswerType__c |Formula(Text) a|
 The answer type is used for a record of the _Special Tracking_ record
@@ -55,15 +55,15 @@ type:
 * manually as text;
 * inherited from the related _Marketing Detail Tracking_ record.
 
-|Assortment Product                
-|CTCPG__AssortmentProductId__c |Lookup(Assortment Product)   
-     |The related _Assortment_ record.
+|Assortment Product
+|CTCPG__AssortmentProductId__c |Lookup(Assortment Product)
+     |The related _Assortment_ record.
 
-|Contact |CTCPG__ContactId__c  |Lookup(Contact)  |The
-related _Contact_ record.
+|Contact |CTCPG__ContactId__c  |Lookup(Contact)  |The
+related _Contact_ record.
 
-|Description |CTCPG__Description__c  |Long Text
-Area(32768)   |Specify additional information about the _Activity
+|Description |CTCPG__Description__c  |Long Text
+Area(32768)   |Specify additional information about the _Activity
 Data_.
 
 |IsPresent |CTCPG__IsPresent__c |Checkbox |If selected, the
@@ -71,35 +71,35 @@ _Activity Data_ is active.
 
 |Marketing Detail Tracking
 |CTCPG__MarketingDetailTrackingId__c |Lookup(Marketing Detail
-Tracking) |If specified, the related _Marketing Detail Tracking_ record.
+Tracking) |If specified, the related _Marketing Detail Tracking_ record.
 
 |Parameter Name |CTCPG__ParameterName__c |Formula(Text) a|
-The parameter name is used for a record of the _Special Tracking_ record
+The parameter name is used for a record of the _Special Tracking_ record
 type:
 
 * manually as text;
-* inherited from the related _Marketing Detail Tracking_ record.
+* inherited from the related _Marketing Detail Tracking_ record.
 
-|Price |CTCPG__Price__c |Currency(16,2)  |The price of a _CT
+|Price |CTCPG__Price__c |Currency(16,2)  |The price of a _CT
 Product_ or _Assortment_.
 
-|Product |CTCPG__ProductId__c  |Lookup(CT Product)  |The
-related _Product_ record.
+|Product |CTCPG__ProductId__c  |Lookup(CT Product)  |The
+related _Product_ record.
 
-|Quantity |CTCPG__Quantity__c  |Number(18,0) |The price of
-a _CT Product_ or _Assortment_.
+|Quantity |CTCPG__Quantity__c  |Number(18,0) |The price of
+a _CT Product_ or _Assortment_.
 
-|Status |CTCPG__Status__c  |Picklist a|
+|Status |CTCPG__Status__c  |Picklist a|
 The _Activity Data_ status. The available values by default:
 
 * Value 1
 * Value 2
 * Value 3
 
-|Total Price |CTCPG__TotalPrice__c  |Formula(Currency) |The
-total price of all _CT Products_ and _Assortments_.
+|Total Price |CTCPG__TotalPrice__c  |Formula(Currency) |The
+total price of all _CT Products_ and _Assortments_.
 
-|Type |CTCPG__Type__c  |Picklist a|
+|Type |CTCPG__Type__c  |Picklist a|
 The type of _Activity Data_ for the _Activity_ record type. The
 available values by default:
 

@@ -6,8 +6,8 @@ The following fields are created on the standard
 [NOTE] ==== In case of xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[creating new
 divisions], create the Division[.underline]#Name#Category__c ====
 field with the category picklist and the
-**Division[.underline]#Name#TargetCheck__c **checkbox, where Name is
-the new division name. 
+**Division[.underline]#Name#TargetCheck__c **checkbox, where Name is
+the new division name.
 
 [width="100%",cols="25%,25%,25%,25%",]
 |===
@@ -41,7 +41,7 @@ assigned to the specified category.
 
 |Division Beta Category |CTCPG__DivisionBetaCategory__c
 |Picklist a|
-The _Account_ category that used to assign the target frequency to the
+The _Account_ category that used to assign the target frequency to the
 selected _Account_ record.
 
 Available values by default:
@@ -57,20 +57,20 @@ assigned to the specified category.
 
 |External Id |CTCPG__ExternalId__c |Text(255) (External ID)
 (Unique Case Sensitive) |The external identifier if the
-__Account __record has been synchronized from the external ERP-system.
+__Account __record has been synchronized from the external ERP-system.
 
 |Has Child Accounts |CTCPG__HasChildAccounts__c |Checkbox
 |The field is checked if the _Account_ record has child _Account_
 records. That _Account_ with child records will be displayed as
 hierarchy on the *Hierarchy* tab of the *Calendar* tab (refer to
-the xref:admin-guide/calendar-management/legacy-calendar-management/index[Legacy Calendar Management] for more
+the xref:admin-guide/calendar-management/legacy-calendar-management/index[Legacy Calendar Management] for more
 details).
 
 |Is Auto Target Field Check? |CTCPG__IsAutoTargetCheck__c
 |Checkbox |
 
 |Is Target? |CTCPG__IsTarget__c |Formula(Text) |The field is
-checked if the _Account_ record has been selected as a target.
+checked if the _Account_ record has been selected as a target.
 
 |Status |CTCPG__Status__c |Picklist a|
 Available values:
@@ -80,6 +80,6 @@ Available values:
 * Waiting Succession
 
 |Target User Ids |CTCPG__TargetUserIds__c |Text Area(255)
-|Store the values from the CTCPG__UniqUserNumber__c field of the
+|Store the values from the CTCPG__UniqUserNumber__c field of the
 _User_ record that targeted the _Account_ record.
 |===

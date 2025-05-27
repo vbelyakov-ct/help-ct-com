@@ -1,24 +1,24 @@
 = Configure an Inventory Tab
 
-Add the _Inventory_ tab for managing participants and their role during
+Add the _Inventory_ tab for managing participants and their role during
 the _Activity_ on
 xref:activity-report-management#h2__1515393312[the _Activity
-Report_ page for the _Visit_ record type].
+Report_ page for the _Visit_ record type].
 
 . xref:admin-guide/activity-report-management/configure-an-inventory-tab#h2_899645149[Map the _Inventory_
-tab and the _Activity Report_ page] for the
-corresponding _Activity_ record type via the appropriate custom setting.
+tab and the _Activity Report_ page] for the
+corresponding _Activity_ record type via the appropriate custom setting.
 . xref:admin-guide/activity-report-management/configure-an-inventory-tab#h2_1658041598[Customize fields to
-display] on the *Inventory* tab.
-. xref:admin-guide/ct-products-and-assortments-management/create-a-new-ct-product[Create new _CT
-Product_ records] with the *Inventory* record type and
-xref:admin-guide/ct-products-and-assortments-management/assign-inventories-to-accounts[assign them to the _Account_
+display] on the *Inventory* tab.
+. xref:admin-guide/ct-products-and-assortments-management/create-a-new-ct-product[Create new _CT
+Product_ records] with the *Inventory* record type and
+xref:admin-guide/ct-products-and-assortments-management/assign-inventories-to-accounts[assign them to the _Account_
 records] for displaying _Inventory_ records on the _Inventory_ tab of
 the _Activity Report_ page for the _Activity_ of the selected _Account_
 record.
 
 [[h2_899645149]]
-=== Manage Inventory Settings Records
+=== Manage Inventory Settings Records
 
 To display the _Event Member_ tab on the _Activity Report_ page:
 
@@ -30,9 +30,9 @@ for the whole Salesforce organization.
 xref:inventory-tab-settings[here]. ====
 * specify the user/profile;
 * specify the required _Activity_ record type;
-* specify the API name of the lookup to the
-[.object]#Product# object;
-* specify the API name of the *Inventory Tab* field set to display:
+* specify the API name of the lookup to the
+[.object]#Product# object;
+* specify the API name of the *Inventory Tab* field set to display:
 CTCPG__CallReportInventory;
 * set active.
 . ​Click *Save*.
@@ -43,14 +43,14 @@ image:ct-inventory-tab-settings-example.png[]
 The setup is complete.
 
 [[h2_1658041598]]
-=== Customize Fields to Display on the Inventory Tab
+=== Customize Fields to Display on the Inventory Tab
 
-To customize fields to display on the *Inventory*__ __tab:
+To customize fields to display on the *Inventory*__ __tab:
 
-. Go to *Setup → Object Manager → Inventory → Field Sets*.
+. Go to *Setup → Object Manager → Inventory → Field Sets*.
 . Click one of the *CallReportInventory* field set.
 . On the page layout editor, drag-n-drop or remove fields to display.
-. Click *Save*. 
+. Click *Save*.
 
 The setup is complete.
 

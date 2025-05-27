@@ -2,7 +2,7 @@
 
 Add the related tabs for tracking _CT Products_ during the _Activity_ on
 xref:activity-report-management#h2__1515393312[the _Activity
-Report_ page for the _Visit_ record type]. The following tabs are
+Report_ page for the _Visit_ record type]. The following tabs are
 available:
 
 * _Company Products_;
@@ -18,12 +18,12 @@ corresponding record type] can be managed.
 To display the required _CT Product_ tab:
 
 . xref:admin-guide/activity-report-management/configure-ct-product-tabs#h2_1832965105[Map the _CT
-Products_ related tab and the _Activity Report_ page] for the
-corresponding _Activity_ record type via the appropriate custom setting.
+Products_ related tab and the _Activity Report_ page] for the
+corresponding _Activity_ record type via the appropriate custom setting.
 . xref:admin-guide/activity-report-management/configure-ct-product-tabs#h2__1475822200[Customize fields to
-display] on the *CT Product* tab.
+display] on the *CT Product* tab.
 . xref:admin-guide/ct-products-and-assortments-management/create-a-new-ct-product[Create new _CT Product_
-records] that can be added to the _Activity_ record and displayed on the
+records] that can be added to the _Activity_ record and displayed on the
 _Activity Report_ page:
 * company products;
 * competitor products;
@@ -32,11 +32,11 @@ _Activity Report_ page:
 
 
 xref:admin-guide/targeting-and-marketing-cycles-management/index[In case of using
-marketing cycles], the __CT products __will be automatically added on
-the corresponding **CT Product **tab after _Activity_ record creation
-if: 
+marketing cycles], the __CT products __will be automatically added on
+the corresponding **CT Product **tab after _Activity_ record creation
+if:
 
-* The *Start Date* of the _Activity_ record is within the period of the
+* The *Start Date* of the _Activity_ record is within the period of the
 active _Marketing Cycle_ record;
 * The _User_ division is the same as the _Marketing Cycle_ division;
 * The _Account_ division category is the same as the division category
@@ -56,11 +56,11 @@ To display the *CT Product* tab on the _Activity Report_ page:
 Products_ tab with the _CT Product_ records of the _Company Product_
 record type;
 * *Competitor Product Tab Settings* to customize displaying of the
-_Competitor Products_ tab with the _CT Product_ records of
-the _Competitor Product_ record type;
+_Competitor Products_ tab with the _CT Product_ records of
+the _Competitor Product_ record type;
 * *POS Material Tab Settings* to customize displaying of the _POS
-Materials_ tab with the _CT Product_ records of the _POS
-Material_ record type; 
+Materials_ tab with the _CT Product_ records of the _POS
+Material_ record type;
 . Specify a new record for the specific user/profile, or edit the record
 for the whole Salesforce organization.
 [TIP] ==== Read the description of each parameter:
@@ -72,9 +72,9 @@ Setting], xref:pos-material-tab-settings[POS Material Tab Setting].
 * specify the required _Activity_ record type;
 * specify the lookup to the _CT Product_ object;
 * specify the API name of the field set to display:
-** *Company Product Tab* → CTCPG__CompanyProductTab;
-**  *Competitor Product Tab* → CTCPG__CompetitorProductTab;
-**  *POS Material Tab* → CTCPG__POSMaterialTab.
+** *Company Product Tab* → CTCPG__CompanyProductTab;
+**  *Competitor Product Tab* → CTCPG__CompetitorProductTab;
+**  *POS Material Tab* → CTCPG__POSMaterialTab.
 * set active.
 . ​Click *Save*.
 image:ct-product-tab-settings-example.png[]
@@ -82,20 +82,20 @@ image:ct-product-tab-settings-example.png[]
 The setup is complete.
 
 [[h2__1475822200]]
-=== Customize Fields to Display on the CT Product Tab
+=== Customize Fields to Display on the CT Product Tab
 
 To customize fields to display non the _CT Product_ tab:
 
 . Go to *Setup → Object Manager → CT CPG Activity Data → Field Sets*.
 . Click one of the following field sets:
-* *Company Product Tab* to set up fields to display on the *Company
-Products* tab;
-* *Competitor Product Tab* to set up fields to display on
-the *Competitor Products* tab; 
-* *POS Material Tab* to set up fields to display on the *POS
-Material*__ __tab; 
-.  On the page layout editor, drag-n-drop or remove fields to display.
-. Click *Save*. 
+* *Company Product Tab* to set up fields to display on the *Company
+Products* tab;
+* *Competitor Product Tab* to set up fields to display on
+the *Competitor Products* tab;
+* *POS Material Tab* to set up fields to display on the *POS
+Material*__ __tab;
+.  On the page layout editor, drag-n-drop or remove fields to display.
+. Click *Save*.
 
 The setup is complete.
 

@@ -9,42 +9,42 @@ Create a dynamic CPG group and manage its members.
 
 To create a static CPG group:
 
-. Go to the *Groups* tab.
-. Click *New*.
-. Fill in the _CPG group_ parameters, such as:
+. Go to the *Groups* tab.
+. Click *New*.
+. Fill in the _CPG group_ parameters, such as:
 [TIP] ==== Read the description of each
-parameter xref:cpg-group-field-reference[here]. ====
-* Enter *Group Name*;
-* Select *Group Type*;
-[NOTE] ==== *Group Type* cannot be changed after saving the
+parameter xref:cpg-group-field-reference[here]. ====
+* Enter *Group Name*;
+* Select *Group Type*;
+[NOTE] ==== *Group Type* cannot be changed after saving the
 group. ====
-* Select the *Dynamic* **Group **checkbox.
+* Select the *Dynamic* **Group **checkbox.
 image:62558302.png[]
-. Click *Save*.
-. The dynamic group of records is created. The *SOQL Builder* tab
-opens.   
-* Enter criteria using the *OR* / *AND* buttons.
-* Check the _SOQL Query_ record above the builder.
+. Click *Save*.
+. The dynamic group of records is created. The *SOQL Builder* tab
+opens.
+* Enter criteria using the *OR* / *AND* buttons.
+* Check the _SOQL Query_ record above the builder.
 image:create-a-new-dynamic-group_2.png[]
-. Click *Save* and confirm.
+. Click *Save* and confirm.
 
-The dynamic group is created.
+The dynamic group is created.
 
 [[h2_1766846133]]
 === Manage Dynamic CPG Group Members
 
-To view dynamic CPG group members, go to the **Group Members **tab.
+To view dynamic CPG group members, go to the **Group Members **tab.
 
-* Click *New* to manually add a CPG group member.
-** A _CPG Group Member_ record will not be recalculated after changing
+* Click *New* to manually add a CPG group member.
+** A _CPG Group Member_ record will not be recalculated after changing
 the SOQL criteria.
-** To recalculate a __CPG Group Member __record,
-uncheck the *Manual* field on the added __CPG Group Member __record.
-[TIP] ==== Add the *Manual* field to the *Group Member* page
+** To recalculate a __CPG Group Member __record,
+uncheck the *Manual* field on the added __CPG Group Member __record.
+[TIP] ==== Add the *Manual* field to the *Group Member* page
 layout. ====
-* An empty record cannot be added as a _CPG Group Member_ record;
-* Only the records of the selected *Group Type* on the _CPG
-Group_ record can be added as a group member. 
+* An empty record cannot be added as a _CPG Group Member_ record;
+* Only the records of the selected *Group Type* on the _CPG
+Group_ record can be added as a group member.
 image:add-dynamic-member.png[]
 
 [[h2_2007782862]]
@@ -59,23 +59,23 @@ recalculation manually.
 
 If a user creates, updates, or removes a record of the object that
 matches the criteria of the dynamic group, the
-xref:group-member-process[GroupMemberProcess] trigger immediately
+xref:group-member-process[GroupMemberProcess] trigger immediately
 recalculates the dynamic group. It checks specific fields of the record
-and updates the corresponding dynamic group(s). 
+and updates the corresponding dynamic group(s).
 
 [NOTE] ==== Object records will not be recalculated if only the
-records of the child objects have been changed.  ====
+records of the child objects have been changed.  ====
 
 [[h3__1746193321]]
 ==== Schedule Recalculation
 
-By default, the dynamic groups are updated daily. The special
-Apex Schedule_DynamicGroup class will be run to update all the
+By default, the dynamic groups are updated daily. The special
+Apex Schedule_DynamicGroup class will be run to update all the
 dynamic groups according to all the criteria for each parent and child
 objects.
 
 [NOTE] ==== Manually added group members cannot be recalculated.
-To recalculate this record, uncheck the *Manual* field.  ====
+To recalculate this record, uncheck the *Manual* field.  ====
 
 For further information, please refer to
 https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_scheduler.htm[Developer

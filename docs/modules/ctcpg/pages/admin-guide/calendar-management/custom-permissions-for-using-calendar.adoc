@@ -3,10 +3,10 @@
 [[h3__1046081510]]
 ==== Permission Sets
 
-Grant users the following permission sets to use the Calendar:
+Grant users the following permission sets to use the Calendar:
 
-* _CPG Calendar User_ to access only the Calendar.
-* _CPG Calendar Admin_ to access the Calendar and Calendar settings.
+* _CPG Calendar User_ to access only the Calendar.
+* _CPG Calendar Admin_ to access the Calendar and Calendar settings.
 
 If you cannot want to use permissions sets, you can set up permissions
 listed below.
@@ -31,14 +31,14 @@ Settings] object are required to work with Calendar:
 * Other Calendar Settings JSON
 * Json User Settings
 * User Id
-* Record Type 
+* Record Type
 
 |===
 
 
 
 Also, the current user must have _Read_ permission for the following
-fields on the[.object]#User# object: 
+fields on the[.object]#User# object:
 
 * Start
 * End
@@ -83,6 +83,6 @@ When creating new fields on the
 names different from existing ones. For example, if there is a
 [.apiobject]#CTCPG_AccountId__c# field, you cannot
 create a new field with the[.apiobject]#AccountId__c# name.
- 
+
 
 

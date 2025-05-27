@@ -1,6 +1,6 @@
 = Reference Guide
 
-[TIP] ==== You can use preconfigured
+[TIP] ==== You can use preconfigured
 xref:standard-layout-interface[Standard Layouts] without
 configuring xref:activity-report-interface[Activity Reports]. ====
 
@@ -18,7 +18,7 @@ settings.
 Activity], xref:activity-data-field-reference[CT CPG Activity
 Data],
 [.object]#xref:report-template-field-reference[Report
-Template], #[.object]#xref:skill-field-reference[Skill],#
+Template], #[.object]#xref:skill-field-reference[Skill],#
 and xref:skill-mark-field-reference[Skill Mark]
 xref:skill-mark-field-reference[] objects.
 
@@ -41,7 +41,7 @@ xref:activity-report-interface#h2__192515681[Time Off],
 xref:activity-report-interface#h2__1426808308[Joint Visit] is used
 for displaying the main section with all detailed information about the
 open _Activity_ record;
-** *Visit* is intended to track _CT Products_ on the point-of-sales,
+** *Visit* is intended to track _CT Products_ on the point-of-sales,
 objectives, and tasks.
 ** *Event* is intended to track meetings, participants, and meeting
 expenses.
@@ -62,12 +62,12 @@ configured field sets.
 [[DefaultConfiguration-AR-BasicActionsforActivity]]
 === Basic Actions for Activity
 
-By default, the *New*, *Edit*, and *View* buttons on the tabs, for
+By default, the *New*, *Edit*, and *View* buttons on the tabs, for
 example, the xref:admin-guide/calendar-management/legacy-calendar-management/configuring-calendar/index[Calendar] or *Activities*
-tab, related to the[.object]#CT CPG Activity# object redirect
+tab, related to the[.object]#CT CPG Activity# object redirect
 users to the standard pages instead of _Activity Report_ pages.
 
-* *StandardLayout* is responsible for displaying a standard page, where
+* *StandardLayout* is responsible for displaying a standard page, where
 fields are set up within the page layout customization;
 * *ActivityReport* is responsible for displaying the Visualforce page
 with the corresponding field set and customized related tabs, e.g., the

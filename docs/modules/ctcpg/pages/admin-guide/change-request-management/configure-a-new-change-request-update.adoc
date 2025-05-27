@@ -7,26 +7,26 @@ fields for the Change Request object] that will be changed via the
 _Change Request: Update_ process. These fields represent fields of the
 __[.object]#Account# __ or[.object]#Contact# __
 object.
-. xref:admin-guide/change-request-management/configure-a-new-change-request-update#h2__1624561601[Create a
-new _Change Request Mapping_ record] to map the _Change Request_ record
+. xref:admin-guide/change-request-management/configure-a-new-change-request-update#h2__1624561601[Create a
+new _Change Request Mapping_ record] to map the _Change Request_ record
 and the target object.
 
 [[h2__315694290]]
 === Add Fields to the Change Request Record
 
 To change the values of the selected *Account* or *Contact* fields,
-create the corresponding fields on the[.object]#Change Request#
-object. 
+create the corresponding fields on the[.object]#Change Request#
+object.
 
 [NOTE] ====
 
-The created field *Data Type*, *Filed Label*, and *Field Name* on the
+The created field *Data Type*, *Filed Label*, and *Field Name* on the
 [.object]#Change Request ==== object should be the same as for
-the corresponding field of the
+the corresponding field of the
 
 Account# __ or[.object]#Contact# __ object.
 
-To create a new field for the Change Request object, go to the Change
+To create a new field for the Change Request object, go to the Change
 Request object and
 https://help.salesforce.com/articleView?id=adding_fields.htm&type=5[follow
 the Salesforce guide].
@@ -41,19 +41,19 @@ values within the _Change Request: Update_ record creation.
 To update the target object field(s), create the relation via a _Change
 Request Mapping_ record:
 
-. Go to *Setup* → *Custom Code* → *Custom Settings* →
-click **Manage **next to *Change Request Mapping*.
-. On the next page, click *New* to create a new record:
+. Go to *Setup* → *Custom Code* → *Custom Settings* →
+click **Manage **next to *Change Request Mapping*.
+. On the next page, click *New* to create a new record:
 [TIP] ==== Read the description of each
-parameter xref:change-request-mapping[here].  ====
-* In the **Name **section, specify the name.
-* In the *Change Request Field*, enter the API name of the field that
+parameter xref:change-request-mapping[here].  ====
+* In the **Name **section, specify the name.
+* In the *Change Request Field*, enter the API name of the field that
 you have to change via the _Change Request: Update_ process;
-* In the *Change Request Record Type* field, select _Update_;
-* In the *Target Object Field*, enter field API Name to change via
-the _Change Request: Update_ process; 
-* ​In the *Target Object Name* field, enter object API Name, which field
-should be changed via the _Change Request: Update_ process;
+* In the *Change Request Record Type* field, select _Update_;
+* In the *Target Object Field*, enter field API Name to change via
+the _Change Request: Update_ process;
+* ​In the *Target Object Name* field, enter object API Name, which field
+should be changed via the _Change Request: Update_ process;
 . Click *Save*.
 
 The setup is complete.

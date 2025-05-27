@@ -19,12 +19,12 @@ _Account_ record to which the
 _xref:assortment-field-reference.html[Assortment]_ is assigned.
 
 |Active |CTCPG__IsActive__c |Checkbox |If selected,
-the record is active and applied in business logic.
+the record is active and applied in business logic.
 
-|Assortment         |CTCPG__AssortmentId__c
-|Lookup(Assortment)         |The related _Assortment_ record.
+|Assortment         |CTCPG__AssortmentId__c
+|Lookup(Assortment)         |The related _Assortment_ record.
 
-|Description  |CTCPG__Description__c |Long Text
+|Description  |CTCPG__Description__c |Long Text
 Area(32768) |Specify the additional information.
 
 |End Date |CTCPG__EndDate__c |Checkbox |Specify the last day
@@ -34,6 +34,6 @@ when the _Assortment_ can be selected for the _Account_ record.
 _Assortment_ will be displayed first on the *Activity Report* tab.
 
 |Start Date |CTCPG__TargetUserIds__c |Text Area(255)
-|Specify the first day when the _Assortment_ can be selected for
-the _Account_ record.
+|Specify the first day when the _Assortment_ can be selected for
+the _Account_ record.
 |===

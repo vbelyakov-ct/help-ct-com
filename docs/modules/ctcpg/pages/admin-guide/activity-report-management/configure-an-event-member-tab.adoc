@@ -1,15 +1,15 @@
 = Configure an Event Member Tab
 
-Add the *Event Member* tab for managing participants and their
-role during the _Activity_ on
+Add the *Event Member* tab for managing participants and their
+role during the _Activity_ on
 xref:activity-report-management#h2__1515393312[the _Activity
 Report_ page for the _Event_ record type].
 
 . xref:admin-guide/activity-report-management/configure-an-event-member-tab#h2_899645149[Map the Event
-Member tab and the _Activity Report_ page] for the
-corresponding _Activity_ record type via the appropriate custom setting.
+Member tab and the _Activity Report_ page] for the
+corresponding _Activity_ record type via the appropriate custom setting.
 . xref:admin-guide/activity-report-management/configure-an-event-member-tab[Customize fields to display]
-on the *Event Member* tab.
+on the *Event Member* tab.
 . xref:admin-guide/activity-report-management/work-with-the-activity-report-page#h2_867056578[Add members]
 manually on the _Activity Report_ page or select participants on the
 *Contacts* tab.
@@ -27,7 +27,7 @@ for the whole Salesforce organization.
 xref:event-member-tab-settings[here]. ====
 * specify the user/profile;
 * specify the required _Activity_ record type;
-* specify the API name of the lookup to the[.object]#Contact#
+* specify the API name of the lookup to the[.object]#Contact#
 object;
 * specify the API name of the *Event Members Tab* field set to display:
 CTCPG__EventMembersTab;
@@ -40,14 +40,14 @@ image:ct-event-product-tab-settings-example.png[]
 The setup is complete.
 
 [[h2_1658041598]]
-=== Customize Fields to Display on the Event Member Tab
+=== Customize Fields to Display on the Event Member Tab
 
-To customize fields to display non the _Event Member_ tab:
+To customize fields to display non the _Event Member_ tab:
 
 . Go to *Setup → Object Manager → CT CPG Activity Data → Field Sets*.
 . Click one of the *Event Members Tab* field set.
 . On the page layout editor, drag-n-drop or remove fields to display.
-. Click *Save*. 
+. Click *Save*.
 
 The setup is complete.
 

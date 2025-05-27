@@ -1,11 +1,11 @@
 = Dynamic Group Settings
 
-*Dynamic Group Settings* is used for managing parameters of creating CPG
+*Dynamic Group Settings* is used for managing parameters of creating CPG
 groups.
 
 '''''
 
-API name in Salesforce: CTCPG__DynamicGroupSettings__c
+API name in Salesforce: CTCPG__DynamicGroupSettings__c
 
 '''''
 
@@ -16,7 +16,7 @@ API name in Salesforce: CTCPG__DynamicGroupSettings__c
 |Batch Size for Processing |CTCPG__BatchSizeForProcessing__c
 |Number(4,0) a|
 [#CS_Defn_View:CS_View:theDetailBlock:thePageBlockSection:description]#Specify
-the batch size to process the
+the batch size to process the
 _xref:cpg-group-member-field-reference.html[CPG Group Member]_ records.
 #
 
@@ -27,7 +27,7 @@ case of an incorrect value, the size will be set as 2000.#
 
 |Batch Size for Removing |CTCPG__BatchSizeForRemoving__c
 |Number(4,0) a|
-Specify the batch size to remove the _CPG Group Member_ records. 
+Specify the batch size to remove the _CPG Group Member_ records.
 
 * [#CS_Defn_View:CS_View:theDetailBlock:thePageBlockSection:description]#The
 size should be in the range of 1 to 2000.#

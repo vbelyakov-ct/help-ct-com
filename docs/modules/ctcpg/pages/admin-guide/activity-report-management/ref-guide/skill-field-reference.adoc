@@ -3,7 +3,7 @@
 [NOTE] ==== The information below is incomplete and will be
 updated. ====
 
-The[.object]#Skill# object is intended to store skills and
+The[.object]#Skill# object is intended to store skills and
 criteria that should be estimated during the _Joint Visit_.
 
 '''''
@@ -17,14 +17,14 @@ API name in Salesforce: CTCPG__Skill__c
 |*Field* |*API Name* |*Type* |*Description*
 
 |Active |CTCPG__IsActive__c |Checkbox |If selected,
-the record is active and applied in business logic.
+the record is active and applied in business logic.
 
 |Answer Field API name |CTCPG__AnswerFieldAPIName__c |Text
 Area(255) a|
 Specify the API name for the field where the representative will type
 the answer.
 
-|Answer Type   |CTCPG__AnswerType__c  |Picklist a|
+|Answer Type   |CTCPG__AnswerType__c  |Picklist a|
 Specify the answer type. The available values by default:
 
 * Date
@@ -34,18 +34,18 @@ Specify the answer type. The available values by default:
 * Number
 * Multipicklist
 
-|Category        |CTCPG__Category__c |Picklist |if needed,
+|Category        |CTCPG__Category__c |Picklist |if needed,
 specify category values for skill segmentation.
 
-|Criteria |CTCPG__Criteria__c  |Long Text Area(32768)
+|Criteria |CTCPG__Criteria__c  |Long Text Area(32768)
 |Specify the criteria to estimate a representative's skills (separated
 by a comma, without blank spaces).
 
-|Criteria Value |CTCPG__CriteriaValue__c  |Long Text
+|Criteria Value |CTCPG__CriteriaValue__c  |Long Text
 Area(32768) |Specify values for each criterion (separated by a comma,
 without blank spaces).
 
-|Description |CTCPG__Description__c |Long Text Area(32768)  a|
+|Description |CTCPG__Description__c |Long Text Area(32768)  a|
 Specify the additional information about the skill.
 
 |For Activity |CTCPG__ForActivity__c |Checkbox |

@@ -3,7 +3,7 @@
 [[h1__1751924913]]
 == Quiz Completion Field Reference
 
-The[.object]#Quiz Completion# object is intended to store the
+The[.object]#Quiz Completion# object is intended to store the
 completed questionnaire linked to the corresponding
 _xref:quiz-partaker-field-reference.html[Quiz Partaker]_ record.
 
@@ -30,32 +30,32 @@ the quiz is complete.
 |Completion Time |CTCPG__ComletionTime__c |Number(18,0)
 |Total time spent completing the quiz.
 
-|Correct Answer |CTCPG__correctAnswerPercent__c 
+|Correct Answer |CTCPG__correctAnswerPercent__c
 |Percent(18,0) |The percent of the correct answers.
 
-|Description  |CTCPG__Description__c |Long Text Area
+|Description  |CTCPG__Description__c |Long Text Area
 (32768) |Specify information about the quiz completion.
 
-|IsUserEndedQuiz |CTCPG__IsUserEndedQuiz__c  |Checkbox 
+|IsUserEndedQuiz |CTCPG__IsUserEndedQuiz__c  |Checkbox
 |If selected, the quiz is complete or interrupted by a quiz partaker.
 
-|Mobile Id |CTCPG__MobileId__c  |Text(255) a|
-[NOTE] ==== In case of integration with the CT Mobile app.  ====
+|Mobile Id |CTCPG__MobileId__c  |Text(255) a|
+[NOTE] ==== In case of integration with the CT Mobile app.  ====
 
-If filled out, the quiz was passed on the mobile device.
+If filled out, the quiz was passed on the mobile device.
 
-The Mobile ID is a unique identifier to identify the record that was
+The Mobile ID is a unique identifier to identify the record that was
 created or edited in the CT Mobile app.
 
-|Quiz |CTCPG__QuizId__c |Master-Detail(Quiz)      |The
+|Quiz |CTCPG__QuizId__c |Master-Detail(Quiz)      |The
 parent _Quiz_ record.
 
 |Quiz Partaker |CTCPG__QuizPartaker__c |Lookup(Quiz Partaker)
 |The related _Quiz Partaker_ record.
 
 |Start Date |CTCPG__StartDate__c |Date/Time a|
-The date and time when the partaker starts the quiz.
+The date and time when the partaker starts the quiz.
 
-|User |CTCPG__UserId__c  |Lookup(User) |The related _User_
+|User |CTCPG__UserId__c  |Lookup(User) |The related _User_
 record.
 |===

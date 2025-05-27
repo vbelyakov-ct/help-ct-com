@@ -6,7 +6,7 @@ and a related record of the custom[.object]#CT CPG Activity
 Data# object:
 
 * ActivityProcessHandler
-* GlobalActivityService 
+* GlobalActivityService
 
 The Apex classes are invoked by the following Apex trigger:
 
@@ -14,15 +14,15 @@ The Apex classes are invoked by the following Apex trigger:
 
 [NOTE] ==== Before implementing, the system checks that the
 xref:admin-guide/triggers-management/triggers/activity-process[ActivityProcess] trigger has a corresponding
-record in xref:trigger-settings[Trigger Settings].  ====
+record in xref:trigger-settings[Trigger Settings].  ====
 
-A trigger is xref:admin-guide/triggers-management/triggers/trigger-contexts[invoked by operations on
+A trigger is xref:admin-guide/triggers-management/triggers/trigger-contexts[invoked by operations on
 recurring events].
 
 [[h2__135632021]]
 === The ActivityProcessHandler Class
 
-The following trigger methods of the ActivityProcessHandler class are
+The following trigger methods of the ActivityProcessHandler class are
 implemented:
 [TIP] ==== You can xref:admin-guide/triggers-management/enabling-the-bypass-logic[restrict
 one or more trigger events] to not invoke the trigger methods. ====
@@ -35,24 +35,24 @@ one or more trigger events] to not invoke the trigger methods. ====
 
 |onBeforeInsert a|
 * Create a _CT CPG Activity_ record linked to the _Contact_
-and/or _Account_ records;
+and/or _Account_ records;
 * Assign the related
 _xref:configuring-targeting-and-marketing-cycles.html[Marketing Cycle]_
 record;
 * Link the corresponding _Target Frequency_ record;
-* Fill in _Objectives_ if specified.
+* Fill in _Objectives_ if specified.
 
 |onBeforeUpdate a|
 For the _CT CPG Activity_ record:
 
-* Assign the related _Marketing Cycle_ record;
-* Link the corresponding _Target Frequency_ record;
-* Fill in _xref:objective-creating.html[Objectives]_ if specified.
+* Assign the related _Marketing Cycle_ record;
+* Link the corresponding _Target Frequency_ record;
+* Fill in _xref:objective-creating.html[Objectives]_ if specified.
 
 |onBeforeDelete |Search and delete the standard _Event_ and _Task_
 records that are related to deleted _CT CPG Activity_ records.
 
-|onAfterInsert  a|
+|onAfterInsert  a|
 * Create the corresponding _CT CPG Activity Data_ record for the _CT CPG
 Activity_ record;
 * Calculate finished activities and fill in the *Actual Calls* field of
@@ -64,17 +64,17 @@ specified;
 xref:admin-guide/configuring-activity-sync/index[Activity Sync] is configured.
 
 |onAfterUpdate a|
-* Update the corresponding__ CT CPG Activity Data__ record for the _CT
-CPG Activity_ record;
-* Recalculate finished activities and fill in the *Actual Calls* field
-of the related _Target Frequency_ record;
+* Update the corresponding__ CT CPG Activity Data__ record for the _CT
+CPG Activity_ record;
+* Recalculate finished activities and fill in the *Actual Calls* field
+of the related _Target Frequency_ record;
 * Create the related _CT CPG Activity_ records in case of the
 _xref:creating-the-next-activity.html[Next Call]_ functionality is
-configured. 
+configured.
 * Grant access to the Joint Visit Report for relevant users if
 specified.
 
-|onAfterDelete  |When the _CT CPG Activity_ records are removed,
+|onAfterDelete  |When the _CT CPG Activity_ records are removed,
 recalculate the finished activities in the *Actual Calls* field of the
 corresponding Target Frequency record.
 |===

@@ -1,19 +1,19 @@
 = Create a Marketing Cycle
 
-Create a new marketing cycle for the new division. The Application
+Create a new marketing cycle for the new division. The Application
 Settings affect the Marketing Cycle operation. If needed,
-edit xref:admin-guide/getting-started/configuring-application-settings[t]xref:admin-guide/getting-started/configuring-application-settings[he
-corresponding record of Application Settings].  
+edit xref:admin-guide/getting-started/configuring-application-settings[t]xref:admin-guide/getting-started/configuring-application-settings[he
+corresponding record of Application Settings].
 
 When a user creates an _Activity_ record, it will be automatically
-linked to the _Marketing Cycle_ record if: 
+linked to the _Marketing Cycle_ record if:
 
 * the *Start Date* of the _Activity_ record is within the _Marketing
 Cycle_ period;
 * the _User_ and _Marketing Cycle_ records are assigned to the same
 division;
 * the _Marketing Cycle_ record is related to the specific record type of
-the _Activity_ record according to the
+the _Activity_ record according to the
 xref:marketing-cycle-linking-settings[Marketing Cycle Linking
 Setting];
 * the _xref:marketing-cycle-field-reference.html[Marketing Cycle]_
@@ -23,21 +23,21 @@ record is active.
 
 To create a marketing cycle:
 
-. Go to the *Marketing Cycles* tab and click *New*.
+. Go to the *Marketing Cycles* tab and click *New*.
 . Specify the required parameters:
 [TIP] ==== Read the description of each
-parameter xref:marketing-cycle-field-reference[here].   ====
+parameter xref:marketing-cycle-field-reference[here].   ====
 * Enter *the name*.
-* Specify the *Start Date* and *End Date*. The marketing cycle period
+* Specify the *Start Date* and *End Date*. The marketing cycle period
 should be no longer than the maximum marketing cycle period on the
-xref:application-settings[Application Settings] record. 
+xref:application-settings[Application Settings] record.
 * Select *Status*.
-* Select *User Division*, for example, Gamma.
+* Select *User Division*, for example, Gamma.
 * Specify
 xref:admin-guide/configuring-targeting-and-marketing-cycles/enable-activity-linking-to-the-marketing-cycle[Activity
 Linking].
 * Select *Active*.
 image:new-marketing-cycle.png[]
-. Click *Save*.
+. Click *Save*.
 
 The marketing cycle is created.

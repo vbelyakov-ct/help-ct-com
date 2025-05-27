@@ -5,23 +5,23 @@ the CT CPG installation.
 
 [NOTE] ==== In case of xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[creating new
 divisions], add the new division to the values of
-the CTCPG__UserDivision__c ====  picklist.
+the CTCPG__UserDivision__c ====  picklist.
 
 [width="100%",cols="25%,25%,25%,25%",]
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Calendar Locale         |CTCPG__CalendarLocale__c
-|Text(255)  |The selected locale of the _User_ record, for example,
+|Calendar Locale         |CTCPG__CalendarLocale__c
+|Text(255)  |The selected locale of the _User_ record, for example,
 en.
 
 |User Division for Calendar |CTCPG__CalendarUserDivision__c
-|Formula(Text)         |In the CT CPG Calendar,
-select xref:admin-guide/calendar-management/legacy-calendar-management/configuring-calendar/configure-settings-for-the-calendar/index[the assigned
+|Formula(Text)         |In the CT CPG Calendar,
+select xref:admin-guide/calendar-management/legacy-calendar-management/configuring-calendar/configure-settings-for-the-calendar/index[the assigned
 division].
 
-|Uniq User Number |CTCPG__UniqUserNumber__c |Text(30)  |The
-last 5 symbols of the _User_ record ID.
+|Uniq User Number |CTCPG__UniqUserNumber__c |Text(30)  |The
+last 5 symbols of the _User_ record ID.
 
 |User Division |CTCPG__UserDivision__c |Picklist |The picklist
 with all assigned divisions for the _User_ record.

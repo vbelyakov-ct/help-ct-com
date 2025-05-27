@@ -1,6 +1,6 @@
 = Question Field Reference
 
-The[.object]#Question# object is intended to store questions
+The[.object]#Question# object is intended to store questions
 for the particular _Quiz_ record.
 
 '''''
@@ -13,41 +13,41 @@ API name in Salesforce: CTCPG__QuizQuestion__c
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Answers |CTCPG__Answers__c |Long Text Area (32768)   |It is
-used to store answers to a quiz question (separated by a comma, without
+|Answers |CTCPG__Answers__c |Long Text Area (32768)   |It is
+used to store answers to a quiz question (separated by a comma, without
 a blank space).
 
 |Correct Answer |CTCPG__CorrectAnswer__c |Long Text Area
-(32768)     |It is used to store the correct answer to a quiz
+(32768)     |It is used to store the correct answer to a quiz
 question.
 
-|Depends on Answer  |CTCPG__DependsOnAnswer__c |Text(255)
+|Depends on Answer  |CTCPG__DependsOnAnswer__c |Text(255)
 |It is used to store the answer to the question in
-the CTCPG__DependsOnQuestion__c field.
+the CTCPG__DependsOnQuestion__c field.
 
 |Depends on Question |CTCPG__DependsOnQuestion__c
 |Lookup(Question) |It is used to store the specific question based on
 the answer to which the next question will be displayed in a quiz.
 
-|Description  |CTCPG__Description__c |Long Text Area
+|Description  |CTCPG__Description__c |Long Text Area
 (32768) |Specify information about the quiz question.
 
 |Is Quiz Question Required |CTCPG__IsRequired__c 
-|Checkbox  |If selected, the quiz question is required to answer.
+|Checkbox  |If selected, the quiz question is required to answer.
 
-|Order |CTCPG__Order__c  |Number(18,0) |The question order
+|Order |CTCPG__Order__c  |Number(18,0) |The question order
 in a quiz.
 
-|Question |CTCPG__Question__c   |Long Text Area (32768)   
-    |The question text.
+|Question |CTCPG__Question__c   |Long Text Area (32768)
+    |The question text.
 
-|Quiz |CTCPG__QuizId__c |Master-Detail(Quiz)      |The
+|Quiz |CTCPG__QuizId__c |Master-Detail(Quiz)      |The
 parent _Quiz_ record.
 
 |Sub Order |CTCPG__SubOrder__c |Number(18,0) |It is an order
-of the question that is included in the branch that starts based on a
-question in the CTCPG__DependsOnQuestion__c field and the answer
-to this question in the CTCPG__DependsOnAnswer__c field.
+of the question that is included in the branch that starts based on a
+question in the CTCPG__DependsOnQuestion__c field and the answer
+to this question in the CTCPG__DependsOnAnswer__c field.
 
 |Type |CTCPG__Type__c |Picklist a|
 The question type. Available values:
