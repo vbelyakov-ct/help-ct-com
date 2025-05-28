@@ -1,69 +1,45 @@
 = Salesforce Winter '20 Release: Critical Updates
+:toc:
 
-Salesforce has announced two critical updates to be released at the
-beginning of 2020. The administrator of the CT CPG package must perform
-additional configuration for the current profiles before the update is
-released, otherwise, the CT CPG package proper functioning will be
-impossible.
-
-:toc: :toclevels: 3
+Salesforce has announced two critical updates to be released at the beginning of 2020. The administrator of the CT CPG package must perform additional configuration for the current profiles before the update is released, otherwise, the CT CPG package proper functioning will be impossible.
 
 [[h2__1033053122]]
-=== Announced critical updates
+== Announced critical updates
 
-[width="100%",cols="34%,33%,33%",]
+[width="100%",cols="20%,60%,20%",]
 |===
 |*Require Customize Application permission for direct read access to
-custom settings* a|
-Currently, users without Customize Application permission can read
-custom settings using different APIs that are provided by Salesforce.
-Following the “secure by default” approach, read access for users
-without Customize Application permission will be revoked with this
-update.
+custom settings*
+a| Currently, users without Customize Application permission can read custom settings using different APIs that are provided by Salesforce. Following the “secure by default” approach, read access for users without Customize Application permission will be revoked with this update.
 
-
-System Administrator needs to perform the actions that are described in
-this article to allow access to custom settings to non-admin CT CPG
-users (via profiles or permission sets).
+System Administrator needs to perform the actions that are described in this article to allow access to custom settings to non-admin CT CPG users (via profiles or permission sets).
 
 |3 January 2020
 
 |*Require Customize Application permission for direct read access to
-custom metadata types * a|
-Currently, users without Customize Application permission can read
-unprotected custom metadata types using different APIs that are provided
-by Salesforce. Following the “secure by default” approach, read access
-for users without Customize Application permission will be revoked with
-this update.
+custom metadata types*
+a| Currently, users without Customize Application permission can read unprotected custom metadata types using different APIs that are provided by Salesforce. Following the “secure by default” approach, read access for users without Customize Application permission will be revoked with this update.
 
-
-
-System Administrator needs to perform the actions that are described in
-this article to explicitly grant access to custom metadata types to
-non-admin CT CPG users (via profiles or permission sets).
+System Administrator needs to perform the actions that are described in this article to explicitly grant access to custom metadata types to non-admin CT CPG users (via profiles or permission sets).
 
 |17 February 2020
 |===
 
-
-
-You can allow direct read access to Custom Settings and Custom Metadata
-Type by editing:
+You can allow direct read access to Custom Settings and Custom Metadata Type by editing:
 
 * Profile settings
 * Permission Set settings
 
-For the first option, you will need to configure each profile
-separately, or you can edit a permission set and assign it to all users
-you want to grant read access to.
+For the first option, you will need to configure each profile separately, or you can edit a permission set and assign it to all users you want to grant read access to.
 
-[NOTE] ==== After updating the permissions
-configuration, https://help.customertimes.com/articles/ct-mobile-ios-en/synchronization-launch/a/h3__1369866827[launch full
-synchronization] on devices with installed CT Mobile to include the
-changes. ====
+[NOTE]
+====
+After updating the permissions configuration, link:https://help.customertimes.com/articles/ct-mobile-ios-en/synchronization-launch/a/h3__1369866827[launch full
+synchronization] on devices with installed CT Mobile to include the changes.
+====
 
 [[h3_1457068314]]
-==== Impacted functionality
+=== Impacted functionality
 
 The following features will be blocked:
 
@@ -72,128 +48,108 @@ The following features will be blocked:
 * Joint Visits
 
 [[h3__1936122314]]
-==== Recommended actions
+=== Recommended actions
 
-To avoid possible issues, we recommend you to perform a test
-configuration for your package before the automatic updates take place.
-The update can be manually activated and rolled back after testing.
+To avoid possible issues, we recommend you to perform a test configuration for your package before the automatic updates take place. The update can be manually activated and rolled back after testing.
 
-Follow the instructions below to set up desired profiles and check
-proper package functioning.
+Follow the instructions below to set up desired profiles and check proper package functioning.
 
 * Use the sandbox environment to perform testing.
-* If you encounter any issues, please, address them to Salesforce
-support immediately.
+* If you encounter any issues, please, address them to Salesforce support immediately.
 
 [[h2_1651425521]]
-=== Grant permissions to Custom Settings
+== Grant permissions to Custom Settings
 
 [[h3__215964704]]
-==== Via Profile settings
+=== Via Profile settings
 
-To set up permissions for direct read access to custom settings for a
-profile:
+To set up permissions for direct read access to custom settings for a profile:
 
 . Go to *Setup* (1) → *Users* → *Profiles* (2).
 . Click *Edit* (3) next to a profile you want to configure.
-image:/resources/Storage/project-ct-pharma/CTPHARMDOC/attachments/66356759/CU_profiles.png[/resources/Storage/project-ct-pharma/CTPHARMDOC/attachments/66356759/CU_profiles]
++
+image:CU_profiles.png[CU_profiles]
 . Go to the *Enabled Custom Setting Definitions Access* section.
 . Click *Edit*.
-. Select the following *Available Custom Setting Definitions* from the
-list:
+. Select the following *Available Custom Setting Definitions* from the list:
 .. All _package custom setting definitions_ with the **CT CPG **prefix.
-.. All _project-specific custom setting definitions_ (any additional
-non-package custom settings added by the company's admin).
-.. The **_Digital Signature Settings _**custom setting definition (if
-the Documents Module is used on your project).
-
-
-image:/resources/Storage/project-ct-pharma/CTPHARMDOC/attachments/66356759/Enable-Custom-Setting-Definitions-Access.png[/resources/Storage/project-ct-pharma/CTPHARMDOC/attachments/66356759/Enable-Custom-Setting-Definitions-Access]
+.. All _project-specific custom setting definitions_ (any additional non-package custom settings added by the company's admin).
+.. The **_Digital Signature Settings _**custom setting definition (if the Documents Module is used on your project).
++
+image:Enable-Custom-Setting-Definitions-Access.png[]
 . Click *Add*
 . Click *Save*.
 
 [[h3_1012487746]]
 ==== Via Permission Set Settings
 
-To set up permissions for direct read access to custom settings for a
-permission set:
+To set up permissions for direct read access to custom settings for a permission set:
 
 . Go to *Setup*(1) → *Users* → *Permission Sets*(2).
-. Select a permission set which you want to configure (3) or create a
-new permission set.
-image:/resources/Storage/project-ct-pharma/CTPHARMDOC/attachments/66356759/CU_permission-sets.png[/resources/Storage/project-ct-pharma/CTPHARMDOC/attachments/66356759/CU_permission-sets]
+. Select a permission set which you want to configure (3) or create a new permission set.
++
+image:CU_permission-sets.png[]
 . On the *Permission Set Overview* page that opens, scroll to
 the *Apps* section, and click *Custom Settings Definitions*.
-image:/resources/Storage/project-ct-pharma/CTPHARMDOC/attachments/66356759/66361701.png[/resources/Storage/project-ct-pharma/CTPHARMDOC/attachments/66356759/66361701]
-. On the next page, click *Edit* next to the *Custom Settings
-Definitions*.
-. Select the following *Available Custom Settings Definitions* from the
-list:*
-*
-.. All _package custom setting definitions_ with the **_CT
-CPG _**prefix.
-.. All _project-specific custom setting definitions_ (any additional
-non-package custom settings added by the company's admin).
-.. The **_Digital Signature Settings _**custom setting definition (if
-the Documents Module is used on your project).
++
+image:66361701.png[66361701]
+. On the next page, click *Edit* next to the *Custom Settings Definitions*.
+. Select the following *Available Custom Settings Definitions* from the list:
 
-
-image:/resources/Storage/project-ct-pharma/CTPHARMDOC/attachments/66356759/Enable-Custom-Setting-Definitions-Access_permission-set.png[/resources/Storage/project-ct-pharma/CTPHARMDOC/attachments/66356759/Enable-Custom-Setting-Definitions-Access_permission-set]
+.. All _package custom setting definitions_ with the **_CT CPG _**prefix.
+.. All _project-specific custom setting definitions_ (any additional non-package custom settings added by the company's admin).
+.. The **_Digital Signature Settings _**custom setting definition (if the Documents Module is used on your project).
++
+image:Enable-Custom-Setting-Definitions-Access_permission-set.png[]
 . Click *Add*.
 . Click *Save*.
 
 The selected setting will be applied.
+
 Assign the newly configured permission set to the required users.
 
 [[h2__1934844072]]
-=== Grant permission to Custom Metadata Type
+== Grant permission to Custom Metadata Type
 
 [[h3__225777329]]
-==== Via Profile settings
+=== Via Profile settings
 
-To set up permission for direct read access to custom metadata types for
-a profile:
+To set up permission for direct read access to custom metadata types for a profile:
 
 . Go to *Setup (1) → Users → Profiles (2)*.
 . In the list of profiles, select a profile you wish to configure (3).
-image:/resources/Storage/project-ct-pharma/CTPHARMDOC/attachments/66356759/CU_profiles.png[/resources/Storage/project-ct-pharma/CTPHARMDOC/attachments/66356759/CU_profiles]
++
+image:CU_profiles.png[CU_profiles]
 . Go to the *Enable Custom Metadata Type Access* section.
 . Click *Edit*.
 . Select the following *Available Custom Metadata Types*:
-.. _Package metadata types_ with the CT CPG prefix: _CT CPG
-Solution.CTCPG.ActivitySync_.
+.. _Package metadata types_ with the CT CPG prefix: _CT CPG Solution.CTCPG.ActivitySync_.
 .. All _project-specific metadata types_ (any additional non-package
 metadata types).
-
-image:/resources/Storage/project-ct-pharma/Enable-Custom-Metadata-Type-Access.png[/resources/Storage/project-ct-pharma/Enable-Custom-Metadata-Type-Access]
++
+image:Enable-Custom-Metadata-Type-Access.png[]
 . Click *Add*
 . Click *Save*.
 
 [[h3__1992642846]]
-==== Via Permission Set settings
+=== Via Permission Set settings
 
-To set up permission for direct read access to custom metadata types for
-a permission set:
+To set up permission for direct read access to custom metadata types for a permission set:
 
 . Go to *Setup* (1) → *Users* → *Permission Sets* (2).
-. Select a permission set (3) which you want to configure or create a
-new permission set.
-image:/resources/Storage/project-ct-pharma/CTPHARMDOC/attachments/66356759/CU_permission-sets.png[/resources/Storage/project-ct-pharma/CTPHARMDOC/attachments/66356759/CU_permission-sets]
-. On the *Permission Set Overview* page that opens, scroll to
-the *Apps* section, and click *Custom Metadata Types*.
-image:/resources/Storage/project-ct-pharma/Custom-Metadata-Types.png[/resources/Storage/project-ct-pharma/Custom-Metadata-Types]
+. Select a permission set (3) which you want to configure or create a new permission set.
++
+image:CU_permission-sets.png[]
+. On the *Permission Set Overview* page that opens, scroll to the *Apps* section, and click *Custom Metadata Types*.
++
+image:Custom-Metadata-Types.png[]
 . On the next page, click *Edit* next to the *Custom Metadata Types*.
-. Select the following *Available Custom Metadata Types*:*
-*
-.. _Package metadata types_ with the CT CPG prefix: _CT CPG
-Solution.CTCPG.ActivitySync_.
-.. All _project-specific metadata types_ (any additional non-package
-metadata types).
-
-
-image:/resources/Storage/project-ct-pharma/CTPHARMDOC/attachments/66356759/Enable-Custom-Metadata-Type-Access_permission-set.png[/resources/Storage/project-ct-pharma/CTPHARMDOC/attachments/66356759/Enable-Custom-Metadata-Type-Access_permission-set]
+. Select the following *Available Custom Metadata Types*:
+.. _Package metadata types_ with the CT CPG prefix: _CT CPG Solution.CTCPG.ActivitySync_.
+.. All _project-specific metadata types_ (any additional non-package metadata types).
++
+image:Enable-Custom-Metadata-Type-Access_permission-set.png[]
 . Click *Add*.
 . Click *Save*.
 
-Selected Custom Metadata Type will be enabled
-Assign the newly configured permission set to the required users.
+Selected Custom Metadata Type will be enabled Assign the newly configured permission set to the required users.
