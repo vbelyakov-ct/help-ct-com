@@ -17,7 +17,7 @@ settings by divisions.
 
 '''''
 
-API name in Salesforce: CTCPG__ApplicationSettings__c
+API name in Salesforce: CTCPG\__ApplicationSettings__c
 
 '''''
 
@@ -26,7 +26,7 @@ API name in Salesforce: CTCPG__ApplicationSettings__c
 |*Field* |*API Name* |*Type* |*Description*
 
 |Account Category Fields API names
-|CTCPG__AccountCategoryFields__c |Text Area(255) |Specify the
+|CTCPG\__AccountCategoryFields__c |Text Area(255) |Specify the
 list of API names of fields that represent the picklist with division
 categories for
 thexref:account-field-reference.html[ Account] object (separated by a
@@ -35,21 +35,21 @@ comma, without blank space).
 Used in xref:admin-guide/targeting-and-marketing-cycles-management/ref-guide/target-frequency-field-reference[Target Frequencies].
 
 |Account Target Flags API names
-|CTCPG__AccountTargetFlagsFields__c |Text Area(255) |Specify
+|CTCPG\__AccountTargetFlagsFields__c |Text Area(255) |Specify
 the list of API names of checkbox fields that are responsible for
 xref:account-field-reference[the selection of a division] for the
 _Account_ record.
 
-|Advanced TF Logic |CTCPG__EnableAdvancedTFLogic__c
+|Advanced TF Logic |CTCPG\__EnableAdvancedTFLogic__c
 |Checkbox |If selected, the data from records of
 the xref:admin-guide/targeting-and-marketing-cycles-management/ref-guide/target-frequency-field-reference[Target Frequency] object,
 for example, the values in
-the CTCPG__ActualCalls__c and CTCPG__PlannedCalls__c,
+the CTCPG\__ActualCalls__c and CTCPG\__PlannedCalls__c,
 may be used for creating additional list views for the *Account* or
 [.object]#Contact# object.
 
 |Allow Segmentation by linking
-|CTCPG__AllowLinkSegmentation__c |Checkbox a|
+|CTCPG\__AllowLinkSegmentation__c |Checkbox a|
 If selected, the additional algorithm is enabled that automatically
 links the matched _Activity_ record to the active _Marketing Cycle_
 record.
@@ -63,22 +63,22 @@ xref:admin-guide/targeting-and-marketing-cycles-management/enable-activity-linki
 parameters].#
 
 |Contact Category Fields API names
-|CTCPG__ContactCategoryFields__c |Text Area(255) |Specify
+|CTCPG\__ContactCategoryFields__c |Text Area(255) |Specify
 the list of API names of fields that represent the picklist with
 division categories for
 the xref:contact-field-reference[Contact] object (separated by a
 comma, without blank space).
 
 |Contact Target Flags API names
-|CTCPG__ContactTargetFlagsFields__c |Text Area(255) |Specify
+|CTCPG\__ContactTargetFlagsFields__c |Text Area(255) |Specify
 the list of API names of checkbox fields that are responsible for
 xref:contact-field-reference[the selection of a division] for the
 _Contact_ record.
 
-|Create Next Activity |CTCPG__CreateNextActivity__c
+|Create Next Activity |CTCPG\__CreateNextActivity__c
 |Checkbox a|
 If selected, a new Activity record will be automatically created on the
-specific date from the CTCPG__NextCallDate__c field of
+specific date from the CTCPG\__NextCallDate__c field of
 xref:admin-guide/activity-report-management/ref-guide/activity-field-reference[an _Activity_ record] after changing
 xref:admin-guide/next-activity-management/creating-the-next-activity[the activity status to Finished].
 
@@ -86,7 +86,7 @@ Create a record of xref:admin-guide/cpg-custom-settings/next-call-settings[Next 
 the required _Activity_ record type.
 
 |Create Related Activity Data records
-|CTCPG__CreateRelatedActivityDataRecords__c |Checkbox |If
+|CTCPG\__CreateRelatedActivityDataRecords__c |Checkbox |If
 selected, xref:admin-guide/activity-report-management/ref-guide/activity-data-field-reference[the _Activity Data_
 record] based on parameters of an active _Marketing Cycle_ and
 _Marketing Detail Tracking_ records will be created for the
@@ -100,7 +100,7 @@ saved to not take up space in the Salesforce organization by records
 without details.
 
 |Enable Objective History tracking
-|CTCPG__EnableObjectiveHistoryTracking__c |Checkbox a|
+|CTCPG\__EnableObjectiveHistoryTracking__c |Checkbox a|
 If selected, the previous _Objective_ values for the _Activity_ records
 will be saved. According to
 the xref:admin-guide/objectives-management/objective-creating#h2_1011142261[Next Call
@@ -112,19 +112,19 @@ the xref:admin-guide/objectives-management/objective-field-reference[Objective] 
 ====  record for populating the Objective field on the _Activity
 Report_ page.#
 
-|Enable Objectives |CTCPG__IsObjectivesEnabled__c
+|Enable Objectives |CTCPG\__IsObjectivesEnabled__c
 |Checkbox |If selected, you're
 allowed xref:admin-guide/objectives-management/index[to create objectives] for the
 _Activity_ records.
 
-|Max days for activity planning |CTCPG__MaxPlanningDays__c
+|Max days for activity planning |CTCPG\__MaxPlanningDays__c
 |Number(18,0) a|
 Specify the maximum period of marketing cycles.
 
 [NOTE] ==== The value cannot be more than 800 days. ====
 
 |Objective Tracking Period
-|CTCPG__ObjectiveTrackingPeriod__c |Text Area(255) a|
+|CTCPG\__ObjectiveTrackingPeriod__c |Text Area(255) a|
 Specify how long to store the history of objectives. The available
 values:
 
@@ -133,17 +133,17 @@ values:
 * year
 * a marketing cycle
 
-|Recalculate TF Records |CTCPG__EnableTFRecalculate__c
+|Recalculate TF Records |CTCPG\__EnableTFRecalculate__c
 |Checkbox |If selected, when a new marketing cycle is activated, the
 active _Target Frequency_ records will be copied and the old and
 inactive ones will be deactivated.
 
 |Share Activity with Joint Visit Users
-|CTCPG__IsJointActivityShareEnabled__c |Checkbox |If
+|CTCPG\__IsJointActivityShareEnabled__c |Checkbox |If
 selected, access for a representative to view the corresponding _Joint
 Visit_ record is granted.
 
-|Show Page Headers |CTCPG__IsPageHeaderEnabled__c
+|Show Page Headers |CTCPG\__IsPageHeaderEnabled__c
 |Checkbox |If selected, headers with the standard Salesforce tabs are
 shown on the _xref:calendar-interface.html[Calendar]_ and
 _xref:activity-report-interface.html[Activity Report]_ pages.

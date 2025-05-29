@@ -6,7 +6,7 @@ _xref:quiz-completion-field-reference.html[Quiz Completion]_ record.
 
 '''''
 
-API name in Salesforce: CTCPG__QuizPartaker__c
+API name in Salesforce: CTCPG\__QuizPartaker__c
 
 '''''
 
@@ -14,22 +14,22 @@ API name in Salesforce: CTCPG__QuizPartaker__c
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Already Passed Count |CTCPG__AlreadyPassedCount__c
+|Already Passed Count |CTCPG\__AlreadyPassedCount__c
 |Number(18,0) |The number of the completed questions if a partaker has
 several attempts.
 
-|Description  |CTCPG__Description__c |Long Text Area
+|Description  |CTCPG\__Description__c |Long Text Area
 (32768) |Specify information about the quiz partaker.
 
-|Possible Number of Passes |CTCPG__PossibleNumberofPasses__c
+|Possible Number of Passes |CTCPG\__PossibleNumberofPasses__c
 |Number(18,0) |The allowed number of quiz attempts.
 
-|Is Quiz Required |CTCPG__IsRequired__c  |Checkbox  |If
+|Is Quiz Required |CTCPG\__IsRequired__c  |Checkbox  |If
 selected, the quiz is required to take.
 
-|Quiz |CTCPG__QuizId__c  |Master-Detail(Quiz) |The parent
+|Quiz |CTCPG\__QuizId__c  |Master-Detail(Quiz) |The parent
 _Quiz_ record.
 
-|User Id |CTCPG__UserId__c  |Lookup(User) |The related _User_
+|User Id |CTCPG\__UserId__c  |Lookup(User) |The related _User_
 record.
 |===

@@ -1,56 +1,45 @@
 = Configure a Special Trackings Tab
 
 Add the *Special Trackings* tab for tracking objectives and tasks within
-the _Marketing Cycle_ period during the _Activity_ on
-xref:admin-guide/activity-report-management/index.adoc#h2__1515393312[the _Activity
-Report_ page for the __Visit __record type].
+the _Marketing Cycle_ period during the _Activity_ on xref:admin-guide/activity-report-management/index.adoc[the _Activity
+Report_ page for the _Visit_ record type].
 
-. xref:admin-guide/activity-report-management/configure-a-special-trackings-tab#h2_1832965105[Configure a
-Special Trackings Tab] for the corresponding _Activity_ record type via
-the appropriate custom setting.
-. xref:admin-guide/targeting-and-marketing-cycles-management/create-a-new-record-of-marketing-detail-tracking[Create the
-_Marketing Detail Tracking_ records] with the *Special Tracking* record
-type. These __Marketing Detail Tracking __will be automatically added on
-the *Special Trackings* tab after _Activity_ record creation if:
-* The *Start Date* of the _Activity_ record is within the period of the
-active _Marketing Cycle_ record;
+. xref:admin-guide/activity-report-management/configure-a-special-trackings-tab.adoc#h2_1832965105[Configure a Special Trackings Tab] for the corresponding _Activity_ record type via the appropriate custom setting.
+. xref:admin-guide/targeting-and-marketing-cycles-management/create-a-new-record-of-marketing-detail-tracking.adoc[Create the _Marketing Detail Tracking_ records] with the _Special Tracking_ record type. These __Marketing Detail Tracking __will be automatically added on the *Special Trackings* tab after _Activity_ record creation if:
+* The *Start Date* of the _Activity_ record is within the period of the active _Marketing Cycle_ record;
 * The _User_ division is the same as the _Marketing Cycle_ division;
-* The _Account_ division category is the same as the division category
-specified for the _Marketing Detail Tracking_ record.
-* The activity inking is enabled for the appropriate _Activity_ record
-type and the active _Marketing Cycle_.
+* The _Account_ division category is the same as the division category specified for the _Marketing Detail Tracking_ record.
+* The activity inking is enabled for the appropriate _Activity_ record type and the active _Marketing Cycle_.
 
 [[h2_1832965105]]
-=== Manage Special Tracking Tab Settings Records
+== Manage Special Tracking Tab Settings Records
 
-To display the _CT Product_ tab on the _Activity Report_ page:
+To display the *CT Product* tab on the _Activity Report_ page:
 
 . Go to *Setup → Custom Code → Custom Settings.*
 . Click *Manage* next to *Special Trackings Tab Settings*.
-. Specify a new record for the specific user/profile or edit the record
-for the whole Salesforce organization.
-[TIP] ==== Read the description of each parameter
-xref:special-tracking-tab-settings[here]. ====
+. Specify a new record for the specific user/profile or edit the record for the whole Salesforce organization.
++
+[TIP]
+====
+Read the description of each parameter xref:admin-guide/cpg-custom-settings/special-tracking-tab-settings.adoc[here].
+====
+
 * specify the user/profile;
 * specify the required _Activity_ record type;
 * specify the API name of the corresponding _Activity Data_ fields:
-** CTCPG__TextAnswer__c;
-** CTCPG__BooleanAnswer__c;
-** CTCPG__CurrencyAnswer__c;
-** CTCPG__NumberAnswer__c;
-** CTCPG__AnswerType__c.
+** [.apiobject]#CTCPG\__TextAnswer__c#;
+** [.apiobject]#CTCPG\__BooleanAnswer__c#;
+** [.apiobject]#CTCPG\__CurrencyAnswer__c#;
+** [.apiobject]#CTCPG\__NumberAnswer__c#;
+** [.apiobject]#CTCPG\__AnswerType__c#.
 * set active.
-. ​Click *Save*.
+. Click *Save*.
++
 image:ct-special-tracking-tab-settings-example.png[]
-
-
 
 The setup is complete.
 
+On the *Special Trackings* tab, the questions with the specific answer types will be available to fill out.
 
-
-On the *Special Trackings* tab, the questions with the specific answer
-types will be available to fill out.
-
-
-[.confluence-embedded-file-wrapper .confluence-embedded-manual-size]#image:588234061.png[]#
+image:588234061.png[]

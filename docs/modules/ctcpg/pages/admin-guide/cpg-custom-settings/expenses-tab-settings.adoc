@@ -12,7 +12,7 @@ xref:admin-guide/activity-report-management/configure-an-event-member-tab[create
 
 '''''
 
-API name in Salesforce: CTCPG__ExpensesTab__c
+API name in Salesforce: CTCPG\__ExpensesTab__c
 
 '''''
 
@@ -20,39 +20,39 @@ API name in Salesforce: CTCPG__ExpensesTab__c
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Active  |CTCPG__IsActive__c |Checkbox  |If selected, the
+|Active  |CTCPG\__IsActive__c |Checkbox  |If selected, the
 setting is active, and rental items can be added to the corresponding
 _Activity Report_.
 
-|Additional Parameter  |CTCPG__AdditionalParam__c |Text (255)
+|Additional Parameter  |CTCPG\__AdditionalParam__c |Text (255)
 |Not in use.
 
-|Allow Record Management  |CTCPG__AllowRecordManagement__c
+|Allow Record Management  |CTCPG\__AllowRecordManagement__c
 |Text (255) a|
 Specify if the user is allowed to add and remove rental items on the
 __Expenses __tab of the _Activity Report_ page for each specified
-_Activity_ record type in the CTCPG__RecordTypeDeveloperName__c
+_Activity_ record type in the CTCPG\__RecordTypeDeveloperName__c
 field (separated by a comma, without blank spaces):
 
 * *true* to enable;
 * **false **to restrict.
 
-|Field Set Name  |CTCPG__FieldSetName__c |Text (255)
+|Field Set Name  |CTCPG\__FieldSetName__c |Text (255)
 |xref:admin-guide/activity-report-management/configure-an-expenses-tab[Specify the API name of the field
 set] for the _Activity Report_ page for each
 specified _Activity_ record type in
-the CTCPG__RecordTypeDeveloperName__c field (separated by a
+the CTCPG\__RecordTypeDeveloperName__c field (separated by a
 comma, without a blank space).
 
-|Field To Show As Picklist  |CTCPG__FieldToShowAsPicklist__c
+|Field To Show As Picklist  |CTCPG\__FieldToShowAsPicklist__c
 |Text (255) |Not in use.
 
 |Record Type Developer Name
-|CTCPG__RecordTypeDeveloperName__c |Text (255) |Specify the
+|CTCPG\__RecordTypeDeveloperName__c |Text (255) |Specify the
 list of API names of _Activity_ record types to display the *Event
 Members* __ tab on the _Activity Report_ page (separated by a comma,
 without blank spaces).
 
-|Show Lookup As Picklist |CTCPG__ShowLookupAsPicklist__c
+|Show Lookup As Picklist |CTCPG\__ShowLookupAsPicklist__c
 |Checkbox  |Not in use.
 |===

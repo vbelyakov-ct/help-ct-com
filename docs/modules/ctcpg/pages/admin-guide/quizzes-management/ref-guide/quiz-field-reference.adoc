@@ -5,7 +5,7 @@ questionnaires.
 
 '''''
 
-API name in Salesforce: CTCPG__Quiz__c
+API name in Salesforce: CTCPG\__Quiz__c
 
 '''''
 
@@ -13,34 +13,34 @@ API name in Salesforce: CTCPG__Quiz__c
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Active |CTCPG__Active__c |Checkbox |If selected,
+|Active |CTCPG\__Active__c |Checkbox |If selected,
 the record is active and applied in business logic.
 
-|Anonymous Quiz |CTCPG__AnonymousQuiz__c |Checkbox
+|Anonymous Quiz |CTCPG\__AnonymousQuiz__c |Checkbox
 |If selected, the quiz can be passed anonymously.
 
-|Correct Answer Percent |CTCPG__CompletionPercentage__c
+|Correct Answer Percent |CTCPG\__CompletionPercentage__c
 |Percent(2,2) |It is used to set the minimum percentage of the
 partaker's correct answers to consider the quiz as passed.
 
-|Countdown Timer   |CTCPG__IsCountdownTimerEnabled__c
+|Countdown Timer   |CTCPG\__IsCountdownTimerEnabled__c
 |Checkbox |If selected, the countdown timer will be displayed on the
 _Quiz_ page.
 
-|Description  |CTCPG__Description__c |Long Text Area
+|Description  |CTCPG\__Description__c |Long Text Area
 (32768) |Specify information about the quiz.
 
-|End Date |CTCPG__EndDate__c |Date  |The last day when the
+|End Date |CTCPG\__EndDate__c |Date  |The last day when the
 quiz can be taken.
 
-|Is Quiz Required |CTCPG__IsRequired__c  |Checkbox  |If
+|Is Quiz Required |CTCPG\__IsRequired__c  |Checkbox  |If
 selected, the assigned partaker should take the quiz.
 
-|Is Write Answers On Exit |CTCPG__IsWriteAnswersOnExit__c
+|Is Write Answers On Exit |CTCPG\__IsWriteAnswersOnExit__c
 |Checkbox  |If selected, the answers will be shown at the end of the
 quiz.
 
-|Notification Period |CTCPG__NotificationPeriod__c
+|Notification Period |CTCPG\__NotificationPeriod__c
 |Picklist        a|
 The period to remind a user about the quiz. The available values:
 
@@ -48,10 +48,10 @@ The period to remind a user about the quiz. The available values:
 * Weekly
 * Monthly
 
-|Notify Users |CTCPG__IsUserInformerEnabled__c |Checkbox
+|Notify Users |CTCPG\__IsUserInformerEnabled__c |Checkbox
          |If selected, the user will be informed to take the open quiz
 during the period specified in the
-CTCPG__NotificationPeriod__c field.
+CTCPG\__NotificationPeriod__c field.
 
 |Record Type |RecordTypeId |Record Type a|
 Available values:
@@ -59,26 +59,26 @@ Available values:
 * Internal
 * External
 
-|Show Correct Answers |CTCPG__IsCorrectAnswersEnabled__c
+|Show Correct Answers |CTCPG\__IsCorrectAnswersEnabled__c
 |Checkbox |If selected, the right answers will be shown or highlighted
-if the CTCPG__IsWriteAnswersOnExit__c field is selected.
+if the CTCPG\__IsWriteAnswersOnExit__c field is selected.
 
-|Show Results |CTCPG__IsResultsEnabled__c |Checkbox a|
+|Show Results |CTCPG\__IsResultsEnabled__c |Checkbox a|
 If selected, the partaker sees if they passed the quiz at the end of
 it.
 
-|Start Date |CTCPG__StartDate__c |Date |The first day when
+|Start Date |CTCPG\__StartDate__c |Date |The first day when
 the quiz can be taken.
 
-|Stop Timer on app exit |CTCPG__IsTimeStopsOnExit__c
+|Stop Timer on app exit |CTCPG\__IsTimeStopsOnExit__c
 |Checkbox a|
 [NOTE] ==== Offline mode in case of integration with the CT
 Mobile app.  ==== If selected, the timer will be stopped when a user
 closes the CT Mobile app or switches to another app.
 
-|Strict Mode |CTCPG__IsStrictMode__c   |Checkbox |If selected,
+|Strict Mode |CTCPG\__IsStrictMode__c   |Checkbox |If selected,
 a user should send the answer to each question.
 
-|Time Limit (Minutes) |CTCPG__TimeLimit__c  |Number(18,0) |The
+|Time Limit (Minutes) |CTCPG\__TimeLimit__c  |Number(18,0) |The
 period when a user should complete the started quiz.
 |===

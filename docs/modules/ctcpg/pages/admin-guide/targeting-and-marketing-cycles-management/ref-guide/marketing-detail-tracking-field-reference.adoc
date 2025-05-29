@@ -15,7 +15,7 @@ record types]:
 
 '''''
 
-API name in Salesforce: CTCPG__MarketingDetailTracking__c
+API name in Salesforce: CTCPG\__MarketingDetailTracking__c
 
 '''''
 
@@ -23,44 +23,44 @@ API name in Salesforce: CTCPG__MarketingDetailTracking__c
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Active |CTCPG__IsActive__c |Checkbox |If selected, the
+|Active |CTCPG\__IsActive__c |Checkbox |If selected, the
 _Marketing Detail Tracking_ record is active.
 
-|Answer Type |CTCPG__AnswerType__c |Picklist |For the
+|Answer Type |CTCPG\__AnswerType__c |Picklist |For the
 _Special Tracking_ record type, specify the type of the answer for the
-question in the CTCPG__ParameterName__c field.
+question in the CTCPG\__ParameterName__c field.
 
-|Assortment |CTCPG__AssortmentId__c |Lookup(Assortment) |If
+|Assortment |CTCPG\__AssortmentId__c |Lookup(Assortment) |If
 specified, the ID of the selected _Assortment_ record.
 [NOTE] ==== You cannot simultaneously relate the _Marketing
 Detail Tracking_ record to the _Assortment_ and _Product_ records. ====
 
-|Category |CTCPG__Category__c |Picklist |The available
+|Category |CTCPG\__Category__c |Picklist |The available
 category of the related _Account_ or _Contact_ division.
 
-|Description |CTCPG__Description__c  |Long Text Area(32768)
+|Description |CTCPG\__Description__c  |Long Text Area(32768)
 |If needed, specify the description.
 
-|Marketing Cycle |CTCPG__MarketingCycleId__c
+|Marketing Cycle |CTCPG\__MarketingCycleId__c
 |Lookup(Marketing Cycle) |The ID of the related _Marketing Cycle_
 record.
 
-|Parameter Name |CTCPG__ParameterName__c |Text Area(255) |For
+|Parameter Name |CTCPG\__ParameterName__c |Text Area(255) |For
 the _Special Tracking_ record type, specify the question.
 
-|Planned Calls |CTCPG__PlannedCalls__c |Number(18,0) |A number
+|Planned Calls |CTCPG\__PlannedCalls__c |Number(18,0) |A number
 of the planned _activities_ that will be inherited by the _Target
 Frequency_ for the target _Account_ or _Contact_ record.
 
-|Product |CTCPG__ProductId__c |Lookup(CT Product) |If
+|Product |CTCPG\__ProductId__c |Lookup(CT Product) |If
 specified, the ID of the selected _CT Product_ record.
 [NOTE] ==== You cannot simultaneously relate the _Marketing
 Detail Tracking_ record to the _Assortment_ and _Product_ records. ====
 
-|Sort Order |CTCPG__SortOrder__c |Number(18,0) |The order
+|Sort Order |CTCPG\__SortOrder__c |Number(18,0) |The order
 number of the record.
 
-|Type |CTCPG__Type__c |Formula(Text)
+|Type |CTCPG\__Type__c |Formula(Text)
 |xref:admin-guide/configuring-targeting-and-marketing-cycles/specify-categories-for-marketing-detail-tracking#h2__1618421469[The
 assigned object type] on the _Marketing Cycle_ record.
 |===

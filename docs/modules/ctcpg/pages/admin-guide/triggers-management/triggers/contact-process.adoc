@@ -23,9 +23,9 @@ Frequency Settings] record for the__ User__ division:
 * create a new _Target Frequency_ record related to the
 specific _Contact_ record for the current user;
 ** if the __Target Frequency __record already exists, this record will
-be deactivated and its CTCPG__DeactivationDateTime__c field will
+be deactivated and its CTCPG\__DeactivationDateTime__c field will
 be populated with the deactivation date;
-* update the CTCPG__TargetUserIds__c field on
+* update the CTCPG\__TargetUserIds__c field on
 this _Contact_ record.
 
 |===

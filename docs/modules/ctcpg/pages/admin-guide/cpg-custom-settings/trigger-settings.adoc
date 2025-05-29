@@ -13,7 +13,7 @@ deactivated and will not in operation.
 
 '''''
 
-API name in Salesforce: CTCPG__TriggerSettings__c
+API name in Salesforce: CTCPG\__TriggerSettings__c
 
 '''''
 
@@ -21,20 +21,20 @@ API name in Salesforce: CTCPG__TriggerSettings__c
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Active  |CTCPG__IsActive__c |Checkbox  |If selected, the
+|Active  |CTCPG\__IsActive__c |Checkbox  |If selected, the
 trigger is active.
 
-|Bypass Logic |CTCPG__BypassLogic__c |Text Area (255)  |Enter
+|Bypass Logic |CTCPG\__BypassLogic__c |Text Area (255)  |Enter
 xref:admin-guide/triggers-management/triggers/trigger-contexts[the trigger event API name] to prevent the
 trigger event from execution (separated by a comma, without blank
 spaces).
 
-|Comments |CTCPG__Comments__c |Text Area (255) |Specify the
+|Comments |CTCPG\__Comments__c |Text Area (255) |Specify the
 description of a current setting.
 
 |Name |Name | |API Name of the required trigger.
 
-|Prevent re-execution |CTCPG__IsReexecutionPrevented__c
+|Prevent re-execution |CTCPG\__IsReexecutionPrevented__c
 |Checkbox  a|
 If selected, the trigger will not re-execute within one transaction, for
 example, in case of another trigger invokes it.

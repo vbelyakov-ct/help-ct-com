@@ -13,7 +13,7 @@ layout to have an ability to manage objectives for an _Account_ or
 _Contact_ record and
 xref:admin-guide/activity-report-management/manage-field-sets-for-activity-report-pages[add to the
 corresponding _CT CPG Activity_ field
-set(s)] the CTCPG__Objective__c and CTCPG__NextCallObjective__c fields
+set(s)] the CTCPG\__Objective__c and CTCPG\__NextCallObjective__c fields
 
 [[h2__1347415082]]
 === Create a regular Objective for the Account or Contact
@@ -45,7 +45,7 @@ The objective is set.
 When a representative creates a _CT CPG Activity_ record related to
 the _Account_ or _Contact_ record with the specified _Objective_ record,
 the _Objective_ value will be automatically set in
-the CTCPG__Objective__c field of this _CT CPG Activity_ record.
+the CTCPG\__Objective__c field of this _CT CPG Activity_ record.
 
 [NOTE] ==== If the related _Account_ record has a
 relative _Objective_ record, the objective will be added to
@@ -71,7 +71,7 @@ with the _Visit_ record type.
 . Open the created _CT CPG Activity_ record.
 [TIP] ==== Also, you can open the required _CT CPG Activity_
 from the *Calendar* or *Activity Reports* tab. ====
-. In the CTCPG__Objective__c field, specify the required notes
+. In the CTCPG\__Objective__c field, specify the required notes
 and/or goals.
 . Click *Save*.
 
@@ -103,7 +103,7 @@ with the _Visit_ record type.
 . Open the created _CT CPG Activity_ record.
 [TIP] ==== Also, you can open the required _CT CPG
 Activity_ from the *Calendar* or *Activity Reports* tab. ====
-. In the CTCPG__NextCallObjective__c field, specify the required
+. In the CTCPG\__NextCallObjective__c field, specify the required
 notes and/or goals.
 . Click *Save*.
 
@@ -114,8 +114,8 @@ The objective is set.
 When a representative finishes the created _CT CPG Activity_ record and
 creates a next _CT CPG Activity_ record for the
 same _Account_ and/or __Contact __record, a value from
-the CTCPG__NextCallObjective__c field of the finished _CT CPG
-Activity_ record is copied to the CTCPG__Objective__c field of
+the CTCPG\__NextCallObjective__c field of the finished _CT CPG
+Activity_ record is copied to the CTCPG\__Objective__c field of
 the next _CT CPG Activity_ record.
 
 [[h2__1099816968]]
@@ -150,7 +150,7 @@ When a representative finishes the created _CT CPG Activity_ record and
 creates a next _CT CPG Activity_ record for the
 same _Account_ and/or __Contact __record, a value from the field that is
 selected for the _Next Activity_ functionality of the finished _CT CPG
-Activity_ record is copied to the CTCPG__Objective__c field of
+Activity_ record is copied to the CTCPG\__Objective__c field of
 the next _CT CPG Activity_ record.
 
 [[h2_97080500]]

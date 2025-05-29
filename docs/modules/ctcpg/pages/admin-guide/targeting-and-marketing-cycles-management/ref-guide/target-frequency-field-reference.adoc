@@ -6,7 +6,7 @@ record.
 
 '''''
 
-API name in Salesforce: CTCPG__TargetFrequency__c
+API name in Salesforce: CTCPG\__TargetFrequency__c
 
 '''''
 
@@ -14,54 +14,54 @@ API name in Salesforce: CTCPG__TargetFrequency__c
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Account         |CTCPG__AccountId__c |Lookup(Account)
+|Account         |CTCPG\__AccountId__c |Lookup(Account)
 |The related _xref:account-field-reference.html[Account]_ record.
 
-|Active |CTCPG__IsActive__c |Checkbox |If selected,
+|Active |CTCPG\__IsActive__c |Checkbox |If selected,
 the _Target Frequency_ record is active.
 
-|Actual Calls         |CTCPG__ActualCalls__c |Number(18,0)
+|Actual Calls         |CTCPG\__ActualCalls__c |Number(18,0)
 a|
 The number of finished activities of
 the __Account __or _Contact_ record.
 
-|Category |CTCPG__Category__c |Text(255) |The category of
+|Category |CTCPG\__Category__c |Text(255) |The category of
 the related _Account_ or _Contact_ record.
 
-|Contact |CTCPG__ContactId__c |Lookup(Contact)         |The
+|Contact |CTCPG\__ContactId__c |Lookup(Contact)         |The
 related _xref:contact-field-reference.html[Contact]_ record.
 
-|Deactivation Date / Time |CTCPG__DeactivationDateTime__c
+|Deactivation Date / Time |CTCPG\__DeactivationDateTime__c
 |Date/Time |The date when the __Target Frequency __record will be
-deactivated and the value in the CTCPG__IsActive__c field will
+deactivated and the value in the CTCPG\__IsActive__c field will
 be False.
 
-|Description |CTCPG__Description__c |Long Text Area(32768)
+|Description |CTCPG\__Description__c |Long Text Area(32768)
 |If needed, specify the description.
 
-|Last Call Date |CTCPG__LastCallDate__c |Date |Specify the
+|Last Call Date |CTCPG\__LastCallDate__c |Date |Specify the
 last date when the user can create _Activity_ of the current _Target
 Frequency_ record.
 
-|Marketing Cycle |CTCPG__MarketingCycleId__c |Lookup(Marketing
+|Marketing Cycle |CTCPG\__MarketingCycleId__c |Lookup(Marketing
 Cycle) |The related _xref:marketing-cycle-field-reference.html[Marketing
 Cycle]_ record.
 
 |Marketing Detail Tracking
-|CTCPG__MarketingDetailTrackingId__c |Lookup(Marketing Detail
+|CTCPG\__MarketingDetailTrackingId__c |Lookup(Marketing Detail
 Tracking) |The
 related _xref:marketing-detail-tracking-field-reference.html[Marketing
 Detail Tracking]_ record.
 
-|Owner |CTCPG__OwnerId__c |Lookup(User) |The related
+|Owner |CTCPG\__OwnerId__c |Lookup(User) |The related
 _xref:user-field-reference.html[User]_ record.
 
-|Planned Calls |CTCPG__PlannedCalls__c  |Number(18,0)  |The
+|Planned Calls |CTCPG\__PlannedCalls__c  |Number(18,0)  |The
 number of planned activities of the _Account_ or _Contact_ record.
 
-|Unique User Number |CTCPG__UniqUserNumber__c |Formula(Text)
+|Unique User Number |CTCPG\__UniqUserNumber__c |Formula(Text)
 |The unique number of the _User_ record.
 
-|User Division |CTCPG__UserDivision__c |Formula(Text) |The
+|User Division |CTCPG\__UserDivision__c |Formula(Text) |The
 assigned division on the _User_ record.
 |===

@@ -15,7 +15,7 @@ Website__c field on the Change Request __ object.
 
 '''''
 
-API name in Salesforce: CTCPG__ChangeRequest__c
+API name in Salesforce: CTCPG\__ChangeRequest__c
 
 '''''
 
@@ -23,18 +23,18 @@ API name in Salesforce: CTCPG__ChangeRequest__c
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Account |CTCPG__AccountId__c |Lookup(Account) |The
+|Account |CTCPG\__AccountId__c |Lookup(Account) |The
 related _Account_ record.
 
-|Account Name |CTCPG__AccountName__c |Text(255)
+|Account Name |CTCPG\__AccountName__c |Text(255)
    |This field relates to the Name field of the standard
 xref:account-field-reference[Account] object.
 
-|Account Number |CTCPG__Account_Number__c |Text(40)
+|Account Number |CTCPG\__Account_Number__c |Text(40)
 |This field relates to the AccountNumber field of the standard
 xref:account-field-reference[Account] object.
 
-|Account Type            |CTCPG__Account_Type__c
+|Account Type            |CTCPG\__Account_Type__c
 |Picklist a|
 The available _Account_ types by default:
 
@@ -44,23 +44,23 @@ The available _Account_ types by default:
 * Channel Partner / Reseller
 * Technology Partner
 
-|City  |CTCPG__City__c |Text(40) |Field to relate with any
+|City  |CTCPG\__City__c |Text(40) |Field to relate with any
 additional field of the target object.
 
-|ClearFields |CTCPG__ClearFields__c |Long Text Area (32768)
+|ClearFields |CTCPG\__ClearFields__c |Long Text Area (32768)
 |Fields to clear their value (separated by a comma, without a blank
 space).
 
-|Comments       |CTCPG__Comments__c |Long Text Area
+|Comments       |CTCPG\__Comments__c |Long Text Area
 (32768) |The additional description.
 
-|Contact |CTCPG__ContactId__c  |Lookup(Contact)  |The
+|Contact |CTCPG\__ContactId__c  |Lookup(Contact)  |The
 related _Contact_ record.
 
-|Email |CTCPG__Email__c  |Email |The field relates to the
+|Email |CTCPG\__Email__c  |Email |The field relates to the
 Email field of the xref:contact-field-reference[Contact] object.
 
-|Industry |CTCPG__Industry__c |Picklist a|
+|Industry |CTCPG\__Industry__c |Picklist a|
 The _Change Request_ industry type. The available values by default:
 
 * Agriculture
@@ -69,17 +69,17 @@ The _Change Request_ industry type. The available values by default:
 * Healthcare
 * Technology
 
-|Name |CTCPG__Name__c |Text(255) |Name of the Change Request
+|Name |CTCPG\__Name__c |Text(255) |Name of the Change Request
 process.
 
-|Phone |CTCPG__Phone__c |Phone a|
+|Phone |CTCPG\__Phone__c |Phone a|
 The field relates to the Phone field of the[.object]#Account#
 or[.object]#Contact# object.
 
-|SIC Code |CTCPG__SIC_Code__c |Text(40) |The field
+|SIC Code |CTCPG\__SIC_Code__c |Text(40) |The field
 relates to the Sic field of the Account object.
 
-|Status |CTCPG__Status__c  |Picklist a|
+|Status |CTCPG\__Status__c  |Picklist a|
 The _Change Request_ status. The available values by default:
 
 * On Hold
@@ -89,6 +89,6 @@ The _Change Request_ status. The available values by default:
 * Approved
 * Canceled
 
-|Street |CTCPG__Street__c  |Text(40) |Field to relate with any
+|Street |CTCPG\__Street__c  |Text(40) |Field to relate with any
 additional field of the target object.
 |===

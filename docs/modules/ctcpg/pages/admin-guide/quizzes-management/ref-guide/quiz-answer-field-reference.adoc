@@ -6,7 +6,7 @@ questions.
 
 '''''
 
-API name in Salesforce: CTCPG__QuizAnswer__c
+API name in Salesforce: CTCPG\__QuizAnswer__c
 
 '''''
 
@@ -14,13 +14,13 @@ API name in Salesforce: CTCPG__QuizAnswer__c
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Answer |CTCPG__Answer__c |Text (255) |It is used to store the
+|Answer |CTCPG\__Answer__c |Text (255) |It is used to store the
 partaker's answer to a quiz question.
 
-|Correct Answer |CTCPG__IsCorrectAnswer__c |Checkbox |If
+|Correct Answer |CTCPG\__IsCorrectAnswer__c |Checkbox |If
 selected, the partaker's answer is correct.
 
-|Mobile ID |CTCPG__MobileId__c |Text(255) a|
+|Mobile ID |CTCPG\__MobileId__c |Text(255) a|
 [NOTE] ==== In case of integration with the CT Mobile app.  ====
 
 If filled out, the quiz was passed on the mobile device.
@@ -28,13 +28,13 @@ If filled out, the quiz was passed on the mobile device.
 The Mobile ID is a unique identifier to identify the record that was
 created or edited in the CT Mobile app.
 
-|Quiz |CTCPG__QuizId__c |Lookup(Quiz)      |The
+|Quiz |CTCPG\__QuizId__c |Lookup(Quiz)      |The
 linked _Quiz_ record.
 
-|Quiz Completion |CTCPG__QuizCompletionId__c
+|Quiz Completion |CTCPG\__QuizCompletionId__c
 |Master-Detail(Quiz Completion) |The parent _Quiz Completion_ record.
 
-|Quiz Question |CTCPG__QuizQuestionId__c |Lookup(Question)
+|Quiz Question |CTCPG\__QuizQuestionId__c |Lookup(Question)
 a|
 The linked _Question_ record to which the answer was given.
 

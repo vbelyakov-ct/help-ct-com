@@ -1,43 +1,38 @@
 = Configure an Expenses Tab
 
-Add the *Expenses* tab for managing participants and their role during
-the _Activity_ on
-xref:admin-guide/activity-report-management/index.adoc#h2__1515393312[the _Activity
-Report_ page for the _Event_ record type].
+Add the *Expenses* tab for managing participants and their role during the _Activity_ on
+xref:admin-guide/activity-report-management/index.adoc[the _Activity Report_ page for the _Event_ record type].
 
-. xref:admin-guide/activity-report-management/configure-an-expenses-tab#h2_874578172[Map the
-*Expenses* tab and the _Activity Report_ page] for the
-corresponding _Activity_ record type via the appropriate custom setting.
-. xref:admin-guide/activity-report-management/configure-an-expenses-tab#h2__1964705955[Customize fields to
-display] on the *Expenses* tab.
+. xref:admin-guide/activity-report-management/configure-an-expenses-tab.adoc#h2_874578172[Map the *Expenses* tab and the _Activity Report_ page] for the corresponding _Activity_ record type via the appropriate custom setting.
+. xref:admin-guide/activity-report-management/configure-an-expenses-tab.adoc#h2__1964705955[Customize fields to display] on the *Expenses* tab.
 
 [[h2_874578172]]
-=== Manage Expenses Tab Settings Records
+== Manage Expenses Tab Settings Records
 
-To display the *Expenses*__ __tab on the _Activity Report_ page:
+To display the *Expenses* tab on the _Activity Report_ page:
 
 . Go to *Setup → Custom Code → Custom Settings.*
 . Click *Manage* next to *Expenses Tab Settings*.
-. Specify a new record for the specific user/profile or edit the record
-for the whole Salesforce organization.
-[TIP] ==== Read the description of each parameter
-xref:expenses-tab-settings[here]. ====
-* specify the user/profile;
-* specify the required _Activity_ record type;
-* specify the API name of the *Expenses Tab* field set to display:
-CTCPG__ExpenseTab;
-* set active.
-. ​Click *Save*.
+. Specify a new record for the specific user/profile or edit the record for the whole Salesforce organization.
++
+[TIP]
+====
+Read the description of each parameter xref:admin-guide/cpg-custom-settings/expenses-tab-settings.adoc[here].
+====
+* specify the user/profile
+* specify the required _Activity_ record type
+* specify the API name of the *Expenses Tab* field set to display: [.apiobject]#CTCPG__ExpenseTab#
+* set active
+. Click *Save*.
++
 image:ct-expenses-tab-settings-example.png[]
-
-
 
 The setup is complete.
 
 [[h2__1964705955]]
-=== Customize Fields to Display on the Expenses Tab
+== Customize Fields to Display on the Expenses Tab
 
-To customize fields to display on the *Expenses* __ tab:
+To customize fields to display on the *Expenses* tab:
 
 . Go to *Setup → Object Manager → CT CPG Activity Data → Field Sets*.
 . Click one of the *Expenses Tab* field set.

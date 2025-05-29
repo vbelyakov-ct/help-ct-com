@@ -1,32 +1,27 @@
 = Skill Mark Field Reference
 
-The[.object]#Skill Mark# object is intended to store skill
-stores from the _Joint Visit_.
+The [.object]#Skill Mark# object is intended to store skill stores from the _Joint Visit_.
 
 '''''
 
-API name in Salesforce: CTCPG__SkillMark__c
+API name in Salesforce: [.apiobject]#CTCPG\__SkillMark__c#
 
 '''''
 
-[width="100%",cols="25%,25%,25%,25%",]
+[width="100%",cols="15%,20%,10%,55%"]
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Activity |CTCPG__ActivityId__c |Lookup(Activity) |The
-parent _Activity_ record.
+|Activity |[.apiobject]#CTCPG\__ActivityId__c#|Lookup(Activity) |The parent _Activity_ record.
 
-|Criteria |CTCPG__CriteriaText__c  |TextArea(255) |The
-description of the criteria.
+|Criteria |[.apiobject]#CTCPG\__CriteriaText__c#  |TextArea(255) |The description of the criteria.
 
-|Description |CTCPG__Description__c |Long Text Area(32768)  a|
+|Description |[.apiobject]#CTCPG\__Description__c# |Long Text Area(32768)  a|
 Specify the additional information about the skill mark.
 
-|Mark |CTCPG__Mark__c |Text(255) |The _Skill Mark_.
+|Mark |[.apiobject]#CTCPG\__Mark__c# |Text(255) |The _Skill Mark_.
 
-|Report Template |CTCPG__ReportTemplateId__c |Lookup(Report
-Template) |The parent _Report Template_ record.
+|Report Template |[.apiobject]#CTCPG\__ReportTemplateId__c# |Lookup(Report Template) |The parent _Report Template_ record.
 
-|Skill |CTCPG__SkillId__c |Lookup(Skill) |The related _Skill_
-record.
+|Skill |[.apiobject]#CTCPG\__SkillId__c# |Lookup(Skill) |The related _Skill_ record.
 |===

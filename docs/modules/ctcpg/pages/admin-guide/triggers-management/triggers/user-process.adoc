@@ -14,11 +14,11 @@ API name in Salesforce: UserProcess
 |*Context* |*Method* |*Codename* |*Description*
 
 |after insert[ai] |setUniqUserNumber() |setUUNF
-|Populate the CTCPG__UniqUserNumber__c field on
+|Populate the CTCPG\__UniqUserNumber__c field on
 the _User_ record.
 
 |before update[bd] |setUniqUserNumber() |setUUN
-|Update the CTCPG__UniqUserNumber__c field on the _User_
+|Update the CTCPG\__UniqUserNumber__c field on the _User_
 record.
 |===
 

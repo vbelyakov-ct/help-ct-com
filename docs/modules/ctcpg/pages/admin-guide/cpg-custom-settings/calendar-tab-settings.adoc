@@ -7,7 +7,7 @@ for profiles.
 '''''
 
 API name in Salesforce:
-[.apiobject]#CTCPG__CalendarTabSettings__c#
+[.apiobject]#CTCPG\__CalendarTabSettings__c#
 
 '''''
 
@@ -15,7 +15,7 @@ API name in Salesforce:
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Default Tab |[.apiobject]#CTCPG__DefaultTab__c#
+|Default Tab |[.apiobject]#CTCPG\__DefaultTab__c#
 |Text(255) a|
 Specify the default tab. Available values:
 
@@ -24,40 +24,40 @@ Specify the default tab. Available values:
 * *usertab* for the Employee Calendar
 
 |Employee Calendar Tab
-|[.apiobject]#CTCPG__IsUserCalendarTabEnabled__c#
+|[.apiobject]#CTCPG\__IsUserCalendarTabEnabled__c#
 |Checkbox |If enabled, the
 xref:admin-guide/calendar-management/legacy-calendar-management/calendar-interface#h2_989699835[Employee Calendar] tab is
 displayed.
 
 |Hierarchy View Tab
-|[.apiobject]#CTCPG__IsHierarchyViiewTabEnabled__c#
+|[.apiobject]#CTCPG\__IsHierarchyViiewTabEnabled__c#
 |Checkbox |If enabled,
 the xref:admin-guide/calendar-management/legacy-calendar-management/calendar-interface#h2__1884555900[Hierarchy View] tab is
 displayed.
 
 |List Views Tab
-|[.apiobject]#CTCPG__IsListViewsTabEnabled__c#
+|[.apiobject]#CTCPG\__IsListViewsTabEnabled__c#
 |Checkbox |If enabled,
 the xref:admin-guide/calendar-management/legacy-calendar-management/calendar-interface#h2__661653765[List Views] tab is
 displayed.
 
 |Settings Tab
-|[.apiobject]#CTCPG__IsSettingsEnabled__c# |Checkbox
+|[.apiobject]#CTCPG\__IsSettingsEnabled__c# |Checkbox
 |If enabled,
 the xref:admin-guide/calendar-management/legacy-calendar-management/calendar-interface#h2_681682073[Settings] tab is
 displayed.
 
 |Show page header
-|[.apiobject]#CTCPG__IsPageHeaderEnabled__c#
+|[.apiobject]#CTCPG\__IsPageHeaderEnabled__c#
 |Checkbox |If enabled, the standard Salesforce header menu is
 displayed.
 
 |Show Sidebar
-|[.apiobject]#CTCPG__IsSidebarEnabled__c# |Checkbox
+|[.apiobject]#CTCPG\__IsSidebarEnabled__c# |Checkbox
 |Not in use.
 
 |Table View Tab
-|[.apiobject]#CTCPG__IsTableViewTabEnabled__c#
+|[.apiobject]#CTCPG\__IsTableViewTabEnabled__c#
 |Checkbox |If enabled,
 the xref:admin-guide/calendar-management/legacy-calendar-management/calendar-interface#h2__1638660003[Table View] tab is
 available.

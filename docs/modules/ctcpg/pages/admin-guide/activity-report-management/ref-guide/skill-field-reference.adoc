@@ -1,30 +1,28 @@
 = Skill Field Reference
 
-[NOTE] ==== The information below is incomplete and will be
-updated. ====
+[NOTE]
+====
+The information below is incomplete and will be updated.
+====
 
-The[.object]#Skill# object is intended to store skills and
-criteria that should be estimated during the _Joint Visit_.
-
-'''''
-
-API name in Salesforce: CTCPG__Skill__c
+The [.object]#Skill# object is intended to store skills and criteria that should be estimated during the _Joint Visit_.
 
 '''''
 
-[width="100%",cols="25%,25%,25%,25%",]
+[.apiobject]#API name in Salesforce: CTCPG\__Skill__c#
+
+'''''
+
+[width="100%",cols="15%,20%,10%,55%"]
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Active |CTCPG__IsActive__c |Checkbox |If selected,
-the record is active and applied in business logic.
+|Active |[.apiobject]#CTCPG\__IsActive__c# |Checkbox |If selected, the record is active and applied in business logic.
 
-|Answer Field API name |CTCPG__AnswerFieldAPIName__c |Text
-Area(255) a|
-Specify the API name for the field where the representative will type
-the answer.
+|Answer Field API name |[.apiobject]#CTCPG\__AnswerFieldAPIName__c# |Text Area(255) a|
+Specify the API name for the field where the representative will type the answer.
 
-|Answer Type   |CTCPG__AnswerType__c  |Picklist a|
+|Answer Type   |[.apiobject]#CTCPG\__AnswerType__c# |Picklist a|
 Specify the answer type. The available values by default:
 
 * Date
@@ -34,33 +32,24 @@ Specify the answer type. The available values by default:
 * Number
 * Multipicklist
 
-|Category        |CTCPG__Category__c |Picklist |if needed,
-specify category values for skill segmentation.
+|Category        |[.apiobject]#CTCPG\__Category__c# |Picklist |if needed, specify category values for skill segmentation.
 
-|Criteria |CTCPG__Criteria__c  |Long Text Area(32768)
-|Specify the criteria to estimate a representative's skills (separated
-by a comma, without blank spaces).
+|Criteria |[.apiobject]#CTCPG\__Criteria__c# |Long Text Area(32768) |Specify the criteria to estimate a representative's skills (separated by a comma, without blank spaces).
 
-|Criteria Value |CTCPG__CriteriaValue__c  |Long Text
-Area(32768) |Specify values for each criterion (separated by a comma,
-without blank spaces).
+|Criteria Value |[.apiobject]#CTCPG\__CriteriaValue__c#  |Long Text Area(32768) |Specify values for each criterion (separated by a comma, without blank spaces).
 
-|Description |CTCPG__Description__c |Long Text Area(32768)  a|
+|Description |[.apiobject]#CTCPG\__Description__c# |Long Text Area(32768)  a|
 Specify the additional information about the skill.
 
-|For Activity |CTCPG__ForActivity__c |Checkbox |
+|For Activity |[.apiobject]#CTCPG\__ForActivity__c# |Checkbox |
 
-|Order |CTCPG__Order__c |Number(18,0) |The order number of the
-_Skill_ record on the _Report Template_.
+|Order |[.apiobject]#CTCPG\__Order__c# |Number(18,0) |The order number of the _Skill_ record on the _Report Template_.
 
-|Photo |CTCPG__Photo__c |Checkbox |
+|Photo |[.apiobject]#CTCPG\__Photo__c# |Checkbox |
 
-|Report Template |CTCPG__ReportTemplateId__c |Lookup(Report
-Template) |The parent _Report Template_ record.
+|Report Template |[.apiobject]#CTCPG\__ReportTemplateId__c# |Lookup(Report Template) |The parent _Report Template_ record.
 
-|Required |CTCPG__Required__c |Checkbox |If selected, the
-_Skill_ is required to estimate.
+|Required |[.apiobject]#CTCPG\__Required__c# |Checkbox |If selected, the _Skill_ is required to estimate.
 
-|Subcategory |CTCPG__Subcategory__c |Text Area(255) |If
-needed, specify the additional subcategory to categorize skills.
+|Subcategory |[.apiobject]#CTCPG\__Subcategory__c# |Text Area(255) |If needed, specify the additional subcategory to categorize skills.
 |===

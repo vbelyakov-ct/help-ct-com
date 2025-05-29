@@ -46,7 +46,7 @@ image:activity-sync-records-.png[]
 
 The values from the following fields will be updated on the creating
 _Activity_ record via the _Activity Sync_ process. The
-[.apiobject]#CTCPG__ActivityId__c field# is used to
+[.apiobject]#CTCPG\__ActivityId__c field# is used to
 relate the synced standard _Event_/_Task_ or CT CPG Activity records.
 
 
@@ -55,10 +55,10 @@ relate the synced standard _Event_/_Task_ or CT CPG Activity records.
 |===
 |*Standard Calendar* | |*CT CPG Calendar*
 |*Field Label* | |
-|*Event* |*Task* |*CTCPG__Activity__c*
-|StartDateTime |– |CTCPG__StartDate__c
-|EndDateTime |– |CTCPG__EndDate__c
-|WhoId |WhoId |CTCPG__ContactId__c
-|WhatId |WhatId |CTCPG__AccountId__c
+|*Event* |*Task* |*CTCPG\__Activity__c*
+|StartDateTime |– |CTCPG\__StartDate__c
+|EndDateTime |– |CTCPG\__EndDate__c
+|WhoId |WhoId |CTCPG\__ContactId__c
+|WhatId |WhatId |CTCPG\__AccountId__c
 |OwnerId |OwnerId |OwnerId
 |===

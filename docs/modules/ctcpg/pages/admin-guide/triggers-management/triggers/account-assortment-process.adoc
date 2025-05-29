@@ -15,11 +15,11 @@ API name in Salesforce: AccountAssortment
 
 |after insert  |managePrimary() |managePr |Verify that the
 _Account_ record has no more than one related _Assortment_ record with
-the selected CTCPG__IsPrimary__c checkbox concurrently.
+the selected CTCPG\__IsPrimary__c checkbox concurrently.
 
 |after update  |managePrimary() |managePr |Verify that
 the _Account_ record has no more than one related _Assortment_ record
-with the selected CTCPG__IsPrimary__c checkbox concurrently.
+with the selected CTCPG\__IsPrimary__c checkbox concurrently.
 
 |before insert | | |Reserved.
 

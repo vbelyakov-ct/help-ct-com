@@ -19,14 +19,14 @@ Object API name: `CTCPG_ProductComponent__c`
 |Bundle |Bundle2Id__c |Lookup(CT Product) |A bundle that
 includes the current Salesforce product.
 
-|Bundle |`CTCPG__BundleId__c` |Lookup(Product2) |A bundle
+|Bundle |`CTCPG\__BundleId__c` |Lookup(Product2) |A bundle
 that includes the current _CT Product_.
 
-|Multiplier |`CTCPG__Multiplier__c` |Number(18,0) |A multiplying
+|Multiplier |`CTCPG\__Multiplier__c` |Number(18,0) |A multiplying
 factor sets the ratio for multiplying the number of products in the
 bundle.
 
-|Product |`CTCPG__ProductId__c` |Lookup(CT Product) |This is a
+|Product |`CTCPG\__ProductId__c` |Lookup(CT Product) |This is a
 lookup to store a __CT Product __identifier.
 
 |Product |Product2Id__c |Lookup(Product2) |

@@ -18,7 +18,7 @@ API name: ProductProcess
 |*Context* |*Method* |*Codename* |*Description*
 
 |after insert[au]  |calculateGroupMembers() |gm a|
-Verify that the created record of the CTCPG__Product__с object
+Verify that the created record of the CTCPG\__Product__с object
 is matched the conditions of the existing _CPG Group_ records.
 
 
@@ -27,7 +27,7 @@ If found, a _CPG Group Member_ record is created for this particular
 record and the corresponding _CPG Group_.
 
 |after update[au]  |calculateGroupMembers() |gm a|
-Verify that the updated record of the  CTCPG__Product__с object
+Verify that the updated record of the  CTCPG\__Product__с object
 is matched the conditions of the existing _CPG Group_ records.
 
 
@@ -37,7 +37,7 @@ record and the corresponding _CPG Group_.
 
 |[.apiobject]#after undelete [aud]#
 |calculateGroupMembers() |gm a|
-Verify that the restored record of the CTCPG__Product__с object
+Verify that the restored record of the CTCPG\__Product__с object
 is matched the conditions of the existing _CPG Group_ records.
 
 
@@ -46,7 +46,7 @@ If found, a _CPG Group Member_ record is created for this particular
 record and the corresponding _CPG Group_.
 
 |before delete[bd]  |deleteteGroupMembers() |gm |Search and
-delete the _CPG Group Members_ records of CTCPG__Product__с
+delete the _CPG Group Members_ records of CTCPG\__Product__с
 object that are being deleted.
 |===
 

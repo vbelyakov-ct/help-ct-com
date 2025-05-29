@@ -6,7 +6,7 @@ Calendar parameters specified per each user division].
 
 '''''
 
-API name in Salesforce: CTCPG__CalendarSettings__c
+API name in Salesforce: CTCPG\__CalendarSettings__c
 
 '''''
 
@@ -15,7 +15,7 @@ API name in Salesforce: CTCPG__CalendarSettings__c
 |*Field* |*API Name* |*Type* |*Description*
 
 |Activate Quick Creation
-|[.apiobject]#CTCPG__IsQuickCreate__c# |Checkbox a|
+|[.apiobject]#CTCPG\__IsQuickCreate__c# |Checkbox a|
 Defines if the
 xref:admin-guide/new-calendar-management/calendar-settings-ct-cpg-settings-panel#compact-form[Compact
 form] is used for the specified record type or not. Available values:
@@ -26,20 +26,20 @@ form] is used for the specified record type or not. Available values:
 Used in the _Record Settings_ record type.
 
 |Activity Subtitle
-|[.apiobject]#CTCPG__ActivitySubtitle__c# |Text(255)
+|[.apiobject]#CTCPG\__ActivitySubtitle__c# |Text(255)
 |API name of the activity *Subtitle* field. Used in the _Record
 Settings_ record type.
 
 |Activity Title
-|[.apiobject]#CTCPG__ActivityTitle__c# |Text(255)
+|[.apiobject]#CTCPG\__ActivityTitle__c# |Text(255)
 |API name of the activity *Title* field. Used in the _Record
 Settings_ record type.
 
 |All Day Field Mapping
-|[.apiobject]#CTCPG__AllDayFieldMapping__c#
+|[.apiobject]#CTCPG\__AllDayFieldMapping__c#
 |Text(255) |Not in use.
 
-|Child Object |[.apiobject]#CTCPG__ChildObject__c#
+|Child Object |[.apiobject]#CTCPG\__ChildObject__c#
 |Text(255) a|
 * API name of the child object, if used in the _Target Object_ record
 type.
@@ -49,20 +49,20 @@ Object_ record type.
 Default value is _Contact_.
 
 |Child Object Label
-|[.apiobject]#CTCPG__ChildObjectLabel__c# |Text(255)
+|[.apiobject]#CTCPG\__ChildObjectLabel__c# |Text(255)
 a|
 Label of the child object.
 
 [.confluence-information-macro-icon .confluence-information-macro-information]#Used
 in the _Target Object_ record type.#
 
-|Color |CTCPG__Color__c  |Long Text Area(32768) |The specific
+|Color |CTCPG\__Color__c  |Long Text Area(32768) |The specific
 color for the _CT CPG Activity_ record with the corresponding record
 type (separated by a comma, without a blank space).
 [.confluence-information-macro-information]#Stored within
 the _Global_ and _Color_** **setting types.#
 
-|Default View |CTCPG__DefaultView__c |Text(255) a|
+|Default View |CTCPG\__DefaultView__c |Text(255) a|
 The default view of the calendar grid:
 
 * Day
@@ -73,7 +73,7 @@ The default view of the calendar grid:
 
 Stored within the _Global_ setting type.
 
-|Direct Lookup |[.apiobject]#CTCPG__DirectLookup__c#
+|Direct Lookup |[.apiobject]#CTCPG\__DirectLookup__c#
 |Text(255) |API name of the field, which is used as a lookup between
 child and parent objects, if the
 xref:admin-guide/new-calendar-management/calendar-settings-ct-cpg-settings-panel#show-hierarchy[Hierarchy]
@@ -82,7 +82,7 @@ is enabled and *Connection Type* is set to _Direct_.
 Object_ record type.#
 
 |Displayed records in monthly preview
-|[.apiobject]#CTCPG__RecordsPreview__c# |Number(3,
+|[.apiobject]#CTCPG\__RecordsPreview__c# |Number(3,
 0) a|
 Number of records that are displayed as preview for 1 day in
 xref:admin-guide/new-calendar-management/calendar-settings-ct-cpg-settings-panel#h3_951662406[Month]
@@ -91,7 +91,7 @@ view. Default value is _3_.
 [.confluence-information-macro-information]#Used in the _General_ record
 type. #
 
-|Division |CTCPG__Division__c |Picklist a|
+|Division |CTCPG\__Division__c |Picklist a|
 xref:admin-guide/configuring-targeting-and-marketing-cycles/add-a-new-division[The calendar division]. Available values by
 default:
 
@@ -100,7 +100,7 @@ default:
 
 Used in all record types.
 
-|Duration |CTCPG__Duration__c  |Number(3,0)  a|
+|Duration |CTCPG\__Duration__c  |Number(3,0)  a|
 The default duration in minutes for the CT CPG Activity. Available
 values are from _15_ to _780_.
 
@@ -114,7 +114,7 @@ Default values for the activity record types:
 Used in the _Record Settings_ record type.
 
 |Enable Hierarchy View
-|[.apiobject]#CTCPG__EnableHierarchyView__c#
+|[.apiobject]#CTCPG\__EnableHierarchyView__c#
 |Checkbox a|
 Defines if
 the xref:admin-guide/new-calendar-management/calendar-settings-ct-cpg-settings-panel#show-hierarchy[Hierarchy] is
@@ -126,34 +126,34 @@ enabled or not. Available values:
 Used in the _Target Object_ record type.
 
 |End Date Field Mapping
-|[.apiobject]#CTCPG__EndDateFieldMapping__c#
+|[.apiobject]#CTCPG\__EndDateFieldMapping__c#
 |Text(255) a|
 API name of the field, which corresponds to the *End Date* field.
 
 [.confluence-information-macro-information]#Used in the _Activity
 Object_ record type.#
 
-|Fields |CTCPG__Fields__c |Long Text Area(131072) |API names of
+|Fields |CTCPG\__Fields__c |Long Text Area(131072) |API names of
 the fields used on the
 xref:admin-guide/new-calendar-management/calendar-settings-ct-cpg-settings-panel#compact-form[Compact
 form].
 
-|Is Active |CTCPG__IsActive__c |Checkbox |If selected, the
+|Is Active |CTCPG\__IsActive__c |Checkbox |If selected, the
 corresponding
 xref:admin-guide/new-calendar-management/calendar-settings-ct-cpg-settings-panel#h3_1454440899[Pop-Up] setting
 is active on the _Pop-up_ record type.
 
 |Json User Settings
-|[.apiobject]#CTCPG__JsonUserSettings__c# |Long Text
+|[.apiobject]#CTCPG\__JsonUserSettings__c# |Long Text
 Area(131072) |Maintenance field, not editable.
 
 |Mass Drag and Drop Gap
-|[.apiobject]#CTCPG__DragDropGap__c# |Number(3, 0)
+|[.apiobject]#CTCPG\__DragDropGap__c# |Number(3, 0)
 |Defines the default interval between activities created by
 xref:admin-guide/new-calendar-management/calendar-interface-and-activities#h4_2089059603[drag-and-drop]
 of target objects.
 
-|Object |[.apiobject]#CTCPG__Object__c# |Text(255)
+|Object |[.apiobject]#CTCPG\__Object__c# |Text(255)
 a|
 API name of the object, for which the setting must be applied. Used in
 record types:
@@ -164,10 +164,10 @@ record types:
 * _Pop-up_
 
 |Other Calendar Settings JSON
-|[.apiobject]#CTCPG__OtherCalendarSettingsJSON__c#
+|[.apiobject]#CTCPG\__OtherCalendarSettingsJSON__c#
 |Long Text Area(32768) |Maintenance field, not editable.
 
-|Parent Object |[.apiobject]#CTCPG__ParentObject__c#
+|Parent Object |[.apiobject]#CTCPG\__ParentObject__c#
 |Text(255) a|
 * API name of the parent object, if used in the _Target Object_ record
 type.
@@ -177,14 +177,14 @@ Object_ record type.
 Default value is _Account_.
 
 |Parent Object Label
-|[.apiobject]#CTCPG__ParentObjectLabel__c#
+|[.apiobject]#CTCPG\__ParentObjectLabel__c#
 |Text(255) a|
 Label of the parent object.
 
 [.confluence-information-macro-information]#Used in the _Target Object_
 record type.#
 
-|Profile |[.apiobject]#CTCPG__Profile__c#
+|Profile |[.apiobject]#CTCPG\__Profile__c#
 |Text(255) a|
 Developer name of the profile, for which the drag-and-drop setting must
 be applied. Value is empty if the setting is applied as the *Global
@@ -193,7 +193,7 @@ rule*.
 [.confluence-information-macro-information]#Used in the _Drag and Drop_
 record type.#
 
-|Record Type |[.apiobject]#CTCPG__RecordType__c#
+|Record Type |[.apiobject]#CTCPG\__RecordType__c#
 |Text(255) a|
 Developer name of the record type, for which the setting must be
 applied.
@@ -202,7 +202,7 @@ applied.
 Drop_ and _Record Settings_ record types.#
 
 |Reference Object
-|[.apiobject]#CTCPG__ReferenceObject__c# |Text(255)
+|[.apiobject]#CTCPG\__ReferenceObject__c# |Text(255)
 |API name of the object, which is used as a lookup between child and
 parent objects, if
 the xref:admin-guide/new-calendar-management/calendar-settings-ct-cpg-settings-panel#show-hierarchy[Hierarchy] is
@@ -210,13 +210,13 @@ enabled and *Connection Type* is set to _Junction_.
 [.confluence-information-macro-information]#Used in the _Target
 Object_ record type.#
 
-|Required |CTCPG__Required__c |Long Text Area(32768) a|
+|Required |CTCPG\__Required__c |Long Text Area(32768) a|
 Stores the *Required* flag for a field on the *Compact form*.
 
 Used is the _Record Settings_ record type.
 
 |Start Date Field Mapping
-|[.apiobject]#CTCPG__StartDateFieldMapping__c#
+|[.apiobject]#CTCPG\__StartDateFieldMapping__c#
 |Text(255) a|
 API name of the field, which corresponds to the *Start Date* field.
 
@@ -224,23 +224,23 @@ API name of the field, which corresponds to the *Start Date* field.
 Object_ record type.#
 
 |Status Field Mapping
-|[.apiobject]#CTCPG__StatusFieldMapping__c#
+|[.apiobject]#CTCPG\__StatusFieldMapping__c#
 |Text(255) a|
 API name of the field, which corresponds to the *Status* field.
 
 Used in the _Activity Object_ record type.
 
 |Subject Field Mapping
-|[.apiobject]#CTCPG__SubjectFieldMapping__c#
+|[.apiobject]#CTCPG\__SubjectFieldMapping__c#
 |Text(255) a|
 API name of the field, which corresponds to the *Subject* field.
 
 Used in the _Activity Object_ record type.
 
-|User Id |[.apiobject]#CTCPG__UserId__c#
+|User Id |[.apiobject]#CTCPG\__UserId__c#
 |Lookup(User) |Maintenance field, not editable.
 
-|Value |CTCPG__Value__c |Long Text Area(131072) a|
+|Value |CTCPG\__Value__c |Long Text Area(131072) a|
 Values of statuses from the *Status field mapping* field, which is used
 for
 xref:admin-guide/new-calendar-management/calendar-settings-ct-cpg-settings-panel#h3__1948960707[mapping

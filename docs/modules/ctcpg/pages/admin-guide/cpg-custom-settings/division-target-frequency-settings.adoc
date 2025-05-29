@@ -13,7 +13,7 @@ a record of the Division Target Frequency Setting] for each one.
 
 '''''
 
-API name in Salesforce: CTCPG__DivisionTFSettings__c
+API name in Salesforce: CTCPG\__DivisionTFSettings__c
 
 '''''
 
@@ -22,24 +22,24 @@ API name in Salesforce: CTCPG__DivisionTFSettings__c
 |*Field* |*API Name* |*Type* |*Description*
 
 |Account  Target Category field
-|CTCPG__AccountTargetCategoryField__c |Text Area(255) |Specify
+|CTCPG\__AccountTargetCategoryField__c |Text Area(255) |Specify
 the *Account* field API name that represents the division and contains
 the division categories.
 
-|Account Target Flag field |CTCPG__AccountTargetFlagField__c
+|Account Target Flag field |CTCPG\__AccountTargetFlagField__c
 |Text Area(255) |Specify the *Account* field API name of the checkbox
 that indicates the selected division.
 
 |Contact Target Category field
-|CTCPG__ContactTargetCategoryField__c |Text Area(255)
+|CTCPG\__ContactTargetCategoryField__c |Text Area(255)
 |Specify the *Contact* field API name that represents the division and
 contains the division categories.
 
-|Contact Target Flag field |CTCPG__ContactTargetFlagField__c
+|Contact Target Flag field |CTCPG\__ContactTargetFlagField__c
 |Text Area(255) |Specify the *Contact* field API name of the checkbox
 that indicates the selected division.
 
-|Enable Category selection |CTCPG__EnableCategorySelection__c
+|Enable Category selection |CTCPG\__EnableCategorySelection__c
 |Checkbox a|
 * If enabled, you can select the available division category in
 xref:admin-guide/targeting-and-marketing-cycles-management/add-the-manage-targets-button[the Target Assignment dialog

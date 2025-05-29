@@ -2,91 +2,67 @@
 
 On the _Activity Report_ page:
 
-* manage data in the specific
-xref:admin-guide/activity-report-management/manage-field-sets-for-activity-report-pages[field sets];
-* open the appropriate activities and
-xref:admin-guide/activity-report-management/create-a-new-filter-for-the-activities-list[use filters to
-display] only matched ones;
+* manage data in the specific xref:admin-guide/activity-report-management/manage-field-sets-for-activity-report-pages.adoc[field sets];
+* open the appropriate activities and xref:admin-guide/activity-report-management/create-a-new-filter-for-the-activities-list.adoc[use filters to display] only matched ones;
 * manage the tracked CT Products via _Visit_:
-** within the active _Marketing Cycle_, the corresponding records fill
-out the *CT Product* tabs and the *Special Trackings* tab;
-** xref:admin-guide/ct-products-and-assortments-management/assign-inventories-to-accounts[assign Inventories to
-Accounts] to track them;
-* xref:admin-guide/activity-report-management/work-with-the-activity-report-page#h2_867056578[Add
-participants] and check expenses via _Event_;
+** within the active _Marketing Cycle_, the corresponding records fill out the *CT Product* tabs and the *Special Trackings* tab;
+** xref:admin-guide/ct-products-and-assortments-management/assign-inventories-to-accounts.adoc[assign Inventories to Accounts] to track them;
+* <<h2_867056578, Add participants>> and check expenses via _Event_;
 *  As a manager for a _Joint Visit_.
-** select the representative's activities to link them to the _Joint
-Visit_;
+** select the representative's activities to link them to the _Joint Visit_;
 ** fill out the report for the representative.
 
 [[h2_867056578]]
-=== Add an Event Member
+== Add an Event Member
 
-There are two ways to add participant(s) to the _Activity_ with
-the _Event_ record type.
+There are two ways to add participant(s) to the _Activity_ with the _Event_ record type.
 
-* xref:admin-guide/activity-report-management/work-with-the-activity-report-page#h2_1809147520[On the
-Activity Report Page]
-* xref:admin-guide/activity-report-management/work-with-the-activity-report-page#h2_1878806894[On the
-Contacts tab]
-** xref:admin-guide/activity-report-management/work-with-the-activity-report-page#h3__1318785425[Add
-Button to the Layout]
-** xref:admin-guide/activity-report-management/work-with-the-activity-report-page#h3__888033415[Add
-Participants]
+* <<h3_1546508832, On the Activity Report Page>>
+* <<h3_1878806894, On the Contacts tab>>
+** <<h4__1318785425, Add Button to the Layout>>
+** <<h4__888033415, Add Participants>>
 
 [[h3_1546508832]]
-==== On the Activity Report Page
+=== On the Activity Report Page
 
 To add participants to the event:
 
 . Open the required
-xref:activity-report-interface#h2_1673179481[Activity Report] page
-for the _Activity_ with the _Event_ record type.
+xref:./ref-guide/activity-report-interface.adoc#h2_1673179481[Activity Report] page for the _Activity_ with the _Event_ record type.
 . On the *Event Members* tab, click *Add event member*.
-. Fill in xref:admin-guide/activity-report-management/configure-an-event-member-tab[the fields].
+. Fill in xref:admin-guide/activity-report-management/configure-an-event-member-tab.adoc[the fields].
 
 Participants are added.
 
 [[h3_1878806894]]
-==== On the Contacts tab
+=== On the Contacts tab
 
 Previously, add the *Add selected to event* button to the *Contacts*
 tab:
 
-
-
 [[h4__1318785425]]
-===== Add Button to the Layout
-
-
+==== Add Button to the Layout
 
 To add the button to the *Contacts* tab:
 
 . Go to *Setup → Contact → Search Layouts for Salesforce Classic*.
 . Click *Edit* next to *List View*.
-. In the *Custom Buttons* section, move *Add selected to
-event* to *Selected Buttons*.
+. In the *Custom Buttons* section, move *Add selected to event* to *Selected Buttons*.
 . Click *Save*.
 
 The button is added.
 
-
-
 [[h4__888033415]]
-===== Add Participants
+==== Add Participants
 
-
-
-To add _Contacts_ as participants to the _Activity_ record with the **
-_Event_ __ record type:
+To add _Contacts_ as participants to the _Activity_ record with the _Event_ record type:
 
 . Go to the *Contacts* tab.
 . Select a list view.
 . Select the required contacts.
 . Click the *Add selected to event* button.
-. In the window, select the _Activity_ record and the type of the added
-_Contact_ records.
-
+. In the window, select the _Activity_ record and the type of the added _Contact_ records.
++
 image:add-selected-to-event-window.png[]
 . Click *Add participants*.
 

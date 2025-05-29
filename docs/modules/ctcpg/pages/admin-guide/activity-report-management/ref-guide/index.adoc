@@ -1,80 +1,42 @@
 = Reference Guide
 
-[TIP] ==== You can use preconfigured
-xref:standard-layout-interface[Standard Layouts] without
-configuring xref:activity-report-interface[Activity Reports]. ====
+[TIP]
+====
+You can use preconfigured xref:./standard-layout-interface.adoc[Standard Layouts] without
+configuring xref:./activity-report-interface.adoc[Activity Reports].
+====
 
 In this section:
 
-* Get familiar xref:activity-report-interface[with the interface of
-the _Activity Report_ page] according to the specific _Activity_ record
-type;
-* View the default
-_xref:admin-guide/activity-report-management/index.adoc.html#h2__1515393312[Activity Layout]_
-and
-_xref:admin-guide/activity-report-management/index.adoc.html#DefaultConfiguration-AR-BasicActionsforActivity[Buttons]_
-settings.
-* Read field description for xref:activity-field-reference[CT CPG
-Activity], xref:activity-data-field-reference[CT CPG Activity
-Data],
-[.object]#xref:admin-guide/activity-report-management/ref-guide/report-template-field-reference.adoc[Report
-Template], #[.object]#xref:skill-field-reference[Skill],#
-and xref:skill-mark-field-reference[Skill Mark]
-xref:skill-mark-field-reference[] objects.
+* Get familiar xref:./activity-report-interface.adoc[with the interface of the _Activity Report_ page] according to the specific _Activity_ record type;
+* View the default <<h2__1515393312, Activity Layout>> and <<DefaultConfiguration-AR-BasicActionsforActivity, Activity Buttons>> settings.
+* Read field description for xref:./activity-field-reference.adoc[CT CPG Activity], xref:./activity-data-field-reference.adoc[CT CPG Activity Data],
+xref:./report-template-field-reference.adoc[Report Template], xref:./skill-field-reference.adoc[Skill], and xref:./skill-mark-field-reference.adoc[Skill Mark] xref:./skill-mark-field-reference.adoc[] objects.
 
-
-
-xref:admin-guide/activity-report-management/index[Configure _Activity Report_ pages]
-for each required _Activity_ record type.
+xref:admin-guide/activity-report-management/index.adoc[Configure _Activity Report_ pages] for each required _Activity_ record type.
 
 [[h2__1515393312]]
-=== Activity Layout Settings
+== Activity Layout Settings
 
-The following field sets are specified for the[.object]#CT CPG
-Activity# object.
+The following field sets are specified for the [.object]#CT CPG Activity# object.
 
-* *Activity List* is used for displaying available activities for the
-current user;
-* xref:activity-report-interface#h2_683681312[Visit],
-xref:activity-report-interface#h2_1673179481[Event],
-xref:activity-report-interface#h2__192515681[Time Off],
-xref:activity-report-interface#h2__1426808308[Joint Visit] is used
-for displaying the main section with all detailed information about the
-open _Activity_ record;
-** *Visit* is intended to track _CT Products_ on the point-of-sales,
-objectives, and tasks.
-** *Event* is intended to track meetings, participants, and meeting
-expenses.
-** *Time Off* is used to track the representative's vacancies, holidays,
-and time offs.
-** *Joint Visit* is intended to estimate the representative's skills
-using the preconfigured questionnaire and based on their activities.
-* *Joint user activities* is used for displaying the required user's
-open activities to relate one of them to the _Joint Visit_ record.
+* *Activity List* is used for displaying available activities for the current user;
+* xref:./activity-report-interface.adoc#h2_683681312[Visit], xref:./activity-report-interface.adoc#h2_1673179481[Event], xref:./activity-report-interface.adoc#h2__192515681[Time Off], xref:./activity-report-interface.adoc#h2__1426808308[Joint Visit] is used for displaying the main section with all detailed information about the open _Activity_ record;
+** *Visit* is intended to track _CT Products_ on the point-of-sales, objectives, and tasks.
+** *Event* is intended to track meetings, participants, and meeting expenses.
+** *Time Off* is used to track the representative's vacancies, holidays, and time offs.
+** *Joint Visit* is intended to estimate the representative's skills using the preconfigured questionnaire and based on their activities.
+* *Joint user activities* is used for displaying the required user's open activities to relate one of them to the _Joint Visit_ record.
 * *Joint Activities List* and *VisitOnMap* are not in use.
 
-
-
-If needed, xref:admin-guide/activity-report-management/manage-field-sets-for-activity-report-pages[create
-a new record type with the appropriate field set] or customize the
-configured field sets.
+If needed, xref:admin-guide/activity-report-management/manage-field-sets-for-activity-report-pages.adoc[create a new record type with the appropriate field set] or customize the configured field sets.
 
 [[DefaultConfiguration-AR-BasicActionsforActivity]]
-=== Basic Actions for Activity
+== Basic Actions for Activity
 
-By default, the *New*, *Edit*, and *View* buttons on the tabs, for
-example, the xref:admin-guide/calendar-management/legacy-calendar-management/configuring-calendar/index[Calendar] or *Activities*
-tab, related to the[.object]#CT CPG Activity# object redirect
-users to the standard pages instead of _Activity Report_ pages.
+By default, the *New*, *Edit*, and *View* buttons on the tabs, for example, the xref:admin-guide/calendar-management/legacy-calendar-management/configuring-calendar/index.adoc[Calendar] or *Activities* tab, related to the [.object]#CT CPG Activity# object redirect users to the standard pages instead of _Activity Report_ pages.
 
-* *StandardLayout* is responsible for displaying a standard page, where
-fields are set up within the page layout customization;
-* *ActivityReport* is responsible for displaying the Visualforce page
-with the corresponding field set and customized related tabs, e.g., the
-xref:admin-guide/activity-report-management/configure-ct-product-tabs[Company Products] or
-xref:admin-guide/activity-report-management/configure-an-event-member-tab[Event Members].
+* *StandardLayout* is responsible for displaying a standard page, where fields are set up within the page layout customization;
+* *ActivityReport* is responsible for displaying the Visualforce page with the corresponding field set and customized related tabs, e.g., the xref:admin-guide/activity-report-management/configure-ct-product-tabs.adoc[Company Products] or xref:admin-guide/activity-report-management/configure-an-event-member-tab.adoc[Event Members].
 
-
-
-xref:admin-guide/activity-report-management/override-basic-actions-for-activity[Override the button
-action] if you want to use the _Activity Report_ pages.
+xref:admin-guide/activity-report-management/override-basic-actions-for-activity.adoc[Override the button action] if you want to use the _Activity Report_ pages.

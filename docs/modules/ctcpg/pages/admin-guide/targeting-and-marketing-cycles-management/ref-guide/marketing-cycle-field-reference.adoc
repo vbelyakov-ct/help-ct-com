@@ -5,7 +5,7 @@ parameters of the marketing cycle records.
 
 '''''
 
-API name in Salesforce: CTCPG__MarketingCycle__c
+API name in Salesforce: CTCPG\__MarketingCycle__c
 
 '''''
 
@@ -13,32 +13,32 @@ API name in Salesforce: CTCPG__MarketingCycle__c
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Active |CTCPG__IsActive__c |Checkbox |If selected, the
+|Active |CTCPG\__IsActive__c |Checkbox |If selected, the
 _Marketing Cycle_ record is active.
 
-|Description |CTCPG__Description__c |Long Text Area(32768)
+|Description |CTCPG\__Description__c |Long Text Area(32768)
 |If needed, specify the description.
 
-|End Date |CTCPG__EndDate__c |Date |Specify the end date of
+|End Date |CTCPG\__EndDate__c |Date |Specify the end date of
 the marketing cycle.
 The Marketing Cycle period should be within the value of
-the CTCPG__MaxPlanningDays__c field of
+the CTCPG\__MaxPlanningDays__c field of
 the _xref:application-settings.html[Application Settings]_ record.
 
-|Link Visit 1:1 |CTCPG__LinkVisit__c |Checkbox a|
+|Link Visit 1:1 |CTCPG\__LinkVisit__c |Checkbox a|
 If selected, the related _Activity_ records with the _Visit_ record type
 will be linked to the _Marketing Cycle_ record.
 
-* The CTCPG__AllowLinkSegmentation__c on the _Application
+* The CTCPG\__AllowLinkSegmentation__c on the _Application
 Settings_ record should be checked.
 * You
 can specify xref:admin-guide/configuring-targeting-and-marketing-cycles/enable-activity-linking-to-the-marketing-cycle[another
 activity linking].
 
-|Start Date |CTCPG__StartDate__c |Date |Specify the start date
+|Start Date |CTCPG\__StartDate__c |Date |Specify the start date
 of the marketing cycle.
 
-|Status |CTCPG__Status__c |Picklist a|
+|Status |CTCPG\__Status__c |Picklist a|
 Specify the current status of the _Marketing Cycle_ record. Available
 values:
 
@@ -50,6 +50,6 @@ values:
 You can specify the behavior of the system for the related status on the
 record of xref:application-settings[Application Settings].
 
-|User Division |CTCPG__UserDivision__c |Formula(Text) |The
+|User Division |CTCPG\__UserDivision__c |Formula(Text) |The
 assigned division on the _Marketing Cycle_ record.
 |===

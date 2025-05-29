@@ -13,16 +13,16 @@ the new division name.
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Account |CTCPG__Succession_from__c |Lookup(Account)
+|Account |CTCPG\__Succession_from__c |Lookup(Account)
 |The parent _Account_ record.
 
-|Delivery Dates |CTCPG__DeliveryDates__c |Text(255)
+|Delivery Dates |CTCPG\__DeliveryDates__c |Text(255)
 |[.confluence-information-macro-information]#Available in the CT CPG
 package v. 1.20—1.26 and used in
 https://help.customertimes.com/articles/project-order-module/ct-orders-solution[CT
 Orders].#
 
-|Division Alpha Category |CTCPG__DivisionAlphaCategory__c
+|Division Alpha Category |CTCPG\__DivisionAlphaCategory__c
 |Picklist a|
 The _Account_ category that used to assign the target frequency to the
 selected _Account_ record. Available values by default:
@@ -35,11 +35,11 @@ selected _Account_ record. Available values by default:
 [NOTE] ==== It is possible xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[to
 create a new division]. ====
 
-|Division Alpha Target |CTCPG__DivisionAlphaTargetCheck__c
+|Division Alpha Target |CTCPG\__DivisionAlphaTargetCheck__c
 |Checkbox |The field is checked if the _Account_ record has been
 assigned to the specified category.
 
-|Division Beta Category |CTCPG__DivisionBetaCategory__c
+|Division Beta Category |CTCPG\__DivisionBetaCategory__c
 |Picklist a|
 The _Account_ category that used to assign the target frequency to the
 selected _Account_ record.
@@ -51,35 +51,35 @@ Available values by default:
 * Discounter
 * Minimarket
 
-|Division Beta Target |CTCPG__DivisionBetaTargetCheck__c
+|Division Beta Target |CTCPG\__DivisionBetaTargetCheck__c
 |Checkbox |The field is checked if the _Account_ record has been
 assigned to the specified category.
 
-|External Id |CTCPG__ExternalId__c |Text(255) (External ID)
+|External Id |CTCPG\__ExternalId__c |Text(255) (External ID)
 (Unique Case Sensitive) |The external identifier if the
 __Account __record has been synchronized from the external ERP-system.
 
-|Has Child Accounts |CTCPG__HasChildAccounts__c |Checkbox
+|Has Child Accounts |CTCPG\__HasChildAccounts__c |Checkbox
 |The field is checked if the _Account_ record has child _Account_
 records. That _Account_ with child records will be displayed as
 hierarchy on the *Hierarchy* tab of the *Calendar* tab (refer to
 the xref:admin-guide/calendar-management/legacy-calendar-management/index[Legacy Calendar Management] for more
 details).
 
-|Is Auto Target Field Check? |CTCPG__IsAutoTargetCheck__c
+|Is Auto Target Field Check? |CTCPG\__IsAutoTargetCheck__c
 |Checkbox |
 
-|Is Target? |CTCPG__IsTarget__c |Formula(Text) |The field is
+|Is Target? |CTCPG\__IsTarget__c |Formula(Text) |The field is
 checked if the _Account_ record has been selected as a target.
 
-|Status |CTCPG__Status__c |Picklist a|
+|Status |CTCPG\__Status__c |Picklist a|
 Available values:
 
 * Active
 * Inactive
 * Waiting Succession
 
-|Target User Ids |CTCPG__TargetUserIds__c |Text Area(255)
-|Store the values from the CTCPG__UniqUserNumber__c field of the
+|Target User Ids |CTCPG\__TargetUserIds__c |Text Area(255)
+|Store the values from the CTCPG\__UniqUserNumber__c field of the
 _User_ record that targeted the _Account_ record.
 |===
