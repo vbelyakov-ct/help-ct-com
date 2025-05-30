@@ -1,29 +1,18 @@
 = Calendar Settings: Calendar Setup
 
-In this section, manage the appropriate Calendar view, specify mouse
-click actions, and specify fields of the additional custom object that
-stores the company's Holidays calendar.
+In this section, manage the appropriate Calendar view, specify mouse click actions, and specify fields of the additional custom object that stores the company's Holidays calendar.
 
-[TIP] ==== To add the custom Holidays calendar, go to
-the xref:add-the-custom-holidays-dictionary[Add the Custom Holidays
-Dictionary] article. ====
+[TIP]
+====
+To add the custom Holidays calendar, go to the xref:./add-the-custom-holidays-dictionary.adoc[Add the Custom Holidays Dictionary] article.
+====
 
-* In the *Calendar default view* field, select the day, week, or month
-view. Also, to give the representatives the ability to manage activities
-in the agenda views, select the *Enable list calendar* checkbox;
+* In the *Calendar default view* field, select the day, week, or month view. Also, to give the representatives the ability to manage activities in the agenda views, select the *Enable list calendar* checkbox;
++
 image:List-Calendar.png[]
-* To add weekends to the Calendar grid, select the** Show
-weekends** checkbox. To add the ability to create activities on these
-days, select the *Allow holidays event* checkbox;
+* To add weekends to the Calendar grid, select the **Showweekends** checkbox. To add the ability to create activities on these days, select the *Allow holidays event* checkbox;
 * Customize mouse clicks:
-** *Disable left-click* action. In this case, a user can create a _CT
-CPG Activity_ record by a right-click on the calendar grid or
-xref:admin-guide/new-calendar-management/legacy-calendar-management/configuring-calendar/configure-settings-for-the-calendar/calendar-settings-drag-drop-settings[a drag-and-drop] an
-_Account_ or _Contact_ record.
-** Select the *Inverted click logic* checkbox to use a single-click for
-opening the _CT CPG Activity_ record details and a double click for
-deleting the _CT CPG Activity_ record.
+** *Disable left-click* action. In this case, a user can create a _CT CPG Activity_ record by a right-click on the calendar grid or xref:admin-guide/calendar-management/legacy-calendar-management/configuring-calendar/configure-settings-for-the-calendar/calendar-settings-drag-drop-settings.adoc[a drag-and-drop] an _Account_ or _Contact_ record.
+** Select the *Inverted click logic* checkbox to use a single-click for opening the _CT CPG Activity_ record details and a double click for deleting the _CT CPG Activity_ record.
 
-
-
-image:Settings-Calendar-Setup.png[]
+image:Settings-Calendar-Setup.png[align="center"]

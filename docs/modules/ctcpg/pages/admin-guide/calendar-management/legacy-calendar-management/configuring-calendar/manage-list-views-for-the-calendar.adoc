@@ -1,112 +1,77 @@
 = Configure List Views for the Calendar
+:toc: :toclevels: 3
 
-On the xref:admin-guide/new-calendar-management/legacy-calendar-management/calendar-interface#h2__661653765[List View tab], manage
-available list views. Create, edit, or delete list views, specify
-columns to display, and more.
+On the xref:admin-guide/calendar-management/legacy-calendar-management/calendar-interface.adoc#h2__661653765[List View tab], manage available list views. Create, edit, or delete list views, specify columns to display, and more.
 
-
-
-The specified list views will be available on the *Table View* and
-*Hierarchy View* tabs.
-
-
+The specified list views will be available on the *Table View* and *Hierarchy View* tabs.
 
 To create a new list view:
 
 . Go to the *List View* tab.
 . Specify in the following order:
-:toc: :toclevels: 3
 
 The setup is complete.
 
 [[h2__1247217375]]
-=== Available List Views
+== Available List Views
 
-In this section, select a list view to customize or create a new list
-view based on the selected list view.
+In this section, select a list view to customize or create a new list view based on the selected list view.
 
 * Click *Delete* this view to remove a list view if needed;
-* Click *Reset / Create new view* to reset the parameters of the
-selected list view and create a new one.
+* Click *Reset / Create new view* to reset the parameters of the selected list view and create a new one.
 
 image:Available-List-Views.png[]
 
-
-
-xref:admin-guide/new-calendar-management/legacy-calendar-management/configuring-calendar/manage-list-views-for-the-calendar#listviewsettings[Go back]
-to the list view settings.
-
 [[h2__91149515]]
-=== Edit View
+== Edit View
 
 In this section, specify the object and list view criteria.
 
-* Select the[.object]#Account#,[.object]#Contact#, or
-[.object]#AccountContactRelationship# object.
+* Select the [.object]#Account#, [.object]#Contact#, or [.object]#AccountContactRelationship# object.
 * Specify up to 5 criteria.
-[TIP] ==== Select *not equal* to and leave the *Value* field
-blank to display only records with values in the selected fields. ====
++
+[TIP]
+====
+Select *not equal* to and leave the *Value* field
+blank to display only records with values in the selected fields.
+====
 
 image:Edit-View.png[]
 
-
-
-xref:admin-guide/new-calendar-management/legacy-calendar-management/configuring-calendar/manage-list-views-for-the-calendar#listviewsettings[Go
-back] to the list view settings.
-
 [[h2__1584195996]]
-=== Columns to Display
+== Columns to Display
 
-[TIP] ==== Used on
-the xref:admin-guide/new-calendar-management/legacy-calendar-management/configuring-calendar/manage-activities-on-the-table-view-tab[Table View] tab.
+[TIP]
+====
+Used on the xref:admin-guide/calendar-management/legacy-calendar-management/configuring-calendar/manage-activities-on-the-table-view-tab.adoc[Table View] tab.
 ====
 
 In this section, specify the columns to display in the list view table.
 
-* Add and remove columns by the *Plus* button or a drag-and-drop;
+* Add and remove columns by the *Plus* button or a drag-and-drop.
 * Rearrange columns if needed.
 
 image:Columns-to-display.png[]
 
-
-
-When a representative selects a list view on the *Table View* tab, they
-will see the specified columns in the list view table.
+When a representative selects a list view on the *Table View* tab, they will see the specified columns in the list view table.
 
 image:Columns-to-display-Example.png[]
 
-
-
-xref:admin-guide/new-calendar-management/legacy-calendar-management/configuring-calendar/manage-list-views-for-the-calendar#listviewsettings[Go
-back] to the list view settings.
-
 [[h2__1852231214]]
-=== View Availability
+== View Availability
 
-In this section, select user roles that have the ability to view and use
-the selected list view.
+In this section, select user roles that have the ability to view and use the selected list view.
 
 * Add and remove user roles by the** Plus** button or a drag-and-drop.
 
 image:View-Availability.png[]
 
-
-
-xref:admin-guide/new-calendar-management/legacy-calendar-management/configuring-calendar/manage-list-views-for-the-calendar#listviewsettings[Go
-back] to the list view settings.
-
 [[h2__1076523567]]
-=== Other Settings
+== Other Settings
 
 In this section, enter the list view name and specify the record order.
 
 * Select a field to order records.
-* Select the ascending or descending order to display records in the
-list view.
+* Select the ascending or descending order to display records in the list view.
 
 image:Other-Settings.png[]
-
-
-
-xref:admin-guide/new-calendar-management/legacy-calendar-management/configuring-calendar/manage-list-views-for-the-calendar#listviewsettings[Go
-back] to the list view settings.

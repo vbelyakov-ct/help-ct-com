@@ -1,54 +1,37 @@
 = Calendar Settings: Customize Events
 
-Two sections below are intended to customize _CT CPG Activity_
-displaying on the Calendar grid and the corresponding layout for working
-with the _CT CPG Activity_ details.
+Two sections below are intended to customize _CT CPG Activity_ displaying on the Calendar grid and the corresponding layout for working with the _CT CPG Activity_ details.
 
 [[h2__1740967952]]
-=== Customize Events (1)
+== Customize Events (1)
 
-In this section, select a field with the *Picklist* data type to
-differentiate the _CT CPG Activity_ records according to its field value
-by color.
+In this section, select a field with the *Picklist* data type to differentiate the _CT CPG Activity_ records according to its field value by color.
 
 * Select the *Type* or *Status* field of the _CT CPG Activity_ object:
 ** It is possible to change the values of these fields.
-** Create a new field with a *Picklist* data type to have the ability to
-differentiate _CT CPG Activities_ based on the values of this field.
+** Create a new field with a *Picklist* data type to have the ability to differentiate _CT CPG Activities_ based on the values of this field.
 * Specify preferred colors:
-** If the *Another user activity color* enabled, other users' _CT CPG
-Activities_ on
-the xref:admin-guide/new-calendar-management/legacy-calendar-management/configuring-calendar/manage-activities-on-the-employees-calendar-tab[Employees
-Calendar] tab will be displayed with the selected color.
+** If the *Another user activity color* enabled, other users' _CT CPG Activities_ on the xref:admin-guide/calendar-management/legacy-calendar-management/configuring-calendar/manage-activities-on-the-employees-calendar-tab.adoc[Employees Calendar] tab will be displayed with the selected color.
 
 image:Settings-Customze-Events-Color.png[]
 
 [[h2__1740967955]]
-=== Customize Events (2)
+== Customize Events (2)
 
-In this section, customize the corresponding layout for working
-with records of each _CT CPG Activity_ record type on the Calendar
-grid.
+In this section, customize the corresponding layout for working with records of each _CT CPG Activity_ record type on the Calendar grid.
 
-* If you specified a new record type for the [.object]#CT CPG
-Activity# object, it will be available to customize.
-* In the *Title field*, select a field to use it as a title of a _ CT
-CPG Activity_ record on the Calendar grid. It is possible to use a field
-with the *Formula* data type.
-* ​Specify the *Icon URL* to display. Images are connected with the help
-of a link and can be stored either in the Salesforce organization or on
-third-party resources.
-* Set the default *Duration* value;
-* In the *Open In* field, select the layout to open _CT CPG
-Activity_ details.[TIP] ====
-Configure xref:activity-report-interface[Activity Reports] pages in
-case of using them instead of _Standard Layout_ pages for working with
-_CT CPG Activities_.
+* If you specified a new record type for the [.object]#CT CPG Activity# object, it will be available to customize.
+* In the *Title field*, select a field to use it as a title of a _ CT CPG Activity_ record on the Calendar grid. It is possible to use a field with the *Formula* data type.
+* Specify the *Icon URL* to display. Images are connected with the help of a link and can be stored either in the Salesforce organization or on third-party resources.
+* Set the default *Duration* value.
+* In the *Open In* field, select the layout to open _CT CPG Activity_ details.
++
+[TIP]
+====
+Configure xref:admin-guide/activity-report-management/ref-guide/activity-report-interface.adoc[Activity Reports] pages in case of using them instead of _Standard Layout_ pages for working with _CT CPG Activities_.
 ====
 
 image:Settings-Customze-Events.png[]
-
-
 
 Check the settings on the Calendar grid:
 

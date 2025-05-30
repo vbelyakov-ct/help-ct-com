@@ -1,31 +1,27 @@
 = User Field Reference
 
-The following fields are created on the standard _User_ object during
-the CT CPG installation.
+The following fields are created on the standard _User_ object during the CT CPG installation.
 
-[NOTE] ==== In case of xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[creating new
-divisions], add the new division to the values of
-the CTCPG\__UserDivision__c ====  picklist.
+[NOTE]
+====
+In case of xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division.adoc[creating new divisions], add the new division to the values of the [.apiobject]#CTCPG\__UserDivision__c# picklist.
+====
 
-[width="100%",cols="25%,25%,25%,25%",]
+[width="100%",cols="15%,20%,10%,55%"]
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Calendar Locale         |CTCPG\__CalendarLocale__c
-|Text(255)  |The selected locale of the _User_ record, for example,
-en.
+|Calendar Locale |[.apiobject]#CTCPG\__CalendarLocale__c#
+|Text(255)  |The selected locale of the _User_ record, for example, [.apiobject]#en#.
 
-|User Division for Calendar |CTCPG\__CalendarUserDivision__c
-|Formula(Text)         |In the CT CPG Calendar,
-select xref:admin-guide/calendar-management/legacy-calendar-management/configuring-calendar/configure-settings-for-the-calendar/index[the assigned
-division].
+|User Division for Calendar |[.apiobject]#CTCPG\__CalendarUserDivision__c#
+|Formula(Text) |In the CT CPG Calendar, select xref:admin-guide/calendar-management/legacy-calendar-management/configuring-calendar/configure-settings-for-the-calendar/index.adoc[the assigned division].
 
-|Uniq User Number |CTCPG\__UniqUserNumber__c |Text(30)  |The
-last 5 symbols of the _User_ record ID.
+|Uniq User Number |[.apiobject]#CTCPG\__UniqUserNumber__c# |Text(30)  |The last 5 symbols of the _User_ record ID.
 
-|User Division |CTCPG\__UserDivision__c |Picklist |The picklist
-with all assigned divisions for the _User_ record.
-[NOTE] ==== This field should
-xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division#h2__1661054417[be added to the page layout
-and populated] with the required division. ====
+|User Division |[.apiobject]#CTCPG\__UserDivision__c# |Picklist a|The picklist with all assigned divisions for the _User_ record.
+[NOTE]
+====
+This field should xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division.adoc#h2__1661054417[be added to the page layout and populated] with the required division.
+====
 |===

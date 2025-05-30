@@ -1,37 +1,16 @@
 = Configuring Legacy Calendar
 
-The xref:admin-guide/new-calendar-management/legacy-calendar-management/index[Calendar] functionalities are used to
-manage CT CPG Activity records.
+The xref:admin-guide/calendar-management/legacy-calendar-management/index[Calendar] functionalities are used to manage CT CPG Activity records.
 
+Follow the guidelines to customize the Calendar view according to user division categories.
 
-
-Follow the guidelines to customize the Calendar view according to user
-division categories.
-
-. xref:admin-guide/getting-started/permission-settings[Grant users access] to the required CT
-CPG Calendar's functionality. Users should have access to the
-xref:admin-guide/new-calendar-management/legacy-calendar-management/planning-calendar-settings-field-reference[Planning Calendar
-Settings] object.
-. To display Calendar tabs in the non-English language, add the
-*Calendar Locale* field to the User object layout and specify the
-required language. Also, the current user's language affects Calendar
-tabs.
-. xref:create-a-new-record-of-calendar-tab-settings[Specify
-Calendar tabs] for each user type.
-. On the xref:configure-settings-for-the-calendar[_Settings_ tab],
-customize the *Table View* and *Hierarchy View* tabs and available
-actions for each user division.
-. xref:manage-list-views-for-the-calendar[Manage list views] to
-filter records on the *Table View* and *Hierarchy View* tabs.
-. Get familiar with the _CT CPG Activity_ management on the
-xref:manage-activities-on-the-table-view-tab[Table View],
-xref:manage-activities-on-the-hierarchy-view-tab[Hierarchy View],
-and xref:manage-activities-on-the-employees-calendar-tab[Employees
-Calendar] tabs.
+. xref:admin-guide/getting-started/permission-settings.adoc[Grant users access] to the required CT CPG Calendar's functionality. Users should have access to the
+xref:admin-guide/calendar-management/legacy-calendar-management/planning-calendar-settings-field-reference.adoc[Planning Calendar Settings] object.
+. To display Calendar tabs in the non-English language, add the *Calendar Locale* field to the User object layout and specify the required language. Also, the current user's language affects Calendar tabs.
+. xref:./create-a-new-record-of-calendar-tab-settings.adoc[Specify Calendar tabs] for each user type.
+. On the xref:admin-guide/calendar-management/legacy-calendar-management/configuring-calendar/configure-settings-for-the-calendar/index.adoc[_Settings_ tab], customize the *Table View* and *Hierarchy View* tabs and available actions for each user division.
+. xref:./manage-list-views-for-the-calendar.adoc[Manage list views] to filter records on the *Table View* and *Hierarchy View* tabs.
+. Get familiar with the _CT CPG Activity_ management on the xref:./manage-activities-on-the-table-view-tab.adoc[Table View], xref:./manage-activities-on-the-hierarchy-view-tab.adoc[Hierarchy View], and xref:./manage-activities-on-the-employees-calendar-tab.adoc[Employees Calendar] tabs.
 * If xref:admin-guide/configuring-activity-sync/index.adoc[the _Activity Sync_
-functionality] enabled, the associated _Task_ and _Event_ records will
-be presented as the _CT CPG Activity_ records on the Calendar grid.
-* xref:calendar-settings-customize-events[If specified], a _CT CPG
-Activity_ record will be open on
-xref:admin-guide/activity-report-management/index.adoc[the corresponding _Activity Report_
-page].
+functionality] enabled, the associated _Task_ and _Event_ records will be presented as the _CT CPG Activity_ records on the Calendar grid.
+* xref:admin-guide/calendar-management/legacy-calendar-management/configuring-calendar/configure-settings-for-the-calendar/calendar-settings-customize-events.adoc[If specified], a _CT CPG Activity_ record will be open on xref:admin-guide/activity-report-management/index.adoc[the corresponding _Activity Report_ page].

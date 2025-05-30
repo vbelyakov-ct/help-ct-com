@@ -1,33 +1,19 @@
 = Calendar Settings: Target Frequency
 
-[TIP] ==== Used on
-the xref:admin-guide/new-calendar-management/legacy-calendar-management/configuring-calendar/manage-activities-on-the-hierarchy-view-tab[Hierarchy
-View] tab.  ==== In this section, select the *Use target frequency*
-checkbox to automatically create__ CT CPG Activity__ records with
-the _Visit_ record type
-for xref:admin-guide/configuring-targeting-and-marketing-cycles/create-targeting-lists[target _Contacts_] when creating
-a _CT CPG Activity_ record for their parent _Account_.
+[TIP]
+====
+Used on the xref:admin-guide/calendar-management/legacy-calendar-management/configuring-calendar/manage-activities-on-the-hierarchy-view-tab.adoc[Hierarchy View] tab.
+====
 
-* Enable if a representative has the regular appointments for several
-_Contacts_ of the _Account_. Also, use it with
-xref:admin-guide/new-calendar-management/legacy-calendar-management/configuring-calendar/configure-settings-for-the-calendar/calendar-settings-mass-actions[the customized _Mass Action_
-option].
-* _CT CPG Activities_ for contacts will be created at 30-minute
-intervals with xref:admin-guide/new-calendar-management/legacy-calendar-management/configuring-calendar/configure-settings-for-the-calendar/calendar-settings-customize-events[the default
-_Duration_].
-* xref:admin-guide/configuring-targeting-and-marketing-cycles/creating-a-new-record-of-target-frequency[The _Target
-Frequency_ records] should be assigned to the _Account_ and their
-child _Contacts_.
-* xref:admin-guide/new-calendar-management/legacy-calendar-management/configuring-calendar/configure-settings-for-the-calendar/calendar-settings-drag-drop-settings[The _Drag & Drop_
-action] should be selected for the corresponding _CT CPG Activity_
-record type, for example, _Visit_.
+In this section, select the *Use target frequency* checkbox to automatically create__ CT CPG Activity__ records with the _Visit_ record type for xref:admin-guide/targeting-and-marketing-cycles-management/create-targeting-lists.adoc[target _Contacts_] when creating a _CT CPG Activity_ record for their parent _Account_.
+
+* Enable if a representative has the regular appointments for several _Contacts_ of the _Account_. Also, use it with xref:admin-guide/calendar-management/legacy-calendar-management/configuring-calendar/configure-settings-for-the-calendar/calendar-settings-mass-actions.adoc[the customized _Mass Action_ option].
+* _CT CPG Activities_ for contacts will be created at 30-minute intervals with xref:admin-guide/calendar-management/legacy-calendar-management/configuring-calendar/configure-settings-for-the-calendar/calendar-settings-customize-events.adoc[the default _Duration_].
+* xref:admin-guide/targeting-and-marketing-cycles-management/creating-a-new-record-of-target-frequency.adoc[The _Target Frequency_ records] should be assigned to the _Account_ and their child _Contacts_.
+* xref:admin-guide/calendar-management/legacy-calendar-management/configuring-calendar/configure-settings-for-the-calendar/calendar-settings-drag-drop-settings.adoc[The _Drag & Drop_ action] should be selected for the corresponding _CT CPG Activity_ record type, for example, _Visit_.
 
 image:Settings-Target-Frequency.png[]
 
-
-
-If checked, after a representative drag-and-dropped an _Account_ to the
-Calendar grid, the corresponding _CT CPG Activity_ record is created for
-each target _Contacts_ of this _Account_.
+If checked, after a representative drag-and-dropped an _Account_ to the Calendar grid, the corresponding _CT CPG Activity_ record is created for each target _Contacts_ of this _Account_.
 
 image:Target-Frequency-Example.png[]

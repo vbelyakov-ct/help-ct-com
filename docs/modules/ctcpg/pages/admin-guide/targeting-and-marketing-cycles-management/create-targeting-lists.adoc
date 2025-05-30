@@ -1,15 +1,15 @@
 = Create Targeting Lists
 
-When xref:admin-guide/configuring-targeting-and-marketing-cycles/add-a-new-division[the new division is specified] and
-xref:admin-guide/configuring-targeting-and-marketing-cycles/create-a-marketing-cycle[assigned for the new marketing
+When xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[the new division is specified] and
+xref:admin-guide/targeting-and-marketing-cycles-management/create-a-marketing-cycle[assigned for the new marketing
 cycle]:
 
-* xref:admin-guide/configuring-targeting-and-marketing-cycles/create-targeting-lists#h2__542322944[target Account and
+* xref:admin-guide/targeting-and-marketing-cycles-management/create-targeting-lists#h2__542322944[target Account and
 Contact records] that a user should visit during
-xref:admin-guide/configuring-targeting-and-marketing-cycles/create-a-marketing-cycle[the marketing cycle period];
-* xref:admin-guide/configuring-targeting-and-marketing-cycles/create-targeting-lists#h2__682035545[use a filter] to find
+xref:admin-guide/targeting-and-marketing-cycles-management/create-a-marketing-cycle[the marketing cycle period];
+* xref:admin-guide/targeting-and-marketing-cycles-management/create-targeting-lists#h2__682035545[use a filter] to find
 untargeted records or to find records
-xref:admin-guide/configuring-targeting-and-marketing-cycles/create-targeting-lists#h2_1108913478[that should be removed
+xref:admin-guide/targeting-and-marketing-cycles-management/create-targeting-lists#h2_1108913478[that should be removed
 from targets].
 
 [[h2__542322944]]
@@ -37,9 +37,9 @@ records, the _Target Frequency_ records will be created.
 * The corresponding _Marketing Detail Tracking_ record will be related
 to the _Target Frequency_ record.
 For example, the _Account_ record with the *division category D* will be
-linked to xref:admin-guide/configuring-targeting-and-marketing-cycles/create-a-new-record-of-marketing-detail-tracking[the
+linked to xref:admin-guide/targeting-and-marketing-cycles-management/create-a-new-record-of-marketing-detail-tracking[the
 created Marketing Detail Tracking record] with
-xref:admin-guide/configuring-targeting-and-marketing-cycles/specify-categories-for-marketing-detail-tracking[the assigned
+xref:admin-guide/targeting-and-marketing-cycles-management/specify-categories-for-marketing-detail-tracking[the assigned
 division category D].
 * The _Marketing Detail Tracking_ record with the _Call Rate_ record
 type is segmented with the _Account/Contact_ reference to the client.

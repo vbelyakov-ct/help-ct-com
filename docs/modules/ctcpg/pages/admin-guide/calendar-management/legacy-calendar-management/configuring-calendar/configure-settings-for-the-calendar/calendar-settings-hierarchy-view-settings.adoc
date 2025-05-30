@@ -1,24 +1,15 @@
 = Calendar Settings: Hierarchy View Settings
 
-Used on
-the xref:admin-guide/new-calendar-management/legacy-calendar-management/configuring-calendar/manage-activities-on-the-hierarchy-view-tab[Hierarchy
-View] tab.
+Used on the xref:admin-guide/calendar-management/legacy-calendar-management/configuring-calendar/manage-activities-on-the-hierarchy-view-tab.adoc[Hierarchy View] tab.
 
-In this section, customize the displaying of the records in the
-hierarchy tree.
+In this section, customize the displaying of the records in the hierarchy tree.
 
-* In the *Account block* field, select
-the [.object]#Account# object;
+* In the *Account block* field, select the [.object]#Account# object.
 
-* In the *Calendar reference fields in SFDC* field, select
-the [.object]#Contact# or [.object]#Reference# object.
-
+* In the *Calendar reference fields in SFDC* field, select the [.object]#Contact# or [.object]#Reference# object.
++
 image:Settings-Hierarchy-View-Settings.png[]
 
+When you select xref:admin-guide/calendar-management/legacy-calendar-management/configuring-calendar/manage-list-views-for-the-calendar.adoc[the list view] on the *Hierarchy view* tab, tap the *Plus* button next to the _Account_ record to view its _Contact_ or _Reference_ records.
 
-
-When you select xref:admin-guide/new-calendar-management/legacy-calendar-management/configuring-calendar/manage-list-views-for-the-calendar[the list
-view] on the *Hierarchy view* tab, tap the *Plus* button next to the
-_Account_ record to view its _Contact_ or _Reference_ records.
-
-image:Hierarchy-View-Tree.png[]
+image::Hierarchy-View-Tree.png[328,500]

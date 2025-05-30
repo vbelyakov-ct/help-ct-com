@@ -2,30 +2,22 @@
 
 In this section:
 
-* Get familiar with
-xref:admin-guide/application-settings-management/application-settings-management#h2__709591029[Application
-Settings].
-* Read field description for custom fields created on the following
-objects:
-** xref:account-field-reference[Account]
-** xref:account-field-reference[]xref:account-contact-relationship-field-reference[Account
-Contact Relationship]
-** xref:account-contact-relationship-field-reference[]xref:contact-field-reference[Contact]
-** xref:contact-field-reference[]xref:user-field-reference[User]xref:admin-guide/activity-report-management/ref-guide/skill-mark-field-reference[]
+* Read field description for custom fields created on the following objects:
+** xref:./account-field-reference.adoc[Account]
+** xref:./account-contact-relationship-field-reference.adoc[Account Contact Relationship]
+** xref:./contact-field-reference.adoc[Contact]
+** xref:./user-field-reference.adoc[User]
 
-You can xref:admin-guide/getting-started/configuring-application-settings[create another record
-of the Application Settings] with other parameters if needed.
+You can xref:admin-guide/getting-started/configuring-application-settings.adoc[create another record of the Application Settings] with other parameters if needed.
 
 [[h2__709591029]]
-=== The Application Settings record
+== The Application Settings record
 
-The xref:admin-guide/cpg-custom-settings/application-settings[Application Settings] record with the
-*Global* name is created.
+The xref:admin-guide/cpg-custom-settings/application-settings.adoc[Application Settings] record with the *Global* name is created.
 
-[NOTE] ==== There should be only one record with a *Global* name
-for the whole Salesforce organization. In case of
-xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[using a number of divisions], which are
-assigned to the _Account_ and _Contact_ records, all active divisions
-should be specified.  ====
+[NOTE]
+====
+There should be only one record with a *Global* name for the whole Salesforce organization. In case of xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division.adoc[using a number of divisions], which are assigned to the _Account_ and _Contact_ records, all active divisions should be specified.
+====
 
-image:default-application-settings.png[]
+image::default-application-settings.png[align="center"]

@@ -1,19 +1,12 @@
 = Account Contact Relationship Field Reference
 
-The following fields are created on the standard
-[.object]#Account Contact Relationship# object during the CT CPG
-installation.
+The following fields are created on the standard [.object]#Account Contact Relationship# object during the CT CPG installation.
 
-
-
-[width="100%",cols="25%,25%,25%,25%",]
+[width="100%",cols="15%,20%,10%,55%"]
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Contact Name |CTCPG\__ContactName__c |Formula(Text)  |The
-Full Name of the _Contact_ record.
+|Contact Name |[.apiobject]#CTCPG\__ContactName__c# |Formula(Text)  |The Full Name of the _Contact_ record.
 
-|Is Target? |CTCPG\__IsTarget__c |Formula(Checkbox) |The field
-is checked if the account and contact records have been selected as a
-target.
+|Is Target? |[.apiobject]#CTCPG\__IsTarget__c# |Formula(Checkbox) |The field is checked if the account and contact records have been selected as a target.
 |===

@@ -1,50 +1,39 @@
 = Legacy Calendar Settings Field Reference
 
-The [.object]#Planning Calendar Settings# object is intended to
-store xref:configure-settings-for-the-calendar[the CT CPG Calendar
-parameters specified per each user division].
+The [.object]#Planning Calendar Settings# object is intended to  store xref:admin-guide/calendar-management/legacy-calendar-management/configuring-calendar/configure-settings-for-the-calendar/index.adoc[the CT CPG Calendar parameters specified per each user division].
 
 '''''
 
-API name in Salesforce: CTCPG\__CalendarSettings__c
+API name in Salesforce: [.apiobject]#CTCPG\__CalendarSettings__c#
 
 '''''
 
-[width="100%",cols="25%,25%,25%,25%",]
+[width="100%",cols="15%,20%,10%,55%"]
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Account Block      |CTCPG\__AccountBlock__c |Text(255) a|
-The API name of the *Account* field for the *Account* title in the
-*xref:manage-activities-on-the-hierarchy-view-tab[Hierarchy View]*
+|Account Block      |[.apiobject]#CTCPG\__AccountBlock__c# |Text(255) a|
+The API name of the *Account* field for the *Account* title in the *xref:manage-activities-on-the-hierarchy-view-tab[Hierarchy View]*
 tab.
 
-[.confluence-information-macro-information]#Stored within
-the _Global_ setting type.#
+NOTE: Stored within
+the _Global_ setting type.
 
-|Allow Holiday Events |CTCPG\__AllowHolidayEvents__c |Checkbox
-a|
-If enabled, the representative can create a _CT CPG Activity_ record on
+|Allow Holiday Events |[.apiobject]#CTCPG\__AllowHolidayEvents__c# |Checkbox
+a| If enabled, the representative can create a _CT CPG Activity_ record on
 holidays and weekends.
 
-[.confluence-information-macro-information]#Stored within
-the _Global_ setting type.#
+NOTE: Stored within the _Global_ setting type.
 
-|API |CTCPG\__API__c |Text(255) a|
-The field API name to differentiate _CT CPG Activity_ records by color,
-for example, CTCPG\__Status__c.
+|API |[.apiobject]#CTCPG\__API__c# |Text(255) a| The field API name to differentiate _CT CPG Activity_ records by color, for example, [.apiobject]#CTCPG\__Status__c#.
 
-|Calendar Day Source Object
-|CTCPG\__CalendarDaySourceObject__c |Text(50) a|
-The API name of the custom
-[.object]#xref:add-the-custom-holidays-dictionary[Dictionary]
-#object.
+|Calendar Day Source Object |[.apiobject]#CTCPG\__CalendarDaySourceObject__c# |Text(50) a| The API name of the custom xref:admin-guide/calendar-management/legacy-calendar-management/configuring-calendar/configure-settings-for-the-calendar/calendar-settings-calendar-setup/add-the-custom-holidays-dictionary.adoc[Dictionary] object.
 
-* Used if the CTCPG\__UseCalendarObject__c field is selected.
-* Stored within the _Global_* *setting type.
+* Used if the [.apiobject]#CTCPG\__UseCalendarObject__c# field is selected.
+* Stored within the _Global_ setting type.
 
-|Calendar Locale |CTCPG\__CalendarLocale__c |Text(10) a|
-The value of the CTCPG\__CalendarLocale__c on the _User_ record
+|Calendar Locale |[.apiobject]#CTCPG\__CalendarLocale__c# |Text(10) a|
+The value of the [.apiobject]#CTCPG\__CalendarLocale__c# on the _User_ record
 that is responsible for the current calendar language. Available values:
 
 * en: English;
@@ -58,259 +47,182 @@ that is responsible for the current calendar language. Available values:
 * (Zhōngwén): Mandarin;
 * hi: Hindi.
 
-|Color |CTCPG\__Color__c  |Long Text Area(32768) |The specific
-color for the _CT CPG Activity_ record with the corresponding record
-type (separated by a comma, without a blank space).
-[.confluence-information-macro-information]#Stored within
-the _Global_ and _Color_** **setting types.#
+|Color |[.apiobject]#CTCPG\__Color__c#  |Long Text Area(32768) |The specific color for the _CT CPG Activity_ record with the corresponding record type (separated by a comma, without a blank space).
+NOTE: Stored within the _Global_ and _Color_ setting types.
 
-|ContextMenuPoints |CTCPG\__ContextMenuPoints__c |Long Text
-Area(3000) |If true, the _CT CPG Activity_ record type is available to
-create on the
-corresponding xref:manage-activities-on-the-table-view-tab[Table
-View], xref:manage-activities-on-the-hierarchy-view-tab[Hierarchy
-View], and
-xref:manage-activities-on-the-employees-calendar-tab[Employees]
-tabs (separated by a comma, without a blank space).
+|ContextMenuPoints |[.apiobject]#CTCPG\__ContextMenuPoints__c#|Long Text Area(3000) |If true, the _CT CPG Activity_ record type is available to create on the corresponding xref:../manage-activities-on-the-table-view-tab.adoc[Table View], xref:../manage-activities-on-the-hierarchy-view-tab.adoc[Hierarchy View], and xref:../manage-activities-on-the-employees-calendar-tab.adoc[Employees] tabs (separated by a comma, without a blank space).
 
-|Date field name |CTCPG\__DateFieldName__c |Text(50) a|
-The API name of the *Date* field of the
-custom [.object]#Dictionary# object.
+|Date field name |[.apiobject]#CTCPG\__DateFieldName__c# |Text(50) a| The API name of the *Date* field of the custom [.object]#Dictionary# object.
 
-* Used if the CTCPG\__UseCalendarObject__c field is selected.
-* Stored within the _Global_* *setting type.
+* Used if the [.apiobject]#CTCPG\__UseCalendarObject__c# field is selected.
+* Stored within the _Global_ setting type.
 
-|Default View |CTCPG\__DefaultView__c |Text(255) a|
-The default view of the calendar grid:
+|Default View |[.apiobject]#CTCPG\__DefaultView__c# |Text(255) a| The default view of the calendar grid:
 
 * month
 * agendaDay
 * agendaWeek
 
-[.confluence-information-macro-information]#Stored within
-the _Global_ setting type.#
+NOTE: Stored within the _Global_ setting type.
 
-|Description field name |CTCPG\__DescriptionApiName__c
-|Text(50) a|
-The API name of the *Description* field of the
-custom Dictionary__ __object.
+|Description field name |[.apiobject]#CTCPG\__DescriptionApiName__c#
+|Text(50) a| The API name of the *Description* field of the custom [.apiobject]#Dictionary# object.
 
-* Used if the CTCPG\__UseCalendarObject__c field is selected.
-* Stored within the _Global_* *setting type.
+* Used if the [.apiobject]#CTCPG\__UseCalendarObject__c# field is selected.
+* Stored within the _Global_ setting type.
 
-|Disable Left Click |CTCPG\__DisableLEftClick__c |Checkbox |If
+|Disable Left Click |[.apiobject]#CTCPG\__DisableLEftClick__c# |Checkbox |If
 enabled, the left-click action is restricted.
 
-|Division |CTCPG\__Division__c |Picklist a|
-xref:admin-guide/configuring-targeting-and-marketing-cycles/add-a-new-division[The calendar division]. Available values by
-default:
+|Division |[.apiobject]#CTCPG\__Division__c# |Picklist a| xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division.adoc[The calendar division]. Available values by default:
 
 * Alpha;
 * Beta.
 
-The representative can create a _CT CPG Activity_ record if _Account_,
-_Contact_, and _User_ record have the same division.
+The representative can create a _CT CPG Activity_ record if _Account_, _Contact_, and _User_ record have the same division.
 
-|Duration |CTCPG\__Duration__c  |Number(3,0)  |The default
-duration in minutes for the CT CPG Activity. Available values are from
-30 to 480.
+|Duration |[.apiobject]#CTCPG\__Duration__c# |Number(3,0)  |The default duration in minutes for the CT CPG Activity. Available values are from 30 to 480.
 
-|Enable list calendar |CTCPG\__EnableListCalendar__c  |Checkbox
-|If enabled, a user can select the *List Day*, *List Week*, and *List
-Month* calendar view.
+|Enable list calendar |[.apiobject]#CTCPG\__EnableListCalendar__c#  |Checkbox |If enabled, a user can select the *List Day*, *List Week*, and *List Month* calendar view.
 
-|End |CTCPG\__End__c |Number(2,0) a|
-The end hour of the working day.
+|End |[.apiobject]#CTCPG\__End__c# |Number(2,0) a| The end hour of the working day.
 
-[.confluence-information-macro-information]#Stored within
-the _Global_** **setting type.#
+NOTE: Stored within the _Global_ setting type.
 
-|Fields |CTCPG\__Fields__c |Long Text Area(131072) |The API names
-of the fields in one of the Calendar settings, for example, for the
-popups (separated by a comma, without a blank space).
+|Fields |[.apiobject]#CTCPG\__Fields__c# |Long Text Area(131072) |The API names
+of the fields in one of the Calendar settings, for example, for the popups (separated by a comma, without a blank space).
 
-|Holiday Flag |CTCPG\__HolidayFlagApiName__c |Text(50) a|
-The API name of the *Holiday* field of the
-custom [.object]#Dictionary# object.
+|Holiday Flag |[.apiobject]#CTCPG\__HolidayFlagApiName__c# |Text(50) a|
+The API name of the *Holiday* field of the custom [.object]#Dictionary# object.
 
-* Used if the CTCPG\__UseCalendarObject__c field is selected.
-* Stored within the _Global_* *setting type.
+* Used if the [.apiobject]#CTCPG\__UseCalendarObject__c# field is selected.
+* Stored within the _Global_ setting type.
 
-|ID |CTCPG\__ID__c |Long Text Area(32768) |Stored within
-the *Icon* setting type.
+|ID |[.apiobject]#CTCPG\__ID__c# |Long Text Area(32768) |NOTE: Stored within the *Icon* setting type.
 
-|Inverted Click Logic |CTCPG\__IsClickLogicInverted__c
-|Checkbox a|
+|Inverted Click Logic |[.apiobject]#CTCPG\__IsClickLogicInverted__c# |Checkbox a|
 If enabled:
 
-* single-click to open a _CT CPG Activity_ record;
+* single-click to open a _CT CPG Activity_ record.
 * double-click to delete a _CT CPG Activity_ record.
 
-|Is Active |CTCPG\__IsActive__c |Checkbox |If selected, the
-corresponding _Calendar_ setting is active.
+|Is Active |[.apiobject]#CTCPG\__IsActive__c# |Checkbox |If selected, the corresponding _Calendar_ setting is active.
 
-|Labels |CTCPG\__Labels__c |Long Text Area(131072) |Labels of
-the fields in one of the _Calendar_ settings, for example, for the
-popups (separated by a comma, without a blank space).
+|Labels |[.apiobject]#CTCPG\__Labels__c# |Long Text Area(131072) |Labels of the fields in one of the _Calendar_ settings, for example, for the popups (separated by a comma, without a blank space).
 
-|Name |CTCPG\__Name__c |Text(255) |It is used to store
-different settings, such as the default mass action, the _CT CPG
-Activity_ record type, etc.
+|Name |[.apiobject]#CTCPG\__Name__c# |Text(255) |It is used to store different settings, such as the default mass action, the _CT CPG Activity_ record type, etc.
 
-|ProfileId |CTCPG\__ProfileId__c |Text(255) |The ID of the
-corresponding user profile.
+|ProfileId |[.apiobject]#CTCPG\__ProfileId__c# |Text(255) |The ID of the corresponding user profile.
 
-|RecordType |CTCPG\__RecordTypeId__c |Text(255) |The ID of
-the corresponding _CT CPG Activity_ record type for the popup.
+|RecordType |[.apiobject]#CTCPG\__RecordTypeId__c# |Text(255) |The ID of the corresponding _CT CPG Activity_ record type for the popup.
 
-|Reference Block |CTCPG\__ReferenceBlock__c |Text(255) a|
-The API name of the _Contact_ or _Reference_ field for
-the __Contact_ or _Reference__ title in the *Hierarchy* view.
+|Reference Block |[.apiobject]#CTCPG\__ReferenceBlock__c#|Text(255) a|
+The API name of the _Contact_ or _Reference_ field for the __Contact_ or _Reference_ title in the *Hierarchy* view.
 
-[.confluence-information-macro-information]#Stored within
-the _Global_ setting type.#
+NOTE: Stored within the _Global_ setting type.
 
-|Relationships |CTCPG\__Relationships__c |Long Text
-Area(32768) |The API name of the related fields, for example, lookup
-fields.
+|Relationships |[.apiobject]#CTCPG\__Relationships__c# |Long Text Area(32768) |The API name of the related fields, for example, lookup fields.
 
-|Required |CTCPG\__Required__c |Long Text Area(32768) |If
-enabled, the corresponding field in the _CT CPG Activity_ creation popup
-is required to fill out.
+|Required |[.apiobject]#CTCPG\__Required__c# |Long Text Area(32768) |If enabled, the corresponding field in the _CT CPG Activity_ creation popup is required to fill out.
 
-|Setting Type |CTCPG\__SettingType__c |Picklist a|
-The setting type of the calendar setting:
+|Setting Type |[.apiobject]#CTCPG\__SettingType__c# |Picklist a| The setting type of the calendar setting:
 
-* _Color_ ** to store _CT CPG Activity_ color settings;
+* _Color_ to store _CT CPG Activity_ color settings;
 * _Global_ to store main settings;
-* _Icon_ to store icon images for the C__T CPG Activities__;
+* _Icon_ to store icon images for the _CT CPG Activities_;
 * _Link_ to store available links;
 * _Popup_ to store additional popup settings;
 * _Setting_ not in use;
-* _Tip_ ** to store tips parameters;
+* _Tip_ to store tips parameters;
 * _View_ to store list view parameters;
-* _Context Menu_ to define available _CT CPG Activity_ record types on
-the *Table Tab* or *Hierarchy* tab;
+* _Context Menu_ to define available _CT CPG Activity_ record types on the *Table Tab* or *Hierarchy* tab;
 * _draganddropTrigger_ to enable the drag-and-drop action
 * _Mass Actions_ to define the default mass action;
 * _OldPopup_: not in use.
 
-|Show weekends |CTCPG\__ShowWeekends__c |Checkbox a|
-If enabled, the weekends are displayed on the calendar grid.
+|Show weekends |[.apiobject]#CTCPG\__ShowWeekends__c# |Checkbox a| If enabled, the weekends are displayed on the calendar grid.
 
-Stored within the _Global_ setting type.
+NOTE: Stored within the _Global_ setting type.
 
-|Start |CTCPG\__Start__c |Number(2,0) a|
+|Start |[.apiobject]#CTCPG\__Start__c# |Number(2,0) a|
 The start hour of the working day.
 
-Stored within the _Global_ setting type.
+NOTE: Stored within the _Global_ setting type.
 
-|Time Format |CTCPG\__TimeFormat__c |Text(255) a|
+|Time Format |[.apiobject]#CTCPG\__TimeFormat__c# |Text(255) a|
 The default time format. The available values:
 
 * 24-hour;
 * AM/PM.
 
-[.confluence-information-macro-information]#Stored within
-the _Global_ setting type.#
+NOTE: Stored within the _Global_ setting type.
 
-|To Show Popup |CTCPG\__ToShowPopup__c |Long Text Area(32768)
-|If enabled, the _CT CPG Activity_ creation popup (if specified) will be
-displayed to fill out during the _CT CPG Activity_ record creation.
+|To Show Popup |[.apiobject]#CTCPG\__ToShowPopup__c# |Long Text Area(32768)
+|If enabled, the _CT CPG Activity_ creation popup (if specified) will be displayed to fill out during the _CT CPG Activity_ record creation.
 
-|Types |CTCPG\__Types__c |Long Text Area(131072) |The _CT CPG
-Activity_ record type to select for the popup displaying.
+|Types |[.apiobject]#CTCPG\__Types__c# |Long Text Area(131072) |The _CT CPG Activity_ record type to select for the popup displaying.
 
-|URL |CTCPG\__URL__c |URL(255) |It is used to store the URL for
-the _CT CPG Activity_ icon or for the useful link.
+|URL |[.apiobject]#CTCPG\__URL__c# |URL(255) |It is used to store the URL for the _CT CPG Activity_ icon or for the useful link.
 
-|Use calendar object |CTCPG\__UseCalendarObject__c |Checkbox
-|If enabled, xref:add-the-custom-holidays-dictionary[the additional
-custom dictionary] is in use.
+|Use calendar object |[.apiobject]#CTCPG\__UseCalendarObject__c# |Checkbox |If enabled, xref:admin-guide/calendar-management/legacy-calendar-management/configuring-calendar/configure-settings-for-the-calendar/calendar-settings-calendar-setup/add-the-custom-holidays-dictionary.adoc[the additional custom dictionary] is in use.
 
-|Use Frequency |CTCPG\__UseFrequency__c |Checkbox a|
-If enabled, when a representative creates a _CT CPG Activity_ record for
-the _Account_ by dragging and dropping, the _CT CPG Activity_ records
-will be automatically created with a 30-minute interval for the
-associated target _Contacts_.
+|Use Frequency |[.apiobject]#CTCPG\__UseFrequency__c# |Checkbox a|
+If enabled, when a representative creates a _CT CPG Activity_ record for the _Account_ by dragging and dropping, the _CT CPG Activity_ records will be automatically created with a 30-minute interval for the associated target _Contacts_.
 
-[.confluence-information-macro-information]#Stored within
-the _Global_ setting type.#
+NOTE: Stored within the _Global_ setting type.
 
-|Value |CTCPG\__Value__c |Long Text Area(131072) |The
-Standard Layout or any Visualforce page to view the _CT CPG Activity_
-record.
+|Value |[.apiobject]#CTCPG\__Value__c# |Long Text Area(131072) |The Standard Layout or any Visualforce page to view the _CT CPG Activity_ record.
 
-|View Criteria Fields |CTCPG\__CriteriaField__c |Long Text
-Area(131072) a|
-The API names of xref:manage-list-views-for-the-calendar[the list
-view] fields (separated by a comma, without a blank space).
+|View Criteria Fields |[.apiobject]#CTCPG\__CriteriaField__c# |Long Text
+Area(131072) a| The API names of xref:../manage-list-views-for-the-calendar.adoc[the list view] fields (separated by a comma, without a blank space).
 
-[.confluence-information-macro-information]#Stored within
-the _View_ setting type.#
+NOTE: Stored within the _View_ setting type.
 
-|View Criteria Operators |CTCPG\__CriteriaOperator__c |Long
-Text Area(131072) a|
-The API names of the list view operators (separated by a comma, without
-a blank space).
+|View Criteria Operators |[.apiobject]#CTCPG\__CriteriaOperator__c# |Long Text Area(131072) a| The API names of the list view operators (separated by a comma, without a blank space).
 
-[.confluence-information-macro-information]#Stored within
-the _View_ setting type.#
+NOTE: Stored within the _View_ setting type.
 
-|View Criteria Types |CTCPG\__CriteriaType__c |Long Text
-Area(131072) a|
-The data types of the list view fields (separated by a comma, without a
-blank space).
+|View Criteria Types |[.apiobject]#CTCPG\__CriteriaType__c# |Long Text Area(131072) a| The data types of the list view fields (separated by a comma, without a blank space).
 
-[.confluence-information-macro-information]#Stored within
-the _View_ setting type.#
+NOTE: Stored within the _View_ setting type.
 
-|View Criteria Values |CTCPG\__CriteriaValue__c |Long Text
-Area(131072) a|
-The values of the list view fields (separated by a comma, without a
-blank space).
+|View Criteria Values |[.apiobject]#CTCPG\__CriteriaValue__c# |Long Text Area(131072) a| The values of the list view fields (separated by a comma, without a blank space).
 
-[.confluence-information-macro-information]#Stored within
-the _View_ setting type.#
+NOTE: Stored within the _View_ setting type.
 
-|View Name |CTCPG\__ViewName__c |Text(255) |Not in use.
+|View Name |[.apiobject]#CTCPG\__ViewName__c# |Text(255) |Not in use.
 
-|View Roles |CTCPG\__Roles__c |Long Text Area(131072) a|
-The IDs of the selected user roles to access a list view (separated by a
-comma, without a blank space).
+|View Roles |[.apiobject]#CTCPG\__Roles__c# |Long Text Area(131072) a|
+The IDs of the selected user roles to access a list view (separated by a comma, without a blank space).
 
-[.confluence-information-macro-information]#Stored within
-the _View_ setting type.#
+NOTE: Stored within the _View_ setting type.
 
-|View SObject |CTCPG\__SObject__c |Text(255) a|
+|View SObject |[.apiobject]#CTCPG\__SObject__c# |Text(255) a|
 The API name of the object to sort its records in a list view.
 
-[.confluence-information-macro-information]#Stored within
-the _View_ setting type.#
+NOTE: Stored within the _View_ setting type.
 
-|View Sort |CTCPG\__Sort__c |Text(255) a|
+|View Sort |[.apiobject]#CTCPG\__Sort__c# |Text(255) a|
 The API name of the field to sort records in a list view.
 
-[.confluence-information-macro-information]#Stored within
-the _View_ setting type.#
+NOTE: Stored within the _View_ setting type.
 
-|View Sort Order |CTCPG\__SortOrder__c |Picklist a|
+|View Sort Order |[.apiobject]#CTCPG\__SortOrder__c# |Picklist a|
 The ascending or descending order of the records in a list view.
 
 * asc;
 * desc.
 
-[.confluence-information-macro-information]#Stored within
-the _View_ setting type.#
+NOTE: Stored within the _View_ setting type.
 
-|Week Start |CTCPG\__WeekStart__c |Number(18,0) a|
+|Week Start |[.apiobject]#CTCPG\__WeekStart__c# |Number(18,0) a|
 The first day of the week on the calendar grid.
 
 Stored within the _Global_ setting type.
 
 |===
 
-ifdef::hidden[]
+////
 
 [width="100%",cols="12%,8%,8%,8%,8%,8%,8%,8%,8%,8%,8%,8%",]
 |===
@@ -473,3 +385,4 @@ Division
 
 |?
 |===
+////
