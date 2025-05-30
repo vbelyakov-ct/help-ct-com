@@ -13,7 +13,7 @@ API name in Salesforce: [.apiobject]#CTCPG\__CalendarSettings__c#
 |*Field* |*API Name* |*Type* |*Description*
 
 |Account Block      |[.apiobject]#CTCPG\__AccountBlock__c# |Text(255) a|
-The API name of the *Account* field for the *Account* title in the *xref:manage-activities-on-the-hierarchy-view-tab[Hierarchy View]*
+The API name of the *Account* field for the *Account* title in the xref:admin-guide/calendar-management/legacy-calendar-management/configuring-calendar/manage-activities-on-the-hierarchy-view-tab.adoc[Hierarchy View]
 tab.
 
 NOTE: Stored within
@@ -50,7 +50,7 @@ that is responsible for the current calendar language. Available values:
 |Color |[.apiobject]#CTCPG\__Color__c#  |Long Text Area(32768) |The specific color for the _CT CPG Activity_ record with the corresponding record type (separated by a comma, without a blank space).
 NOTE: Stored within the _Global_ and _Color_ setting types.
 
-|ContextMenuPoints |[.apiobject]#CTCPG\__ContextMenuPoints__c#|Long Text Area(3000) |If true, the _CT CPG Activity_ record type is available to create on the corresponding xref:../manage-activities-on-the-table-view-tab.adoc[Table View], xref:../manage-activities-on-the-hierarchy-view-tab.adoc[Hierarchy View], and xref:../manage-activities-on-the-employees-calendar-tab.adoc[Employees] tabs (separated by a comma, without a blank space).
+|ContextMenuPoints |[.apiobject]#CTCPG\__ContextMenuPoints__c#|Long Text Area(3000) |If true, the _CT CPG Activity_ record type is available to create on the corresponding xref:admin-guide/calendar-management/legacy-calendar-management/configuring-calendar/manage-activities-on-the-table-view-tab.adoc[Table View], xref:admin-guide/calendar-management/legacy-calendar-management/configuring-calendar/manage-activities-on-the-hierarchy-view-tab.adoc[Hierarchy View], and xref:admin-guide/calendar-management/legacy-calendar-management/configuring-calendar/manage-activities-on-the-employees-calendar-tab.adoc[Employees] tabs (separated by a comma, without a blank space).
 
 |Date field name |[.apiobject]#CTCPG\__DateFieldName__c# |Text(50) a| The API name of the *Date* field of the custom [.object]#Dictionary# object.
 
@@ -174,7 +174,7 @@ NOTE: Stored within the _Global_ setting type.
 |Value |[.apiobject]#CTCPG\__Value__c# |Long Text Area(131072) |The Standard Layout or any Visualforce page to view the _CT CPG Activity_ record.
 
 |View Criteria Fields |[.apiobject]#CTCPG\__CriteriaField__c# |Long Text
-Area(131072) a| The API names of xref:../manage-list-views-for-the-calendar.adoc[the list view] fields (separated by a comma, without a blank space).
+Area(131072) a| The API names of xref:admin-guide/calendar-management/legacy-calendar-management/configuring-calendar/manage-list-views-for-the-calendar.adoc[the list view] fields (separated by a comma, without a blank space).
 
 NOTE: Stored within the _View_ setting type.
 
