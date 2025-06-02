@@ -1,16 +1,12 @@
 = Activity Report Filters
 
-*Activity Report Filters* is a setup to
-xref:admin-guide/activity-report-management/create-a-new-filter-for-the-activities-list[manage filters]
-for the available activities in the *Activities List* __ section on the
-_xref:activity-report-interface.html[Activity Report]_ page.
+*Activity Report Filters* is a setup to xref:admin-guide/activity-report-management/create-a-new-filter-for-the-activities-list.adoc[manage filters] for the available activities in the *Activities List* section on the xref:admin-guide/activity-report-management/ref-guide/activity-report-interface.adoc[Activity Report] page.
 
-[.confluence-information-macro-information]# By default, the *Today* and
-*This Month* filters are available. #
+NOTE: By default, the *Today* and *This Month* filters are available.
 
 '''''
 
-API name: CTCPG\__ActivityReportFiters__c
+API name: [.apiobject]#CTCPG\__ActivityReportFiters__c#
 
 '''''
 
@@ -18,20 +14,16 @@ API name: CTCPG\__ActivityReportFiters__c
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Default Filter |CTCPG\__IsDefault__c |Checkbox |If enabled,
-the filter will be shown as default.
+|Default Filter |[.apiobject]#CTCPG\__IsDefault__c# |Checkbox |If enabled, the filter will be shown as default.
 
-|Filter Is Active |CTCPG\__IsActive__c |Checkbox |If enabled,
-the filter is available on the _Activity Report_ page.
+|Filter Is Active |[.apiobject]#CTCPG\__IsActive__c# |Checkbox |If enabled, the filter is available on the _Activity Report_ page.
 
-|Filter Label |CTCPG\__Label__c |Text(255) |The filter name in
-the list on the _Activity Report_ page.
+|Filter Label |[.apiobject]#CTCPG\__Label__c# |Text(255) |The filter name in the list on the _Activity Report_ page.
 
-|Filter Order |CTCPG\__Order__c |Number(18,0) |The order number
-for the filter on the _Activity Report_ page.
+|Filter Order |[.apiobject]#CTCPG\__Order__c# |Number(18,0) |The order number for the filter on the _Activity Report_ page.
 
-|Filter Query |CTCPG\__FilterQuery__c |Text(255) |Specify the
+|Filter Query |[.apiobject]#CTCPG\__FilterQuery__c# |Text(255) a|Specify the
 SOQL filter.
-[.confluence-information-macro-note]#To filter records, the criteria
-line should start with the[.apiobject]#WHERE# keyword.#
+
+NOTE: To filter records, the criteria line should start with the [.apiobject]#WHERE# keyword.
 |===

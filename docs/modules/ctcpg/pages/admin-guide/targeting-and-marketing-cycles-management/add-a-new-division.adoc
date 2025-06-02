@@ -1,7 +1,7 @@
 = Add a New Division
 
 By default, the *Alpha* and *Beta* divisions are
-available, the xref:account-field-reference[Account] and xref:contact-field-reference[Contact] objects
+available, the xref:admin-guide/application-settings-management/account-field-reference.adoc[Account] and xref:admin-guide/application-settings-management/contact-field-reference.adoc[Contact] objects
 have the corresponding division fields that are present in the *Global*
 record of the xref:application-settings[Application Settings].
 
@@ -122,7 +122,7 @@ or another existed one.
 . Update the following fields:
 * In the *Account Category Fields API names* field, add the new division
 field API Name field
-of xref:account-field-reference[the _Account_ record], that is
+of xref:admin-guide/application-settings-management/account-field-reference.adoc[the _Account_ record], that is
 responsible for the new division, for
 example, Division_Gamma_Category__c (separated by a comma,
 without blank spaces);
@@ -132,7 +132,7 @@ responsible for the selection of the new division, for
 example, Division_Gamma_Target_Check__c (separated by a
 comma, without blank spaces);
 * Specify the same division fields
-of xref:contact-field-reference[the _Contact_ record] in
+of xref:admin-guide/application-settings-management/contact-field-reference.adoc[the _Contact_ record] in
 the *Contact *Category Fields API names** and *Contact *Target Flags API
 names** fields (separated by a comma, without blank spaces).
 . Click *Save*.

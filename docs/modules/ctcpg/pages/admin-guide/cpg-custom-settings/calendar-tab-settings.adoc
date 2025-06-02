@@ -1,8 +1,7 @@
 = Calendar Tab Settings
 
 *Calendar Tab Settings* is intended to define the display and
-availability of the xref:admin-guide/calendar-management/legacy-calendar-management/index[Legacy Calendar] tabs
-for profiles.
+availability of the xref:admin-guide/calendar-management/legacy-calendar-management/index.adoc[Legacy Calendar] tabs for profiles.
 
 '''''
 
@@ -20,37 +19,31 @@ API name in Salesforce:
 Specify the default tab. Available values:
 
 * *tabletab* for the Table View
-* *​treetab* for the Hierarchy View
+* *treetab* for the Hierarchy View
 * *usertab* for the Employee Calendar
 
 |Employee Calendar Tab
 |[.apiobject]#CTCPG\__IsUserCalendarTabEnabled__c#
 |Checkbox |If enabled, the
-xref:admin-guide/calendar-management/legacy-calendar-management/calendar-interface#h2_989699835[Employee Calendar] tab is
-displayed.
+xref:admin-guide/calendar-management/legacy-calendar-management/calendar-interface.adoc#h2_989699835[Employee Calendar] tab is displayed.
 
 |Hierarchy View Tab
 |[.apiobject]#CTCPG\__IsHierarchyViiewTabEnabled__c#
-|Checkbox |If enabled,
-the xref:admin-guide/calendar-management/legacy-calendar-management/calendar-interface#h2__1884555900[Hierarchy View] tab is
-displayed.
+|Checkbox |If enabled, the xref:admin-guide/calendar-management/legacy-calendar-management/calendar-interface.adoc#h2__528606302[Hierarchy View] tab is displayed.
 
 |List Views Tab
 |[.apiobject]#CTCPG\__IsListViewsTabEnabled__c#
 |Checkbox |If enabled,
-the xref:admin-guide/calendar-management/legacy-calendar-management/calendar-interface#h2__661653765[List Views] tab is
-displayed.
+the xref:admin-guide/calendar-management/legacy-calendar-management/calendar-interface.adoc#h2__661653765[List Views] tab is displayed.
 
 |Settings Tab
 |[.apiobject]#CTCPG\__IsSettingsEnabled__c# |Checkbox
 |If enabled,
-the xref:admin-guide/calendar-management/legacy-calendar-management/calendar-interface#h2_681682073[Settings] tab is
-displayed.
+the xref:admin-guide/calendar-management/legacy-calendar-management/calendar-interface.adoc#h2_681682073[Settings] tab is displayed.
 
 |Show page header
 |[.apiobject]#CTCPG\__IsPageHeaderEnabled__c#
-|Checkbox |If enabled, the standard Salesforce header menu is
-displayed.
+|Checkbox |If enabled, the standard Salesforce header menu is displayed.
 
 |Show Sidebar
 |[.apiobject]#CTCPG\__IsSidebarEnabled__c# |Checkbox
@@ -59,6 +52,5 @@ displayed.
 |Table View Tab
 |[.apiobject]#CTCPG\__IsTableViewTabEnabled__c#
 |Checkbox |If enabled,
-the xref:admin-guide/calendar-management/legacy-calendar-management/calendar-interface#h2__1638660003[Table View] tab is
-available.
+the xref:admin-guide/calendar-management/legacy-calendar-management/calendar-interface.adoc#h2_817238099[Table View] tab is available.
 |===

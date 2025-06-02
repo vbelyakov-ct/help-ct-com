@@ -15,7 +15,7 @@ API name in Salesforce: CTCPG\__TargetFrequency__c
 |*Field* |*API Name* |*Type* |*Description*
 
 |Account         |CTCPG\__AccountId__c |Lookup(Account)
-|The related _xref:account-field-reference.html[Account]_ record.
+|The related _xref:admin-guide/application-settings-management/account-field-reference.adoc.html[Account]_ record.
 
 |Active |CTCPG\__IsActive__c |Checkbox |If selected,
 the _Target Frequency_ record is active.
@@ -29,7 +29,7 @@ the __Account __or _Contact_ record.
 the related _Account_ or _Contact_ record.
 
 |Contact |CTCPG\__ContactId__c |Lookup(Contact)         |The
-related _xref:contact-field-reference.html[Contact]_ record.
+related _xref:admin-guide/application-settings-management/contact-field-reference.adoc.html[Contact]_ record.
 
 |Deactivation Date / Time |CTCPG\__DeactivationDateTime__c
 |Date/Time |The date when the __Target Frequency __record will be
@@ -54,7 +54,7 @@ related _xref:marketing-detail-tracking-field-reference.html[Marketing
 Detail Tracking]_ record.
 
 |Owner |CTCPG\__OwnerId__c |Lookup(User) |The related
-_xref:user-field-reference.html[User]_ record.
+_xref:admin-guide/application-settings-management/user-field-reference.adoc.html[User]_ record.
 
 |Planned Calls |CTCPG\__PlannedCalls__c  |Number(18,0)  |The
 number of planned activities of the _Account_ or _Contact_ record.

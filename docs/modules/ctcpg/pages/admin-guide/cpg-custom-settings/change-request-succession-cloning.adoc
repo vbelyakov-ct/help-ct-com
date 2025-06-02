@@ -1,17 +1,12 @@
 = Change Request Succession Cloning
 
-[NOTE] ==== The information below is incomplete and will be
-updated. ====
+NOTE: The information below is incomplete and will be updated.
 
-*Change Request Mapping* is intended to provide setup info to specify
-which fields of the target object record and which fields of the object
-records linked to the target object should be cloned or re-parented
-within the _Change Request: Succession_ process.
+*Change Request Mapping* is intended to provide setup info to specify which fields of the target object record and which fields of the object records linked to the target object should be cloned or re-parented within the _Change Request: Succession_ process.
 
 '''''
 
-API name in Salesforce:
-CTCPG\__Change_Request_Succession_Cloning__c
+API name in Salesforce: [.apiobject]#CTCPG\__Change_Request_Succession_Cloning__c#
 
 '''''
 
@@ -19,33 +14,24 @@ CTCPG\__Change_Request_Succession_Cloning__c
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Cloned Related Objects |CTCPG\__Cloned_Relationships__c
-|Text (255) |The API names of objects that are linked to the target
-object (separated by a comma, without a blank space) to clone their
-records.
+|Cloned Related Objects |[.apiobject]#CTCPG\__Cloned_Relationships__c#
+|Text (255) |The API names of objects that are linked to the target object (separated by a comma, without a blank space) to clone their records.
 
-|Field API Names |CTCPG\__Field_API_Names__c |Text
-(255)  |The field API Names of the target object to be included when
-cloning or re-parenting (separated by a comma, without a blank space).
+|Field API Names |[.apiobject]#CTCPG\__Field_API_Names__c# |Text
+(255)  |The field API Names of the target object to be included when cloning or re-parenting (separated by a comma, without a blank space).
 
 |Invert field inclusion logic
-|CTCPG\__Invert_Field_Logic__c |Checkbox |If enabled,
-the fields specified in
-the CTCPG\__Field_API_Names__c field should be excluded
-when cloning or re-parenting.
+|[.apiobject]#CTCPG\__Invert_Field_Logic__c# |Checkbox |If enabled, the fields specified in
+the CTCPG\__Field_API_Names__c field should be excluded when cloning or re-parenting.
 
-|Parent Object |CTCPG\__Parent_Object__c |Text (255) |The
-parent object API name, a record of which should be inherited.
+|Parent Object |[.apiobject]#CTCPG\__Parent_Object__c# |Text (255) |The parent object API name, a record of which should be inherited.
 
-|Reparent |CTCPG\__doReparent__c |Checkbox   |If enabled, the
-target object record should be re-parented.
+|Reparent |[.apiobject]#CTCPG\__doReparent__c# |Checkbox   |If enabled, the target object record should be re-parented.
 
 |Reparent Back On Rejection
-|CTCPG\__doReparent_Back_on_Rejection__c
-|Checkbox  |If enabled, the target object record should be re-parented
-back to rejection.
+|[.apiobject]#CTCPG\__doReparent_Back_on_Rejection__c#
+|Checkbox  |If enabled, the target object record should be re-parented back to rejection.
 
-|Target Object |CTCPG\__Target_Object__c  |Text (255)
-|The API name of the target object, which record is affected by
-the _Change Request_ process.
+|Target Object |[.apiobject]#CTCPG\__Target_Object__c#  |Text (255)
+|The API name of the target object, which record is affected by the _Change Request_ process.
 |===

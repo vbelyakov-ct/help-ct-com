@@ -1,16 +1,10 @@
 = Activity Layout Settings
 
-*Activity Layout Settings* is responsible for displaying the
-corresponding field set on the
-_xref:activity-report-interface.html[Activity Report]_ page for the
-_Activity_ with the specific record type. Also, it used to
-display the *Activities List* __ and __ *Joint User Activities
-List*__ __sections with available activities on the__ Activity
-Report__ page.
+*Activity Layout Settings* is responsible for displaying the corresponding field set on the xref:admin-guide/activity-report-management/ref-guide/activity-report-interface.adoc[Activity Report] page for the _Activity_ with the specific record type. Also, it used to display the *Activities List* and *Joint User Activities List* sections with available activities on the _Activity Report_ page.
 
 '''''
 
-API name in Salesforce: CTCPG\__ActivityLayoutSettings__c
+API name in Salesforce: [.apiobject]#CTCPG\__ActivityLayoutSettings__c#
 
 '''''
 
@@ -18,13 +12,10 @@ API name in Salesforce: CTCPG\__ActivityLayoutSettings__c
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Field Set API Name |CTCPG\__FieldSetAPIName__c |Text(255)
-|The API name of the specific field set.
-[TIP] ==== The records for each available _Activity_ record type
-are created by default. You can edit field sets and
-xref:admin-guide/activity-report-management/manage-field-sets-for-activity-report-pages[create a new one]
-for the newly created _Activity_ record type. ====
+|Field Set API Name |[.apiobject]#CTCPG\__FieldSetAPIName__c# |Text(255)
+a|The API name of the specific field set.
 
-|Name |Name |Text(255) |The _CT CPG Activity_ record type for which the
-specified field set will be used.
+TIP: The records for each available _Activity_ record type are created by default. You can edit field sets and xref:admin-guide/activity-report-management/manage-field-sets-for-activity-report-pages.adoc[create a new one] for the newly created _Activity_ record type.
+
+|Name |[.apiobject]#Name# |Text(255) |The _CT CPG Activity_ record type for which the specified field set will be used.
 |===
