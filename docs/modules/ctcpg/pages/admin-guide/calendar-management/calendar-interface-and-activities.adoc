@@ -1,14 +1,11 @@
 = Calendar Interface and Activities
+:toc:
 
-:toc: :toclevels: 3
-
-[[h2__88456521]]
-== Calendar Interface
 
 Get familiar with the available interface elements:
 
 [[h3__115958815]]
-=== Left Sidebar
+== Left Sidebar
 
 There are 3 tabs: *Accounts*, *Contacts* and *Hierarchy*.
 
@@ -38,7 +35,7 @@ image:cpg_left_arrow_icon.png[] and image:cpg_right_arrow_icon.png[] to hide and
 image:Calendar-Interface.png[]
 
 [[h3__2071613420]]
-=== Main Calendar Area
+== Main Calendar Area
 
 On the main calendar area:
 
@@ -48,15 +45,15 @@ On the main calendar area:
 * Activities have color stripes on the left side according to their statuses. You can configure them in the xref:admin-guide/calendar-management/calendar-settings-ct-cpg-settings-panel.adoc#h3__1948960707[CT CPG Settings Panel].
 * Activities can have titles and subtitles, you can configure them in the xref:admin-guide/calendar-management/calendar-settings-ct-cpg-settings-panel.adoc#h3__1888339674[CT CPG Settings Panel].
 
-[[h4__1480817773]]
-==== Useful Notes
-
+[NOTE]
+=====
 * Time zone, language of the calendar (days, months, weeks) and starting day of the week depend on the link:https://help.salesforce.com/s/articleView?id=sf.usersetup_lang_time_zone.htm&type=5[user's language and locale settings]. To translate other interface elements of the Calendar, use xref:admin-guide/calendar-management/custom-labels-for-translating-the-calendar-interface.adoc[custom labels].
 * Working hours are displayed with white color, and non-working hours are displayed with gray color. You can set up working hours on the user's
 link:https://help.salesforce.com/s/articleView?id=sf.usersetup.htm&type=5[Personal Information] page in the *Start of Day* and *End of Day* fields.
+=====
 
 [[h3__265155760]]
-=== Right Sidebar
+== Right Sidebar
 
 * Use the mini-calendar to quickly move to the desired date. The today date is always highlighted.
 * In the *My Calendar* section:
@@ -82,7 +79,7 @@ To access this section, assign required xref:admin-guide/calendar-management/cus
 hide and show the right sidebar.
 
 [[h2__1494438992]]
-=== Actions with Activities
+== Actions with Activities
 
 [NOTE]
 ====
@@ -90,7 +87,7 @@ Any actions with activities (xref:admin-guide/calendar-management/calendar-inter
 ====
 
 [[h3_1752519442]]
-==== Creating Activities
+=== Creating Activities
 
 [[h4_397646639]]
 ===== Create an Activity by click
@@ -118,7 +115,7 @@ If the compact form is configured as *Required* in the xref:admin-guide/calendar
 . Click *Save*.
 
 [[h4_2089059603]]
-===== Create an Activity by drag and drop
+==== Create an Activity by drag and drop
 
 You can also create an activity by dragging and dropping a Target Object from the left sidebar, the creation form will look different and will have another set of fields.
 
@@ -132,12 +129,12 @@ You can also create an activity by dragging and dropping a Target Object from th
 image:cpg_create_activity2.png[]
 
 [[h3__786187553]]
-==== Editing Activities
+=== Editing Activities
 
 . To edit an activity, you can:
 * Click on activity in the calendar grid.
 * Hover mouse pointer over activity and click *Edit* on the pop-up (if it is xref:admin-guide/calendar-management/calendar-settings-ct-cpg-settings-panel.adoc#h3_1454440899[enabled in the settings]).
-
++
 The activity form shown above will be displayed.
 . Edit necessary fields and click *Save* to apply changes.
 
@@ -153,7 +150,7 @@ Editing other users' activities require the xref:admin-guide/calendar-management
 ====
 
 [[h3_1490113349]]
-==== Moving and Copying Activities
+=== Moving and Copying Activities
 
 * To copy an activity, hover mouse pointer over an activity and click image:cpg-copy-icon.png[25,25].
 * To move an activity, do one of these:
@@ -173,7 +170,7 @@ To copy or move multiple activities (applies only to the current user's activiti
 image:cpg_move_activity_week.png[]
 
 [[h3_661183531]]
-==== Deleting Activities
+=== Deleting Activities
 
 To delete an activity, hover mouse pointer over it and click image:cpg_delete_activity_icon.png[25,25].
 
