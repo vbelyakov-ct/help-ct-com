@@ -35,8 +35,8 @@ API name in Salesforce: [.apiobject]#CTCPG\__ActivitySync__mdt#
 |Fields to update |[.apiobject]#CTCPG\__FieldsAPIName__c# |Long Text Area (131072) |Specify field API names to update on the creating _Activity_ record (separated by a comma, without a blank space). For example: Event.Description,Event.Duration,Event.Phone.
 
 |Field values |[.apiobject]#CTCPG\__FieldValues__c# |Long Text Area (131072) |Specify field API names to copy values from them to the fields specified in the [.apiobject]#CTCPG\__FieldsAPIName__c# field (separated by a comma, without a blank space). For example:
-+
-`CTCPG\__Activity__c.CTCPG\__Description__c,CTCPG\__Activity__c CTCPG\__Objective__c.`
+
+[.apiobject]#CTCPG\__Activity__c.CTCPG\__Description__c,CTCPG\__Activity__c CTCPG\__Objective__c#.
 
 |Standard Activity Type |[.apiobject]#CTCPG\__ActivityType__c# |Text (255)
 a| The API name of the standard [.object]#Event# and [.object]#Task# objects. Available types by default:
