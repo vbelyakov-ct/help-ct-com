@@ -1,13 +1,10 @@
 = Custom Metadata Type: Activity Sync
 
-The _Activity Sync_ metadata type is intended to store settings
-according to them the activities will be generated in the standard
-Salesforce calendar based on activities in the CT CPG Calendar, and/or
-vice versa.
+The _Activity Sync_ metadata type is intended to store settings  according to them the activities will be generated in the standard Salesforce calendar based on activities in the CT CPG Calendar, and/or vice versa.
 
 '''''
 
-API name in Salesforce: CTCPG\__ActivitySync__mdt
+API name in Salesforce: [.apiobject]#CTCPG\__ActivitySync__mdt#
 
 '''''
 
@@ -15,76 +12,54 @@ API name in Salesforce: CTCPG\__ActivitySync__mdt
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Active |CTCPG\__IsACtive__c |Checkbox |If selected, the
-setting is active.
+|Active |[.apiobject]#CTCPG\__IsACtive__c# |Checkbox |If selected, the setting is active.
 
-|Activity Record Type |CTCPG\__ActivityRecordtypeAPIName__c
-|Text (255) a|
-The API name of the _CT CPG Activity_ record type. Available record
-types by default:
+|Activity Record Type |[.apiobject]#CTCPG\__ActivityRecordtypeAPIName__c#
+|Text (255) a| The API name of the _CT CPG Activity_ record type. Available record types by default:
 
 * _Event_
 * _Visit_
 * _Timeoff_
 * _JointVisit_
 
-|Custom object record criteria |CTCPG\__CustomObjectCriteria__c
-|Text (255) a|
-A filter to select the _CT CPG Activity_ records that should be synced
-with the standard activities.
+|Custom object record criteria |[.apiobject]#CTCPG\__CustomObjectCriteria__c#
+|Text (255) a| A filter to select the _CT CPG Activity_ records that should be synced with the standard activities.
 
 * Left this field blank for processing all records.
-* Use a SOQL query to specify filters. The clause part of the query
-should be without the [.apiobject]#WHERE# word. For example:
+* Use a SOQL query to specify filters. The clause part of the query should be without the [.apiobject]#WHERE# word. For example:
++
+[.apiobject]#CTCPG\__Type__c LIKE '%Type 1%'#
 
-|Description |CTCPG\__Description__c |Text Area(255) |Specify
-information about the _Activity Sync_ record.
+|Description |[.apiobject]#CTCPG\__Description__c# |Text Area(255) |Specify information about the _Activity Sync_ record.
 
-|Fields to update |CTCPG\__FieldsAPIName__c |Long Text Area
-(131072) |Specify field API names to update on the creating _Activity_
-record (separated by a comma, without a blank space). For
-example: Event.Description,Event.Duration,Event.Phone.
+|Fields to update |[.apiobject]#CTCPG\__FieldsAPIName__c# |Long Text Area (131072) |Specify field API names to update on the creating _Activity_ record (separated by a comma, without a blank space). For example: Event.Description,Event.Duration,Event.Phone.
 
-|Field values |CTCPG\__FieldValues__c |Long Text Area
-(131072) |Specify field API names to copy values from them to the
-fields specified in the CTCPG\__FieldsAPIName__c field (separated
-by a comma, without a blank space). For
-example: CTCPG\__Activity__c.CTCPG\__Description__c,CTCPG\__Activity__c.CTCPG\__Objective__c.
+|Field values |[.apiobject]#CTCPG\__FieldValues__c# |Long Text Area (131072) |Specify field API names to copy values from them to the fields specified in the [.apiobject]#CTCPG\__FieldsAPIName__c# field (separated by a comma, without a blank space). For example:
++
+`CTCPG\__Activity__c.CTCPG\__Description__c,CTCPG\__Activity__c CTCPG\__Objective__c.`
 
-|Standard Activity Type |CTCPG\__ActivityType__c |Text (255)
-a|
-The API name of the standard [.object]#Event# and
-[.object]#Task# objects. Available types by default:
+|Standard Activity Type |[.apiobject]#CTCPG\__ActivityType__c# |Text (255)
+a| The API name of the standard [.object]#Event# and [.object]#Task# objects. Available types by default:
 
 * _Email_
 * _Meeting_
 * _Other_
 * _Call_
 
-[NOTE] ====
+NOTE: The filter will not be applied if the [.apiobject]#CTCPG\__StandardObjectCriteria__c# or [.apiobject]#CTCPG\__CustomObjectCriteria__c field# is specified.
 
-The filter will not be applied if the
-
-CTCPG\__StandardObjectCriteria__c ==== or
-CTCPG\__CustomObjectCriteria__c field is specified.
-
-|Standard Object |CTCPG\__StandardObjectAPIName__c |Picklist
-a|
+|Standard Object |[.apiobject]#CTCPG\__StandardObjectAPIName__c# |Picklist a|
 Select the standard Activity object. Available objects:
 
 * Event
 * Task
 
-|Standard object record criteria
-|CTCPG\__StandardObjectCriteria__c |Text (255) a|
-A filter to select the _Event_ or _Task_ records that should be synced
-with the standard activities.
+|Standard object record criteria |[.apiobject]#CTCPG\__StandardObjectCriteria__c# |Text (255) a| A filter to select the _Event_ or _Task_ records that should be synced with the standard activities.
 
 * Left this field blank for processing all records.
-* Use a SOQL query to specify filters. The clause part of the query
-should be without the [.apiobject]#WHERE# word.
+* Use a SOQL query to specify filters. The clause part of the query should be without the [.apiobject]#WHERE# word.
 
-|Sync Type |CTCPG\__SyncType__c |Picklist a|
+|Sync Type |[.apiobject]#CTCPG\__SyncType__c#|Picklist a|
 Select the _Activity Sync_ type:
 
 * _Both_

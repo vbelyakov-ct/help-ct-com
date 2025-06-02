@@ -2,45 +2,35 @@
 
 For the correct operation of the _Activity Sync_ functionality:
 
-* xref:admin-guide/configuring-activity-sync/set-up-global-actions-new-task-and-new-event#h2_1382380833[configure
-the display of the *Type* field] for the following
-https://help.salesforce.com/articleView?id=actions_overview_global.htm&language=en_us&r=https%3A%2F%2Fwww.google.com%2F&type=5[global
-actions]: __New Event __and _New Task_;[NOTE] ====
-
-If you create a new *Activity Sync* setting with the filled
-
-CTCPG\__StandardObjectCriteria__c ====
- or** **CTCPG\__CustomObjectCriteria__c, the *Type* field will
-not affect the _Activity Sync_ process.
-* xref:admin-guide/configuring-activity-sync/set-up-global-actions-new-task-and-new-event#h2__142637281[add
-global actions] on the *Accounts* and *Contacts* tabs;
-* specify the EventProcess and TaskProcess records
-in xref:configuring-triggers[Trigger Settings]. Also, check that
-the ActivityProcess setting is active.
+* xref:admin-guide/configuring-activity-sync/set-up-global-actions-new-task-and-new-event.adoc#h2_1382380833[configure the display of the *Type* field] for the following link:https://help.salesforce.com/articleView?id=actions_overview_global.htm&language=en_us&r=https%3A%2F%2Fwww.google.com%2F&type=5[global actions]: __New Event __and _New Task_.
++
+[NOTE]
+====
+If you create a new *Activity Sync* setting with the filled [.apiobject]#CTCPG\__StandardObjectCriteria__c#  or [.apiobject]#CTCPG\__CustomObjectCriteria__c#, the *Type* field will not affect the _Activity Sync_ process.
+====
+* xref:admin-guide/configuring-activity-sync/set-up-global-actions-new-task-and-new-event.adoc#h2__142637281[add global actions] on the *Accounts* and *Contacts* tabs.
+* specify the EventProcess and TaskProcess records in xref:admin-guide/triggers-management/index.adoc[Trigger Settings]. Also, check that the ActivityProcess setting is active.
 
 [[h2_1382380833]]
-=== Configure the Type field display
+== Configure the Type field display
 
 To display the *Type* field on the *Accounts* and *Contacts* tabs:
 
 . Go to *Setup* → *User Interface → Global Actions → Global Actions.*
 . Click *Layout* next to *New Event*.
 . Drag-n-drop the *Type* field to the layout and click *Save*.
-. Go to **Setup → Users → Profiles → **select
-xref:admin-guide/getting-started/permission-settings[the required profile].
-. Go to the **Field-Level Security **section and click **View **next to
-*Event.*
-. Add _Read_ and _Edit_ permissions to the** Type** field.
-. Repeat steps 1–6 for the[.object]#New Task# object.
+. Go to *Setup → Users → Profiles →* select
+xref:admin-guide/getting-started/permission-settings.adoc[the required profile].
+. Go to the *Field-Level Security* section and click *View* next to *Event.*
+. Add _Read_ and _Edit_ permissions to the *Type* field.
+. Repeat steps 1–6 for the [.object]#New Task# object.
 
 The setup is complete.
 
 [[h2__142637281]]
-=== Add Global Actions
+== Add Global Actions
 
-To add global actions, create a new Lightning page for the
-[.object]#Account#/[.object]#Contact# object and assign
-it to the CT CPG package and required profiles.
+To add global actions, create a new Lightning page for the [.object]#Account#/[.object]#Contact# object and assign it to the CT CPG package and required profiles.
 
 . Go to *Setup → User Interface → Lightning App Builder →* click *New*.
 . Click *Clone* next to *Account Page*.
@@ -48,12 +38,9 @@ it to the CT CPG package and required profiles.
 . Remove *Activities* and *Objectives* tabs.
 . Drag-n-drop *Activities* from the left side list.
 . Click *Save* and then click *Activate*.
-. On the *App, Record Type, and Profiles* tab, click the *Assign to
-Apps, Record Types, and Profiles* button.
-. Select *CT CPG* and other Lightning Apps (if needed) and click
-**Nex**t.
-. On the next page, check the selected form factors (desktop and phone)
-and click *Next*.
+. On the *App, Record Type, and Profiles* tab, click the *Assign to Apps, Record Types, and Profiles* button.
+. Select *CT CPG* and other Lightning Apps (if needed) and click *Next*.
+. On the next page, check the selected form factors (desktop and phone) and click *Next*.
 . On the next page, select *Master* and click *Save*.
 . On the next page, select the required profiles and click *Next*.
 . Click *Save*.

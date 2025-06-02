@@ -1,64 +1,45 @@
 = Activity Sync Management
 
-[TIP] ==== These settings are optional. ====
+TIP: These settings are optional.
 
 In this section:
 
-* Get familiar with xref:custom-metadata-type-activity-sync[the
-_Activity Sync_ metadata type].
-* View xref:admin-guide/configuring-activity-sync/activity-sync-management/activity-sync-management#h2_1614346086[the
-preconfigured _Activity Sync_ records] and
-xref:admin-guide/configuring-activity-sync/activity-sync-management/activity-sync-management#h2__559488800[the list of fields that
-will be updated] on the[.object]#Event# and
-[.object]#Task# object by default.
+* Get familiar with xref:./custom-metadata-type-activity-sync.adoc[the _Activity Sync_ metadata type].
+* View <<h2_1614346086, the preconfigured _Activity Sync_ records>> and <<h2__559488800, the list of fields that will be updated>> on the [.object]#Event# and [.object]#Task# object by default.
 
-
-
-xref:admin-guide/configuring-activity-sync/index[Configure Activity Sync] for
-managing activities between the standard Salesforce calendar and CT CPG
+xref:admin-guide/configuring-activity-sync/index.adoc[Configure Activity Sync] for managing activities between the standard Salesforce calendar and CT CPG
 Calendar.
 
 [[h2_1614346086]]
-=== The Default Activity Sync records
+== The Default Activity Sync records
 
 Activity Sync is used to:
 
-* Automatically synchronize the standard _Event/Task_ and _CT CPG
-Activity_ records. A corresponding record based on the
-standard _Event/Task_ or _CT CPG Activity_ record will be created.
+* Automatically synchronize the standard _Event/Task_ and _CT CPG Activity_ records. A corresponding record based on the standard _Event/Task_ or _CT CPG Activity_ record will be created.
 
-If you have a few _Activity Sync_ records, make sure that active
-settings do not affect each other to avoid failures during the _Activity
-Sync_ processes.
+If you have a few _Activity Sync_ records, make sure that active settings do not affect each other to avoid failures during the _Activity Sync_ processes.
 * Synchronize changes in records.
-* Map fields to update them with the values from the
-parent _Event/Task_ or _CT CPG Activity_ record via the _Activity
-Sync_ process.
-
-
+* Map fields to update them with the values from the parent _Event/Task_ or _CT CPG Activity_ record via the _Activity Sync_ process.
 
 Three preconfigured inactive records may be edited.
 
 image:activity-sync-records-.png[]
 
 [[h2__559488800]]
-=== The Event and Task fields to update
+== The Event and Task fields to update
 
-The values from the following fields will be updated on the creating
-_Activity_ record via the _Activity Sync_ process. The
-[.apiobject]#CTCPG\__ActivityId__c field# is used to
-relate the synced standard _Event_/_Task_ or CT CPG Activity records.
+The values from the following fields will be updated on the creating _Activity_ record via the _Activity Sync_ process. The [.apiobject]#CTCPG\__ActivityId__c field# is used to relate the synced standard _Event_/_Task_ or CT CPG Activity records.
 
 
 
-[width="100%",cols="^34%,^33%,^33%",]
+[width="100%",cols="^34%,^33%,^33%",options="header"]
 |===
-|*Standard Calendar* | |*CT CPG Calendar*
-|*Field Label* | |
+2+|*Standard Calendar*  |*CT CPG Calendar*
+3+|*Field Label*
 |*Event* |*Task* |*CTCPG\__Activity__c*
-|StartDateTime |– |CTCPG\__StartDate__c
-|EndDateTime |– |CTCPG\__EndDate__c
-|WhoId |WhoId |CTCPG\__ContactId__c
-|WhatId |WhatId |CTCPG\__AccountId__c
-|OwnerId |OwnerId |OwnerId
+|[.apiobject]#StartDateTime# |– |[.apiobject]#CTCPG\__StartDate__c#
+|[.apiobject]#EndDateTime# |– |[.apiobject]#CTCPG\__EndDate__c#
+|[.apiobject]#WhoId# |[.apiobject]#WhoId# |[.apiobject]#CTCPG\__ContactId__c#
+|[.apiobject]#WhatId# |[.apiobject]#WhatId# |[.apiobject]#CTCPG\__AccountId__c#
+|[.apiobject]#OwnerId# |[.apiobject]#OwnerId# |[.apiobject]#OwnerId#
 |===

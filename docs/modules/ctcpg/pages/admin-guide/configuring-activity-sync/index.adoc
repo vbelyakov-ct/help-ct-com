@@ -1,25 +1,15 @@
 = Configuring Activity Sync
 
-xref:admin-guide/configuring-activity-sync/index.adoc[Activity Sync] is designed to merge
-the standard Salesforce _Tasks_ and _Events_ records with the _CT CPG
-Activity_ records in a way to get better visibility within your private
-and CT CPG calendars.
-
-
+xref:admin-guide/configuring-activity-sync/index.adoc[Activity Sync] is designed to merge the standard Salesforce _Tasks_ and _Events_ records with the _CT CPG Activity_ records in a way to get better visibility within your private and CT CPG calendars.
 
 Follow the guidelines to configure the _Activity Sync_ process.
 
-. If needed,
-https://help.salesforce.com/articleView?id=email_int_overview.htm&type=5[set
-up the _Outlook_ and _Gmail_ integration] with the help of standard
-Salesforce functionality.
-. Configure the *New Task* and *New Event*
-xref:set-up-global-actions-new-task-and-new-event[global
-actions] on the *Accounts* and *Contacts* tabs.
-. Set up xref:admin-guide/configuring-activity-sync/create-an-activity-sync.adoc[Activity Sync] record. Map
-additional fields that are required to update within the _Activity Sync_
-process.
+. If needed, link:https://help.salesforce.com/articleView?id=email_int_overview.htm&type=5[set up the _Outlook_ and _Gmail_ integration] with the help of standard Salesforce functionality.
+. Configure the *New Task* and *New Event* xref:./set-up-global-actions-new-task-and-new-event.adoc[global actions] on the *Accounts* and *Contacts* tabs.
+. Set up xref:admin-guide/configuring-activity-sync/create-an-activity-sync.adoc[Activity Sync] record. Map additional fields that are required to update within the _Activity Sync_ process.
 . Create records that should be synchronized.
-[NOTE] ==== Records created via Activity Sync do not be
-automatically updated using the batch in case of changes in their parent
-records. ====
++
+[NOTE]
+====
+Records created via Activity Sync do not be automatically updated using the batch in case of changes in their parent records.
+====
