@@ -1,33 +1,26 @@
 = Calendar Management
 
-The new Calendar is available since the version 1.60 of the CT CPG
+NOTE: The new Calendar is available since the version 1.60 of the CT CPG
 package.
 
 In this section:
 
-* Get familiar with
-the xref:admin-guide/calendar-management/calendar-interface-and-activities[Calendar interface and
-activities management].
-* Learn about xref:admin-guide/calendar-management/calendar-settings-ct-cpg-settings-panel[Calendar
-settings].
-* xref:calendar-interface[]Learn
-about xref:admin-guide/calendar-management/custom-labels-for-translating-the-calendar-interface[custom
-labels for translating the Calendar interface].
-* Check the xref:admin-guide/calendar-management/custom-permissions-for-using-calendar[required
-permissions and field names rules] for using Calendar.
-* Read field description for
-the xref:admin-guide/calendar-management/new-calendar-settings-field-reference[Planning Calendar
-Settings]xref:skill-mark-field-reference[ ]object.
-* Learn about the xref:calendar-management[Legacy Calendar].
+* Get familiar with the xref:./calendar-interface-and-activities.adoc[Calendar interface and activities management].
+* Learn about xref:./calendar-settings-ct-cpg-settings-panel.adoc[Calendar settings].
+* Learn about xref:./custom-labels-for-translating-the-calendar-interface.adoc[custom labels for translating the Calendar interface].
+* Check the xref:./custom-permissions-for-using-calendar.adoc[required permissions and field names rules] for using Calendar.
+* Read field description for the xref:./new-calendar-settings-field-reference.adoc[Planning Calendar Settings] object.
+* Learn about the xref:admin-guide/calendar-management/legacy-calendar-management/index.adoc[Legacy Calendar].
 
-ifdef::hidden[] This section describes the new planning Calendar.
-You still can use the xref:calendar-management[legacy Calendar],
-however, it is not supported anymore.
+////
+This section describes the new planning Calendar.
+You still can use the xref:./legacy-calendar-management.adoc[legacy Calendar], however, it is not supported anymore.
+////
 
-[WARNING] ==== The calendar functionality is fully available for
-the Google Chrome web browser. Other web browsers are not yet supported.
+[WARNING]
+====
+* The calendar functionality is fully available for the Google Chrome web browser. Other web browsers are not yet supported.
+* For the stable work of the calendar, go to *Setup* → *Session Setting* and select the *Lightning Web Security* checkbox.
 ====
 
-[WARNING] ==== For the stable work of the calendar, go
-to *Setup* → *Session Setting* and select the *Lightning Web Security*
-checkbox.  ====
+

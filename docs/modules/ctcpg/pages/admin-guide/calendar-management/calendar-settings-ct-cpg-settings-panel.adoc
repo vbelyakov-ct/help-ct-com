@@ -1,44 +1,33 @@
 = Calendar Settings (CT CPG Settings Panel)
 
-Go to the *CT CPG Settings Panel* to set up the Calendar. If you cannot
-see this tab, add it to the panel.
+Go to the *CT CPG Settings Panel* to set up the Calendar. If you cannot  see this tab, add it to the panel.
 
-While opening the ***CT CPG Settings Panel* **for the first time, in the
-pop-up window, click *Allow*:
+While opening the ***CT CPG Settings Panel* **for the first time, in the pop-up window, click *Allow*:
 
 Pop-up windows in your web browser should be allowed.
 
-__CT CPG.CTCPG.Allow Management of Self API __custom permission must be
-enabled for the profile of the user with maximum access rights.
+_CT CPG.CTCPG.Allow Management of Self API_ custom permission must be enabled for the profile of the user with maximum access rights.
 
 image:calendar-settings-ct-cpg-settings-panel-2025-03-24.png[]
 
-
-
-After editing settings on any tab, click *Save* to apply them. If you do
-not save changes and switch to another tab, the dialog window with
-further actions will be displayed:
+After editing settings on any tab, click *Save* to apply them. If you do not save changes and switch to another tab, the dialog window with further actions will be displayed:
 
 image:cpg_settings_save_changes.png[]
 
 [[h3_932595492]]
-==== User Division
+== User Division
 
-All Calendar settings are applied to the selected User Division. Please
-pay attention to which division is selected before modifying settings.
+All Calendar settings are applied to the selected User Division. Please pay attention to which division is selected before modifying settings.
 
 Before editing settings, select *User Division* from the list:
 
-* [#h3_951662406]#By default, _Alpha_ and _Beta_ divisions are included
-in the CT CPG package. You can xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[create your
-own divisions].#
-* [#h3_951662406]#Select __Global __to apply settings to all users,
-which do not belong to any divisions.#
-
+* By default, _Alpha_ and _Beta_ divisions are included in the CT CPG package. You can xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division.adoc[create your own divisions].
+* Select __Global __to apply settings to all users, which do not belong to any divisions.
++
 image:cpg_settings_division.png[]
 
 [[h3_951662406]]
-==== General
+== General
 
 In this section, you can set up:
 
@@ -48,9 +37,8 @@ In this section, you can set up:
 ** _Week_
 ** _Work Month_
 ** _Month_
-* *Preview records in month view* (from _2_ to _5_ or _All_). It affects
-how many records will be displayed as preview for 1 day in _Month_
-view:
+* *Preview records in month view* (from _2_ to _5_ or _All_). It affects how many records will be displayed as preview for 1 day in _Month_ view:
++
 image:cpg_month_view_cell.png[]
 * *Interval between drag and drops*:
 ** _30 min_
@@ -58,208 +46,152 @@ image:cpg_month_view_cell.png[]
 ** _1 hour 30 min_
 ** _2 hours_
 
-This setting affects the default interval between activities created by
-drag-and-drop of target objects from the left panel.
-
-
+This setting affects the default interval between activities created by drag-and-drop of target objects from the left panel.
 
 Click *Save* to apply changes on this tab.
 
 image:cpg_settings_general.png[]
 
 [[h3__1934044513]]
-==== Target Objects
+== Target Objects
 
-[NOTE] ==== Editing the *Parent Object* and *Child object*
-fields require
-the xref:admin-guide/calendar-management/custom-permissions-for-using-calendar#h3__260496953[Allow
-to delete Calendar Setting records] custom permission. ==== In this
-section, you can set up target objects that will be displayed on the
-xref:admin-guide/calendar-management/calendar-interface-and-activities#h3__115958815[left sidebar]
-of the calendar:
+[NOTE]
+====
+Editing the *Parent Object* and *Child object* fields require the xref:admin-guide/calendar-management/custom-permissions-for-using-calendar.adoc#h3__260496953[Allow to delete Calendar Setting records] custom permission.
+====
+In this section, you can set up target objects that will be displayed on the
+xref:admin-guide/calendar-management/calendar-interface-and-activities.adoc#h3__115958815[left sidebar] of the calendar:
 
-* *Parent object* (Account by default) and *Child object* (Contact by
-default). If you want to specify another objects as a parent and/or
-child object, do the following:
-. Create lookup fields to the new parent/child object on
-the [.apiobject]#CTCPG_Activity__c# object.
+* *Parent object* (Account by default) and *Child object* (Contact by default). If you want to specify another objects as a parent and/or child object, do the following:
+. Create lookup fields to the new parent/child object on the [.apiobject]#CTCPG_Activity__c# object.
 . Select new object(s) in the *Target Objects* section.
-. Select created lookup fields to the new parent/child object in the
-xref:admin-guide/calendar-management/calendar-settings-ct-cpg-settings-panel#h3__362695117[Activity
-Objects] section.
-. (Optional) edit settings in the *Target Objects* tab of the
-xref:admin-guide/calendar-management/calendar-settings-ct-cpg-settings-panel#h3_1454440899[Pop-Up]
-section.
-*  *Object label* defines how the names of parent and child objects tabs
-in the left sidebar (10 symbols max).
-* *Show hierarchy* activates the *Hierarchy* tab in the
-xref:calendar-interface#h3__115958815[]xref:admin-guide/calendar-management/calendar-interface-and-activities#h3__115958815[left
-sidebar] of the calendar. Then select the *Connection type*:
-** *Direct*: lookup from child object to parent object. Select lookup
-field from the *Lookup from child object* list.
-** *Junction*: when child object and parent object are connected via
-another object, which has lookup/master-detail fields related to both
-objects. Select lookup field from the *Object linking parent and child
-object* list.
+. Select created lookup fields to the new parent/child object in the xref:admin-guide/calendar-management/calendar-settings-ct-cpg-settings-panel.adoc#h3__362695117[Activity Objects] section.
+. (Optional) edit settings in the *Target Objects* tab of the xref:admin-guide/calendar-management/calendar-settings-ct-cpg-settings-panel.adoc#h3_1454440899[Pop-Up] section.
+*  *Object label* defines how the names of parent and child objects tabs in the left sidebar (10 symbols max).
+* [[show-hierarchy]]*Show hierarchy* activates the *Hierarchy* tab in the
+xref:admin-guide/calendar-management/calendar-interface-and-activities.adoc#h3__115958815[left sidebar] of the calendar. Then select the *Connection type*:
+** *Direct*: lookup from child object to parent object. Select lookup field from the *Lookup from child object* list.
+** *Junction*: when child object and parent object are connected via another object, which has lookup/master-detail fields related to both objects. Select lookup field from the *Object linking parent and child object* list.
 
 Click *Save* to apply changes on this tab.
 
 image:cpg_settings_target_objects.png[]
 
 [[h3__362695117]]
-==== Activity Objects
+== Activity Objects
 
-In this section, select parent and child objects lookup fields, if
-xref:admin-guide/calendar-management/calendar-settings-ct-cpg-settings-panel#h3__1934044513[target
-objects] are not set as default ([.object]#Account# and
-[.object]#Contact#).
+In this section, select parent and child objects lookup fields, if xref:admin-guide/calendar-management/calendar-settings-ct-cpg-settings-panel.adoc#h3__1934044513[target objects] are not set as default ([.object]#Account# and [.object]#Contact#).
 
-In the *Subject* list, select a text field to store value from the
-*Subject* field of the
-xref:admin-guide/calendar-management/calendar-interface-and-activities#h3_1752519442[Create
-Activity] form.
+In the *Subject* list, select a text field to store value from the *Subject* field of the xref:admin-guide/calendar-management/calendar-interface-and-activities.adoc#h3_1752519442[Create Activity] form.
 
 image:cpg_settings_activity_objects.png[]
 
 [[h3__1888339674]]
-==== Record Types
+== Record Types
 
-In this section, you can set up record
-types, created on the [.apiobject]#CTCPG\__Activity__c# object:
+In this section, you can set up record types, created on the [.apiobject]#CTCPG\__Activity__c# object:
 
-* *Title* (required) and *Subtitle* (optional) are fields which values
-are displayed on the activity preview in the calendar grid:
+* *Title* (required) and *Subtitle* (optional) are fields which values are displayed on the activity preview in the calendar grid:
++
 image:cpg_activity_preview.png[]
-* *Default duration (minutes)*: default value between *Start Time* and
-**End Time **for new activities (from 15 to 780 minutes).
-* In the *Add Compact Form For Creation* section, select an option to
-enable the compact form for
-the xref:calendar-interface#h3_1752519442[]xref:admin-guide/calendar-management/calendar-interface-and-activities#h3_1752519442[Create
-Activity] form:
+* *Default duration (minutes)*: default value between *Start Time* and **End Time **for new activities (from 15 to 780 minutes).
+* [[compact-form]]In the *Add Compact Form For Creation* section, select an option to enable the compact form for the xref:admin-guide/calendar-management/calendar-interface-and-activities.adoc#h3_1752519442[Create Activity] form:
 ** *None* (the compact form will be disabled).
 ** *Optional* (the compact form can be enabled by switching the toggle).
 ** *Required* (the compact form will always be enabled).
-
-For *Optional* and *Required* options, set up fields to display in the
-compact form:
-[TIP] ==== If you switch between *Optional*, *Required* and
-*None* options, your set of fields will be saved. ====
++
+For *Optional* and *Required* options, set up fields to display in the compact form:
++
+[TIP]
+====
+If you switch between *Optional*, *Required* and *None* options, your set of fields will be saved.
+====
 *** Select a field from the list.
 *** Check *Required field* if necessary.
-*** Click image:cpg_plus2_icon.png[]
+*** Click image:cpg_plus2_icon.png[25,25]
 to add one more field. You can add up to 10 fields.
-*** Click image:cpg_trash_icon.png[]
-to remove the field.
-[TIP] ==== You do not need to add *Start Date*, *End Date*,
-*AllDay* and *Record* *Type ID* fields, because they are displayed on
-the
-xref:calendar-interface#h3_1752519442[]xref:admin-guide/calendar-management/calendar-interface-and-activities#h3_1752519442[Create
-Activity] by default. ====
+*** Click image:cpg_trash_icon.png[25,25] to remove the field.
++
+[TIP]
+====
+You do not need to add *Start Date*, *End Date*, *AllDay* and *Record* *Type ID* fields, because they are displayed on the xref:admin-guide/calendar-management/calendar-interface-and-activities.adoc#h3_1752519442[Create Activity] by default.
+====
 
 Click *Save* to apply changes on this tab.
 
 image:cpg_settings_record_types.png[]
 
 [[h3_1454440899]]
-==== Pop-Up
+== Pop-Up
 
-In this section, you can turn on/off pop-ups for target objects (on the
-xref:calendar-interface#h3__115958815[left sidebar]) and activity
-objects (in the calendar grid).
+In this section, you can turn on/off pop-ups for target objects (on the xref:admin-guide/calendar-management/calendar-interface-and-activities.adoc#h3__115958815[left sidebar]) and activity objects (in the calendar grid).
 
 . Select the appropriate tab, *Target objects* or *Activity objects*.
-. For *Target Objects*, also select a tab for defined target
-objects ([.object]#Account# and [.object]#Contact# by
-default).
-* If the
-xref:admin-guide/calendar-management/calendar-settings-ct-cpg-settings-panel#show-hierarchy[hierarchy]
-is enabled and connection type is _Junction_, also an additional tab of
-the linking object will be displayed (*Activity* in the example below).
-On this tab, you can select fields to show in the pop-up for the target
-objects in the *Hierarchy* tab.
-* If
-the xref:admin-guide/calendar-management/calendar-settings-ct-cpg-settings-panel#show-hierarchy[hierarchy] is
-enabled and connection type is _Direct_, then the pop-up for the target
-objects in the *Hierarchy* tab will display fields specified for the
-child object (*Contact* in the example below).
-. Move desired fields from *Available* to *Selected* (up to 5): values
-of these fields will be displayed on the pop-up.
-[TIP] ==== For *Activity Objects*, you do not need to add the
-*Status* field, because it is displayed on the pop-up by default. ====
+. For *Target Objects*, also select a tab for defined target objects ([.object]#Account# and [.object]#Contact# by default).
+* If the <<show-hierarchy, hierarchy>>.
+is enabled and connection type is _Junction_, also an additional tab of the linking object will be displayed (*Activity* in the example below).
+On this tab, you can select fields to show in the pop-up for the target objects in the *Hierarchy* tab.
+* If the <<show-hierarchy, hierarchy>> is enabled and connection type is _Direct_, then the pop-up for the target objects in the *Hierarchy* tab will display fields specified for the child object (*Contact* in the example below).
+. Move desired fields from *Available* to *Selected* (up to 5): values of these fields will be displayed on the pop-up.
++
+[TIP]
+====
+For *Activity Objects*, you do not need to add the *Status* field, because it is displayed on the pop-up by default.
+====
 
 Click *Save* to apply changes on this tab.
 
 image:cpg_settings_pop-up.png[]
 
 [[h3__1182969566]]
-==== Drag and Drop
+== Drag and Drop
 
-In this section, you can set up default record types for drag-and-drop
-creation of activities. If default record typers are not set, then
-the xref:calendar-interface#h3_1752519442[]xref:admin-guide/calendar-management/calendar-interface-and-activities#h3_1752519442[Create
-Activity] form will be opened after dragging and dropping an object from
-the left sidebar to the calendar grid. You can specify drag-and-drop
-settings globally for all users of the
-xref:admin-guide/calendar-management/calendar-settings-ct-cpg-settings-panel#h3_932595492[selected
-division], or for a specific user profile. Settings for a specific user
-profile have higher priority than global settings.
+In this section, you can set up default record types for drag-and-drop creation of activities. If default record typers are not set, then the xref:admin-guide/calendar-management/calendar-interface-and-activities.adoc#h3_1752519442[Create Activity] form will be opened after dragging and dropping an object from the left sidebar to the calendar grid. You can specify drag-and-drop settings globally for all users of the xref:admin-guide/calendar-management/calendar-settings-ct-cpg-settings-panel.adoc#h3_932595492[selected division], or for a specific user profile. Settings for a specific user profile have higher priority than global settings.
 
-* To set default record types for all users of the selected division, in
-the *Global rule* section select desired values from the *Activity* and
-*Record Type* lists.
-* To set default record types for a specific user profile, click *Add
-Settings*:
+* To set default record types for all users of the selected division, in the *Global rule* section select desired values from the *Activity* and *Record Type* lists.
+* To set default record types for a specific user profile, click *Add Settings*:
 . Select *User Profile*.
 . Select *Activity Object*.
 . Select *Record Type*.
 . Click *Save*.
 
-Click image:cpg_trash_icon.png[] to
-remove settings for a specific user profile.
-[NOTE] ==== This action requires
-the xref:admin-guide/calendar-management/custom-permissions-for-using-calendar#h3__260496953[Allow
-to delete Calendar Setting records] custom permission. ====
+Click image:cpg_trash_icon.png[25,25] to remove settings for a specific user profile.
+
+[NOTE]
+====
+This action requires the xref:admin-guide/calendar-management/custom-permissions-for-using-calendar.adoc#h3__260496953[Allow to delete Calendar Setting records] custom permission.
+====
 
 Click *Save* to apply changes on this tab.
 
 image:cpg_settings_drag-and-drop.png[]
 
 [[h3__1948960707]]
-==== Visualization → Status Color
+== Visualization → Status Color
 
-In this section, you can map status from your activity objects with
-standard status categories, each of them has its own color. It affects
-the color of the stripe on the left side of the activity preview:
+In this section, you can map status from your activity objects with standard status categories, each of them has its own color. It affects the color of the stripe on the left side of the activity preview:
 
 image:cpg_activity_preview.png[]
 
 There are 4 categories:
 
-* _Planned (blue)_
-* _In Progress (yellow)_
-* _Finished (green)_
-* _Cancelled (red)_
+* [.blue-text]#Planned#
+* [.yellow-text]#In Progress#
+* [.green-text]#Finished#
+* [.red-text]#Cancelled#
 
-You can define the same category for different statuses, or leave any
-status without category.
+You can define the same category for different statuses, or leave any status without category.
 
 Click *Save* to apply changes on this tab.
 
-
-
 image:cpg_settings_visualization_status_color.png[]
 
-You can also create your own statuses and map them with categories. To
-do that:
+You can also create your own statuses and map them with categories. To do that:
 
-. Go to *Setup* → *Object Manager* and search for
-the [.apiobject]#CTCPG\__Activity__c# object.
+. Go to *Setup* → *Object Manager* and search for the [.apiobject]#CTCPG\__Activity__c# object.
 . Go to *Fields & Relationships* and click on the *Status* picklist.
-. In the *Values* section, click *Edit* for existing statues. To create
-a new status:
+. In the *Values* section, click *Edit* for existing statues. To create a new status:
 .. Click *New*.
 .. In the text box, type the status name.
 .. Select record types, for which the status must be applied.
 .. Click *Save*.
-
-
