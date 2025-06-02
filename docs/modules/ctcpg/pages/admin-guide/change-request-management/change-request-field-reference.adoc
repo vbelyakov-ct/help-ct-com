@@ -1,21 +1,16 @@
 = Change Request Field Reference
 
-The[.object]#Change Request# object is intended to transfer the
-changes to the related parent object.
+The [.object]#Change Request# object is intended to transfer the  changes to the related parent object.
 
 * The available record types by default:
-** *Create*: creating a record of the target object;
-** *Succession*: succeeding a record of the target object;
-** *Update*: updating a record of the target object.
-* For changing certain fields xref:change-request-mapping[of the
-target object], it is necessary to create the related field on the
-Change Request object. For example, if you want to change the value in
-the Website field of the Account object, you should create the
-Website__c field on the Change Request __ object.
+** *Create*: creating a record of the target object
+** *Succession*: succeeding a record of the target object
+** *Update*: updating a record of the target object
+* For changing certain fields xref:admin-guide/cpg-custom-settings/change-request-mapping.adoc[of the target object], it is necessary to create the related field on the Change Request object. For example, if you want to change the value in the Website field of the Account object, you should create the [.apiobject]#Website__c# field on the [.object]#Change Request# object.
 
 '''''
 
-API name in Salesforce: CTCPG\__ChangeRequest__c
+API name in Salesforce: [.apiobject]#CTCPG\__ChangeRequest__c#
 
 '''''
 
@@ -23,19 +18,15 @@ API name in Salesforce: CTCPG\__ChangeRequest__c
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Account |CTCPG\__AccountId__c |Lookup(Account) |The
-related _Account_ record.
+|Account |[.apiobject]#CTCPG\__AccountId__c# |Lookup(Account) |The related _Account_ record.
 
-|Account Name |CTCPG\__AccountName__c |Text(255)
-   |This field relates to the Name field of the standard
-xref:account-field-reference[Account] object.
+|Account Name |[.apiobject]#CTCPG\__AccountName__c# |Text(255) |This field relates to the Name field of the standard xref:admin-guide/application-settings-management/account-field-reference.adoc[Account] object.
 
-|Account Number |CTCPG\__Account_Number__c |Text(40)
+|Account Number |[.apiobject]#CTCPG\__Account_Number__c# |Text(40)
 |This field relates to the AccountNumber field of the standard
-xref:account-field-reference[Account] object.
+xref:admin-guide/application-settings-management/account-field-reference.adoc[Account] object.
 
-|Account Type            |CTCPG\__Account_Type__c
-|Picklist a|
+|Account Type |[.apiobject]#CTCPG\__Account_Type__c# |Picklist a|
 The available _Account_ types by default:
 
 * Prospect
@@ -44,23 +35,20 @@ The available _Account_ types by default:
 * Channel Partner / Reseller
 * Technology Partner
 
-|City  |CTCPG\__City__c |Text(40) |Field to relate with any
-additional field of the target object.
+|City  |[.apiobject]#CTCPG\__City__c# |Text(40) |Field to relate with any additional field of the target object.
 
-|ClearFields |CTCPG\__ClearFields__c |Long Text Area (32768)
-|Fields to clear their value (separated by a comma, without a blank
-space).
+|ClearFields |[.apiobject]#CTCPG\__ClearFields__c# |Long Text Area (32768)
+|Fields to clear their value (separated by a comma, without a blank space).
 
-|Comments       |CTCPG\__Comments__c |Long Text Area
-(32768) |The additional description.
+|Comments |[.apiobject]#CTCPG\__Comments__c# |Long Text Area (32768) |The additional description.
 
-|Contact |CTCPG\__ContactId__c  |Lookup(Contact)  |The
+|Contact |[.apiobject]#CTCPG\__ContactId__c# |Lookup(Contact)  |The
 related _Contact_ record.
 
-|Email |CTCPG\__Email__c  |Email |The field relates to the
-Email field of the xref:contact-field-reference[Contact] object.
+|Email |[.apiobject]#CTCPG\__Email__c# |Email |The field relates to the
+Email field of the xref:admin-guide/application-settings-management/contact-field-reference.adoc[Contact] object.
 
-|Industry |CTCPG\__Industry__c |Picklist a|
+|Industry |[.apiobject]#CTCPG\__Industry__c# |Picklist a|
 The _Change Request_ industry type. The available values by default:
 
 * Agriculture
@@ -69,17 +57,14 @@ The _Change Request_ industry type. The available values by default:
 * Healthcare
 * Technology
 
-|Name |CTCPG\__Name__c |Text(255) |Name of the Change Request
-process.
+|Name |[.apiobject]#CTCPG\__Name__c# |Text(255) |Name of the Change Request process.
 
-|Phone |CTCPG\__Phone__c |Phone a|
-The field relates to the Phone field of the[.object]#Account#
-or[.object]#Contact# object.
+|Phone |[.apiobject]#CTCPG\__Phone__c# |Phone a|
+The field relates to the Phone field of the [.object]#Account# or [.object]#Contact# object.
 
-|SIC Code |CTCPG\__SIC_Code__c |Text(40) |The field
-relates to the Sic field of the Account object.
+|SIC Code |[.apiobject]#CTCPG\__SIC_Code__c# |Text(40) |The field relates to the Sic field of the [.object]#Account# object.
 
-|Status |CTCPG\__Status__c  |Picklist a|
+|Status |[.apiobject]#CTCPG\__Status__c#  |Picklist a|
 The _Change Request_ status. The available values by default:
 
 * On Hold
@@ -89,6 +74,6 @@ The _Change Request_ status. The available values by default:
 * Approved
 * Canceled
 
-|Street |CTCPG\__Street__c  |Text(40) |Field to relate with any
+|Street |[.apiobject]#CTCPG\__Street__c#  |Text(40) |Field to relate with any
 additional field of the target object.
 |===
