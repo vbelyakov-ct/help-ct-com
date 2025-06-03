@@ -1,13 +1,12 @@
 = Target Frequency Settings
 
-Not in use.
+WARNING: Not in use.
 
-*Target Frequency Settings* is intended to specify available categories
-of the records with the specific type of Marketing Detail Tracking.
+*Target Frequency Settings* is intended to specify available categories of the records with the specific type of Marketing Detail Tracking.
 
 '''''
 
-API name in Salesforce: CTCPG\__TFSettings__c
+API name in Salesforce: [.apiobject]#CTCPG\__TFSettings__c#
 
 '''''
 
@@ -16,17 +15,17 @@ API name in Salesforce: CTCPG\__TFSettings__c
 |*Field* |*API Name* |*Type* |*Description*
 
 |Available Account Picklist Labels
-|CTCPG\__AccountTargetCategoryField__c |Text Area(255) |
+|[.apiobject]#CTCPG\__AccountTargetCategoryField__c# |Text Area(255) |
 
 |Available Account Picklist Values
-|CTCPG\__AccountTargetFlagField__c |Text Area(255) |
+|[.apiobject]#CTCPG\__AccountTargetFlagField__c# |Text Area(255) |
 
 |Available Contact Picklist Labels
-|CTCPG\__ContactTargetCategoryField__c |Text Area(255) |
+|[.apiobject]#CTCPG\__ContactTargetCategoryField__c# |Text Area(255) |
 
 |Available Contact Picklist Values
-|CTCPG\__ContactTargetFlagField__c |Text Area(255) |
+|[.apiobject]#CTCPG\__ContactTargetFlagField__c# |Text Area(255) |
 
-|Enable Category selection |CTCPG\__EnableCategorySelection__c
+|Enable Category selection |[.apiobject]#CTCPG\__EnableCategorySelection__c#
 |Checkbox |
 |===

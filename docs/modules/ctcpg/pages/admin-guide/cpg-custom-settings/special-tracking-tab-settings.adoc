@@ -1,19 +1,12 @@
 = Special Tracking Tab Settings
 
-*Special Tracking Tab Settings* is used to display
-xref:admin-guide/targeting-and-marketing-cycles-management/create-a-new-record-of-marketing-detail-tracking#h2_726145408[tracking tasks
-and objectives] on the tab of
-the xref:admin-guide/activity-report-management/ref-guide/activity-report-interface#h2_683681312[Activity
-Report] page for the specific user or
-profile xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[based on the division category].
+*Special Tracking Tab Settings* is used to display xref:admin-guide/targeting-and-marketing-cycles-management/create-a-new-record-of-marketing-detail-tracking.adoc#h2_726145408[tracking tasks and objectives] on the tab of the xref:admin-guide/activity-report-management/ref-guide/activity-report-interface.adoc#h2_683681312[Activity Report] page for the specific user or profile xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division.adoc[based on the division category].
 
-By default, there is the setting for the whole Salesforce organization.
-To enhance or restrict a particular user or profile access,
-xref:admin-guide/activity-report-management/configure-ct-product-tabs[create a new record].
+By default, there is the setting for the whole Salesforce organization. To enhance or restrict a particular user or profile access, xref:admin-guide/activity-report-management/configure-ct-product-tabs.adoc[create a new record].
 
 '''''
 
-API name: CTCPG\__SpecialTrackingTab__c
+API name: [.apiobject]#CTCPG\__SpecialTrackingTab__c#
 
 '''''
 
@@ -21,35 +14,22 @@ API name: CTCPG\__SpecialTrackingTab__c
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Active  |CTCPG\__IsActive__c |Checkbox  |If selected, the
-setting is active, and created records will be pulled to the
-corresponding _Activity Report_.
+|Active  |[.apiobject]#CTCPG\__IsActive__c# |Checkbox  |If selected, the setting is active, and created records will be pulled to the corresponding _Activity Report_.
 
-|Boolean Answer Field Name |CTCPG\__BooleanAnswerFieldName__c
-|Text (255)  |Specify the field API name with the checkbox type on the
-xref:admin-guide/activity-report-management/ref-guide/activity-data-field-reference[Activity Data] __ object, which
-is used to store logical values in created records.
+|Boolean Answer Field Name |[.apiobject]#CTCPG\__BooleanAnswerFieldName__c#
+|Text (255)  |Specify the field API name with the checkbox type on the xref:admin-guide/activity-report-management/ref-guide/activity-data-field-reference.adoc[Activity Data] object, which is used to store logical values in created records.
 
-|Currency Answer Field Name |CTCPG\__CurrencyAnswerFieldName__c
-|Text (255) |Specify the field API name with the currency type on
-the xref:admin-guide/activity-report-management/ref-guide/activity-data-field-reference[Activity Data] object, which
-is used to store currency values in created records.
+|Currency Answer Field Name |[.apiobject]#CTCPG\__CurrencyAnswerFieldName__c#
+|Text (255) |Specify the field API name with the currency type on the xref:admin-guide/activity-report-management/ref-guide/activity-data-field-reference.adoc[Activity Data] object, which is used to store currency values in created records.
 
-|Number Answer Field Name |CTCPG\__NumberAnswerFieldName__c
-|Text (255) |Specify the field API name with the number type on the
-xref:admin-guide/activity-report-management/ref-guide/activity-data-field-reference[Activity Data] object, which is
-used to store number values in created records.
+|Number Answer Field Name |[.apiobject]#CTCPG\__NumberAnswerFieldName__c#
+|Text (255) |Specify the field API name with the number type on the xref:admin-guide/activity-report-management/ref-guide/activity-data-field-reference.adoc[Activity Data] object, which is used to store number values in created records.
 
 |Record Type Developer Name
-|CTCPG\__RecordTypeDeveloperName__c |Text (255) |Specify the
-list of API names of _Activity_ record types to display the *Special
-Tracking* tab on the _Activity Report_ page (separated by a comma,
-without blank spaces).
+|[.apiobject]#CTCPG\__RecordTypeDeveloperName__c# |Text (255) |Specify the list of API names of _Activity_ record types to display the *Special Tracking* tab on the _Activity Report_ page (separated by a comma, without blank spaces).
 
-|Text Answer Field Name |CTCPG\__textAnswerFieldName__c |Text
-(255)  |Specify the field API name with the text type on the
-xref:admin-guide/activity-report-management/ref-guide/activity-data-field-reference[Activity Data]__ __object, which
-is used to store text values in created records.
+|Text Answer Field Name |[.apiobject]#CTCPG\__textAnswerFieldName__c# |Text
+(255)  |Specify the field API name with the text type on the xref:admin-guide/activity-report-management/ref-guide/activity-data-field-reference.adoc[Activity Data] object, which is used to store text values in created records.
 |===
 
 

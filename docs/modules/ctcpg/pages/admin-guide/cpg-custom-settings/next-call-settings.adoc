@@ -1,16 +1,12 @@
 = Next Call Settings
 
-*Next Call Settings* is responsible for transferring values from the
-selected fields of the previous _CT CPG Activity_ record to the
-corresponding fields of the next _CT CPG_ Activity record.
+*Next Call Settings* is responsible for transferring values from the  selected fields of the previous _CT CPG Activity_ record to the corresponding fields of the next _CT CPG_ Activity record.
 
-The CTCPG\__NextCallDate__c field on the previous _CT CPG
-Activity_ record should be filled out with
-xref:admin-guide/next-activity-management/index[the future date].
+The [.apiobject]#CTCPG\__NextCallDate__c# field on the previous _CT CPG Activity_ record should be filled out with xref:admin-guide/next-activity-management/index.adoc[the future date].
 
 '''''
 
-API name in Salesforce: CTCPG\__NextCallSettings__c
+API name in Salesforce: [.apiobject]#CTCPG\__NextCallSettings__c#
 
 '''''
 
@@ -18,16 +14,11 @@ API name in Salesforce: CTCPG\__NextCallSettings__c
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Fields |CTCPG\__Fields__c |Text Area(255) |Specify field API
-names of the[.object]#CT CPG Activity# object that should be
-populated on the next _CT CPG Activity_ record (separated by a comma,
-without a blank space).
+|Fields |[.apiobject]#CTCPG\__Fields__c# |Text Area(255) |Specify field API
+names of the [.object]#CT CPG Activity# object that should be populated on the next _CT CPG Activity_ record (separated by a comma, without a blank space).
 
-|Name |Name |Text(255) |The _CT CPG Activity_ record type for which the
+|Name |[.apiobject]#Name# |Text(255) |The _CT CPG Activity_ record type for which the
 _Next Call Setting_ record is applied.
 
-|Values |CTCPG\__Values__c |Text Area(255) |Specify field API
-names of the previous _CT CPG Activity_ record whose values should be
-copied into the fields added in the CTCPG\__Fields__c field
-(separated by a comma, without a blank space).
+|Values |[.apiobject]#CTCPG\__Values__c# |Text Area(255) |Specify field API names of the previous _CT CPG Activity_ record whose values should be copied into the fields added in the [.apiobject]#CTCPG\__Fields__c# field (separated by a comma, without a blank space).
 |===

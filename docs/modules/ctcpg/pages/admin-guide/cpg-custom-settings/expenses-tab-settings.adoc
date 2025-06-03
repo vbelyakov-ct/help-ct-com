@@ -1,18 +1,12 @@
 = Expenses Tab Settings
 
-*Expenses Tab Settings* is used to display rental items for the event,
-for example, promo materials or mobile stands, on the tab of the
-_xref:admin-guide/activity-report-management/ref-guide/activity-report-interface.adoc#h2_1673179481[Activity Report]_
-page for the specific user or profile xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[based
-on the division category].
+*Expenses Tab Settings* is used to display rental items for the event, for example, promo materials or mobile stands, on the tab of the xref:admin-guide/activity-report-management/ref-guide/activity-report-interface.adoc#h2_1673179481[Activity Report] page for the specific user or profile xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division.adoc[based on the division category].
 
-By default, there is the setting for the whole Salesforce organization.
-To enhance or restrict a particular user or profile access,
-xref:admin-guide/activity-report-management/configure-an-event-member-tab[create a new record].
+By default, there is the setting for the whole Salesforce organization. To enhance or restrict a particular user or profile access, xref:admin-guide/activity-report-management/configure-an-event-member-tab.adoc[create a new record].
 
 '''''
 
-API name in Salesforce: CTCPG\__ExpensesTab__c
+API name in Salesforce: [.apiobject]#CTCPG\__ExpensesTab__c#
 
 '''''
 
@@ -20,39 +14,27 @@ API name in Salesforce: CTCPG\__ExpensesTab__c
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Active  |CTCPG\__IsActive__c |Checkbox  |If selected, the
-setting is active, and rental items can be added to the corresponding
-_Activity Report_.
+|Active  |[.apiobject]#CTCPG\__IsActive__c# |Checkbox  |If selected, the setting is active, and rental items can be added to the corresponding _Activity Report_.
 
-|Additional Parameter  |CTCPG\__AdditionalParam__c |Text (255)
+|Additional Parameter  |[.apiobject]#CTCPG\__AdditionalParam__c# |Text (255)
 |Not in use.
 
-|Allow Record Management  |CTCPG\__AllowRecordManagement__c
+|Allow Record Management  |[.apiobject]#CTCPG\__AllowRecordManagement__c#
 |Text (255) a|
-Specify if the user is allowed to add and remove rental items on the
-__Expenses __tab of the _Activity Report_ page for each specified
-_Activity_ record type in the CTCPG\__RecordTypeDeveloperName__c
-field (separated by a comma, without blank spaces):
+Specify if the user is allowed to add and remove rental items on the *Expenses* tab of the _Activity Report_ page for each specified _Activity_ record type in the [.apiobject]#CTCPG\__RecordTypeDeveloperName__c# field (separated by a comma, without blank spaces):
 
 * *true* to enable;
-* **false **to restrict.
+* *false* to restrict.
 
-|Field Set Name  |CTCPG\__FieldSetName__c |Text (255)
-|xref:admin-guide/activity-report-management/configure-an-expenses-tab[Specify the API name of the field
-set] for the _Activity Report_ page for each
-specified _Activity_ record type in
-the CTCPG\__RecordTypeDeveloperName__c field (separated by a
-comma, without a blank space).
+|Field Set Name  |[.apiobject]#CTCPG\__FieldSetName__c# |Text (255)
+|xref:admin-guide/activity-report-management/configure-an-expenses-tab.adoc[Specify the API name of the field set] for the _Activity Report_ page for each specified _Activity_ record type in the [.apiobject]#CTCPG\__RecordTypeDeveloperName__c# field (separated by a comma, without a blank space).
 
-|Field To Show As Picklist  |CTCPG\__FieldToShowAsPicklist__c
+|Field To Show As Picklist  |[.apiobject]#CTCPG\__FieldToShowAsPicklist__c#
 |Text (255) |Not in use.
 
 |Record Type Developer Name
-|CTCPG\__RecordTypeDeveloperName__c |Text (255) |Specify the
-list of API names of _Activity_ record types to display the *Event
-Members* __ tab on the _Activity Report_ page (separated by a comma,
-without blank spaces).
+|[.apiobject]#CTCPG\__RecordTypeDeveloperName__c# |Text (255) |Specify the list of API names of _Activity_ record types to display the *Event Members* tab on the _Activity Report_ page (separated by a comma, without blank spaces).
 
-|Show Lookup As Picklist |CTCPG\__ShowLookupAsPicklist__c
+|Show Lookup As Picklist |[.apiobject]#CTCPG\__ShowLookupAsPicklist__c#
 |Checkbox  |Not in use.
 |===

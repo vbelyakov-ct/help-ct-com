@@ -1,19 +1,16 @@
 = Trigger Settings
 
-*Trigger Settings* is used to switch one certain trigger or trigger
-context on/off.[NOTE] ==== Deactivation of a CT CPG trigger can
-result in data inconsistency or loss of data.  ====
+*Trigger Settings* is used to switch one certain trigger or trigger context on/off.
+
+NOTE: Deactivation of a CT CPG trigger can result in data inconsistency or loss of data.
 
 * Records CT CPG triggers are available by default and active.
-* If you updated the CT CPG package, some triggers may not be present in
-the *Trigger
-Settings* list. Unless xref:admin-guide/triggers-management/manage-ct-cpg-triggers#h2_527552279[the
-corresponding Trigger Settings record is present], the CT CPG trigger is
-deactivated and will not in operation.
+* If you updated the CT CPG package, some triggers may not be present in the *Trigger
+Settings* list. Unless xref:admin-guide/triggers-management/manage-ct-cpg-triggers.adoc#h2_527552279[the corresponding Trigger Settings record is present], the CT CPG trigger is deactivated and will not in operation.
 
 '''''
 
-API name in Salesforce: CTCPG\__TriggerSettings__c
+API name in Salesforce: [.apiobject]#CTCPG\__TriggerSettings__c#
 
 '''''
 
@@ -21,31 +18,22 @@ API name in Salesforce: CTCPG\__TriggerSettings__c
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Active  |CTCPG\__IsActive__c |Checkbox  |If selected, the
-trigger is active.
+|Active  |[.apiobject]#CTCPG\__IsActive__c# |Checkbox  |If selected, the trigger is active.
 
-|Bypass Logic |CTCPG\__BypassLogic__c |Text Area (255)  |Enter
-xref:admin-guide/triggers-management/triggers/trigger-contexts[the trigger event API name] to prevent the
-trigger event from execution (separated by a comma, without blank
-spaces).
+|Bypass Logic |[.apiobject]#CTCPG\__BypassLogic__c# |Text Area (255)  |Enter xref:admin-guide/triggers-management/triggers/trigger-contexts.adoc[the trigger event API name] to prevent the trigger event from execution (separated by a comma, without blank spaces).
 
-|Comments |CTCPG\__Comments__c |Text Area (255) |Specify the
-description of a current setting.
+|Comments |[.apiobject]#CTCPG\__Comments__c# |Text Area (255) |Specify the description of a current setting.
 
-|Name |Name | |API Name of the required trigger.
+|Name |[.apiobject]#Name# | |API Name of the required trigger.
 
-|Prevent re-execution |CTCPG\__IsReexecutionPrevented__c
-|Checkbox  a|
-If selected, the trigger will not re-execute within one transaction, for
-example, in case of another trigger invokes it.
+|Prevent re-execution |[.apiobject]#CTCPG\__IsReexecutionPrevented__c#
+|Checkbox  a| If selected, the trigger will not re-execute within one transaction, for example, in case of another trigger invokes it.
 
-If not, in case of the presence of the custom logic, such as Workflow or
-Process Builder, the trigger will be invoked before and after custom
-logic.
+If not, in case of the presence of the custom logic, such as Workflow or Process Builder, the trigger will be invoked before and after custom logic.
 
 |===
 
-ifdef::hidden[]
+////
 
 *trigger context* – контекст выполнения триггера, например before
 insert, after update и т.д.
@@ -59,4 +47,4 @@ afterInsert(trigger.new), который сработает при создан�
 контексте after insert триггера (при наличии триггера на соответствующий
 объект и объявлении в нем соответствующего контекста)
 
-
+////
