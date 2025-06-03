@@ -29,7 +29,7 @@ We recommend changing names of the given below Apex class and trigger to match y
 
 To apply the dynamic group logic to objects, customize and add Apex class and trigger.
 
-. In the Test_DynamicGroupExtension.cls Apex class, check the package name and specify API name of the required group object within +/** SETUP THIS */+ and +/** FINISH SETUP */+.
+. In the [.apiobject]#Test_DynamicGroupExtension.cls# Apex class, check the package name and specify API name of the required group object within +/** SETUP THIS */+ and +/** FINISH SETUP */+.
 +
 Click to see the Apex class:
 +
@@ -146,9 +146,9 @@ public with sharing class Test_DynamicGroupExtension {
 --
 ====
 +
-. In the DynamicGroupExtensionProcess.trigger Apex trigger:
+. In the [.apiobject]#DynamicGroupExtensionProcess.trigger# Apex trigger:
 * Check the package name.
-* Instead of OBJECT_API_NAME, enter the API name of the required group object.
+* Instead of [.apiobject]#OBJECT_API_NAME#, enter the API name of the required group object.
 +
 Click to see the Apex trigger:
 +
