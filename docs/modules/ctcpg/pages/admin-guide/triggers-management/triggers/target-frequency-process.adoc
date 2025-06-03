@@ -16,7 +16,7 @@ API name in Salesforce: TargetFrequencyProcess
 
 |after insert[ai]  |concatenateUsersOnTarget() |conTarget
 |If the CTCPG\__EnableAdvancedTFLogic__c checkbox enabled on the
-_xref:application-settings.html[Application Settings]_ record,
+xref:application-settings.html[Application Settings] record,
 xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[the fields with division values] will be
 updated on the related _Account_ and _Contact_ records.
 
@@ -47,8 +47,8 @@ be updated on the related _Account_ and _Contact_ records.
 
 |after undelete[aud]   |concatenateUsersOnTarget()
 |conTarget |If the CTCPG\__EnableAdvancedTFLogic__c checkbox
-enabled on the _xref:application-settings.html[Application
-Settings]_ record, xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[the fields with division
+enabled on the xref:application-settings.html[Application
+Settings] record, xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[the fields with division
 values] will be updated on the related _Account_ and _Contact_ records.
 
 | | | |
@@ -78,8 +78,8 @@ changed.
 
 |before delete[bd]  |concatenateUsersOnTarget() |conTarget
 |If the CTCPG\__EnableAdvancedTFLogic__c checkbox enabled on
-the _xref:application-settings.html[Application
-Settings]_ record, xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[the fields with division
+the xref:application-settings.html[Application
+Settings] record, xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[the fields with division
 values] will be updated on the
 related _Account_ and _Contact_ records.
 |===

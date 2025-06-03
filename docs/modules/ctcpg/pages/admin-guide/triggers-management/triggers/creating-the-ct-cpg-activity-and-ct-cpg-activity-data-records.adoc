@@ -37,7 +37,7 @@ one or more trigger events] to not invoke the trigger methods. ====
 * Create a _CT CPG Activity_ record linked to the _Contact_
 and/or _Account_ records;
 * Assign the related
-_xref:targeting-and-marketing-cycles-management.html[Marketing Cycle]_
+xref:targeting-and-marketing-cycles-management.html[Marketing Cycle]_
 record;
 * Link the corresponding _Target Frequency_ record;
 * Fill in _Objectives_ if specified.
@@ -47,7 +47,7 @@ For the _CT CPG Activity_ record:
 
 * Assign the related _Marketing Cycle_ record;
 * Link the corresponding _Target Frequency_ record;
-* Fill in _xref:objective-creating.html[Objectives]_ if specified.
+* Fill in xref:objective-creating.html[Objectives] if specified.
 
 |onBeforeDelete |Search and delete the standard _Event_ and _Task_
 records that are related to deleted _CT CPG Activity_ records.
@@ -69,7 +69,7 @@ CPG Activity_ record;
 * Recalculate finished activities and fill in the *Actual Calls* field
 of the related _Target Frequency_ record;
 * Create the related _CT CPG Activity_ records in case of the
-_xref:creating-the-next-activity.html[Next Call]_ functionality is
+xref:creating-the-next-activity.html[Next Call] functionality is
 configured.
 * Grant access to the Joint Visit Report for relevant users if
 specified.

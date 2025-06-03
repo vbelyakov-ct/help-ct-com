@@ -1,48 +1,54 @@
 = Create a Static CPG Group
+:toc:
 
 Create a static CPG group and manage its members.
 
-:toc: :toclevels: 3
-
 [[h2__411285314]]
-=== Create a Static CPG Group
+== Create a Static CPG Group
 
 To create a static CPG group:
 
 . Go to the *Groups* tab.
 . Click *New*.
 . Fill in the _CPG group_ parameters, such as:
-[TIP] ==== Read the description of each parameter
-xref:cpg-group-field-reference[here]. ====
++
+[TIP]
+====
+Read the description of each parameter xref:./ref-guide/cpg-group-field-reference.adoc[here].
+====
 * Enter *Group Name*.
 * Select *Group Type*.
-[NOTE] ==== *Group Type* cannot be changed after saving the
-group. ====
++
+[NOTE]
+====
+*Group Type* cannot be changed after saving the group.
+====
 * Leave the *Dynamic* **Group **checkbox unchecked.
 image:62558291.png[]
 . Click *Save*.
 . The static group of records is created. The *SOQL Builder* tab opens.
-
 * Enter criteria using the *OR* / *AND* buttons.
 * Check the _SOQL Query_ record above the builder.
++
 image:create-a-new-static-group_2.png[]
 . Click *Save* and confirm.
 
 The static group is created.
 
 [[h2_1766846133]]
-=== Manage Static CPG Group Members
+== Manage Static CPG Group Members
 
-To view static CPG group members, go to the **Group Members **tab.
+To view static CPG group members, go to the *Group Members* tab.
 
 * Click *New* to manually add a CPG group member.
-** A _CPG Group Member_ record will not be recalculated after changing
-the SOQL criteria.
-** To recalculate a __CPG Group Member __record,
-uncheck the *Manual* field on the added _CPG Group Member_ record.
-[TIP] ==== Add the *Manual* field to the *Group Member* page
-layout. ====
+** A _CPG Group Member_ record will not be recalculated after changing the SOQL criteria.
+** To recalculate a __CPG Group Member __record, uncheck the *Manual* field on the added _CPG Group Member_ record.
++
+[TIP]
+====
+Add the *Manual* field to the *Group Member* page layout.
+====
 * An empty record cannot be added as a _CPG Group Member_ record.
-* Only the records of the selected *Group Type* on the _CPG Group_
-record can be added as a group
-member. image:add_member.png[]
+* Only the records of the selected *Group Type* on the _CPG Group_ record can be added as a group member.
++
+image:add_member.png[]

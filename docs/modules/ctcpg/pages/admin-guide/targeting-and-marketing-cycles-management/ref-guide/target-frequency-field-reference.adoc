@@ -15,7 +15,7 @@ API name in Salesforce: CTCPG\__TargetFrequency__c
 |*Field* |*API Name* |*Type* |*Description*
 
 |Account         |CTCPG\__AccountId__c |Lookup(Account)
-|The related _xref:admin-guide/application-settings-management/account-field-reference.adoc.html[Account]_ record.
+|The related xref:admin-guide/application-settings-management/account-field-reference.adoc.html[Account] record.
 
 |Active |CTCPG\__IsActive__c |Checkbox |If selected,
 the _Target Frequency_ record is active.
@@ -29,7 +29,7 @@ the __Account __or _Contact_ record.
 the related _Account_ or _Contact_ record.
 
 |Contact |CTCPG\__ContactId__c |Lookup(Contact)         |The
-related _xref:admin-guide/application-settings-management/contact-field-reference.adoc.html[Contact]_ record.
+related xref:admin-guide/application-settings-management/contact-field-reference.adoc.html[Contact] record.
 
 |Deactivation Date / Time |CTCPG\__DeactivationDateTime__c
 |Date/Time |The date when the __Target Frequency __record will be
@@ -44,17 +44,17 @@ last date when the user can create _Activity_ of the current _Target
 Frequency_ record.
 
 |Marketing Cycle |CTCPG\__MarketingCycleId__c |Lookup(Marketing
-Cycle) |The related _xref:marketing-cycle-field-reference.html[Marketing
-Cycle]_ record.
+Cycle) |The related xref:marketing-cycle-field-reference.html[Marketing
+Cycle] record.
 
 |Marketing Detail Tracking
 |CTCPG\__MarketingDetailTrackingId__c |Lookup(Marketing Detail
 Tracking) |The
-related _xref:marketing-detail-tracking-field-reference.html[Marketing
-Detail Tracking]_ record.
+related xref:marketing-detail-tracking-field-reference.html[Marketing
+Detail Tracking] record.
 
 |Owner |CTCPG\__OwnerId__c |Lookup(User) |The related
-_xref:admin-guide/application-settings-management/user-field-reference.adoc.html[User]_ record.
+xref:admin-guide/application-settings-management/user-field-reference.adoc.html[User] record.
 
 |Planned Calls |CTCPG\__PlannedCalls__c  |Number(18,0)  |The
 number of planned activities of the _Account_ or _Contact_ record.

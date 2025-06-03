@@ -1,11 +1,10 @@
 = CPG Group Member Field Reference
 
-The[.object]#CPG Group Member# object is intended to store
-static or dynamic group members.
+The [.object]#CPG Group Member# object is intended to store static or dynamic group members.
 
 '''''
 
-Object API name: `CTCPG\__GroupMember__c`
+Object API name: [.apiobject]#CTCPG\__GroupMember__c#
 
 '''''
 
@@ -13,21 +12,15 @@ Object API name: `CTCPG\__GroupMember__c`
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Account |`CTCPG\__AccountId__c` |Lookup(Account) |The related
-_Account_ record if the group type is _Account_.
+|Account |[.apiobject]#CTCPG\__AccountId__c# |Lookup(Account) |The related _Account_ record if the group type is _Account_.
 
-|Contact |​​`CTCPG\__ContactId__c` |Lookup(Contact) |The related
-_Contact_ __ record if the group type is _Contact_.
+|Contact |[.apiobject]#CTCPG\__ContactId__c# |Lookup(Contact) |The related _Contact_ __ record if the group type is _Contact_.
 
-|CPG Group |`CTCPG\__GroupId__c` |Lookup(CPG Group) |The related
-_CPG Group_ record.
+|CPG Group |[.apiobject]#CTCPG\__GroupId__c# |Lookup(CPG Group) |The related _CPG Group_ record.
 
-|Manual |`CTCPG\__IsManual__c` |Checkbox       |Defines if the
-member was added to the resulting list manually.
+|Manual |[.apiobject]#CTCPG\__IsManual__c# |Checkbox |Defines if the member was added to the resulting list manually.
 
-|Product |`CTCPG\__ProductId__c` |Lookup(CT Product) |The
-related _Product_ record if the group type is _Product_.
+|Product |[.apiobject]#CTCPG\__ProductId__c# |Lookup(CT Product) |The related _Product_ record if the group type is _Product_.
 
-|User   |`​​CTCPG\__UserId__c` |Lookup(User) |The related
-User ** record if the group type is _User_.
+|User   |[.apiobject]#CTCPG\__UserId__c# |Lookup(User) |The related User record if the group type is _User_.
 |===
