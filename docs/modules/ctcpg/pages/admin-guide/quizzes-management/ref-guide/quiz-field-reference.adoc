@@ -1,11 +1,10 @@
 = Quiz Field Reference
 
-The[.object]#Quiz# object is intended to store the created
-questionnaires.
+The [.object]#Quiz# object is intended to store the created questionnaires.
 
 '''''
 
-API name in Salesforce: CTCPG\__Quiz__c
+API name in Salesforce: [.apiobject]#CTCPG\__Quiz__c#
 
 '''''
 
@@ -13,72 +12,56 @@ API name in Salesforce: CTCPG\__Quiz__c
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Active |CTCPG\__Active__c |Checkbox |If selected,
-the record is active and applied in business logic.
+|Active |[.apiobject]#CTCPG\__Active__c# |Checkbox |If selected, the record is active and applied in business logic.
 
-|Anonymous Quiz |CTCPG\__AnonymousQuiz__c |Checkbox
+|Anonymous Quiz |[.apiobject]#CTCPG\__AnonymousQuiz__c# |Checkbox
 |If selected, the quiz can be passed anonymously.
 
-|Correct Answer Percent |CTCPG\__CompletionPercentage__c
-|Percent(2,2) |It is used to set the minimum percentage of the
-partaker's correct answers to consider the quiz as passed.
+|Correct Answer Percent |[.apiobject]#CTCPG\__CompletionPercentage__c#
+|Percent(2,2) |It is used to set the minimum percentage of the partaker's correct answers to consider the quiz as passed.
 
-|Countdown Timer   |CTCPG\__IsCountdownTimerEnabled__c
-|Checkbox |If selected, the countdown timer will be displayed on the
-_Quiz_ page.
+|Countdown Timer   |[.apiobject]#CTCPG\__IsCountdownTimerEnabled__c#
+|Checkbox |If selected, the countdown timer will be displayed on the _Quiz_ page.
 
-|Description  |CTCPG\__Description__c |Long Text Area
+|Description  |[.apiobject]#CTCPG\__Description__c# |Long Text Area
 (32768) |Specify information about the quiz.
 
-|End Date |CTCPG\__EndDate__c |Date  |The last day when the
-quiz can be taken.
+|End Date |[.apiobject]#CTCPG\__EndDate__c# |Date  |The last day when the quiz can be taken.
 
-|Is Quiz Required |CTCPG\__IsRequired__c  |Checkbox  |If
-selected, the assigned partaker should take the quiz.
+|Is Quiz Required |[.apiobject]#CTCPG\__IsRequired__c#  |Checkbox  |If selected, the assigned partaker should take the quiz.
 
-|Is Write Answers On Exit |CTCPG\__IsWriteAnswersOnExit__c
-|Checkbox  |If selected, the answers will be shown at the end of the
-quiz.
+|Is Write Answers On Exit |[.apiobject]#CTCPG\__IsWriteAnswersOnExit__c#
+|Checkbox  |If selected, the answers will be shown at the end of the quiz.
 
-|Notification Period |CTCPG\__NotificationPeriod__c
-|Picklist        a|
-The period to remind a user about the quiz. The available values:
+|Notification Period |[.apiobject]#CTCPG\__NotificationPeriod__c#
+|Picklist        a| The period to remind a user about the quiz. The available values:
 
 * Daily
 * Weekly
 * Monthly
 
-|Notify Users |CTCPG\__IsUserInformerEnabled__c |Checkbox
-         |If selected, the user will be informed to take the open quiz
-during the period specified in the
-CTCPG\__NotificationPeriod__c field.
+|Notify Users |[.apiobject]#CTCPG\__IsUserInformerEnabled__c# |Checkbox|If selected, the user will be informed to take the open quiz during the period specified in the
+[.apiobject]#CTCPG\__NotificationPeriod__c# field.
 
-|Record Type |RecordTypeId |Record Type a|
-Available values:
+|Record Type |[.apiobject]#RecordTypeId# |Record Type a| Available values:
 
 * Internal
 * External
 
-|Show Correct Answers |CTCPG\__IsCorrectAnswersEnabled__c
-|Checkbox |If selected, the right answers will be shown or highlighted
-if the CTCPG\__IsWriteAnswersOnExit__c field is selected.
+|Show Correct Answers |[.apiobject]#CTCPG\__IsCorrectAnswersEnabled__c#
+|Checkbox |If selected, the right answers will be shown or highlighted if the [.apiobject]#CTCPG\__IsWriteAnswersOnExit__c# field is selected.
 
-|Show Results |CTCPG\__IsResultsEnabled__c |Checkbox a|
-If selected, the partaker sees if they passed the quiz at the end of
-it.
+|Show Results |[.apiobject]#CTCPG\__IsResultsEnabled__c# |Checkbox a|
+If selected, the partaker sees if they passed the quiz at the end of it.
 
-|Start Date |CTCPG\__StartDate__c |Date |The first day when
-the quiz can be taken.
+|Start Date |[.apiobject]#CTCPG\__StartDate__c# |Date |The first day when the quiz can be taken.
 
-|Stop Timer on app exit |CTCPG\__IsTimeStopsOnExit__c
-|Checkbox a|
-[NOTE] ==== Offline mode in case of integration with the CT
-Mobile app.  ==== If selected, the timer will be stopped when a user
-closes the CT Mobile app or switches to another app.
+|Stop Timer on app exit |[.apiobject]#CTCPG\__IsTimeStopsOnExit__c#
+|Checkbox a| NOTE: Offline mode in case of integration with the CT Mobile app.
 
-|Strict Mode |CTCPG\__IsStrictMode__c   |Checkbox |If selected,
-a user should send the answer to each question.
+If selected, the timer will be stopped when a user closes the CT Mobile app or switches to another app.
 
-|Time Limit (Minutes) |CTCPG\__TimeLimit__c  |Number(18,0) |The
-period when a user should complete the started quiz.
+|Strict Mode |[.apiobject]#CTCPG\__IsStrictMode__c#   |Checkbox |If selected, a user should send the answer to each question.
+
+|Time Limit (Minutes) |[.apiobject]#CTCPG\__TimeLimit__c#  |Number(18,0) |The period when a user should complete the started quiz.
 |===

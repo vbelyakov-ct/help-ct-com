@@ -3,46 +3,33 @@
 Quizzes may be used for the following purposes:
 
 * *Marketing Investigation*
- It is a survey to get feedback from the representatives. A quiz has no
-time restriction and required questions.
++
+It is a survey to get feedback from the representatives. A quiz has no time restriction and required questions.
 * *Team Self Training*
-Based on the segmentation, a representative team studies the company
-recommendations for visiting target customers. To pass the quiz, it is
-required to give a specific percent of the right answers. The quiz can
-be passed many times, and the results will be shown at the end of the
-quiz.
++
+Based on the segmentation, a representative team studies the company recommendations for visiting target customers. To pass the quiz, it is required to give a specific percent of the right answers. The quiz can be passed many times, and the results will be shown at the end of the quiz.
 * *Knowledge Estimation*
-Estimate your representatives by restricting the time of a quiz and
-setting a passing score.
++
+Estimate your representatives by restricting the time of a quiz and setting a passing score.
 * *Customer Feedback*
-Collect the targeted customers' feedback to increase the sales and
-effectiveness of your representatives.
-
-
++
+Collect the targeted customers' feedback to increase the sales and effectiveness of your representatives.
 
 Follow the guidelines to set up quizzes:
 
-. Specify the representative access to
-the [.object]#Quizzes# objects and specify the way to pass the
-quiz.
-* Online by adding the quiz to the *Home* page or displaying
-the *Quizzes* tab.
-* ​Offline in case of integration with the CT Mobile app.
-[NOTE] ==== Available only for the CT Mobile iOS. ====
-* Configure your custom process, for example, to link a quiz to the _CT
-Pharma Activity_ record.
-. xref:override-basic-action-for-quiz[Override Basic Action for
-Quiz] of the [.object]#Quiz# object to have the ability to add
-questions and assign users.
-. https://help.salesforce.com/articleView?id=creating_custom_object_tabs.htm&type=5[Add
-the Quizzes tab].
-. Define the __Quiz __purpose and xref:create-a-new-quiz[create a
-new Quiz] with the required options:
-* xref:specify-questions-for-quiz[create questions] for the quiz;
+. Specify the representative access to the [.object]#Quizzes# objects and specify the way to pass the quiz.
+* Online by adding the quiz to the *Home* page or displaying the *Quizzes* tab.
+* Offline in case of integration with the CT Mobile app.
++
+NOTE: Available only for the CT Mobile iOS.
+* Configure your custom process, for example, to link a quiz to the _CT Pharma Activity_ record.
+. xref:./override-basic-action-for-quiz.adoc[Override Basic Action for Quiz] of the [.object]#Quiz# object to have the ability to add questions and assign users.
+. link:https://help.salesforce.com/articleView?id=creating_custom_object_tabs.htm&type=5[Add the Quizzes tab].
+. Define the _Quiz_ purpose and xref:./create-a-new-quiz.adoc[create a new Quiz] with the required options:
+* xref:./specify-questions-for-quiz.adoc[create questions] for the quiz;
 * specify the order of the questions;
 * activate the _Quiz_ record.
-. xref:assign-the-quiz-partaker[Assign representatives] to pass the
-quiz.
-[TIP] ==== You can test the quiz as the administrator and next
-assign it to users. ====
+. xref:./assign-the-quiz-partaker.adoc[Assign representatives] to pass the quiz.
++
+TIP: You can test the quiz as the administrator and next assign it to users.
 . Additionally, customize reports to view the quiz results.

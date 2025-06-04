@@ -1,40 +1,35 @@
 = Create a new Quiz
 
-Before creating a quiz,
-https://help.salesforce.com/articleView?id=creating_custom_object_tabs.htm&type=5[add
-the Quizzes tab] to the menu.
-
-
+Before creating a quiz, link:https://help.salesforce.com/articleView?id=creating_custom_object_tabs.htm&type=5[add the Quizzes tab] to the menu.
 
 To create a quiz:
 
 . Go to the *Quizzes* tab and click *New*.
 . Select the appropriate record type and click *Next*.
-image:/resources/Storage/project-ct-pharma/Select-the-Quiz-record-type.png[/resources/Storage/project-ct-pharma/Select-the-Quiz-record-type]
++
+image:Select-the-Quiz-record-type.png[]
 . Fill in the quiz parameters, such as:
-[TIP] ==== Read the description of each
-parameter xref:quiz-field-reference[here]. ====
-* Specify the *Start Date* and *End Date* of the quiz availability to
-users;
++
+TIP: Read the description of each parameter xref:./ref-guide/quiz-field-reference.adoc[here].
+
+* Specify the *Start Date* and *End Date* of the quiz availability to users;
 * the percentage of the correct answers;
 * the time limit if needed;
 * enable the display of results;
 * activate the quiz.
++
 image:Create-the-Quiz.png[]
 . Click *Save*.
 
 The _Quiz_ record is created.
 
-
-[INFO] ==== xref:admin-guide/quizzes-management/override-basic-action-for-quiz[Override
-the _View_ button] to view the Quiz information. ====
+TIP: xref:./override-basic-action-for-quiz.adoc[Override the _View_ button] to view the Quiz information.
 
 * Click *Edit* to edit the _Quiz_ details;
 * Click *Clone Quiz* to create a new _Quiz_ record based on this one;
 * Click *Start Quiz* to start passing the quiz;
 * Click *Delete Quiz* to remove the quiz.
++
 image:quiz-editor.png[]
 
-
-
-Next, xref:admin-guide/quizzes-management/specify-questions-for-quiz[add questions] to the quiz.
+Next, xref:./specify-questions-for-quiz.adoc[add questions] to the quiz.

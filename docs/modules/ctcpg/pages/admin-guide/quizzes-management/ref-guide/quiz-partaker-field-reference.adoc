@@ -1,12 +1,10 @@
 = Quiz Partaker Field Reference
 
-The[.object]#Quiz Partaker# object is intended to link the user
-who passes the quiz with the xref:quiz-field-reference.html[Quiz] and
-xref:quiz-completion-field-reference.html[Quiz Completion] record.
+The [.object]#Quiz Partaker# object is intended to link the user who passes the quiz with the xref:./quiz-field-reference.adoc[Quiz] and xref:./quiz-completion-field-reference.adoc[Quiz Completion] record.
 
 '''''
 
-API name in Salesforce: CTCPG\__QuizPartaker__c
+API name in Salesforce: [.apiobject]#CTCPG\__QuizPartaker__c#
 
 '''''
 
@@ -14,22 +12,18 @@ API name in Salesforce: CTCPG\__QuizPartaker__c
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Already Passed Count |CTCPG\__AlreadyPassedCount__c
-|Number(18,0) |The number of the completed questions if a partaker has
-several attempts.
+|Already Passed Count |[.apiobject]#CTCPG\__AlreadyPassedCount__c#
+|Number(18,0) |The number of the completed questions if a partaker has several attempts.
 
-|Description  |CTCPG\__Description__c |Long Text Area
+|Description  |[.apiobject]#CTCPG\__Description__c# |Long Text Area
 (32768) |Specify information about the quiz partaker.
 
-|Possible Number of Passes |CTCPG\__PossibleNumberofPasses__c
+|Possible Number of Passes |[.apiobject]#CTCPG\__PossibleNumberofPasses__c#
 |Number(18,0) |The allowed number of quiz attempts.
 
-|Is Quiz Required |CTCPG\__IsRequired__c  |Checkbox  |If
-selected, the quiz is required to take.
+|Is Quiz Required |[.apiobject]#CTCPG\__IsRequired__c#  |Checkbox  |If selected, the quiz is required to take.
 
-|Quiz |CTCPG\__QuizId__c  |Master-Detail(Quiz) |The parent
-_Quiz_ record.
+|Quiz |[.apiobject]#CTCPG\__QuizId__c#  |Master-Detail(Quiz) |The parent _Quiz_ record.
 
-|User Id |CTCPG\__UserId__c  |Lookup(User) |The related _User_
-record.
+|User Id |[.apiobject]#CTCPG\__UserId__c#  |Lookup(User) |The related _User_ record.
 |===

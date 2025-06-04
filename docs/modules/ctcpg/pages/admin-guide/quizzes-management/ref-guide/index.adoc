@@ -1,55 +1,30 @@
 = Reference Guide
 
-[TIP] ==== These settings are optional. ====
+TIP: These settings are optional.
 
 In this section, get familiar with the following objects:
 
-* xref:quiz-field-reference[Quiz]
-* xref:quiz-field-reference.html[]xref:question-field-reference.html[Quiz
-Question]
-* xref:question-field-reference.html[]xref:quiz-answer-field-reference.html[Quiz
-Answer]
-* xref:quiz-answer-field-reference.html[]xref:quiz-partaker-field-reference.html[Quiz
-Partaker]
-* xref:quiz-partaker-field-reference.html[]xref:quiz-completion-field-reference.html[Quiz
-Completion]
+* xref:./quiz-field-reference.adoc[Quiz]
+* xref:./question-field-reference.adoc[Quiz Question]
+* xref:./quiz-answer-field-reference.adoc[Quiz Answer]
+* xref:./quiz-partaker-field-reference.adoc[Quiz Partaker]
+* xref:./quiz-completion-field-reference.adoc[Quiz Completion]
 
-
-
-xref:admin-guide/quizzes-management/index[Configuring Quizzes] for passing by
-representatives or for customers during the visit.
-
-
+xref:admin-guide/quizzes-management/index.adoc[Configuring Quizzes] for passing by representatives or for customers during the visit.
 
 The _Quiz_ record has the following record types:
 
 * _Internal quizzes_ are designed:
-** to examine representatives' knowledge about CT Products, which are
-targeted at customers;
-** to get feedback about the representative's daily routine, for
-example, how they conduct a meeting, what they like or do not like, how
-much time they spend on visits, etc.
-* _External quizzes_ may be used to get feedback from the clients the
-representative visited. The passed questionnaire will be linked to the
-corresponding _CT CPG Activity_ record, and the received information
-will be used for better customer segmentation and understanding of their
-needs.
+** to examine representatives' knowledge about CT Products, which are targeted at customers;
+** to get feedback about the representative's daily routine, for example, how they conduct a meeting, what they like or do not like, how much time they spend on visits, etc.
+* _External quizzes_ may be used to get feedback from the clients the representative visited. The passed questionnaire will be linked to the corresponding _CT CPG Activity_ record, and the received information will be used for better customer segmentation and understanding of their needs.
 
-It is possible to create complex quizzes with questions depend on the
-previous question or answer.
+It is possible to create complex quizzes with questions depend on the previous question or answer.
 
 [[h2_552352642]]
-=== Quiz Model
+== Quiz Model
 
-Each _Quiz_ record has a number of related _Quiz Question_ records. The
-passed _Quiz_ is stored as the _Quiz Completion_ record with the
-linked _Quiz Answer_ records. The corresponding Quiz Answer record is
-related to the _Quiz Partaker_ record and a _CT CPG Activity_ record if
-applied. The administrator assigns representatives as the _Quiz
-Partakers_ by creating a _Quiz Partaker_ record related to
-the _User_ record.
-
-
+Each _Quiz_ record has a number of related _Quiz Question_ records. The passed _Quiz_ is stored as the _Quiz Completion_ record with the linked _Quiz Answer_ records. The corresponding Quiz Answer record is related to the _Quiz Partaker_ record and a _CT CPG Activity_ record if applied. The administrator assigns representatives as the _Quiz Partakers_ by creating a _Quiz Partaker_ record related to the _User_ record.
 
 image:CTCPG-Quiz-Model.png[]
 

@@ -7,10 +7,8 @@ To specify questions for the _Quiz_ record:
 . Select the _Question_ type and click *Next*.
 image:Quiz-record-type.png[]
 . Specify the question. To create a branch:
-.. select one of the added questions to the quiz in the *Depends on
-question* field;
-.. specify the answer to this question in the **Depends on answe**r
-field, according to which the user jumps to the branch:
+.. select one of the added questions to the quiz in the *Depends on question* field;
+.. specify the answer to this question in the *Depends on answer* field, according to which the user jumps to the branch:
 * with the *Text* type:
 image:Text-Question.png[]
 * with the *Number* type
@@ -22,5 +20,4 @@ image:Multipicklist-Question.png[]
 . Click *Save*.
 . Repeat steps 2–5 for all questions in the quiz.
 
-The questions are added. Next, specify users
-as xref:admin-guide/quizzes-management/assign-the-quiz-partaker[quiz partakers].
+The questions are added. Next, specify users as xref:admin-guide/quizzes-management/assign-the-quiz-partaker.adoc[quiz partakers].
