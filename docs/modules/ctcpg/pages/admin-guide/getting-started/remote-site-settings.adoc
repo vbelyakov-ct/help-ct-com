@@ -1,6 +1,18 @@
 = 3. Remote Site Settings
 
-To configure and work with the full functionality of the managed CT CPG
-package, it is necessary to create an additional remote site.
+To configure and work with the full functionality of the managed CT CPG package, it is necessary to create an additional remote site.
+
+If https://help.salesforce.com/articleView?id=domain_name_overview.htm&type=5[My Domain] is not configured, the two required settings should be specified:
+
+. Go to *Setup → Security → Remote Site Settings.*
+. Click **New Remote Site **and add the first entry.
+* In the *Remote Site Name* field, enter any name you like.
+* In the *Remote Site URL* field, enter `https://INSTANCE_NAME.salesforce.com`.
++
+TIP: To obtain ``INSTANCE_NAM``E, go to *Setup → Company Settings* → *Company Information* → find the *Instance* field.
+. Click *Save*.
+
+The remote sites are added.
+
 
 
