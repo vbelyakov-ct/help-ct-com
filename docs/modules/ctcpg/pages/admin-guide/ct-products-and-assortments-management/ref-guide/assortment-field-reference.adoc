@@ -1,13 +1,11 @@
 = Assortment Field Reference
 
-The *Assortment* object represents xref:admin-guide/configuring-ct-products-and-assortments/create-an-assortment[a
-unique set of products] available during a specific period, based on the
-brands, families, and hierarchy sets in your product catalogs, and
-promoted for the particular accounts.
+The *Assortment* object represents xref:admin-guide/ct-products-and-assortments-management/create-an-assortment.adoc[a
+unique set of products] available during a specific period, based on the brands, families, and hierarchy sets in your product catalogs, and promoted for the particular accounts.
 
 '''''
 
-API name in Salesforce: CTCPG\__Assortment__c
+API name in Salesforce: [.apiobject]#CTCPG\__Assortment__c#
 
 '''''
 
@@ -15,23 +13,16 @@ API name in Salesforce: CTCPG\__Assortment__c
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Active |CTCPG\__IsActive__c |Checkbox |If selected,
-the record is active and applied in business logic.
+|Active |[.apiobject]#CTCPG\__IsActive__c# |Checkbox |If selected, the record is active and applied in business logic.
 
-|Default Assortment |CTCPG\__IsDefault__c |Checkbox |If
-selected, the _Assortment_ record will be used as the default for
-_Accounts_ without assigned assortments.
+|Default Assortment |[.apiobject]#CTCPG\__IsDefault__c# |Checkbox |If selected, the _Assortment_ record will be used as the default for _Accounts_ without assigned assortments.
 
-|Description |CTCPG\__Description__c |Long Text Area(32768)
+|Description |[.apiobject]#CTCPG\__Description__c# |Long Text Area(32768)
 |Specify information about the assortment.
 
-|End Date         |CTCPG\__EndDate__c |Date |Specify the
-last date of the _Assortment_ availability.
+|End Date         |[.apiobject]#CTCPG\__EndDate__c# |Date |Specify the last date of the _Assortment_ availability.
 
-|Start Date |CTCPG\__StartDate__c |Date |Specify the first date
-of the _Assortment_ availability.
+|Start Date |[.apiobject]#CTCPG\__StartDate__c# |Date |Specify the first date of the _Assortment_ availability.
 
-|Total products |CTCPG\__TotalProducts__c |Roll-Up Summary
-(COUNT Assortment Product) |Used to view the total products in the
-_Assortment_ record.
+|Total products |[.apiobject]#CTCPG\__TotalProducts__c# |Roll-Up Summary (COUNT Assortment Product) |Used to view the total products in the _Assortment_ record.
 |===

@@ -1,14 +1,10 @@
 = Product Component Field Reference
 
-The[.object]#Product Component# object is a junction object
-between a bundle and a product and used in
-https://help.customertimes.com/smart/project-order-module/product-management[product
-management] for CT Orders. One product can be a part of different
-bundles.
+The [.object]#Product Component# object is a junction object between a bundle and a product and used in link:https://help.customertimes.com/smart/project-order-module/product-management[product management] for CT Orders. One product can be a part of different bundles.
 
 '''''
 
-Object API name: `CTCPG_ProductComponent__c`
+Object API name: [.apiobject]#CTCPG_ProductComponent__c#
 
 '''''
 
@@ -16,18 +12,13 @@ Object API name: `CTCPG_ProductComponent__c`
 |===
 |*Field* |*API name* |*Type* |*Description*
 
-|Bundle |Bundle2Id__c |Lookup(CT Product) |A bundle that
-includes the current Salesforce product.
+|Bundle |[.apiobject]#Bundle2Id__c# |Lookup(CT Product) |A bundle that includes the current Salesforce product.
 
-|Bundle |`CTCPG\__BundleId__c` |Lookup(Product2) |A bundle
-that includes the current _CT Product_.
+|Bundle |[.apiobject]#CTCPG\__BundleId__c# |Lookup(Product2) |A bundle that includes the current _CT Product_.
 
-|Multiplier |`CTCPG\__Multiplier__c` |Number(18,0) |A multiplying
-factor sets the ratio for multiplying the number of products in the
-bundle.
+|Multiplier |[.apiobject]#CTCPG\__Multiplier__c# |Number(18,0) |A multiplying factor sets the ratio for multiplying the number of products in the bundle.
 
-|Product |`CTCPG\__ProductId__c` |Lookup(CT Product) |This is a
-lookup to store a __CT Product __identifier.
+|Product |[.apiobject]#CTCPG\__ProductId__c# |Lookup(CT Product) |This is a lookup to store a _CT Product_ identifier.
 
-|Product |Product2Id__c |Lookup(Product2) |
+|Product |[.apiobject]#Product2Id__c# |Lookup(Product2) |
 |===

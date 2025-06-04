@@ -1,12 +1,11 @@
 = Assortment Product Field Reference
 
 The *Assortment Product* object
-xref:admin-guide/configuring-ct-products-and-assortments/create-an-assortment#h2__1291616949[represents product
-records] in the _Assortment_ record.
+xref:admin-guide/ct-products-and-assortments-management/create-an-assortment.adoc#h2__1291616949[represents product records] in the _Assortment_ record.
 
 '''''
 
-API name in Salesforce: CTCPG\__AssortmentProduct__c
+API name in Salesforce: [.apiobject]#CTCPG\__AssortmentProduct__c#
 
 '''''
 
@@ -14,16 +13,13 @@ API name in Salesforce: CTCPG\__AssortmentProduct__c
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Assortment  |CTCPG\__AssortmentId__c |Lookup(Assortment)
+|Assortment  |[.apiobject]#CTCPG\__AssortmentId__c# |Lookup(Assortment)
 |The related _Assortment_ record.
 
-|Product |CTCPG\__ProductId__c |Lookup(CT Product) |The
-related _CT Product_ record that is included in the assortment.
+|Product |[.apiobject]#CTCPG\__ProductId__c# |Lookup(CT Product) |The related _CT Product_ record that is included in the assortment.
 
-|Required         |CTCPG\__IsRequired__c |Checkbox
-|The _CT Product_ cannot be excluded from the _Assortment_ assigned to
-the _Account_.
+|Required         |[.apiobject]#CTCPG\__IsRequired__c# |Checkbox
+|The _CT Product_ cannot be excluded from the _Assortment_ assigned to the _Account_.
 
-|Sort Order |CTCPG\__SortOrder__c |Number(18,0) |The order
-number of _CT Product_ in the _Assortment_ record.
+|Sort Order |[.apiobject]#CTCPG\__SortOrder__c# |Number(18,0) |The order number of _CT Product_ in the _Assortment_ record.
 |===

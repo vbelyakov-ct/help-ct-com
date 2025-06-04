@@ -2,52 +2,31 @@
 
 In this section:
 
-* Get familiar with
-xref:admin-guide/configuring-ct-products-and-assortments/ref-guide/ct-products-and-assortments-management#h2_1870584043[CT
-Product object model]
-and xref:admin-guide/configuring-ct-products-and-assortments/ref-guide/ct-products-and-assortments-management#h2__160781133[CT
-Product record types].
-* Read field description for
-the xref:account-assortment-field-reference[Account
-Assortment], xref:assortment-field-reference[Assortment], xref:assortment-product-field-reference[Assortment
-Product], xref:admin-guide/ct-products-and-assortments-management/ref-guide/ct-product-field-reference.adoc[CT Product],
-xref:inventory-field-reference[Inventory], and xref:product-component-field-reference[Product
-Component]xref:skill-mark-field-reference[ ]objects.
+* Get familiar with <<h2_1870584043, CT Product object model>> and <<h2__160781133, CT Product record types>>.
+* Read field description for the xref:./account-assortment-field-reference.adoc[Account Assortment], xref:./assortment-field-reference.adoc[Assortment], xref:./assortment-product-field-reference.adoc[Assortment Product], xref:./ct-product-field-reference.adoc[CT Product], xref:./inventory-field-reference.adoc[Inventory], and xref:./product-component-field-reference.adoc[Product Component] objects.
 
-
-
-xref:admin-guide/configuring-ct-products-and-assortments/index[Create new
-products and assortments] according to your business needs.
+xref:admin-guide/ct-products-and-assortments-management/index.adoc[Create new products and assortments] according to your business needs.
 
 [[h2_1870584043]]
-=== The CT Product object model
+== The CT Product object model
 
 image:CT-Product-Object-Model.png[]
 
 [[h2__160781133]]
-=== The CT Product Record Types
+== The CT Product Record Types
 
-After the CT CPG installation, there are CT Products with different
-record types divided by families and brands. The available record types:
+After the CT CPG installation, there are CT Products with different record types divided by families and brands. The available record types:
 
 * *Company Product*
-This record type is intended to store records of your company's
-products.
+This record type is intended to store records of your company's products.
 * *Competitor Product*
-This record type is intended to store records of our competitor's
-products.
+This record type is intended to store records of our competitor's products.
 * *POS Material*
-This record type is intended to store records of the auxiliary products,
-such as shelves, roll-stands, stoppers, and other items for the
-point-of-sales.
+This record type is intended to store records of the auxiliary products, such as shelves, roll-stands, stoppers, and other items for the point-of-sales.
 * *Inventory*
-This record type is intended to store records of the rented items for
-the point-of-sales.
+This record type is intended to store records of the rented items for the point-of-sales.
 * *Bundle*
-It is a CT Product that is a hub for CT Product records organized in a
-hierarchy.
-https://help.customertimes.com/smart/project-order-module/managing-bundles[A
-bundle] can include up to 3 child bundles.
-[NOTE] ==== Used for the
-https://help.customertimes.com/articles/project-order-module/ct-orders-solution[CT
-Orders] functionality and not added to the CT Product page layout. ====
+It is a CT Product that is a hub for CT Product records organized in a hierarchy.
+link:https://help.customertimes.com/smart/project-order-module/managing-bundles[A bundle] can include up to 3 child bundles.
++
+NOTE: Used for the link:https://help.customertimes.com/articles/project-order-module/ct-orders-solution[CT Orders] functionality and not added to the CT Product page layout.

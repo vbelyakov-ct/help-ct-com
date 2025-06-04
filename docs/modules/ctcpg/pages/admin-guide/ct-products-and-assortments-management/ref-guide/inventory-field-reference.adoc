@@ -1,21 +1,13 @@
 = Inventory Field Reference
 
-The[.object]#Inventory# object is used to store records of the
-rented items for the point-of-sales and relate them with the _Account_
-and _Contact_ of the corresponding _Activity_ record.
+The [.object]#Inventory# object is used to store records of the rented items for the point-of-sales and relate them with the _Account_ and _Contact_ of the corresponding _Activity_ record.
 
-* The _CallReportInventory_ field set is responsible
-for xref:activity-report-interface[the
-Inventory tab displaying] on xref:configuring-activity-report[the
-configured _Activity Report_ page] for the corresponding _Activity_
-record type;
-* The__ CT Product__ with the _Inventory_ record type is used as the
-Inventory record that can be selected on the *Inventory* tab of the
-_Activity Report_ page.
+* The _CallReportInventory_ field set is responsible for xref:admin-guide/activity-report-management/ref-guide/activity-report-interface.adoc[the Inventory tab displaying] on xref:admin-guide/activity-report-management/index.adoc[the configured _Activity Report_ page] for the corresponding _Activity_ record type;
+* The__ CT Product__ with the _Inventory_ record type is used as the _Inventory_ record that can be selected on the *Inventory* tab of the _Activity Report_ page.
 
 '''''
 
-API name in Salesforce: CTCPG\__Inventory__c
+API name in Salesforce: [.apiobject]#CTCPG\__Inventory__c#
 
 '''''
 
@@ -23,38 +15,33 @@ API name in Salesforce: CTCPG\__Inventory__c
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Account          |CTCPG\__AccountId__c |Lookup(Account)
+|Account          |[.apiobject]#CTCPG\__AccountId__c# |Lookup(Account)
    |The related _Account_ record to which the _Inventory_ is assigned.
 
-|Active |CTCPG\__IsActive__c |Checkbox |If selected,
+|Active |[.apiobject]#CTCPG\__IsActive__c# |Checkbox |If selected,
 the record is active and applied in business logic.
 
-|Category |CTCPG\__Category__c |Picklist a|
+|Category |[.apiobject]#CTCPG\__Category__c# |Picklist a|
 _Inventory_ categories. The available values by default:
 
 * Dairy
 * Nutrition
 
-|Contact         |CTCPG\__ContactId__c |Lookup(Contact)
-   |The related _Contact_ record to which the__ Inventory__ is
-assigned.
+|Contact |[.apiobject]#CTCPG\__ContactId__c# |Lookup(Contact)
+|The related _Contact_ record to which the__ Inventory__ is assigned.
 
-|Description |CTCPG\__Description__c |Long Text Area(32768)
-     |_Inventory_ description.
+|Description |[.apiobject]#CTCPG\__Description__c# |Long Text Area(32768)
+|_Inventory_ description.
 
-|Install Date |CTCPG\__InstallDate__c |Date |The date of the
-_Inventory_ delivery to the point-of-sales.
+|Install Date |[.apiobject]#CTCPG\__InstallDate__c# |Date |The date of the _Inventory_ delivery to the point-of-sales.
 
-|Product |CTCPG\__ProductId__c |Lookup(CT Product)  |The
-related _CT Product_ record, if applied.
+|Product |[.apiobject]#CTCPG\__ProductId__c# |Lookup(CT Product)  |The related _CT Product_ record, if applied.
 
-|Serial |CTCPG\__Serial__c  |Text(255) |The serial number of
-the _Inventory_.
+|Serial |[.apiobject]#CTCPG\__Serial__c#  |Text(255) |The serial number of the _Inventory_.
 
-|Shelf Space |CTCPG\__ShelfSpace__c  |Number(16,2) |A number of
-shelves.
+|Shelf Space |[.apiobject]#CTCPG\__ShelfSpace__c#  |Number(16,2) |A number of shelves.
 
-|Status |CTCPG\__Status__c  |Picklist a|
+|Status |[.apiobject]#CTCPG\__Status__c#  |Picklist a|
 Status of the Inventory record. The available values by default:
 
 * Installed

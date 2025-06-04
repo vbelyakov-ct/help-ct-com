@@ -1,32 +1,27 @@
 = Create a new CT Product
 
-You can upload new product records from the external ERP-system or
-separately create new xref:admin-guide/ct-products-and-assortments-management/ref-guide/ct-product-field-reference.adoc[CT Product]
-records and differentiate them by specific categories, brands, and
-families.
+You can upload new product records from the external ERP-system or  separately create new xref:admin-guide/ct-products-and-assortments-management/ref-guide/ct-product-field-reference.adoc[CT Product] records and differentiate them by specific categories, brands, and families.
 
-[TIP] ==== To upload multiple _CT Product_ records, create a CSV
-file with required _CT Product_ records, and then
-use https://help.salesforce.com/articleView?id=data_loader.htm&type=5[Data
-Loader] orhttps://trailhead.salesforce.com/content/learn/modules/lex_implementation_data_management/lex_implementation_data_import[ Data
-Import Wizard] to upload records to the Salesforce organization. ====
+TIP: To upload multiple _CT Product_ records, create a CSV file with required _CT Product_ records, and then use link:https://help.salesforce.com/articleView?id=data_loader.htm&type=5[Data Loader] or link:https://trailhead.salesforce.com/content/learn/modules/lex_implementation_data_management/lex_implementation_data_import[DataImport Wizard] to upload records to the Salesforce organization.
 
 To create a _CT Product_ record:
 
 . Go to the *CT Product* tab and click *New*.
-. xref:admin-guide/ct-products-and-assortments-management/index.adoc#h2__160781133[Select
-the record type] and click *Next*.
+. xref:admin-guide/ct-products-and-assortments-management/ref-guide/index.adoc#h2__160781133[Select the record type] and click *Next*.
++
 image:588242151.png[]
 . Fill in the product parameters, such as:
-[TIP] ==== Read the description of each parameter
-xref:admin-guide/ct-products-and-assortments-management/ref-guide/ct-product-field-reference.adoc[here]. ====
-* Product *name* and *Brand*, *Family*, and *Type*;
-[TIP] ==== If needed, update the values of the _Brand_,
-_Family_, and _Type_ picklist on the _CT Product_ object. ====
-* Enable *Price Audit* to track product price changes;
-* Select *Category* if needed;
-* Add** Parent** product if needed;
++
+TIP: Read the description of each parameter xref:admin-guide/ct-products-and-assortments-management/ref-guide/ct-product-field-reference.adoc[here].
+
+* Product *name* and *Brand*, *Family*, and *Type*.
++
+TIP: If needed, update the values of the _Brand_, _Family_, and _Type_ picklist on the _CT Product_ object.
+* Enable *Price Audit* to track product price changes.
+* Select *Category* if needed.
+* Add** Parent** product if needed.
 * Set *Active* to use CT Product.
++
 image:588242161.png[]
 . Click *Save*.
 

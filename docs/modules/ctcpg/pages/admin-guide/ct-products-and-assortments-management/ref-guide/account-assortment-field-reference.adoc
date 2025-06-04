@@ -1,12 +1,10 @@
 = Account Assortment Field Reference
 
-The[.object]#Account Assortment# ** object is used
-xref:admin-guide/configuring-ct-products-and-assortments/assign-assortments-to-accounts[to map assortments and
-accounts].
+The [.object]#Account Assortment# object is used xref:admin-guide/ct-products-and-assortments-management/assign-assortments-to-accounts.adoc[to map assortments and accounts].
 
 '''''
 
-API name in Salesforce: CTCPG\__AccountAssortment__c
+API name in Salesforce: [.apiobject]#CTCPG\__AccountAssortment__c#
 
 '''''
 
@@ -14,26 +12,18 @@ API name in Salesforce: CTCPG\__AccountAssortment__c
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Account |CTCPG\__AccountId__c |Lookup(Account) |The
-_Account_ record to which the
-xref:assortment-field-reference.html[Assortment] is assigned.
+|Account |[.apiobject]#CTCPG\__AccountId__c# |Lookup(Account) |The _Account_ record to which the xref:./assortment-field-reference.adoc[Assortment] is assigned.
 
-|Active |CTCPG\__IsActive__c |Checkbox |If selected,
-the record is active and applied in business logic.
+|Active |[.apiobject]#CTCPG\__IsActive__c# |Checkbox |If selected, the record is active and applied in business logic.
 
-|Assortment         |CTCPG\__AssortmentId__c
-|Lookup(Assortment)         |The related _Assortment_ record.
+|Assortment |[.apiobject]#CTCPG\__AssortmentId__c# |Lookup(Assortment) |The related _Assortment_ record.
 
-|Description  |CTCPG\__Description__c |Long Text
-Area(32768) |Specify the additional information.
+|Description  |[.apiobject]#CTCPG\__Description__c# |Long Text Area(32768) |Specify the additional information.
 
-|End Date |CTCPG\__EndDate__c |Checkbox |Specify the last day
-when the _Assortment_ can be selected for the _Account_ record.
+|End Date |[.apiobject]#CTCPG\__EndDate__c# |Checkbox |Specify the last day when the _Assortment_ can be selected for the _Account_ record.
 
-|Primary |CTCPG\__IsTarget__c |Formula(Text) |If selected, the
-_Assortment_ will be displayed first on the *Activity Report* tab.
+|Primary |[.apiobject]#CTCPG\__IsTarget__c# |Formula(Text) |If selected, the _Assortment_ will be displayed first on the *Activity Report* tab.
 
-|Start Date |CTCPG\__TargetUserIds__c |Text Area(255)
-|Specify the first day when the _Assortment_ can be selected for
-the _Account_ record.
+|Start Date |[.apiobject]#CTCPG\__TargetUserIds__c# |Text Area(255)
+|Specify the first day when the _Assortment_ can be selected for the _Account_ record.
 |===
