@@ -57,13 +57,13 @@ administrators.
 +
 . link:https://workbench.developerforce.com/login.php[Go to the workbench] and log in with credentials of the required Salesforce organization.
 . Go to *Migration → Retrieve*
-. Specify the path to your locally stored .xml file from step 1.
+. Specify the path to your locally stored [.apiobject]#.xml# file from step 1.
 . Click *Next* → click *Retrieve*.
 . When metadata is ready, click *Download ZIP File* in the *Results* section and save the ZIP file.
 +
 image:image2019-10-20-18_55_13.png[]
-. Open the .xml file from the downloaded archive and delete the custom tabs from this Salesforce organization.
+. Open the [.apiobject]#.xml# file from the downloaded archive and delete the custom tabs from this Salesforce organization.
 . Go to the workbench to deploy new custom tabs from a new version.
-. Go to **Migration → Retrieve **→ add the .xml file from step 1 → click *Next* → click *Deploy*.
+. Go to **Migration → Retrieve **→ add the [.apiobject]#.xml# file from step 1 → click *Next* → click *Deploy*.
 
 When deployment is complete, the previously existed access rights will be assigned to the newly deployed custom tabs.
