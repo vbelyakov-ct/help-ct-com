@@ -1,12 +1,11 @@
 = AccountProcess
 
 _AccountProcess_ is intended to display the _Account_ hierarchy
-xref:admin-guide/calendar-management/legacy-calendar-management/calendar-interface#h2__1884555900[on the _Calendar_ tab] and
-xref:admin-guide/targeting-and-marketing-cycles-management/create-targeting-lists[manage target _Account_ records].
+xref:admin-guide/calendar-management/legacy-calendar-management/calendar-interface.adoc[on the _Calendar_ tab] and xref:admin-guide/targeting-and-marketing-cycles-management/create-targeting-lists.adoc[manage target _Account_ records].
 
 '''''
 
-API name in Salesforce: AccountProcess
+API name in Salesforce: [.apiobject]#AccountProcess#
 
 '''''
 
@@ -14,31 +13,21 @@ API name in Salesforce: AccountProcess
 |===
 |*Context* |*Method* |*Codename* |*Description*
 
-|after insert[ai]  |manageHierarchy() |manageHr |Analyze
-if the _Account_ record has child _Account_ records and, if so, update
-the CTCPG\__HasChildAccounts__c field on this _Account_ record.
+|[.apiobject]#after insert[ai]#  |[.apiobject]#manageHierarchy()# |manageHr |Analyze if the _Account_ record has child _Account_ records and, if so, update the [.apiobject]#CTCPG\__HasChildAccounts__c# field on this _Account_ record.
 
-|after update[au]  |manageTargetFrequency()  |manageTF a|
-In case of changes in
-the xref:division-target-frequency-settings[Division Target
-Frequency Settings] record for the__ User__ division:
+|[.apiobject]#after update[au]#  |[.apiobject]#manageTargetFrequency()#  |[.apiobject]#manageTF# a| In case of changes in the xref:admin-guide/cpg-custom-settings/division-target-frequency-settings.adoc[Division Target Frequency Settings] record for the _User_ division:
 
-* create a new _Target Frequency_ record related to the
-specific _Account_ record for the current user;
-** if the __Target Frequency __record already exists, this record will
-be deactivated and its CTCPG\__DeactivationDateTime__c field will
-be populated with the deactivation date;
-* update the CTCPG\__TargetUserIds__c field on
-this _Account_ record.
+* create a new _Target Frequency_ record related to the specific _Account_ record for the current user;
+** if the _Target Frequency_ record already exists, this record will
+be deactivated and its [.apiobject]#CTCPG\__DeactivationDateTime__c# field will be populated with the deactivation date;
+* update the [.apiobject]#CTCPG\__TargetUserIds__c# field on this _Account_ record.
 
-| |manageHierarchy()  |managehR a|
-Analyze if the _Account_ record has child __Account __records and, if
-so, update the CTCPG\__HasChildAccounts__c field on
-this __Account __record.
+| |[.apiobject]#manageHierarchy()#  |[.apiobject]#managehR# a|
+Analyze if the _Account_ record has child __Account __records and, if so, update the [.apiobject]#CTCPG\__HasChildAccounts__c# field on this _Account_ record.
 
-|before insert[bi] | | |Reserved.
+|[.apiobject]#before insert[bi]# | | |Reserved.
 
-|before update[bu] | | |Reserved.
+|[.apiobject]#before update[bu]# | | |Reserved.
 |===
 
 

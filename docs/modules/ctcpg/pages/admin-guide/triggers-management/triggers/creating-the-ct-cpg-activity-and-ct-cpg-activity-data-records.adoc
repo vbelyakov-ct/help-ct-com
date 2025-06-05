@@ -1,82 +1,58 @@
 = Creating the CT CPG Activity and CT CPG Activity Data Records
 
-The following Apex classes are used to create a record of the custom
-xref:admin-guide/activity-report-management/ref-guide/activity-field-reference#h2_573063013[CT CPG Activity] object
-and a related record of the custom[.object]#CT CPG Activity
-Data# object:
+The following Apex classes are used to create a record of the custom xref:admin-guide/activity-report-management/ref-guide/activity-field-reference.adoc#h2_573063013[CT CPG Activity] object and a related record of the custom [.object]#CT CPG Activity Data# object:
 
-* ActivityProcessHandler
-* GlobalActivityService
+* [.apiobject]#ActivityProcessHandler#
+* [.apiobject]#GlobalActivityService#
 
 The Apex classes are invoked by the following Apex trigger:
 
-* ActivityProcess
+* [.apiobject]#ActivityProcess#
 
-[NOTE] ==== Before implementing, the system checks that the
-xref:admin-guide/triggers-management/triggers/activity-process[ActivityProcess] trigger has a corresponding
-record in xref:admin-guide/cpg-custom-settings/trigger-settings.adoc[Trigger Settings].  ====
+NOTE: Before implementing, the system checks that the xref:admin-guide/triggers-management/triggers/activity-process.adoc[ActivityProcess] trigger has a corresponding record in xref:admin-guide/cpg-custom-settings/trigger-settings.adoc[Trigger Settings].
 
-A trigger is xref:admin-guide/triggers-management/triggers/trigger-contexts[invoked by operations on
-recurring events].
+A trigger is xref:admin-guide/triggers-management/triggers/trigger-contexts.adoc[invoked by operations on recurring events].
 
 [[h2__135632021]]
-=== The ActivityProcessHandler Class
+== The ActivityProcessHandler Class
 
-The following trigger methods of the ActivityProcessHandler class are
-implemented:
-[TIP] ==== You can xref:admin-guide/triggers-management/enabling-the-bypass-logic[restrict
-one or more trigger events] to not invoke the trigger methods. ====
+The following trigger methods of the [.apiobject]#ActivityProcessHandler# class are implemented:
 
-
+TIP: You can xref:admin-guide/triggers-management/enabling-the-bypass-logic.adoc[restrict one or more trigger events] to not invoke the trigger methods.
 
 [width="100%",cols="50%,50%",]
 |===
 |*ActivityProcessHandler Method* |*Execution*
 
-|onBeforeInsert a|
-* Create a _CT CPG Activity_ record linked to the _Contact_
-and/or _Account_ records;
-* Assign the related
-xref:targeting-and-marketing-cycles-management.html[Marketing Cycle]_
-record;
+|[.apiobject]#onBeforeInsert# a|
+* Create a _CT CPG Activity_ record linked to the _Contact_ and/or _Account_ records;
+* Assign the related xref:admin-guide/targeting-and-marketing-cycles-management/index.adoc[Marketing Cycle]_ record;
 * Link the corresponding _Target Frequency_ record;
 * Fill in _Objectives_ if specified.
 
-|onBeforeUpdate a|
+| [.apiobject]#onBeforeUpdate# a|
 For the _CT CPG Activity_ record:
 
 * Assign the related _Marketing Cycle_ record;
 * Link the corresponding _Target Frequency_ record;
-* Fill in xref:objective-creating.html[Objectives] if specified.
+* Fill in xref:admin-guide/objectives-management/objective-creating.adoc[Objectives] if specified.
 
-|onBeforeDelete |Search and delete the standard _Event_ and _Task_
-records that are related to deleted _CT CPG Activity_ records.
+|[.apiobject]#onBeforeDelete# |Search and delete the standard _Event_ and _Task_ records that are related to deleted _CT CPG Activity_ records.
 
-|onAfterInsert  a|
-* Create the corresponding _CT CPG Activity Data_ record for the _CT CPG
-Activity_ record;
-* Calculate finished activities and fill in the *Actual Calls* field of
-the related _Target Frequency_ record;
+|[.apiobject]#onAfterInsert#  a|
+* Create the corresponding _CT CPG Activity Data_ record for the _CT CPG Activity_ record;
+* Calculate finished activities and fill in the *Actual Calls* field of the related _Target Frequency_ record;
 * Add _Objectives_ if specified;
-* Grant access to the Joint Visit Report for relevant users if
-specified;
-* Create the _Event_ or _Task_ records in case
-xref:admin-guide/configuring-activity-sync/index[Activity Sync] is configured.
+* Grant access to the Joint Visit Report for relevant users if specified;
+* Create the _Event_ or _Task_ records in case xref:admin-guide/configuring-activity-sync/index.adoc[Activity Sync] is configured.
 
-|onAfterUpdate a|
-* Update the corresponding__ CT CPG Activity Data__ record for the _CT
-CPG Activity_ record;
-* Recalculate finished activities and fill in the *Actual Calls* field
-of the related _Target Frequency_ record;
-* Create the related _CT CPG Activity_ records in case of the
-xref:creating-the-next-activity.html[Next Call] functionality is
-configured.
-* Grant access to the Joint Visit Report for relevant users if
-specified.
+|[.apiobject]#onAfterUpdate# a|
+* Update the corresponding__ CT CPG Activity Data__ record for the _CT CPG Activity_ record;
+* Recalculate finished activities and fill in the *Actual Calls* field of the related _Target Frequency_ record;
+* Create the related _CT CPG Activity_ records in case of the xref:admin-guide/next-activity-management/creating-the-next-activity.adoc[Next Call] functionality is configured.
+* Grant access to the Joint Visit Report for relevant users if specified.
 
-|onAfterDelete  |When the _CT CPG Activity_ records are removed,
-recalculate the finished activities in the *Actual Calls* field of the
-corresponding Target Frequency record.
+|[.apiobject]#onAfterDelete#  |When the _CT CPG Activity_ records are removed, recalculate the finished activities in the *Actual Calls* field of the corresponding Target Frequency record.
 |===
 
 

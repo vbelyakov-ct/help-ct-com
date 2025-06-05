@@ -1,12 +1,10 @@
 = MarketingCycleProcess
 
-*MarketingCycleProcess* is intended to mass deactivate _Target
-Frequency_ records if xref:admin-guide/targeting-and-marketing-cycles-management/create-a-marketing-cycle[a _Marketing
-Cycle_ record] is no more active.
+The _MarketingCycleProcess_ trigger is intended to mass deactivate _Target Frequency_ records if xref:admin-guide/targeting-and-marketing-cycles-management/create-a-marketing-cycle.adoc[a _Marketing Cycle_ record] is no more active.
 
 '''''
 
-API name in Salesforce: MarketingCycleProcess
+API name in Salesforce: [.apiobject]#MarketingCycleProcess#
 
 '''''
 
@@ -14,13 +12,10 @@ API name in Salesforce: MarketingCycleProcess
 |===
 |*Context* |*Method* |*Codename* |*Description*
 
-|after update  |deactivateTargetFrequency() |deactivateTF a|
-Deactivate all _Target Frequency_ records after the related _Marketing
-Cycle_ record deactivation.
+|[.apiobject]#after update#  |[.apiobject]#deactivateTargetFrequency()# |[.apiobject]#deactivateTF# a|
+Deactivate all _Target Frequency_ records after the related _Marketing Cycle_ record deactivation.
 
-
-
-The used Apex class: Batch_MarketingCycleProcessor.
+The used Apex class: [.apiobject]#Batch_MarketingCycleProcessor#.
 
 |===
 

@@ -1,15 +1,10 @@
 = ProductProcess
 
-[[h1__1139156842]]
-== 
-
-The ** _ProductProcess_ trigger is responsible for recalculating
-xref:admin-guide/cpg-groups-management/ref-guide/index[CPG Groups] of
-xref:admin-guide/ct-products-and-assortments-management/index.adoc.html[CT Products]_.
+The _ProductProcess_ trigger is responsible for recalculating xref:admin-guide/cpg-groups-management/ref-guide/index.adoc[CPG Groups] of xref:admin-guide/ct-products-and-assortments-management/index.adoc[CT Products].
 
 '''''
 
-API name: ProductProcess
+API name: [.apiobject]#ProductProcess#
 
 '''''
 
@@ -17,37 +12,25 @@ API name: ProductProcess
 |===
 |*Context* |*Method* |*Codename* |*Description*
 
-|after insert[au]  |calculateGroupMembers() |gm a|
-Verify that the created record of the CTCPG\__Product__с object
-is matched the conditions of the existing _CPG Group_ records.
+|[.apiobject]#after insert[au]#  |[.apiobject]#calculateGroupMembers()# |[.apiobject]#gm# a|
+Verify that the created record of the [.apiobject]#CTCPG\__Product__с# object is matched the conditions of the existing _CPG Group_ records.
 
+If found, a _CPG Group Member_ record is created for this particular record and the corresponding _CPG Group_.
 
+|[.apiobject]#after update[au]#  |[.apiobject]#calculateGroupMembers()# |gm a|
+Verify that the updated record of the  [.apiobject]#CTCPG\__Product__с# object is matched the conditions of the existing _CPG Group_ records.
 
-If found, a _CPG Group Member_ record is created for this particular
-record and the corresponding _CPG Group_.
-
-|after update[au]  |calculateGroupMembers() |gm a|
-Verify that the updated record of the  CTCPG\__Product__с object
-is matched the conditions of the existing _CPG Group_ records.
-
-
-
-If found, a _CPG Group Member_ record is created for this particular
-record and the corresponding _CPG Group_.
+If found, a _CPG Group Member_ record is created for this particular record and the corresponding _CPG Group_.
 
 |[.apiobject]#after undelete [aud]#
-|calculateGroupMembers() |gm a|
-Verify that the restored record of the CTCPG\__Product__с object
-is matched the conditions of the existing _CPG Group_ records.
+|[.apiobject]#calculateGroupMembers()# |[.apiobject]#gm# a|
+Verify that the restored record of the [.apiobject]#CTCPG\__Product__с# object is matched the conditions of the existing _CPG Group_ records.
 
 
 
-If found, a _CPG Group Member_ record is created for this particular
-record and the corresponding _CPG Group_.
+If found, a _CPG Group Member_ record is created for this particular record and the corresponding _CPG Group_.
 
-|before delete[bd]  |deleteteGroupMembers() |gm |Search and
-delete the _CPG Group Members_ records of CTCPG\__Product__с
-object that are being deleted.
+|[.apiobject]#before delete[bd]#  |[.apiobject]#deleteteGroupMembers()# |[.apiobject]#gm# |Search and delete the _CPG Group Members_ records of [.apiobject]#CTCPG\__Product__с# object that are being deleted.
 |===
 
 

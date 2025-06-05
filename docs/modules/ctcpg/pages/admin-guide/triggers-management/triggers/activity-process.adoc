@@ -1,13 +1,10 @@
 = ActivityProcess
 
-_ActivityProcess_ is intended to manage custom __CT CPG
-Activity __records, as well as standard __Event __and __Task __records
-in case of using the xref:admin-guide/configuring-activity-sync/index.adoc.html[Activity
-Sync] functionality, according to the specified business logic.
+_ActivityProcess_ is intended to manage custom _CT CPG  Activity_ records, as well as standard _Event_ and _Task_ records in case of using the xref:admin-guide/configuring-activity-sync/index.adoc[Activity Sync] functionality, according to the specified business logic.
 
 '''''
 
-API name in Salesforce: ActivityProcess
+API name in Salesforce: [.apiobject]#ActivityProcess#
 
 '''''
 
@@ -15,157 +12,84 @@ API name in Salesforce: ActivityProcess
 |===
 |*Context* |*Method* |*Codename* |*Description*
 
-|after insert[ai]  |createRelatedData() |createRD a|
-For the _CT CPG Activity_ record, create the _Activity Data_ records
-based on:
+|[.apiobject]#after insert[ai]#  |[.apiobject]#createRelatedData()# |[.apiobject]#createRD# a|
+For the _CT CPG Activity_ record, create the _Activity Data_ records based on:
 
-* the _Marketing Detail Tracking_ records of the related _Marketing
-Cycle_ record;
-* the value in the CTCPG\__CreateRelatedActivityDataRecords__c
-checkbox of the xref:admin-guide/cpg-custom-settings/application-settings.adoc.html[Application Settings]_
-record.
+* the _Marketing Detail Tracking_ records of the related _Marketing Cycle_ record;
+* the value in the [.apiobject]#CTCPG\__CreateRelatedActivityDataRecords__c# checkbox of the xref:admin-guide/cpg-custom-settings/application-settings.adoc[Application Settings] record.
 
 | a|
 
-calculateFinishedActivity()
+[.apiobject]#calculateFinishedActivity()#
 
 a|
 
-calcFA
+[.apiobject]#calcFA#
 
-|Count the completed _CT CPG Activities_ and fill in the
-CTCPG\__ActialCalls__c field on the relayed _Target Frequency_
-record.
+|Count the completed _CT CPG Activities_ and fill in the [.apiobject]#CTCPG\__ActialCalls__c# field on the relayed _Target Frequency_ record.
 
 | a|
-storeObjectives()
-
-
+[.apiobject]#storeObjectives()#
 
 a|
-storeObj
+[.apiobject]#storeObj#
 
-
-
-|Copy the value from the CTCPG\__NextCallObjective__c field of
-the _CT CPG Activity_ record to the _Objective_ record of the linked
-_Account_ or _Contact_ record.
+|Copy the value from the [.apiobject]#CTCPG\__NextCallObjective__c# field of the _CT CPG Activity_ record to the _Objective_ record of the linked _Account_ or _Contact_ record.
 
 | a|
-manageActivityShares()
-
-
+[.apiobject]#manageActivityShares()#
 
 a|
-manageAS
+[.apiobject]#manageAS#
 
-
-
-|For the _User_ record whose ID is specified in the
-CTCPG\__UserId__c field of the _CT CPG Activity_ record with
-the _Joint Visit_** **record type, grant access to this _CT CPG
-Activity_ record based on the value in the
-CTCPG\__IsJointActivityShareEnabled__c field of the _Application
-Settings_ record.
+|For the _User_ record whose ID is specified in the [.apiobject]#CTCPG\__UserId__c# field of the _CT CPG Activity_ record with the _Joint Visit_ record type, grant access to this _CT CPG Activity_ record based on the value in the [.apiobject]#CTCPG\__IsJointActivityShareEnabled__c# field of the _Application Settings_ record.
 
 | a|
-createRelatedActivities()
-
-
+[.apiobject]#createRelatedActivities()#
 
 a|
-createRA
+[.apiobject]#createRA#
 
+|Create the related _Event_ or _Task_ record according to the parent _CT CPG Activity_ record and the xref:admin-guide/configuring-activity-sync/index.adoc[Activity Sync] setting.
 
-
-|Create the related _Event_ or _Task_ record according to the parent _CT
-CPG Activity_ record and the
-xref:admin-guide/configuring-activity-sync/index.adoc[Activity Sync] setting.
-
-|after update[au]  |createRelatedData()  |createRD a|
-For the _CT CPG Activity_ record, update the__ Activity Data__ records
-based on:
+|[.apiobject]#after update[au]#  |[.apiobject]#createRelatedData()#  |[.apiobject]#createRD# a| For the _CT CPG Activity_ record, update the _Activity Data_ records based on:
 
 * changing of the related _Account_ and _Contact_ record;
-* the _Marketing Detail Tracking_ records of the related _Marketing
-Cycle_ record;
-* the value in
-the CTCPG\__CreateRelatedActivityDataRecords__c checkbox of
-the _Application Settings_ record.
+* the _Marketing Detail Tracking_ records of the related _Marketing Cycle_ record;
+* the value in the [.apiobject]#CTCPG\__CreateRelatedActivityDataRecords__c# checkbox of the _Application Settings_ record.
 
-| |recalculateActivityActualCalls() |calcActAC |Recalculate the number
-of completed _CT CPG Activities_ for the related _Target Frequency_
-record based on if the CTCPG\__IsDone__c checkbox of the _CT CPG
-Activity_ record is selected.
+| |[.apiobject]#recalculateActivityActualCalls()# |[.apiobject]#calcActAC# |Recalculate the number of completed _CT CPG Activities_ for the related _Target Frequency_ record based on if the [.apiobject]#CTCPG\__IsDone__c# checkbox of the _CT CPG Activity_ record is selected.
 
-| |storeObjectives()  |storeObj |Update the _Objective_ record of the
-linked _Account_ or __Contact __record if the value from
-the CTCPG\__NextCallObjective__c field of the _CT CPG
-Activity_ record is changed.
+| |[.apiobject]#storeObjectives()#  |[.apiobject]#storeObj# |Update the _Objective_ record of the linked _Account_ or _Contact_ record if the value from the [.apiobject]#CTCPG\__NextCallObjective__c# field of the _CT CPG Activity_ record is changed.
 
-| |manageActivityShares() |manageAS |Update the access to the _CT
-CPG Activity_ record with the _Joint Visit_ record type if the _User Id_
-is changed in the CTCPG\__UserId__c field of this _CT CPG
-Activity_ record and based on the value in the
-CTCPG\__IsJointActivityShareEnabled__c field of the _Application
-Settings_ record.
+| |[.apiobject]#manageActivityShares()# |[.apiobject]#manageAS# |Update the access to the _CT CPG Activity_ record with the _Joint Visit_ record type if the _User Id_
+is changed in the [.apiobject]#CTCPG\__UserId__c# field of this _CT CPG Activity_ record and based on the value in the [.apiobject]#CTCPG\__IsJointActivityShareEnabled__c# field of the _Application Settings_ record.
 
-| |transferNextDateToChildrenVisit() |transferNextDates |Update the _CT
-CPG Activity_ records that are created based on the parent _CT CPG
-Activity_ record if the value in
-the CTCPG\__NextCallDate__c field value is changed.
+| |[.apiobject]#transferNextDateToChildrenVisit()# |[.apiobject]#transferNextDates# |Update the _CT
+CPG Activity_ records that are created based on the parent _CT CPG Activity_ record if the value in the [.apiobject]#CTCPG\__NextCallDate__c# field value is changed.
 
-| |modifyRelatedActivities() |modifyRelatedAct |Update the related
-_Event_ or _Task_ record in case of changing a value in the
-CTCPG\__StartDate__c and/or CTCPG\__EndDate__c field of
-the parent _CT CPG Activity_ record and based on the _Activity Sync_
-setting.
+| |[.apiobject]#modifyRelatedActivities()# |[.apiobject]#modifyRelatedAct# |Update the related _Event_ or _Task_ record in case of changing a value in the [.apiobject]#CTCPG\__StartDate__c# and/or [.apiobject]#CTCPG\__EndDate__c# field of the parent _CT CPG Activity_ record and based on the _Activity Sync_ setting.
 
-|after delete[ad]
-|recalculateActivityActualCallsAfterDelete() |calcActAC |Recalculate the
-value in the CTCPG\__ActialCalls__c field on the related _Target
-Frequency_ record if the counted _CT CPG Activity_ records were deleted.
+|[.apiobject]#after delete[ad]#
+|[.apiobject]#recalculateActivityActualCallsAfterDelete()# |[.apiobject]#calcActAC# |Recalculate the value in the [.apiobject]#CTCPG\__ActialCalls__c# field on the related _Target Frequency_ record if the counted _CT CPG Activity_ records were deleted.
 
-| | | |
+|[.apiobject]#before insert[bi]# |[.apiobject]#fillAccountAndContactFromReference()#
+|[.apiobject]#fillAAC# |
 
-|before insert[bi] |fillAccountAndContactFromReference()
-|fillAAC |
+| |[.apiobject]#fillObjectives()# |[.apiobject]#fillObj# |Copy the active _Objective_ record related to the _Account_ and/or _Contact_ record to the [.apiobject]#CTCPG\__Objective__c# field of the linked _CT CPG Activity_ record.
 
-| |fillObjectives() |fillObj |Copy the active _Objective_ record related
-to the _Account_ and/or _Contact_ record to
-the CTCPG\__Objective__c field of the linked __CT CPG
-Activity __record.
+| |[.apiobject]#fillMarketingCycle()# |[.apiobject]#fillCycle# a|
+Link the _CT CPG Activity_ record to the active _Marketing Cycle_ record based on xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division.adoc[the _User_ division] and the xref:admin-guide/cpg-custom-settings/marketing-cycle-linking-settings.adoc[Marketing Cycle Linking Settings] record.
 
-| |fillMarketingCycle() |fillCycle a|
-Link the _CT CPG Activity_ record to the active _Marketing Cycle_ record
-based on xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[the _User_ division] and the
-xref:marketing-cycle-linking-settings.html[Marketing Cycle Linking
-Settings] record.
+| |[.apiobject]#fillTargetFrequency()# |[.apiobject]#fillTF# |Link to the _Target Frequency_ record.
 
-| |fillTargetFrequency() |fillTF |Link to the _Target
-Frequency_ record.
+|[.apiobject]#before update[bu]#  |[.apiobject]#fillObjectives()#  |[.apiobject]#fillObj#  |Copy the active _Objective_ record related to the _Account_ and/or _Contact_ record to the [.apiobject]#CTCPG\__Objective__c# field of the linked _CT CPG Activity_ record in case of changing the _Account_ and/or _Contact_ record.
 
-|before update[bu]  |fillObjectives()  |fillObj  |Copy the
-active _Objective_ record related to
-the _Account_ and/or _Contact_ record to
-the CTCPG\__Objective__c field of the linked __CT CPG
-Activity __record in case of changing
-the _Account_ and/or _Contact_ record.
+| |[.apiobject]#fillMarketingCycle()# |[.apiobject]#fillCycle# |Link the _CT CPG Activity_ record to the active _Marketing Cycle_ record based on changing a value in the [.apiobject]#CTCPG\__StartDate__c# field of the _CT CPG Activity_ record in the _User_ division and the _Marketing Cycle Linking Settings_ record.
 
-| |fillMarketingCycle() |fillCycle |Link the _CT CPG Activity_
-record to the active _Marketing Cycle_ record based on changing a value
-in the CTCPG\__StartDate__c field of the _CT CPG Activity_ record
-in the _User_ division and the _Marketing Cycle Linking Settings_
-record.
+| |[.apiobject]#fillTargetFrequency()# |[.apiobject]#fillTF# |Link the _Target Frequency_ record if the _Account_ and/or _Contact_ record is changed and based on the value in the [.apiobject]#CTCPG\__StartDate__c# field of the _CT CPG Activity_ record.
 
-| |fillTargetFrequency() |fillTF |Link the _Target Frequency_ record
-if the _Account_ and/or _Contact_ record is changed and based on the
-value in the CTCPG\__StartDate__c field of the _CT CPG Activity_
-record
-
-|before delete[bd]  |fillRelatedActivitiesIds() |fillRA |Delete
-related _Event_ and _Task_ records if the _CT CPG Activity_ is
-deleted.
+|[.apiobject]#before delete[bd]#  |[.apiobject]#fillRelatedActivitiesIds()# |[.apiobject]#fillRA# |Delete related _Event_ and _Task_ records if the _CT CPG Activity_ is deleted.
 |===
 
 

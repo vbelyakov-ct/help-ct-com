@@ -1,11 +1,10 @@
 = UserProcess
 
-The _UserProcess_ trigger is intended to
-manage xref:admin-guide/application-settings-management/user-field-reference.adoc.html[User] records.
+The _UserProcess_ trigger is intended to manage xref:admin-guide/application-settings-management/user-field-reference.adoc[User] records.
 
 '''''
 
-API name in Salesforce: UserProcess
+API name in Salesforce: [.apiobject]#UserProcess#
 
 '''''
 
@@ -13,13 +12,11 @@ API name in Salesforce: UserProcess
 |===
 |*Context* |*Method* |*Codename* |*Description*
 
-|after insert[ai] |setUniqUserNumber() |setUUNF
-|Populate the CTCPG\__UniqUserNumber__c field on
-the _User_ record.
+|[.apiobject]#after insert[ai]# |[.apiobject]#setUniqUserNumber()# |[.apiobject]#setUUNF#
+|Populate the [.apiobject]#CTCPG\__UniqUserNumber__c# field on the _User_ record.
 
-|before update[bd] |setUniqUserNumber() |setUUN
-|Update the CTCPG\__UniqUserNumber__c field on the _User_
-record.
+|[.apiobject]#before update[bd]# |[.apiobject]#setUniqUserNumber()# |[.apiobject]#setUUN#
+|Update the [.apiobject]#CTCPG\__UniqUserNumber__c# field on the _User_ record.
 |===
 
 

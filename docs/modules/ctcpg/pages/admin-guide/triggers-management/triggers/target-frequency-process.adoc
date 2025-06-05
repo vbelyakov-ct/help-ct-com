@@ -1,12 +1,11 @@
 = TargetFrequencyProcess
 
-*TargetFrequencyProcess* is intended to
-xref:admin-guide/targeting-and-marketing-cycles-management/index[manage _Target
+*TargetFrequencyProcess* is intended to xref:admin-guide/targeting-and-marketing-cycles-management/index.adoc[manage _Target
 Frequency_ records].
 
 '''''
 
-API name in Salesforce: TargetFrequencyProcess
+API name in Salesforce: [.apiobject]#TargetFrequencyProcess#
 
 '''''
 
@@ -14,74 +13,43 @@ API name in Salesforce: TargetFrequencyProcess
 |===
 |*Context* |*Method* |*Codename* |*Description*
 
-|after insert[ai]  |concatenateUsersOnTarget() |conTarget
-|If the CTCPG\__EnableAdvancedTFLogic__c checkbox enabled on the
-xref:admin-guide/cpg-custom-settings/application-settings.adoc.html[Application Settings] record,
-xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[the fields with division values] will be
-updated on the related _Account_ and _Contact_ records.
+.2+|[.apiobject]#after insert[ai]#
+|[.apiobject]#concatenateUsersOnTarget()# |[.apiobject]#conTarget#
+|If the [.apiobject]#CTCPG\__EnableAdvancedTFLogic__c# checkbox enabled on the xref:admin-guide/cpg-custom-settings/application-settings.adoc[Application Settings] record,
+xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division.adoc[the fields with division values] will be updated on the related _Account_ and _Contact_ records.
 
-| a|
-cloneTargetFrequencyBySegment()
+|[.apiobject]#cloneTargetFrequencyBySegment()#
 
+|[.apiobject]#cloneTF# a|
+If there is a _Marketing Cycle_ record that has no _Target Frequency_ record which met the following conditions:
 
-
-|cloneTF a|
-If there is a _Marketing Cycle_ record that has no _Target Frequency_
-record which met the following conditions:
-
-* the _Target Frequency_ record is related to an _Account_ and/or
-_Contact_ record;
+* the _Target Frequency_ record is related to an _Account_ and/or _Contact_ record;
 * the _Target Frequency_ record is related to a _User_ record;
-* the division value in the CTCPG\__UserDivision__c field of the
-_Target Frequency_ record is the same as for the related _User_ record.
+* the division value in the [.apiobject]#CTCPG\__UserDivision__c# field of the _Target Frequency_ record is the same as for the related _User_ record.
 
+Create the cloned _Target Frequency_ record linked to the _Marketing Cycle_ record.
 
+|[.apiobject]#after update[au]#  |[.apiobject]#concatenateUsersOnTarget()# |[.apiobject]#conTarget#
+|If the [.apiobject]#CTCPG\__EnableAdvancedTFLogic__c# checkbox enabled on the _Application Settings_ record, the fields with division values will be updated on the related _Account_ and _Contact_ records.
 
-Create the cloned _Target Frequency_ record linked to the _Marketing
-Cycle_ record.
+|[.apiobject]#after undelete[aud]#   |[.apiobject]#concatenateUsersOnTarget()#
+|[.apiobject]#conTarget# |If the [.apiobject]#CTCPG\__EnableAdvancedTFLogic__c# checkbox enabled on the xref:admin-guide/cpg-custom-settings/application-settings.adoc[Application Settings] record, xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division.adoc[the fields with division values] will be updated on the related _Account_ and _Contact_ records.
 
-|after update[au]  |concatenateUsersOnTarget() |conTarget
-|If the CTCPG\__EnableAdvancedTFLogic__c checkbox enabled on
-the _Application Settings_ record, the fields with division values will
-be updated on the related _Account_ and _Contact_ records.
+|[.apiobject]#before insert[bi]# |[.apiobject]#fillOwnerField()#  |[.apiobject]#fillOwner# |On the _Target Frequency_ record, update
+the [.apiobject]#CTCPG\__OwnerId__c# field if the owner of the record is changed.
 
-|after undelete[aud]   |concatenateUsersOnTarget()
-|conTarget |If the CTCPG\__EnableAdvancedTFLogic__c checkbox
-enabled on the xref:admin-guide/cpg-custom-settings/application-settings.adoc.html[Application
-Settings] record, xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[the fields with division
-values] will be updated on the related _Account_ and _Contact_ records.
+| |[.apiobject]#fillDetailsField()# |[.apiobject]#fillDetails# a|
+* Define the active _Marketing Cycle_ record to link the _Target Frequency_ record.
 
-| | | |
+* Based on the found _Marketing Cycle_ record and the division category of the _Account_ and _Contact_ records, define the related _Marketing Detail Tracking_ record with the *Call Rate* record type to link the _Target Frequency_ record.
 
-|before insert[bi] |fillOwnerField()  |fillOwner |On
-the _Target Frequency_ record, update
-the CTCPG\__OwnerId__c field if the owner of the record is
-changed.
+* Based on the value in the found _Marketing Detail Tracking_ record, update the [.apiobject]#CTCPG\__PlannedCalls__c# field on the linked _Target Frequency_ record.
 
-| |fillDetailsField() |fillDetails a|
-* Define the active _Marketing Cycle_ record to link the _Target
-Frequency_ record.
+|[.apiobject]#before update[bd]#  |[.apiobject]#fillOwnerField()# |[.apiobject]#fillOwner# |On the _Target Frequency_ record, update
+the [.apiobject]#CTCPG\__OwnerId__c# field if the owner of the record is changed.
 
-* Based on the found _Marketing Cycle_ record and the division category
-of the _Account_ and _Contact_ records, define the related _Marketing
-Detail Tracking_ record with the *Call Rate* record type to link
-the _Target Frequency_ record.
-
-* Based on the value in the found _Marketing Detail Tracking_ record,
-update the CTCPG\__PlannedCalls__c field on the linked _Target
-Frequency_ record.
-
-|before update[bd]  |fillOwnerField() |fillOwner |On
-the _Target Frequency_ record, update
-the CTCPG\__OwnerId__c field if the owner of the record is
-changed.
-
-|before delete[bd]  |concatenateUsersOnTarget() |conTarget
-|If the CTCPG\__EnableAdvancedTFLogic__c checkbox enabled on
-the xref:admin-guide/cpg-custom-settings/application-settings.adoc.html[Application
-Settings] record, xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[the fields with division
-values] will be updated on the
-related _Account_ and _Contact_ records.
+|[.apiobject]#before delete[bd]#  |[.apiobject]#concatenateUsersOnTarget()# |[.apiobject]#conTarget#
+|If the [.apiobject]#CTCPG\__EnableAdvancedTFLogic__c# checkbox enabled on the xref:admin-guide/cpg-custom-settings/application-settings.adoc[Application Settings] record, xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division.adoc[the fields with division values] will be updated on the related _Account_ and _Contact_ records.
 |===
 
 

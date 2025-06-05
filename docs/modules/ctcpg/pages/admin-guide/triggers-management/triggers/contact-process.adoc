@@ -1,11 +1,10 @@
 = ContactProcess
 
-*ContactProcess* is intended to xref:admin-guide/targeting-and-marketing-cycles-management/create-targeting-lists[manage
-target _Contact_ records].
+*ContactProcess* is intended to xref:admin-guide/targeting-and-marketing-cycles-management/create-targeting-lists.adoc[manage target _Contact_ records].
 
 '''''
 
-API name in Salesforce: ContactProcess
+API name in Salesforce: [.apiobject]#ContactProcess#
 
 '''''
 
@@ -13,20 +12,14 @@ API name in Salesforce: ContactProcess
 |===
 |*Context* |*Method* |*Codename* |*Description*
 
-|after insert[ai]  | | |Reserved.
+|[.apiobject]#after insert[ai]#  | | |Reserved.
 
-|after update[ai] |manageTargetFrequency()  |manageTF a|
-In case of changes in
-the xref:division-target-frequency-settings[Division Target
-Frequency Settings] record for the__ User__ division:
+|[.apiobject]#after update[ai]# |[.apiobject]#manageTargetFrequency()#  |[.apiobject]#manageTF# a|
+In case of changes in the xref:admin-guide/cpg-custom-settings/division-target-frequency-settings.adoc[Division Target Frequency Settings] record for the _User_ division:
 
-* create a new _Target Frequency_ record related to the
-specific _Contact_ record for the current user;
-** if the __Target Frequency __record already exists, this record will
-be deactivated and its CTCPG\__DeactivationDateTime__c field will
-be populated with the deactivation date;
-* update the CTCPG\__TargetUserIds__c field on
-this _Contact_ record.
+* create a new _Target Frequency_ record related to the specific _Contact_ record for the current user;
+** if the _Target Frequency_ record already exists, this record will be deactivated and its [.apiobject]#CTCPG\__DeactivationDateTime__c# field will be populated with the deactivation date;
+* update the [.apiobject]#CTCPG\__TargetUserIds__c# field on this _Contact_ record.
 
 |===
 

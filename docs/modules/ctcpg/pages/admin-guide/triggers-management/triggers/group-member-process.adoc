@@ -1,12 +1,10 @@
 = GroupMemberProcess
 
-The _GroupMemberProcess_ trigger is responsible for removing duplicate
-xref:configuring-cpg-groups.html[CPG Group Member]_
-xref:admin-guide/cpg-groups-management/index[] records that were manually added.
+The _GroupMemberProcess_ trigger is responsible for removing duplicate xref:admin-guide/cpg-groups-management/index.adoc[CPG Group Member] records that were manually added.
 
 '''''
 
-API name in Salesforce: GroupMemberProcess
+API name in Salesforce: [.apiobject]#GroupMemberProcess#
 
 '''''
 
@@ -14,16 +12,11 @@ API name in Salesforce: GroupMemberProcess
 |===
 |*Context* |*Method* |*Codename* |*Description*
 
-|before insert  |deduplicateManualGroupMembers()
-|[.apiobject]#bi# |In case of the _CPG Group Member_ record
-xref:admin-guide/cpg-groups-management/create-and-update-a-dynamic-cpg-group#h2_1766846133[is being
-manually created] to the _CPG Group_ with the same record existed, it
-generates an error to not create a duplicate record.
+|[.apiobject]#before insert#  |[.apiobject]#deduplicateManualGroupMembers()#
+|[.apiobject]#bi# |In case of the _CPG Group Member_ record xref:admin-guide/cpg-groups-management/create-and-update-a-dynamic-cpg-group.adoc#h2_1766846133[is being manually created] to the _CPG Group_ with the same record existed, it generates an error to not create a duplicate record.
 
-|after undelete   |deduplicateManualGroupMembers()
-|[.apiobject]#aud# |In case of the _CPG Group Member_
-record is being restored from _Recycle Bin_ to the _CPG Group_ with the
-same record existed, an error occurs to not create a duplicate record.
+|[.apiobject]#after undelete#   |[.apiobject]#deduplicateManualGroupMembers()#
+|[.apiobject]#aud# |In case of the _CPG Group Member_ record is being restored from _Recycle Bin_ to the _CPG Group_ with the same record existed, an error occurs to not create a duplicate record.
 |===
 
 

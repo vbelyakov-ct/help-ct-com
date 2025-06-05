@@ -1,11 +1,10 @@
 = AccountAssortmentProcess
 
-_AccountAssortmentProcess_ is intended to support
-xref:admin-guide/ct-products-and-assortments-management/assign-assortments-to-accounts[Assortmets] logic.
+_AccountAssortmentProcess_ is intended to support xref:admin-guide/ct-products-and-assortments-management/assign-assortments-to-accounts.adoc[Assortmets] logic.
 
 '''''
 
-API name in Salesforce: AccountAssortment
+API name in Salesforce: [.apiobject]#AccountAssortment#
 
 '''''
 
@@ -13,17 +12,17 @@ API name in Salesforce: AccountAssortment
 |===
 |*Context* |*Method* |*Codename* |*Description*
 
-|after insert  |managePrimary() |managePr |Verify that the
+|[.apiobject]#after insert#  |[.apiobject]#managePrimary()# |[.apiobject]#managePr# |Verify that the
 _Account_ record has no more than one related _Assortment_ record with
-the selected CTCPG\__IsPrimary__c checkbox concurrently.
+the selected [.apiobject]#CTCPG\__IsPrimary__c# checkbox concurrently.
 
-|after update  |managePrimary() |managePr |Verify that
+|[.apiobject]#after update#  |[.apiobject]#managePrimary()# |[.apiobject]#managePr# |Verify that
 the _Account_ record has no more than one related _Assortment_ record
-with the selected CTCPG\__IsPrimary__c checkbox concurrently.
+with the selected [.apiobject]#CTCPG\__IsPrimary__c# checkbox concurrently.
 
-|before insert | | |Reserved.
+|[.apiobject]#before insert# | | |Reserved.
 
-|before update | | |Reserved.
+|[.apiobject]#before update# | | |Reserved.
 |===
 
 

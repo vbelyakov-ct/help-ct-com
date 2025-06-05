@@ -1,8 +1,17 @@
 = Trigger Contexts
 
-Each __C__T CPG trigger has trigger contexts that are invoked by insert,
-delete, or update events. It is possible to restrict the trigger
-context by xref:admin-guide/triggers-management/enabling-the-bypass-logic[specifying the bypass
-logic].
+Each CT CPG trigger has trigger contexts that are invoked by insert, delete, or update events. It is possible to restrict the trigger context by xref:admin-guide/triggers-management/enabling-the-bypass-logic.adoc[specifying the bypass logic].
 
+[width="100%",cols="20%,10%,70%",]
+|===
+|*Trigger Context* |*Codename* |*Description*
+
+|[.apiobject]#after insert#   |[.apiobject]#ai# |Operates after the changes of the insert operation are saved.
+|[.apiobject]#after update#   |[.apiobject]#au# |Operates after the changes of the update operation are saved.
+|[.apiobject]#after delete#   |[.apiobject]#ad# |Operates after the changes of the delete operation are saved.
+|[.apiobject]#after undelete# |[.apiobject]#aud#|Operates after the changes of the undelete operation are saved.
+|[.apiobject]#before insert#  |[.apiobject]#bi# |Operates before the changes of the insert operation are saved.
+|[.apiobject]#before update#  |[.apiobject]#bu# |Operates before the changes of the update operation are saved.
+|[.apiobject]#before delete#  |[.apiobject]#bd# |Operates before the changes of the delete operation are saved.
+|===
 
