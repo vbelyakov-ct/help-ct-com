@@ -1,35 +1,34 @@
 = Public Methods
 
-Public means the method can be used by any Apex in this app or namespace
-and be called by triggers and other classes. Calling methods of other
-classes:
+Public means the method can be used by any Apex in this app or namespace and be called by triggers and other classes. Calling methods of other classes:
 
 * enables code reuse;
 * reduces the size of triggers;
 * improves maintenance of Apex code;
 * allows you to use object-oriented programming.
 
-
-
-You can extend a class to provide more specialized behavior. A class
-that extends another class inherits all the methods and properties of
-the extended class. In addition, the extending class can override the
-existing virtual methods by using the override keyword in the method
-definition. Overriding a virtual method allows you to provide a
-different implementation for an existing method. This means that the
-behavior of a particular method is different based on the object you’re
-calling it on.
+You can extend a class to provide more specialized behavior. A class that extends another class inherits all the methods and properties of the extended class. In addition, the extending class can override the existing virtual methods by using the override keyword in the method definition. Overriding a virtual method allows you to provide a different implementation for an existing method. This means that the behavior of a particular method is different based on the object you’re calling it on.
 
 Currently, we have only one public method:
 
-* The global GlobalActivityService class.
+* The global [.apiobject]#GlobalActivityService# class.
 * The first parameter is the list of the _CT CPG Activity_ records.
-* The second parameter is the previous values of the __CT CPG
-Activity __records.
+* The second parameter is the previous values of the _CT CPG Activity_ records.
 
+[source, apex]
+----
+global virtual void createRelatedData(List<CTCPG__Activity__c> activityList,Map<Id, CTCPG__Activity__c> oldMap) {
+    code_block
+}
+----
 
-
-Here is an example of how to extend the existing class and override its
-public method.
-
+Here is an example of how to extend the existing class and override its public method.
+[source, apex]
+----
+public class ClassName extends GlobalActivityService {
+    public override void createRelatedData(List<CTCPG__Activity__c> activityList, Map<Id, CTCPG__Activity__c> oldMap) {
+        your_code_block
+    }
+}
+----
 
