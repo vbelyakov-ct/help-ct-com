@@ -1,51 +1,23 @@
 = Targeting and Marketing Cycles Management
 
-Get familiar with xref:admin-guide/targeting-and-marketing-cycles-management/index.adoc[the
-marketing cycles and targeting] in the CT CPG package.
-[TIP] ==== The _Marketing Cycle_ usage is optional. You
-can create activities, track _CT Products_ and other parameters, and
-target users out of the marketing cycle.   ==== Follow the guidelines
-to target clients that should be visited by the reps a certain number of
-times.
+Get familiar with xref:admin-guide/targeting-and-marketing-cycles-management/index.adoc[the marketing cycles and targeting] in the CT CPG package.
 
+TIP: The _Marketing Cycle_ usage is optional. You can create activities, track _CT Products_ and other parameters, and target users out of the marketing cycle.
 
+Follow the guidelines to target clients that should be visited by the reps a certain number of times.
 
-Configure a marketing cycle for the specific division and define the
-different groups of customers to whom you wish to sell decisive products
-or services within a number of scheduled activities:
+Configure a marketing cycle for the specific division and define the different groups of customers to whom you wish to sell decisive products or services within a number of scheduled activities:
 
-. Set up clients'
-segmentation using _Account_ and _Contact_ divisions. xref:add-a-new-division[Create
-a new division] and
-xref:division-a-new-record-of-division-target-frequency-settings[add
+. Set up clients' segmentation using _Account_ and _Contact_ divisions. xref:./add-a-new-division.adoc[Create a new division] and xref:./division-a-new-record-of-division-target-frequency-settings.adoc[add
 the division to the corresponding custom setting].
-
-The divisions represent departments that have the same structure but
-works with different KPIs, and division categories could be used to
-define specific groups of customers, for example, hypermarkets and
-discounters.
-. xref:create-a-marketing-cycle[Create marketing cycles] with the
-specific
-details, xref:create-a-new-record-of-marketing-detail-tracking[targeting
-parameters] per xref:specify-categories-for-marketing-detail-tracking[each
-segment], and
-xref:enable-activity-linking-to-the-marketing-cycle[the Activity
-linking].
-* The marketing cycle represents a period during which the planning of
-activities and personalized marketing takes place. At the end of
-each marketing cycle, a company can review results via reports and also
-assess accumulated KPI.
-* The[.object]#Marketing Detail Tracking# object is used to
-define tracking products and parameters for the particular _Activity **_
-record type and the required category of _Accounts_ and _Contacts_.
-* Check xref:application-settings[Application Settings] parameters
-for the marketing cycle.
-. xref:admin-guide/targeting-and-marketing-cycles-management/add-the-manage-targets-button.adoc[Add the targeting buttons] to
-xref:create-targeting-lists[create targeting lists] of _Accounts_
-and _Contacts_ xref:creating-a-new-record-of-target-frequency[with
-the related Target Frequency records].
-* Allow users to target clients for the marketing cycles. To do that,
-set up xref:admin-guide/getting-started/permission-settings[the user permissions].
-* The _Target Frequency_ records can be automatically filled out with
-the values from the related _Marketing Detail Tracking_ record of the
-_Call Rate_ type.
++
+The divisions represent departments that have the same structure but works with different KPIs, and division categories could be used to define specific groups of customers, for example, hypermarkets and discounters.
+. xref:./create-a-marketing-cycle.adoc[Create marketing cycles] with the specific details, xref:./create-a-new-record-of-marketing-detail-tracking.adoc[targeting parameters] per xref:./specify-categories-for-marketing-detail-tracking.adoc[each segment], and
+xref:./enable-activity-linking-to-the-marketing-cycle.adoc[the Activity linking].
+* The marketing cycle represents a period during which the planning of activities and personalized marketing takes place. At the end of each marketing cycle, a company can review results via reports and also assess accumulated KPI.
+* The [.object]#Marketing Detail Tracking# object is used to define tracking products and parameters for the particular _Activity_ record type and the required category of _Accounts_ and _Contacts_.
+* Check xref:admin-guide/cpg-custom-settings/application-settings.adoc[Application Settings] parameters for the marketing cycle.
+. xref:admin-guide/targeting-and-marketing-cycles-management/add-the-manage-targets-button.adoc[Add the targeting buttons] to xref:./create-targeting-lists.adoc[create targeting lists] of _Accounts_
+and _Contacts_ xref:./creating-a-new-record-of-target-frequency.adoc[with the related Target Frequency records].
+* Allow users to target clients for the marketing cycles. To do that, set up xref:admin-guide/getting-started/permission-settings.adoc[the user permissions].
+* The _Target Frequency_ records can be automatically filled out with the values from the related _Marketing Detail Tracking_ record of the _Call Rate_ type.

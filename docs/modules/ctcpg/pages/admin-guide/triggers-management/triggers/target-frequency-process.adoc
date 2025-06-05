@@ -16,7 +16,7 @@ API name in Salesforce: TargetFrequencyProcess
 
 |after insert[ai]  |concatenateUsersOnTarget() |conTarget
 |If the CTCPG\__EnableAdvancedTFLogic__c checkbox enabled on the
-xref:application-settings.html[Application Settings] record,
+xref:admin-guide/cpg-custom-settings/application-settings.adoc.html[Application Settings] record,
 xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[the fields with division values] will be
 updated on the related _Account_ and _Contact_ records.
 
@@ -47,7 +47,7 @@ be updated on the related _Account_ and _Contact_ records.
 
 |after undelete[aud]   |concatenateUsersOnTarget()
 |conTarget |If the CTCPG\__EnableAdvancedTFLogic__c checkbox
-enabled on the xref:application-settings.html[Application
+enabled on the xref:admin-guide/cpg-custom-settings/application-settings.adoc.html[Application
 Settings] record, xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[the fields with division
 values] will be updated on the related _Account_ and _Contact_ records.
 
@@ -78,7 +78,7 @@ changed.
 
 |before delete[bd]  |concatenateUsersOnTarget() |conTarget
 |If the CTCPG\__EnableAdvancedTFLogic__c checkbox enabled on
-the xref:application-settings.html[Application
+the xref:admin-guide/cpg-custom-settings/application-settings.adoc.html[Application
 Settings] record, xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division[the fields with division
 values] will be updated on the
 related _Account_ and _Contact_ records.

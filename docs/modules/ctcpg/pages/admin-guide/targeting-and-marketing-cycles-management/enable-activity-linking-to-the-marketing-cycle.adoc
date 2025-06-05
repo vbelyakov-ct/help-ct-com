@@ -1,82 +1,53 @@
 = Enable Activity Linking to the Marketing Cycle
 
-[[h1__2142343198]]
-== 
+By default, when a user creates a _CT CPG Activity_ record with the _Visit_ record type, it will be automatically linked to xref:admin-guide/targeting-and-marketing-cycles-management/create-a-marketing-cycle.adoc[the _Marketing Cycle_ record] if:
 
-By default, when a user creates a _CT CPG Activity_ record with the
-_Visit_ record type, it will be automatically linked to
-xref:admin-guide/targeting-and-marketing-cycles-management/create-a-marketing-cycle[the _Marketing Cycle_ record] if:
-
-* the *Start Date* of the _CT CPG Activity_ record is within the
-_Marketing Cycle_ period;
-* the _User_ and _Marketing Cycle_ records are assigned to the same
-division;
-* the _Marketing Cycle_ record is related to the specific record type of
-the _CT CPG Activity_ record according
-to the xref:marketing-cycle-linking-settings[Marketing Cycle
-Linking Setting];
-* the xref:marketing-cycle-field-reference.html[Marketing
-Cycle] record is active.
-
-
+* the *Start Date* of the _CT CPG Activity_ record is within the _Marketing Cycle_ period;
+* the _User_ and _Marketing Cycle_ records are assigned to the same division;
+* the _Marketing Cycle_ record is related to the specific record type of the _CT CPG Activity_ record according to the xref:admin-guide/cpg-custom-settings/marketing-cycle-linking-settings.adoc[Marketing Cycle Linking Setting];
+* the xref:./ref-guide/marketing-cycle-field-reference.adoc[Marketing Cycle] record is active.
 
 Enable automatic linking for other _CT CPG Activity_ record types:
 
-* xref:admin-guide/targeting-and-marketing-cycles-management/enable-activity-linking-to-the-marketing-cycle#h2__884544412[Create
-a checkbox] on the _Marketing Cycle_ object and
-xref:admin-guide/targeting-and-marketing-cycles-management/enable-activity-linking-to-the-marketing-cycle#h2__1809417075[add
-it to the page layout]. This field will be used to set up automatically
-linking the _CT CPG Activity_ record of the specific record type with
-the marketing cycle.
-* xref:admin-guide/targeting-and-marketing-cycles-management/enable-activity-linking-to-the-marketing-cycle#h2__1816263087[Create
-a record] of xref:marketing-cycle-linking-settings.html[Marketing Cycle
-Linking Settings] to allow automatic linking.
+* <<h2__884544412, Create a checkbox>> on the _Marketing Cycle_ object and
+<<h2__1809417075, add it to the page layout>>. This field will be used to set up automatically linking the _CT CPG Activity_ record of the specific record type with the marketing cycle.
+* <<h2__1816263087, Create a record>> of xref:admin-guide/cpg-custom-settings/marketing-cycle-linking-settings.adoc[Marketing Cycle Linking Settings] to allow automatic linking.
 
 [[h2__884544412]]
-=== Create the Activity Link field on the Marketing Cycle object
+== Create the Activity Link field on the Marketing Cycle object
 
-Create a checkbox on the[.object]#Marketing Cycle# object:
+Create a checkbox on the [.object]#Marketing Cycle# object:
 
-. Go to *Setup → Object Manager → Marketing Cycle → Fields &
-Relationships →* click *New*.
+. Go to *Setup → Object Manager → Marketing Cycle → Fields & Relationships →* click *New*.
 . Create a field with the *Checkbox* type:
 * Select *Checkbox* and click *Next*.
-* In** Field Label**, enter the label, for example, Link Event.
-* Select the profiles to which you want to grant edit access to this
-field and click *Next*.
-* Select the page layouts that should include this field and
-click *Save*.
+* In *Field Label*, enter the label, for example, `Link Event`.
+* Select the profiles to which you want to grant edit access to this field and click *Next*.
+* Select the page layouts that should include this field and click *Save*.
 
 The field is created.
 
 [[h2__1809417075]]
-=== Add the Activity Link field to the Page Layout
+== Add the Activity Link field to the Page Layout
 
-To add the created *Activity Link* field to the Marketing Cycle page
-layout:
+To add the created *Activity Link* field to the Marketing Cycle page layout:
 
-. Go to *Setup → Object Manager → Marketing Cycle → Page Layouts →
-Marketing Cycle Layout*.
-. Drag-n-drop the created *Link Activity* field, for example, Link
-Event, on the page layout.
+. Go to *Setup → Object Manager → Marketing Cycle → Page Layouts → Marketing Cycle Layout*.
+. Drag-n-drop the created *Link Activity* field, for example, `Link Event`, on the page layout.
 . Click *Save*.
 
-The field is now available on the Marketing Cycle object.
+The field is now available on the [.object]#Marketing Cycle# object.
 
 [[h2__1816263087]]
-=== Create a record of Marketing Cycle Linking Settings
+== Create a record of Marketing Cycle Linking Settings
 
 To enable the automatic linking:
 
-. Go to *Setup → Custom Code → Custom Settings → Marketing Cycle Linking
-Settings →* click *New*.
+. Go to *Setup → Custom Code → Custom Settings → Marketing Cycle Linking Settings →* click *New*.
 . Fill Marketing Cycle Linking Settings Information.
-* Enter *Name*, for example, Event.
-* In the *Field API Name* field, enter the API name of
-the xref:admin-guide/targeting-and-marketing-cycles-management/enable-activity-linking-to-the-marketing-cycle#h2__1816263087[Activity
-Link] field.
+* Enter *Name*, for example, `Event`.
+* In the *Field API Name* field, enter the API name of the xref:admin-guide/targeting-and-marketing-cycles-management/enable-activity-linking-to-the-marketing-cycle.adoc#h2__1816263087[Activity Link] field.
 * Select *Active*.
 . Click *Save*.
 
-The new activity linking is enabled on
-xref:admin-guide/targeting-and-marketing-cycles-management/create-a-marketing-cycle[the _Marketing Cycle_ record].
+The new activity linking is enabled on xref:admin-guide/targeting-and-marketing-cycles-management/create-a-marketing-cycle.adoc[the _Marketing Cycle_ record].

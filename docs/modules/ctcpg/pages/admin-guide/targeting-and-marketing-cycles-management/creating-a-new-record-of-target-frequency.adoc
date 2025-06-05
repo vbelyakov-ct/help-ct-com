@@ -1,38 +1,20 @@
 = Creating Target Frequency Records
 
-The[.object]#Target Frequency# object is intended to store and
-track the number of activities to the target _Account_ or _Contact_
-record within xref:admin-guide/targeting-and-marketing-cycles-management/create-a-marketing-cycle[the active and given
-marketing cycle].
+The [.object]#Target Frequency# object is intended to store and track the number of activities to the target _Account_ or _Contact_ record within xref:admin-guide/targeting-and-marketing-cycles-management/create-a-marketing-cycle.adoc[the active and given marketing cycle].
 
-The xref:target-frequency-process[TargetFrequencyProcess] trigger
-automatically creates active _Target Frequency_ records when
-the _Account_ or Contact records xref:admin-guide/targeting-and-marketing-cycles-management/create-targeting-lists[are
-added to the targeting list].
+TIP: The xref:admin-guide/triggers-management/triggers/target-frequency-process.adoc[TargetFrequencyProcess] trigger automatically creates active _Target Frequency_ records when the _Account_ or Contact records xref:admin-guide/targeting-and-marketing-cycles-management/create-targeting-lists.adoc[are added to the targeting list].
 
 The _Target Frequency_ record contains the following information:
 
-* *Planned Calls* is the number of how many _Activities_ with
-the _Visit_** **record type should be done for the
-target _Account_ or _Contact_ record within the marketing cycle.
+* *Planned Calls* is the number of how many _Activities_ with the _Visit_ record type should be done for the target _Account_ or _Contact_ record within the marketing cycle.
++
+The planned calls and category of the _Target Frequency_ record can be automatically filled out with the *Planned Calls* and *Category* values from the xref:./ref-guide/marketing-detail-tracking-field-reference.adoc[Marketing Detail Tracking] record of the xref:admin-guide/targeting-and-marketing-cycles-management/ref-guide/index.adoc#h3_2015528788[Call Rate] record type if:
 
-The planned calls and category of the _Target Frequency_ record can be
-automatically filled out with the *Planned Calls* and *Category* values
-from the xref:marketing-detail-tracking-field-reference[Marketing
-Detail Tracking] record of
-the xref:admin-guide/targeting-and-marketing-cycles-management/index.adoc#h3_2015528788[Call
-Rate] record type if:
-** ​the _Account_ or _Contact_ record is in the targeting list;
-** the _Call_ __Rate __record is assigned for the same division category
-that is specified for the _Account_ or __Contact __record.
-
-If the matched _Call Rate_ record is not created, the *Planned Calls*
-and *Category* fields of the _Target Frequency_ record left blank.
+** the _Account_ or _Contact_ record is in the targeting list;
+** the _Call Rate_ record is assigned for the same division category that is specified for the _Account_ or _Contact_ record.
++
+NOTE: If the matched _Call Rate_ record is not created, the *Planned Calls* and *Category* fields of the _Target Frequency_ record left blank.
 * *Actual Calls* is the number of activities already done.
-* *Last Call Date* will be automatically filled out with the date of the
-last _Activity_ record for the corresponding _Account_ and _Contact_.
-* *Deactivation Date/Time* will be automatically filled out when the
-current marketing cycle will be deactivated for the
-corresponding _Account_ and _Contact_.
-* The *Marketing Cycle* field will be automatically filled out with the
-corresponding _Marketing Cycle_ record.
+* *Last Call Date* will be automatically filled out with the date of the last _Activity_ record for the corresponding _Account_ and _Contact_.
+* *Deactivation Date/Time* will be automatically filled out when the current marketing cycle will be deactivated for the corresponding _Account_ and _Contact_.
+* The *Marketing Cycle* field will be automatically filled out with the corresponding _Marketing Cycle_ record.

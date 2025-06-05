@@ -1,11 +1,8 @@
 = Marketing Detail Tracking Field Reference
 
-The [.object]#Marketing Detail Tracking# object is intended to
-store the KPI related to a particular marketing cycle with different
-parameters and attributes given the record type.
+The [.object]#Marketing Detail Tracking# object is intended to store the KPI related to a particular marketing cycle with different parameters and attributes given the record type.
 
-xref:admin-guide/targeting-and-marketing-cycles-management/ref-guide/index#h2_83089996[Available
-record types]:
+xref:admin-guide/targeting-and-marketing-cycles-management/ref-guide/index.adoc#h2_83089996[Available record types]:
 
 * Call Rate
 * Company Product Tracking
@@ -15,7 +12,7 @@ record types]:
 
 '''''
 
-API name in Salesforce: CTCPG\__MarketingDetailTracking__c
+API name in Salesforce: [.apiobject]#CTCPG\__MarketingDetailTracking__c#
 
 '''''
 
@@ -23,44 +20,31 @@ API name in Salesforce: CTCPG\__MarketingDetailTracking__c
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Active |CTCPG\__IsActive__c |Checkbox |If selected, the
-_Marketing Detail Tracking_ record is active.
+|Active |[.apiobject]#CTCPG\__IsActive__c# |Checkbox |If selected, the _Marketing Detail Tracking_ record is active.
 
-|Answer Type |CTCPG\__AnswerType__c |Picklist |For the
-_Special Tracking_ record type, specify the type of the answer for the
-question in the CTCPG\__ParameterName__c field.
+|Answer Type |[.apiobject]#CTCPG\__AnswerType__c# |Picklist |For the _Special Tracking_ record type, specify the type of the answer for the question in the [.apiobject]#CTCPG\__ParameterName__c# field.
 
-|Assortment |CTCPG\__AssortmentId__c |Lookup(Assortment) |If
-specified, the ID of the selected _Assortment_ record.
-[NOTE] ==== You cannot simultaneously relate the _Marketing
-Detail Tracking_ record to the _Assortment_ and _Product_ records. ====
+|Assortment |[.apiobject]#CTCPG\__AssortmentId__c# |Lookup(Assortment) a|If specified, the ID of the selected _Assortment_ record.
 
-|Category |CTCPG\__Category__c |Picklist |The available
-category of the related _Account_ or _Contact_ division.
+NOTE: You cannot simultaneously relate the _Marketing Detail Tracking_ record to the _Assortment_ and _Product_ records.
 
-|Description |CTCPG\__Description__c  |Long Text Area(32768)
-|If needed, specify the description.
+|Category |[.apiobject]#CTCPG\__Category__c# |Picklist |The available category of the related _Account_ or _Contact_ division.
 
-|Marketing Cycle |CTCPG\__MarketingCycleId__c
-|Lookup(Marketing Cycle) |The ID of the related _Marketing Cycle_
-record.
+|Description |[.apiobject]#CTCPG\__Description__c#  |Long Text Area(32768) |If needed, specify the description.
 
-|Parameter Name |CTCPG\__ParameterName__c |Text Area(255) |For
-the _Special Tracking_ record type, specify the question.
+|Marketing Cycle |[.apiobject]#CTCPG\__MarketingCycleId__c#
+|Lookup(Marketing Cycle) |The ID of the related _Marketing Cycle_ record.
 
-|Planned Calls |CTCPG\__PlannedCalls__c |Number(18,0) |A number
-of the planned _activities_ that will be inherited by the _Target
-Frequency_ for the target _Account_ or _Contact_ record.
+|Parameter Name |[.apiobject]#CTCPG\__ParameterName__c# |Text Area(255) |For the _Special Tracking_ record type, specify the question.
 
-|Product |CTCPG\__ProductId__c |Lookup(CT Product) |If
-specified, the ID of the selected _CT Product_ record.
-[NOTE] ==== You cannot simultaneously relate the _Marketing
-Detail Tracking_ record to the _Assortment_ and _Product_ records. ====
+|Planned Calls |[.apiobject]#CTCPG\__PlannedCalls__c# |Number(18,0) |A number of the planned _activities_ that will be inherited by the _Target Frequency_ for the target _Account_ or _Contact_ record.
 
-|Sort Order |CTCPG\__SortOrder__c |Number(18,0) |The order
-number of the record.
+|Product |[.apiobject]#CTCPG\__ProductId__c# |Lookup(CT Product) |If specified, the ID of the selected _CT Product_ record.
 
-|Type |CTCPG\__Type__c |Formula(Text)
-|xref:admin-guide/targeting-and-marketing-cycles-management/specify-categories-for-marketing-detail-tracking#h2__1618421469[The
-assigned object type] on the _Marketing Cycle_ record.
+NOTE: You cannot simultaneously relate the _Marketing Detail Tracking_ record to the _Assortment_ and _Product_ records.
+
+|Sort Order |[.apiobject]#CTCPG\__SortOrder__c# |Number(18,0) |The order number of the record.
+
+|Type |[.apiobject]#CTCPG\__Type__c# |Formula(Text)
+|xref:admin-guide/targeting-and-marketing-cycles-management/specify-categories-for-marketing-detail-tracking.adoc#h2__1618421469[The assigned object type] on the _Marketing Cycle_ record.
 |===
