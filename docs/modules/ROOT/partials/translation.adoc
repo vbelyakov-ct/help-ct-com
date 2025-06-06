@@ -1,0 +1,52 @@
+[[h2__1506875936]]
+== Translation Workbench
+
+Enable link:https://help.salesforce.com/articleView?id=workbench.htm&type=5[Translation Workbench], select users who can translate and set up languages in https://help.salesforce.com/articleView?id=adding_and_editing_translated_languages.htm&type=5[Translation Language Settings].
+
+* To translate field sets, picklist values, or buttons, use the *Translate* option.
+* To translate record types or validation errors, select *Override*.
+
+To translate any component:
+
+. From *Setup*, enter _Translation Workbench_ in the *Quick Find* box, then select *Translate* or *Override*.
+. Select a *Language*.
+. Select a *Setup Component*.
+. Select an *Object*.
+. Add new translations.
++
+image:translations-2020-12-22-1.png[]
+. Click *Save*.
+
+The component is renamed.
+
+[[h2__884365928]]
+== Rename Tabs and Labels
+
+To translate custom tabs, for example, *CT Product*:
+
+. From *Setup*, enter _https://help.salesforce.com/articleView?id=customize_rename.htm&type=5[Rename Tabs and Labels]_** **in the *Quick Find* box, then select *Rename Tabs and Labels*. +
+. Go to the *Custom Tabs* section.
+. Click **Edit **next to the appropriate tab.
+. Specify the new **Singular **and *Plural* name.
+. Click *Save*.
++
+image:default-rectype-2020-12-22.png[] +
+
+The tab is renamed.
+
+image:default-rectype-2020-12-22-2.png[]
+
+[[h2__1636435164]]
+== Custom Labels
+
+To translate buttons, labels, popups for _Activity Report_, _Joint Visit Report_, or _Calendar_:
+
+. From *Setup*, enter _link:https://help.salesforce.com/articleView?id=cl_translate_edit.htm&type=5[Custom Labels] in the *Quick Find* box, then select *[.uicontrol]#Custom Labels#*.
+. Click the *Name* of the label to translate.
+. Create or override translation:
++
+* In the **Local Translations / Overrides **section, click the **New Local Translations / Overrides **button to create a new translation.
+* In the **Package Translations **section, click *Override* next to the required language to override translation.
+. Click *Save*.
+
+The selected label is renamed.

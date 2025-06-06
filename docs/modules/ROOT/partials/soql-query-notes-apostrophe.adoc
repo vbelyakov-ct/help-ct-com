@@ -1,0 +1,6 @@
+When using the apostrophe (') symbol in the SOQL query, escape it with a backslash (\). For example:
+
+[source, apex]
+----
+SELECT name FROM Account WHERE Name = 'TEST\'ING'
+----
