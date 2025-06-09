@@ -22,7 +22,7 @@ API name in Salesforce: [.apiobject]#CTCPG\__Change_Request_Succession_Cloning__
 
 |Invert field inclusion logic
 |[.apiobject]#CTCPG\__Invert_Field_Logic__c# |Checkbox |If enabled, the fields specified in
-the CTCPG\__Field_API_Names__c field should be excluded when cloning or re-parenting.
+the [.apiobject]#CTCPG\__Field_API_Names__c# field should be excluded when cloning or re-parenting.
 
 |Parent Object |[.apiobject]#CTCPG\__Parent_Object__c# |Text (255) |The parent object API name, a record of which should be inherited.
 

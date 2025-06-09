@@ -22,7 +22,7 @@ If selected, the group is dynamic.
 
 |Field List |[.apiobject]#CTCPG\__FieldList__c# |TextArea(255)  |Fields to display group members table (separated by a comma, without blank space).
 
-|For Group Update |[.apiobject]#CTCPG\__IsForUpdate__#c |Checkbox
+|For Group Update |[.apiobject]#CTCPG\__IsForUpdate__c# |Checkbox
 |Defines if the group should be automatically recalculated.
 
 |Group Filter |[.apiobject]#CTCPG\__GroupFilter__c# |LongTextArea(32768)
@@ -37,8 +37,7 @@ If selected, the group is dynamic.
 |Picklist a|
 Select the group type:
 
-To specify a new group type, refer to
-xref:admin-guide/cpg-groups-management/specify-a-custom-object-for-a-cpg-group.adoc[Specify a Custom Object for a CPG Group].
+TIP: To specify a new group type, refer to xref:admin-guide/cpg-groups-management/specify-a-custom-object-for-a-cpg-group.adoc[Specify a Custom Object for a CPG Group].
 
 * _Accounts_ and their child objects, e.g., [.object]#CT Orders#, [.object]#Activities#, etc.
 * _Contacts_ and their child objects, e.g., Activities, [.object]#Target Frequencies#, etc.

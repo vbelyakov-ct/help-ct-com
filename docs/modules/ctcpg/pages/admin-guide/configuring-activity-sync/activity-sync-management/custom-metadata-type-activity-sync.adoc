@@ -26,13 +26,13 @@ API name in Salesforce: [.apiobject]#CTCPG\__ActivitySync__mdt#
 |Text (255) a| A filter to select the _CT CPG Activity_ records that should be synced with the standard activities.
 
 * Left this field blank for processing all records.
-* Use a SOQL query to specify filters. The clause part of the query should be without the [.apiobject]#WHERE# word. For example:
+* Use an SOQL query to specify filters. The clause part of the query should be without the [.apiobject]#WHERE# word. For example:
 +
 [.apiobject]#CTCPG\__Type__c LIKE '%Type 1%'#
 
 |Description |[.apiobject]#CTCPG\__Description__c# |Text Area(255) |Specify information about the _Activity Sync_ record.
 
-|Fields to update |[.apiobject]#CTCPG\__FieldsAPIName__c# |Long Text Area (131072) |Specify field API names to update on the creating _Activity_ record (separated by a comma, without a blank space). For example: Event.Description,Event.Duration,Event.Phone.
+|Fields to update |[.apiobject]#CTCPG\__FieldsAPIName__c# |Long Text Area (131072) |Specify field API names to update on the creating _Activity_ record (separated by a comma, without a blank space). For example: [.apiobject]#Event.Description,Event.Duration,Event.Phone#.
 
 |Field values |[.apiobject]#CTCPG\__FieldValues__c# |Long Text Area (131072) |Specify field API names to copy values from them to the fields specified in the [.apiobject]#CTCPG\__FieldsAPIName__c# field (separated by a comma, without a blank space). For example:
 
@@ -49,15 +49,17 @@ a| The API name of the standard [.object]#Event# and [.object]#Task# objects. Av
 NOTE: The filter will not be applied if the [.apiobject]#CTCPG\__StandardObjectCriteria__c# or [.apiobject]#CTCPG\__CustomObjectCriteria__c field# is specified.
 
 |Standard Object |[.apiobject]#CTCPG\__StandardObjectAPIName__c# |Picklist a|
-Select the standard Activity object. Available objects:
+Select the standard [.object]#Activity# object. Available objects:
 
-* Event
-* Task
+* [.object]#Event#
+* [.object]#Task#
 
 |Standard object record criteria |[.apiobject]#CTCPG\__StandardObjectCriteria__c# |Text (255) a| A filter to select the _Event_ or _Task_ records that should be synced with the standard activities.
 
 * Left this field blank for processing all records.
-* Use a SOQL query to specify filters. The clause part of the query should be without the [.apiobject]#WHERE# word.
+* Use a SOQL query to specify filters. The clause part of the query should be without the [.apiobject]#WHERE# word. For example:
++
+[.apiobject]#Subject LIKE '%Call%'#
 
 |Sync Type |[.apiobject]#CTCPG\__SyncType__c#|Picklist a|
 Select the _Activity Sync_ type:

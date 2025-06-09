@@ -9,7 +9,7 @@ For the correct operation of the _Activity Sync_ functionality:
 If you create a new *Activity Sync* setting with the filled [.apiobject]#CTCPG\__StandardObjectCriteria__c#  or [.apiobject]#CTCPG\__CustomObjectCriteria__c#, the *Type* field will not affect the _Activity Sync_ process.
 ====
 * xref:admin-guide/configuring-activity-sync/set-up-global-actions-new-task-and-new-event.adoc#h2_142637281[add global actions] on the *Accounts* and *Contacts* tabs.
-* specify the EventProcess and TaskProcess records in xref:admin-guide/triggers-management/index.adoc[Trigger Settings]. Also, check that the ActivityProcess setting is active.
+* specify the [.apiobject]#EventProcess# and [.apiobject]#TaskProcess# records in xref:admin-guide/triggers-management/index.adoc[Trigger Settings]. Also, check that the [.apiobject]#ActivityProcess# setting is active.
 
 [[h2_1382380833]]
 == Configure the Type field display

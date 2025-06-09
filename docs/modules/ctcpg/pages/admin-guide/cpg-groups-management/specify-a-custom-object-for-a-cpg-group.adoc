@@ -25,11 +25,11 @@ The setup is complete.
 [[h2_1560790028]]
 == Set up Apex Class and Trigger
 
-We recommend changing names of the given below Apex class and trigger to match your naming convention.
+TIP: We recommend changing names of the given below Apex class and trigger to match your naming convention.
 
 To apply the dynamic group logic to objects, customize and add Apex class and trigger.
 
-. In the [.apiobject]#Test_DynamicGroupExtension.cls# Apex class, check the package name and specify API name of the required group object within +/** SETUP THIS */+ and +/** FINISH SETUP */+.
+. In the [.apiobject]#Test_DynamicGroupExtension.cls# Apex class, check the package name and specify API name of the required group object within `+/** SETUP THIS */+` and `+/** FINISH SETUP */+`.
 +
 Click to see the Apex class:
 +

@@ -2,8 +2,13 @@
 
 By default, when a user opens any _Change Request_ record, the standard  page will be displayed. Instead of having a standard Salesforce page, override the behavior of the *New*, *Edit*, and *View* buttons to open the preconfigured Change Request Visualforce page.
 
+[NOTE]
+====
 Currently, the _Change Request_ pages are displayed only in the Salesforce Classic interface, regardless of the selected Salesforce mode. The Lightning Experience interface will be introduced later.
+
 This configuration is not necessary due to using the same Change Request page as Standard Layout.
+====
+
 
 To override basic actions:
 

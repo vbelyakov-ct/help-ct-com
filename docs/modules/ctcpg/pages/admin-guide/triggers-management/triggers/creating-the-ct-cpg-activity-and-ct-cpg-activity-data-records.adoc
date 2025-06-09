@@ -20,13 +20,13 @@ The following trigger methods of the [.apiobject]#ActivityProcessHandler# class 
 
 TIP: You can xref:admin-guide/triggers-management/enabling-the-bypass-logic.adoc[restrict one or more trigger events] to not invoke the trigger methods.
 
-[width="100%",cols="50%,50%",]
+[width="100%",cols="20%,80%",]
 |===
 |*ActivityProcessHandler Method* |*Execution*
 
 |[.apiobject]#onBeforeInsert# a|
 * Create a _CT CPG Activity_ record linked to the _Contact_ and/or _Account_ records;
-* Assign the related xref:admin-guide/targeting-and-marketing-cycles-management/index.adoc[Marketing Cycle]_ record;
+* Assign the related xref:admin-guide/targeting-and-marketing-cycles-management/index.adoc[Marketing Cycle] record;
 * Link the corresponding _Target Frequency_ record;
 * Fill in _Objectives_ if specified.
 

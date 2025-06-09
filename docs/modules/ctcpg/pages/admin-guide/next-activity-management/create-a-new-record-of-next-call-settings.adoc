@@ -9,8 +9,8 @@ To create a new _Next Call Settings_ record:
 * In the *Name* field, enter the API name of the corresponding _CT CPG Activity_ record type, e.g., _Visit_.
 * In *Fields*, specify fields of the next _CT CPG Activity_ record to populate it with specific values (separated by a comma, without a blank space).
 * In *Values*, specify fields of the parent _CT CPG Activity_ record (separated by a comma, without a blank space). Values from these fields will be copied to the next _CT CPG Activity_ record.
-
-Add the *AccountId* and *ContactId* fields to copy the related _Account_ and _Contact_ record from the parent _CT CPG Activity_ record.
++
+NOTE: Add the *AccountId* and *ContactId* fields to copy the related _Account_ and _Contact_ record from the parent _CT CPG Activity_ record.
 . Click *Save*.
 
 The setup is complete.

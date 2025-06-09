@@ -36,9 +36,9 @@ NOTE: You can specify different xref:admin-guide/targeting-and-marketing-cycles-
 |Contact Target Flags API names |[.apiobject]#CTCPG\__ContactTargetFlagsFields__c# |Text Area(255) |Specify the list of API names of checkbox fields that are responsible for xref:admin-guide/application-settings-management/contact-field-reference.adoc[the selection of a division] for the _Contact_ record.
 
 |Create Next Activity |[.apiobject]#CTCPG\__CreateNextActivity__c# |Checkbox a|
-If selected, a new Activity record will be automatically created on the specific date from the CTCPG\__NextCallDate__c field of xref:admin-guide/activity-report-management/ref-guide/activity-field-reference.adoc[an _Activity_ record] after changing xref:admin-guide/next-activity-management/creating-the-next-activity.adoc[the activity status to Finished].
+If selected, a new Activity record will be automatically created on the specific date from the [.apiobject]#CTCPG\__NextCallDate__c# field of xref:admin-guide/activity-report-management/ref-guide/activity-field-reference.adoc[an _Activity_ record] after changing xref:admin-guide/next-activity-management/creating-the-next-activity.adoc[the activity status to Finished].
 
-Create a record of xref:admin-guide/cpg-custom-settings/next-call-settings.adoc[Next Call Settings] for the required _Activity_ record type.
+NOTE: Create a record of xref:admin-guide/cpg-custom-settings/next-call-settings.adoc[Next Call Settings] for the required _Activity_ record type.
 
 |Create Related Activity Data records |[.apiobject]#CTCPG\__CreateRelatedActivityDataRecords__c# |Checkbox |If selected, xref:admin-guide/activity-report-management/ref-guide/activity-data-field-reference.adoc[the _Activity Data_ record] based on parameters of an active _Marketing Cycle_ and _Marketing Detail Tracking_ records will be created for the corresponding _Activity_ record.
 
