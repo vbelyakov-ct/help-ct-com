@@ -21,13 +21,14 @@ For your convenience, you can create a new View for the Calendar interface eleme
 . Click *Create New View*.
 . Fill in *View Name* and *View Unique Name* fields.
 . In the *Filter By Additional Fields (Optional)* section, add 2 filters:
-
-[width="100%",cols="34%,33%,33%",options="header",]
++
+[width="60%",options="header",]
 |===
 |*Field* |*Operator* |*Value*
 |Categories |equals |Calendar
 |Categories |equals |Settings Panel
 |===
+
 . Click *Add Filter Logic* and, in the *Filter Logic* field, type _1 OR 2_.
 . If needed, *Restrict Visibility* of this View.
 . Click *Save*.
