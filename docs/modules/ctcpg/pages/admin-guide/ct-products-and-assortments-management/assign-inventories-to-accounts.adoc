@@ -1,8 +1,8 @@
 = Assign Inventories to Accounts
 
-Specify clients to whom you wish to rent _Inventories_ by creating the _Inventory_ record that ties the required _Account_ records with _CT Product_ records of the *Inventory* record type. Multiple _Inventory_ records can be assigned for the same _Account_ record, and vice versa.
+Specify clients to whom you wish to rent _Inventories_ by creating the _Inventory_ record that ties the required _Account_ records with _CT Product_ records of the _Inventory_ record type. Multiple _Inventory_ records can be assigned for the same _Account_ record, and vice versa.
 
-To assign a _CT Product_ record of the *Inventory* record type as the _Inventory_ record to the _Account_ record, go to the *Accounts* tab.
+To assign a _CT Product_ record of the _Inventory_ record type as the _Inventory_ record to the _Account_ record, go to the *Accounts* tab.
 
 NOTE: link:https://help.salesforce.com/articleView?id=admin_files_related_list_setup.htm&type=5[The _Inventories_ related list] should be available on the _Account_ page
 layout.
@@ -18,7 +18,7 @@ To assign _a CT Product_ record of the _Inventory_ record type as the _Inventory
 +
 TIP: Read the description of each parameter xref:admin-guide/cpg-custom-settings/inventory-tab-settings.adoc[here].
 
-* In the *Product* filed, select _CT Product_ with the *Inventory* record type.
+* In the *Product* filed, select _CT Product_ with the _Inventory_ record type.
 * Set *Active* to use the _Inventory_ record.
 * Specify *Installed Date*, *Status*, and other parameters.
 +

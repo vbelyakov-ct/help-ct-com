@@ -16,7 +16,7 @@ Create the [.apiobject]#MobileId__c# field on the required [.object]#Vision# obj
 
 For more information, go to the link:https://help.customertimes.com/articles/ct-mobile-ios-en/system-label[System Label] article.
 
-[[h2__242242597]]
+[[h2_242242597]]
 == JSON Web Token
 
 Photos taken in CT Mobile using the CT Vision Lite module are sent to the server. To connect to the server, the CT Mobile app sends that pair of the Salesforce Org Id in the 18-digit format and the valid cloud token to the server, and the server generates a JSON Web token.
@@ -48,7 +48,7 @@ In CT Mobile Control Panel 2.0::
 --
 . Go to https://help.customertimes.com/smart/project-ct-mobile-en/ct-mobile-control-panel-app-menu-new[CT Mobile Control Panel 2.0: App Menu].
 . Select the required profile in the *Profile* picklist. To apply settings to all the profiles, select *General Settings*.
-. If the *Orders* module has not been added to the app menu, link:https://help.customertimes.com/smart/project-order-module/adding-ct-orders-to-the-ct-mobile-app-4-0/a/h2__827845120[add
+. If the *Orders* module has not been added to the app menu, link:https://help.customertimes.com/smart/project-order-module/adding-ct-orders-to-the-ct-mobile-app-4-0/a/h2_827845120[add
 it].
 . Select the *Orders* module in the *Selected* list.
 . Select [.object]#Product# object used by CT Vision Lite in the *Product Object* picklist.
@@ -62,7 +62,7 @@ it].
 
 The setup is complete.
 
-[[h2__1130295568]]
+[[h2_1130295568]]
 == Add CT Vision to CT Mobile app
 
 To add the CT Vision Lite module to the https://help.customertimes.com/articles/ct-mobile-ios-en/app-menu[application menu]:
@@ -98,7 +98,7 @@ In CT Mobile Control Panel 2.0::
 
 The CT Vision Lite module is added to the CT Mobile app.
 
-[[h2__521416285]]
+[[h2_521416285]]
 == Add Pictures Gallery to the Mobile Layout
 
 xref:admin-guide/working-with-ct-vision-lite-in-the-ct-mobile-app-2-9.adoc#h2_566778463[Pictures] allows users to view the photos they have taken on an object record details screen.

@@ -77,7 +77,7 @@ The list of available Visualforce pages:
 [[h3_1694073495]]
 === Custom Settings and Metadata Types
 
-link:https://help.customertimes.com/smart/project-ct-mobile-en/custom-settings[CT CPG Custom Settings] are used to store the configuration of the managed CT CPG package.
+xref:admin-guide/cpg-custom-settings/index.adoc[CT CPG Custom Settings] are used to store the configuration of the managed CT CPG package.
 
 The list of custom settings:
 
@@ -123,28 +123,28 @@ Custom metadata types are used to store the *Activity Sync* settings.
 Triggers can be xref:admin-guide/cpg-custom-settings/trigger-settings.adoc[deactivated].
 ====
 
-[[h2__426184834]]
+[[h2_426184834]]
 == Deployment Steps
 
 Deployment of CT CPG solution for the field sales force is performed in the following order where steps with an asterisk (*) are optional:
 
-. <<h3__692457807, Install the CT CPG package>> in your Salesforce organization.
-. <<h3__1324800910, Assign licenses and permissions>> to users.
-. Specify <<h3__1862566713, the main application settings>>.
+. <<h3_692457807, Install the CT CPG package>> in your Salesforce organization.
+. <<h3_1324800910, Assign licenses and permissions>> to users.
+. Specify <<h3_1862566713, the main application settings>>.
 . <<h3_398962205, Add products>>.
-. * Categorize your clients, <<h3__1438761666, set the marketing cycle up>>, and target accounts and contacts.
+. * Categorize your clients, <<h3_1438761666, set the marketing cycle up>>, and target accounts and contacts.
 . <<h3_1423379549, Configure the CT CPG calendar>>.
-. * <<h3__115994772, Streamline the representatives' activities>>.
-. * <<h3__28788001, Specify goals>> to Accounts.
+. * <<h3_115994772, Streamline the representatives' activities>>.
+. * <<h3_28788001, Specify goals>> to Accounts.
 . * <<h3_1656217633, Schedule activities>>.
 . * <<h3_1927205111, Set up the Activity Sync process>> to view all your activities in one place.
 . * Control the data quality with <<h3_1569917463, the Change Request process>>.
 . * <<h3_626062174, Configure CPG groups>>.
 . * <<h3_1485440664, Create quizzes>> to estimate your representatives.
 . * <<h3_994439749, Integrate the CT CPG solution with the CT Mobile solution>> to provide full CT CPG and Salesforce offline functionality along with an advanced interactive Digital Sales Ais for field sales representatives via the CT Mobile app.
-. * <<h3__1152226206, Integrate the CT CPG solution with the CT Orders solution>> to have the ability for using a powerful and comprehensive order management solution.
+. * <<h3_1152226206, Integrate the CT CPG solution with the CT Orders solution>> to have the ability for using a powerful and comprehensive order management solution.
 
-[[h3__692457807]]
+[[h3_692457807]]
 === 1. CT CPG Package Installation
 
 [TIP]
@@ -159,14 +159,14 @@ CT CPG is an add-on to Salesforce, provided as an Appexchange ISV product. xref:
 * Before installation, xref:admin-guide/getting-started/preparing-the-salesforce-organization.adoc[enable Contacts to Multiple Accounts Settings].
 * After installation, xref:admin-guide/getting-started/remote-site-settings.adoc[specify an additional remote site].
 
-[[h3__1324800910]]
+[[h3_1324800910]]
 === 2. Assigning User Licenses and Permissions
 
 To give CT CPG access to users, xref:admin-guide/getting-started/managing-ct-cpg-licenses.adoc[specify user licenses]. Also, each user has xref:admin-guide/getting-started/permission-settings.adoc[the assigned profile] and, if necessary, permission set.
 
 Make sure that users have xref:news/salesforce-updates/salesforce-winter-20-release-critical-updates.adoc[access to all custom settings and custom metadata types].
 
-[[h3__1862566713]]
+[[h3_1862566713]]
 === 3. Global Application Setting
 
 The first step of configuring the managed CT CPG package is xref:admin-guide/application-settings-management/index.adoc[to manage records of Application Settings] according to your business purpose. It can be a few records in case of need to use more than one marketing cycle. For more information, refer to the xref:admin-guide/getting-started/configuring-application-settings.adoc[Configuring Application Settings] section.
@@ -176,7 +176,7 @@ The first step of configuring the managed CT CPG package is xref:admin-guide/app
 
 xref:admin-guide/ct-products-and-assortments-management/index.adoc[CT Products and Assortments management] is intended to manage customer products according to their business logic.
 
-[[h3__1438761666]]
+[[h3_1438761666]]
 === 5. Creating the Marketing Cycle and Targeting Clients
 
 xref:admin-guide/targeting-and-marketing-cycles-management/index.adoc[Targeting and Marketing Cycle management] is designed to tailor your strategy to each client segment. Set up the frequency of planned activities to clients, products promoted for sale, assortments audit, and objectives to meet your clients' needs during the _Marketing Cycle_ period.
@@ -188,14 +188,14 @@ You can configure your custom business logic without configuring the targeting a
 
 xref:admin-guide/calendar-management/index.adoc[Calendar Management] is intended to manage activities for the specific needs of each user division and role.
 
-[[h3__115994772]]
+[[h3_115994772]]
 === 7. Streamline Representatives' Activities
 
 These settings are optional.
 
 xref:admin-guide/activity-report-management/index.adoc[Activity Report management] is intended to set _Activity Reports_ up for displaying details about the _CT CPG Activity_ record and to force the detailing based on your products and business goals.
 
-[[h3__28788001]]
+[[h3_28788001]]
 === 8. Add Goals
 
 These settings are optional.
@@ -246,7 +246,7 @@ To simplify the routine of the field forces, it is possible to integrate the CT 
 running link:https://help.customertimes.com/articles/ct-mobile-ios-en/ct-mobile-solution[iOS], link:https://help.customertimes.com/articles/ct-mobile-win-en/ct-mobile-solution[Windows], or link:https://help.customertimes.com/articles/ct-mobile-android-en/ct-mobile-solution[Android].
 The solution allows users to operate with the target CT CPG system data in offline mode using features that enhanced the Salesforce functionality.
 
-[[h3__1152226206]]
+[[h3_1152226206]]
 === 15. Integration of CT CPG with the CT Orders solution
 
 These settings are optional.

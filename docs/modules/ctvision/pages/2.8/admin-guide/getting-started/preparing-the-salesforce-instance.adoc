@@ -5,7 +5,7 @@ Prepare your Salesforce organization to enable easy configuration of CT Vision I
 
 After customization, check permissions to make sure they are granted to required user profiles.
 
-[[h2__200909819]]
+[[h2_200909819]]
 == 1. Create CTM Settings Fields 
 
 Check that the following fields are created on the [.object]#CTM Settings# object that will be used in the CT Vision IR logic. If any of these fields is missing, create it manually:
@@ -54,24 +54,24 @@ Click the link to view the required fields and their description for the corresp
 
 Specify new values for the [.apiobject]#clm\__Type__c# picklist:
 
-* For the *Vision Shelf* record type:
+* For the _Vision Shelf_ record type:
 ** Photo
 ** Collection
-* For the *Vision KPI* record type:
+* For the _Vision KPI_ record type:
 ** Percent
 ** Amount
-* For the *Vision Product List* record type:
+* For the _Vision Product List_ record type:
 ** Checkbox
 ** Double(16,2)
 ** Number(18,0)
 ** Text
 
-[[h2__242260294]]
+[[h2_242260294]]
 == 4. Prepare Layout for the Vision Setup 
 
 Add the *Product Synchronization Criteria* field to the layout of the *Vision Setup* custom metadata type.
 
-[[h2__682569336]]
+[[h2_682569336]]
 == 5. Assign Permission Set for Administrators
 
 Assign the _CT Vision Administrator_ permission set to administrators. The permission set contains all required permissions for the correct operation of the CT Vision IR.

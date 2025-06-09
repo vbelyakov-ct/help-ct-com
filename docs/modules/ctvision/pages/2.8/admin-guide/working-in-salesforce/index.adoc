@@ -33,7 +33,7 @@ the image:delete-icon-gallery.png[25,25] icon in the photo gallery.
 +
 image:tags-list.png[]
 
-[[h2__1484451922]]
+[[h2_1484451922]]
 == Feedback Loop Filters 
 
 [width="100%",cols="70%,30%",frame=none, grid=none]
@@ -73,7 +73,7 @@ Click *Advanced Search* to expand additional filter criteria. Use the following 
 
 * Select the desired *Recognition Engine*. Only xref:2.8/admin-guide/getting-started/setting-up-integration-with-the-image-recognition-providers/index.adoc[configured] recognition engines are available for selection.
 * Select the specific *Activity Object* and *Activity Object Name*.
-* Select an [.object]#Account# that is linked to the *Activity* records. The filter uses the OR operator.
+* Select an [.object]#Account# that is linked to the _Activity_ records. The filter uses the OR operator.
 ** Create a _CTM Settings_ record with the xref:2.8/ref-guide/vision-settings-ref/vision-account-object-field-reference.adoc[Vision Account] record type to add desired accounts to the picklist.
 ** Search an organization by a specific *Account Field Value* in the selected *Account Field*.
 * Specify the *Product* criteria:
@@ -81,10 +81,10 @@ Click *Advanced Search* to expand additional filter criteria. Use the following 
 +
 [TIP]
 ====
-For more information, refer to xref:2.8/admin-guide/getting-started/specifying-product-objects-and-fields.adoc#h2__1362989108[Product Object Settings].
+For more information, refer to xref:2.8/admin-guide/getting-started/specifying-product-objects-and-fields.adoc#h2_1362989108[Product Object Settings].
 ====
 
-** Select the *Product* record.
+** Select the _Product_ record.
 ** Select the *Product Record Type*.
 ** Search a product by a specific *Product Field Value* in the selected *Product Field*.
 
@@ -147,7 +147,7 @@ Available only for xref:../getting-started/setting-up-integration-with-the-image
 
 Click the image:Salesforce-Realogram-button-v.2.png[40,60] button to open a *Preview* window.
 
-Use the navigation arrows to scroll photos of the current *Activity* record.
+Use the navigation arrows to scroll photos of the current _Activity_ record.
 
 * View the recognized products and price tags on the *Realogram* tab.
 * The originally taken photo without any recognition information is located on the *Fact* tab.

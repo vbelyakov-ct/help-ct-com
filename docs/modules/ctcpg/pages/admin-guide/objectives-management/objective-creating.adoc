@@ -5,7 +5,7 @@ Objectives can be specified in different ways according to business purpose. xre
 
 We recommend link:https://help.salesforce.com/articleView?id=admin_files_related_list_setup.htm&type=5[adding the _Objectives_ related list] on the _Account_ and _Contact_ page layout to have an ability to manage objectives for an _Account_ or _Contact_ record and xref:admin-guide/activity-report-management/manage-field-sets-for-activity-report-pages.adoc[add to the corresponding _CT CPG Activity_ field set(s)] the [.apiobject]#CTCPG\__Objective__c# and [.apiobject]#CTCPG\__NextCallObjective__c# fields.
 
-[[h2__1347415082]]
+[[h2_1347415082]]
 == Create a regular Objective for the Account or Contact
 
 Create an Objective on the _Objectives_ related list for the particular _Account_ and/or _Contact_ record to automatically set it to the related _CT CPG Activity_ record.
@@ -31,7 +31,7 @@ When a representative creates a _CT CPG Activity_ record related to the _Account
 NOTE: If the related _Account_ record has a relative _Objective_ record, the objective will be added to the _Objective_ related list for all _Contact_ records of
 that _Account_. Specify another _Objective_ record for the particular _Contact_ record to overwrite the _Account_ objective.
 
-[[h2__280478342]]
+[[h2_280478342]]
 == Create an Objective for Activity
 
 Set an objective for the particular _CT CPG Activity_, and it will be automatically assigned to the related _Account_ and/or _Contact_ record. Manage activities via a Standard layout or by using a pre-configured xref:admin-guide/activity-report-management/index.adoc[Activity Report] page.
@@ -68,7 +68,7 @@ The objective is set.
 When a representative finishes the created _CT CPG Activity_ record and creates a next _CT CPG Activity_ record for the same _Account_ and/or _Contact_ record, a value from the [.apiobject]#CTCPG\__NextCallObjective__c# field of the finished _CT CPG Activity_ record is copied to the [.apiobject]#CTCPG\__Objective__c# field of
 the next _CT CPG Activity_ record.
 
-[[h2__1099816968]]
+[[h2_1099816968]]
 == Create an Objective using the Next Activity functionality
 
 Use the xref:admin-guide/next-activity-management/index.adoc[Next Activity] functionality to copy an objective from the specified field of the finished _CT CPG

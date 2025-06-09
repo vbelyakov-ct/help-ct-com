@@ -4,17 +4,14 @@ The Standard Layout interface will be used to manage _CT CPG Activity_
 records if:
 
 * the Standard Layout is selected for the particular _CT CPG Activity_ record type on the
-xref:admin-guide/calendar-management/legacy-calendar-management/configuring-calendar/configure-settings-for-the-calendar/calendar-settings-customize-events.adoc#h2__1740967955[Calendar Settings] tab.
+xref:admin-guide/calendar-management/legacy-calendar-management/configuring-calendar/configure-settings-for-the-calendar/calendar-settings-customize-events.adoc#h2_1740967955[Calendar Settings] tab.
 * the Standard Layout is xref:admin-guide/activity-report-management/override-basic-actions-for-activity.adoc[selected to open by buttons].
 
 By default, the _Activity Report_ Visulaforce page is selected for display with the standard Salesforce header tabs.
 
 [TIP]
 ====
-To display the Salesforce header in case of
-using __Activity Report __pages, select *Show page header* for the
-corresponding xref:calendar-tab-settings.html[Calendar Tab Settings]_
-record.
+To display the Salesforce header in case of using __Activity Report __pages, select *Show page header* for the corresponding xref:admin-guide/cpg-custom-settings/calendar-tab-settings.adoc[Calendar Tab Settings]_ record.
 ====
 
 image:Standard-Layout-Interface-with-Visualforce-page.png[]
@@ -30,8 +27,7 @@ To customize the Standard Layout page:
 
 . Open any _Activity Report_ page. The Standard Layout should be assigned to open the _CT CPG Activity_ of the selected record type.
 . Click *Setup → Edit Page*. The https://help.salesforce.com/articleView?id=lightning_app_builder_overview.htm&type=5[Lightning App Builder] opens.
-. Remove the Visualforce page and add components you want to display on
-the Standard Layout page.
+. Remove the Visualforce page and add components you want to display on the Standard Layout page.
 +
 TIP: You can select another Visualforce page if needed.
 +

@@ -14,7 +14,7 @@ The following fields must be created on the [.object]#Product Image#  object:
 |===
 |*Field*    |*API Name*                 |*Type*              |*Description*
 
-|CT Product |[.apiobject]#ProductId__c# |Lookup(CT Product) a| The parent *CT Product* record. The field must be manually created by the administrator.
+|CT Product |[.apiobject]#ProductId__c# |Lookup(CT Product) a| The parent _CT Product_ record. The field must be manually created by the administrator.
 
 |Document Id |[.apiobject]#ctv\__DocumentId__c# |Text(255) |The unique Id of the product image.
 

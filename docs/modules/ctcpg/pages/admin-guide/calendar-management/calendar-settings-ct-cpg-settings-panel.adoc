@@ -53,24 +53,24 @@ Click *Save* to apply changes on this tab.
 
 image:cpg_settings_general.png[]
 
-[[h3__1934044513]]
+[[h3_1934044513]]
 == Target Objects
 
 [NOTE]
 ====
-Editing the *Parent Object* and *Child object* fields require the xref:admin-guide/calendar-management/custom-permissions-for-using-calendar.adoc#h3__260496953[Allow to delete Calendar Setting records] custom permission.
+Editing the *Parent Object* and *Child object* fields require the xref:admin-guide/calendar-management/custom-permissions-for-using-calendar.adoc#h3_260496953[Allow to delete Calendar Setting records] custom permission.
 ====
 In this section, you can set up target objects that will be displayed on the
-xref:admin-guide/calendar-management/calendar-interface-and-activities.adoc#h3__115958815[left sidebar] of the calendar:
+xref:admin-guide/calendar-management/calendar-interface-and-activities.adoc#h3_115958815[left sidebar] of the calendar:
 
 * *Parent object* (Account by default) and *Child object* (Contact by default). If you want to specify another objects as a parent and/or child object, do the following:
 . Create lookup fields to the new parent/child object on the [.apiobject]#CTCPG_Activity__c# object.
 . Select new object(s) in the *Target Objects* section.
-. Select created lookup fields to the new parent/child object in the xref:admin-guide/calendar-management/calendar-settings-ct-cpg-settings-panel.adoc#h3__362695117[Activity Objects] section.
+. Select created lookup fields to the new parent/child object in the xref:admin-guide/calendar-management/calendar-settings-ct-cpg-settings-panel.adoc#h3_362695117[Activity Objects] section.
 . (Optional) edit settings in the *Target Objects* tab of the xref:admin-guide/calendar-management/calendar-settings-ct-cpg-settings-panel.adoc#h3_1454440899[Pop-Up] section.
 *  *Object label* defines how the names of parent and child objects tabs in the left sidebar (10 symbols max).
 * [[show-hierarchy]]*Show hierarchy* activates the *Hierarchy* tab in the
-xref:admin-guide/calendar-management/calendar-interface-and-activities.adoc#h3__115958815[left sidebar] of the calendar. Then select the *Connection type*:
+xref:admin-guide/calendar-management/calendar-interface-and-activities.adoc#h3_115958815[left sidebar] of the calendar. Then select the *Connection type*:
 ** *Direct*: lookup from child object to parent object. Select lookup field from the *Lookup from child object* list.
 ** *Junction*: when child object and parent object are connected via another object, which has lookup/master-detail fields related to both objects. Select lookup field from the *Object linking parent and child object* list.
 
@@ -78,16 +78,16 @@ Click *Save* to apply changes on this tab.
 
 image:cpg_settings_target_objects.png[]
 
-[[h3__362695117]]
+[[h3_362695117]]
 == Activity Objects
 
-In this section, select parent and child objects lookup fields, if xref:admin-guide/calendar-management/calendar-settings-ct-cpg-settings-panel.adoc#h3__1934044513[target objects] are not set as default ([.object]#Account# and [.object]#Contact#).
+In this section, select parent and child objects lookup fields, if xref:admin-guide/calendar-management/calendar-settings-ct-cpg-settings-panel.adoc#h3_1934044513[target objects] are not set as default ([.object]#Account# and [.object]#Contact#).
 
 In the *Subject* list, select a text field to store value from the *Subject* field of the xref:admin-guide/calendar-management/calendar-interface-and-activities.adoc#h3_1752519442[Create Activity] form.
 
 image:cpg_settings_activity_objects.png[]
 
-[[h3__1888339674]]
+[[h3_1888339674]]
 == Record Types
 
 In this section, you can set up record types, created on the [.apiobject]#CTCPG\__Activity__c# object:
@@ -125,7 +125,7 @@ image:cpg_settings_record_types.png[]
 [[h3_1454440899]]
 == Pop-Up
 
-In this section, you can turn on/off pop-ups for target objects (on the xref:admin-guide/calendar-management/calendar-interface-and-activities.adoc#h3__115958815[left sidebar]) and activity objects (in the calendar grid).
+In this section, you can turn on/off pop-ups for target objects (on the xref:admin-guide/calendar-management/calendar-interface-and-activities.adoc#h3_115958815[left sidebar]) and activity objects (in the calendar grid).
 
 . Select the appropriate tab, *Target objects* or *Activity objects*.
 . For *Target Objects*, also select a tab for defined target objects ([.object]#Account# and [.object]#Contact# by default).
@@ -144,7 +144,7 @@ Click *Save* to apply changes on this tab.
 
 image:cpg_settings_pop-up.png[]
 
-[[h3__1182969566]]
+[[h3_1182969566]]
 == Drag and Drop
 
 In this section, you can set up default record types for drag-and-drop creation of activities. If default record typers are not set, then the xref:admin-guide/calendar-management/calendar-interface-and-activities.adoc#h3_1752519442[Create Activity] form will be opened after dragging and dropping an object from the left sidebar to the calendar grid. You can specify drag-and-drop settings globally for all users of the xref:admin-guide/calendar-management/calendar-settings-ct-cpg-settings-panel.adoc#h3_932595492[selected division], or for a specific user profile. Settings for a specific user profile have higher priority than global settings.
@@ -160,14 +160,14 @@ Click image:cpg_trash_icon.png[25,25] to remove settings for a specific user pro
 
 [NOTE]
 ====
-This action requires the xref:admin-guide/calendar-management/custom-permissions-for-using-calendar.adoc#h3__260496953[Allow to delete Calendar Setting records] custom permission.
+This action requires the xref:admin-guide/calendar-management/custom-permissions-for-using-calendar.adoc#h3_260496953[Allow to delete Calendar Setting records] custom permission.
 ====
 
 Click *Save* to apply changes on this tab.
 
 image:cpg_settings_drag-and-drop.png[]
 
-[[h3__1948960707]]
+[[h3_1948960707]]
 == Visualization → Status Color
 
 In this section, you can map status from your activity objects with standard status categories, each of them has its own color. It affects the color of the stripe on the left side of the activity preview:

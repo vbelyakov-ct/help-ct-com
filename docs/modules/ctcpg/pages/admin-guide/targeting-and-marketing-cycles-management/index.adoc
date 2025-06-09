@@ -1,6 +1,6 @@
 = Targeting and Marketing Cycles Management
 
-Get familiar with xref:admin-guide/targeting-and-marketing-cycles-management/index.adoc[the marketing cycles and targeting] in the CT CPG package.
+Get familiar with xref:admin-guide/targeting-and-marketing-cycles-management/ref-guide/index.adoc[the marketing cycles and targeting] in the CT CPG package.
 
 TIP: The _Marketing Cycle_ usage is optional. You can create activities, track _CT Products_ and other parameters, and target users out of the marketing cycle.
 
@@ -11,7 +11,7 @@ Configure a marketing cycle for the specific division and define the different g
 . Set up clients' segmentation using _Account_ and _Contact_ divisions. xref:./add-a-new-division.adoc[Create a new division] and xref:./division-a-new-record-of-division-target-frequency-settings.adoc[add
 the division to the corresponding custom setting].
 +
-The divisions represent departments that have the same structure but works with different KPIs, and division categories could be used to define specific groups of customers, for example, hypermarkets and discounters.
+The divisions represent departments that have the same structure but works with different KPIs, and division categories could be used to define specific groups of customers, for example, [.apiobject]#hypermarkets# and [.apiobject]#discounters#.
 . xref:./create-a-marketing-cycle.adoc[Create marketing cycles] with the specific details, xref:./create-a-new-record-of-marketing-detail-tracking.adoc[targeting parameters] per xref:./specify-categories-for-marketing-detail-tracking.adoc[each segment], and
 xref:./enable-activity-linking-to-the-marketing-cycle.adoc[the Activity linking].
 * The marketing cycle represents a period during which the planning of activities and personalized marketing takes place. At the end of each marketing cycle, a company can review results via reports and also assess accumulated KPI.

@@ -48,12 +48,12 @@ a|
 * xref:ref-guide/ct-sign-control-panel.adoc[CT Sign Control Panel] is a tool to provide clear and convenient UI to connect the Salesforce organization with the Application Service and e-signature provider;
 * xref:ref-guide/template-editor-feature-reference.adoc[Template Editor] is a tool for creating and configuring templates that will be used to form documents based on Salesforce data.
 
-[[h3__1873686521]]
+[[h3_1873686521]]
 === Custom Objects and Fields
 
 [NOTE]
 ====
-There custom CT Sign fields on the _Contact_ and _User_ objects, such as [.apiobject]#ctsign\__CompanyName__c#, [.apiobject]#ctsign\__ContraliaIdentityID__c#, and [.apiobject]#ctsign\__ContraliaIdentityPIN__c# are no longer in use.
+There custom CT Sign fields on the [.object]#Contact# and [.object]#User# objects, such as [.apiobject]#ctsign\__CompanyName__c#, [.apiobject]#ctsign\__ContraliaIdentityID__c#, and [.apiobject]#ctsign\__ContraliaIdentityPIN__c# are no longer in use.
 ====
 
 * xref:ref-guide/ct-sign-custom-settings-and-objects/sign-settings-field-reference/index.adoc[Sign Settings] is intended for template access management and to store the main CT Sign settings, such as objects to sign and layouts for the Form Document page.
@@ -63,9 +63,9 @@ document being signed.
 xref:ref-guide/ct-sign-custom-settings-and-objects/content-version-field-reference.adoc[Content Version] object are intended to store the attributes of the templates for documents being signed and to send them as document parameters.
 * The generated documents are saved as link:https://help.salesforce.com/articleView?id=collab_salesforce_files_parent.htm&type=5[files] to allow users to attach the same document to different records. Until a transaction (a _Sign Document_ record) receives a successful completion status, the document is attached only to this transaction. Next, the document is additionally attached to the record from which the signing
 process was started.
-* The *Signing Contact* field is used as a link between _Account_ and _Contact_ who should sign the generated document.
+* The *Signing Contact* field is used as a link between [.object]#Account# and [.object]#Contact# who should sign the generated document.
 
-[[h3__2038128731]]
+[[h3_2038128731]]
 === Custom Setting
 
 * The protected xref:ref-guide/ct-sign-custom-settings-and-objects/sign-credentials.adoc[Sign Credentials] custom setting is intended to store the Application Service credentials. To
@@ -105,7 +105,7 @@ To use a legally binding e-signature, connect the Salesforce organization with t
 Connect xref:admin-guide/connect-salesforce-with-the-application-service-and-e-signature-provider.adoc[to test the e-signature process].
 . xref:admin-guide/connect-salesforce-with-the-application-service-and-e-signature-provider.adoc[Obtain the production account] and go live with the DocuSign app to allow the legally binding signing.
 
-[[h2__426184834]]
+[[h2_426184834]]
 == Deployment Steps
 
 Users may sign documents with legally binding or simple signatures in Salesforce and on a mobile device. Depending on the purpose and the platform of a mobile device, skip the unnecessary steps, for example, if there is no need to give iOS users the ability to sign documents with a legally binding signature.

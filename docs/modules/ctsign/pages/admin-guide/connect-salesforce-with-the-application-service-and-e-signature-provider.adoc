@@ -3,12 +3,12 @@
 
 [NOTE]
 ====
-This article is applicable only if you use xref:admin-guide/create-a-new-template.adoc#h2__296611947[template with the DocuSign sign method].
+This article is applicable only if you use xref:admin-guide/create-a-new-template.adoc#h2_296611947[template with the DocuSign sign method].
 ====
 
 In case to process signatures by an e-Signature provider, it is necessary to connect the Salesforce organization with the App Service and the e-signature provider. Currently, you can connect only to the DocuSign provider. Read more at link:https://support.docusign.com/s/document-item?language=en_US&bundleId=pik1583277475390&topicId=vkq1583277322201.html&_LANG=enus[DocuSign support portal].
 
-[[h2__1758912760]]
+[[h2_1758912760]]
 == 1. Save 18-character Code of your Salesforce Organization
 
 . Go to *Setup* → *Company Settings* → *Company Information*.
@@ -53,7 +53,7 @@ image:docusign-listener-settings.png[]
 ** *Name*: _DocuSign Connect_.
 ** *URL to Publish*: `https://sign.customertimes.com/api/docusign/connect/<18-character Organization ID>`
 +
-Use the xref:admin-guide/connect-salesforce-with-the-application-service-and-e-signature-provider.adoc#h2__1758912760[18-character Organization ID you saved before].
+Use the xref:admin-guide/connect-salesforce-with-the-application-service-and-e-signature-provider.adoc#h2_1758912760[18-character Organization ID you saved before].
 * In the *Event Settings* section:
 +
 image:docusign-event-settings.png[]
@@ -114,7 +114,7 @@ If successful, you will be redirected to the *CT Sign app* tab, and the token to
 Please re-enter DocuSign parameters after promoting your integration key from your developer account to a production DocuSign account. Documents sent from the developer DocuSign account are not legally binding and are watermarked.
 ====
 
-[[h2__327227725]]
+[[h2_327227725]]
 == 4. Connect DocuSign App
 
 . Go to *CT Sign Control Panel* → *DocuSign App*.

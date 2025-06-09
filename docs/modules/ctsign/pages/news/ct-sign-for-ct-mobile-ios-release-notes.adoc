@@ -4,7 +4,7 @@
 
 Here you could find a CT Sign feature, the link to the corresponding article, and the CT Mobile version in which the feature is available. Add the CT Sign module to the CT Mobile iOS app to have the ability to sign documents on the mobile device.
 
-[[h2__523563164]]
+[[h2_523563164]]
 == CT Sign 2.0 for CT Mobile 2.6
 
 [[h3_1590465207]]
@@ -15,36 +15,36 @@ xref:admin-guide/create-a-new-template.adoc[Templates]:
 * Support fields of the *Date* and *Formula* types.
 * For localization purposes, the ability to use a custom label for the *Sign Document* button.
 
-xref:ref-guide/template-editor-feature-reference.adoc#h3__99476489[Salesforce tables]:
+xref:ref-guide/template-editor-feature-reference.adoc#h3_99476489[Salesforce tables]:
 
 * Support of several Salesforce tables on a template.
 * Titles of columns now display labels for selected fields instead of their API names.
 
-[[h3__892195453]]
+[[h3_892195453]]
 === Fixes
 
 * Fixed filling out status and date of signing for the completed documents on the device.
 * Fixed attaching a signed document. The signed document is available on the *Files* tab xref:ref-guide/ct-sign-custom-settings-and-objects/sign-settings-field-reference/object-setting-field-reference.adoc[on the appropriate object].
 
-[[h2__523563167]]
+[[h2_523563167]]
 == CT Sign 2.0 for CT Mobile 2.5
 
 [[h3_1642576463]]
 === New Features and Improvements
 
-Sign documents offline xref:admin-guide/sign-a-document-the-ct-mobile-app/index.adoc#h2__1603366204[using a simple signature].
+Sign documents offline xref:admin-guide/sign-a-document-the-ct-mobile-app/index.adoc#h2_1603366204[using a simple signature].
 
 * All signatories must sign the document, or it will not be saved.
 * The document may not need to be signed when generated based on a template without the *Signature* button(s).
-* The finished document will be saved in the *Files* section of the parent object and the _Sign Document_ object.
+* The finished document will be saved in the *Files* section of the parent object and the [.object]#Sign Document# object.
 * Add the handwritten signature, select a photo from the device gallery, or take a new one with the signature.
 
-When creating a template in the Template Editor, use xref:ref-guide/template-editor-feature-reference.adoc#h3__99476489[Salesforce Table] for displaying values from the related records.
+When creating a template in the Template Editor, use xref:ref-guide/template-editor-feature-reference.adoc#h3_99476489[Salesforce Table] for displaying values from the related records.
 
-[[h3__649865195]]
+[[h3_649865195]]
 === Fixes
 
-Only documents from xref:admin-guide/configuring-the-ct-sign-package/index.adoc#h2__1469899678[the specified workspaces] will be downloaded on the mobile device.
+Only documents from xref:admin-guide/configuring-the-ct-sign-package/index.adoc#h2_1469899678[the specified workspaces] will be downloaded on the mobile device.
 
 [[h2_51713154]]
 == CT Sign 2.0 for CT Mobile 2.4

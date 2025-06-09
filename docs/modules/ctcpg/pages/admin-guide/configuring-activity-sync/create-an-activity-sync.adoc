@@ -13,17 +13,17 @@ To create an Activity Sync:
 
 The setup is complete. Get familiar with the _Activity Sync_ examples.
 
-[[h2__243952492]]
+[[h2_243952492]]
 == One-way synchronization
 
-When creating an _Activity_ object record with the _Visit_ record type:
+When creating an [.object]#Activity# object record with the _Visit_ record type:
 
 * a standard _Event_ record will be created with the _Other_ value in the *Type* field.
 * the value from the *Objective* field will be copied to the *Description* field of the newly created _Event_ record.
 
 image:one-way.png[]
 
-[[h2__1458391187]]
+[[h2_1458391187]]
 == Both-ways synchronization using the Standard Activity Type field
 
 When creating a _Task_ record with the _Meeting_ type, the _CT CPG Activity_ record with the _Visit_ record type will be created.

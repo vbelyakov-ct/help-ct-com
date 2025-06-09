@@ -4,12 +4,12 @@
 
 Get familiar with the available interface elements:
 
-[[h3__115958815]]
+[[h3_115958815]]
 == Left Sidebar
 
 There are 3 tabs: *Accounts*, *Contacts* and *Hierarchy*.
 
-* In *Accounts* and *Contacts* tabs, you can select activity target records to create activities in the calendar. By default, these target records are [.object]#Account# and [.object]#Contact# objects, but you can specify another objects in the xref:admin-guide/calendar-management/calendar-settings-ct-cpg-settings-panel.adoc#h3__1934044513[CT CPG Settings Panel], as well as rename their tabs.
+* In *Accounts* and *Contacts* tabs, you can select activity target records to create activities in the calendar. By default, these target records are [.object]#Account# and [.object]#Contact# objects, but you can specify another objects in the xref:admin-guide/calendar-management/calendar-settings-ct-cpg-settings-panel.adoc#h3_1934044513[CT CPG Settings Panel], as well as rename their tabs.
 ** Activity target records can also be displayed with their titles and subtitles, if there are fields specified in their link:https://help.salesforce.com/s/articleView?id=sf.compact_layout_overview.htm&type=5[compact layouts].
 ** Hover mouse pointer over a target record to see its basic information
 (if it is enabled in the xref:admin-guide/calendar-management/calendar-settings-ct-cpg-settings-panel.adoc#h3_1454440899[CT CPG Settings Panel]).
@@ -34,7 +34,7 @@ image:cpg_left_arrow_icon.png[] and image:cpg_right_arrow_icon.png[] to hide and
 
 image:Calendar-Interface.png[]
 
-[[h3__2071613420]]
+[[h3_2071613420]]
 == Main Calendar Area
 
 On the main calendar area:
@@ -42,8 +42,8 @@ On the main calendar area:
 * Switch between *Day*, *Week* and *Month* views. You can set the default view in the xref:admin-guide/calendar-management/calendar-settings-ct-cpg-settings-panel.adoc#h3_951662406[CT CPG Settings Panel].
 * Click *Today* to go to the current day.
 * Click image:cpg_settings_icon.png[] to switch between *Calendar view* and *List view*, and show/hide weekends.
-* Activities have color stripes on the left side according to their statuses. You can configure them in the xref:admin-guide/calendar-management/calendar-settings-ct-cpg-settings-panel.adoc#h3__1948960707[CT CPG Settings Panel].
-* Activities can have titles and subtitles, you can configure them in the xref:admin-guide/calendar-management/calendar-settings-ct-cpg-settings-panel.adoc#h3__1888339674[CT CPG Settings Panel].
+* Activities have color stripes on the left side according to their statuses. You can configure them in the xref:admin-guide/calendar-management/calendar-settings-ct-cpg-settings-panel.adoc#h3_1948960707[CT CPG Settings Panel].
+* Activities can have titles and subtitles, you can configure them in the xref:admin-guide/calendar-management/calendar-settings-ct-cpg-settings-panel.adoc#h3_1888339674[CT CPG Settings Panel].
 
 [NOTE]
 =====
@@ -52,7 +52,7 @@ On the main calendar area:
 link:https://help.salesforce.com/s/articleView?id=sf.usersetup.htm&type=5[Personal Information] page in the *Start of Day* and *End of Day* fields.
 =====
 
-[[h3__265155760]]
+[[h3_265155760]]
 == Right Sidebar
 
 * Use the mini-calendar to quickly move to the desired date. The today date is always highlighted.
@@ -78,12 +78,12 @@ To access this section, assign required xref:admin-guide/calendar-management/cus
 * Click image:cpg_right_arrow_icon.png[] and image:cpg_left_arrow_icon.png[] to
 hide and show the right sidebar.
 
-[[h2__1494438992]]
+[[h2_1494438992]]
 == Actions with Activities
 
 [NOTE]
 ====
-Any actions with activities (xref:admin-guide/calendar-management/calendar-interface-and-activities.adoc#h3_1490113349[moving], resizing to change activity duration, xref:admin-guide/calendar-management/calendar-interface-and-activities.adoc#h3__786187553[changing status] etc.) apply to database immediately. However, the xref:admin-guide/calendar-management/calendar-interface-and-activities.adoc#h3__786187553[Edit Activity] form may display the obsolete data for a couple of minutes.
+Any actions with activities (xref:admin-guide/calendar-management/calendar-interface-and-activities.adoc#h3_1490113349[moving], resizing to change activity duration, xref:admin-guide/calendar-management/calendar-interface-and-activities.adoc#h3_786187553[changing status] etc.) apply to database immediately. However, the xref:admin-guide/calendar-management/calendar-interface-and-activities.adoc#h3_786187553[Edit Activity] form may display the obsolete data for a couple of minutes.
 ====
 
 [[h3_1752519442]]
@@ -98,7 +98,7 @@ image:cpg_create_activity.png[]
 . Fill out the fields:
 * *Record type*: select record type created on the [.apiobject]#CTCPG\__Activity__c# object.
 * Enter *Subject* if needed.
-* Specify *Start*/*End Time*/*Date* or toggle *All-Day*. If you are creating an activity by clicking on a blank cell of the calendar, *Start* *Time* and *End* *Time* will be pre-filled according to the xref:admin-guide/calendar-management/calendar-settings-ct-cpg-settings-panel.adoc#h3__1888339674[Default duration] setting.
+* Specify *Start*/*End Time*/*Date* or toggle *All-Day*. If you are creating an activity by clicking on a blank cell of the calendar, *Start* *Time* and *End* *Time* will be pre-filled according to the xref:admin-guide/calendar-management/calendar-settings-ct-cpg-settings-panel.adoc#h3_1888339674[Default duration] setting.
 * If needed, toggle *Compact form* or *Detailed form* and fill out their fields:
 +
 [NOTE]
@@ -124,11 +124,11 @@ You can also create an activity by dragging and dropping a Target Object from th
 ** Parent object: lookup fields of the parent object will be filled in.
 ** Child object: lookup fields of the parent and child objects will be filled in.
 * You can select several target objects and drag and drop them. In this case, you can select only type of activity and edit properties of the created activities later. Activities will be created with the specified xref:admin-guide/calendar-management/calendar-settings-ct-cpg-settings-panel.adoc#h3_951662406[Interval between drag and drops].
-* *Start Date* and *End Date* are pre-filled according to the xref:admin-guide/calendar-management/calendar-settings-ct-cpg-settings-panel.adoc#h3__1888339674[Default duration] setting.
+* *Start Date* and *End Date* are pre-filled according to the xref:admin-guide/calendar-management/calendar-settings-ct-cpg-settings-panel.adoc#h3_1888339674[Default duration] setting.
 +
 image:cpg_create_activity2.png[]
 
-[[h3__786187553]]
+[[h3_786187553]]
 === Editing Activities
 
 . To edit an activity, you can:

@@ -4,16 +4,16 @@ TIP: You can configure your custom business logic without configuring the target
 
 In this section:
 
-* Get familiar with the default Targeting settings, such as records of <<h2__1971775911, Division Target Frequency>> Settings and <<h2_890863050, Target Frequency Settings>>.
-* Learn about the <<h2__252001192, Marketing Detail Tracking object>> and the <<h2__1482834092, preconfigured Marketing Cycle record>>.
+* Get familiar with the default Targeting settings, such as records of <<h2_1971775911, Division Target Frequency>> Settings and <<h2_890863050, Target Frequency Settings>>.
+* Learn about the <<h2_252001192, Marketing Detail Tracking object>> and the <<h2_1482834092, preconfigured Marketing Cycle record>>.
 * Read field description for the xref:./marketing-detail-tracking-field-reference.adoc[Marketing Detail Tracking], xref:./marketing-cycle-field-reference.adoc[Marketing Cycle], and xref:./target-frequency-field-reference.adoc[Target Frequency] objects.
 
 xref:admin-guide/targeting-and-marketing-cycles-management/index.adoc[Configure targeting based on a marketing cycle] according to your business needs.
 
-[[h2__1971775911]]
+[[h2_1971775911]]
 == Division Target Frequency Settings
 
-By default, the *Alpha* and *Beta* records of the _Division Target Frequency Settings_ are created. These divisions are specified in xref:admin-guide/application-settings-management/index.adoc[the default _Global_ record of the Application Settings].
+By default, the _Alpha_ and _Beta_ records of the _Division Target Frequency Settings_ are created. These divisions are specified in xref:admin-guide/application-settings-management/index.adoc[the default _Global_ record of the Application Settings].
 
 * *Alpha*
 +
@@ -29,16 +29,16 @@ You can create xref:admin-guide/targeting-and-marketing-cycles-management/add-a-
 
 The xref:admin-guide/cpg-custom-settings/target-frequency-settings.adoc[Target Frequency Settings] records are not in use.
 
-[[h2__1482834092]]
+[[h2_1482834092]]
 == Marketing Cycle
 
-There is an active _Sample Marketing Cycle_ record for the *Alpha* division. The pre-configured records of the [.object]#Marketing Detail Tracking# object are created for *Alpha* division categories. _CT CPG Activities_ with the *Visit* record type will be automatically linked to the _Sample Marketing Cycle_ record.
+There is an active _Sample Marketing Cycle_ record for the *Alpha* division. The pre-configured records of the [.object]#Marketing Detail Tracking# object are created for *Alpha* division categories. _CT CPG Activities_ with the _Visit_ record type will be automatically linked to the _Sample Marketing Cycle_ record.
 
 image:sample-marketing-cycle.png[]
 
 xref:admin-guide/targeting-and-marketing-cycles-management/create-a-marketing-cycle.adoc[Create a new Marketing Cycle record] with the appropriate parameters and xref:admin-guide/targeting-and-marketing-cycles-management/enable-activity-linking-to-the-marketing-cycle.adoc[enable the required activity linking].
 
-[[h2__252001192]]
+[[h2_252001192]]
 == Marketing Detail Tracking
 
 For the [.object]#Marketing Detail Tracking# object, there are <<h2_83089996, a few pre-configured record types>>.
@@ -55,13 +55,13 @@ By default, the following record types are available.
 * <<h3_2015528788, Call Rate>>
 * <<h3_2122917811, Company Product Tracking>>
 * <<h3_669576096, Competitor Product Tracking>>
-* <<h3__2056569094, POS Material>>
-* <<h3__843668850, Special Tracking>>
+* <<h3_2056569094, POS Material>>
+* <<h3_843668850, Special Tracking>>
 
 [[h3_2015528788]]
 === Call Rate
 
-The *Call Rate* record type is intended to set up the number of planned activities per each required division category of the target _Account_ or _Contact_ record.
+The _Call Rate_ record type is intended to set up the number of planned activities per each required division category of the target _Account_ or _Contact_ record.
 
 The _Target Frequency_ record, xref:admin-guide/targeting-and-marketing-cycles-management/creating-a-new-record-of-target-frequency.adoc[which is automatically created] to the target _Account_ or _Contact_ record, inherit the values from the *Planned Calls*, *Category*, and *Marketing Cycle* fields of the _Call Rate_ record, if:
 
@@ -70,7 +70,7 @@ The _Target Frequency_ record, xref:admin-guide/targeting-and-marketing-cycles-m
 
 While creating the _Marketing Detail Tracking_ record:
 
-* The related *Marketing Cycle* record is already set.
+* The related _Marketing Cycle_ record is already set.
 * Set *Active* to activate the _Call Rate_ record.
 * In the *Type* field, select the related object.
 * In the *Category* field, select the required division category.
@@ -119,7 +119,7 @@ While creating the _Marketing Detail Tracking_ record:
 +
 image:588241971.png[]
 
-[[h3__2056569094]]
+[[h3_2056569094]]
 === POS Material
 
 The _POS Material_ record type is intended to track marketing materials distributed during the _Activity_ record with the _Visit_ record type of the target _Account_ or _Contact_ record.
@@ -138,10 +138,10 @@ While creating the _Marketing Detail Tracking_ record:
 +
 image:588246471.png[]
 
-[[h3__843668850]]
+[[h3_843668850]]
 === Special Tracking
 
-The *Special Tracking* record type is intended to track tasks and objectives within the _Activity_ record with the *Visit* record type of the target _Account_ or _Contact_ record. You can specify a question on the *Special Tracking* tab of the _Activity Report_ page by creating a few _Marketing Detail Tracking_ records of the *Special Tracking* record type.
+The _Special Tracking_ record type is intended to track tasks and objectives within the _Activity_ record with the _Visit_ record type of the target _Account_ or _Contact_ record. You can specify a question on the *Special Tracking* tab of the _Activity Report_ page by creating a few _Marketing Detail Tracking_ records of the *Special Tracking* record type.
 
 TIP: xref:admin-guide/activity-report-management/configure-ct-product-tabs.adoc[Customize the Activity Report page] to view the special tracking for the _Activity_ record.
 
@@ -153,8 +153,7 @@ While creating the _Marketing Detail Tracking_ record:
 * In the *Category* field, select the required division category.
 
 * Specify the *Parameter Name*.
-* Select *Answer Type*. The available values: text, boolean (yes/no
-answers), number, currency.
+* Select *Answer Type*. The available values: `text`, `boolean` (yes/no answers), `number`, `currency`.
 * Specify the *Sort Order* and, optionally, add a description.
 +
 image:588222931.png[]

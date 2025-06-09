@@ -1,14 +1,14 @@
 = Add a New Division
 
-By default, the *Alpha* and *Beta* divisions are available, the xref:admin-guide/application-settings-management/account-field-reference.adoc[Account] and xref:admin-guide/application-settings-management/contact-field-reference.adoc[Contact] objects have the corresponding division fields that are present in the *Global* record of the xref:admin-guide/cpg-custom-settings/application-settings.adoc[Application Settings].
+By default, the *Alpha* and *Beta* divisions are available, the xref:admin-guide/application-settings-management/account-field-reference.adoc[Account] and xref:admin-guide/application-settings-management/contact-field-reference.adoc[Contact] objects have the corresponding division fields that are present in the _Global_ record of the xref:admin-guide/cpg-custom-settings/application-settings.adoc[Application Settings].
 
 To specify a new division:
 
-* <<h2_704810426, Specify the new division>> in the *User Division* picklist of the [.object]#User# and [.object]#Marketing Cycle# objects, for example, `Gamma`;
-* <<h2__1661054417, Add the custom User Division field>> on the *User* page layout and specify the new `Gamma` division for the required _User_ record;
-* <<h2__81078948, Create the new division fields>> on the [.object]#Account# and
-[.object]#Contact# objects using the same division category name, for example, `+Division_Gamma_Category__c+` and `+Division_Gamma_Target_Check__c+`;
-* <<h2__1236380249, Add new division fields>>, `+Division_Gamma_Category__c+` and `+Division_Gamma_Target_Check__c+`, in the corresponding record of the xref:admin-guide/cpg-custom-settings/application-settings.adoc[Application Settings].
+* <<h2_704810426, Specify the new division>> in the *User Division* picklist of the [.object]#User# and [.object]#Marketing Cycle# objects, for example, `*Gamma*`;
+* <<h2_1661054417, Add the custom User Division field>> on the *User* page layout and specify the new `*Gamma*` division for the required _User_ record;
+* <<h2_81078948, Create the new division fields>> on the [.object]#Account# and
+[.object]#Contact# objects using the same division category name, for example, `+Division_+`*Gamma*`+_Category__c+` and `+Division_+`*Gamma*`+_Target_Check__c+`;
+* <<h2_1236380249, Add new division fields>>, `+Division_+`*Gamma*`+_Category__c+` and `+Division_+`*Gamma*`+_Target_Check__c+`, in the corresponding record of the xref:admin-guide/cpg-custom-settings/application-settings.adoc[Application Settings].
 
 [[h2_704810426]]
 == Add Division to the User and Marketing Cycle objects
@@ -31,7 +31,7 @@ image:new-division-category.png[]
 
 The division is added.
 
-[[h2__1661054417]]
+[[h2_1661054417]]
 == Specify Division on the User Record
 
 To target _Accounts_ and _Contacts_ of the specific division, assign the required _User_ record to the division.
@@ -50,7 +50,7 @@ To assign the _User_ record to the specific division:
 
 The division is assigned.
 
-[[h2__81078948]]
+[[h2_81078948]]
 == Add Division to the Account and Contact Objects
 
 There should be a picklist to contain division categories and a checkbox that represents belonging to the new division on both [.object]#Account# and [.object]#Contact# objects.
@@ -77,7 +77,7 @@ image:division-fileds.png[]
 
 The division is added.
 
-[[h2__1236380249]]
+[[h2_1236380249]]
 == Editing the Application Settings record
 
 To finish the setting, update a corresponding record of the Application Settings with new division fields.
@@ -88,9 +88,8 @@ To update the record:
 . Click *Edit* next to the required record, for example, the *Global* or another existed one.
 . Update the following fields:
 * In the *Account Category Fields API names* field, add the new division field API Name field of xref:admin-guide/application-settings-management/account-field-reference.adoc[the _Account_ record], that is responsible for the new division, for
-example, Division_Gamma_Category__c (separated by a comma, without blank spaces);
-* In the *Account Target Flags API names* field, add the new division field API Name field of the _Account_ record, that is responsible for the selection of the new division, for example, `+Division_Gamma_Target_Check__c+` (separated by a
-comma, without blank spaces);
+example, `+Division_Gamma_Category__c+` (separated by a comma, without blank spaces);
+* In the *Account Target Flags API names* field, add the new division field API Name field of the _Account_ record, that is responsible for the selection of the new division, for example, `+Division_Gamma_Target_Check__c+` (separated by a comma, without blank spaces);
 * Specify the same division fields of xref:admin-guide/application-settings-management/contact-field-reference.adoc[the _Contact_ record] in the *Contact Category Fields API names* and *Contact Target Flags API names* fields (separated by a comma, without blank spaces).
 . Click *Save*.
 +

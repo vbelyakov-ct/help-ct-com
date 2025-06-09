@@ -2,7 +2,7 @@
 
 The [.object]#CT Product# object is intended to store detailed information regarding company and competitor products, including their physical parameters and quantity.
 
-xref:admin-guide/ct-products-and-assortments-management/ref-guide/index.adoc#h2__160781133[The _CT Product_ record types] are used to distinguish _CT Products_ by purpose.
+xref:admin-guide/ct-products-and-assortments-management/ref-guide/index.adoc#h2_160781133[The _CT Product_ record types] are used to distinguish _CT Products_ by purpose.
 
 For the
 link:https://help.customertimes.com/articles/project-order-module/ct-orders-solution[CT Orders] functionality, it also stores Quantity per delivery settings and specific attributes that define the price calculation procedure.
@@ -62,8 +62,8 @@ The value will be set by default during the CT Orders package installation or up
 |Height(mm) |[.apiobject]#CTCPG\__Heigth__c# |Number (18, 0) |Product physical parameter: height in millimeters.
 
 |Ignore Component Availability
-|[.apiobject]#orders__isIgnoreComponentAvailability__c#
-|Checkbox a| Applied for bundle components only.
+|[.apiobject]#orders\__isIgnoreComponentAvailability__c#
+|Checkbox a| NOTE: Applied for bundle components only.
 
 If _true_, the bundle component always available by *Product Availability* and *Default Availability Type* fields.
 

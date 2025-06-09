@@ -1,16 +1,16 @@
 = 4. Create a New Template
 :toc:
 
-After xref:admin-guide/configuring-the-ct-sign-package/index.adoc#h2__1469899678[creating libraries, assigning members to them], and xref:admin-guide/configuring-the-ct-sign-package/index.adoc#h2_283394407[creating record types], create templates and specify their availability.
+After xref:admin-guide/configuring-the-ct-sign-package/index.adoc#h2_1469899678[creating libraries, assigning members to them], and xref:admin-guide/configuring-the-ct-sign-package/index.adoc#h2_283394407[creating record types], create templates and specify their availability.
 
-[[h2__549128247]]
+[[h2_549128247]]
 == Prerequisites
 
 User Permissions:
 
 * The link:https://help.salesforce.com/articleView?id=sf.collab_admin_crm_content.htm&type=5[Salesforce CRM Content User] checkbox should be selected on the required _User_
 record. You can check it by going to *Setup* → *User* → *Users* → _Your User Account_.
-* The user should have access to at least one of the workspaces listed in the xref:ref-guide/ct-sign-custom-settings-and-objects/sign-settings-field-reference/library-setting-field-reference.adoc[Sign Settings] record with the *Library Setting* record type.
+* The user should have access to at least one of the workspaces listed in the xref:ref-guide/ct-sign-custom-settings-and-objects/sign-settings-field-reference/library-setting-field-reference.adoc[Sign Settings] record with the _Library Setting_ record type.
 * The user should have access to the following Apex classes:
 ** [.apiobject]#TemplateEditorCommonController#
 ** [.apiobject]#TemplateEditorController#
@@ -20,7 +20,7 @@ record. You can check it by going to *Setup* → *User* → *Users* → _Your Us
 ** *Label*: _CTSign Allow Disability 2FA In Templates_
 ** *Name*: _CTSign_Allow_Disability_2FA_In_Templates_
 
-[[h2__296611947]]
+[[h2_296611947]]
 == Create a Template
 
 [TIP]

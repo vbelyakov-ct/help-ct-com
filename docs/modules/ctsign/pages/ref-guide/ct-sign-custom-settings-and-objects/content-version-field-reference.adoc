@@ -1,6 +1,6 @@
 = Content Version Field Reference
 
-The standard _Content Version_ object is used to store template attributes.
+The standard [.object]#Content Version# object is used to store template attributes.
 
 Standard fields in use.
 
@@ -15,7 +15,7 @@ Standard fields in use.
 |VersionData |[.apiobject]#VersionData# |base64 |The JSON file is in the [.apiobject]#base64# format.
 |===
 
-The following fields are created on the standard _Content Version_ object during the CT Sign installation:
+The following fields are created on the standard [.object]#Content Version# object during the CT Sign installation:
 
 [width="100%",cols="15%,20%,10%,55%"]
 |===
@@ -92,6 +92,6 @@ Available providers:
 The record type for the object is specified in the [.apiobject]#ctsign\__Object__c# field.
 
 * *Empty*: applied to any available record type of the object.
-* *--Master--*: applied to the *Master* record type.
+* *--Master--*: applied to the _Master_ record type.
 
 |===

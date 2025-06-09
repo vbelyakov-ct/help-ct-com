@@ -14,7 +14,7 @@ Settings* list. xref:admin-guide/triggers-management/manage-ct-cpg-triggers.adoc
 . In the *Bypass Logic* field, specify the trigger contexts or methods that should not be invoked. For example: [.apiobject]#ai,bd# (where [.apiobject]#ai# stands for [.apiobject]#after insert# and [.apiobject]#bd# stands for [.apiobject]#before delete#)
 or [.apiobject]#au_createRD# (where [.apiobject]#au# stands for [.apiobject]#after update# and [.apiobject]#createRD# stands for [.apiobject]#createRelatedData#).
 +
-TIP: In order to disable the logic of creating _Activity_ objects' records (either for standard or custom _Activity_ objects), for *ActivityProcess* trigger specify [.apiobject]#createRelatedActivities# in the *Bypass logic* field.
+TIP: In order to disable the logic of creating [.object]#Activity# objects' records (either for standard or custom [.object]#Activity# objects), for *ActivityProcess* trigger specify [.apiobject]#createRelatedActivities# in the *Bypass logic* field.
 . Select the *Active* checkbox.
 . Click *Save*.
 +

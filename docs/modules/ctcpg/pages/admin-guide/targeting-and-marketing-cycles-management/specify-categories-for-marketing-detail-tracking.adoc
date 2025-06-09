@@ -2,9 +2,9 @@
 
 For each _Marketing Detail Tracking_ record type, specify the required _Account_ and _Contact_ division category and assign the object type on which the required record type of Marketing Detail Tracking will be available.
 
-* <<h2_1104532017, Add the new division categories >>for the xref:./ref-guide/marketing-detail-tracking-field-reference.adoc[Marketing Detail Tracking] object;
+* <<h2_1104532017, Add the new division categories>> for the xref:./ref-guide/marketing-detail-tracking-field-reference.adoc[Marketing Detail Tracking] object;
 * <<h2_566398107, Assign division categories>> to the xref:admin-guide/targeting-and-marketing-cycles-management/ref-guide/index.adoc#h2_83089996[record types of the Marketing Detail Object].
-* <<h2__1618421469, Update dependent picklist>> for the *Type* field to have an ability to select new division categories when xref:admin-guide/targeting-and-marketing-cycles-management/create-a-new-record-of-marketing-detail-tracking.adoc[creating new Marketing Detail Tracking records].
+* <<h2_1618421469, Update dependent picklist>> for the *Type* field to have an ability to select new division categories when xref:admin-guide/targeting-and-marketing-cycles-management/create-a-new-record-of-marketing-detail-tracking.adoc[creating new Marketing Detail Tracking records].
 
 [[h2_1104532017]]
 == Add a Division Category
@@ -13,7 +13,7 @@ xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division.ad
 
 . Go to *Setup → Object Manager → Marketing Detail Tracking → Fields & Relationships →* click *Category*.
 . In the *Values* section, click *New*.
-. Add xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division.adoc#h2__81078948[the new division categories] of the [.object]#Account# and [.object]#Contact# objects.
+. Add xref:admin-guide/targeting-and-marketing-cycles-management/add-a-new-division.adoc#h2_81078948[the new division categories] of the [.object]#Account# and [.object]#Contact# objects.
 . Click *Save*.
 +
 image:new-categories-on-MDT.png[]
@@ -39,7 +39,7 @@ image:specify-category-for-MDT-record-type.png[]
 
 The setup is complete.
 
-[[h2__1618421469]]
+[[h2_1618421469]]
 == Update Dependent Picklist for the Type field
 
 The *Type* field has three values to which you can add the new division categories: `Account`, `Contact`, and `Global`. Use link:https://help.salesforce.com/articleView?id=fields_defining_field_dependencies.htm&type=5[field dependencies] to manage available categories per each type.

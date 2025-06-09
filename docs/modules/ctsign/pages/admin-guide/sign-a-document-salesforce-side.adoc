@@ -2,12 +2,12 @@
 
 [NOTE]
 ====
-This article is applicable only if you use xref:admin-guide/create-a-new-template.adoc#h2__296611947[template with the DocuSign sign method]. Simple sign method supports only xref:./sign-a-document-the-ct-mobile-app/index.adoc[signing in the CT Mobile app].
+This article is applicable only if you use xref:admin-guide/create-a-new-template.adoc#h2_296611947[template with the DocuSign sign method]. Simple sign method supports only xref:./sign-a-document-the-ct-mobile-app/index.adoc[signing in the CT Mobile app].
 ====
 
 To sign a document:
 
-. Open a record of the xref:admin-guide/configuring-the-ct-sign-package/index.adoc#h2__236049169[Object to Sign]. For example, if you added [.object]#Account# as an object to
+. Open a record of the xref:admin-guide/configuring-the-ct-sign-package/index.adoc#h2_236049169[Object to Sign]. For example, if you added [.object]#Account# as an object to
 sing, open the *Accounts* tab.
 . Click the picklist on the right and select *Form Document*. The page with the signing details opens.
 +
@@ -49,4 +49,4 @@ The document is signed.
 
 * Signatories receive the completed document by email.
 * The document is stored within the linked production DocuSign account.
-* In Salesforce, the *Sign Document* record with the signed PDF document is linked to the record that started the signing process.
+* In Salesforce, the _Sign Document_ record with the signed PDF document is linked to the record that started the signing process.

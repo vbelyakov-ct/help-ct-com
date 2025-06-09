@@ -5,7 +5,7 @@ TIP: These settings are optional.
 In this section:
 
 * Get familiar with xref:./custom-metadata-type-activity-sync.adoc[the _Activity Sync_ metadata type].
-* View <<h2_1614346086, the preconfigured _Activity Sync_ records>> and <<h2__559488800, the list of fields that will be updated>> on the [.object]#Event# and [.object]#Task# object by default.
+* View <<h2_1614346086, the preconfigured _Activity Sync_ records>> and <<h2_559488800, the list of fields that will be updated>> on the [.object]#Event# and [.object]#Task# object by default.
 
 xref:admin-guide/configuring-activity-sync/index.adoc[Configure Activity Sync] for managing activities between the standard Salesforce calendar and CT CPG
 Calendar.
@@ -25,7 +25,7 @@ Three preconfigured inactive records may be edited.
 
 image:activity-sync-records-.png[]
 
-[[h2__559488800]]
+[[h2_559488800]]
 == The Event and Task fields to update
 
 The values from the following fields will be updated on the creating _Activity_ record via the _Activity Sync_ process. The [.apiobject]#CTCPG\__ActivityId__c field# is used to relate the synced standard _Event_/_Task_ or CT CPG Activity records.

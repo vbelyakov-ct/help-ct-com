@@ -4,12 +4,12 @@
 
 Here you find a feature, the link to the corresponding article, and the CT Vision package version since the feature is available.
 
-[[h2__441053885]]
+[[h2_441053885]]
 == CT Vision package v. 2.3.0.1 24 R1
 
 * The *Feedback Loop* tab is now xref:2.9/admin-guide/working-with-ct-vision-ir-in-salesforce-2-9.adoc#h2_1552458132[Photo Gallery] and has updated interface to be more convenient and user-friendly, including:
 ** You can specify which *Interface Fields* of the xref:2.9/ref-guide/vision-settings-ref/vision-object-field-reference-ir-2-9.adoc[Vision Object] are displayed under photos in the *Photo Gallery*.
-** xref:2.9/admin-guide/working-with-ct-vision-ir-in-salesforce-2-9.adoc#h2__1484451922[Filtering] by tags, date, users, and user managers. Also, you can create your own custom filters in the *Filter Fields* of the xref:2.9/ref-guide/vision-settings-ref/vision-object-field-reference-ir-2-9.adoc[Vision object].
+** xref:2.9/admin-guide/working-with-ct-vision-ir-in-salesforce-2-9.adoc#h2_1484451922[Filtering] by tags, date, users, and user managers. Also, you can create your own custom filters in the *Filter Fields* of the xref:2.9/ref-guide/vision-settings-ref/vision-object-field-reference-ir-2-9.adoc[Vision object].
 ** You can add up to 500 photos to archive and download it.
 * https://help.customertimes.com/smart/project-ct-vision-lite-en/working-with-ct-vision-lite-in-salesforce-2-9/a/h2_787411710[Vision Photo Uploader] is added, allowing you to upload photos to Salesforce for desired object record. Also, you can add *Photo Carousel* component to view photos taken for this object record and its child records.
 * Upgraded data model:
@@ -20,18 +20,17 @@ Here you find a feature, the link to the corresponding article, and the CT Visio
 * New  photo tags data model:
 ** Instead of using the _Vision Tag_ record type in the [.apiobject]#clm_CTMSettingObject\__c# object, now photo tags using their own [.apiobject]#xref:2.9/ref-guide/tag-field-reference-ir-2-9.adoc[ctv_Tag__c]#
 object on the xref:2.9/admin-guide/getting-started/7-specifying-photo-tags-2-9.adoc[Tags] tab.
-** xref:2.9/admin-guide/getting-started/7-specifying-photo-tags-2-9.adoc#h2__117227442[Granular access management] to each photo tag.
+** xref:2.9/admin-guide/getting-started/7-specifying-photo-tags-2-9.adoc#h2_117227442[Granular access management] to each photo tag.
 
 [[h2_1034579388]]
 == CT Vision package v. 1.22 Autumn '21 
 
-[[h3__1717775038]]
+[[h3_1717775038]]
 === General Settings
 
 * Use xref:2.8/admin-guide/index.adoc[the preconfigured permission set] for administrators to provide access to work with CT Vision.
 * UI improvements for the *CT Vision Setup* tab.
-* Set up additional CT Vision functionality by creating *CTM
-Settings* records of the following record type:
+* Set up additional CT Vision functionality by creating _CTM Settings_ records of the following record type:
 ** xref:2.8/ref-guide/tag-field-reference.adoc[Vision Tag]
 ** xref:2.8/ref-guide/vision-settings-ref/vision-visit-field-reference.adoc[Vision Visit]
 * Improvements for provider support.
@@ -53,15 +52,14 @@ Improvements for the  *Feedback Loop*  functionality.
 * Use any custom [.object]#Activity# object as xref:2.8/admin-guide/working-in-salesforce/index.adoc#h3_717556108[the filter criteria].
 * Sort taken photos by xref:2.8/admin-guide/working-in-salesforce/index.adoc[adding the photo tags] to them.
 
-[[h2__2005490110]]
+[[h2_2005490110]]
 == CT Vision package v. 1.10 Summer '21 
 
 [[h3_1086671697]]
 === General Settings
 
 * xref:2.8/admin-guide/getting-started/specifying-product-objects-and-fields.adoc[Specify product settings] and xref:2.8/admin-guide/getting-started/setting-up-integration-with-the-image-recognition-providers/index.adoc[configure available providers] on the *CT Vision Setup* tab.
-* Set up CT Vision by creating  *CTM Settings* records of the following
-record types:
+* Set up CT Vision by creating  _CTM Settings_ records of the following record types:
 ** xref:2.8/ref-guide/vision-settings-ref/vision-shelf-field-reference.adoc[Vision Shelf]
 ** xref:2.8/ref-guide/vision-settings-ref/vision-kpi-field-reference.adoc[Vision KPI]
 ** xref:2.8/ref-guide/vision-settings-ref/vision-kpi-field-reference.adoc[Vision Hint]
@@ -72,7 +70,7 @@ product images that should be sent from the CT Vision server to the Image Recogn
 * The standard *Salesforce Product* is supported.
 * The CT Vision server creates previews for _Product_ records to display xref:2.8/admin-guide/working-with-ct-vision-in-the-ct-mobile-app.adoc#h3_2072273480[in the clickable realogram].
 
-[[h3__1848120530]]
+[[h3_1848120530]]
 === Image Recognition Tools
 
 * The *xref:2.8/admin-guide/working-with-ct-vision-in-the-ct-mobile-app.adoc[Feedback Loop]* tab helps you manage taken photos and verify recognition results.

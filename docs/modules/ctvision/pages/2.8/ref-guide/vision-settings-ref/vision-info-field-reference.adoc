@@ -1,12 +1,12 @@
 = Vision Info Field Reference
 
-The *Vision Info* record type is responsible for viewing the product
+The _Vision Info_ record type is responsible for viewing the product
 details when
 xref:2.8/admin-guide/working-with-ct-vision-in-the-ct-mobile-app.adoc#h3_2072273480[the clickable realogram is active].
 
 When the mobile user taps the recognized photo on a shelf, the product details with the product preview are displayed. The product previews are stored in the same folder as the xref:../product-image-field-reference.adoc[Product Images] records (if they exist) on the server.
 
-* When xref:2.8/admin-guide/getting-started/specifying-product-objects-and-fields.adoc#h2__1362989108[the Product Code value] has been changed, Salesforce rebuilds the archive with the *Product Images* records.
+* When xref:2.8/admin-guide/getting-started/specifying-product-objects-and-fields.adoc#h2_1362989108[the Product Code value] has been changed, Salesforce rebuilds the archive with the _Product Images_ records.
 * CT Mobile downloads the archive during the first or full synchronization.
 * If the archive has been rebuilt, CT Mobile downloads it during the next synchronization.
 * If the archive is still the same since the first or full synchronization, CT Mobile will not download it.

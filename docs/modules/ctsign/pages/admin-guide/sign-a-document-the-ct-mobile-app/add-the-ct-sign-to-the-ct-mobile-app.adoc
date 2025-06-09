@@ -8,7 +8,7 @@ Available since CT Mobile 2.4.
 
 To add the CT Sign to the CT Mobile application:
 
-[[h2__1079380618]]
+[[h2_1079380618]]
 == 1. Add CT Sign to the Menu
 
 To add the CT Sign module to the link:https://help.customertimes.com/articles/ct-mobile-ios-en/app-menu[app menu]:
@@ -46,7 +46,7 @@ The CT Sign module is now available in the CT Mobile app. The *Sign Documents* m
 
 To display the *Sign Document* button in the link:https://help.customertimes.com/articles/ct-mobile-ios-en/actions[Actions] combo menu on the object record screen:
 
-. There should be a xref:ref-guide/ct-sign-custom-settings-and-objects/sign-settings-field-reference/object-setting-field-reference.adoc[Sign Settings] record with the *Object Setting* record type for the required offline object.
+. There should be a xref:ref-guide/ct-sign-custom-settings-and-objects/sign-settings-field-reference/object-setting-field-reference.adoc[Sign Settings] record with the _Object Setting_ record type for the required offline object.
 . There should be xref:admin-guide/create-a-new-template.adoc[templates]:
 * available for the mobile user;
 * with *Sign Document* button to sign on the mobile device (*Signature Place*: _Device_) or by email (*Signature Place*: _Email_);
@@ -56,13 +56,13 @@ If necessary, create a new template and then link:https://help.customertimes.com
 
 To override the translation of the *Sign Document* button, link:https://help.salesforce.com/s/articleView?id=sf.cl_edit.htm&type=5[create a new custom label] for the [.apiobject]#CTM_Layout_Button_SignDocument# name.
 
-[[h2__842279340]]
+[[h2_842279340]]
 == 3. Grant User Permissions to CT Sign Objects
 
 ////
 [NOTE]
 ====
-Consider xref:admin-guide/configuring-the-ct-sign-package/index.adoc#h2__549128247[the general user permissions] to the CT Sign solution.
+Consider xref:admin-guide/configuring-the-ct-sign-package/index.adoc#h2_549128247[the general user permissions] to the CT Sign solution.
 ====
 ////
 
@@ -86,7 +86,7 @@ The mobile user should have access to objects and fields required for proper wor
 
 | |[.apiobject]#ctsign\__Types__c# |Read |
 
-| |[.apiobject]#ctsign\__Workspaces__c# |Read |Only documents from xref:admin-guide/configuring-the-ct-sign-package/index.adoc#h2__1469899678[the specified workspaces] will be downloaded on the mobile device.
+| |[.apiobject]#ctsign\__Workspaces__c# |Read |Only documents from xref:admin-guide/configuring-the-ct-sign-package/index.adoc#h2_1469899678[the specified workspaces] will be downloaded on the mobile device.
 
 |[.apiobject]#ctsign\__SignDocument__c# | | |
 

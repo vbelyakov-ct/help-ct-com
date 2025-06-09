@@ -41,7 +41,7 @@ the [.apiobject]#CTCPG\__OwnerId__c# field if the owner of the record is changed
 | |[.apiobject]#fillDetailsField()# |[.apiobject]#fillDetails# a|
 * Define the active _Marketing Cycle_ record to link the _Target Frequency_ record.
 
-* Based on the found _Marketing Cycle_ record and the division category of the _Account_ and _Contact_ records, define the related _Marketing Detail Tracking_ record with the *Call Rate* record type to link the _Target Frequency_ record.
+* Based on the found _Marketing Cycle_ record and the division category of the _Account_ and _Contact_ records, define the related _Marketing Detail Tracking_ record with the _Call Rate_ record type to link the _Target Frequency_ record.
 
 * Based on the value in the found _Marketing Detail Tracking_ record, update the [.apiobject]#CTCPG\__PlannedCalls__c# field on the linked _Target Frequency_ record.
 

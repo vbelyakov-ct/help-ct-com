@@ -21,7 +21,7 @@ The following fields must be created on the [.object]#CTM Settings# object for t
 
 |Enable Gallery |[.apiobject]#IsGalleryEnabled__c# |Checkbox |If active, a mobile user can add photos from the device gallery to the shelf.
 
-|Enable Simple View |[.apiobject]#Enable_simple_view__c# |Checkbox |If active, the information from the header of the xref:2.8/admin-guide/working-with-ct-vision-in-the-ct-mobile-app.adoc#h2__1221438961[Report Summary] screen (actual and planned number of photos, the number of errors, and the actual number of the required report summaries) and the final summary report will not be displayed.
+|Enable Simple View |[.apiobject]#Enable_simple_view__c# |Checkbox |If active, the information from the header of the xref:2.8/admin-guide/working-with-ct-vision-in-the-ct-mobile-app.adoc#h2_1221438961[Report Summary] screen (actual and planned number of photos, the number of errors, and the actual number of the required report summaries) and the final summary report will not be displayed.
 
 |Label |[.apiobject]#clm\__Label__c# |Text(255) |Specify any setting name.
 
@@ -41,7 +41,7 @@ The following fields must be created on the [.object]#CTM Settings# object for t
 * planorama
 * intelligence_retail
 
-|Vision Object |[.apiobject]#VisionObject__c# |Text(255) a| Specify the API name of the object on the layout of which you want to add the *CT Vision* button. Also, you can filter records by this field on the xref:2.8/admin-guide/working-in-salesforce/index.adoc#h2__1484451922[Feedback Loop] page.
+|Vision Object |[.apiobject]#VisionObject__c# |Text(255) a| Specify the API name of the object on the layout of which you want to add the *CT Vision* button. Also, you can filter records by this field on the xref:2.8/admin-guide/working-in-salesforce/index.adoc#h2_1484451922[Feedback Loop] page.
 
 The field must be manually created by the administrator.
 

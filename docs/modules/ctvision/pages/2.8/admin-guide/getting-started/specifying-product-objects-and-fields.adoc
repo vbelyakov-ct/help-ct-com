@@ -7,7 +7,7 @@ Go to the *CT Vision* app and open the *CT Vision Setup* tab.
 
 image:CT-Vision-General-Configuration.png[]
 
-[[h2__1981203353]]
+[[h2_1981203353]]
 == Authorization 
 
 If the Salesforce org was not yet registered on the CT Vision service side, click the *Authorize* button in the *General Configuration* section to connect to the CT Vision server.
@@ -27,7 +27,7 @@ Mobile Control Panel:Tools] / link:https://help.customertimes.com/smart/project-
 
 Currently, the cloud token may be stored in two custom settings, and the CT Vision IR retrieves it based on the combination of the CT Mobile package version and the used CT Mobile app version. For more information, refer to the link:https://help.customertimes.com/articles/ct-mobile-ios-en/ct-mobile-managed-package-update-to-v-3-54[CT Mobile Managed Package Update to v. 3.54] description.
 
-[[h2__1362989108]]
+[[h2_1362989108]]
 == Product Object Setting 
 
 To specify the corresponding [.object]#Product# object:
@@ -56,7 +56,7 @@ Check the user profile permissions to make sure the newly created lookup is avai
 
 image:about-ct-vision-2021-12-21.png[]
 
-[[h2__2130197288]]
+[[h2_2130197288]]
 == Product Image Setting 
 
 Select fields of the [.object]#Product Image# object that store all required information to send them to the CT Vision server to train the provider's neural networks. This information along with the marketing photo of a product can be displayed on the _Product_ record.
