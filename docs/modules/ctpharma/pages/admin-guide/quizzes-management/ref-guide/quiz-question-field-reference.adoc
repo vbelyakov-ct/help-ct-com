@@ -1,0 +1,47 @@
+= Quiz Question Field Reference
+
+The[.object]#Question# object is intended to store questions
+for the particular _Quiz_ record.
+
+'''''
+
+API name in Salesforce: QuizQuestion__c
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Answers |Answers__c |Long Text Area (32768)   |It is used to
+store answers to a quiz question (separated by a comma, without a blank
+space).
+
+|Correct Answer |CorrectAnswer__c |Long Text Area (32768)
+|It is used to store the correct answer to a quiz question.
+
+|Description  |Description__c |Long Text Area (32768) |Specify
+information about the quiz question.
+
+|Is Quiz Question Required |IsRequired__c  |Checkbox  |If
+selected, the quiz question is required to answer.
+
+|Order |Order__c  |Number(18,0) |The question order in a quiz.
+
+|Question |Question__c   |Long Text Area (32768)        |The
+question text.
+
+|Quiz |QuizId__c |Master-Detail(Quiz)      |The parent _Quiz_
+record.
+
+|Sub Order |SubOrder__c |Number(18,0) |
+
+|Type |Type__c |Picklist a|
+The question type. Available values:
+
+* text
+* number
+* picklist
+* multipicklist
+
+|===

@@ -1,0 +1,28 @@
+= Calendar Settings: Target Frequency
+
+[TIP] ==== Used on
+the *xref:creating-a-targeting-list[Hierarchy View]* tab.  ==== In
+this section, select the *Use target frequency* checkbox to
+automatically create__ Pharma Activity__ records with the _Visit_ record
+type for xref:creating-a-targeting-list[target _Contacts_] when
+creating a _Pharma Activity_ record for their parent _Account_.
+
+* Enable if a representative has the regular appointments for several
+_Contacts_ of the _Account_. Also, use it with
+xref:calendar-settings-mass-actions[the customized *Mass Action*
+option].
+* _Pharma Activities_ for contacts will be created at 30-minute
+intervals with xref:calendar-settings-customize-events[the default
+_Duration_].
+* xref:managing-targeting[The _Target Frequency_ records] should be
+assigned to the _Account_ and their child _Contacts_.
+* xref:calendar-settings-drag-drop-settings[The _Drag & Drop_
+action] should be selected for the corresponding _Pharma Activity_
+record type, for example, _Visit_.
+image:58828999.png[]
+
+If checked, after a representative drag-and-dropped an _Account_ to the
+Calendar grid, the corresponding _Pharma Activity_ record is created for
+each target _Contacts_ of this _Account_.
+
+image:Pharma-Target-Frequency-Example.png[]

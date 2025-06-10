@@ -1,0 +1,56 @@
+= Quiz Management
+
+[TIP] ==== These settings are optional. ====
+
+In this section:
+
+* Install the unmanaged __CT Mobile: Quizzes __package.
+* Get familiar with the objects:
+** xref:quiz-field-reference[Quiz]
+** xref:quiz-question-field-reference[Quiz Question]
+** xref:quiz-answer-field-reference[Quiz Answer]
+** xref:quiz-partaker-field-reference[Quiz Partaker]
+**[.object]#xref:quiz-completion-field-reference[Quiz
+Completion]#
+* Have a look at the xref:the-quiz-interface[_Quiz_ Interface].
+
+
+
+xref:configuring-quizzes[Configure _Quizzes_] for passing by
+representatives or customers.
+
+[[h2__450949748]]
+=== CT Mobile: Quizzes
+
+The unmanaged _CT Mobile: Quizzes_ package should be installed to pass
+pre-configured questionnaires.
+
+* https://login.salesforce.com/packaging/installPackage.apexp?p0=04t2X000000F1Qu[Follow
+the link] to install the package into your Salesforce org.
+* Only the simple quizzes are supported (there is no functionality to
+display questions depending on the previous answers).
+** *Internal quizzes* are designed to assess representatives' knowledge
+about CT Products, which are targeted at doctors and hospitals, and to
+get feedback about the representative's daily routine. For example, how
+they conduct a meeting, what they like or do not like, how much time
+they spend on visits, etc.
+** *External quizzes* may be used to get feedback from the doctors the
+representative visited.
+
+[[h2_552352642]]
+=== Quiz Model
+
+Each _Quiz_ record has a number of related _Quiz Question_ records. The
+passed _Quiz_ is stored as the _Quiz Completion_ record with the
+linked _Quiz Answer_ records. The corresponding _Quiz Answer_ record is
+related to the _Quiz Partaker_ record. The administrator assigns _Quiz
+Partakers_ by creating a _Quiz Partaker_ record.
+
+
+
+image:Unmanaged-Quiz-Model.png[]
+
+
+
+[[h2__315475588]]
+=== Configuring Quizzes

@@ -1,0 +1,57 @@
+= Calendar Settings: Customize Events
+
+Two sections below are intended to customize _Pharma Activity_
+displaying on the Calendar grid and the corresponding layout for working
+with the _Pharma Activity_ details.
+
+[[h2__1740967952]]
+=== Customize Events (1)
+
+In this section, select a field with the *Picklist* data type to
+differentiate the _Pharma Activity_ records according to its field value
+by color.
+
+* Select the *Type* or *Status* field of the [.object]#Pharma
+Activity# object:
+** It is possible to change the values of these fields.
+** Create a new field with a *Picklist* data type to have the ability to
+differentiate _Pharma Activities_ based on the values of this field.
+image:58829040.png[]
+
+* Specify preferred colors. If the *Another user activity
+color* enabled, other users' _Pharma Activities_ on
+the _xref:manage-activities-on-the-employees-calendar-tab.html[Employees
+Calendar]_ tab will be displayed with the selected color.
+
+image:58829036.png[]
+
+[[h2__1740967955]]
+=== Customize Events (2)
+
+In this section, customize the corresponding layout for working
+with records of each _Pharma Activity_ record type on the Calendar
+grid.
+
+* If you specified a new record type for the [.object]#Pharma
+Activity# object, it will be available to customize.
+* In the *Title field*, select a field to use it as a title of
+a__ Pharma Activity__ record on the Calendar grid. It is possible to use
+a field with the _Formula_ data type.
+* ​Specify the *Icon URL* to display. Images are connected with the help
+of a link and can be stored either in the Salesforce organization or on
+third-party resources.
+* Set the default *Duration* value.
+* In the *Open In* field, select the layout to open _Pharma
+Activity_ details.[TIP] ====
+Configure xref:activity-report-interface[Activity Reports] pages in
+case of using them instead of _Standard Layout_ pages for working with
+_Pharma Activities_.
+====
+
+image:58829046.png[]
+
+
+
+Check the settings on the Calendar grid:
+
+image:/resources/Storage/project-ct-cpg/Pharma-Customize-Event-Example.png[/resources/Storage/project-ct-cpg/Pharma-Customize-Event-Example]

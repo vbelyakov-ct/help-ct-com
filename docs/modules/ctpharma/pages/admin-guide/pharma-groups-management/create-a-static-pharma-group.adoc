@@ -1,0 +1,46 @@
+= Create a Static Pharma Group
+
+Create a static Pharma group and manage its members.
+
+:toc: :toclevels: 3
+
+[[h2__411285314]]
+=== Create a Static Pharma Group
+
+To create a static Pharma group:
+
+. Go to the *Groups* tab.
+. Click *New*.
+. Fill in the _Pharma group_ parameters, such as:
+* Enter *Group Name*.
+* Select *Group Type*. It cannot be changed after saving the group.
+* Leave the *Dynamic* **Group **checkbox unchecked.
+[TIP] ==== Read the description of each
+parameter xref:pharma-group-field-reference[here]. ====
+image:Create-a-static-Pharma-Group.png[]
+. Click *Save*.
+. The static group of records is created. The *SOQL Builder* tab opens.
+
+* Enter criteria using the *OR* / *AND* buttons.
+* Check the _SOQL Query_ record above the builder.
+image:Create-a-static-Pharma-Group_SOQL-Builder.png[]
+. Click *Save* and confirm.
+
+The static group is created.
+
+[[h2_1766846133]]
+=== Manage Static Pharma Group Members
+
+To view static Pharma group members, go to the **Group Members **tab.
+
+* Click *New* to manually add a Pharma group member.
+** A _Pharma Group Member_ record will not be recalculated after
+changing the SOQL criteria.
+** To recalculate a __Pharma Group Member __record, unchecked
+the *Manual* field on the added _Pharma Group Member_ record.
+[TIP] ==== Add the *Manual* field to the *Group Member* page
+layout. ====
+* An empty record cannot be added as a _Pharma Group Member_ record;
+* Only the records of the selected *Group Type* on the _CT Pharma Group_
+record can be added as a group member.
+image:Create-a-static-Pharma-Group_Members.png[]

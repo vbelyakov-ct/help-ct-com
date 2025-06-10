@@ -1,0 +1,92 @@
+= Expenses Tab Settings
+
+Expenses is an entity to hold the spending related to the event.
+Customize an *Expenses* related tab by adding the required fields to the
+*Expenses Tab* field set.
+
+To customize the view of the *Expenses* related tab:
+
+. Go to *Setup* (1) → *Custom Code* → *Custom Settings* (2).
+. Click *Manage* (3) next to *Expenses Settings*.
+image:58829523.png[]
+The *Expenses Tab Settings Detail* page opens.
+You can also click **Expenses Tab Settings **and then
+click *Manage *(3) on the *Expenses Tab Settings* page.
+image:58829524.png[]
+. Click **Edit **to manage *Default Organization Level Value*.
+
+
+
+Click *New* to create a new organization level value.
+
+[.confluence-embedded-file-wrapper]#image:58829525.png[]
+Check the description of the fields.
+
+[cols=",,,",]
+|===
+|*Setting Name* |*Type* |*Description* |*Example*
+
+|Active |Checkbox |If selected, that setting is active, and the
+*Activity Report* page uses it. |
+
+|Additional Parameter |Text (255) |Additional SOQL-criteria are in use
+to the list of available records for the object, relation to which is
+specified in the *Field To Show As Picklist* field. They are used only
+when the *Show Lookup As Picklist* checkbox is checked and the *Field To
+Show As Picklist* field is populated. |
+
+|Allow Record Management |Text (255) a|
+Specifies the values true or false for each record type developer name
+specified in the *Record Type Developer Name* field for enabling add or
+delete record functionality.
+
+* Set *true* to add or delete records and *false* to disable these
+options.
+* Use comma delimiter for multiple records.
+
+|[.apiobject]#true#,[.apiobject]#false#
+
+|Field Set Name |Text (255) |Specify *Activity Data* field set API name
+for each record type specified in **Record Type Developer
+Name **field.
+Use comma delimiter for multiple records.
+|[.apiobject]#CTPHARMA_ExpenseTab#
+
+|Fields To Show As Picklist |Text (255) |The field API-name with lookup
+type displays as a picklist in a selected order. |
+
+|Record Type Developer Name |Text (255) |Specify the list of API names
+for[.object]#Activity# object record types, in order to display
+the tab on the *Activity Report* page when creating an activity with the
+specified record type. |[.apiobject]#Visit#,
+[.apiobject]#Event#
+
+|Show Lookup As Picklist |Text (255) |If selected, the lookup field is
+replaced with the picklist with values that are available according to
+conditions specified in *Additional Parameter* field. |
+|===
+
+
+
+The view of the tab is customized.
+
+[.aui-icon .aui-icon-small .aui-iconfont-approve .confluence-information-macro-icon]##
+
+Also, you can customize the *Company Product Tab* for each Profile on
+the *xref:ct-pharma-control-panel-activity-report[CT Pharma Control
+Panel: Activity Report]* tab.
+
+Now, you can edit the *Expenses Tab* field set:
+image:58829526.png[]
+
+
+
+
+
+*See also:*
+
+* xref:ct-pharma-control-panel-activity-report[CT Pharma Control
+Panel: Activity Report]
+* xref:managing-targeting[Managing Targeting]
+* xref:managing-marketing-cycle[Managing Marketing Cycle]
+* xref:pharma-event[Activity Report: Pharma Event]

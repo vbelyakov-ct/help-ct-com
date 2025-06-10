@@ -1,0 +1,31 @@
+= Marketing Cycle Default Configuration
+
+The *Manage Targets* button is hidden by default and must be added to
+the *Account* and *Contact* tabs by Administrator for users with the
+Manager role.
+
+[[DefaultConfiguration-MC-TargetManagementSettings]]
+=== Target Management Settings
+
+* xref:admin-guide/application-settings-management/index[Application Settings ]are
+customized.
+* Alpha and Beta divisions are created.
+* Division Target Frequency is set for Alpha and Beta divisions: the
+required fields on the[.object]#Account# and
+[.object]#Contact# objects are created and have relationship via
+Division Target Frequency Settings.
+* The categories values are empty.
+
+[[DefaultConfiguration-MC-MarketingCycleSettings]]
+=== Marketing Cycle Settings
+
+* xref:admin-guide/application-settings-management/index[Application Settings ]are
+set by default.
+* Activity Link for 1:1 Visit is already created.
+* Marketing Detail Tracking Record Types are installed with the package,
+but the specified record types are not set:
+** Call Rate
+** Company/Competitor Product
+** POS Materials
+** Special Tracking
+* Marketing Detail Tracking is not associated with Target Frequency.

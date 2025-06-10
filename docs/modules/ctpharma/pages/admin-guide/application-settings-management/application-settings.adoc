@@ -1,0 +1,155 @@
+= Application Settings
+
+*Application Settings* is a setup where the CT PHARMA mapping data is
+stored. This is the primary setting of the CT PHARMA package.
+
+* xref:application-settings-management[The Global record] should be
+applied to your Salesforce organization. The record is available for
+editing.
+* Create additional records in case of need to use
+xref:creating-a-marketing-cycle[more than one marketing cycle] with
+different parameters.
+* For each record, it is necessary to specify custom fields that should
+be created for
+the [.object]#xref:account-field-reference[Account],# xref:contact-field-reference[Contact],
+and xref:user-field-reference[User] objects and used to divide
+settings by divisions.
+
+'''''
+
+API name in Salesforce: CTPHARMA\__ApplicationSettings__c
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Account Category Fields API names
+|CTPHARMA\__AccountCategoryFields__c |Text Area(255) |Specify
+the list of API names of fields that represent the picklist or formula
+with division categories xref:account-field-reference[for the
+[.object]#Account# object] (separated by a comma, without blank
+space).
+
+Used in xref:configuring-targeting-and-marketing-cycles[Target
+Frequencies].
+
+|Account Target Flags API names
+|CTPHARMA\__AccountTargetFlagsFields__c |Text Area(255)
+|Specify the list of API names of checkbox fields that are responsible
+for xref:account-field-reference[the selection of a division] for
+the _Account_ record.
+
+|Advanced TF Logic |CTPHARMA\__EnableAdvancedTFLogic__c
+|Checkbox |If selected, the data from records of the _Target
+Frequency_ object, for example, the values in
+the CTPHARMA\__ActualCalls__c and CTPHARMA\__PlannedCalls__c,
+may be used for creating additional list views for
+[.object]#Account# or[.object]#Contact# object.
+
+|Allow Segmentation by linking
+|CTPHARMA\__AllowLinkSegmentation__c |Checkbox a|
+If selected, the additional algorithm is enabled that automatically
+links the matched _Activity_ record to the active _Marketing Cycle_
+record.
+
+
+
+Used in case of more than one active marketing cycle for different
+division categories.
+
+
+
+It is possible to specify different xref:linking-activity[linking
+parameters].
+
+|Contact Category Fields API names
+|CTPHARMA\__ContactCategoryFields__c |Text Area(255) |Specify
+the list of API names of fields that represent the picklist or formula
+with division categories for xref:contact-field-reference[the
+[.object]#Contact# object] (separated by a comma, without blank
+space).
+
+|Contact Target Flags API names
+|CTPHARMA\__ContactTargetFlagsFields__c |Text Area(255)
+|Specify the list of API names of checkbox fields that are responsible
+for the selection of a division for the _Contact_ record.
+
+|Create Next Activity |CTPHARMA\__CreateNextActivity__c
+|Checkbox a|
+If selected, a new Activity record will be automatically created on the
+specific date from the CTPHARMA\__NextCallDate__c field of an
+_Activity_ record after changing the activity status to Finished.
+
+
+Create a record of xref:next-call-settings[Next Call Settings] for
+the required _Activity_ record type.
+
+|Create Related Activity Data records
+|CTPHARMA\__CreateRelatedActivityDataRecords__c |Checkbox |If
+selected, the _Activity Data_ record based on parameters of an active
+_Marketing Cycle_ and _Marketing Detail Tracking_ records will be
+created for the corresponding _Activity_ record.
+
+If unselected, the related _Activity Data_ will be pulled to the
+_Activity_ record after opening
+xref:configuring-activity-report[the Activity Report page]. Only
+_Activities_ with the completed _Activity Data_ will be saved to not
+take up space in the Salesforce organization by records without
+details.
+
+|Enable Objective History tracking
+|CTPHARMA\__EnableObjectiveHistoryTracking__c |Checkbox a|
+If selected, the previous _Objective_ values for the _Activity_ records
+will be saved. According to the _Next Call Settings_ record, a new
+active _Activity_ record will be created, and the previous record will
+be deactivated in the [.object]#Objective# object.
+
+[NOTE] ==== The user should have a _Next Call Settings_ record
+for populating the *Objective* field on the *Activity Report* page. ====
+
+|Enable Objectives |CTPHARMA\__IsObjectivesEnabled__c
+|Checkbox |If selected, you can xref:configuring-objectives[to
+create objectives] for the _Activity_ records.
+
+|Max days for activity planning
+|CTPHARMA\__MaxPlanningDays__c |Number(18,0) a|
+Specify the maximum period of marketing cycles.
+
+
+
+The value cannot be more than 800 days.
+
+|Objective Tracking Period
+|CTPHARMA\__ObjectiveTrackingPeriod__c |Text Area(255) a|
+Specify how long to store the history of objectives. The available
+values:
+
+* month
+* quarter
+* year
+* a marketing cycle
+
+|Read Only Joint Visit Share |CTPHARMA\__IsReadOnlyJVShare__c
+|Checkbox |
+
+|Recalculate TF Records |CTPHARMA\__EnableTFRecalculate__c
+|Checkbox |If selected, when a new marketing cycle is activated, the
+active _Target Frequency_ records will be copied and the old and
+inactive ones will be deactivated.
+
+|Share Activity with Joint Visit Users
+|CTPHARMA\__IsJointActivityShareEnabled__c |Checkbox |If
+selected, access for a representative to view the corresponding _Joint
+Visit_ record is granted.
+
+|Show Page Headers |CTPHARMA\__IsPageHeaderEnabled__c
+|Checkbox |If selected, headers with the standard Salesforce tabs are
+shown on the *xref:calendar-tab-settings-field-reference[Calendar]*
+and *Activity Report* pages.
+If not selected, the *Calendar* and *Activity Report* pages are open in
+a full-screen mode.
+|===
+
+

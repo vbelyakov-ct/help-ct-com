@@ -1,0 +1,75 @@
+= Objectives Management
+
+[[ObjectivesManagement-Purpose]]
+=== Purpose
+
+Objective Management is the functionality designed for representatives
+to manage their own notes for the clients. Based on the configuration,
+the objective could be tracked during the time period before completion
+or repeated per each visit.
+
+[[ObjectivesManagement-MainTerms]]
+=== Main Terms
+
+* *Objective*
+Personal objectives and notes used by representatives as a reminder for
+the particular client.
+* *Next Call Objective*
+The option that allows creating an objective for the upcoming visit on
+the next selected date when the previous visit finished.
+* *Special tracking*
+An entity to set and track the tasks and objectives for an active
+marketing cycle within a visit and related tab of the Activity Report
+designed to set the objectives for the specific clients within the
+Marketing Cycle.
+
+[[ObjectivesManagement-ProcessDescription]]
+=== Process Description
+
+. Set up *Application Settings*.
+. Think about the objectives and tasks you need to track and audit
+during a visit.
+You have several options to create objectives.
+. Check objectives in the *Account* and *Contact* related lists or in
+the *Activity Reports*.
+. Use *Special Tracking* to track objectives via *Marketing Cycles*.
+
+[[ObjectivesManagement-SetupSteps]]
+=== Setup Steps
+
+. In the  xref:application-settings-management[Application
+Settings] or in xref:ct-pharma-control-panel[CT Pharma Control
+Panel]:
+.. Enable *Objectives*.
+.. Enable *Objective History* tracking.
+.. Enter a period in *Objective Tracking Period*.
+.. Enable *Create Next Activity* if you want to use the *Next Call Date*
+option and *Next Call Settings*.
+. Add *Objectives* related list to the[.object]#Account# and
+[.object]#Contact# objects.
+. xref:creating-an-objective[Create Objectives] according to your
+business purposes:
+.. Add an *Objective* to the related list of the
+[.object]#Account# object if you want to have a
+regular objective for the account.
+.. Add an *Objective* to the related list of the
+[.object]#Contact# object if you want to have a regular
+objective for the contact but not for the account.
+.. Create an *Objective* for the selected activity via *Activity Report*
+if you want to have an objective only for the selected visit.
+.. Create *Next Call Objective* if you want to create an objective for
+the next visit when the previous one is finished.
+.. Create an *Objective* using the *Next Call Date* on the *Activity
+Report* if you want to add the objective for a visit on a specific date.
+.. Create an *Objective* using *Next Call Settings* if you want to use
+regular objectives with the specific values.
+. Add Objective to the Marketing Cycle if needed:
+.. Set up xref:targeting-and-marketing-cycle[Targeting & Marketing
+Cycle] processes.
+.. Specify attributes for the
+xref:special-trackings-tab-settings[Special Trackings Tab
+Settings].
+.. Log the *Activity* to verify the *Tasks* creation.
+
+[[h2_620578293]]
+=== Configuring Objectives

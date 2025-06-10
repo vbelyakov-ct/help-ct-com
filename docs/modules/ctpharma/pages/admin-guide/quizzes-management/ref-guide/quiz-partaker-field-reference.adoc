@@ -1,0 +1,27 @@
+= Quiz Partaker Field Reference
+
+The[.object]#Quiz Partaker# object is intended to link the user
+who passes the quiz with
+the _xref:quiz-field-reference.html[Quiz]_ and _xref:quiz-completion-field-reference.html[Quiz
+Completion]_ record.
+
+'''''
+
+API name in Salesforce: QuizPartaker__c
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Description  |Description__c |Long Text Area (32768) |Specify
+information about the quiz partaker.
+
+|Quiz |QuizId__c  |Master-Detail(Quiz) |The parent _Quiz_
+record.
+
+|User |UserId__c  |Lookup(User) |The related _User_ record.
+|===
+
+

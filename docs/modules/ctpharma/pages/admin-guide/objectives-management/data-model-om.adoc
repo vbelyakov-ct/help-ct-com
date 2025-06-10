@@ -1,0 +1,56 @@
+= Objectives Management Data Model
+
+[[DataModel-OM-TheDataModelofObjectivesManagement]]
+====  The Data Model of Objectives Management
+
+
+image:58828947.png[]
+
+#
+
+[[DataModel-OM-ObjectsDescription]]
+==== Objects Description
+
+
+[cols=",,,",options="header",]
+|===
+a|
+*Object Label*
+
+a|
+*Object API Name*
+
+a|
+*Used Record Types*
+
+a|
+*Description*
+
+|Objective |[.apiobject]#CTPHARMA\__Objective__c#
+|Master |This object stores the objectives' history and the active
+objective for the next activities to accounts and contacts.
+
+|Pharma Activity |[.apiobject]#CTPHARMA\__Activity__c#
+|Visit |This object contains record types related to accounts and
+contacts.
+Granular objectives will be created from the
+[.apiobject]#CTPHARMA\__NextCallObjective__c# fields.
+Active related activities will be put into
+[.apiobject]#CTPHARMA\__Objective__c# fields while
+criteria are applicable.
+
+|Marketing Detail Tracking
+|[.apiobject]#CTPHARMA\__MarketingDetailTracking__c#
+|Special Tracking |This object stores the KPI related to a particular
+marketing cycle with different attributes depends on the record type.
+
+|Pharma Activity Data
+|[.apiobject]#CTPHARMA\__ActivityData__c# |Special
+Tracking
+ |This object stores different information captured during an
+activity.
+Special trackings are generated for the targeted clients based on a
+marketing detail tracking records for the active marketing cycle.
+|===
+
+

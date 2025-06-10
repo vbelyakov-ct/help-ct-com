@@ -1,0 +1,79 @@
+= TargetFrequencyProcess
+
+_TargetFrequencyProcess_ is intended to
+xref:targeting-and-marketing-cycle[manage Target Frequency
+records].
+
+'''''
+
+API name: [.apiobject]#CTPHARMA\__TargetFrequency__c#
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",options="header",]
+|===
+|*Context* a|
+*Method*
+
+a|
+*Codename*
+
+a|
+*Description*
+
+|[.apiobject]#Before Insert[bi]# |` fillOwnerField `
+|` fillOF ` |Update of the [.apiobject]##OwnerId ##field value in the [.apiobject]#CTPHARMA\__OwnerId__c# field.
+
+| |` setPersonalCycles ` |` setPC ` |Creating association for a
+[.object]#Marketing Cycle# object record that is related to a
+user of Target Frequency specified in the [.apiobject]##OwnerId ##field. | |` fillDetailsField ` |` fillDF ` |Creating association on the[.object]#Marketing Cycle Detail# object record with the _Call
+Rate_ record type depending on the previously selected Marketing Cycle
+and account or contact category.
+
+|[.apiobject]#Before Update[bu]# |` fillOwnerField `
+|` fillOF ` |Update of the [.apiobject]##OwnerId ##field value in the [.apiobject]#CTPHARMA\__OwnerId__c# field.
+
+| |` setPersonalCycles ` |` setPC ` |Creating association for a
+[.object]#Marketing Cycle# object record that is related to a
+user of Target Frequency specified in the[.apiobject]#OwnerId#
+field.
+
+| |` fillDetailsField ` |` fillDF ` |Creating association on the
+[.object]#Marketing Cycle Detail# object record with the _Call
+Rate_ record type depending on the previously selected Marketing Cycle
+and account or contact category.
+
+|[.apiobject]#Before Delete[bd]#
+|` concatenateUsersOnTarget ` |` fillOF ` |Updating targeting values on
+the related accounts and contacts records if the Advanced Target
+Frequency Logic in the custom settings is enabled.
+
+|[.apiobject]#After Insert[ai]#
+|` concatenateUsersOnTarget ` |` fillOF ` |Updating targeting values on
+the related accounts and contacts records if the Advanced Target
+Frequency Logic in the custom settings is enabled.
+
+| |` cloneTargetFrequencyBySegment ` |` cloneTFbyS ` a|
+If there is a marketing cycle which does not have a Target Frequency
+record that meets the following requirements:
+
+* the[.apiobject]#CTPHARMA\__AccountId__c# field related
+to the Target Frequency for which a trigger is called has a link to the
+Account and/or a link to the Contact in the
+[.apiobject]#CTPHARMA\__ContactId__c#, related to the
+Target Frequency.
+* The [.apiobject]##OwnerId ##field has a link to a user related to the Target Frequency for which a trigger was called. * The[.apiobject]#UserDivision# field value equals the value of
+the owner's division ([.apiobject]#OwnerId#) of the Target Frequency for which a trigger is called. If any of the conditions are not met, a clone of a Target Frequency, for which a trigger was called, is created and the current Marketing Cycle Id is added to the[.apiobject]#CTPHARMA\__MarketingCycleId__c# field.
+
+|[.apiobject]#After Update[au]#
+|` concatenateUsersOnTarget ` |` fillOF ` |Updating targeting values on
+the related accounts and contacts records if the Advanced Target
+Frequency Logic in the custom settings is enabled.
+
+|[.apiobject]#After Undelete[aud]#
+|` concatenateUsersOnTarget ` |` fillOF ` |Update of the targeting
+values on related _Accounts_ and _Contacts_ records if the Advanced
+Target Frequency Logic in the Custom settings is enabled.
+|===
+
+

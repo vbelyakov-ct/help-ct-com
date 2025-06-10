@@ -1,0 +1,38 @@
+= Manage CT Pharma Triggers
+
+It is possible not only xref:enabling-the-bypass-logic[the restrict
+the trigger event] but also to manage the whole CT Pharma trigger.
+
+* create a new Trigger Setting record to activate the CT Pharma trigger;
+* deactivate the CT Pharma trigger in case of using the custom trigger
+logic.
+
+[[h2_527552279]]
+=== Activate a CT Pharma trigger
+
+Some CT Pharma triggers are active by default. If you have updated the
+CT Pharma package and new triggers have been added, specify a _Trigger
+Settings_ record for each one to activate them.
+
+. Go to *Setup → Custom Code → Custom Settings*.
+. Click *Manage* next to *Trigger Settings*.
+. Click *New*.
+. Specify a new record for the specific CT Pharma trigger.
+* specify the trigger name;
+* set active.
+. ​Click *Save*.
+
+The setup is complete.
+
+[[h2__1834731254]]
+=== Deactivate a CT Pharma trigger
+
+To deactivate a CT Pharma trigger:
+
+. Go to *Setup → Custom Code → Custom Settings*.
+. Click *Manage* next to *Trigger Settings*.
+. Click *Edit* next to _a CT Pharma trigger_ you want to configure.
+. Deselect the *Active* field.
+. Click *Save*.#
+
+The setup is complete.

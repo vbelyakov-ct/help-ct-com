@@ -1,0 +1,313 @@
+= ActivityProcess
+
+_ActivityProcess_ is intended to manage custom _CT Pharma Activity_
+records, as well as standard _Event_ and _Task_ records in case of using
+the xref:activity-sync[Activity Sync] functionality, according to
+the specified business logic.
+
+'''''
+
+API-name: `CTPHARMA\__Activity__c`
+
+'''''
+
+[[ActivityProcess-BeforeInsert]]
+==== 
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Context* |*Method* |*Codename* |*Execution*
+
+a|
+after insert [ai]
+
+
+
+|[.apiobject]#createRelatedData()#
+|[.apiobject]#createRD# |Create child records of the
+[.apiobject]#CTPHARMA\__ActivityData__c# object related
+to the parent record of the
+[.apiobject]#CTPHARMA\__Activity__c# object according to
+the values of the
+[.apiobject]#CTPHARMA\__MarketingDetailTracking__c#
+records associated with the corresponding active record of the
+[.apiobject]#CTPHARMA\__MarketingCycle__c# object and
+according to the
+[.apiobject]#CTPHARMA\__CreateRelatedActivityDataRecords__c#
+flag in the
+[.apiobject]#CTPHARMA\__ApplicationSettins__c# custom
+setting.
+
+| a|
+calculateFinishedActivity()
+
+|[.apiobject]#calcFA# |Calculate the finished activities of
+the[.apiobject]#CTPHARMA\__Activity__c# and set this
+value to the related record of the
+[.apiobject]#CTPHARMA\__TargetFrequency__c# object.
+
+| a|
+storeObjectives()
+
+|[.apiobject]#storeObj# |If the value in the
+[.apiobject]#CTPHARMA\__NextCallObjective__c# field is
+specified, add it to the record of
+the [.apiobject]#CTPHARMA\__Objective__c# object which is
+related to the[.object]#Account# or[.object]#Contact#
+__ object.
+
+| a|
+manageActivityShares()
+
+|[.apiobject]#manageAS# |Grant access to the user which is
+specified in the[.apiobject]#CTPHARMA\__UserId__c# field
+on the record of the[.apiobject]#CTPHARMA\__Activity__c#
+object with the _Joint Visit_ record type, if the
+[.apiobject]#CTPHARMA\__IsJointActivityShareEnabled__c#
+flag is set in the
+[.apiobject]#CTPHARMA\__ApplicationSettings__c# custom
+setting.
+
+| a|
+hasRelatedActivitiesCheckForNewRecords
+
+a|
+checkRAInsert
+
+|Update the value in the
+[.apiobject]#CTPHARMA\__HasRelatedActivities__c# field of
+the related records of the
+[.apiobject]#CTPHARMA\__Activity__c# __ object with the
+_Joint Visit_ record type.
+If the records of the
+[.apiobject]#CTPHARMA\__JointVisitReport__c # were not
+attached before, the value is changed from _False_ to _True_.
+
+| a|
+createRelatedActivities()
+
+|[.apiobject]#createRA# |Update the value in the
+[.apiobject]#CTPHARMA\__HasRelatedActivities__c# field of
+the related records of the
+[.apiobject]#CTPHARMA\__Activity__c# __ object with the
+_Joint Visit_ record type.
+If the records of the
+[.apiobject]#CTPHARMA\__JointVisitReport__c # were not
+attached before, the value is changed from _False_ to _True_.
+
+a|
+after update[au]
+
+
+
+|[.apiobject]#createRelatedData#
+|[.apiobject]#createRD# |Update child records of the
+[.apiobject]#CTPHARMA\__ActivityData__c# object related
+to the parent record of the
+[.apiobject]#CTPHARMA\__Activity__c# object according to
+the values of the
+[.apiobject]#CTPHARMA\__MarketingDetailTracking__c#
+records associated with the corresponding active record of the
+[.apiobject]#CTPHARMA\__MarketingCycle__c# object and
+according to the
+[.apiobject]#CTPHARMA\__CreateRelatedActivityDataRecords__c#
+flag in the
+[.apiobject]#CTPHARMA\__ApplicationSettins__c# custom
+setting.
+
+| |[.apiobject]#recalculateActivityActualCalls#
+|[.apiobject]#calcActAC# |Recalculate the finished activities of
+the[.apiobject]#CTPHARMA\__Activity__c# and set this
+value to the related record of the
+[.apiobject]#CTPHARMA\__TargetFrequency__c# object.
+
+| |[.apiobject]#storeObjectives#
+|[.apiobject]#storeObj# |Update the record of the
+[.apiobject]#CTPHARMA\__Objective__c# object which is
+related to the[.object]#Account# or[.object]#Contact#
+__ object, if the value in the
+[.apiobject]#CTPHARMA\__NextCallObjective__c# field has
+been changed.
+
+| |[.apiobject]#createNextActivities#
+|[.apiobject]#createNA# |Create the next one record of the
+[.apiobject]#CTPHARMA\__Activity__c# object, if the value
+in the __[.apiobject]#CTPHARMA\__NextCallDate__c# __
+field is specified.
+
+| |[.apiobject]#transferNextDateToChildrenVisit#
+|[.apiobject]#transferNextDates# |Update related records of
+the[.apiobject]#CTPHARMA\__Activity__c# object, if the
+value in the __[.apiobject]#CTPHARMA\__NextCallDate__c#
+__ field has been changed.
+
+| |[.apiobject]#manageActivityShares#
+|[.apiobject]#manageAS# |Update access to the user which is
+specified in the[.apiobject]#CTPHARMA\__UserId__c# field
+on the record of the[.apiobject]#CTPHARMA\__Activity__c#
+__ object with the _Joint Visit_ record type, if the
+[.apiobject]#CTPHARMA\__IsJointActivityShareEnabled__c#
+flag is set in the
+[.apiobject]#CTPHARMA\__ApplicationSettings__c# custom
+setting.
+
+| |[.apiobject]#hasRelatedActivitiesCheckAfterUpdate#
+|[.apiobject]#checkRAUpdate# a|
+Update the value in the
+[.apiobject]#CTPHARMA\__HasRelatedActivities__c# field of
+the related records of the
+[.apiobject]#CTPHARMA\__Activity__c# __ object with the
+_Joint Visit_ record type.
+
+* If the records of
+the[.apiobject]#CTPHARMA\__JointVisitReport__c# were not
+attached before, the value is changed from _False_ to _True_.
+* If, after the update, there are no attached records of the
+[.apiobject]#CTPHARMA\__JointVisitReport__c# left, the
+value is changed from _False_ to _True_.
+
+a|
+after delete[ad]
+
+
+
+a|
+recalculateActivityActualCallsAfterDelete
+
+a|
+calcActAC
+
+|Update the value in the
+[.apiobject]#CTPHARMA\__ActualCalls__c# field and the
+date of the last activity in the
+[.apiobject]#CTPHARMA\__LastCallDate__c# field of the
+[.apiobject]#CTPHARMA\__TargetFrequency__c# records,
+which are related to the removed records of the __
+[.apiobject]#CTPHARMA\__Activity__c#_._
+
+a|
+before insert[bd]
+
+
+
+
+
+
+
+|`fillAccountAndContactFromReference` |`fillAAC` |If the value is
+specified in the[.apiobject]#CTPHARMA\__ReferenceId__c#
+field, then the[.apiobject]#CTPHARMA\__AccountId__c# and
+[.apiobject]#CTPHARMA\__ContactId__c# fields are filled
+in the corresponding record of the
+[.apiobject]#CTPHARMA\__Activity__c# object.
+
+| |`fillObjectives` |`fillObj` a|
+If the[.apiobject]#CTPHARMA\__IsObjectivesEnabled__c#
+flag is set in the
+[.apiobject]#CTPHARMA\__ApplicationSettings__c# custom
+setting, a record of the
+[.apiobject]#CTPHARMA\__Objective__c# object is created,
+and the[.apiobject]#CTPHARMA\__StartDate__c# field of
+the record of the[.apiobject]#CTPHARMA\__Activity__c# __
+is specified, then the value from the record of the
+[.apiobject]#CTPHARMA\__Objective__c# object will be
+added to the[.apiobject]#CTPHARMA\__Objective__c# field
+of the corresponding record of the
+[.apiobject]#CTPHARMA\__Activity__c#.
+
+* If the objective is specified for the record of the
+[.object]#Contact# object, the
+[.apiobject]#CTPHARMA\__Objective__c# field will be
+filled for the[.apiobject]#CTPHARMA\__Activity__c# __ of
+this contact's record.
+*  If the objective is specified for the record of the
+[.object]#Account# object, the
+[.apiobject]#CTPHARMA\__Objective__c# field will be
+filled for the[.apiobject]#CTPHARMA\__Activity__c# of
+this Account.
+
+| |`fillMarketingCycle` |`fillCycle` |Map a record of the
+[.apiobject]#CTPHARMA\__Activity__c# object and a record
+of the[.apiobject]#CTPHARMA\__MarketingCycle__c# object
+in the[.apiobject]#CTPHARMA\__MarketingCycleId__c#
+field, if the marketing cycle is active, the maximum number of days of
+this cycle is less than or equal to the value specified in the
+[.apiobject]#CTPHARMA\__MaxPlanningDays__c# field of the
+[.apiobject]#CTPHARMA\__ApplicationSettings__c# custom
+setting, the value in the
+[.apiobject]#CTPHARMA\__StartDate__c# field of the record
+of the[.apiobject]#CTPHARMA\__Activity__c# is changed,
+the user and marketing cycle divisions are the same, and the
+corresponding parameter for this type of activity is specified in the
+[.apiobject]#CTPHARMA\__MarketingLinkSettings__c#.
+
+| |`fillTargetFrequency` |`fillTF` |The corresponding record of the
+[.apiobject]#CTPHARMA\__TargetFrequency__c# object will
+be specified.
+
+a|
+before update[bu]
+
+
+
+
+
+a|
+fillObjectives()
+
+|[.apiobject]#fillObj# a|
+If the[.apiobject]#CTPHARMA\__IsObjectivesEnabled__c#
+flag is set in the
+[.apiobject]#CTPHARMA\__ApplicationSettings__c# custom
+setting, a record of the
+[.apiobject]#CTPHARMA\__Objective__c# object is created,
+and the[.apiobject]#CTPHARMA\__StartDate__c# field on
+the record of the[.apiobject]#CTPHARMA\__Activity__c# __
+is specified, then the value from the record of the
+[.apiobject]#CTPHARMA\__Objective__c# object is added to
+the[.apiobject]#CTPHARMA\__Objective__c# field of the
+corresponding record of the
+[.apiobject]#CTPHARMA\__Activity__c#.
+
+*  If the objective is specified for the record of the
+[.object]#Contact# object, the
+[.apiobject]#CTPHARMA\__Objective__c# field will be
+filled for the[.apiobject]#CTPHARMA\__Activity__c# __ of
+this _Contact_.
+*  If the objective is specified for the record of the
+[.object]#Account# object, the
+[.apiobject]#CTPHARMA\__Objective__c# field will be
+filled for the[.apiobject]#CTPHARMA\__Activity__c# __ of
+__ this _Account_.
+
+| |[.apiobject]#fillMarketingCycle()#
+|[.apiobject]#fillCycle# a|
+Map a record of the[.apiobject]#CTPHARMA\__Activity__c#
+object and a record of the
+[.apiobject]#CTPHARMA\__MarketingCycle__c# object in the
+[.apiobject]#CTPHARMA\__MarketingCycleId__c# field, if:
+
+* the marketing cycle is active, the maximum number of days of this
+cycle is less than or equal to the value specified in the
+[.apiobject]#CTPHARMA\__MaxPlanningDays__c# field in the
+[.apiobject]#CTPHARMA\__ApplicationSettings__c# custom
+setting,
+* the value in the[.apiobject]#CTPHARMA\__StartDate__c#
+field of the record of the
+[.apiobject]#CTPHARMA\__Activity__c# is changed,
+* the user and marketing cycle divisions are the same,
+* the corresponding parameter for this type of activity is specified in
+the[.apiobject]#CTPHARMA\__MarketingLinkSettings__c#.
+
+| |[.apiobject]#fillTargetFrequency()#
+|[.apiobject]#fillTF# |The corresponding record of the
+[.apiobject]#CTPHARMA\__TargetFrequency__c# object will
+be specified.
+
+|before delete [bd] | |[.apiobject]#bd# |Remove the
+records of the standard[.object]#Event# __ and
+[.object]#Task# __ objects related to the removed records of the
+[.apiobject]#CTPHARMA\__Activity__c#_._
+|===
+
+

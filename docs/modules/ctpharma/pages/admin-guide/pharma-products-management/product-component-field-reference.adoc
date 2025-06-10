@@ -1,0 +1,33 @@
+= Product Component Field Reference
+
+The[.object]#Product Component #object is a junction object
+between a bundle and a product and used in
+https://help.customertimes.com/smart/project-order-module/product-management[product
+management] for CT Orders. One product can be a part of different
+bundles.
+
+'''''
+
+Object API name: `CTPHARMA_ProductComponent__c`
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API name* |*Type* |*Description*
+
+|Bundle |Bundle2Id__c |Lookup(CT Product) |A bundle that
+includes the current Salesforce product.
+
+|Bundle |`CTPHARMA\__BundleId__c` |Lookup(Product2)
+|A bundle that includes the current _Pharma Product_.
+
+|Multiplier |`CTPHARMA\__Multiplier__c` |Number(18,0) |A
+multiplying factor sets the ratio for multiplying the number of products
+in the bundle.
+
+|Product |`CTPHARMA\__ProductId__c` |Lookup(CT Product) |This is
+a lookup to store a __Pharma Product __identifier.
+
+|Product |Product2Id__c |Lookup(Product2) |
+|===

@@ -1,0 +1,49 @@
+= Timeoff
+
+By default, the *Time Off* field set is related to the
+[.object]#Timeoff# record type:
+
+[start=3]
+. Click *Edit* (4) next to *Timeoff*.
+
+
+
+To create another activity layout, click *New*.
+
+image:58829344.png[]
+
+. Check *Fieldset API Name*. It should be the same as the API name of
+the *Time Off *field set of
+the [.object]#Pharma Activity# object.
+
+image:58829346.png[]
+
+image:58829362.png[]
+
+#
+
+The Time Off field set is related to the _Timeoff_ record type. Now, you
+can customize the Time Off field set.
+
+To define which fields will be available on the Pharma Activity Report
+for _Timeoff_ record type:
+
+. Go to *Setup* (1) → *Object Manager* (2) → *Pharma Activity* (3)
+→ *Field Sets *(4).
+The list of the field sets opens.
+. Click *Time Off *(5).
+
+image:58829348.png[]
+
+. Edit a visible field set by dragging available fields to the *In
+the Field Set* list and click *Save* (6).
+
+image:58829350.png[]
+#
+
+The Time Off field set is customized.
+
+According to the settings, the main section is displayed on the *Pharma
+Activity Report* page.
+
+image:58829353.png[]

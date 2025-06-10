@@ -1,0 +1,54 @@
+= Setting up Division Target Frequency
+
+To use Target Frequencies, associate the User and Marketing Cycle
+division with the Accounts and Contacts division's fields.
+Add new division to *Division Target Frequency Settings* and map newly
+created fields for[.object]#Account# and
+[.object]#Contact#.
+
+To add a division to *Division Target Frequency Settings*:
+
+. Go to *Setup (1) → Custom Code (2) → Custom Settings (3).*
+. Click **Manage **next to *Division Target Frequency Settings (4)*.
+
+
+image:66355850.png[]
+#
+Alternatively, click** *Division Target Frequency Settings ***and then
+click** *Manage* **on the** *Division Target Frequency Settings***.
+ #
+
+image:66355852.png[]
+
+
+A page with the list of available divisions opens.
+. Click *New* to create a new division.
+[.confluence-information-macro-information]#To manage an existing
+division, click *Edit* next to the division name.#
+. Enter the following values:
+* Enter *Theta* in the *Name* field.
+[NOTE] ==== The value in the *Name* field must match the
+division name. ====
+* In the *Account Target Flag field*, enter the API name of the checkbox
+for the Theta division that you created for the
+[.object]#Account# object.
+* In the *Contact Target Flag field*,** **enter the API name of the
+checkbox for the Theta division that you created for the
+[.object]#Contact# object.
+* In the *Account Target Category field*, enter the API name of the
+picklist or formula for the Theta division that you created for the
+Account object.
+* In the *Contact Target Category field*, enter the API name of
+the picklist or formula for the Theta division that you created for the
+[.object]#Contact# object.
+* Select the **Enable Category Selection **checkbox to add division
+categories to available values. The picklist with values will be
+displayed in the mass assignment dialog box of the Target attribute for
+accounts and contacts.
+
+ #
+
+image:66355858.png[]
+. Click *Save*.
+
+The new division is added.

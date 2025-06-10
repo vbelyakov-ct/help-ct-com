@@ -1,0 +1,33 @@
+= Enabling the ByPass Logic
+
+The _Bypass Logic_ functionality is intended to restrict the execution
+of one or several trigger methods by deactivating the specific trigger
+context(s) or methods.
+
+To restrict execution of a method invoked by the trigger context:
+
+. Go to *Setup* *(1)* → *Custom Code* *(2)* → *Custom Settings* *(3)*.
+. Click *Manage* *(4)* next to *Trigger Settings*.
+image:66360555.png[]
+. Click *Edit* next to a CT CPG trigger you want to configure.
+[TIP] ==== If you updated the CT Pharma package, some triggers
+will not be added to the *Trigger
+Settings* list. xref:configuring-triggers[Add a record] with the
+specific CT Pharma trigger name.  ====
+. In the *Bypass Logic* field, specify the trigger contexts or methods
+that should not be invoked. For example: ai,bd (where ai stands for
+after insert and bd stands for before delete)
+or [.apiobject]#au_createRD# (where[.apiobject]#au#
+stands for[.apiobject]#after update# and
+[.apiobject]#createRD# stands for
+[.apiobject]#createRelatedData#).
+[TIP] ==== In order to disable the logic of creating
+_Activity_ objects' records (either for standard or custom _Activity_
+objects), for *ActivityProcess* trigger
+specify `createRelatedActivities` in the *Bypass logic* field. ====
+. Select the *Active* checkbox.
+. Click *Save*.
+
+image:66360554.png[]
+
+The setup is complete.

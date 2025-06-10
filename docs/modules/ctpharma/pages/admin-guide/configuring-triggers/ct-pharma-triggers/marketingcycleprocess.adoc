@@ -1,0 +1,31 @@
+= MarketingCycleProcess
+
+_MarketingCycleProcess_ is intended to mass deactivate _Target
+Frequency_ records if a xref:creating-a-marketing-cycle[Marketing
+Cycle record] is no more active.
+
+'''''
+
+API name:[.apiobject]#CTPHARMA\__MarketingCycle__c#
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",options="header",]
+|===
+|*Context* a|
+*Method*
+
+a|
+*Codename*
+
+a|
+*Description*
+
+|[.apiobject]#After Update[au]#
+|` deactivateTargetFrequency ` |` deactivateTF ` |Logic of sequential
+mass deactivation of _Target Frequency_ records related to a marketing
+cycle after a marketing cycle deactivation. The
+_Batch_MarketingCycleProcessor_ batch apex class is used.
+|===
+
+

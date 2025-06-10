@@ -1,0 +1,85 @@
+= Activity Data
+
+The following Apex classes are used to create a record of the
+custom__ __[.object]#Activity# object
+([.apiobject]#__Activity__c#) and a related record of
+the custom[.object]#ActivityData# object
+([.apiobject]#__ActivityData__c#):
+
+* `ActivityProcessHandler`
+* `GlobalActivityService`
+
+The following trigger invokes the Apex classes:
+
+* `ActivityProcess`
+
+
+
+Before implementing, the system checks that the `ActivityProcess`
+trigger is specified in the custom Trigger Settings.
+
+A trigger is xref:trigger-events[invoked by operations on
+the recurring events].
+
+
+The following trigger methods of the `ActivityProcessHandler` class are
+implemented:
+
+* `onBeforeInsert`
+* `onBeforeUpdate`
+* `onBeforeDelete`
+* `onAfterInsert`
+* `onAfterUpdate`
+* `onAfterDelete`
+
+In the *Setup* → *Custom Code* → *Custom Settings* → *Trigger Settings*,
+the system checks methods in the **Bypass Logic **field of
+the `ActivityProcess`** **trigger.
+
+
+
+[width="100%",cols="50%,50%",]
+|===
+|*ActivityProcessHandler Method* |*Execution*
+
+|onBeforeInsert |Create a record of the custom
+[.object]#Activity# object related to the
+[.object]#Contact# and[.object]#Account# objects,
+assign the related _Marketing Cycle_, set _Target Frequency_, and add
+_Objectives_.
+
+|`onBeforeUpdate` |Assign the related _Marketing Cycle_, set _Target
+Frequency_, and add _Objectives_ to the record of the custom __
+[.object]#Activity# object.
+
+|`onBeforeDelete` |Search and delete the records of the standard
+[.object]#Event# and[.object]#Task# __ objects related
+to removed records of the custom[.object]#Activity# object.
+
+|`onAfterInsert` |Create data of the record of the custom __
+[.object]#Activity Data# object, which is related to the record
+of the custom[.object]#Activity# object.
+Calculate finished activities and fill in the __ *Actual Calls* field of
+the record of the[.object]#Target Frequency# __ object.
+According to the settings, add _Objectives_ and grant access to the
+record of the _Joint Visit_ for relevant users. According to the
+Activity Sync, create records of the standard[.object]#Event#
+__ and[.object]#Task# objects.
+
+|`onAfterUpdate` |Update data of the record of the custom __
+[.object]#Activity Data# object, which is related to the record
+of the custom[.object]#Activity# object.
+Recalculate finished activities and fill in the __ *Actual Calls* field
+of the record of the[.object]#Target Frequency# __ object.
+According to the value in the *Next Call Date* field and Next Call
+Settings, create children records of the custom
+[.object]#Activity# object. According to the settings, grant
+access to the record of the _Joint Visit_ for relevant users.
+
+|`onAfterDelete` |After removing related records of the
+custom [.object]#Activity# object, recalculate the finished
+activities in the *Actual Calls* field of the record of
+the [.object]#Target Frequency#__ __object.
+|===
+
+

@@ -1,0 +1,30 @@
+= GroupMemberProcess
+
+The *GroupMemberProcess* trigger is responsible for removing duplicate
+_xref:configuring-pharma-groups.html[Pharma Group Member]_ records that
+were manually added.
+
+'''''
+
+API name in Salesforce: GroupMemberProcess
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Context* |*Method* |*Codename* |*Description*
+
+|before insert  |deduplicateManualGroupMembers()
+|[.apiobject]#bi# |In case of the _Pharma Group Member_ record
+xref:admin-guide/pharma-groups-management/create-and-update-a-dynamic-pharma-group#h2_657316184[is being
+manually created] to the _Pharma Group_ with the same record existed, it
+generates an error to not create a duplicate record.
+
+|[.apiobject]#after undelete #
+|deduplicateManualGroupMembers() |[.apiobject]#au# |In case
+of the _Pharma Group Member_ record is being restored from _Recycle
+Bin_ to the _Pharma Group_ with the same record existed, an error occurs
+to not create a duplicate record.
+|===
+
+

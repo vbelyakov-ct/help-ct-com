@@ -1,0 +1,237 @@
+= CT Pharma Package Components
+
+[[h1__366288330]]
+== 
+
+[[CTPharmaPackageComponents-CustomObjects]]
+=== Custom Objects
+
+[cols=">,",]
+|===
+|Classic |Setup → Build → Create → Objects
+|Lightning |Setup → Objects and Fields → Object Manager
+|===
+
+
+
+[cols=",,,",]
+|===
+|360 Overview |Activities |Targeting |Coaching
+a|
+* Account
+* Contact
+* Objectives
+* Inventories
+* Change Requests
+* References
+
+a|
+* Pharma Activities
+* Pharma Activity Data
+* Planning Calendar Settings
+* Pharma Products
+
+a|
+* Marketing Cycles
+* Marketing Detail Trackings
+* Target Frequencies
+* Marketing Cycle Users
+
+a|
+* Joint Visit Reports
+* Joint Visit Report Templates
+* Skills
+* Skill Marks
+
+|===
+
+[[CTPharmaPackageComponents-VisualforcePages]]
+=== Visualforce Pages
+
+[cols=">,<,",]
+|===
+|Classic |Setup → Build → Develop → |Visualforce Pages
+|Lightning |Setup → Custom Code → |
+|===
+
+
+
+[width="100%",cols="22%,24%,23%,16%,15%",]
+|===
+|360 Overview |Activities |Targeting |Coaching |General
+a|
+* ChangeRequest
+* ChangeRequestApprove
+* ChangeRequestEdit
+* ChangeRequestTitle
+
+a|
+* ActivityReport
+* Calendar
+* ActivityDataDetails
+* ActivityDataDetailsForLightning
+* AddSelectedToEvent
+
+a|
+* massManageAccountTargets
+* massManageContactTargets
+* MarketingDetailTracking
+
+a|
+* JVReport
+* JVTemplateEditor
+
+a|
+* LabelTranslator
+
+|===
+
+[[CTPharmaPackageComponents-CustomSettings]]
+=== Custom Settings
+
+[cols=">,<,",]
+|===
+|Classic |Setup → Build → Develop → |Custom Settings
+|Lightning |Setup → Custom Code → |
+|===
+
+
+
+[cols=",,,",]
+|===
+|360 Overview |Activities |Targeting |General
+a|
+* Change Request Settings
+
+a|
+* Activity Layout Settings
+* Activity Report Filters
+* Calendar Tab Settings
+* Company Product Tab Settings
+* Competitor Product Tab Settings
+* Event Member Tab Settings
+* Expenses Tab Settings
+* Inventory Tab Settings
+* Next Call Settings
+* POS Material Tab Settings
+* Special Trackings Tab Settings
+
+a|
+* Division Target Frequency Settings
+* Marketing Cycle Linking Settings
+
+a|
+* Application Settings
+* Trigger Settings
+
+|===
+
+[[CTPharmaPackageComponents-CalendarTabSettings]]
+=== Calendar Tab Settings
+
+[cols=">,<,",]
+|===
+|Classic |Setup → Build → Develop → |Custom Settings → Calendar Tab
+Settings → Manage
+
+|Lightning |Setup → Custom Code → |
+|===
+
+image:58834685.png[]
+
+[[CTPharmaPackageComponents-TriggerSettings]]
+=== Trigger Settings
+
+[cols=">,>,",]
+|===
+|Classic |Setup → Build → Develop → |Custom Settings → Trigger Settings
+→ Manage
+
+|Lightning a|
+Setup → Custom Code →
+
+|
+|===
+
+
+
+image:58834684.png[]
+
+[[CTPharmaPackageComponents-ApexTriggers]]
+=== Apex Triggers
+
+[cols=">,>,",]
+|===
+|Classic |Setup → Build → Develop → |Apex Triggers
+|Lightning |Setup → Custom Code → |
+|===
+
+
+
+[width="100%",cols="39%,18%,27%,16%",]
+|===
+|360 Overview |Activities |Targeting |General
+a|
+* AccountProcess
+* ContactProcess
+* ActivityProcessChangeRequestProcess
+
+a|
+* ActivityProcess
+
+a|
+* MarketingCycleProcess
+* TargetFrequencyProcess
+* MarketingCycleUserProcess
+
+a|
+* UserProcess
+
+|===
+
+[[CTPharmaPackageComponents-ApexСlasses]]
+=== Apex Сlasses
+
+[cols=">,>,",]
+|===
+|Classic |Setup → Build → Develop → |Apex Classes
+|Lightning |Setup → Custom Code → |
+|===
+
+
+
+[width="99%",cols="23%,19%,26%,21%,11%",]
+|===
+|360 Overview |Activities |Targeting |Coaching |General
+a|
+* AccountProcessHandler
+* ContactProcessHandler
+* ChangeRequestController
+
+a|
+* ActivityProcessHandler
+* ActivityReportController
+* CalendarController
+* MassActionsController
+
+a|
+* Batch_MarketingCycleProcessor
+* MarketingCycleProcessHandler
+* CycleManagementController
+* MarketingCycleUserProcessHandler
+* MarketingDetailTrackingController
+* TargetFrequencyProcessHandler
+
+a|
+* JVReportController
+* JVTemplateEditorController
+
+a|
+* CoreClass
+* GlobalClass
+* PostInstall
+* SortHelper
+
+|===
+
+

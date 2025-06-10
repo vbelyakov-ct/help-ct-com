@@ -1,0 +1,55 @@
+= AccountProcess
+
+_AccountProcess_ is intended to display the _Account_ hierarchy on the
+https://help.customertimes.com/smart/project-ct-cpg/calendar-interface[Calendar]
+tab and xref:creating-a-targeting-list[manage target Account
+records].
+
+'''''
+
+API name in Salesforce:[.apiobject]#Account#
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Context* |*Method* |*Codename* |*Description*
+
+a|
+
+
+After Insert[ai]
+
+
+
+|` manageHierarhy ` |`manageHh ` |Analysis of the accounts hierarchy,
+[.apiobject]#CTPHARMA\__HasChildAccounts__c# field update
+on the parent record. Used for displaying accounts hierarchy correctly
+in the calendar hierarchical view.
+
+a|
+
+
+After Update[au]
+
+
+
+|`manageTargetFrequency ` |`manageTF ` a|
+Target Frequency logic. Check targeting fields (check box and category)
+for changes set in the Division Target Frequency Settings custom setting
+for the user division.
+
+
+
+When updating the fields, targeting creates a new Target Frequency
+active record for a current user. If such record already exists, it will
+be deactivated and the deactivation date specified. The
+[.apiobject]#CTPHARMA\__TargetUserIds__c# field update.
+
+| |`manageHierarhy ` |`manageHh ` |Analysis of the accounts hierarchy,
+[.apiobject]#CTPHARMA\__HasChildAccounts__c# field update
+on the parent record. Used for displaying accounts hierarchy correctly
+in the calendar hierarchical view.
+|===
+
+

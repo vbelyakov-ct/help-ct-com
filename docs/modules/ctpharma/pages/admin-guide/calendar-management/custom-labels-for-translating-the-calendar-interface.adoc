@@ -1,0 +1,44 @@
+= Custom Labels for Translating the Calendar Interface
+
+To translate interface elements of the
+xref:calendar-interface-and-activities[Pharma Calendar]:
+
+. Go to *Setup* → *User Interface* → *Custom Labels*.
+. Select a label category to translate:
+* _Calendar_ category to translate interface elements of the
+https://help.customertimes.com/smart/project-ct-cpg/calendar-interface-and-activities[]xref:calendar-interface-and-activities[Pharma
+Calendar].
+* _Settings Panel_ category to translate interface elements of the
+xref:pharma-calendar-settings[Pharma Calendar Settings].
+. Click *Edit* on the desired label.
+. Edit the *Value* field.
+. Click *Save*.
+
+[TIP] ==== Time zone, language of the calendar (days, months,
+weeks) and starting day of the week depend on the  ====
+https://help.salesforce.com/s/articleView?id=sf.usersetup_lang_time_zone.htm&type=5[user's
+language and locale settings].
+
+For your convenience, you can create a new View for the Pharma Calendar
+interface elements:
+
+. Go to *Setup* → *User Interface* → *Custom Labels*.
+. Click *Create New View*.
+. Fill in *View Name* and *View Unique Name* fields.
+. In the *Filter By Additional Fields (Optional)* section, add 2
+filters:
+
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|*Field* |*Operator* |*Value*
+|Categories |equals |Calendar
+|Categories |equals |Settings Panel
+|===
+. Click *Add Filter Logic* and, in the *Filter Logic* field, type _1 OR
+2_.
+. If needed, *Restrict Visibility* of this View.
+. Click *Save*.
+
+
+
+

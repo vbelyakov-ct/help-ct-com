@@ -1,0 +1,76 @@
+= Activity Report Data Model
+
+[[DataModel-AR-TheDataModelofActivityReport]]
+==== The Data Model of Activity Report
+
+
+
+[.confluence-embedded-file-wrapper]##
+
+image:58829276.png[]
+
+
+
+
+[[DataModel-AR-ObjectsDescription]]
+==== Objects Description
+
+[cols=",,,",options="header",]
+|===
+a|
+*Object Label*
+
+a|
+*Object API Name*
+
+a|
+*Used Record Types*
+
+a|
+*Description*
+
+a|
+Activity
+
+a|
+[.apiobject]#CTPHARMA\__Activity__c#
+
+a|
+* Visit
+* Event
+* Timeoff
+* Joint Visit
+
+a|
+This object contains record types related to accounts and contacts.
+
+
+
+|Activity Data |[.apiobject]#CTPHARMA\__ActivityData__c#
+a|
+* Special Tracking
+* POS Material Tracking
+* Company Product Tracking
+* Competitor Product Tracking
+* Event Members
+* Expenses
+
+|This object stores different information captured during an
+activity.
+If activity is logged to a target account, Pharma Activity Data will be
+created based on a marketing detail tracking records for the active
+marketing cycle.
+
+|Marketing Detail Tracking
+|[.apiobject]#CTPHARMA\__MarketingDetailTracking__c# a|
+* Special Tracking
+* POS Material Tracking
+* Company Product Tracking
+* Competitor Product Tracking
+
+|This object stores data such as product promotions, planned call rates,
+and others related to a particular marketing cycle depends on the record
+types.
+|===
+
+

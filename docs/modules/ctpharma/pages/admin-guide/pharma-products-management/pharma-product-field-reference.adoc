@@ -1,0 +1,126 @@
+= Pharma Product Field Reference
+
+The **[.object]#Pharma Product# object is intended to store
+detailed information regarding company and competitor products,
+including their physical parameters, quantity per delivery settings, and
+specific attributes that define the price calculation procedure.
+
+
+
+For
+the https://help.customertimes.com/articles/project-order-module/ct-orders-solution[CT
+Orders] functionality, it also stores Quantity per delivery settings and
+specific attributes that define the price calculation procedure.
+
+'''''
+
+Object API name: `CTPHARMA\__Product__c`
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Active |`CTPHARMA\__IsActive__c` |Checkbox |If selected, the
+record is active and applied in business logic.
+
+|Brand |CTPHARMA\__Brand__c |Picklist |Brand of a
+product.
+
+|Bundle |​​`CTPHARMA\__IsBundle__c` |Checkbox |If selected, the
+product is a part of a bundle.
+
+|Calculate Price On a|
+`CTPHARMA\__CalculatePriceLevel__c`
+
+
+
+|Picklist a|
+Defines the source for a price in the order:
+
+* Header
+* Components
+
+|Default Availability Type |CTPHARMA\__Default Availability
+Type__c |Picklist a|
+It
+defines https://help.customertimes.com/articles/project-order-module/product-availability[whether
+a product is available] by default. Available values:
+
+* Available. The value will be set by default during the CT Orders
+package installation or update.
+* Not Available.
+
+|Description |`​​``CTPHARMA\__Description__c` |Long Text
+Area(32768) |Description of a product.
+
+|External Id a|
+`CTPHARMA\__ExternalId__c`
+
+
+
+|Text(255) (External ID) (Unique Case Sensitive) |Product external
+identifier if integration is set up.
+
+|Family |`CTPHARMA\__Family__c` |Picklist |Product family.
+
+|Height(mm) |`CTPHARMA\__Heigth__c` |Number (18, 0) |Product
+physical parameter: height in millimeters.
+
+|Ignore Component Availability
+|[.apiobject]#orders__isIgnoreComponentAvailability__c#
+|Checkbox a|
+Applied for bundle components only.
+
+If _true_, the bundle component always available by *Product
+Availability* and *Default Availability Type* fields.
+
+Default value: _false_.
+
+|Max Quantity Per Delivery
+|`CTPHARMA\__MaxQuantityPerDelivery__c` |Number(18, 0) |Max
+limit of products for delivery. Must be greater than *Min Quantity Per
+Delivery*.
+
+|Min Quantity Per Delivery
+|`CTPHARMA\__MinQuantityPerDelivery__c` |Number(18, 0)
+|Min limit of products for delivery. Must be less than *Max Quantity Per
+Delivery*.
+
+|Parent |`CTPHARMA\__ParentId__c` |Lookup(CT Product) |Parent
+product from a bundle/catalog.
+
+|Set Quantity On a|
+`CTPHARMA\__SetQuantityLevel__c`
+
+
+
+|Picklist a|
+Defines the source for products quantity in the order:
+
+* Header
+* Components
+
+|SKU |CTPHARMA\__IsSKU__c |Checkbox |If this product is the
+lower member of the Pharma Product hierarchy.
+
+|Type |`CTPHARMA\__Type__c`​​ |Picklist  |A product type.
+
+|Units in Package |`CTPHARMA\__UnitsInPackage__c` |Number(18,
+0)  |The ratio of adding a product.
+For example, if this number is 5, that means 5 units of this product
+will be added when clicking the "plus"({plus}) button on
+https://help.customertimes.com/articles/project-order-module/order-line-item-field-reference[the
+order quantity field].
+
+|Use Freebie Multiplier |CTPHARMA\__IsUseFreebieMultiplier__c
+|Checkbox |If selected, the freebies will be added with the specified
+multiplicity to the product amount.
+
+|Weight (gr) |`CTPHARMA\__Weight__c` |Number(16,2) |Product
+physical parameter: weight in grams.
+
+|Width (mm) |`CTPHARMA\__Width__c` |Number(16,2) |Product
+physical parameter: width in millimeters.
+|===

@@ -1,0 +1,108 @@
+= Pharma Activity Report
+
+[[PharmaActivityReport-Purpose]]
+=== Purpose
+
+Activity Report displays all information required for performing the
+planned activity within one page.
+
+In this section, learn about Activity Report interface, how to configure
+report settings and customize tabs on the *Activity Report* page for
+each activity.
+
+[[PharmaActivityReport-MainTerms]]
+==== Main Terms
+
+* *Activity Report Tab*
+A tab that displays all information required for activity within one
+screen.
+* *Activity Layout*
+Page layout controls the organization of fields, custom links, and
+related lists on the Activity Report pages.
+* *Activity Type*
+A diversification of activities according to the purpose. In the CT
+Pharma package the Visit, Event, Timeoff, and Joint Visit record types
+are available by default.
+* **1:1 Visit
+**Activity type for a face-to-face meeting.
+* *Pharma Event*
+Activity type to track meetings with multiple participants.
+* *Timeoff*
+Activity type to log vacations and days off.
+* *Joint Visit*
+Activity type used for managers to schedule activities with their
+subordinates.
+* **Company Product Tab
+**An entity to track your company products or assortments within a
+visit.
+The corresponding related tab of the Activity Report provides an audit
+of the company's products and assortments.
+* **Competitor Product Tab
+**An entity to track competitor products within a visit.
+The corresponding related tab of the Activity Report tracks the
+competitor activity for particular clients.
+* **POS Materials Tab
+**An entity to track the marketing materials distributed during a
+visit.
+The corresponding related tab of the Activity Report tracks the
+marketing materials distributed for particular clients.
+* **Special Tracking Tab
+**An entity to set and track the tasks and objectives for the active
+marketing cycle within a visit.
+The corresponding related tab of the Activity Report is used to set the
+objectives for the specific clients within the marketing cycle.
+* **Event Members
+**An entity to hold information about attendees of the event.
+The corresponding related tab is used to add attendees to an event.
+* **Expenses
+**An entity to hold the spendings of the event.
+The corresponding related tab tracks the spendings of an event.
+
+[[PharmaActivityReport-ProcessDescription]]
+==== Process Description
+
+. A representative is opening the created activity and see the fields to
+fill in with details depending on the activity type.
+* Detailing information could be created due to the marketing cycle if
+applied.
+* Detailing information is displayed due to the marketing cycle and will
+be created if details are entered by the representative.
+. A representative can switch the activity using the pre-defined
+filters.
+. User can plan the next call from the Activity Report page
+. User can manage objectives from the Activity Report page.
+. User can view details only for the submitted activity.
+
+[[PharmaActivityReport-SetupSteps]]
+==== Setup Steps
+
+. Set up xref:activity-layout-settings[Activity Report page
+layouts].
+* 1:1 Visit
+* Pharma Event
+* Timeoff
+* Joint Visit
+. Set up xref:create-a-new-filter-for-the-activities-list[Activity
+Report filters] for the *Activity Report* tab.
+. Customize xref:activity-report-tab-settings[Activity Report
+related tabs] per visit and event record types.
+* Add the *Company Products*, *Competitor Products*, *POS Materials*,
+and *Special Trackings* related tabs to the Activity Report for a visit.
+* Add *Event Members* and *Expenses* related tabs to the Activity Report
+for an event.
+. Set up access to Activity Report
+by xref:override-basic-actions-for-activity[overriding buttons].
+
+[.confluence-information-macro-information]#You can also customize these
+tabs for each Profile on the
+xref:ct-pharma-control-panel-activity-report[CT Pharma Control
+Panel: Activity Report] tab.#
+
+
+
+See also:
+
+* xref:ct-pharma-control-panel-activity-report[CT Pharma Control
+Panel: Activity Report]
+* xref:marketing-detail-tracking[Marketing Detail Tracking]
+* xref:objectives-management[Objectives Management]

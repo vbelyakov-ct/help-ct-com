@@ -1,0 +1,99 @@
+= Inventory Tab Settings
+
+This setting controls the displaying of the *Inventory Tab* on the
+*Activity Report* page for a user.
+Data on the *Inventory Tab* will be displayed if there are related
+records in Inventories related list of the Account, for which the 1:1
+Visit is planned.
+
+To customize the view of the *Inventory* tab:
+
+. Go to *Setup* (1) → *Custom Code* → *Custom Settings* (2).
+. Click *Manage *(3) next to *Inventory Tab Settings*.
+image:58829502.png[]
+The *Inventory Tab Settings Detail* page opens.
+You can also click **Inventory Tab Settings **and then
+click *Manage *(3) on the *Inventory Tab Settings* page.
+image:58829503.png[]
+. Click **Edit **to manage *Default Organization Level Value*.
+
+
+
+Click *New* to create a new organization level value.
+
+[.confluence-embedded-file-wrapper]#image:58829505.png[]
+Check the description of the fields.
+
+[cols=",,,",]
+|===
+|*Setting Name* |*Type* |*Description* |*Example*
+
+|Active |Checkbox |If selected, that setting is active, and the
+*Activity Report* page uses it. |
+
+|Additional Parameter |Text (255) |Additional SOQL-criteria are in use
+to the list of available records for the object, relation to which is
+specified in the *Field To Show As Picklist* field. They are used only
+when the *Show Lookup As Picklist* checkbox is checked and the *Field To
+Show As Picklist* field is populated. |[.apiobject]#WHERE
+RecordType.DeveloperName = 'Inventory'#
+
+|Allow Record Management |Text (255) a|
+Specifies the values true or false for each record type developer name
+specified in *Record Type Developer Name* field for enabling add or
+delete record functionality.
+
+* Set *true* to add or delete records and *false* to disable these
+options.
+* Use comma delimiter for multiple records.
+
+|[.apiobject]#true#,[.apiobject]#false#
+
+|Field Set Name |Text (255) |Specify Activity Data field set API name
+for each record type specified in **Record Type Developer
+Name **field.
+Use comma delimiter for multiple records.
+|[.apiobject]#CTPHARMA\__CallReportInventory#
+
+|Fields To Show As Picklist |Text (255) |The field API-name with lookup
+type displays as a picklist in a selected order.
+|[.apiobject]#ProductId__c#
+
+|Read Only ProductId |Text (255) a|
+Specifies the values true or false for each record type developer name
+specified in *Record Type Developer Name* field. Set *true* to switch
+the ProductId lookup to read-only mode.
+
+* Set *false* to switch the ProductId lookup to edit mode.
+* Use comma delimiter for multiple records.
+
+|[.apiobject]#true#,[.apiobject]#false#
+
+|Record Type Developer Name |Text (255) |Specify the list of API names
+for[.object]#Activity# object record types, in order to display
+the tab on the *Activity Report* page when creating an activity with the
+specified record type. |[.apiobject]#Visit#
+
+|Show Lookup As Picklist |Text (255) |If selected, the lookup field is
+replaced with the picklist with values that are available according to
+conditions specified in *Additional Parameter* field. |
+|===
+
+The view of the tab is customized.
+
+[.aui-icon .aui-icon-small .aui-iconfont-approve .confluence-information-macro-icon]##
+
+Also, you can customize *POS Material Tab* for each Profile on
+the** ***xref:ct-pharma-control-panel-activity-report[CT Pharma
+Control Panel: Activity Report]* tab.
+
+
+
+According to these settings, the *Inventory* related tab is displayed on
+an *Activity Report* page.
+image:58829509.png[]#
+
+*See also:*
+
+* xref:ct-pharma-control-panel-activity-report[CT Pharma Control
+Panel: Activity Report]

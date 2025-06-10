@@ -1,0 +1,117 @@
+= List of Metadata Components Removed from CT Pharma Package
+
+To view metadata components included in the current installed CT Pharma
+version in your Salesforce org:
+
+. Go to *Setup → Apps → Packaging → Installed Packages*.
+. Click _CT Pharma_ in the *Package Name* field.
+. Click the *View Components* button.
+
+The list of metadata components opens.
+
+
+
+The list of metadata components that were removed from the CT Pharma
+managed package:
+
+
+
+[width="100%",cols="^25%,^25%,^25%,25%",]
+|===
+|*Name* |*Parent Object* |*Type* a|
+*Available in Versions*
+
+|accountpicklisttables |Target Frequency Settings |Custom Field
+|1.0 - 1.83
+
+|accountpicklistvalues |Target Frequency Settings |Custom Field
+|1.0 - 1.83
+
+|activecompanyproducts |Pharma Product |List View |1.0 - 1.48
+
+|activecompetitorproducts |Pharma Product |List View |1.0 - 1.48
+
+|activeposmaterials |Pharma Product |List View |1.0 - 1.48
+
+|activitieslistfieldsetname |Pharma Activity Settings |Custom
+Field |1.1 - 1.83
+
+|all |Objective |List View |1.0 - 1.48
+
+|all |Pharma Activity |List View |1.0 - 1.49
+
+|all |Pharma Product |List View |1.0 - 1.48
+
+|all |Reference |List View |1.0 - 1.48
+
+|all |Target Frequency |List View |1.0 - 1.48
+
+|all |Inventory |List View |1.18 - 1.48
+
+|allcompanyproducts |Pharma Product |List View |1.0 - 1.48
+
+|allcompetitorproducts |Pharma Product |List View |1.0 - 1.48
+
+|allposmaterials |Pharma Product |List View |1.0 - 1.48
+
+|allproducts |Pharma Product |List View |1.0 - 1.48
+
+|calendarsettingslayout |Pharma Calendar Settings |Page Layout
+|1.0
+
+|call_report |Pharma Activity |Button or Link |1.75 - 1.82
+
+|callreportfiltercriteria |Application Settings |Custom Field |1.0
+-1.44
+
+|contactpicklisttables |Target Frequency Settings |Custom Field
+|1.0 - 1.83
+
+|contactpicklistvalues |Target Frequency Settings |Custom Field
+|1.0 - 1.83
+
+|deliverydates |Account |Custom Field |2.0 - 2.22
+
+|enablecategoryselection |Target Frequency Settings |Custom Field
+|1.0 - 1.83
+
+|Inventory | |Tab |1.18 - 1.48
+
+|joinvisitfieldsetname |Pharma Activity Settings |Custom Field
+|1.0 - 1.83
+
+|labeltranslator | |Apex Class |1.83 - 1.86
+
+|labeltranslatorcontroller | |Apex Class |1.83 - 1.86
+
+|objective | |Tab |1.0 - 1.48
+
+|oneonevisitfieldsetname |Pharma Activity Settings |Custom Field
+|1.0 - 1.83
+
+|pharmaactivitysetting | |Custom Object |1.0 - 1.83
+
+|pharmaeventfieldsetname |Pharma Activity Settings |Custom Field
+|1.0 - 1.83
+
+|pharmatogo | |Document |1.0 - 1.18
+
+|product | |Tab |1.0 -1.48
+
+|reference | |Tab |1.0 - 1.48
+
+|samplecalendardata | |Document |1.0 -1.1
+
+|targetfrequency | |Tab |1.0 -1.48
+
+|test |Reference |Custom Field |1.7 - 1.44
+
+|tfsetting | |Custom Object |1.0 - 1.83
+
+|timeofffieldsetname |Pharma Activity Settings |Custom Field |1..0
+- 1.83
+
+|user layout |Change Request |Page Layout |1.83 - 1.88
+
+|objective layout |Objective |Page Layout |1.0 - 1.17
+|===

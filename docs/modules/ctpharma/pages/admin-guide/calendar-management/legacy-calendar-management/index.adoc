@@ -1,0 +1,75 @@
+= Legacy Calendar Management
+
+In this section:
+
+* Get familiar xref:calendar-interface[with the Calendar
+interface] for each *Calendar* tab;
+* View the default xref:admin-guide/calendar-management/legacy-calendar-management/index#h2_1141916048[Calendar
+Tab Settings] and xref:admin-guide/calendar-management/legacy-calendar-management/index#h2_1857539359[Calendar
+Settings].
+* Read field description for
+xref:planning-calendar-settings-field-reference[Planning Calendar
+Settings]https://help.customertimes.com/articles/project-ct-cpg/skill-mark-field-reference[ ]objects.
+
+
+
+xref:configuring-calendar[Configure Calendar] for managing
+activities.
+
+[[h2_1141916048]]
+=== Calendar Tab Settings
+
+By default, the
+following _xref:calendar-tab-settings-field-reference.html[Calendar Tab
+Settings]_ record is applied for the whole Salesforce organization.
+
+image:/resources/Storage/project-ct-cpg/Calendar-Tab-Settings-by-default.png[/resources/Storage/project-ct-cpg/Calendar-Tab-Settings-by-default]
+
+xref:create-a-new-record-of-calendar-tab-settings[Create
+new Calendar Tab Settings records] for required user roles, for example,
+representatives and supervisors.
+
+[[h2_1857539359]]
+=== The Pharma Calendar page
+
+The *Table View* tab is shown by default with four list views: _All
+Accounts_, _All Contacts_, _My Target Accounts_, _My Target Contacts_.
+
+image:Pharma-Calendar-Interface-by-default.png[]
+
+[[h3__1602162167]]
+==== The Settings tab on the Pharma Calendar page
+
+On the *Settings* tab, the *Alpha* and *Beta* user divisions are
+available. The *Alpha* user division is set by default.
+
+The administrator must have access to the
+[.apiobject]#CTPHARMA\__Reference__c# object.
+
+The following settings are defined by default for the *Alpha* user
+division and stored in the _Planning Calendar Settings_ record:
+
+* In the *Target Frequency* section, the *Use target frequency* option
+is selected. To set up the _Target Frequency_ records, go to
+the xref:configuring-targeting-and-marketing-cycles[Configuring
+Targeting and Marketing Cycles] section.
+* The _Week_ view is set for the calendar grid.
+* The working hours are from 9:00 to 18:00 in the 24-hour time format.
+* xref:admin-guide/calendar-management/legacy-calendar-management/calendar-interface#h2__1884555900[For the *Hierarchy* tab],
+the __Account __and _Contact_ fields are specified.
+* The corresponding color is assigned to each of the available
+_Activity_ statuses.
+* There are icons, durations by default, and the assigned *Activity
+Report* page to view the detailed _Activity_ information
+for available _Activity_ record types.
+* The pre-configured tips for[.object]#Event (Activity)#,
+[.object]#Account#, and[.object]#Reference# objects are
+enabled by default.
+* There are pre-configured *Event Creation Windows* for available
+_Activity_ record types.
+* The **Visit **record type of the[.object]#Activity# object is
+set for the drag-n-drop _Activity_ creation.
+* Mass actions can be performed only in the _Day_ view.
+
+[[h2_1353136307]]
+=== Configuring Calendar

@@ -1,0 +1,30 @@
+= Create a new Filter for the Activities List
+
+By default, the __Today __and _This Month_ filters are available on
+the xref:activity-report-interface[Activity Report] page.
+
+
+
+To create a new filter:
+
+. Go to *Setup → Custom Code → CustomSettings →* click *Manage* next
+to *Activity Report Filters*.
+. Click *New* to create a new filter.
+. Fill in the details.
+* Enter *Name*
+* Enter *Filter Label*
+* Set the filter as *Active*
+* In the *Filter Query* field, enter the SOQL-filter
+* Optionally, specify the order in the filter picklist on the *Activity
+Report* page and select **Default Filter **if you want to use this
+filter by default
+[TIP] ==== Refer
+to https://developer.salesforce.com/docs/atlas.en-us.soql_sosl.meta/soql_sosl/sforce_api_calls_soql_select_dateformats.htm[a
+list of data formats and data literals] at Help Salesforce. ====
+. Click *Save*.
+image:58829399.png[]
+
+The setup is complete. The filter is available on the *Activity
+Report* pages.
+
+image:58829400.png[]

@@ -1,0 +1,254 @@
+= Planning Calendar Settings Field Reference
+
+The [.object]#Planning Calendar Settings# object is intended to
+store xref:pharma-calendar-settings[the Pharma Calendar parameters
+specified per each user division].
+
+'''''
+
+API name in Salesforce: CTPHARMA\__CalendarSettings__c
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Activate Quick Creation
+|[.apiobject]#CTPHARMA\__IsQuickCreate__c# |Checkbox
+a|
+Defines if the xref:admin-guide/calendar-management/pharma-calendar-settings#compact-form[Compact
+form] is used for the specified record type or not. Available values:
+
+* true (Compact form is used)
+* false
+
+Used in the _Record Settings_ record type.
+
+|Activity Subtitle
+|[.apiobject]#CTPHARMA\__ActivitySubtitle__c#
+|Text(255) |API name of the activity *Subtitle* field. Used
+in the _Record Settings_ record type.
+
+|Activity Title
+|[.apiobject]#CTPHARMA\__ActivityTitle__c# |Text(255)
+|API name of the activity *Title* field. Used in the _Record
+Settings_ record type.
+
+|All Day Field Mapping
+|[.apiobject]#CTPHARMA\__AllDayFieldMapping__c#
+|Text(255) |Not in use.
+
+|Child Object
+|[.apiobject]#CTPHARMA\__ChildObject__c# |Text(255)
+a|
+* API name of the child object, if used in the _Target Object_ record
+type.
+* API name of the lookup to the child object, if used in the _Activity
+Object_ record type.
+
+Default value is _Contact_.
+
+|Child Object Label
+|[.apiobject]#CTPHARMA\__ChildObjectLabel__c#
+|Text(255) a|
+Label of the child object.
+
+[.confluence-information-macro-icon .confluence-information-macro-information]#Used
+in the _Target Object_ record type.#
+
+|Color |CTPHARMA\__Color__c  |Long Text Area(32768) |The
+specific color for the _CT PHARMA Activity_ record with the
+corresponding record type (separated by a comma, without a blank
+space).
+[.confluence-information-macro-information]#Stored within
+the _Global_ and _Color_** **setting types.#
+
+|Default View |CTPHARMA\__DefaultView__c |Text(255) a|
+The default view of the calendar grid:
+
+* Day
+* Week (default)
+* Work week
+* Month
+* Work month
+
+Stored within the _Global_ setting type.
+
+|Direct Lookup
+|[.apiobject]#CTPHARMA\__DirectLookup__c# |Text(255)
+|API name of the field, which is used as a lookup between child and
+parent objects, if the
+xref:admin-guide/calendar-management/pharma-calendar-settings#show-hierarchy[Hierarchy] is enabled
+and *Connection Type* is set to _Direct_.
+[.confluence-information-macro-information]#Used in the _Target
+Object_ record type.#
+
+|Displayed records in monthly preview
+|[.apiobject]#CTPHARMA\__RecordsPreview__c# |Number(3,
+0) a|
+Number of records that are displayed as preview for 1 day in
+xref:admin-guide/calendar-management/pharma-calendar-settings#h3_951662406[Month] view. Default
+value is _3_.
+
+[.confluence-information-macro-information]#Used in the _General_ record
+type. #
+
+|Division |CTPHARMA\__Division__c |Picklist a|
+xref:add-and-set-up-divisions[The calendar division]. Available
+values by default:
+
+* Alpha;
+* Beta.
+
+Used in all record types.
+
+|Duration |CTPHARMA\__Duration__c  |Number(3,0)  a|
+The default duration in minutes for the CT PHARMA Activity. Available
+values are from _15_ to _780_.
+
+Default values for the activity record types:
+
+* Event: 120
+* Visit: 30
+* Time off: 480
+* Joined Visit: 160
+
+Used in the _Record Settings_ record type.
+
+|Enable Hierarchy View
+|[.apiobject]#CTPHARMA\__EnableHierarchyView__c#
+|Checkbox a|
+Defines if
+the https://help.customertimes.com/smart/project-ct-cpg/calendar-settings-ct-cpg-settings-panel/a/show-hierarchy[]xref:/articles/project-ct-pharma/calendar-settings-ct-cpg-settings-panel/a/show-hierarchy[]xref:admin-guide/calendar-management/pharma-calendar-settings#show-hierarchy[Hierarchy] is
+enabled or not. Available values:
+
+* true (Hierarchy is enabled)
+* false (Hierarchy is disabled, default value)
+
+Used in the _Target Object_ record type.
+
+|End Date Field Mapping
+|[.apiobject]#CTPHARMA\__EndDateFieldMapping__c#
+|Text(255) a|
+API name of the field, which corresponds to the *End Date* field.
+
+[.confluence-information-macro-information]#Used in the _Activity
+Object_ record type.#
+
+|Fields |CTPHARMA\__Fields__c |Long Text Area(131072) |API names
+of the fields used on the
+xref:admin-guide/calendar-management/pharma-calendar-settings#compact-form[Compact form].
+
+|Is Active |CTPHARMA\__IsActive__c |Checkbox |If selected, the
+corresponding
+xref:admin-guide/calendar-management/pharma-calendar-settings#h3_1454440899[Pop-Up] setting is
+active on the _Pop-up_ record type.
+
+|Json User Settings
+|[.apiobject]#CTPHARMA\__JsonUserSettings__c# |Long
+Text Area(131072) |Maintenance field, not editable.
+
+|Mass Drag and Drop Gap
+|[.apiobject]#CTPHARMA\__DragDropGap__c# |Number(3,
+0) |Defines the default interval between activities created by
+xref:admin-guide/calendar-management/calendar-interface-and-activities#h4_2089059603[drag-and-drop]
+of target objects.
+
+|Object |[.apiobject]#CTPHARMA\__Object__c#
+|Text(255) a|
+API name of the object, for which the setting must be applied. Used in
+record types:
+
+* _Activity Object_
+* _Record Settings_
+* _Drag and Drop_
+* _Pop-up_
+
+|Other Calendar Settings JSON
+|[.apiobject]#CTPHARMA\__OtherCalendarSettingsJSON__c#
+|Long Text Area(32768) |Maintenance field, not editable.
+
+|Parent Object
+|[.apiobject]#CTPHARMA\__ParentObject__c# |Text(255)
+a|
+* API name of the parent object, if used in the _Target Object_ record
+type.
+* API name of the lookup to the parent object, if used in the _Activity
+Object_ record type.
+
+Default value is _Account_.
+
+|Parent Object Label
+|[.apiobject]#CTPHARMA\__ParentObjectLabel__c#
+|Text(255) a|
+Label of the parent object.
+
+[.confluence-information-macro-information]#Used in the _Target Object_
+record type.#
+
+|Profile |[.apiobject]#CTPHARMA\__Profile__c#
+|Text(255) a|
+Developer name of the profile, for which the drag-and-drop setting must
+be applied. Value is empty if the setting is applied as the *Global
+rule*.
+
+[.confluence-information-macro-information]#Used in the _Drag and Drop_
+record type.#
+
+|Record Type |[.apiobject]#CTPHARMA\__RecordType__c#
+|Text(255) a|
+Developer name of the record type, for which the setting must be
+applied.
+
+[.confluence-information-macro-information]#Used in the _Drag and
+Drop_ and _Record Settings_ record types.#
+
+|Reference Object
+|[.apiobject]#CTPHARMA\__ReferenceObject__c#
+|Text(255) |API name of the object, which is used as a lookup between
+child and parent objects, if
+the xref:admin-guide/calendar-management/pharma-calendar-settings#show-hierarchy[Hierarchy] is
+enabled and *Connection Type* is set to _Junction_.
+[.confluence-information-macro-information]#Used in the _Target
+Object_ record type.#
+
+|Required |CTPHARMA\__Required__c |Long Text Area(32768) a|
+Stores the *Required* flag for a field on the *Compact form*.
+
+Used is the _Record Settings_ record type.
+
+|Start Date Field Mapping
+|[.apiobject]#CTPHARMA\__StartDateFieldMapping__c#
+|Text(255) a|
+API name of the field, which corresponds to the *Start Date* field.
+
+[.confluence-information-macro-information]#Used in the _Activity
+Object_ record type.#
+
+|Status Field Mapping
+|[.apiobject]#CTPHARMA\__StatusFieldMapping__c#
+|Text(255) a|
+API name of the field, which corresponds to the *Status* field.
+
+Used in the _Activity Object_ record type.
+
+|Subject Field Mapping
+|[.apiobject]#CTPHARMA\__SubjectFieldMapping__c#
+|Text(255) a|
+API name of the field, which corresponds to the *Subject* field.
+
+Used in the _Activity Object_ record type.
+
+|User Id |[.apiobject]#CTPHARMA\__UserId__c#
+|Lookup(User) |Maintenance field, not editable.
+
+|Value |CTPHARMA\__Value__c |Long Text Area(131072) a|
+Values of statuses from the *Status field mapping* field, which is used
+for xref:admin-guide/calendar-management/pharma-calendar-settings#h3__1948960707[mapping statuses
+with colors].
+
+[.confluence-information-macro-information]#Used in the _Activity
+Object_ record type.#
+
+|===

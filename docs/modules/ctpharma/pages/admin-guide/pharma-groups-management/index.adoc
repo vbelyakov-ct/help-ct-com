@@ -1,0 +1,83 @@
+= Pharma Groups Management
+
+[TIP] ==== These settings are optional. ====
+
+In this section:
+
+* Get familiar with the xref:pharma-group-field-reference[Pharma
+Group] and xref:pharma-group-member-field-reference[Pharma Group
+Member] objects;
+* Have a look at the difference between
+xref:admin-guide/pharma-groups-management/index#h3__1554410513[static Pharma groups]
+and xref:admin-guide/pharma-groups-management/index#h3__1007999912[dynamic Pharma
+groups];
+* Learn xref:admin-guide/pharma-groups-management/index#h2_514682594[the SOQL builder
+options] to create criteria for a group.
+
+
+
+xref:configuring-pharma-groups[Configure CT Pharma groups] for
+managing _Contacts_, _Accounts_, _CT Products,_ _Users_ or your custom
+object per single tasks or scheduled processes.
+
+[[h2_398360046]]
+=== Group Types
+
+The limit is equal to 500 thousand records per group. If there are more
+records, a warning is displayed.
+
+[[h3__1554410513]]
+==== Static Group
+
+A static group is a snapshot of records per specific time. It can be
+used to send ad hoc emails such as:
+
+* announcements;
+* invitations to the events;
+* special offers of products;
+* etc.
+
+[[h3__1007999912]]
+==== Dynamic Group
+
+Use dynamic groups to keep the lists of record per different objects up
+to date, e.g.:
+
+* to create a group of users for the onboarding process;
+* to create a group of clients who meet specific criteria, for example,
+were not visited during the last 2 weeks but have orders for more than $
+100 000;
+* to derive the list of the most popular products based on product sales
+or numeric distribution;
+* etc.
+
+[[h2_514682594]]
+=== SOQL Builder to Filter Pharma Group Records
+
+SOQL Builder is used for creating a SOQL query to filter records in a
+Pharma group.
+
+. On a high level, set up a query based on the parent object.
+. Add up to a maximum of two subqueries applied to children's records if
+needed.
+
+[.confluence-information-macro-warning]#We do not recommend to use
+different fields with the same names in the SOQL queries. The reason is
+that Dynamic SOQL in the Managed Package uses the default package field
+and ignores the field with the same name, but with the package prefix.#
+
+The SOQL builder buttons:
+
+* Click image:/resources/Storage/project-ct-cpg/CTCPGDOC/attachments/62558006/62558834.png[/resources/Storage/project-ct-cpg/CTCPGDOC/attachments/62558006/62558834,width=23] to
+add criteria based on the fields of the object's record;
+* Click image:/resources/Storage/project-ct-cpg/CTCPGDOC/attachments/62558006/62558835.png[/resources/Storage/project-ct-cpg/CTCPGDOC/attachments/62558006/62558835,width=100,height=28] to
+add criteria in the brackets;
+* Click image:/resources/Storage/project-ct-cpg/CTCPGDOC/attachments/62558006/62558838.png[/resources/Storage/project-ct-cpg/CTCPGDOC/attachments/62558006/62558838,width=115,height=29] to
+add criteria based on the fields of the child object record;
+* Click image:/resources/Storage/project-ct-cpg/CTCPGDOC/attachments/62558006/62558844.png[/resources/Storage/project-ct-cpg/CTCPGDOC/attachments/62558006/62558844,width=110,height=27]
+to launch validation of the query.
+
+image:Pharma-Group_Example.png[]
+
+[[h2_817911510]]
+=== Configuring Pharma Groups
