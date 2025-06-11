@@ -3,66 +3,51 @@
 The following fields are created on the standard
 [.object]#Account# object during the CT Pharma installation.
 
-In case of xref:add-and-set-up-divisions[creating new divisions],
-the DivisionName#Category__c field with the category
-picklist and
-the *DivisionName#TargetCheck__c * checkbox,
-where Name is the new division name, should be created.
+In case of xref:admin-guide/targeting-and-marketing-cycle/configuring-targeting-and-marketing-cycles/managing-targeting/add-and-set-up-divisions.adoc[creating new divisions], the [.apiobject]#Division**Name**Category\__c# field with the category
+picklist and the [.apiobject]#Division**Name**TargetCheck__c# checkbox, where *Name* is the new division name, should be created.
 
 [width="100%",cols="25%,25%,25%,25%",]
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Delivery Dates |CTPHARMA\__DeliveryDates__c |Text(255)
-|Available in the CT Pharma package v. 2.20–2.22 and used
-in https://help.customertimes.com/articles/project-order-module/ct-orders-solution[CT
-Orders].
+|Delivery Dates |[.apiobject]#CTPHARMA\__DeliveryDates__c# |Text(255)
+|Available in the CT Pharma package v. 2.20–2.22 and used in link:https://help.customertimes.com/articles/project-order-module/ct-orders-solution[CT Orders].
 
-|Division Alpha Category |CTPHARMA\__DivisionAlphaCategory__c
+|Division Alpha Category |[.apiobject]#CTPHARMA\__DivisionAlphaCategory__c#
 |Picklist a|
-The _Account_ category that used to assign the target frequency to the
-selected _Account_ record. Available values by default:
+The _Account_ category that used to assign the target frequency to the selected _Account_ record. Available values by default:
 
 * Category A
 * Category B
 * Category C
 
-[NOTE] ==== It is possible to create a new division. ====
+NOTE: It is possible to create a new division.
 
 |Division Alpha Target
-|CTPHARMA\__DivisionAlphaTargetCheck__c |Checkbox |The field is
-checked if the _Account_ record has been assigned to the specified
-category.
+|[.apiobject]#CTPHARMA\__DivisionAlphaTargetCheck__c# |Checkbox |The field is checked if the _Account_ record has been assigned to the specified category.
 
-|Division Beta Category |CTPHARMA\__DivisionBetaCategory__c
+|Division Beta Category |[.apiobject]#CTPHARMA\__DivisionBetaCategory__c#
 |Picklist a|
-The _Account_ category that used to assign the target frequency to the
-selected _Account_ record. Available values by default:
+The _Account_ category that used to assign the target frequency to the selected _Account_ record. Available values by default:
 
 * Category A
 * Category B
 * Category C
 
-|Division Beta Target |CTPHARMA\__DivisionBetaTargetCheck__c
-|Checkbox |The field is checked if the _Account_ record has been
-assigned to the specified category.
+|Division Beta Target |[.apiobject]#CTPHARMA\__DivisionBetaTargetCheck__c#
+|Checkbox |The field is checked if the _Account_ record has been assigned to the specified category.
 
-|External Id |CTPHARMA\__ExternalId__c |Text(255) (External ID)
-(Unique Case Sensitive) |The external identifier if the
-__Account __record has been synchronized from the external ERP system.
+|External Id |[.apiobject]#CTPHARMA\__ExternalId__c# |Text(255) (External ID)
+(Unique Case Sensitive) |The external identifier if the _Account_ record has been synchronized from the external ERP system.
 
-|Has Child Accounts |CTPHARMA\__HasChildAccounts__c
-|Checkbox |The field is checked if the _Account_ record has child
-_Account_ records. That _Account_ with child records will be displayed
-as a hierarchy on the *Hierarchy* tab of the *Calendar* tab.
+|Has Child Accounts |[.apiobject]#CTPHARMA\__HasChildAccounts__c#
+|Checkbox |The field is checked if the _Account_ record has child _Account_ records. That _Account_ with child records will be displayed as a hierarchy on the *Hierarchy* tab of the *Calendar* tab.
 
-|Is Auto Target Field Check? |CTPHARMA\__IsAutoTargetCheck__c
+|Is Auto Target Field Check? |[.apiobject]#CTPHARMA\__IsAutoTargetCheck__c#
 |Checkbox |
 
-|Is Target? |CTPHARMA\__IsTarget__c |Formula(Text) |The field
-is checked if the _Account_ record has been selected as a target.
+|Is Target? |[.apiobject]#CTPHARMA\__IsTarget__c# |Formula(Text) |The field is checked if the _Account_ record has been selected as a target.
 
-|Target User Ids |CTPHARMA\__TargetUserIds__c |Text Area(255)
-|Store the values from the CTPHARMA\__UniqUserNumber__c field of
-the _User_ record that targeted the _Account_ record.
+|Target User Ids |[.apiobject]#CTPHARMA\__TargetUserIds__c# |Text Area(255)
+|Store the values from the [.apiobject]#CTPHARMA\__UniqUserNumber__c# field of the _User_ record that targeted the _Account_ record.
 |===

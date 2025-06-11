@@ -1,53 +1,44 @@
 = Contact Field Reference
 
-The following fields are created on the standard
-[.object]#Contact# object during the CT Pharma installation.
+The following fields are created on the standard [.object]#Contact# object during the CT Pharma installation.
 
-In case of xref:add-and-set-up-divisions[creating new divisions],
-the DivisionName#Category__c field with the category
-picklist and the DivisionName#TargetCheck__c checkbox,
-where Name is the new division name, should be created.
+In case of xref:admin-guide/targeting-and-marketing-cycle/configuring-targeting-and-marketing-cycles/managing-targeting/add-and-set-up-divisions.adoc[creating new divisions], the [.apiobject]#Division**Name**Category__c# field with the category
+picklist and the [.apiobject]#Division**Name**TargetCheck__c# checkbox, where *Name* is the new division name, should be created.
 
 [width="100%",cols="25%,25%,25%,25%",]
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Division Alpha Category |CTPHARMA\__DivisionAlphaCategory__c
+|Division Alpha Category |[.apiobject]#CTPHARMA\__DivisionAlphaCategory__c#
 |Picklist a|
-The C__ontact__ category that used to assign the target frequency to the
-selected C__ontact__ record. Available values by default:
+The _Contact_ category that used to assign the target frequency to the selected _Contact_ record. Available values by default:
 
 * Category 1
 * Category 2
 * Category 3
 
-[NOTE] ==== It is possible to create a new division. ====
+NOTE: It is possible to create a new division.
 
 |Division Alpha Target
-|CTPHARMA\__DivisionAlphaTargetCheck__c |Checkbox |The field is
-checked if the C__ontact__ record has been assigned to the specified
-category.
+|[.apiobject]#CTPHARMA\__DivisionAlphaTargetCheck__c# |Checkbox |The field is checked if the _Contact_ record has been assigned to the specified category.
 
-|Division Beta Category |CTPHARMA\__DivisionBetaCategory__c
+|Division Beta Category |[.apiobject]#CTPHARMA\__DivisionBetaCategory__c#
 |Picklist a|
-The _Contact_ category that used to assign the target frequency to the
-selected C__ontact__ record. Available values by default:
+The _Contact_ category that used to assign the target frequency to the selected _Contact_ record. Available values by default:
 
 * Category 1
 * Category 2
 * Category 3
 
-|Division Beta Target |CTPHARMA\__DivisionBetaTargetCheck__c
-|Checkbox |The field is checked if the C__ontact__ record has been
-assigned to the specified category.
+|Division Beta Target |[.apiobject]#CTPHARMA\__DivisionBetaTargetCheck__c#
+|Checkbox |The field is checked if the _Contact_ record has been assigned to the specified category.
 
-|Is Auto Target Field Check? |CTPHARMA\__IsAutoTargetCheck__c
+|Is Auto Target Field Check? |[.apiobject]#CTPHARMA\__IsAutoTargetCheck__c#
 |Checkbox |
 
-|Is Target? |CTPHARMA\__IsTarget__c |Formula(Text) |The field
-is checked if the C__ontact__ record has been selected as a target.
+|Is Target? |[.apiobject]#CTPHARMA\__IsTarget__c# |Formula(Text) |The field is checked if the _Contact_ record has been selected as a target.
 
-|Target User Ids |CTPHARMA\__TargetUserIds__c |Text Area(255)
-|Store the values from the CTPHARMA\__UniqUserNumber__c field of
-the _User_ record that targeted the__ Contact__ record.
+|Target User Ids |[.apiobject]#CTPHARMA\__TargetUserIds__c# |Text Area(255)
+|Store the values from the [.apiobject]#CTPHARMA\__UniqUserNumber__c# field of
+the _User_ record that targeted the _Contact_ record.
 |===

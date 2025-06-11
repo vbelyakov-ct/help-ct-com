@@ -1,31 +1,25 @@
 = User Field Reference
 
-The following fields are created on the standard [.object]#User#
-object during the CT Pharma installation.
+The following fields are created on the standard [.object]#User#  object during the CT Pharma installation.
 
-In case of xref:add-and-set-up-divisions[creating new divisions],
-add the new division to the values of
-the CTPHARMA\__UserDivision__c picklist.
+In case of xref:admin-guide/targeting-and-marketing-cycle/configuring-targeting-and-marketing-cycles/managing-targeting/add-and-set-up-divisions.adoc[creating new divisions], add the new division to the values of the [.apiobject]#CTPHARMA\__UserDivision__c# picklist.
 
 [width="100%",cols="25%,25%,25%,25%",]
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Calendar Locale         |CTPHARMA\__CalendarLocale__c
-|Text(255)  |The selected locale of the _User_ record, for example,
-en.
+|Calendar Locale         |[.apiobject]#CTPHARMA\__CalendarLocale__c#
+|Text(255)  |The selected locale of the _User_ record, for example, [.apiobject]#en#.
 
 |User Division for Calendar
-|CTPHARMA\__CalendarUserDivision__c |Formula(Text)
+|[.apiobject]#CTPHARMA\__CalendarUserDivision__c# |Formula(Text)
 |In the CT Pharma Calendar,
-select xref:configure-settings-for-the-calendar[the assigned
-division].
+select xref:admin-guide/calendar-management/legacy-calendar-management/configure-settings-for-the-calendar/index.adoc[the assigned division].
 
-|Uniq User Number |CTPHARMA\__UniqUserNumber__c |Text(30)
+|Uniq User Number |[.apiobject]#CTPHARMA\__UniqUserNumber__c# |Text(30)
 |The last 5 symbols of the _User_ record ID.
 
-|User Division |CTPHARMA\__UserDivision__c |Picklist |The
-picklist with all assigned divisions for the _User_ record.
-[NOTE] ==== This field should be added to the page layout and
-populated with the required division. ====
+|User Division |[.apiobject]#CTPHARMA\__UserDivision__c# |Picklist a|The picklist with all assigned divisions for the _User_ record.
+
+NOTE: This field should be added to the page layout and populated with the required division.
 |===
