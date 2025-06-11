@@ -1,14 +1,4 @@
 = Salesforce Spring '21 Release
 
-In link:https://www.salesforceben.com/salesforce-spring-21-release-date-preview-information/[the new release], Salesforce is restricting the login ability for users belonging to standard external link:https://help.salesforce.com/articleView?id=users_license_types_communities.htm&type=5[Community profiles] or link:https://help.salesforce.com/articleView?id=users_license_types_customerportal.htm&type=5[Portal profiles].
-
-It means that users who are assigned to standard external profiles will not be able to log in into the customer’s Community or Portal unless the customer opted out or turned on the applicable preference in Communities or Site Settings prior to the release. ISV applications will not be accessible by such users.
-
-To avoid disruptions:
-
-. Clone the standard Community/Portal profile(s) currently in use for login, change object permissions to meet their business needs, and re-assign active users to the new profile.
-. If continued use of standard external profiles is required, go to *Setup → Release Updates →* activate https://releasenotes.docs.salesforce.com/en-us/winter21/release-notes/rn_networks_standard_profiles_update.htm?edition=&impact=[Allow Users to Use Standard External Profiles to Self-Register and Log Into Communities and Portals].
-. In the case of using standard external profiles in the test Apex classes or otherwise, update all components that refer to standard profiles if step 2 is not taken.
-
-The setup is complete.
+include::ROOT:partial$salesforce-spring21-update.adoc[]
 

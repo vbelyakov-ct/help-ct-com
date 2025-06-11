@@ -1,22 +1,18 @@
 = CT Pharma Package Components
 
-[[h1__366288330]]
-== 
-
 [[CTPharmaPackageComponents-CustomObjects]]
-=== Custom Objects
+== Custom Objects
 
-[cols=">,",]
+[cols="5%,15%"]
 |===
-|Classic |Setup → Build → Create → Objects
-|Lightning |Setup → Objects and Fields → Object Manager
+|*Classic* |Setup → Build → Create → Objects
+|*Lightning* |Setup → Objects and Fields → Object Manager
 |===
 
-
-
-[cols=",,,",]
+[]
 |===
 |360 Overview |Activities |Targeting |Coaching
+
 a|
 * Account
 * Contact
@@ -48,17 +44,16 @@ a|
 [[CTPharmaPackageComponents-VisualforcePages]]
 === Visualforce Pages
 
-[cols=">,<,",]
+[cols="5%,15%,15%"]
 |===
-|Classic |Setup → Build → Develop → |Visualforce Pages
-|Lightning |Setup → Custom Code → |
+|*Classic* |Setup → Build → Develop → |Visualforce Pages
+|*Lightning* |Setup → Custom Code → |
 |===
-
-
 
 [width="100%",cols="22%,24%,23%,16%,15%",]
 |===
 |360 Overview |Activities |Targeting |Coaching |General
+
 a|
 * ChangeRequest
 * ChangeRequestApprove
@@ -89,10 +84,10 @@ a|
 [[CTPharmaPackageComponents-CustomSettings]]
 === Custom Settings
 
-[cols=">,<,",]
+[cols="5%,15%,15%"]
 |===
-|Classic |Setup → Build → Develop → |Custom Settings
-|Lightning |Setup → Custom Code → |
+|*Classic* |Setup → Build → Develop → |Custom Settings
+|*Lightning* |Setup → Custom Code → |
 |===
 
 
@@ -100,6 +95,7 @@ a|
 [cols=",,,",]
 |===
 |360 Overview |Activities |Targeting |General
+
 a|
 * Change Request Settings
 
@@ -129,48 +125,43 @@ a|
 [[CTPharmaPackageComponents-CalendarTabSettings]]
 === Calendar Tab Settings
 
-[cols=">,<,",]
+[cols="5%,15%,15%"]
 |===
-|Classic |Setup → Build → Develop → |Custom Settings → Calendar Tab
-Settings → Manage
+|*Classic* |Setup → Build → Develop →
+.2+|Custom Settings → Calendar Tab Settings → Manage
 
-|Lightning |Setup → Custom Code → |
+|*Lightning* |Setup → Custom Code →
 |===
 
 image:58834685.png[]
 
 [[CTPharmaPackageComponents-TriggerSettings]]
-=== Trigger Settings
+== Trigger Settings
 
-[cols=">,>,",]
+[cols="5%,15%,15%"]
 |===
-|Classic |Setup → Build → Develop → |Custom Settings → Trigger Settings
+|*Classic* |Setup → Build → Develop → .2+|Custom Settings → Trigger Settings
 → Manage
 
-|Lightning a|
+|*Lightning* a|
 Setup → Custom Code →
-
-|
 |===
-
-
 
 image:58834684.png[]
 
 [[CTPharmaPackageComponents-ApexTriggers]]
-=== Apex Triggers
+== Apex Triggers
 
-[cols=">,>,",]
+[cols="5%,15%,15%"]
 |===
-|Classic |Setup → Build → Develop → |Apex Triggers
-|Lightning |Setup → Custom Code → |
+|*Classic* |Setup → Build → Develop → .2+|Apex Triggers
+|*Lightning* |Setup → Custom Code →
 |===
-
-
 
 [width="100%",cols="39%,18%,27%,16%",]
 |===
 |360 Overview |Activities |Targeting |General
+
 a|
 * AccountProcess
 * ContactProcess
@@ -189,13 +180,13 @@ a|
 
 |===
 
-[[CTPharmaPackageComponents-ApexСlasses]]
+[[CTPharmaPackageComponents-ApexClasses]]
 === Apex Сlasses
 
-[cols=">,>,",]
+[cols="5%,15%,15%"]
 |===
-|Classic |Setup → Build → Develop → |Apex Classes
-|Lightning |Setup → Custom Code → |
+|*Classic* |Setup → Build → Develop → .2+|Apex Classes
+|*Lightning* |Setup → Custom Code →
 |===
 
 
@@ -203,6 +194,7 @@ a|
 [width="99%",cols="23%,19%,26%,21%,11%",]
 |===
 |360 Overview |Activities |Targeting |Coaching |General
+
 a|
 * AccountProcessHandler
 * ContactProcessHandler

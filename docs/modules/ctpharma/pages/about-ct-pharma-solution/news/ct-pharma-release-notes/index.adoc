@@ -1,380 +1,309 @@
 = CT Pharma Release Notes
-
-Here you could find a list of the versions of the managed CT Pharma
-package with release notes.
-
 :toc: :toclevels: 2
 
+Here you could find a list of the versions of the managed CT Pharma package with release notes.
+
 [[h2_1671420549]]
-=== CT Pharma Version 2.57 Spring '25
+== CT Pharma Version 2.57 Spring '25
 
 [[h3__834098121]]
-==== New Features and Improvements
+=== New Features and Improvements
 
 * Updating old API versions to 46.
 
 [[h3_307313719]]
-==== Fixes
+=== Fixes
 
-* _An error occurred while being fetched: unexpected token:_ error when
-opening Calendar.
-* Incorrect display of the
-xref:manage-activities-on-the-employees-calendar-tab[Employees
-Calendar] tab in the legacy Calendar.
+* _An error occurred while being fetched: unexpected token:_ error when opening Calendar.
+* Incorrect display of the xref:admin-guide/calendar-management/legacy-calendar-management/manage-activities-on-the-employees-calendar-tab.adoc[Employees Calendar] tab in the legacy Calendar.
 
 [[h2_240713834]]
-=== CT Pharma Version 2.55 Winter '24
+== CT Pharma Version 2.55 Winter '24
 
 [[h3_146315609]]
-==== New Features and Improvements
+=== New Features and Improvements
 
-* You can now use formula fields when defining *Account Target Category*
-or *Contact Target
-Category* in xref:setting-up-a-division-target-frequency[Division
-Target Frequency Settings].
+* You can now use formula fields when defining *Account Target Category* or *Contact Target Category* in xref:admin-guide/targeting-and-marketing-cycle/configuring-targeting-and-marketing-cycles/managing-targeting/setting-up-a-division-target-frequency.adoc[Division Target Frequency Settings].
 
 [[h2__308010787]]
-=== CT Pharma Version 2.52 Spring '24
+== CT Pharma Version 2.52 Spring '24
 
 [[h3__2112656071]]
-==== New Features and Improvements
+=== New Features and Improvements
 
-New xref:calendar-management-new[Calendar] with improved usability
-and interface. Now you can
-xref:calendar-interface-and-activities[manage
-activities] and xref:pharma-calendar-settings[configure] the
-calendar in a faster and more convenient way.
+New xref:admin-guide/calendar-management/index.adoc[Calendar] with improved usability and interface. Now you can xref:admin-guide/calendar-management/calendar-interface-and-activities.adoc[manage activities] and xref:admin-guide/calendar-management/pharma-calendar-settings.adoc[configure] the calendar in a faster and more convenient way.
 
 [[h2_1160356590]]
-=== CT Pharma Version 2.46.2 Patch
+== CT Pharma Version 2.46.2 Patch
 
 [[h3__1617722775]]
-==== Fixes
+=== Fixes
 
 Fixed displaying date in calendar:
 
-* ​Date is now displayed as _Day of the week_ {plus} _date_, without
-month. For example, _Mo 5_ instead of _06/05_.
-* Days of the week are displayed in the language specified in the
-xref:user-field-reference[Calendar Locale] field.
+* Date is now displayed as _Day of the week_ {plus} _date_, without month. For example, _Mo 5_ instead of _06/05_.
+* Days of the week are displayed in the language specified in the xref:admin-guide/application-settings-management/user-field-reference.adoc[Calendar Locale] field.
 
 [[h2__779436412]]
-=== CT Pharma Solution Summer '22 (2.46)
+== CT Pharma Solution Summer '22 (2.46)
 
-ifdef::hidden[] Download the CT Pharma package
-https://login.salesforce.com/packaging/installPackage.apexp?p0=04t4W0000034Lhl[here].
+// Download the CT Pharma package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t4W0000034Lhl[here].
 
 [[h3__285208193]]
-==== Fixes
+=== Fixes
 
 * Fixed the visit creation in case of interruption.
-* Fixed an _Account_ or _Contact_ selection in the pop-up while creating
-a visit with the drag-and-drop.
-* Fixed the Account search while creating a visit with the
-drag-and-drop.
-* Fixed the ability to add reference fields to the *Event Creation
-Pop-up* window.
+* Fixed an _Account_ or _Contact_ selection in the pop-up while creating a visit with the drag-and-drop.
+* Fixed the Account search while creating a visit with the drag-and-drop.
+* Fixed the ability to add reference fields to the *Event Creation Pop-up* window.
 * Fixed frozen screen while creating a visit in case of interruption.
-* Fixed the *Event Creation Pop-up* window position due to the inability
-to fill in the reference field.
+* Fixed the *Event Creation Pop-up* window position due to the inability to fill in the reference field.
 
 [[h2_297672811]]
-=== CT Pharma Solution Spring '22 (2.45)
+== CT Pharma Solution Spring '22 (2.45)
 
-ifdef::hidden[] Download the CT Pharma package
-https://login.salesforce.com/packaging/installPackage.apexp?p0=04t4W0000034Lg9[here].
+// Download the CT Pharma package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t4W0000034Lg9[here].
 
 [[h3__1784863877]]
-==== Fixes
+=== Fixes
 
-Fixed the display of list views with employees on the *Employees
-Calendar* tab.
-
-[[h2_297672817]]
-=== CT Pharma Solution Spring '22 (2.44)
-
-ifdef::hidden[] Download the CT Pharma package
-https://login.salesforce.com/packaging/installPackage.apexp?p0=04t4W0000034Lfa[here].
-
-[[h3_1642576463]]
-==== New Features and Improvements
-
-Add logic to support the Product Availability feature in case of
-integration with the CT Orders solution.
+Fixed the display of list views with employees on the *Employees Calendar* tab.
 
 [[h2_297672817]]
-=== CT Pharma Solution Spring '22 (2.43)
+== CT Pharma Solution Spring '22 (2.44)
 
-ifdef::hidden[] Download the CT Pharma package
-https://login.salesforce.com/packaging/installPackage.apexp?p0=04t4W0000034KwI[here].
+// Download the CT Pharma package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t4W0000034Lfa[here].
 
 [[h3_1642576463]]
-==== New Features and Improvements
+=== New Features and Improvements
 
-* Add logic to support the *Product Availability* feature in case of
-integration with the CT Orders solution.
-* Add a new field on the __CT Product __object to support new
-functionality in *Freebie Management* in case of integration with the CT
-Orders solution.
+Add logic to support the Product Availability feature in case of integration with the CT Orders solution.
+
+== CT Pharma Solution Spring '22 (2.43)
+
+// Download the CT Pharma package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t4W0000034KwI[here].
+
+=== New Features and Improvements
+
+* Add logic to support the *Product Availability* feature in case of integration with the CT Orders solution.
+* Add a new field on the [.object]#CT Product# object to support new functionality in *Freebie Management* in case of integration with the CT Orders solution.
 
 [[h2_1798279454]]
-=== CT Pharma Solution Autumn '21 (2.42)
+== CT Pharma Solution Autumn '21 (2.42)
 
-ifdef::hidden[] Download the CT Pharma package
-https://login.salesforce.com/packaging/installPackage.apexp?p0=04t4W0000034KjS[here].
+// Download the CT Pharma package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t4W0000034KjS[here].
 
-[[h3_1642576463]]
-==== New Features and Improvements
+=== New Features and Improvements
 
 * Add the ability to block the logic of creating related _Activities_.
 * Ability to disable creating _Activity_ records.
 
 [[h2__779402464]]
-=== CT Pharma Solution Summer '21 (2.41)
+== CT Pharma Solution Summer '21 (2.41)
 
-ifdef::hidden[] Download the CT Pharma package
-https://login.salesforce.com/packaging/installPackage.apexp?p0=04t4W0000034KdT[here].
+// Download the CT Pharma package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t4W0000034KdT[here].
 
 [[h3__649865195]]
-==== Fixes
+=== Fixes
 
-* Fixed the display of the *Employees Calendar* tab for the
-administrator.
+* Fixed the display of the *Employees Calendar* tab for the administrator.
 
 [[h2__779402463]]
-=== CT Pharma Solution Summer '21 (2.40)
+== CT Pharma Solution Summer '21 (2.40)
 
-ifdef::hidden[] Download the CT Pharma package
-https://login.salesforce.com/?ec=302&startURL=%2Fpackaging%2FinstallPackage.apexp%3Fp0%3D04t4W00000308R3[here].
+// Download the CT Pharma package https://login.salesforce.com/?ec=302&startURL=%2Fpackaging%2FinstallPackage.apexp%3Fp0%3D04t4W00000308R3[here].
 
 [[h3__64899989]]
-==== New Features and Improvements
+=== New Features and Improvements
 
 * Support several different objects in the Calendar.
 
 [[h3_21945923]]
-==== Fixes
+=== Fixes
 
-* Fixed the display of the *Employees Calendar* tab for the
-administrator.
+* Fixed the display of the *Employees Calendar* tab for the administrator.
 
 [[h2__441324657]]
-=== CT Pharma Solution Summer '21 (2.39)
+== CT Pharma Solution Summer '21 (2.39)
 
-ifdef::hidden[] Download the CT Pharma
-package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t4W00000308Qy[here].
+// Download the CT Pharma package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t4W00000308Qy[here].
 
 [[h3__2081664352]]
-==== New Features and Improvements
+=== New Features and Improvements
 
-* CG Cloud: Support the standard Salesforce _Product_ and _Retail Store_
-objects in dynamic groups.
+* CG Cloud: Support the standard Salesforce [.object]#Product# and [.object]#Retail Store# objects in dynamic groups.
 
 [[h2_2125912729]]
-=== CT Pharma Solution Spring '21 (2.37)
+== CT Pharma Solution Spring '21 (2.37)
 
-ifdef::hidden[] Download the CT Pharma
-package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t4W000002vyeh[here].
+// Download the CT Pharma package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t4W000002vyeh[here].
 
 [[h3__101851711]]
-==== Fixes
+=== Fixes
 
-* Fixed the display of the list view for custom fields of the _Activity_
-object.
+* Fixed the display of the list view for custom fields of the [.object]#Activity# object.
 
 [[h2_573558302]]
-=== CT Pharma Solution Winter '21 (2.36)
+== CT Pharma Solution Winter '21 (2.36)
 
-ifdef::hidden[] Download the CT Pharma
-package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t4W000002vyVo[here].
+// Download the CT Pharma package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t4W000002vyVo[here].
 
 [[h3_338582951]]
-==== New Features and Improvements
+=== New Features and Improvements
 
-* The ability to reassign the *Contact* field with the master-detail
-relationship on the _Reference_ object:
+* The ability to reassign the *Contact* field with the master-detail relationship on the [.object]#Reference# object:
 ** if a user has access to the corresponding custom permission;
-** the reparentable master-detail attribute is selected on the *Contact*
-field.
+** the reparentable master-detail attribute is selected on the *Contact* field.
 
 [[h3_2101881790]]
-==== Fixes
+=== Fixes
 
 * Fixed the query in the old version of the Calendar.
 
 [[h2_1221055321]]
-=== CT Pharma Solution Winter '21 (2.35)
+== CT Pharma Solution Winter '21 (2.35)
 
-Download the CT Pharma
-package https://appexchange.salesforce.com/appxListingDetail?listingId=a0N3000000B4XqyEAF[from
+// Download the CT Pharma package https://appexchange.salesforce.com/appxListingDetail?listingId=a0N3000000B4XqyEAF[from
 the App Exchange].
 
 [[h3__1910261704]]
-==== Fixes
+=== Fixes
 
 * Fixed CheckMarx notes for Security Review passing.
 
 [[h2_1617448608]]
-=== CT Pharma Solution Winter '21 (2.34)
+== CT Pharma Solution Winter '21 (2.34)
 
-ifdef::hidden[] Download the CT Pharma
-package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t4W000002vxkG[here].
+// Download the CT Pharma package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t4W000002vxkG[here].
 
 [[h3__1504097203]]
-==== Fixes
+=== Fixes
 
-* Fixed the URL address of the linked *Activity* record while opening in
-the current Joint Visit Report page.
+* Fixed the URL address of the linked _Activity_ record while opening in the current Joint Visit Report page.
 
 [[h2_573558307]]
-=== CT Pharma Solution Winter '21 (2.33)
+== CT Pharma Solution Winter '21 (2.33)
 
-ifdef::hidden[] Download the CT Pharma
-package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t4W000002vxDM[here].
+// Download the CT Pharma package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t4W000002vxDM[here].
 
 [[h3_1329800525]]
-==== New Features and Improvements
+=== New Features and Improvements
 
-* For integration with
-the _https://help.customertimes.com/articles/project-order-module/ct-orders-solution[CT
-Orders]_ package:
-** Add validation for the value in the *Units In
-Package* field of _Pharma Product_ object according to
-the *UnitsCountStep* field of _Promotion_, _Catalog_, and _Price Book
-Line Item_ objects.
+* For integration with the _https://help.customertimes.com/articles/project-order-module/ct-orders-solution[CT Orders]_ package:
+** Add validation for the value in the *Units In Package* field of [.object]#Pharma Product# object according to the *UnitsCountStep* field of [.object]#Promotion#, [.object]#Catalog#, and [.object]#Price Book Line Item# objects.
 
 [[h3_2035158707]]
-==== Fixes
+=== Fixes
 
 * Code refactoring of the Activity Process trigger.
-* Fixed search for the field with the *Lookup Relationship* type in
-the _CT Pharma Activity_ Creation.
+* Fixed search for the field with the _Lookup Relationship_ type in the _CT Pharma Activity_ Creation.
 * Fixed issues with the record targeting.
 
 [[h2__2006092865]]
-=== CT Pharma Solution Autumn '20 (2.32)
+== CT Pharma Solution Autumn '20 (2.32)
 
-ifdef::hidden[] Download the CT Pharma
-package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t4W000002vkPb[here].
+// Download the CT Pharma package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t4W000002vkPb[here].
 
 [[h3_1619229522]]
-==== Fixes
+=== Fixes
 
 * Fixed issues with the _Mass Action_ functionality.
 * Fixed incorrect field validation in the _Activity_ creation.
-* Fixed the filling out of the field with the *Lookup Relationship* type
-in the__ Activity__ creation.
+* Fixed the filling out of the field with the _Lookup Relationship_ type in the__ Activity__ creation.
 
 [[h2__1602808338]]
-=== CT Pharma Solution Autumn '20 (2.31)
+== CT Pharma Solution Autumn '20 (2.31)
 
-ifdef::hidden[] Download the CT Pharma
-package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t4W000002vcFS[here].
+// Download the CT Pharma package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t4W000002vcFS[here].
 
 [[h3__322948445]]
-==== New Features and Improvements
+=== New Features and Improvements
 
 * Internal Package Update:
 ** Copyrights to code are added.
 ** Update CI configuration.
 
 [[h3__278342408]]
-==== Fixes
+=== Fixes
 
 * Fixed issues with the _Mass Action_ functionality.
 
 [[h2_1126075017]]
-=== CT Pharma Solution Autumn '20 (2.30)
+== CT Pharma Solution Autumn '20 (2.30)
 
-ifdef::hidden[] Download the CT Pharma
-package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t4W000001gUmT[here].
+// Download the CT Pharma package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t4W000001gUmT[here].
 
 [[h3__724315907]]
-==== New Features and Improvements
+=== New Features and Improvements
 
-* New Feature: _Pharma Groups_ are intended to store records in
-alignment with SOQL filters applied to objects and their child objects.
+* New Feature: _Pharma Groups_ are intended to store records in alignment with SOQL filters applied to objects and their child objects.
 
 [[h3_690578655]]
-==== Fixes
+=== Fixes
 
 * Fixed display of the open by a right-click Context menu with actions.
-* Fixed label display in the calendar _Settings_ tab.
+* Fixed label display in the calendar *Settings* tab.
 * Fixed issues with the _Mass Action_ functionality.
 
 [[h2__1959038731]]
-=== CT Pharma Solution Autumn '20 (2.29)
+== CT Pharma Solution Autumn '20 (2.29)
 
-ifdef::hidden[] Download the CT Pharma
-package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t4W000001dbxo[here].
+// Download the CT Pharma package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t4W000001dbxo[here].
 
 [[h3__928444768]]
-==== Fixes
+=== Fixes
 
-* Fixed the selection of available record types per profile on the
-calendar _Settings_ tab.
+* Fixed the selection of available record types per profile on the calendar *Settings* tab.
 
 [[h2_1796009731]]
-=== CT Pharma Solution Summer '20 (2.28)
+== CT Pharma Solution Summer '20 (2.28)
 
-ifdef::hidden[] Download the CT Pharma
-package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t4W000000xA7v[here].
+// Download the CT Pharma package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t4W000000xA7v[here].
 
 [[h3_939553841]]
-==== Fixes
+=== Fixes
 
-* The calendar _Table_ tab:
+* The calendar *Table* tab:
 ** Fixed display of the fields in the selected list view.
-* Fixed the filling out of the required fields in the _CT
-Pharma Activity Creation_ pop-up.
+* Fixed the filling out of the required fields in the _CT Pharma Activity Creation_ pop-up.
 
 [[h2__1378612382]]
-=== CT Pharma Solution Summer '20 (2.27)
+== CT Pharma Solution Summer '20 (2.27)
 
-ifdef::hidden[] Download the CT Pharma
-package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t4W000000xA7g[here].
+// Download the CT Pharma package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t4W000000xA7g[here].
 
 [[h3_1688877169]]
-==== Fixes
+=== Fixes
 
-* The calendar _Hierarchy_ tab:
-** Fixed the display of the fields with the *Date* or *Datetime* data
-type.
+* The calendar *Hierarchy* tab:
+** Fixed the display of the fields with the *Date* or *Datetime* data type.
 
 [[h2_1350270973]]
-=== CT Pharma Solution Summer '20 (2.26)
+== CT Pharma Solution Summer '20 (2.26)
 
-ifdef::hidden[] Download the CT Pharma package
-https://login.salesforce.com/packaging/installPackage.apexp?p0=04t4W000000xA7b[here].
+// Download the CT Pharma package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t4W000000xA7b[here].
 
 [[h3_1577151141]]
-==== Fixes
+=== Fixes
 
-* Fixed incorrect creation of duplicate records via the _Next Activity_
-functionality.
-* The calendar _Hierarchy_ tab:
+* Fixed incorrect creation of duplicate records via the _Next Activity_ functionality.
+* The calendar *Hierarchy* tab:
 ** Fixed search within the _Account_ hierarchy.
-** Fixed the display of the fields with the *Date* or *Datetime* data
-type.
+** Fixed the display of the fields with the *Date* or *Datetime* data type.
 * Fixed issues with the record targeting.
 
 [[h2_1371327460]]
-=== CT Pharma Solution Summer '20
+== CT Pharma Solution Summer '20
 
-ifdef::hidden[] Download the CT Pharma
-package https://appexchange.salesforce.com/appxListingDetail?listingId=a0N3000000B4XqyEAF[from
-the App Exchange].
+// Download the CT Pharma package https://appexchange.salesforce.com/appxListingDetail?listingId=a0N3000000B4XqyEAF[from the App Exchange].
 
 [[h3_1880520961]]
-==== Fixes
+=== Fixes
 
-* Fixed issues after Security Review: missing checks for fields and
-object access are added.
-* Fixed display of list views on the _Calendar_ tab.
+* Fixed issues after Security Review: missing checks for fields and object access are added.
+* Fixed display of list views on the *Calendar* tab.
 
 [[h2_1618107204]]
-=== CT Pharma Solution Spring '19
+== CT Pharma Solution Spring '19
 
-Download
-the xref:../Storage/project-ct-pharma/CTPHARMDOC/attachments/58827070/58827071.pdf[CT
-Pharma Spring '19 Release Notes].
+Download the xref:../Storage/project-ct-pharma/CTPHARMDOC/attachments/58827070/58827071.pdf[CT Pharma Spring '19 Release Notes].
