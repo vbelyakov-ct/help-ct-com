@@ -5,27 +5,22 @@ By default, the following field values are copied via Activity Sync:
 
 [cols="^,^,^",]
 |===
-|*Standard Calendar* | |*CT Pharma Calendar*
+2+|*Standard Calendar*  |*CT Pharma Calendar*
+
 |*Field Label* |*Field Label* |*Field Name*
-|Event |Task |CTPHARMA\__Activity__c
-|StartDateTime |- |CTPHARMA\__StartDate__c
-|EndDateTime |- |CTPHARMA\__EndDate__c
-|WhoId |WhoId |CTPHARMA\__ContactId__c
-|WhatId |WhatId |CTPHARMA\__AccountId__c
-|OwnerId |OwnerId |OwnerId
+
+|[.apiobject]#Event# |[.apiobject]#Task# |[.apiobject]#CTPHARMA\__Activity__c#
+|[.apiobject]#StartDateTime# |- |[.apiobject]#CTPHARMA\__StartDate__c#
+|[.apiobject]#EndDateTime# |- |[.apiobject]#CTPHARMA\__EndDate__c#
+|[.apiobject]#WhoId# |[.apiobject]#WhoId# |[.apiobject]#CTPHARMA\__ContactId__c#
+|[.apiobject]#WhatId# |[.apiobject]#WhatId# |[.apiobject]#CTPHARMA\__AccountId__c#
+|[.apiobject]#OwnerId# |[.apiobject]#OwnerId# |[.apiobject]#OwnerId#
 |===
 
 
-When the activity record is generated, the relationship
-field [.apiobject]#CTPHARMA\__ActivityId__c# on the
-standard[.object]#Activity# object record is filled-out. Due to
-this relationship, the changes are synchronized.
+When the activity record is generated, the relationship field [.apiobject]#CTPHARMA\__ActivityId__c# on the standard [.object]#Activity# object record is filled-out. Due to this relationship, the changes are synchronized.
 
-
-
-Only the field changes from the table above will be taken into Account
-during synchronization, if:
+Only the field changes from the table above will be taken into Account during synchronization, if:
 
 * the standard and custom activity records are already synced;
-* the type of record on the custom Activity or the value of the *Type*
-field on the _Task_/_Event_ record is changed.
+* the type of record on the custom Activity or the value of the *Type* field on the _Task_/_Event_ record is changed.

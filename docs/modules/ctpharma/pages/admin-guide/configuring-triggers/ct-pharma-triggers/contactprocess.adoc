@@ -27,14 +27,14 @@ After Insert [ai]
 
 |` manageReference ` |` manageRef ` |A new
 [.apiobject]#CTPHARMA\__Reference__c# object is created
-for associating[.object]#Contact# and
+for associating [.object]#Contact# and
 [.object]#Account# objects.
 
 |[.apiobject]#After Update[au]# |` manageReference `
 |` manageRef ` |When changing the
 [.apiobject]#CTPHARMA\__AccountId__c# field, a new
 [.apiobject]#CTPHARMA\__Reference__c# object associating
-[.object]#Contact# and[.object]#Account# objects is
+[.object]#Contact# and [.object]#Account# objects is
 created. In the[.apiobject]#CTPHARMA\__Reference__c#
 objects where the data is stored, the value of the
 [.apiobject]#CTPHARMA\__IsPrimary__c# field changes from

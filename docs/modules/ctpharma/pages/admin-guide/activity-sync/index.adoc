@@ -1,56 +1,42 @@
 = Activity Sync Management
 
 [[ActivitySync-Purpose]]
-=== Purpose
+== Purpose
 
-Activity Sync is designed to merge the standard Salesforce Tasks and
-Events with the custom[.object]#Activity# object records to get
-better overview of both your private and CT Pharma Calendars.
+Activity Sync is designed to merge the standard Salesforce Tasks and Events with the custom [.object]#Activity# object records to get better overview of both your private and CT Pharma Calendars.
 
 [[ActivitySync-MainTerms]]
-=== Main Terms
+== Main Terms
 
 * *Activity Sync*
-A Custom Metadata Types setting that is intended to manage the
-synchronization of your private and work activities between your
-different calendars.
++
+A Custom Metadata Types setting that is intended to manage the synchronization of your private and work activities between your different calendars.
 * *Sync Types*
++
 The one-way or two-way direction of activities creation and update.
 * *Standard and Custom Object Record Criteria*
-Additional query criteria should be provided to synchronize standard and
-custom activities.
-* **Fields to Update and Field Values
-**Enumeration of fields to update and fields which values will be copied
-into the fields for updating.
++
+Additional query criteria should be provided to synchronize standard and custom activities.
+* *Fields to Update and Field Values*
++
+Enumeration of fields to update and fields which values will be copied into the fields for updating.
 
 [[ActivitySync-ProcessDescription]]
-=== Process Description
+== Process Description
 
 . Set up Activity Sync in the Custom Metadata Types.
-. Set up the Type field in the [.object]#Task# and
-[.object]#Event# standard objects.
-. Create a Salesforce Task or Event and check the creation on the CT
-Pharma Calendar.
-. Update the custom Activity and check its update on a standard SF
-Calendar.
-. Create a custom activity and check the creation on the standard
-Salesforce calendar.
+. Set up the Type field in the [.object]#Task# and [.object]#Event# standard objects.
+. Create a Salesforce Task or Event and check the creation on the CT Pharma Calendar.
+. Update the custom Activity and check its update on a standard SF Calendar.
+. Create a custom activity and check the creation on the standard Salesforce calendar.
 . Update activity and check its update on the CT Pharma Calendar.
 . Set up Mailbox integration.
 
 [[ActivitySync-SetupSettings]]
-=== Setup Settings
+== Setup Settings
 
-. Check xref:default-configuration-as[the default configuration].
-. xref:admin-guide/activity-sync/configuring-activity-sync#ConfiguringActivitySync-CreateActivitySync[Create
-Activity Sync]. Fill in
-the xref:admin-guide/activity-sync/configuring-activity-sync#ConfiguringActivitySync-SetUpTaskandEvent[*Type*
-field of the [.object]#Event# or
-[.object]#Task#] standard
-object. Use xref:admin-guide/activity-sync/configuring-activity-sync#ConfiguringActivitySync-One-waySynchronization[one-way ]or xref:admin-guide/activity-sync/configuring-activity-sync#ConfiguringActivitySync-BothWaysSynchronization[both-way] synchronization
-type.
+. Check xref:./default-configuration-as.adoc[the default configuration].
+. xref:admin-guide/activity-sync/configuring-activity-sync.adoc#ConfiguringActivitySync-CreateActivitySync[Create Activity Sync]. Fill in the xref:admin-guide/activity-sync/configuring-activity-sync.adoc#ConfiguringActivitySync-SetUpTaskandEvent[*Type* field of the [.object]#Event# or [.object]#Task#] standard object. Use xref:admin-guide/activity-sync/configuring-activity-sync.adoc#ConfiguringActivitySync-One-waySynchronization[one-way] or xref:admin-guide/activity-sync/configuring-activity-sync.adoc#ConfiguringActivitySync-BothWaysSynchronization[both-way] synchronization type.
 . Add criteria to sync records.
-. Map additional fields which are required to update within
-synchronization.
-. Set up Outlook and Gmail integration with the help of standard
-Salesforce functionality.
+. Map additional fields which are required to update within synchronization.
+. Set up Outlook and Gmail integration with the help of standard Salesforce functionality.

@@ -1,65 +1,42 @@
 = Configuring Activity Sync
+:toc:
 
 Use Activity Sync to:
 
-* Automatically synchronize the standard and custom
-[.object]#Activity# objects' records.
-** Generate a record of the standard[.object]#Activity#
-object when creating entries for the custom Activity object in one-way
-or both-way synchronization.
-** If you have a few Activity Sync settings, make sure that active
-settings are not crossed with each other. It can cause failures in
-creating a record according to these settings.
+* Automatically synchronize the standard and custom [.object]#Activity# objects' records.
+** Generate a record of the standard [.object]#Activity# object when creating entries for the custom Activity object in one-way or both-way synchronization.
+** If you have a few Activity Sync settings, make sure that active settings are not crossed with each other. It can cause failures in creating a record according to these settings.
 * Synchronize changes in the record.
-* Map configuration of additional fields that are required to update
-when synchronizing.
-** Use *Fields to update* and *Fields values* for mapping additional
-fields.
-** Some field values synchronize automatically, and there is no need to
-add them to a new Activity Sync record. Check these field values here.
-
-
+* Map configuration of additional fields that are required to update when synchronizing.
+** Use *Fields to update* and *Fields values* for mapping additional fields.
+** Some field values synchronize automatically, and there is no need to add them to a new Activity Sync record. Check these field values here.
 
 Read the article to set up standard objects and create new Activity
 Sync:
 
-:toc: :toclevels: 3
+[[ConfiguringActivitySync-SetUpTaskandEvent]]
+== Set Up Task and Event
 
-[[h2__1525502095]]
-=== Set Up Task and Event
+For the correct operation of Activity Sync, the *Type* field should be specified on the [.object]#Event# and [.object]#Task# objects as well as the _EventProcess_ and _TaskProcess_ settings in Trigger Settings.
 
-For the correct operation of Activity Sync, the *Type* field should be
-specified on the [.object]#Event# and[.object]#Task#
-objects as well as the *EventProcess* and *TaskProcess* settings in
-Trigger Settings.
-
-[NOTE] ==== If you create a new Activity Sync setting with
-the *Standard* or** Custom object record criteria**, the *Type* field
-will not affect Activity Sync.
+[NOTE]
+====
+If you create a new Activity Sync setting with the *Standard* or *Custom object record criteria*, the *Type* field will not affect Activity Sync.
 ====
 
-By default, the *Type* field is absent on the page layout of the
-standard[.object]#Event# and[.object]#Task# objects.
-Add this field to the objects.
+By default, the *Type* field is absent on the page layout of the standard [.object]#Event# and [.object]#Task# objects. Add this field to the objects.
 
 . Configure page layouts of the standard *Event* and *Task* fields.
-Go to *Setup* → *Object Manager* → select *Event / Task* → *Page
-Layout*. Add the *Type* field to the page layout.
-. xref:user-permission-settings[Check profile permissions] to the
-*Type* field. A profile should have
-the __View __and __Edit __permissions to the *Type* field.
-Go to **Setup → Users → Profiles → **select profile → go to
-the **Field-Level Security **section and click **View **next to **Task
-→ **add _Read_ and _Edit_ access to the** Type** field.
-. Configure *Global Quick Actions* on the *Account* and *Contact*
-tabs.
-Go to *Setup* → *User Interface* → *Global Actions* →
-click *Layout* next to *New Event / New task* → add the *Type* field to
-the layout.
++
+Go to *Setup* → *Object Manager* → select *Event / Task* → *Page Layout*. Add the *Type* field to the page layout.
+. xref:admin-guide/getting-started/user-permission-settings.adoc[Check profile permissions] to the *Type* field. A profile should have the _View_ and _Edit_ permissions to the *Type* field.
++
+Go to *Setup → Users → Profiles →* select profile → go to the *Field-Level Security* section and click *View* next to *Task* → add _Read_ and _Edit_ access to the *Type* field.
+. Configure *Global Quick Actions* on the *Account* and *Contact* tabs.
++
+Go to *Setup* → *User Interface* → *Global Actions* → click *Layout* next to *New Event / New task* → add the *Type* field to the layout.
 
-
-Next, add the _EventProcess_ and _TaskProcess_ settings in Trigger
-Settings.
+Next, add the _EventProcess_ and _TaskProcess_ settings in Trigger Settings.
 
 . Go to *Setup* → *Custom Code* → *Custom Settings*.
 . Click *Manage* next to *Trigger Settings*.
@@ -70,160 +47,134 @@ For the first one:
 * Click *Save & New*.
 
 For the second one:
+
 * Enter *TaskProcess* in the *Name* field.
 * Set a flag next to the *Active*.
 * Click *Save*.
 
 The Trigger Settings are specified.
 
-[NOTE] ==== Check that the _ActivityProcess_ setting is active
-in Trigger Settings. If not, create or edit it and then set a flag next
-to *Active*. ====
+[NOTE]
+====
+Check that the _ActivityProcess_ setting is active in Trigger Settings. If not, create or edit it and then set a flag next to *Active*.
+====
 
 [[h2__576395911]]
-=== Activity Sync Fields Description
+== Activity Sync Fields Description
 
 [width="100%",cols="^25%,<25%,<25%,^25%",]
 |===
-a|
-*Fields Label*
+| *Fields Label* |*Data Type* |*Description* | *Example*
 
-|*Data Type* |*Description* a|
-*Example*
-
-|*Information* | | |
-
+4+<| *Information*
 |Label |Text (40) |The Activity Sync name. |
 
-|Activity Sync Name |Text (255) |The unique name is used by the API and
-managed packages. The name must begin with letters and use only
-alphanumeric characters and underscores. The name cannot end with an
-underscore or have consecutive underscores. |
+|Activity Sync Name |Text (255) |The unique name is used by the API and managed packages. The name must begin with letters and use only alphanumeric characters and underscores. The name cannot end with an underscore or have consecutive underscores. |
 
-|Sync Type |Picklist |Select a type of synchronization *Both / Custom* →
-*Standard / Standard* → *Custom* from the picklist. |Both,
-Custom→Standard, Standard→Custom
+|Sync Type |Picklist |Select a type of synchronization *Both / Custom* → *Standard / Standard* → *Custom* from the picklist. |Both, Custom→Standard, Standard→Custom
 
-|Active |Checkbox |If selected, the synchronization settings are active.
-|
+|Active |Checkbox |If selected, the synchronization settings are active.|
 
-|Protected Component |Picklist |If a developer releases protected custom
-metadata records in a managed package, access to them is limited in
-specific ways. |
+|Protected Component |Picklist |If a developer releases protected custom metadata records in a managed package, access to them is limited in specific ways. |
 
-|*Details* | | |
+4+<|*Details*
 
-|Standard Object |Picklist |Select a standard _Event_ or _Task_ from the
-picklist. |Event, Task
+|Standard Object |Picklist |Select a standard _Event_ or _Task_ from the picklist. |Event, Task
 
 |Standard Activity Type |Text (255) a|
-The *Type* field value of the selected standard
-[.object]#Activity# object.
+The *Type* field value of the selected standard [.object]#Activity# object.
 
-The filter will not be applied if[.object]#Standard# object
-record criteria are specified.
+The filter will not be applied if [.object]#Standard# object record criteria are specified.
 
 |Email, Meeting, Other, Call
 
 |Standard object record criteria |Text (255) a|
-Provide query criteria that standard activity object records will use to
-sync with custom activities.
+Provide query criteria that standard activity object records will use to sync with custom activities.
+
 Left this field blank for proceeding with all records.
 
-Use a SOQL query to specify filters. The clause part of the query should
-be without[.apiobject]#WHERE# word.
+Use a SOQL query to specify filters. The clause part of the query should be without [.apiobject]#WHERE# word.
 
 |[.apiobject]#Subject LIKE '%Call%'#
 
-|Activity Record Type |Text (255) |The name of the custom Activity
-record type. |
+|Activity Record Type |Text (255) |The name of the custom Activity record type. |
 
 |Custom object record criteria |Text (255) a|
-Provide query criteria that custom activity object records will use to
-sync with standard activities.
+Provide query criteria that custom activity object records will use to sync with standard activities.
+
 Left this field blank for proceeding with all records.
 
-Use a SOQL query to specify filters. The clause part of the query should
-be without WHERE word.
+Use a SOQL query to specify filters. The clause part of the query should be without [.apiobject]#WHERE# word.
 
 |[.apiobject]#CTPHARMA\__Type__c LIKE '%Type 1%'#
 
-|*Additional Fields Mapping* | | |
+4+<|*Additional Fields Mapping*
 
-|Fields to update |Long Text Area |Enumeration of the field API names
-for the update.
-Required format:[.apiobject]#ObjectApiName.FieldApiName#
-Values should be separated by a comma without spaces.
-|[.apiobject]#Event.Description#
+|Fields to update |Long Text Area |Enumeration of the field API names for the update.
 
-|Field values |Long Text Area |Enumeration of the API field names, whose
-values will be copied into the fields for updating.
-Required format:[.apiobject]#ObjectApiName.FieldApiName#
+Required format: [.apiobject]#ObjectApiName.FieldApiName#
+
+Values should be separated by a comma without spaces. | [.apiobject]#Event.Description#
+
+|Field values |Long Text Area |Enumeration of the API field names, whose values will be copied into the fields for updating.
+
+Required format: [.apiobject]#ObjectApiName.FieldApiName#
+
 Values should be separated by a comma without spaces.
 |[.apiobject]#CTPHARMA\__Activity__c.CTPHARMA\__Description__c#
 
-|*Description* | | |
+4+<| *Description*
 
-|Description |Text Area (255) |Additional information about Activity
-Sync |
+| Description |Text Area (255) |Additional information about Activity Sync|
 |===
 
-[[h2_1047431366]]
-=== Create Activity Sync
+[[ConfiguringActivitySync-CreateActivitySync]]
+== Create Activity Sync
 
 To create an Activity Sync:
 
 . Go to *Setup* (1) → *Custom Metadata Types* → *Activity Sync* (2).
 . Click *Manage Records* (3) next to *Activity Sync*.
++
 image:58829173.png[]
++
 The *Activity Sync* page opens.
-You can also click **Activity Sync **and then click *Manage Activity
-Sync *(3)** **on the *Activity Sync* page.
++
+You can also click **Activity Sync **and then click *Manage Activity Sync *(3)* on the *Activity Sync* page.
++
 image:58829174.png[]
 . Click *New* (4) to create a new Activity Sync.
++
 image:58829176.png[]
++
 The *Activity Sync Edit* page opens.
 . Fill in the required fields.
 . Click *Save*.
 
 Activity Sync is created.
 
-[[h2_393245108]]
-=== One-way Synchronization
+[[ConfiguringActivitySync-One-waySynchronization]]
+== One-way Synchronization
 
-Here is an example of one-way synchronization with additional field
-mapping.
-When a standard[.object]#Event# object with a value of
-_Meeting_ in the *Type* field is created, an entry of the custom
-[.object]#Activity# object with the type of the _Pharma Event_
-record is created. Additionally, the value of the *Description* field
-from the _Event_ record is copied to the _Activity_ entry record in the
-*Description* field.
+Here is an example of one-way synchronization with additional field mapping.
+
+When a standard [.object]#Event# object with a value of _Meeting_ in the *Type* field is created, an entry of the custom [.object]#Activity# object with the type of the _Pharma Event_ record is created. Additionally, the value of the *Description* field from the _Event_ record is copied to the _Activity_ entry record in the *Description* field.
 
 image:58829239.png[]
 
-[[h2_605908405]]
-=== Both-Way Synchronization
+[[ConfiguringActivitySync-BothWaysSynchronization]]
+== Both-Way Synchronization
 
-Here is an example of both-way synchronization using the *Standard
-Activity Type* field.
-When creating a record of a standard[.object]#Task# object with
-the value of _Meeting_ in the *Type* field, an entry of the batch
-[.object]#Activity# object with the type of the _Visit_ record
-is created. Similarly, when you create an _Activity_ record with the
-_Visit_ record type, a[.object]#Task# object record with the
-value of _Meeting_ in the *Type* field is created.
+Here is an example of both-way synchronization using the *Standard Activity Type* field.
+
+When creating a record of a standard [.object]#Task# object with the value of _Meeting_ in the *Type* field, an entry of the batch [.object]#Activity# object with the type of the _Visit_ record is created. Similarly, when you create an _Activity_ record with the _Visit_ record type, a [.object]#Task# object record with the value of _Meeting_ in the *Type* field is created.
 
 image:58829234.png[]
-Here is an example of both-way synchronization using
-[.object]#Standard# and[.object]#Custom# object record
-criteria.
-When a standard[.object]#Event# object with the specific
-_Subject_ name is created, an entry of the custom
-[.object]#Activity# object with the type of the _Visit_ record
-is created. Similarly, when you create an _Activity_ record with the
-_Visit_ record type and the specific _Status_, an
-[.object]#Event# object record is created.
+
+Here is an example of both-way synchronization using [.object]#Standard# and [.object]#Custom# object record criteria.
+
+When a standard [.object]#Event# object with the specific _Subject_ name is created, an entry of the custom [.object]#Activity# object with the type of the _Visit_ record is created. Similarly, when you create an _Activity_ record with the _Visit_ record type and the specific _Status_, an [.object]#Event# object record is created.
+
 image:58829216.png[]
 
 

@@ -53,7 +53,7 @@ storeObjectives()
 [.apiobject]#CTPHARMA\__NextCallObjective__c# field is
 specified, add it to the record of
 the [.apiobject]#CTPHARMA\__Objective__c# object which is
-related to the [.object]#Account# or[.object]#Contact#
+related to the [.object]#Account# or [.object]#Contact#
 __ object.
 
 | a|
@@ -124,7 +124,7 @@ value to the related record of the
 | |[.apiobject]#storeObjectives#
 |[.apiobject]#storeObj# |Update the record of the
 [.apiobject]#CTPHARMA\__Objective__c# object which is
-related to the [.object]#Account# or[.object]#Contact#
+related to the [.object]#Account# or [.object]#Contact#
 __ object, if the value in the
 [.apiobject]#CTPHARMA\__NextCallObjective__c# field has
 been changed.
@@ -305,7 +305,7 @@ the[.apiobject]#CTPHARMA\__MarketingLinkSettings__c#.
 be specified.
 
 |before delete [bd] | |[.apiobject]#bd# |Remove the
-records of the standard[.object]#Event# __ and
+records of the standard [.object]#Event# __ and
 [.object]#Task# __ objects related to the removed records of the
 [.apiobject]#CTPHARMA\__Activity__c#_._
 |===
