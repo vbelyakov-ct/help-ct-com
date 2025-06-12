@@ -1,30 +1,21 @@
 = Create a new Record of Calendar Tab Settings
 
-Calendar tab settings are responsible for the visibility of the Pharma
-Calendar tabs. Create a customized calendar tab view for required user
-roles and profiles.
-
-
+Calendar tab settings are responsible for the visibility of the Pharma Calendar tabs. Create a customized calendar tab view for required user roles and profiles.
 
 We recommended the following visibility of the tabs:
-
-
 
 [width="100%",cols="34%,33%,33%",]
 |===
 |*Representative* |*Supervisor / Manager* |*Administrator*
 
 a|
-The representative should have the ability to manage their activities
-and Activity Reports.
+The representative should have the ability to manage their activities and Activity Reports.
 
 * Table View
 * Hierarchy View (optional)
 
 a|
-The supervisors should have the ability to view representatives'
-activities, train representatives, and estimate their work by using
-Joint Visit Reports.
+The supervisors should have the ability to view representatives' activities, train representatives, and estimate their work by using Joint Visit Reports.
 
 * Table View
 * Hierarchy View (optional)
@@ -32,8 +23,7 @@ Joint Visit Reports.
 * List Views (optional)
 
 a|
-The administrator should have the ability to customize Calendar for each
-user role and creates the list views.
+The administrator should have the ability to customize Calendar for each user role and creates the list views.
 
 * Table View
 * Hierarchy View
@@ -43,21 +33,17 @@ user role and creates the list views.
 
 |===
 
-[[h2__718662688]]
-=== Create a Calendar Tab Settings Record
+[[h2_718662688]]
+== Create a Calendar Tab Settings Record
 
 To create a new calendar tab setting:
 
-. Go to *Setup* → **Custom Code **→ **Custom Settings **→ click *Manage*
-next to *Calendar Tab Settings*.
+. Go to *Setup* → *Custom Code* → *Custom Settings* → click *Manage* next to *Calendar Tab Settings*.
 . On the next page, click *New* to create a new record or click *Edit*
-to manage the global record for the whole Salesforce organization:
-* Specify *The Default Tab* to open when a user goes to the Calendar
-tab;
-* Select available tabs to view according to the user role, for example,
-*Hierarchy View Tab* and *List Views Tab*.
-[TIP] ==== Read the description of each parameter  ====
-https://help.customertimes.com/articles/project-ct-cpg/calendar-tab-settings[here].
+* Specify *The Default Tab* to open when a user goes to the Calendar tab;
+* Select available tabs to view according to the user role, for example, *Hierarchy View Tab* and *List Views Tab*.
++
+TIP: Read the description of each parameter xref:admin-guide/calendar-management/legacy-calendar-management/ref-guide/calendar-tab-settings-field-reference.adoc[here].
 . Click *Save*.
 
 The setup is complete.
