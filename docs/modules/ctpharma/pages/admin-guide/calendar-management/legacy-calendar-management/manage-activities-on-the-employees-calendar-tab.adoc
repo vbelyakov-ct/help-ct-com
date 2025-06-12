@@ -1,31 +1,21 @@
 = Manage Activities on the Employees Calendar Tab
+:toc:
 
-A supervisor can create
-xref:admin-guide/pharma-activity-report/configuring-activity-report/activity-layout-settings/activity-report-interface#h2_1426808308[a _Joint
-Visit_ record] to one of their representative's _Pharma activity_ on the
-*xref:admin-guide/calendar-management/legacy-calendar-management/calendar-interface#h2_989699835[Employees Calendar]* tab, if:
+A supervisor can create xref:admin-guide/pharma-activity-report/configuring-activity-report/activity-layout-settings/activity-report-interface.adoc[a _Joint Visit_ record] to one of their representative's _Pharma activity_ on the xref:admin-guide/calendar-management/legacy-calendar-management/calendar-interface.adoc#h2_989699835[Employees Calendar] tab, if:
 
-* the administrator customized the _Pharma Activity_ display
-on xref:admin-guide/calendar-management/legacy-calendar-management/configure-settings-for-the-calendar/index.adoc[the *Settings* tab] and
-created the list views
-on xref:admin-guide/calendar-management/legacy-calendar-management/manage-list-views-for-the-calendar.adoc[the *List View* tab];
-* xref:admin-guide/calendar-management/legacy-calendar-management/manage-list-views-for-the-calendar.adoc[] a representative
-created a__ Pharma Activity__ record related to
-the _Account_ or _Contact_ record on
-the *xref:admin-guide/calendar-management/legacy-calendar-management/calendar-interface#h2_817238099[Table
-View]* or *xref:admin-guide/calendar-management/legacy-calendar-management/calendar-interface#h2_528606302[Hierarchy
-View]* tab.
-
-:toc: :toclevels: 3
+* the administrator customized the _Pharma Activity_ display on xref:admin-guide/calendar-management/legacy-calendar-management/configure-settings-for-the-calendar/index.adoc[the *Settings* tab] and created the list views on xref:admin-guide/calendar-management/legacy-calendar-management/manage-list-views-for-the-calendar.adoc[the *List View* tab];
+* a representative created a__ Pharma Activity__ record related to the _Account_ or _Contact_ record on the xref:admin-guide/calendar-management/legacy-calendar-management/calendar-interface.adoc#h2_817238099[Table View] or xref:admin-guide/calendar-management/legacy-calendar-management/calendar-interface.adoc#h2_528606302[Hierarchy View] tab.
 
 image:58828900.png[]
 
 [[h2_2034850802]]
-=== Planning Joint Visits with a Left-click
+== Planning Joint Visits with a Left-click
 
-[NOTE] ==== Enable the left-click action in
-the *xref:admin-guide/calendar-management/legacy-calendar-management/configure-settings-for-the-calendar/calendar-settings-calendar-setup/index.adoc[Calendar Settings:
-Calendar Setup]* section.  ====
+[NOTE]
+====
+Enable the left-click action in the xref:admin-guide/calendar-management/legacy-calendar-management/configure-settings-for-the-calendar/calendar-settings-calendar-setup/index.adoc[Calendar Settings:
+Calendar Setup] section.
+====
 
 To create a _Joint Visit_:
 
@@ -33,129 +23,87 @@ To create a _Joint Visit_:
 . In the *Select user* field, select the representative and click *Go*.
 * Representatives are grouped by user roles.
 * Select the *Use employee timezone* checkbox if needed.
-. Left-click on a cell in the Calendar grid next to the representative's
-_Pharma Activity_ record.
-We
-recommend xref:admin-guide/calendar-management/legacy-calendar-management/configure-settings-for-the-calendar/calendar-settings-customize-events#h2_1740967952[to
-set up a color] for another user's activities.
+. Left-click on a cell in the Calendar grid next to the representative's _Pharma Activity_ record.
++
+We recommend xref:admin-guide/calendar-management/legacy-calendar-management/configure-settings-for-the-calendar/calendar-settings-customize-events.adoc#h2_1740967952[to set up a color] for another user's activities.
 . In the open pop-up, select a *Joint Visit* record type from the
 picklist and click *Select*.
-. xref:calendar-settings-event-creation-pop-up-window-setup[If
-customized], fill out fields in the *Joint Visit Creation* pop-up and
-click *Create*.
+. xref:admin-guide/calendar-management/legacy-calendar-management/configure-settings-for-the-calendar/calendar-settings-event-creation-pop-up-window-setup.adoc[If customized], fill out fields in the *Joint Visit Creation* pop-up and click *Create*.
 . Click *Save* on the *Employees Calendar* tab.
 
 The _Joint Visit_ is created.
 
-* According to xref:admin-guide/calendar-management/legacy-calendar-management/configure-settings-for-the-calendar/calendar-settings-calendar-setup/index.adoc[the *Invert
-click
-logic* checkbox] and xref:admin-guide/calendar-management/legacy-calendar-management/configure-settings-for-the-calendar/calendar-settings-customize-events#h2_1740967955[the
-specified layout], click/double-click the _Joint Visit_ record to open
-the *Joint Visit* details page.
-* According to the *Invert click logic* checkbox, click/double-click
-the _Joint Visit_ record to delete it.
+* According to xref:admin-guide/calendar-management/legacy-calendar-management/configure-settings-for-the-calendar/calendar-settings-calendar-setup/index.adoc[the *Invert click logic* checkbox] and xref:admin-guide/calendar-management/legacy-calendar-management/configure-settings-for-the-calendar/calendar-settings-customize-events.adoc#h2_1740967955[the specified layout], click/double-click the _Joint Visit_ record to open the *Joint Visit* details page.
+* According to the *Invert click logic* checkbox, click/double-click the _Joint Visit_ record to delete it.
 * xref:admin-guide/calendar-management/legacy-calendar-management/configure-settings-for-the-calendar/calendar-settings-drag-drop-settings.adoc[If enabled],
 drag-and-drop the _Join Visit_ record on another day.
-* Drag the bottom border of the _Joint Visit_ record to change its
-duration.
-
-image:/resources/Storage/project-ct-cpg/duration-employ-activity.png[/resources/Storage/project-ct-cpg/duration-employ-activity]
-
-
-
-xref:admin-guide/calendar-management/legacy-calendar-management/manage-activities-on-the-employees-calendar-tab#employlistofactions[Go
-back] to the list of actions.
+* Drag the bottom border of the _Joint Visit_ record to change its duration.
++
+image:duration-employ-activity.png[]
 
 [[h2_540787025]]
-=== Planning Joint Visits with a Right-click
+== Planning Joint Visits with a Right-click
 
-[NOTE] ==== Add available record types in
-the *xref:calendar-settings-customize-context[Calendar Settings:
-Customize Context]* section. ====
+[NOTE]
+====
+Add available record types in the xref:admin-guide/calendar-management/legacy-calendar-management/configure-settings-for-the-calendar/calendar-settings-customize-context.adoc[Calendar Settings: Customize Context] section.
+====
 
 To create a__ Joint Visit__:
 
 . Go to *Calendar → Employees Calendar*.
-. Right-click on a cell in the Calendar grid next to the
-representative's _Pharma Activity_ record.
-We
-recommend xref:admin-guide/calendar-management/legacy-calendar-management/configure-settings-for-the-calendar/calendar-settings-customize-events#h2_1740967952[to
-set up a color] for another user's activities.
+. Right-click on a cell in the Calendar grid next to the representative's _Pharma Activity_ record.
++
+We recommend xref:admin-guide/calendar-management/legacy-calendar-management/configure-settings-for-the-calendar/calendar-settings-customize-events.adoc#h2_1740967952[to set up a color] for another user's activities.
 . Click the *Joint Visit* record type from the actions.
-We recommend xref:calendar-settings-customize-context[restricting
-the available record types] on the *Employees Calendar* tab.
-. xref:calendar-settings-event-creation-pop-up-window-setup[If
-customized], fill out fields in the *Joint Visit Creation* pop-up and
-click *Create*.
++
+We recommend xref:admin-guide/calendar-management/legacy-calendar-management/configure-settings-for-the-calendar/calendar-settings-customize-context.adoc[restricting the available record types] on the *Employees Calendar* tab.
+. xref:admin-guide/calendar-management/legacy-calendar-management/configure-settings-for-the-calendar/calendar-settings-event-creation-pop-up-window-setup.adoc[If customized], fill out fields in the *Joint Visit Creation* pop-up and click *Create*.
 . Click *Save* on the *Employees Calendar* tab.
 
 The _Joint Visit_ is created.
 
-* According to xref:admin-guide/calendar-management/legacy-calendar-management/configure-settings-for-the-calendar/calendar-settings-calendar-setup/index.adoc[the *Invert
-click
-logic* checkbox] and xref:admin-guide/calendar-management/legacy-calendar-management/configure-settings-for-the-calendar/calendar-settings-customize-events#h2_1740967955[the
-specified layout], click/double-click the ___Joint Visit ___record to
-open the *Pharma Activity* details page.
-* According to the *Invert click logic* checkbox, click/double-click
-the ___Joint Visit ___record to delete it.
-* xref:admin-guide/calendar-management/legacy-calendar-management/configure-settings-for-the-calendar/calendar-settings-drag-drop-settings.adoc[If enabled],
-drag-and-drop the _Joint Visit_ record on another day.
-* Drag the bottom border of the ___Joint Visit ___record to change its
-duration.
-
-image:/resources/Storage/project-ct-cpg/duration-employ-activity.png[/resources/Storage/project-ct-cpg/duration-employ-activity]
-
-
-
-xref:admin-guide/calendar-management/legacy-calendar-management/manage-activities-on-the-employees-calendar-tab#employlistofactions[Go
-back] to the list of actions.
+* According to xref:admin-guide/calendar-management/legacy-calendar-management/configure-settings-for-the-calendar/calendar-settings-calendar-setup/index.adoc[the *Invert click logic* checkbox] and xref:admin-guide/calendar-management/legacy-calendar-management/configure-settings-for-the-calendar/calendar-settings-customize-events.adoc#h2_1740967955[the specified layout], click/double-click the _Joint Visit_ record to open the *Pharma Activity* details page.
+* According to the *Invert click logic* checkbox, click/double-click the _Joint Visit_ record to delete it.
+* xref:admin-guide/calendar-management/legacy-calendar-management/configure-settings-for-the-calendar/calendar-settings-drag-drop-settings.adoc[If enabled], drag-and-drop the _Joint Visit_ record on another day.
+* Drag the bottom border of the _Joint Visit_ record to change its duration.
++
+image:duration-employ-activity.png[]
 
 [[h2_1144528364]]
-=== Planning Joint Visits with a Mass Action
+== Planning Joint Visits with a Mass Action
 
-[NOTE] ==== Allow mass actions for the user profile in
-the *xref:calendar-settings-mass-actions[Calendar Settings: Mass
-Actions]* section.  ====
+[NOTE]
+====
+Allow mass actions for the user profile in the xref:admin-guide/calendar-management/legacy-calendar-management/configure-settings-for-the-calendar/calendar-settings-mass-actions.adoc[Calendar Settings: Mass Actions] section.
+====
 
 [[h3_632475968]]
-==== Mass Actions: Copy and Move
+=== Mass Actions: Copy and Move
 
 To manage _Joint Visits_ using a mass action:
 
-. Go to *Calendar → Hierarchy View*_._
+. Go to *Calendar → Hierarchy View*.
 . Right-click a cell on the Calendar grid.
 . Click the appropriate mass action from the actions:
-* *Copy* to copy activities of the day (where you click the cell) or of
-the whole week if enabled.
-* *Move* to move activities of the day (where you click the cell) or of
-the whole week if enabled.
-. If the *Day and Week* option enabled, click *Day* or *Week* in the
-pop-up to apply the mass action for _Pharma Activities_ of a single
-selected day or of the whole week started from the selected day.
-. In the next pop-up, select a day to copy or move__ Joint Visits__ to
-that day or to the week started from the selected day, and click *Copy
-events/Move events*.
+* *Copy* to copy activities of the day (where you click the cell) or of the whole week if enabled.
+* *Move* to move activities of the day (where you click the cell) or of the whole week if enabled.
+. If the *Day and Week* option enabled, click *Day* or *Week* in the pop-up to apply the mass action for _Pharma Activities_ of a single selected day or of the whole week started from the selected day.
+. In the next pop-up, select a day to copy or move_Joint Visits_ to that day or to the week started from the selected day, and click *Copy events/Move events*.
 . Click *Save* on the *Employees Calendar* tab.
 
 _Joint Visits_ are copied or moved.
 
 [[h3__1934690656]]
-==== Mass Actions: Delete
+=== Mass Actions: Delete
 
-To manage__ Joint Visits__ using a mass action:
+To manage _Joint Visits_ using a mass action:
 
-. Go to *Calendar → Hierarchy View*_._
+. Go to *Calendar → Hierarchy View*.
 . Right-click a cell on the Calendar grid.
 . Click the *Delete* action from the actions.
-. If the *Day and Week* option enabled, click *Day* or *Week* in the
-pop-up to delete _Joint Visits_ of a single selected day or of the whole
-week started from the selected day.
+. If the *Day and Week* option enabled, click *Day* or *Week* in the pop-up to delete _Joint Visits_ of a single selected day or of the whole week started from the selected day.
 . Click *Delete events*.
 . Click *Save* on the *Employees Calendar* tab.
 
 _Joint Visits_ are deleted.
-
-
-
-xref:admin-guide/calendar-management/legacy-calendar-management/manage-activities-on-the-hierarchy-view-tab#treelistofactions[Go
-back] to the list of actions.
