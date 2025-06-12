@@ -1,297 +1,176 @@
 = Calendar Interface and Activities
-
-:toc: :toclevels: 3
-
-[[h2_88456521]]
-=== Calendar Interface
+:toc:
 
 Get familiar with the available interface elements:
 
-[[h3__115958815]]
-==== Left Sidebar
+[[h3_115958815]]
+== Left Sidebar
 
 There are 3 tabs: *Accounts*, *Contacts* and *Hierarchy*.
 
-* In *Accounts* and *Contacts* tabs, you can select activity target
-records to create activities in the calendar. By default, these target
-records are [.object]#Account# and [.object]#Contact#
-objects, but you can specify another objects in
-the https://help.customertimes.com/smart/project-ct-cpg/calendar-settings-ct-cpg-settings-panel/a/h3__1934044513[]xref:admin-guide/calendar-management/pharma-calendar-settings#h3__1934044513[Pharma
-Calendar Settings], as well as rename their tabs.
-** Activity target records can also be displayed with their titles and
-subtitles, if there are fields specified in their
-https://help.salesforce.com/s/articleView?id=sf.compact_layout_overview.htm&type=5[compact
-layouts].
-** Hover mouse pointer over a target record to see its basic information
-(if it is enabled in the
-xref:admin-guide/calendar-management/pharma-calendar-settings#h3_1454440899[Pharma Calendar
-Settings]).
-* In the *Hierarchy* tab, you can see your activity target records as a
-hierarchy tree, if you specified the connection object in
-the https://help.customertimes.com/smart/project-ct-cpg/calendar-settings-ct-cpg-settings-panel/a/show-hierarchy[]xref:admin-guide/calendar-management/pharma-calendar-settings#show-hierarchy[Pharma
-Calendar Settings]. For example, you can select
-the [.object]#Account Contact Relationship# as a connection
-object to see [.object]#Accounts# and related lists of
-[.object]#Contacts#.
+* In *Accounts* and *Contacts* tabs, you can select activity target records to create activities in the calendar. By default, these target records are [.object]#Account# and [.object]#Contact# objects, but you can specify another objects in the xref:admin-guide/calendar-management/pharma-calendar-settings.adoc#h3_1934044513[Pharma Calendar Settings], as well as rename their tabs.
+** Activity target records can also be displayed with their titles and subtitles, if there are fields specified in their link:https://help.salesforce.com/s/articleView?id=sf.compact_layout_overview.htm&type=5[compact layouts].
+** Hover mouse pointer over a target record to see its basic information (if it is enabled in the xref:admin-guide/calendar-management/pharma-calendar-settings.adoc#h3_1454440899[Pharma Calendar Settings]).
+* In the *Hierarchy* tab, you can see your activity target records as a hierarchy tree, if you specified the connection object in the xref:admin-guide/calendar-management/pharma-calendar-settings.adoc#show-hierarchy[Pharma Calendar Settings]. For example, you can select the [.object]#Account Contact Relationship# as a connection object to see [.object]#Accounts# and related lists of [.object]#Contacts#.
++
 image:cpg_calendar_hierarchy_tab.png[]
 
-For all tabs, you can select a list view of the activity target
-record and search by keywords.
+For all tabs, you can select a list view of the activity target record and search by keywords.
 
-[NOTE] ==== Search is performed according
-to https://help.salesforce.com/s/articleView?id=sf.customizing_search_layouts.htm&type=5[Search
-Layouts]. To make it work correctly, please do not add the owner alias
-to the search layout. ====
+[NOTE]
+====
+Search is performed according to link:https://help.salesforce.com/s/articleView?id=sf.customizing_search_layouts.htm&type=5[Search Layouts]. To make it work correctly, please do not add the owner alias to the search layout.
+====
 
-To create or edit a list view, go to the target object and follow
-the https://help.salesforce.com/s/articleView?id=sf.basics_understanding_list_views_lex.htm&type=5[standard
-Salesforce flow]. For the *Hierarchy* tab, list views of the parent
-object are used. The *All* list view is created by default for all
-objects.
+To create or edit a list view, go to the target object and follow the link:https://help.salesforce.com/s/articleView?id=sf.basics_understanding_list_views_lex.htm&type=5[standard Salesforce flow]. For the *Hierarchy* tab, list views of the parent object are used. The *All* list view is created by default for all objects.
 
-* Click image:cpg_pin_icon.png[] to
-set a list view as default.
-* Click image:cpg_filter_icon.png[]
-to select sorting option. From the drop-down list, select the field on
-the object to sort by, and
-click image:cpg_sorting_down.png[] or image:cpg_sorting_up.png[] to
-sort from A to Z or vice versa.
+* Click image:cpg_pin_icon.png[25,25] to set a list view as default.
+* Click image:cpg_filter_icon.png[25,25] to select sorting option. From the drop-down list, select the field on the object to sort by, and click image:cpg_sorting_down.png[25,25] or image:cpg_sorting_up.png[25,25] to sort from A to Z or vice versa.
 
-* Click
-image:cpg_left_arrow_icon.png[] and image:cpg_right_arrow_icon.png[] to
-hide and show the left sidebar.
+* Click image:cpg_left_arrow_icon.png[] and image:cpg_right_arrow_icon.png[] to hide and show the left sidebar.
 
 image:Calendar-Interface.png[]
 
-
-
-[[h3__2071613420]]
-==== Main Calendar Area
+[[h3_2071613420]]
+== Main Calendar Area
 
 On the main calendar area:
 
-* [#h2_989699835]#Switch between *Day*, *Week* and *Month* views. You
-can set the default view in
-the https://help.customertimes.com/smart/project-ct-cpg/calendar-settings-ct-cpg-settings-panel/a/h3_951662406[]xref:admin-guide/calendar-management/pharma-calendar-settings#h3_951662406[Pharma
-Calendar Settings].#
-* [#h2_989699835]#Click *Today* to go to the current day.#
-* [#h2_989699835]#Click image:cpg_settings_icon.png[] to
-switch between *Calendar view* and *List view*, and show/hide weekends.#
-* [#h2_989699835]#Activities have color stripes on the left side
-according to their statuses. You can configure them in
-the https://help.customertimes.com/smart/project-ct-cpg/calendar-settings-ct-cpg-settings-panel/a/h3__1948960707[]xref:admin-guide/calendar-management/pharma-calendar-settings#h3__1948960707[Pharma
-Calendar Settings].#
-* [#h2_989699835]#Activities can have titles and subtitles, you can
-configure them in
-the https://help.customertimes.com/smart/project-ct-cpg/calendar-settings-ct-cpg-settings-panel/a/h3__1888339674[]xref:admin-guide/calendar-management/pharma-calendar-settings#h3__1888339674[Pharma
-Calendar Settings].#
+* Switch between *Day*, *Week* and *Month* views. You can set the default view in the xref:admin-guide/calendar-management/pharma-calendar-settings.adoc#h3_951662406[Pharma Calendar Settings].
+* Click *Today* to go to the current day.
+* Click image:cpg_settings_icon.png[] to switch between *Calendar view* and *List view*, and show/hide weekends.
+* Activities have color stripes on the left side according to their statuses. You can configure them in the xref:admin-guide/calendar-management/pharma-calendar-settings.adoc#h3_1948960707[Pharma Calendar Settings].
+* Activities can have titles and subtitles, you can configure them in
+the xref:admin-guide/calendar-management/pharma-calendar-settings.adoc#h3_1888339674[Pharma Calendar Settings].
 
-[[h4_520612844]]
-===== 
+[NOTE]
+====
+* Time zone, language of the calendar (days, months, weeks) and starting day of the week depend on the link:https://help.salesforce.com/s/articleView?id=sf.usersetup_lang_time_zone.htm&type=5[user's language and locale settings]. To translate other interface elements of the Pharma Calendar,
+use xref:./custom-labels-for-translating-the-calendar-interface.adoc[custom labels].
+* Working hours are displayed with white color, and non-working hours are displayed with gray color. You can set up working hours on the user's
+link:https://help.salesforce.com/s/articleView?id=sf.usersetup.htm&type=5[Personal Information] page in the *Start of Day* and *End of Day* fields.
+====
 
-[[h4__1480817773]]
-===== Useful Notes
+[[h3_265155760]]
+== Right Sidebar
 
-* Time zone, language of the calendar (days, months, weeks) and starting
-day of the week depend on
-the https://help.salesforce.com/s/articleView?id=sf.usersetup_lang_time_zone.htm&type=5[user's
-language and locale settings]. To translate other interface elements of
-the Pharma Calendar,
-use xref:custom-labels-for-translating-the-calendar-interface[custom
-labels].
-* Working hours are displayed with white color, and non-working hours
-are displayed with gray color. You can set up working hours on the
-user's
-https://help.salesforce.com/s/articleView?id=sf.usersetup.htm&type=5[Personal
-Information] page in the *Start of Day* and *End of Day* fields.
+* Use the mini-calendar to quickly move to the desired date. The today date is always highlighted.
+* In the *My Calendar* section:
+** To hide your activities, unselect the checkbox. Your activities have their own color on the calendar grid.
+** To show only your activities, click image:cpg_user_calendar_icon.png[] and select *Show only this*.
+* In the *User Calendar* section:
++
+NOTE: To access this section, assign required  xref:./custom-permissions-for-using-calendar.adoc[custom permissions] to the current user: *Read Access To Other User Calendar* to view other user's activities in the calendar grid, and *Full Access To Other User Calendar* to edit other user's activities.
 
-[[h3__265155760]]
-==== Right Sidebar
-
-* [#h2_989699835]#Use the mini-calendar to quickly move to the desired
-date. The today date is always highlighted.#
-* [#h2_989699835]#In the *My Calendar* section:#
-** [#h2_989699835]#To hide your activities, unselect the checkbox. Your
-activities have their own color on the calendar grid.#
-** [#h2_989699835]#To show only your activities,
-click image:cpg_user_calendar_icon.png[]
-and select *Show only this*.#
-* [#h2_989699835]#In the *User Calendar* section:
-[NOTE] ==== To access this section, assign required  ====
-xref:custom-permissions-for-using-calendar[custom permissions] to
-the current user: *Read Access To Other User Calendar* to view other
-user's activities in the calendar grid, and *Full Access To Other User
-Calendar* to edit other user's activities.#
-** [#h2_989699835]#Select desired users' records to show on the
-calendar. Each user's activities have their own color on the calendar
-grid.#
-** [#h2_989699835]#To show only the desired user's records, click
-image:cpg_user_calendar_icon.png[] and
-select *Show only this*.#
-** [#h2_989699835]#To add an activity to the selected user's calendar,
-click
-image:cpg_user_calendar_icon.png[]
-and select *Add Activity*.#
-** [#h2_989699835]#To remove the user's calendar from the list, click
-image:cpg_user_calendar_icon.png[]
-and select *Delete*.#
-** [#h2_989699835]#To add a new user's calendar:#
-. [#h2_989699835]#Click
-image:cpg_plus_icon.png[]. #
-. [#h2_989699835]#Select a user from the list. You can see only users
-that are available for you according to the
-https://help.salesforce.com/s/articleView?id=sf.managing_the_sharing_model.htm&type=5[Sharing
-Settings].#
-. [#h2_989699835]#Click *Add*. #
-* [#h2_989699835]#Click image:cpg_hide_icon.png[] and image:cpg_show_icon.png[] to
-hide and show any section of the right sidebar.#
-* [#h2_989699835]#Click
-image:cpg_right_arrow_icon.png[] and
-image:cpg_left_arrow_icon.png[] to
-hide and show the right sidebar.#
+** Select desired users' records to show on the calendar. Each user's activities have their own color on the calendar grid.
+** To show only the desired user's records, click image:cpg_user_calendar_icon.png[] and select *Show only this*.
+** To add an activity to the selected user's calendar, click image:cpg_user_calendar_icon.png[] and select *Add Activity*.
+** To remove the user's calendar from the list, click image:cpg_user_calendar_icon.png[] and select *Delete*.
+** To add a new user's calendar:
+. Click image:cpg_plus_icon.png[].
+. Select a user from the list. You can see only users that are available for you according to the link:https://help.salesforce.com/s/articleView?id=sf.managing_the_sharing_model.htm&type=5[Sharing Settings].
+. Click *Add*.
+* Click image:cpg_hide_icon.png[] and image:cpg_show_icon.png[] to hide and show any section of the right sidebar.
+* Click image:cpg_right_arrow_icon.png[] and image:cpg_left_arrow_icon.png[] to hide and show the right sidebar.
 
 [[h2_1494438992]]
-=== Actions with Activities
+== Actions with Activities
 
-[NOTE] ==== Any actions with activities
-(xref:admin-guide/calendar-management/calendar-interface-and-activities#h3_1490113349[moving],
-resizing to change activity duration,
-xref:admin-guide/calendar-management/calendar-interface-and-activities#h3__786187553[changing
-status] etc.) apply to database immediately. However, the
-xref:admin-guide/calendar-management/calendar-interface-and-activities#h3__786187553[Edit Activity]
-form may display the obsolete data for a couple of minutes.  ====
+[NOTE]
+====
+Any actions with activities (xref:admin-guide/calendar-management/calendar-interface-and-activities.adoc#h3_1490113349[moving], resizing to change activity duration,
+xref:admin-guide/calendar-management/calendar-interface-and-activities.adoc#h3_786187553[changing status] etc.) apply to database immediately. However, the xref:admin-guide/calendar-management/calendar-interface-and-activities.adoc#h3_786187553[Edit Activity] form may display the obsolete data for a couple of minutes.
+====
 
 [[h3_1752519442]]
-==== Creating Activities
+=== Creating Activities
 
 [[h4_397646639]]
-===== Create an Activity by click
+==== Create an Activity by click
 
-. Click *New* or any blank cell to create a new activity. The *Create
-Activity* form will be opened:
-
+. Click *New* or any blank cell to create a new activity. The *Create Activity* form will be opened:
++
 image:cpg_create_activity.png[]
 . Fill out the fields:
-* *Record type*: select record type
-created on the [.apiobject]#CTPHARMA\__Activity__c#
-object.
+* *Record type*: select record type created on the [.apiobject]#CTPHARMA\__Activity__c# object.
 * Enter *Subject* if needed.
-* Specify *Start*/*End Time*/*Date* or toggle *All-Day*. If you are
-creating an activity by clicking on a blank cell of the
-calendar, *Start* *Time* and *End* *Time* will be pre-filled according
-to the xref:admin-guide/calendar-management/pharma-calendar-settings#h3__1888339674[Default
-duration] setting.
-* If needed, toggle *Compact form* or *Detailed form* and fill out their
-fields:
-** *Compact form* can be configured in
-the https://help.customertimes.com/smart/project-ct-cpg/calendar-settings-ct-cpg-settings-panel/a/compact-form[]xref:admin-guide/calendar-management/pharma-calendar-settings#compact-form[Pharma
-Calendar Settings] and can contain up to 10 fields of the record type,
-within you are creating the activity.
-** *Detailed form* displays all the fields of the record type, within
-you are creating the activity. It cannot be enabled, if the *Compact
-form* is already enabled.
-[NOTE] ==== *Detailed form* and *Compact form* cannot be enabled
-both at the same time. If you fill out one of these forms and switch to
-another one, all the entered data will be lost. ====
+* Specify *Start*/*End Time*/*Date* or toggle *All-Day*. If you are creating an activity by clicking on a blank cell of the calendar, *Start* *Time* and *End* *Time* will be pre-filled according to the xref:admin-guide/calendar-management/pharma-calendar-settings.adoc#h3_1888339674[Default duration] setting.
+* If needed, toggle *Compact form* or *Detailed form* and fill out their fields:
+** *Compact form* can be configured in xref:admin-guide/calendar-management/pharma-calendar-settings.adoc#compact-form[Pharma Calendar Settings] and can contain up to 10 fields of the record type, within you are creating the activity.
+** *Detailed form* displays all the fields of the record type, within you are creating the activity. It cannot be enabled, if the *Compact form* is already enabled.
++
+[NOTE]
+====
+*Detailed form* and *Compact form* cannot be enabled both at the same time. If you fill out one of these forms and switch to another one, all the entered data will be lost.
+====
 . Click *Save*.
 
 [[h4_2089059603]]
-===== Create an Activity by drag and drop
+==== Create an Activity by drag and drop
 
-You can also create an activity by dragging and dropping a Target Object
-from the left sidebar, the creation form will look different and will
-have another set of fields.
+You can also create an activity by dragging and dropping a Target Object from the left sidebar, the creation form will look different and will have another set of fields.
 
-* If you drag and drop from a single target object (for example,
-[.object]#Account# or [.object]#Contact#), lookup fields
-of this object will be filled in.
+* If you drag and drop from a single target object (for example, [.object]#Account# or [.object]#Contact#), lookup fields of this object will be filled in.
 * If you drag and drop from the *Hierarchy* tab:
 ** Parent object: lookup fields of the parent object will be filled in.
-** Child object: lookup fields of the parent and child objects will be
-filled in.
-* You can select several target objects and drag and drop them. In this
-case, you can select only type of activity and edit properties of the
-created activities later. Activities will be created with the
-specified xref:admin-guide/calendar-management/pharma-calendar-settings#general[Interval between
-drag and drops].
-* *Start Date* and *End Date* are pre-filled according to
-the xref:admin-guide/calendar-management/pharma-calendar-settings#h3__1888339674[Default duration]
-setting.
+** Child object: lookup fields of the parent and child objects will be filled in.
+* You can select several target objects and drag and drop them. In this case, you can select only type of activity and edit properties of the created activities later. Activities will be created with the specified xref:admin-guide/calendar-management/pharma-calendar-settings.adoc#h3_951662406[Interval between drag and drops].
+* *Start Date* and *End Date* are pre-filled according to the xref:admin-guide/calendar-management/pharma-calendar-settings.adoc#h3_1888339674[Default duration] setting.
 
 image:cpg_create_activity2.png[]
 
-[[h3__786187553]]
-==== Editing Activities
+[[h3_786187553]]
+=== Editing Activities
 
 . To edit an activity, you can:
 * Click on activity in the calendar grid.
-* Hover mouse pointer over activity and click *Edit* on the pop-up (if
-it is xref:admin-guide/calendar-management/pharma-calendar-settings#h3_1454440899[enabled in the
-settings]).
+* Hover mouse pointer over activity and click *Edit* on the pop-up (if it is xref:admin-guide/calendar-management/pharma-calendar-settings.adoc#h3_1454440899[enabled in the settings]).
 
 The activity form shown above will be displayed.
 . Edit necessary fields and click *Save* to apply changes.
 
-To quickly change the status of an activity, hover the mouse pointer
-over the activity and select another *Status*.
+To quickly change the status of an activity, hover the mouse pointer over the activity and select another *Status*.
 
-* [#h2_989699835]#Double-click on activity or
-click image:cpg_pop-up_new_window_icon.png[]
-in the pop-up window to open it in the new browser tab:
+* Double-click on activity or click image:cpg_pop-up_new_window_icon.png[] in the pop-up window to open it in the new browser tab:
++
 image:cpg_calendar_pop-up.png[]
-[NOTE] ==== Editing other users' activities require
-the xref:custom-permissions-for-using-calendar[Full Access To Other
-User Calendar] custom permission. ====#
++
+NOTE: Editing other users' activities require the xref:./custom-permissions-for-using-calendar.adoc[Full Access To Other User Calendar] custom permission.
 
 [[h3_1490113349]]
-==== Moving and Copying Activities
+=== Moving and Copying Activities
 
-* [#h2_989699835]#To copy an activity, hover mouse pointer over an
-activity and
-click image:cpg-copy-icon.png[]. #
+* To copy an activity, hover mouse pointer over an activity and click image:cpg-copy-icon.png[25,25].
 * To move an activity, do one of these:
 ** click on it and specify another date/time;
 ** drag and drop it to another calendar cell.
 
+To copy or move multiple activities (applies only to the current user's activities):
 
-
-To copy or move multiple activities (applies only to the current user's
-activities):
-
-. [#h2_989699835]#Click image:cpg_mass_actions_icon.png[]  next
-to the *New* button on the right sidebar.#
-. [#h2_989699835]#Select *Copy* or *Move*.#
-. [#h2_989699835]#In the dialog window:#
-.. [#h2_989699835]#Select *Period of time*: _Day_ or _Week_.#
-.. [#h2_989699835]#Select day or week to move. If you select any day for
-the _Week_ period, the first day of the week will be selected
-automatically. #
-.. [#h2_989699835]#Select target day or week. If you select any day for
-the _Week_ period, the first day of the week will be selected
-automatically.  #
-.. [#h2_989699835]#Click *Move* or *Copy*.#
-
+. Click image:cpg_mass_actions_icon.png[25,25] next to the *New* button on the right sidebar.
+. Select *Copy* or *Move*.
+. In the dialog window:
+.. Select *Period of time*: _Day_ or _Week_.
+.. Select day or week to move. If you select any day for the _Week_ period, the first day of the week will be selected automatically.
+.. Select target day or week. If you select any day for the _Week_ period, the first day of the week will be selected automatically.
+.. Click *Move* or *Copy*.
++
 image:cpg_move_activity_week.png[]
 
 [[h3_661183531]]
-==== Deleting Activities
+=== Deleting Activities
 
-To delete an activity, hover mouse pointer over it and
-click image:cpg_delete_activity_icon.png[].
+To delete an activity, hover mouse pointer over it and click image:cpg_delete_activity_icon.png[25,25].
 
-To delete multiple activities (applies only to the current user's
-activities):
+To delete multiple activities (applies only to the current user's activities):
 
-. [#h2_989699835]#Click image:cpg_mass_actions_icon.png[]  next
-to the *New* button on the right sidebar.#
-. [#h2_989699835]#Select *Delete*.#
-. [#h2_989699835]#In the dialog window:#
-.. [#h2_989699835]#Select *Period of time*: _Day_ or _Week_.#
-.. [#h2_989699835]#Select day or week to delete. If you select any day
-for the _Week_ period, the first day of the week will be selected
-automatically.  #
-.. [#h2_989699835]#Click *Delete*.#
-
+. Click image:cpg_mass_actions_icon.png[25,25] next to the *New* button on the right sidebar.
+. Select *Delete*.
+. In the dialog window:
+.. Select *Period of time*: _Day_ or _Week_.
+.. Select day or week to delete. If you select any day for the _Week_ period, the first day of the week will be selected automatically.
+.. Click *Delete*.
++
 image:cpg_delete_activity.png[]
 
 
