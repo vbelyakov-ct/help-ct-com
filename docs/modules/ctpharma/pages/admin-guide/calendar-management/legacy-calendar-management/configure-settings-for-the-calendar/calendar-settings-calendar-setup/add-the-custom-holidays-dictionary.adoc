@@ -1,92 +1,60 @@
 = Add the Custom Holidays Dictionary
+:toc:
 
-If your company has corporate holidays, add the custom Holidays
-dictionary to mark those days as holidays at the calendar grid. Calendar
-Settings will affect the custom holidays, for example, if the creation
-of a _Pharma Activity_ record on a weekend is enabled, the
-representative can create a _Pharma Activity_ record on custom holidays.
-
-:toc: :toclevels: 3
+If your company has corporate holidays, add the custom Holidays dictionary to mark those days as holidays at the calendar grid. Calendar Settings will affect the custom holidays, for example, if the creation of a _Pharma Activity_ record on a weekend is enabled, the representative can create a _Pharma Activity_ record on custom holidays.
 
 [[h2_1222324904]]
-=== Create a Custom Dictionary Object
+== Create a Custom Dictionary Object
 
-First, customize your Salesforce organization by adding a new custom
-object:
+First, customize your Salesforce organization by adding a new custom object:
 
-. Go to *Setup → Object Manager →* click *Create* and select *Custom
-Object*.
+. Go to *Setup → Object Manager →* click *Create* and select *Custom Object*.
 . Specify the required fields and additional parameters.
-* Add the *Label* and *API name*, for example,
-[.apiobject]#Dictionary__c#.
+* Add the *Label* and *API name*, for example, [.apiobject]#Dictionary__c#.
 * Set the *Deployed* status.
-* If needed, select *Track Field History*, *Enable Reports*, and other
-parameters.
+* If needed, select *Track Field History*, *Enable Reports*, and other parameters.
 . Click *Save*.
 
 The setup is complete.
 
-
-
 Next, add fields for the [.object]#Dictionary# object.
 
-. Go to *Setup →  Object Manager → Dictionary → Fields & Relationships
-→* click *New*.
-. Create a *Date* field with the *Date* data type and click *Save &
-New*. For example,[.apiobject]#Date__c#. This field is
-responsible for the calendar dates.
-. Create a *Holiday* field with the *Checkbox* data type and click *Save
-& New*. For example,[.apiobject]#Holiday__c#. This field
-indicates whether the calendar date is a holiday.
-. Create a *Description* field with the *Text Area* data type and click
-*Save*. For example,[.apiobject]#Description__c#. This
-field is used for comments.
+. Go to *Setup →  Object Manager → Dictionary → Fields & Relationships →* click *New*.
+. Create a *Date* field with the *Date* data type and click *Save & New*. For example, [.apiobject]#Date__c#. This field is responsible for the calendar dates.
+. Create a *Holiday* field with the *Checkbox* data type and click *Save & New*. For example, [.apiobject]#Holiday__c#. This field indicates whether the calendar date is a holiday.
+. Create a *Description* field with the *Text Area* data type and click *Save*. For example, [.apiobject]#Description__c#. This field is used for comments.
 
 The setup is complete.
 
 [[h2__1902867138]]
-=== Create and Add a .csv File with Custom Holidays to the Dictionary
+== Create and Add a .csv File with Custom Holidays to the Dictionary
 
 The .csv file should have 365 days entries in the following format:
 
-* the first cell of the column contains the *Date* and *Holiday* fields
-of the __ Dictionary__ __object, for example,
-[.apiobject]#Date__c, Holiday__c#;
-* Use the following format for the holiday:
-[.apiobject]#YYYY-MM-DD,true#;
-* Use the following format for the holiday:
-[.apiobject]#YYYY-MM-DD,false#;
+* the first cell of the column contains the *Date* and *Holiday* fields of the [.object]#Dictionary# object, for example, [.apiobject]#Date\__c#, [.apiobject]#Holiday__c#;
+* Use the following format for the holiday: [.apiobject]#YYYY-MM-DD,true#;
+* Use the following format for the holiday: [.apiobject]#YYYY-MM-DD,false#;
 
-https://trailhead.salesforce.com/content/learn/modules/lex_implementation_data_management/lex_implementation_data_import[Use
-the Data Import Wizard] or
-https://workbench.developerforce.com/login.php[Workbench] to add a .csv
-file to the custom Dictionary__ __object.
+link:https://trailhead.salesforce.com/content/learn/modules/lex_implementation_data_management/lex_implementation_data_import[Use the Data Import Wizard] or
+https://workbench.developerforce.com/login.php[Workbench] to add a .csv file to the custom [.object]#Dictionary# object.
 
 [[h2_1760066578]]
-=== Customize the Use of the Custom Holidays Dictionary
+== Customize the Use of the Custom Holidays Dictionary
 
 To use the custom Holidays dictionary:
 
 . Go to the Pharma Calendar and click the *Settings* tab.
-. In the *User division* field, select
-xref:admin-guide/targeting-and-marketing-cycle/configuring-targeting-and-marketing-cycles/managing-targeting/add-and-set-up-divisions.adoc[the required _User_ division].
-. In the *Calendar Setup* section, select the *Use calendar day
-dictionary* checkbox.
+. In the *User division* field, select xref:admin-guide/targeting-and-marketing-cycle/configuring-targeting-and-marketing-cycles/managing-targeting/add-and-set-up-divisions.adoc[the required _User_ division].
+. In the *Calendar Setup* section, select the *Use calendar day dictionary* checkbox.
 . Fill out the open table:
-* In the *Calendar Day object* cell, add the API name of the
-custom Dictionary object, for example, Dictionary__c.
-* In the *Date field API-name* cell, add the API Name of the *Date*
-field of the custom Dictionary object, for example, Date__c.
-* In the *Holiday Flag field* cell, add the API Name of the *Holiday*
-field of the custom Dictionary object, for example, Holiday__c.
-* In the *Description field* cell, add the API Name of the *Description*
-field in the custom Dictionary object, for example, Description__c.
+* In the *Calendar Day object* cell, add the API name of the custom [.object]#Dictionary# object, for example, [.apiobject]#Dictionary__c#.
+* In the *Date field API-name* cell, add the API Name of the *Date* field of the custom [.object]#Dictionary# object, for example, [.apiobject]#Date__c#.
+* In the *Holiday Flag field* cell, add the API Name of the *Holiday* field of the custom [.object]#Dictionary# object, for example, [.apiobject]#Holiday__c#.
+* In the *Description field* cell, add the API Name of the *Description* field in the custom [.object]#Dictionary# object, for example, [.apiobject]#Description__c#.
 . Click *Save*.
 
 The setup is complete.
 
-The Holidays are marked with a red color and, if the *Allow holiday
-events* option is selected, a user can create Pharma Activities on these
-days.
+The Holidays are marked with a red color and, if the *Allow holiday events* option is selected, a user can create Pharma Activities on these days.
 
-image:/resources/Storage/project-ct-cpg/CTCPGDOC/attachments/58821906/588219261.png[/resources/Storage/project-ct-cpg/CTCPGDOC/attachments/58821906/588219261]
+image:588219261.png[]

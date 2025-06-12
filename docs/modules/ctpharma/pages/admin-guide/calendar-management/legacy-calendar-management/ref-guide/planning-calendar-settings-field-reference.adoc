@@ -18,7 +18,7 @@ API name in Salesforce: CTPHARMA\__CalendarSettings__c
 |[.apiobject]#CTPHARMA\__AccountBlock__c# |Text(255)
 a|
 The API name of the *Account* field for the *Account* title in the
-*xref:manage-activities-on-the-hierarchy-view-tab[Hierarchy
+*xref:admin-guide/calendar-management/legacy-calendar-management/manage-activities-on-the-hierarchy-view-tab.adoc[Hierarchy
 View]* tab.
 
 
@@ -85,9 +85,9 @@ Stored within the *Global* and *Color* setting type.
 |[.apiobject]#CTPHARMA\__ContextMenuPoints__c# |Long
 Text Area(3000) |If true, the _Pharma Activity_ record type is available
 to create on the
-corresponding *xref:manage-activities-on-the-table-view-tab[Table]*,
+corresponding *xref:admin-guide/calendar-management/legacy-calendar-management/manage-activities-on-the-table-view-tab.adoc[Table]*,
 *Hierarchy*, and
-*xref:manage-activities-on-the-employees-calendar-tab[Employees]*
+*xref:admin-guide/calendar-management/legacy-calendar-management/manage-activities-on-the-employees-calendar-tab.adoc[Employees]*
 tabs (separated by a comma, without a blank space).
 
 |Date field name
@@ -293,7 +293,7 @@ _Pharma Activity_ record.
 |View Criteria Fields
 |[.apiobject]#CTPHARMA\__CriteriaField__c# |Long Text
 Area(131072) a|
-The API names of xref:manage-list-views-for-the-calendar[the list
+The API names of xref:admin-guide/calendar-management/legacy-calendar-management/manage-list-views-for-the-calendar.adoc[the list
 view] fields (separated by a comma, without a blank space).
 
 Stored within the *View* setting type.

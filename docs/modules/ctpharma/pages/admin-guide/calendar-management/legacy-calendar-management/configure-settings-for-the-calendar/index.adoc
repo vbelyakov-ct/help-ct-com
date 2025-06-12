@@ -1,26 +1,32 @@
 = Configure Settings for the Calendar
 
-xref:admin-guide/calendar-management/legacy-calendar-management/calendar-interface#h2_681682073[The __ *Settings*
-tab] is intended to customize appropriate Calendar view and allowed
-actions based on the _User_ division and _User_ profile.
+xref:admin-guide/calendar-management/legacy-calendar-management/calendar-interface.adoc#h2_681682073[The *Settings* tab] is intended to customize appropriate Calendar view and allowed actions based on the _User_ division and _User_ profile.
 
 * for administrator convenience, all settings are divided into sections.
-* the specified parameters will be stored as records of the
-xref:planning-calendar-settings-field-reference[Planning Calendar
-Settings] object of the corresponding record type.
+* the specified parameters will be stored as records of the xref:admin-guide/calendar-management/legacy-calendar-management/ref-guide/planning-calendar-settings-field-reference.adoc[Planning Calendar Settings] object of the corresponding record type.
 
 [[h2_168101153]]
-=== Configure Settings
+== Configure Settings
 
 To customize the Calendar view and allowed actions:
 
 . Go to the Pharma Calendar and click the *Settings* tab.
 . In the *User division (1)* field,
-select xref:admin-guide/targeting-and-marketing-cycle/configuring-targeting-and-marketing-cycles/managing-targeting/add-and-set-up-divisions.adoc[the
-required _User_ division].
+select xref:admin-guide/targeting-and-marketing-cycle/configuring-targeting-and-marketing-cycles/managing-targeting/add-and-set-up-divisions.adoc[the required _User_ division].
++
 image:58828996.png[]
-. Tap the title to get familiar and customize Calendar parameters in the
-following sections:
+. Tap the title to get familiar and customize Calendar parameters in the following sections:
+* xref:./calendar-settings-target-frequency.adoc[]
+* xref:./calendar-settings-working-hours.adoc[]
+* xref:./calendar-settings-calendar-setup/index.adoc[]
+* xref:./calendar-settings-hierarchy-settings.adoc[]
+* xref:./calendar-settings-customize-events.adoc[]
+* xref:./calendar-settings-link-setup.adoc[]
+* xref:./calendar-settings-customize-tips.adoc[]
+* xref:./calendar-settings-customize-context.adoc[]
+* xref:./calendar-settings-event-creation-pop-up-window-setup.adoc[]
+* xref:./calendar-settings-drag-drop-settings.adoc[]
+* xref:./calendar-settings-mass-actions.adoc[]
 . Click *Save*.
 
 The setup is complete.
