@@ -1,13 +1,11 @@
 = 2. Installing CT Pharma Package
 
 [[h2_1644201065]]
-=== Prerequisites
+== Prerequisites
 
 * Before the
-installation, xref:preparing-the-salesforce-organization[allow
-users to relate contacts to multiple accounts].
-* CT Pharma package can be installed on the following Salesforce
-Editions:
+installation, xref:./preparing-the-salesforce-organization.adoc[allow users to relate contacts to multiple accounts].
+* CT Pharma package can be installed on the following Salesforce Editions:
 ** Enterprise
 ** Unlimited
 ** Force.com
@@ -15,42 +13,31 @@ Editions:
 ** Performance
 
 [[h2_1315640814]]
-=== Installation
+== Installation
 
 To install the CT Pharma package:
 
-. Follow https://appexchange.salesforce.com/appxListingDetail?listingId=a0N3000000B4XqyEAF[the
-direct link] to the managed CT CPG package on the AppExchange site.
-Alternatively, go to https://appexchange.salesforce.com/[the AppExchange
-site], enter _CT Pharma_ in the search box, and click *CT Pharma* in the
-search results.
+. Follow link:https://appexchange.salesforce.com/appxListingDetail?listingId=a0N3000000B4XqyEAF[the direct link] to the managed CT CPG package on the AppExchange site.
++
+Alternatively, go to link:https://appexchange.salesforce.com/[the AppExchange
+site], enter _CT Pharma_ in the search box, and click *CT Pharma* in the search results.
 . Click *Get It Now* for a 30-day free trial version.
-
-#
 . Select the installation type.
-* The *Install in Sandbox* installation type requires production org
-credentials.
-* Regardless of the installation type, you can use the CT Pharma package
-for 30 days in trial mode.
-
+* The *Install in Sandbox* installation type requires production org credentials.
+* Regardless of the installation type, you can use the CT Pharma package for 30 days in trial mode.
++
 image:58828400.png[]
-
-
-. Read the installation details, agree with terms and conditions, and
-click *Confirm and Install*.
+. Read the installation details, agree with terms and conditions, and click *Confirm and Install*.
++
 image:58828401.png[]
-#
 . Select the security level of installation and click *Install*.
-It is recommended to select** Install for Admins Only** security level.
-A Salesforce organization can contain numerous profiles. It may be
-unwise to give admin permissions to all the users. Admin
-can xref:admin-guide/getting-started/user-permission-settings.adoc[set the permissions] for specific
-users after the package installation.
++
+It is recommended to select** Install for Admins Only** security level. A Salesforce organization can contain numerous profiles. It may be unwise to give admin permissions to all the users.
++
+Admin can xref:admin-guide/getting-started/user-permission-settings.adoc[set the permissions] for specific users after the package installation.
++
 image:58828402.png[]
 
-It will take some time for the CT Pharma package to be installed. You
-will receive the email at the specified email address when the process
-is finished.
+It will take some time for the CT Pharma package to be installed. You will receive the email at the specified email address when the process is finished.
 
-To view and manage the installed package, go to *Setup* →** Installed
-Packages**.
+To view and manage the installed package, go to *Setup* → *Installed Packages*.

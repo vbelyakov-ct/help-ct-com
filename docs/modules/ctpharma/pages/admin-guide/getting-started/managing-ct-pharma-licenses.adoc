@@ -1,56 +1,55 @@
 = 4. Managing CT Pharma Licenses
+:toc:
 
 The following Salesforce License options are available:
 
 * Lightning Platform
 * Sales Cloud
-* Service Cloud​
+* Service Cloud
 * Community Cloud
-* Consumer Goods Cloud​
-* Health Cloud​
-* E-Commerce​.
+* Consumer Goods Cloud
+* Health Cloud
+* E-Commerce
 
-The administrator can grant or restrict access to users who can
-use the CT Pharma package functionality by managing licenses.
-
-:toc: :toclevels: 3
+The administrator can grant or restrict access to users who can use the CT Pharma package functionality by managing licenses.
 
 [[h2_1491098279]]
-=== Grant Access to Users
+== Grant Access to Users
 
 To select users who can use the CT Pharma package functionality:
 
 . Go to *Setup* (1) → **Apps **→ *Installed Packages *(2).
 . Click *Manage Licenses* (3)** **next to *CT Pharma Solution*.
++
 image:62573745.png[]
-#
 . Click the *Add Users* button.
 . Select users from the *Available Users* list.
-. Click *Add*. [TIP] ==== Also, you can click *Add All Users* if
-you want to grant access to all users. ====
+. Click *Add*.
++
+TIP: Also, you can click *Add All Users* if you want to grant access to all users.
++
 image:62573746.png[]
 
-The selected user appears in the list of users who have access to the CT
-Pharma package.
+The selected user appears in the list of users who have access to the CT Pharma package.
 
 [[h2_1361513113]]
-=== Restrict Access to Users
+== Restrict Access to Users
 
 To restrict access to the user(s):
 
-. Go to *Setup* (1) → **Apps **→ *Installed Packages *(2).
-. Click *Manage Licenses* (3)** **next to *CT Pharma Solution*.
+. Go to *Setup* (1) → *Apps* → *Installed Packages* (2).
+. Click *Manage Licenses* (3) next to *CT Pharma Solution*.
++
 image:62573745.png[]
 . Click *Remove Multiple Users*.
-Also, you can remove a single user by clicking *Remove* next to the
-user's *Full Name*.
++
+Also, you can remove a single user by clicking *Remove* next to the user's *Full Name*.
 . Select users from the *Available Users* list.
 . Click *Remove*.
++
 Also, you can click *Remove All Users* if you want to restrict access to
 the package for all users.
++
 image:62573748.png[]
 
-
-
-The user(s) are removed from the list of users who have access to the CT
-Pharma package.
+The user(s) are removed from the list of users who have access to the CT Pharma package.
