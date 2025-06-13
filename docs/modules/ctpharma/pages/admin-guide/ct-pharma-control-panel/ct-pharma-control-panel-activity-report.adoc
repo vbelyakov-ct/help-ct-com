@@ -1,18 +1,20 @@
 = CT Pharma Control Panel: Activity Report
 
-For the correct presentation of activity details on the *Activity
-Report* page, you should set up field sets with main information,
-activity report filters, and related tabs. Previously, you should set up
-custom settings one by one. Now, you can customize *Activity Report*
-pages in one place.
+For the correct presentation of activity details on the *Activity Report* page, you should set up field sets with main information, activity report filters, and related tabs. Previously, you should set up custom settings one by one. Now, you can customize *Activity Report* pages in one place.
 
 The *Activity Report* tab represents the following custom settings:
 
-:toc: :toclevels: 3
+* <<CTPharmaControlPanel:ActivityReport-Location>>
+* <<CTPharmaControlPanel:ActivityReport-RecordType>>
+* <<CTPharmaControlPanel:ActivityReport-ActivityReportTabs>>
+** <<CTPharmaControlPanel:ActivityReport-CompanyProductTabSettings>>
+** <<CTPharmaControlPanel:ActivityReport-CompetitorProductTabSettings>>
+** <<CTPharmaControlPanel:ActivityReport-InventoryTabSettings>>
+** <<CTPharmaControlPanel:ActivityReport-POSMaterialTabSettings>>
+** <<CTPharmaControlPanel:ActivityReport-EventMemberTabSettings>>
+** <<CTPharmaControlPanel:ActivityReport-ExpensesTabSettings>>
 
-According to the selected profile, customize tabs for the specific
-Pharma Activity Report. Define available and selected Pharma Activity
-Report filters.
+According to the selected profile, customize tabs for the specific Pharma Activity Report. Define available and selected Pharma Activity Report filters.
 
 To open Activity Report:
 
@@ -21,271 +23,216 @@ To open Activity Report:
 
 The *Activity Report* opens.
 
-#
-
 image:58831870.png[]
 
-
-
 [[CTPharmaControlPanel:ActivityReport-Location]]
-=== Location
+== Location
 
 Select the required profile in the *Location* picklist.
 
-*General Settings* will be applied to all the profiles without
-individual settings.
+*General Settings* will be applied to all the profiles without individual settings.
 
 [[CTPharmaControlPanel:ActivityReport-RecordType]]
-=== Record Type
+== Record Type
 
-*Record Type* is a drop-down list, containing all
-[.object]#Pharma Activity# object record types available for the
-selected profile. Previously, specify the list of API names for
-[.object]#Pharma Activity# object record types or use the
-existing ones, in order to display the tab on the *Activity Report* page
-when creating an activity with the specified record type.
-
+*Record Type* is a drop-down list, containing all [.object]#Pharma Activity# object record types available for the selected profile. Previously, specify the list of API names for [.object]#Pharma Activity# object record types or use the existing ones, in order to display the tab on the *Activity Report* page when creating an activity with the specified record type.
 
 Select the record type to add the required related tabs. 
 
-
 image:58831814.png[]
 
-
-
 [[CTPharmaControlPanel:ActivityReport-ActivityReportTabs]]
-=== Activity Report Tabs
+== Activity Report Tabs
 
-There are several related tabs that you can add to the selected profile
-with the selected _Pharma Activity_ record type.
+There are several related tabs that you can add to the selected profile with the selected _Pharma Activity_ record type.
 
 [[CTPharmaControlPanel:ActivityReport-CompanyProductTabSettings]]
-==== *Company Product Tab Settings*
+=== Company Product Tab Settings
 
-Company Product is an entity to track related information and provide an
-audit of the Pharma Products within a 1:1 Visit.
+Company Product is an entity to track related information and provide an audit of the Pharma Products within a 1:1 Visit.
+
 To configure this tab, switch the toggle (1).
-
-#
 
 image:58831890.png[]
 
-
-
-
 * *Allow Record Management*
++
 Enable adding or removing record functionality.
 * *FieldSet Name*
-Select a previously configured specific field set for a proper view of
-the records.
++
+Select a previously configured specific field set for a proper view of the records.
 * *Read Only Product Id*
++
 If disabled, the ProductId lookup is switched to read-only mode.
 * *Active*
-Enable this option to make the tab available on the *Activity Report*
-page.
++
+Enable this option to make the tab available on the *Activity Report* page.
 * *Additional Parameter*
-Additional SOQL-criteria are in use to the list of available records for
-the object, relation to which is specified in the *Field To Show As
-Picklist* field. They are used only when the *Show Lookup As
-Picklist* switch is enabled and the *Field To Show As Picklist* field is
-populated.
-* **Field To Show As Picklist
-**The field API-name with lookup type is displayed as a picklist in a
-selected order.
-* **Show Lookup As Picklist
-**If selected, the lookup field is replaced with the picklist with
-values that are available according to conditions specified in
-the *Additional Parameter* field.
++
+Additional SOQL-criteria are in use to the list of available records for the object, relation to which is specified in the *Field To Show As Picklist* field. They are used only when the *Show Lookup As Picklist* switch is enabled and the *Field To Show As Picklist* field is populated.
+* *Field To Show As Picklist*
++
+The field API-name with lookup type is displayed as a picklist in a selected order.
+* *Show Lookup As Picklist*
++
+If selected, the lookup field is replaced with the picklist with values that are available according to conditions specified in the *Additional Parameter* field.
 
-Please refer to the xref:company-product-tab-settings[*Company
-Product* Tab Settings] for a detailed description of the following
-settings.
-
+Please refer to the xref:admin-guide/pharma-activity-report/configuring-activity-report/activity-report-tab-settings/company-product-tab-settings.adoc[*Company Product* Tab Settings] for a detailed description of the following settings.
 
 [[CTPharmaControlPanel:ActivityReport-CompetitorProductTabSettings]]
-==== *Competitor Product Tab Settings
-*
+=== Competitor Product Tab Settings
 
-Competitor Product is an entity to track your competitor's related
-information for particular clients within a visit.
+Competitor Product is an entity to track your competitor's related information for particular clients within a visit.
+
 To configure this tab, switch the toggle (1).
-
-#
 
 image:58831896.png[]
 
 * *Allow Record Management*
++
 Enable adding or removing record functionality.
 * *FieldSet Name*
-Select a previously configured specific field set for a proper view of
-the records.
++
+Select a previously configured specific field set for a proper view of the records.
 * *Read Only Product Id*
++
 If disabled, the ProductId lookup is switched to read-only mode.
 * *Active*
-Enable this option to make the tab available on the *Activity Report*
-page.
++
+Enable this option to make the tab available on the *Activity Report* page.
 * *Additional Parameter*
-Additional SOQL-criteria are in use to the list of available records for
-the object, relation to which is specified in the *Field To Show As
-Picklist* field. They are used only when the *Show Lookup As
-Picklist* switch is enabled and the *Field To Show As Picklist* field is
-populated.
-* **Field To Show As Picklist
-**The field API-name with lookup type is displayed as a picklist in a
-selected order.
-* **Show Lookup As Picklist
-**If selected, the lookup field is replaced with the picklist with
-values that are available according to conditions specified in
-the *Additional Parameter* field.
++
+Additional SOQL-criteria are in use to the list of available records for the object, relation to which is specified in the *Field To Show As Picklist* field. They are used only when the *Show Lookup As Picklist* switch is enabled and the *Field To Show As Picklist* field is populated.
+* *Field To Show As Picklist*
++
+The field API-name with lookup type is displayed as a picklist in a selected order.
+* *Show Lookup As Picklist*
++
+If selected, the lookup field is replaced with the picklist with values that are available according to conditions specified in the *Additional Parameter* field.
 
-Please refer to
-the xref:competitor-product-tab-settings[*Competitor Product* Tab
-Settings] for a detailed description of the following settings.
+Please refer to the xref:admin-guide/pharma-activity-report/configuring-activity-report/activity-report-tab-settings/competitor-product-tab-settings.adoc[*Competitor Product* Tab Settings] for a detailed description of the following settings.
 
 [[CTPharmaControlPanel:ActivityReport-InventoryTabSettings]]
-==== *
-Inventory Tab Settings*
+=== Inventory Tab Settings
 
-This setting controls the displaying of the *Inventory* Tab on the
-*Activity Report* page for a user.
+This setting controls the displaying of the *Inventory* Tab on the *Activity Report* page for a user.
+
 To set up this tab, switch the toggle (*1*).
-
-#
 
 image:58831897.png[]
 
 * *Allow Record Management*
++
 Enable adding or removing record functionality.
 * *FieldSet Name*
-Select a previously configured specific field set for a proper view of
-the records.
++
+Select a previously configured specific field set for a proper view of the records.
 * *Read Only Product Id*
++
 If disabled, the ProductId lookup is switched to read-only mode.
 * *Active*
-Enable this option to make the tab available on the *Activity Report*
-page.
++
+Enable this option to make the tab available on the *Activity Report* page.
 * *Additional Parameter*
-Additional SOQL-criteria are in use to the list of available records for
-the object, relation to which is specified in the *Field To Show As
-Picklist* field. They are used only when the *Show Lookup As
-Picklist* switch is enabled and the *Field To Show As Picklist* field is
-populated.
-* **Field To Show As Picklist
-**The field API-name with lookup type is displayed as a picklist in a
-selected order.
-* **Show Lookup As Picklist
-**If selected, the lookup field is replaced with the picklist with
-values that are available according to conditions specified in
-the *Additional Parameter* field.
++
+Additional SOQL-criteria are in use to the list of available records for the object, relation to which is specified in the *Field To Show As Picklist* field. They are used only when the *Show Lookup As Picklist* switch is enabled and the *Field To Show As Picklist* field is populated.
+* *Field To Show As Picklist*
++
+The field API-name with lookup type is displayed as a picklist in a selected order.
+* *Show Lookup As Picklist*
++
+If selected, the lookup field is replaced with the picklist with values that are available according to conditions specified in the *Additional Parameter* field.
 
-Please refer to the xref:inventory-tab-settings[*Inventory* Tab
-Settings] for a detailed description of the following settings.
+Please refer to the xref:admin-guide/pharma-activity-report/configuring-activity-report/activity-report-tab-settings/inventory-tab-settings.adoc[*Inventory* Tab Settings] for a detailed description of the following settings.
 
 [[CTPharmaControlPanel:ActivityReport-POSMaterialTabSettings]]
-==== *
-POS Material Tab Settings*
+=== POS Material Tab Settings
 
-POS Materials is an entity to track the marketing materials
-distributed for particular clients within a visit.
+POS Materials is an entity to track the marketing materials distributed for particular clients within a visit.
+
 To configure this tab, switch the toggle (1).
-
-#
 
 image:58831905.png[]
 
 * *Allow Record Management*
++
 Enable adding or removing record functionality.
 * *FieldSet Name*
-Select a previously configured specific field set for a proper view of
-the records.
++
+Select a previously configured specific field set for a proper view of the records.
 * *Read Only Product Id*
++
 If disabled, the ProductId lookup is switched to read-only mode.
 * *Active*
-Enable this option to make the tab available on the *Activity Report*
-page.
++
+Enable this option to make the tab available on the *Activity Report* page.
 * *Additional Parameter*
-Additional SOQL-criteria are in use to the list of available records for
-the object, relation to which is specified in the *Field To Show As
-Picklist* field. They are used only when the *Show Lookup As
-Picklist* switch is enabled and the *Field To Show As Picklist* field is
-populated.
-* **Field To Show As Picklist
-**The field API-name with lookup type is displayed as a picklist in a
-selected order.
-* **Show Lookup As Picklist
-**If selected, the lookup field is replaced with the picklist with
-values that are available according to conditions specified in
-the *Additional Parameter* field.
++
+Additional SOQL-criteria are in use to the list of available records for the object, relation to which is specified in the *Field To Show As Picklist* field. They are used only when the *Show Lookup As Picklist* switch is enabled and the *Field To Show As Picklist* field is populated.
+* *Field To Show As Picklist*
++
+The field API-name with lookup type is displayed as a picklist in a selected order.
+* *Show Lookup As Picklist*
+If selected, the lookup field is replaced with the picklist with values that are available according to conditions specified in the *Additional Parameter* field.
 
-Please refer to the xref:pos-material-tab-settings[*POS Material*
-Tab Settings] for a detailed description of the following settings.
-
-
+Please refer to the xref:admin-guide/pharma-activity-report/configuring-activity-report/activity-report-tab-settings/pos-material-tab-settings.adoc[*POS Material* Tab Settings] for a detailed description of the following settings.
 
 [[CTPharmaControlPanel:ActivityReport-EventMemberTabSettings]]
-==== *Event Member Tab Settings
-*
+=== Event Member Tab Settings
 
-This setting controls the displaying of the *Pharma Event Members* tab
-on the *Activity Report* page.
+This setting controls the displaying of the *Pharma Event Members* tab on the *Activity Report* page.
+
 To set up this tab, switch the toggle (1).
-
-#
 
 image:58831923.png[]
 
 * *Allow Record Management*
++
 Enable adding or removing record functionality.
 * *FieldSet Name*
-Select a previously configured specific field set for a proper view of
-the records.
++
+Select a previously configured specific field set for a proper view of the records.
 * *Read Only Product Id*
++
 If disabled, the ProductId lookup is switched to read-only mode.
 * *Active*
-Enable this option to make the tab available on the *Activity Report*
-page.
-* **Field To Show As Picklist
-**The field API-name with lookup type is displayed as a picklist in a
-selected order.
-* **Show Lookup As Picklist
-**If selected, the lookup field is replaced with the picklist with
-values that are available according to conditions specified in
-the *Additional Parameter* field.
++
+Enable this option to make the tab available on the *Activity Report* page.
+* *Field To Show As Picklist*
++
+The field API-name with lookup type is displayed as a picklist in a selected order.
+* *Show Lookup As Picklist*
++
+If selected, the lookup field is replaced with the picklist with values that are available according to conditions specified in the *Additional Parameter* field.
 
-Please refer to the xref:event-member-tab-settings[*Event Member*
-Tab Settings] for a detailed description of the following settings.
-
+Please refer to the xref:admin-guide/pharma-activity-report/configuring-activity-report/activity-report-tab-settings/event-member-tab-settings.adoc[*Event Member* Tab Settings] for a detailed description of the following settings.
 
 [[CTPharmaControlPanel:ActivityReport-ExpensesTabSettings]]
-==== *Expenses Tab Settings
-*
+=== Expenses Tab Settings
 
 Expenses is an entity to hold the spendings related to the event.
-To configure this tab, switch the toggle (1).
 
-#
+To configure this tab, switch the toggle (1).
 
 image:58831924.png[]
 
-
-
 * *Allow Record Management*
++
 Enable adding or removing record functionality.
 * *FieldSet Name*
-Select a previously configured specific field set for a proper view of
-the records.
++
+Select a previously configured specific field set for a proper view of the records.
 * *Read Only Product Id*
++
 If disabled, the ProductId lookup is switched to read-only mode.
 * *Active*
-Enable this option to make the tab available on the *Activity Report*
-page.
-* **Field To Show As Picklist
-**The field API-name with lookup type is displayed as a picklist in a
-selected order.
-* **Show Lookup As Picklist
-**If selected, the lookup field is replaced with the picklist with
-values that are available according to conditions specified in
-the *Additional Parameter* field.
++
+Enable this option to make the tab available on the *Activity Report* page.
+* *Field To Show As Picklist*
++
+The field API-name with lookup type is displayed as a picklist in a selected order.
+* *Show Lookup As Picklist*
++
+If selected, the lookup field is replaced with the picklist with values that are available according to conditions specified in the *Additional Parameter* field.
 
-Please refer to the xref:expenses-tab-settings[*Expenses* Tab
-Settings] for a detailed description of the following settings.
+Please refer to the xref:admin-guide/pharma-activity-report/configuring-activity-report/activity-report-tab-settings/expenses-tab-settings.adoc[*Expenses* Tab Settings] for a detailed description of the following settings.

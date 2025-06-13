@@ -1,77 +1,51 @@
 = CT Pharma Control Panel: Divisions
 
-This tab represents
-xref:setting-up-a-division-target-frequency[Setting up Division
-Target Frequency].
+This tab represents xref:admin-guide/targeting-and-marketing-cycle/configuring-targeting-and-marketing-cycles/managing-targeting/setting-up-a-division-target-frequency.adoc[Setting up Division Target Frequency].
 
-To use Target Frequencies, you should associate User and Marketing Cycle
-divisions with *Accounts* and *Contacts* division fields. Previously,
-divisions should be created for the [.object]#User# and
-[.object]#Marketing Cycle# objects, and related division fields
-should be created for the [.object]#Account# and
-[.object]#Contact# objects.
+To use Target Frequencies, you should associate User and Marketing Cycle divisions with *Accounts* and *Contacts* division fields. Previously, divisions should be created for the [.object]#User# and [.object]#Marketing Cycle# objects, and related division fields should be created for the [.object]#Account# and [.object]#Contact# objects.
+
 You can associate divisions via custom setting or via *CT Pharma Control
 Panel*: *Divisions* tab.
 
-If you create or remove division on the *Divisions* tab, the changes
-will be presented in *Division Target Frequency Settings*, and vice
-versa.
+If you create or remove division on the *Divisions* tab, the changes will be presented in *Division Target Frequency Settings*, and vice versa.
 
 To open *Divisions* tab:
 
 . Click on *CT Pharma Control Panel*.
 . Click on the *Divisions* tab.
-
-#
-
++
 image:58831936.png[]
 
 [[CTPharmaControlPanel:Divisions-Name]]
-=== Name
+== Name
 
 In the *Name* field, the name of the division is represented.
 
-* To create a new division,
-click image:58831937.png[],
-enter a name, and click *Add*.
-#
-
+* To create a new division, click image:58831937.png[], enter a name, and click *Add*.
++
 image:58831943.png[]
-
-
++
 If you enter a name, which is already in use, you will see an alert:
-#
-
++
 image:58831938.png[]
-
-
-If you have not created division with the same name for the
-[.object]#User# object, you will see an alert:
-#
-
++
+If you have not created division with the same name for the [.object]#User# object, you will see an alert:
++
 image:58831940.png[]
-* To remove a division, select the required division (1) from the
-picklist,
-click image:58831944.png[] (2),
-and then click *Save* (3).
++
+* To remove a division, select the required division (1) from the picklist,
+click image:58831944.png[] (2), and then click *Save* (3).
++
 image:58831945.png[]
 
 [[CTPharmaControlPanel:Divisions-DivisionFields]]
-=== Division Fields
+== Division Fields
 
-Associate User and Marketing Cycle divisions with *Accounts* and
-*Contacts* division fields:
+Associate User and Marketing Cycle divisions with *Accounts* and *Contacts* division fields:
 
-* In *Account Target Category field*, add API name of the field of
-[.object]#Account# object that contains categories of the
-division.
-* In *Account Target Flag field*, add API name of the field of Account
-object that contains the sign of belonging to the division.
-* In *Contact Target Category field*, add API name of the field of
-[.object]#Contact# object that contains categories of the
-division.
-* In *Contact Target Flag field*, add API name of the field of Contact
-object that contains the sign of belonging to the division.
+* In *Account Target Category field*, add API name of the field of [.object]#Account# object that contains categories of the division.
+* In *Account Target Flag field*, add API name of the field of [.object]#Account# object that contains the sign of belonging to the division.
+* In *Contact Target Category field*, add API name of the field of [.object]#Contact# object that contains categories of the division.
+* In *Contact Target Flag field*, add API name of the field of [.object]#Contact# object that contains the sign of belonging to the division.
 
-Switch on *Enable Category selection* and click *Save*, if you want to
-use the selected division.
+Switch on *Enable Category selection* and click *Save*, if you want to use the selected division.

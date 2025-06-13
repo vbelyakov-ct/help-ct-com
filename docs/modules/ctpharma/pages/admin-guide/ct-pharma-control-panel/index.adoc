@@ -1,19 +1,16 @@
 = CT Pharma Control Panel
 
-CT Pharma Control Panel is an interface designed to speed up the CT
-Pharma package setup. All tabs listed below refer to the Custom
-Settings. The main page of the Panel consists of five tabs.
+CT Pharma Control Panel is an interface designed to speed up the CT  Pharma package setup. All tabs listed below refer to the Custom Settings. The main page of the Panel consists of five tabs.
 
 [[h2_1644201065]]
-=== Prerequisites
+== Prerequisites
 
 Before using the Control Panel features, perform the following actions:
 
-. Go to *Setup* → *Custom Code* → *Visualforce Pages.*
+. Go to *Setup* → *Custom Code* → *Visualforce Pages*.
 . Click *Security* next to *AppControlPanel*.
-.  Add the current user profile to the *Enabled Profiles* list and click
-*Save*.
-. Go to *Setup* → *Profiles.*
+.  Add the current user profile to the *Enabled Profiles* list and click *Save*.
+. Go to *Setup* → *Profiles*.
 . Select the current user profile and click *Apex Class Access* →
 *Edit*.
 . Add the following classes to the *Enabled Apex Classes* list:
@@ -24,76 +21,51 @@ Before using the Control Panel features, perform the following actions:
 . Click *Save*.
 
 [[h2_951662406]]
-=== General
+== General
 
-This tab represents
-xref:admin-guide/application-settings-management/index.adoc[Application Settings],
-xref:admin-guide/pharma-activity-report/configuring-activity-report/activity-layout-settings/1-1-visit/next-call-settings.adoc[Next Call Settings], and
-xref:admin-guide/targeting-and-marketing-cycle/configuring-targeting-and-marketing-cycles/managing-marketing-cycle/linking-activity.adoc[Marketing Cycle Linking Settings]. All
-settings are divided into categories according to the purpose.
+This tab represents xref:admin-guide/application-settings-management/index.adoc[Application Settings], xref:admin-guide/pharma-activity-report/configuring-activity-report/activity-layout-settings/1-1-visit/next-call-settings.adoc[Next Call Settings], and xref:admin-guide/targeting-and-marketing-cycle/configuring-targeting-and-marketing-cycles/managing-marketing-cycle/linking-activity.adoc[Marketing Cycle Linking Settings]. All settings are divided into categories according to the purpose.
+
 image:58828551.png[]
 
-
-
 [[h2_1292798904]]
-=== Calendar
+== Calendar
 
-This tab represents the
-xref:create-a-new-record-of-calendar-tab-settings[Calendar Tab
-Settings]. You can define which calendar tab will be shown for which
-profile.
+This tab represents the xref:admin-guide/calendar-management/legacy-calendar-management/create-a-new-record-of-calendar-tab-settings.adoc[Calendar Tab
+Settings]. You can define which calendar tab will be shown for which profile.
 
 image:58828552.png[]
 
-
-
 [[h2_1996642697]]
-=== Activity Report
+== Activity Report
 
 This tab represents the following tabs:
 
-* xref:company-product-tab-settings[Company Product Settings]
-* xref:company-product-tab-settings[]xref:competitor-product-tab-settings[Competitor
-Product Settings]
-* xref:competitor-product-tab-settings[]xref:event-member-tab-settings[Event
-Member Tab Settings]
-* xref:event-member-tab-settings[]xref:expenses-tab-settings[Expenses
-Tab Settings]
-* xref:expenses-tab-settings[]xref:inventory-tab-settings[Inventory
-Tab Settings]
-* xref:inventory-tab-settings[]xref:pos-material-tab-settings[POS
-Material Tab Settings]
-* xref:pos-material-tab-settings[]xref:special-trackings-tab-settings[Special
-Tracking Tab Settings]
-* xref:special-trackings-tab-settings[]xref:create-a-new-filter-for-the-activities-list[Activity
-Report Filters].
+* xref:admin-guide/pharma-activity-report/configuring-activity-report/activity-report-tab-settings/company-product-tab-settings.adoc[Company Product Settings]
+* xref:admin-guide/pharma-activity-report/configuring-activity-report/activity-report-tab-settings/company-product-tab-settings.adoc[]xref:admin-guide/pharma-activity-report/configuring-activity-report/activity-report-tab-settings/competitor-product-tab-settings.adoc[Competitor Product Settings]
+* xref:admin-guide/pharma-activity-report/configuring-activity-report/activity-report-tab-settings/competitor-product-tab-settings.adoc[]xref:admin-guide/pharma-activity-report/configuring-activity-report/activity-report-tab-settings/event-member-tab-settings.adoc[Event Member Tab Settings]
+* xref:admin-guide/pharma-activity-report/configuring-activity-report/activity-report-tab-settings/event-member-tab-settings.adoc[]xref:admin-guide/pharma-activity-report/configuring-activity-report/activity-report-tab-settings/expenses-tab-settings.adoc[Expenses Tab Settings]
+* xref:admin-guide/pharma-activity-report/configuring-activity-report/activity-report-tab-settings/expenses-tab-settings.adoc[]xref:admin-guide/pharma-activity-report/configuring-activity-report/activity-report-tab-settings/inventory-tab-settings.adoc[Inventory Tab Settings]
+* xref:admin-guide/pharma-activity-report/configuring-activity-report/activity-report-tab-settings/inventory-tab-settings.adoc[]xref:admin-guide/pharma-activity-report/configuring-activity-report/activity-report-tab-settings/pos-material-tab-settings.adoc[POS Material Tab Settings]
+* xref:admin-guide/pharma-activity-report/configuring-activity-report/activity-report-tab-settings/special-trackings-tab-settings.adoc[Special Tracking Tab Settings]
+* xref:admin-guide/pharma-activity-report/configuring-activity-report/activity-layout-settings/create-a-new-filter-for-the-activities-list.adoc[Activity Report Filters].
 
-Customize tabs for the specific Pharma Activity Report according to the
-selected profile. Define Pharma Activity Report filters.
+Customize tabs for the specific Pharma Activity Report according to the selected profile. Define Pharma Activity Report filters.
 
-Refer to xref:activity-report-tab-settings[Activity Report Tab
-Settings] for more information.
+TIP: Refer to xref:admin-guide/pharma-activity-report/configuring-activity-report/activity-report-tab-settings/index.adoc[Activity Report Tab Settings] for more information.
 
 image:58828554.png[]
 
-
-
 [[h2_374856802]]
-=== Divisions
+== Divisions
 
-This tab represents Application Settings and Division Target Frequency
-Settings.
+This tab represents Application Settings and Division Target Frequency Settings.
 
 image:58828558.png[]
 
-
-
 [[h2_1837685899]]
-=== Triggers
+== Triggers
 
-This tab represents Triggers
-Settings. Refer to xref:admin-guide/configuring-triggers/index.adoc[Triggers
-Management] for more information.
+This tab represents Triggers Settings. Refer to xref:admin-guide/configuring-triggers/index.adoc[Triggers Management] for more information.
 
 image:58828560.png[]
 
