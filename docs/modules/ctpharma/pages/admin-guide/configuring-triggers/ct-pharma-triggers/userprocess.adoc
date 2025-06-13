@@ -1,35 +1,22 @@
 = UserProcess
 
-The _UserProcess_ trigger is intended to manage
-xref:user-field-reference[User] records.
+The _UserProcess_ trigger is intended to manage xref:admin-guide/application-settings-management/user-field-reference.adoc[User] records.
 
 '''''
 
-API name:[.apiobject]#User#
+API name: [.apiobject]#User#
 
 '''''
 
 [width="100%",cols="15%,20%,10%,55%"options="header",]
 |===
-a|
-*Context*
-
-a|
-*Method*
-
-a|
-*Codename*
-
-a|
-*Description*
+a| *Context* a| *Method* a| *Codename* a| *Description*
 
 |[.apiobject]#After Insert[ai]#
-|` setUniqUserNumberFuture ` |` setUUNF ` |Populating the
-[.apiobject]#CTPHARMA\__UniqUserNumber__c# field.
+|[.apiobject]#setUniqUserNumberFuture# |[.apiobject]#setUUNF# |Populating the [.apiobject]#CTPHARMA\__UniqUserNumber__c# field.
 
 |[.apiobject]#Before Update[bu]#
-|` setUniqUserNumber ` |` setUUN ` |Updating the
-[.apiobject]#CTPHARMA\__UniqUserNumber__c# field.
+|[.apiobject]#setUniqUserNumber# |[.apiobject]#setUUN# |Updating the [.apiobject]#CTPHARMA\__UniqUserNumber__c# field.
 |===
 
 

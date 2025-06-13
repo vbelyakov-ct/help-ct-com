@@ -1,38 +1,21 @@
 = MarketingCycleUserProcess
 
-API name:[.apiobject]#CTPHARMA\__MarketingCycleUser__c #
+API name: [.apiobject]#CTPHARMA\__MarketingCycleUser__c#
 
 '''''
 
 [width="100%",cols="15%,20%,10%,55%"options="header",]
 |===
-|*Context* a|
-*Method*
-
-a|
-*Codename*
-
-a|
-*Description*
+|*Context* a| *Method* a| *Codename* a| *Description*
 
 |[.apiobject]#After Insert [ai]#
-|` manageTargetFrequency(false) ` |` manageTF ` |If the association
-between a user and a marketing cycle is not active
-([.apiobject]#CTPHARMA\__Active__c# field
-value is _False_), the Target Frequencies linked to this user is
-deactivated.
+|[.apiobject]#manageTargetFrequency(false)# |[.apiobject]#manageTF# |If the association between a user and a marketing cycle is not active ([.apiobject]#CTPHARMA\__Active__c# field value is _False_), the Target Frequencies linked to this user is deactivated.
 
 |[.apiobject]#After Update[au]#
-|` manageTargetFrequency(false) ` |` manageTF ` |If the
-[.apiobject]#CTPHARMA\__Active__c# field value was
-changed for a marketing cycle user from _True_ to _False_, meaning that
-the association between the user and the marketing cycle is deactivated,
-the Target Frequencies related to this user are also deactivated.
+|[.apiobject]#manageTargetFrequency(false)# |[.apiobject]#manageTF# |If the [.apiobject]#CTPHARMA\__Active__c# field value was changed for a marketing cycle user from _True_ to _False_, meaning that the association between the user and the marketing cycle is deactivated, the Target Frequencies related to this user are also deactivated.
 
 |[.apiobject]#After Delete[ad]#
-|` manageTargetFrequency(true) ` |` manageTF ` |If the association
-between a user and a marketing cycle was deleted, Target Frequencies
-related to this user would also be deactivated.
+|[.apiobject]#manageTargetFrequency(true)# |[.apiobject]#manageTF# |If the association between a user and a marketing cycle was deleted, Target Frequencies related to this user would also be deactivated.
 |===
 
 

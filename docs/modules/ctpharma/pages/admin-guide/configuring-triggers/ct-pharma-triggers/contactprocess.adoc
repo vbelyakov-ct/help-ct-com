@@ -1,55 +1,25 @@
 = ContactProcess
 
-_ContactProcess_ is intended to
-xref:creating-a-targeting-list[manage target Contact records].
+_ContactProcess_ is intended to xref:admin-guide/targeting-and-marketing-cycle/configuring-targeting-and-marketing-cycles/managing-targeting/creating-a-targeting-list.adoc[manage target Contact records].
 
 '''''
 
-API name:[.apiobject]#Contact#
+API name: [.apiobject]#Contact#
 
 '''''
 
 [width="100%",cols="15%,20%,10%,55%"options="header",]
 |===
-|*Context* a|
-*Method*
+|*Context* a| *Method* a| *Codename* a|*Description*
 
-a|
-*Codename*
+a|[.apiobject]#After Insert [ai]#
 
-a|
-*Description*
+|[.apiobject]#manageReference# |[.apiobject]#manageRef# |A new [.apiobject]#CTPHARMA\__Reference__c# object is created for associating [.object]#Contact# and [.object]#Account# objects.
 
-a|
+|[.apiobject]#After Update[au]# |[.apiobject]#manageReference# |[.apiobject]#manageRef# |When changing the [.apiobject]#CTPHARMA\__AccountId__c# field, a new [.apiobject]#CTPHARMA\__Reference__c# object associating [.object]#Contact# and [.object]#Account# objects is created. In the [.apiobject]#CTPHARMA\__Reference__c# objects where the data is stored, the value of the [.apiobject]#CTPHARMA\__IsPrimary__c# field changes from true to false.
 
+| |[.apiobject]#manageTargetFrequency# |[.apiobject]#manageTF# a| Target Frequency logic. Check targeting fields (check box and category) for changes set in the Division Target Frequency Settings custom setting for the user division.
 
-After Insert [ai]
-
-|` manageReference ` |` manageRef ` |A new
-[.apiobject]#CTPHARMA\__Reference__c# object is created
-for associating [.object]#Contact# and
-[.object]#Account# objects.
-
-|[.apiobject]#After Update[au]# |` manageReference `
-|` manageRef ` |When changing the
-[.apiobject]#CTPHARMA\__AccountId__c# field, a new
-[.apiobject]#CTPHARMA\__Reference__c# object associating
-[.object]#Contact# and [.object]#Account# objects is
-created. In the[.apiobject]#CTPHARMA\__Reference__c#
-objects where the data is stored, the value of the
-[.apiobject]#CTPHARMA\__IsPrimary__c# field changes from
-true to false.
-
-| |` manageTargetFrequency ` |` manageTF ` a|
-Target Frequency logic. Check targeting fields (check box and category)
-for changes set in the Division Target Frequency Settings custom setting
-for the user division.
-
-When updating the fields, targeting creates a new _Target Frequency_
-active record for a current user. If such record already exists, it will
-be deactivated and the deactivation date specified. The
-[.apiobject]#CTPHARMA\__TargetUserIds__c# field update.
+When updating the fields, targeting creates a new _Target Frequency_ active record for a current user. If such record already exists, it will be deactivated and the deactivation date specified. The [.apiobject]#CTPHARMA\__TargetUserIds__c# field update.
 
 |===
-
-
