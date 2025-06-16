@@ -3,35 +3,28 @@
 In this section:
 
 * Get familiar with _Pharma Product_ record type;
-* Read field description for the
-xref:pharma-product-field-reference[Pharma Product]
-and xref:product-component-field-reference[Product Component]
-objects.
+* Read field description for the xref:./pharma-product-field-reference.adoc[Pharma Product] and xref:./product-component-field-reference.adoc[Product Component] objects.
 
 [[h2_160781133]]
-=== The Pharma Product Record Types
+== The Pharma Product Record Types
 
-After the CT Pharma installation, there are Pharma Products with
-different record types divided by families and brands. The available
-record types:
+After the CT Pharma installation, there are Pharma Products with different record types divided by families and brands. The available record types:
 
 * *Company Product*
-This record type is intended to store records of your company's
-products.
++
+This record type is intended to store records of your company's products.
 * *Competitor Product*
-This record type is intended to store records of our competitor's
-products.
++
+This record type is intended to store records of our competitor's products.
 * *POS Material*
-This record type is intended to store records of the auxiliary products,
-such as shelves, roll-stands, stoppers, and other items for the
-point-of-sales.
++
+This record type is intended to store records of the auxiliary products, such as shelves, roll-stands, stoppers, and other items for the point-of-sales.
 * *Inventory*
-This record type is intended to store records of the rented items for
-the point-of-sales.
++
+This record type is intended to store records of the rented items for the point-of-sales.
 * *Bundle*
-It is a Pharma Product that is a hub for Pharma Product records
-organized in a hierarchy.
++
+It is a Pharma Product that is a hub for Pharma Product records organized in a hierarchy.
+
 ** A bundle can include up to 3 child bundles.
-** It is used for the
-https://help.customertimes.com/articles/project-order-module/ct-orders-solution[CT
-Orders] functionality and not added to the *Pharma Product* page layout.
+** It is used for the link:https://help.customertimes.com/articles/project-order-module/ct-orders-solution[CT Orders] functionality and not added to the *Pharma Product* page layout.

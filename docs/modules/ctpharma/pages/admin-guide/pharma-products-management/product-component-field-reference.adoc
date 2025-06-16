@@ -1,14 +1,10 @@
 = Product Component Field Reference
 
-the [.object]#Product Component #object is a junction object
-between a bundle and a product and used in
-https://help.customertimes.com/smart/project-order-module/product-management[product
-management] for CT Orders. One product can be a part of different
-bundles.
+The [.object]#Product Component# object is a junction object between a bundle and a product and used in link:https://help.customertimes.com/smart/project-order-module/product-management[product management] for CT Orders. One product can be a part of different bundles.
 
 '''''
 
-Object API name: `CTPHARMA_ProductComponent__c`
+Object API name: [.apiobject]#CTPHARMA_ProductComponent__c#
 
 '''''
 
@@ -16,18 +12,19 @@ Object API name: `CTPHARMA_ProductComponent__c`
 |===
 |*Field* |*API name* |*Type* |*Description*
 
-|Bundle |Bundle2Id__c |Lookup(CT Product) |A bundle that
-includes the current Salesforce product.
+|Bundle |[.apiobject]#Bundle2Id__c# |Lookup(CT Product) |A bundle that includes the current Salesforce product.
 
-|Bundle |`CTPHARMA\__BundleId__c` |Lookup(Product2)
+The field must be manually created by the administrator.
+
+|Bundle |[.apiobject]#CTPHARMA\__BundleId__c# |Lookup(Product2)
 |A bundle that includes the current _Pharma Product_.
 
-|Multiplier |`CTPHARMA\__Multiplier__c` |Number(18,0) |A
-multiplying factor sets the ratio for multiplying the number of products
-in the bundle.
+|Multiplier |[.apiobject]#CTPHARMA\__Multiplier__c# |Number(18,0) |A multiplying factor sets the ratio for multiplying the number of products in the bundle.
 
-|Product |`CTPHARMA\__ProductId__c` |Lookup(CT Product) |This is
-a lookup to store a __Pharma Product __identifier.
+|Product |[.apiobject]#CTPHARMA\__ProductId__c# |Lookup(CT Product) |This is a lookup to store a _Pharma Product_ identifier.
 
-|Product |Product2Id__c |Lookup(Product2) |
+|Product |[.apiobject]#Product2Id__c# |Lookup(Product2) |
+This is a default lookup to the standard link:https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_product2.htm[Product] record in case of working with the CG Cloud solution.
+
+The field must be manually created by the administrator.
 |===
