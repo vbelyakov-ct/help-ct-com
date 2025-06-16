@@ -1,12 +1,10 @@
 = Pharma Group Field Reference
 
-the [.object]#Pharma Group# object is intended to store
-appropriate objects' records in alignment with SOQL filters applied to
-these objects and their child objects.
+the [.object]#Pharma Group# object is intended to store appropriate objects' records in alignment with SOQL filters applied to these objects and their child objects.
 
 '''''
 
-Object API name: `CTPHARMA\__Group__c`
+Object API name: [.apiobject]#CTPHARMA\__Group__c#
 
 '''''
 
@@ -14,52 +12,40 @@ Object API name: `CTPHARMA\__Group__c`
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|BatchJobId |`CTPHARMA\__BatchJobId__c` |Text(18) |The
-appropriate batch job to update group members.
+|BatchJobId |[.apiobject]#CTPHARMA\__BatchJobId__c# |Text(18) |The appropriate batch job to update group members.
 
-|Dynamic Group |CTPHARMA\__IsDynamic__c |Checkbox       a|
+|Dynamic Group |[.apiobject]#CTPHARMA\__IsDynamic__c# |Checkbox a|
 If enabled, the group is dynamic.
 
 * *Static*
++
 A static group is a snapshot of records per specific time.
 * *Dynamic*
-A dynamic group keeps the lists of records per different objects up to
-date
++
+A dynamic group keeps the lists of records per different objects up to date
 
-|Field List |​​`CTPHARMA\__FieldList__c` |TextArea(255)  |Fields
-to display group members table (separated by a comma, without blank
-space).
+|Field List |[.apiobject]#CTPHARMA\__FieldList__c# |TextArea(255)  |Fields to display group members table (separated by a comma, without blank space).
 
-|For Group Update     |​​CTPHARMA\__IsForUpdate__c |Checkbox
-   |if enabled, the group is automatically recalculated.
+|For Group Update |[.apiobject]#CTPHARMA\__IsForUpdate__c# |Checkbox
+|if enabled, the group is automatically recalculated.
 
-|Group Filter |`CTPHARMA\__GroupFilter__c` |LongTextArea(32768)
+|Group Filter |[.apiobject]#CTPHARMA\__GroupFilter__c# |LongTextArea(32768)
 |Stores SOQL filter for a group record.
 
-|Group Filter JSON |`CTPHARMA\__GroupFilerJson__c`
-|LongTextArea(131072) |Stores a JSON with SOQL filter for a group
-record.
+|Group Filter JSON |[.apiobject]#CTPHARMA\__GroupFilerJson__c#
+|LongTextArea(131072) |Stores a JSON with SOQL filter for a group record.
 
 |Group Type a|
-`CTPHARMA\__ObjectType__c`
-
-
+[.apiobject]#CTPHARMA\__ObjectType__c#
 
 |Picklist a|
 Select the group type:
 
-* *Accounts* and their child objects,
-e.g., [.object]#CT Orders#, [.object]#Activities#, etc.
-* *Contacts* and their child objects,
-e.g., [.object]#Activities#, [.object]#Target
-Frequencies#, etc.
-* *CT Products* and their child objects,
-e.g., [.object]#Activity Data#, etc.
-* *Users* and their child objects, e.g., [.object]#CT
-Orders#, [.object]#Activities#, etc.
+* *Accounts* and their child objects, e.g., [.object]#CT Orders#, [.object]#Activities#, etc.
+* *Contacts* and their child objects, e.g., [.object]#Activities#, [.object]#Target Frequencies#, etc.
+* *CT Products* and their child objects, e.g., [.object]#Activity Data#, etc.
+* *Users* and their child objects, e.g., [.object]#CT Orders#, [.object]#Activities#, etc.
 
-To specify a new group type, refer
-to xref:specify-a-custom-object-for-a-pharma-group[Specify a Custom
-Object for a Pharma Group].
+To specify a new group type, refer to xref:admin-guide/pharma-groups-management/specify-a-custom-object-for-a-pharma-group.adoc[Specify a Custom Object for a Pharma Group].
 
 |===

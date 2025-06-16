@@ -1,11 +1,10 @@
 = Create and Update a Dynamic Pharma Group
+:toc:
 
 Create a dynamic Pharma group and manage its members.
 
-:toc: :toclevels: 3
-
 [[h2_2088856957]]
-=== Create a Dynamic Pharma Group
+== Create a Dynamic Pharma Group
 
 To create a static Pharma group:
 
@@ -14,66 +13,53 @@ To create a static Pharma group:
 . Fill in the _Pharma group_ parameters, such as:
 * Enter *Group Name*.
 * Select *Group Type*. It cannot be changed after saving the group.
-* Select the *Dynamic* **Group **checkbox.
-[TIP] ==== Read the description of each parameter  ====
-xref:pharma-group-field-reference[here].image:Create-a-dynamic-Pharma-Group.png[]
+* Select the *Dynamic Group* checkbox.
++
+TIP: Read the description of each parameter xref:./ref-guide/pharma-group-field-reference.adoc[here].
++
+image:Create-a-dynamic-Pharma-Group.png[]
 . Click *Save*.
-. The dynamic group of records is created. The *SOQL Builder* tab
-opens.
+. The dynamic group of records is created. The *SOQL Builder* tab opens.
 * Enter criteria using the *OR* / *AND* buttons.
 * Check the _SOQL Query_ record above the builder.
++
 image:Create-a-dynamic-Pharma-Group_SOQL-Builder.png[]
 . Click *Save* and confirm.
 
 The dynamic group is created.
 
 [[h2_657316184]]
-=== Manage Dynamic Pharma Group Members
+== Manage Dynamic Pharma Group Members
 
-To view dynamic Pharma group members, go to the **Group Members **tab.
+To view dynamic Pharma group members, go to the *Group Members* tab.
 
 * Click *New* to manually add a Pharma group member.
-** A _Pharma Group Member_ record will not be recalculated after
-changing the SOQL criteria.
-** To recalculate a __Pharma Group Member __record, unchecked
-the *Manual* field on the added __Pharma Group Member __record.
-[TIP] ==== Add the *Manual* field to the *Group Member* page
-layout. ====
+** A _Pharma Group Member_ record will not be recalculated after changing the SOQL criteria.
+** To recalculate a _Pharma Group Member_ record, uncheck the *Manual* field on the added _Pharma Group Member_ record.
++
+TIP: Add the *Manual* field to the *Group Member* page layout.
 * An empty record cannot be added as a _Pharma Group Member_ record;
-* Only the records of the selected *Group Type* on the _Pharma
-Group_ record can be added as a group member.
+* Only the records of the selected *Group Type* on the _Pharma Group_ record can be added as a group member.
++
 image:Create-a-dynamic-Pharma-Group_Members.png[]
 
 [[h2_2007782862]]
-=== Update a Dynamic Pharma Group
+== Update a Dynamic Pharma Group
 
-To update a dynamic group, you can choose between recalculation per
-record, dependent on the Apex trigger activation, or scheduling
-recalculation manually.
+To update a dynamic group, you can choose between recalculation per record, dependent on the Apex trigger activation, or scheduling recalculation manually.
 
 [[h3_1694404096]]
-==== Recalculation per Record
+=== Recalculation per Record
 
-If a user creates, updates, or removes a record of the object that
-matches the criteria of the dynamic group, the
-xref:group-member-process[GroupMemberProcess] trigger immediately
-recalculates the dynamic group. It checks specific fields of the record
-and updates the corresponding dynamic group(s).
+If a user creates, updates, or removes a record of the object that matches the criteria of the dynamic group, the xref:admin-guide/configuring-triggers/ct-pharma-triggers/group-member-process.adoc[GroupMemberProcess] trigger immediately recalculates the dynamic group. It checks specific fields of the record and updates the corresponding dynamic group(s).
 
-Object records will not be recalculated if only the records of the child
-objects have been changed.
+Object records will not be recalculated if only the records of the child objects have been changed.
 
 [[h3_1746193321]]
-==== Schedule Recalculation
+=== Schedule Recalculation
 
-By default, the dynamic groups are updated daily. The special
-Apex Schedule_DynamicGroup class will be run to update all the
-dynamic groups according to all the criteria for each parent and child
-objects.
+By default, the dynamic groups are updated daily. The special Apex Schedule_DynamicGroup class will be run to update all the dynamic groups according to all the criteria for each parent and child objects.
 
-Manually added group members cannot be recalculated. To recalculate this
-record, unchecked the *Manual* field.
+Manually added group members cannot be recalculated. To recalculate this record, unchecked the *Manual* field.
 
-For further information, please refer to
-https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_scheduler.htm[Developer
-Salesforce: Apex Scheduler].
+For further information, please refer to link:https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_scheduler.htm[Developer Salesforce: Apex Scheduler].

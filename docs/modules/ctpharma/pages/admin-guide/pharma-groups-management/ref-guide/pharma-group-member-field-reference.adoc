@@ -1,11 +1,10 @@
 = Pharma Group Member Field Reference
 
-the [.object]#Pharma Group Member# object is intended to store
-static or dynamic group members.
+the [.object]#Pharma Group Member# object is intended to store static or dynamic group members.
 
 '''''
 
-Object API name: `CTPHARMA\__GroupMember__c`
+Object API name: [.apiobject]#CTPHARMA\__GroupMember__c#
 
 '''''
 
@@ -13,21 +12,16 @@ Object API name: `CTPHARMA\__GroupMember__c`
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Account |`CTPHARMA\__AccountId__c` |Lookup(Account) |The related
-_Account_ record if the group type is Account.
+|Account |[.apiobject]#CTPHARMA\__AccountId__c# |Lookup(Account) |The related _Account_ record if the group type is Account.
 
-|Contact |​​`CTPHARMA\__ContactId__c` |Lookup(Contact) |The
-related _Contact_ record if the group type is Contact.
+|Contact |[.apiobject]#CTPHARMA\__ContactId__c# |Lookup(Contact) |The related _Contact_ record if the group type is Contact.
 
-|Manual |`CTPHARMA\__IsManual__c` |Checkbox       |Defines if
-the member was added to the resulting list manually.
+|Manual |[.apiobject]#CTPHARMA\__IsManual__c# |Checkbox |Defines if the member was added to the resulting list manually.
 
-|Pharma Group |CTPHARMA\__GroupId__c |Lookup(Pharma Group)
+|Pharma Group |[.apiobject]#CTPHARMA\__GroupId__c# |Lookup(Pharma Group)
 |The related _CPG Group_ record.
 
-|Product |`CTPHARMA\__ProductId__c` |Lookup(CT Product) |The
-related _Product_ record if the group type is Product.
+|Product |[.apiobject]#CTPHARMA\__ProductId__c# |Lookup(CT Product) |The related _Product_ record if the group type is Product.
 
-|User   |`​​CTPHARMA\__UserId__c` |Lookup(User) |The related
-_User_ record if the group type is User.
+|User   |[.apiobject]#CTPHARMA\__UserId__c# |Lookup(User) |The related _User_ record if the group type is User.
 |===

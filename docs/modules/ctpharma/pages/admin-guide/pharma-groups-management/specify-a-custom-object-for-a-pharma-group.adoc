@@ -1,60 +1,203 @@
 = Specify a Custom Object for a Pharma Group
 
-It is possible to specify desired objects that should be used in a
-static or dynamic group.
+It is possible to specify desired objects that should be used in a static or dynamic group.
 
 [[h2_1226814596]]
-=== Add a Custom Object
+== Add a Custom Object
 
 Add a required object as a new group type:
 
-. Go to *Setup → Object Manager → Pharma Group → Fields & Relationships
-→ Group Type →* in the *Values* section, click *New*.
-. As the picklist values, add the API name of an object you like to use
-and click *Save*.
-The API name must be written with a namespace prefix (if any) and
-postfix (if any). You may set any label for this picklist value.
-. Go to *Object Manager → Pharma Group Member →* click *New*.
-. Create a lookup from the *Pharma Group Member* to the object you
-specified in step 2.
-There must be only one lookup field for one object. Otherwise, we may
-not guarantee which lookup will be in use.
+. Go to *Setup* → *Object Manager* → *Pharma Group* → *Fields & Relationships* → *Group Type* → in the *Values* section, click *New*.
+. As the picklist values, add the API name of an object you like to use and click *Save*.
++
+The API name must be written with a namespace prefix (if any) and postfix (if any). You may set any label for this picklist value.
+. Go to *Object Manager* → *Pharma Group Member* → click *New*.
+. Create a lookup from the *Pharma Group Member* to the object you specified in step 2.
++
+There must be only one lookup field for one object. Otherwise, we may not guarantee which lookup will be in use.
 
 The setup is complete.
 
 [[h2_1560790028]]
-=== Set up Apex Class and Trigger
+== Set up Apex Class and Trigger
 
-We recommend changing names of the given below Apex class and trigger to
-match your naming convention.
+TIP: We recommend changing names of the given below Apex class and trigger to match your naming convention.
 
-To apply the dynamic group logic to objects, customize and add Apex
-class and trigger.
+To apply the dynamic group logic to objects, customize and add Apex class and trigger.
 
-. In the Test_DynamicGroupExtension.cls Apex class, check the
-package name and specify API name of the required group object
-within /** SETUP THIS*/ and /** FINISH SETUP*/ .
-
-.Click to view[%collapsible] ==== *Click to see the Apex class*
-==== .Click to hide[%collapsible] ====
-
-
-
+. In the `Test_DynamicGroupExtension.cls` Apex class, check the package name and specify API name of the required group object within `+/** SETUP THIS*/+` and `+/** FINISH SETUP*/+` .
++
+Click to see the Apex class:
++
+[%collapsible]
 ====
-. In the DynamicGroupExtensionProcess.trigger Apex trigger:
+--
+[source, apex]
+----
+/*******************************************************************************
+ * Copyright Copyright(C) 2007-2021 Customertimes Corp.
+ * Columbus Circle, 15th Floor, #1513
+ * New York, NY 10019
+ * mailto:support@customertimes.com
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation
+ * files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy,
+ * modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the
+ * Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO
+ * THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS
+ * OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ * ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+
+@isTest
+public with sharing class Test_DynamicGroupExtension {
+
+    /** SETUP THIS */
+    private static final String ctPackage = 'CTPHARMA';
+    private static final String objectName = 'OBJECT_API_NAME'; // Your object API name
+    /** FINISH SETUP */
+
+    // Test variables
+    private static final String targetName = 'Test Name';
+
+    private static String getName(String name) {
+        return ctPackage + '__' + name;
+    }
+
+    @TestSetup static void setup() {
+
+        SObject dynamicGroup = Schema.getGlobalDescribe().get(getName('Group__c')).newSObject();
+        dynamicGroup.put(getName('ObjectType__c'), objectName);
+        dynamicGroup.put(getName('IsDynamic__c'), true);
+        dynamicGroup.put(getName('GroupFilter__c'), 'Name Like \'%' + targetName + '%\'');
+        dynamicGroup.put(getName('FieldList__c'), 'Name');
+        insert dynamicGroup;
+    }
+
+    @IsTest static void testInsert() {
+
+        SObject currentObject = Schema.getGlobalDescribe().get(objectName).newSObject();
+        currentObject.put('Name', targetName);
+
+        Test.startTest();
+        //Checking how the trigger works when inserting a record
+        insert currentObject;
+
+        Test.stopTest();
+    }
+
+    @IsTest static void testUpdate() {
+
+        SObject currentObject = Schema.getGlobalDescribe().get(objectName).newSObject();
+        currentObject.put('Name', targetName);
+
+        Test.startTest();
+        //Checking how the trigger works when inserting a record
+        insert currentObject;
+
+        //We check the trigger when updating the record, dynamic groups should not work in this case
+        currentObject.Name = 'testMark2';
+        update currentObject;
+        Test.stopTest();
+    }
+
+    @IsTest static void testDelete() {
+
+        SObject currentObject = Schema.getGlobalDescribe().get(objectName).newSObject();
+        currentObject.put('Name', targetName);
+
+        Test.startTest();
+        //Checking how the trigger works when inserting a record
+        insert currentObject;
+
+        //Checking how the trigger works when deleting a record
+        delete currentObject;
+
+        Test.stopTest();
+    }
+
+    @IsTest static void testUndelete() {
+
+        SObject currentObject = Schema.getGlobalDescribe().get(objectName).newSObject();
+        currentObject.put('Name', targetName);
+
+        Test.startTest();
+        //Checking how the trigger works when inserting a record
+        insert currentObject;
+
+        //Checking how the trigger works when deleting a record
+        delete currentObject;
+
+        undelete currentObject;
+
+        Test.stopTest();
+    }
+}
+
+----
+--
+====
+. In the `DynamicGroupExtensionProcess.trigger` Apex trigger:
 * Check the package name.
-* Instead of OBJECT_API_NAME, enter the API name of the required
-group object.
-
-.Click to view[%collapsible] ==== *Click to see the Apex
-trigger* ==== .Click to hide[%collapsible] ====
-
-
-
+* Instead of `OBJECT_API_NAME`, enter the API name of the required group object.
++
+Click to see the Apex trigger
++
+[%collapsible]
 ====
-. Deploy the customized Apex class and trigger to your Salesforce
-instance using your
-IDE, https://workbench.developerforce.com/metadataDeploy.php[Workbench], https://developer.salesforce.com/tools/sfdxcli[SFDX],
-or any other tool.
+--
+[source,apex]
+----
+/*******************************************************************************
+ * Copyright Copyright(C) 2007-2021 Customertimes Corp.
+ * Columbus Circle, 15th Floor, #1513
+ * New York, NY 10019
+ * mailto:support@customertimes.com
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation
+ * files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy,
+ * modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the
+ * Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO
+ * THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS
+ * OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ * ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+
+/**
+ * SETUP THIS:
+ * - Replace OBJECT_API_NAME with the api name of the object for which you want to enable Dynamic Groups.
+ */
+
+trigger DynamicGroupExtensionProcess on OBJECT_API_NAME (before delete, after insert, after update, after undelete) {
+
+    if(Trigger.isInsert && Trigger.isAfter) {
+        CTPHARMA.GlobalDynamicGroups.calculateGroupMembers(Trigger.new, Trigger.oldMap, 'ai');
+    }
+
+    if(Trigger.isUpdate && Trigger.isAfter) {
+        CTPHARMA.GlobalDynamicGroups.calculateGroupMembers(Trigger.new, Trigger.oldMap, 'au');
+    }
+
+    if(Trigger.isUndelete && Trigger.isAfter) {
+        CTPHARMA.GlobalDynamicGroups.calculateGroupMembers(Trigger.new, Trigger.oldMap, 'aud');
+    }
+
+    if(Trigger.isDelete && Trigger.isBefore) {
+        CTPHARMA.GlobalDynamicGroups.deleteGroupMembers(Trigger.old);
+    }
+}
+----
+--
+====
+. Deploy the customized Apex class and trigger to your Salesforce instance using your
+IDE, link:https://workbench.developerforce.com/metadataDeploy.php[Workbench], link:https://developer.salesforce.com/tools/sfdxcli[SFDX], or any other tool.
 
 The setup is complete.
