@@ -1,11 +1,10 @@
 = Skill Mark Field Reference
 
-The [.object]#Skill Mark# object is intended to store results of
-a xref:managing-joint-visits[Joint Visit report].
+The [.object]#Skill Mark# object is intended to store results of a xref:./index.adoc[Joint Visit report].
 
 '''''
 
-Object API name: `CTPHARMA\__SkillMark__c`
+Object API name: [.apiobject]#CTPHARMA\__SkillMark__c#
 
 '''''
 
@@ -14,22 +13,16 @@ Object API name: `CTPHARMA\__SkillMark__c`
 |*Field* |*API Name* |*Type* |*Description*
 
 |Description |[.apiobject]#CTPHARMA\__Description__c#
-|Long Text Area(32768) |Stores tooltip for a Skill in the
-xref:creating-joint-visit-report-template[Joint Visit report
-template].
+|Long Text Area(32768) |Stores tooltip for a Skill in the xref:./creating-joint-visit-report-template.adoc[Joint Visit report template].
 
 |Joint Visit Report
 |[.apiobject]#CTPHARMA\__JointVisitReportId__c#
-|Master-Detail(Joint Visit Report) |ID of a
-xref:creating-a-joint-visit-report[Joint Visit report].
+|Master-Detail(Joint Visit Report) |ID of a xref:./creating-a-joint-visit-report.adoc[Joint Visit report].
 
 |Mark |[.apiobject]#CTPHARMA\__Mark__c# |Text(255)
-|Stores answer to a[.apiobject]#Skill# specified in a
-xref:creating-joint-visit-report-template[Joint Visit report
-template].
+|Stores answer to a [.apiobject]#Skill# specified in a xref:./creating-joint-visit-report-template.adoc[Joint Visit report template].
 
 |Skill |[.apiobject]#CTPHARMA\__SkillId__c#
 |Lookup(Skill) |Stores text of the question specified in
-a xref:creating-joint-visit-report-template[Joint Visit report
-template].
+a xref:./creating-joint-visit-report-template.adoc[Joint Visit report template].
 |===

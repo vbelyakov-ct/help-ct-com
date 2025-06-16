@@ -1,57 +1,45 @@
 = Activities List
 
-The parameter displays the list of the available activities on the right
-side of the *Activity Report* page.
-By default, the *Activities List* field set is related to the
-*Activities List* section:
+The parameter displays the list of the available activities on the right  side of the *Activity Report* page.
 
-[start=3]
-. Click *Edit *(4)
-next to *ActivityList*.#
+By default, the *Activities List* field set is related to the *Activities List* section:
 
-
-
-To create another activity layout, click *New*.
-
+include::ROOT:partial$pharma-activity-layout-settings.adoc[]
+. Click *Edit*(4) next to *ActivityList*.
++
+NOTE: To create another activity layout, click *New*.
++
 image:58829371.png[]
-#
-. Check *Fieldset API Name*. It should be the same as the API name of
-the *Activities List *field set of
-the [.object]#Pharma Activity# object.
+. Check *Fieldset API Name*. It should be the same as the API name of the *Activities List* field set of the [.object]#Pharma Activity# object.
++
 image:58829372.png[]
++
 image:58829373.png[]
-#
 
-The *Activities List* field set is related to the *Activities List*
-section. Now, you can customize the *Activities List* field set.
+The *Activities List* field set is related to the *Activities List* section. Now, you can customize the *Activities List* field set.
 
-To define which fields will be available on the Pharma Activity Report
-for [.object]#Activities List# record type:
+To define which fields will be available on the Pharma Activity Report for [.object]#Activities List# record type:
 
-. Go to *Setup* (1) → *Object Manager* (2) → *Pharma Activity* (3)
-→ *Field Sets *(4).
+. Go to *Setup*(1) → *Object Manager*(2) → *Pharma Activity*(3) → *Field Sets*(4).
++
 The list of the field sets opens.
-. Click *Activities List *(5).
+. Click *Activities List*(5).
++
 image:58829375.png[]
 The Field Set editor opens.
-. Edit a visible field set by dragging available fields to the *In
-the Field Set* list and click *Save* (6).
+. Edit a visible field set by dragging available fields to the *In the Field Set* list and click *Save*(6).
++
 image:58829377.png[]
-#
 
 The *Activities List* field set is customized.
 
-According to the settings, the main section is displayed on the *Pharma
-Activity Report* page.
+According to the settings, the main section is displayed on the *Pharma Activity Report* page.
 
 * Activities, which status is finished, are not displayed.
-* The Activity, which is highlighted with green color, is the Activity
-of the current Pharma Activity Report.
-
+* The Activity, which is highlighted with green color, is the Activity of the current Pharma Activity Report.
++
 image:58829381.png[]
-
 
 *See also:*
 
-* xref:admin-guide/pharma-activity-report/configuring-activity-report/activity-layout-settings/create-a-new-filter-for-the-activities-list.adoc[Activity Report
-Filters]
+* xref:admin-guide/pharma-activity-report/configuring-activity-report/activity-layout-settings/create-a-new-filter-for-the-activities-list.adoc[Activity Report Filters]

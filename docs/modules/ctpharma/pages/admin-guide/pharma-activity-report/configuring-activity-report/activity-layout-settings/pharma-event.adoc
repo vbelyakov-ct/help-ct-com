@@ -1,43 +1,37 @@
 = Pharma Event
 
-By default, the Pharma Event field set is related to the _Pharma Event_
-record type:
+By default, the Pharma Event field set is related to the _Pharma Event_ record type:
 
-[start=3]
-. Click *Edit *(4) next to *Event*.
-
-
-
-To create another activity layout, click *New*.
-
+include::ROOT:partial$pharma-activity-layout-settings.adoc[]
+. Click *Edit*(4) next to *Event*.
++
+NOTE: To create another activity layout, click *New*.
++
 image:58829328.png[]
-. Check *Fieldset API Name*. It should be the same as the API name of
-the *Pharma Event *field set of the
-[.object]#Pharma Activity# object.
+. Check *Fieldset API Name*. It should be the same as the API name of the *Pharma Event *field set of the [.object]#Pharma Activity# object.
++
 image:58829329.png[]
++
 image:58829330.png[]
-#
 
-The *Pharma Event* field set is related to the [.object]#Pharma
-Event# record type. Now, you can customize the *Pharma Event* field
-set.
+The *Pharma Event* field set is related to the _Pharma Event_ record type. Now, you can customize the *Pharma Event* field set.
 
-To define which fields will be available on the Pharma Activity Report
-for _Pharma Event_ record type:
+To define which fields will be available on the Pharma Activity Report for _Pharma Event_ record type:
 
-. Go to *Setup* (1) → *Object Manager* (2) → *Pharma Activity* (3)
-→ *Field Sets *(4).
+. Go to *Setup*(1) → *Object Manager*(2) → *Pharma Activity*(3) → *Field Sets*(4).
++
 The list of the field sets opens.
 . Click *Pharma Event *(5).
++
 image:58829331.png[]
++
 The Field Set editor opens.
-. Edit a visible field set by dragging available fields to the *In
-the Field Set* list and click *Save* (6).
+. Edit a visible field set by dragging available fields to the *In the Field Set* list and click *Save*(6).
++
 image:58829332.png[]
-#
 
 The Pharma Event field set is customized.
 
-According to the settings, the main section is displayed on the *Pharma
-Activity Report* page.
+According to the settings, the main section is displayed on the *Pharma Activity Report* page.
+
 image:58829336.png[]

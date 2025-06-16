@@ -2,27 +2,15 @@
 
 Set up and customize page layouts for a current Activity Report.
 
-. Have a look at the xref:admin-guide/pharma-activity-report/configuring-activity-report/activity-layout-settings/activity-report-interface.adoc[Activity Report
-interface].
-. Create field sets of the [.object]#Activity# custom object and
-associate them with the required [.object]#Activity# record
-types. If there is not a specific field set, the standard page layout
-will be displayed.
-* Use xref:admin-guide/pharma-activity-report/configuring-activity-report/activity-layout-settings/1-1-visit/index[Visit] for a face-to-face meeting.
-* Use xref:pharma-event[Event ]to track meetings with multiple
-participants.
-* Use xref:timeoff[Timeoff ]to log days off or vacations.
+. Have a look at the xref:admin-guide/pharma-activity-report/configuring-activity-report/activity-layout-settings/activity-report-interface.adoc[Activity Report interface].
+. Create field sets of the [.object]#Activity# custom object and associate them with the required [.object]#Activity# record types. If there is not a specific field set, the standard page layout will be displayed.
+* Use xref:admin-guide/pharma-activity-report/configuring-activity-report/activity-layout-settings/1-1-visit/index.adoc[Visit] for a face-to-face meeting.
+* Use xref:./pharma-event.adoc[Event ]to track meetings with multiple participants.
+* Use xref:./timeoff.adoc[Timeoff ]to log days off or vacations.
 * Use Joint Visit as part of Coaching Management.
-
-
-
-CT Pharma package includes 1:1 Visit, Pharma Event, Timeoff, and Joint
-Visit by default. Use articles as an example of how to add a custom
-record type and further configure UI for this record type.
-. Customize the xref:activities-list[*Activities List* ]field set
-to view the required details of activities.
-. Create and use
-xref:admin-guide/pharma-activity-report/configuring-activity-report/activity-layout-settings/create-a-new-filter-for-the-activities-list.adoc[Activity
-Report filters] to keep an eye on activities for a period of time.
++
+NOTE: CT Pharma package includes 1:1 Visit, Pharma Event, Timeoff, and Joint Visit by default. Use articles as an example of how to add a custom record type and further configure UI for this record type.
+. Customize the xref:./activities-list.adoc[*Activities List*] field set to view the required details of activities.
+. Create and use xref:admin-guide/pharma-activity-report/configuring-activity-report/activity-layout-settings/create-a-new-filter-for-the-activities-list.adoc[Activity Report filters] to keep an eye on activities for a period of time.
 
 

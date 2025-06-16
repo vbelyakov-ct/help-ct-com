@@ -1,58 +1,46 @@
 = Objective General Settings
 
-To enable full functionality of the Objectives Management, you should
-previously set up xref:admin-guide/application-settings-management/index.adoc[Application
-Settings] and add the Objectives related list to the
+To enable full functionality of the Objectives Management, you should  previously set up xref:admin-guide/application-settings-management/index.adoc[Application Settings] and add the Objectives related list to the
 [.object]#Account# and [.object]#Contact# objects.
 
-[.aui-icon .aui-icon-small .aui-iconfont-approve .confluence-information-macro-icon]##
-
-Also, you can go to xref:ct-pharma-control-panel-general[CT Pharma
-Control Panel: General] to customize the *Objective Settings* and *Next
-Activity Settings* sections.
+TIP: Also, you can go to xref:admin-guide/ct-pharma-control-panel/index.adoc[CT Pharma Control Panel: General] to customize the *Objective Settings* and *Next Activity Settings* sections.
 
 In the *Application Settings*:
 
 . *Enable Objectives*.
 . *Enable Objective History tracking*.
 . Enter *Objective Tracking Period*.
++
 You can set a month, quarter, year, or cycle period.
-. Enable *Create Next Activity* if you want to use the *Next Call Date*
-option and xref:admin-guide/pharma-activity-report/configuring-activity-report/activity-layout-settings/1-1-visit/next-call-settings.adoc[Next Call Settings].
-You can specify fields to fill in and values with the required
-information that will be added to these fields while creating the visit
-on the *Next Call Date*.
+. Enable *Create Next Activity* if you want to use the *Next Call Date* option and xref:admin-guide/pharma-activity-report/configuring-activity-report/activity-layout-settings/1-1-visit/next-call-settings.adoc[Next Call Settings].
++
+You can specify fields to fill in and values with the required information that will be added to these fields while creating the visit on the *Next Call Date*.
+
 image:58828796.png[]
 
-Now, the *Application Settings* are configured.
-The next step is to add *Objectives* related list to the
-[.object]#Account# and [.object]#Contact# objects.
+Now, the *Application Settings* are configured. The next step is to add *Objectives* related list to the [.object]#Account# and [.object]#Contact# objects.
 
 To add a related list to the *Account* page layout:
 
-. Go to *Setup *(1)** **→ **Object Manager **→ *Account* (2) → *Page
-Layout* (3).
-. Click** Account Layout **(4).**
-image:58828797.png[]#
-**The *Account Layout Settings* opens.
-image:58828798.png[]#
-. Go to the *Related lists* section and add the *Objectives* section by
-dragging it to the layout.
+. Go to *Setup *(1)* → *Object Manager* → *Account*(2) → *Page Layout*(3).
+. Click *Account Layout*(4).
++
+image:58828797.png[]
++
+The *Account Layout Settings* opens.
++
+image:58828798.png[]
++
+. Go to the *Related lists* section and add the *Objectives* section by dragging it to the layout.
 . Click *Save*.
 
-The related list is added. You can find the *Objectives* section on the
-*Related* tab of the selected account.
+The related list is added. You can find the *Objectives* section on the *Related* tab of the selected account.
+
 image:58828801.png[]
 
-
-
-Use
-the same steps to add the *Objectives* related list to the
-[.object]#Contact# object.
-##
+Use the same steps to add the *Objectives* related list to the [.object]#Contact# object.
 
 image:58828802.png[]
 
 
-The next step is xref:creating-an-objective[to create an
-objective].
+The next step is xref:./creating-an-objective.adoc[to create an objective].

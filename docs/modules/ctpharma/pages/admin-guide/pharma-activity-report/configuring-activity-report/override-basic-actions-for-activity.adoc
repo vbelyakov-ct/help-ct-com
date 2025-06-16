@@ -1,33 +1,21 @@
 = Override Basic Actions for Activity
 
-Overriding a standard button changes what happens when a user clicks on
-it.
-To launch the *Activity Report* Visualforce page instead of having a
-standard Salesforce page, you should override the *New*, *Edit*, and
-*View* buttons.
+Overriding a standard button changes what happens when a user clicks on  it.
 
-
+To launch the *Activity Report* Visualforce page instead of having a standard Salesforce page, you should override the *New*, *Edit*, and *View* buttons.
 
 To override the *Edit* button:
 
-. Go to *Setup* (1)** **→ *Object Manager* → *Pharma Activity* (2)
-→ *Buttons, Links and Actions *(3).
+. Go to *Setup*(1) → *Object Manager* → *Pharma Activity*(2) → *Buttons, Links and Actions *(3).
 . Click *Edit *(4) next to the *Edit* label.
-#
-
++
 image:58829534.png[]
-
-
++
 The *Edit* button page opens.
-. In the **Override Properties **section, next to *Salesforce Classic
-Override,* select *Visualforce
-page* → __ActivityReport [CTPHARMA\__ActivityReport] __and
-click *Save*.
-#
-
+. In the *Override Properties* section, next to *Salesforce Classic Override*, select *Visualforce page* → `ActivityReport [CTPHARMA__ActivityReport]` and click *Save*.
++
 image:58829535.png[]
 
-
-
 The *Edit* button is overridden.
+
 Repeat these steps to override the *New* and *View* buttons.

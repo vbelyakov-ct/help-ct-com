@@ -1,27 +1,24 @@
 = Special Trackings Tab Settings
 
-Special Tracking is an entity to set and track tasks and objectives
-during the marketing cycle.
-Customize *Special Tracking* related tab by adding the required fields
-to the *Special Tracking Tab* field set.
+Special Tracking is an entity to set and track tasks and objectives during the marketing cycle.
 
-
+Customize *Special Tracking* related tab by adding the required fields to the *Special Tracking Tab* field set.
 
 To customize the view of the *Special Tracking* tab:
 
-. Go to *Setup* (1) → *Custom Code* → *Custom Settings* (2).
+. Go to *Setup*(1) → *Custom Code* → *Custom Settings*(2).
 . Click *Manage *(3) next to *Special Tracking Tab Settings*.
++
 image:58829495.png[]
 The *Special Tracking Tab Settings Detail* page opens.
-You can also click **Special Tracking Tab Settings **and then
-click *Manage *(3) on the *Special Tracking Tab Settings* page.
++
+You can also click *Special Tracking Tab Settings* and then click *Manage*(3) on the *Special Tracking Tab Settings* page.
++
 image:58829496.png[]
 . Click *Edit *to manage *Default Organization Level Value*.
-
-
-
-Click *New* to create a new organization level value.
-
++
+NOTE: Click *New* to create a new organization level value.
++
 image:58829497.png[]
 Check the description of the fields.
 
@@ -29,60 +26,35 @@ Check the description of the fields.
 |===
 |*Setting Name* |*Type* |*Description* |*Example*
 
-|Active |Checkbox |If selected, that setting is active, and the
-*Activity Report* page uses it. |
+|Active |Checkbox |If selected, that setting is active, and the *Activity Report* page uses it. |
 
-|Currency Answer Field Type |Text (255) |Specify API name of the field
-with the currency type on the custom [.object]#Activity Data#
-object, which is used to store currency values in created records.
-|[.apiobject]# CTPHARMA\__CurrencyAnswer__c#
+|Currency Answer Field Type |Text (255) |Specify API name of the field with the currency type on the custom [.object]#Activity Data# object, which is used to store currency values in created records.
+|[.apiobject]#CTPHARMA\__CurrencyAnswer__c#
 
-|Number Answer Field Type |Text (255) |Specify API name of the field
-with the number type on the custom Activity Data object, which is used
-to store number values in created records.
+|Number Answer Field Type |Text (255) |Specify API name of the field with the number type on the custom Activity Data object, which is used to store number values in created records.
 |[.apiobject]#CTPHARMA\__NumberAnswer__c#
 
-|Text Answer Field Type |Text (255) |Specify API name of the field with
-the text type on the custom Activity Data object, which is used to store
-text values in created records.
-|[.apiobject]#CTPHARMA\__TextAnswer__c #
+|Text Answer Field Type |Text (255) |Specify API name of the field with the text type on the custom Activity Data object, which is used to store text values in created records.
+|[.apiobject]#CTPHARMA\__TextAnswer__c#
 
-|Boolean Answer Field Type |Text (255) |Specify API name of the field
-with the checkbox type on the custom Activity Data object, which is used
-to store logical values in created records.
+|Boolean Answer Field Type |Text (255) |Specify API name of the field with the checkbox type on the custom Activity Data object, which is used to store logical values in created records.
 |[.apiobject]#CTPHARMA\__BooleanAnswer__c#
 
-|Record Type Developer Name |Text (255) |Specify the list of API names
-for [.object]#Activity# object record types, in order to display
-the tab on the *Activity Report* page when creating an activity with the
-specified record type. |[.apiobject]# Visit#
+|Record Type Developer Name |Text (255) |Specify the list of API names for [.object]#Activity# object record types, in order to display the tab on the *Activity Report* page when creating an activity with the specified record type. |[.apiobject]#Visit#
 |===
 
 The view of the tab is customized.
 
-[.aui-icon .aui-icon-small .aui-iconfont-approve .confluence-information-macro-icon]##
+TIP: Also, you can customize *Special Tracking Tab* for each Profile on the xref:admin-guide/ct-pharma-control-panel/ct-pharma-control-panel-activity-report.adoc[CT Pharma Control Panel: Activity Report] tab.
 
-Also, you can customize *Special Tracking Tab* for each Profile on
-the *xref:ct-pharma-control-panel-activity-report[CT Pharma Control
-Panel: Activity Report]* tab.
+According to these settings, the *Special Tracking* tab displays on the *Activity Report* page.
 
-According to these settings, the *Special Tracking* tab displays on the
-*Activity Report* page.
 image:58829498.png[]
-
-
-#
-
-
-#
-
-
 
 *See also:*
 
-* xref:ct-pharma-control-panel-activity-report[CT Pharma Control
-Panel: Activity Report]
-* xref:managing-targeting[Managing Targeting]
-* xref:managing-marketing-cycle[Managing Marketing Cycle]
-* xref:admin-guide/pharma-activity-report/configuring-activity-report/activity-layout-settings/1-1-visit/index[Activity Report: Visit]
-* xref:creating-an-objective[Objective Creating]
+* xref:admin-guide/ct-pharma-control-panel/ct-pharma-control-panel-activity-report.adoc[CT Pharma Control Panel: Activity Report]
+* xref:admin-guide/targeting-and-marketing-cycle/configuring-targeting-and-marketing-cycles/managing-targeting/index.adoc[Managing Targeting]
+* xref:admin-guide/targeting-and-marketing-cycle/configuring-targeting-and-marketing-cycles/managing-marketing-cycle/index.adoc[Managing Marketing Cycle]
+* xref:admin-guide/pharma-activity-report/configuring-activity-report/activity-layout-settings/1-1-visit/index.adoc[Activity Report: Visit]
+* xref:admin-guide/objectives-management/creating-an-objective.adoc[Objective Creating]

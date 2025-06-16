@@ -1,69 +1,55 @@
 = Competitor Product Tab Settings
 
-Competitor Product is an entity to track your competitor's related
-information for particular clients within a visit.
-Customize *Competitor Product* tab and add the required fields to the
-*Competitor Product Tab* field set.
+Competitor Product is an entity to track your competitor's related  information for particular clients within a visit.
+
+Customize *Competitor Product* tab and add the required fields to the *Competitor Product Tab* field set.
 
 To customize the view of the *Competitor Product* tab:
 
-. Go to *Setup* (1) → *Custom Code* → *Custom Settings* (2).
-. Click *Manage *(3)** **next to *Competitor Product Tab Settings*.
+. Go to *Setup*(1) → *Custom Code* → *Custom Settings*(2).
+. Click *Manage *(3)* next to *Competitor Product Tab Settings*.
++
 image:58829475.png[]
++
 The *Competitor Product Tab Settings Detail* opens.
-You can also click **Competitor Product Tab Settings **and then
-click *Manage *(3) on the *Competitor Product Tab Settings* page.
++
+You can also click *Competitor Product Tab Settings* and then click *Manage*(3) on the *Competitor Product Tab Settings* page.
++
 image:58829476.png[]
-
-#
 . Click *Edit *to manage *Default Organization Level Value*.
-
-
-
-Click *New* to create a new organization level value.
-
++
+NOTE: Click *New* to create a new organization level value.
++
 image:58829477.png[]
+
 Check the description of the fields.
 
 [cols=",,,",]
 |===
 |*Setting Name* |*Type* |*Description* |*Example*
 
-|Active |Checkbox |If selected, that setting is active, and the
-*Activity Report* page uses it. |
+|Active |Checkbox |If selected, that setting is active, and the *Activity Report* page uses it. |
 
-|Additional Parameter |Text (255) |Additional SOQL-criteria is in use to
-the list of available records for the object, relation to which is
-specified in the *Field To Show As Picklist* field. They are used only
-when the *Show Lookup As Picklist* checkbox is checked and the *Field To
-Show As Picklist* field is populated. a|
-[.apiobject]#WHERE RecordType.DeveloperName =
+|Additional Parameter |Text (255) |Additional SOQL-criteria is in use to the list of available records for the object, relation to which is specified in the *Field To Show As Picklist* field. They are used only when the *Show Lookup As Picklist* checkbox is checked and the *Field To Show As Picklist* field is populated. a| [.apiobject]#WHERE RecordType.DeveloperName =
 'CompetitorProduct'#
 
 |Allow Record Management |Text (255) a|
-Specifies the values true or false for each record type developer name
-specified in the *Record Type Developer Name* field for enabling add or
-delete record functionality.
+Specifies the values true or false for each record type developer name specified in the *Record Type Developer Name* field for enabling add or delete record functionality.
 
-* Set *true* to add or delete records and *false* to disable these
-options.
+* Set *true* to add or delete records and *false* to disable these options.
 * Use comma delimiter for multiple records.
 
 |[.apiobject]#true#,[.apiobject]#false#
 
-|Field Set Name |Text (255) |Specify *Activity Data* field set API name
-for each record type specified in the **Record Type Developer
-Name **field.
+|Field Set Name |Text (255) |Specify *Activity Data* field set API name for each record type specified in the *Record Type Developer Name* field.
 Use comma delimiter for multiple records.
-|[.apiobject]#CTPHARMA\__CompetitorProductTab#
+|[.apiobject]#CTPHARMA__CompetitorProductTab#
 
-|Fields To Show As Picklist |Text (255) |The field API-name with lookup
-type displays as a picklist in a selected order.
+|Fields To Show As Picklist |Text (255) |The field API-name with lookup type displays as a picklist in a selected order.
 |[.apiobject]#ProductId__c#
 
 |Read Only ProductId |Text (255) a|
-Specifies the values true or false for each record type developer name
-specified in the *Record Type Developer Name* field.
+Specifies the values true or false for each record type developer name specified in the *Record Type Developer Name* field.
 
 * Set *true* to switch the ProductId lookup to read-only mode.
 * Set *false* to switch the ProductId lookup to edit mode.
@@ -71,49 +57,37 @@ specified in the *Record Type Developer Name* field.
 
 |[.apiobject]#true#,[.apiobject]#false#
 
-|Record Type Developer Name |Text (255) |Specify the list of API names
-for [.object]#Activity# object record types, in order to display
-the tab on the *Activity Report* page when creating an activity with the
-specified record type. |[.apiobject]#Visit#
+|Record Type Developer Name |Text (255) |Specify the list of API names for [.object]#Activity# object record types, in order to display the tab on the *Activity Report* page when creating an activity with the specified record type. |[.apiobject]#Visit#
 
-|Show Lookup As Picklist |Text (255) |If selected, the lookup field is
-replaced with the picklist with values that are available according to
-conditions specified in the *Additional Parameter* field. |
+|Show Lookup As Picklist |Text (255) |If selected, the lookup field is replaced with the picklist with values that are available according to conditions specified in the *Additional Parameter* field. |
 |===
 
 The view of the tab is customized.
 
-[.aui-icon .aui-icon-small .aui-iconfont-approve .confluence-information-macro-icon]##
-
-Also, you can customize the *Company Product* tab for each Profile on
-the *xref:ct-pharma-control-panel-activity-report[CT Pharma Control
-Panel: Activity Report]* tab.
-
+TIP: Also, you can customize the *Competitor Product* tab for each Profile on
+the xref:admin-guide/ct-pharma-control-panel/ct-pharma-control-panel-activity-report.adoc[CT Pharma Control Panel: Activity Report] tab.
 
 Now, you can edit the *Competitor Product Tab* field set:
 
-. Go to *Setup* (1)** **→ *Object Manager * →** Pharma Activity
-Data** (2).
+. Go to *Setup*(1)* → *Object Manager* → *Pharma Activity Data*(2).
++
 The *Pharma Activity Data* page opens.
-. Go to** Field Sets** (3) and click** Competitor Product Tab**.
+. Go to *Field Sets*(3) and click *Competitor Product Tab*.
++
 The field set template opens.
-. Edit a visible field set by dragging any of the fields to the *In
-the Field Set* list and click *Save*.
+. Edit a visible field set by dragging any of the fields to the *In the Field Set* list and click *Save*.
++
 image:58829478.png[]
 
 The view of the tab is customized.
 
-According to these settings, the *Company Product* tab displays on the
-*Activity Report* page.
+According to these settings, the *Company Product* tab displays on the *Activity Report* page.
 
 image:58829479.png[]
 
-
-
 *See also:*
 
-* xref:ct-pharma-control-panel-activity-report[CT Pharma Control
-Panel: Activity Report]
-* xref:managing-targeting[Managing Targeting]
-* xref:managing-marketing-cycle[Managing Marketing Cycle]
-* xref:admin-guide/pharma-activity-report/configuring-activity-report/activity-layout-settings/1-1-visit/index[Activity Report:: 1:1 Visit]
+* xref:admin-guide/ct-pharma-control-panel/ct-pharma-control-panel-activity-report.adoc[CT Pharma Control Panel: Activity Report]
+* xref:admin-guide/targeting-and-marketing-cycle/configuring-targeting-and-marketing-cycles/managing-targeting/index.adoc[Managing Targeting]
+* xref:admin-guide/targeting-and-marketing-cycle/configuring-targeting-and-marketing-cycles/managing-marketing-cycle/index.adoc[Managing Marketing Cycle]
+* xref:admin-guide/pharma-activity-report/configuring-activity-report/activity-layout-settings/1-1-visit/index.adoc[Activity Report:: 1:1 Visit]

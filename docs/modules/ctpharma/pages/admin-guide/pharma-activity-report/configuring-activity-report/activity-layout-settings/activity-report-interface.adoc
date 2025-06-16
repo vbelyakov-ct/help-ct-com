@@ -1,38 +1,25 @@
 = Activity Report Interface
 
-Pharma Activity Report displays all information for the selected pharma
-activity within one page and can help you to manage activities related
-to the particular user.
-
-
+Pharma Activity Report displays all information for the selected pharma  activity within one page and can help you to manage activities related to the particular user.
 
 Pharma Activity Report page consists of a number of sections:
 
-* The main section (1) displays the customized view of the Pharma
-activity details for xref:admin-guide/pharma-activity-report/configuring-activity-report/activity-layout-settings/1-1-visit/index[1:1
-Visit], xref:pharma-event[Pharma
-Event], xref:timeoff[Timeoff], and other types of activities if
-needed.
-* Available Activities section (2)
-displays xref:admin-guide/pharma-activity-report/configuring-activity-report/activity-layout-settings/create-a-new-filter-for-the-activities-list.adoc[available
-activities filters].
-Create a SOQL filter to find a required activity.
-* The section that displays xref:activities-list[the list of the
-available activities] (3) according to the filter criteria.
+* The main section (1) displays the customized view of the Pharma activity details for xref:admin-guide/pharma-activity-report/configuring-activity-report/activity-layout-settings/1-1-visit/index.adoc[1:1 Visit], xref:./pharma-event.adoc[Pharma Event], xref:./timeoff.adoc[Timeoff], and other types of activities if needed.
+* Available Activities section (2) displays xref:admin-guide/pharma-activity-report/configuring-activity-report/activity-layout-settings/create-a-new-filter-for-the-activities-list.adoc[available activities filters].
++
+Create an SOQL filter to find a required activity.
+* The section that displays xref:./activities-list.adoc[the list of the available activities] (3) according to the filter criteria.
++
 Only not finished activities are displayed in this section.
-* The section that
-displays xref:admin-guide/pharma-activity-report/configuring-activity-report/activity-report-tab-settings/index.adoc[related tabs] (4), which
-could be used for:
-** tracking products within or outside the marketing cycle during a 1:1
-visit.
-** tracking objectives within or outside the marketing cycle during a
-1:1 visit.
+* The section that displays xref:admin-guide/pharma-activity-report/configuring-activity-report/activity-report-tab-settings/index.adoc[related tabs] (4), which could be used for:
+** tracking products within or outside the marketing cycle during a 1:1 visit.
+** tracking objectives within or outside the marketing cycle during a 1:1 visit.
 ** tracking participants and expenses for a Pharma Event.
++
 image:58829405.png[]
 
 See also:
 
-* xref:admin-guide/pharma-activity-report/configuring-activity-report/activity-layout-settings/create-a-new-filter-for-the-activities-list.adoc[Activity Report
-Filters]
-* xref:managing-marketing-cycle[Managing Marketing Cycle]
+* xref:admin-guide/pharma-activity-report/configuring-activity-report/activity-layout-settings/create-a-new-filter-for-the-activities-list.adoc[Activity Report Filters]
+* xref:admin-guide/targeting-and-marketing-cycle/configuring-targeting-and-marketing-cycles/managing-marketing-cycle/index.adoc[Managing Marketing Cycle]
 * xref:admin-guide/pharma-activity-report/configuring-activity-report/activity-report-tab-settings/index.adoc[Activity Report Tab Settings]
