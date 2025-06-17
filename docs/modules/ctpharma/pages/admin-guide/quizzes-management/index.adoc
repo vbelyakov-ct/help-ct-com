@@ -1,56 +1,68 @@
 = Quiz Management
 
-[TIP] ==== These settings are optional. ====
+TIP: These settings are optional.
 
 In this section:
 
-* Install the unmanaged __CT Mobile: Quizzes __package.
+* Install the unmanaged _CT Mobile: Quizzes_ package.
 * Get familiar with the objects:
-** xref:quiz-field-reference[Quiz]
-** xref:quiz-question-field-reference[Quiz Question]
-** xref:quiz-answer-field-reference[Quiz Answer]
-** xref:quiz-partaker-field-reference[Quiz Partaker]
-**[.object]#xref:quiz-completion-field-reference[Quiz
-Completion]#
-* Have a look at the xref:the-quiz-interface[_Quiz_ Interface].
+** xref:./ref-guide/quiz-field-reference.adoc[Quiz]
+** xref:./ref-guide/quiz-question-field-reference.adoc[Quiz Question]
+** xref:./ref-guide/quiz-answer-field-reference.adoc[Quiz Answer]
+** xref:./ref-guide/quiz-partaker-field-reference.adoc[Quiz Partaker]
+** xref:./ref-guide/quiz-completion-field-reference.adoc[Quiz Completion]
+* Have a look at the xref:./the-quiz-interface.adoc[Quiz Interface].
 
-
-
-xref:configuring-quizzes[Configure _Quizzes_] for passing by
-representatives or customers.
+Configure Quizzes for passing by representatives or customers.
 
 [[h2_450949748]]
-=== CT Mobile: Quizzes
+== CT Mobile: Quizzes
 
-The unmanaged _CT Mobile: Quizzes_ package should be installed to pass
-pre-configured questionnaires.
+The unmanaged _CT Mobile: Quizzes_ package should be installed to pass pre-configured questionnaires.
 
-* https://login.salesforce.com/packaging/installPackage.apexp?p0=04t2X000000F1Qu[Follow
-the link] to install the package into your Salesforce org.
-* Only the simple quizzes are supported (there is no functionality to
-display questions depending on the previous answers).
-** *Internal quizzes* are designed to assess representatives' knowledge
-about CT Products, which are targeted at doctors and hospitals, and to
-get feedback about the representative's daily routine. For example, how
-they conduct a meeting, what they like or do not like, how much time
-they spend on visits, etc.
-** *External quizzes* may be used to get feedback from the doctors the
-representative visited.
+* link:https://login.salesforce.com/packaging/installPackage.apexp?p0=04t2X000000F1Qu[Follow the link] to install the package into your Salesforce org.
+* Only the simple quizzes are supported (there is no functionality to display questions depending on the previous answers).
+** *Internal quizzes* are designed to assess representatives' knowledge about CT Products, which are targeted at doctors and hospitals, and to get feedback about the representative's daily routine. For example, how they conduct a meeting, what they like or do not like, how much time they spend on visits, etc.
+** *External quizzes* may be used to get feedback from the doctors the representative visited.
 
 [[h2_552352642]]
-=== Quiz Model
+== Quiz Model
 
-Each _Quiz_ record has a number of related _Quiz Question_ records. The
-passed _Quiz_ is stored as the _Quiz Completion_ record with the
-linked _Quiz Answer_ records. The corresponding _Quiz Answer_ record is
-related to the _Quiz Partaker_ record. The administrator assigns _Quiz
-Partakers_ by creating a _Quiz Partaker_ record.
-
-
+Each _Quiz_ record has a number of related _Quiz Question_ records. The passed _Quiz_ is stored as the _Quiz Completion_ record with the linked _Quiz Answer_ records. The corresponding _Quiz Answer_ record is related to the _Quiz Partaker_ record. The administrator assigns _Quiz Partakers_ by creating a _Quiz Partaker_ record.
 
 image:Unmanaged-Quiz-Model.png[]
 
-
-
 [[h2_315475588]]
-=== Configuring Quizzes
+== Configuring Quizzes
+
+Quizzes may be used for the following purposes:
+
+* *Marketing Investigation*
++
+It is a survey to get feedback from the representatives. A quiz has no time restriction and required questions.
+* *Team Self Training*
++
+Based on the marketing strategy and segmentation, a representative team studies the company recommendations for visiting target doctors. To pass the quiz, it is required to give a specific percent of the right answers. The quiz can be passed many times, and the results will be shown at the end of the quiz.
+* *Knowledge Estimation*
++
+Estimate your representatives by restricting the time of a quiz and setting a passing score.
+* *Customer Feedback*
++
+Collect the targeted doctors' feedback to improve the representative and doctor relationship.
+
+Follow the guidelines to set up quizzes:
+
+. Specify the representative access to the [.object]#Quizzes# objects and specify the way to pass the quiz:
+* Online by adding the quiz to the *Home* page or displaying the *Quizzes* tab.
+* Offline in case of integration with the CT Mobile app (available only for the CT Mobile iOS).
+* Configure your custom process, for example, to link a quiz to the _CT Pharma Activity_ record.
+. xref:./override-basic-action-for-quiz.adoc[Override the *View* button] of the [.object]#Quiz# object to have the ability to add questions and assign users.
+. https://help.salesforce.com/articleView?id=creating_custom_object_tabs.htm&type=5[Add the *Quizzes* tab].
+. Define the _Quiz_ purpose and xref:./create-a-new-quiz.adoc[create the _Quiz_ record] with the required options.
+* xref:./specify-questions-for-quiz.adoc[create questions] for the quiz;
+* specify the order of the questions;
+* activate the _Quiz_ record.
+. xref:./assign-the-quiz-partaker.adoc[Assign representatives] to pass the quiz.
++
+TIP: You can test the quiz as the administrator and next assign it to users.
+. Additionally, customize reports to view the quiz results.

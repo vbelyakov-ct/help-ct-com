@@ -1,11 +1,10 @@
 = Quiz Field Reference
 
-the [.object]#Quiz# object is intended to store the created
-questionnaires.
+the [.object]#Quiz# object is intended to store the created questionnaires.
 
 '''''
 
-API name in Salesforce: Quiz__c
+API name in Salesforce: [.apiobject]#Quiz__c#
 
 '''''
 
@@ -13,70 +12,51 @@ API name in Salesforce: Quiz__c
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Active |Active__c |Checkbox |If selected, the record is active
-and applied in business logic.
+|Active |Active__c |Checkbox |If selected, the record is active and applied in business logic.
 
-|Anonymous Quiz |AnonymousQuiz__c |Checkbox        |If
-selected, the quiz can be passed anonymously.
+|Anonymous Quiz |[.apiobject]#AnonymousQuiz__c# |Checkbox |If selected, the quiz can be passed anonymously.
 
-|Correct Answer Percent |CompletionPercentage__c |Percent(2,2)
-|It is used to set the minimum percentage of the partaker's correct
-answers to consider the quiz as passed.
+|Correct Answer Percent |[.apiobject]#CompletionPercentage__c# |Percent(2,2)
+|It is used to set the minimum percentage of the partaker's correct answers to consider the quiz as passed.
 
-|Countdown Timer   |IsCountdownTimerEnabled__c |Checkbox |If
-selected, the countdown timer will be displayed for a partaker on the
-*Quiz* page.
+|Countdown Timer   |[.apiobject]#IsCountdownTimerEnabled__c# |Checkbox |If selected, the countdown timer will be displayed for a partaker on the *Quiz* page.
 
-|Description  |Description__c |Long Text Area (32768) |Specify
-information about the quiz.
+|Description  |[.apiobject]#Description__c# |Long Text Area (32768) |Specify information about the quiz.
 
-|End Date |EndDate__c |Date  |The last day when the quiz can be
-taken.
+|End Date |[.apiobject]#EndDate__c# |Date  |The last day when the quiz can be taken.
 
-|Is Quiz Required |IsRequired__c  |Checkbox  |If selected, the
-assigned partaker should take the quiz.
+|Is Quiz Required |[.apiobject]#IsRequired__c#  |Checkbox  |If selected, the assigned partaker should take the quiz.
 
-|Is Write Answers On Exit |IsWriteAnswersOnExit__c  |Checkbox
+|Is Write Answers On Exit |[.apiobject]#IsWriteAnswersOnExit__c#  |Checkbox
 |If selected, the answers will be shown at the end of the quiz.
 
-|Notification Period |NotificationPeriod__c   |Picklist
-  a|
-The period to remind the assigned partaker to take the quiz. The
-available values:
+|Notification Period |[.apiobject]#NotificationPeriod__c#   |Picklist  a|
+The period to remind the assigned partaker to take the quiz. The available values:
 
 * Daily
 * Weekly
 * Monthly
 
-|Notify Users |IsUserInformerEnabled__c |Checkbox
-|If selected, the user will be informed to take the open quiz during the
-period specified in the NotificationPeriod__c field.
+|Notify Users |[.apiobject]#IsUserInformerEnabled__c# |Checkbox
+|If selected, the user will be informed to take the open quiz during the period specified in the [.apiobject]#NotificationPeriod__c# field.
 
-|Record Type |RecordTypeId |Record Type a|
-Available values:
+|Record Type |[.apiobject]#RecordTypeId# |Record Type a| Available values:
 
 * Internal
 * External
 
-|Show Correct Answers |IsCorrectAnswersEnabled__c |Checkbox |If
-selected, the right answers will be shown or highlighted if
-the IsWriteAnswersOnExit__c field is selected.
+|Show Correct Answers |[.apiobject]#IsCorrectAnswersEnabled__c# |Checkbox |If selected, the right answers will be shown or highlighted if the [.apiobject]#IsWriteAnswersOnExit__c# field is selected.
 
-|Show Results |IsResultsEnabled__c |Checkbox a|
-If selected, the partaker sees if they passed the quiz at the end of it.
+|Show Results |[.apiobject]#IsResultsEnabled__c# |Checkbox a| If selected, the partaker sees if they passed the quiz at the end of it.
 
-|Start Date |StartDate__c |Date |The first day when the quiz can
-be taken.
+|Start Date |[.apiobject]#StartDate__c# |Date |The first day when the quiz can be taken.
 
-|Stop Timer on app exit |IsTimeStopsOnExit__c  |Checkbox a|
-If selected, the timer will be stopped when a user closes the CT Mobile
-app or switches to another app.
+|Stop Timer on app exit |[.apiobject]#IsTimeStopsOnExit__c#  |Checkbox a|
+If selected, the timer will be stopped when a user closes the CT Mobile app or switches to another app.
 
 Offline mode in case of integration with the CT Mobile app.
 
-|Strict Mode |IsStrictMode__c   |Checkbox |If selected, a user
-should send the answer to each question.
+|Strict Mode |[.apiobject]#IsStrictMode__c#   |Checkbox |If selected, a user should send the answer to each question.
 
-|Time Limit (Minutes) |TimeLimit__c  |Number(18,0) |The period
-when a user should complete the started quiz.
+|Time Limit (Minutes) |[.apiobject]#TimeLimit__c#  |Number(18,0) |The period when a user should complete the started quiz.
 |===

@@ -1,11 +1,10 @@
 = Quiz Answer Field Reference
 
-The *Quiz Answer* object is intended to store the partaker's answers to
-the quiz questions.
+The *Quiz Answer* object is intended to store the partaker's answers to   the quiz questions.
 
 '''''
 
-API name in Salesforce: QuizAnswer__c
+API name in Salesforce: [.apiobject]#QuizAnswer__c#
 
 '''''
 
@@ -13,29 +12,23 @@ API name in Salesforce: QuizAnswer__c
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Answer |Answer__c |Text (255) |It is used to store the partaker's
-answer to a quiz question.
+|Answer |[.apiobject]#Answer__c# |Text (255) |It is used to store the partaker's answer to a quiz question.
 
-|Correct Answer |IsCorrectAnswer__c |Checkbox |If selected,
-the partaker's answer is correct.
+|Correct Answer |[.apiobject]#IsCorrectAnswer__c# |Checkbox |If selected, the partaker's answer is correct.
 
-|Mobile ID |MobileId__c |Text(255) a|
-[NOTE] ==== Is used in case of integration with the CT Mobile
-app.  ====
+|Mobile ID |[.apiobject]#MobileId__c# |Text(255) a|
+NOTE: Is used in case of integration with the CT Mobile app.
 
 If filled out, the quiz was passed on the mobile device.
 
-The Mobile ID is a unique identifier to identify the record that was
-created or edited in the CT Mobile app.
+The Mobile ID is a unique identifier to identify the record that was created or edited in the CT Mobile app.
 
-|Quiz |QuizId__c |Lookup(Quiz)      |The linked _Quiz_ record.
+|Quiz |[.apiobject]#QuizId__c# |Lookup(Quiz)      |The linked _Quiz_ record.
 
-|Quiz Completion |QuizCompletionId__c |Master-Detail(Quiz
-Completion) |The parent _Quiz Completion_ record.
+|Quiz Completion |[.apiobject]#QuizCompletionId__c# |Master-Detail(Quiz Completion) |The parent _Quiz Completion_ record.
 
-|Quiz Question |QuizQuestionId__c |Lookup(Quiz Question) a|
+|Quiz Question |[.apiobject]#QuizQuestionId__c# |Lookup(Quiz Question) a|
 The linked _Question_ record to which the answer was given.
-
 |===
 
 

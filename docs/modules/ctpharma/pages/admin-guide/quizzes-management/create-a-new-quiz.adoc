@@ -2,35 +2,35 @@
 
 Before creating a quiz, add the *Quizzes* tab to the menu.
 
-
-
 To create a quiz:
 
 . Go to the *Quiz* tab and click *New*.
 . Select the appropriate record type and click *Next*.
++
 image:Select-the-Quiz-record-type.png[]
 . Fill in the quiz parameters, such as:
-[TIP] ==== Read the description of each
-parameter xref:quiz-field-reference[here]. ====
-* Specify the *Start Date* and *End Date* of the quiz availability to
-users;
++
+TIP: Read the description of each parameter xref:./ref-guide/quiz-field-reference.adoc[here].
+
+* Specify the *Start Date* and *End Date* of the quiz availability to users;
 * the percentage of the correct answers;
 * the time limit if needed;
 * enable the display of results;
 * activate the quiz.
++
 image:Create-the-Quiz.png[]
 . Click *Save*.
 
 The _Quiz_ record is created.
-[INFO] ==== xref:override-basic-action-for-quiz[Override
-the *View* button] to view the Quiz information. ====
+
+TIP: xref:./override-basic-action-for-quiz.adoc[Override the *View* button] to view the Quiz information.
 
 * Click *Clone Quiz* to create a new _Quiz_ record based on this one;
-[NOTE] ==== Currently available only in Salesforce Classic. ====
++
+NOTE: Currently available only in Salesforce Classic.
 * Click *Start Quiz* to start passing the quiz;
 * Click *Delete Quiz* to remove the quiz.
+
 image:quiz-editor.png[]
 
-
-
-Next, xref:specify-questions-for-quiz[add questions] to the quiz.
+Next, xref:./specify-questions-for-quiz.adoc[add questions] to the quiz.
