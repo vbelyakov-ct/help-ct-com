@@ -1,13 +1,10 @@
 = Marketing Detail Tracking: Categories
 
 [[MarketingDetailTracking:Categories-Tasks]]
-=== Tasks
+== Tasks
 
-* Associate required record types of products with the desired
-categories.
-* Map new categories with record types of the
-[.object]#Marketing Detail Tracking# object.
-
+* Associate required record types of products with the desired categories.
+* Map new categories with record types of the [.object]#Marketing Detail Tracking# object.
 
 To map categories with record types:
 
@@ -15,52 +12,44 @@ To map categories with record types:
 * Map the new values for the specific record types.
 
 [[MarketingDetailTracking:Categories-AddingCategoryValues]]
-=== Adding Category Values
+== Adding Category Values
 
-To add new values to the** Category** field
-of [.object]#Marketing Detail Tracking# object:
+To add new values to the *Category* field of [.object]#Marketing Detail Tracking# object:
 
-. Go to *Setup*(1) → *Object Manager*(2) → *Marketing Detail
-Tracking*(3) → *Fields & Relationships *(4)** **→ *Category *(5).
-*#*
-
+. Go to *Setup*(1) → *Object Manager*(2) → *Marketing Detail Tracking*(3) → *Fields & Relationships*(4) → *Category*(5).
++
 image:66355960.png[]
-
-
-. Navigate to the** Values **section and click** New**.
-. Add _Primary_ and _Secondary_ picklist values (1). Each value should
-be on a separate line.
-. To map newly created values to the picklist of existing Record Types,
-select Record Types names in the table below (2).
-
+. Navigate to the *Values* section and click *New*.
+. Add _Primary_ and _Secondary_ picklist values (1). Each value should be on a separate line.
+. To map newly created values to the picklist of existing Record Types, select Record Types names in the table below (2).
++
 image:66355964.png[]
 . Click *Save*.
++
 image:66355963.png[]
-
 
 New values are added to the *Category* custom field.
 
 [[MarketingDetailTracking:Categories-ManualCategoryMapping]]
-=== Manual Category Mapping
+== Manual Category Mapping
 
-To map new values or change the set of values mapped before to the
-specific record types on *Marketing Detail Tracking* object:
+To map new values or change the set of values mapped before to the specific record types on *Marketing Detail Tracking* object:
 
-. Go to *Setup*(1) → *Object Manager*(2) → *Marketing Detail
-Tracking*(3) → *Record Types *(4).
+. Go to *Setup*(1) → *Object Manager*(2) → *Marketing Detail Tracking*(3) → *Record Types*(4).
 . Click the required record type.
++
 The *Record Type details* page opens.
 . Click *Edit* next to the *Category* field.
++
 The *Category details page* of the Record Type opens.
-. Add or remove values (1) using the arrow buttons between the
-**Available values **and *Selected Values* lists.
+. Add or remove values (1) using the arrow buttons between the *Available values* and *Selected Values* lists.
++
 image:66355970.png[]
-. You can set any value as a default one for this particular Record Type
-by selecting a value from the *Default*(2) picklist.
+. You can set any value as a default one for this particular Record Type by selecting a value from the *Default*(2) picklist.
 . Click *Save*.
 
 The values are mapped with the selected record type.
 
 *See also:*
 
-* xref:marketing-detail-tracking[Marketing Detail Tracking]
+* xref:admin-guide/targeting-and-marketing-cycle/configuring-targeting-and-marketing-cycles/managing-marketing-cycle/marketing-detail-tracking/index.adoc[Marketing Detail Tracking]

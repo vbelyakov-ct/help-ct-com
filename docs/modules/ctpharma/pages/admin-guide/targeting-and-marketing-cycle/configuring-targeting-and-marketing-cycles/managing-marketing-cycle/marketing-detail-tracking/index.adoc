@@ -1,29 +1,26 @@
 = Marketing Detail Tracking
 
-Activity Tracking associates with Activities if the following conditions
-are met:
+Activity Tracking associates with Activities if the following conditions  are met:
 
 * The Activity start date is within the Marketing Cycle period.
 * User and Marketing Cycle divisions are the same.
-* Customer/Organization category is the same as in the Marketing Detail
-Trackings related list.
-* Marketing Cycle is connected to the type of Activity with the
-Marketing Cycle Linking Setting.
+* Customer/Organization category is the same as in the Marketing Detail Trackings related list.
+* Marketing Cycle is connected to the type of Activity with the Marketing Cycle Linking Setting.
 
-[NOTE] ==== To create Target Frequency, based on tracked target
+[NOTE]
+====
+To create Target Frequency, based on tracked target
 rate records, the Category and the Customer type should be the same as
-in the tracking card. ====
+in the tracking card.
+====
 
-Tracked parameters are divided into the types and displayed in different
-tabs on the Activity Report pages.
+Tracked parameters are divided into the types and displayed in different tabs on the Activity Report pages.
 
-* xref:admin-guide/targeting-and-marketing-cycle/configuring-targeting-and-marketing-cycles/managing-marketing-cycle/marketing-detail-tracking/index#MarketingDetailTracking-CreateaMarketingDetailTracking[Create
-a Marketing Detail Tracking]
-* xref:admin-guide/targeting-and-marketing-cycle/configuring-targeting-and-marketing-cycles/managing-marketing-cycle/marketing-detail-tracking/index#MarketingDetailTracking-ReviewingassociatedTargetFrequency[Reviewing
-associated Target Frequency ]
+* <<MarketingDetailTracking-CreateaMarketingDetailTracking, Create a Marketing Detail Tracking>>
+* <<MarketingDetailTracking-ReviewingassociatedTargetFrequency, Reviewing associated Target Frequency>>
 
 [[MarketingDetailTracking-CreateaMarketingDetailTracking]]
-=== Create a Marketing Detail Tracking
+== Create a Marketing Detail Tracking
 
 To create a Marketing Detail Tracking:
 
@@ -31,51 +28,38 @@ To create a Marketing Detail Tracking:
 . Open the required Marketing Cycle.
 . Click on *Related* to open related lists.
 . Click *New *next to the *Marketing Detail Tracking* section name.
-#
 
 image:66363543.jpg[]
 
-
-
 A *New Marketing Detail Tracking* window opens.
-#
 
 image:58827360.png[]
-
 
 . Select a record type of tracked parameter.
 . Fill the required fields.
 . Click *Save*.
 
-The new *Marketing Detail Tracking* is created and appears in the
-*Marketing Detail Tracking* list on the *Related* tab.
+The new *Marketing Detail Tracking* is created and appears in the *Marketing Detail Tracking* list on the *Related* tab.
 
 [[MarketingDetailTracking-ReviewingassociatedTargetFrequency]]
-=== Reviewing associated Target Frequency
+== Reviewing associated Target Frequency
 
-To review a Marketing Detail Tracking is associated with Target
-Frequency:
+To review a Marketing Detail Tracking is associated with Target Frequency:
 
 . Go to the *Marketing Cycles *tab.
 . Open the required Marketing Cycle.
 . Click on *Related* to open related lists.
 . Select a Target Frequency in *Target Frequencies* section.
 * Check **Actual Calls **and *Planned Calls*.
-* Check related *Marketing Detail Tracking* in
-the **Information **section in the *Details* tab.
+* Check related *Marketing Detail Tracking* in the **Information **section in the *Details* tab.
 * Check the tracked *Category*.
 
-
-
-See related *Target Frequency* in the *Target* *Frequencies*** **section
-in the *Related* tab on the selected *Marketing Detail Tracking* page.
+NOTE: See related *Target Frequency* in the *Target* *Frequencies* section in the *Related* tab on the selected *Marketing Detail Tracking* page.
 
 image:58827354.png[]
 
-
-
 *See also:*
 
-* xref:marketing-detail-tracking-categories[Marketing Detail
+* xref:admin-guide/targeting-and-marketing-cycle/configuring-targeting-and-marketing-cycles/managing-targeting/marketing-detail-tracking-categories.adoc[Marketing Detail
 Tracking: Categories]
 * xref:admin-guide/pharma-activity-report/configuring-activity-report/activity-report-tab-settings/index.adoc[Activity Report Tab Settings]
