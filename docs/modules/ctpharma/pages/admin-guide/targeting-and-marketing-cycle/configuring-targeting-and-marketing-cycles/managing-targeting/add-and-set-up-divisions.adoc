@@ -15,7 +15,7 @@ the [.object]#User# and [.object]#Marketing Cycle# objects, for example, [.apiob
 
 To add a new division:
 
-. Go to **Setup → Object Manager → User → Fields & Relationships → *click *User Division*.
+. Go to *Setup* → *Object Manager* → *User* → *Fields & Relationships* → click *User Division*.
 . In the *Values* section, click *New*.
 . Add the new category name, for example, [.apiobject]#Pediatrician#.
 . Click *Save*.
@@ -56,7 +56,7 @@ There should be a picklist to contain division categories and a checkbox that re
 
 To add a new division:
 
-. Go to *Setup* → *Object Manager*  → *Account* → *Fields & Relationships*
+. Go to *Setup* → *Object Manager* → *Account* → *Fields & Relationships*
 → click *New*.
 . Create a field with the *Picklist* type and set the values up.
 * Select *Picklist* and click *Next*.
@@ -84,7 +84,7 @@ To finish the setting, update a corresponding record of the Application Settings
 To update the record:
 
 . Go to *Setup* → *Custom Code* → *Custom Settings* → *Application Settings* → click *Manage* next to *Application Settings*.
-. Click **Edit **next to the required record, for example, the *Global* or another existed one.
+. Click *Edit* next to the required record, for example, the *Global* or another existed one.
 . Update the following fields:
 * In the *Account Category Fields API names* field, add the new division field API Name field of the *Account* record, that responsible for the new division, for
 example, [.apiobject]#Division_Pediatrician_Category__c# (separated by a comma, without blank spaces);
