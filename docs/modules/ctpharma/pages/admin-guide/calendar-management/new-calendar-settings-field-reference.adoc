@@ -46,8 +46,7 @@ Default value is _Contact_.
 |Text(255) a|
 Label of the child object.
 
-NOTE: Used
-in the _Target Object_ record type.#
+NOTE: Used in the _Target Object_ record type.
 
 |Color |[.apiobject]#CTPHARMA\__Color__c#  |Long Text Area(32768) a|The specific color for the _CT PHARMA Activity_ record with the corresponding record type (separated by a comma, without a blank space).
 
@@ -171,7 +170,7 @@ NOTE: Used in the _Target Object_ record type.
 |Required |[.apiobject]#CTPHARMA\__Required__c# |Long Text Area(32768) a|
 Stores the *Required* flag for a field on the *Compact form*.
 
-Used is the _Record Settings_ record type.
+NOTE: Used is the _Record Settings_ record type.
 
 |Start Date Field Mapping
 |[.apiobject]#CTPHARMA\__StartDateFieldMapping__c#
@@ -185,14 +184,14 @@ NOTE: Used in the _Activity Object_ record type.
 |Text(255) a|
 API name of the field, which corresponds to the *Status* field.
 
-Used in the _Activity Object_ record type.
+NOTE: Used in the _Activity Object_ record type.
 
 |Subject Field Mapping
 |[.apiobject]#CTPHARMA\__SubjectFieldMapping__c#
 |Text(255) a|
 API name of the field, which corresponds to the *Subject* field.
 
-Used in the _Activity Object_ record type.
+NOTE: Used in the _Activity Object_ record type.
 
 |User Id |[.apiobject]#CTPHARMA\__UserId__c#
 |Lookup(User) |Maintenance field, not editable.
