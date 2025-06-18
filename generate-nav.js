@@ -23,7 +23,7 @@ const config = {
   includedExtensions: ['.adoc'],
   
   // Файлы, которые нужно исключить из навигации
-  excludedFiles: ['index.adoc', 'README.adoc'],
+  excludedFiles: ['public-methods.adoc', 'README.adoc'],
   
   // Глубина вложенности навигации (0 - без ограничений)
   maxDepth: 0,
@@ -85,8 +85,8 @@ function generateNavItems(dirPath, level = 0, relativePath = '') {
     const itemRelativePath = path.join(relativePath, item.name);
     
     if (item.isDirectory()) {
-      // Проверяем, есть ли index.adoc в директории
-      const indexPath = path.join(itemPath, 'index.adoc');
+      // Проверяем, есть ли public-methods.adoc в директории
+      const indexPath = path.join(itemPath, 'public-methods.adoc');
       const hasIndex = fs.existsSync(indexPath);
       
       // Проверяем, есть ли файлы или директории внутри текущей директории
@@ -98,8 +98,8 @@ function generateNavItems(dirPath, level = 0, relativePath = '') {
         
         if (hasIndex) {
           dirTitle = getTitleFromFile(indexPath);
-          // Добавляем директорию как ссылку на index.adoc
-          navItems += `${indentation}xref:${path.join(itemRelativePath, 'index.adoc')}[${dirTitle}]\n`;
+          // Добавляем директорию как ссылку на public-methods.adoc
+          navItems += `${indentation}xref:${path.join(itemRelativePath, 'public-methods.adoc')}[${dirTitle}]\n`;
         } else {
           // Добавляем директорию как заголовок
           navItems += `${indentation}${dirTitle}\n`;
