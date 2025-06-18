@@ -33,7 +33,7 @@ image:58828956.png[]
 * In the *Fields to update* field, add the *Objective*, *AccountId*, and *ContactId* fields to populate. To multiple fields, use a comma delimiter without spaces.
 * In the *Field Values* field, add a value that will be populated in the *Objective* field, *AccountId*, and *ContactId*. To multiple fields, use a comma delimiter without spaces.
 +
-In the example below, the value from the [.apiobject]#CTPHARMA\__Description__c# field will populate the [.apiobject]#CTPHARMA\__Objective__c# field on the next *Activity* record.
+In the example below, the value from the [.apiobject]#CTPHARMA\__Description__c# field will populate the [.apiobject]#CTPHARMA\__Objective__c# field on the next _Activity_ record.
 +
 image:58828968.png[]#
 . Click *Save*.
@@ -48,7 +48,7 @@ To create a visit using the Next Call Settings.
 . Open the *Activity Report*.
 * Add the value to the field mentioned in the *Values* field of the created next call.
 * Add the required date to the *Next Call Date* field.
-* Change the *Status* field to *Finished.
+* Change the *Status* field to *Finished*.
 +
 image:58828969.png[]
 . Click *Save*.
