@@ -58,7 +58,7 @@ Object records will not be recalculated if only the records of the child objects
 [[h3_1746193321]]
 === Schedule Recalculation
 
-By default, the dynamic groups are updated daily. The special Apex Schedule_DynamicGroup class will be run to update all the dynamic groups according to all the criteria for each parent and child objects.
+By default, the dynamic groups are updated daily. The special Apex [.apiobject]#Schedule_DynamicGroup# class will be run to update all the dynamic groups according to all the criteria for each parent and child objects.
 
 Manually added group members cannot be recalculated. To recalculate this record, unchecked the *Manual* field.
 
