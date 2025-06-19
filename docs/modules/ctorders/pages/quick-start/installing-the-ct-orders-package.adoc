@@ -1,0 +1,44 @@
+= 1. Install the CT Orders Package
+
+Follow these instructions to install the *CT Orders* managed package.
+
+. Contact the Customertimes team to obtain a direct link for the managed
+package installation:
+* *in your sandboxes*;
+* *in your production environment*.
+. Log in to Salesforce.
+. Select the security level of installation.
+
+[NOTE] ==== It is recommended to select *Install for Admins
+Only* security level. An org can contain numerous profiles. It may be
+unwise to give admin permissions to all the users. Admin can set the
+permissions for specific users after the package installation. ====
+. Select the checkbox to confirm the installation of a non-Salesforce
+application.
+. Click *Install*.
+
+image:Install-Order-Module.png[]
+
+
+
+The installation is complete. It will take some time for the CT Orders
+package to install. You will receive the email at the specified email
+address when the process is finished.
+
+After the installation:
+
+. Go to the *CT Orders Control Panel* page and open the *Self
+API* tab.
+[NOTE] ====
+link:required-permissions-for-a-specific-role#h2__260496953[orders.Allow
+Management of SelfAPI] custom permission is required to access the *Self
+API* tab. ====
+. On the pop-up window, click *Allow*. Make sure that your account
+status is set to *Authorized*.
+image:webservice-auth-popup.jpg[]
+
+The setup is complete.
+
+By default, all necessary settings are already configured after the
+package installation. To check them, refer
+to link:setting-up-an-instance[Setting Up an Instance].

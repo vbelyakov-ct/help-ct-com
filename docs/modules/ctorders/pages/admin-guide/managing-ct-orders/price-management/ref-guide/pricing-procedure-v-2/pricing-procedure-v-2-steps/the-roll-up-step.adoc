@@ -1,0 +1,106 @@
+= The Roll-up Step
+
+This step is used to roll up field values from the children's records to
+the parent records.
+
+[[h2_109049444]]
+=== Step Keys
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Key* |*Type* |*Required* |*Comment*
+
+|[.apiobject]#type# |String |Yes |It is filled out with the
+[.apiobject]#rollUp# constant.
+
+|[.apiobject]#condition# |Step Conditions |No |See the
+link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/step-conditions[Step Conditions].
+
+|[.apiobject]#baseObject# |Enum |Yes a|
+The API name of the child object. Available values:
+
+*[.apiobject]#orders__DeliveryLineItem__c#
+*[.apiobject]#orders__OrderLineItem__c#
+*[.apiobject]#orders__Delivery__c#
+
+|[.apiobject]#basePrice# |String |Yes |The
+[.apiobject]#baseObject# field rolls up values to the parent
+records. See the
+link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-available-field-formats[Available Field
+Formats].
+
+|[.apiobject]#method# |Enum |Yes a|
+Roll-up method. Available values:
+
+* sum
+* min
+* minExcludeZero
+* max
+* copyEqual
+
+|[.apiobject]#result# |Array |Yes |At least one item must be
+provided. See the link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-roll-up-step#h2__369440874[Roll-up
+Result Keys].
+|===
+
+[[h2__369440874]]
+=== Roll-up Result Keys
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Key* |*Type* |*Required* |*Comment*
+
+|[.apiobject]#resultObject# |Enum |Yes a|
+The API name of the parent object. Available values:
+
+*[.apiobject]#orders__OrderLineItem__c#
+*[.apiobject]#orders__Delivery__c#
+*[.apiobject]#orders__Order__c#
+
+|[.apiobject]#resultPrice# |String |Yes |The
+[.apiobject]#resultObject# field to storing rolled-up prices
+from children. See
+the link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-available-field-formats[Available Field
+Formats].
+|===
+
+[[h2__830677094]]
+=== Result Object Dependency
+
+[width="100%",cols="^20%,^20%,^20%,^20%,^20%",]
+|===
+|*baseObject* |*resultObject* | | |
+
+| |*orders__DeliveryLineItem__c*
+|*orders__OrderLineItem__c* |*orders__Delivery__c*
+|*orders__Order__c*
+
+|*orders__DeliveryLineItem__c* a|
+–
+
+|{plus} |{plus} |{plus}
+
+a|
+*orders__OrderLineItem__c*
+
+|– |– |– |{plus}
+
+a|
+*orders__Delivery__c*
+
+|– |– |– |{plus}
+
+a|
+*orders__Order__c*
+
+|– |– |– |–
+|===
+
+[[h2_1689083776]]
+=== Example
+
+[{plus}] link:javascript:void(0)[Standard Roll-up Step:]
+
+.[-] Hide[%collapsible] ====
+
+====

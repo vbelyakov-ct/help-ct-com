@@ -1,0 +1,60 @@
+= Condition Level Field Reference
+
+The[.object]#Condition Level# object stores the minimum amount
+of product for the discount applied discount value and payment terms for
+each level.
+
+'''''
+
+Object API name:[.apiobject]#orders__ConditionLevel__c#
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API name* |*Type* |*Description*
+
+|Condition |[.apiobject]#orders__ConditionId__c#
+|Master-Detail(Condition) |Parent condition identifier.
+
+|Discount (%)
+|[.apiobject]#orders__DiscountRatePercent__c#
+|Percent(16, 2) |Discount in percents.
+
+|Discount (Amt)
+|[.apiobject]#orders__DiscountRateAmount__c# |Number(16,
+2) |Discount in amount.
+
+|Discount Rate Source Field (%)
+|[.apiobject]#orders__DiscountRateFieldPercent__c#
+|Text(255) |Specify the API name of the fields for discount
+calculation (inc. manual). Can only contain fields with the type
+Percent.
+
+If the field is empty, the discount calculation will be based on the
+Discount Rate (%) value.
+
+|Discount Rate Source Field (Amt)
+|[.apiobject]#orders__DiscountRateFieldAmount__c#
+|Text(255) a|
+Specify the API name of the fields for discount calculation (inc.
+manual). Can only contain fields with the type Number.
+
+
+
+If the field is empty, the discount calculation will be based on the
+Discount Rate (Amt) value.
+
+|External Id |[.apiobject]#orders__ExternalId__c#
+|Text(255) (External ID) (Unique Case Sensitive) |
+
+|Payment Term |[.apiobject]#orders__PaymentTermId__c# a|
+Lookup(Payment Term)
+
+
+
+|Applied payment terms.
+
+|Starting From |[.apiobject]#orders__StartingFrom__c#
+|Number(18, 0) |Set the starting quantity of products for the level.
+|===

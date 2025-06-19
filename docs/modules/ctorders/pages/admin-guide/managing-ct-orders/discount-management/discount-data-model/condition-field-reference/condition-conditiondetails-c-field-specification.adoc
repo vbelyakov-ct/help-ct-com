@@ -1,0 +1,175 @@
+= Condition: ConditionDetails__c Field Specification
+
+List of conditions a product must meet in order to apply a discount to
+it. This field should be filled out differently depending on the
+[.object]#Calculation Type# record type.
+
+:toc: :toclevels: 3
+
+[[h4_493853140]]
+=== Record Type: Condition
+
+Applies to [.object]#Condition# and [.object]#Freebie
+Condition# records.
+
+The[.object]#Condition# will be applied if the *Discount Rate
+Location* field has the *Condition Record* value. Otherwise, for
+the *Level Record* value, the system checks the product quantity for
+the *Basic* calculation method or
+the [.apiobject]#conditionLevel# key
+in link:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification#h2__1997029544[the
+Advanced Criteria JSON] for the *Advanced* calculation type. 
+
+
+
+For[.object]#Calculation Type# with the *Condition* record
+type, specify a JSON with the conditions a product must meet.
+
+[TIP] ==== When the [.object]#Calculation Type ==== with
+the *Condition* record type is a child record of the
+[.object]#Calculation Type# with the *Group {plus} Condition* record, refer to link:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-conditiondetails-c-field-specification#h4_1294571464[Record
+Type: Group {plus} Condition].#
+
+[[h3_469009993]]
+==== JSON Key Description
+
+[[h4__804310595]]
+===== Condition Details
+
+
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Key* |*Type* |*Required* |*Comment*
+
+|conditions |Object |No |Conditions a product must meet in order
+to apply a discount to it.
+|===
+
+
+
+[[h4__1323252625]]
+===== Condition
+
+
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Key* |*Type* |*Required* |*Comment*
+|operator |Enum |Yes a|
+Available values:
+
+* AND
+* OR
+
+|items |Array |Yes |The required conditions.
+|===
+
+
+
+[[h4__938831642]]
+===== Items
+
+
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Key* |*Type* |*Required* |*Comment*
+
+|field |String |Yes |The API name of the required field of the
+desiredd CT Orders package object.
+
+|[.apiobject]#operator# |Enum |Yes |Applied operator.
+Available values:
+
+|value |Currency |No a|
+A target value for a field in the[.apiobject]#field# key.
+
+An empty value is not allowed.
+
+The available
+operators: [.apiobject]#contain#, [.apiobject]#notContain#, [.apiobject]#equal#, [.apiobject]#notEqual#.
+
+| |Number | |
+
+| |Text | |
+
+|[.apiobject]#values# |Array of Values |No a|
+List of the target values a field in the[.apiobject]#field#
+key, for example:[.apiobject]#["abc","123"]#
+
+[.apiobject]#At least two values must be provided.#
+
+[.apiobject]#The available
+operators: [.apiobject]#in#,[.apiobject]#notIn#. #
+
+|===
+
+
+
+[[h4__1448410204]]
+===== Item Operators
+
+
+
+[width="100%",cols="10%,^9%,^9%,^9%,^9%,^9%,^9%,^9%,^9%,^9%,^9%",]
+|===
+|*Field Data Type* |*Operator* | | | | | | | | |
+
+| |*contain* |*notContain* a|
+*in*
+
+|*notIn* |*equal* |*notEquel* a|
+*greater*
+
+|*greaterOrEqual* a|
+*less*
+
+a|
+*lessOrEqual*
+
+|*Currency* |No |No |No |No |Yes |Yes |Yes |Yes |Yes
+a|
+Yes
+
+|*Number* |No |No |No |No |Yes |Yes |Yes |Yes |Yes
+a|
+Yes
+
+|*Text* a|
+Yes
+
+|Yes |Yes |Yes |Yes |Yes |No |No |No |No
+|===
+
+[[h4_1294571464]]
+=== Record Type: Group {plus} Condition
+
+If the[.object]#Order Line Item# has the not empty required
+fields specified for the[.object]#Condition Group #object and
+meets the child[.object]#Condition# criterion, a discount will
+be applied.
+
+. Specify the list of fields that should be not empty on the *Order Line
+Item* records in the *Condition Fields List* field on the *Calculation
+Type* record with the *Condition Group* record type.
+. In the *Condition Fields* field on the[.object]#Condition
+Group #object, specify the list of field API names that should not be
+empty on the *Order Line Item* records.
+. In the *Condition Details* filed on the child *Condition* records,
+specify the expected values.
+
+
+
+For example, the list of fields that should not be empty specified in
+the[.apiobject]#orders__ConditionFieldsList__c# field
+on the *Calculation Type* record with the *Condition Group* record type:
+[.apiobject]#orders__OrderId__r.orders__AccountId__r.Industry,orders__OrderId__r.orders__AccountId__r.Type,orders__OrderId__r.orders__PriceBookId__c#
+
+
+
+Values in the[.apiobject]#orders__ConditionDetails__c#
+field of the child[.object]#Calculation Type# with the
+*Condition* record type:
+[.apiobject]#"Agriculture","Customer","a0p3X00000WIvicQAD"# or
+[.apiobject]#Agriculture,Customer,a0p3X00000WIvicQAD#

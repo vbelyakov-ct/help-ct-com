@@ -1,0 +1,488 @@
+= Data to Send to Web Service
+
+To have the ability to calculate discounts using the
+link:admin-guide/managing-ct-orders/web-service/index[Web Service], all mappings and the following data
+should be sent to the server.
+
+Only administrators can modify this data. For more information, refer
+to link:admin-guide/managing-ct-orders/web-service/index#h2__1477820419[User Permissions].
+
+[[h2__1931515875]]
+=== Mapping with Sales Organization
+
+It is required to send all mappings so that the Web Service can return
+the value for discounts and freebies into the correct fields.
+
+* A mapping is created for each[.object]#Sales Organization#
+and combines both global settings and settings for the
+[.object]#Sales Organization#.
+* The mapping is sent link:admin-guide/managing-ct-orders/web-service/index#h3__364386004[via one of the
+sync processes] based on the *Sync Transaction* records. These records
+are created after mapping updates or in the case of a new
+[.object]#Sales Organization# and deleted after a successful
+mapping transfer to Web Service.
+
+[[h2__513356405]]
+=== Master Data to Send
+
+The objects below are responsible for a type of discount and define a
+freebie to apply for the products in the order.
+
+* The master data is sent link:admin-guide/managing-ct-orders/web-service/index#h3__364386004[via one of
+the sync processes] based on the *Sync Transaction* records. These
+records are created after master data updates and deleted after a
+successful master data transfer to Web Service.
+
+
+
+[width="100%",cols="20%,20%,20%,20%,20%",]
+|===
+|*Object Name* |*Field Name* |*Field API Name* |*Type*
+|*Required*
+
+|Sales Organization | | | |
+
+| |Id |[.apiobject]#Id# |Id |Yes
+
+| |Sales Organization |[.apiobject]#Name# |Text(80) |Yes
+
+|Pricing Procedure | | | |
+
+| |Id |[.apiobject]#Id# |Id |Yes
+
+| |Procedure Name |[.apiobject]#Name# |Text(80) |Yes
+
+| |Active |[.apiobject]#orders__IsActive__c#
+|Checkbox |Yes
+
+| |Order Type |[.apiobject]#orders__OrderType__c#
+|Picklist(Multi-select) |Yes
+
+| |Pricing Procedure
+|[.apiobject]#orders__PricingProcedure__c# |Long Text
+Area (32768) |No
+
+| |Sales Organization
+|[.apiobject]#orders__SalesOrganizationId__c#
+|Master-Detail(Sales Organization) |Yes
+
+|Procedure Calculation Type | | | |
+
+| |Id |[.apiobject]#Id# |Id |Yes
+
+| |Calculation Type
+|[.apiobject]#orders__CalculationTypeId__c#
+|Master-Detail(Calculation Type) |Yes
+
+| |Pricing Procedure
+|[.apiobject]#orders__PricingProcedureId__c#
+|Master-Detail(Pricing Procedure) |Yes
+
+|Calculation Type | | | |
+
+| |Id |[.apiobject]#Id# |Id |Yes
+
+| |External Id
+|[.apiobject]#orders__ExternalId__c# |Text(255)
+(External ID) (Unique Case Sensitive) |Yes
+
+| |Name |[.apiobject]#Name# |Text (80) |Yes
+
+| |Record Type |[.apiobject]#RecordType# |Record Type
+|Yes
+
+| |Apply Condition Type
+|[.apiobject]#orders__ApplyConditionType__c#
+|Picklist |Yes
+[NOTE] ==== If no, the default value is *First*. ====
+
+| |Calculation Method
+|[.apiobject]#orders__CalculationMethod__c#
+|Picklist |Yes
+
+| |Condition Field List
+|[.apiobject]#orders__ConditionFieldList__c# |Long
+Text Area (32768) |No
+
+| |Condition Recalculation Fields
+|[.apiobject]#orders__ConditionRecalculationFields__c#
+|Long Text Area (32768) |No
+
+| |Discount Recalculation Fields
+|[.apiobject]#orders__DiscountRecalculationFields__c#
+|Long Text Area (32768) |No
+
+| |Level Based On
+|[.apiobject]#orders__LevelBasedOn__c# |Picklist
+|Yes
+
+| |Level Formula
+|[.apiobject]#orders__LevelFormula__c# |Long Text Area
+(32768) |No
+
+| |Unit of Measure
+|[.apiobject]#orders__UnitOfMeasure__c# |Picklist
+|Yes
+
+|Condition Group | | | |
+
+| |Id |[.apiobject]#Id# |Id |Yes
+
+| |Active |[.apiobject]#orders__IsActive__c#
+|Checkbox |Yes
+
+| |Calculation Type
+|[.apiobject]#orders__CalculationTypeId__c#
+|Master-Detail(Calculation Type) |Yes
+
+| |Condition Fields
+|[.apiobject]#orders__ConditionFields__c# |Long Text
+Area (32768) |No
+
+| |End Date |[.apiobject]#orders__EndDate__c#
+|Date |No
+
+| |Order |[.apiobject]#orders__Order__c# |Number
+(18,0) |Yes
+
+| |Start Date |[.apiobject]#orders__StartDate__c#
+|Date |No
+
+|Condition | | | |
+
+| |Id |[.apiobject]#Id# |Id |Yes
+
+| |Active |[.apiobject]#orders__IsActive__c#
+|Checkbox |No
+
+| |Advanced Criteria
+|[.apiobject]#orders__AdvancedCriteria__c # |Long Text
+Area(32768) |No
+
+| |Calculation Method
+|[.apiobject]#orders__CalculationMethod__c# a|
+Picklist
+
+
+
+|Yes
+
+| |Calculation Type
+|[.apiobject]#orders__CalculationTypeId__c#
+|Master-Detail(Calculation Type) |Yes
+
+| |Condition Details
+|[.apiobject]#orders__ConditionDetails__c# a|
+Long Text Area(32768)
+
+
+
+|No
+
+| |Condition Group
+|[.apiobject]#orders__ConditionGroupId__c#
+|Lookup(Condition Group) |No
+
+| |Discount Rate (%)
+|[.apiobject]#orders__DiscountRatePercent__c# a|
+Percent(16, 2)
+
+
+
+|No
+
+| |Discount Rate (Amt)
+|[.apiobject]#orders__DiscountRateAmount__c# a|
+Number(16, 2)
+
+
+
+|No
+
+| |Discount Rate Location
+|[.apiobject]#orders__DiscountRateLocation__c# a|
+Picklist
+
+
+
+|Yes
+
+| |Discount Rate Source Field (%)
+|[.apiobject]#orders__DiscountRateFieldPercent__c#
+|Text(255) |No
+
+| |Discount Rate Source Field (Amt)
+|[.apiobject]#orders__DiscountRateFieldAmount__c#
+|Text(255) |No
+
+| |End Date |[.apiobject]#orders__EndDate__c# |Date
+|No
+
+| |Exception Condition
+|[.apiobject]#orders__ExceptionCondition__c# |Long
+Text Area(32768) |No
+
+| |Order |[.apiobject]#orders__Order__c# |Number(18,
+0) |Yes
+
+| |Payment Term 
+[NOTE] ==== Available in future releaes. ====
+|[.apiobject]#orders__PaymentTermId__c# |Lookup(Payment
+Term) |No
+
+| |Promotion |[.apiobject]#orders__PromotionId__c#
+|Lookup (Promotion) |No
+
+| |Start Date |[.apiobject]#orders__StartDate__c#
+|Date |No
+
+|Condition Level | | | |
+
+| |Id |Id |Id |Yes
+
+| |Condition |[.apiobject]#orders__ConditionId__c#
+|Master-Detail(Condition) |Yes
+
+| |Discount (%)
+|[.apiobject]#orders__DiscountRatePercent__c#
+|Percent(16, 2) |No
+
+| |Discount (Amt)
+|[.apiobject]#orders__DiscountRateAmount__c# |Number(16,
+2) |No
+
+| |Discount Rate Source Field (%)
+|[.apiobject]#orders__DiscountRateFieldPercent__c#
+|Text(255) |No
+
+| |Discount Rate Source Field (Amt)
+|[.apiobject]#orders__DiscountRateFieldAmount__c#
+|Text(255) |No
+
+| a|
+Payment Term
+
+Available in future releases.
+
+|[.apiobject]#orders__PaymentTermId__c# |Lookup(Payment
+Term) |No
+
+| |Starting From
+|[.apiobject]#orders__StartingFrom__c# |Number(18, 0)
+|Yes
+
+|Organization Freebie Type | | | |
+
+| |Id |[.apiobject]#Id# |Id |Yes
+
+| |Freebie Type
+|[.apiobject]#orders__FreebieTypeId__c#
+|Master-Detail(Freebie Type) |Yes
+
+| |Sales Organization
+|[.apiobject]#orders__SalesOrganizationId__c#
+|Master-Detail(Sales Organization) |Yes
+
+|Freebie Type | | | |
+
+| |Id |[.apiobject]#Id# |Id |Yes
+
+| |Freebie Type |[.apiobject]#Name# |Text(80) |Yes
+
+| |Record Type |[.apiobject]#RecordType # |Record Type |Yes
+
+| |Active |[.apiobject]#orders__IsActive__c#
+|Checkbox |Yes
+
+| |Condition Fields List
+|[.apiobject]#orders__ConditionFieldsList__c # |Long
+Text Area(32768)  |No
+
+| |Order Type |[.apiobject]#orders__OrderType__c #
+|Picklist(Multi-Select) |Yes
+
+|Freebie Condition | | | |
+
+| |Id |[.apiobject]#Id# |Id |Yes
+
+| |Freebie Condition Name |[.apiobject]#Name# |Text(80) |Yes
+
+| |Active |[.apiobject]#orders__IsActive__c#
+|Checkbox |Yes
+
+| |Adding Method
+|[.apiobject]#orders__AddingMethod__c# |Picklist |Yes
+
+| |Condition Details
+|[.apiobject]#orders__ConditionDetails__c# |Long Text
+Area(32768) |No
+
+| |Criteria Details
+|[.apiobject]#orders__CriteriaDetails__c# |Long Text
+Area(32768) |No
+
+| |Delivery Control
+|[.apiobject]#orders__DeliveryControl__c# |Picklist
+|No
+
+| |End Date |[.apiobject]#orders__EndDate__c# |Date
+|No
+
+| |Freebie Type
+|[.apiobject]#orders__FreebieTypeId__c#
+|Master-Detail(Freebie Type) |Yes
+
+| |Freebie Value Field
+|[.apiobject]#orders__FreebieValueField__c#
+|Text(255) |No
+
+| |Ignore Product Availability
+|[.apiobject]#orders__IgnoreProductAvailability__c#
+|Checkbox |Yes
+
+| |Level Formula
+|[.apiobject]#orders__LevelFormula__c# |Long Text
+Area(32768)  |No
+
+| |Order |[.apiobject]#orders__Order__c# |Number(18,
+0) |Yes
+
+| |Promotion |[.apiobject]#orders__PromotionId__c#
+|Lookup |No
+
+| |Proportional
+|[.apiobject]#orders__IsProportional__c# |Checkbox
+|Yes
+
+| |Start Date |[.apiobject]#orders__StartDate__c#
+|Date |No
+
+|Freebie Level | | | |
+
+| |Id |[.apiobject]#Id# |Id |Yes
+
+| |Freebie Level # |[.apiobject]#Name# |Auto Number |Yes
+
+| |Freebie Condition
+|[.apiobject]#orders__FreebieConditionId__c#
+|Master-Detail |Yes
+
+| |Freebies Quantity Max
+|[.apiobject]#orders__FreebiesQuantityMax__c#
+|Number(18, 0) |No
+
+| |Freebies Quantity Min
+|[.apiobject]#orders__FreebiesQuantityMin__с#
+|Number(18, 0) |No
+
+| |Freebie Ratio
+|[.apiobject]#orders__FreebieRatio__c# |Number(18, 0)
+|No
+
+| |Product Ratio
+|[.apiobject]#orders__ProductRatio__c# |Number(18, 0) 
+|No
+
+| |Starting From
+|[.apiobject]#orders__StartingFrom__c# |Number(18, 0)
+|Yes
+
+|Freebie Line Item | | | |
+
+| |Id |[.apiobject]#Id# |Id |Yes
+
+| |Freebie Line Item # |[.apiobject]#Name# |Auto Number |Yes
+
+| |Product |[.apiobject]#orders__ProductId__c# or 
+[.apiobject]#orders__Product2Id__c# |Lookup (Salesforce
+Product/CT Product/Pharma Product) |No
+
+|Freebie Level Line Item | | | |
+
+| |Id |[.apiobject]#Id# |Id |Yes
+
+| |Freebie Level Line Item # |[.apiobject]#Name# |Auto
+Number |Yes
+
+| |Bundle |[.apiobject]#orders__IsBundle__c#
+|Checkbox |Yes
+
+| |Freebie Level
+|[.apiobject]#orders__FreebieLevelId__c#
+|Master-Detail(Freebie Level) |Yes
+
+| |Freebie Line Item
+|[.apiobject]#orders__FreebieLineItemId__c#
+|Master-Detail(Freebie Line Item) |No
+
+| |Freebies Quantity Max
+|[.apiobject]#orders__FreebiesQuantityMax__c#
+|Number(18, 0) |No
+
+| |Freebies Quantity Min
+|[.apiobject]#orders__FreebiesQuantityMin__c#
+|Number(18, 0) |No
+
+|Condition Dependency | | | |
+
+| |Id |[.apiobject]#Id# |Id |Yes
+
+| |Condition Dependency # |[.apiobject]#Name# |Auto Number
+|Yes
+
+| |Active |[.apiobject]#orders__IsActive__c#
+|Checkbox |Yes
+
+| |Controlling Condition
+|[.apiobject]#orders__ControllingConditionId__c #
+|Lookup(Condition) |No
+
+| |Controlling Freebie Condition
+|[.apiobject]#orders__ControllingFreebieConditionId__c#
+|Lookup(Freebie Condition) |No
+
+| |Dependency Action
+|[.apiobject]#orders__DependencyAction__c# |Picklist
+|Yes
+
+| |Dependency Type
+|[.apiobject]#orders__DependencyType__c# |Picklist
+|Yes
+
+| |Dependent Condition
+|[.apiobject]#orders__DependentConditionId__c#
+|Lookup(Dependent Condition) |No
+
+| |Dependent Freebie Condition
+|[.apiobject]#orders__DependentFreebieConditionId__c#
+|Lookup(Dependent Freebie Condition) |No
+
+| |Order |[.apiobject]#orders__Order__c# |Number(18,
+0) |Yes
+
+|OM Settings of the Split Mapping record type | | | |
+
+| |Id |[.apiobject]#Id# |Id |Yes
+
+| |Order Type |[.apiobject]#orders__OrderType__c#
+|Text(255) |No
+
+| |Price Book |[.apiobject]#orders__PriceBookId__c#
+|Lookup(CT Price Book) |No
+
+| |Sales Organization
+|[.apiobject]#orders__SalesOrganizationId__c#
+|Lookup(Sales Organization) |No
+
+| |Split Fields
+|[.apiobject]#orders__SplitFieldsList__c# a|
+Text(255)
+
+
+
+|Yes
+
+| |Split Parameters Path
+|[.apiobject]#orders__SplitParametersPath__c# |Long
+Text Area(32768) |Yes
+|===

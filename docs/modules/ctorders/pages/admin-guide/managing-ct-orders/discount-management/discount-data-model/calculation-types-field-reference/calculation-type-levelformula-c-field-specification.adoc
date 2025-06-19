@@ -1,0 +1,91 @@
+= Calculation Type: LevelFormula__c Field Specification
+
+*Level Formula* allows specifying a formula for calculating product
+quantity, based on which the discount will be calculated.
+
+Level Formula is also available for freebies. For more information,
+refer
+to link:freebie-condition-levelformula-c-field-specification[Freebie
+Condition: LevelFormula__c Field Specification].
+
+[[h2__1406500097]]
+=== Examples
+
+The formula performs calculations in fields based on the object set in
+the link:admin-guide/managing-ct-orders/discount-management/discount-data-model/calculation-types-field-reference/index[Level Based On] field.
+
+
+
+Example of a complex calculation of quantity using addition and
+multiplication on several levels:
+
+
+
+Example of a calculation with addition and
+[.apiobject]#roundTo#:
+
+
+
+Example of a calculation with division and
+[.apiobject]#cutDecimalsTo#:
+
+
+
+Example of a calculation with multiplication and minus:
+
+
+
+[[h2_469009993]]
+=== JSON Key Description
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Key* |*Type* |*Required* |*Comment*
+
+|[.apiobject]#cutDecimalsTo# |Number |No a|
+The optional operator that truncates the number of the decimal places on
+the resulting value after the operations with
+[.apiobject]#items#.
+
+It can be used in pair with [.apiobject]#roundTo# after after
+rounding.
+
+|[.apiobject]#items# |Array |Yes a|
+Items is to be used in calculations.
+
+* Fields on following objects:
+**[.apiobject]# Order Line item #
+**[.apiobject]#Delivery Line Item#
+* A constant value.
+* Fields on related objects, for example,
+[.apiobject]#ProductId__r.Weight__c#.
+* The following fields specified in the CT Orders settings in the
+format:
+**[.apiobject]#$.listPrice#
+**[.apiobject]#$.quantity#
+**[.apiobject]#$.unitPrice#
+**[.apiobject]#$.totalPric#
+**[.apiobject]#$.totalDiscount#
+
+|[.apiobject]#operator# |Enum |Yes a|
+The arithmetic operation:
+
+*[.apiobject]#sum# is addition
+*[.apiobject]#multi# is multiplication. Multiplication by 0
+will result in 0.
+*[.apiobject]#minus# is substraction.
+[TIP] ==== It is possible to use the minus sign, for example,
+[.apiobject]#-$.quantity ==== . The minus sign is considered in
+the calculations.#
+
+*[.apiobject]#divide# is division. Division by 0 will result in
+0.
+
+|[.apiobject]#roundTo# |Number |No a|
+The optional and rounds the number of decimals on the resulting value
+after the operations with[.apiobject]#items#.
+
+It can be used in pair with [.apiobject]#cutDecimalsTo# before
+truncating to the required number of decimal places.
+
+|===

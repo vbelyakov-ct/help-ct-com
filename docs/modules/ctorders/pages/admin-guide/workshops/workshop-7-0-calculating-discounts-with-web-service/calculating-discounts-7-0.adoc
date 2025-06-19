@@ -1,0 +1,36 @@
+= Calculating Discounts (7.0)
+
+Calculating discounts using the Web Service is similar to usual discount
+calculation. The main difference is that calculation is performed not on
+your mobile device, but on the Web Service. It allows
+increasing calculation speed for massive orders and implementing
+advanced calculation logic.
+
+. Create a new order link:admin-guide/managing-ct-orders/order-management/online-order[in the Order Module] or
+link:admin-guide/workshops/workshop-4-0-working-with-offline-orders/creating-an-offline-order-4-0[in the CT Mobile application].
+For this order, specify a pricing procedure with
+applied link:admin-guide/workshops/workshop-2-0-setting-up-discounts/index[discount(s)].
+. If you created order in the Order Module,
+https://help.customertimes.com/smart/project-ct-mobile-en/synchronization-launch[launch
+synchronization] in CT Mobile.
+. In CT Mobile, open *CT Orders* application and choose your order.
+. Tap
+image:3dotsbutton.png[] and
+then *Edit order*.
+
+image:edit-order.png[]
+. If needed, add products from *Promotions* and/or *Catalogs* lists and
+new[.object]#Delivery#.
+. Once you are finished, tap
+image:ctorders-ios-update-prices-2.7.png[] to
+calculate prices and discounts.
+. Wait while discounts and final prices are being calculated on the Web
+Service. Once it's finished, you will see the *Prices validated* message
+on the bottom.
+. Tap the link:admin-guide/workshops/workshop-5-0-implementing-additional-features/5-3-displaying-price-tags[price tag] to see in
+details which discounts were applied to your order:
+
+image:order-with-calculated-prices.png[]
+
+
+. Tap *Complete* to complete your order.

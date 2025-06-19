@@ -1,0 +1,59 @@
+= Filter Setting Field Reference
+
+The _Filter Setting_ record type is intended for storing
+[.object]## fields that are used to adjust filters in the order
+cart.
+
+'''''
+
+Object record type API name:[.apiobject]#FilterSetting #
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field Label* |*API name* |*Type* |*Description*
+
+|Filter Application |[.apiobject]#FilterApplication#
+|Picklist a|
+Specifies for which side will the filters apply. Available values:
+
+* *RightSide*: the filtering will be carried out only for
+[.object]#Order Line Item# records. The left side will not be
+influenced by applied filters.
+* *LeftSide*: the filtering will be carried out only for
+[.object]#Catalog Line Item# and[.object]#Promotion
+Line Item# records. The right side will not be influenced by applied
+filters.
+* *All*: the filtering will apply to[.object]#Catalog Line
+Item#,[.object]#Promotion Line Item# and
+[.object]#Order Line Item# records. Both sides will be
+influenced by applied filters.
+
+|Filter Details |[.apiobject]#FilterDetails# |Long Text
+Area(32768)  |Contains link:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/filter-setting-field-reference/filter-details-field-reference[JSON
+with filter setting] for the order cart.
+
+|Record Type |[.apiobject]#orders__RecordType__c#
+|Text(255) a|
+A record type for which the layout is configured. If not specified, the
+settings will be applied to all record types.
+
+[NOTE] ==== Pay attention
+that link:ct-order-field-reference[the CT Order object] has no
+record types by default. ====
+
+[NOTE] ==== To use different layouts depending on
+the [.object]#CT Order ====  record type, create a separate
+record of this setting for each desired record type.#
+
+|Sales Organization
+|[.apiobject]#orders__SalesOrganizationId__c#
+|Lookup(Sales Organization) a|
+The business unit for which settings are configured.
+
+* If specified, the setting will be applied to a
+particular [.object]#Sales Organization#.
+* If blank, the setting can be applied to all sales organizations.
+
+|===

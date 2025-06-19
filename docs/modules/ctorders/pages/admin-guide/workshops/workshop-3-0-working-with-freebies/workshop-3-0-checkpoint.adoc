@@ -1,0 +1,159 @@
+= Workshop 3.0 Checkpoint
+
+To make sure you have correctly configured the freebies distribution,
+let's create an order with the appropriate conditions.
+
+:toc: :toclevels: 3
+
+[[h2__21164539]]
+=== Create a Basic Order
+
+When all settings are done, let's create a new order to apply the
+configured discounts:
+
+. Go to the *CT Orders* tab and click *New*.
+. Specify the following:
+* *Order Type*: _Order_.
+* Select *Account*.
+[NOTE] ==== The link:admin-guide/workshops/workshop1-0-creating-basic-order/configuring-an-account-1-0[Order
+Allowed] checkbox must be selected on the account details page. ====
+* *Price Book*: select
+link:admin-guide/workshops/workshop1-0-creating-basic-order/creating-and-assigning-a-ct-price-book-1-0/index[a price book] that
+you have created earlier.
+* *Sales Organization*: _Default Sales Org_.
+* *Pricing Procedure*: select one of the created pricing procedures, for
+example,
+link:admin-guide/workshops/workshop-2-0-setting-up-discounts/workshop-2-5-setting-up-a-total-discount-per-order/index[Total
+Discount (%) per Order].
+* *Order Stage*: _On-Hold_.
+image:Checkpoint-1-2.5.png[]
+. Click *Save*.
+
+The new CT Order is created. On the created CT Order page, click the
+*Edit Cart* button.
+
+[[h2_1381230772]]
+=== Apply the Prioritized Freebie Type
+
+To apply conditions from
+link:workshop-3-1-configuring-prioritized-freebie-type[the
+prioritized Freebie Type record]:
+
+. On the left side, expand one or more catalogs, select catalog(s), sub
+catalog(s), or product(s), and click *Add* to add them to the order
+cart.
+. Create the first delivery in the *Delivery* window and click *OK*.
+. Click the *Add Delivery* button and add two more deliveries in turn.
+. Set the quantity for products:
+
+[width="100%",cols="50%,50%",]
+|===
+|The first condition: Certain Brand 48 {plus} 8 a|
+If you add 48 products of a certain brand, then the first condition will
+be applied over the second condition.
+
+image:Workshop-3.0-Chekpoint-48--8-Order-Cart.png[]
+
+|The second condition: All Brands 12 {plus} 1 a|
+If you add 10, 12, or up to 48 products to the order cart, then the
+second condition will be applied.
+
+[TIP] ==== This condition will be triggered for every product in
+the cart in quantities of 10 to 48 because the condition states that we
+are giving the same product as a freebie. ====
+image:Workshop-3.0-Chekpoint-12-1-Order-Cart.png[]
+
+|===
+. Click the *Get Freebie* button to open a Freebie window.
+. Wait a minute while the system calculates the distributed freebies.
+. If you click the *Save* button and then change the number of products
+in the order cart, when you open the Freebie window again, it will be
+redrawn according to the changes you made.
+* If only one combination of the number of freebies per product fits the
+changed conditions, the number of freebies will be automatically filled
+in, and all cells, including empty ones, will be blocked.
+* If several freebies fit the new conditions, you should manually
+allocate the number of freebies.
+* If the *Delivery Control* option is set, the cells of unavailable
+deliveries to distribute freebies will be blocked.
+.. Click on the
+image:Screenshot-2021-08-06-at-19.58.49.png[]
+icon to review the min and max possible quantity of freebies. The info
+on a header displays the overall quantity of freebies allowed by the
+condition, while the info for a particular product displays the possible
+min/max quantity of this product for the order.
+
+[width="100%",cols="50%,50%",]
+|===
+|The first condition: Certain Brand 48 {plus} 8 a|
+If the condition is met, distribute 8 freebies because there are the
+same minimum and the same maximum number of freebies for one order.
+
+* If only one freebie matched the *Criteria Based* condition, the 8
+number of the appropriate freebie will be automatically auto-populated.
+* If several freebies matched the *Criteria Based* condition, you should
+manually share 8 freebies. You will see the warning that the required
+number has not yet been reached.
+
+image:Workshop-3.0-Chekpoint-48--8-Freebie-Window.png[]
+
+|The second condition: All Brands 12 {plus} 1 a|
+If the condition is met, the number of freebies will be auto-populated,
+and all cells will be blocked.
+
+image:Workshop-3.0-Chekpoint-12-1-Freebie-Window.png[]
+
+|===
+. Click *Save*.
+.. The added freebies will be shown in the order cart.
+.. Scroll to view all added products and freebies.
+image:Workshop-3.0-Chekpoint-48--8-Final-Order.png[]
+. Click *Save Draft*.
+
+The order is created and freebies are distributed.
+
+[[h2__827836735]]
+=== Apply the Selective Freebie type
+
+To apply conditions from
+link:workshop-3-2-configuring-selective-freebie-type[the selective
+Freebie Type record]:
+
+. On the left side, go to the *Promotion* tab, select a promotion(s) or
+promotion product(s), and click *Add* to add them to the order cart.
+. Create the first delivery in the *Delivery* window and click *OK*.
+. Click the *Add Delivery* button and add two more deliveries in turn.
+. Set the quantity for added promotion products. According to the
+condition, you may either specify 40 and more number of the same
+promotion product or different ones. If so, you can distribute
+freebies.image:Workshop-3.0-Chekpoint-Promotion-Freebie-Order-Cart.png[]
+. Click the *Get Freebie* button to open a Freebie window.
+. Wait a minute while the system calculates the distributed freebies.
+If the condition is met, you should manually distribute the desired
+number (4 to 8) of specified freebies–Freebie Line Items. You will see
+the warning that the required number has not yet been reached.
+.. Click on the
+image:Screenshot-2021-08-06-at-19.58.49.png[]
+icon to review the min and max possible quantity of freebies. The info
+on a header displays the overall quantity of freebies allowed by the
+condition, while the info for a particular product displays the possible
+min/max quantity of this product for the order.
+image:Workshop-3.0-Chekpoint-Promotion-Freebie-Window.png[]
+. Click *Save*.
+.. The added freebies will be shown in the order cart.
+.. Scroll to view all added promotion products and freebies.
+image:Workshop-3.1-Chekpoint-Promotion-Final-Order-Cart.png[]
+. Click *Save Draft*.
+
+The order is created and freebies are distributed.
+
+[[h2__730080006]]
+=== Apply Both Freebie Types
+
+In this workshop, If you add catalogs and promotions to your rider cart,
+then you can specify freebies both for catalogs (Structural Freebies)
+and promotions (*Selective*). In the final order cart, freebies will be
+shown separately for products from catalogs and for promotions going
+right after each section.
+
+image:Workshop-3.0-Catalogas-and-Promotion-Final-Order-Cart.png[]

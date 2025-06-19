@@ -1,0 +1,223 @@
+= Layout Setting Field Reference
+
+The _Layout Setting_ record type is intended to store configurations of
+link:catalog-management[Catalog], link:promotions[Promotions],
+link:how-to-set-up-delivery-summary[Delivery Summary] and
+link:order-management[Order] layouts for Salesforce and the CT
+Mobile app.
+
+:toc: :toclevels: 3
+
+'''''
+
+Object record type API name:[.apiobject]#LayoutSetting#
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Object |[.apiobject]#orders__Object__c#
+|Text(255) a|
+Specify the API name of the object for which the settings are
+configured.
+
+If set, it will be prioritized over the
+[.apiobject]#orders__ParentObject__c# field.
+
+|Parent Object
+|[.apiobject]#orders__ParentObject__c# |Text(255) a|
+Specify the API name of the parent object for which the settings are
+configured if the object has master-detail relationships with another
+object.
+[NOTE] ==== If the object does not have the master-detail
+relationship with the object specified in the
+[.apiobject]#orders__Object__c ==== field, the setting
+will not be applied.#
+
+If set, the[.apiobject]#orders__RecordType__c# and
+[.apiobject]#orders__SalesOrganizationId__c# are
+specified for a parent object.
+
+|Record Type |[.apiobject]#orders__RecordType__c#
+|Text(255) a|
+A record type for which the layout is configured.
+
+[NOTE] ==== Pay attention that
+link:ct-order-field-reference[the CT Order object] has no record
+types by default. ====
+
+[NOTE] ==== To use different layouts depending on the
+[.object]#CT Order ==== record type, create a separate record of
+this setting for each desired record type.#
+
+* If not specified, the settings will be applied to all record types.
+* If[.apiobject]#orders__ParentObject__c# is set, the
+record type should be specified for this object. If not set, the same
+layout will be applied for the objects specified in the
+[.apiobject]#orders__Object__c# or
+[.apiobject]#orders__ParentObject__c# fields.
+
+|Sales Organization
+|[.apiobject]#orders__SalesOrganizationId__c#
+|Lookup(Sales Organization) |[NOTE] ==== If
+orders__ParentObject__c is set, the[.object]#Sales
+Organization ==== should be specified for this object.#
+
+|Fields to Display
+|[.apiobject]#orders__FeildsToDisplay__c# |Long Text
+Area(1000) a|
+Specify the list of fields that will be displayed on the layout
+(separated by a comma, without spaces).
+
+[TIP] ==== Support display fields on the related
+[.object]#Product ==== object in the
+[.apiobject]#ParentId__r.Field# format, only as read-only
+fields on the Catalog Line Item and Promotion Line Item layouts.#
+
+|Required Attributes
+|[.apiobject]#orders__RerquiredAttributes__c#
+|Text(255) a|
+For the specified fields in the
+[.apiobject]#orders__FeildsToDisplay__c# field, list
+correspondingly the attributes true/false (separated by the comma,
+without spaces) to define which fields should be mandatorily filled
+out. An empty value of the attribute is
+applied as [.apiobject]#false#.
+
+
+
+The specified fields must be of the following types:
+
+Fields of any other type will remain read-only regardless of the applied
+settings.
+
+[width="100%",cols="34%,33%,33%",]
+!===
+! ! !
+!===
+
+|Read Only Attributes
+|[.apiobject]#orders__ReadOnlyAttributes__c#
+|Text(255) a|
+For the specified fields in the Fields to Display, list correspondingly
+the attributes[.apiobject]#true/false# (separated by the coma,
+without spaces) to define which fields should be set as read-only.
+
+An empty value of the attribute is applied as
+[.apiobject]#false#.
+
+[NOTE] ==== In the CT Mobile app, fields with this attribute
+will not be displayed on the layout, for example, when
+link:adding-ct-orders-to-the-ct-mobile-app-4-0[creating a new
+order]. ====
+
+Some fields are filled automatically on the objects when a product is
+being added and have always a read-only status.
+
+*[.object]#Order Line Item#:
+**[.apiobject]#orders__ListPrice__c#
+**[.apiobject]#orders__CatalogId__c
+orders__CatalogLineItemId__c#
+**[.apiobject]#orders__FreebieConditionId__c#
+**[.apiobject]#orders__FreebieLevelId__c,
+orders__FreebieTypeId__c#
+**[.apiobject]#orders__OrderId__c#
+**[.apiobject]#orders__ParentId__c#
+**[.apiobject]#orders__PriceBookId__c#
+**[.apiobject]#orders__PriceBookLineItemId__c#
+**[.apiobject]#orders__Product2Id__c#
+**[.apiobject]#orders__ProductId__c#
+**[.apiobject]#orders__ProductComponentId__c#
+**[.apiobject]#orders__PromotionId__c#
+**[.apiobject]#orders__PromotionLineItemId__c#
+*[.object]#OM Settings#:
+**[.apiobject]#orders__QuantityField__c#
+
+|Displayed Field Width
+|[.apiobject]#orders__DisplayedFieldWidth__c#
+|Text(255) a|
+Set fields width as a percentage of visible part of the screen in the
+following format:
+[.apiobject]#'Product Name,Quantity,Field1,Field2,..,FieldN'#
+where _Field1_, _Field2_, _FieldN_ are fields listed in the *Fields To
+Display*.
+
+Use *0* for *default width.*
+
+[NOTE] ==== Applies only to the[.object]#Order Line
+Item ==== layout.#
+
+|Order Currency |CurrencyIsoCode |Picklist a|
+Available since CT Mobile version 2.9
+
+Applies to link:ct-order-field-reference[CT Order] related objects
+(link:order-line-item-field-reference[Order Line Item],
+link:delivery-line-item-field-reference[Delivery Line Item],
+link:calculated-discount-field-reference[Calculated Discount]) and
+requires
+https://help.salesforce.com/s/articleView?id=sf.admin_enable_multicurrency.htm&type=5[multiple
+currency activation]. Is the standard Salesforce field to select
+currency while link:offline-order#h2_2044385779[creating order in
+the CT Mobile app].  Do not change the currency after saving the order.
+
+|===
+
+[cols=",",]
+|===
+|image:info.png[] |For lookup
+fields, you can set
+up https://help.salesforce.com/s/articleView?id=sf.fields_lookup_filters.htm&type=5[lookup
+filters] to control data that should be displayed in *Delivery Summary*.
+|===
+
+[[h2__966181550]]
+=== Required Layouts
+
+It is necessary to create the *Settings* record with the *Layout
+Setting* record type for the following objects: 
+
+*[.object]#Catalog Line Item# and [.object]#Catalog
+Assignment# to have the ability link:catalog-management[to add
+products to a catalog and assign accounts].
+[NOTE] ==== It is highly recommended to set up a single catalog
+layout for an instance. ====
+*[.object]#Promotion Line Item# and [.object]#Promotion
+Assignment# to have the ability link:promotions#h2__492952072[to
+add products to the promotion and assign accounts].
+*[.object]#Order Line Item# to view
+link:online-order[product details in the order cart].
+[NOTE] ==== It is highly recommended to set up the order layout
+for each *Sales Organization* separately. ====
+
+
+
+Additionally, link:adding-ct-orders-to-the-ct-mobile-app-4-0#h2_552129946[customize
+a mini layout] for the [.object]#CT Order# object to display
+desired fields when creating a new order in the CT Mobile app.
+
+[[h2_2072530411]]
+=== Search the Appropriate Layout
+
+The *Settings* record with the *Layout Settings* record type will be
+applied when the criteria are met. The search is carried out in the
+following order:
+
+
+
+[width="100%",cols="^50%,^50%",]
+|===
+|*Salesforce* |*CT Mobile*
+a|
+. With the specified record type and sales organization.
+. With the specified record type.
+. With the specified sales organization.
+. Without specified record type and sales organization.
+
+a|
+. With the specified record type and sales organization.
+. With the specified record type.
+. Without specified record type and sales organization.
+
+|===

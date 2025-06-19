@@ -1,0 +1,84 @@
+= Split Settings Field Reference
+
+The *Split Setting* record type is intended to store configuration which
+is used to split the order into suborders for further integration with
+the customer ERP system. The setting is applied upon
+link:order-management[order finalization].
+
+
+
+The *Settings* record with the *Split Settings* record type will be
+applied when the criteria are met. The search is carried out in the
+following order:
+
+. With the specified sales organization, order type, and price book.
+. With the specified sales organization and price book.
+. With the specified sales organization and order type.
+. With the specified sales organization.
+. With the specified order type.
+. Without the specified sales organization, order type, and price book.
+
+'''''
+
+Object record type API name:[.apiobject]#SplitSetting#
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Order Type |[.apiobject]#orders__OrderType__c#
+|Text(255) a|
+The order type for which the settings are configured.
+
+If not set, the setting will be applied for all order types of the
+selected Sales Org.
+
+* Order
+* Return
+* Pre-sale
+
+|Price Book |[.apiobject]#orders__PriceBookId__c#
+|Lookup(CT Price Book) |The[.object]#Price Book# with
+products to which the split will be applied.
+
+|Sales Organization
+|[.apiobject]#orders__SalesOrganizationId__c#
+|Lookup(Sales Organization) a|
+
+The specified Sales Organization is prioritized over the specified order
+type in the[.apiobject]#orders__OrderType__c# field.
+
+|Split Fields |[.apiobject]#orders__SplitFieldsList__c#
+a|
+Text(255)
+
+
+
+a|
+This field contains fields from the[.object]#Delivery# object
+that store the parameters according to which the deliveries are split.
+Fields are separated by the comma with no space. Maximum 5 fields are
+allowed.
+
+Specified fields must be created on the[.object]#Delivery#
+object manually.
+
+Address and date fields are already used for splitting by default. If
+you specify them, the system will skip these fields.
+
+|Split Parameters Path
+|[.apiobject]#orders__SplitParametersPath__c# |Long
+Text Area(32768) a|
+Defines the principle according to which the delivery will be split.
+Specify a path to the fields that store parameters on the
+[.object]#Delivery# object (specified in
+the orders__SplitFieldsList__c field). Maximum 5 fields are
+allowed. 
+
+[NOTE] ==== When managing bundles, make sure that the ====
+*Split Parameter Path* value is the same for both the bundle header and
+its components. Otherwise, the split settings might work incorrectly.
+
+|===

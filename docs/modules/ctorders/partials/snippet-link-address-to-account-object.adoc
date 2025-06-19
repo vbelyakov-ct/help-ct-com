@@ -1,0 +1,54 @@
+= Snippet: Link Address to Account Object
+
+You can use an existing default[.object]#Account# object to
+specify the address.
+
+. To specify the[.object]#Address# object, create a _Settings_
+record with the _Object Settings_ record type.
+. To specify the *Address* field, create a _Settings_ record with the
+_Address Settings_ record type.
+
+[[h2_1782833325]]
+=== Specify the Address Object
+
+To use the[.object]#Account# object as the
+[.object]#Address# object:
+
+. Go to the *Settings* tab and click *New*.
+. In the *New Settings* window, select *Object Settings* record type.
+. Specify the desired settings according to the
+link:admin-guide/getting-started/setting-up-an-instance/configuring-object-setting[Configure an Object Setting] guide
+and specify[.object]#Account# in the *Address Object* field.
+image:survey1-2021-01-25.jpg[]
+. Click *Save*.
+
+The[.object]#Address# object is set up.
+
+[[h2__405395202]]
+=== Specify the Address Field
+
+To set up the *Address* field:
+
+. Go to the *Settings* tab and click *New*.
+. In the *New Settings* window, select *Address Settings* record type.
+. Specify the following:
+* *Sales Organization*: select the *Sales Organization* if required.
+* *Address Field*: enter the API name of the *Address* field on the
+[.object]#Account# object.
+* Leave the *SOQL Filter* empty.
+
+image:ctorders-overview-2021-02-05-1.jpg[]
+. Click *Save*.
+
+The setup is complete.
+
+* A custom field containing the address for the
+[.object]#Account# object:
+
+image:ctorders-overview-2021-02-05-2.jpg[]
+* The *Shipping Street* custom field was added to the layout:
+
+image:ctorders-overview-2021-02-05-3.jpg[]
+* Order cart:
+
+image:ctorders-overview-2021-02-05-4.jpg[]

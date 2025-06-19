@@ -1,0 +1,20 @@
+= Catalog Line Item Layout Setting (1.0)
+
+To create the Catalog Line Item layout:
+
+. Go to *Settings* and click *New*.
+. In the *New Settings* window, select *Layout Setting*.
+. Configure the settings as follows:
+* Enter *Product* in the *Record Type* field.
+* Select a *Sales Organization*.
+* In the *Object* field, specify
+[.apiobject]#orders__CatalogLineItem__c#.
+* In *Fields To Display*, specify
+[.apiobject]#orders__ProductId__c#.
+
+image:catalog-line-item-layout-setting-2020-05-08.png[]
+. Click *Save*.
+
+The Catalog Line Item layout is set up.
+
+image:Layout-Catalog-Products.png[]

@@ -1,0 +1,39 @@
+= Left Panel Setting Field Reference
+
+The _Left Panel Setting_ record type is intended to store configurations
+of the left panel of the order cart of the CT Mobile app.
+
+'''''
+
+Object record type API name:[.apiobject]#LeftPanelSetting #
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Fields To Display
+|[.apiobject]#orders__FieldsToDisplay__c# |Long Text
+Area(1000) a|
+Specify the order of *Catalogs* and *Promotion* tabs to be displayed
+in the order cart. Example:
+
+"Catalogs,Promotion"
+
+|Labels |[.apiobject]#orders__Labels__c#
+|Text(255) a|
+Specify custom names for *Catalogs* and *Promotion* tabs, for example:
+
+"Goods,Specials"
+
+
+
+If the field is empty, default names will be used.
+
+|===
+
+[[h2__966181550]]
+=== 
+
+

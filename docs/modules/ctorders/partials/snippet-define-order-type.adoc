@@ -1,0 +1,23 @@
+= Snippet: Define Order Type
+
+By default, the CT Orders package contains three preset order types:
+
+* Order
+* PreSale
+* Return
+
+
+
+For this workshop, let's assume you need to create an additional order
+type.
+
+. Go to *Setup → Objects and Fields → Picklist Value Sets*.
+. Click *Order Type*.
+. In the *Values* section, click *New*.
+. Enter the new order type name in the window, select *Add the new
+picklist values to all Record Types that use this Global Value Set* and
+click *Save*.
+
+image:defining-an-order-type-2020-06-22.png[]
+
+The new value is added.

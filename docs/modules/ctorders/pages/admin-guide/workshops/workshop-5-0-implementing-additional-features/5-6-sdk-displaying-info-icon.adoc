@@ -1,0 +1,42 @@
+= Workshop 5.6: SDK Displaying Info Icon
+
+link:admin-guide/managing-ct-orders/sdk/info-icon[SDK] allows you to add additional icons to the order
+cart displaying the embedded HTML, or opening a new window with its own
+URL. 
+
+
+
+To set up the display of the info icon:
+
+. Create an HTML template that will be shown in the pop-up window when
+the icon is clicked on.
+. Create and add an
+https://help.salesforce.com/articleView?id=sf.code_manage_packages.htm&type=5[Apex
+class] to your Salesforce org to bring the created HTML to the
+displayed layout. 
+. Go to *Settings* and click *New*.
+. Select *SDK Setting* record type and click *Next*.
+. Fill in the fields:
+[TIP] ==== The full description of the fields is available
+link:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/sdk-setting-field-reference[here]. ====
+* Fill in *Order type* and *Sales Organization* fields.
+* **SDK Type: **choose where the icon will be displayed on the Order
+layout.
+* *Platform*: select where to apply the setting.
+[NOTE] ==== Currently, the setting will be not applied on mobile
+devices.  ====
+* *Version*: v1. Currently, only v1 is available, otherwise, the setting
+won't be applied.
+* *Parameters*: leave empty.
+* *Implementation*: type in the name of the created Apex class in step
+2.
+* *Icon Name*: select a name from the
+https://www.lightningdesignsystem.com/icons/#utility[Utility list] to
+define the looks of the icon. 
+image:sdkinfoicon1.png[]
+. Click *Save*.
+
+The setup is complete. The corresponding icons are added to the order
+layout.
+
+image:sdkinfoicon2.png[]

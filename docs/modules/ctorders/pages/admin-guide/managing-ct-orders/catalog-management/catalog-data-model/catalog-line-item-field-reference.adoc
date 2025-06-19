@@ -1,0 +1,73 @@
+= Catalog Line Item Field Reference
+
+The[.object]#Catalog Line Item# object stores basic data about
+a product that has been added to a catalog.
+
+'''''
+
+Object API name:
+[.apiobject]#orders__CatalogLineItem__c#
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API name* |*Type* |*Description*
+
+|Active |orders__IsActive__c |Checkbox |If selected, the catalog
+line item record is active and can be applied in business logic.
+
+|Catalog |[.apiobject]#orders__CatalogId__c# a|
+Master-Detail(Catalog)
+
+
+
+|The identifier of the catalog.
+
+|External Id |[.apiobject]#orders__ExternalId__c#
+|Text(255) (External ID) (Unique Case Sensitive) |Specifies in case of
+using the ERP system data for deliveries.
+
+|Order |[.apiobject]#orders__Order__c#
+|Number(18,0) a|
+Defines the order of a product in the catalogs and sub-catalogs.
+
+* If this field is empty, such products are placed at the end of a
+catalog or sub-catalog.
+* If this field is empty on all records or a user has no access to this
+field, products are sorted in alphabetical order in catalogs and
+sub-catalogs.
+
+|Parent Catalog Line Item
+|[.apiobject]#orders__[.ArticleViewer_searchKeywords]#ParentId#__c#
+|Lookup(Catalog Line Item) |Filled out with the linked *Catalog Line
+Item* record that is a bundle including the selected product.
+
+|Product |[.apiobject]#orders__Prodcut2Id__c#
+|Lookup(Product2) |
+
+|Product |orders__ProductId__c a|
+Lookup(CT Product)
+
+
+
+|
+
+|Product Component
+|[.apiobject]#orders__ProductComponentId__c#
+|Lookup(Product Component) a|
+Available since CT Orders 24R1.
+
+Lookup to the[.object]#Product Component# object (in
+https://help.customertimes.com/smart/project-ct-cpg/product-component-field-reference[CT
+CPG] or
+https://help.customertimes.com/smart/project-ct-pharma/product-component-field-reference[CT
+Pharma]) in case of using link:admin-guide/managing-ct-orders/product-management/managing-bundles[bundles]. Must be
+created manually by the administrator.
+
+|Record Type |[.apiobject]#RecordType# |Record Type |Use
+the *Product* record type.
+
+|Units Count Step
+|[.apiobject]#orders__UnitsCountStep__c# |Number(18,0) |
+|===

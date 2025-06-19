@@ -1,0 +1,80 @@
+= Workshop 6.1: Configuring Product Availability
+
+In Workshop 6.1, you'll learn how to allocate products and freebies
+based on their availability on delivery dates. In this workshop:
+
+. Learn about default product availability and override it, if
+necessary, by creating Product Availability records for specific
+products.
+. Create two _Product Availability_ records for a paid product:
+.. For the default unavailable[.object]#CT Product#, set the
+period during which it can be added to the delivery.
+.. For the default available[.object]#CT Product#, add the
+period during which it cannot be delivered.
+. Create two _Product Availability_ records for a freebie.
+.. For the default unavailable[.object]#Freebie#, set the
+period during which it can be added to the delivery.
+.. For the default available[.object]#Freebie#, add the period
+during which it cannot be delivered.
+
+
+
+When you add such products and freebies to the order cart, the system
+blocks the quantity cells for those products that are unavailable on
+selected dates.
+
+
+
+For Workshop 6.1, we use the following settings for products:
+
+[width="100%",cols="^25%,^25%,^25%,25%",]
+|===
+|*CT Product* |*The default Product Availability* |*The Product
+Availability record: Availability, Dates* a|
+*The Delivery Date*
+
+|DM SPOON YOG 105 CRNCH-MAR-MAN/plast cup a|
+Available
+
+|Not Available, 4 July — 31 July 2022 a|
+4 July 2022
+
+
+
+
+|DM SPOON YOG 105 CRNCH-GNG-CIN/plast cup a|
+Not Available
+
+|Available, 5 July — 31 July 2022 |
+|===
+
+
+
+For freebies:
+
+[width="100%",cols="^20%,^20%,^20%,20%,20%",]
+|===
+|*Freebie* |*The default Product Availability* |*The Product
+Availability record: Availability, Dates* a|
+*The Delivery Date*
+
+a|
+*Ignore Product Availability*
+
+|DM CURD DESS 119 KISS-COC/plast cup a|
+Available
+
+|Not Available, 4 July — 31 July 2022 a|
+4 July 2022
+
+
+
+
+a|
+No
+
+|DM CURD DESS 127 WAFF-CRM/plast cup a|
+Not Available
+
+|Available, 5 July — 31 July 2022 | |
+|===

@@ -1,0 +1,89 @@
+= CG Cloud: Configuring Addresses
+
+There are several options to configure addresses for retail stores,
+which allows you to flexibly set up the CG Cloud integration with CT
+Orders.
+
+
+
+To set up addresses:
+
+. Define the standard or custom object to use as the
+[.object]#Address# object. It is possible to use the
+[.object]#Retail Store#,[.object]#Account#, or custom
+[.object]#Address# object as the[.object]#Address#
+object.
+. Create an _OM Settings_ record with the _Object Setting_ record type
+and specify the API name of the[.object]#Address# object.
+Follow the steps in the
+link:linking-address-to-the-account-object-1-0#h2_1782833325[Specify
+the Address Object] guide.
+. Create an _OM Settings_ record with the _Address Setting_ record type
+and specify the corresponding _Address_ field:
+* Using the[.object]#Account# or[.object]#Retail
+Store# object, follow the steps in the
+link:linking-address-to-the-account-object-1-0#h2__405395202[Specify
+the Address Field] guide.
+* Using the custom[.object]#Address# object, follow the steps
+in the link:setting-up-a-custom-address-object-1-0[Set Up a Custom
+Address Object] guide.
+. Make sure that there is a lookup from the[.object]#Delivery#
+object to the corresponding[.object]#Address# object.
+. Make sure that there is a lookup from the[.object]#Address#
+object to the corresponding[.object]#Account# object.
+
+
+
+For your convenience, there is a table with all available combinations
+to set up addresses.
+
+
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Address Object* |*Address Object API Name* |*Address Field*
+|*Comments*
+
+a|
+Account
+
+
+
+|[.apiobject]#Account# a|
+* If an address is specified on the[.object]#Account# object,
+create a custom field with the *Text* data type, for example,
+[.apiobject]#ShippingAddress__c#.
+
+
+
+* If the[.apiobject]#Retail Store# object is used to specify
+the address for the[.apiobject]#Account# object, create a
+custom field with the *Text* data type on the[.object]#Retail
+Store# object, for example,
+[.apiobject]#RetailStoreAddress__c#.
+
+|
+
+|Retail Store |[.apiobject]#RetailStore# |Create a custom
+field with the *Text* data type, for example,
+[.apiobject]#RetailStoreAddress__c# |
+
+|Custom Address |For example,[.apiobject]#Address__c#
+|Create a custom[.object]#Address# object and a custom
+*Address* field with ;the *Text* data type, for example,
+[.apiobject]#CustomAddress__c#. a|
+. Create a custom lookup to the corresponding object:
+* Lookup(Account)
+* Lookup(Retail Store)
+. ​If necessary, link:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/address-setting-field-reference[specify the
+SOQL query] to sort delivery addresses given the selected
+[.object]#Account# or[.object]#Retail Store# object.
+For example:
+
+Or the SOQL filter will be written as:
+
+The result will be the ID list of the custom[.object]#Address#
+records and values specified in the appropriate field of this object,
+for example,[.apiobject]#Address__с#.
+
+|===

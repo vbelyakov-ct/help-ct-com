@@ -1,0 +1,37 @@
+= Example: MIN
+
+[width="100%",cols="34%,33%,33%",]
+|===
+|*Input Conditions* |*JSON* |*Discount Calculation Flow*
+
+a|
+Unit of Measure = Percent, Amount
+
+Calculation Method = Decrease
+
+
+
+Product List Price = 100$
+
+
+
+3 Calculation Types are created for the Pricing Procedure:
+
+. Calculation Method = Decrease and Structural 10%
+. Calculation Method = Decrease and Contract 9$
+. Calculation Method =Increase and Promo 0%
+
+| a|
+Calculating discounts and selecting the minimum discount according to
+the formula:
+
+. 100* (1 – 0.1) = 91$
+. 100 –9 = 91$
+. 100* (1 – 0) = 100$ because[.apiobject]#isIgnoreNulls =
+true# by default.
+
+
+
+Total price for an[.object]#Order Line Item# = 90$
+
+|===

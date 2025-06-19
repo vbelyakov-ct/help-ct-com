@@ -1,0 +1,39 @@
+= Authorization (7.0)
+
+To connect to the Web Service:
+
+. Go to the *CT Orders Control Panel* page and open the *Connect* tab.
+. Click *Connect* under the field with the selected server.
+[NOTE] ==== A warning will be displayed If you do not have
+enough permissions. The required permissions are listed
+link:admin-guide/managing-ct-orders/web-service/index#h3_241107400[here]. ====
+image:6.1-Connect-to-Web-Service.png[]
+. On the Salesforce login page, enter your Salesforce credentials.
+. You are authorized, and the *Connect* tab is displayed. Tokens are
+created:
+* Active token for Web Service access to Salesforce.
+** Click *Disconnect and Delete All Data* to terminate the connection to
+the web service and delete all master data on the web service side. You
+should confirm this action.
+** Click *Change User* and enter credentials of another integration user
+on the Salesforce login page. Use this option to change the integration
+user, if necessary.
+* Active standard tokens to access Web Service from Salesforce: 
+** A token for Salesforce administrator access to the web service to
+send master data.
+** A token for user access to the web service to calculate discounts.
+Click *Reissue* next to the token if you want to deactivate it. The old
+token will be marked as *Expired* and removed from the list in three
+days.
+. Optionally, create a custom token to access Web Service from the
+external system (b2b, e-commerce).
+.. To get a token, click the *Generate New* button, specify a token
+name, and select the scope, for example, discounts.
+.. Click the *Revoke* button if the token is no longer needed. The token
+will be deactivated.
+image:6.1-Web-Service-Tokens.png[]
+
+
+
+Next, link:admin-guide/workshops/workshop-7-0-calculating-discounts-with-web-service/connecting-to-web-service-and-price-calculation-7-0[set
+up the sync process] to send master data.

@@ -1,0 +1,422 @@
+= Offline Order
+
+CT Orders is designed to create and manage orders via different
+channels. Using the CT Mobile app on iOS and Windows platforms, create
+orders on the spot in offline or online mode and send them to Salesforce
+during the synchronization.
+
+* https://help.customertimes.com/articles/ct-mobile-ios-en/ct-mobile-description-and-deployment[Integrate
+the CT Mobile solution] with the target system, such as CT CPG, CT
+Pharma, or CG Cloud.
+* link:admin-guide/getting-started/setting-up-an-instance/index[Map the CT Orders objects] with the
+target system for applying the overall logic.
+* link:adding-ct-orders-to-the-ct-mobile-app-4-0[Follow the guide]
+to enable work with CT Orders in the CT Mobile app.
+* link:workshop-4-0-working-with-offline-orders[Take a workshop] on
+how to create an offline order in the CT Mobile app.
+
+
+
+In this article, you will find the necessary user permissions, a
+description of the *Order Cart* screen, conditions for displaying
+products, the steps to follow when creating an order, and a description
+of additional options.
+
+
+
+link:admin-guide/managing-ct-orders/order-management/offline-order#h2_1850278800[1. User Permissions and
+Synchronization]
+
+link:admin-guide/managing-ct-orders/order-management/offline-order#h2_2044385779[2. Create and Manage Orders]
+
+link:admin-guide/managing-ct-orders/order-management/offline-order#h3_1847490047[3. Edit the Order Cart]
+
+  link:admin-guide/managing-ct-orders/order-management/offline-order#h4__589780300[3.1 Promotions and Catalogs]
+
+  link:admin-guide/managing-ct-orders/order-management/offline-order#h4__1635896381[3.2 Order Cart]
+
+link:admin-guide/managing-ct-orders/order-management/offline-order#h2_1980854273[4. Additional Options]
+
+  link:admin-guide/managing-ct-orders/order-management/offline-order#h3_2048041897[4.1 Freebies]
+
+  link:admin-guide/managing-ct-orders/order-management/offline-order#h3__419365112[4.2 Price Tags]
+
+  link:admin-guide/managing-ct-orders/order-management/offline-order#h3__639588894[4.3 Delivery Summary]
+
+  link:admin-guide/managing-ct-orders/order-management/offline-order#h3_727125212[4.4 Calculate Price using the SDK
+Step]
+
+[[h2_1850278800]]
+=== 1. User Permissions and Synchronization
+
+Before starting to work with offline orders, please verify that the
+mobile users have the
+link:user-permissions-for-offline-orders[appropriate permissions
+for objects].
+
+[[h2_2044385779]]
+=== 2. Create and Manage Orders
+
+link:admin-guide/managing-ct-orders/order-management/offline-order[When the CT Orders is activated] and
+link:adding-ct-orders-to-the-ct-mobile-app-4-0[customized for
+offline work] and a mobile user performed the full synchronization:
+
+. The *CT Orders* menu item is available on the main menu.
+.. Specify list views for sorting _Order_ records.
+.. Add[.object]#Order# custom related lists to the _Accounts_,
+_Contacts_, or _Activities_ objects to manage orders.
+. The *Order* button is available on the _Accounts_, _Contacts_, or
+_Activities_ records for order creation.
+.. Tap
+the image:order-Icon.png[]
+icon, specify the required data in the mini layout, and tap *Create*.
+[NOTE] ==== Configure the
+link:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/layout-setting-field-reference[layout setting] for
+[.object]#CT Order ==== object to set up displayed fields in the
+mini
+layout.#image:create-order-order-icon.jpeg[]
+.. Edit the new order on the *Order Cart* screen.
+
+[[h3_1847490047]]
+=== 3. Edit the Order Cart
+
+On the *Edit Cart* screen, the mobile user manages the current order.
+
+[[h4__589780300]]
+==== 3.1 Promotions and Catalogs
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+[width="100%",cols="50%,50%",]
+!===
+!For CT Mobile iOS users
+!image:List-of-Products_Order-Cart_iOS.png[]
+
+!For CT Mobile Windows users
+!image:List-of-Products_Order-Cart_Windows.png[]
+!===
+
+a|
+On the left side, select products from available promotions and
+catalogs. The *Promotion* tab is displayed by default.
+
+* Each promotion and catalog are collapsed by default.
+* Promotions and catalogs (including sub-catalogs) should be:
+** Active.
+** Assigned for the current _Account_ record or all _Accounts_.
+** Available for the current _Sales Organization_, the selected _Order
+Type_ of the _Order_, and on _Order_ and _Delivery_ dates.
+
+[cols=",",]
+!===
+!image:info.png[] !All active
+catalogs (including sub-catalogs) are available for the CT Mobile
+Windows users.
+!===
+* Tap the promotion or catalog name to expand it and view product
+records.
+[TIP] ==== The *Expand* icon is displayed only when the
+promotion or catalog has products. ====
+** Products are arranged according to their order number (if given) or
+in alphabetical order.
+** There can be products and bundles in promotions and catalogs, as well
+as catalogs can have sub-catalogs. When the catalog has sub-catalogs,
+products and bundles are available only in the sub-catalogs.
+** Product details are displayed according to
+https://help.customertimes.com/smart/project-ct-mobile-en/compact-layout[the
+compact layout].
+** Only active products with the active assigned _Price Book_ and the
+specified _List Price_ are available.
+
+* Tap
+the image:order-cart-right-arrow.png[] icon
+to add a promotion or catalog. Tap
+the image:order-cart-left-arrow.png[]image:order-cart-left-arrow.png[] icon
+to remove the added catalog or promotion. 
+* Use the *Search* box to find the record.
+** The search is performed among products in catalogs, promotions, and
+products that are already added to the cart.
+** You can search by several words separated by blank spaces.
+** Search is carried out in the fields that are listed on the
+https://help.salesforce.com/articleView?id=search_results_setup_parent.htm&type=5[Search
+Results] search layout and in the fields specified as the title and
+subtitle on the
+https://help.customertimes.com/articles/ct-mobile-ios-en/compact-layout[compact
+layout].
+** Search results are saved when the mobile user switches the
+*Promotions* tab to the *Catalogs* tab.
+
+|===
+
+[[h4__1635896381]]
+==== 3.2 Order Cart
+
+Add products and manage them on the order cart.
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+[[h4_521967105]]
+===== Add and Remove Products
+
+* Tap
+the image:order-cart-right-arrow.png[] icon
+to add a catalog, promotion, sub catalog, bundle, or product to the
+cart. Products added to the cart disappear from the left section list.
+Swipe left to remove sub catalog, bundle, or product from the cart.
+* You can add
+(image:order-cart-right-arrow.png[])
+or remove
+(image:order-cart-left-arrow.png[]image:order-cart-left-arrow.png[])
+the whole catalog to/from the cart, if
+the link:admin-guide/managing-ct-orders/catalog-management/catalog-data-model/catalogs-field-reference[Disable Mass Adding] option is
+disabled. You cannot add a catalog if adding another catalog is still in
+progress (see the progress bar in the *Catalog* section).
+* In the CT Order cart, products are grouped into the *Catalogs* and
+*Promotions* sections. When you add products to the cart, the system
+checks the availability of each record.
+* All catalog products are gathered under the *Catalogs* section.
+* Promotion products are grouped separately under their respective
+*Promotion* names. The promotion sales and delivery dates are displayed
+in each promotion header. If the sales dates are empty, the delivery
+dates will be displayed instead of them.
+* The administrator can add custom fields for the order cart layout,
+including formulas and roll-up field types. The title bar is fixed so
+that users can scroll through the order cart without losing sight of the
+names of columns.
+
+[TIP] ==== The _Order Cart_ layout is managed by the _Settings_
+record of the _Layout Setting_ record type for
+link:order-line-item-layout-setting-1-0[the Order Line Item
+object]. ====
+
+[[h4__733574480]]
+===== Filter products
+
+[[h4_1069920130]]
+===== 
+
+. Tap
+the image:ctorders-ios-filter-icon.png[] icon
+to add a filter for products in the order cart. The filter must be set
+up in advance by the link:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/filter-setting-field-reference/index[Filter
+Setting].
+. Tap *Add Filter* to add new filter.
+. Select desired filter criteria from the list and tap *Apply*.
+. Tap *Apply* to apply the filter.
+
+a|
+[width="100%",cols="50%,50%",]
+!===
+!For CT Mobile iOS users !
+
+!For CT Mobile Windows users
+!image:Order-Cart_Windows.png[]
+!===
+
+|===
+
+[[h4_1105933755]]
+===== 
+
+[[h3__519467819]]
+==== 3.3 Create the First Delivery
+
+When a mobile user adds the first product, the *Delivery* pop-up
+appears. Delivery dates are controlled by the _Settings_ record with
+the _Limit Setting_ record type. To add delivery
+limits, link:adding-delivery-restrictions-to-an-order-1-0[follow
+this guide]. To set up delivery
+addresses, link:configuring-an-address-settings-1-0[refer to this
+article]. 
+
+The mobile user cannot delete a single delivery.
+
+* If no limits are set, the first delivery date is set as the current
+date and the end date is set as the last date defined by the calendar.
+* Deliveries are sorted by date. If multiple deliveries are added for
+the same date, they will be sorted by the *Address* field (in ascending
+alphabetical order).
+* The *Address* field is populated based on the
+link:configuring-an-address-settings-1-0[Address Setting] record
+defined for the Sales Org.
+
+
+
+In the CT Mobile iOS app, tap the *Expand Order Cart* icon to hide the
+catalogs and promotions on the left side for a better experience with
+items in a filled cart.
+
+[[h3_637482102]]
+==== 3.4 Add More Products and Specify Product Quantity per Delivery
+
+Add more products to the cart.
+
+* Tap
+the image:ctorders-ios-add-delivery-icon.jpg[]
+icon (iOS) or tap the Plus button next to the first delivery (Windows)
+to create one more delivery if needed.
+* Set quantity of each product for each delivery using the plus and
+minus buttons.
+** The quantity will change proportionally based on the
+link:admin-guide/managing-ct-orders/order-management/multiplicator[multiplicator] value for each product.
+** More details about the product and bundle calculation are available
+link:admin-guide/managing-ct-orders/product-management/index#h2_1138962735[here].
+** After making changes to the order cart, new prices will be calculated
+automatically on the
+https://help.customertimes.com/smart/project-ct-mobile-en/application-settings/a/h3__611076828[timer],
+if the link:web-service[Web Service] is disabled.
+* Organize products in cart by *max* or *min quantity* for the selected
+delivery.
+* *Pin delivery* as the first one in the order cart.
+* *Delete delivery* if needed.
+
+[width="100%",cols="50%,50%",]
+|===
+|For CT Mobile iOS users
+|image:ctorders-ios-add-delivery.jpg[]
+
+|For CT Mobile Windows users
+|image:Create-Delivery_Windows.png[]
+|===
+
+
+
+[[h3_1696966453]]
+==== 3.5 Review the Order
+
+* When the cart is full and all deliveries are set, review the order
+price and discounts in the *Total Panel* at the bottom of the screen.
+* To customize fields in the total panel, create the _Settings_ record
+with the link:configuring-totals-panel-setting-1-0[Totals Panel
+Setting] record type with custom fields. The maximum number of fields
+displayed is 4.
+
+[[h3__408281835]]
+==== 3.6 Export Order Data
+
+To enable this feature, configure
+the link:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/export-csv-setting-field-reference[Export CSV] setting. 
+
+. Tap *Actions* menu →  *Export to File*. 
+. Select fields to export (or leave preselected fields, if they are
+configured in the link:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/export-csv-setting-field-reference[Export
+CSV] setting).
+image:ios-select-fields-to-export.png[]
+ 
+. Tap *Export*.
+image:ios-export-dialog.png[]
+ 
+. Tap *Share* to open standard iOS sharing dialog. 
+
+[[h3__1128524764]]
+==== 3.7 Complete the Order
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+Depending on the mobile user's decision,
+link:admin-guide/managing-ct-orders/order-management/index#h3_1058643383[the order status will be
+changed]. We recommend getting familiar with
+the link:order-change-manager[Order Change Manager] logic. Do not
+manually change the Stage value on the _Order_ record screen to avoid
+missing validations.
+
+* Tap *Save draft* to save the cart without validation on the mobile
+device.
+* Tap the *Actions* menu →  *Cancel order* to exit the order cart
+without saving changes. 
+
+* Tap the *Complete* button to complete the order.
+The order cannot be edited on a mobile device after it has been
+completed. For more information about the order stages, refer
+to link:admin-guide/managing-ct-orders/order-management/index#h2_158967301[Order Stages]. To edit the
+order:
+
+. Go to the *CT Orders* menu item or the custom related list on the
+_Accounts_, _Contacts_, or _Activities_ menu item.
+. Select the order.
+. Tap *Edit Order* in the *Actions* menu.
+
+a|
+[cols=",",]
+!===
+!For CT Mobile iOS users
+!image:actions-order-ios.png[]
+
+!For CT Mobile Windows users
+!image:Save-draft_Windows.png[]
+!===
+
+|===
+
+[[h2_1980854273]]
+=== 4. Additional Options
+
+[[h3_2048041897]]
+==== 4.1 Freebies
+
+link:admin-guide/managing-ct-orders/freebies-management/index[If specified], tap the *Freebies* button.
+
+* Review freebies for a delivery and tap *Add products*. Freebies will
+be validated and added to the cart.
+[TIP] ==== It is possible to set up
+link:admin-guide/managing-ct-orders/freebies-management/index#h2_1556344363[freebies distribution]. For
+example, use the *Delivery Control* option to add freebies to the first
+or last delivery. ====
+* If the quantity of the cart products has been changed, tap the
+*Freebies* button again to recalculate freebies to the order.
+
+[width="100%",cols="50%,50%",]
+|===
+|For CT Mobile iOS users
+|image:Add-Freebies_iOS.png[]
+
+|For CT Mobile Windows users |The feature has not been implemented yet.
+|===
+
+[[h3__419365112]]
+==== 4.2 Price Tags
+
+link:5-3-displaying-price-tags[If specified], the *Price Tag* icon
+next to the added product indicates the status of the discount. Tap the
+icon to view a currently applied discount. 
+
+[cols=",",]
+|===
+|For CT Mobile iOS users
+|image:price-tag-ios.png[]
+
+|For CT Mobile Windows users |The feature has not been implemented yet.
+|===
+
+[[h3__639588894]]
+==== 4.3 Delivery Summary
+
+The *Delivery Summary* pop-up is used to review and edit (if needed) the
+delivery details. For more information, refer
+to link:delivery-management#h2__1374863314[Delivery Summary].
+
+[[h3_727125212]]
+==== 4.4 Calculate Price using the SDK Step
+
+link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-sdk-step[If the SDK step is implemented], the *Calculate
+Discounts* button appears on the **Order Car**t screen. Tap the button
+to link:admin-guide/managing-ct-orders/discount-management/index#h2__1225315997[calculate discounts].
+
+[width="100%",cols="50%,50%",]
+|===
+|For CT Mobile iOS users
+|image:SDK-Step_iOS.gif[]
+
+|For CT Mobile Windows users
+|image:SDK-Step_Windows.gif[]
+|===
+
+See also:
+
+* link:workshop-4-0-working-with-offline-orders[Workshop 4.0:
+Working with Offline Orders]
+
+

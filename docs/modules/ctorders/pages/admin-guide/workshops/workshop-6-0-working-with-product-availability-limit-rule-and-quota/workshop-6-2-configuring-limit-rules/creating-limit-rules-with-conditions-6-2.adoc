@@ -1,0 +1,55 @@
+= Creating Limit Rules with Conditions (6.2)
+
+Let's create a _Limit Rule_ to restrict the number of products in one
+delivery or order based on the condition:
+
+* *Exception Condition*: the _Limit Rule_ must restrict the number of
+products in a whole order cart if the specified condition is met. 
+* *Apply Condition*: the _Limit Rule_ must restrict the number of
+products in a single delivery, except for such products.
+
+[[h2_69606710]]
+=== Exception Condition
+
+To create a _Limit Rule_:
+
+. Go to the *Limit Rules* tab and click *New*.
+. Select the *Delivery* record type and click *Next*.
+. Enter the following:
+* *Sales Organization*: _Default Sales Org_.
+* *Min Quantity*: _5_.
+* *Order Type*: _Order_.
+* *Delivery Criteria Path*: specify the _Delivery_ fields as criteria to
+apply a limit rule:
+[.apiobject]#orders__DeliveryDate__c,orders__AccountId__c#.
+* *Exception Condition*: enter the following:
+
+
+image:limit-rules-descr-2021-06-23-2.png[]
+. Click *Save*.
+
+The _Limit Rule_ is created.
+
+[[h2__953788261]]
+=== Apply Condition
+
+To create a _Limit Rule_:
+
+. Go to the *Limit Rules* tab and click *New*.
+. Select the *Order* record type and click *Next*.
+. Enter the following:
+* *Sales Organization*: _Default Sales Org_.
+* *Amount*: enter the field with the total price:
+[.apiobject]#orders__TotalPrice__c#.
+* *Min Amount*: _5_.
+* *Max Amount*: _50_.
+* *Order Type*: _Order_.
+* *Apply Condition*: enter the following:
+[TIP] ==== In the[.apiobject]#value ==== key, specify a
+product that must be added to the order cart to apply the limit rule.#
+
+
+image:limit-rules-descr-2021-06-23-1.png[]
+. Click *Save*.
+
+The _Limit Rule_ is created.

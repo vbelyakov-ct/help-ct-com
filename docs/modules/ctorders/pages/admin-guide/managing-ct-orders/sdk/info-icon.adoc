@@ -1,0 +1,79 @@
+= Info Icon
+
+Available for Salesforce users only.
+
+Use SDK to add a dedicated icon with additional information to the order
+layout to display with the embedded HTML or open a new window with its
+own URL. Though the information displayed in the info icon can contain
+any kind of interactive data, it cannot be used in calculation
+processes.
+
+
+
+To set up a new custom info icon,
+link:5-6-sdk-displaying-info-icon[create an OM Settings record]
+with the *SDK Setting* record type. For more information, refer
+to link:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/sdk-setting-field-reference[SDK Setting Field Reference]. 
+
+* The *SDK Type* field determines the display position of the icon and
+the display of a different HTML, while the *Icon* field is a specified
+icon that can be picked from
+https://www.lightningdesignsystem.com/icons/#utility[the Utility Icons
+set] of the Salesforce Lightning Design System.
+* Specify one of the following in the SDK Type field to display icon in
+the desired place on the order layout:
+
+If there are no records, for example, a catalog without products, the
+Info icon will be displayed next to it anyway.
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*SDK Type* |*Description* |*Object* |*Displayed Format*
+
+|[.apiobject]#getPromotionLineItemInfoIcon# |Displays the icon
+with the product information next to the promotion product that hasn't
+been added to the order cart. |[.object]#Promotion Line Item#
+a|
+** HTML
+** URL
+
+|[.apiobject]#getPromotionInfoIcon# |Displays the icon with the
+information for the promotion. |[.object]#Promotion# |
+
+|[.apiobject]#getOrderLineItemInfoIcon# |Displays the icon with
+the product information next to each product already added to the order
+cart. a|
+**[.object]#Order Line Item#
+**[.object]#Delivery Line Item#
+**[.object]#Order#
+**[.object]#Delivery#
+**[.object]#Calculation Discount#
+
+|
+
+|[.apiobject]#getOrderInfoIcon# |Displays the icon with
+information for the Order. |[.object]#Order# |
+
+|[.apiobject]#getCatalogLineItemInfoIcon# |Displays the icon
+with the product information next to the product in the catalog that
+hasn't been added to the order cart. |[.object]#Catalog Line
+Item# |
+
+|[.apiobject]#getCatalogInfoIcon# |Displays the icon with
+information for the catalogs and sub-catalogs.
+|[.object]#Catalog# |
+|===
+
+
+
+For example, the[.apiobject]#info# icon from the Utility Icon
+set on the order layout:
+
+image:image2021-7-30_14-1-25.png[]
+
+
+
+See also:
+
+* link:5-6-sdk-displaying-info-icon[Workshop 5.6: SDK Displaying
+Info Icon]

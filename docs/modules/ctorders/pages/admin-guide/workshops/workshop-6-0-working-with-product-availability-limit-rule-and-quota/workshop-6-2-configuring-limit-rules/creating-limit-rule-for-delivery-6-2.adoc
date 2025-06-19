@@ -1,0 +1,38 @@
+= Creating Limit Rule for Delivery (6.2)
+
+Let's create a _Limit Rule_ to restrict the number of products in one
+delivery. 
+
+* The _Order Split_ setting created in
+link:admin-guide/workshops/workshop-5-0-implementing-additional-features/5-1-setting-up-a-delivery-split[Workshop 5.1] automatically
+splits one delivery if there are products with different combinations of
+families and brands.
+* The _Limit Rule_ must restrict the number of products in a single
+delivery based on the combinations of families and brands.
+
+
+
+So, according to the _Order Split_ record, products with the same family
+and brand will be placed in the same delivery. But according to the
+_Limit Rule_ record, if the total number of such products is less than
+the minimum quantity or higher than the maximum quantity, you will get a
+validation error.
+
+
+
+To create a _Limit Rule_:
+
+. Go to the *Limit Rules* tab and click *New*.
+. Select the *Delivery* record type and click *Next*.
+. Enter the following:
+* *Sales Organization*: _Default Sales Org_.
+* *Min Quantity*: _1_.
+* *Max Quantity*: _100_.
+* *Order Type*: _Order_.
+* *Delivery Criteria Path*: specify the _Delivery_ fields as criteria to
+apply a limit rule:
+[.apiobject]#Brand__c,Family__c#.  
+image:Workshop-6.2-Limit-Rule-per-Delivery.png[]
+. Click *Save*.
+
+The _Limit Rule_ is created.

@@ -1,0 +1,99 @@
+= Price Tag
+
+The Price Tag functionality provides the user with detailed information
+about the price, applied and available discounts, and their limits for
+each product.
+
+* Price tags are available for online and offline orders.
+* Set up the _Settings_ record with the
+link:5-3-displaying-price-tags[Layout Setting] record type for the
+[.object]#Order Line Item# object to activate price tags in the
+order cart.
+* Click the Price Tag icon next to the product in the order cart to
+display information in the pop-up.
+
+[TIP] ==== Default price tag logic is not applied to freebies.
+Use link:custom-price-tag[Price Tag SDK] to display additional
+information for each product added to the cart, including available
+freebies for the reached discount per product. ====
+
+
+
+Click on the *Price Tag* icon to review the info:
+
+* Price tags display one or more applied conditions on the discount
+scale with the current product quantity and the reached level of
+discounts.
+** Several conditions are displayed when
+link:admin-guide/managing-ct-orders/discount-management/discount-data-model/calculation-types-field-reference/calculation-type-applyconditiontype-c-field-specification[Apply
+Condition Type] is *AllNoZero* on the appropriate _Calculation Type_
+record.
+** All levels with the required product quantity are presented on the
+scale.
+** The discount scale is available for conditions with the *Level
+Record* value in the *Discount Rate Location* field.
+image:price-tag-2.0.png[]
+* If there are more than one delivery in the order, and a discount is
+defined for a delivery, they will be displayed in price tag the
+following way:
+
+image:ctorders-pricetag-levels-different-deliveries.png[]
+This Price Tag display is triggered if the following conditions are met:
+** In link:admin-guide/managing-ct-orders/discount-management/discount-data-model/calculation-types-field-reference/index[Calculation Type]
+object, the *Level Based On* field is set to _Delivery Line Item_.
+** In link:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/index[Condition] object, the
+*Discount Rate Location* field is set to ** _Level Record_.
+** There are more than one delivery created for the order.
+[NOTE] ====[.object]#Calculation Types ==== with
+link:admin-guide/managing-ct-orders/discount-management/discount-data-model/calculation-types-field-reference/index[Field Search Based On] set
+to _Delivery Line Item_** **will be ignored and excluded from the Price
+Tag logic.#
+* Price tags display only the calculated value, but there is no
+information about whether it is a discount or a tax.
+* If the same calculation type is specified more than once in the
+pricing procedure, it only appears once in the price tag.
+* The Price tag icon may be displayed in different ways.
+
+
+[width="100%",cols="50%,50%",]
+|===
+|*Price Tag Icon* |*Description*
+
+|– |The icon is absent for freebies. The Price Tag icon will be
+displayed only on the bundle header or its components, depending on the
+value in the link:admin-guide/managing-ct-orders/product-management/managing-bundles#h2__1169899360[Set Quantity
+On] field on the _Product_ record.
+
+|image:ctorders-overview-2021-02-03.jpg[]
+|An empty icon is displayed if there is at least one
+link:workshop-2-0-setting-up-discounts[condition with discount
+levels] for the _Order Line Item_ record, but the discount level has not
+been reached.
+
+|image:ctorders-overview-2021-02-03-2.jpg[]
+|A half-empty icon is displayed if there is a condition with discount
+levels and one of the intermediate discount levels has been applied.
+
+|image:ctorders-overview-2021-02-03-1.jpg[]
+a|
+A filled icon is displayed in one of the following cases:
+
+** No matching conditions for the _Order Line Item_ record.
+** The discount on matching conditions is
+link:workshop-2-0-setting-up-discounts[calculated on the Condition
+records].
+** The _Order Line Item_ record has reached the highest level on a
+matching condition with discount levels.
+
+|image:boolean-price-tag.png[]
+|The checkmark icon is displayed when several _Delivery Line Items_ are
+tied to one _Order Line Item_ and different levels were applied in the
+conditions.
+|===
+
+See also:
+
+* link:5-3-displaying-price-tags[Workshop 5.3: Displaying Price
+Tags]
+* link:5-4-sdk-configuring-a-custom-price-tag[Workshop 5.4: SDK
+Configuring a Custom Price Tag]

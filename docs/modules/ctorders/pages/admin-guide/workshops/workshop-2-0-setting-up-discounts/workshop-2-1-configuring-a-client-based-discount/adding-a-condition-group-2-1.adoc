@@ -1,0 +1,18 @@
+= Adding a Condition Group (2.1)
+
+To create a new _Condition Group_ record:
+
+. On the created *Calculation Type* page, click *New* in the *Condition
+Groups* section.
+. Complete the form as follows:
+* *Calculation type*: _Client Based_.
+* *Order*: enter the product amount to grant a discount for the order.
+* *Active:* select the** **checkbox.
+* *Condition Fields*:
+[.apiobject]#orders__OrderId__r.orders__AccountId__r.Name
+# 
+
+image:calculation-types-2020-08-25-1.png[]
+. Click *Save*.
+
+The setup is complete.

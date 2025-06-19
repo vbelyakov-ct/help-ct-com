@@ -1,0 +1,188 @@
+= Pricing Procedure v. 1.0
+
+The[.object]#Pricing Procedure# object defines the method and
+succession of discount calculations for each order. The procedure is
+specified in JSON format in the
+link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-fields-reference[Pricing Procedure] field or
+by using the link:admin-guide/managing-ct-orders/price-management/procedure-builder-tab[Procedure Builder].
+
+Since CT Orders 2.0, link:pricing-procedure-v-2-steps[the pricing
+procedure v. 2.0] is available.
+
+:toc: :toclevels: 3
+
+[[h3__560869033]]
+=== Syntax Sample
+
+[[h2_469009993]]
+==== Examples
+
+Have a look at JSON examples for different discounts:
+
+[[h2__1426969465]]
+=== JSON Key Description
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Key* |*Type* |*Required* |*Comment*
+
+|[.apiobject]#isIgnoresNull# |Boolean |No a|
+​If true that between the *Calculated Type* records will be selected
+minimum discount except for 0 discounts.
+
+*  The default value is true.
+* The result will be 0 if all[.object]#Calculated Types# are 0.
+
+Applicable if[.apiobject]#"type":"MIN"#.
+
+|[.apiobject]#items# |Array |Yes |An array of calculated
+discounts. At least one item must be provided.
+
+|[.apiobject]#calculationType# |String |No |The value from
+the *External ID* field of the *Calculation Type* record.
+
+|[.apiobject]#procedure# |Object |Yes |Pricing Procedure.
+
+|[.apiobject]#round# |Enum |No a|
+The condition for rounding. If set, values will be rounded according to
+the selected value. Available values:
+
+*[.apiobject]#item# is used to round a value separately for
+each[.object]#Calculation Type#.
+*[.apiobject]#group# is used to round the total cost of all
+listed[.object]#Calculation Types#.
+
+Otherwise, the value will be rounded after all discounts are calculated
+according to the number of digits in the *Unit Price* field on the
+*Order Line Item* record.
+
+|[.apiobject]#roundTo# |Integer |No a|
+The precision for rounding in the number of decimals (digits after the
+comma).
+
+[NOTE] ==== If a[.apiobject]#round ==== key is
+specified and [.apiobject]#roundTo# is not, the rounding precision is based on the *Unit Price* field on the *Order Line Item* record.#
+
+* Available values are integers from 0 to 8. The number of digits is
+added to decimals after the comma.
+
+* The percentages are counted as decimals, for example, 5% is 0.05.
+
+|[.apiobject]#type# |Enum |Yes a|
+Available values:
+[NOTE] ==== A nested type inherits the constraints of its parent
+type. See the description in the
+link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-1/pricing-procedure-v-1#h3__1124271170[Type Values Description]
+table. ====
+
+* MIN
+* MAX
+* MULT
+* SUM
+
+|===
+
+[[h3__1124271170]]
+==== Type Values Description
+
+[width="100%",cols="34%,33%,33%",]
+|===
+|*Operator* |*Description* |*Example*
+
+|[.apiobject]#MAX# a|
+The discount with maximum discount or markup is applied depending on a
+selected *Calculation Method* of[.object]#Calculation Type#.
+
+* The maximum discount is selected for all nested
+[.object]#Calculation Types#.
+
+
+
+Important notes:
+
+*[.object]#Calculation Types# with different *Calculation
+Methods* cannot be used with the[.apiobject]#MAX# operator.
+* If the parent[.apiobject]#MAX# operator has the child
+[.apiobject]#SUM# operator, you have to compare in *Unit of
+Measure* = *Percent* only.
+* Inside[.apiobject]#MAX# operator you can compare discounts in
+% and discount in Amt because before comparison the system will
+calculate the price with a discount before making a decision.
+
+|
+
+|[.apiobject]#MIN# a|
+The discount with minimum discount or markup is applied depending on a
+selected *Calculation Method* of[.object]#Calculation Type#.
+
+* The minimum discount is selected for all nested
+[.object]#Calculation Types#.
+* Zero discounts do not count if[.apiobject]#isIgnoresNul# does
+not apply.
+
+[NOTE] ==== Calculation Types with different *Calculation
+Methods* cannot be used with the[.apiobject]#MIN ====
+operator.#
+
+|
+
+|[.apiobject]#MULT# a|
+Sequential application of discounts.
+
+* Each subsequent discount is applied to a product price that is
+calculated after the previous discount has been applied.
+* The operator can be applied for any
+link:calculation-types-field-reference[Calculation Type]
+combination of *Calculation Method* and *Unit of Measure*.
+* The operator can be used with additional attributes, such as
+[.apiobject]#isIgnoresNull#,[.apiobject]#round#, and
+[.apiobject]#isIgnoresNull#.
+
+[NOTE] ====[.object]#Calculation Types ==== with
+different *Units of Measure* (% and amount) can only be used with the
+[.apiobject]#MULT# operator.#
+
+a|
+Given:
+
+Product List Price = 100$
+
+Discount A = 10%
+
+Discount B = 10%
+
+Discount С = 20%
+
+
+
+Then:
+
+Operation: 100 (A) → 90 (B) → 81 (C) → 64.8$
+
+|[.apiobject]#SUM# a|
+Simultaneous application of a total sum of all discounts. The operator
+can be used for[.object]#Calculation Type# with *Unit of
+Measure* = *Percent* and any *Calculation Method*.
+
+
+
+a|
+Given:
+
+Product List Price = 100$
+
+Discount A = 10%
+
+Discount B = 10%
+
+Discount С = 20%
+
+
+
+Then:
+
+Operation: SUM discounts = 40%
+
+Apply discount: 100 → 60$
+
+|===

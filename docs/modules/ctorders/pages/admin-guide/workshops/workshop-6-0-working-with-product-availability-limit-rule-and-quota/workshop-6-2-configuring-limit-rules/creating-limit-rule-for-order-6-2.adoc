@@ -1,0 +1,23 @@
+= Creating Limit Rule for Order (6.2)
+
+Let's create a _Limit Rule_ to restrict the total price of products in
+the whole order cart. This _Limit Rule_ will not interact with the
+_Order Split_ setting because it checks only the total price.
+
+
+
+To create a _Limit Rule_:
+
+. Go to the *Limit Rules* tab and click *New*.
+. Select the *Order* record type and click *Next*.
+. Enter the following:
+* *Sales Organization*: _Default Sales Org_.
+* *Amount*: enter the field with the total price:
+[.apiobject]#orders__TotalPrice__c#.
+* *Min Amount*: _100_.
+* *Max Amount*: _10000_.
+* *Order Type*: _Order_.
+image:Workshop-6.2-Limit-Rule-per-Order.png[]
+. Click *Save*.
+
+The _Limit Rule_ is created.

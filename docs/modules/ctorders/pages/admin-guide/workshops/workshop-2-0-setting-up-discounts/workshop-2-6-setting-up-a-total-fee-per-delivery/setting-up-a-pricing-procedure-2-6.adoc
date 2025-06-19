@@ -1,0 +1,39 @@
+= Setting up a Pricing Procedure (2.6)
+
+To apply all discounts and fees, configure a new procedure:
+
+. Go to the *Pricing Procedure* tab and click *New.*
+. Specify the following:
+* *Procedure Name*: _Fee per Delivery_.
+* Set *Active*.
+* Select the *Sales Organization*, for which the procedure will be
+available.
+* Select *Order Types*, for which you want to apply this procedure.
+* In the *Pricing Procedure* window, enter the following JSON:
+
+
+
+[width="100%",cols="50%,50%",]
+|===
+|Insert this JSON  a|
+[{plus}] Click to expand a JSON
+
+.[-] Click to hide[%collapsible] ====
+
+
+
+====
+
+|JSON with Comments a|
+[{plus}] Click to expand a JSON
+
+.[-] Click to hide[%collapsible] ====
+
+
+
+====
+
+|===
+. Click *Save*.
+
+The _Pricing Procedure_ record is created.

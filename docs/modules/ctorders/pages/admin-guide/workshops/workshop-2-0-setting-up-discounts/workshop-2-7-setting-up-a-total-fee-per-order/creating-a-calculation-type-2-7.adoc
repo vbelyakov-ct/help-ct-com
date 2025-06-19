@@ -1,0 +1,20 @@
+= Creating a Calculation Type (2.7)
+
+First, set up a _Calculation Type_ record:
+
+. Go to *Calculation Types* and click *New*.
+. In the *New Calculation Type* window, select the *Condition* record
+type and click *Next*.
+. Enter the following:
+* *Calculation Type Name*: _Total Fee per Order_.
+* *External Id*: _totalfeeperorder_.
+* *Calculation Method*: _Increase Price_.
+* *Unit of Measure*: _Percent_.
+* *Apply Condition Type*: _First matching condition_.
+* *Condition Fields Update Type*: _Real-Time_.
+* *Level Based On*: _Order Line Items_.
+* *Level Formula*: enter the following:
+image:Calculation-Type-2.7.png[]
+. Click *Save*.
+
+The _Calculation Type_ record is created.

@@ -1,0 +1,32 @@
+= Example: MULT
+
+[width="100%",cols="34%,33%,33%",]
+|===
+|*Input Conditions* |*JSON* |*Discount Calculation Flow*
+a|
+Unit of Measure = Percent, Amount
+
+
+
+Product List Price = 100$
+
+
+
+3 Сaculation Types are created for the Pricing Procedure:
+
+. Calculation Method = Decrease and Structural 10%
+. Calculation Method = Decrease and Contract 10$
+. Calculation Method =Increase and Vat –10%
+
+| a|
+Calculating discount according to the formula:
+
+. 100* (1 – 0.1) = 90$
+. 90 – 10 = 80$
+. 80* (1 – (–0.1)) = 88$
+
+
+
+Total price for an[.object]#Order Line Item# = 88$
+
+|===

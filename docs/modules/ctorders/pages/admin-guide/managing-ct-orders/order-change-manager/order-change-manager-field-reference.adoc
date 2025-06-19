@@ -1,0 +1,79 @@
+= Order Change Manager Field Reference
+
+The[.object]#Order Change Manager# object is responsible for
+exchanging data about orders created, edited, and deleted in the CT
+Mobile app, and maintaining the integrity of those orders in the
+Salesforce database.
+
+* During synchronization, CT Mobile sends change packets with all
+related data of a particular *Order* record. Each order is represented
+link:admin-guide/managing-ct-orders/order-change-manager/order-change-manager-json-examples-and-keys[as a JSON file].
+* link:admin-guide/managing-ct-orders/order-change-manager/index#h2_1554146395[On the Salesforce side],
+the system creates an *Order Change Manager* record for each order
+received from CT Mobile during synchronization.
+* The system splits the received JSON and populates the *Order Change
+Manager* record fields with the split JSON based on the object name.
+* When a user closes the order cart, finalizes, or completes the order,
+the corresponding **Order Change Manage**r record is deleted.
+
+'''''
+
+Object API name:
+[.apiobject]#orders__OrderChangeManager__c#
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Delivery Collection
+|[.apiobject]#orders__DeliveryCollection__c# |Long Text
+Area(131072) |This field stores a JSON file for
+[.apiobject]#"type" = "orders__Delivery__c"# with all
+information about the related deliveries to the particular
+[.object]#Order#.
+
+|Delivery Line Item Collection
+|[.apiobject]#orders__DeliveryLineItemCollection__c#
+|Long Text Area(131072) |This field stores a JSON file for
+[.apiobject]#"type" = "orders__DeliveryLineItem__c"#
+with all information about the related[.object]#Delivery Line
+Items# records to the particular[.object]#Order#.
+
+|Order |[.apiobject]#orders__OrderId__c#
+|Master-Detail(CT Order) |This field stores a JSON file for
+[.apiobject]#"type" = "orders__Order__c"# with all
+information about the particular[.object]#Order#.
+
+|Order Line Item Collection
+|[.apiobject]#orders__ExternalID__c# |Long Text
+Area(131072) |This field stores a JSON file for
+[.apiobject]#"type" = "orders__OrderLineItem__c"# with
+all information about the related[.object]#Order Line Items#
+records to the particular[.object]#Order#.
+
+|Order Stage |[.apiobject]#orders__OrderType__c#
+|Text(255) |This field stores the current order stage.
+
+|Reference Order Id
+|[.apiobject]#orders__ReferenceOrderId__c# |Text(255) a|
+This field stores the pair of record ID and user ID—the value from the
+[.apiobject]#referenceOrderId# key of the received JSON file.
+Possible values:
+
+* The mobile temporary record ID and the user identifier.
+For example,
+[.apiobject]#a06-AF3AA67B-EA24-4DAB-9C8A-9B70357DAB830055J000001L7aTQAS#,
+where[.apiobject]#a06-AF3AA67B-EA24-4DAB-9C8A-9B70357DAB83# is
+the temporary record Id and[.apiobject]#0055J000001L7aTQAS# is
+the user identifier.
+* The Salesforce record ID and the user identifier.
+For example,[.apiobject]#a0g5w00000EQJi1AAH0055J000001L7aTQAS#,
+where[.apiobject]#a0g5w00000EQJi1AAH# is the Salesforce record
+ID and[.apiobject]#0055J000001L7aTQAS# is the user identifier.
+
+|Session Id |[.apiobject]#orders__SessionId__c#
+|Text(255) |The field stores the identifier of the session, during
+which data of the particular[.object]#Order# was transferred.
+|===

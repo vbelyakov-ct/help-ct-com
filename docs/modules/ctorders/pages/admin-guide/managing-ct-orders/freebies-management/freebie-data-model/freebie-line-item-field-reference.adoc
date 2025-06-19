@@ -1,0 +1,31 @@
+= Freebie Line Item Field Reference
+
+The[.object]#Freebie Line Item# object stores information about
+each[.object]#Order Line Item#, which will be distributed as a
+freebie.
+
+'''''
+
+Object API name: [.apiobject]#orders__FreebieLineItem__c
+#
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field*  |*API name* |*Type* |*Description*
+
+|External Id |[.apiobject]#orders__ExternalId__c#
+|Text(255) (External ID) (Unique Case Sensitive) |
+
+|Freebie Condition
+|[.apiobject]#orders__FreebieConditionId__c#
+|Master-Detail(Freebie Condition) |A link to the Freebie Condition
+record.
+
+|Product |[.apiobject]#orders__Product2Id__c#
+|Lookup(Product2) |
+
+|Product |[.apiobject]#orders__ProductId__c# |Lookup (CT
+Product) |
+|===

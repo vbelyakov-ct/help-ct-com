@@ -1,0 +1,145 @@
+= Catalog Management
+
+The catalog management process includes building a structure of
+Marketing Catalogs, adding products, and defining catalogs availability.
+Catalogs are used by managers and sales representatives to create
+orders.
+
+The *Catalog* page is implemented as a Lightning component with three
+tabs:
+
+* The *Details* tab with the main catalog info.
+* The link:admin-guide/managing-ct-orders/catalog-management/catalog-management#h3_832302310[Product Management] tab
+consists of two sections. The left list section displays a list or
+hierarchy view of products available for adding to
+link:catalogs-field-reference[a catalog]. The right list section
+displays products added to a catalog, which are represented as the
+link:catalog-line-item-field-reference[Catalog Line Item] records.
+* The link:admin-guide/managing-ct-orders/catalog-management/catalog-management#h2_457737850[Catalog Assignment] tab
+consists of two sections. The left list section displays a list of
+link:catalogs-field-reference[catalogs]. In the right list section,
+assign catalogs for accounts.
+
+[[h2__1817507152]]
+=== Product Management
+
+[[h3_832302310]]
+==== 
+
+The *Product Management* tab on the _Catalog_ record page allows you to
+create a hierarchy with sub-catalogs that include
+link:admin-guide/managing-ct-orders/product-management/index[products and product bundles].
+
+* On the left side, the available catalogs and sub-catalogs are
+displayed as a list or according to hierarchy. Use the toggle to the
+appropriate view and the *Filter* button to sort and search.
+* On the right side, create a hierarchy with sub-catalogs and specify
+products.
+
+image:catalog-mgmt-product-mgmt.png[]
+
+[[h3__2080835998]]
+==== Filtering Options
+
+* 
+
+Create the *SKU* checkbox for the
+target [.object]#Product# object and specify it in
+the link:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/object-setting-field-reference[Object Setting] record for
+the SF Instance. This property signifies that this product is a
+stock-keeping unit that can be added to catalogs.
+
+[[h3__1395193200]]
+==== Create a Hierarchy with Subcatalogs
+
+To add products to catalogs, it is necessary to create
+link:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/layout-setting-field-reference[a Layout Setting record] for
+the *Catalog Line Item* object.
+
+If a *Layout Setting* for the object is not found or no field is
+specified, the record ID will be displayed instead of a product name.
+
+Click *Add new Catalog* to create a catalog and add sub-catalogs:
+** When you add a sub-catalog, a lookup to the parent catalog is created
+for link:catalogs-field-reference[the sub-catalog record]. The
+maximum levels in the catalog hierarchy are 4: 1 main {plus} 3 nested
+sub-catalogs. 
+** Products can be added only to the lowest level of a catalog, i.e., if
+a sub-catalog is created, you can add a product only to this
+sub-catalog. You can add a product to multiple sub-catalogs. If a
+catalog has at least one sub-catalog, no products can be added to a
+parent catalog directly; each product must be assigned to a
+sub-catalog. 
+** Added product is represented as
+link:catalog-line-item-field-reference[the Catalog Line Item
+record].
+image:Catalog-Hierarchy.png[]
+
+[[h2_457737850]]
+=== Catalog Assignment
+
+A created catalog can be available for a specific set of accounts or to
+all accounts in your instance by applying the *Available for all
+accounts* checkbox on the *Details* tab of the Catalog record page. In
+the latter case, the Sales Org selection field on the catalog settings
+will be inactive. Otherwise, you need to assign a catalog to accounts,
+which means creating link:catalog-assignment-field-reference[a
+Catalog Assignment record].
+
+
+
+To display the *Catalog Assignment* tab on the layout, you need to
+configure link:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/layout-setting-field-reference[a Layout Setting
+record] for the[.object]#Catalog Assignment# object. Drag and
+drop catalogs to assign them to the selected _Account_ record.
+
+If you selected multiple filters, accounts will be displayed that match
+all of the selected criteria.
+
+image:Layout-Catalog-Assignment.png[]
+
+[[h3_1077652161]]
+==== Dynamic Catalog Assignment
+
+The CT solutions support a new feature that allows filtering catalogs
+available for a selected account dynamically. To apply dynamic search
+logic:
+. Define the[.object]#Group# and[.object]#Group
+Member# objects of the CT package you work with (CT CPG, CT Pharma) in
+the link:admin-guide/getting-started/setting-up-an-instance/configuring-object-setting[Object Settings].
+. Create a lookup to the[.object]#Group# object of the CT
+package on the[.object]#Catalog# object.
+. Make sure the catalog is NOT available for all accounts (checkbox is
+not selected).
+. Create a dynamic group.
+** https://help.customertimes.com/articles/ct-cpg-publication/create-and-update-a-dynamic-cpg-group[Create
+and Update a Dynamic CPG Group]
+** https://help.customertimes.com/articles/ct-pharma-publication/create-and-update-a-dynamic-pharma-group[Create
+and Update a Dynamic Pharma Group]
+. Assign a dynamic group, create a new _Settings_ record with
+the _Object Setting_ record type, and specify the referenced objects
+in *Group Object* and *Group Member Object* fields.
+
+[[h2__1131344625]]
+=== Process Path
+
+The following steps must be performed by the administrator to configure
+the catalogs for further usage:
+. Create link:admin-guide/getting-started/setting-up-an-instance/configuring-object-setting[the Object Setting record]
+for the SF Instance.
+. Add
+link:admin-guide/getting-started/setting-up-an-instance/creating-relationships-between-product-and-ct-orders-objects[lookups
+to a CT Product] object.
+. link:configuring-layout-settings-1-0[Configure Layout Settings]
+for *Catalog Line Item* and *Catalog Assignment* objects.
+. link:quick-start/creating-and-adding-catalogs-1-0[Create and manage
+catalogs].
+. Assign catalogs if required.
+
+See also:
+
+* link:how-to-create-and-assign-catalog[How to Create and Assign
+Catalog]
+* link:catalog-data-model[Catalog Data Model]
+* link:cg-cloud-setting-up-dynamic-group-assignment[CG Cloud:
+Setting up a Dynamic Group Assignment]

@@ -1,0 +1,28 @@
+= Adding a Condition (2.3)
+
+For the newly created _Calculation Type_ record, you will need to
+specify the conditions to calculate discounts for products in order.
+
+. ​On the created *Calculation Type* page, click *New* in the
+*Conditions* section:
+. Enter the following:
+* *Order*: _10_.
+[TIP] ==== The field is responsible for the order in which
+[.object]#Conditions ==== of [.object]#Calculation Type# are applied. Since we only use one[.object]#Condition# in the
+workshop, you can specify any value in this field.#
+* *Active*: set the checkbox
+* *Condition Details*: add this JSON, which contains the condition that
+discount will be applied for the product, which is not a promotional
+product:
+[TIP] ==== In the[.apiobject]#field ==== key, you may
+either specify
+[.apiobject]#orders__PromotionId__r.orders__ExternalId__c# or[.apiobject]#orders__PromotionId__c#, depending on
+whether your products have *External Id*.#
+* *Discount Rate Location*: _Condition Record_.
+* *Calculation Method*: _Basic_.
+* *Discount Rate Source Field (%)*:
+[.apiobject]#ManualDiscountPercent__c#.
+image:2021-08-16_17-27-03.png[]
+. Click *Save*.
+
+The _Condition_ is created.

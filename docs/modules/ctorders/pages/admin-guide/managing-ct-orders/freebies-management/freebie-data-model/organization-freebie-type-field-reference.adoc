@@ -1,0 +1,24 @@
+= Organization Freebie Type Field Reference
+
+The[.object]#Organization Freebie Type# object is a junction
+object between _Freebie Type_ and _Sales Organization_ records.
+
+'''''
+
+Object API
+name: [.apiobject]#orders__OrganizationFreebieType__c#
+
+'''''
+
+[cols=",,,",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Freebie Type |[.apiobject]#orders__FreebieTypeId__c#
+|Master-Detail(Freebie Type) |Specify a _Freebie Type_ record.
+
+|Sales Organization
+|[.apiobject]#orders__SalesOrganizationId__c#
+|Master-Detail(Sales Organization) |Specify required _Sales Organization
+record_.
+|===

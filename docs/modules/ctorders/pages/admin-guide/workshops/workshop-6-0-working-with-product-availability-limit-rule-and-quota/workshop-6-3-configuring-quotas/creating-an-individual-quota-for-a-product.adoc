@@ -1,0 +1,27 @@
+= Creating an Individual Quota for a Product
+
+Let's create a _Quota_ to restrict the number of distributed products on
+certain dates.
+
+
+
+To create a _Quota_:
+
+. Go to the *Quotas* tab and click *New*.
+. Select the *Individual* record type and click *Next*.
+. Enter the following:
+* *Product Type*: _Product_.
+* *Start Date*: _6 July 2022_.
+* *End Date*: _31 July 2022_.
+* Set *Active*.
+* *Unit of Measure*: _Quantity_.
+* *Sales Organization*: _Default Sales Org_.
+* *User*: select the current user.
+* *Order Type*: _Order_.
+* *Product*: _DM SPOON YOG 105 CRNCH-S-CAR/plast cup_.
+* *Account*: _METRO Giper Ship To #016_.
+* *Limit Quantity*: _48_.
+image:6.3-Individual-Quota-for-a-Product.png[]
+. Click *Save*.
+
+The _Quota_ for a product is created.

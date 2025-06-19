@@ -1,0 +1,34 @@
+= Export CSV Setting Field Reference
+
+The _Export CSV Setting_ record type is intended for storing settings
+for the exporting order details to the CSV format. Applies only
+to link:order-line-item-field-reference[Order Line Item],
+link:delivery-field-reference[Delivery] and link:delivery-line-item-field-reference[Delivery
+Line Item] objects. Only one _Export CSV Setting_ record at a time can
+be applied.
+
+'''''
+
+Object record type API name:[.apiobject]#ExportCSVSetting#
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field Label* |*API name* |*Type* |*Description*
+
+|Default Export Columns
+|[.apiobject]#orders__DefaultExportColumns__c# |Long
+Text Area(32768) |Stores a default list of fields, which are available
+for selecting for the export to the CSV format, separated by comma. If
+it is empty, then the user must select fields for the export.
+
+|Allow Select Export Columns |[.apiobject]#
+IsAllowedSelectExportColumns__с# |Checkbox |Enables ability of
+selecting fields that must be included in the export to the CSV format.
+Default value is _false_ (the user cannot select fields).
+|===
+
+Both fields must have the *Write* permission for the _System
+Administrator_ and _Sales Administrator_ roles, and *Read* permission
+for the _Sales Representative_ role.

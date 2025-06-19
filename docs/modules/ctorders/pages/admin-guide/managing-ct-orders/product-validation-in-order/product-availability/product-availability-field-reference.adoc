@@ -1,0 +1,93 @@
+= Product Availability Field Reference
+
+The[.object]#Product Availability# object is used to track the
+availability status of SKUs stored at the warehouse and define specific
+availability dates for different departments, sales points, or clients.
+The availability is checked for each product in the cart during the
+delivery creation.
+
+'''''
+
+Object API name:
+[.apiobject]#orders__ProductAvailability__c#
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API name* |*Type* |*Description*
+
+|Account |[.apiobject]#orders__AccountId__c#
+|Lookup(Account) |If specified, product availability is assigned for a
+certain Account.
+
+|Active |[.apiobject]#orders__IsActive__c# |Checkbox
+|This field defines whether the setting is active or not. Only active
+settings can be applied. 
+
+|Availability Type
+|[.apiobject]#orders__AvailabilityType__c# |Picklist
+a|
+It defines whether a product is available in a specific period from
+[.apiobject]#orders__StartDate__c# to
+[.apiobject]#orders__EndDate__c.# Available values:
+
+* _Available_
+* _Not Available_
+
+|End Date |[.apiobject]#orders__EndDate__c# |Date a|
+It is a required field with the end date when the product is available.
+
+link:delivery-field-reference[The delivery date] should be within
+the start and end dates of the product availability.
+
+|External Id |[.apiobject]#orders__ExternalId__c# |Text(255) (External ID) (Unique Case Sensitive) |Unique identifier of the record. |Order Type |[.apiobject]#orders__OrderType__c#
+|Picklist (Multi-select) a|
+It is a required field to select one or more
+link:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/ct-order-field-reference[order types]. Available values:
+
+* _Order_
+* _Return_
+* _Pre-Sale_
+
+|Product |[.apiobject]#ProductId__c# |Lookup(Product) |If the product is a bundle, then the product availability is applied to link:admin-guide/managing-ct-orders/product-management/managing-bundles[the whole bundle] or separately to included products, depending on the value in the *Calculate Price On* field. |Product |[.apiobject]#orders__Product2Id__c#
+|Lookup(Product) a|
+
+
+If the product is a bundle, then the product availability is applied
+to link:admin-guide/managing-ct-orders/product-management/managing-bundles[the whole bundle] or separately to
+included products, depending on the value in the *Calculate Price
+On* field.
+
+|Product Type |[.apiobject]#orders__ProductType__c#
+|Picklist(Multi-select) a|
+It is a required field to select one or more product types to apply the
+product availability to them. Available values: 
+
+* _Product_
+* _Freebie_
+
+|Promotion |[.apiobject]#orders__PromotiontId__c#
+|Lookup(Promotion) |The relationship with the Promotion with the added
+product.
+
+|Retail Store |[.apiobject]#RetailStoreId__c#
+|Lookup(Retail Store) a|
+If specified, a _Product Availability_ record is assigned for a certain
+Retail Store.
+
+Create this field in case of working with the CG Cloud solution.
+
+|Sales Organization
+|[.apiobject]#orders__SalesOrganizationId__c#
+|Lookup(Sales Organization) |It is a required field to relate a
+_Product Availability_ record to a certain Sales Organization.
+
+|Start Date |[.apiobject]#orders__StartDate__c# |Date a|
+It is a required field with the start date when the product is
+available.
+
+link:delivery-field-reference[The delivery date] should be within
+the start and end dates of the product availability.
+
+|===

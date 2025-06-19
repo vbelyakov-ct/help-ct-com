@@ -1,0 +1,26 @@
+= Linking Freebie Type Records with a Sales Organization (3.2)
+
+After you created the required _Freebie Types_, link them to your _Sales
+Organization_.
+
+[WARNING] ==== Only one selective and one prioritized _Freebie
+Type_ records can be simultaneously used for one _Sales Organization_.
+The records must not interact with each other because conditions of both
+types will be applied at once. If you try to link two records of the
+same _Freebie Type_ to a _Sales Organization_, you receive an error.
+====
+
+. Go to *Organization Freebie Type* and click *New*.
+. Enter the following:
+.. Select your _Sales Organization_.
+.. Specify the _Freebie Type_ record that you created in
+link:admin-guide/workshops/workshop-3-0-working-with-freebies/workshop-3-1-configuring-prioritized-freebie-type/index[Workshop
+3.1: Configuring Prioritized Freebie Type].
+image:link-freebie-type-records-with-a-sales-org-2020-07-21.png[]
+. Click *Save & New*.
+. Repeat step 2 to link the _Freebie Type_ record that you created in
+link:admin-guide/workshops/workshop-3-0-working-with-freebies/workshop-3-2-configuring-selective-freebie-type/workshop-3-2-configuring-selective-freebie-type[Workshop 3.2:
+Configuring Selective Freebie Type].
+. Click *Save*.
+
+The setup is complete.

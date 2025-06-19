@@ -1,0 +1,22 @@
+= Adding Condition Levels (2.6)
+
+Condition levels are responsible for the fee levels. Set up 2 fee levels
+based on the total price for products in a single delivery.
+
+. On the created *Calculation Type* page, click on the
+created *Condition* record under the *Conditions* section → click *New*
+in the *Condition Levels* section. 
+. Specify the following:
+* *Starting from*: _1_.
+* *Discount Rate (%)*: _5_.
+image:Condition-Level-1-2.6.png[]
+. Click *Save & New*.
+. Specify the following:
+* *Starting from*: _100_.
+* *Discount Rate (%)*: _0_.
+image:Condition-Level-2-2.6.png[]
+. Click *Save*.
+
+The _Condition Level_ records are created. So, a 5% fee will be applied
+when the total price of products in a single delivery does not exceed
+$100, and when the total value reaches $100, no fee will apply. 

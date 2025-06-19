@@ -1,0 +1,93 @@
+= Sales Organization Field Reference
+
+The[.object]#Sales Organization# object is intended to
+represent the customer organization based, for example, on territory or
+departments.
+
+At least one *Sales Organization* should be created. 
+
+'''''
+
+Object API name: orders__SalesOrganization__c.
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|External Id |[.apiobject]#orders__ExternalId__c#
+|Text(255) (External ID) (Unique Case Sensitive) a|
+Specify only in the case if there is a target ERP system that provides
+data with accounts, delivery addresses, price books, etc. 
+
+You can add all data using in one file with the .csv extension.
+
+|Logging Mode |[.apiobject]#orders__LoggingMode__c#
+|Picklist a|
+[WARNING] ==== At least _Read_ permission to this field is
+required to work with link:order-management[orders]. ====
+
+This field is used to define information to store in the
+link:calculated-discount-field-reference[Calculated Discounts]
+records. For more information, refer to link:discount-logs[Discount
+Logs]. 
+
+Available values:
+
+* None
+* Applied Condition
+* Calculation Log
+* All
+
+|Log Request Trigger
+|[.apiobject]#orders__LogRequestTrigger__c# |Picklist a|
+This field is responsible for determining when and for which records
+logs from Web Service will be requested. Available values:
+
+[NOTE] ==== The request will be sent only if
+the orders__LoggingMode__c ====  field is not empty, the
+[.apiobject]#orders__LogStatus__c# field on the
+[.object]#Order# object has the _Not Requested_ value, and the
+[.apiobject]#orders__LogId__c# field on the
+[.object]#Order# object is empty.
+
+It is possible to schedule the batch.
+
+* Save Order
+* Finalize Order
+
+|Sales Organization |[.apiobject]#Name# |Text(80) |The
+business unit for which the settings are configured.
+
+|Sales Point |[.apiobject]#orders_SalesPoint__c#
+|Picklist a|
+Specify the object to work with. Available Values:
+
+* Account
+* Retail Store
+
+If the value is not set, the CT Orders will work with the *Account*
+object.
+
+Please note that you cannot change the value when there are:
+
+* *Promotion* and/or *Catalog* with the related *Catalog Assignment* and
+*Promotion Assignment* records are created for the current *Sales
+Organization* record;
+* *Promotion* and/or *Catalog* has the related dynamic group;
+* related unfinalized *CT Order* records.
+
+|Turn Off Closed Orders Duplication
+|[.apiobject]#orders__IsTurnOffClosedOrdersDuplication__c#
+|Checkbox a|
+If enabled, the deduplication logic is applied to processing the
+completed orders. Duplicated records will not be created if a user tries
+to complete an order which is the same as the order already completed
+online.
+
+[TIP] ==== For more information, refer to
+link:order-change-manager#h3_1662160851[Deduplication Logic for the
+Finalized Order]. ====
+
+|===

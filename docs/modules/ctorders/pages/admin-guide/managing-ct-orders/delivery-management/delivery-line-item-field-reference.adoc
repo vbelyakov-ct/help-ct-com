@@ -1,0 +1,55 @@
+= Delivery Line Item Field Reference
+
+The[.object]#Delivery Line Item# object is intended to store
+the data for each delivery in order.
+
+The *Delivery Line Item* record will be created for each order delivery.
+
+'''''
+
+Object API name:
+[.apiobject]#orders__DeliveryLineItem__c#
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API* |*Type* |*Description*
+
+|Delivery |[.apiobject]#orders__DeliveryId__c#
+|Master-Detail(Delivery) |Stores the
+link:admin-guide/managing-ct-orders/delivery-management/delivery-field-reference[Delivery] record that includes the
+Delivery Line Item.
+
+|External Id |[.apiobject]#orders__ExternalId__c#
+|Text(255) (External ID) (Unique Case Sensitive) |
+
+|Log Id |[.apiobject]#orders__LogId__c# |Text(255)
+(External ID) (Unique Case Sensitive) |
+
+|Order Line Item
+|[.apiobject]#orders__OrderLineItem__c# |Lookup(Order
+Line Item) |The corresponding *Order Line Item* record.
+
+|Product |[.apiobject]#orders__Product2Id__c#
+|Lookup(Product2) |
+
+|Product |[.apiobject]#orders__ProductId__c#
+|Lookup(CT Product) |
+
+|Quantity |orders__Quantity__c |Number(18, 0) |Stores the
+quantity of CT Products for the delivery date on the
+link:admin-guide/managing-ct-orders/delivery-management/delivery-field-reference[Delivery] record.
+
+|Reference Id |[.apiobject]#orders__RefereneId__c#
+|Text(255) (External ID) (Unique Case Sensitive) |
+
+|Total Price |[.apiobject]#orders__TotalPrice__c#
+|Currency(15, 3) |The overall price for all CT Products and deliveries
+with discounts in the order.
+
+|Unit Price |orders__UnitPrice__c |Currency(16,2) |Stores the
+price of the CT Product with a discount, which is specified for the
+appropriate link:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/order-line-item-field-reference[Order Line Item]
+record.
+|===

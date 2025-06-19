@@ -1,0 +1,22 @@
+= Promotion Assignment Layout Setting (1.0)
+
+Set up the Catalog Assignment layout if you want
+to link:admin-guide/managing-ct-orders/discount-management/promotions#h2__492952072[assign accounts to a promotion] on
+the *Product Management* tab on the *Catalog* record page.
+
+
+
+To create the Promotion Assignment layout:
+
+. Go to *Settings* and click *New*.
+. In the *New Settings* window, select *Layout Setting*.
+. Configure the settings as follows:
+* Enter *Participant* in the *Record Type* field.
+* Select a *Sales Organization*.
+* In the *Object* field, specify
+[.apiobject]#orders__PromotionAssignment__c#.
+* In *Fields To Display*, specify
+[.apiobject]#orders__AccountId__c#.
+. Click *Save*.
+
+The Promotion Assignment layout is set up.

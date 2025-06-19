@@ -1,0 +1,33 @@
+= Procedure Calculation Type Fields Reference
+
+The[.object]#Procedure Calculation Type# is a junction object
+to make a link between
+link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-fields-reference[Pricing Procedure] and
+link:calculation-types[Calculation Types].
+
+'''''
+
+Object API name: orders__ProcedureCalculationType__c
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API* |*Type* |*Description*
+
+|Calculation Type a|
+[.apiobject]#orders__CalculationTypeId__c#
+
+
+
+|Master-Detail(Calculation Type) |The calculation type that is used in
+the Pricing Procedure formula.
+
+|Pricing Procedure a|
+[.apiobject]#orders__PricingProcedureId__c#
+
+
+
+|Master-Detail(Pricing Procedure) |The Pricing Procedure that is used
+for price calculation.
+|===

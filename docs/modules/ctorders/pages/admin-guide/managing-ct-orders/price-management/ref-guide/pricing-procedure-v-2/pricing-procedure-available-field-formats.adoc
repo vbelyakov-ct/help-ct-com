@@ -1,0 +1,33 @@
+= Pricing Procedure: Available Field Formats
+
+Here is the table with the available values for the
+[.apiobject]#field# key for the specific
+[.object]#Pricing Procedure# keys.
+
+
+
+[width="100%",cols="34%,33%,33%",]
+|===
+|*Value* |*Description* |*Comment*
+
+|Field API name |Any field with the *Currency* or *Number* data
+type. |A field with the *Lookup* data type is not allowed.
+
+|[.apiobject]#$.listPrice# |The specified in the settings
+*List Price* field.  |Available for the[.object]#Order Line
+Item# and[.object]#Delivery Line Item# objects.
+
+|[.apiobject]#$.quantity# |The specified in the settings
+*Quantity* field. |
+
+|[.apiobject]#$.unitPrice# |The specified in the settings *Unit
+Price* field. |
+
+|[.apiobject]#$.totalPrice# |The specified in the settingsn
+*Total Price* field. |Available for then[.object]#Order#,
+[.object]#Order Line Item#,[.object]#Delivery#, and
+[.object]#Delivery Line Item# objects.
+
+|[.apiobject]#$.totalDiscount# |The specified in the settings
+*Total Discount* field. |
+|===

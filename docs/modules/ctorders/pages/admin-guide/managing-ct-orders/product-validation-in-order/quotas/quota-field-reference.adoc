@@ -1,0 +1,301 @@
+= Quota Field Reference
+
+The[.object]#Quota# object is an object that is used to
+allocate a fixed share of products to orders according to the conditions
+fulfilled.
+
+* Quotas are distributed per sales representatives.
+* Quotas can be applied based on the product quantity in the order or
+the amount of the delivery.
+* Quotas can be automatically created based on templates if the
+necessary conditions for applying the quota are met.
+* Quotas can be available for certain order types, product types,
+organizations, etc.
+
+'''''
+
+Object API name:[.apiobject]#orders__Quota__c#
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Account |[.apiobject]#orders__AccountId__c#
+|Lookup(Account) |If specified, a quota is available for a certain
+Account.
+
+|Active |[.apiobject]#orders__IsActive__c# |Checkbox
+|This field defines whether the quota is active or not. Only active
+quotas can be applied. 
+
+|Amount Field |[.apiobject]#orders__AmountField__c#
+|Text(255) a|
+The API name of the field from the
+link:delivery-line-item-field-reference[Delivery Line Item] object
+that stores the final price for the order, for example,
+[.apiobject]#orders__TotalPrice__c#.
+
+
+
+It is used when
+the [.apiobject]#orders___UnitOfMeasure__c# field
+is _Amount_. The current user should have access to the specified
+field.
+
+|Booked Amount |[.apiobject]#orders__BookedAmount__c#
+|Currency(16,2) a|
+Amount of products in the delivery booked for the order. The default
+value is _0_.
+
+
+
+It is used when
+the [.apiobject]#orders___UnitOfMeasure__c# field
+is _Amount_ and
+the [.apiobject]#orders__OrderStage__c# field of the
+order is not _Finalized_ or _Completed_.
+
+|Booked Quantity
+|[.apiobject]#orders__BookedQuantity__c# |Number(18,0)
+a|
+Quantity of products booked for the order. The default value is _0_.
+
+
+
+It is used when
+the [.apiobject]#orders___UnitOfMeasure__c# field
+is _Quantity_ and
+the [.apiobject]#orders__OrderStage__c# field of
+the [.object]#order# is not _Finalized_ or _Completed_.
+
+|Catalog |[.apiobject]#orders__CatalogId__c#
+|Lookup(Catalog) a|
+If specified, a quota is available for a certain Catalog.
+
+
+
+The quota can be applied to either a catalog or a promo. If there are
+two identical quotas, the quota related to the promo will be given
+priority.
+
+|End Date |[.apiobject]#orders__EndDate__c# |Date a|
+It is a required field with the end date when the quota is available.
+
+link:delivery-field-reference[The delivery date] should be within
+the start and end dates of the quota availability.
+
+|Ignore Bundle Components
+|[.apiobject]#orders__IsIgnoreBundleComponents__c#
+|Checkbox |If _true_, the quota is not available for bundle
+components. Default value is _false_.
+
+|Limit Amount |[.apiobject]#orders__LimitAmount__c#
+|Currency(16,2) a|
+Amount limit of products in the delivery that cannot be exceeded
+cumulatively on all orders in which the quota was used.
+
+
+
+It is used when
+the [.apiobject]#orders___UnitOfMeasure__c# field
+is _Amount_.
+
+|Limit Quantity
+|[.apiobject]#orders__LimitQuantity__c# |Number(18,0)
+a|
+Quantity limit of products that cannot be exceeded cumulatively on all
+orders in which the quota was used.
+
+
+
+It is used when
+the [.apiobject]#orders___UnitOfMeasure__c# field
+is _Quantity_.
+
+|Order Type |[.apiobject]#orders__OrderType__c#
+|Picklist (Multi-select) a|
+Select one or more link:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/ct-order-field-reference[order types] to
+apply the quota. Available values: 
+
+* _Order_
+* _Return_
+* _Pre-Sale_
+
+|Product |[.apiobject]#ProductId__c# |Lookup(CT Product)
+|If the product is a bundle, then the quota is applied
+to link:admin-guide/managing-ct-orders/product-management/managing-bundles[the whole bundle] or separately to
+included products depending on the value in the *Calculate Price
+On* field.
+
+|Product |[.apiobject]#orders__Product2Id__c#
+|Lookup(Product2) |If the product is a bundle, then the quota is
+applied to link:admin-guide/managing-ct-orders/product-management/managing-bundles[the whole bundle] or separately to
+included products depending on the value in the *Calculate Price
+On* field.
+
+|Product Type |[.apiobject]#orders__ProductType__c#
+|Picklist(Multi-select) a|
+It is a required field to select one or more product types to apply the
+quota to them. Available values: 
+
+* _Product_
+* _Freebie_
+
+|Promotion |[.apiobject]#orders__PromotiontId__c#
+|Lookup(Promotion) a|
+If specified, a quota is available for a certain Promotion.
+
+
+
+The quota can be applied to either a catalog or a promo. If there are
+two identical quotas, the quota related to the promo will be given
+priority.
+
+|Quota Template
+|[.apiobject]#orders__QuotaTemplatetId__c# |Lookup(Quota
+Template) |The parent _Quota_ record of the _Template_ type (if exists).
+
+|Record Type |[.apiobject]#RecordTypeId# |Record Type a|
+The quota must be one of the following record types:
+
+* _Individual_
+It is a quota that is applied to the
+order. The [.apiobject]#orders__UserId__c# field must be
+filled out.
+* _Template_
+It is used to automatically create
+link:admin-guide/managing-ct-orders/product-validation-in-order/quotas/quota-field-reference#h2_12722709[an individual quota based on
+specified parameters], including when adding a new product or delivery
+to order. The quota will be created if it has a higher priority than
+other (if any) individual quotas.
+
+|Retail Store |[.apiobject]#RetailStore__c# |Lookup(Retail
+Store) a|
+If specified, a quota is available for a certain Retail Store.
+
+
+
+Create this field in case of working with the CG Cloud solution.
+
+|Sales Organization
+|[.apiobject]#orders__SalesOrganizationId__c#
+|Lookup(Sales Organization) |It is a required field to relate a
+_Quota_ record to a certain Sales Organization.
+
+|Start Date |[.apiobject]#orders__StartDate__c#
+|Date a|
+It is a required field with the start date when the quota is available.
+
+The delivery date should be within the start and end dates of the quota
+availability.
+
+|Used Amount |[.apiobject]#orders__UsedAmount__c#
+|Currency(16,2) a|
+The actual amount of products in the delivery used in the order. The
+default value is _0_.
+
+
+
+It is used when
+the [.apiobject]#orders___UnitOfMeasure__c# field
+is _Amount_ and
+the [.apiobject]#orders__OrderStage__c# field of the
+order[.object]## is not _On Hold._
+
+|Used Quantity
+|[.apiobject]#orders__UsedQuantity__c# |Number(18,0)
+a|
+The actual quantity of products used in the order. The default value is
+_0_.
+
+
+
+It is used when
+the [.apiobject]#orders___UnitOfMeasure__c# field
+is _Quantity_ and
+the [.apiobject]#orders__OrderStage__c# field of the
+order[.object]## is not _On Hold_.
+
+|User |[.apiobject]#orders__UserId__c#
+|Lookup(User) a|
+If specified, the quota is available for the user.
+
+
+
+Each quota of the Individual record type must be assigned to the user.
+
+|Unit of Measures
+|[.apiobject]#orders__UnitOfMeasure__c# |Picklist a|
+It is a required field to select a unit of measure of the quota
+application conditions. Available values:
+
+* _Amount_
+* _Quantity_
+
+|===
+
+[[h2_12722709]]
+=== Filling Quota Template
+
+When the quota is automatically created based on the quota template, the
+following fields inherit values from the template, and the quota has the
+_Individual_ record type.
+
+
+
+[width="100%",cols="50%,50%",]
+|===
+|*Field* |*Value*
+
+|Account
+|[.apiobject]#orders__orderId__r.orders__AccountId__с#
+
+|Active |[.apiobject]#true#
+
+|Amount Field
+|[.apiobject]#orders__QuotaTemplateId__r.orders__AmountField__c#
+
+|End Date
+|[.apiobject]#orders__QuotaTemplateId__r.orders__EndDate__с#
+
+|Limit Amount
+|[.apiobject]#orders__QuotaTemplateId__r.orders__LimitAmount__с#
+
+|Limit Quantity
+|[.apiobject]#orders__QuotaTemplateId__r.orders__LimitQuantity__с#
+
+|Order Type
+|[.apiobject]#orders__QuotaTemplateId__r.orders__OrderType__c#
+
+|Product
+|[.apiobject]#orders__QuotaTemplateId__r.ProductId__c#
+or
+[.apiobject]#orders__QuotaTemplateId__r.orders__Product2Id__c#
+
+|Product Type
+|[.apiobject]#orders__QuotaTemplateId__r.orders__ProductType__с#
+
+|Promotion
+|[.apiobject]#orders__QuotaTemplateId__r.orders__PromotionId__с#
+
+|Retail Store
+|[.apiobject]#orders__QuotaTemplateId__r.RetailStoreId__с#
+
+|Quota Template |The parent _Quota_ record of the _Template_ type (if
+exists).
+
+|Record Type |Individual
+
+|Sales Organization
+|[.apiobject]#orders__QuotaTemplateId__r.orders__SalesOrganizationId__c#
+
+|Start Date
+|[.apiobject]#orders__QuotaTemplateId__r.orders__StartDate__с#
+
+|User |[.apiobject]#orders__OrderId__r.OwnerId#
+
+|Unit of Measures
+|[.apiobject]#orders__QuotaTemplateId__r.orders__UnitOfMeasure__с#
+|===

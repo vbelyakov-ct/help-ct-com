@@ -1,0 +1,65 @@
+= Configuring Order and Order Line Item Mapping
+
+[cols=",",]
+|===
+|image:info.png[] |By
+default, these settings are already configured after installing the CT
+Order package.
+|===
+
+To create an order and successfully process products added to the cart,
+the following settings should be configured:
+
+[WARNING] ==== If the mapping setting (global or for a selected
+Sales Org) for at least one of these objects is not found, the order
+creation attempt will result in an error. ====
+
+* link:order-mapping-field-reference[Order Mapping]
+* link:order-line-item-mapping-field-settings[Order Line Item
+Mapping]
+
+[[h2_1000521456]]
+=== Order Mapping
+
+Configure the *Order Mapping* record:
+
+. Go to *Settings* and click *New*.
+. In the *New Settings* window, select the *Order Mapping* record type.
+. Configure the settings as follows:
+* Select a *Sales Organization*, for which you configure the mapping.
+* Enter field API names from the corresponding fields of the
+link:order-line-item-field-reference[Order Line Item] record for
+the *Total Price* and *Total Discount* fields.
+image:configure-objects-mapping-2020-04-27-5.png[]
+. Click *Save*.
+
+The setup is complete.
+
+[[h2__954711883]]
+=== Order Line Item Mapping
+
+Create the *Order Line Item Mapping* record:
+
+. Go to *Settings* and click *New*.
+. In the *New Settings* window, select the *Order Line Item Mapping*
+record type.
+. Configure the settings as follows:
+* If required, select a *Sales Organization*, for which you configure
+the mapping. If no Sales Organization is defined for an OM Setting
+record, it will be applied globally to all records without configured
+Sales Organization. 
+* Enter the field API name for the *List Price* field from the
+link:ct-price-book-line-item-field-reference[Price Book Line Item]
+record.
+* Enter field API names from the corresponding fields of the
+link:order-line-item-field-reference[Order Line Item] record for
+other fields.
+[NOTE] ==== You can reuse the package *Quantity* field if the
+Number (18,0) format is suitable for your organization. You can also
+create a custom *Quantity* field with the required measurement
+specifications. ====
+
+image:ctorders-overview-2020-12-25.png[]
+. Click *Save*.
+
+The setup is complete.

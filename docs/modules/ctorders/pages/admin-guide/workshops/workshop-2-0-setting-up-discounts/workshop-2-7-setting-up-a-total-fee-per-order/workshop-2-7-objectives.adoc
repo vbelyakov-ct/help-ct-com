@@ -1,0 +1,39 @@
+= Workshop 2.7 Objectives
+
+This master class describes the steps for setting up a total fee based
+on the total price of products in the whole order cart.
+
+
+
+So, if you have multiple deliveries and you set a 10% fee if the total
+price of products does not exceed $100, this fee will apply to all
+deliveries when the total price of added products will be less than
+$100. You can add multiple fees based on a total price and set up
+several discounts.
+
+
+
+Prior to the setup process, please check on the following list of the
+prerequisites that should be carried out first:
+
+* The account you are working with
+must link:admin-guide/workshops/workshop1-0-creating-basic-order/configuring-an-account-1-0[be able to make orders].
+* Create a custom *Total For Discount* field with the API
+name [.apiobject]#TotalForDiscount__c# and the _Currency
+(16, 2)_ type on the link:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/order-line-item-field-reference[Order
+Line Item] object.
+* Create a custom *Total For Discount* field with the API
+name [.apiobject]#TotalForDiscount__c# and the _Currency
+(16, 2)_ type on
+the link:admin-guide/managing-ct-orders/delivery-management/delivery-line-item-field-reference[Delivery Line
+Item] object.
+* Create one or more discounts to be automatically applied to the
+cart, link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-1/example-mixed[for example&#44; structural&#44;
+season&#44; or contract].  
+[NOTE] ==== Please, note that you need to specify the *External
+Id* of each Calculation Type that you want to apply in the order cart in
+the [.object]#link:admin-guide/workshops/workshop-2-0-setting-up-discounts/workshop-2-3-setting-up-a-manual-discount/setting-up-a-pricing-procedure-2-3[Pricing
+Procedure] ==== .#
+* Additionally, you can set
+up the link:5-3-displaying-price-tags[price tags] to display the
+information about the applied discounts. 

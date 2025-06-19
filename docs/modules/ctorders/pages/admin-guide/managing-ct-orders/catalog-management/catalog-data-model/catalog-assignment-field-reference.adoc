@@ -1,0 +1,38 @@
+= Catalog Assignment Field Reference
+
+The[.object]#Catalog Assignment# object allows assigning
+catalogs to accounts or retail stores. Per each account or retail store,
+a separate *Catalog Assignment* record will be created.
+
+'''''
+
+Object API
+name: [.apiobject]#orders__CatalogAssignment__c#
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API name* |*Type* |*Description*
+
+|Account |orders__AccountId__c |Lookup(Account) |An account to
+which the catalog is assigned.
+
+|Active |[.apiobject]#orders__IsActive__c# |Checkbox |If
+selected, the record is active and can be applied in business logic.
+
+|Catalog |[.apiobject]#orders__CatalogId__c# a|
+Master-Detail(Catalog)
+
+
+
+|The identifier of the catalog.
+
+|Retail Store |[.apiobject]#RetailStoreId__c#[#ebm]##
+|Lookup(Retail Store) a|
+A retail store to which the catalog is assigned.
+
+This field must be manually created in case of integration with CG
+Cloud.
+
+|===

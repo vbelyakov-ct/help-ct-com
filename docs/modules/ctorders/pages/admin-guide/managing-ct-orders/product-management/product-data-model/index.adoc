@@ -1,0 +1,70 @@
+= Product Data Model
+
+The products data model consists of the following objects:
+
+
+
+image:Product-Data-Model.png[]
+
+
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*CT Package* |*Object* |*Object API Name* |*Description*
+
+|Product Management | | |
+
+|CT CPG
+|https://help.customertimes.com/smart/project-ct-cpg/ct-product-field-reference[CT
+Product] |[.apiobject]#CTCPG__Product__c# |This object
+stores detailed information regarding company and competitor products,
+including its physical parameters, quantity per delivery settings, and
+specific attributes that define the price calculation procedure.
+
+|CT Pharma
+|https://help.customertimes.com/articles/project-ct-pharma/pharma-product-field-reference[Pharma
+Product] |[.apiobject]#CTPHARMA__Product__c# |
+
+|CT CPG
+|https://help.customertimes.com/smart/project-ct-cpg/product-component-field-reference[Product
+Component] |[.apiobject]#CTCPG__ProductComponent__c#
+|This is a junction object between a bundle and a product. One product
+can be a part of different bundles.
+
+|CT Pharma
+|https://help.customertimes.com/articles/project-ct-pharma/product-component-field-reference[Product
+Component]
+|[.apiobject]#CTPHARMA__ProductComponent__c# |
+
+|CT Orders
+ |link:ct-price-book-field-reference[CT Price Book]
+|[.apiobject]#orders__PriceBook__c# |This object
+contains the list of products that the company sells.
+
+| |link:ct-price-book-line-item-field-reference[CT Price Book Line
+Item] |[.apiobject]# orders__PriceBookLineItem__c# |This
+object contains data about a product in the price book (line item), and
+product quantity for delivery details.
+
+|Dynamic Groups | | |
+
+|CT CPG
+|https://help.customertimes.com/smart/project-ct-cpg/cpg-group-field-reference[CPG
+Group] |[.apiobject]#CTCPG__Group__c# |This object
+is intended to store appropriate objects' records in alignment with SOQL
+filters applied to these objects and their child objects.
+
+|CT Pharma
+|https://help.customertimes.com/articles/project-ct-pharma/pharma-group-field-reference[Pharma
+Group] |[.apiobject]#CTPHARMA__Group__c# |
+
+|CT CPG
+|https://help.customertimes.com/smart/project-ct-cpg/cpg-group-member-field-reference[CPG
+Group Member] |[.apiobject]#CTCPG__GroupMember__c#
+|This object is intended to store static or dynamic group members.
+
+|CT Pharma
+|https://help.customertimes.com/articles/project-ct-pharma/pharma-group-member-field-reference[Pharma
+Group Member]
+|[.apiobject]#CTPHARMA__GroupMember__c# |
+|===

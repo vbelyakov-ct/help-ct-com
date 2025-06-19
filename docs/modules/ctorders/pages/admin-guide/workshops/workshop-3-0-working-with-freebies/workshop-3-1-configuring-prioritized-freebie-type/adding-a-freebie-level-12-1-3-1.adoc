@@ -1,0 +1,44 @@
+= Adding a Freebie Level (121) (3.1)
+
+To apply a[.object]#Freebie Condition#, it is necessary to
+create freebie level(s).
+
+* In this workshop, we set up two[.object]#Freebie Levels# for
+the second[.object]#Freebie Condition#.
+* We will give 1 freebie for each added 12 products.
+* The minimum number of products in the order to distribute freebies is
+10.
+* The minimum number of distributed freebies is 2.
+* The maximum number of distributed freebies is 10.
+
+
+
+So, according to these settings, you should distribute at least 2
+freebies and a maximum of 10 freebies since at least 10 products are
+added to the order cart:
+
+* If there are 10 products, then we distribute 2 freebies.
+* If there are 12 products, then we distribute 2 freebies.
+* If there are 24 products, then we distribute 2 freebies according to
+the ratio.
+* If there are 36 products, we distribute 3 freebies.
+* And so on, but taking into account that the maximum quantity for
+distributing is 10 freebies.
+
+
+
+To create a _Freebie Level_ record:
+
+. Open the _All Brands 12 {plus} 1_ freebie condition → go to the
+*Related* tab and click *New* in the *Freebie Level* section.
+. Enter the following:
+* *External Id*: _12_1_.
+* *Product Ratio*: _12_.
+* *Freebie Ratio*: _1_.
+* *Starting from*: _10_.
+* *Freebies Quantity Min*: _2_.
+* *Freebies Quantity Max*:
+_10_.image:Freebie-Condition-Level-2-3.1.png[]
+. Click *Save*.
+
+The _Freebie Level_ record is created.

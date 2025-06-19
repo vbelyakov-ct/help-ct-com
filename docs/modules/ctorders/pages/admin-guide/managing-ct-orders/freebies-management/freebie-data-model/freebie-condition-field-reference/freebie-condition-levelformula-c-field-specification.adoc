@@ -1,0 +1,77 @@
+= Freebie Condition: LevelFormula__c Field Specification
+
+Available for instances with the enabled link:web-service[Web
+Service].
+
+*Level Formula* allows adding freebies based not only on the number of
+products, but also on the product amount. Also, the required quantity
+can be calculated using constants or additional fields, such as the
+*Freebie Value* field.
+
+[[h2__1406500097]]
+=== Examples
+
+Example of complex calculation:
+
+
+
+Example of a calculation with multiplication and minus:
+
+
+
+Example of a calculation with division and
+[.apiobject]#cutDecimalsTo#:
+
+
+
+[[h2_469009993]]
+=== JSON Key Description
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Key* |*Type* |*Required* |*Comment*
+
+|[.apiobject]#cutDecimalsTo# |Number |No a|
+The optional operator truncates the number of the decimal places on the
+resulting value after the operations with items.
+
+It can be used in pair with roundTo after rounding. 
+
+|[.apiobject]#items# |Array |Yes a|
+Items is to be used in calculations.
+
+* Fields on following objects:
+**[.apiobject]#Order Line item#
+* A constant value.
+* Fields on related objects, for example,
+[.apiobject]#ProductId__r.Weight__c#.
+* The following fields specified in the CT Orders settings in the
+format:
+**[.apiobject]#$.listPrice#
+**[.apiobject]#$.quantity#
+**[.apiobject]#$.unitPrice#
+**[.apiobject]#$.totalPrice#
+**[.apiobject]#$.totalDiscount#
+
+|[.apiobject]#operator# |Enum |Yes a|
+The arithmetic operation:
+
+*[.apiobject]#sum# is addition
+*[.apiobject]#multi# is multiplication. Multiplication by 0
+will result in 0.
+*[.apiobject]#minus# is substraction.
+[TIP] ==== It is possible to use the minus sign, for example,
+[.apiobject]#-$.quantity ==== . The minus sign is considered in
+the calculations.#
+
+*[.apiobject]#divide# is division. Division by 0 will result in
+0.
+
+|[.apiobject]#roundTo# |Number |No a|
+The optional and rounds the number of decimals on the resulting value
+after the operations with[.apiobject]#items#.
+
+It can be used in pair with [.apiobject]#cutDecimalsTo# before
+truncating to the required number of decimal places.
+
+|===

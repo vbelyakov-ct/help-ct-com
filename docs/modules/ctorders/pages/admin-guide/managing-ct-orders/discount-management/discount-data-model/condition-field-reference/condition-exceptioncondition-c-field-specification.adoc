@@ -1,0 +1,242 @@
+= Condition: ExceptionCondition__c Field Specification
+
+The[.apiobject]#orders__ExceptionCondition__c# field is
+used to exclude a condition from the application affecting the discount
+under the presence of certain products in the order cart.
+
+:toc: :toclevels: 3
+
+
+
+The Exclude Condition logic is reversed to the
+link:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification[Advanced
+Criteria] option. While the Advanced Criteria blocks the application of
+the discount until the condition requirements are met, Exception
+Condition is used to block the discount application until the condition
+is met. At the same time, the logic works with the
+[.apiobject]#orders__LevelBasedOn__c# option to
+determine the discount exclusion for a specific[.object]#Order
+Line Item# or[.object]#Delivery Line Item# and the
+corresponding object's quantity. The Exclude Condition logic may be
+applied for both paid products and freebies.
+
+[[h2_1689083776]]
+=== Example
+
+A JSON example of an exception condition:
+
+
+
+[[h2_469009993]]
+=== JSON Key Description
+
+* All the unique fields specified in the JSON will be automatically
+added to
+the [.apiobject]#orders__ConditionFieldsList__c# on
+the [.object]#Calculation Type#.
+* If the Exception Condition was altered or deleted, it may require
+manual removal of some fields
+in [.apiobject]#orders__ConditionFieldsList__c# in
+accordance with the changes, if not done automatically.
+
+[[h3_69606710]]
+==== Exception Condition
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Key* |*Type* |*Required* |*Comment*
+
+|[.apiobject]#operator# |Enum |Yes a|
+Available values:
+
+* AND
+* OR
+
+|[.apiobject]#productCount# |Object |Yes |The condition
+that must be excluded according to the total amount of mandatory
+products.
+
+|[.apiobject]#requiredProducts# |Object |Yes |The specific
+mandatory products. The quantity is defined according to the selected
+operator for the[.apiobject]#productCount# key.
+|===
+
+[[h3__1623789156]]
+==== Filter
+
+A filter defines which[.object]#Delivery Line Items# can be
+used for calculating a unique number of products or required products.
+
+
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Key* |*Type* |*Required* |*Comment*
+
+|[.apiobject]#operator# |Enum |Yes a|
+Available values:
+
+* AND
+* OR
+
+|[.apiobject]#items# |An array of Filter Items |Yes a|
+See
+link:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification#h3__764213188[Filter
+items].
+
+
+
+At least one item must be provided.
+
+|===
+
+[[h3__764213188]]
+==== Filter Items
+
+[NOTE] ==== Only products with a non-zero quantity are counted.
+====
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Key* |*Type* |*Required* |*Comment*
+
+|[.apiobject]#field# |String |Yes |The field from the
+[.object]#Delivery Line Item# or its parent object for which the
+[.apiobject]#operator# key is applied.
+
+|[.apiobject]#operator# |Enum |Yes |See
+link:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-exceptioncondition-c-field-specification#h3__1448410204[Items
+Operators].
+
+|[.apiobject]#value# |Boolean |No |A target value for
+fields with the *Boolean* type.
+
+| |Number | |A target value for fields with the *Currency* or *Number*
+type.
+
+| |String | a|
+A target value for fields with the *Text* type.
+
+
+
+The key is required when the [.apiobject]#operator# key is
+not [.apiobject]#in# or [.apiobject]#notIn#.
+
+|[.apiobject]#values# |Array of Values |No a|
+The[.apiobject]#values# with the *Text* type, separated by a
+comma, for example:[.apiobject]#["abc","123"]#
+
+[.apiobject]#
+#
+
+[.apiobject]#At least one item must be provided. The key is
+required when
+the #[.apiobject]#in# or [.apiobject]#>notIn#.
+
+|===
+
+[[h3_290861277]]
+==== Minimum Quantity
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Key* |*Type* |*Required* |*Comment*
+
+|[.apiobject]#minCount# |Number |Yes
+|[.confluence-information-macro-body]#The minimum quantity of unique
+products (a unique number of added product items#) that must be added to
+order to exclude the condition. If this number is lower than values from
+the[.apiobject]#productCount# key then condition will not be
+excluded).
+|===
+
+[[h3_1542681245]]
+==== Required Products
+
+The required products to exclude a condition.
+
+
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Key* |*Type* |*Required* |*Comment*
+
+|[.apiobject]#productField# |String |Yes a|
+The identification to search required products.
+
+* Salesforce Id (by default)
+* External Id (if it is set for all products in an instance)
+
+|[.apiobject]#operator# |Enum |Yes a|
+The operator defines how to apply the logic:
+
+* AND
+The quantity checked for all listed products.
+* OR
+At least the quantity of one product has reached the minimum value.
+
+|[.apiobject]#items# |An array of Required Product Items
+|Yes a|
+The list of required products. See the
+link:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification#h3_2075634919[Required
+Products Items]. 
+
+
+
+The condition may be satisfied if there are no specified values.
+
+|===
+
+[[h3_661720176]]
+==== Required Product Items
+
+The list of required products to exclude a condition.
+
+
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Key* |*Type* |*Required* |*Comment*
+
+|[.apiobject]#product# |String |Yes a|
+Available values:
+
+* Salesforce Id
+* External Id (if exist)
+
+|[.apiobject]#minQuantity# |Number |Yes |The product minimum
+quantity.
+|===
+
+[[h3__1448410204]]
+==== Item Operators
+
+[width="100%",cols="10%,^9%,^9%,^9%,^9%,^9%,^9%,^9%,^9%,^9%,^9%",]
+|===
+|*Field Data Type* |*Operator* | | | | | | | | |
+
+| |*contain* |*notContain* a|
+*in*
+
+|*notIn* |*equal* |*notEquel* a|
+*greater*
+
+|*greaterOrEqual* a|
+*less*
+
+a|
+*lessOrEqual*
+
+|*Currency* |No |No |No |No |Yes |Yes |Yes |Yes |Yes
+a|
+Yes
+
+|*Number* |No |No |No |No |Yes |Yes |Yes |Yes |Yes
+a|
+Yes
+
+|*Text* a|
+Yes
+
+|Yes |Yes |Yes |Yes |Yes |No |No |No |No
+|===

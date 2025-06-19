@@ -1,0 +1,115 @@
+= Order Line Item Field Reference
+
+The[.object]#Order Line Item# object is intended to store
+details about related catalog and price book, general information about
+promotions, discounts, and totals for each[.object]#CT Product#
+in the order.
+
+If you use CT Orders module for CT Mobile
+app, https://help.customertimes.com/articles/ct-mobile-ios-en/synchronization-launch/a/h3__1369866827[launch
+full synchronization] after adding new fields to the Order Line Item
+Layout.
+
+Fields with _Checkbox_ and _Date_ types are not supported.
+
+'''''
+
+Object API name:[.apiobject]#orders__OrderLineItem__c#
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Catalog |[.apiobject]#orders__CatalogId__c#
+|Lookup(Catalog) |Stores the linked _Catalog_ record.
+
+|Catalog Line Item |orders__CatalogLineItemId__c |Lookup(Catalog
+Line Item) |Stores the linked _Catalog Line Item_ record that is a
+product from the selected catalog.
+
+|External Id |[.apiobject]#orders__ExternalId__c#
+|Text(255) (External ID) (Unique Case Sensitive) |In the case of using
+pre-configured orders from the related ERP.
+
+|Freebie Condition
+|[.apiobject]#orders__FreebieConditionId__c#
+|Lookup(Freebie Condition) |Stores the linked _Freebie Condition_
+record.
+
+|Freebie Level
+|[.apiobject]#orders__FreebieLevelId__c# |Lookup(Freebie
+Level) |Stores the linked _Freebie Level_ record.
+
+|Freebie Type |[.apiobject]#orders__FreebieTypeId__c#
+|Lookup(Freebie Type) |Stores the linked _Freebie Type_ record.
+
+|List Price |[.apiobject]#orders__ListPrice__c#
+|Currency(15, 3) |Stores a price from the linked _CT Price Book_ record
+for a product.
+
+|Log Id |[.apiobject]#orders__LogId__c# |Text(255)
+(External ID) (Unique Case Sensitive) |
+
+|Order |[.apiobject]#orders__OrderId__c#
+|Master-Detail(CT Order) |The unique Order Id.
+
+|Parent Order Line Item
+|[.apiobject]#orders__ParentId__c# |Lookup(Order Line
+Item) |Filled out with the linked _Catalog Line Item_ record that is a
+bundle including the selected product.
+
+|Price Book |[.apiobject]#orders__PriceBookId__c#
+|Lookup(CT Price Book) |Stores the linked _CT Price Book_ record.
+
+|Price Book Line Item
+|[.apiobject]#orders__PriceBookLineItemId__c# |Lookup(CT
+Price Book Line Item) |Stores the linked _CT Price Book Line Item_
+record with the list price from the selected CT Price Book.
+
+|Product |[.apiobject]#orders__Product2Id__c#
+|Lookup(Product2) |
+
+|Product |[.apiobject]#orders__ProductId__c# |Lookup(CT
+Product) |
+
+|Product Component
+|[.apiobject]#orders__ProductComponentId__c#
+|Lookup(Product Component) |Stores the linked _Product Component_
+record that is a bundle added in the order.
+
+|Promotion |[.apiobject]#orders__PromotionId__c#
+|Lookup(Promotion) |Stores the linked _Promotion_ record.
+
+|Promotion Line Item
+|[.apiobject]#orders__PromotionLineItemId__c#
+|Lookup(Promotion Line Item) |Stores the linked _Promotion Line Item_
+record that is a promo product in the order.
+
+|Quantity |[.apiobject]#orders__Quantity__c# |Number(18,
+0) |Number of products in the order.
+
+This field is used
+for link:admin-guide/getting-started/setting-up-an-instance/configuring-order-and-order-line-item-mapping[Order and
+Delivery mapping].
+You can reuse the package *Quantity* field if the Currency (16,2) format
+is suitable for your organization. You can also create a
+custom *Quantity* field with the required measurement specifications.
+
+|Reference Id |[.apiobject]#orders__RefereneId__c#
+|Text(255) (External ID) (Unique Case Sensitive) |
+
+|Total Discount |[.apiobject]#orders__TotalDiscount__c#
+|Currency(15, 3) |The overall discount for all[.object]#CT
+Products# and[.object]#Deliveries# for the order.
+
+|Total Price |[.apiobject]#orders__TotalPrice__c#
+|Currency(15, 3) |The overall price for all[.object]#CT
+Products# and[.object]#Deliveries# with a discount for the
+order.
+
+|Unit Price |[.apiobject]#orders__UnitPrice__c#
+|Currency(15, 3) |The price for a single[.object]#CT Product#
+with a discount for the order.
+|===

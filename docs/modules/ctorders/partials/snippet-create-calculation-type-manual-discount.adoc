@@ -1,0 +1,20 @@
+= Snippet: Create Calculation Type Manual Discount
+
+. Go to *Calculation Types* and click *New*.
+. In the *New Calculation Type* window, select the *Condition* record
+type and click *Next*.
+. Enter the following:
+* *Calculation Type Name*: _Manual Discount %_.
+* *External Id*:* *_manualdiscountpercent_.
+* *Calculation Method*: _Decrease Price_.
+* *Unit of Measure*: _Percent_.
+* *Condition Fields Update Type*: _Real-Time_.
+* *Discount Recalculation Fields*: insert this JSON to re-initialize the
+discount recalculation in the case when the *Manual Discount* field is
+updated on the _Order Line Item_ record to use the newly entered
+value.
+
+image:2021-08-16_14-23-06.png[]
+. Click *Save*.
+
+The _Calculation Type_ record is created.

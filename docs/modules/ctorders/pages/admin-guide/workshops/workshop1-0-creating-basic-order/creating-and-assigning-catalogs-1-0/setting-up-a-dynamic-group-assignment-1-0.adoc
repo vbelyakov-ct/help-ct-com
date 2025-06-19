@@ -1,0 +1,81 @@
+= Set up a Dynamiс Group Assignment
+
+Dynamic groups help you to assign multiple accounts to catalogs and
+promotions and also keep records up-to-date.
+
+Depending on the installed solution, see more information:
+
+* https://help.customertimes.com/articles/project-ct-pharma/configuring-pharma-groups[Configure
+Pharma Groups]
+* https://help.customertimes.com/smart/project-ct-cpg/configuring-cpg-groups[Configuring
+CPG Groups]
+
+[[h2_221470279]]
+=== Create a Dynamic Group
+
+To create a dynamic group, for example, with retail stores:
+
+. Go to *Object Manager → CPG Group Member* or *Pharma Group Member →*
+click *New*.
+. Follow one of the guides to create a dynamic group:
+.. https://help.customertimes.com/articles/project-ct-pharma/configuring-pharma-groups/a/h3__1007999912[Create
+a Dynamic Pharma Group]
+.. https://help.customertimes.com/articles/project-ct-cpg/create-and-update-a-dynamic-cpg-group[Create
+a Dynamic CPG Group]
+
+The dynamic group with the appropriate records is created.
+
+[[h2__774670135]]
+=== Set up CT Orders package for Dynamic Group Support
+
+Create the required lookups:
+
+. Create a lookup from the[.object]#Catalog# object to the
+[.object]#Account# object. For example,
+[.apiobject]#GroupId__c#.
+. Create a lookup from the[.object]#Catalog Assignment# object
+to the dynamic group object. For example,
+[.apiobject]#GroupId__c#.
+. Repeat steps 1—2 for the[.object]#Promotion# and
+[.object]#Promotion Assignment# object if necessary.
+
+The setup is complete.
+
+We advise using only one lookup field to
+the [.object]#Group# object on
+the [.object]#Catalog#/[.object]#Promotion# object. If
+the[.object]#Catalog#/[.object]#Promotion# object
+contains more than one lookup to the[.object]#Group# object,
+make sure to fill in all lookup fields with identical IDs.
+Otherwise, the Dynamic group feature may not work correctly.
+
+Next, set up the layouts.
+
+. For catalogs, follow the
+link:admin-guide/workshops/workshop1-0-creating-basic-order/configuring-layout-settings-1-0/catalog-assignment-layout-setting-1-0[Catalog Assignment
+Layout Setting] guide.
+. For promotions, follow the
+link:admin-guide/workshops/workshop1-0-creating-basic-order/configuring-layout-settings-1-0/promotion-layout-settings-1-0#h3_950329355[Promo Assignment
+Layout Settings] guide.
+
+[[h2__1433879550]]
+=== Assign to a Dynamic Group
+
+In order to assign either a Catalog or a Promo to a Dynamic group:
+
+. Create a lookup from the[.object]#Catalog# to the
+[.object]#CPG Group#. For example,
+[.apiobject]#CPG_Group__c#.
+. Go to the *Page layouts* settings for the[.object]#Catalog#
+object and bring up created lookup to the dynamic group to the selected
+layout.
+image:calculation-types-2021-10-06.png[]
+. Go to *Order Module → Catalogs* and select the catalog you want to
+assign to a Dynamic Group.
+. On the selected catalog's *Details* tab, click *Edit* and in the added
+field specify the Dynamic Group.
+image:calculation-types-2021-10-06-1.png[]
+. To assign a Promo, repeat steps 1—4 creating a lookup from the
+[.object]#Promotion# to the group object.
+
+The setup is complete.

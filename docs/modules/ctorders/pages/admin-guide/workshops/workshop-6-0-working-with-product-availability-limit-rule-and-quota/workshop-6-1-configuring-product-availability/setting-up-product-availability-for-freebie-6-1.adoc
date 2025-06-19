@@ -1,0 +1,55 @@
+= Setting up Product Availability for Freebie (6.1)
+
+Create two _Product Availability_ records.
+
+* Change the default product availability and set up the availability
+dates for the first[.object]#Freebie#.
+* Set the unavailability dates for the second
+[.object]#Freebie#.
+
+[TIP] ==== You can create multiple _Product Availability_
+records for one product. If such records are found, the info icon shows
+a maximum of 3 records sorted by date, closest to the first delivery
+date.
+In Workshop 6.1, we create one _Product Availability_ record for a
+freebie. ====
+
+
+
+For the first[.object]#CT Product#:
+
+. Go to the *CT Products →* click *DM CURD DESS 127 WAFF-CRM/plast cup*.
+. In the *Default Availability Type* field, select *Not Available*.
+. Click *Save*.
+. Go to the *Product Availability* tab and click *New*.
+. Enter the following:
+* *Start Date*: _5 July 2022_.
+* *End Date*: _31 July 2022_.
+* Set *Active*.
+* *Sales Organization*: _Default Sales Org_.
+* *Order Type*: _Order_.
+* *Availability Type*: _Available_.
+* *Product*: _DM CURD DESS 127 WAFF-CRM/plast cup_.
+* *Product Type*: _Freebie_.
+image:Workshop-6.1-PA-Available-Freebie.png[]
+. Click *Save & New*.
+
+The availability dates are created.
+
+
+
+For the second[.object]#Freebie#:
+
+. Enter the following:
+* *Start Date*: _4 July 2022_.
+* *End Date*: _31 July 2022_.
+* Set *Active*.
+* *Sales Organization*: _Default Sales Org_.
+* *Order Type*: _Order_.
+* *Availability Type*: _NotAvailable_.
+* *Product*: _DM CURD DESS 119 KISS-COC/plast cup_.
+* *Product Type*: _Freebie_.
+image:Workshop-6.1-PA-Not-Available-Freebie.png[]
+. Click *Save*.
+
+The unavailability dates are created.

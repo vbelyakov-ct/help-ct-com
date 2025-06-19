@@ -1,0 +1,815 @@
+= CT Orders Package Release Notes
+
+Here you could find a feature, the link to the corresponding article,
+and the version of the CT Orders package since which the feature is
+available.
+
+:toc: :toclevels: 2
+
+[[h2__1836106951]]
+=== The CT Orders Package 25 R1
+
+* link:sync-transaction-field-reference[Sync Transaction] records
+are now deleted automatically after disconnecting from the
+link:web-service[Web Service].
+* link:required-permissions-for-a-specific-role#h2__260496953[orders.Allow
+Management of AuthData] custom permission added to manually manage
+link:auth-data-field-reference[Auth Data] records. 
+
+[[h2__290225989]]
+=== The CT Orders Package 24 R2
+
+[[h3__149663536]]
+==== Major Features
+
+After installing or upgrading to this version, please perform actions on
+the *Self API* tab on the *CT Orders Control Panel* as described
+link:installing-the-ct-orders-package#self-api[here].
+
+* *DiscountRatePercent* and *DiscountRateAmount* fields on
+link:condition-level-field-reference[Condition Level] object are
+now validated for negative values.
+* New *Assigned On Order* checkbox on the
+link:promotion-field-reference[Promotion] object. If enabled, the
+promotion is displayed in the order screen.
+* The *Payment Terms* column on the *Discount Management* tab is now
+hidden by default.
+* Order cart now better fits full screen.
+* Deliveries in the
+link:delivery-management#h2__1374863314[Delivery Summary] pop-up
+are now sorted in chronological order according to delivery date.
+* Products are added to *Catalog*/*Promotion* in the same order as they
+have been selected on the link:product-management[Product
+Management] tab.
+* link:managing-bundles[Bundles] functionality improvements:
+** Quotas are now validated for bundles.
+** Bundles with *Set Quantity On* = _Header_ can be distributed as
+freebies.
+** New design of the link:product-management[Product Management]
+tab for promotions and catalogs, including bundles components.
+** New *Ignore Bundle Components* checkbox added for
+link:quota-field-reference[Quota] record. If enabled, the quota is
+not available for bundle components. 
+** *List Price* value for _Header-Components_ bundles is displayed as a
+sum of listPrice values of the bundle's components after adding them to
+the order cart.
+** Freebies can be distributed not only for the whole bundle, but
+also to selected products of the bundle.
+** New
+https://help.customertimes.com/smart/project-ct-cpg/ct-product-field-reference[Ignore
+Component Availability] checkbox added for bundles. If enabled, the
+components of bundle are always available disregarding their _Product
+Availability_ status.
+** *Default Availability Type* and *Product Availability* fields now
+take effect on bundle disregarding if it’s calculated on header or on
+components.
+** New *Parent Catalog Line Item* and *Parent Promotion Line
+Item* lookup fields added for
+link:catalog-line-item-field-reference[Catalog Line Item] and
+link:promotion-line-item-field-reference[Promotion Line Item]
+objects to work with new bundles logic.
+* New *Restrict by Order content* checkbox is added for the
+link:freebie-condition-field-reference[Freebie Condition] object.
+If enabled, only _Order Line Item_ records with *Quantity*> 0 are
+distributed as freebies.
+
+[[h2__290225986]]
+=== The CT Orders Package 24 R1
+
+[[h3__1126186873]]
+==== Major Features
+
+[NOTE] ==== To work with bundles, please manually create the
+*Product Component* lookup field to the[.object]#Product
+Component ==== object (in
+https://help.customertimes.com/smart/project-ct-cpg/product-component-field-reference[CT
+CPG] or
+https://help.customertimes.com/smart/project-ct-pharma/product-component-field-reference[CT
+Pharma]) on link:catalog-line-item-field-reference[Catalog Line
+Item] and/or link:promotion-line-item-field-reference[Promotion
+Line Item] .#
+
+* The new link:filter-setting-field-reference[Filter Setting]
+allows to set up fields to filter products in the order cart.
+* Improved performance while opening the order cart and prices
+recalculation.
+* Added validation that *Max Quantity Per Delivery* value is greater or
+equal than *Min Quantity Per Delivery* value on the
+https://help.customertimes.com/smart/project-ct-cpg/ct-product-field-reference[CT
+Product],
+https://help.customertimes.com/smart/project-ct-pharma/pharma-product-field-reference[Pharma
+Product] and
+https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_product2.htm[Product2]
+objects.
+* If the *Fields To Display* parameter is not set in the
+link:totals-panel-setting-field-reference[Totals Panel Setting], no
+fields will be displayed in the *Total Panel* of the order cart.
+* Prices are calculated more precisely in the
+link:the-procedure-step[Procedure step].
+* Fields with automatically corrected invalid values are now highlighted
+in the order cart.
+* New link:left-panel-setting-field-reference[Left Panel Setting]
+is added to configure displaying *Catalogs* and *Promotion* tabs in the
+left list of the order screen.
+* *Self API* tab is added to the
+link:installing-the-ct-orders-package[CT Orders Control Panel].
+* New link:export-csv-setting-field-reference[Export CSV Setting]
+is added for *OM Settings*.
+* Added sorting by product name in order cart.
+* Pressing the *Tab* button in the order cart switches to editing the
+same field on the next order item.
+
+[[h2__1553777728]]
+=== The CT Orders Package 23 R3
+
+[[h3__1502650940]]
+==== Major Features
+
+* The *Field Search Based On* field is added to the
+link:calculation-types-field-reference[Calculation Type] object.
+This field determines if *Condition Fields* will be searched starting
+from[.object]#Order Line Item# or[.object]#Delivery
+Line Item# when performing calculation for the Web Service. 
+* Calculation Types with *Field Search Based On* set to _Delivery Line
+Item_ will be ignored and excluded from the link:price-tag[Price
+Tag] logic if calculations by Web Service are not use. 
+* The *SKU Field* is now mandatory to create an
+link:configuring-object-setting[object settings].
+* New features for link:limit-rules[Limit Rules]: 
+** Limit Rules are now validated, if their *Apply Conditions* contain a
+reference via *Order Line Item Id* field and the order draft has not
+been saved. 
+** New[.apiobject]#$.deliveryOrder# operator for
+link:limit-rule-applycondition-c-field-specification[Apply
+Condition] and
+link:limit-rule-exceptioncondition-c-field-specification[Exception
+Condition] on Limit Rules, which specifies certain index of the delivery
+in the order (0, 1, 2 etc.). 
+** New *Global Exception* field to support multi-delivery exception
+conditions for Limit Rules. If it’s enabled, it triggers searching
+*Exceptions Condition* field in the whole order, disregarding the value
+of the *Apply Condition* field.
+** New *Custom Validation Message* field on Limit Rule. Contains API
+name of custom label, which is displayed as the validation message when
+the Limit Rule is applied to the order or delivery. 
+
+[[h2__1746735548]]
+=== The CT Orders Package 23 R2 April
+
+[[h3_783110532]]
+==== Major Features
+
+* The[.apiobject]#!Order# shortcut can be set for
+link:address-setting-field-reference[Address Setting] SOQL
+Filter.
+In previous version, you could use [.apiobject]#!Account# and
+[.apiobject]#!RetailStore# shortcuts to get relevant custom
+address records for an order. Now, you can also use
+the [.apiobject]#!Order# shortcut for this purpose in the *SOQL
+Filter* field. For example:
+* Support comparison operators in JSON of the *Condition Details* field
+in the link:freebies-management#h2__623789817[Freebie Condition].
+In previous version, you could use _equal_, _notEqual_, _contain_,
+_notContain_, _in_, _notIn_ as values for the
+[.apiobject]#operator# key in JSON of *Condition Details* field
+in Freebie Condition. Now, you can also use _greater_, _greaterOrEqual_,
+_less_ and _lessOrEqual_ operators.
+
+[[h3__600655742]]
+==== Resolved Issues
+
+* In the link:configuring-object-setting[Object Setting], The
+*isActive* field is used disregarding *Object Settings SKU* field value.
+* link:online-order#h2_735642631[Products from the parent catalog]
+cannot be added to an order.
+* Checkboxes defined as optional, appear as required on the
+link:order-line-item-field-reference[Order Line Item] and
+link:delivery-line-item-field-reference[Delivery Line Item]
+layouts.
+* *Delivery Control* = _None_ for
+link:freebie-condition-field-reference[Freebie Condition] does not
+work for orders with different dates.
+* The product does not appear in available Freebies when filling out an
+order unless *Freebies Quantity Max* is specified on the
+link:freebie-level-item-field-reference[Freebie Level Line Item].
+* Freebies are not displayed in the delivery tab of the order cart, if
+the link:split-settings-field-reference[Split setting] is set.
+* The left panel of the order cart is not minimized after switching to
+delivery tab, if the link:split-settings-field-reference[Split
+setting] is set.
+* Negative values are allowed for link:limit-rules[Limit Rules] and
+can be applied for an order.
+* The bundle structure is not displayed when clicking on the bundle icon
+in the left menu of the link:online-order#h2_735642631[order].
+* Info icon displays more than 3 link:product-availability[Product
+Availability] entries.
+* Validation for extra parenthesis at the end of JSON in
+the link:calculation-type-levelformula-c-field-specification[Level
+Formula] field for the[.object]#Calculation type# object does
+not work on save.
+* The
+link:condition-advancedcriteria-c-field-specification[Advanced
+Criteria] field is required even if the
+link:condition-field-reference[Calculation Method] is set to
+_Basic_.
+* Width of the *All* tab in the
+link:offline-order#h4__1635896381[order cart] varies while
+switching between this and another tabs.
+* Discount is not recalculated for created orders after changing
+*Discount Rate* field value in the
+link:condition-field-reference[Condition] record.
+* After decreasing the width of the
+link:online-order#h2_915453080[order cart] window, the *Add* button
+becomes hidden by the side panel.
+* Different validation notifications for empty *Limit Quantity* and
+*Limit Amount* fields in link:quota-field-reference[Quotas].
+
+[[h2_699818774]]
+=== The CT Orders package 23 R1 March
+
+[[h3_1956376193]]
+==== Major Features
+
+* link:condition-advancedcriteria-c-field-specification#h2_1585895621[Advanced
+Criteria 2.0] now works both in link:web-service[Web Service] and
+in-app discount calculator.
+* link:web-service#h3__795817566[Calculate discounts] feature works
+both in link:web-service[Web Service] and in-app discount
+calculator.
+* *Promotions*, *Catalogs* and their sub-catalogs in the
+link:offline-order#h4__1635896381[Order Cart] are now displayed in
+alphabetical order.
+* New *Displayed Field Width* field added to
+link:order-line-item-layout-setting-1-0[Order Line Item Layout]. It
+allows adjusting the width of *Product Name* and *Quantity* fields in
+the link:offline-order#h4__1635896381[order cart], as well as of
+each field listed in the *Fields To Display*.
+
+[[h2_1975608344]]
+=== The CT Orders package 22 R4 December
+
+[[h3_1166002869]]
+==== Major Features
+
+[[h4_782416552]]
+===== Price Management
+
+* {blank}
+
+[[h4_782416552]]
+===== New link:procedure-builder-tab.html[Procedure Builder] link:procedure-builder-tab.html[tab] added to setup Pricing Procedure.  Now you can build up Pricing procedure 1.0 or 2.0 using friendly interface instead of writing JSON query.  
+
+
+
+[[h4_1273943364]]
+===== Freebie Management
+
+* New *link:freebie-management-tab[Freebie
+Management]*link:freebie-management-tab[ tab] added to set up
+[.object]#Freebies# for Promotion in one place. Now you can set
+up Freebie conditions using friendly interface instead of writing JSON
+query. 
+
+
+
+[[h4__260496953]]
+===== Custom Permissions and Permission Set Groups
+
+* Assign one of the preconfigured
+link:required-permissions-for-a-specific-role[permission set
+groups] to users based on their role to have access to the required CT
+Orders functionalities.
+* Assign
+link:additional-permissions-to-override-the-standard-logic[new
+custom permissions] to override the standard logic:
+** Allow changing *Condition Details* of[.object]#Promotion#.
+
+
+
+[[h4__419366360]]
+===== Price tags 
+
+* link:price-tag[The checkmark icon] is displayed when
+several *Delivery Line Items* are tied to one *Order Line Item*, and
+different levels are applied in the conditions.
+
+[[h3_350390124]]
+==== Other Improvements
+
+* The UX/UI improvement for the order cart:
+** link:offline-order#h4__1635896381[The promotion] sales and
+delivery dates are displayed in each promotion header. If the sales
+dates are empty, the delivery dates will be displayed instead of them.
+** The *Product Availability* records are displayed both for products on
+the left side in the catalogs/promotions and added to the order cart. No
+more than 3 records are available in a 365-day period.
+** The *Totals Panel* can be now
+link:how-to-configure-totals-panel-setting[configured to view price
+and discount per each delivery.]
+* The Disable Mass Adding option on a Catalog record defines whether a
+sales rep can add a whole catalog to the order cart.
+* Validation for link:links[Links] with the *Best Of* dependency
+action: conditions from one[.object]#Calculation Type# must
+have the same value in the *Unit Of Measure* field.
+* Changing criteria for searching the appropriate
+link:totals-panel-setting-field-reference[Totals Panel Settings]
+record.
+* The ability to edit fields with the *Lookup* type in the order cart.
+
+[[h2__1756148868]]
+=== The CT Orders package 22 R3 July
+
+[[h3_481302646]]
+==== Major Features
+
+[[h4__260496953]]
+===== Custom Permissions and Permission Set Groups
+
+* Assign one of the preconfigured
+link:required-permissions-for-a-specific-role[permission set
+groups] to users based on their role to have access to the required CT
+Orders functionalities.
+* Assign
+link:additional-permissions-to-override-the-standard-logic[new
+custom permissions] to override the standard logic:
+** Allow the same[.object]#Calculation Types# in the
+[.object]#Pricing Procedure# steps.
+
+
+
+[[h4_656259478]]
+===== Search
+
+For order carts, catalogs, and promotions, a search is carried out in
+the fields that are listed on the
+product https://help.salesforce.com/articleView?id=search_results_setup_parent.htm&type=5[Search
+Results] search layout (including the *Name* field). Only products that
+match the selected criteria will be displayed.
+
+[[h3_573774079]]
+==== Other Improvements
+
+* New operators are supported for JSON in the
+link:condition-advancedcriteria-c-field-specification[Advanced
+Criteria],
+link:condition-conditiondetails-c-field-specification[Condition
+Details&#44;] and
+link:condition-exceptioncondition-c-field-specification[Exception
+Condition] fields of the [.object]#Condition# object: 
+* The UX/UI improvement:
+** https://help.customertimes.com/articles/ct-mobile-ios-en/compact-layout[Set
+up the compact layout] for the [.object]#Product# object. The
+title is the value of the first field in a compact layout, and the
+subtitle is the value of the second field in a compact layout.
+** In the catalogs and promotions, products are arranged according to
+their order number (if given) or the order defined inside
+[.object]#Catalogs# and[.object]#Promotions#
+. Drag-and-drop products to manage their order.
+** The ability to
+https://help.customertimes.com/articles/ct-orders-3-0/layout-setting-field-reference[display
+fields from parent objects] in the order cart and the *Product
+Management* tab for catalogs and promotions.
+
+[[h2_1527186819]]
+=== The CT Orders package Summer '22
+
+Download the package
+https://login.salesforce.com/packaging/installPackage.apexp?p0=04t3j000001IiSM[here].
+
+For correct operation of new features, use the following versions of
+target systems:
+
+* The CT CPG package v. 1.49 and higher.
+* The CT Pharma package v. 2.44 and higher.
+
+[[h3_1819729950]]
+==== Major Features
+
+[[h4_1512079693]]
+===== Web Service
+
+Before starting work, check all the required permissions
+link:../Storage/project-order-module/PDF/CT-Orders-User-Permissions-to-Access-Web-Service.pdf[here].
+
+* link:authorization-7-0[Set up two-way authorization] to transfer
+data between Web Service and Salesforce and allow the Web Service to use
+Apex classes and SOQL queries on the Salesforce side for the SDK step
+and freebie calculations.
+* link:connecting-to-web-service-and-price-calculation-7-0[Set up
+the connection] to use the Web Service calculator instead of the
+built-in calculator and perform all discount calculations in one place.
+* link:data-to-send-to-web-service[The ability to load master data]
+to Web Service and keep it up-to-date with the *Run Batch* button.
+* The new advanced features, such as links, mixed discounts, and freebie
+values are only available when working with the Web Service.
+* Validations that a sales rep has access to all necessary fields to
+calculate discounts. Otherwise, the calculation will be carried out by
+the *List Price* field.
+
+
+
+[[h4_512944023]]
+===== Links
+
+* link:links[Conduct advanced discount calculations] by creating
+condition dependencies among paid products and freebies based on
+different or the same [.object]#Calculation Types# and non-zero
+conditions.
+* Administrators can set 4 types of condition dependencies and the
+sequence of applying them to the orders.
+
+
+
+[[h4__313159045]]
+===== Mixed Discounts
+
+* link:calculation-type-applyconditiontype-c-field-specification[The
+ability] to apply multiple conditions from a
+single [.object]#Calculation Type#. 
+* link:condition-advancedcriteria-c-field-specification#h2_1585895621[Advanced
+Criteria 2.0] provides more flexibility by simultaneously setting
+several filters and a minimum number of products for different size
+discounts.
+
+
+
+[[h4_62076529]]
+===== Freebie Management
+
+* link:freebies-management#h3__316467656[Freebie Values] allow you
+to spread a different number of freebies over the freebie levels and
+deliveries.
+* If Web Service is enabled, freebies will be validated if changes on
+the link:delivery-management#h2__1374863314[Delivery Summary] popup
+affected them.
+
+[[h3_1921978271]]
+==== Other Improvements
+
+[[h4__219878134]]
+===== Discount Management
+
+* If the matching *Condition* record was not found on the *Condition
+Group* record, the system checks the next
+link:calculation-types[Condotoion Group] record.
+
+
+
+[[h4__1295053106]]
+===== Quota
+
+* If a quota has child link:quota-usage-field-reference[Quota
+Usage] records or was created based on a
+link:quota-field-reference#h2_12722709[Quota Template], you cannot
+change the quota except to extend its validity period by hanging the end
+date.
+* Updates to keep *Quota Usage* records up-to-date.
+
+
+
+[[h4__1047129545]]
+===== Limit Rule
+
+* Cells with zero quantity of a certain product will be highlighted if
+that product fits link:limit-rules[the limit rule], but the minimum
+quantity or minimum amount for that product was not reached according to
+the limit rule.
+
+[[h2__753275011]]
+=== The CT Orders package Winter '22
+
+For correct operation of new features, use the following versions of
+target systems:
+
+* The CT CPG package v. 1.49 and higher.
+* The CT Pharma package v. 2.44 and higher.
+
+[[h3_1670723894]]
+==== Major Features
+
+[[h4_57267150]]
+===== Product Availability
+
+* Set up availability dates of link:product-availability[paid
+products and freebies] for offline and online orders and deliveries.
+* Click the Info icon in the order cart to see up to 3 records of
+availability dates for a paid product or freebie.
+* Automatic check of catalogs and promos to display only available
+products and bundles in the order cart.
+* Optionally define whether to
+link:product-availability#h3_2048041897[ignore the default
+availability] for freebies.
+
+
+
+[[h4_878037613]]
+===== Quotas
+
+* link:quotas[Regulate sales of a limited number of products], such
+as when launching a new product, running a promotion for a selected
+customer segment, or withdrawing a product from production, by
+distributing product quotas to sales reps.
+* Sales reps can link:quotas#h3__576888334[reserve an available
+number of a product by quota] and still be able to allocate all products
+in that quota among the orders.
+** When saving the order cart, the system validate distributed products
+against the allotted quotas.
+** Quotas will be also validated if changes on the
+link:delivery-management#h2__1374863314[Delivery Summary] popup
+affected them.
+* Click the Info icon to see the booked and used quotas.
+
+
+
+[[h4_2057147528]]
+===== Freebie Management
+
+* link:freebies-management#h3__676523153[Multiplier]: specify
+whether the number of freebies in the order cart must be multiple to the
+specific value. The freebies quantity will be automatically rounded up. 
+* The availability of the added freebies in deliveries will be
+validated.
+* In future releases, managers can assign different values for freebie
+products in the *Freebie Value* field of the[.object]#Freebie
+Condition# object.
+
+
+
+[[h4__133304238]]
+===== Limit Rules
+
+* Limit rules will be validated if changes on the Delivery Summary popup
+affected them.
+
+
+
+[[h4_1273755418]]
+===== Preparing for Web Service
+
+* In future releases, use link:web-service#h2_389205030[the new
+Settings Panel tab] for the secure two-way authorization and setting up
+the connection with the Web Service.
+
+
+
+[[h4__188392436]]
+===== Preparing for Mixed Discounts
+
+* In future releases, the
+link:calculation-types-field-reference[Apply Condition Type] field
+of the[.object]#Calculation Type# object will be responsible
+for setting the condition(s) to be applied.
+* New JSON keys are available in the *Advanced Criteria* field for the
+[.object]#Condition# object.
+
+[[h3__2059353835]]
+==== Other Improvements
+
+* For link:the-set-value-step[the Set Value step] of the pricing
+procedure, link:calculation-types-field-reference[Calculation
+Type], and link:freebie-condition-field-reference[Freebie
+Condition]:
+** The[.apiobject]#minus# and[.apiobject]#divide#
+operators are supported.
+** The[.apiobject]#cutDecimalsTo# and
+[.apiobject]#roundTo# keys help you round and truncate the
+number of the decimal places of the resulting value if necessary.
+* For your convenience, the custom SDK price tag always displays the
+product name to which it refers.
+* If an order has 140 or more deliveries, use the *Calculate Discounts*
+button to reduce the time it takes to calculate discounts and the total
+price.
+* In the case of a configured
+link:delivery-management#h2__1374863314[Delivery Summary] layout,
+the system validates to see if the link:limit-rules[limit rules]
+and quotas have been violated when the sales rep has made changes to the
+supplies.
+
+[[h2__137398238]]
+=== The CT Orders package Summer '21
+
+[[h3__1258541938]]
+==== Major Features
+
+[[h4_1379605186]]
+===== CG Cloud Support
+
+Integrate with
+https://www.salesforce.com/eu/products/consumer-goods-cloud/overview/[Salesforce
+CG Cloud] solution to apply complex order-taking logic to its objects.
+
+* Use the link:cg-cloud-support#h3_656771318[Salesforce Product]
+object in bundles, catalogs, and promotions.
+* Create orders for the link:cg-cloud-support#h3__2058563056[Retail
+Store] object.
+* Use link:cg-cloud-setting-up-dynamic-group-assignment[dynamic
+groups] to keep stores and sales products up-to-date.
+
+
+
+[[h4__1068677388]]
+===== Discount Management
+
+A fully configurable link:price-management[pricing procedure] that
+allows you to implement complex custom scenarios with manual and total
+discounts if needed:
+
+[NOTE] ==== The standard pricing procedure version 1 is also
+supported. Use the standard v.1 syntax or customize the new pricing
+procedure using the steps with a broadened
+link:pricing-procedure-v-1[syntax]. ====
+
+* Set link:pricing-procedure-v-2-steps[pricing procedure steps] to
+write the intermediate discount results.
+* Add link:step-conditions[step conditions] to determine the step
+applicability.
+* Implement link:the-sdk-step[SDK step] to use custom project
+logic.
+
+
+
+Enhanced link:calculation-types[discount calculation] capabilities:
+
+* Define link:calculation-types#h3_1022633546[quantity settings]
+for discount calculation on[.object]#Calculation Type#.
+* Set
+link:condition-exceptioncondition-c-field-specification[exception
+conditions] to apply the discount under specific circumstances.
+* Specify any field on any object to be used as a
+link:calculation-types#h3_1561772746[discount rate source].
+* Launch link:calculation-types#h3_1022633546[full or partial
+recalculation] in the order cart if the selected field value is altered.
+
+
+
+[[h4_2048041897]]
+===== Freebies
+
+* Take advantage of full and partial
+link:freebies-management#autoupdate[recalculation and auto-update]
+of freebies in order triggered by changes in the set of products in the
+cart.
+* Control the link:freebies-management#h2_1556344363[freebie
+distribution] among several deliveries.
+
+
+
+[[h4_1633116198]]
+===== Limit Rules
+
+Dynamic control over the product quantity and cost for the whole order
+or several deliveries:
+
+* Apply link:limit-rules[limit rules] to all products in the order,
+or only for those that match conditions.
+* Apply limit rules to a single delivery or a group of deliveries in the
+order.
+* Set conditions to apply to
+link:creating-limit-rules-with-conditions-6-2[exclude limit rules]
+in specific cases.
+* Check the real-time validation during the order creation.
+
+
+
+[[h4__1132174910]]
+===== SDK
+
+With link:sdk-setting-field-reference[the new setting], tailor the
+order-taking process according to your goals and facilitate the audit
+purposes:
+
+* link:5-4-sdk-configuring-a-custom-price-tag[Display custom price
+tags] in the order basket.
+* link:5-5-sdk-updating-values-in-the-order-and-delivery-fields[Update
+custom fields] when adding products to order.
+* Display the link:5-6-sdk-displaying-info-icon[info icon] with an
+embedded HTML template.
+
+[[h3__1409574029]]
+==== Other improvements
+
+* Support for
+https://help.salesforce.com/articleView?id=sf.fields_about_field_validation.htm&type=5[the
+standard Salesforce validations] to control conditions applied during
+the order creation.
+* link:online-order#h3__1143528965[Editable fields] allow entering
+data in custom fields in real-time.
+* Decreased processing time when adding many products from catalogs and
+promotions.
+* Real-time update of search results in catalogs. Highlighting applied
+filters and the ability to clear all filters.
+* Web-service Improvements, including the possibility to
+link:sales-organization-field-reference[turn off closed order
+duplications].
+
+[[h2__580524974]]
+=== The CT Orders package Spring '21
+
+[[h3_944897068]]
+==== Major Features
+
+[[h4__580391303]]
+===== Order Management
+
+* link:multiplicator[Multiplicator] provides flexible management of
+product quantity per delivery. The quantity is calculated automatically
+based on multiplicity settings processed on three levels:
+[.object]#Product#,[.object]#Price Book Line Item#,
+[.object]#Catalog Line Item#,[.object]# or Promotion
+Line Item#.
+* Add the display of link:5-3-displaying-price-tags[price tags] for
+a convenient visualized method of informing your sales reps about the
+applied calculation type and discount required quantity for reaching the
+next discount level and special conditions for each product added to the
+cart.
+
+
+
+[[h4_1646196432]]
+===== Delivery Management​​​
+
+link:5-1-setting-up-a-delivery-split[Order split] allows the
+distribution of products between multiple deliveries to meet your
+company's logistic and financial requirements:
+
+* Define the split parameters for different departments and order types;
+* Review the split
+link:5-2-setting-up-the-delivery-summary[delivery summary] with
+details for each delivery before finalization.
+
+[[h3__230916525]]
+==== Other Improvements
+
+* Perform an link:offline-order#h3_1847490047[advanced search in
+orders] in all fields among all products in *Catalog* or *Promotion*
+sections and already added to the order cart, including freebies.
+* With link:online-order#h3_2083175848[mass actions in order], add
+or remove all products added to the cart from a selected
+[.object]#Catalog# or[.object]#Promotion# with one
+click.
+* Use link:online-order#h2_734239727[the active price filter] to
+apply the filter to all records in your order cart's Catalog and
+Promotion sections and display only actual products with assigned
+[.object]#Price Book# and *List Price*.
+* link:freebies-management[Improved freebies validation] now
+provides versatile validations to improve the working experience when
+adding freebies in orders. The system now checks active promotion dates,
+min/max required products, and other settings influencing the final
+freebies calculation per order and displays errors in the user
+interface.
+* A brand new link:order-change-manager[Order Change Manager] is an
+additional session processing agent, that ensures stable operation when
+opening the order cart in the CT Mobile app.
+* Overall product performance has been improved.
+
+[[h2__1703482179]]
+=== The CT Orders package Summer '20
+
+[[h3__2095028261]]
+==== Major Features
+
+[[h4__1817507152]]
+===== Product Management
+
+link:managing-bundles[A bundle] is a new product type that includes
+several products under one group.
+
+* Bundles are now supported for use in[.object]#Catalogs# and
+[.object]#Promotions#.
+* Bundles management is now available for all the roles:
+** Admins can create Bundles in CRM or integrate them from ERP, set up
+calculations, and quantity rules.
+** Managers can use bundles in[.object]#Catalogs# and
+[.object]#Promotions#.
+** Sales Reps can use bundles according to settings to form an order.
+
+
+
+[[h4_1098396873]]
+===== Order Management
+
+Order features are further improved for quantity management:
+
+* Control link:product-data-model[units in a package] on the
+*Product* level.
+* Control of link:adding-a-price-book-line-item-1-0[maximum and
+minimum values] on the *Product* and *Price Book* levels.
+
+
+
+[[h4__2034780073]]
+===== Delivery Management
+
+Manage multi-address deliveries.
+
+* Control the number of deliveries and the applicable dates.
+
+[[h3__1531464550]]
+==== Other Improvements​
+
+link:online-order[Online Order] is now aligned due to its life
+cycle with the following features:
+
+* Validation for the order on the *On Hold* stage.
+* Save the order draft, edit, the order cart, and finalize the order.
+* Block editing for the finalized order.

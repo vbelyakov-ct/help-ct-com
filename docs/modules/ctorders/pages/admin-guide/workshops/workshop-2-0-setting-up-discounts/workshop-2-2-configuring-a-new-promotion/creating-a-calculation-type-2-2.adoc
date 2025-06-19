@@ -1,0 +1,28 @@
+= Creating a Calculation Type (2.2)
+
+As the first step of this workshop, you need to create a _Condition_
+calculation type:
+
+. Go to *Calculation Types*.
+. Click *New*. A *New Calculation Type* window pops up.
+. Select a *Condition* record type.
+. Complete the form as follows:
+
+[WARNING] ==== The *Condition Fields List* field will be
+automatically updated after you configure discount settings in
+Promotion. ====
+.. Enter the main settings:
+* Enter *Promo* as a *Calculation Type Name*.
+* Set *Promo* as an *External ID*.
+* Select the *Promo Related* checkbox.
+.. Set up the link:admin-guide/managing-ct-orders/discount-management/discount-data-model/calculation-types-field-reference/index[Calculation
+Type Properties]:
+* Select *Decrease Price* as a *Calculation Method*.
+* Select *Percent* as a *Unit of Measure*.
+.. In the Update Settings section, select *Real-Time* mode as a
+*Condition Fields Update Type*.
+
+image:add-conditions-2020-08-26-2.png[]
+. Click *Save*.
+
+The setup is complete.

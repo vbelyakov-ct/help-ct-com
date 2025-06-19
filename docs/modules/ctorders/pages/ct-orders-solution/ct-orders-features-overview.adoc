@@ -1,0 +1,177 @@
+= CT Orders Features Overview
+
+This article provides an overview table of all the features available in
+the CT Orders package and CT Mobile app by the feature release version.
+
+
+
+[width="100%",cols="20%,^20%,^20%,^20%,^20%",]
+|===
+| |*Feature* |*Available in CT Orders package since version*
+|*Available in CT Mobile iOS since version* |*Available in CT Mobile
+Windows since version*
+
+|*Core Functionality* |Product search, selection, and adding mechanics
+|1.0 |2.3 |1.3
+
+| |Synchronization and CT Orders activation |1.0 |2.3 |1.3
+
+| |link:order-change-manager[Order Change Manager] |1.7 |— |—
+
+| |Sync web service Sessions Handling |Spring '21 |— |—
+
+| |link:settings-fields-reference[Initial package activation] |1.0
+|Not Applied |Not Applied
+
+|*Catalogs* |Catalog creation |1.0 |— |—
+
+| |Add products to the catalog |1.0 |— |—
+
+| |Product search |1.0 |2.3 |1.3
+
+| |Filter options in the products search sidebar |1.0 |— |—
+
+| |Catalog assignment |1.0 |2.3 |1.3
+
+| |Dynamically update catalog assignment |Spring '21 |2.4 |–
+
+|*Promotions* |Discount Validation |1.0 |2.3 |1.3
+
+| |Promo creation |1.0 |— |—
+
+| |Add products to promotion |1.0 |— |—
+
+| |Product search |1.0 |2.3 |1.3
+
+| |Filter options in the products search sidebar |1.0 |— |—
+
+| |Promo assignment |1.0 |2.3 |1.3
+
+| |Dynamically update promotion assignment |Spring '21 |2.4 |–
+
+| |Set Discount Levels |1.0 |— |—
+
+| |Specify Payment Terms in Promo |— |— |—
+
+|*Delivery Management* |Manage addresses |1.0 |2.3 |1.3
+
+| |Manage deliveries |1.0 |2.3 |—
+
+| |Set # of days between deliveries with and without holidays
+assumption |— |— |—
+
+| |Order Split |Spring '21 |2.4 |—
+
+| |Quotas |Winter '22 |2.6 |—
+
+| |Product Availability |Winter '22 |2.6 |—
+
+|*Product Management* |Support bundles in catalogs and promo |1.5
+|2.3 |1.3
+
+| |Support bundles in an order |1.5 |2.3 |1.3
+
+| |Support multiplier for bundles |1.0 |2.3 |—
+
+| |Support units in package |1.5 |2.3 |1.3
+
+| |Support multiplicator for products in the order cart |Spring '21
+|2.4 |—
+
+| |Price book creation |1.0 |— |—
+
+| |Switching between views in the Catalog section |— |— |—
+
+|*Product Validation in Order* |Limit Rules |Summer '21 |2.6 |—
+
+| |Product Availability |Winter '22 |2.6 |—
+
+| |Quotas |Winter '22 |2.6 |—
+
+|*Price Management* |Calculate the price for an order |1.0 |1.5 |1.3
+
+| |Setup pricing procedure |1.0 |— |—
+
+| |Pricing Engine 2.0 (New discount calculation logic) |Summer '21
+|2.5 |1.3
+
+| |Procedure Builder Tab |'23-R1 February |2.7 |—
+
+|
+*Discount Management* |Manual discounts |Summer '21 |2.5 |1.3
+
+| |Setup calculation types |Summer '21 |— |—
+
+| |Exception conditions |Summer '21 |— |1.3
+
+| |Define quantity calculation level for calculation types |Summer
+'21 |2.5 |1.3
+
+| |Quantity settings |Summer '21 |2.5 |1.3
+
+| |Discount recalculation |Summer '21 |2.5 |1.3
+
+| |Advanced Criteria 2.0 |Summer '22 |2.7 |—
+
+| |Apply multiple conditions from one calculation type |Summer '22
+|2.7 |—
+
+| |Links |Winter '22 |2.6 |—
+
+|*Order Management* |The Order Page interface |1.0 |2.3 |1.3
+
+| |Support multi-deliveries for an order |1.0 |2.3 |1.3
+
+| |Delivery summary |1.7 |2.3 |—
+
+| |Manage quantity rules |1.0 |2.3 |—
+
+| |The Totals panel as the summary menu |1.0 |2.3 |1.3
+
+| |Price tags  |Spring '21 |2.4 |—
+
+| |Boolean price tag and discount scale |Spring '22 |2.7 |—
+
+| |Advanced search in an order |Spring '21 |2.4 |—
+
+| |Mass actions |Spring '21 |2.4 |—
+
+| |Editable fields |Summer '21 |2.5 |1.3
+
+| |Salesforce validation rules |Summer '21 |2.7 |—
+
+|*Freebies* |Freebies in an order |1.7 |2.3 |1.3
+
+| |Auto-population and update |Summer '21 |2.5 |1.3
+
+| |Delivery control: distribute freebies in the first or last delivery
+|Summer '21 |2.5 |1.3
+
+| |Freebie Multiplier |Winter '22 |2.7 |—
+
+| |Freebie Value |Spring '22 |2.7 |—
+
+| |Level Formula |Summer '22 |2.8 |—
+
+| |Freebie Management Tab |'23-R1 February |2.7 |—
+
+|*Order Life Cycle* |Order validation |1.0 |2.3  |1.3
+
+| |Order save draft, finalization, and cancellation logic |1.5 |2.3
+|1.3
+
+|*SDK Tools* |Custom price tags |Summer '21 |— |—
+
+| |Updating the order fields |Summer '21 |— |—
+
+| |Info icon |Summer '21 |— |—
+
+|*Other* |Standard Salesforce Product support |Summer '21 |2.5 |—
+
+| |СG Cloud support |Summer '21 |2.5 |—
+
+| |Support Salesforce validations |Summer '21 |2.5 |—
+
+|*Web Service* |Connection and Discount Calculation |Summer '22
+|2.7 |—
+|===

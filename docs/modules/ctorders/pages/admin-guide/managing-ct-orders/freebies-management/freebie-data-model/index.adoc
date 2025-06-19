@@ -1,0 +1,45 @@
+= Freebie Data Model
+
+This data model consists of the following objects:
+
+image:Freebie-Data-Model.png[]
+
+
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Object Label* |*API Name* |*Record Type* |*Description*
+
+|link:freebie-type-field-reference[Freebie Type]
+|[.apiobject]#orders__FreebieType__c# a|
+* Prioritized
+* Selective
+
+|This object stores details about a freebie record type that defines how
+Freebie Conditions will be applied.
+
+|link:freebie-level-field-reference[Freebie Level]
+|[.apiobject]#orders__FreebieLevel__c# |  |This object
+stores the number of freebies for a defined amount of products.
+
+|link:freebie-level-item-field-reference[Freebie Level Line Item]
+|[.apiobject]#orders__FreebieLevelLineItem__c# | |A
+record for each freebie if different[.object]#Freebie Levels#
+are defined for different products and product quantity, and products
+are not distributed proportionally.
+
+|link:freebie-line-item-field-reference[Freebie Line Item]
+|[.apiobject]#orders__FreebieLineItem__c# | |This
+object stores information about each[.object]#Order Line Item#
+which will be distributed as a freebie.
+
+|link:freebie-condition-field-reference[Freebie Condition]
+|[.apiobject]#orders__FreebieCondition__c# | |This
+object stores conditions for applying freebies.
+
+|link:organization-freebie-type-field-reference[Organization
+Freebie Type]
+|[.apiobject]#orders__OrganizationFreebieType__c# |
+|The junction object between[.object]#Freebie Type# and
+[.object]#Sales Organization#.
+|===

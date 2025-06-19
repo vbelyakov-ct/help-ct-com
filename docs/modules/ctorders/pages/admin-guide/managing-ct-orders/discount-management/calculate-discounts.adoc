@@ -1,0 +1,37 @@
+= Calculate Discounts
+
+A sales rep should click the *Calculate Discount* button in Salesforce
+or tap
+the image:WS-Calculation-in-CT-Mobile.png[] button
+in CT Mobile to get the valid prices. The invalid prices will be
+highlighted in red color.
+
+* When the calculation is done, the *Calculate Discount* button will be
+deactivated and a sales rep can *Finalize* the order.
+* Also, the discount will be automatically recalculated if the sales rep
+has changed fields on link:delivery-management#h2__1374863314[the
+Delivery Summary screen] that may affect the discount or condition and
+tapped *Save*.
+
+[width="100%",cols="50%,50%",]
+|===
+|For Salesforce users a|
+If there is no pricing procedure or access to the field(s) included in
+the pricing procedure, the *Get Freebie* button is blocked, and clicking
+the *Calculate Discount* button launches a calculation on the *List
+Price* fields using the standard Salesforce calculator instead of the
+Web Service.
+
+image:Calculate-Discounts-Links-WS.png[]
+
+|For CT Mobile users a|
+image:Web-Service-Calculation-CT-Mobile.png[]
+
+|===
+
+
+
+See also:
+
+* link:workshop-7-0-calculating-discounts-with-web-service[Workshop
+7.0: Calculating Discounts with Web Service]

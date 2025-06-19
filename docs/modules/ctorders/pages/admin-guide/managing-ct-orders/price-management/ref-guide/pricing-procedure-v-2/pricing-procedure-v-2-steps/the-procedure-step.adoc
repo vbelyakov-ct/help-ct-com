@@ -1,0 +1,110 @@
+= The Procedure Step
+
+This step is used to calculate the price based on the conditions
+specified in the link:calculation-types-field-reference[Calculation
+Type] record.
+
+[[h2_109049444]]
+=== Step Keys
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Key* |*Type* |*Required* |*Comment*
+
+|[.apiobject]#type# |String |Yes |It is filled out with the
+[.apiobject]#procedure# constant.
+
+|[.apiobject]#condition# |Step Conditions |No |See the
+link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/step-conditions[Step Conditions].
+
+|[.apiobject]#basePrice# |String |Yes |The field from the
+link:delivery-line-item-field-reference[Delivery Line Item] object
+for obtaining the price for calculating the discount. See the
+link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-available-field-formats[Available Field
+Formats].
+
+|[.apiobject]#resultPrice# |String |Yes |The field from the
+[.object]#Delivery Line Item# object for storing the price with
+the applied discount. See the
+link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-available-field-formats[Available Field
+Formats].
+
+|[.apiobject]#procedure# |Object |Yes |Pricing Procedure.
+|===
+
+[[h2_71686657]]
+=== Pricing Procedure Keys
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Key* |*Type* |*Required* |*Comment*
+
+|[.apiobject]#type# |Enum |Yes a|
+Available values:
+
+* MULT
+* SUM
+* MIN
+* MAX
+
+|[.apiobject]#round# |Enum |No a|
+If set, values will be rounded according to the selected value.
+Available values:
+
+*[.apiobject]#item# is used to round a value separately for
+each[.object]#Calculation Type#.
+*[.apiobject]#group# is used to round the total cost of all
+listed[.object]#Calculation Types#.
+
+Otherwise, the value will be rounded after all discounts are calculated
+according to the number of digits in the *Unit Price* field on the
+*Order Line Item* record.
+
+|[.apiobject]#roundTo# |Integer |No a|
+The rounding precision, the number of decimals (digits after the comma).
+The default value is 0.
+
+Used if the[.apiobject]#round# key is set.
+
+|[.apiobject]#isIgnoreNulls# |Boolean |No a|
+The default value is[.apiobject]#true#.
+
+If[.apiobject]#true# that between *Calculated Type* records
+will be selected minimum discount except for 0 discounts. The result
+will be 0 if all Calculated Types are 0.
+
+Applicable if[.apiobject]#"type":"MIN"#.
+
+|[.apiobject]#items# |Array |Yes |At least one item must be
+provided.
+
+|[.apiobject]#items[i].calculationType# |String |No |The
+value from the *External ID* field of the *Calculation Type* record.
+
+|[.apiobject]#items[i].type# |Enum |
+Yes, if there is no
+[.apiobject]#items[i].calculationTypes#
+ a|
+Embed next-level procedures. using the same format as presented in this
+table.
+
+
+
+|[.apiobject]#items[i].item# |Array | |
+|===
+
+[[h2__1406500097]]
+=== Examples
+
+[{plus}] link:javascript:void(0)[Standard Procedure: MULT]
+
+.[-] Hide[%collapsible] ==== ====
+
+[{plus}] link:javascript:void(0)[Standard Procedure: MULT (with
+rounding)]
+
+.[-] Hide[%collapsible] ==== ====
+
+[{plus}] link:javascript:void(0)[Standard Multi-level Procedure]
+
+.[-] Hide[%collapsible] ==== ====

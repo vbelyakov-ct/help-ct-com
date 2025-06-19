@@ -1,0 +1,47 @@
+= Web Service Setting Field Reference
+
+The *Web Service Setting* record type is used to perform the discount
+calculation using link:web-service[Web Service].
+
+This setting is global for the instance.
+
+In the case of real-time data synchronization, we recommended scheduling
+a batch to send those records that were not sent in real-time due to
+errors.
+
+'''''
+
+Object record type API name: WebServiceSetting
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Enable WS for Mobile
+|[.apiobject]#orders__IsWSForCTMobile__c# |Checkbox
+|If enabled, the Web Service is used in the CT Mobile app.
+
+|Batch Schedule Data Sync
+|[.apiobject]#orders__IsBatchScheduleDataSync__c#
+|Checkbox |If enabled, the data will be sent by batch.
+
+|Real-Time Data Sync
+|[.apiobject]#orders__IsRealTimeDataSync__c#
+|Checkbox |If enabled, the data will be sent by triggers.
+
+|Schedule Expression
+|[.apiobject]#orders__ScheduleExpression__c#
+|Text(255) a|
+An expression for running batch on a schedule.
+[NOTE] ==== Do not use if the
+[.apiobject]#orders__IsRealTimeDataSync__c ==== field is
+enabled.#
+
+* To learn more about the format, refer to
+https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_scheduler.htm[Salesforce
+Developer: Apex Scheduler].
+* The minimum interval is 1 hour.
+
+|===

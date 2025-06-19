@@ -1,0 +1,43 @@
+= Pricing Procedure Fields Reference
+
+The[.object]#Pricing Procedure# object stores the price
+calculation formula for the selected *Order Type* and
+[.object]#Sales Organization#.
+
+'''''
+
+Object API name: orders__PricingProcedure__c
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API* |*Type* |*Description*
+
+|Active |[.apiobject]#orders__IsActive__c# |Picklist
+|If selected, the record is active and applied in business logic.
+
+|Order Type |[.apiobject]#orders__OrderType__c# |Text
+|The order type for which the settings are configured.
+
+|Pricing Procedure
+|[.apiobject]#orders__PricingProcedure__c# |Text(255) a|
+The formula for calculating the price of each[.object]#Order
+Line Item# by applying different[.object]#Calculation Types#
+and operators.
+
+* For more information about[.object]#Pricing Procedure#
+version 1.0, refer to link:pricing-procedure-v-1[Pricing Procedure
+v. 1.0].
+* For more information about[.object]#Pricing Procedure#
+version 2.0, refer to link:pricing-procedure-v-2-steps[Pricing
+Procedure v. 2.0: Steps].
+
+|Procedure Name |[.apiobject]#Name# |Checkbox |Name of the
+pricing procedure.
+
+|Sales Organization
+|[.apiobject]#orders__SalesOrganizationId__c#
+|Master-Detail (Sales Organization) |The business unit for which the
+settings are configured.
+|===

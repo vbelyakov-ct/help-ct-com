@@ -1,0 +1,22 @@
+= Snippet: Create and Assign CT Price Book
+
+To create and assign a[.object]#CT Price Book# for the sales
+organization:
+
+. Go to *CT Price Books* and click *New*.
+. Enter the following data:
+* Enter your new *Price Book Name*. For example, _Main PB '20_. 
+* Left blank the *External Id* field.
+* Add a short description in the *Description* field.
+* Select the default *Sales Organization*.
+* Make sure the *Active* checkbox is selected.
+* Specify *Order Types* for which the Price Book will be available
+*(1)*.
+[NOTE] ==== This field is required if you want representatives
+to be able to create offline orders, as the *Order Type* is mandatory on
+the default mobile layout. ====
+
+image:adding-ct-orders-to-the-ct-mobile-app-2020-09-04.png[]
+. Click *Save*.
+
+The[.object]#CT Price Book# is assigned.

@@ -1,0 +1,30 @@
+= Catalog Data Model
+
+The Catalog data model consists of the following objects:
+
+image:Catalog-Data-Model.png[]
+
+
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Object* |*API Name* |*Record Type* |*Description*
+
+|link:catalogs-field-reference[Catalog]
+|[.apiobject]#orders__Catalog__c# | |This object allows
+to setup availability of catalogs for accounts and select the order
+types that will use the selected catalog. 
+
+|link:catalog-assignment-field-reference[Catalog Assignment]
+|[.apiobject]#orders__CatalogAssignment__с# a|
+* Participant
+
+|This object allows to assign catalogs to accounts.
+
+|link:catalog-line-item-field-reference[Catalog Line Item]
+|[.apiobject]#orders__CatalogLineItem__c# a|
+* Product
+
+|This object stores basic data about a product that has been added to a
+catalog.
+|===

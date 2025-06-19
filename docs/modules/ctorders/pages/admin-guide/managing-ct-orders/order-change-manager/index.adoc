@@ -1,0 +1,199 @@
+= Order Change Manager
+
+Order Change Manager maintains the integrity of orders in the Salesforce
+database. It allows Salesforce users to work with multiple order carts
+on different tabs simultaneously, while for CT Mobile users, it tracks
+all changes to the order cart and performs their successful submission
+to the Salesforce database.
+
+:toc: :toclevels: 3
+
+[[h2_1605195356]]
+=== Overview
+
+Order Change Manager is used for:
+
+* Ensuring the integrity of orders saved in Salesforce.
+* Loading all required CT Orders records with the specified conditions
+to the CT Mobile app.
+* Handling conflicts of simultaneous editing of the same order in
+Salesforce and CT Mobile.
+* Allows Salesforce users to simultaneously work with multiple order
+carts on different
+tabs. link:admin-guide/managing-ct-orders/order-management/ref-guide/user-permissions-for-offline-orders[Go to the
+article] to view the required user permissions. 
+
+
+
+Order Change Manager uses a public method for Order Lightning Web
+interface in Salesforce and a custom REST API for CT Mobile and controls
+data integrity the following objects:
+
+*[.object]#CT Order#
+*[.object]#Order Line Item#
+*[.object]#Delivery#
+*[.object]#Delivery Line Item#
+*[.object]#Calculated Discount#
+
+[[h2_1554146395]]
+=== Keeping Data Up-to-Date in Orders
+
+When a mobile user performs a synchronization, orders that are available
+for this user will be downloaded on the mobile device along with all
+related records. If a user made changes to the order cart:
+
+. REST API creates package(s) with changes for a specific _Order_ record
+if any related records of that order have been changed, created, or
+deleted.
+.. Each package contains no more than 200 records for a particular
+order.
+.. If the total number of transferred object records exceeds 200
+records, the order will be split into several packages, which are formed
+according to that order:
+...[.object]#Order#
+...[.object]#Order Line Item#,[.object]#Delivery#
+...[.object]#Delivery Line Item#,[.object]#Calculated
+Discount#
+.. Each _Order_ record is presented as a JSON file (flat list) in
+package(s).
+[TIP] ==== To learn more about JSON keys and view examples,
+refer to link:order-change-manager-json-examples-and-keys[Order
+Change Manager: JSON Examples and Keys]. ====
+. During the synchronization, REST API sends package(s) with changes to
+the records of the following CT Orders objects to a designated
+endpoint:[.apiobject]#{{Salesforce_instance_url}}/services/apexrest/ChangeManager#. The
+standard CT Mobile functionality for iOS users, such
+as https://help.customertimes.com/articles/ct-mobile-ios-en/sync-recovery[Sync
+Recovery], https://help.customertimes.com/articles/ct-mobile-ios-en/conflict-manager-control[Conflict
+Manager],
+and https://help.customertimes.com/articles/ct-mobile-ios-en/online-records-fetching[Online
+Records Fetching], does not apply to those CT Orders objects. 
+. On the Salesforce side, the system creates an _Order Change Manager_
+record for the particular[.object]#Order# and fills it out with
+the received JSONs. If a previous _Order Change Manager_ record is
+found, it will be deleted. For more information, refer
+to link:order-change-manager-field-reference[Order Change Manager
+Field Reference].
+. The link:admin-guide/managing-ct-orders/order-change-manager/order-change-manager[Order Change Manager] checks SOQL
+queries received from CT Mobile. If the query contains a mobile
+temporary record ID, Order Change Manager checks if there is a record
+with the same value in the *Reference Id* field in Salesforce. If such a
+record is found, Order Change Manager updates it. Otherwise, Order
+Change Manager creates a new record.
+. REST API gets a response from Salesforce:
+* records are successfully saved;
+* records are successfully copied;
+* an error occurred.
+. When a user closes the order cart, finalizes, or completes the order
+in Salesforce, the corresponding _Order Change Manager_ record is
+deleted.
+
+[[h2__23704773]]
+=== Order Deduplication Logic
+
+The deduplication logic allows you to handle conflicts and keep data
+consistency of created orders and related object records. For this
+purpose, the[.apiobject]#orders__ReferenceId__c# field
+is created on the following objects:
+
+*[.object]#Order#
+*[.object]#Order Line Item#
+*[.object]#Delivery#
+*[.object]#Delivery Line Item#
+*[.object]#Calculated Discount#
+
+A mobile user should have permission to edit the *Reference Id* field on
+all the following objects.
+
+The *Reference Id* field stores the pair of record ID and user ID.
+
+* If the record has not yet been transferred from CT Mobile, the field
+contains the mobile temporary record ID and the user identifier.
+For example,
+[.apiobject]#a06-AF3AA67B-EA24-4DAB-9C8A-9B70357DAB830055J000001L7aTQAS#,
+where[.apiobject]#a06-AF3AA67B-EA24-4DAB-9C8A-9B70357DAB83# is
+the temporary record Id and[.apiobject]#0055J000001L7aTQAS# is
+the user identifier.
+* If the record was transferred to Salesforce, the field contains the
+Salesforce record ID and the user identifier.
+For example,[.apiobject]#a0g5w00000EQJi1AAH0055J000001L7aTQAS#,
+where[.apiobject]#a0g5w00000EQJi1AAH# is the Salesforce record
+ID and[.apiobject]#0055J000001L7aTQAS# is the user identifier.
+
+[[h3_1662160851]]
+==== Deduplication Logic for the Finalized Order
+
+Sometimes, there are situations when the same order has different
+statuses on the mobile device and in Salesforce because the mobile user
+did not perform the fast synchronization. Use the additional option to
+control whether to create a duplicate of the finalized order with all
+related records in Salesforce, or update it if a mobile user made
+changes to this order. For more information about the order stages,
+refer to link:admin-guide/managing-ct-orders/order-management/index#h2_158967301[Order Stages]. 
+
+For example, an order was downloaded to a mobile device and then
+finalized in Salesforce. If, after finishing the order in Salesforce,
+the mobile user did not run synchronization and made changes to the same
+order in CT Mobile, a duplicate order will be created with all related
+records in Salesforce during the next synchronization.
+
+
+
+The administrator can change the default behavior using the *Turn Off
+Closed Orders Duplication* checkbox on the appropriate
+link:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/sales-organization-field-reference[Sales Organization] record.
+
+* By default, the checkbox is disabled. A duplicate of the mobile order
+will be created with all related records in Salesforce when a mobile
+user edits this record on the mobile device. This logic does not affect
+orders on the *On-Hold* stage in Salesforce.
+* When the checkbox is selected, the finalized order is updated in
+Salesforce if a mobile user has edited it in CT Mobile.
+
+[cols=",",]
+|===
+|image:warning.png[] |Enabling
+the option can cause conflicts in the case when there is the custom
+business logic to send the finalized orders to ERP from Salesforce.
+|===
+
+
+
+ifdef::hidden[]
+
+[[h2__1434512242]]
+=== Salesforce: Public method
+
+When a record is changed, Order Change Manager saves all changes in the
+link:order-change-manager-field-reference[Order Change Manager]
+record. If a user closes the order cart, *Finalize* or *Complete* the
+order in Salesforce or CT Mobile app, the corresponding *Order Change
+Manager* record will be deleted.
+
+
+
+To save changes in the Salesforce database, the public method is used in
+the Order Lightning Web interface. When a user opens a *CT Order* record
+in the Lightning Web interface in Salesforce:
+
+. The data is received directly from the Salesforce database using the
+SOQL queries.
+. If allowed, the finalized order opens for editing. Otherwise, the
+order is available in read-only mode.
+. If the user makes changes and clicks *Save*, all data changes will be
+prepared, added to the package(s), and saved to the Salesforce database.
+​
+[NOTE] ==== While the order data is being saved, the Order Cart
+interface is blocked, restricting new changes until the saving process
+is complete. ====
+* Each package contains no more than 200 records for a particular order.
+* If the total number of transferred object records exceeds 200 records,
+the order will be split into several packages, which are formed
+according to that order:
+**[.object]#Order#
+**[.object]#Order Line Item#,[.object]#Delivery#
+**[.object]#Delivery Line Item#,[.object]#Calculated
+Discount#
+* Changes for the order are stored in the *Order Change Manager* record,
+which will be deleted when the user closes the order cart, finalize or
+complete the order.

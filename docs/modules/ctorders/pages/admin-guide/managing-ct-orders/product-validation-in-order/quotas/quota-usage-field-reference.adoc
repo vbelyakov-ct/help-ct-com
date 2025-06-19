@@ -1,0 +1,59 @@
+= Quota Usage Field Reference
+
+The[.object]#Quota Usage# object is a junction object that
+links link:admin-guide/managing-ct-orders/product-validation-in-order/quotas/quota-field-reference[a quota] to
+link:delivery-line-item-field-reference[a certain delivery] and
+stores all information on the quota. A record is created after the quota
+has been applied in an order.
+
+'''''
+
+Object API name:[.apiobject]#orders__QuotaUsage__c#
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Amount |[.apiobject]#orders__Amount__c#
+|Currency(16,2) a|
+Amount of products booked or used in the order according to the quota.
+
+
+
+It is used when
+the [.apiobject]#orders__UnitOfMeasure__c# field of the
+quota is _Amount_.
+
+|Delivery Line Item
+|[.apiobject]#orders__DeliveryLineItemId__c#
+|Master-Detail(Delivery Line Item) |It is a required field to relate
+the corresponding[.object]#Delivery Line Item# record.
+
+|Order |[.apiobject]#orders__OrderId__c#
+|Lookup(Order) |The parent _Order_ record for the
+[.apiobject]#orders__DeliveryLineItem__c# field.
+
+|Quota |[.apiobject]#orders__QuotaId__c#
+|Master-Detail(Quota) |The parent _Quota_ record.
+
+|Quantity |[.apiobject]#orders__Quantity__c#
+|Number(18,0) a|
+Quantity of products booked or used in the order according to the quota.
+
+
+
+It is used when
+the [.apiobject]#orders__UnitOfMeasure__c# field of the
+quota[.object]## is _Quantity_.
+
+|Status |[.apiobject]#orders__Status__c# |Picklist
+a|
+It is a required field to define whether the products have been booked
+or used according to the quota. Available values:
+
+* _Booked_
+* _Used_
+
+|===

@@ -1,0 +1,36 @@
+= Steps
+
+The updated Pricing Procedure v. 2.0 with pricing procedure steps that
+enrich the control over the calculation algorithm and allow recording
+intermediate values calculated for each record of the
+[.object]#Delivery Line Item#.
+
+[[h2__1185303549]]
+=== Sample Syntax
+
+[cols=",",]
+|===
+|Sample Syntax |
+|Commentary |
+|===
+
+[[h2__1426969465]]
+=== JSON Key Description
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Key* |*Type* |*Required* |*Comment*
+
+|[.apiobject]#steps# |Array |Yes a|
+​At least one item must be provided.
+
+* link:the-procedure-step[The Procedure Step]
+* link:the-set-value-step[The Set Value Step]
+* link:the-roll-up-step[The Roll-up Step]
+* link:the-drill-down-step[The Drill Down Step]
+* link:the-sdk-step[The SDK Step]
+
+|[.apiobject]#version# |Number |Yes |Constant: 2.
+[NOTE] ==== Specify 1 to perform
+link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-1/index[pricing procedure v. 1.0].  ====
+|===

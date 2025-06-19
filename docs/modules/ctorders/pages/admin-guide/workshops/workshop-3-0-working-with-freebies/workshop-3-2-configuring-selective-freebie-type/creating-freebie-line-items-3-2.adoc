@@ -1,0 +1,24 @@
+= Creating Freebie Line Items (3.2)
+
+Products that will be distributed as freebies must be separate related
+_Freebie Line Item_ records.
+
+
+
+To create _Freebie Line Item_ records:
+
+. Open the *All. Bio Balance.Kefir* freebie condition → go to the
+*Related* tab and click *New* under the *Freebie Line Item* section.
+. Select a product you intend to grant as a freebie for certain
+promotion products added to the order cart.
+
+If you can't see the list of available products in the *Product* field,
+you might need to manually change the standard page layout of the
+_Freebie Line Item_ object: display the
+link:admin-guide/getting-started/setting-up-an-instance/configuring-object-setting[lookup field to the CT Product
+object] instead of the default lookup field.
+
+image:link-product-as-a-freebie-line-item-2020-07-21.png[]
+. Click *Save & New* to add more products as freebies.
+
+The _Freebie Line Item_ records are created.

@@ -1,0 +1,60 @@
+= Delivery Line Item Mapping Field Settings
+
+The _Delivery Line Item Mapping_ record type is intended for storing
+[.object]#Delivery Line Item# fields that are used in discount
+calculations.
+
+'''''
+
+Object record type API name:
+[.apiobject]#DeliveryLineItemMapping#
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|List Price Field
+|[.apiobject]#orders__ListPriceField__c# |Text(255)
+|The API name of a field on
+link:ct-price-book-line-item-field-reference[Price Book Line Item]
+that stores a product price from the specific price book.
+
+|Product |[.apiobject]#orders__Product2Id__c#
+|Lookup(Product2) |
+
+|Product |[.apiobject]#orders__ProductId__c#
+|Lookup( CT Product) |
+
+|Quantity Field
+|[.apiobject]#orders__QuantityField__c# |Text(255)
+|The field API name of a field
+on link:delivery-line-item-field-reference[Delivery Line
+Item] to store the number of products per order delivery.
+
+|Sales Organization
+|[.apiobject]#orders__SalesOrganizationId__c#
+|Lookup(Sales Organization) |
+
+|Total Discount Field
+|[.apiobject]#orders__TotalDiscountField__c#
+|Text(255) |The API name of a field
+on link:delivery-line-item-field-reference[Delivery Line Item] that
+stores the total discount for a product. Calculation
+formula: [.apiobject]#(ListPrice* quantity) - (UnitPtice
+* quantity)#.
+
+|Total Price Field
+|[.apiobject]#orders__TotalPriceField__c# |Text(255)
+|The API name of of a field
+on link:delivery-line-item-field-reference[Delivery Line Item] that
+stores the total price with discount for a product. Calculation
+formula: [.apiobject]#UnitPrice* quantity#.
+
+|Unit Price Field
+|[.apiobject]#orders__UnitPriceField__c# |Text(255)
+|The API name of the field
+on link:delivery-line-item-field-reference[Delivery Line Item] that
+stores a price for one product with a discount.
+|===

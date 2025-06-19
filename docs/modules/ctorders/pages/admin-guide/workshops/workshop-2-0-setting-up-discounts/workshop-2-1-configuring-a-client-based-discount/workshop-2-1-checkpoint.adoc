@@ -1,0 +1,31 @@
+= Workshop 2.1 Checkpoint
+
+Let's create an order with a discount for the selected client's account:
+
+. Go to *CT Orders* and click *New*.
+. Complete the form as follows:
+* *Order Type*: _Order_.
+* *Account*: _link:adding-a-condition-2-1.html[sForce]_.
+[NOTE] ==== The *Order allowed* checkbox must be selected on the
+account details page. ====
+* *Price Book*: select the
+link:admin-guide/workshops/workshop1-0-creating-basic-order/creating-and-assigning-a-ct-price-book-1-0/index[price book] you
+created earlier.
+* *Sales organization*: _Default_.
+* *Pricing Procedure*:
+_link:setting-up-a-pricing-procedure-2-1.html[Account_discount]_.
+* *Stage*: _On-hold_.
+
+image:add-conditions-2020-08-26.png[]
+. Click *Save*.
+. On the *CT Order* tab, click on the newly created order.
+. On the selected *CT Order* page, click *Edit Cart*.
+. Expand the catalog on the left side and select some products.
+. Click *Add*.
+image:add-conditions-2020-08-26-1.png[]
+. Fill out the *Delivery* window.
+. Set the different amounts of items for each product to check the
+discount by the levels.
+. Click *Save Draft*.
+
+The discount will be applied and the totals panel values updated.

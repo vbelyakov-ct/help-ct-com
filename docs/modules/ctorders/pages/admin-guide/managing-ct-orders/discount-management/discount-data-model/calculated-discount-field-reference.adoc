@@ -1,0 +1,103 @@
+= Calculated Discount Field Reference
+
+The[.object]#Calculated Discount# object is responsible
+for storing information about all applied discounts for an order
+depending on the pricing procedure. 
+
+'''''
+
+Object API name:
+[.apiobject]#orders__CalculatedDiscount__c#
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Calculation Method
+|[.apiobject]#orders__CalculationMethod__c# a|
+Picklist
+
+
+
+a|
+The applied method of price calculation:
+
+* Increase
+* Decrease
+
+|Calculation Type
+|[.apiobject]#orders__CalculationTypeId__c#
+|Lookup(Calculation Type) |Applied Calculation Type identifier.
+
+|Condition |[.apiobject]#orders__ConditionId__c#
+|Lookup(Condition) |Condition identifier.
+
+|Condition Group
+|[.apiobject]#orders__ConditionGroupId__c# a|
+Lookup(ConditionGroup)
+
+
+
+|Condition Group from the Calculation Type used for discount
+calculation.
+
+|Condition Level
+|[.apiobject]#orders__ConditionLevelId__c#
+|Lookup(Condition Level) |Condition level identifier.
+
+|Discount Rate (%)
+|[.apiobject]#orders__DiscountRatePercent__c#
+|Percent(16, 2) |Discount value in percent.
+
+|Discount Rate (Amt)
+|[.apiobject]#orders__DiscountRateAmount__c#
+|Number(16, 2) |Discount value in amount.
+
+|Order |[.apiobject]#orders__OrderId__c# a|
+Master-Detail (Order)
+
+
+
+|The order for which discount is calculated.
+
+|Order Line Item
+|[.apiobject]#orders__OrderLineItemId__с# |Lookup (
+Order Line Item) |Order Line Item identifier.
+
+|Price Calculation Log
+|[.apiobject]#orders__PriceCalculationLog__c# |Long Text
+Area(32768) |Log of operations that occurred during the price
+calculation.
+
+|Pricing Procedure
+|[.apiobject]#orders__PricingProcedureId__c#
+|Lookup(Pricing Procedure) |Applied Pricing Procedure identifier.
+
+|Record Type |[.apiobject]#RecordTypeId# |Record Type a|
+A log type:
+
+* *Applied Condition* stores all lookups that were used for each
+specified discount from
+[.apiobject]#orders__CalculationType__с# and the value
+of this discount.
+* *Calculation Log* stores an overall calculation of all *Calculation
+Type* records according to the applied pricing procedure.
+
+|Reference Id |[.apiobject]#orders__RefereneId__c#
+|Text(255) (External ID) (Unique Case Sensitive) |
+
+|Unit of Measure |[.apiobject]#orders__UnitOfMeasure__c#
+a|
+Picklist
+
+
+
+a|
+Unit of measure used for price calculation:
+
+* Percent
+* Amount
+
+|===

@@ -1,0 +1,26 @@
+= Creating an Individual Quota for a Freebie
+
+Let's create a _Quota_ to restrict the number of distributed freebies on
+certain dates.
+
+
+
+To create a _Quota_:
+
+. Go to the *Quotas* tab and click *New*.
+. Select the *Individual* record type and click *Next*.
+. Enter the following:
+* *Product Type*: _Freebie_.
+* *Start Date*: _6 July 2022_.
+* *End Date*: _31 July 2022_.
+* Set *Active*.
+* *Unit of Measure*: _Quantity_.
+* *Sales Organization*: _Default Sales Org_.
+* *User*: select the current user.
+* *Order Type*: _Order_.
+* *Product*: _DM CURD DESS 127 WAFF-CRM/plast cup_.
+* *Limit Quantity*: _8_.
+image:6.3-Individual-Quota-for-a-Freebie.png[]
+. Click *Save*.
+
+The _Quota_ for a product is created.

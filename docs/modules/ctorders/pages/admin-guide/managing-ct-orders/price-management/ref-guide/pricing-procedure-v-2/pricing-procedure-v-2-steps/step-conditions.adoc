@@ -1,0 +1,138 @@
+= Step Conditions
+
+Each step's item will be calculated only if the conditions of the step
+are met or if there are no conditions for the step.
+
+[[h2__136084655]]
+=== Condition Level Keys
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Key* |*Type* |*Required* |*Comment*
+
+|[.apiobject]#operator# |Enum |Yes a|
+Available values:
+
+* AND
+* OR
+
+|[.apiobject]#items# |Array |Yes |At least one item of the
+Condition Level or Condition Level Item object must be provided.
+|===
+
+[[h2__625014080]]
+=== Condition Level Item keys
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Key* |*Type* |*Required* |*Comment*
+
+|[.apiobject]#field# |String |Yes
+|link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/step-conditions#h2_680034043[The value] in the
+[.apiobject]#object# key to check. See
+link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-available-field-formats[Available Field
+Formats].
+
+|[.apiobject]#operator# |Enum |Yes
+|link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/step-conditions#h2__748327130[Available operators] depending
+on the field data type.
+
+|[.apiobject]#value# |Boolean |No |Target values for fields with
+the *Boolean* data type.
+
+| |Number | |Target values for fields with the *Currency* and *Number*
+data type.
+
+| |String | a|
+Target values for fields with the *Text* data type.
+
+The key is required if[.apiobject]#"operator" != "in"# or
+[.apiobject]#"operator "!= "notIn"#.
+
+|[.apiobject]#values# |Array |No a|
+Target values for fields with the *Text* data type.
+
+The key is required if[.apiobject]#"operator" == "in"# or
+[.apiobject]#"operator "== "notIn"#.
+
+At least one item is required.
+
+|===
+
+[[h2__748327130]]
+=== Condition Operators
+
+Check which operators can be used with the available field data types.
+
+The[.apiobject]#in# and[.apiobject]#notIn# keys must
+contain multiple values separated by commas.
+
+[width="100%",cols="10%,^9%,^9%,^9%,^9%,^9%,^9%,^9%,^9%,^9%,^9%",]
+|===
+|*Field Data Type* |*Operator* | | | | | | | | |
+
+| |*contain* |*notContain* a|
+*in*
+
+|*notIn* |*equal* |*notEquel* a|
+*greater*
+
+|*greaterOrEqual* a|
+*less*
+
+a|
+*lessOrEqual*
+
+|*Currency* |No |No |No |No |Yes |Yes |Yes |Yes |Yes
+a|
+Yes
+
+|*Number* |No |No |No |No |Yes |Yes |Yes |Yes |Yes
+a|
+Yes
+
+|*Text* a|
+Yes
+
+|Yes |Yes |Yes |Yes |Yes |No |No |No |No
+|===
+
+[[h2_680034043]]
+=== Value in the Object Key
+
+[width="100%",cols="50%,50%",]
+|===
+|*Value* |*CT Orders Object*
+
+|[.apiobject]#procedure# |Delivery Line Item
+
+|[.apiobject]#setValue# |a value in the
+[.apiobject]#object# key
+
+|[.apiobject]#rollUp# |a value in the
+[.apiobject]#object# key
+
+|[.apiobject]#drillDown# |a value in the
+[.apiobject]#object# key
+|===
+
+[[h2__1406500097]]
+=== Examples
+
+[{plus}] link:javascript:void(0)[Standard AND condition]
+
+.[-] Hide[%collapsible] ====
+
+====
+
+[{plus}] link:javascript:void(0)[Standard OR condition]
+
+.[-] Hide[%collapsible] ====
+
+====
+
+[{plus}] link:javascript:void(0)[Standard complex condition]
+
+.[-] Hide[%collapsible] ====
+
+====

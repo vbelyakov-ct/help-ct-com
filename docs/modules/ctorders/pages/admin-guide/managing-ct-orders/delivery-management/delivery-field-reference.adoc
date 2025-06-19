@@ -1,0 +1,50 @@
+= Delivery Field Reference
+
+The[.object]#Delivery# object is intended to store dates and
+other related data about order deliveries.
+
+The *Delivery* record will be created for each order delivery.
+
+'''''
+
+Object API name:[.apiobject]#orders__Delivery__c#
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Address |[.apiobject]#AddressId__c# |Lookup(Address) a|
+By default, addresses on the Account record are used for deliveries. If
+you want to use the custom[.object]#Address# object, specify it
+in this field. For more information, refer
+to link:setting-up-a-custom-address-object-1-0[Set Up a Custom
+Address Object].
+
+The field must be manually created.
+
+|Account |[.apiobject]#orders__AccountId__c#
+|Lookup(Account) |Stores the related *Account* record.
+
+|Delivery Date
+|[.apiobject]#orders__DeliveryDate__c# |Date |Stores
+the delivery date specified during the order.
+
+|External Id |[.apiobject]#orders__ExternalId__c#
+|Text(255) (External ID) (Unique Case Sensitive) |Specifies in case of
+using the ERP system data for deliveries.
+
+|Log Id |[.apiobject]#orders__LogId__c# |Text(255)
+(External ID) (Unique Case Sensitive) |
+
+|Order |[.apiobject]#orders__OrderId__c#
+|Master-Detail(CT Order) |The parent order identifier.
+
+|Reference Id |[.apiobject]#orders__RefereneId__c#
+|Text(255) (External ID) (Unique Case Sensitive) |
+
+|Total Price |[.apiobject]#orders__TotalPrice__c#
+|Currency(15, 3) |The overall price for all CT Products and deliveries
+with discounts in the order.
+|===

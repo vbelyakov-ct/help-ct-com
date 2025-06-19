@@ -1,0 +1,146 @@
+= The SDK Step
+
+The SDK step is used to execute a custom project logic that is
+implemented via the Apex class. It allows you to perform additional
+operations and overwrite some fields on the objects that participate in
+the price calculation.
+
+* To perform the SDK step, link:offline-order#h3_727125212[tap the
+button] in the CT Mobile app to initialize the calculator instead of
+using the standard calculation logic.
+[NOTE] ==== A custom logic must be specified in both Salesforce
+and CT Mobile to prevent different price calculation results. ====
+* Although several SDK steps can be used, we recommend only one step of
+this type in order to reduce the calculation time.
+
+[[h2_109049444]]
+=== Step Keys
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Key* |*Type* |*Required* |*Comment*
+
+|[.apiobject]#type# |String |Yes |It is filled out with the
+[.apiobject]#sdk# constant.
+
+|[.apiobject]#fieldsAllowedToChange# |An array of fields allowed
+to change |Yes |An array may contain zero or more items. An array may
+contain only one item for the[.apiobject]#objectName# key. See
+the link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-sdk-step#h2_704387152[Fields Allowed to Change].
+
+|[.apiobject]#salesforceSDK# |SDK |No |If the key is not used in
+the price calculation on the Salesforce side, the different price
+calculation results will be received in Salesforce and CT Mobile. See
+the link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-sdk-step#h2__1132174910[SDK].
+
+|[.apiobject]#ctMobileSDK# |SDK |No |If the key is not used in
+the price calculation In the CT Mobile app, the different price
+calculation results will be received in Salesforce and CT Mobile. See
+the link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-sdk-step#h2__1132174910[SDK].
+|===
+
+[[h2_704387152]]
+=== Fields Allowed to Change
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Key* |*Type* |*Required* |*Comment*
+
+|[.apiobject]#objectName# |Enum |Yes a|
+The API name of the object. Available values:
+
+*[.apiobject]#orders__Order__c#
+*[.apiobject]#orders__Delivery__c#
+*[.apiobject]#orders__OrderLineItem__c#
+*[.apiobject]#orders__DeliveryLineItem__c#
+
+|[.apiobject]#fields# |Array of Strings |Yes a|
+The[.apiobject]#objectName# key is allowed to be changed via
+the custom logic.
+
+Specify the fields that should be overwritten with new values by the
+custom Apex class.
+
+* See the link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-available-field-formats[Available
+Field Formats].
+* See the link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-sdk-step#h2_2146359128[Restricted Fields].
+
+|===
+
+[[h2__1132174910]]
+=== SDK
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Key* |*Type* |*Required* |*Comment*
+
+|[.apiobject]#version# |Enum |Yes a|
+SDK version. Available values:
+
+* v1
+
+|[.apiobject]#implementation# |String |Yes |SDK implementation
+class name
+|===
+
+[[h2_2146359128]]
+=== Restricted Fields
+
+These fields are populated by the system during the ordering process and
+cannot be overwritten by the custom logic.
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Order Line Item* |*Delivery Line Item* |*Order* |*Delivery*
+
+a|
+*[.apiobject]#$.quantity#
+*[.apiobject]#$.listPrice#
+*[.apiobject]#orders__CatalogId__c#
+*[.apiobject]#orders__CatalogLineItemId__c#
+*[.apiobject]#orders__FreebieConditionId__c>#
+*[.apiobject]#orders__FreebieLevelId__c#
+*[.apiobject]# orders__FreebieTypeId__c#
+*[.apiobject]#orders__OrderId__c#
+*[.apiobject]#orders__ParentId__c#
+*[.apiobject]#orders__PriceBookId__c#
+*[.apiobject]#orders__PriceBookLineItemId__c#
+*[.apiobject]# orders__ProductComponentId__c#
+*[.apiobject]# orders__PromotionId__c#
+*[.apiobject]#orders__PromotionLineItemId__c#
+*[.apiobject]#Lookup(Product)#
+
+a|
+*[.apiobject]#$.quantity#
+*[.apiobject]#$.listPrice#
+*[.apiobject]#orders__DeliveryId__c#
+*[.apiobject]#orders__OrderLineItemId__c#
+*[.apiobject]#Lookup(Product)#
+
+a|
+*[.apiobject]# orders__AccountId__c#
+*[.apiobject]#orders__PriceBookId__c#
+*[.apiobject]# orders__PricingProcedureId__c#
+*[.apiobject]#orders__SalesOrganizationId__c#
+*[.apiobject]#orders__OrderType__c#
+*[.apiobject]#orders__Stage__c#
+*[.apiobject]#Lookup(RetailStore)#
+
+
+
+a|
+*[.apiobject]#orders__OrderId__c#
+* link:creating-a-relationship-between-custom-address-object-and-delivery-1-0[Lookup(Address)]
+* Fields in the
+link:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/split-settings-field-reference[order__SplitFields__c]
+
+|===
+
+[[h2_1689083776]]
+=== Example
+
+[{plus}] link:javascript:void(0)[SDK Step]
+
+.[-] Hide[%collapsible] ====
+
+====

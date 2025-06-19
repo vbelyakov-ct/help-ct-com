@@ -1,0 +1,38 @@
+= Example: isIgnoreNulls
+
+[width="100%",cols="34%,33%,33%",]
+|===
+|*Input Conditions* |*JSON* |*Discount Calculation Flow*
+
+a|
+Unit of Measure = Percent
+
+Calculation Method = Decrease
+
+[.apiobject]#isIgnoreNull = false#
+
+
+
+Product List Price = 100$
+
+
+
+3 Сaculation Types are created for the Pricing Procedure:
+
+. Calculation Method = Decrease and Structural 10%
+. Calculation Method = Decrease and Contract 20%
+. Calculation Method = Decrease and Promo 0%
+
+| a|
+Calculating discounts and selecting the minimum discount according to
+the formula:
+
+. 100* (1 – 0.1) = 90$
+. 100* (1 – 0.20) = 80$
+. 100* (1 – 0) = 100$
+
+
+
+Total price for an[.object]#Order Line Item# = 100$
+
+|===

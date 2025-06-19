@@ -1,0 +1,239 @@
+= Calculation Type Field Reference
+
+The[.object]#Calculation Type# object stores all data about a
+particular type of discount calculation.
+
+'''''
+
+Object API name:
+[.apiobject]#orders__CalculationType__c#
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Apply Condition Type
+|[.apiobject]#orders__ApplyConditionType__c#
+|Picklist a|
+Select the type of work with the[.object]#Condition# records.
+
+To see the example, refer to
+link:calculation-type-applyconditiontype-c-field-specification[Calculation
+Type: ApplyConditionType__c Field Specification].
+
+Available values:
+
+* *First* is used to apply the first matching condition (if found) to
+the individual[.object]#Calculation Type# and go to the next
+[.object]#Calculation Type#.
+
+* *FirstNonZero* is used to apply the first non-zero matching condition
+to the individual[.object]#Calculation Type# and go to the next
+[.object]#Calculation Type#.
+Available only for the *Condition* record type.
+
+* *AllNonZero* is used to apply all non-zero matching conditions to the
+individual[.object]#Calculation Type# and go to the next
+[.object]#Calculation Type#, and all discount conditions will be
+used to calculate *Unit Price*.
+Available only for the *Condition* record type.
+
+* *Maximum Discount Condition* is used to apply maximum discount rate:
+. All *Condition* records based on *Condition Details* field are
+selected.
+. All *Condition* records that contain *Discount Rate Location* =
+*Condition Record* are compared with each other by *Discount Rate (%)*
+or *Discount Rate (Amount)*.
+. The condition with maximum discount rate is selected.
+
+Available only for the *Condition* record type and only with the
+link:web-service[Web Service] enabled.
+
+
+* *Minimum Discount Condition* is used to apply minimum discount rate:
+. All *Condition* records based on *Condition Details* field are
+selected.
+. All *Condition* records that contain *Discount Rate
+Location* = *Condition Record* are compared with each other by *Discount
+Rate (%)* or *Discount Rate (Amount)*.
+. The condition with minimum discount rate is selected.
+
+Available only for the *Condition* record type and only with
+the link:web-service[Web Service] enabled.
+
+|Calculation Method
+|[.apiobject]#orders__CalculationMethod__c# |Picklist
+a|
+The applied method of price calculation:
+
+* Increase
+* Decrease
+
+|Condition Fields List
+|[.apiobject]#orders__ConditionFieldsList__c# |Long Text
+Area(32768) |List of fields that are available for the user. The list
+includes all child fields for[.object]#Condition Group# and
+[.object]#Condition# objects.
+
+The field is automatically updated based on the *Condition Fields Update
+Type* value.
+
+|Condition Fields Update Type
+|[.apiobject]#orders__ConditionFieldsUpdateType__c#
+|Picklist a|
+The way of updating the conditions fields list:
+
+* Real-time: the stored list of fields will be updated whenever the
+values in the *Condition Details* field on[.object]#Condition#
+records are changed.
+* Batch update: the stored fields will be updated in batches. Can be
+enabled only if the *Force Condition Fields Update* checkbox is
+selected.
+When a batch is processed, the checkbox is deselected.
+
+|Condition Recalculation Fields
+|[.apiobject]#orders__ConditionRecalculationFields__c#
+|Long Text Area(32768) a|
+Specify the API names of fields that will initiate the matching
+conditions search for[.object]#Order Line Item# records from
+the beginning when changed.
+
+* Only fields from the[.object]#Order#
+[.object]#Delivery# and[.object]#Order Line Item#
+objects are supported. If the specified fields belong to any other
+object, these fields will be skipped in the process.
+* Users must have access to the specified fields. Otherwise, the price
+fields will be based on the[.apiobject]#$.listPrice# field.
+
+|Discount Recalculation Fields
+|[.apiobject]#orders__DiscountRecalculationFields__c#
+|​Long Text Area(32768) a|
+Specify the API name of a field in JSON format that, when changed, will
+initiate the recalculation of a discount within each condition.
+
+* Only fields from the[.object]#Order#,
+[.object]#Delivery#,[.object]#Order Line Item# and
+[.object]#Delivery Line Item# objects are supported. If the
+specified fields belong to any other object, these fields will be
+skipped in the process.
+
+The same recalculation logic is applied when the *Quantity* field is
+changed.
+
+
+
+|External ID |[.apiobject]#orders__ExternalId__c#
+|Text(255) (External ID) (Unique Case Sensitive) |Calculation Type
+external identifier.
+
+|Field Search Based On
+|[.apiobject]#orders__FieldSearchBasedOn__c#
+|Picklist a|
+Determines if *Condition Fields* will be searched starting from
+[.object]#Order Line Item# or[.object]#Delivery Line
+Item#. Available values:
+
+* Order Line Item (default)
+* Delivery Line Item
+
+This field applies only to link:web-service[Web Service]
+calculations and does not affect the internal calculator. Pricing
+procedures with this field will be ignored and excluded from
+the link:price-tag[Price Tag] logic.
+
+|Force Condition Fields Update
+|[.apiobject]#orders__IsForceConditionFieldsUpdate__c#
+|Checkbox |If selected, the *Condition Fields List* field will be
+updated after the[.object]#Condition# object fields were
+changed on the child records.
+The checkbox is required if the _Batch update_ mode is selected in
+*Condition Field Update Type*.
+
+|Need Condition Fields Force Update
+|[.apiobject]#orders__isNeedConditionFieldsUpdate__c#
+|Checkbox (hidden) a|
+Selected, if the *Condition Fields Update Type* field is set to _Batch
+update_ and the *Force Condition Fields Update* checkbox is set to
+active. It is unchecked after the update process is finished.
+
+It is hidden from the interface, intended only for develop customization
+purposes.
+
+|Level Based On |[.apiobject]#orders__LevelBasedOn__c#
+|Picklist a|
+Select the object where the calculation will be performed:
+
+* Order Line Item.
+* Delivery Line Item.
+
+If the *Delivery Line Item* is selected, the processing of the
+*Condition* records will be the same as for the[.object]#Order
+Line Item# object and the conditions will be calculated based on values
+on the *Order Line Item* records.
+
+
+
+|Level Formula |[.apiobject]# orders__LevelFormula__c#
+|​Long Text Area(32768) a|
+The formula in JSON format is used to calculate quantity across multiple
+fields.
+
+
+
+The source object for formula fields is defined in the *Level Based On*
+field.
+
+
+
+It is possible to use fields with the *Number* and *Currency* types to
+calculate quantity or amount, and the values from these fields can be
+used for the discount calculation based on the entire order or the
+previous deliveries. In this case, an additional step should be
+specified in the Pricing Procedure to process this summary.
+
+To see the example, refer to
+link:calculation-type-levelformula-c-field-specification[Calculation
+Type: LevelFormula__c Field Specification].
+
+|Promo Related
+|[.apiobject]#orders__IsPromoRelated__c# |Checkbox
+|If selected, promos can be linked to this calculation type.
+
+|Record Type |[.apiobject]#RecordType# |Record Type a|
+Available values:
+
+* *Condition* is used for discount calculation conditions that allow
+using link:condition-field-reference[advanced calculation methods].
+** Supports difficult cases for *Promotions*, for example:
+*** Allows setting the number of unique SKUs to be eligible for the
+discounting.
+*** Allows setting the required min for a particular product from the
+group to get the discount.
+** Uses JSON syntax.
+** Created automatically if related to a promo.
+** Can be set up by a developer or an advanced consultant.
+* *Group {plus} Condition*: *Condition* is used to store specific
+calculation conditions and linked to the parent
+link:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-group-field-reference[Condition Group] object.
+** Inherits the structure of ERP systems and is easier to integrate.
+** Uses Salesforce syntax and can be set up by consultants.
+
+[width="100%",cols="50%,50%",]
+!===
+!image:warning.png[] !Not
+applicable for advanced calculations
+and [.object]#Promotion# discounts calculation.
+!===
+
+
+
+|Unit of Measure |[.apiobject]#orders__UnitOfMeasure__c#
+|Picklist a|
+Unit of measure used for price calculation:
+
+* Percent
+* Amount
+
+|===

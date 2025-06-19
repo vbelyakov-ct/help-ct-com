@@ -1,0 +1,76 @@
+= CG Cloud: Configuring Object Setting
+
+According to the _Settings_ record with the _Object Settings_ record
+type, CT Orders supports different implementations based on the objects
+in use:
+
+* Only[.object]#Salesforce Products#;
+*[.object]#Salesforce Products# and[.object]#Retail
+Stores#;
+
+* When the CT CPG or CT Pharma package is installed in your Salesforce
+instance:
+** the appropriate[.object]#Product Component# object to create
+bundles;
+** support of the[.object]#Salesforce Product# or
+[.object]#Retail Store# objects in dynamic groups.
+
+
+
+To create the _Settings_ record with the _Object Settings_ record type
+when the CT CPG or CT Pharma package is installed in your Salesforce
+instance:
+
+. Go to the *Settings* tab and click *New*.
+. In the *New Settings* window, select *Object Settings* record type.
+. Specify the following:
+* *Activity Object*: select the desired[.object]#Activity#
+object (_CPG_ or _Pharma,_ depending on the installed target system).
+* *Product Object*:** **select *Salesforce Product*.
+* Select the corresponding *Product Component Object*, which will be
+used as the bundle component.
+* In case of using dynamic groups, specify *Group Object* and *Group
+Member Object*. For more information, refer
+to link:admin-guide/managing-ct-orders/cg-cloud-support/cg-cloud-setting-up-dynamic-group-assignment[CG Cloud: Set
+up a Dynamic Group Assignment]. 
+* *Address Object*:** **specify the API name of the desired
+[.object]#Address# object. It is possible to use
+the [.object]#Account#, [.object]#Retail Store#, or
+custom [.object]#Address# object. 
+* *SKU Field*: specify the API name of the standard *Active* field of
+the[.object]#Salesforce Product #object.
+
+[cols=",",]
+|===
+|image:info.png[] |The *SKU
+Field* setting is required for the proper operation of
+the link:admin-guide/managing-ct-orders/catalog-management/catalog-management[Catalog] and link:admin-guide/managing-ct-orders/discount-management/promotions[Promotions] pages.
+The *SKU* attribute defines whether the product record can be added to
+an order. It distinguishes the product SKU record from other product
+records used to create hierarchy, such as brands, families, etc. You may
+create a custom field of the [.object]#Product# object to use as
+the *SKU Field*.
+|===
+
+
+image:CG-Cloud-Object-Settings.png[]
+. Click *Save*.
+
+The setup is complete.
+
+
+
+The example of the _OM Settings_ record with the _Object Settings_
+record type when the CT CPG or CT Pharma package is installed in your
+Salesforce instance, but you are not planning on using bundles:
+
+image:CG-Cloud-Object-Settings-3.png[]
+
+
+
+The example of the _OM Settings_ record with the _Object Settings_
+record type when the CT CPG or CT Pharma package was not installed in
+your Salesforce org. In this case, you cannot create bundles and use
+dynamic groups:
+
+image:CG-Cloud-Object-Settings-2.png[]

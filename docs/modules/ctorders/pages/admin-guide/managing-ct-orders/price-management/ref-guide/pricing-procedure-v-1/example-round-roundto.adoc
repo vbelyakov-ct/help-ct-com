@@ -1,0 +1,101 @@
+= Example: round, roundTo
+
+Rounding is the optional parameter.
+
+
+
+To apply rounding to percentages, use[.apiobject]#SUM# as the
+parent operator to add the percentage discount values and apply the
+total discount.
+
+* If the child type is[.apiobject]#MULT#, the discounts will be
+multiplied and returned for addition in[.apiobject]#SUM#.
+* If[.apiobject]#MULT# is used separately, the calculation
+formula is 1 – (1– % result_previous_step)*(1 – % discount)
+
+[[h2_790032749]]
+=== Round: item
+
+[width="100%",cols="34%,33%,33%",]
+|===
+|*Input Conditions* |*JSON* |*Discount Calculation Flow*
+
+a|
+Unit of Measure = Percent
+
+
+
+Product List Price = 100$
+
+
+
+4 Сaculation Types are created for the Pricing Procedure:
+
+. Calculation Method = Decrease and Structural 2%
+. Calculation Method = Decrease and Contract 3%
+. Calculation Method = Decrease and Promo 4%
+. Calculation Method = Decrease and Season 5%
+
+| a|
+Calculating maximum discount according to the formula:
+
+. 100*(1 – 0.02) = 98
+RoundTo: 3 = 98
+. 98*(1 – 0.03) = 95.06
+RoundTo: 3 = 95.06
+. 95.06*(1 – 0.04) = 91.2576
+RoundTo: 3 = 91.258
+. 91.258*(1 – 0,05) =86.6951
+RoundTo: 3 = 86.695
+
+
+
+Total price for an[.object]#Order Line Item# = 86.70$
+
+The rounding is presented with two decimals as by default the field
+format allows only two digits after the decimal point.
+
+|===
+
+[[h2_515213435]]
+=== Round: group
+
+[width="100%",cols="34%,33%,33%",]
+|===
+|*Input Conditions* |*JSON* |*Discount Calculation Flow*
+
+a|
+Unit of Measure = Percent
+
+
+
+Product List Price = 100$
+
+
+
+4 Сaculation Types are created for the Pricing Procedure:
+
+. Calculation Method = Decrease and Structural 2%
+. Calculation Method = Decrease and Contract 3%
+. Calculation Method = Decrease and Promo 4%
+. Calculation Method = Decrease and Season 5%
+
+| a|
+Calculating maximum discount according to the formula:
+
+. 100*(1 – 0.02) = 98
+. 98*(1 – 0.03) = 95.06
+. 95.06*(1 – 0.04) = 91.2576
+. 91.258*(1 – 0,05) =86.69472
+RoundTo: 3 = 86.695
+
+
+
+Total price for an[.object]#Order Line Item# = 86.70$
+
+The rounding is presented with two decimals as by default the field
+format allows only two digits after the decimal point.
+
+
+
+|===

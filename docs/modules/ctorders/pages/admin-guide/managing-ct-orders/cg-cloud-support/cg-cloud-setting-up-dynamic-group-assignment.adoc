@@ -1,0 +1,69 @@
+= CG Cloud: Setting up a Dynamic Group Assignment
+
+The dynamic group functionality extends the way of working with multiple
+records, helps to keep these records up-to-date, and provides the
+dynamic group assignment feature that allows you to add
+[.object]#Catalog# or[.object]#Promotion# to the
+*Retail Store* records.
+
+:toc: :toclevels: 3
+
+[[h2_221470279]]
+=== Create a Dynamic Group with Retail Stores
+
+To create a dynamic group with retail stores, follow the guide depending
+on the target system:
+
+. Add _Retail Store_ as a new group type:
+* https://help.customertimes.com/articles/ct-cpg-publication/specify-a-custom-object-for-a-cpg-group[Specify
+a Custom Object for a CPG Group]
+* https://help.customertimes.com/articles/ct-pharma-publication/specify-a-custom-object-for-a-pharma-group[Specify
+a Custom Object for a Pharma Group]
+. Create a dynamic group:
+* https://help.customertimes.com/articles/ct-cpg-publication/create-and-update-a-dynamic-cpg-group[Create
+and Update a Dynamic CPG Group]
+* https://help.customertimes.com/articles/ct-pharma-publication/create-and-update-a-dynamic-pharma-group[Create
+and Update a Dynamic Pharma Group]
+. Set up CT Orders package.
+
+[[h2__774670135]]
+=== Set up CT Orders package for Dynamic Group Support
+
+Create the following fields with the _Lookup_ record type:
+
+. Create a lookup from the[.object]#Catalog# object to the
+dynamic group object, for example,[.apiobject]#GroupId__c#.
+. Create a lookup from the[.object]#Promotion# object to the
+dynamic group object if necessary.
+
+These fields will be used by the CT Orders inner mechanics to provide a
+dynamic search within the installed target package.
+
+
+
+Next, customize *Catalog Assignment* and *Promotion Assignment* layouts.
+
+. Go to the *Settings* tab and click *New*.
+. In the *New Settings* window, select *Layout Settings* record type.
+. Specify the following:
+* Select a *Sales Organization*.
+* *Object*: [.apiobject]#orders__CatalogAssignment__c#.
+* *Fields To Display*: [.apiobject]#RetailStoreId__c#.
+. Click *Save & New*.
+. In the *New Settings* window, select *Layout Settings* record type.
+. Specify the following:
+* Select a *Sales Organization*.
+* *Object*: [.apiobject]#orders__PromotionAssignment__c#.
+* *Fields To Display*: [.apiobject]#RetailStoreId__c#.
+. Click *Save*.
+
+The setup is complete.
+
+[[h2_1639429351]]
+=== Assign a Dynamic Group
+
+To assign a dynamic group, create a new _Settings_ record with the
+_Object Setting_ record type and specify the referenced objects in
+*Group Object* and *Group Member Object* fields:
+
+image:/resources/Storage/project-ct-cpg/dynamic-group-assignment-2020-11-11.png[/resources/Storage/project-ct-cpg/dynamic-group-assignment-2020-11-11]

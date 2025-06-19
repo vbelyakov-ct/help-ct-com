@@ -1,0 +1,24 @@
+= Setting up a Pricing Procedure (2.1)
+
+After you configure all required conditions for the calculation type,
+you need to specify the pricing procedure that should be applied to
+calculate a discount for the orders.
+
+
+
+To configure a pricing procedure:
+
+. Go to the *Pricing Procedure* tab.
+. Click *New*. The *New Pricing Procedure* window pops up.
+. Complete the form as follows:
+.. Specify the new *Procedure Name*.
+.. Set the *Active* checkbox.
+.. Select the *Sales Organization* for which the procedure will be
+available.
+.. Select *Order Types* for which you want to apply this procedure.
+.. Specify the *Pricing Procedure* in JSON format:
+
+image:calculation-types-2020-08-25-6.png[]
+. Click *Save*.
+
+The setup is complete.

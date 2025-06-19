@@ -1,0 +1,51 @@
+= Order Line Item Mapping Field Reference
+
+The *Order Line Item Mapping* record type is intended for storing
+[.object]#Orde Line Item# fields that are used in discount
+calculations.
+
+'''''
+
+Object record type API name:[.apiobject]#OrderLineItemMapping#
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|List Price Field |`orders__ListPriceField__c` |Text(255)
+|The API name of the field on the
+link:ct-price-book-line-item-field-reference[Price Book Line Item]
+that stores a product price from the specific price book.
+[NOTE] ==== The[.object]#Price Book ==== object should
+be specified in the link:ct-price-book-field-reference[Price Book]
+and *Price Book Line Item* records. The records should be active.#
+
+|Quantity Field
+|[.apiobject]#orders__QuantityField__c# |Text(255)
+|The API name of th field on the
+link:order-line-item-field-reference[Order Line Item] that stores
+an overall quantity of products in one order.
+
+|Sales Organization
+|[.apiobject]#orders__SalesOrganizationId__c#
+|Lookup(Sales Organization) a|
+
+|Total Discount Field
+|[.apiobject]#orders__TotalDiscountField__c#
+|Text(255) |The API name of the field
+on link:order-line-item-field-reference[Order Line Item] that
+stores the total discount of products.  
+
+|Total Price Field |`orders__TotalPriceField__c` |Text(255) 
+|The API name of the field
+on link:order-line-item-field-reference[Order Line Item] that
+stores the total price of products with a discount.    
+
+|Unit Price Field
+|[.apiobject]#orders__UnitPriceField__c# |Text(255) 
+|The API name of the field
+on link:order-line-item-field-reference[Order Line Item] that
+stores a price for one product with a discount.
+|===

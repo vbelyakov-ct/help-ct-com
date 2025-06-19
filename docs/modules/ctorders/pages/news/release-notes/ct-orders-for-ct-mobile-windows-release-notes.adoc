@@ -1,0 +1,100 @@
+= CT Orders for CT Mobile Windows Release Notes
+
+Here you could find a CT Orders feature, the link to the corresponding
+article, and the version of CT Mobile since which the feature is
+available. Add the CT Orders module to the CT Mobile Windows app to have
+the ability to take orders.
+
+:toc: :toclevels: 2
+
+[[h2__1184861462]]
+=== CT Orders for CT Mobile 1.3
+
+[[h3__1817507152]]
+==== Product Management
+
+link:managing-bundles[A bundle] is a new type of product to include
+several products.
+
+* Bundles are now supported for use in[.object]#Catalogs# and
+[.object]#Promotions#.
+
+
+
+Product management allows controlling link:product-data-model[units
+in a package] on the *Product* level.
+
+[[h3_62076529]]
+==== Freebie Management
+
+Freebies management window with the dedicated button.
+
+* link:freebies-management[Freebies validation] provides versatile
+validations to improve the working experience when adding freebies to
+orders. The system checks active promotion dates, min/max required
+products, and other settings influencing the final freebies calculation
+per order and displays errors in the user interface.
+
+* Take advantage of full and partial
+link:freebies-management#autoupdate[recalculation and auto-update]
+of freebies in order triggered by changes in the set of products in the
+cart.
+* Control the link:freebies-management#h2_1556344363[freebie
+distribution] among several deliveries.
+
+[[h3__580391303]]
+==== Order Management
+
+* Work with offline orders in the CT Mobile by
+link:adding-ct-orders-to-the-ct-mobile-app-4-0[adding the CT
+Orders] module to the app menu.
+* link:offline-order#h3_1904156377[Create orders] on
+link:offline-order#h2__2117318770[the Account&#44; Contact&#44; or
+Activity records] through the customizable mini-layout.
+* Manage the created offline orders
+on link:offline-order#h3_1847490047[the Edit Cart screen]:
+** Search the regular products, free goods, and product bundles and
+select the right ones with specific prices structured in the catalogs
+hierarchy or joined in promotions, filtered for the customer.
+** Manage addresses for deliveries.
+** Apply quantity rules for
+link:adding-a-price-book-line-item-1-0[setting up min and max]
+products in delivery.
+** Finalize the order to restrict any changes in the CT Mobile app and
+send the order for further processing in Salesforce.
+** link:online-order#h3__1143528965[Editable fields] allow entering
+data in custom fields in real-time.
+* Validation of the product list, prices, and quantities in the CT
+Mobile app.
+* The total price is displayed on the Order cart screen.
+
+[[h3__1068677388]]
+==== Discount Management
+
+A fully configurable link:price-management[pricing procedure] that
+allows you to implement complex custom scenarios with manual and total
+discounts if needed:
+
+[NOTE] ==== The standard pricing procedure version 1 is also
+supported. Use either the standard v.1 syntax or customize the new
+pricing procedure using the steps with a broadened
+link:pricing-procedure-v-1[syntax]. ====
+
+* Set link:pricing-procedure-v-2-steps[pricing procedure steps] to
+write the intermediate discount results.
+* Add link:step-conditions[step conditions] to determine the step
+applicability.
+
+
+
+Enhanced link:calculation-types[discount calculation] capabilities:
+
+* Define link:calculation-types#h3_1022633546[quantity settings]
+for discount calculation on[.object]#Calculation Type#.
+* Set
+link:condition-exceptioncondition-c-field-specification[exception
+conditions] to apply the discount under specific circumstances.
+* Specify any field on any object to be used as
+a link:calculation-types#h3_1561772746[discount rate source].
+* Launch link:calculation-types#h3_1022633546[full or partial
+recalculation] in the order cart if the selected field value is altered.

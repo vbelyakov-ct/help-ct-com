@@ -1,0 +1,38 @@
+= Snippet: Relationship between Custom Address &amp; Delivery
+
+Create a lookup from the [.object]#Delivery# object to the
+custom [.object]#Address# object. By default, there is only the
+lookup from the [.object]#Delivery# object to
+the [.object]#Account# object, which means delivery will be
+carried out at the address specified in
+the [.object]#Account# records.
+
+
+
+To create a lookup for the[.object]#Delivery# object:
+
+. Go to *Setup → Object Manager → Delivery → Fields and Relationships*
+and click *New*.
+. Select the *Lookup Relationship* data type for the new custom field
+and click *Next*.
+. Select the *Address* object from the *Related to* picklist and click
+*Next*.
+. In the *Field Information* section:
+* Enter the *Field Label*.
+* Enter *Field Name*.
+
+[TIP] ==== It is recommended to use the following API name:
+[.apiobject]#AddressId__c ==== or
+[.apiobject]#Address__c#. #
+*  Enter a *Child Relationship Name* for integration purposes:
+_Deliveries_.
+image:create-account-address-lookup-2020-04-27.png[]
+. Select the profiles to which you want to grant edit access to this
+field via field-level security and click *Next*.
+. Make sure the *Delivery* page layout is selected if you want the
+*Address* field to be displayed, and click *Next*.
+. Specify the *Related List Label* and select the layout that should
+display the related list field.
+. Click *Save*.
+
+The setup is complete.

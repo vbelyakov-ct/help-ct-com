@@ -1,0 +1,39 @@
+= Sync Transaction Field Reference
+
+The[.object]#Sync Transaction# object is used to store
+information about the success of the data transfer. A new record will be
+created when the record of one of
+link:admin-guide/managing-ct-orders/web-service/ref-guide/data-to-send-to-web-service[the discount calculation objects]
+is changed.
+
+After disconnecting from the Web Service, all _Sync Transaction_ records
+will be deleted. 
+
+'''''
+
+Object record type API name:
+[.apiobject]#orders__SyncTransaction__c#
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field Label* |*API name* |*Type* |*Description*
+
+|Error |[.apiobject]#orders__Error__c# |Long Text
+Area(32768) |The text of the error received during the sync process.
+
+|Object Name |[.apiobject]#orders__ObjectName__c#
+|Text(255) a|
+The API name of the object whose record is to be synchronized.
+
+|Record Id |[.apiobject]#orders__RecordId__c#
+|Text(255) |The ID of the record to be synchronized.
+
+|Type |[.apiobject]#orders__Type__c# |Picklist a|
+The operation type:
+
+*[.apiobject]#upsert#
+*[.apiobject]#delete#
+
+|===

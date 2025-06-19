@@ -1,0 +1,28 @@
+= Adding a Freebie Level (488) (3.1)
+
+To apply a[.object]#Freebie Condition#, it is necessary to
+create freebie level(s).
+
+* In this workshop, we set up one[.object]#Freebie Level# for
+the priority[.object]#Freebie Condition#.
+* We will give 8 freebies for each added 48 products of a certain brand.
+* The minimum number of products in the order must be 48.
+* The minimum and the maximum number of the distributed freebies is 8.
+
+
+
+To create a _Freebie Level_ record:
+
+. Open the _Certain Brand 48 {plus} 8_ freebie condition → go to the
+*Related* tab and click *New* in the *Freebie Level* section.
+. Enter the following:
+* *External Id*: _48_8_.
+* *Product Ratio*: _48_.
+* *Freebie Ratio*: _8_.
+* *Starting from*: _48_.
+* *Freebies Quantity Min*: _8_.
+* *Freebies Quantity Max*: _8_.
+image:Freebie-Condition-Level-1-3.1.png[]
+. Click *Save*.
+
+The _Freebie Level_ record is created.

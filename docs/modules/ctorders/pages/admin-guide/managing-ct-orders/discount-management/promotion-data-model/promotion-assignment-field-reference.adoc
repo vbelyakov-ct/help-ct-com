@@ -1,0 +1,33 @@
+= Promotion Assignment Field Reference
+
+The[.object]#Promotion Assignment# object allows assigning
+promotions to accounts or retail stores.
+
+'''''
+
+Object API name:
+[.apiobject]#orders__PromotionAssignment__c#
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Account |[.apiobject]#orders__AccountId__c#
+|Lookup(Account) |An account to which the promotion is assigned.
+
+|Active |[.apiobject]#orders__IsActive__c# |Checkbox |If
+selected, the record is active and can be applied in business logic.
+
+|Promotion |[.apiobject]#orders__PromotionId__c#
+|Master-Detail(Promotion) |The Promotion identifier.
+
+|Retail Store |[.apiobject]#RetailStoreId__c#
+|Lookup(Retail Store) a|
+A retail store to which the promotion is assigned.
+
+This field must be manually created in case of integration with CG
+Cloud.
+
+|===

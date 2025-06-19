@@ -1,0 +1,31 @@
+= Order Mapping Field Reference
+
+The **Order Mapping **record type is intended for storing
+[.object]#Order# fields that are used in discount calculations.
+
+'''''
+
+Object record type API name:[.apiobject]#OrderMapping#
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Sales Organization
+|[.apiobject]#orders__SalesOrganizationId__c#
+|Lookup(Sales Organization) |
+
+|Total Discount Field
+|[.apiobject]#orders__TotalDiscountField__c#
+|Text(255) |The API name of the field specified in
+the [.apiobject]#orders__TotalDiscountField__c# field of
+the corresponding *Order Line Item Mapping* record. 
+
+|Total Price Field
+|[.apiobject]#orders__TotalPriceField__c#
+|Text(255)  |The API name of the field specified in
+the [.apiobject]#orders__TotalPriceField__c# field of
+the corresponding *Order Line Item Mapping* record. 
+|===

@@ -1,0 +1,139 @@
+= General Limitations
+
+Refer to this article to learn about functional limitations and some of
+the known issues of the CT Orders package.
+
+:toc: :toclevels: 3
+
+[[h2_951662406]]
+=== General
+
+[[h3_1483371260]]
+==== Lightning Web Security
+
+Lightning Web Security for Lightning web components is not
+supported. Check the following:
+
+. Go to *Setup → Security → Session Settings*.
+. In the *Lightning Web Security* section, check that the *Use Lightning
+Web Security for Lightning web components* checkbox is inactive.
+
+The setup is complete.
+
+[[h3__1728072365]]
+==== Custom Field Limitations
+
+To avoid errors, the API name of the custom field must be different from
+the API name of the CT Orders package field (not including the
+[.apiobject]#orders__# namespace prefix) on the same object.
+For example, if you have
+[.apiobject]#orders__UnitPrice__c# on the Product
+object, do not create[.apiobject]#UnitPrice__c#. For more
+details, please refer to
+the https://trailblazer.salesforce.com/issues_view?id=a1p30000000sY2FAAU[Salesforce
+Known Issue]. 
+
+[[h3_1554838289]]
+==== Case Sensitive Settings
+
+CT Orders settings are case-sensitive, so be careful when entering API
+names when creating records.
+
+image:json-specification-2021-10-18.png[]
+
+[[h3_1717089794]]
+==== Text Area (Rich) Field Limitations
+
+Currently, the CT Mobile app does not fully process the *Text Area
+(Rich)* data type. If you enter formatted text or special symbols (as
+apostrophes) via the web interface, you will see the text with HTML tags
+on the mobile device. We recommend using other *Text* data types or
+entering text without formatting.
+
+
+image:ctorders-overview-2020-12-25-2.png[]
+
+[[h3__35438396]]
+==== Address Configuration
+
+CT Orders does not support the processing of
+https://developer.salesforce.com/docs/atlas.en-us.224.0.api.meta/api/compound_fields_address.htm?search_text=address[compound
+fields] (formulas), such as[.apiobject]#BillingAddress# and
+[.apiobject]#ShippingAddress#.
+
+[[h2__872355444]]
+=== Promotion and Catalog Management
+
+By default, there are no layouts for[.object]#Catalog Line
+Item# and[.object]#Promotion Line Item# objects, so when you
+add products on the *Product Management* tab, you will see the records'
+Ids instead of product names.
+link:configuring-layout-settings-1-0[Create a layout] to display
+the product names.
+
+
+
+image:ctorders-overview-2020-08-24.png[]
+
+[[h2_25586823]]
+=== Freebies Management
+
+[[h3_25586823]]
+==== SOQL Specifications
+
+For freebies with the
+link:adding-a-freebie-condition-with-the-criteria-based-method-3-1[Criteria
+Based] condition type, the system applies a SOQL filter to search
+through the list of records. If [.apiobject]#IN# operator is
+required, we suggest selecting
+the link:adding-a-freebie-condition-with-the-list-based-method-3-2[List
+Based] freebie condition with the specified list of products instead of
+the *Criteria Based* one.
+
+[[h3_1598835347]]
+==== Formula Fields
+
+Formula fields requiring recalculation during order management are not
+supported for freebies.
+
+[[h3__884774678]]
+=== Delivery Management
+
+You cannot create multiple deliveries for the same date and address
+combination:
+
+image:ctorders-overview-2020-11-17-1.jpg[]
+
+[[h2_1062646429]]
+=== Order Management
+
+[[h3_1206446755]]
+==== Multiplicator
+
+*Units Count Step* is link:multiplicator[a>multiplicity step]
+in the order cart, which must be _divisible_ by the *Units in Package*
+value and also _greater than_ that value. I.e. if you set *Units in
+Package* to 5, the *Units Count Step* must be at least 10.
+
+[[h2__176614697]]
+=== Calculating Discounts
+
+[[h3__1475579741]]
+==== Negative values
+
+The built-in calculator and Web Service are not designed to work with
+negative values. The calculations are performed modulo and if the
+price value is negative, for example, due to very large values of
+applied discounts, then there may be errors in further calculations. 
+
+
+
+This limitation affects all platforms—Salesforce, iOS, and Windows.
+
+[[h3__1001740197]]
+==== Formula Fields
+
+Formula fields requiring recalculation during order management are not
+supported for calculating discounts.
+
+

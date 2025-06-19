@@ -1,0 +1,35 @@
+= Auth Data Field Reference
+
+The *Auth Data* object is used to store a token that Salesforce will use
+link:admin-guide/managing-ct-orders/web-service/index#h2__1981203353[to connect to Web Service].
+
+'''''
+
+Object record type API name:
+[.apiobject]#orders__AuthData__c#
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field Label* |*API name* |*Type* |*Description*
+
+|App URL |[.apiobject]#orders__AppUrl__c# |Text
+Area(255) |The Web Service URL address.
+
+|Auth URL |[.apiobject]#orders__AuthUrl__c#
+|Text(255) a|
+The authentication URL address.
+
+|Name |[.apiobject]#Name# |Text(80) |Token name.
+
+|Token |[.apiobject]#orders__Token__c# |Text(255)
+|The generated token.
+
+|Token Id |[.apiobject]#orders__TokenId__c#
+|Text(255) |The token ID on the Web Service side.
+
+|Scope |[.apiobject]#orders__Scope__c# |Text(255)
+|User permission to access Web Service (separated by a comma). For
+example,[.apiobject]#Calculate; Data; Admin#.
+|===
