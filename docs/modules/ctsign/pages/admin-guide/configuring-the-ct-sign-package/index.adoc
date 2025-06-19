@@ -110,27 +110,27 @@ For [.object]#Account# object::
 --
 * *Type*: _Header_
 * *Object*: _Account_
-* *Fields To Display*: _Name_,_Industry_
-* *Required Attributes*: _true_,_false_
-* *Read Only Attributes*: _true_,_true_
+* *Fields To Display*: _Name,Industry_
+* *Required Attributes*: _true,false_
+* *Read Only Attributes*: _true,true_
 --
 For [.object]#User# object::
 +
 --
 * *Type*: _List_
 * *Object*: _User_
-* *Fields To Display*: _FirstName_,_LastName,Email,Phone_
-* *Required Attributes*: _true_,_true,false,_false__
-* *Read Only Attributes*: _true_,_true,_false,_false___.
+* *Fields To Display*: _FirstName,LastName,Email,Phone_
+* *Required Attributes*: _true,true,false,false_
+* *Read Only Attributes*: _true,true,false,false_.
 --
 For [.object]#Contact# object::
 +
 --
 * *Type*: _List_
 * *Object*: _Contact_
-* *Fields To Display*: __FirstName_,_LastName,Email,Phone__
-* *Required Attributes*: __true_,_true,false,_false___
-* *Read Only Attributes*: __true_,_true,_false,_false____
+* *Fields To Display*: _FirstName,LastName,Email,Phone_
+* *Required Attributes*: _true,true,false,false_
+* *Read Only Attributes*: _true,true,false,false_
 --
 ====
 
