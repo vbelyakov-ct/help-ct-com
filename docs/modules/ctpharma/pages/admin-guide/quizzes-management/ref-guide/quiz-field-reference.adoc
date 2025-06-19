@@ -12,7 +12,7 @@ API name in Salesforce: [.apiobject]#Quiz__c#
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Active |Active__c |Checkbox |If selected, the record is active and applied in business logic.
+|Active |[.apiobject]#Active__c# |Checkbox |If selected, the record is active and applied in business logic.
 
 |Anonymous Quiz |[.apiobject]#AnonymousQuiz__c# |Checkbox |If selected, the quiz can be passed anonymously.
 
@@ -54,7 +54,7 @@ The period to remind the assigned partaker to take the quiz. The available value
 |Stop Timer on app exit |[.apiobject]#IsTimeStopsOnExit__c#  |Checkbox a|
 If selected, the timer will be stopped when a user closes the CT Mobile app or switches to another app.
 
-Offline mode in case of integration with the CT Mobile app.
+NOTE: Offline mode in case of integration with the CT Mobile app.
 
 |Strict Mode |[.apiobject]#IsStrictMode__c#   |Checkbox |If selected, a user should send the answer to each question.
 
