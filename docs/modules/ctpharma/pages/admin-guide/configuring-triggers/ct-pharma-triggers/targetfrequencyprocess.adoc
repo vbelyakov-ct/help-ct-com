@@ -13,11 +13,11 @@ API name: [.apiobject]#CTPHARMA\__TargetFrequency__c#
 |*Context* a| *Method* a| *Codename* a| *Description*
 
 .3+|[.apiobject]#Before Insert[bi]# |[.apiobject]#fillOwnerField#
-|fillOF |Update of the [.apiobject]##OwnerId ##field value in the [.apiobject]#CTPHARMA\__OwnerId__c# field.
+|fillOF |Update of the [.apiobject]#OwnerId# field value in the [.apiobject]#CTPHARMA\__OwnerId__c# field.
 
  |[.apiobject]#setPersonalCycles# |[.apiobject]#setPC# |Creating association for a
 [.object]#Marketing Cycle# object record that is related to a
-user of Target Frequency specified in the [.apiobject]##OwnerId ##field.
+user of Target Frequency specified in the [.apiobject]#OwnerId# field.
 
 |[.apiobject]#fillDetailsField# |[.apiobject]#fillDF# |Creating association on the [.object]#Marketing Cycle Detail# object record with the _Call
 Rate_ record type depending on the previously selected Marketing Cycle
@@ -56,7 +56,7 @@ to the Target Frequency for which a trigger is called has a link to the
 Account and/or a link to the Contact in the
 [.apiobject]#CTPHARMA\__ContactId__c#, related to the
 Target Frequency.
-* The [.apiobject]##OwnerId ##field has a link to a user related to the Target Frequency for which a trigger was called.
+* The [.apiobject]#OwnerId# field has a link to a user related to the Target Frequency for which a trigger was called.
 * the [.apiobject]#UserDivision# field value equals the value of
 the owner's division ([.apiobject]#OwnerId#) of the Target Frequency for which a trigger is called.
 

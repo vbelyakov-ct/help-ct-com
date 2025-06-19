@@ -8,7 +8,7 @@ API name: [.apiobject]#CTPHARMA\__MarketingCycleUser__c#
 |===
 |*Context* a| *Method* a| *Codename* a| *Description*
 
-|[.apiobject]#After Insert [ai]#
+|[.apiobject]#After Insert[ai]#
 |[.apiobject]#manageTargetFrequency(false)# |[.apiobject]#manageTF# |If the association between a user and a marketing cycle is not active ([.apiobject]#CTPHARMA\__Active__c# field value is _False_), the Target Frequencies linked to this user is deactivated.
 
 |[.apiobject]#After Update[au]#
