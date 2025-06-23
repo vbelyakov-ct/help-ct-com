@@ -7,7 +7,7 @@ default, these settings are already configured after installing the CT
 Order package.
 |===
 
-Configure link:settings-fields-reference[the main CT Orders
+Configure xref:settings-fields-reference[the main CT Orders
 settings] for an Instance:
 
 . Go to the *Settings* tab and click *New*.
@@ -19,22 +19,22 @@ CT CPG or CT Pharma.
 * Select the corresponding *Product Component Object*, which will be
 used as the bundle component.
 * Specify *Group
-Object*,* *if https://help.customertimes.com/articles/project-ct-cpg/configuring-cpg-groups[dynamic
-groups] will be used.
+Object*,* *if https://help.customertimes.com/articles/project-ct-cpg/configuring-cpg-groups[dynamic
+groups] will be used.
 * In the *Address Object*, specify the API name of the standard
 *Address* object.
 * In the *SKU Field*, specify the API name of the standard *Active*
 field of the corresponding[.object]#Product# object.
-** The *SKU Field* setting is required for the proper operation of
-the link:catalog-management[Catalog] and link:promotions[Promotions] pages.
-The *SKU* attribute defines whether the product record can be added to
+** The *SKU Field* setting is required for the proper operation of
+the xref:catalog-management[Catalog] and xref:promotions[Promotions] pages.
+The *SKU* attribute defines whether the product record can be added to
 an order. It distinguishes the product SKU record from other product
-records used to create hierarchy, such as brands, families, etc. 
-** If the *SKU Field* is set
-to [.apiobject]#CTCPG__IsSKU__c#, then it will
-correspond with the *SKU* checkbox on the[.object]#Product#
-object. If the *SKU* checkbox is unchecked, the product cannot be added
-to an order, but will be displayed in the product hierarchy. 
+records used to create hierarchy, such as brands, families, etc.
+** If the *SKU Field* is set
+to [.apiobject]#CTCPG__IsSKU__c#, then it will
+correspond with the *SKU* checkbox on the[.object]#Product#
+object. If the *SKU* checkbox is unchecked, the product cannot be added
+to an order, but will be displayed in the product hierarchy.
 
 [TIP] ==== You may create a custom field of the corresponding
 [.object]#Product ==== object to use as the *SKU Field*.#

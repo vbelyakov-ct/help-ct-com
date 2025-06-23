@@ -16,23 +16,23 @@ image:CT-Order-Data-Model.png[]
 |===
 |*Object* |*API Name* |*Record Type* |*Description*
 
-|link:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/ct-order-data-model[CT Order]
+|xref:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/ct-order-data-model[CT Order]
 |[.apiobject]#orders__Order__c# | |This object is
 intended to store order data. Each record represents an order with
 specific[.object]#CT Products# from available
 [.object]#Catalogs#, prices from[.object]#CT Price
-Book# according to pricing procedures and discounts management,
+Book# according to pricing procedures and discounts management,
 configured delivery dates, and order status.
 
-|link:delivery-field-reference[Delivery]
+|xref:delivery-field-reference[Delivery]
 |[.apiobject]#orders__Delivery__c# | |This object is
 intended to store dates and other related data about order deliveries.
 
-|link:delivery-line-item-field-reference[Delivery Line Item]
+|xref:delivery-line-item-field-reference[Delivery Line Item]
 |[.apiobject]#orders__DeliveryLineItem__c# | |This
 object is intended to store the data for each delivery in order.
 
-|link:limit-rules[Limit Rule]
+|xref:limit-rules[Limit Rule]
 |[.apiobject]#orders__LimitRule__c# a|
 * Order
 * Delivery
@@ -40,14 +40,14 @@ object is intended to store the data for each delivery in order.
 |This object is intended to store the minimum and maximum product
 quantity for an order and each delivery.
 
-|link:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/order-line-item-field-reference[Order Line Item]
+|xref:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/order-line-item-field-reference[Order Line Item]
 |[.apiobject]#orders__OrderLineItem__c# | |This
 object is intended to store details about related
 [.object]#Catalog# and[.object]#CT Price Book#, general
 information about promotions, discounts, and totals for each
 [.object]#CT Product#.
 
-|link:quota-field-reference[Quota]
+|xref:quota-field-reference[Quota]
 |[.apiobject]#orders__Quota__c# a|
 * Individual
 * Template
@@ -55,12 +55,12 @@ information about promotions, discounts, and totals for each
 |This object is used to allocate a fixed share of products to orders
 according to the conditions fulfilled.
 
-|link:quota-usage-field-reference[Quota Usage]
+|xref:quota-usage-field-reference[Quota Usage]
 |[.apiobject]#orders__QuotaUsage__c# | |This object is
 a junction object that links a quota to a certain delivery and stores
 all information on the quota.
 
-|link:product-availability[Product Availability]
+|xref:product-availability[Product Availability]
 |[.apiobject]#orders__ProductAvailability__c# | |This
 object is used to track the availability status of SKUs stored at the
 warehouse and define specific availability dates for different

@@ -1,10 +1,10 @@
 = Workshop 5.5: SDK Updating Values in the Order and Delivery Fields
 
 This option is provided by
-the link:admin-guide/managing-ct-orders/sdk/updating-values-in-the-order-and-delivery-fields[SDK]
-allowing to update the fields on[.object]#Order#,
+the xref:admin-guide/managing-ct-orders/sdk/updating-values-in-the-order-and-delivery-fields[SDK]
+allowing to update the fields on[.object]#Order#,
 [.object]#Order Line Item#,[.object]#Delivery#, and
-[.object]#Delivery Line Item# objects with new values used for
+[.object]#Delivery Line Item# objects with new values used for
 further discount and freebies calculations and defined by the logic in
 the Apex class. This update occurs at a moment when a product is being
 added to the order.
@@ -14,33 +14,33 @@ added to the order.
 To set up fields for update:
 
 . Create and add
-an https://help.salesforce.com/articleView?id=sf.code_manage_packages.htm&type=5[Apex
-class] to your Salesforce org to specify the update logic of the
+an https://help.salesforce.com/articleView?id=sf.code_manage_packages.htm&type=5[Apex
+class] to your Salesforce org to specify the update logic of the
 selected fields.
 
-[{plus}] link:javascript:void(0)[Apex class example:]
+[{plus}] xref:javascript:void(0)[Apex class example:]
 
 .[-] Hide[%collapsible] ====
 
 ====
-. Go to *Settings* and click *New*.
-. Select *SDKSetting* record type and click *Next*.
+. Go to *Settings* and click *New*.
+. Select *SDKSetting* record type and click *Next*.
 . Fill in the fields:
 [TIP] ==== The full description of the fields is available
-link:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/sdk-setting-field-reference[here]. ====
-* Fill in *Order type* and *Sales Organization* fields.
-* *SDK Type*: updateDataOnAfterOrderLineItemUpsert.
+xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/sdk-setting-field-reference[here]. ====
+* Fill in *Order type* and *Sales Organization* fields.
+* *SDK Type*: updateDataOnAfterOrderLineItemUpsert.
 * *Platform*: select where to apply the setting.
 [NOTE] ==== Currently, the setting cannot be applied on mobile
 devices. ====
-* *Version*: v1. Currently, only v1 is available, otherwise, the setting
+* *Version*: v1. Currently, only v1 is available, otherwise, the setting
 won't be applied.
-* *Implementation*: enter the name of the created Apex class of step 2.
-* *Parameters*:** **fill in the list of fields in JSON format:
+* *Implementation*: enter the name of the created Apex class of step 2.
+* *Parameters*:** **fill in the list of fields in JSON format:
 [NOTE] ==== The fields written in the Apex class should match
-those written in the JSON, otherwise the setting won't work.  ====
+those written in the JSON, otherwise the setting won't work.  ====
 
-[{plus}] link:javascript:void(0)[JSON example]
+[{plus}] xref:javascript:void(0)[JSON example]
 
 .[-] Hide[%collapsible] ====
 

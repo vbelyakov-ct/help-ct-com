@@ -3,7 +3,7 @@
 The *Split Setting* record type is intended to store configuration which
 is used to split the order into suborders for further integration with
 the customer ERP system. The setting is applied upon
-link:order-management[order finalization].
+xref:order-management[order finalization].
 
 
 
@@ -74,11 +74,11 @@ Text Area(32768) a|
 Defines the principle according to which the delivery will be split.
 Specify a path to the fields that store parameters on the
 [.object]#Delivery# object (specified in
-the orders__SplitFieldsList__c field). Maximum 5 fields are
-allowed. 
+the orders__SplitFieldsList__c field). Maximum 5 fields are
+allowed.
 
 [NOTE] ==== When managing bundles, make sure that the ====
 *Split Parameter Path* value is the same for both the bundle header and
-its components. Otherwise, the split settings might work incorrectly.
+its components. Otherwise, the split settings might work incorrectly.
 
 |===

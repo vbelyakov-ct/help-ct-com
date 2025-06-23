@@ -3,8 +3,8 @@
 Consider that the mobile users should have the appropriate permissions
 for objects listed below and required for proper operation of the CT
 Orders features.
-Perform https://help.customertimes.com/articles/ct-mobile-ios-en/synchronization[the
-full synchronization] to download these objects to the mobile device.
+Perform https://help.customertimes.com/articles/ct-mobile-ios-en/synchronization[the
+full synchronization] to download these objects to the mobile device.
 
 [NOTE] ==== Records are loaded to the device according to a
 specific set of predefined conditions. Currently, there is no
@@ -16,7 +16,7 @@ https://jira.customertimes.com/browse/CTOM-131
 
 
 You
-can link:adding-ct-orders-to-the-ct-mobile-app-4-0#h2__1358985369[set
+can xref:adding-ct-orders-to-the-ct-mobile-app-4-0#h2__1358985369[set
 up a filter for loading records for these objects]:
 
 *[.apiobject]#orders__Order__с#
@@ -115,11 +115,11 @@ Create; Edit |
 |Target package objects |Depending on the target system |Read a|
 Possible values:
 
-* using https://help.customertimes.com/articles/ct-pharma-publication/ct-pharma-solution[CT
+* using https://help.customertimes.com/articles/ct-pharma-publication/ct-pharma-solution[CT
 Pharma], CTPHARMA__Product__c
-* using https://help.customertimes.com/articles/ct-cpg-publication/ct-cpg-solution[CT
+* using https://help.customertimes.com/articles/ct-cpg-publication/ct-cpg-solution[CT
 CPG], CTCPG__Product__c
-* using link:cg-cloud-support[CG Cloud], or without installed CT
+* using xref:cg-cloud-support[CG Cloud], or without installed CT
 Pharma and CT CPG solution, Product2
 
 | |[.apiobject]#ProductComponent__c# |Read |

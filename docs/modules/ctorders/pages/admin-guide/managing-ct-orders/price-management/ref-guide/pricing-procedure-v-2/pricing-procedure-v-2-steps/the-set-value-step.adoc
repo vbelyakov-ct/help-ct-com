@@ -13,7 +13,7 @@ This step is used to calculate and set the field's value.
 [.apiobject]#setValue# constant.
 
 |[.apiobject]#condition# |Step Conditions |No |See the
-link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/step-conditions[Step Conditions].
+xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/step-conditions[Step Conditions].
 
 |[.apiobject]#object# |Enum |Yes a|
 API name of an object. Available values:
@@ -25,11 +25,11 @@ API name of an object. Available values:
 
 |[.apiobject]#resultPrice# |String |Yes |The
 [.apiobject]#object# key to store the calculated price. See the
-link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-available-field-formats[Available Field
+xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-available-field-formats[Available Field
 Formats].
 
 |[.apiobject]#value# |Formula Value Item |Yes |See the
-link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-set-value-step#h3_71686657[Formula Value Item].
+xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-set-value-step#h3_71686657[Formula Value Item].
 |===
 
 [[h2__424773932]]
@@ -43,11 +43,11 @@ link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure
 
 |[.apiobject]#String# | |The[.apiobject]#object# key to
 get a price for calculation. See the
-link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-available-field-formats[Available Field
+xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-available-field-formats[Available Field
 Formats].
 
 |[.apiobject]#Object# | |Value calculation formula. See the
-link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-set-value-step#h2_1231388848[Set Value Calculation
+xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-set-value-step#h2_1231388848[Set Value Calculation
 Formula].
 |===
 
@@ -66,37 +66,37 @@ Calculation operator. Available values:
 * minus
 * divide
 
-If you select the minus operator, you can use the minus sign for a
+If you select the minus operator, you can use the minus sign for a
 value, for example,[.apiobject]#-$.quantity#.
 
 |[.apiobject]#items# |Array |Yes |See the
-link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-set-value-step#h3_71686657[Formula Value Item].
+xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-set-value-step#h3_71686657[Formula Value Item].
 |===
 
 [[h2__1406500097]]
 === Examples
 
-[{plus}] link:javascript:void(0)[Standard Set Value Step:
+[{plus}] xref:javascript:void(0)[Standard Set Value Step:
 Number]
 
 .[-] Hide[%collapsible] ====
 
 ====
 
-[{plus}] link:javascript:void(0)[Standard Set Value Step: Field]
+[{plus}] xref:javascript:void(0)[Standard Set Value Step: Field]
 
 .[-] Hide[%collapsible] ====
 
 ====
 
-[{plus}] link:javascript:void(0)[Standard Set Value Step: Flat
+[{plus}] xref:javascript:void(0)[Standard Set Value Step: Flat
 Formula]
 
 .[-] Hide[%collapsible] ====
 
 ====
 
-[{plus}] link:javascript:void(0)[Standard Set Value Step:
+[{plus}] xref:javascript:void(0)[Standard Set Value Step:
 Complex Formula]
 
 .[-] Hide[%collapsible] ====

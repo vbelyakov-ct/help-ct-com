@@ -23,7 +23,7 @@ This checkbox is interrelated with promo Status.
 
 |Assigned On Order |orders__isAssignedOnOrder__c |Checkbox
 a|
-If _true_, the link:ct-order-field-reference[Promotion Id] lookup
+If _true_, the xref:ct-order-field-reference[Promotion Id] lookup
 field is checked on the order. If the field contains SFID of the
 promotion, the promotion will be displayed in the left list of the order
 screen.
@@ -47,7 +47,7 @@ Calculation Type used for the price calculation.
 
 * Calculation Type should have the same unit of measure as specified in
 the Promo settings
-* The [.apiobject]#orders__IsPromoRelated__c# checkbox
+* The [.apiobject]#orders__IsPromoRelated__c# checkbox
 should be selected.
 * Calculation Type should have the _Condition_ record type.
 

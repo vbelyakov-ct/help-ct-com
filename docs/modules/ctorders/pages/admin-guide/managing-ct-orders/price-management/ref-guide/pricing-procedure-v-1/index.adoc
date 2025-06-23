@@ -3,10 +3,10 @@
 The[.object]#Pricing Procedure# object defines the method and
 succession of discount calculations for each order. The procedure is
 specified in JSON format in the
-link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-fields-reference[Pricing Procedure] field or
-by using the link:admin-guide/managing-ct-orders/price-management/procedure-builder-tab[Procedure Builder].
+xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-fields-reference[Pricing Procedure] field or
+by using the xref:admin-guide/managing-ct-orders/price-management/procedure-builder-tab[Procedure Builder].
 
-Since CT Orders 2.0, link:pricing-procedure-v-2-steps[the pricing
+Since CT Orders 2.0, xref:pricing-procedure-v-2-steps[the pricing
 procedure v. 2.0] is available.
 
 :toc: :toclevels: 3
@@ -30,7 +30,7 @@ Have a look at JSON examples for different discounts:
 ​If true that between the *Calculated Type* records will be selected
 minimum discount except for 0 discounts.
 
-*  The default value is true.
+*  The default value is true.
 * The result will be 0 if all[.object]#Calculated Types# are 0.
 
 Applicable if[.apiobject]#"type":"MIN"#.
@@ -72,7 +72,7 @@ added to decimals after the comma.
 Available values:
 [NOTE] ==== A nested type inherits the constraints of its parent
 type. See the description in the
-link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-1/pricing-procedure-v-1#h3__1124271170[Type Values Description]
+xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-1/pricing-procedure-v-1#h3__1124271170[Type Values Description]
 table. ====
 
 * MIN
@@ -132,7 +132,7 @@ Sequential application of discounts.
 * Each subsequent discount is applied to a product price that is
 calculated after the previous discount has been applied.
 * The operator can be applied for any
-link:calculation-types-field-reference[Calculation Type]
+xref:calculation-types-field-reference[Calculation Type]
 combination of *Calculation Method* and *Unit of Measure*.
 * The operator can be used with additional attributes, such as
 [.apiobject]#isIgnoresNull#,[.apiobject]#round#, and

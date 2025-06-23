@@ -11,22 +11,22 @@ allowing to cover difficult discount calculation scenarios.
 The *Promotion* page is implemented as a Lightning component with four
 tabs:
 
-* The link:admin-guide/managing-ct-orders/discount-management/promotions#h2_1422482942[Details] tab with the main
+* The xref:admin-guide/managing-ct-orders/discount-management/promotions#h2_1422482942[Details] tab with the main
 promotion info, such as status, promotion availability, order dates, and
 delivery datesю
-* The link:admin-guide/managing-ct-orders/discount-management/promotions#h2_1219631006[Product Management] tab
+* The xref:admin-guide/managing-ct-orders/discount-management/promotions#h2_1219631006[Product Management] tab
 consists of two sections. The left list section displays a list or
 hierarchy view of products available for adding to
-link:promotion-field-reference[a promotion]. The right list section
+xref:promotion-field-reference[a promotion]. The right list section
 displays products added to a promotion, which are represented as the
-link:promotion-line-item-field-reference[Promotion Line Item]
+xref:promotion-line-item-field-reference[Promotion Line Item]
 records.
-* The link:admin-guide/managing-ct-orders/discount-management/promotions#h2__1068677388[Discount Management] tab is
+* The xref:admin-guide/managing-ct-orders/discount-management/promotions#h2__1068677388[Discount Management] tab is
 used for the discount level assignment for the selected promotion
 products.
-* The link:admin-guide/managing-ct-orders/discount-management/promotions#h2__492952072[Promotion Assignment] tab
+* The xref:admin-guide/managing-ct-orders/discount-management/promotions#h2__492952072[Promotion Assignment] tab
 consists of two sections. The left list section displays a list of
-link:promotion-field-reference[promotions]. In the right list
+xref:promotion-field-reference[promotions]. In the right list
 section, assign promotions for accounts.
 
 
@@ -38,24 +38,24 @@ image:promotions-details.png[]
 
 On the *Details* tab, you can see and edit the following:
 
-. Specify the promotion status: 
+. Specify the promotion status:
 * *Draft* is the default status for the newly created promotion.
 Promotion is not available for users.
 * *Active* means that promotion is available for all users.
 You cannot change settings for active promotion. Set it to draft to
-introduce changes. 
+introduce changes.
 * *Closed* means that the promotion is expired and is no longer active.
 It will not be displayed for CT Mobile users.
-Promotion is automatically set as *Closed* when the current date is
-later than the *Delivery End Date.* 
+Promotion is automatically set as *Closed* when the current date is
+later than the *Delivery End Date.*
 * *Canceled* is set for invalid promotions or promotions canceled by the
 administrator.
-. It is necessary to specify the link:admin-guide/managing-ct-orders/discount-management/calculation-types[Calculation
+. It is necessary to specify the xref:admin-guide/managing-ct-orders/discount-management/calculation-types[Calculation
 Type] for a promotion.
 . Specify order and delivery promotion dates.
-* *Order Dates* must not be later than *Delivery Dates*.
+* *Order Dates* must not be later than *Delivery Dates*.
 * If a sales rep changes delivery dates to incorrect dates
-in link:offline-order[the CT Mobile app], the number of eligible
+in xref:offline-order[the CT Mobile app], the number of eligible
 promotional products in the order cart will be reset and blocked.
 . Specify the long-term discount dates.
 
@@ -63,7 +63,7 @@ promotional products in the order cart will be reset and blocked.
 === Product Management
 
 The *Product Management* tab on the _Promotion_ record page allows you
-to create promotions that include link:admin-guide/managing-ct-orders/product-management/index[products
+to create promotions that include xref:admin-guide/managing-ct-orders/product-management/index[products
 and product bundles].
 
 * On the left side, the available promotions are displayed as a list
@@ -71,9 +71,9 @@ and product bundles].
 or according to hierarchy
 (image:product-mgmt-hierarchy-icon.png[]).
 Use the toggle to the appropriate view and
-the image:product-mgmt-filter-icon.png[] button
+the image:product-mgmt-filter-icon.png[] button
 to sort and search.
-Click image:product-mgmt-hide-left-panel-icon.png[]
+Click image:product-mgmt-hide-left-panel-icon.png[]
 to hide the left side.
 * On the right side, specify products for the discount. To pin the
 *Product* column, hover mouse pointer and click
@@ -86,7 +86,7 @@ image:promotions-product-management.png[]
 
 Search is carried out in the fields that are listed on the product
 https://help.salesforce.com/articleView?id=search_results_setup_parent.htm&type=5[Search
-Results] search layout (including the *Name* field). If you select
+Results] search layout (including the *Name* field). If you select
 multiple filters, the products will be displayed that match the selected
 criteria.
 
@@ -98,7 +98,7 @@ You can search:
 * by a product name.
 [NOTE] ==== Create the *SKU* checkbox for the target
 [.object]#Product ==== object and specify it in the
-link:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/object-setting-field-reference[Object Setting] record for the
+xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/object-setting-field-reference[Object Setting] record for the
 Salesforce organization. This property signifies that this product is a
 stock-keeping unit that can be added to catalogs.#
 
@@ -106,10 +106,10 @@ stock-keeping unit that can be added to catalogs.#
 ==== Promotion Products
 
 To add products to catalogs, it is necessary to create
-link:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/layout-setting-field-reference[a Layout Setting record] for
-the[.object]#Promotion Line Item# object. If a *Layout
-Setting* for the object is not found or no field is specified, the
-record ID will be displayed instead of a product name. 
+xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/layout-setting-field-reference[a Layout Setting record] for
+the[.object]#Promotion Line Item# object. If a *Layout
+Setting* for the object is not found or no field is specified, the
+record ID will be displayed instead of a product name.
 
 Unlike catalogs, promotions do not support product hierarchy and are
 always listed consecutively.
@@ -124,25 +124,25 @@ certain product.
 * Click *Save* so that selected products will be displayed in the
 *Discount Management* list.
 * Added product is represented as
-link:promotion-line-item-field-reference[the Promotion Line Item
+xref:promotion-line-item-field-reference[the Promotion Line Item
 record].
 * If the products are not added to the list, try refreshing the page.
 
 [[h2__1068677388]]
 === Discount Management
 
-The *Discount Management* tab on the _Promotion_ record page allows you
+The *Discount Management* tab on the _Promotion_ record page allows you
 to assign discount levels according to rates for the selected
-link:admin-guide/managing-ct-orders/discount-management/promotions#h3__1395193200[promotion products].
+xref:admin-guide/managing-ct-orders/discount-management/promotions#h3__1395193200[promotion products].
 
 * The *Discount Rate* unit of measure is automatically obtained from the
-assigned link:admin-guide/managing-ct-orders/discount-management/calculation-types[calculation type] for a promotion
+assigned xref:admin-guide/managing-ct-orders/discount-management/calculation-types[calculation type] for a promotion
 (amount or %).
 * Discounts for promotions are saved as the
-link:condition-field-reference[Condition] record with linked
-link:condition-level-field-reference[Condition Level] records. You
-can also add new levels directly on the related **Calculation
-Type **page in the *Condition* section.
+xref:condition-field-reference[Condition] record with linked
+xref:condition-level-field-reference[Condition Level] records. You
+can also add new levels directly on the related **Calculation
+Type **page in the *Condition* section.
 
 image:promotions-discount-management.png[]
 
@@ -150,10 +150,10 @@ image:promotions-discount-management.png[]
 === Freebies Management
 
 Once you have selected products to use for freebies in the
-link:admin-guide/managing-ct-orders/discount-management/promotions#h2_333729072[*Product Management* tab] and set up
-link:freebies-management#h3__1307099884[Freebie type], you can
+xref:admin-guide/managing-ct-orders/discount-management/promotions#h2_333729072[*Product Management* tab] and set up
+xref:freebies-management#h3__1307099884[Freebie type], you can
 configure Freebies in the *Freebies Management* tab. See detailed
-description here: link:freebie-management-tab[Freebies Management
+description here: xref:freebie-management-tab[Freebies Management
 Tab].
 
 [[h2__492952072]]
@@ -165,18 +165,18 @@ accounts* checkbox on the *Details* tab of the Promotion record page. In
 the latter case, the *Sales Org* selection field in the promotion
 settings will be inactive. Otherwise, you need to assign a promotion to
 accounts, which means creating
-link:promotion-assignment-field-reference[a Promotion Assignment
+xref:promotion-assignment-field-reference[a Promotion Assignment
 record].
 
 
 
 To display the *Promotion Assignment* tab on the layout, you need to
-configure link:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/layout-setting-field-reference[a Layout Setting
+configure xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/layout-setting-field-reference[a Layout Setting
 record] for the *Promotion Assignment* object. Drag and drop promotions
 to assign them to the selected Account record.
 
 If you selected multiple filters, accounts will be displayed that match
-all the selected criteria.
+all the selected criteria.
 
 image:promotions-promotions-assignment.png[]
 
@@ -192,7 +192,7 @@ To apply dynamic search logic:
 
 . Define the[.object]#Group# and[.object]#Group
 Member# objects of the target package in the
-link:admin-guide/getting-started/setting-up-an-instance/configuring-object-setting[Object Settings].
+xref:admin-guide/getting-started/setting-up-an-instance/configuring-object-setting[Object Settings].
 . Create a lookup to the[.object]#Group# object of the CT
 package on the[.object]#Promotion# object.
 . Make sure the promotion is not available for all accounts (checkbox is
@@ -212,12 +212,12 @@ _Object Setting_ record type, and specify the referenced objects in
 The following steps must be performed by the administrator in order to
 make promotions available for discount calculation:
 
-. Create link:admin-guide/getting-started/setting-up-an-instance/configuring-object-setting[the Object Setting record]
+. Create xref:admin-guide/getting-started/setting-up-an-instance/configuring-object-setting[the Object Setting record]
 for the SF Instance.
 . Add
-link:admin-guide/getting-started/setting-up-an-instance/creating-relationships-between-product-and-ct-orders-objects[lookups
+xref:admin-guide/getting-started/setting-up-an-instance/creating-relationships-between-product-and-ct-orders-objects[lookups
 to a CT Product] object.
-. link:configuring-layout-settings-1-0[Configure Layout Settings]
+. xref:configuring-layout-settings-1-0[Configure Layout Settings]
 for[.object]#Promotion Line Item# and
 [.object]#Promotion Assignment# objects.
 . Create and configure Calculation Type for a promotion.
@@ -229,8 +229,8 @@ for[.object]#Promotion Line Item# and
 
 See also:
 
-* link:how-to-create-a-promotion[How to Create a Promotion]
-* link:how-to-manage-products-in-promotion[How to Manage Products
+* xref:how-to-create-a-promotion[How to Create a Promotion]
+* xref:how-to-manage-products-in-promotion[How to Manage Products
 in Promotion]
-* link:how-to-manage-discount-settings-for-a-promotion[How to
+* xref:how-to-manage-discount-settings-for-a-promotion[How to
 Manage Discount Settings for a Promotion]

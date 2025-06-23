@@ -55,9 +55,9 @@ a|
 
 a|
 **[.apiobject]#orders__OrderId__c#
-** link:creating-a-relationship-between-custom-address-object-and-delivery-1-0[Lookup(Address)]
+** xref:creating-a-relationship-between-custom-address-object-and-delivery-1-0[Lookup(Address)]
 ** Fields in the
-[.apiobject]#link:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/split-settings-field-reference[order__SplitFields__c]#
+[.apiobject]#xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/split-settings-field-reference[order__SplitFields__c]#
 
 
 
@@ -66,11 +66,11 @@ a|
 [.object]#Pricing Procedure# and a lookup from the
 [.object]#Order# object cannot be filled since they will be
 rewritten by the implemented logic.
-** For link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-1/index[Pricing Procedure v.1], do not
+** For xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-1/index[Pricing Procedure v.1], do not
 use the[.apiobject]#orders__UnitPrice__c#,
 [.apiobject]#orders__TotalPrice__c#, and
 [.apiobject]#orders__TotalDiscount__с# fields.
-** For link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/index[Pricing Procedure v. 2], do
+** For xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/index[Pricing Procedure v. 2], do
 not use fields specified for the[.apiobject]#resultPrice# and
 [.apiobject]#object# keys.
 
@@ -78,19 +78,19 @@ not use fields specified for the[.apiobject]#resultPrice# and
 
 To set up updating custom fields in objects when adding a product to an
 order to further calculate discounts and freebies,
-link:5-5-sdk-updating-values-in-the-order-and-delivery-fields[create
-an OM Settings record] with the *SDK Setting* record type. For more
-information, refer to link:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/sdk-setting-field-reference[SDK Setting
-Field Reference]. 
+xref:5-5-sdk-updating-values-in-the-order-and-delivery-fields[create
+an OM Settings record] with the *SDK Setting* record type. For more
+information, refer to xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/sdk-setting-field-reference[SDK Setting
+Field Reference].
 
 When writing code for this logic, follow the version format according to
-the *Version* field of the *OM Settings* record. Otherwise, a warning
+the *Version* field of the *OM Settings* record. Otherwise, a warning
 will be shown that the calculator will be disabled and the total price
-will be calculated based on *List Price* values.
+will be calculated based on *List Price* values.
 
 
 
 See also:
 
-* link:5-5-sdk-updating-values-in-the-order-and-delivery-fields[Workshop
+* xref:5-5-sdk-updating-values-in-the-order-and-delivery-fields[Workshop
 5.5: SDK Updating Values in the Order and Delivery Fields]

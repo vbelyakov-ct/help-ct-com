@@ -20,8 +20,8 @@ to the CT Mobile app.
 Salesforce and CT Mobile.
 * Allows Salesforce users to simultaneously work with multiple order
 carts on different
-tabs. link:admin-guide/managing-ct-orders/order-management/ref-guide/user-permissions-for-offline-orders[Go to the
-article] to view the required user permissions. 
+tabs. xref:admin-guide/managing-ct-orders/order-management/ref-guide/user-permissions-for-offline-orders[Go to the
+article] to view the required user permissions.
 
 
 
@@ -57,24 +57,24 @@ Discount#
 .. Each _Order_ record is presented as a JSON file (flat list) in
 package(s).
 [TIP] ==== To learn more about JSON keys and view examples,
-refer to link:order-change-manager-json-examples-and-keys[Order
+refer to xref:order-change-manager-json-examples-and-keys[Order
 Change Manager: JSON Examples and Keys]. ====
 . During the synchronization, REST API sends package(s) with changes to
 the records of the following CT Orders objects to a designated
-endpoint:[.apiobject]#{{Salesforce_instance_url}}/services/apexrest/ChangeManager#. The
+endpoint:[.apiobject]#{{Salesforce_instance_url}}/services/apexrest/ChangeManager#. The
 standard CT Mobile functionality for iOS users, such
-as https://help.customertimes.com/articles/ct-mobile-ios-en/sync-recovery[Sync
-Recovery], https://help.customertimes.com/articles/ct-mobile-ios-en/conflict-manager-control[Conflict
+as https://help.customertimes.com/articles/ct-mobile-ios-en/sync-recovery[Sync
+Recovery], https://help.customertimes.com/articles/ct-mobile-ios-en/conflict-manager-control[Conflict
 Manager],
-and https://help.customertimes.com/articles/ct-mobile-ios-en/online-records-fetching[Online
-Records Fetching], does not apply to those CT Orders objects. 
+and https://help.customertimes.com/articles/ct-mobile-ios-en/online-records-fetching[Online
+Records Fetching], does not apply to those CT Orders objects.
 . On the Salesforce side, the system creates an _Order Change Manager_
 record for the particular[.object]#Order# and fills it out with
-the received JSONs. If a previous _Order Change Manager_ record is
-found, it will be deleted. For more information, refer
-to link:order-change-manager-field-reference[Order Change Manager
+the received JSONs. If a previous _Order Change Manager_ record is
+found, it will be deleted. For more information, refer
+to xref:order-change-manager-field-reference[Order Change Manager
 Field Reference].
-. The link:admin-guide/managing-ct-orders/order-change-manager/order-change-manager[Order Change Manager] checks SOQL
+. The xref:admin-guide/managing-ct-orders/order-change-manager/order-change-manager[Order Change Manager] checks SOQL
 queries received from CT Mobile. If the query contains a mobile
 temporary record ID, Order Change Manager checks if there is a record
 with the same value in the *Reference Id* field in Salesforce. If such a
@@ -128,8 +128,8 @@ statuses on the mobile device and in Salesforce because the mobile user
 did not perform the fast synchronization. Use the additional option to
 control whether to create a duplicate of the finalized order with all
 related records in Salesforce, or update it if a mobile user made
-changes to this order. For more information about the order stages,
-refer to link:admin-guide/managing-ct-orders/order-management/index#h2_158967301[Order Stages]. 
+changes to this order. For more information about the order stages,
+refer to xref:admin-guide/managing-ct-orders/order-management/index#h2_158967301[Order Stages].
 
 For example, an order was downloaded to a mobile device and then
 finalized in Salesforce. If, after finishing the order in Salesforce,
@@ -141,12 +141,12 @@ records in Salesforce during the next synchronization.
 
 The administrator can change the default behavior using the *Turn Off
 Closed Orders Duplication* checkbox on the appropriate
-link:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/sales-organization-field-reference[Sales Organization] record.
+xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/sales-organization-field-reference[Sales Organization] record.
 
 * By default, the checkbox is disabled. A duplicate of the mobile order
 will be created with all related records in Salesforce when a mobile
-user edits this record on the mobile device. This logic does not affect
-orders on the *On-Hold* stage in Salesforce.
+user edits this record on the mobile device. This logic does not affect
+orders on the *On-Hold* stage in Salesforce.
 * When the checkbox is selected, the finalized order is updated in
 Salesforce if a mobile user has edited it in CT Mobile.
 
@@ -165,7 +165,7 @@ ifdef::hidden[]
 === Salesforce: Public method
 
 When a record is changed, Order Change Manager saves all changes in the
-link:order-change-manager-field-reference[Order Change Manager]
+xref:order-change-manager-field-reference[Order Change Manager]
 record. If a user closes the order cart, *Finalize* or *Complete* the
 order in Salesforce or CT Mobile app, the corresponding *Order Change
 Manager* record will be deleted.

@@ -21,17 +21,17 @@ To create a lookup to *CT Product*:
 Relationships* and click *New*.
 . Select the *Lookup Relationship* data type for the new custom field
 and click *Next*.
-. Select the *CT Product* (or *Product*, if the CPG package is not
-installed) object from the *Related to* picklist and click *Next*.
+. Select the *CT Product* (or *Product*, if the CPG package is not
+installed) object from the *Related to* picklist and click *Next*.
 . In the *Field Information* section:
 * Enter _Product_ as the *Field Label*.
-* Enter _ProductId_ as the *Field Name*.
+* Enter _ProductId_ as the *Field Name*.
 
 [WARNING] ==== The lookup field name must be the same for all
-objects ([.object]#Catalog Line Item ==== , [.object]#Promotion Line Item#, [.object]#Price Book Line
-Item#, [.object]#Order Line Item#, [.object]#Freebie
-Line Item,# and [.object]#Delivery Line Item#) to avoid an
-error. #[NOTE] ==== When naming the lookup field, please
+objects ([.object]#Catalog Line Item ==== , [.object]#Promotion Line Item#, [.object]#Price Book Line
+Item#, [.object]#Order Line Item#, [.object]#Freebie
+Line Item,# and [.object]#Delivery Line Item#) to avoid an
+error. #[NOTE] ==== When naming the lookup field, please
 consider the following rules applied by the package logic during a
 search: ====
 .. Search for a field with the[.apiobject]#ProductId__c#
@@ -58,6 +58,6 @@ The lookup to the[.object]#CT Product# object on the
 create a lookup to the[.object]#CT Product# (or
 [.object]#Product#)[.object]## object on
 [.object]#Promotion Line Item#,
-[.object]#CT #[.object]#Price Book Line Item#,
+[.object]#CT #[.object]#Price Book Line Item#,
 [.object]#Order Line Item#,[.object]#Freebie Line
 Item,# and[.object]#Delivery Line Item# objects.

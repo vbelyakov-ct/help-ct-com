@@ -1,6 +1,6 @@
 = Freebie Condition: LevelFormula__c Field Specification
 
-Available for instances with the enabled link:web-service[Web
+Available for instances with the enabled xref:web-service[Web
 Service].
 
 *Level Formula* allows adding freebies based not only on the number of
@@ -32,10 +32,10 @@ Example of a calculation with division and
 |*Key* |*Type* |*Required* |*Comment*
 
 |[.apiobject]#cutDecimalsTo# |Number |No a|
-The optional operator truncates the number of the decimal places on the
-resulting value after the operations with items.
+The optional operator truncates the number of the decimal places on the
+resulting value after the operations with items.
 
-It can be used in pair with roundTo after rounding. 
+It can be used in pair with roundTo after rounding.
 
 |[.apiobject]#items# |Array |Yes a|
 Items is to be used in calculations.
@@ -68,10 +68,10 @@ the calculations.#
 0.
 
 |[.apiobject]#roundTo# |Number |No a|
-The optional and rounds the number of decimals on the resulting value
+The optional and rounds the number of decimals on the resulting value
 after the operations with[.apiobject]#items#.
 
-It can be used in pair with [.apiobject]#cutDecimalsTo# before
+It can be used in pair with [.apiobject]#cutDecimalsTo# before
 truncating to the required number of decimal places.
 
 |===

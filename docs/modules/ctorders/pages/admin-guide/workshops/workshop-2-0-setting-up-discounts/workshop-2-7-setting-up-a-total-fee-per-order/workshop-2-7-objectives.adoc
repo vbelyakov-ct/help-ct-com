@@ -13,27 +13,27 @@ several discounts.
 
 
 
-Prior to the setup process, please check on the following list of the
-prerequisites that should be carried out first:
+Prior to the setup process, please check on the following list of the
+prerequisites that should be carried out first:
 
 * The account you are working with
-must link:admin-guide/workshops/workshop1-0-creating-basic-order/configuring-an-account-1-0[be able to make orders].
-* Create a custom *Total For Discount* field with the API
-name [.apiobject]#TotalForDiscount__c# and the _Currency
-(16, 2)_ type on the link:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/order-line-item-field-reference[Order
-Line Item] object.
+must xref:admin-guide/workshops/workshop1-0-creating-basic-order/configuring-an-account-1-0[be able to make orders].
 * Create a custom *Total For Discount* field with the API
-name [.apiobject]#TotalForDiscount__c# and the _Currency
-(16, 2)_ type on
-the link:admin-guide/managing-ct-orders/delivery-management/delivery-line-item-field-reference[Delivery Line
-Item] object.
+name [.apiobject]#TotalForDiscount__c# and the _Currency
+(16, 2)_ type on the xref:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/order-line-item-field-reference[Order
+Line Item] object.
+* Create a custom *Total For Discount* field with the API
+name [.apiobject]#TotalForDiscount__c# and the _Currency
+(16, 2)_ type on
+the xref:admin-guide/managing-ct-orders/delivery-management/delivery-line-item-field-reference[Delivery Line
+Item] object.
 * Create one or more discounts to be automatically applied to the
-cart, link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-1/example-mixed[for example&#44; structural&#44;
-season&#44; or contract].  
-[NOTE] ==== Please, note that you need to specify the *External
-Id* of each Calculation Type that you want to apply in the order cart in
-the [.object]#link:admin-guide/workshops/workshop-2-0-setting-up-discounts/workshop-2-3-setting-up-a-manual-discount/setting-up-a-pricing-procedure-2-3[Pricing
+cart, xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-1/example-mixed[for example&#44; structural&#44;
+season&#44; or contract].
+[NOTE] ==== Please, note that you need to specify the *External
+Id* of each Calculation Type that you want to apply in the order cart in
+the [.object]#xref:admin-guide/workshops/workshop-2-0-setting-up-discounts/workshop-2-3-setting-up-a-manual-discount/setting-up-a-pricing-procedure-2-3[Pricing
 Procedure] ==== .#
 * Additionally, you can set
-up the link:5-3-displaying-price-tags[price tags] to display the
-information about the applied discounts. 
+up the xref:5-3-displaying-price-tags[price tags] to display the
+information about the applied discounts.

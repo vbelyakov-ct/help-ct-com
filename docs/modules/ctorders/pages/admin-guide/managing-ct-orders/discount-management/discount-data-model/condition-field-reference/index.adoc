@@ -24,7 +24,7 @@ Conditions that affect discount calculation in JSON format (required if
 the Advanced Calculation Method is selected).
 
 To see the example, refer to
-link:condition-advancedcriteria-c-field-specification[Condition:
+xref:condition-advancedcriteria-c-field-specification[Condition:
 AdvancedCriteria__c Field Specification].
 
 |Calculation Method
@@ -37,7 +37,7 @@ a|
 The method of cost calculation:
 
 * Basic is based on the selected Order Line Item.
-* link:condition-advancedcriteria-c-field-specification[Advanced]
+* xref:condition-advancedcriteria-c-field-specification[Advanced]
 requires adding conditions/criteria for discount calculation in JSON
 format.
 
@@ -56,7 +56,7 @@ Stores fields values that initialize discount calculation or the advance
 conditions in JSON to check if the discount should be calculated.
 
 To see the example, refer to
-link:condition-conditiondetails-c-field-specification[Condition:
+xref:condition-conditiondetails-c-field-specification[Condition:
 ConditionDetails__c Field Specification].
 
 |Condition Group
@@ -112,7 +112,7 @@ Discount Rate (Amt) value.
 |End Date |[.apiobject]#orders__EndDate__c# |Date |After
 this date, the condition is no longer available. For example, if the
 *End Date* is set to _14 Mar 2024_, the condition will not be available
-if the current date is _15 Mar 2024_, but remains available on _14 Mar
+if the current date is _15 Mar 2024_, but remains available on _14 Mar
 2024_.
 
 |Exception Condition
@@ -122,7 +122,7 @@ Condition in JSON format, which makes discount inapplicable for the
 order if the condition is matched during the price calculation process.
 
 To see the example, refer to
-link:condition-exceptioncondition-c-field-specification[Condition:
+xref:condition-exceptioncondition-c-field-specification[Condition:
 ExceptionCondition__c Field Specification].
 
 |External Id |[.apiobject]#orders__ExternalId__c#

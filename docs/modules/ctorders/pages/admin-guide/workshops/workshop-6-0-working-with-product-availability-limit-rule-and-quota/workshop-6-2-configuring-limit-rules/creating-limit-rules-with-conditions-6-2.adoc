@@ -3,9 +3,9 @@
 Let's create a _Limit Rule_ to restrict the number of products in one
 delivery or order based on the condition:
 
-* *Exception Condition*: the _Limit Rule_ must restrict the number of
-products in a whole order cart if the specified condition is met. 
-* *Apply Condition*: the _Limit Rule_ must restrict the number of
+* *Exception Condition*: the _Limit Rule_ must restrict the number of
+products in a whole order cart if the specified condition is met.
+* *Apply Condition*: the _Limit Rule_ must restrict the number of
 products in a single delivery, except for such products.
 
 [[h2_69606710]]
@@ -44,7 +44,7 @@ To create a _Limit Rule_:
 * *Min Amount*: _5_.
 * *Max Amount*: _50_.
 * *Order Type*: _Order_.
-* *Apply Condition*: enter the following:
+* *Apply Condition*: enter the following:
 [TIP] ==== In the[.apiobject]#value ==== key, specify a
 product that must be added to the order cart to apply the limit rule.#
 

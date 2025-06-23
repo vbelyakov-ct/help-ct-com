@@ -1,9 +1,9 @@
 = Layout Setting Field Reference
 
 The _Layout Setting_ record type is intended to store configurations of
-link:catalog-management[Catalog], link:promotions[Promotions],
-link:how-to-set-up-delivery-summary[Delivery Summary] and
-link:order-management[Order] layouts for Salesforce and the CT
+xref:catalog-management[Catalog], xref:promotions[Promotions],
+xref:how-to-set-up-delivery-summary[Delivery Summary] and
+xref:order-management[Order] layouts for Salesforce and the CT
 Mobile app.
 
 :toc: :toclevels: 3
@@ -45,7 +45,7 @@ specified for a parent object.
 A record type for which the layout is configured.
 
 [NOTE] ==== Pay attention that
-link:ct-order-field-reference[the CT Order object] has no record
+xref:ct-order-field-reference[the CT Order object] has no record
 types by default. ====
 
 [NOTE] ==== To use different layouts depending on the
@@ -73,7 +73,7 @@ Specify the list of fields that will be displayed on the layout
 
 [TIP] ==== Support display fields on the related
 [.object]#Product ==== object in the
-[.apiobject]#ParentId__r.Field# format, only as read-only
+[.apiobject]#ParentId__r.Field# format, only as read-only
 fields on the Catalog Line Item and Promotion Line Item layouts.#
 
 |Required Attributes
@@ -81,10 +81,10 @@ fields on the Catalog Line Item and Promotion Line Item layouts.#
 |Text(255) a|
 For the specified fields in the
 [.apiobject]#orders__FeildsToDisplay__c# field, list
-correspondingly the attributes true/false (separated by the comma,
-without spaces) to define which fields should be mandatorily filled
-out. An empty value of the attribute is
-applied as [.apiobject]#false#.
+correspondingly the attributes true/false (separated by the comma,
+without spaces) to define which fields should be mandatorily filled
+out. An empty value of the attribute is
+applied as [.apiobject]#false#.
 
 
 
@@ -110,7 +110,7 @@ An empty value of the attribute is applied as
 
 [NOTE] ==== In the CT Mobile app, fields with this attribute
 will not be displayed on the layout, for example, when
-link:adding-ct-orders-to-the-ct-mobile-app-4-0[creating a new
+xref:adding-ct-orders-to-the-ct-mobile-app-4-0[creating a new
 order]. ====
 
 Some fields are filled automatically on the objects when a product is
@@ -152,15 +152,15 @@ Item ==== layout.#
 |Order Currency |CurrencyIsoCode |Picklist a|
 Available since CT Mobile version 2.9
 
-Applies to link:ct-order-field-reference[CT Order] related objects
-(link:order-line-item-field-reference[Order Line Item],
-link:delivery-line-item-field-reference[Delivery Line Item],
-link:calculated-discount-field-reference[Calculated Discount]) and
+Applies to xref:ct-order-field-reference[CT Order] related objects
+(xref:order-line-item-field-reference[Order Line Item],
+xref:delivery-line-item-field-reference[Delivery Line Item],
+xref:calculated-discount-field-reference[Calculated Discount]) and
 requires
 https://help.salesforce.com/s/articleView?id=sf.admin_enable_multicurrency.htm&type=5[multiple
-currency activation]. Is the standard Salesforce field to select
-currency while link:offline-order#h2_2044385779[creating order in
-the CT Mobile app].  Do not change the currency after saving the order.
+currency activation]. Is the standard Salesforce field to select
+currency while xref:offline-order#h2_2044385779[creating order in
+the CT Mobile app].  Do not change the currency after saving the order.
 
 |===
 
@@ -168,33 +168,33 @@ the CT Mobile app].  Do not change the currency after saving the order.
 |===
 |image:info.png[] |For lookup
 fields, you can set
-up https://help.salesforce.com/s/articleView?id=sf.fields_lookup_filters.htm&type=5[lookup
-filters] to control data that should be displayed in *Delivery Summary*.
+up https://help.salesforce.com/s/articleView?id=sf.fields_lookup_filters.htm&type=5[lookup
+filters] to control data that should be displayed in *Delivery Summary*.
 |===
 
 [[h2__966181550]]
 === Required Layouts
 
-It is necessary to create the *Settings* record with the *Layout
-Setting* record type for the following objects: 
+It is necessary to create the *Settings* record with the *Layout
+Setting* record type for the following objects:
 
-*[.object]#Catalog Line Item# and [.object]#Catalog
-Assignment# to have the ability link:catalog-management[to add
+*[.object]#Catalog Line Item# and [.object]#Catalog
+Assignment# to have the ability xref:catalog-management[to add
 products to a catalog and assign accounts].
-[NOTE] ==== It is highly recommended to set up a single catalog
-layout for an instance. ====
-*[.object]#Promotion Line Item# and [.object]#Promotion
-Assignment# to have the ability link:promotions#h2__492952072[to
+[NOTE] ==== It is highly recommended to set up a single catalog
+layout for an instance. ====
+*[.object]#Promotion Line Item# and [.object]#Promotion
+Assignment# to have the ability xref:promotions#h2__492952072[to
 add products to the promotion and assign accounts].
 *[.object]#Order Line Item# to view
-link:online-order[product details in the order cart].
+xref:online-order[product details in the order cart].
 [NOTE] ==== It is highly recommended to set up the order layout
 for each *Sales Organization* separately. ====
 
 
 
-Additionally, link:adding-ct-orders-to-the-ct-mobile-app-4-0#h2_552129946[customize
-a mini layout] for the [.object]#CT Order# object to display
+Additionally, xref:adding-ct-orders-to-the-ct-mobile-app-4-0#h2_552129946[customize
+a mini layout] for the [.object]#CT Order# object to display
 desired fields when creating a new order in the CT Mobile app.
 
 [[h2_2072530411]]

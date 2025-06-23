@@ -1,15 +1,15 @@
 = Workshop 5.3: Displaying Price Tags
 
-The link:admin-guide/managing-ct-orders/order-management/price-tag[Price Tag] option is a visual display of a
+The xref:admin-guide/managing-ct-orders/order-management/price-tag[Price Tag] option is a visual display of a
 currently applied product discount.
 
 
 
 To add the price tags to the layout:
 
-. Go to **Settings **and open the existing layout for the
+. Go to **Settings **and open the existing layout for the
 [.object]#Order Line Item# object.
-. In the *Fields to Display* field, add the
+. In the *Fields to Display* field, add the
 [.apiobject]#PriceTag# keyword to the list of API names of
 fields that exist on the[.object]#Order Line Item# object
 (separated by a comma, without a blank space).

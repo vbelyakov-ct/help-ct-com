@@ -14,7 +14,7 @@ the parent records.
 [.apiobject]#rollUp# constant.
 
 |[.apiobject]#condition# |Step Conditions |No |See the
-link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/step-conditions[Step Conditions].
+xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/step-conditions[Step Conditions].
 
 |[.apiobject]#baseObject# |Enum |Yes a|
 The API name of the child object. Available values:
@@ -26,7 +26,7 @@ The API name of the child object. Available values:
 |[.apiobject]#basePrice# |String |Yes |The
 [.apiobject]#baseObject# field rolls up values to the parent
 records. See the
-link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-available-field-formats[Available Field
+xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-available-field-formats[Available Field
 Formats].
 
 |[.apiobject]#method# |Enum |Yes a|
@@ -39,7 +39,7 @@ Roll-up method. Available values:
 * copyEqual
 
 |[.apiobject]#result# |Array |Yes |At least one item must be
-provided. See the link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-roll-up-step#h2__369440874[Roll-up
+provided. See the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-roll-up-step#h2__369440874[Roll-up
 Result Keys].
 |===
 
@@ -60,7 +60,7 @@ The API name of the parent object. Available values:
 |[.apiobject]#resultPrice# |String |Yes |The
 [.apiobject]#resultObject# field to storing rolled-up prices
 from children. See
-the link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-available-field-formats[Available Field
+the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-available-field-formats[Available Field
 Formats].
 |===
 
@@ -99,7 +99,7 @@ a|
 [[h2_1689083776]]
 === Example
 
-[{plus}] link:javascript:void(0)[Standard Roll-up Step:]
+[{plus}] xref:javascript:void(0)[Standard Roll-up Step:]
 
 .[-] Hide[%collapsible] ====
 

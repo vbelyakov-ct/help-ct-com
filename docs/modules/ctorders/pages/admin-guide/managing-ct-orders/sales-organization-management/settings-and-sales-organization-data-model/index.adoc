@@ -1,6 +1,6 @@
 = Settings and Sales Organization Data Model
 
-The data model outlines the primary settings that define compatibility
+The data model outlines the primary settings that define compatibility
 between CT Orders and a target system, such as CT CPG or CT Pharma.
 These settings are required for online and offline order taking.
 
@@ -10,9 +10,9 @@ image:Sales-Organization-Data-Model.png[]
 
 [width="100%",cols="25%,25%,25%,25%",]
 |===
-|*Object* |*API Name * |*Record Type* |*Description*
+|*Object* |*API Name * |*Record Type* |*Description*
 
-|link:settings-fields-reference[Settings]
+|xref:settings-fields-reference[Settings]
 |`orders__OMSettings__c` a|
 * DeliveryLineItemMapping
 * LayoutSetting
@@ -34,18 +34,18 @@ The main settings are stored in the object record types.
 * CT Orders layouts settings for Salesforce and CT Mobile;
 * Order record types and status management;
 * General delivery and pricing settings
-*  Transfer and load the master data into AWS DB.
+*  Transfer and load the master data into AWS DB.
 
-|link:sales-organization-user-field-reference[Sales Organization
+|xref:sales-organization-user-field-reference[Sales Organization
 User] |`orders__SalesOrganizationUser__c` |You can specify
 record types if needed.
-|link:sales-organization-user-field-reference[Specify users] for
+|xref:sales-organization-user-field-reference[Specify users] for
 each Sales Organization to have the ability to use CT Orders features.
 
-|link:sales-organization-field-reference[Sales Organization]
+|xref:sales-organization-field-reference[Sales Organization]
 |`orders__SalesOrganization__c` |You can specify record types
 if needed. |Stores Sales Organization data.
 [NOTE] ==== In the case of using data from customer ERP, it is
-necessary to link:sales-organization-field-reference[specify the
-relationship] between ERP and Salesforce CRM.  ====
+necessary to xref:sales-organization-field-reference[specify the
+relationship] between ERP and Salesforce CRM.  ====
 |===

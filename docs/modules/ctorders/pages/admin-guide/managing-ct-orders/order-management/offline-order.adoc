@@ -8,11 +8,11 @@ during the synchronization.
 * https://help.customertimes.com/articles/ct-mobile-ios-en/ct-mobile-description-and-deployment[Integrate
 the CT Mobile solution] with the target system, such as CT CPG, CT
 Pharma, or CG Cloud.
-* link:admin-guide/getting-started/setting-up-an-instance/index[Map the CT Orders objects] with the
+* xref:admin-guide/getting-started/setting-up-an-instance/index[Map the CT Orders objects] with the
 target system for applying the overall logic.
-* link:adding-ct-orders-to-the-ct-mobile-app-4-0[Follow the guide]
+* xref:adding-ct-orders-to-the-ct-mobile-app-4-0[Follow the guide]
 to enable work with CT Orders in the CT Mobile app.
-* link:workshop-4-0-working-with-offline-orders[Take a workshop] on
+* xref:workshop-4-0-working-with-offline-orders[Take a workshop] on
 how to create an offline order in the CT Mobile app.
 
 
@@ -24,41 +24,41 @@ of additional options.
 
 
 
-link:admin-guide/managing-ct-orders/order-management/offline-order#h2_1850278800[1. User Permissions and
+xref:admin-guide/managing-ct-orders/order-management/offline-order#h2_1850278800[1. User Permissions and
 Synchronization]
 
-link:admin-guide/managing-ct-orders/order-management/offline-order#h2_2044385779[2. Create and Manage Orders]
+xref:admin-guide/managing-ct-orders/order-management/offline-order#h2_2044385779[2. Create and Manage Orders]
 
-link:admin-guide/managing-ct-orders/order-management/offline-order#h3_1847490047[3. Edit the Order Cart]
+xref:admin-guide/managing-ct-orders/order-management/offline-order#h3_1847490047[3. Edit the Order Cart]
 
-  link:admin-guide/managing-ct-orders/order-management/offline-order#h4__589780300[3.1 Promotions and Catalogs]
+  xref:admin-guide/managing-ct-orders/order-management/offline-order#h4__589780300[3.1 Promotions and Catalogs]
 
-  link:admin-guide/managing-ct-orders/order-management/offline-order#h4__1635896381[3.2 Order Cart]
+  xref:admin-guide/managing-ct-orders/order-management/offline-order#h4__1635896381[3.2 Order Cart]
 
-link:admin-guide/managing-ct-orders/order-management/offline-order#h2_1980854273[4. Additional Options]
+xref:admin-guide/managing-ct-orders/order-management/offline-order#h2_1980854273[4. Additional Options]
 
-  link:admin-guide/managing-ct-orders/order-management/offline-order#h3_2048041897[4.1 Freebies]
+  xref:admin-guide/managing-ct-orders/order-management/offline-order#h3_2048041897[4.1 Freebies]
 
-  link:admin-guide/managing-ct-orders/order-management/offline-order#h3__419365112[4.2 Price Tags]
+  xref:admin-guide/managing-ct-orders/order-management/offline-order#h3__419365112[4.2 Price Tags]
 
-  link:admin-guide/managing-ct-orders/order-management/offline-order#h3__639588894[4.3 Delivery Summary]
+  xref:admin-guide/managing-ct-orders/order-management/offline-order#h3__639588894[4.3 Delivery Summary]
 
-  link:admin-guide/managing-ct-orders/order-management/offline-order#h3_727125212[4.4 Calculate Price using the SDK
+  xref:admin-guide/managing-ct-orders/order-management/offline-order#h3_727125212[4.4 Calculate Price using the SDK
 Step]
 
 [[h2_1850278800]]
 === 1. User Permissions and Synchronization
 
-Before starting to work with offline orders, please verify that the
+Before starting to work with offline orders, please verify that the
 mobile users have the
-link:user-permissions-for-offline-orders[appropriate permissions
+xref:user-permissions-for-offline-orders[appropriate permissions
 for objects].
 
 [[h2_2044385779]]
 === 2. Create and Manage Orders
 
-link:admin-guide/managing-ct-orders/order-management/offline-order[When the CT Orders is activated] and
-link:adding-ct-orders-to-the-ct-mobile-app-4-0[customized for
+xref:admin-guide/managing-ct-orders/order-management/offline-order[When the CT Orders is activated] and
+xref:adding-ct-orders-to-the-ct-mobile-app-4-0[customized for
 offline work] and a mobile user performed the full synchronization:
 
 . The *CT Orders* menu item is available on the main menu.
@@ -68,10 +68,10 @@ _Contacts_, or _Activities_ objects to manage orders.
 . The *Order* button is available on the _Accounts_, _Contacts_, or
 _Activities_ records for order creation.
 .. Tap
-the image:order-Icon.png[]
+the image:order-Icon.png[]
 icon, specify the required data in the mini layout, and tap *Create*.
 [NOTE] ==== Configure the
-link:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/layout-setting-field-reference[layout setting] for
+xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/layout-setting-field-reference[layout setting] for
 [.object]#CT Order ==== object to set up displayed fields in the
 mini
 layout.#image:create-order-order-icon.jpeg[]
@@ -130,10 +130,10 @@ compact layout].
 specified _List Price_ are available.
 
 * Tap
-the image:order-cart-right-arrow.png[] icon
+the image:order-cart-right-arrow.png[] icon
 to add a promotion or catalog. Tap
-the image:order-cart-left-arrow.png[]image:order-cart-left-arrow.png[] icon
-to remove the added catalog or promotion. 
+the image:order-cart-left-arrow.png[]image:order-cart-left-arrow.png[] icon
+to remove the added catalog or promotion.
 * Use the *Search* box to find the record.
 ** The search is performed among products in catalogs, promotions, and
 products that are already added to the cart.
@@ -161,16 +161,16 @@ a|
 ===== Add and Remove Products
 
 * Tap
-the image:order-cart-right-arrow.png[] icon
+the image:order-cart-right-arrow.png[] icon
 to add a catalog, promotion, sub catalog, bundle, or product to the
-cart. Products added to the cart disappear from the left section list.
-Swipe left to remove sub catalog, bundle, or product from the cart.
+cart. Products added to the cart disappear from the left section list.
+Swipe left to remove sub catalog, bundle, or product from the cart.
 * You can add
 (image:order-cart-right-arrow.png[])
 or remove
 (image:order-cart-left-arrow.png[]image:order-cart-left-arrow.png[])
 the whole catalog to/from the cart, if
-the link:admin-guide/managing-ct-orders/catalog-management/catalog-data-model/catalogs-field-reference[Disable Mass Adding] option is
+the xref:admin-guide/managing-ct-orders/catalog-management/catalog-data-model/catalogs-field-reference[Disable Mass Adding] option is
 disabled. You cannot add a catalog if adding another catalog is still in
 progress (see the progress bar in the *Catalog* section).
 * In the CT Order cart, products are grouped into the *Catalogs* and
@@ -188,7 +188,7 @@ names of columns.
 
 [TIP] ==== The _Order Cart_ layout is managed by the _Settings_
 record of the _Layout Setting_ record type for
-link:order-line-item-layout-setting-1-0[the Order Line Item
+xref:order-line-item-layout-setting-1-0[the Order Line Item
 object]. ====
 
 [[h4__733574480]]
@@ -198,11 +198,11 @@ object]. ====
 ===== 
 
 . Tap
-the image:ctorders-ios-filter-icon.png[] icon
+the image:ctorders-ios-filter-icon.png[] icon
 to add a filter for products in the order cart. The filter must be set
-up in advance by the link:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/filter-setting-field-reference/index[Filter
+up in advance by the xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/filter-setting-field-reference/index[Filter
 Setting].
-. Tap *Add Filter* to add new filter.
+. Tap *Add Filter* to add new filter.
 . Select desired filter criteria from the list and tap *Apply*.
 . Tap *Apply* to apply the filter.
 
@@ -224,12 +224,12 @@ a|
 ==== 3.3 Create the First Delivery
 
 When a mobile user adds the first product, the *Delivery* pop-up
-appears. Delivery dates are controlled by the _Settings_ record with
-the _Limit Setting_ record type. To add delivery
-limits, link:adding-delivery-restrictions-to-an-order-1-0[follow
+appears. Delivery dates are controlled by the _Settings_ record with
+the _Limit Setting_ record type. To add delivery
+limits, xref:adding-delivery-restrictions-to-an-order-1-0[follow
 this guide]. To set up delivery
-addresses, link:configuring-an-address-settings-1-0[refer to this
-article]. 
+addresses, xref:configuring-an-address-settings-1-0[refer to this
+article].
 
 The mobile user cannot delete a single delivery.
 
@@ -239,7 +239,7 @@ date and the end date is set as the last date defined by the calendar.
 the same date, they will be sorted by the *Address* field (in ascending
 alphabetical order).
 * The *Address* field is populated based on the
-link:configuring-an-address-settings-1-0[Address Setting] record
+xref:configuring-an-address-settings-1-0[Address Setting] record
 defined for the Sales Org.
 
 
@@ -254,19 +254,19 @@ items in a filled cart.
 Add more products to the cart.
 
 * Tap
-the image:ctorders-ios-add-delivery-icon.jpg[]
+the image:ctorders-ios-add-delivery-icon.jpg[]
 icon (iOS) or tap the Plus button next to the first delivery (Windows)
 to create one more delivery if needed.
 * Set quantity of each product for each delivery using the plus and
 minus buttons.
 ** The quantity will change proportionally based on the
-link:admin-guide/managing-ct-orders/order-management/multiplicator[multiplicator] value for each product.
+xref:admin-guide/managing-ct-orders/order-management/multiplicator[multiplicator] value for each product.
 ** More details about the product and bundle calculation are available
-link:admin-guide/managing-ct-orders/product-management/index#h2_1138962735[here].
+xref:admin-guide/managing-ct-orders/product-management/index#h2_1138962735[here].
 ** After making changes to the order cart, new prices will be calculated
 automatically on the
 https://help.customertimes.com/smart/project-ct-mobile-en/application-settings/a/h3__611076828[timer],
-if the link:web-service[Web Service] is disabled.
+if the xref:web-service[Web Service] is disabled.
 * Organize products in cart by *max* or *min quantity* for the selected
 delivery.
 * *Pin delivery* as the first one in the order cart.
@@ -288,50 +288,50 @@ delivery.
 
 * When the cart is full and all deliveries are set, review the order
 price and discounts in the *Total Panel* at the bottom of the screen.
-* To customize fields in the total panel, create the _Settings_ record
-with the link:configuring-totals-panel-setting-1-0[Totals Panel
-Setting] record type with custom fields. The maximum number of fields
+* To customize fields in the total panel, create the _Settings_ record
+with the xref:configuring-totals-panel-setting-1-0[Totals Panel
+Setting] record type with custom fields. The maximum number of fields
 displayed is 4.
 
 [[h3__408281835]]
 ==== 3.6 Export Order Data
 
 To enable this feature, configure
-the link:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/export-csv-setting-field-reference[Export CSV] setting. 
+the xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/export-csv-setting-field-reference[Export CSV] setting.
 
-. Tap *Actions* menu →  *Export to File*. 
+. Tap *Actions* menu →  *Export to File*.
 . Select fields to export (or leave preselected fields, if they are
-configured in the link:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/export-csv-setting-field-reference[Export
+configured in the xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/export-csv-setting-field-reference[Export
 CSV] setting).
 image:ios-select-fields-to-export.png[]
- 
+
 . Tap *Export*.
 image:ios-export-dialog.png[]
- 
-. Tap *Share* to open standard iOS sharing dialog. 
+
+. Tap *Share* to open standard iOS sharing dialog.
 
 [[h3__1128524764]]
-==== 3.7 Complete the Order
+==== 3.7 Complete the Order
 
 [width="100%",cols="50%,50%",]
 |===
 a|
 Depending on the mobile user's decision,
-link:admin-guide/managing-ct-orders/order-management/index#h3_1058643383[the order status will be
-changed]. We recommend getting familiar with
-the link:order-change-manager[Order Change Manager] logic. Do not
-manually change the Stage value on the _Order_ record screen to avoid
+xref:admin-guide/managing-ct-orders/order-management/index#h3_1058643383[the order status will be
+changed]. We recommend getting familiar with
+the xref:order-change-manager[Order Change Manager] logic. Do not
+manually change the Stage value on the _Order_ record screen to avoid
 missing validations.
 
-* Tap *Save draft* to save the cart without validation on the mobile
+* Tap *Save draft* to save the cart without validation on the mobile
 device.
-* Tap the *Actions* menu →  *Cancel order* to exit the order cart
-without saving changes. 
+* Tap the *Actions* menu →  *Cancel order* to exit the order cart
+without saving changes.
 
 * Tap the *Complete* button to complete the order.
 The order cannot be edited on a mobile device after it has been
 completed. For more information about the order stages, refer
-to link:admin-guide/managing-ct-orders/order-management/index#h2_158967301[Order Stages]. To edit the
+to xref:admin-guide/managing-ct-orders/order-management/index#h2_158967301[Order Stages]. To edit the
 order:
 
 . Go to the *CT Orders* menu item or the custom related list on the
@@ -357,12 +357,12 @@ a|
 [[h3_2048041897]]
 ==== 4.1 Freebies
 
-link:admin-guide/managing-ct-orders/freebies-management/index[If specified], tap the *Freebies* button.
+xref:admin-guide/managing-ct-orders/freebies-management/index[If specified], tap the *Freebies* button.
 
 * Review freebies for a delivery and tap *Add products*. Freebies will
 be validated and added to the cart.
 [TIP] ==== It is possible to set up
-link:admin-guide/managing-ct-orders/freebies-management/index#h2_1556344363[freebies distribution]. For
+xref:admin-guide/managing-ct-orders/freebies-management/index#h2_1556344363[freebies distribution]. For
 example, use the *Delivery Control* option to add freebies to the first
 or last delivery. ====
 * If the quantity of the cart products has been changed, tap the
@@ -379,9 +379,9 @@ or last delivery. ====
 [[h3__419365112]]
 ==== 4.2 Price Tags
 
-link:5-3-displaying-price-tags[If specified], the *Price Tag* icon
+xref:5-3-displaying-price-tags[If specified], the *Price Tag* icon
 next to the added product indicates the status of the discount. Tap the
-icon to view a currently applied discount. 
+icon to view a currently applied discount.
 
 [cols=",",]
 |===
@@ -395,15 +395,15 @@ icon to view a currently applied discount. 
 ==== 4.3 Delivery Summary
 
 The *Delivery Summary* pop-up is used to review and edit (if needed) the
-delivery details. For more information, refer
-to link:delivery-management#h2__1374863314[Delivery Summary].
+delivery details. For more information, refer
+to xref:delivery-management#h2__1374863314[Delivery Summary].
 
 [[h3_727125212]]
 ==== 4.4 Calculate Price using the SDK Step
 
-link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-sdk-step[If the SDK step is implemented], the *Calculate
+xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-sdk-step[If the SDK step is implemented], the *Calculate
 Discounts* button appears on the **Order Car**t screen. Tap the button
-to link:admin-guide/managing-ct-orders/discount-management/index#h2__1225315997[calculate discounts].
+to xref:admin-guide/managing-ct-orders/discount-management/index#h2__1225315997[calculate discounts].
 
 [width="100%",cols="50%,50%",]
 |===
@@ -416,7 +416,7 @@ to link:admin-guide/managing-ct-orders/discount-management/index#h2__1225315997[
 
 See also:
 
-* link:workshop-4-0-working-with-offline-orders[Workshop 4.0:
+* xref:workshop-4-0-working-with-offline-orders[Workshop 4.0:
 Working with Offline Orders]
 
 

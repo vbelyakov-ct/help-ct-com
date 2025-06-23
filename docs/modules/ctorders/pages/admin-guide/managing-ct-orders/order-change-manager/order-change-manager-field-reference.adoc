@@ -7,8 +7,8 @@ Salesforce database.
 
 * During synchronization, CT Mobile sends change packets with all
 related data of a particular *Order* record. Each order is represented
-link:admin-guide/managing-ct-orders/order-change-manager/order-change-manager-json-examples-and-keys[as a JSON file].
-* link:admin-guide/managing-ct-orders/order-change-manager/index#h2_1554146395[On the Salesforce side],
+xref:admin-guide/managing-ct-orders/order-change-manager/order-change-manager-json-examples-and-keys[as a JSON file].
+* xref:admin-guide/managing-ct-orders/order-change-manager/index#h2_1554146395[On the Salesforce side],
 the system creates an *Order Change Manager* record for each order
 received from CT Mobile during synchronization.
 * The system splits the received JSON and populates the *Order Change

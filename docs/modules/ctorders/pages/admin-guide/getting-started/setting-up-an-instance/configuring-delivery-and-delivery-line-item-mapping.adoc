@@ -26,7 +26,7 @@ Configure the *Delivery Mapping* record:
 type.
 . Configure the settings as follows:
 * If required, select a *Sales Organization*, for which you configure
-the mapping. If no Sales Organization is defined for a Setting record,
+the mapping. If no Sales Organization is defined for a Setting record,
 it will be applied globally to all records without configured Sales
 Organization.
 * Enter the field API name for the *Total Price Field* from the Delivery
@@ -50,26 +50,26 @@ record type.
 Orders to version 2.0 or later, some fields listed below might be absent
 on your page layout. Please, go to the[.object]#Settings ====
 object and add required fields to the *Delivery Line Item Mapping*
-record type layout. #
+record type layout. #
 * If required, select a *Sales Organization*, for which you configure
-the mapping. If no Sales Organization is defined for a Setting record,
+the mapping. If no Sales Organization is defined for a Setting record,
 it will be applied globally to all records without configured Sales
 Organization.
 * Enter the field API name for the *Unit Price Field* from the
-link:delivery-line-item-field-reference[Delivery Line Item] record.
+xref:delivery-line-item-field-reference[Delivery Line Item] record.
 * Enter the field API name for the *List Price Field* from the
-link:delivery-line-item-field-reference[Delivery Line Item] record.
+xref:delivery-line-item-field-reference[Delivery Line Item] record.
 * Enter the field API name for the *Quantity Field* from the
-link:delivery-line-item-field-reference[Delivery Line Item]
+xref:delivery-line-item-field-reference[Delivery Line Item]
 record.
 [NOTE] ==== You can reuse the package's *Quantity* field if the
 Number (18,0) format is suitable for your organization. You can also
 create a custom *Quantity* field with the required measurement
-specifications.  ====
+specifications.  ====
 * Enter the field API name for the *Total Price Field* from the
-link:delivery-line-item-field-reference[Delivery Line Item] record.
+xref:delivery-line-item-field-reference[Delivery Line Item] record.
 * Enter the field API name for the *Total Discount Field* from the
-link:delivery-line-item-field-reference[Delivery Line Item]
+xref:delivery-line-item-field-reference[Delivery Line Item]
 record.
 image:ctorders-overview-2021-09-09.png[]
 . Click *Save*.

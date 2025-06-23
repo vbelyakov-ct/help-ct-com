@@ -1,19 +1,19 @@
 = Procedure Builder Tab
 
-*Procedure Builder* tab is a convenient tool to set up a
-Pricing[.object]# #Procedure[.object]# #step by step, so
-you do not need to manually build the JSON query.
+*Procedure Builder* tab is a convenient tool to set up a
+Pricing[.object]# #Procedure[.object]# #step by step, so
+you do not need to manually build the JSON query.
 
-To use it, click the *Procedure Builder* button on the
+To use it, click the *Procedure Builder* button on the
 [.object]#Pricing Procedure# object:
 
 image:procedure-builder-button.png[]
 
 
 
-By default, Builder for link:pricing-procedure-v-1[Pricing
+By default, Builder for xref:pricing-procedure-v-1[Pricing
 Procedure 1.0] is opened. To open Builder
-for link:pricing-procedure-2-0-head[Pricing Procedure 2.0], click
+for xref:pricing-procedure-2-0-head[Pricing Procedure 2.0], click
 *Move to Advance Version*:
 
 
@@ -29,24 +29,24 @@ image:procedure-builder-2-0.png[]
 [width="100%",cols="50%,50%",]
 |===
 |Procedure Builder for v 1.0 a|
-. Set up Pricing procedure settings: 
+. Set up Pricing procedure settings:
 * Procedure Type:
-** link:example-sum[SUM]
-** link:example-mult[MULT]
-** link:example-min[MIN]
-** link:example-max[MAX]
-* link:example-round-roundto[Round]:
+** xref:example-sum[SUM]
+** xref:example-mult[MULT]
+** xref:example-min[MIN]
+** xref:example-max[MAX]
+* xref:example-round-roundto[Round]:
 ** Item
 ** Group
-* link:example-round-roundto[Round To]
-* link:example-isignorenulls[Ignore Nulls]
-* link:procedure-calculation-type-fields-reference[Procedure
+* xref:example-round-roundto[Round To]
+* xref:example-isignorenulls[Ignore Nulls]
+* xref:procedure-calculation-type-fields-reference[Procedure
 Calculation Type Settings]
 
 [cols=",",]
 !===
-!image:info.png[] !The *Item
-type* setting is missing in the resulting JSON itself, but it defines
+!image:info.png[] !The *Item
+type* setting is missing in the resulting JSON itself, but it defines
 the JSON structure.
 !===
 
@@ -59,9 +59,9 @@ Step]
 
 [cols=",",]
 !===
-!image:info.png[] !The *Item
-type* setting is missing in the resulting JSON itself, but it defines
-the JSON structure.
+!image:info.png[] !The *Item
+type* setting is missing in the resulting JSON itself, but it defines
+the JSON structure.
 !===
 * https://help.customertimes.com/articles/ct-orders-4-0/the-set-value-step[Set
 Value Step]
@@ -75,32 +75,32 @@ Down Step]
 Step]
 
 ** Drag and drop steps
-with image:drag-n-drop-icon.png[] to
+with image:drag-n-drop-icon.png[] to
 arrange them in your desired order.
-** Use *Add Step* and *Delete Step* buttons to make a desired number of
+** Use *Add Step* and *Delete Step* buttons to make a desired number of
 steps.
-** For the *Type field* in the *Value Settings,* select:
-*** *String* to select the price type
-*** *Number* to enter the decimal value
-*** *Formula* to set up formula settings:
+** For the *Type field* in the *Value Settings,* select:
+*** *String* to select the price type
+*** *Number* to enter the decimal value
+*** *Formula* to set up formula settings:
 image:procedure-builder-2-0-formula.png[]
 
 [cols=",",]
 !===
 !image:info.png[] !The
-*MULTIPLY* formula operator is displayed as multi in the JSON query.
+*MULTIPLY* formula operator is displayed as multi in the JSON query.
 !===
 
 For each step, you can also set
-up https://help.customertimes.com/articles/ct-orders-4-0/step-conditions[Step
+up https://help.customertimes.com/articles/ct-orders-4-0/step-conditions[Step
 Conditions]. Useful notes:
-* Use *OR*, *AND*, *{plus}* and *Add Group* buttons to set up condition
+* Use *OR*, *AND*, *{plus}* and *Add Group* buttons to set up condition
 groups:
 ** You can add up to 3 subgroups for each group.
-** For the *AND* group type, its subgroup type is automatically set to
+** For the *AND* group type, its subgroup type is automatically set to
 *OR* and vice versa.
 * Click *Delete group* to delete condition group
-and image:delete-string-icon.png[]
+and image:delete-string-icon.png[]
 to delete condition string.
 
 
@@ -117,8 +117,8 @@ Click *Save*.
 [[h3_98762040]]
 ==== Pricing Procedure 1.0
 
-To generate link:setting-up-a-pricing-procedure-2-2[JSON from the
-Workshop 2.2], do the following in the Procedure Builder for v 1.0:
+To generate xref:setting-up-a-pricing-procedure-2-2[JSON from the
+Workshop 2.2], do the following in the Procedure Builder for v 1.0:
 
 image:pricing_procedure_v1_example.png[]
 
@@ -129,18 +129,18 @@ These settings will generate the following JSON:
 [[h3_98762009]]
 ==== Pricing Procedure 2.0
 
-To generate link:setting-up-a-pricing-procedure-2-3[JSON from the
-Workshop 2.3], make the following settings in the Procedure Builder for
+To generate xref:setting-up-a-pricing-procedure-2-3[JSON from the
+Workshop 2.3], make the following settings in the Procedure Builder for
 v 2.0:
 
 . Drill Down
 image:pricing_procedure_v2_example_step1.png[]
 . Procedure
-image:pricing_procedure_v2_example_step2.png[] image:pricing_procedure_v2_example_step2-condition.png[]
+image:pricing_procedure_v2_example_step2.png[] image:pricing_procedure_v2_example_step2-condition.png[]
 . Procedure
-image:pricing_procedure_v2_example_step3.png[] image:pricing_procedure_v2_example_step3-condition.png[]
+image:pricing_procedure_v2_example_step3.png[] image:pricing_procedure_v2_example_step3-condition.png[]
 . Set Value
-image:pricing_procedure_v2_example_step4.png[] image:pricing_procedure_v2_example_step4-condition.png[]
+image:pricing_procedure_v2_example_step4.png[] image:pricing_procedure_v2_example_step4-condition.png[]
 . Roll Up
 image:pricing_procedure_v2_example_step5.png[]
 . Set Value
@@ -154,7 +154,7 @@ image:pricing_procedure_v2_example_step9.png[]
 
 These settings will generate the following JSON:
 
-[{plus}] link:javascript:void(0)[Click to expand a JSON]
+[{plus}] xref:javascript:void(0)[Click to expand a JSON]
 
 .[-] Click to hide[%collapsible] ====
 
@@ -164,5 +164,5 @@ These settings will generate the following JSON:
 
 See also:
 
-* link:pricing-procedure-v-1[Pricing Procedure v. 1.0]
-* link:pricing-procedure-2-0-head[Pricing Procedure v. 2.0]
+* xref:pricing-procedure-v-1[Pricing Procedure v. 1.0]
+* xref:pricing-procedure-2-0-head[Pricing Procedure v. 2.0]

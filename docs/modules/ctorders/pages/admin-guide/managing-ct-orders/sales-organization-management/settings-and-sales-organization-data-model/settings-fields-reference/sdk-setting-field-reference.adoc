@@ -2,8 +2,8 @@
 
 The *SDK Setting* record type allows overriding the standard logic:
 
-* to display link:5-4-sdk-configuring-a-custom-price-tag[custom
-price tags] and an link:info-icon[info icon] with a custom HTML
+* to display xref:5-4-sdk-configuring-a-custom-price-tag[custom
+price tags] and an xref:info-icon[info icon] with a custom HTML
 template.
 * to select additional fields to fill on[.object]#Order#,
 [.object]#Order Line Item#,[.object]#Delivery Line
@@ -42,12 +42,12 @@ the[.apiobject]#orders__SDKType__c# field.
 
 [TIP] ==== It is recommended to name the Apex class based on its
 function:
-e.g.: [.apiobject]#OrderImplementation.SetUnitPriceAsListPrice
+e.g.: [.apiobject]#OrderImplementation.SetUnitPriceAsListPrice
 ==== #
 
 |Order Type |[.apiobject]#orders__OrderType__c#
 |Picklist a|
-The order type for which the settings are configured. Available values:
+The order type for which the settings are configured. Available values:
 
 If not set, the setting will be applied for all order types of the
 selected Sales Org.
@@ -75,7 +75,7 @@ selected.
 |Picklist a|
 Defies the platform where an SDK Setting will be implemented:
 
-* CT Mobile [WARNING] ==== Currently, SDK is not available on
+* CT Mobile [WARNING] ==== Currently, SDK is not available on
 this platform. ====
 * Salesforce
 
@@ -97,7 +97,7 @@ additional fields to fill in on the objects.
 standard logic and display the custom price tags defined in the HTML
 file that is requested by the Apex class from the
 [.apiobject]#orders__Implementation__c# field.
-* To display an link:info-icon[info icon] containing an embedded
+* To display an xref:info-icon[info icon] containing an embedded
 HTML template choose among these settings:
 **[.apiobject]#getOrderLineItemInfoIcon#;
 **[.apiobject]#getPromotionLineItemInfoIcon#;

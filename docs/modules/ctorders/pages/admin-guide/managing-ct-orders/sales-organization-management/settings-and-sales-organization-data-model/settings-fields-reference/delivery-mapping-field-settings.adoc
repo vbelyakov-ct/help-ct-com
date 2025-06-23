@@ -1,6 +1,6 @@
 = Delivery Mapping Field Reference
 
-The _Delivery Mapping_ record type is intended for storing
+The _Delivery Mapping_ record type is intended for storing
 [.object]#Delivery# fields that are used in discount
 calculations.
 
@@ -21,12 +21,12 @@ Object record type API name:[.object]#DeliveryMapping#
 |Total Discount Field
 |[.apiobject]#orders__TotalDiscountField__c#
 |Text(255) |The API name of the field specified in
-the [.apiobject]#orders__TotalDiscountField__c# field of
-the corresponding *Delivery Line Item Mapping* record. 
+the [.apiobject]#orders__TotalDiscountField__c# field of
+the corresponding *Delivery Line Item Mapping* record.
 
 |Total Price Field
 |[.apiobject]#orders__TotalPriceField__c# |Text(255)
 |The API name of the field specified in
-the [.apiobject]#orders__TotalPriceField__c# field of
-the corresponding *Delivery Line Item Mapping* record.
+the [.apiobject]#orders__TotalPriceField__c# field of
+the corresponding *Delivery Line Item Mapping* record.
 |===

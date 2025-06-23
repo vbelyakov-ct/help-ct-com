@@ -25,7 +25,7 @@ conditions specified in the _Freebie Condition_ records.
 
 
 The source object for tracing the path to a field is
-the [.object]#Order Line Item# object.
+the [.object]#Order Line Item# object.
 
 |Condition Fields Update Type
 |[.apiobject]#orders__ConditionFieldsUpdateType__c#
@@ -34,7 +34,7 @@ The way of updating the conditions fields list:
 
 * _Real-time_
 Condition fields will be updated whenever the values in the *Condition
-Details* field on[.object]#Freebie Condition# object are
+Details* field on[.object]#Freebie Condition# object are
 changed.
 * _Batch update_
 A batch will be launched to update the condition fields.

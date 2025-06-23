@@ -5,7 +5,7 @@ implemented via the Apex class. It allows you to perform additional
 operations and overwrite some fields on the objects that participate in
 the price calculation.
 
-* To perform the SDK step, link:offline-order#h3_727125212[tap the
+* To perform the SDK step, xref:offline-order#h3_727125212[tap the
 button] in the CT Mobile app to initialize the calculator instead of
 using the standard calculation logic.
 [NOTE] ==== A custom logic must be specified in both Salesforce
@@ -26,17 +26,17 @@ this type in order to reduce the calculation time.
 |[.apiobject]#fieldsAllowedToChange# |An array of fields allowed
 to change |Yes |An array may contain zero or more items. An array may
 contain only one item for the[.apiobject]#objectName# key. See
-the link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-sdk-step#h2_704387152[Fields Allowed to Change].
+the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-sdk-step#h2_704387152[Fields Allowed to Change].
 
 |[.apiobject]#salesforceSDK# |SDK |No |If the key is not used in
 the price calculation on the Salesforce side, the different price
 calculation results will be received in Salesforce and CT Mobile. See
-the link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-sdk-step#h2__1132174910[SDK].
+the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-sdk-step#h2__1132174910[SDK].
 
 |[.apiobject]#ctMobileSDK# |SDK |No |If the key is not used in
 the price calculation In the CT Mobile app, the different price
 calculation results will be received in Salesforce and CT Mobile. See
-the link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-sdk-step#h2__1132174910[SDK].
+the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-sdk-step#h2__1132174910[SDK].
 |===
 
 [[h2_704387152]]
@@ -61,9 +61,9 @@ the custom logic.
 Specify the fields that should be overwritten with new values by the
 custom Apex class.
 
-* See the link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-available-field-formats[Available
+* See the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-available-field-formats[Available
 Field Formats].
-* See the link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-sdk-step#h2_2146359128[Restricted Fields].
+* See the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-sdk-step#h2_2146359128[Restricted Fields].
 
 |===
 
@@ -130,16 +130,16 @@ a|
 
 a|
 *[.apiobject]#orders__OrderId__c#
-* link:creating-a-relationship-between-custom-address-object-and-delivery-1-0[Lookup(Address)]
+* xref:creating-a-relationship-between-custom-address-object-and-delivery-1-0[Lookup(Address)]
 * Fields in the
-link:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/split-settings-field-reference[order__SplitFields__c]
+xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/split-settings-field-reference[order__SplitFields__c]
 
 |===
 
 [[h2_1689083776]]
 === Example
 
-[{plus}] link:javascript:void(0)[SDK Step]
+[{plus}] xref:javascript:void(0)[SDK Step]
 
 .[-] Hide[%collapsible] ====
 

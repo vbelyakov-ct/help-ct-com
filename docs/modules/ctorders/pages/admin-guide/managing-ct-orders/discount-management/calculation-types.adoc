@@ -1,34 +1,34 @@
 = Calculation Types
 
-The link:calculation-types-field-reference[Calculation Type] stores
+The xref:calculation-types-field-reference[Calculation Type] stores
 the set of rules for calculating a particular type of discount. The
-_Calculation Type_ determines whether a discount should be calculated
+_Calculation Type_ determines whether a discount should be calculated
 separately or in combination with other discount types.
 
 
 
 The discount is calculated according to the
-link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-fields-reference[Pricing Procedure], which
-is defined by a link:calculation-types-field-reference[Calculation
+xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-fields-reference[Pricing Procedure], which
+is defined by a xref:calculation-types-field-reference[Calculation
 Type] via the
-link:admin-guide/managing-ct-orders/price-management/ref-guide/procedure-calculation-type-fields-reference[Procedure
-Calculation Type]. The relationship is automatically managed by the
+xref:admin-guide/managing-ct-orders/price-management/ref-guide/procedure-calculation-type-fields-reference[Procedure
+Calculation Type]. The relationship is automatically managed by the
 system.
 
 Each _Calculation Type_ has conditions and/or a group of conditions that
 the products in the order must meet to apply to them a discount. On the
 selected *Calculation Types* tab, select the desired _Calculation Type_
 record *(1)* to view all the associated _Procedure Calculation
-Types _*(2)*, _Condition Group _*(3)*, and _Condition _*(4)* records.
+Types _*(2)*, _Condition Group _*(3)*, and _Condition _*(4)* records.
 
 * _Condition Group_ is present for the _Calculation Type_ record with
 the _Group {plus} Condition_ record type.
-* Only one _Condition_ from the ** _Calculation Type_ can be applied to
+* Only one _Condition_ from the ** _Calculation Type_ can be applied to
 the _Order Line Item_.
 
 Also, it is possible to avoid a discount application under the presence
 of certain products in the order cart. For more information, refer
-to link:condition-exceptioncondition-c-field-specification[Condition:
+to xref:condition-exceptioncondition-c-field-specification[Condition:
 ExceptionCondition__c Field Specification].
 
 
@@ -56,7 +56,7 @@ required quantity is reached, a discount will be provided.
 
 
 For more information, refer
-to link:calculation-type-levelformula-c-field-specification[Calculation
+to xref:calculation-type-levelformula-c-field-specification[Calculation
 Type: LevelFormula__c Field Specification].
 
 |Not Applicable |The list of field API names of the
@@ -82,7 +82,7 @@ records with the _Condition_ record type.
 
 
 This occurs automatically when creating the conditions, but may require
-manual editing of the *Condition Field List* if any changes or the
+manual editing of the *Condition Field List* if any changes or the
 removal of the conditions were made.
 
 | a|
@@ -93,7 +93,7 @@ _Calculation Type_ record will be considered for the discount.
 
 
 For more information, refer
-to link:calculation-type-applyconditiontype-c-field-specification[Calculation
+to xref:calculation-type-applyconditiontype-c-field-specification[Calculation
 Type: ApplyConditionType__c Field Specification].
 
 a|
@@ -120,9 +120,9 @@ image:2021-08-19_17-43-55.png[]
 
 See also:
 
-* link:how-to-create-a-calculation-type[How to Create a Calculation
+* xref:how-to-create-a-calculation-type[How to Create a Calculation
 Type]
-* link:how-to-add-a-condition-for-a-calculation-type[How to Add a
+* xref:how-to-add-a-condition-for-a-calculation-type[How to Add a
 Condition for a Calculation Type]
-* link:how-to-add-a-condition-level[How to Add a Condition Level]
-* link:how-to-add-a-condition-group[How to Add a Condition Group]
+* xref:how-to-add-a-condition-level[How to Add a Condition Level]
+* xref:how-to-add-a-condition-group[How to Add a Condition Group]

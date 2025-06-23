@@ -4,7 +4,7 @@ The[.apiobject]#orders__ExceptionsCondition__c# field
 contains the condition that this limit rule does not apply to the
 specified order, delivery, or delivery group. If the condition is not
 met, the system checks
-the link:admin-guide/managing-ct-orders/product-validation-in-order/limit-rules/limit-rule-field-reference/limit-rule-applycondition-c-field-specification[orders__ApplyCondition__c] field.
+the xref:admin-guide/managing-ct-orders/product-validation-in-order/limit-rules/limit-rule-field-reference/limit-rule-applycondition-c-field-specification[orders__ApplyCondition__c] field.
 
 
 
@@ -19,17 +19,17 @@ for calculating a unique number of products. If the
 products that are found according to the[.apiobject]#filter#.
 Starting this quantity, the limit rule will not be applied.
 
-[TIP] ==== Use the [.apiobject]#AND ==== operator to
+[TIP] ==== Use the [.apiobject]#AND ==== operator to
 check [.apiobject]#minCount# for all listed products, or use the[.apiobject]#OR# operator if at least one product must meet
 [.apiobject]#minCount#.#
 
-*[.apiobject]#requiredProducts# specifies the mandatory
-products from the founded according to the [.apiobject]#filter.#
+*[.apiobject]#requiredProducts# specifies the mandatory
+products from the founded according to the [.apiobject]#filter.#
 *[.apiobject]#productIdField# is the product unique ID to
-search the required product. If set,
-the [.apiobject]#ExternalId__c# value is used for products
-with [.apiobject]#minCount#. Otherwise, the product identifier
-from the [.apiobject]#orders__ProductId__c# field is
+search the required product. If set,
+the [.apiobject]#ExternalId__c# value is used for products
+with [.apiobject]#minCount#. Otherwise, the product identifier
+from the [.apiobject]#orders__ProductId__c# field is
 used.
 *[.apiobject]#productQuantityField# stores the field API name
 from the[.object]#Order Line Item# object that stores the
@@ -41,7 +41,7 @@ added to order cart.
 [.apiobject]#ExternalId__c# (if specified) field.
 **[.apiobject]#minQuantity# specifies the product minimum
 quantity.
-** $.deliveryOrder specifies certain index of the delivery in the order
+** $.deliveryOrder specifies certain index of the delivery in the order
 (0, 1, 2 etc.) or _max_ as the last delivery. You can use the following
 operators:
 *** less

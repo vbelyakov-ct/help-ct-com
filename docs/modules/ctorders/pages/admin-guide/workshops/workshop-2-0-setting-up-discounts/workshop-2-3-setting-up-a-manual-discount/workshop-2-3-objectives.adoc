@@ -3,7 +3,7 @@
 This workshop provides you with the steps to configure the manually
 entered discounts, overriding discounts that are applied based on
 fitting conditions
-(link:admin-guide/workshops/workshop-2-0-setting-up-discounts/workshop-2-1-configuring-a-client-based-discount/index[like
+(xref:admin-guide/workshops/workshop-2-0-setting-up-discounts/workshop-2-1-configuring-a-client-based-discount/index[like
 client's based]), and applying to the products in the order cart.
 
 
@@ -12,24 +12,24 @@ Before the setup process, please check on the following list of the
 prerequisites that should be carried out first:
 
 * The account you are working with must
-link:admin-guide/workshops/workshop1-0-creating-basic-order/configuring-an-account-1-0[be able to make orders].
+xref:admin-guide/workshops/workshop1-0-creating-basic-order/configuring-an-account-1-0[be able to make orders].
 * Create a custom *Manual Discount* field with the API name
 [.apiobject]#ManualDiscountPercent__c# and the _Percent (18,
-0)_ type on the link:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/order-line-item-field-reference[Order Line
+0)_ type on the xref:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/order-line-item-field-reference[Order Line
 Item] object.
-* link:admin-guide/workshops/workshop1-0-creating-basic-order/configuring-layout-settings-1-0/order-line-item-layout-setting-1-0[Update layout] for order
+* xref:admin-guide/workshops/workshop1-0-creating-basic-order/configuring-layout-settings-1-0/order-line-item-layout-setting-1-0[Update layout] for order
 cart by adding the *Manual Discount* field to the list of the displayed
 fields and specifying its display attribute.
 image:Screenshot-2021-08-17-at-14.28.44.png[]
 * Create another discount to be automatically applied to the cart. For
 example, set up a
-link:admin-guide/workshops/workshop-2-0-setting-up-discounts/workshop-2-1-configuring-a-client-based-discount/index[Client Based
+xref:admin-guide/workshops/workshop-2-0-setting-up-discounts/workshop-2-1-configuring-a-client-based-discount/index[Client Based
 Discount].
 [NOTE] ==== Please, note that you need to specify the *External
 Id* of each Calculation Type that you want to apply in the order cart in
 the
-[.object]#link:admin-guide/workshops/workshop-2-0-setting-up-discounts/workshop-2-3-setting-up-a-manual-discount/setting-up-a-pricing-procedure-2-3[Pricing
+[.object]#xref:admin-guide/workshops/workshop-2-0-setting-up-discounts/workshop-2-3-setting-up-a-manual-discount/setting-up-a-pricing-procedure-2-3[Pricing
 Procedure] ==== .#
 * Additionally, you can set up the
-link:5-3-displaying-price-tags[price tags] to display the
+xref:5-3-displaying-price-tags[price tags] to display the
 information about the applied discounts.

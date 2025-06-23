@@ -27,21 +27,21 @@ Object API name:[.apiobject]#orders__Quota__c#
 Account.
 
 |Active |[.apiobject]#orders__IsActive__c# |Checkbox
-|This field defines whether the quota is active or not. Only active
-quotas can be applied. 
+|This field defines whether the quota is active or not. Only active
+quotas can be applied.
 
 |Amount Field |[.apiobject]#orders__AmountField__c#
 |Text(255) a|
 The API name of the field from the
-link:delivery-line-item-field-reference[Delivery Line Item] object
+xref:delivery-line-item-field-reference[Delivery Line Item] object
 that stores the final price for the order, for example,
 [.apiobject]#orders__TotalPrice__c#.
 
 
 
 It is used when
-the [.apiobject]#orders___UnitOfMeasure__c# field
-is _Amount_. The current user should have access to the specified
+the [.apiobject]#orders___UnitOfMeasure__c# field
+is _Amount_. The current user should have access to the specified
 field.
 
 |Booked Amount |[.apiobject]#orders__BookedAmount__c#
@@ -52,10 +52,10 @@ value is _0_.
 
 
 It is used when
-the [.apiobject]#orders___UnitOfMeasure__c# field
-is _Amount_ and
-the [.apiobject]#orders__OrderStage__c# field of the
-order is not _Finalized_ or _Completed_.
+the [.apiobject]#orders___UnitOfMeasure__c# field
+is _Amount_ and
+the [.apiobject]#orders__OrderStage__c# field of the
+order is not _Finalized_ or _Completed_.
 
 |Booked Quantity
 |[.apiobject]#orders__BookedQuantity__c# |Number(18,0)
@@ -65,10 +65,10 @@ Quantity of products booked for the order. The default value is _0_.
 
 
 It is used when
-the [.apiobject]#orders___UnitOfMeasure__c# field
-is _Quantity_ and
-the [.apiobject]#orders__OrderStage__c# field of
-the [.object]#order# is not _Finalized_ or _Completed_.
+the [.apiobject]#orders___UnitOfMeasure__c# field
+is _Quantity_ and
+the [.apiobject]#orders__OrderStage__c# field of
+the [.object]#order# is not _Finalized_ or _Completed_.
 
 |Catalog |[.apiobject]#orders__CatalogId__c#
 |Lookup(Catalog) a|
@@ -83,12 +83,12 @@ priority.
 |End Date |[.apiobject]#orders__EndDate__c# |Date a|
 It is a required field with the end date when the quota is available.
 
-link:delivery-field-reference[The delivery date] should be within
+xref:delivery-field-reference[The delivery date] should be within
 the start and end dates of the quota availability.
 
 |Ignore Bundle Components
 |[.apiobject]#orders__IsIgnoreBundleComponents__c#
-|Checkbox |If _true_, the quota is not available for bundle
+|Checkbox |If _true_, the quota is not available for bundle
 components. Default value is _false_.
 
 |Limit Amount |[.apiobject]#orders__LimitAmount__c#
@@ -99,8 +99,8 @@ cumulatively on all orders in which the quota was used.
 
 
 It is used when
-the [.apiobject]#orders___UnitOfMeasure__c# field
-is _Amount_.
+the [.apiobject]#orders___UnitOfMeasure__c# field
+is _Amount_.
 
 |Limit Quantity
 |[.apiobject]#orders__LimitQuantity__c# |Number(18,0)
@@ -111,13 +111,13 @@ orders in which the quota was used.
 
 
 It is used when
-the [.apiobject]#orders___UnitOfMeasure__c# field
-is _Quantity_.
+the [.apiobject]#orders___UnitOfMeasure__c# field
+is _Quantity_.
 
 |Order Type |[.apiobject]#orders__OrderType__c#
 |Picklist (Multi-select) a|
-Select one or more link:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/ct-order-field-reference[order types] to
-apply the quota. Available values: 
+Select one or more xref:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/ct-order-field-reference[order types] to
+apply the quota. Available values:
 
 * _Order_
 * _Return_
@@ -125,20 +125,20 @@ apply the quota. Available values: 
 
 |Product |[.apiobject]#ProductId__c# |Lookup(CT Product)
 |If the product is a bundle, then the quota is applied
-to link:admin-guide/managing-ct-orders/product-management/managing-bundles[the whole bundle] or separately to
-included products depending on the value in the *Calculate Price
-On* field.
+to xref:admin-guide/managing-ct-orders/product-management/managing-bundles[the whole bundle] or separately to
+included products depending on the value in the *Calculate Price
+On* field.
 
 |Product |[.apiobject]#orders__Product2Id__c#
 |Lookup(Product2) |If the product is a bundle, then the quota is
-applied to link:admin-guide/managing-ct-orders/product-management/managing-bundles[the whole bundle] or separately to
-included products depending on the value in the *Calculate Price
-On* field.
+applied to xref:admin-guide/managing-ct-orders/product-management/managing-bundles[the whole bundle] or separately to
+included products depending on the value in the *Calculate Price
+On* field.
 
 |Product Type |[.apiobject]#orders__ProductType__c#
 |Picklist(Multi-select) a|
 It is a required field to select one or more product types to apply the
-quota to them. Available values: 
+quota to them. Available values:
 
 * _Product_
 * _Freebie_
@@ -162,11 +162,11 @@ The quota must be one of the following record types:
 
 * _Individual_
 It is a quota that is applied to the
-order. The [.apiobject]#orders__UserId__c# field must be
+order. The [.apiobject]#orders__UserId__c# field must be
 filled out.
 * _Template_
 It is used to automatically create
-link:admin-guide/managing-ct-orders/product-validation-in-order/quotas/quota-field-reference#h2_12722709[an individual quota based on
+xref:admin-guide/managing-ct-orders/product-validation-in-order/quotas/quota-field-reference#h2_12722709[an individual quota based on
 specified parameters], including when adding a new product or delivery
 to order. The quota will be created if it has a higher priority than
 other (if any) individual quotas.
@@ -199,10 +199,10 @@ default value is _0_.
 
 
 It is used when
-the [.apiobject]#orders___UnitOfMeasure__c# field
-is _Amount_ and
-the [.apiobject]#orders__OrderStage__c# field of the
-order[.object]## is not _On Hold._
+the [.apiobject]#orders___UnitOfMeasure__c# field
+is _Amount_ and
+the [.apiobject]#orders__OrderStage__c# field of the
+order[.object]## is not _On Hold._
 
 |Used Quantity
 |[.apiobject]#orders__UsedQuantity__c# |Number(18,0)
@@ -213,10 +213,10 @@ _0_.
 
 
 It is used when
-the [.apiobject]#orders___UnitOfMeasure__c# field
-is _Quantity_ and
-the [.apiobject]#orders__OrderStage__c# field of the
-order[.object]## is not _On Hold_.
+the [.apiobject]#orders___UnitOfMeasure__c# field
+is _Quantity_ and
+the [.apiobject]#orders__OrderStage__c# field of the
+order[.object]## is not _On Hold_.
 
 |User |[.apiobject]#orders__UserId__c#
 |Lookup(User) a|
@@ -224,7 +224,7 @@ If specified, the quota is available for the user.
 
 
 
-Each quota of the Individual record type must be assigned to the user.
+Each quota of the Individual record type must be assigned to the user.
 
 |Unit of Measures
 |[.apiobject]#orders__UnitOfMeasure__c# |Picklist a|

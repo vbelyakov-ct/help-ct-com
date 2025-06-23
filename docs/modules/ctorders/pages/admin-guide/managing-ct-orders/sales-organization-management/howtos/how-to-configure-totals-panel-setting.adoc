@@ -1,7 +1,7 @@
 = How to Configure Totals Panel Setting
 
 You can also configure the Totals Panel to display *Total Price* and
-*Total Discount* per each delivery:
+*Total Discount* per each delivery:
 
 . Create a custom field on the[.object]#CT Order# object you
 want to add to the Totals Panel. For example, let's create a formula
@@ -12,7 +12,7 @@ image:reassigning-access-rights-after-changing-custom-tab-2021-02-04.jpg[]
 . Configure the setting as follows:
 * Leave the *Sales Organization* field empty, if you want to apply the
 setting across all Sales Organizations.
-* *Object*: orders__Delivery__c. 
+* *Object*: orders__Delivery__c.
 * *Fields To Display*:
 [.apiobject]#orders__TotalPrice__c,orders__TotalDiscount__c#.
 * *Labels*:[.apiobject]#Delivery Price, Delivery Discount#.

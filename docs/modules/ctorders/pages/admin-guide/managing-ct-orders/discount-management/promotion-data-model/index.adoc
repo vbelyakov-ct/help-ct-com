@@ -10,18 +10,18 @@ image:Promotion-Data-Model.png[]
 |===
 |*Object* |*API Name* |*Record Type* |*Description*
 
-|link:promotion-assignment-field-reference[Promotion Assignment]
+|xref:promotion-assignment-field-reference[Promotion Assignment]
 |[.apiobject]#orders__PromotionAssignment__c#
 |Participant |This object defines the relation between an
 [.object]#Account# and a[.object]#Promotion#.
 
-|link:promotion-field-reference[Promotion]
+|xref:promotion-field-reference[Promotion]
 |[.apiobject]#orders__Promotion__c# | |This object
 allows to set up sell-in, ordering and delivery dates, stores data about
 promo availability and its status, details on discount calculation and
 freebies distribution.
 
-|link:promotion-line-item-field-reference[Promotion Line Item]
+|xref:promotion-line-item-field-reference[Promotion Line Item]
 |[.apiobject]#orders__PromotionLineItem__c# |Product
 |This object specifies if the[.object]#Order Line Item# is used
 for discount or freebies. If yes, the minimum quantity of products per

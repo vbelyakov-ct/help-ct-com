@@ -1,7 +1,7 @@
 = Setting up a Pricing Procedure (2.3)
 
-To enter a manual discount, you need to create a new _Pricing Procedure_
-record that will ignore any other discounts and that can be applied to
+To enter a manual discount, you need to create a new _Pricing Procedure_
+record that will ignore any other discounts and that can be applied to
 the order if the *Manual Discount* *Percent* field is filled out during
 the order-taking process.
 
@@ -16,27 +16,27 @@ To configure a new procedure:
 * Select the *Sales Organization*, for which the procedure will be
 available.
 * Select *Order Types*, for which you want to apply this procedure.
-* Specify the link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/index[Pricing Procedure in
-JSON format]. Please note that: 
-** This JSON uses a new _Manual Discount Percent_** **calculation type
-and two additional _Calculation Types_ that can be configured by
-completing link:admin-guide/workshops/workshop-2-0-setting-up-discounts/workshop-2-1-configuring-a-client-based-discount/index[Workshop
-2.1] and link:admin-guide/workshops/workshop-2-0-setting-up-discounts/workshop-2-2-configuring-a-new-promotion/index[Workshop
+* Specify the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/index[Pricing Procedure in
+JSON format]. Please note that:
+** This JSON uses a new _Manual Discount Percent_** **calculation type
+and two additional _Calculation Types_ that can be configured by
+completing xref:admin-guide/workshops/workshop-2-0-setting-up-discounts/workshop-2-1-configuring-a-client-based-discount/index[Workshop
+2.1] and xref:admin-guide/workshops/workshop-2-0-setting-up-discounts/workshop-2-2-configuring-a-new-promotion/index[Workshop
 2.2]. Carefully check the values specified for
-the [.apiobject]#procedure# key as they define which discounts
+the [.apiobject]#procedure# key as they define which discounts
 will be applied in the order. In case the values are not correct, the
 system displays an error.
 ** This JSON is an example of the procedure for manual discount
-calculation, which requires adding
-the link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-drill-down-step[Drill Down Step] and
-the link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/step-conditions[List Price check] at the beginning of the
-pricing procedure. This allows to check if the *Manual Discount
-Percent* field contains a value (not empty), so it would be either
+calculation, which requires adding
+the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-drill-down-step[Drill Down Step] and
+the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/step-conditions[List Price check] at the beginning of the
+pricing procedure. This allows to check if the *Manual Discount
+Percent* field contains a value (not empty), so it would be either
 applied as a discount for the order line item or skipped for the
 following matching conditions to be applied instead.
 ** The full description of the _Pricing Procedure_ steps is
-available link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/index[here].
-** *JSON with Comments* only meant to explain the pricing steps and will
+available xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/index[here].
+** *JSON with Comments* only meant to explain the pricing steps and will
 not work for the[.object]#Pricing Procedure#.
 
 [width="100%",cols="50%,50%",]

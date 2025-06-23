@@ -5,8 +5,8 @@ details about related catalog and price book, general information about
 promotions, discounts, and totals for each[.object]#CT Product#
 in the order.
 
-If you use CT Orders module for CT Mobile
-app, https://help.customertimes.com/articles/ct-mobile-ios-en/synchronization-launch/a/h3__1369866827[launch
+If you use CT Orders module for CT Mobile
+app, https://help.customertimes.com/articles/ct-mobile-ios-en/synchronization-launch/a/h3__1369866827[launch
 full synchronization] after adding new fields to the Order Line Item
 Layout.
 
@@ -91,11 +91,11 @@ record that is a promo product in the order.
 0) |Number of products in the order.
 
 This field is used
-for link:admin-guide/getting-started/setting-up-an-instance/configuring-order-and-order-line-item-mapping[Order and
+for xref:admin-guide/getting-started/setting-up-an-instance/configuring-order-and-order-line-item-mapping[Order and
 Delivery mapping].
-You can reuse the package *Quantity* field if the Currency (16,2) format
+You can reuse the package *Quantity* field if the Currency (16,2) format
 is suitable for your organization. You can also create a
-custom *Quantity* field with the required measurement specifications.
+custom *Quantity* field with the required measurement specifications.
 
 |Reference Id |[.apiobject]#orders__RefereneId__c#
 |Text(255) (External ID) (Unique Case Sensitive) |

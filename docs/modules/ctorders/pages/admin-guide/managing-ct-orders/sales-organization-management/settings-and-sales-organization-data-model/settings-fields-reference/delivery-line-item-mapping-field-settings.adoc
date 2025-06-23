@@ -1,6 +1,6 @@
 = Delivery Line Item Mapping Field Settings
 
-The _Delivery Line Item Mapping_ record type is intended for storing
+The _Delivery Line Item Mapping_ record type is intended for storing
 [.object]#Delivery Line Item# fields that are used in discount
 calculations.
 
@@ -18,7 +18,7 @@ Object record type API name:
 |List Price Field
 |[.apiobject]#orders__ListPriceField__c# |Text(255)
 |The API name of a field on
-link:ct-price-book-line-item-field-reference[Price Book Line Item]
+xref:ct-price-book-line-item-field-reference[Price Book Line Item]
 that stores a product price from the specific price book.
 
 |Product |[.apiobject]#orders__Product2Id__c#
@@ -29,9 +29,9 @@ that stores a product price from the specific price book.
 
 |Quantity Field
 |[.apiobject]#orders__QuantityField__c# |Text(255)
-|The field API name of a field
-on link:delivery-line-item-field-reference[Delivery Line
-Item] to store the number of products per order delivery.
+|The field API name of a field
+on xref:delivery-line-item-field-reference[Delivery Line
+Item] to store the number of products per order delivery.
 
 |Sales Organization
 |[.apiobject]#orders__SalesOrganizationId__c#
@@ -40,21 +40,21 @@ Item] to store the number of products per order delivery.
 |Total Discount Field
 |[.apiobject]#orders__TotalDiscountField__c#
 |Text(255) |The API name of a field
-on link:delivery-line-item-field-reference[Delivery Line Item] that
+on xref:delivery-line-item-field-reference[Delivery Line Item] that
 stores the total discount for a product. Calculation
-formula: [.apiobject]#(ListPrice* quantity) - (UnitPtice
+formula: [.apiobject]#(ListPrice* quantity) - (UnitPtice
 * quantity)#.
 
 |Total Price Field
 |[.apiobject]#orders__TotalPriceField__c# |Text(255)
 |The API name of of a field
-on link:delivery-line-item-field-reference[Delivery Line Item] that
+on xref:delivery-line-item-field-reference[Delivery Line Item] that
 stores the total price with discount for a product. Calculation
-formula: [.apiobject]#UnitPrice* quantity#.
+formula: [.apiobject]#UnitPrice* quantity#.
 
 |Unit Price Field
 |[.apiobject]#orders__UnitPriceField__c# |Text(255)
 |The API name of the field
-on link:delivery-line-item-field-reference[Delivery Line Item] that
+on xref:delivery-line-item-field-reference[Delivery Line Item] that
 stores a price for one product with a discount.
 |===

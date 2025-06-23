@@ -1,7 +1,7 @@
 = Workshop 5.4: SDK Configuring a Custom Price Tag
 
-Custom prices tags unlike the link:admin-guide/managing-ct-orders/order-management/price-tag[regular ones] allow
-displaying additional information on the order whether as any kind of
+Custom prices tags unlike the xref:admin-guide/managing-ct-orders/order-management/price-tag[regular ones] allow
+displaying additional information on the order whether as any kind of
 calculated discounts or amount of freebies.
 
 
@@ -10,25 +10,25 @@ To create a custom price tag:
 . Create an HTML template that will replace the standard display of
 price tags.
 
-[{plus}] link:javascript:void(0)[Click to view an example of the
+[{plus}] xref:javascript:void(0)[Click to view an example of the
 HTML template]
 
-[-] link:javascript:void(0)[Hide]
+[-] xref:javascript:void(0)[Hide]
 . Create and add an
 https://help.salesforce.com/articleView?id=sf.code_manage_packages.htm&type=5[Apex
-class] to your Salesforce org to bring the created HTML layout over the
+class] to your Salesforce org to bring the created HTML layout over the
 standard price tag display.
-. Go to *Settings* and click *New*.
-. Select *SDK Setting* record type and click *Next*.
+. Go to *Settings* and click *New*.
+. Select *SDK Setting* record type and click *Next*.
 . Fill in the fields:
 [TIP] ==== The full description of the fields is available
-link:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/sdk-setting-field-reference[here]. ====
-* Fill in *Order type* and *Sales Organization* fields.
-* *SDK Type:* getOrderLineItemPriceTag.
-* *Platform*: select where to apply the setting. [NOTE] ====
-Currently, the setting will be not applied on mobile devices.  ====
-* *Version*: v1. Currently, only v1 is available, otherwise, the setting
-won't be applied. 
+xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/sdk-setting-field-reference[here]. ====
+* Fill in *Order type* and *Sales Organization* fields.
+* *SDK Type:* getOrderLineItemPriceTag.
+* *Platform*: select where to apply the setting. [NOTE] ====
+Currently, the setting will be not applied on mobile devices.  ====
+* *Version*: v1. Currently, only v1 is available, otherwise, the setting
+won't be applied.
 * *Implementation*: type in the name of the created Apex class in step
 2.
 * *Parameters*: leave empty.

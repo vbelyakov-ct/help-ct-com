@@ -15,15 +15,15 @@ configured discounts:
 . Specify the following:
 * *Order Type*: _Order_.
 * Select *Account*.
-[NOTE] ==== The link:admin-guide/workshops/workshop1-0-creating-basic-order/configuring-an-account-1-0[Order
+[NOTE] ==== The xref:admin-guide/workshops/workshop1-0-creating-basic-order/configuring-an-account-1-0[Order
 Allowed] checkbox must be selected on the account details page. ====
 * *Price Book*: select
-link:admin-guide/workshops/workshop1-0-creating-basic-order/creating-and-assigning-a-ct-price-book-1-0/index[a price book] that
+xref:admin-guide/workshops/workshop1-0-creating-basic-order/creating-and-assigning-a-ct-price-book-1-0/index[a price book] that
 you have created earlier.
 * *Sales Organization*: _Default Sales Org_.
 * *Pricing Procedure*: select one of the created pricing procedures, for
 example,
-link:admin-guide/workshops/workshop-2-0-setting-up-discounts/workshop-2-5-setting-up-a-total-discount-per-order/index[Total
+xref:admin-guide/workshops/workshop-2-0-setting-up-discounts/workshop-2-5-setting-up-a-total-discount-per-order/index[Total
 Discount (%) per Order].
 * *Order Stage*: _On-Hold_.
 image:Checkpoint-1-2.5.png[]
@@ -36,7 +36,7 @@ The new CT Order is created. On the created CT Order page, click the
 === Apply the Prioritized Freebie Type
 
 To apply conditions from
-link:workshop-3-1-configuring-prioritized-freebie-type[the
+xref:workshop-3-1-configuring-prioritized-freebie-type[the
 prioritized Freebie Type record]:
 
 . On the left side, expand one or more catalogs, select catalog(s), sub
@@ -66,7 +66,7 @@ image:Workshop-3.0-Chekpoint-12-1-Order-Cart.png[]
 |===
 . Click the *Get Freebie* button to open a Freebie window.
 . Wait a minute while the system calculates the distributed freebies.
-. If you click the *Save* button and then change the number of products
+. If you click the *Save* button and then change the number of products
 in the order cart, when you open the Freebie window again, it will be
 redrawn according to the changes you made.
 * If only one combination of the number of freebies per product fits the
@@ -116,14 +116,14 @@ The order is created and freebies are distributed.
 === Apply the Selective Freebie type
 
 To apply conditions from
-link:workshop-3-2-configuring-selective-freebie-type[the selective
+xref:workshop-3-2-configuring-selective-freebie-type[the selective
 Freebie Type record]:
 
 . On the left side, go to the *Promotion* tab, select a promotion(s) or
 promotion product(s), and click *Add* to add them to the order cart.
 . Create the first delivery in the *Delivery* window and click *OK*.
 . Click the *Add Delivery* button and add two more deliveries in turn.
-. Set the quantity for added promotion products. According to the
+. Set the quantity for added promotion products. According to the
 condition, you may either specify 40 and more number of the same
 promotion product or different ones. If so, you can distribute
 freebies.image:Workshop-3.0-Chekpoint-Promotion-Freebie-Order-Cart.png[]

@@ -1,6 +1,6 @@
 = Condition Group Field Reference
 
-The [.object]#Condition Group# object stores reference to the
+The [.object]#Condition Group# object stores reference to the
 order and applied calculation type data.
 
 '''''
@@ -30,8 +30,8 @@ List of API names of fields used as conditions.
 The specified fields must have a constant value, such as brand, parent
 account, etc., i.e., they cannot be altered during order creation or
 editing. Dynamically changing fields can only be specified in
-the link:condition-advancedcriteria-c-field-specification[Advanced
-Criteria] of the [.object]#Condition#.
+the xref:condition-advancedcriteria-c-field-specification[Advanced
+Criteria] of the [.object]#Condition#.
 
 |End Date |[.apiobject]#orders__EndDate__c# |Date |Since
 this date, condition group is no longer available.

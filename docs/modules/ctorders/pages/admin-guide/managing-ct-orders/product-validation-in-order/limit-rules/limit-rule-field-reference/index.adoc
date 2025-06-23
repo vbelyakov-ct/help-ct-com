@@ -31,9 +31,9 @@ The condition, under which the limit rule is applied to
 * The user must have at least permission to read all fields in the
 condition.
 * To see the example, refer
-to link:admin-guide/managing-ct-orders/product-validation-in-order/limit-rules/limit-rule-field-reference/limit-rule-applycondition-c-field-specification[Limit Rule:
+to xref:admin-guide/managing-ct-orders/product-validation-in-order/limit-rules/limit-rule-field-reference/limit-rule-applycondition-c-field-specification[Limit Rule:
 ApplyCondition__c Field Specification].
-* This field is ignored if the *Global Exception* = _true_. 
+* This field is ignored if the *Global Exception* = _true_.
 
 |Custom Validation Message
 |[.apiobject]#orders__CustomValidationMessage__c#
@@ -56,29 +56,29 @@ separate groups as a path to the required fields, for example,
 
 * The user must have at least permission to read all fields in the
 condition.
-* Fields must be on the [.object]#Delivery# object or related
+* Fields must be on the [.object]#Delivery# object or related
 objects.
-* Not applied for the Limit Rule with the _Order_ record type.
+* Not applied for the Limit Rule with the _Order_ record type.
 
 |Exceptions Condition
 |[.apiobject]#orders_ExceptionsCondition__c# |Long Text
 Area(32768) a|
 The condition under which the limit rule is not applied to *Delivery
-Line Item * records in the[.object]#Order#.
+Line Item * records in the[.object]#Order#.
 
 * The user must have at least permission to read all fields in the
 condition.
 * To see the example, refer
-to link:admin-guide/managing-ct-orders/product-validation-in-order/limit-rules/limit-rule-field-reference/limit-rule-exceptioncondition-c-field-specification[Limit
+to xref:admin-guide/managing-ct-orders/product-validation-in-order/limit-rules/limit-rule-field-reference/limit-rule-exceptioncondition-c-field-specification[Limit
 Rule: ExceptionCondition__с Field Specification].
 
 |Global Exception |orders_GlobalException__c |Checkbox a|
 * If enabled, triggers searching *Exceptions Condition* field in the
 whole order, disregarding the value of the *Apply Condition* field. If
-the *Exceptions Condition* is met in any delivery, the Limit Rule will
+the *Exceptions Condition* is met in any delivery, the Limit Rule will
 not apply.
-* If disabled (by default), the standard logic of the Limit Rule with
-the *Record type* = _Delivery_ takes place.
+* If disabled (by default), the standard logic of the Limit Rule with
+the *Record type* = _Delivery_ takes place.
 * Applies only to Limit Rules with the *Record type* = _Delivery_.
 
 |Maximum Amount |[.apiobject]#orders_MaxAmount__c#
@@ -86,34 +86,34 @@ the *Record type* = _Delivery_ takes place.
 The maximum amount of all products for a single delivery or order.
 
 The actual amount is set in the field specified in
-the [.apiobject]#orders__AmountField__c# field.
+the [.apiobject]#orders__AmountField__c# field.
 
 |Maximum Quantity |[.apiobject]#orders_MaxQuantity__c#
 |Number(18, 0) a|
 The maximum quantity of all products for a single delivery or order.
 
 The actual quantity is set in the field specified in
-the [.apiobject]#orders__Quantity__c# field of
-the [.object]#Delivery Line Item# object.
+the [.apiobject]#orders__Quantity__c# field of
+the [.object]#Delivery Line Item# object.
 
 |Minimum Amount |[.apiobject]#orders_MinAmount__c#
 |Currency(16,2) a|
 The minimum amount of all products for a single delivery or order.
 
 The actual amount is set in the field specified in
-the [.apiobject]#orders__AmountField__c# field.
+the [.apiobject]#orders__AmountField__c# field.
 
 |Minimum Quantity |[.apiobject]#orders_MinQuantity__c#
 |Number(18,0) a|
 The minimum quantity of all products for a single delivery or order.
 
 The actual quantity is set in the field specified in
-the [.apiobject]#orders__Quantity__c# field of
-the [.object]#Delivery Line Item# object.
+the [.apiobject]#orders__Quantity__c# field of
+the [.object]#Delivery Line Item# object.
 
 |Order Type |[.apiobject]#orders_OrderType__c#
 |Multipicklist a|
-Select one or more link:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/ct-order-field-reference[order types] to
+Select one or more xref:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/ct-order-field-reference[order types] to
 apply the limit rule.
 
 * Order
@@ -128,7 +128,7 @@ available objects:
 ** Validation is applied to overall products quantity or amount in the
 order.
 Delivery grouping based on fields in
-the [.apiobject]#orders__DeliveryCriteriaPath__c# field
+the [.apiobject]#orders__DeliveryCriteriaPath__c# field
 is not available for this record type.
 * Delivery
 ** Validation is applied only to products of a certain delivery.
@@ -137,7 +137,7 @@ logic processes products quantity or amount per each delivery in the
 order.
 To apply the limit rule to a delivery grouped by address and date, you
 need to use the delivery grouping based on fields in
-the [.apiobject]#orders__DeliveryCriteriaPath__c# field.
+the [.apiobject]#orders__DeliveryCriteriaPath__c# field.
 
 |Sales Organization Id
 |[.apiobject]#orders_SalesOrganizationId__c#

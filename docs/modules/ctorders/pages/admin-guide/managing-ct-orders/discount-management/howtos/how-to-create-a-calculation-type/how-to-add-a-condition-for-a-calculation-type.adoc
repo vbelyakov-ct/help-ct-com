@@ -1,44 +1,44 @@
 = How to Add a Condition for a Calculation Type
 
-For the newly created _Calculation Type_ record, you will need to
+For the newly created _Calculation Type_ record, you will need to
 specify the conditions to calculate discounts for products in order.
 
-. ​On the created *Calculation Type* page, click *New* in
-the *Conditions* section:
+. ​On the created *Calculation Type* page, click *New* in
+the *Conditions* section:
 . Enter the following:
 * Select a *Calculation Type*.
 * (Optional) select a *Condition Group*.
-* (Optional) select a *Promotion*.
-* In the *Order* field, set the order in
-which [.object]#Conditions# of [.object]#Calculation
-Type# will be applied. For example,  *10* means that this
-[.object]#Condition# will be applied after other
+* (Optional) select a *Promotion*.
+* In the *Order* field, set the order in
+which [.object]#Conditions# of [.object]#Calculation
+Type# will be applied. For example,  *10* means that this
+[.object]#Condition# will be applied after other
 [.object]#Conditions# with *Orders* 1, 2, 5 etc.
 * (Optional) specify *External Id*.
 * (Optional) in *Condition Dates*, specify *Start Date* and *End Date*
 of the[.object]#Condition#.
-* Set *Active* checkbox to enable this[.object]#Condition#
+* Set *Active* checkbox to enable this[.object]#Condition#
 after creation.
-* In the *Condition Details* field, add a JSON,
-which describes conditions under which the[.object]#Calculation
+* In the *Condition Details* field, add a JSON,
+which describes conditions under which the[.object]#Calculation
 Type# will be applied for the product discount.
 * Select *Discount Rate Location*:
 ** *Condition Record*: the discount rate will be applied from the
-*Discount Rate (%)* field on this form. 
-** *Level Records:* the discount rate will be applied from the
+*Discount Rate (%)* field on this form.
+** *Level Records:* the discount rate will be applied from the
 *Condition Level* record.
-* Select *Calculation Method*:
+* Select *Calculation Method*:
 ** *Basic*: discount will be calculated for each product separately.
-** *Advanced* (available only if *Discount Rate Location* is set
-to *Level Records*): discount will be calculated based on JSON from the
-*Advanced Criteria* field on this form. 
-* In the *Discount Rate (%)* or *Discount Rate (Amt)*,** **specify
-the discount value as a percentage or in a strict amount, respectively.
-* In the *Discount Rate Source Field (%)* or *Discount Rate Source Field
-(Amt)*,** **specify the API name of the created custom field, if any, to
+** *Advanced* (available only if *Discount Rate Location* is set
+to *Level Records*): discount will be calculated based on JSON from the
+*Advanced Criteria* field on this form.
+* In the *Discount Rate (%)* or *Discount Rate (Amt)*,** **specify
+the discount value as a percentage or in a strict amount, respectively.
+* In the *Discount Rate Source Field (%)* or *Discount Rate Source Field
+(Amt)*,** **specify the API name of the created custom field, if any, to
 get discount value as a percentage or in strict amount, respectively.
-* In the Advanced Criteria, add a JSON, which describes the discount
+* In the Advanced Criteria, add a JSON, which describes the discount
 calculation.image:2021-08-16_17-27-03.png[]
-. Click *Save*.
+. Click *Save*.
 
-The _Condition_ is created.
+The _Condition_ is created.

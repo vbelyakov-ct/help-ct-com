@@ -14,8 +14,8 @@ of using delivery fees, create a roll-up summary field.
 
 By default, the CT Order object has no record types. You can specify
 record types according to your needs and create the
-specific link:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/layout-setting-field-reference[Layout
-Settings] record for each record type.
+specific xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/layout-setting-field-reference[Layout
+Settings] record for each record type.
 
 '''''
 
@@ -83,9 +83,9 @@ calculation.
 a|
 SFID of promotion used in the order.
 
-* Is used only if the link:admin-guide/managing-ct-orders/discount-management/promotion-data-model/promotion-field-reference[Assigned On
+* Is used only if the xref:admin-guide/managing-ct-orders/discount-management/promotion-data-model/promotion-field-reference[Assigned On
 Order] checkbox is selected.
-* Must be manually created by the administrator with any _Field Name_
+* Must be manually created by the administrator with any _Field Name_
 and _API Name_.
 
 |Reference Id |orders__RefereneId__c |Text(255) (External

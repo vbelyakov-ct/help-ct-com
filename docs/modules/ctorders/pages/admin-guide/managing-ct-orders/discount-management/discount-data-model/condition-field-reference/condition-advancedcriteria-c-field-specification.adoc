@@ -4,8 +4,8 @@ The[.apiobject]#orders__AdvancedCriteria__c# field is
 used to specify the complex logic specified in JSON format for granting
 discounts in an order.
 
-The logic is applied when the *Calculation Method* on
-the [.object]#Condition# object is *Advanced*.
+The logic is applied when the *Calculation Method* on
+the [.object]#Condition# object is *Advanced*.
 
 :toc: :toclevels: 3
 
@@ -23,11 +23,11 @@ of which product can determine whether a discount will be granted. Also,
 there are the products, whose quantity would determine whether a
 suitable *Condition Level* record would be selected. The quantity is
 counted for all products, that matched the condition in the *Advanced
-Criteria* field. This syntax is also applied for parsing the *Criteria
-Based* and *List Based* freebies. All [.object]#Order Line
-Items# of the order will. be checked. See the example below:
+Criteria* field. This syntax is also applied for parsing the *Criteria
+Based* and *List Based* freebies. All [.object]#Order Line
+Items# of the order will. be checked. See the example below:
 
-[{plus}] link:javascript:void(0)[Click to view an example]
+[{plus}] xref:javascript:void(0)[Click to view an example]
 
 .[-] Hide[%collapsible] ====
 
@@ -38,10 +38,10 @@ Items# of the order will. be checked. See the example below:
 
 Advanced Criteria 2.0 provides more flexibility when granting discounts
 by setting multiple filters at the same time, as well as a minimum
-number of products for different size discounts. The logic is also
+number of products for different size discounts. The logic is also
 affected by the value specified
-in link:admin-guide/managing-ct-orders/discount-management/discount-data-model/calculation-types-field-reference/calculation-type-applyconditiontype-c-field-specification[the
-Apply Condition Type field]. 
+in xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/calculation-types-field-reference/calculation-type-applyconditiontype-c-field-specification[the
+Apply Condition Type field].
 
 See the example below, where the discount will be applied when one of
 the conditions is met.
@@ -50,7 +50,7 @@ the conditions is met.
 * 6 SKUs from Brand3 and 4 SKUs from Brand4
 * 4 SKUs from Brand4 and 2 SKUs from Brand5
 
-[{plus}] link:javascript:void(0)[Click to view an example]
+[{plus}] xref:javascript:void(0)[Click to view an example]
 
 .[-] Hide[%collapsible] ====
 
@@ -87,7 +87,7 @@ To use several conditions, apply[.apiobject]#AND# and
 
 
 Required
-for link:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification#h2_1585895621[Advanced
+for xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification#h2_1585895621[Advanced
 Criteria 2.0].
 
 |[.apiobject]#levelConditions# |Object |No a|
@@ -97,7 +97,7 @@ get a discount.
 
 
 Required
-for link:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification#h2__1997029544[Advanced
+for xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification#h2__1997029544[Advanced
 Criteria 1.0].
 
 |===
@@ -124,21 +124,21 @@ The required condition. Available values:
 
 * filter
 See
-link:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification#h3__1623789156[Filter].
+xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification#h3__1623789156[Filter].
 * minCount
-Seelink:condition-advancedcriteria-c-field-specification.html#h3_290861277[Minimum
+Seexref:condition-advancedcriteria-c-field-specification.html#h3_290861277[Minimum
 Quantity].
 * requiredProducts
 See
-link:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification#h3_1542681245[Required
+xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification#h3_1542681245[Required
 Products].
 
 
 
 The condition must
-contain [.apiobject]#minCount# or [.apiobject]#requiredProducts#.
-If [.apiobject]#filter# is used,
-the [.apiobject]#minCount# or [.apiobject]#requiredProducts# logic
+contain [.apiobject]#minCount# or [.apiobject]#requiredProducts#.
+If [.apiobject]#filter# is used,
+the [.apiobject]#minCount# or [.apiobject]#requiredProducts# logic
 will be applied to the products that match the filter criteria.
 
 |===
@@ -163,7 +163,7 @@ Available values:
 
 |[.apiobject]#items# |An array of Filter Items |Yes a|
 See
-link:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification#h3__764213188[Filter
+xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification#h3__764213188[Filter
 items].
 
 
@@ -181,10 +181,10 @@ At least one item must be provided.
 
 |[.apiobject]#field# |String |Yes |The field from the
 [.object]#Order Line Item# or its parent object for which the
-operator key is applied.
+operator key is applied.
 
 |[.apiobject]#operator# |Enum |Yes |See
-link:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification#h3_1330481294[Items
+xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification#h3_1330481294[Items
 Operators].
 
 |[.apiobject]#value# |Boolean |No |A target value for
@@ -198,8 +198,8 @@ A target value for fields with the *Text* type.
 
 
 
-The key is required when the [.apiobject]#operator# key is
-not [.apiobject]#in# or [.apiobject]#notIn#.
+The key is required when the [.apiobject]#operator# key is
+not [.apiobject]#in# or [.apiobject]#notIn#.
 
 |[.apiobject]#values# |Array of Values |No a|
 The[.apiobject]#values# with the *Text* type, separated by a
@@ -209,8 +209,8 @@ comma, for example:[.apiobject]#["abc","123"]#
 #
 
 [.apiobject]#At least one item must be provided. The key is
-required when the #[.apiobject]#operator# key
-is [.apiobject]#in# or [.apiobject]#notIn#.
+required when the #[.apiobject]#operator# key
+is [.apiobject]#in# or [.apiobject]#notIn#.
 
 |===
 
@@ -234,7 +234,7 @@ products is less than that specified for that key.
 [[h3_1542681245]]
 ==== Required Products
 
-The required products to get a discount. 
+The required products to get a discount.
 
 
 
@@ -259,7 +259,7 @@ It is used when one of the products is required to get a discount
 |[.apiobject]#items# |An array of Required Product Items
 |Yes a|
 The list of required products. See the
-link:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification#h3_2075634919[Required
+xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification#h3_2075634919[Required
 Products Items].
 
 
@@ -271,7 +271,7 @@ The condition may be satisfied if there are no specified values.
 [[h3_2075634919]]
 ==== Required Product Items
 
-The list of required products to get a discount. 
+The list of required products to get a discount.
 
 
 
@@ -295,13 +295,13 @@ quantity
 The list of products that affect the group discount. These products'
 quantity is compared with the value in the
 [.apiobject]#StartingFrom__c# field on the
-link:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-level-field-reference[Condition Level] record.
+xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-level-field-reference[Condition Level] record.
 
 
 
 Applied
-after link:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification#h3_1317873265[levelConditions] and link:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification#h3_1542681245[requiredProducts] are
-calculated. If those conditions were not met, the **Level Based on
+after xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification#h3_1317873265[levelConditions] and xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification#h3_1542681245[requiredProducts] are
+calculated. If those conditions were not met, the **Level Based on
 Filte**r will not be calculated.
 
 [width="100%",cols="25%,25%,25%,25%",]
@@ -319,7 +319,7 @@ Available values:
 |[.apiobject]#items# |An array of Level Based on Filter Items
 |Yes a|
 See
-link:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification#h3__287654427[Level
+xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification#h3__287654427[Level
 Based on Filter Items].
 
 
@@ -338,7 +338,7 @@ Items# are a match.
 
 
 The format is the same as for
-the link:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-conditiondetails-c-field-specification[orders__ConditionDetails__c] field.
+the xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-conditiondetails-c-field-specification[orders__ConditionDetails__c] field.
 
 [width="100%",cols="25%,25%,25%,25%",]
 |===
@@ -349,7 +349,7 @@ the link:admin-guide/managing-ct-orders/discount-management/discount-data-model
 [.apiobject]#operator# key is applied.
 
 |[.apiobject]#operator# |Enum |Yes |See
-link:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification#h3_1330481294[Items
+xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification#h3_1330481294[Items
 Operators].
 
 |[.apiobject]#value# |Boolean |No |A target value for fields
@@ -363,8 +363,8 @@ A target value for fields with the *Text* type.
 
 
 
-The key is required when the [.apiobject]#operator# key is
-not [.apiobject]#in# or [.apiobject]#notIn#.
+The key is required when the [.apiobject]#operator# key is
+not [.apiobject]#in# or [.apiobject]#notIn#.
 
 |[.apiobject]#values# |Array of Values |No a|
 The[.apiobject]#values# with the *Text* type, separated by a
@@ -374,8 +374,8 @@ comma, for example:[.apiobject]#["abc","123"]#
 #
 
 [.apiobject]#At least one item must be provided. The key is
-required when the #[.apiobject]#operator# key
-is [.apiobject]#in# or [.apiobject]#notIn#.
+required when the #[.apiobject]#operator# key
+is [.apiobject]#in# or [.apiobject]#notIn#.
 
 |===
 

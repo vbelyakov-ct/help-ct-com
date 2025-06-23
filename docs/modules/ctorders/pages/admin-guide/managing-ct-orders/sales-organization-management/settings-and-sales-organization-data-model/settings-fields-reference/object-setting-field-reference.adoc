@@ -26,7 +26,7 @@ Select the[.object]#Activity# object:
 |[.apiobject]#orders__AddressObject__c# |Text(255)
 |A custom object(s) that stores the address for deliveries (separated by
 a comma, without a blank space).[NOTE] ====
-link:delivery-field-reference[The Delivery object] requires a
+xref:delivery-field-reference[The Delivery object] requires a
 reference field to this field, for example, the lookup to
 [.apiobject]#Address__c ==== field.#
 
@@ -64,11 +64,11 @@ Select the[.object]#Product# object.
 |SKU Field |[.apiobject]#orders__SKUField__c#
 |Text(255) a|
 Specify the field API name, which carries an SKU attribute for the
-object specified in the orders__ProductObject__c field.
+object specified in the orders__ProductObject__c field.
 
 * The SKU attribute is a checkbox that defines whether the product
 record can be added to an order.
-* It identifies the product SKU record from other product records used
-to create a hierarchy (brand, family, etc.).   
+* It identifies the product SKU record from other product records used
+to create a hierarchy (brand, family, etc.).
 
 |===

@@ -5,11 +5,11 @@ minimum and maximum quantity or amount of products per the order or per
 single delivery.
 
 To learn more about the object model, refer to
-link:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/index[CT Order Data Model].
+xref:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/index[CT Order Data Model].
 
 The process path:
 
-. Search for all matching link:limit-rule-field-reference[Limit
+. Search for all matching xref:limit-rule-field-reference[Limit
 Rule] records for the order.
 .. Search for a _Limit Rule_ record where the *Order Type* and *Sales
 Organization* fields are specified.
@@ -25,8 +25,8 @@ All found matching records will be applied.
 are criteria in the *Delivery Criteria Path* field for grouping
 deliveries. If yes, the system groups deliveries and applies limit rules
 to each delivery group.
-* The values in the *Maximum Amount*, *Minimum Amount*, *Maximum
-Quantity*, and *Minimum Quantity* fields are applied only to the group
+* The values in the *Maximum Amount*, *Minimum Amount*, *Maximum
+Quantity*, and *Minimum Quantity* fields are applied only to the group
 of deliveries that match the criteria.
 * The bundle components are always distributed to their parent's product
 group.
@@ -41,5 +41,5 @@ a delivery group.
 
 See also:
 
-* link:workshop-6-2-configuring-limit-rules[Workshop 6.2:
+* xref:workshop-6-2-configuring-limit-rules[Workshop 6.2:
 Configuring Limit Rules]

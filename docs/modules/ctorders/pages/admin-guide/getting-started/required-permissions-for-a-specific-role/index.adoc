@@ -4,10 +4,10 @@ Four permission set groups must be assigned to the users based on their
 role. Have a look at accesses and permissions included in the permission
 set groups.
 
-To work with link:web-service[Web Service], the integration user
+To work with xref:web-service[Web Service], the integration user
 must have permission to carry out discount calculations using the Web
 Service. For more information, refer to
-link:../Storage/project-order-module/PDF/CT-Orders-User-Permissions-to-Access-Web-Service.pdf[Integration
+xref:../Storage/project-order-module/PDF/CT-Orders-User-Permissions-to-Access-Web-Service.pdf[Integration
 User Permissions].
 
 :toc: :toclevels: 3
@@ -342,9 +342,9 @@ Setting*
 [[h2__260496953]]
 === Custom Permissions
 
-* _orders.Allow Management of SelfAPI_ custom permission is required to
-access the link:quick-start/installing-the-ct-orders-package#self-api[Self API
-tab] of the CT Orders Control Panel.
-* _orders.Allow Management of AuthData_ custom permission is required
-to access and manually manage link:auth-data-field-reference[Auth
+* _orders.Allow Management of SelfAPI_ custom permission is required to
+access the xref:quick-start/installing-the-ct-orders-package#self-api[Self API
+tab] of the CT Orders Control Panel.
+* _orders.Allow Management of AuthData_ custom permission is required
+to access and manually manage xref:auth-data-field-reference[Auth
 Data] records.

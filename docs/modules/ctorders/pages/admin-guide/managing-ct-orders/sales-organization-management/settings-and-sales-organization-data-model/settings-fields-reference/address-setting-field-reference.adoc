@@ -16,13 +16,13 @@ Object record type API name:[.apiobject]#AddressSetting#
 
 |Address Field
 |[.apiobject]#orders__AddressField__с# |Text(255) a|
-Specify the field API name of the **Address **object that contains the
-delivery address of a selected *Sales Organization*.
+Specify the field API name of the **Address **object that contains the
+delivery address of a selected *Sales Organization*.
 
 * Account
 * RetailStore
-* the API name of the custom **Address **object[NOTE] ==== The
-custom *Address* object should be created by the administrator. ====
+* the API name of the custom **Address **object[NOTE] ==== The
+custom *Address* object should be created by the administrator. ====
 
 |Sales Organization
 |[.apiobject]#orders__SalesOrganizationId__c#
@@ -34,8 +34,8 @@ Specifies the SOQL filter that will be used for searching the delivery
 addresses.
 
 * use the[.apiobject]#WHERE# clause and following operators:
-[.apiobject]#OR#,[.apiobject]#AND#, LIKE, ORDER BY, 
-[.apiobject]#LIMIT#, =, !=,>,<,>=,<=,<
+[.apiobject]#OR#,[.apiobject]#AND#, LIKE, ORDER BY,
+[.apiobject]#LIMIT#, =, !=,>,<,>=,<=,<
 * To define the corresponding account, use
 [.apiobject]#{!Account.Id}#[.apiobject]# or
 {!RetailStore.Id}#

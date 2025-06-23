@@ -1,7 +1,7 @@
 = Online Order
 
 Get familiar with the online order creation process and main features.
-link:workshop1-0-creating-basic-order[Workshop 1.0] helps you to
+xref:workshop1-0-creating-basic-order[Workshop 1.0] helps you to
 configure your first order and understand relationships inside the CT
 Orders data model.
 
@@ -15,14 +15,14 @@ _CT Products_ from these catalogs to the current order:
 
 * The[.object]#Catalog# object must be available for the sales
 rep.
-* link:admin-guide/managing-ct-orders/catalog-management/catalog-management[The Catalog record] must be active and:
-** link:quick-start/creating-and-adding-catalogs-1-0[assigned to the current
+* xref:admin-guide/managing-ct-orders/catalog-management/catalog-management[The Catalog record] must be active and:
+** xref:quick-start/creating-and-adding-catalogs-1-0[assigned to the current
 account];
 [NOTE] ==== Set the *Available for All Accounts* checkbox on the
 _Catalog_ record to use it for any account. ====
 ** available for the current Order Type;
 ** available for the current Sales Organization.
-* The link:admin-guide/managing-ct-orders/catalog-management/catalog-data-model/catalog-line-item-field-reference[Catalog Line Item]
+* The xref:admin-guide/managing-ct-orders/catalog-management/catalog-data-model/catalog-line-item-field-reference[Catalog Line Item]
 records must be active and store the unique CT Product ID.
 
 
@@ -32,7 +32,7 @@ add _CT Products_ from these promotions to the current order:
 
 * The[.object]#Promotion# object must be available for the
 sales rep.
-* link:admin-guide/managing-ct-orders/discount-management/promotions[The Promotion record] must be active and:
+* xref:admin-guide/managing-ct-orders/discount-management/promotions[The Promotion record] must be active and:
 ** assigned to the current account;
 [NOTE] ==== Set the *Available for All Accounts* checkbox on the
 _Promotion_ record to use it for any account. ====
@@ -41,7 +41,7 @@ _Promotion_ record to use it for any account. ====
 * The current date is within the promotion start and end dates. If one
 of the ordering dates is absent, the current date must match the
 promotion delivery dates.
-* The link:admin-guide/managing-ct-orders/discount-management/promotion-data-model/promotion-line-item-field-reference[Promotion Line Item]
+* The xref:admin-guide/managing-ct-orders/discount-management/promotion-data-model/promotion-line-item-field-reference[Promotion Line Item]
 records must be active, have the _Product_ record type, and store the
 unique CT Product ID.
 
@@ -52,27 +52,27 @@ On the *CT Order* tab, click on one of the orders and then click *Edit
 Cart* to open the order cart:
 
 * *(1)* On the left side, the catalogs and promotions available for the
-current _Sales Organization_ are displayed. Products are arranged
+current _Sales Organization_ are displayed. Products are arranged
 according to their order number (if given) or in alphabetical order.
 [NOTE] ==== The product is available for order only if a CT
-Price Book and a link:admin-guide/managing-ct-orders/product-management/product-data-model/ct-price-book-line-item-field-reference[List
-Price] are specified for the _CT Product_ record. ====
+Price Book and a xref:admin-guide/managing-ct-orders/product-management/product-data-model/ct-price-book-line-item-field-reference[List
+Price] are specified for the _CT Product_ record. ====
 * Search is carried out in the fields that are listed on the product
 https://help.salesforce.com/articleView?id=search_results_setup_parent.htm&type=5[Search
-Results] search layout (including the *Name* field). If you selected
+Results] search layout (including the *Name* field). If you selected
 multiple filters, the products will be displayed that match all the
 selected criteria.
-* *(2)* On the right side, the current order table with configured
+* *(2)* On the right side, the current order table with configured
 columns and delivery dates is displayed. Click on the *Product Name*
-column to sort the list of added products in alphabetical order
+column to sort the list of added products in alphabetical order
 (ascending or descending).
-* *(3)* The additional layout could be configured to show a total order
+* *(3)* The additional layout could be configured to show a total order
 price, discounts for all products in the cart, and other metrics.
-* *(4)* The CT Order button panel.
+* *(4)* The CT Order button panel.
 * *(5)* The filter panel.
-Click image:offline-order-filter-icon.jpg[]
+Click image:offline-order-filter-icon.jpg[]
 to expand and hide it. The filter will be displayed only if the
-link:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/filter-setting-field-reference/index[Filter Setting] is configured.
+xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/filter-setting-field-reference/index[Filter Setting] is configured.
 
 image:online-order_2023.png[]
 
@@ -83,7 +83,7 @@ Switch between *Catalogs* and *Promotion* tabs to select products and
 add them to the order cart.
 
 * Add one product, several products, or the whole catalog / sub-catalog
-/ promotions. The *Disable Mass Adding* option on a _Catalog_ record
+/ promotions. The *Disable Mass Adding* option on a _Catalog_ record
 defines whether a sales rep can add a whole catalog to the order cart.
 ** Select products and click the *Add* button.
 ** Use drag-and-drop to manage products in the catalogs, promotions, and
@@ -120,49 +120,49 @@ The *Order Cart* page consists of the following parts:
 image:order-cart-layout.png[]
 
 * *(1)* The main cart area with the configured columns
-link:order-line-item-field-reference[for Order Line Items] contains
+xref:order-line-item-field-reference[for Order Line Items] contains
 read-only fields with the prices from the corresponding CT Price Book
 and applied discounts, additional fields that are configured using the
 layout setting.
 [NOTE] ==== To form an order, it is necessary to configure the
-link:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/layout-setting-field-reference[Object Settings] record with
-the link:configuring-layout-settings-1-0[Layout Setting] record
+xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/layout-setting-field-reference[Object Settings] record with
+the xref:configuring-layout-settings-1-0[Layout Setting] record
 type. You can add read-only and editable fields affecting discount
 calculation on the layout. ====
-* *(2)* The bottom panel with overview metrics (optionally). To add the
+* *(2)* The bottom panel with overview metrics (optionally). To add the
 desired fields, it is necessary to configure the Object Settings record
-with the link:admin-guide/managing-ct-orders/sales-organization-management/howtos/how-to-configure-totals-panel-setting[Totals Panel
+with the xref:admin-guide/managing-ct-orders/sales-organization-management/howtos/how-to-configure-totals-panel-setting[Totals Panel
 Setting] record type. The maximum number of displayed fields is 4. If
-the setting is not configured, link:ct-order-field-reference[the
-Total Price and Total Discount fields] are displayed by default.
+the setting is not configured, xref:ct-order-field-reference[the
+Total Price and Total Discount fields] are displayed by default.
 * *(3)* The CT Order button controls.
-link:creating-a-delivery-1-0[]
+xref:creating-a-delivery-1-0[]
 ** Click *Get Freebie* to
-link:admin-guide/managing-ct-orders/freebies-management/index#h2_1556344363[distribute freebies].
+xref:admin-guide/managing-ct-orders/freebies-management/index#h2_1556344363[distribute freebies].
 ** Click *Add Delivery* to split products in the current order per
 delivery dates and addresses.
-** If the order has 140 *Delivery Line Items *or more, the *Calculate
-Discounts* button appears to reduce the calculation time. Click the
+** If the order has 140 *Delivery Line Items *or more, the *Calculate
+Discounts* button appears to reduce the calculation time. Click the
 button to calculate discounts and the total price.
 By default, there are only two available split criteria: date and
 address. You can add up to three more conditions
-for link:5-1-setting-up-a-delivery-split[splitting an order].
+for xref:5-1-setting-up-a-delivery-split[splitting an order].
 ** Click *Save Draft* to save newly created order or changes in the
-editing one. link:admin-guide/managing-ct-orders/order-management/index#h2_158967301[By default], the
-*On Hold* stage will be set. Price calculations based on values in the
-formula fields will be performed after clicking *Save Draft*.
+editing one. xref:admin-guide/managing-ct-orders/order-management/index#h2_158967301[By default], the
+*On Hold* stage will be set. Price calculations based on values in the
+formula fields will be performed after clicking *Save Draft*.
 ** Click *Exit* if you do not want to save the current order or changes
 made in the existing order.
 ** Click *Finalize* to restrict editing the current order.
-If link:5-2-setting-up-the-delivery-summary[the Delivery Summary
-window] is set up, you can review and edit the delivery details after
-clicking *Finalize*. For more information, refer
-to link:delivery-management#h2__1374863314[Delivery Summary].
-* *(4)* link:creating-a-delivery-1-0[The added delivery dates] with
+If xref:5-2-setting-up-the-delivery-summary[the Delivery Summary
+window] is set up, you can review and edit the delivery details after
+clicking *Finalize*. For more information, refer
+to xref:delivery-management#h2__1374863314[Delivery Summary].
+* *(4)* xref:creating-a-delivery-1-0[The added delivery dates] with
 the product quantity per delivery.
-* To delete deliveries, click the drop-down arrow and select *Delete
+* To delete deliveries, click the drop-down arrow and select *Delete
 delivery*.
-If a _Delivery_ record was created for the order, you cannot delete all
+If a _Delivery_ record was created for the order, you cannot delete all
 deliveries from the order, at least one delivery should exist.
 
 [[h3__1143528965]]
@@ -173,7 +173,7 @@ manually set discounts and can be used in calculations or to display
 additional information. These fields should be first created on the
 [.object]#Order Line Item# object and then specified in the
 Settings record with the
-link:order-line-item-layout-setting-1-0[Layout Setting] record
+xref:order-line-item-layout-setting-1-0[Layout Setting] record
 type.
 
 
@@ -181,7 +181,7 @@ type.
 The processing logic displaying the fields goes as follows:
 
 . First, search the setting with the *Record Type* value matching the
-link:ct-order-field-reference[one] that was specified in the pop-up
+xref:ct-order-field-reference[one] that was specified in the pop-up
 window when the order was created.
 . Then goes the setting with the *Sales Organization* field value
 matching the one on the created order.
@@ -190,10 +190,10 @@ matching the one on the created order.
 
 
 
-This logic takes into account the *Read-Only* and *Required* attributes
+This logic takes into account the *Read-Only* and *Required* attributes
 that could've been checked when the field was created. In that case,
 these attributes will always come in higher priority regardless of the
-values specified in the setting's *Read-Only Attributes* and *Required
+values specified in the setting's *Read-Only Attributes* and *Required
 Attributes*.
 
 
@@ -215,5 +215,5 @@ image:ctorders-editable-fields.gif[]
 
 See also:
 
-* link:workshop1-0-creating-basic-order[Workshop 1.0: Creating
+* xref:workshop1-0-creating-basic-order[Workshop 1.0: Creating
 Basic Order]

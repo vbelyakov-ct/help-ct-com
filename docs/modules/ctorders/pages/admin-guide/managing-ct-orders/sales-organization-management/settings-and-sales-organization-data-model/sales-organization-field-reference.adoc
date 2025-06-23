@@ -4,11 +4,11 @@ The[.object]#Sales Organization# object is intended to
 represent the customer organization based, for example, on territory or
 departments.
 
-At least one *Sales Organization* should be created. 
+At least one *Sales Organization* should be created.
 
 '''''
 
-Object API name: orders__SalesOrganization__c.
+Object API name: orders__SalesOrganization__c.
 
 '''''
 
@@ -19,19 +19,19 @@ Object API name: orders__SalesOrganization__c.
 |External Id |[.apiobject]#orders__ExternalId__c#
 |Text(255) (External ID) (Unique Case Sensitive) a|
 Specify only in the case if there is a target ERP system that provides
-data with accounts, delivery addresses, price books, etc. 
+data with accounts, delivery addresses, price books, etc.
 
 You can add all data using in one file with the .csv extension.
 
 |Logging Mode |[.apiobject]#orders__LoggingMode__c#
 |Picklist a|
 [WARNING] ==== At least _Read_ permission to this field is
-required to work with link:order-management[orders]. ====
+required to work with xref:order-management[orders]. ====
 
 This field is used to define information to store in the
-link:calculated-discount-field-reference[Calculated Discounts]
-records. For more information, refer to link:discount-logs[Discount
-Logs]. 
+xref:calculated-discount-field-reference[Calculated Discounts]
+records. For more information, refer to xref:discount-logs[Discount
+Logs].
 
 Available values:
 
@@ -42,14 +42,14 @@ Available values:
 
 |Log Request Trigger
 |[.apiobject]#orders__LogRequestTrigger__c# |Picklist a|
-This field is responsible for determining when and for which records
+This field is responsible for determining when and for which records
 logs from Web Service will be requested. Available values:
 
 [NOTE] ==== The request will be sent only if
-the orders__LoggingMode__c ====  field is not empty, the
+the orders__LoggingMode__c ====  field is not empty, the
 [.apiobject]#orders__LogStatus__c# field on the
-[.object]#Order# object has the _Not Requested_ value, and the
-[.apiobject]#orders__LogId__c# field on the
+[.object]#Order# object has the _Not Requested_ value, and the
+[.apiobject]#orders__LogId__c# field on the
 [.object]#Order# object is empty.
 
 It is possible to schedule the batch.
@@ -87,7 +87,7 @@ to complete an order which is the same as the order already completed
 online.
 
 [TIP] ==== For more information, refer to
-link:order-change-manager#h3_1662160851[Deduplication Logic for the
+xref:order-change-manager#h3_1662160851[Deduplication Logic for the
 Finalized Order]. ====
 
 |===

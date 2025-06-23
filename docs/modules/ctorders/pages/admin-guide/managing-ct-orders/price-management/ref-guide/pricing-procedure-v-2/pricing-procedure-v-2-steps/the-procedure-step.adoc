@@ -1,7 +1,7 @@
 = The Procedure Step
 
 This step is used to calculate the price based on the conditions
-specified in the link:calculation-types-field-reference[Calculation
+specified in the xref:calculation-types-field-reference[Calculation
 Type] record.
 
 [[h2_109049444]]
@@ -15,18 +15,18 @@ Type] record.
 [.apiobject]#procedure# constant.
 
 |[.apiobject]#condition# |Step Conditions |No |See the
-link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/step-conditions[Step Conditions].
+xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/step-conditions[Step Conditions].
 
 |[.apiobject]#basePrice# |String |Yes |The field from the
-link:delivery-line-item-field-reference[Delivery Line Item] object
+xref:delivery-line-item-field-reference[Delivery Line Item] object
 for obtaining the price for calculating the discount. See the
-link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-available-field-formats[Available Field
+xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-available-field-formats[Available Field
 Formats].
 
 |[.apiobject]#resultPrice# |String |Yes |The field from the
 [.object]#Delivery Line Item# object for storing the price with
 the applied discount. See the
-link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-available-field-formats[Available Field
+xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-available-field-formats[Available Field
 Formats].
 
 |[.apiobject]#procedure# |Object |Yes |Pricing Procedure.
@@ -96,15 +96,15 @@ table.
 [[h2__1406500097]]
 === Examples
 
-[{plus}] link:javascript:void(0)[Standard Procedure: MULT]
+[{plus}] xref:javascript:void(0)[Standard Procedure: MULT]
 
 .[-] Hide[%collapsible] ==== ====
 
-[{plus}] link:javascript:void(0)[Standard Procedure: MULT (with
+[{plus}] xref:javascript:void(0)[Standard Procedure: MULT (with
 rounding)]
 
 .[-] Hide[%collapsible] ==== ====
 
-[{plus}] link:javascript:void(0)[Standard Multi-level Procedure]
+[{plus}] xref:javascript:void(0)[Standard Multi-level Procedure]
 
 .[-] Hide[%collapsible] ==== ====

@@ -5,21 +5,21 @@ has child products—related records of the[.object]#Product
 Components# object. For example, it can be a set of yogurts.
 
 To work with bundles, a user must have access to
-the [.object]#Product Component# object
-(in https://help.customertimes.com/smart/project-ct-cpg/product-component-field-reference[CT
-CPG] or https://help.customertimes.com/smart/project-ct-pharma/product-component-field-reference[CT
-Pharma]) on link:catalog-line-item-field-reference[Catalog Line
-Item] and link:promotion-line-item-field-reference[Promotion Line
+the [.object]#Product Component# object
+(in https://help.customertimes.com/smart/project-ct-cpg/product-component-field-reference[CT
+CPG] or https://help.customertimes.com/smart/project-ct-pharma/product-component-field-reference[CT
+Pharma]) on xref:catalog-line-item-field-reference[Catalog Line
+Item] and xref:promotion-line-item-field-reference[Promotion Line
 Item].
 
-Since CT Orders 24R1, administrator must manually create the *Product
-Component* lookup field to the [.object]#Product
-Component# object
-(in https://help.customertimes.com/smart/project-ct-cpg/product-component-field-reference[CT
-CPG] or https://help.customertimes.com/smart/project-ct-pharma/product-component-field-reference[CT
-Pharma]) on link:catalog-line-item-field-reference[Catalog Line
-Item] and/or link:promotion-line-item-field-reference[Promotion
-Line Item] to work with bundles. 
+Since CT Orders 24R1, administrator must manually create the *Product
+Component* lookup field to the [.object]#Product
+Component# object
+(in https://help.customertimes.com/smart/project-ct-cpg/product-component-field-reference[CT
+CPG] or https://help.customertimes.com/smart/project-ct-pharma/product-component-field-reference[CT
+Pharma]) on xref:catalog-line-item-field-reference[Catalog Line
+Item] and/or xref:promotion-line-item-field-reference[Promotion
+Line Item] to work with bundles.
 
 [[h2_1919554340]]
 === Creating Bundles
@@ -48,7 +48,7 @@ image:Bundle_1.png[]
 === Bundle Calculation Rules
 
 The bundle price and quantity are calculated based on the values in the
-*Set Quantity On* and *Calculate Price On* fields on the *Product*
+*Set Quantity On* and *Calculate Price On* fields on the *Product*
 record.
 [NOTE] ==== The *Multiplier* field on the *Product Component*
 records affects product quantity in the order cart. ====
@@ -90,7 +90,7 @@ The minimum and maximum quantities on bundle components are *Editable*.
 |Components |Components |The multiplier will not be applied. |The
 Price Tag icon is displayed next to each child's product in the bundle.
 |The bundle structure will be fully expanded. a|
-The bundle price will be calculated per component by multiplying the
+The bundle price will be calculated per component by multiplying the
 *List Price* by the *Quantity* of the product component.
 
 

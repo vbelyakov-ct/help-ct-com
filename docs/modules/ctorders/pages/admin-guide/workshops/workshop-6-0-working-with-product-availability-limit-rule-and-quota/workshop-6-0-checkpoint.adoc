@@ -15,15 +15,15 @@ configured discounts:
 . Specify the following:
 * *Order Type*: _Order_.
 * Select *Account*.
-[NOTE] ==== The link:admin-guide/workshops/workshop1-0-creating-basic-order/configuring-an-account-1-0[Order
+[NOTE] ==== The xref:admin-guide/workshops/workshop1-0-creating-basic-order/configuring-an-account-1-0[Order
 Allowed] checkbox must be selected on the _Account_ details page. ====
 * *Price Book*: select
-link:admin-guide/workshops/workshop1-0-creating-basic-order/creating-and-assigning-a-ct-price-book-1-0/index[a price book] that
+xref:admin-guide/workshops/workshop1-0-creating-basic-order/creating-and-assigning-a-ct-price-book-1-0/index[a price book] that
 you have created earlier.
 * *Sales Organization*: _Default Sales Org_.
 * *Pricing Procedure*: select one of the created pricing procedures, for
 example,
-link:admin-guide/workshops/workshop-2-0-setting-up-discounts/workshop-2-4-setting-up-a-total-discount-per-delivery/index[Total
+xref:admin-guide/workshops/workshop-2-0-setting-up-discounts/workshop-2-4-setting-up-a-total-discount-per-delivery/index[Total
 Discount (%) per Delivery].
 * *Order Stage*: _On-Hold_.
 image:Checkpoint-1-2.5.png[]
@@ -38,7 +38,7 @@ page, click the *Edit Cart* button.
 _Product Availabilities_ are automatically applied to the products and
 freebies.
 
-* Click link:admin-guide/workshops/workshop-5-0-implementing-additional-features/5-6-sdk-displaying-info-icon[the info icon] next to
+* Click xref:admin-guide/workshops/workshop-5-0-implementing-additional-features/5-6-sdk-displaying-info-icon[the info icon] next to
 the product or freebie to see the availability dates if they are
 specified.
 * Cells of unavailable products and freebies will be automatically
@@ -50,7 +50,7 @@ blocked.
 The cells are blocked for the products that cannot be distributed on the
 4 of July.
 
-* link:setting-up-product-availability-for-product-6-1[The Product
+* xref:setting-up-product-availability-for-product-6-1[The Product
 Availability records for Product]
 
 
@@ -70,7 +70,7 @@ image:Workshop-6.0-Product-Available-PA.png[]
 The cells are blocked for the freebies that cannot be distributed on the
 4 of July.
 
-* link:setting-up-product-availability-for-freebie-6-1[The Product
+* xref:setting-up-product-availability-for-freebie-6-1[The Product
 Availability records for Freebie]
 
 image:Workshop-6.0-Freebie-Blocked-Cells-due-to-PA.png[]
@@ -106,25 +106,25 @@ _Limit Rules_ are automatically applied when you click *Save Draft*,
 |===
 |Limit Rule per Delivery a|
 According to the _Order Split_ record, products with the same family and
-brand will be placed in the same delivery, and, according to the _Limit
+brand will be placed in the same delivery, and, according to the _Limit
 Rule_ record, if the total number of such products is less than the
 minimum quantity or higher than the maximum quantity, a validation error
 will be displayed.
 
-* link:admin-guide/workshops/workshop-5-0-implementing-additional-features/5-1-setting-up-a-delivery-split[The Order Split setting] is
+* xref:admin-guide/workshops/workshop-5-0-implementing-additional-features/5-1-setting-up-a-delivery-split[The Order Split setting] is
 responsible for dividing products according to the criteria. Here are 4
 deliveries because there are 4 unique combinations of brand and family
 for added products.
 image:Workshop-6.0-Number-of-deliveries-Order-Split-.png[]
-* link:creating-limit-rule-for-delivery-6-2[The Limit Rule per
+* xref:creating-limit-rule-for-delivery-6-2[The Limit Rule per
 Delivery]: the maximum quantity for a single delivery is 100.
-* link:admin-guide/workshops/workshop-2-0-setting-up-discounts/workshop-2-4-setting-up-a-total-discount-per-delivery/index[The
+* xref:admin-guide/workshops/workshop-2-0-setting-up-discounts/workshop-2-4-setting-up-a-total-discount-per-delivery/index[The
 applied discount]: the highest
-link:admin-guide/workshops/workshop-2-0-setting-up-discounts/workshop-2-4-setting-up-a-total-discount-per-delivery/adding-condition-levels-2-4[condition level] is met (starting
+xref:admin-guide/workshops/workshop-2-0-setting-up-discounts/workshop-2-4-setting-up-a-total-discount-per-delivery/adding-condition-levels-2-4[condition level] is met (starting
 from 150 products, you will get the 15% discount)
-* link:admin-guide/workshops/workshop-3-0-working-with-freebies/workshop-3-1-configuring-prioritized-freebie-type/index[The
+* xref:admin-guide/workshops/workshop-3-0-working-with-freebies/workshop-3-1-configuring-prioritized-freebie-type/index[The
 distributed freebies]: the prioritized
-link:admin-guide/workshops/workshop-3-0-working-with-freebies/workshop-3-1-configuring-prioritized-freebie-type/adding-a-freebie-level-48-8-3-1[freebie level] is met (for
+xref:admin-guide/workshops/workshop-3-0-working-with-freebies/workshop-3-1-configuring-prioritized-freebie-type/adding-a-freebie-level-48-8-3-1[freebie level] is met (for
 every 48 products of a certain brand, you will share 8 freebies)
 
 image:Workshop-6.0-Exceed-Limit-Rule-Quantity-per-Delivery.png[]
@@ -132,14 +132,14 @@ image:Workshop-6.0-Exceed-Limit-Rule-Quantity-per-Delivery.png[]
 |Limit Rule per Order a|
 The total price for the whole order exceeds the limit.
 
-* link:creating-limit-rule-for-order-6-2[The Limit Rule per Order] 
-* link:admin-guide/workshops/workshop-2-0-setting-up-discounts/workshop-2-4-setting-up-a-total-discount-per-delivery/index[The
+* xref:creating-limit-rule-for-order-6-2[The Limit Rule per Order]
+* xref:admin-guide/workshops/workshop-2-0-setting-up-discounts/workshop-2-4-setting-up-a-total-discount-per-delivery/index[The
 applied discount]: the
-highest link:admin-guide/workshops/workshop-2-0-setting-up-discounts/workshop-2-4-setting-up-a-total-discount-per-delivery/adding-condition-levels-2-4[condition level] is met
-(starting from 150 products, you will get the 15% discount) 
-* link:admin-guide/workshops/workshop-3-0-working-with-freebies/workshop-3-1-configuring-prioritized-freebie-type/index[The
+highest xref:admin-guide/workshops/workshop-2-0-setting-up-discounts/workshop-2-4-setting-up-a-total-discount-per-delivery/adding-condition-levels-2-4[condition level] is met
+(starting from 150 products, you will get the 15% discount)
+* xref:admin-guide/workshops/workshop-3-0-working-with-freebies/workshop-3-1-configuring-prioritized-freebie-type/index[The
 distributed freebies]: the
-second link:admin-guide/workshops/workshop-3-0-working-with-freebies/workshop-3-1-configuring-prioritized-freebie-type/adding-a-freebie-level-48-8-3-1[freebie level] is met
+second xref:admin-guide/workshops/workshop-3-0-working-with-freebies/workshop-3-1-configuring-prioritized-freebie-type/adding-a-freebie-level-48-8-3-1[freebie level] is met
 (for every 12 products, you will share 1 freebie of the same product)
 
 image:Workshop-6.0-Exceed-Limit-Rule-Amount-per-Order.png[]
@@ -147,10 +147,10 @@ image:Workshop-6.0-Exceed-Limit-Rule-Amount-per-Order.png[]
 |Limit Rule with Condition a|
 The total price for the whole order exceeds the limit.
 
-* link:creating-limit-rules-with-conditions-6-2#h2__953788261[The
-Limit Rule per Order with the Apply Condition] 
+* xref:creating-limit-rules-with-conditions-6-2#h2__953788261[The
+Limit Rule per Order with the Apply Condition]
 * The maximum number (50) of the specific product (Apply Condition) is
-exceeded. 
+exceeded.
 
 image:Screenshot-2021-08-26-at-15.45.20.png[]
 
@@ -200,7 +200,7 @@ Quotas for promotion are calculated based on the created _Quota_ record.
 * The individual _Quota_ record is automatically created based on the
 found _Quota_ record with the _Template_ record type.
 [NOTE] ==== If there is an individual[.object]#Quota
-==== and a [.object]#Quota Template# on the same search level, the individual quota will be applied. For more information, refer to link:admin-guide/managing-ct-orders/product-validation-in-order/quotas/index#h3__1386411308[Quota Search].#
+==== and a [.object]#Quota Template# on the same search level, the individual quota will be applied. For more information, refer to xref:admin-guide/managing-ct-orders/product-validation-in-order/quotas/index#h3__1386411308[Quota Search].#
 * The quota will be counted for all products added from the specified
 promotion.
 * If you added 2 products from the promotion and set a quantity for each
@@ -218,11 +218,11 @@ Quotas for a freebie are calculated based on the created individual
 _Quota_ record.
 
 * If you have added 4 freebies, the remaining quantity is reflected in
-the *Remaining* line. In this case,
-the link:admin-guide/workshops/workshop-3-0-working-with-freebies/workshop-3-1-configuring-prioritized-freebie-type/adding-a-freebie-level-48-8-3-1[Certain Brand 48 {plus}
-8] condition is met, so you should add 8 freebies
-that link:admin-guide/workshops/workshop-3-0-working-with-freebies/workshop-3-1-configuring-prioritized-freebie-type/adding-a-freebie-condition-with-the-criteria-based-method-3-1[match
-the criteria].  
+the *Remaining* line. In this case,
+the xref:admin-guide/workshops/workshop-3-0-working-with-freebies/workshop-3-1-configuring-prioritized-freebie-type/adding-a-freebie-level-48-8-3-1[Certain Brand 48 {plus}
+8] condition is met, so you should add 8 freebies
+that xref:admin-guide/workshops/workshop-3-0-working-with-freebies/workshop-3-1-configuring-prioritized-freebie-type/adding-a-freebie-condition-with-the-criteria-based-method-3-1[match
+the criteria].
 * In addition, in the info icon, you see the unit of measure for the
 quota: quantity.
 
@@ -264,9 +264,9 @@ Quotas for a product are calculated based on the created individual
 _Quota_ record.
 
 * The booked product quantity for the first order is written in the
-*Booked* line. Quotas that have been booked will not affect the number
+*Booked* line. Quotas that have been booked will not affect the number
 of remaining quotas until the order in which those quotas have been
-distributed is finalized. 
+distributed is finalized.
 * If you have added 40 products, only 8 products will be available in
 the *Remaining* line.
 [NOTE] ==== The quota for other orders is placed in the *Booked*
@@ -295,13 +295,13 @@ Quotas for a freebie are calculated based on the created individual
 _Quota_ record.
 
 * The quota for a specific freebie will not be applied due to the
-condition is not met. For the quota,
-the link:admin-guide/workshops/workshop-3-0-working-with-freebies/workshop-3-1-configuring-prioritized-freebie-type/adding-a-freebie-level-48-8-3-1[Certain Brand 48 {plus}
-8] condition must be met. In this case, we have less than 48 products,
-so for products, the link:admin-guide/workshops/workshop-3-0-working-with-freebies/workshop-3-1-configuring-prioritized-freebie-type/adding-a-freebie-level-12-1-3-1[All 12
-{plus} 1] condition is applied, and for promotion,
-the link:admin-guide/workshops/workshop-3-0-working-with-freebies/workshop-3-2-configuring-selective-freebie-type/adding-a-freebie-level-for-promotion-3-2[Selective] freebie
-type is applied.  
+condition is not met. For the quota,
+the xref:admin-guide/workshops/workshop-3-0-working-with-freebies/workshop-3-1-configuring-prioritized-freebie-type/adding-a-freebie-level-48-8-3-1[Certain Brand 48 {plus}
+8] condition must be met. In this case, we have less than 48 products,
+so for products, the xref:admin-guide/workshops/workshop-3-0-working-with-freebies/workshop-3-1-configuring-prioritized-freebie-type/adding-a-freebie-level-12-1-3-1[All 12
+{plus} 1] condition is applied, and for promotion,
+the xref:admin-guide/workshops/workshop-3-0-working-with-freebies/workshop-3-2-configuring-selective-freebie-type/adding-a-freebie-level-for-promotion-3-2[Selective] freebie
+type is applied.
 
 
 

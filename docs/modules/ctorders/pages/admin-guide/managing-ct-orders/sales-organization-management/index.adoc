@@ -21,7 +21,7 @@ Read the Sales Organization description and configuration:
 
 
 
-To configure the link:sales-organization-field-reference[Sales
+To configure the xref:sales-organization-field-reference[Sales
 Organization] record:
 
 . Check the target system segmentation options to specify Sales
@@ -34,16 +34,16 @@ manager permissions to target system objects. Also, if additional custom
 objects will be created, for example, an[.object]#Address ====
 object, permission for representatives and managers should be
 specified.#
-. ​Configure link:admin-guide/getting-started/setting-up-an-instance/configuring-object-setting[the main CT Orders
+. ​Configure xref:admin-guide/getting-started/setting-up-an-instance/configuring-object-setting[the main CT Orders
 settings], such as the object setting, layout settings, etc.
 A representative should have at least permission to read records and all
-fields of the link:settings-fields-reference[Settings] object.
+fields of the xref:settings-fields-reference[Settings] object.
 Users with the manager role can also have permission to edit records.
 . Optionally, customize the *Sales Organization* Lightning page in the
 https://help.salesforce.com/articleView?id=lightning_app_builder_overview.htm&type=5[Lightning
 App Builder].
 The Lightning page should be available for representatives and managers.
-. link:creating-a-sales-organization-1-0[Create a Sales
+. xref:creating-a-sales-organization-1-0[Create a Sales
 Organization].
 A representative should have permission to read records and all fields
 of the *Sales Organization* records. Users with the manager role can
@@ -51,11 +51,11 @@ also have permission to edit records.
 Available options:
 * create a Sales Organization for Salesforce CRM;
 * relate a Sales Organization with a record in the customer ERP system.
-. link:creating-a-sales-organization-user-1-0[Assign users for
+. xref:creating-a-sales-organization-user-1-0[Assign users for
 Sales Organizations].
-link:sales-organization-user-field-reference[Users] should have the
+xref:sales-organization-user-field-reference[Users] should have the
 same permissions as listed in the steps above.
-. link:catalogs-field-reference[Assign at least one Catalog for a
+. xref:catalogs-field-reference[Assign at least one Catalog for a
 Sales Organization].
 [NOTE] ==== The *Catalog* record should include *CT Product*
 records, be assigned to at least one *Account* record that relates to
@@ -65,26 +65,26 @@ permission to read records of the *Catalog* and *Catalog Line Item*, *CT
 Price Book*, and *CT Price Book Line Item*, as well as access to the
 Lightning pages for these objects.
 . Assign at least one *Price Book* for a *Sales Organization*.
-. Optionally, specify link:promotion-field-reference[Promotions]
-and link:pricing-procedure-fields-reference[pricing procedures].
+. Optionally, specify xref:promotion-field-reference[Promotions]
+and xref:pricing-procedure-fields-reference[pricing procedures].
 
 The Sales Org is configured. The sales rep can
-link:order-management[create an order].
+xref:order-management[create an order].
 
 
 
- See also:
+ See also:
 
-* link:sales-organization-tab[Sales Organization Tab]
-* link:how-to-create-a-sales-organization[How to Create a Sales
+* xref:sales-organization-tab[Sales Organization Tab]
+* xref:how-to-create-a-sales-organization[How to Create a Sales
 Organization]
-* link:how-to-create-a-sales-organization-user[How to Create a
+* xref:how-to-create-a-sales-organization-user[How to Create a
 Sales Organization User]
-* link:how-to-create-an-account[How to Create an Account]
-* link:how-to-define-an-order-type[How to Define an Order Type]
-* link:how-to-configure-totals-panel-setting[How to Configure
+* xref:how-to-create-an-account[How to Create an Account]
+* xref:how-to-define-an-order-type[How to Define an Order Type]
+* xref:how-to-configure-totals-panel-setting[How to Configure
 Totals Panel Setting]
-* link:settings-and-sales-organization-data-model[Settings and
+* xref:settings-and-sales-organization-data-model[Settings and
 Sales Organization Data Model]
-* link:workshop1-0-creating-basic-order[Workshop 1.0: Creating
+* xref:workshop1-0-creating-basic-order[Workshop 1.0: Creating
 Basic Order]

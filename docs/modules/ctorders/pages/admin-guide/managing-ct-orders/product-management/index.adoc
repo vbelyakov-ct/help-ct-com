@@ -1,9 +1,9 @@
 = Product Management
 
 Administrators set up products that are assembled into
-link:catalog-management[Catalogs] and
-link:promotions[Promotions], and sales representatives used them
-for link:workshop1-0-creating-basic-order[creating orders]. You can
+xref:catalog-management[Catalogs] and
+xref:promotions[Promotions], and sales representatives used them
+for xref:workshop1-0-creating-basic-order[creating orders]. You can
 use the standard[.object]#Salesforce Product# object as your
 products, or set up CT Orders integration with the CT CPG or CT Pharma
 target package to enrich your product management process.
@@ -28,9 +28,9 @@ bundle if needed.
 [NOTE] ==== The[.object]#Product Component ==== object
 is required for this feature and available in case of integration with
 CT CPG or CT Pharma package.#
-* Set up link:ct-price-book-field-reference[CT Price Books] and
+* Set up xref:ct-price-book-field-reference[CT Price Books] and
 *List Prices* for each
-product—link:ct-price-book-line-item-field-reference[CT Price Book
+product—xref:ct-price-book-line-item-field-reference[CT Price Book
 Line Item].
 
 
@@ -63,7 +63,7 @@ Quantity Per Delivery* field.
 * The same rules are applied for products in bundles in the case when
 the *Set Quantity Level* field is set to[.object]#Product
 Component#.[TIP] ==== For more information, refer to
-link:managing-bundles[Managing Bundles]. ====
+xref:managing-bundles[Managing Bundles]. ====
 
 image:product-management-2020-05-19-2.png[]
 
@@ -135,7 +135,7 @@ subtitle is the value of the second field in a compact layout.
 * Select the[.object]#Product Component# object in a system.
 * Specify a field to be used as an SKU-defining attribute of a product
 record.
-. link:admin-guide/getting-started/setting-up-an-instance/creating-relationships-between-product-and-ct-orders-objects[Create
+. xref:admin-guide/getting-started/setting-up-an-instance/creating-relationships-between-product-and-ct-orders-objects[Create
 lookup fields for Product].
 
 Prior to configuring products hierarchy and other product settings, you
@@ -148,24 +148,24 @@ following objects:
 *[.object]#Freebie Line Item#
 *[.object]#Price Book Line Item#
 *[.object]#Delivery Line Item#
-. link:managing-bundles[Create and configure bundles].
+. xref:managing-bundles[Create and configure bundles].
 . Configure product quantity per delivery using the *Max Product Per
 Delivery* and *Min Product Per Delivery* fields for
 [.object]#Product# and[.object]#CT Price Book Line
 Item# records.
-. link:creating-and-assigning-a-ct-price-book-1-0[Create and assign
+. xref:creating-and-assigning-a-ct-price-book-1-0[Create and assign
 a Price Book].
-. link:adding-a-price-book-line-item-1-0[Set up product list price]
+. xref:adding-a-price-book-line-item-1-0[Set up product list price]
 for[.object]#CT Price Book Line Items#.
 
 
 
-See also: 
+See also:
 
-* link:managing-bundles[Managing Bundles]
-* link:how-to-add-a-product[How to Add a Product]
-* link:how-to-add-a-pricebook[How to Create and Assign a Price
+* xref:managing-bundles[Managing Bundles]
+* xref:how-to-add-a-product[How to Add a Product]
+* xref:how-to-add-a-pricebook[How to Create and Assign a Price
 Book]
-* link:product-data-model[Product Data
-Model]link:managing-bundles.html[
+* xref:product-data-model[Product Data
+Model]xref:managing-bundles.html[
 ]

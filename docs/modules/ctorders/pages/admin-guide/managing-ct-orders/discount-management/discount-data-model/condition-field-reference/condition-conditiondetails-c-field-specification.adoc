@@ -9,25 +9,25 @@ it. This field should be filled out differently depending on the
 [[h4_493853140]]
 === Record Type: Condition
 
-Applies to [.object]#Condition# and [.object]#Freebie
-Condition# records.
+Applies to [.object]#Condition# and [.object]#Freebie
+Condition# records.
 
 The[.object]#Condition# will be applied if the *Discount Rate
-Location* field has the *Condition Record* value. Otherwise, for
-the *Level Record* value, the system checks the product quantity for
-the *Basic* calculation method or
-the [.apiobject]#conditionLevel# key
-in link:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification#h2__1997029544[the
-Advanced Criteria JSON] for the *Advanced* calculation type. 
+Location* field has the *Condition Record* value. Otherwise, for
+the *Level Record* value, the system checks the product quantity for
+the *Basic* calculation method or
+the [.apiobject]#conditionLevel# key
+in xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification#h2__1997029544[the
+Advanced Criteria JSON] for the *Advanced* calculation type.
 
 
 
 For[.object]#Calculation Type# with the *Condition* record
 type, specify a JSON with the conditions a product must meet.
 
-[TIP] ==== When the [.object]#Calculation Type ==== with
+[TIP] ==== When the [.object]#Calculation Type ==== with
 the *Condition* record type is a child record of the
-[.object]#Calculation Type# with the *Group {plus} Condition* record, refer to link:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-conditiondetails-c-field-specification#h4_1294571464[Record
+[.object]#Calculation Type# with the *Group {plus} Condition* record, refer to xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-conditiondetails-c-field-specification#h4_1294571464[Record
 Type: Group {plus} Condition].#
 
 [[h3_469009993]]
@@ -88,7 +88,7 @@ A target value for a field in the[.apiobject]#field# key.
 An empty value is not allowed.
 
 The available
-operators: [.apiobject]#contain#, [.apiobject]#notContain#, [.apiobject]#equal#, [.apiobject]#notEqual#.
+operators: [.apiobject]#contain#, [.apiobject]#notContain#, [.apiobject]#equal#, [.apiobject]#notEqual#.
 
 | |Number | |
 
@@ -101,7 +101,7 @@ key, for example:[.apiobject]#["abc","123"]#
 [.apiobject]#At least two values must be provided.#
 
 [.apiobject]#The available
-operators: [.apiobject]#in#,[.apiobject]#notIn#. #
+operators: [.apiobject]#in#,[.apiobject]#notIn#. #
 
 |===
 

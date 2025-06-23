@@ -5,7 +5,7 @@ setups for an order.
 
 
 
-The *Settings* record with the *Limit Settings* record type will be
+The *Settings* record with the *Limit Settings* record type will be
 applied when the criteria are met. The search is carried out in the
 following order:
 
@@ -14,7 +14,7 @@ following order:
 . Without specified order type and sales organization.
 . If there is no appropriate record then the maximum number of
 deliveries is 19, and the first date of delivery cannot be earlier than
-today. 
+today.
 
 '''''
 
@@ -31,7 +31,7 @@ Object record type API name:[.apiobject]#LimitSetting#
 |Number a|
 The number of days before the closest possible delivery date.
 
-For example, if the value is 3 and the order is placed on Monday, the
+For example, if the value is 3 and the order is placed on Monday, the
 closest possible delivery is on Thursday.
 
 |# of Days till Last Delivery
@@ -42,24 +42,24 @@ closest possible delivery is on Thursday.
 |[.apiobject]#orders__MaxDeliveriesPerOrder__c#
 |Number |A maximum number of deliveries for a user in one order.
 [NOTE] ==== For a single order, you cannot specify more than 19
-deliveries.  ====
+deliveries.  ====
 
 |Order Type |[.apiobject]#orders__OrderType__c#
 |Text(255) a|
-The order type for which the settings are configured. 
+The order type for which the settings are configured.
 
 * Order
 * Return
 * Pre-sale
 
 If not set, the setting will be applied for all orders of the Sales Org
-in the orders__SalesOrganizationId__c field.
+in the orders__SalesOrganizationId__c field.
 
 |Sales Organization
 |[.apiobject]#orders__SalesOrganizationId__c# |Lookup
 (Sales Organization) a|
 
 The specified Sales Org prioritizes over the specified order type in
-the orders__OrderType__c field.
+the orders__OrderType__c field.
 
 |===

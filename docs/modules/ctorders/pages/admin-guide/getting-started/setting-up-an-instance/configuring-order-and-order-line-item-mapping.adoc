@@ -14,8 +14,8 @@ the following settings should be configured:
 Sales Org) for at least one of these objects is not found, the order
 creation attempt will result in an error. ====
 
-* link:order-mapping-field-reference[Order Mapping]
-* link:order-line-item-mapping-field-settings[Order Line Item
+* xref:order-mapping-field-reference[Order Mapping]
+* xref:order-line-item-mapping-field-settings[Order Line Item
 Mapping]
 
 [[h2_1000521456]]
@@ -28,7 +28,7 @@ Configure the *Order Mapping* record:
 . Configure the settings as follows:
 * Select a *Sales Organization*, for which you configure the mapping.
 * Enter field API names from the corresponding fields of the
-link:order-line-item-field-reference[Order Line Item] record for
+xref:order-line-item-field-reference[Order Line Item] record for
 the *Total Price* and *Total Discount* fields.
 image:configure-objects-mapping-2020-04-27-5.png[]
 . Click *Save*.
@@ -45,14 +45,14 @@ Create the *Order Line Item Mapping* record:
 record type.
 . Configure the settings as follows:
 * If required, select a *Sales Organization*, for which you configure
-the mapping. If no Sales Organization is defined for an OM Setting
+the mapping. If no Sales Organization is defined for an OM Setting
 record, it will be applied globally to all records without configured
-Sales Organization. 
+Sales Organization.
 * Enter the field API name for the *List Price* field from the
-link:ct-price-book-line-item-field-reference[Price Book Line Item]
+xref:ct-price-book-line-item-field-reference[Price Book Line Item]
 record.
 * Enter field API names from the corresponding fields of the
-link:order-line-item-field-reference[Order Line Item] record for
+xref:order-line-item-field-reference[Order Line Item] record for
 other fields.
 [NOTE] ==== You can reuse the package *Quantity* field if the
 Number (18,0) format is suitable for your organization. You can also

@@ -1,8 +1,8 @@
 = Quota Usage Field Reference
 
 The[.object]#Quota Usage# object is a junction object that
-links link:admin-guide/managing-ct-orders/product-validation-in-order/quotas/quota-field-reference[a quota] to
-link:delivery-line-item-field-reference[a certain delivery] and
+links xref:admin-guide/managing-ct-orders/product-validation-in-order/quotas/quota-field-reference[a quota] to
+xref:delivery-line-item-field-reference[a certain delivery] and
 stores all information on the quota. A record is created after the quota
 has been applied in an order.
 
@@ -23,8 +23,8 @@ Amount of products booked or used in the order according to the quota.
 
 
 It is used when
-the [.apiobject]#orders__UnitOfMeasure__c# field of the
-quota is _Amount_.
+the [.apiobject]#orders__UnitOfMeasure__c# field of the
+quota is _Amount_.
 
 |Delivery Line Item
 |[.apiobject]#orders__DeliveryLineItemId__c#
@@ -45,8 +45,8 @@ Quantity of products booked or used in the order according to the quota.
 
 
 It is used when
-the [.apiobject]#orders__UnitOfMeasure__c# field of the
-quota[.object]## is _Quantity_.
+the [.apiobject]#orders__UnitOfMeasure__c# field of the
+quota[.object]## is _Quantity_.
 
 |Status |[.apiobject]#orders__Status__c# |Picklist
 a|

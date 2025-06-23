@@ -28,13 +28,13 @@ Condition Level or Condition Level Item object must be provided.
 |*Key* |*Type* |*Required* |*Comment*
 
 |[.apiobject]#field# |String |Yes
-|link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/step-conditions#h2_680034043[The value] in the
+|xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/step-conditions#h2_680034043[The value] in the
 [.apiobject]#object# key to check. See
-link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-available-field-formats[Available Field
+xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-available-field-formats[Available Field
 Formats].
 
 |[.apiobject]#operator# |Enum |Yes
-|link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/step-conditions#h2__748327130[Available operators] depending
+|xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/step-conditions#h2__748327130[Available operators] depending
 on the field data type.
 
 |[.apiobject]#value# |Boolean |No |Target values for fields with
@@ -119,19 +119,19 @@ Yes
 [[h2__1406500097]]
 === Examples
 
-[{plus}] link:javascript:void(0)[Standard AND condition]
+[{plus}] xref:javascript:void(0)[Standard AND condition]
 
 .[-] Hide[%collapsible] ====
 
 ====
 
-[{plus}] link:javascript:void(0)[Standard OR condition]
+[{plus}] xref:javascript:void(0)[Standard OR condition]
 
 .[-] Hide[%collapsible] ====
 
 ====
 
-[{plus}] link:javascript:void(0)[Standard complex condition]
+[{plus}] xref:javascript:void(0)[Standard complex condition]
 
 .[-] Hide[%collapsible] ====
 

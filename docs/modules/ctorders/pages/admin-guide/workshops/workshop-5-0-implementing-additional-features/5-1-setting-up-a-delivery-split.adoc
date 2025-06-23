@@ -29,7 +29,7 @@ that is similar to the[.apiobject]#CTCPG__Family__c#
 field and has the same values.
 * The[.apiobject]#Brand__c# field with the *Picklist* type
 that is similar to the[.apiobject]#CTCPG__Brand__c#
-field and has the same values. 
+field and has the same values.
 . Go to the *OM Settings* tab and click *New*.
 . Select the *Split Setting* record type and click *Next*.
 . Enter the following:
@@ -41,10 +41,10 @@ Product# fields that are used for splitting a delivery:
 [.apiobject]#orders__ProductId__r.CTCPG__Brand__c,orders__ProductId__r.CTCPG__Family__c#.
 [NOTE] ==== When managing bundles, make sure that the *Split
 Parameter Path* value is the same for both the bundle header and its
-components. Otherwise, the split settings might work incorrectly. ====
+components. Otherwise, the split settings might work incorrectly. ====
 * *Split Fields*: add API names of the created custom fields on the
 [.object]#Delivery# object:
-[.apiobject]#Brand__c,Family__c#. 
+[.apiobject]#Brand__c,Family__c#.
 image:Order-Split-Setting.png[]
 . Click *Save*.
 
@@ -54,15 +54,15 @@ The setup is complete.
 
 Now, when you create an order and add products with different
 combination of the brand and family, the system automatically splits a
-delivery according to the _Split Setting_ record. Freebies distribution
+delivery according to the _Split Setting_ record. Freebies distribution
 is based on the quantity of the appropriate product, so this product and
-its freebies will be added in the same delivery. 
+its freebies will be added in the same delivery.
 
 If you configured the
-link:admin-guide/workshops/workshop-5-0-implementing-additional-features/5-2-setting-up-the-delivery-summary[Delivery Summary] window,
+xref:admin-guide/workshops/workshop-5-0-implementing-additional-features/5-2-setting-up-the-delivery-summary[Delivery Summary] window,
 you can view the created deliveries when clicking *Finalize* in the
-order cart. The empty values on [.object]#Order Line Items# are
-also considered during splitting.  
+order cart. The empty values on [.object]#Order Line Items# are
+also considered during splitting.
 
 image:Delivery-Summary-in-the-Order-Cart.png[]
 

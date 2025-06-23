@@ -4,19 +4,19 @@ Condition levels are responsible for the fee levels. Set up 2 fee levels
 based on the total price for products in the whole order cart.
 
 . On the created *Calculation Type* page, click on the
-created *Condition* record under the *Conditions* section → click *New*
-in the *Condition Levels* section. 
+created *Condition* record under the *Conditions* section → click *New*
+in the *Condition Levels* section.
 . Specify the following:
 * *Starting from*: _1_.
 * *Discount Rate (%)*: _5_.
 image:Condition-Level-1-2.7.png[]
 . Click *Save & New*.
 . Specify the following:
-* *Starting from*: _1000_.
+* *Starting from*: _1000_.
 * *Discount Rate (%)*: _0_.
 image:Condition-Level-2-2.7.png[]
 . Click *Save*.
 
-The *Condition Level* records are created. So, a 5% fee will be applied
+The *Condition Level* records are created. So, a 5% fee will be applied
 when the total price of products in the whole order cart does not exceed
-$1,000, and when the total value reaches $1,000, no fee will apply. 
+$1,000, and when the total value reaches $1,000, no fee will apply.

@@ -3,18 +3,18 @@
 In addition to the required permissions, administrators can assign
 additional
 https://help.salesforce.com/s/articleView?id=sf.custom_perms_overview.htm&type=5[custom
-permissions] to certain users according to the desired business logic. 
+permissions] to certain users according to the desired business logic.
 
 [[h2__1759465302]]
 === Allow the same Calculation Types in the Pricing Procedure steps
 
 This custom permission allows you to use the same
-link:calculation-types[Calculation Type] in multiple steps of one
-link:pricing-procedure-v-2-steps[pricing procedure].
+xref:calculation-types[Calculation Type] in multiple steps of one
+xref:pricing-procedure-v-2-steps[pricing procedure].
 
-The link:calculated-discount-field-reference[Calculation Discount]
+The xref:calculated-discount-field-reference[Calculation Discount]
 record will store the discount based on the last step of the pricing
-procedure. It is recommended to use link:step-conditions[conditions
+procedure. It is recommended to use xref:step-conditions[conditions
 for pricing procedure steps] when assigning this permission to avoid
 double triggering the same Calculation Type.
 
@@ -22,9 +22,9 @@ double triggering the same Calculation Type.
 === Allow Сhanging Condition Details of Promotion
 
 This custom permission allows you to edit the *Condition Details* field
-of the link:freebie-condition-field-reference[Freebie Condition]
+of the xref:freebie-condition-field-reference[Freebie Condition]
 object and the *Condition Details* and *Advanced Criteria* fields of the
-link:condition-field-reference[Condition] object if
+xref:condition-field-reference[Condition] object if
 [.object]#Promotion# is defined.
 
 When assigning this permission, consider that it may affect

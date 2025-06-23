@@ -25,7 +25,7 @@ order:
 
 * _List Based_
 To distribute products that are added to the related
-link:admin-guide/managing-ct-orders/freebies-management/freebie-data-model/freebie-line-item-field-reference[Freebie Line Item] records.
+xref:admin-guide/managing-ct-orders/freebies-management/freebie-data-model/freebie-line-item-field-reference[Freebie Line Item] records.
 * _Criteria Based_
 Freebies are selected based on the SOQL filter in the *Condition
 Details* field.
@@ -46,9 +46,9 @@ The following operators are available for specifying the SOQL request:
 *[.apiobject]##notContain.
 
 Cannot bed edited in
-the link:adding-a-freebie-condition-with-the-criteria-based-method-3-1[layout form] if
-the [.apiobject]#orders__PromotionId__c# of the freebie
-condition is specified. 
+the xref:adding-a-freebie-condition-with-the-criteria-based-method-3-1[layout form] if
+the [.apiobject]#orders__PromotionId__c# of the freebie
+condition is specified.
 
 |Criteria Details
 |[.apiobject]#orders__CriteriaDetails__c# |Long Text
@@ -75,13 +75,13 @@ Condition_ record.
 a|
 Specify a field with the value on the corresponding
 [.object]#Product# object, for example,
-CTCPG__ParentId__r.Value__c. 
+CTCPG__ParentId__r.Value__c.
 
 * The field must be with the _Number_, _Currency_, or _Percent_ type.
 * The mobile user should have access to the specified field.
 * The specified field will be automatically added into the *Condition
 Fields List* field of the corresponding
-link:admin-guide/managing-ct-orders/freebies-management/freebie-data-model/freebie-type-field-reference[Freebie Type] record.
+xref:admin-guide/managing-ct-orders/freebies-management/freebie-data-model/freebie-type-field-reference[Freebie Type] record.
 
 |Ignore Product Availability
 |[.apiobject]#orders__IgnoreProductAvailability__c#
@@ -89,7 +89,7 @@ link:admin-guide/managing-ct-orders/freebies-management/freebie-data-model/freeb
 It defines whether the product availability should be considered for the
 freebie condition.
 
-The default value is _false_.
+The default value is _false_.
 
 |Level Formula |[.apiobject]#orders__LevelFormula__c#
 |Long Text Area(32768) |The formula in JSON format that is used to
@@ -101,9 +101,9 @@ search.
 
 |Promotion |[.apiobject]#orders__PromotionId__c# |Lookup
 |Related promotion identifier. If specified,
-the [.apiobject]#orders__ConditionDetails__c# of the
+the [.apiobject]#orders__ConditionDetails__c# of the
 freebie condition cannot be edited in the
-link:adding-a-freebie-condition-with-the-criteria-based-method-3-1[layout form].
+xref:adding-a-freebie-condition-with-the-criteria-based-method-3-1[layout form].
 
 |Proportional |[.apiobject]#orders__IsProportional__c#
 |Checkbox |An attribute that defines if products must be distributed
@@ -112,11 +112,11 @@ proportionally.
 |Restrict by Order content
 |[.apiobject]#orders__isRestrictByOrderContent__c#
 |Checkbox a|
-Available only if the *Adding Method* is set to _List Based_ or
-_Criteria Based._ 
+Available only if the *Adding Method* is set to _List Based_ or
+_Criteria Based._
 
-If _true_, then only link:order-line-item-field-reference[Order
-Line Items] with *Quantity* > 0 will be distributed as freebies.
+If _true_, then only xref:order-line-item-field-reference[Order
+Line Items] with *Quantity* > 0 will be distributed as freebies.
 Default value is _false_.
 
 The field requires the following permissions:

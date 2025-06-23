@@ -3,7 +3,7 @@
 Product availability allows managers to set up dates when regular paid
 products and freebies are available for offline and online orders and
 deliveries. Use product availability alone or in conjunction with
-link:quotas[quotas] and link:admin-guide/managing-ct-orders/product-validation-in-order/limit-rules/index[limit rules].
+xref:quotas[quotas] and xref:admin-guide/managing-ct-orders/product-validation-in-order/limit-rules/index[limit rules].
 
 :toc: :toclevels: 3
 
@@ -12,33 +12,33 @@ link:quotas[quotas] and link:admin-guide/managing-ct-orders/product-validation-i
 
 Select whether the product is available or not by default in the
 *Default Availability Type* field on the corresponding
-[.object]#Product# object. Also, you can enable the *Ignore
+[.object]#Product# object. Also, you can enable the *Ignore
 Product Availability* checkbox on
-the link:admin-guide/managing-ct-orders/freebies-management/freebie-data-model/freebie-condition-field-reference/index[Freebie Condition] or
+the xref:admin-guide/managing-ct-orders/freebies-management/freebie-data-model/freebie-condition-field-reference/index[Freebie Condition] or
 https://help.customertimes.com/smart/project-ct-cpg/ct-product-field-reference[Product]
 objects.
 
 To learn more about the object model, refer to
-link:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/index[CT Order Data Model].
+xref:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/index[CT Order Data Model].
 
 
 
 Please note that:
 
-* The _Product Availability_ record may not have a lookup to
-the [.object]#Account# (or [.object]#Retail Store#) but
+* The _Product Availability_ record may not have a lookup to
+the [.object]#Account# (or [.object]#Retail Store#) but
 be assigned to its parent or any higher in the hierarchy account. So,
-the appropriate _Product Availability_ record will be searched according
+the appropriate _Product Availability_ record will be searched according
 to the account hierarchy, starting at the lowest level.
 * If a sales representative has no access to one of the accounts in the
-hierarchy, then CT Orders will not look for _Product
-Availability_ records for the parent account. For example, if you
-assigned a _Product Availability_ record to a store network, but did not
-give the user access to this parent _Account_ record, that _Product
-Availability_ record will not be applied.
-* _Product Availability_ record may not be assigned to any _Account_
+hierarchy, then CT Orders will not look for _Product
+Availability_ records for the parent account. For example, if you
+assigned a _Product Availability_ record to a store network, but did not
+give the user access to this parent _Account_ record, that _Product
+Availability_ record will not be applied.
+* _Product Availability_ record may not be assigned to any _Account_
 record. But in case of conflicts between different _Product
-Availability_ records (like overlapping conditions of product
+Availability_ records (like overlapping conditions of product
 availability), records with assigned _Accounts_ have higher priority.
 
 The administrator or manager can override the default availability for
@@ -54,7 +54,7 @@ desired dates, depending on:
 
 There can be multiple availability time slots for a single product, and
 a sales representative can
-link:admin-guide/managing-ct-orders/product-validation-in-order/product-availability/product-availability#product-availability[tap the info icon
+xref:admin-guide/managing-ct-orders/product-validation-in-order/product-availability/product-availability#product-availability[tap the info icon
 next to the product in the cart] to view its availability on the closest
 dates.
 
@@ -87,10 +87,10 @@ Products always have default availability and can have _Product
 Availability_ records to override the default availability for specific
 dates. For your convenience, the table below shows all possible cases.
 
-For specific dates, we recommend using only one _Product
-Availability_ record. Otherwise, if multiple records are found for the
-delivery date, the system applies a record with the _Not
-Available_ record type. If the records have the same availability type,
+For specific dates, we recommend using only one _Product
+Availability_ record. Otherwise, if multiple records are found for the
+delivery date, the system applies a record with the _Not
+Available_ record type. If the records have the same availability type,
 any of them will be applied.
 
 [width="100%",cols="^20%,^20%,^20%,^20%,^20%",]
@@ -138,8 +138,8 @@ ifdef::hidden[]
 * The appropriate freebie is not included in the freebie list.
 [NOTE] ==== Administrators can select the *Ignore Product
 Availability* checkbox on the corresponding *Freebie Condition* record
-to consider only the product *Default Availability Type* and
-ignore *Product Availability* records that are found. ====
+to consider only the product *Default Availability Type* and
+ignore *Product Availability* records that are found. ====
 
 |Not applicable
 
@@ -153,7 +153,7 @@ No _Product Availability_ record was found.
 ==== Availability Settings Combinations for Bundles
 
 To define bundle availability, the system first checks the *Calculate
-Price On* field on a bundle product to apply the logic to the header or
+Price On* field on a bundle product to apply the logic to the header or
 component and then checks the availability of the product. If the
 _Product Availability_ ** records are not found for a product, the
 system checks a value in the *Default Availability Type* field on the
@@ -372,7 +372,7 @@ the product quantity cell will be available or blocked based on the
 availability on the appropriate _Product_ record:
 
 * For promotion products, the *Delivery Start Date* and *Delivery End
-Date* fields on link:admin-guide/managing-ct-orders/discount-management/promotion-data-model/promotion-field-reference[Promotion] are
+Date* fields on xref:admin-guide/managing-ct-orders/discount-management/promotion-data-model/promotion-field-reference[Promotion] are
 prioritized over the product availability dates. If delivery is outside
 of promotion delivery dates, the product cannot be added despite the
 *Availability Type*.
@@ -402,7 +402,7 @@ delivery date. The quantity cell for this delivery is reset and blocked.
 [width="100%",cols="50%,50%",]
 |===
 |Salesforce a|
-The *Product Availability* records are displayed both for products on
+The *Product Availability* records are displayed both for products on
 the left side in catalogs/promotions and added to the order cart.
 
 image:PA_Products-Available.png[]
@@ -464,5 +464,5 @@ but have the available dates in the future.
 
 See also:
 
-* link:workshop-6-1-configuring-product-availability[Workshop 6.1:
+* xref:workshop-6-1-configuring-product-availability[Workshop 6.1:
 Configuring Product Availability]

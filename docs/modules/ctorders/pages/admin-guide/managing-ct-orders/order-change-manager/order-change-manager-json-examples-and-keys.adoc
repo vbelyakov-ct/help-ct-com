@@ -24,7 +24,7 @@ mobile temporary ID in the[.apiobject]#referenceOrderId# and
 [.apiobject]#referenceId# keys, which means that these records
 were created on the mobile device and will be inserted into the
 Salesforce database after synchronization. The
-link:admin-guide/managing-ct-orders/order-change-manager/order-change-manager-field-reference[Order Change Manager]
+xref:admin-guide/managing-ct-orders/order-change-manager/order-change-manager-field-reference[Order Change Manager]
 record will be created for this[.object]#Order#.
 
 
@@ -38,8 +38,8 @@ been created before in Salesforce or CT Mobile app and was updated on
 the mobile device.
 
 Also, the Order Line Item record has the mobile temporary ID, which
-means that it was created on the mobile device. The *Order Change
-Manager* record will be created for this [.object]#Order#, and
+means that it was created on the mobile device. The *Order Change
+Manager* record will be created for this [.object]#Order#, and
 the previously created *Order Change Manager* record for this Order will
 be deleted.
 
@@ -61,8 +61,8 @@ that package or if this package is the last one for the order.
 
 |[.apiobject]#referenceOrderId# |String |No |A key stores
 the mobile temporary Id or Salesforce Id of the current *Order*
-record. For the *Order* record, the same value is stored in
-the [.apiobject]#referenceOrderId# and [.apiobject]#referenceId# keys. 
+record. For the *Order* record, the same value is stored in
+the [.apiobject]#referenceOrderId# and [.apiobject]#referenceId# keys.
 
 |[.apiobject]#records# |Array |Yes |A key stores the
 collection of the *Order* record and all related records.
@@ -81,7 +81,7 @@ mobile temporary Id or Salesforce Id of the record of the object
 specified in the[.apiobject]#type# key.
 
 |[.apiobject]#Id# |String |Yes |A key stores Salesforce
-ID for the record. The key is not specified for a new record.
+ID for the record. The key is not specified for a new record.
 
 |[.apiobject]#orders__AccounId__c#,
 [.apiobject]#orders__OrderType__c#, etc. |String

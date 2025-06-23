@@ -10,29 +10,29 @@ execute calculations from different channels in one place. The web
 service supports all discount calculations as well as the new ones
 available in CT Orders since version 3.0:
 
-* link:admin-guide/managing-ct-orders/discount-management/links[Links].
+* xref:admin-guide/managing-ct-orders/discount-management/links[Links].
 * Applying several conditions in one[.object]#Calculation
 Type#:
-link:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification#h2_1585895621[Advanced
+xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification#h2_1585895621[Advanced
 Criteria 2.0],
-link:admin-guide/managing-ct-orders/discount-management/discount-data-model/calculation-types-field-reference/calculation-type-applyconditiontype-c-field-specification[Apply
+xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/calculation-types-field-reference/calculation-type-applyconditiontype-c-field-specification[Apply
 Condition Types].
 * Freebie management:
-link:admin-guide/managing-ct-orders/freebies-management/index#h3__316467656[Freebie Values] and
-link:admin-guide/managing-ct-orders/freebies-management/freebie-data-model/freebie-condition-field-reference/freebie-condition-levelformula-c-field-specification[Level
+xref:admin-guide/managing-ct-orders/freebies-management/index#h3__316467656[Freebie Values] and
+xref:admin-guide/managing-ct-orders/freebies-management/freebie-data-model/freebie-condition-field-reference/freebie-condition-levelformula-c-field-specification[Level
 Formula].
 
 To find out more about the available functionalities per release for
 Salesforce and CT Mobile, refer
-to link:ct-orders-solution/ct-orders-features-overview[Features Overview].
+to xref:ct-orders-solution/ct-orders-features-overview[Features Overview].
 
 [[h2_547005288]]
 === Object Model
 
 Objects on the scheme are responsible for calculating discounts and
 freebies, and the master data of these objects will be transferred to
-the server. For more information, refer
-to link:data-to-send-to-web-service[Data to Send to Web Service].
+the server. For more information, refer
+to xref:data-to-send-to-web-service[Data to Send to Web Service].
 
 
 
@@ -53,8 +53,8 @@ following steps:
 . Request with master data to the CT Orders app.
 . Request the discount or freebies information from the Web Service
 cache.
-. Return information from the Web Service cache. If
-the *Forced* checkbox is activated, the step will be skipped. 
+. Return information from the Web Service cache. If
+the *Forced* checkbox is activated, the step will be skipped.
 . Request discounts or freebies information from the Web Service
 database.
 . Save the information about the discount or freebies to the Web Service
@@ -73,7 +73,7 @@ Mobile app.
 
 The integration user must have permission to carry out discount
 calculations using the Web Service. For more information, refer
-to link:../Storage/project-order-module/PDF/CT-Orders-User-Permissions-to-Access-Web-Service.pdf[Integration
+to xref:../Storage/project-order-module/PDF/CT-Orders-User-Permissions-to-Access-Web-Service.pdf[Integration
 User Permissions].
 
 [[h2_389205030]]
@@ -86,13 +86,13 @@ A secure two-way authorization is required to transfer data between Web
 Service and Salesforce.
 
 * When the administrator is authorized on the *Settings Panel: Connect*
-tab, two link:auth-data-field-reference[Auth Data] records will be
+tab, two xref:auth-data-field-reference[Auth Data] records will be
 automatically created and filled out. One record stores a token for a
 user who has administrator permissions, and another one stores a token
-for an ordinary user. For more information, refer
-to link:authorization-7-0[Authorization (7.0)].
+for an ordinary user. For more information, refer
+to xref:authorization-7-0[Authorization (7.0)].
 * The generated token in each *Auth Data* record is encrypted with the
-*Key* from the link:auth-secret-field-reference[Auth Secret] custom
+*Key* from the xref:auth-secret-field-reference[Auth Secret] custom
 setting. When Salesforce sends a request to the Web Service to calculate
 discounts, each token will be decrypted with the same key.
 * The *Auth Data* records cannot be manually deleted to avoid accidental
@@ -103,9 +103,9 @@ deletion by the user.
 Two-way authorization allows the Web Service to use Apex classes and
 SOQL queries on the Salesforce side:
 
-* link:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-sdk-step[The SDK step] of the pricing procedure uses the
+* xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-sdk-step[The SDK step] of the pricing procedure uses the
 [.apiobject]#CalculatorServiceRest# Apex class.
-* link:admin-guide/managing-ct-orders/freebies-management/index#h3_972561451[Freebie calculation] with
+* xref:admin-guide/managing-ct-orders/freebies-management/index#h3_972561451[Freebie calculation] with
 the *Criteria Based* adding method of[.object]#Freebie
 Condition# uses the SOQL query to retrieve the list of products.
 
@@ -115,24 +115,24 @@ Condition# uses the SOQL query to retrieve the list of products.
 After authorization, administrators should set up the sync process to
 keep master data up-to-date on the Web Service. Parameters of the
 selected sync process will be stored in
-link:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/web-service-setting-field-reference[the *Settings* record] of
+xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/web-service-setting-field-reference[the *Settings* record] of
 the *Web Service Setting* record type.
 
 
 
 On the *Settings: Settings* tab, select the sync mode and click *Save*.
-The button will be active only when some settings were changed. For more
+The button will be active only when some settings were changed. For more
 information, refer
-to link:connecting-to-web-service-and-price-calculation-7-0[Connecting
+to xref:connecting-to-web-service-and-price-calculation-7-0[Connecting
 to Web Service and Price Calculation (7.0)].
 
 * *Real-Time Type of Synchronization* is used to send data changes in
-real-time by triggers. Triggers monitor the creation, modification, and
+real-time by triggers. Triggers monitor the creation, modification, and
 deletion of master data records and will be fired only when fields of
 master data objects are changed in order to send changes to the Web
 Service database. The information about transferred master data records
-is stored in the link:sync-transaction-field-reference[Sync
-Transaction] records.
+is stored in the xref:sync-transaction-field-reference[Sync
+Transaction] records.
 
 [NOTE] ==== When discounts are not applied, the total price is
 calculated based on *List Price* fields and may be performed only by the
@@ -146,10 +146,10 @@ when to run the batch on specific days.
 [.apiobject]#CalculatorServiceReplicator.runCalculatorServiceDeltaReplication();
 ==== method in your custom code to run the batch out of schedule.#
 * *Enable Web Service for CT Mobile* is used to calculate discounts in
-CT Mobile using Web Service. By default, we recommend using Web Service
+CT Mobile using Web Service. By default, we recommend using Web Service
 for online orders in Salesforce. If you use new functionalities for
 discount calculations, for example, Links in offline orders, it is
-required to activate Web Service for CT Mobile. 
+required to activate Web Service for CT Mobile.
 * *Run Batch*. Click the button to send master data changes by batch.
 * *Run Historical Batch*. Click the button to send all master data. This
 can take quite a long time and therefore, with this type it is worth
@@ -158,7 +158,7 @@ loading only historical data at the start of the project.
 [[h3__1022170594]]
 ==== Sync Transactions
 
-The link:sync-transaction-field-reference[Sync Transaction] records
+The xref:sync-transaction-field-reference[Sync Transaction] records
 are created when an administrator changes master data. Each record
 stores information about an object and the identifier of this object
 record with the modified master data. Next, the modified master data is
@@ -177,7 +177,7 @@ you can run a batch out of schedule.
 ==== Calculate Discounts
 
 Discount calculation using *Web Service* is performed in the same way as
-described in** **[#sbm]##link:admin-guide/managing-ct-orders/discount-management/calculate-discounts[Calculate
+described in** **[#sbm]##xref:admin-guide/managing-ct-orders/discount-management/calculate-discounts[Calculate
 Discounts].
 
 
@@ -186,5 +186,5 @@ Discounts].
 
 See also:
 
-* link:workshop-7-0-calculating-discounts-with-web-service[Workshop
+* xref:workshop-7-0-calculating-discounts-with-web-service[Workshop
 7.0: Calculating Discounts with Web Service]

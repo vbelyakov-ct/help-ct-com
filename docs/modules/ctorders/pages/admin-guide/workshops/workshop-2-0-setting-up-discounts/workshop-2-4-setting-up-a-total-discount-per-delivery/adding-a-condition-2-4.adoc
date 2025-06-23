@@ -1,14 +1,14 @@
 = Adding a Condition (2.4)
 
-For the newly created _Calculation Type_ record, you will need to
-specify the conditions to calculate discounts for products in order. 
+For the newly created _Calculation Type_ record, you will need to
+specify the conditions to calculate discounts for products in order.
 
-. ​On the created *Calculation Type* page, click *New* in
-the *Conditions* section.
+. ​On the created *Calculation Type* page, click *New* in
+the *Conditions* section.
 . Enter the following:
 * *Order*: _10_.
 [TIP] ==== The field is responsible for the order in which
-[.object]#Conditions ==== of [.object]#Calculation Type# are applied. Since we only use one[.object]#Condition# in the
+[.object]#Conditions ==== of [.object]#Calculation Type# are applied. Since we only use one[.object]#Condition# in the
 workshop, you can specify any value in this field.#
 * *Active*: set the checkbox.
 * *Condition Details*: add this JSON, according to which the condition

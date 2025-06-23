@@ -9,7 +9,7 @@ under the presence of certain products in the order cart.
 
 
 The Exclude Condition logic is reversed to the
-link:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification[Advanced
+xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification[Advanced
 Criteria] option. While the Advanced Criteria blocks the application of
 the discount until the condition requirements are met, Exception
 Condition is used to block the discount application until the condition
@@ -32,11 +32,11 @@ A JSON example of an exception condition:
 
 * All the unique fields specified in the JSON will be automatically
 added to
-the [.apiobject]#orders__ConditionFieldsList__c# on
-the [.object]#Calculation Type#.
+the [.apiobject]#orders__ConditionFieldsList__c# on
+the [.object]#Calculation Type#.
 * If the Exception Condition was altered or deleted, it may require
 manual removal of some fields
-in [.apiobject]#orders__ConditionFieldsList__c# in
+in [.apiobject]#orders__ConditionFieldsList__c# in
 accordance with the changes, if not done automatically.
 
 [[h3_69606710]]
@@ -81,7 +81,7 @@ Available values:
 
 |[.apiobject]#items# |An array of Filter Items |Yes a|
 See
-link:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification#h3__764213188[Filter
+xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification#h3__764213188[Filter
 items].
 
 
@@ -105,7 +105,7 @@ At least one item must be provided.
 [.apiobject]#operator# key is applied.
 
 |[.apiobject]#operator# |Enum |Yes |See
-link:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-exceptioncondition-c-field-specification#h3__1448410204[Items
+xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-exceptioncondition-c-field-specification#h3__1448410204[Items
 Operators].
 
 |[.apiobject]#value# |Boolean |No |A target value for
@@ -119,8 +119,8 @@ A target value for fields with the *Text* type.
 
 
 
-The key is required when the [.apiobject]#operator# key is
-not [.apiobject]#in# or [.apiobject]#notIn#.
+The key is required when the [.apiobject]#operator# key is
+not [.apiobject]#in# or [.apiobject]#notIn#.
 
 |[.apiobject]#values# |Array of Values |No a|
 The[.apiobject]#values# with the *Text* type, separated by a
@@ -131,7 +131,7 @@ comma, for example:[.apiobject]#["abc","123"]#
 
 [.apiobject]#At least one item must be provided. The key is
 required when
-the #[.apiobject]#in# or [.apiobject]#>notIn#.
+the #[.apiobject]#in# or [.apiobject]#>notIn#.
 
 |===
 
@@ -178,8 +178,8 @@ At least the quantity of one product has reached the minimum value.
 |[.apiobject]#items# |An array of Required Product Items
 |Yes a|
 The list of required products. See the
-link:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification#h3_2075634919[Required
-Products Items]. 
+xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification#h3_2075634919[Required
+Products Items].
 
 
 

@@ -8,17 +8,17 @@ to free up space.
 
 
 
-For each link:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/sales-organization-field-reference[Sales
+For each xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/sales-organization-field-reference[Sales
 Organization]:
 
 * In the *Logging Mode* field, select what type of logs to store, for
-example, only calculation logs. If you use the internal calculator, this
-is a single option to manage logs. 
+example, only calculation logs. If you use the internal calculator, this
+is a single option to manage logs.
 * In the *Log Request Trigger* field, define when to request order logs
 from the Web Service: when saving the order cart or only when finalizing
-the order. This option is used when the Web Service is active for
+the order. This option is used when the Web Service is active for
 discount calculations. The user should have
-the *CommercialCondition_Calculate* custom permission.  
+the *CommercialCondition_Calculate* custom permission.
 
 [TIP] ==== You can schedule the
 [.apiobject]#Database.executeBatch(new
@@ -56,7 +56,7 @@ to be generated on the server and then generates a
 [.object]#Order# object from *Requested* to *Received*.
 
 Logs are stored in the
-link:calculated-discount-field-reference[Calculated Discounts]
+xref:calculated-discount-field-reference[Calculated Discounts]
 records.
 
 Changing *Log Ids* deletes all *Calculated Discounts* records.

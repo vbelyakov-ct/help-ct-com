@@ -17,10 +17,10 @@ following order:
 
 |1 |[.object]#Catalog Line Item# or[.object]#Promotion
 Line Item# |Units Count Step |This field is checked first in these
-objects. If no records are found, the system uses the value in
-the *Units Count Step* field on
-the link:admin-guide/managing-ct-orders/product-management/product-data-model/ct-price-book-line-item-field-reference[CT Price Book Line
-Item] record.
+objects. If no records are found, the system uses the value in
+the *Units Count Step* field on
+the xref:admin-guide/managing-ct-orders/product-management/product-data-model/ct-price-book-line-item-field-reference[CT Price Book Line
+Item] record.
 
 |2 |[.object]#Price Book Line Item# |Units Count Step a|
 The field stores the multiplicity step in the order cart must be
@@ -45,8 +45,8 @@ during quantity calculation.
 *Unit Count Step* on _Catalog Line Item_ or _Promotion Line Item_ record
 exists and the value is greater than 0. The quantity of the product in
 the delivery, e.g., _Delivery Line Item_, must be divisible by the
-*Units Count Step* value. The quantity field is defined in
-the link:admin-guide/getting-started/setting-up-an-instance/configuring-order-and-order-line-item-mapping[Delivery
+*Units Count Step* value. The quantity field is defined in
+the xref:admin-guide/getting-started/setting-up-an-instance/configuring-order-and-order-line-item-mapping[Delivery
 Line Item Mapping Setting].
 . If no value is found on the _Catalog Line Item_ or _Promotion Line
 Item_ record, the system checks the *Units Count Step* field on the _CT
@@ -65,7 +65,7 @@ factor is 1.
 === Important Notes
 
 * The Multiplicator logic is applied for each delivery separately.
-* For link:admin-guide/managing-ct-orders/product-management/managing-bundles[bundles] with the quantity on _Product
+* For xref:admin-guide/managing-ct-orders/product-management/managing-bundles[bundles] with the quantity on _Product
 Component_ records, the first step is omitted, as the _Catalog Line
 Item_ or _Promotion Line Item_ records are copied from the header and
 will be calculated equally for all components. The Multiplicator logic
@@ -73,6 +73,6 @@ is not applied for bundles with header-dependent quantity, as the
 independent multiplier already exists on the _Product Component_
 records.
 * Multiplicator considers the
-link:admin-guide/managing-ct-orders/product-management/index#h2_1138962735[minimum and maximum quantity
+xref:admin-guide/managing-ct-orders/product-management/index#h2_1138962735[minimum and maximum quantity
 per delivery], which is specified on a _Product_ record.
 * Multiplicator logic is not applied for freebies.

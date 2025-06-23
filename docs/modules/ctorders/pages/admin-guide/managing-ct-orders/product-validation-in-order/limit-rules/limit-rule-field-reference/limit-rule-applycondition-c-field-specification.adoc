@@ -1,7 +1,7 @@
 = Limit Rule: ApplyCondition__c Field Specification
 
 If the condition from
-link:admin-guide/managing-ct-orders/product-validation-in-order/limit-rules/limit-rule-field-reference/limit-rule-exceptioncondition-c-field-specification[the
+xref:admin-guide/managing-ct-orders/product-validation-in-order/limit-rules/limit-rule-field-reference/limit-rule-exceptioncondition-c-field-specification[the
 orders__ExceptionCondition__c field] is not met, the system
 checks the[.apiobject]#orders__ApplyCondition__c#
 field.
@@ -17,9 +17,9 @@ Example:
 
 
 
-Use the [.apiobject]#$.deliveryOrder# operator to refer to
-certain index of the delivery in the order (0, 1, 2 etc.) or _max_ as
-the last delivery. You can use the following operators:
+Use the [.apiobject]#$.deliveryOrder# operator to refer to
+certain index of the delivery in the order (0, 1, 2 etc.) or _max_ as
+the last delivery. You can use the following operators:
 
 * less
 * greater

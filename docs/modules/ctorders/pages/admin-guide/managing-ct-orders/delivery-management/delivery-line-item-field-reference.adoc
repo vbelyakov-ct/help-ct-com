@@ -18,7 +18,7 @@ Object API name:
 
 |Delivery |[.apiobject]#orders__DeliveryId__c#
 |Master-Detail(Delivery) |Stores the
-link:admin-guide/managing-ct-orders/delivery-management/delivery-field-reference[Delivery] record that includes the
+xref:admin-guide/managing-ct-orders/delivery-management/delivery-field-reference[Delivery] record that includes the
 Delivery Line Item.
 
 |External Id |[.apiobject]#orders__ExternalId__c#
@@ -39,7 +39,7 @@ Line Item) |The corresponding *Order Line Item* record.
 
 |Quantity |orders__Quantity__c |Number(18, 0) |Stores the
 quantity of CT Products for the delivery date on the
-link:admin-guide/managing-ct-orders/delivery-management/delivery-field-reference[Delivery] record.
+xref:admin-guide/managing-ct-orders/delivery-management/delivery-field-reference[Delivery] record.
 
 |Reference Id |[.apiobject]#orders__RefereneId__c#
 |Text(255) (External ID) (Unique Case Sensitive) |
@@ -50,6 +50,6 @@ with discounts in the order.
 
 |Unit Price |orders__UnitPrice__c |Currency(16,2) |Stores the
 price of the CT Product with a discount, which is specified for the
-appropriate link:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/order-line-item-field-reference[Order Line Item]
+appropriate xref:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/order-line-item-field-reference[Order Line Item]
 record.
 |===

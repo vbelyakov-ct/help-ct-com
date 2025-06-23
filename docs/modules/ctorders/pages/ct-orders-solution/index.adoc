@@ -2,9 +2,9 @@
 
 *CT Orders* is a powerful and comprehensive order management solution
 that works in conjunction with your ERP or Salesforce CRM system and the
-CT Mobile app. Go to link:ct-orders-features-overview[CT Orders
-Features Overview] to find all the features available in the CT Orders
-package and CT Mobile app by the feature release version. 
+CT Mobile app. Go to xref:ct-orders-features-overview[CT Orders
+Features Overview] to find all the features available in the CT Orders
+package and CT Mobile app by the feature release version.
 
 [cols=",",]
 |===
@@ -20,13 +20,13 @@ organization's workflow, offering three various approaches to the
 implementation of the CT Orders:
 
 . *CRM: CT Pharma / CT CPG {plus} CT Mobile*.
-. *ERP {plus} CRM as front end: SAP {plus} CT Pharma / CT CPG {plus} CT
+. *ERP {plus} CRM as front end: SAP {plus} CT Pharma / CT CPG {plus} CT
 Mobile*.
 In this case, promotions must be received from SAP.
-. *Combination of ERP and CRM: SAP {plus} CT Pharma / CT CPG {plus} CT
+. *Combination of ERP and CRM: SAP {plus} CT Pharma / CT CPG {plus} CT
 Mobile*.
-In this case, you can set parameters in both ERP and CRM. For example,
-ERP stores long-term discounts per segment according to the client and
+In this case, you can set parameters in both ERP and CRM. For example,
+ERP stores long-term discounts per segment according to the client and
 brand. On the CRM side, brand managers can provide short-term promotions
 given the marketing strategy for a new product.
 
@@ -42,45 +42,45 @@ To start using CT Orders, the system administrator should follow these
 steps:
 
 . Install CT Pharma/CT CPG and
-link:installing-the-ct-orders-package[CT Orders] packages.
-. link:setting-up-an-instance[Set up the Salesforce instance].
+xref:installing-the-ct-orders-package[CT Orders] packages.
+. xref:setting-up-an-instance[Set up the Salesforce instance].
 .. Define[.object]#Product# and[.object]#Activity#
 objects.
 .. Configure the required mappings.
 .. Add permission to create orders
-link:configuring-an-account-1-0[for required accounts].
-.. Create and assign link:catalog-management[Catalogs] and
-link:promotions[Promotions].
-. link:creating-a-sales-organization-1-0[Create a Sales
+xref:configuring-an-account-1-0[for required accounts].
+.. Create and assign xref:catalog-management[Catalogs] and
+xref:promotions[Promotions].
+. xref:creating-a-sales-organization-1-0[Create a Sales
 Organization].
-.. link:creating-a-sales-organization-user-1-0[Assign users].
-.. link:creating-and-assigning-a-ct-price-book-1-0[Create and
+.. xref:creating-a-sales-organization-user-1-0[Assign users].
+.. xref:creating-and-assigning-a-ct-price-book-1-0[Create and
 assign price books].
-. link:configuring-an-address-settings-1-0[Set up addresses].
-. link:configuring-layout-settings-1-0[Create the appropriate
-layouts] and link:configuring-totals-panel-setting-1-0[customize
+. xref:configuring-an-address-settings-1-0[Set up addresses].
+. xref:configuring-layout-settings-1-0[Create the appropriate
+layouts] and xref:configuring-totals-panel-setting-1-0[customize
 the Totals panel].
-. Additionally, link:defining-an-order-type-1-0[define the desired
+. Additionally, xref:defining-an-order-type-1-0[define the desired
 order types] and
-link:adding-delivery-restrictions-to-an-order-1-0[delivery
+xref:adding-delivery-restrictions-to-an-order-1-0[delivery
 restrictions].
-. Configure link:price-management[the price calculations] and
-link:discount-management[discounts].
-. link:freebies-management[Set up Freebies distribution].
-. link:product-validation-in-order[Add product validations in the
+. Configure xref:price-management[the price calculations] and
+xref:discount-management[discounts].
+. xref:freebies-management[Set up Freebies distribution].
+. xref:product-validation-in-order[Add product validations in the
 order cart] with the help of limit rules, product availability, and
 quotas.
-. Additionally, link:adding-ct-orders-to-the-ct-mobile-app-4-0[set
+. Additionally, xref:adding-ct-orders-to-the-ct-mobile-app-4-0[set
 up integration with CT Mobile] for offline order creation.
-. Additionally, configure link:web-service[Web Service].
+. Additionally, configure xref:web-service[Web Service].
 In Salesforce, Web Service may be used to execute calculations from
 different channels in one place instead of a built-in calculator.
 Consider that some features are available only with the active Web
-Service.  In CT Mobile 2.7, calculations are only performed using the
+Service.  In CT Mobile 2.7, calculations are only performed using the
 Web Service. In future releases, it will be possible to choose between
-the internal calculator and the Web Service. 
-. Create orders in link:online-order[Salesforce] and
-link:offline-order[CT Mobile].
+the internal calculator and the Web Service.
+. Create orders in xref:online-order[Salesforce] and
+xref:offline-order[CT Mobile].
 . Additionally,
-link:workshop-5-0-implementing-additional-features[implement
+xref:workshop-5-0-implementing-additional-features[implement
 additional features], including SD features.

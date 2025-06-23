@@ -1,11 +1,11 @@
 = Data to Send to Web Service
 
 To have the ability to calculate discounts using the
-link:admin-guide/managing-ct-orders/web-service/index[Web Service], all mappings and the following data
+xref:admin-guide/managing-ct-orders/web-service/index[Web Service], all mappings and the following data
 should be sent to the server.
 
 Only administrators can modify this data. For more information, refer
-to link:admin-guide/managing-ct-orders/web-service/index#h2__1477820419[User Permissions].
+to xref:admin-guide/managing-ct-orders/web-service/index#h2__1477820419[User Permissions].
 
 [[h2__1931515875]]
 === Mapping with Sales Organization
@@ -16,7 +16,7 @@ the value for discounts and freebies into the correct fields.
 * A mapping is created for each[.object]#Sales Organization#
 and combines both global settings and settings for the
 [.object]#Sales Organization#.
-* The mapping is sent link:admin-guide/managing-ct-orders/web-service/index#h3__364386004[via one of the
+* The mapping is sent xref:admin-guide/managing-ct-orders/web-service/index#h3__364386004[via one of the
 sync processes] based on the *Sync Transaction* records. These records
 are created after mapping updates or in the case of a new
 [.object]#Sales Organization# and deleted after a successful
@@ -28,8 +28,8 @@ mapping transfer to Web Service.
 The objects below are responsible for a type of discount and define a
 freebie to apply for the products in the order.
 
-* The master data is sent link:admin-guide/managing-ct-orders/web-service/index#h3__364386004[via one of
-the sync processes] based on the *Sync Transaction* records. These
+* The master data is sent xref:admin-guide/managing-ct-orders/web-service/index#h3__364386004[via one of
+the sync processes] based on the *Sync Transaction* records. These
 records are created after master data updates and deleted after a
 successful master data transfer to Web Service.
 
@@ -225,7 +225,7 @@ Text Area(32768) |No
 | |Order |[.apiobject]#orders__Order__c# |Number(18,
 0) |Yes
 
-| |Payment Term 
+| |Payment Term
 [NOTE] ==== Available in future releaes. ====
 |[.apiobject]#orders__PaymentTermId__c# |Lookup(Payment
 Term) |No
@@ -296,7 +296,7 @@ Term) |No
 
 | |Condition Fields List
 |[.apiobject]#orders__ConditionFieldsList__c # |Long
-Text Area(32768)  |No
+Text Area(32768)  |No
 
 | |Order Type |[.apiobject]#orders__OrderType__c #
 |Picklist(Multi-Select) |Yes
@@ -342,7 +342,7 @@ Area(32768) |No
 
 | |Level Formula
 |[.apiobject]#orders__LevelFormula__c# |Long Text
-Area(32768)  |No
+Area(32768)  |No
 
 | |Order |[.apiobject]#orders__Order__c# |Number(18,
 0) |Yes
@@ -380,7 +380,7 @@ Area(32768)  |No
 |No
 
 | |Product Ratio
-|[.apiobject]#orders__ProductRatio__c# |Number(18, 0) 
+|[.apiobject]#orders__ProductRatio__c# |Number(18, 0)
 |No
 
 | |Starting From
@@ -393,7 +393,7 @@ Area(32768)  |No
 
 | |Freebie Line Item # |[.apiobject]#Name# |Auto Number |Yes
 
-| |Product |[.apiobject]#orders__ProductId__c# or 
+| |Product |[.apiobject]#orders__ProductId__c# or
 [.apiobject]#orders__Product2Id__c# |Lookup (Salesforce
 Product/CT Product/Pharma Product) |No
 

@@ -1,6 +1,6 @@
 = Links
 
-Available for instances with the enabled link:web-service[Web
+Available for instances with the enabled xref:web-service[Web
 Service].
 
 The *Links* functionality helps managers to conduct advanced discount
@@ -17,13 +17,13 @@ records, will be sequentially applied to the order.
 Links are based on non-zero conditions and applied after calculating all
 freebie conditions and discount conditions according to *Apply Condition
 Type* of the appropriate
-link:calculation-types-field-reference[Calculation Type] **
-records. Available for [.object]#Calculation
-Type# of *Condition* record type. 
+xref:calculation-types-field-reference[Calculation Type] **
+records. Available for [.object]#Calculation
+Type# of *Condition* record type.
 
 
 
-The link:condition-dependency-field-reference[Condition Dependency]
+The xref:condition-dependency-field-reference[Condition Dependency]
 records define the links between conditions:
 
 [TIP] ==== When creating a record, only the required fields will
@@ -35,7 +35,7 @@ Type#, then links are applied sequentially according to the *Order*
 field of the appropriate *Condition Dependency* records.
 * If the condition was canceled on earlier links, it cannot be applied
 in further links in the sequence.
-* link:calculated-discount-field-reference[Calculation Logs] are
+* xref:calculated-discount-field-reference[Calculation Logs] are
 generated after all links have been applied and contain all the
 resulting values ​​for all[.object]#Conditions# that have been
 applied for each[.object]#Calculation Type#.
@@ -146,10 +146,10 @@ triggered.
 
 
 
-The [.object]#Freebie Condition# for the dependent freebie:
+The [.object]#Freebie Condition# for the dependent freebie:
 
-* Cannot be proportional (the *Proportional* checkbox must be inactive).
-* Cannot have the *Adding Method* = *Similar*.
+* Cannot be proportional (the *Proportional* checkbox must be inactive).
+* Cannot have the *Adding Method* = *Similar*.
 
 a|
 Given:

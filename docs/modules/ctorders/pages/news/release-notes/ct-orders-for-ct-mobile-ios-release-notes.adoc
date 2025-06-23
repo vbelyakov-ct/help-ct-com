@@ -22,31 +22,31 @@ ifdef::hidden[]
 ===== Web Service
 
 * In CT Mobile 2.7, you
-can link:connecting-to-web-service-and-price-calculation-7-0[choose
-between the internal calculator and the Web Service] to calculate
-discounts. Before starting work with the Web Service, check all the
+can xref:connecting-to-web-service-and-price-calculation-7-0[choose
+between the internal calculator and the Web Service] to calculate
+discounts. Before starting work with the Web Service, check all the
 required
-permissions link:../Storage/project-order-module/PDF/CT-Orders-User-Permissions-to-Access-Web-Service.pdf[here]. 
+permissions xref:../Storage/project-order-module/PDF/CT-Orders-User-Permissions-to-Access-Web-Service.pdf[here].
 * Tap
-the image:WS-Calculation-in-CT-Mobile.png[] button
-in the link:offline-order#h4__1635896381[order cart] to get the
-valid prices. The invalid prices will be highlighted in red color. 
+the image:WS-Calculation-in-CT-Mobile.png[] button
+in the xref:offline-order#h4__1635896381[order cart] to get the
+valid prices. The invalid prices will be highlighted in red color.
 * The new advanced features—links, mixed discounts, freebie multiplier,
 and freebie values—are only available when working with the
-link:web-service[Web Service].
+xref:web-service[Web Service].
 * Validations that a sales rep has access to all necessary fields to
 calculate discounts. Otherwise, the calculation will be carried out by
-the *List Price* field.
+the *List Price* field.
 
 
 
 [[h4__313159045]]
 ===== Mixed Discounts
 
-* link:calculation-type-applyconditiontype-c-field-specification[Apply
-multiple conditions] from a single [.object]#Calculation Type#. 
-* link:condition-advancedcriteria-c-field-specification#h2_1585895621[Advanced
-Criteria 2.0] provides more flexibility by setting multiple filters and
+* xref:calculation-type-applyconditiontype-c-field-specification[Apply
+multiple conditions] from a single [.object]#Calculation Type#.
+* xref:condition-advancedcriteria-c-field-specification#h2_1585895621[Advanced
+Criteria 2.0] provides more flexibility by setting multiple filters and
 a minimum number of products for different size discounts.
 
 
@@ -54,7 +54,7 @@ a minimum number of products for different size discounts.
 [[h4_62076529]]
 ===== Freebie Management
 
-* link:freebies-management#h3__316467656[Freebie Values] allow you
+* xref:freebies-management#h3__316467656[Freebie Values] allow you
 to spread freebies over different levels and deliveries.
 
 
@@ -62,33 +62,33 @@ to spread freebies over different levels and deliveries.
 [[h4__419366360]]
 ===== Price tags
 
-* link:price-tag[New price tags] display one or more applied
+* xref:price-tag[New price tags] display one or more applied
 conditions on the discount scale with the current product quantity and
 the reached level of discounts.
-* link:price-tag[The checkmark icon]
+* xref:price-tag[The checkmark icon]
 (image:boolean-price-tag.png[])
-is displayed when several *Delivery Line Items* are tied to one *Order
+is displayed when several *Delivery Line Items* are tied to one *Order
 Line Item*, and different levels are applied in the conditions.
 
 [[h3__1878651479]]
 ==== Other Improvements
 
-* link:links[Links]: Support the *Reduce* dependency action to
+* xref:links[Links]: Support the *Reduce* dependency action to
 calculate discounts for Freebies.
-* Edit fields with the *Currency*, *Number,* *Percent*, or *Text* types
-within the link:delivery-management#h2__1374863314[Delivery
-Summary] pop-up.
+* Edit fields with the *Currency*, *Number,* *Percent*, or *Text* types
+within the xref:delivery-management#h2__1374863314[Delivery
+Summary] pop-up.
 * The UX/UI improvement for[.object]#Quotas#:
 ** Display the current quota status in the
-link:offline-order#h4__1635896381[order cart] interface.
-** For better visibility, the link:quotas#h2_275625523[quota info
+xref:offline-order#h4__1635896381[order cart] interface.
+** For better visibility, the xref:quotas#h2_275625523[quota info
 pop-up] displays the type of products it affects and the source catalog
 or promotion.
 * The UX/UI improvement for the order cart:
-** link:offline-order#h4__1635896381[The promotion] sales and
+** xref:offline-order#h4__1635896381[The promotion] sales and
 delivery dates are displayed in each promotion header. If the sales
 dates are empty, the delivery dates will be displayed instead of them.
-** link:offline-order#h4__589780300[In the catalog and promotion
+** xref:offline-order#h4__589780300[In the catalog and promotion
 left menu], products are arranged according to their order number (if
 given) or alphabetical order.
 * Support Salesforce validation rules when saving or finalizing an
@@ -105,9 +105,9 @@ order.
 
 * Dynamic control over the quantity and cost of products, bundles, or
 freebies for the whole order or several deliveries.
-* Downloading link:limit-rules[Limit Rules] during the sync
+* Downloading xref:limit-rules[Limit Rules] during the sync
 process.
-* link:limit-rules[Applying limit rules] to orders or deliveries
+* xref:limit-rules[Applying limit rules] to orders or deliveries
 and checking the real-time validation during the order creation.
 
 
@@ -115,17 +115,17 @@ and checking the real-time validation during the order creation.
 [[h4_57267150]]
 ===== Product Availability
 
-* link:product-availability[Dynamic control] over the availability
+* xref:product-availability[Dynamic control] over the availability
 of products, bundles, and freebies for order and deliveries on certain
 dates.
-* Support for link:product-data-model[new product fields] to
+* Support for xref:product-data-model[new product fields] to
 implement the product availability logic.
 * During the sync process, the
-link:product-availability-field-reference[Product Availability]
+xref:product-availability-field-reference[Product Availability]
 records will be downloaded for all active products on the mobile device.
 * Automatic check to display only available products and bundles in
 catalogs and promotions.
-* link:product-availability#h2_813222365[Tap the Info icon] next to
+* xref:product-availability#h2_813222365[Tap the Info icon] next to
 the product in the promotion, catalog, order cart, or freebie window to
 see up to 3 records of availability dates for a paid product or freebie.
 
@@ -134,16 +134,16 @@ see up to 3 records of availability dates for a paid product or freebie.
 [[h4_878037613]]
 ===== Quotas
 
-* Dynamic control of link:quota-field-reference[a limited number of
+* Dynamic control of xref:quota-field-reference[a limited number of
 products&#44; bundles&#44; and freebies], such as when launching a new
 product, running a promotion for a selected customer segment, or
 withdrawing a product from production, by distributing product quotas to
 sales reps.
 * Blocking the *Finalize* button until the quota search is completed.
-* Sales reps can link:quotas#h3__576888334[reserve an available
+* Sales reps can xref:quotas#h3__576888334[reserve an available
 number of a product by quota] and still be able to allocate all products
 in that quota among the orders.
-* link:quotas#h2_275625523[Tap the Info icon] next to the product
+* xref:quotas#h2_275625523[Tap the Info icon] next to the product
 in the promotion, catalog, order cart, or freebie window to see the
 booked and used quotas.
 
@@ -166,7 +166,7 @@ limit and quota rules again.
 * Dynamic loading of products during catalog or promo opening to reduce
 data loading time.
 * The ability to add the whole catalog if the
-link:catalogs-field-reference[Disable Mass Action] checkbox is
+xref:catalogs-field-reference[Disable Mass Action] checkbox is
 inactive.
 
 [[h2__1184861497]]
@@ -184,11 +184,11 @@ Integrate with
 https://www.salesforce.com/eu/products/consumer-goods-cloud/overview/[Salesforce
 CG Cloud] solution to apply complex order-taking logic to its objects.
 
-* Use the link:cg-cloud-support#h3_656771318[Salesforce Product]
+* Use the xref:cg-cloud-support#h3_656771318[Salesforce Product]
 object in bundles, catalogs, and promotions.
-* Create orders for the link:cg-cloud-support#h3__2058563056[Retail
+* Create orders for the xref:cg-cloud-support#h3__2058563056[Retail
 Store] object.
-* Use link:cg-cloud-setting-up-dynamic-group-assignment[dynamic
+* Use xref:cg-cloud-setting-up-dynamic-group-assignment[dynamic
 groups] to keep stores and sales products up-to-date.
 
 
@@ -198,34 +198,34 @@ groups] to keep stores and sales products up-to-date.
 
 
 
-A fully configurable link:price-management[pricing procedure] that
+A fully configurable xref:price-management[pricing procedure] that
 allows you to implement complex custom scenarios with manual and total
 discounts if needed:
 
 [NOTE] ==== The standard Pricing Procedure version 1 is also
 supported. Use either the standard v.1 syntax or customize the new
 pricing procedure using the steps with a broadened
-link:pricing-procedure-v-1[syntax]. ====
+xref:pricing-procedure-v-1[syntax]. ====
 
-* Set link:pricing-procedure-v-2-steps[pricing procedure steps] to
+* Set xref:pricing-procedure-v-2-steps[pricing procedure steps] to
 write the intermediate discount results.
-* Add link:step-conditions[step conditions] to determine the step
+* Add xref:step-conditions[step conditions] to determine the step
 applicability.
-* Implement link:the-sdk-step[SDK step] to use custom project
+* Implement xref:the-sdk-step[SDK step] to use custom project
 logic.
 
 
 
-Enhanced link:calculation-types[discount calculation] capabilities:
+Enhanced xref:calculation-types[discount calculation] capabilities:
 
-* Define link:calculation-types#h3_1022633546[quantity settings]
+* Define xref:calculation-types#h3_1022633546[quantity settings]
 for discount calculation on[.object]#Calculation Type#.
 * Set
-link:condition-exceptioncondition-c-field-specification[exception
+xref:condition-exceptioncondition-c-field-specification[exception
 conditions] to apply the discount under specific circumstances.
 * Specify any field on any object to be used as
-a link:calculation-types#h3_1561772746[discount rate source].
-* Launch link:calculation-types#h3_1022633546[full or partial
+a xref:calculation-types#h3_1561772746[discount rate source].
+* Launch xref:calculation-types#h3_1022633546[full or partial
 recalculation] in the order cart if the selected field value is altered.
 
 
@@ -236,20 +236,20 @@ recalculation] in the order cart if the selected field value is altered.
 
 
 * Take advantage of full and partial
-link:freebies-management#autoupdate[recalculation and auto-update]
+xref:freebies-management#autoupdate[recalculation and auto-update]
 of freebies in order triggered by changes in the set of products in the
 cart.
-* Control the link:freebies-management#h2_1556344363[freebie
+* Control the xref:freebies-management#h2_1556344363[freebie
 distribution] among several deliveries.
 
 [[h3__1409574029]]
 ==== Other improvements
 
-* link:online-order#h3__1143528965[Editable fields] allow entering
+* xref:online-order#h3__1143528965[Editable fields] allow entering
 data in custom fields in real-time.
 * Performance improvements for opening orders with large catalogs,
 promotions, and numerous deliveries.
-* On the link:offline-order#h4__1635896381[Order Cart] screen, the
+* On the xref:offline-order#h4__1635896381[Order Cart] screen, the
 header bar is fixed so that users can scroll through the order cart
 without losing sight of the names of columns.
 
@@ -264,18 +264,18 @@ without losing sight of the names of columns.
 
 
 
-* link:multiplicator[Multiplicator] provides flexible management of
+* xref:multiplicator[Multiplicator] provides flexible management of
 product quantity per delivery. The quantity is calculated automatically
 based on multiplicity settings processed on three levels:
 [.object]#Product#,[.object]#Price Book Line Item#,
 [.object]#Catalog Line Item,# or[.object]#Promotion
 Line Item#.
-* Add the display of link:5-3-displaying-price-tags[price tags] for
+* Add the display of xref:5-3-displaying-price-tags[price tags] for
 a convenient visualized method of informing your sales reps about the
 applied calculation type and discount required quantity for reaching the
 next discount level and special conditions for each product added to the
 cart.
-* Perform an link:offline-order#h3_1847490047[advanced search in
+* Perform an xref:offline-order#h3_1847490047[advanced search in
 orders] in all fields among all products in the *Catalog* and
 *Promotion* sections and already added to the order cart, including
 freebies.
@@ -287,19 +287,19 @@ freebies.
 
 
 
-link:5-1-setting-up-a-delivery-split[Order split] allows the
+xref:5-1-setting-up-a-delivery-split[Order split] allows the
 distribution of products between multiple deliveries to meet your
 company's logistic and financial requirements:
 
 * Define the split parameters for different departments and order types;
 * Review the split
-link:5-2-setting-up-the-delivery-summary[delivery summary] with
+xref:5-2-setting-up-the-delivery-summary[delivery summary] with
 details for each delivery before finalization.
 
 [[h3_1881527946]]
 ==== Other Improvements
 
-* link:freebies-management[Improved freebies validation] now
+* xref:freebies-management[Improved freebies validation] now
 provides versatile validations to improve the working experience when
 adding freebies in orders. The system now checks active promotion dates,
 min/max required products, and other settings influencing the final
@@ -322,20 +322,20 @@ sub-catalog) lists to the cart.
 
 
 * Work with offline orders in the CT Mobile by
-link:adding-ct-orders-to-the-ct-mobile-app-4-0[adding the CT
+xref:adding-ct-orders-to-the-ct-mobile-app-4-0[adding the CT
 Orders] module to the app menu.
-* link:offline-order#h3_1904156377[Create orders] on
-link:offline-order#h2__2117318770[the Account&#44; Contact&#44; or
+* xref:offline-order#h3_1904156377[Create orders] on
+xref:offline-order#h2__2117318770[the Account&#44; Contact&#44; or
 Activity records] through the customizable mini-layout.
 * Manage the created offline orders on
-link:offline-order#h3_1847490047[the Edit Cart screen]:
+xref:offline-order#h3_1847490047[the Edit Cart screen]:
 ** Search the regular products, free goods, and product bundles and
 select the right ones with specific prices structured in the catalogs
 hierarchy or joined in promotions, filtered for the customer.
 ** Manage multi-address deliveries. Control the number of deliveries and
 the applicable dates.
 ** Apply quantity rules for
-link:adding-a-price-book-line-item-1-0[setting up min and max]
+xref:adding-a-price-book-line-item-1-0[setting up min and max]
 products in delivery.
 ** Finalize the order to restrict any changes in the CT Mobile app and
 send the order for further processing in Salesforce.
@@ -353,7 +353,7 @@ Mobile app.
 
 
 
-link:managing-bundles[A bundle] is a new type of product that
+xref:managing-bundles[A bundle] is a new type of product that
 includes several products.
 
 * Bundles are now supported for use in[.object]#Catalogs# in
@@ -362,11 +362,11 @@ includes several products.
 
 
 Further product management now allows controlling
-link:product-data-model[units in a package] on the *Product* level.
+xref:product-data-model[units in a package] on the *Product* level.
 
 [[h3__230916525]]
 ==== Other Improvements
 
 * Freebies management window with the dedicated button.
-* link:5-2-setting-up-the-delivery-summary[Delivery summary] window
+* xref:5-2-setting-up-the-delivery-summary[Delivery summary] window
 display before finalizing the order.

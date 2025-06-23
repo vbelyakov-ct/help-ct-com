@@ -17,14 +17,14 @@ If you exceed the product limit for a single delivery or for the order,
 the system will show a validation message when you try to save the draft
 or finalize the order.
 
-Keep in mind that all found suitable [.object]#Limit Rules# will
+Keep in mind that all found suitable [.object]#Limit Rules# will
 be applied to the order. The search is done in the following sequence:
 
-. Search for a _Limit Rule_ record where the *Order Type* and *Sales
-Organization* fields are specified.
-. Search for a _Limit Rule_ record where the *Sales Organization* field
+. Search for a _Limit Rule_ record where the *Order Type* and *Sales
+Organization* fields are specified.
+. Search for a _Limit Rule_ record where the *Sales Organization* field
 is specified.
-. Search for a _Limit Rule_ record where the *Order Type* field is
+. Search for a _Limit Rule_ record where the *Order Type* field is
 specified.
-. Search for a _Limit Rule_ record where neither of these fields is
+. Search for a _Limit Rule_ record where neither of these fields is
 specified.
