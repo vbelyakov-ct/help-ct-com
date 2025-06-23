@@ -10,7 +10,7 @@ image:Discount-Data-Model.png[]
 |===
 |*Object* |*API Name* |*Record Type* |*Description*
 
-|xref:calculated-discount-field-reference[Calculated Discount]
+|xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/calculated-discount-field-reference.adoc[Calculated Discount]
 |[.apiobject]#orders__CalculatedDiscount__c# a|
 * Applied Condition
 * Calculation Log
@@ -18,7 +18,7 @@ image:Discount-Data-Model.png[]
 |This object stores interim data about the discount calculated for each
 [.object]#Order Line Item# in the order.
 
-|xref:calculation-types-field-reference[Calculation Type]
+| xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc-field-reference[Calculation Type]
 |[.apiobject]#orders__CalculationType__c# a|
 * ** Condition
 * Group {plus} Condition
@@ -27,7 +27,7 @@ image:Discount-Data-Model.png[]
 calculation, including the list of fields available for users,condition
 fields update and calculation methods, and applied unit of measure.
 
-|xref:condition-field-reference[Condition]
+|xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/index.adoc[Condition]
 |[.apiobject]#orders__Condition__c# |  |This object
 stores the values of the fields that trigger the discount calculation,
 discount rates, and data about the calculation type and method.

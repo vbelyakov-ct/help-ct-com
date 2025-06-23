@@ -80,7 +80,7 @@ on their respective levels. ====
 The calculation process for freebies is similar to the
 xref:admin-guide/managing-ct-orders/discount-management/index#h2__1585481109[Discount Calculation
 process]. The rules which are used for calculation are manifested in the
-xref:freebie-condition-field-reference[Freebie Condition] child
+xref:admin-guide/managing-ct-orders/freebies-management/freebie-data-model/freebie-condition-field-reference/index.adoc[Freebie Condition] child
 records and filtered and applied one by one in a distinct order.
 
 . Create a new order and add a required number of products to your cart.
@@ -209,7 +209,7 @@ longer fit the order conditions will be automatically removed.
 * If the *Delivery Control* is active, automatically distribute freebies
 to the first or last delivery when deliveries are created or deleted.
 ** This option is selected in the _Freebie Condition_ ** setup and
-defined in the xref:freebie-condition-field-reference[Freebie
+defined in the xref:admin-guide/managing-ct-orders/freebies-management/freebie-data-model/freebie-condition-field-reference/index.adoc[Freebie
 Condition].
 image:2021-08-26_12-36-46.png[]
 * If the *Delivery Control* is inactive, all freebies that can be
@@ -272,7 +272,7 @@ image:2021-09-09_13-19-37.png[]
 [width="100%",cols="50%,50%",]
 |===
 |image:warning.png[] a|
- Available for instances with the enabled xref:web-service[Web
+ Available for instances with the enabled xref:admin-guide/managing-ct-orders/web-service/index.adoc[Web
 Service].
 
 

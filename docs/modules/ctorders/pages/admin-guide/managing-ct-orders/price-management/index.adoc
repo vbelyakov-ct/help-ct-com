@@ -97,7 +97,7 @@ order.
 specified on the object for the _Sales Organization_ and _Order Type_ in
 the order.
 * The _Pricing Procedure_ is active.
-. xref:calculation-types[Calculation Type] is linked to the applied
+.  xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc[Calculation Type] is linked to the applied
 _Pricing Procedure_, and _Calculation Type_ is included in the JSON
 formula.
 * The *Calculation Method*, *Unit of Measure*, and *External Id* fields
@@ -151,7 +151,7 @@ only the *Procedure* step, as in previous CT Orders versions. In this
 step, a formula is used to calculate the price of each _Delivery Line
 Item_ by applying different discount _Calculation Types_ listed in a
 sequence with[.apiobject]#MAX#, MIN, MULT, or SUM operators.
-* xref:pricing-procedure-v-2-steps[Pricing Procedure v. 2.0]
+* xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/index.adoc[Pricing Procedure v. 2.0]
 requires all steps of the price calculation to be specified in the JSON
 formula.
 

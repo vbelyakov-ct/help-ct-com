@@ -27,7 +27,7 @@ affect different products that have required/min/max attributes.
 === Object Model
 
 Since CT Orders Summer '22 and CT Mobile iOS 2.7, you can
-use xref:web-service[the Web Service] to execute calculations from
+use xref:admin-guide/managing-ct-orders/web-service/index.adoc[the Web Service] to execute calculations from
 different channels in one place instead of a built-in calculator.
 
 
@@ -55,7 +55,7 @@ supported.
 Calculation of discounts for[.object]#Order Line Items# is
 performed by the method of consecutive application of rules with
 appropriate criteria. The rules are manifested in the
-xref:condition-field-reference[Condition] and
+xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/index.adoc[Condition] and
 xref:condition-group-field-reference[Condition Group] child records
 and filtered and applied one by one in a distinct order.
 
@@ -153,9 +153,9 @@ the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-proce
 
 See also:
 
-* xref:calculation-types[Calculation Types]
+*  xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc[Calculation Types]
 * xref:calculate-discounts[Calculate
-Discounts]xref:calculation-types.html[
+Discounts] xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc.html[
 ]
 * xref:discount-logs[Discount Logs]
 * xref:links[Links]

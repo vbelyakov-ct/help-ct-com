@@ -1,350 +1,551 @@
 = Required Permissions for a Specific Role
+:toc:
 
-Four permission set groups must be assigned to the users based on their
-role. Have a look at accesses and permissions included in the permission
-set groups.
+Four permission set groups must be assigned to the users based on their  role. Have a look at accesses and permissions included in the permission set groups.
 
-To work with xref:web-service[Web Service], the integration user
-must have permission to carry out discount calculations using the Web
-Service. For more information, refer to
-xref:../Storage/project-order-module/PDF/CT-Orders-User-Permissions-to-Access-Web-Service.pdf[Integration
-User Permissions].
-
-:toc: :toclevels: 3
+WARNING: To work with xref:admin-guide/managing-ct-orders/web-service/index.adoc[Web Service], the integration user must have permission to carry out discount calculations using the Web Service. For more information, refer to
+xref:attachment$CT-Orders-User-Permissions-to-Access-Web-Service.pdf[Integration User Permissions].
 
 [[h2_1833191265]]
-=== Permission Set Groups
+== Permission Set Groups
 
+[.highlighted-table]
 [width="100%",cols="^20%,^20%,^20%,^20%,^20%",]
 |===
-|
-*Permission Sets* |*Permission Set Groups* | | |
 
-| |*CT Orders Read-Only* |*CT Orders Sales Rep* |*CT Order Sales Admin*
-|*CT Order System Admin*
+.2+|*Permission Sets* 4+|*Permission Set Groups*
 
-|OM Manage Catalogs a|
+a| *CT Orders Read-Only* a| *CT Orders Sales Rep* |*CT Order Sales Admin* |*CT Order System Admin*
 
-
-
-
-No
-
-
-| a|
-
-
-
-
-Yes
-
-|
-
+|OM Manage Catalogs a| No | a| Yes |
 |OM Manage Commercial Conditions | | | |
-
 |OM Manage Limit Rules | | | |
-
 |OM Manage Orders |No |Yes | |
-
-|OM Manage Price Books a|
-
-
-
-
-
-
-No
-
-| |
-
-
-Yes |
-
+|OM Manage Price Books a| No
+| | Yes |
 |OM Manage Product Availabilities | | | |
-
 |OM Manage Promotions | | | |
-
 |OM Manage Quotas | | | |
-
 |OM Manage Sales Organizations |No | | |Yes
-
 |OM Manage Settings |No | | |Yes
-
-|OM Read Catalogs a|
-
-
-
-
-Yes
-
-| a|
-
-
-
-
-No
-
-|
-
+|OM Read Catalogs a| Yes| a|No|
 |OM Read Commercial Conditions | | | |
-
 |OM Read Limit Rules | | | |
-
 |OM Read Orders |Yes |No | |
-
-|OM Read Price Books a|
-
-
-
-
-
-
-Yes
-
-| |
-
-
-No |
-
+|OM Read Price Books a|Yes| |No |
 |OM Read Product Availabilities | | | |
-
 |OM Read Promotions | | | |
-
 |OM Read Quotas | | | |
-
 |OM Read Sales Organizations |Yes | | |No
-
 |OM Read Settings |Yes | | |No
 |===
 
-[width="100%",cols="50%,50%",]
-|===
-|image:warning.png[] a|
-For CT Product or Pharma Product, make sure that your users have access
-to lookup fields on the following objects:
+[NOTE]
+====
+For CT Product or Pharma Product, make sure that your users have access to lookup fields on the following objects:
 
-*[.object]#CatalogLineItem#
-*[.object]##[.object]#PromotionLineItem#
-*[.object]##[.object]#OrderLineItem#
-*[.object]##[.object]#DeliveryLineItem#
-*[.object]##[.object]#FreebieLineItem#
+* [.object]#CatalogLineItem#
+* [.object]#PromotionLineItem#
+* [.object]#OrderLineItem#
+* [.object]#DeliveryLineItem#
+* [.object]#FreebieLineItem#
 
-If necessary, manually add permissions to access lookup fields on those
-objects.
+If necessary, manually add permissions to access lookup fields on those objects.
+====
 
-|===
 
 [[h2_1226990026]]
-=== Permissions Sets: Manage
+== Permissions Sets: Manage
 
-[width="100%",cols="50%,50%",]
+[tabs]
+====
+OM Manage Catalogs::
++
+--
+[.highlighted-table]
+[width="100%",cols="34%,33%,33%",]
 |===
-|OM Manage Catalogs a|
-[width="100%",cols="34%,33%,33%",]
-!===
-!*CT Orders Objects* !*Apex Classes* !*Visualforce Page*
-!*Create, Read, Edit, Delete* ! !
-! ! !
-!===
 
-|OM Manage Commercial Conditions a|
-[width="100%",cols="^25%,^25%,^25%,^25%",]
-!===
-!*CT Orders Objects* !*Custom Permission* !*Apex Classes* !*Custom
-Setting*
+|*CT Orders Objects* .2+|*Apex Classes* .2+|*Visualforce Page* |*Create, Read, Edit, Delete*
 
-!*Create, Read, Edit, Delete* ! ! !
+a|
+* Catalog
+* Catalog Assignment
+* Catalog Line Item
 
-! ! ! !
+a|
+* CatalogHierarchyGetData
+* CatalogHierarchySaveData
+* ItemsTableDataGetter
+* ItemsTableDataSaver
+* ProductsViewer
 
-!*Create, Read, Edit, Delete, View All* ! ! !
-
-! ! ! !
-!===
-
-|OM Manage Limit Rules a|
-[width="100%",cols="100%",]
-!===
-!*CT Orders Objects*
-!*Create, Read, Edit, Delete*
-!
-!===
-
-|OM Manage Orders a|
-[width="99%",cols="^20%,^16%,^16%,^16%,^16%,^16%",]
-!===
-!*CT Orders Objects* !*Custom Permission* !*App* !*Apex Classes*
-!*Custom Setting* !*Visualforce Page*
-
-!*Create, Read, Edit, Delete* ! ! ! ! !
-
-! ! ! ! ! !
-
-!*Create, Read, Edit* ! ! ! ! !
-
-! ! ! ! ! !
-
-!*Read* ! ! ! ! !
-
-! ! ! ! ! !
-!===
-
-|OM Manage Price Books a|
-[width="100%",cols="100%",]
-!===
-!*CT Orders Objects*
-!*Create, Read, Edit, Delete*
-!
-!*Read*
-!
-!===
-
-|OM Manage Product Availabilities a|
-[width="100%",cols="100%",]
-!===
-!*CT Orders Objects*
-!*Create, Read, Edit, Delete*
-!
-!===
-
-|OM Manage Promotions a|
-[width="100%",cols="34%,33%,33%",]
-!===
-!*CT Orders Objects* !*Apex Classes* !*Visualforce Page*
-!*Create, Read, Edit, Delete* ! !
-! ! !GetSessionId
-!===
-
-|OM Manage Quotas a|
-[width="100%",cols="100%",]
-!===
-!*CT Orders Objects*
-!*Create, Read, Edit, Delete*
-!
-!===
-
-|OM Manage Sales Organizations a|
-[width="100%",cols="34%,33%,33%",]
-!===
-!*CT Orders Objects* !*Custom Permission* !*Apex Classes*
-!*Create, Read, Edit, Delete* ! !
-! ! !
-!===
-
-|OM Manage Settings a|
-[width="100%",cols="^25%,^25%,^25%,^25%",]
-!===
-!*CT Orders Objects* !*Custom Permission* !*Apex Classes* !*Custom
-Setting*
-
-!*Create, Read, Edit, Delete* ! ! !
-
-! ! ! !
-
-!*Modify All* ! ! !
-
-! ! ! !
-!===
+a|
+* GetSessionId
 
 |===
+
+--
+OM Manage Commercial Conditions::
++
+--
+[.highlighted-table]
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*CT Orders Objects* .2+|*Custom Permission* + .2+|*Apex Classes* .2+|*Custom Setting*
+|*Create, Read, Edit, Delete*
+a|
+* Condition
+* Condition Group
+* Condition Level
+* Calculation Type
+* Freebie Condition
+* Freebie Level
+* Freebie Level Line Item
+* Freebie Line Item
+* Freebie Type
+* Organization Freebie Type
+* Pricing Procedures
+* Procedure Calculation Type
+* Sales Organization
+* Sync Transaction
+
+.3+a| * Commercial Condition Data
+
+.3+a| * Batch_CalculatorServiceDeltaReplicator
+
+.3+a| * Auth Secret
+
+|*Create, Read, Edit, Delete, View All*
+a| * Condition Dependency
+
+|===
+
+--
+OM Manage Limit Rules::
++
+--
+[.highlighted-table]
+[width="100%",cols="100%",]
+|===
+^|*CT Orders Objects*
+^|*Create, Read, Edit, Delete*
+a| * Limit Rules
+
+|===
+
+--
+OM Manage Orders::
++
+--
+[.highlighted-table]
+[width="99%",cols="20%,16%,16%,16%,16%,16%",]
+|===
+|*CT Orders Objects* .2+|*Custom Permission* .2+|*App* .2+|*Apex Classes* .2+|*Custom Setting* .2+|*Visualforce Page*
+|*Create, Read, Edit, Delete*
+a|
+* Calculated Discount
+* Delivery
+* Delivery Line Item
+* Order
+* Order Change Manager
+* Order Line Item
+* Quota Usage
+
+.5+a|
+* Commercial Condition Calculate
+
+.5+a|
+* Order Module (orders__OrderModule)
++
+
+
+.5+a|
+* CalculatorController
+* CalculatorHelper
+* CatalogsData
+* ChangeManager
+* DeliverySummaryController
+* DeliveryTableData
+* EnrichSobjects
+* FreebieCalculatorController
+* LimitRulesController
+* LimitRulesGetter
+* OrderLineItemData
+* OrderProcessor
+* PricingCalculatorController
+* ProductAvailabilityGetter
+* PromotionsData
+* QuotasGetter
+* QuotaUsageController
+* SaveTableData
+* SDKExecutor
+* SettingsPanelController
+* SObjectsMetadata
+* TotalsPanelData
+* CalculatorServiceSender
+* CalculatorServiceValidator
+
+.5+a|
+* Auth Secret
+
+.5+a|
+* GetSessionId
+
+|*Create, Read, Edit*
+a|
+* Quota
+
+
+|*Read*
+a|
+* Auth Data
+
+
+|===
+
+--
+OM Manage Price Books::
++
+--
+[.highlighted-table]
+[width="100%",cols="100%"]
+|===
+^|*CT Orders Objects* ^|*Create, Read, Edit, Delete*
+a|
+* Price Book
+* Price Book Line Item
+
+^|*Read*
+a|
+* Sales Organization
+
+|===
+
+--
+OM Manage Product Availabilities::
++
+--
+[.highlighted-table]
+[width="100%",cols="100%",]
+|===
+^|*CT Orders Objects*
+^|*Create, Read, Edit, Delete*
+a| * Product Availability
+
+|===
+
+--
+OM Manage Promotions::
++
+--
+[.highlighted-table]
+[width="100%",cols="34%,33%,33%",]
+|===
+|*CT Orders Objects* .2+|*Apex Classes* .2+|*Visualforce Page*
+|*Create, Read, Edit, Delete*
+a|
+* Promotion
+* Promotion Assignment
+* Promotion Line Item
+
+a|
+* CtTableController
+* ItemsTableDataGetter
+* ItemsTableDataSaver
+* ProductsViewer
+* PromotionController
+
+|GetSessionId
+|===
+
+--
+OM Manage Quotas::
++
+--
+[.highlighted-table]
+[width="100%",cols="100%",]
+|===
+^|*CT Orders Objects*
+^|*Create, Read, Edit, Delete*
+a|
+* Quota
+* Quota Usage
+
+|===
+
+--
+OM Manage Sales Organizations::
++
+--
+[.highlighted-table]
+[width="100%",cols="34%,33%,33%",]
+|===
+|*CT Orders Objects* .2+|*Custom Permission* .2+|*Apex Classes*
+|*Create, Read, Edit, Delete*
+a|
+* Sales Organization
+* Sales Organization User
+* Sync Transaction
+
+a|
+* Commercial Condition Data
+
+a|
+* Batch_CalculatorServiceDeltaReplicator
+
+|===
+
+--
+OM Manage Settings::
++
+--
+[.highlighted-table]
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*CT Orders Objects* .2+|*Custom Permission* .2+|*Apex Classes* .2+|*Custom Setting* +
+|*Create, Read, Edit, Delete*
+a|
+* Settings
+* Sync Transaction
+
+.3+a|
+* Commercial Condition Admin
+
+.3+a|
+* AuthCryptoHelper
+* AuthTokenRest
+* Batch_CalculatorServiceDeltaReplicator
+* Batch_CalculatorServiceReplicator
+* CalculatorServiceRest
+* AuthValidateAccessRest
+
+.3+a|
+* Auth Secret
+
+^|*Modify All*
+a|
+* Auth Data
+|===
+
+--
+====
+
 
 [[h2__104020043]]
-=== Permissions Sets: Read
+== Permissions Sets: Read
 
-[width="100%",cols="50%,50%",]
+[tabs]
+====
+OM Read Catalogs::
++
+--
+[.highlighted-table]
+[width="100%",cols="34%,33%,33%",]
 |===
-|OM Read Catalogs a|
-[width="100%",cols="^34%,^33%,^33%",]
-!===
-!*CT Orders Objects* !*Apex Classes* !*Visualforce Page*
-!*Read* ! !
-! ! !
-!===
+|*CT Orders Objects* .2+|*Apex Classes* .2+|*Visualforce Page* +
+|*Read*
+a|
+* Catalog
+* Catalog Assignment
+* Catalog Line Item
 
-|OM Read Commercial Conditions a|
-[width="100%",cols="100%",]
-!===
-!*CT Orders Objects*
-!*Read*
-!
-!===
+a|
+* orders.CatalogHierarchyGetData
+* orders.ItemsTableDataGetter
+* orders.ProductsViewer
 
-|OM Read Limit Rules a|
-[width="100%",cols="100%",]
-!===
-!*CT Orders Objects*
-!*Read*
-!
-!===
-
-|OM Read Orders a|
-[width="100%",cols="^25%,^25%,^25%,^25%",]
-!===
-!*CT Orders Objects* !*App* !*Apex Classes* !*Visualforce Page*
-!*Read* ! ! !
-! ! ! !
-!*Create, Read, Edit, Delete* ! ! !
-! ! ! !
-!===
-
-|OM Read Price Books a|
-[width="100%",cols="100%",]
-!===
-!*CT Orders Objects*
-!*Read*
-!
-!===
-
-|OM Read Product Availabilities a|
-[width="100%",cols="100%",]
-!===
-!*CT Orders Objects*
-!*Read*
-!
-!===
-
-|OM Read Promotions a|
-[width="100%",cols="^34%,^33%,^33%",]
-!===
-!*CT Orders Objects* !*Apex Classes* !*Visualforce Page*
-!*Read* ! !
-! ! !
-!===
-
-|OM Read Quotas a|
-[width="100%",cols="100%",]
-!===
-!*CT Orders Objects*
-!*Read*
-!
-!===
-
-|OM Read Sales Organizations a|
-[width="100%",cols="100%",]
-!===
-!*CT Orders Objects*
-!*Read*
-!
-!===
-
-|OM Read Settings a|
-[width="100%",cols="100%",]
-!===
-!*CT Orders Objects*
-!*View All*
-!
-!===
+a|
+* GetSessionId
 
 |===
 
+--
+OM Read Commercial Conditions::
++
+--
+[.highlighted-table]
+[width="100%",cols="100%",]
+|===
+^|*CT Orders Objects*
+^|*Read*
+a|
+* Condition
+* Condition Dependency
+* Condition Group
+* Condition Level
+* Calculation Type
+* Freebie Condition
+* Freebie Level
+* Freebie Level Line Item
+* Freebie Line Item
+* Freebie Type
+* Organization Freebie Type
+* Pricing Procedures
+* Procedure Calculation Type
+* Sales Organisation
+* Sync Transaction
+
+|===
+
+--
+OM Read Limit Rules::
++
+--
+[.highlighted-table]
+[width="100%",cols="100%",]
+|===
+^|*CT Orders Objects*
+^|*Read*
+a|
+* Limit Rule
+
+|===
+
+--
+OM Read Orders::
++
+--
+[.highlighted-table]
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*CT Orders Objects* .2+^|*App*  .2+^|*Apex Classes* .2+^|*Visualforce Page* +
+|*Read*
+a|
+* Calculated Discount
+* Delivery
+* Delivery Line Item
+* Order
+* Order Change Manager
+* Order Line Item
+* Quota Usage
+
+.3+a|
+* orders.Order Module (orders__OrderModule)
+
+.3+a|
+* orders.ChangeManager
+* orders.EnrichSobjects
+* orders.OrderLineItemData
+* orders.OrderProcessor
+* orders.SObjectsMetadata
+* orders.TotalsPanelData
+* orders.SDKExecutor
+
+.3+a|
+* GetSessionId
+
+|*Create, Read, Edit, Delete*
+a|
+* Order Change Manager
+
+|===
+
+--
+OM Read Price Books::
++
+--
+[.highlighted-table]
+[width="100%",cols="100%",]
+|===
+^|*CT Orders Objects*
+^|*Read*
+a|
+* CT Price Book
+* CT Price Book Line Item
+
+|===
+
+--
+OM Read Product Availabilities::
++
+--
+[.highlighted-table]
+[width="100%",cols="100%",]
+|===
+^|*CT Orders Objects*
+^|*Read*
+a|
+* Product Availability
+
+|===
+
+--
+OM Read Promotions::
++
+--
+[.highlighted-table]
+[width="100%",cols="34%,33%,33%",]
+|===
+^|*CT Orders Objects* .2+^|*Apex Classes* .2+^|*Visualforce Page*
+^|*Read*
+a|
+* Promotion
+* Promotion Assignment
+* Promotion Line Item
+
+a|
+* orders.CtTableController
+* orders.ItemsTableDataGetter
+* orders.ProductsViewer
+* orders.PromotionController
+
+a|
+* GetSessionId
+
+|===
+
+--
+OM Read Quotas::
++
+--
+[.highlighted-table]
+[width="100%",cols="100%",]
+|===
+^|*CT Orders Objects*
+^|*Read*
+a|
+* Quota
+* Quota Usage
+
+|===
+
+--
+OM Read Sales Organizations::
++
+--
+[.highlighted-table]
+[width="100%",cols="100%",]
+|===
+^|*CT Orders Objects*
+^|*Read*
+a|
+* Sales Organization
+* Sales Organization User
+
+|===
+
+--
+OM Read Settings::
++
+--
+[.highlighted-table]
+[width="100%",cols="100%",]
+|===
+^|*CT Orders Objects*
+^|*View All*
+a|
+* Settings
+
+|===
+
+--
+====
 
 
 [[h2__260496953]]
-=== Custom Permissions
+== Custom Permissions
 
-* _orders.Allow Management of SelfAPI_ custom permission is required to
-access the xref:quick-start/installing-the-ct-orders-package#self-api[Self API
-tab] of the CT Orders Control Panel.
-* _orders.Allow Management of AuthData_ custom permission is required
-to access and manually manage xref:auth-data-field-reference[Auth
-Data] records.
+* _orders.Allow Management of SelfAPI_ custom permission is required to access the xref:quick-start/installing-the-ct-orders-package.adoc#self-api[Self API tab] of the CT Orders Control Panel.
+* _orders.Allow Management of AuthData_ custom permission is required to access and manually manage xref:admin-guide/managing-ct-orders/web-service/ref-guide/auth-data-field-reference.adoc[Auth Data] records.
+

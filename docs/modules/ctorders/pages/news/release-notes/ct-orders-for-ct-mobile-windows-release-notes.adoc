@@ -80,21 +80,21 @@ supported. Use either the standard v.1 syntax or customize the new
 pricing procedure using the steps with a broadened
 xref:pricing-procedure-v-1[syntax]. ====
 
-* Set xref:pricing-procedure-v-2-steps[pricing procedure steps] to
+* Set xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/index.adoc[pricing procedure steps] to
 write the intermediate discount results.
-* Add xref:step-conditions[step conditions] to determine the step
+* Add xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/step-conditions.adoc[step conditions] to determine the step
 applicability.
 
 
 
-Enhanced xref:calculation-types[discount calculation] capabilities:
+Enhanced  xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc[discount calculation] capabilities:
 
-* Define xref:calculation-types#h3_1022633546[quantity settings]
+* Define  xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc#h3_1022633546[quantity settings]
 for discount calculation on[.object]#Calculation Type#.
 * Set
 xref:condition-exceptioncondition-c-field-specification[exception
 conditions] to apply the discount under specific circumstances.
 * Specify any field on any object to be used as
-a xref:calculation-types#h3_1561772746[discount rate source].
-* Launch xref:calculation-types#h3_1022633546[full or partial
+a  xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc#h3_1561772746[discount rate source].
+* Launch  xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc#h3_1022633546[full or partial
 recalculation] in the order cart if the selected field value is altered.

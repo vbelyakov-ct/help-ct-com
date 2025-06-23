@@ -49,7 +49,7 @@ or *Discount Rate (Amount)*.
 . The condition with maximum discount rate is selected.
 
 Available only for the *Condition* record type and only with the
-xref:web-service[Web Service] enabled.
+xref:admin-guide/managing-ct-orders/web-service/index.adoc[Web Service] enabled.
 
 
 * *Minimum Discount Condition* is used to apply minimum discount rate:
@@ -61,7 +61,7 @@ Rate (%)* or *Discount Rate (Amount)*.
 . The condition with minimum discount rate is selected.
 
 Available only for the *Condition* record type and only with
-the xref:web-service[Web Service] enabled.
+the xref:admin-guide/managing-ct-orders/web-service/index.adoc[Web Service] enabled.
 
 |Calculation Method
 |[.apiobject]#orders__CalculationMethod__c# |Picklist
@@ -138,7 +138,7 @@ Item#. Available values:
 * Order Line Item (default)
 * Delivery Line Item
 
-This field applies only to xref:web-service[Web Service]
+This field applies only to xref:admin-guide/managing-ct-orders/web-service/index.adoc[Web Service]
 calculations and does not affect the internal calculator. Pricing
 procedures with this field will be ignored and excluded from
 the xref:price-tag[Price Tag] logic.
@@ -205,7 +205,7 @@ Type: LevelFormula__c Field Specification].
 Available values:
 
 * *Condition* is used for discount calculation conditions that allow
-using xref:condition-field-reference[advanced calculation methods].
+using xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/index.adoc[advanced calculation methods].
 ** Supports difficult cases for *Promotions*, for example:
 *** Allows setting the number of unique SKUs to be eligible for the
 discounting.

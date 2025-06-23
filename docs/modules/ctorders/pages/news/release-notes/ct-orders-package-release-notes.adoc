@@ -11,10 +11,10 @@ available.
 
 * xref:sync-transaction-field-reference[Sync Transaction] records
 are now deleted automatically after disconnecting from the
-xref:web-service[Web Service].
+xref:admin-guide/managing-ct-orders/web-service/index.adoc[Web Service].
 * xref:required-permissions-for-a-specific-role#h2__260496953[orders.Allow
 Management of AuthData] custom permission added to manually manage
-xref:auth-data-field-reference[Auth Data] records.
+xref:admin-guide/managing-ct-orders/web-service/ref-guide/auth-data-field-reference.adoc[Auth Data] records.
 
 [[h2__290225989]]
 === The CT Orders Package 24 R2
@@ -69,7 +69,7 @@ xref:catalog-line-item-field-reference[Catalog Line Item] and
 xref:promotion-line-item-field-reference[Promotion Line Item]
 objects to work with new bundles logic.
 * New *Restrict by Order content* checkbox is added for the
-xref:freebie-condition-field-reference[Freebie Condition] object.
+xref:admin-guide/managing-ct-orders/freebies-management/freebie-data-model/freebie-condition-field-reference/index.adoc[Freebie Condition] object.
 If enabled, only _Order Line Item_ records with *Quantity*> 0 are
 distributed as freebies.
 
@@ -126,7 +126,7 @@ same field on the next order item.
 ==== Major Features
 
 * The *Field Search Based On* field is added to the
-xref:calculation-types-field-reference[Calculation Type] object.
+ xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc-field-reference[Calculation Type] object.
 This field determines if *Condition Fields* will be searched starting
 from[.object]#Order Line Item# or[.object]#Delivery
 Line Item# when performing calculation for the Web Service.
@@ -187,7 +187,7 @@ xref:order-line-item-field-reference[Order Line Item] and
 xref:delivery-line-item-field-reference[Delivery Line Item]
 layouts.
 * *Delivery Control* = _None_ for
-xref:freebie-condition-field-reference[Freebie Condition] does not
+xref:admin-guide/managing-ct-orders/freebies-management/freebie-data-model/freebie-condition-field-reference/index.adoc[Freebie Condition] does not
 work for orders with different dates.
 * The product does not appear in available Freebies when filling out an
 order unless *Freebies Quantity Max* is specified on the
@@ -210,14 +210,14 @@ not work on save.
 * The
 xref:condition-advancedcriteria-c-field-specification[Advanced
 Criteria] field is required even if the
-xref:condition-field-reference[Calculation Method] is set to
+xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/index.adoc[Calculation Method] is set to
 _Basic_.
 * Width of the *All* tab in the
 xref:offline-order#h4__1635896381[order cart] varies while
 switching between this and another tabs.
 * Discount is not recalculated for created orders after changing
 *Discount Rate* field value in the
-xref:condition-field-reference[Condition] record.
+xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/index.adoc[Condition] record.
 * After decreasing the width of the
 xref:online-order#h2_915453080[order cart] window, the *Add* button
 becomes hidden by the side panel.
@@ -231,10 +231,10 @@ becomes hidden by the side panel.
 ==== Major Features
 
 * xref:condition-advancedcriteria-c-field-specification#h2_1585895621[Advanced
-Criteria 2.0] now works both in xref:web-service[Web Service] and
+Criteria 2.0] now works both in xref:admin-guide/managing-ct-orders/web-service/index.adoc[Web Service] and
 in-app discount calculator.
-* xref:web-service#h3__795817566[Calculate discounts] feature works
-both in xref:web-service[Web Service] and in-app discount
+* xref:admin-guide/managing-ct-orders/web-service/index.adoc#h3__795817566[Calculate discounts] feature works
+both in xref:admin-guide/managing-ct-orders/web-service/index.adoc[Web Service] and in-app discount
 calculator.
 * *Promotions*, *Catalogs* and their sub-catalogs in the
 xref:offline-order#h4__1635896381[Order Cart] are now displayed in
@@ -451,7 +451,7 @@ affected them.
 
 * If the matching *Condition* record was not found on the *Condition
 Group* record, the system checks the next
-xref:calculation-types[Condotoion Group] record.
+ xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc[Condotoion Group] record.
 
 
 
@@ -546,7 +546,7 @@ affected them.
 [[h4_1273755418]]
 ===== Preparing for Web Service
 
-* In future releases, use xref:web-service#h2_389205030[the new
+* In future releases, use xref:admin-guide/managing-ct-orders/web-service/index.adoc#h2_389205030[the new
 Settings Panel tab] for the secure two-way authorization and setting up
 the connection with the Web Service.
 
@@ -556,7 +556,7 @@ the connection with the Web Service.
 ===== Preparing for Mixed Discounts
 
 * In future releases, the
-xref:calculation-types-field-reference[Apply Condition Type] field
+ xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc-field-reference[Apply Condition Type] field
 of the[.object]#Calculation Type# object will be responsible
 for setting the condition(s) to be applied.
 * New JSON keys are available in the *Advanced Criteria* field for the
@@ -566,8 +566,8 @@ for setting the condition(s) to be applied.
 ==== Other Improvements
 
 * For xref:the-set-value-step[the Set Value step] of the pricing
-procedure, xref:calculation-types-field-reference[Calculation
-Type], and xref:freebie-condition-field-reference[Freebie
+procedure,  xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc-field-reference[Calculation
+Type], and xref:admin-guide/managing-ct-orders/freebies-management/freebie-data-model/freebie-condition-field-reference/index.adoc[Freebie
 Condition]:
 ** The[.apiobject]#minus# and[.apiobject]#divide#
 operators are supported.
@@ -619,25 +619,25 @@ supported. Use the standard v.1 syntax or customize the new pricing
 procedure using the steps with a broadened
 xref:pricing-procedure-v-1[syntax]. ====
 
-* Set xref:pricing-procedure-v-2-steps[pricing procedure steps] to
+* Set xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/index.adoc[pricing procedure steps] to
 write the intermediate discount results.
-* Add xref:step-conditions[step conditions] to determine the step
+* Add xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/step-conditions.adoc[step conditions] to determine the step
 applicability.
 * Implement xref:the-sdk-step[SDK step] to use custom project
 logic.
 
 
 
-Enhanced xref:calculation-types[discount calculation] capabilities:
+Enhanced  xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc[discount calculation] capabilities:
 
-* Define xref:calculation-types#h3_1022633546[quantity settings]
+* Define  xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc#h3_1022633546[quantity settings]
 for discount calculation on[.object]#Calculation Type#.
 * Set
 xref:condition-exceptioncondition-c-field-specification[exception
 conditions] to apply the discount under specific circumstances.
 * Specify any field on any object to be used as a
-xref:calculation-types#h3_1561772746[discount rate source].
-* Launch xref:calculation-types#h3_1022633546[full or partial
+ xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc#h3_1561772746[discount rate source].
+* Launch  xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc#h3_1022633546[full or partial
 recalculation] in the order cart if the selected field value is altered.
 
 

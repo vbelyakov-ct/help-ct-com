@@ -25,7 +25,7 @@ logic.
 |Controlling Condition
 |[.apiobject]#orders__ControllingConditionId__c #
 |Lookup(Condition) a|
-Specify the controlling xref:condition-field-reference[Condition].
+Specify the controlling xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/index.adoc[Condition].
 
 
 
@@ -41,7 +41,7 @@ Lookup(Freebie Condition)
 
 a|
 Specify the controlling
-xref:freebie-condition-field-reference[Freebie Condition].
+xref:admin-guide/managing-ct-orders/freebies-management/freebie-data-model/freebie-condition-field-reference/index.adoc[Freebie Condition].
 
 
 
@@ -62,7 +62,7 @@ Discount*.)
 Best Of(A, B): the A and B conditions are compared, and the best
 condition is applied:
 ** The maximum discount if the *Calculation Method* is *Decrease* on the
-appropriate xref:calculation-types-field-reference[Calculation
+appropriate  xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc-field-reference[Calculation
 Type].
 ** The maximum markup if the *Calculation Method* is *Increase* on the
 appropriate[.object]#Calculation Type#.

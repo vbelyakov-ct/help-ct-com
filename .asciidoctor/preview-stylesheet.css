@@ -2733,3 +2733,15 @@ table.highlighted-table > tbody > tr:first-child {
 td.highlight-row {
     background-color: #c0c0c0; /* светло-серый */
 }
+
+.table-cell-gray,
+td.table-cell-gray,
+th.table-cell-gray {
+    background-color: #c0c0c0 !important;
+}
+
+
+table.highlighted-table td.gray-background-cell,
+table.highlighted-table th.gray-background-cell {
+    background-color: #c0c0c0;
+}
