@@ -20,7 +20,7 @@ Line Item#, or[.object]#Delivery#.
 
 
 In this JSON file, the *Order* and *Order Line Item* records have the
-mobile temporary ID in the[.apiobject]#referenceOrderId# and
+mobile temporary ID in the [.apiobject]#referenceOrderId# and
 [.apiobject]#referenceId# keys, which means that these records
 were created on the mobile device and will be inserted into the
 Salesforce database after synchronization. The
@@ -78,7 +78,7 @@ API name, which data must be transferred.
 
 |[.apiobject]#referenceId# |String |Yes |A key stores the
 mobile temporary Id or Salesforce Id of the record of the object
-specified in the[.apiobject]#type# key.
+specified in the [.apiobject]#type# key.
 
 |[.apiobject]#Id# |String |Yes |A key stores Salesforce
 ID for the record. The key is not specified for a new record.
@@ -87,13 +87,13 @@ ID for the record. The key is not specified for a new record.
 [.apiobject]#orders__OrderType__c#, etc. |String
 |No a|
 The key is the API name of the field of the current record. The current
-record is defined by the values in the[.apiobject]#type#,
+record is defined by the values in the [.apiobject]#type#,
 [.apiobject]#referenceId#, and[.apiobject]#Id# keys.
 
-* In case of a new record (the[.apiobject]#Id# key is empty),
-all fields with the[.apiobject]#creatable = true# attribute.
-* In case of a modified record (the[.apiobject]#Id# key is
-set), all fields with the[.apiobject]#creatable = true# and
+* In case of a new record (the [.apiobject]#Id# key is empty),
+all fields with the [.apiobject]#creatable = true# attribute.
+* In case of a modified record (the [.apiobject]#Id# key is
+set), all fields with the [.apiobject]#creatable = true# and
 [.apiobject]#editable = true# attributes, including the empty
 fields.
 

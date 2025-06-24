@@ -49,11 +49,11 @@ This query will be considered by the system as:
 
 
 where:
-**[.apiobject]#orders__Address__c# is the address
+**[.apiobject]#orders__Address__c# is the address
 object you specified in the _Object Settings_.
-**[.apiobject]#ParentId# is the API name of the lookup from
+**[.apiobject]#ParentId# is the API name of the lookup from
 _Address_ to _Account_.
-**[.apiobject]#'{!Account.Id}'# is a keyword that is
+**[.apiobject]#'{!Account.Id}'# is a keyword that is
 replaced with the ID of the _Account_ for which the order is created.
 
 image:configure-address-settings-2020-05-07.png[]

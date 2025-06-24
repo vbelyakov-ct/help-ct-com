@@ -12,7 +12,7 @@ it. This field should be filled out differently depending on the
 Applies to [.object]#Condition# and [.object]#Freebie
 Condition# records.
 
-The[.object]#Condition# will be applied if the *Discount Rate
+the [.object]#Condition# will be applied if the *Discount Rate
 Location* field has the *Condition Record* value. Otherwise, for
 the *Level Record* value, the system checks the product quantity for
 the *Basic* calculation method or
@@ -83,7 +83,7 @@ desiredd CT Orders package object.
 Available values:
 
 |value |Currency |No a|
-A target value for a field in the[.apiobject]#field# key.
+A target value for a field in the [.apiobject]#field# key.
 
 An empty value is not allowed.
 
@@ -95,7 +95,7 @@ operators: [.apiobject]#contain#, [.apiobject]#notContain#, [.apiobject]#equal#,
 | |Text | |
 
 |[.apiobject]#values# |Array of Values |No a|
-List of the target values a field in the[.apiobject]#field#
+List of the target values a field in the [.apiobject]#field#
 key, for example:[.apiobject]#["abc","123"]#
 
 [.apiobject]#At least two values must be provided.#
@@ -145,15 +145,15 @@ Yes
 [[h4_1294571464]]
 === Record Type: Group {plus} Condition
 
-If the[.object]#Order Line Item# has the not empty required
-fields specified for the[.object]#Condition Group #object and
+If the [.object]#Order Line Item# has the not empty required
+fields specified for the [.object]#Condition Group #object and
 meets the child[.object]#Condition# criterion, a discount will
 be applied.
 
 . Specify the list of fields that should be not empty on the *Order Line
 Item* records in the *Condition Fields List* field on the *Calculation
 Type* record with the *Condition Group* record type.
-. In the *Condition Fields* field on the[.object]#Condition
+. In the *Condition Fields* field on the [.object]#Condition
 Group #object, specify the list of field API names that should not be
 empty on the *Order Line Item* records.
 . In the *Condition Details* filed on the child *Condition* records,
@@ -162,13 +162,13 @@ specify the expected values.
 
 
 For example, the list of fields that should not be empty specified in
-the[.apiobject]#orders__ConditionFieldsList__c# field
+the [.apiobject]#orders__ConditionFieldsList__c# field
 on the *Calculation Type* record with the *Condition Group* record type:
 [.apiobject]#orders__OrderId__r.orders__AccountId__r.Industry,orders__OrderId__r.orders__AccountId__r.Type,orders__OrderId__r.orders__PriceBookId__c#
 
 
 
-Values in the[.apiobject]#orders__ConditionDetails__c#
+Values in the [.apiobject]#orders__ConditionDetails__c#
 field of the child[.object]#Calculation Type# with the
 *Condition* record type:
 [.apiobject]#"Agriculture","Customer","a0p3X00000WIvicQAD"# or

@@ -14,7 +14,7 @@ workshop, you can specify any value in this field.#
 * *Condition Details*: add this JSON, according to which the condition
 with discount will trigger for the product, which is not a promotional
 product:
-[TIP] ==== In the[.apiobject]#field ==== key you may
+[TIP] ==== In the [.apiobject]#field ==== key you may
 either specify
 [.apiobject]#orders__PromotionId__r.orders__ExternalId__c# or[.apiobject]#orders__PromotionId__c#, depending on
 whether your products have *External Id*.#
@@ -22,7 +22,7 @@ whether your products have *External Id*.#
 * *Discount Rate Location*: _Level Records_.
 * *Advanced Criteria*: add this JSON, according to which the condition
 with discount will trigger for the product, which is not a promotional
-product:[TIP] ==== In the[.apiobject]#field ==== key,
+product:[TIP] ==== In the [.apiobject]#field ==== key,
 you may either specify
 [.apiobject]#orders__PromotionId__r.orders__ExternalId__c# or[.apiobject]#orders__PromotionId__c#, depending on
 whether your products have *External Id*.#

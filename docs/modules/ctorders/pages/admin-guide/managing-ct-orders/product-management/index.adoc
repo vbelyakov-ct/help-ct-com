@@ -15,7 +15,7 @@ target package to enrich your product management process.
 
 First, define a[.object]#Product# object to use in the system.
 
-* Determine an *SKU* property of the[.object]#Product# object
+* Determine an *SKU* property of the [.object]#Product# object
 by creating a _Settings_ record with the _Object Settings_ record type.
 This attribute signifies that a product is the smallest stock unit for
 sale that can be used to comprise higher-level items (product bundles)
@@ -25,7 +25,7 @@ image:product-management-2020-05-20-1.png[]
 product to add in the order by one tap.
 * Set up bundles and a ratio for multiplying a component quantity in the
 bundle if needed.
-[NOTE] ==== The[.object]#Product Component ==== object
+[NOTE] ==== the [.object]#Product Component ==== object
 is required for this feature and available in case of integration with
 CT CPG or CT Pharma package.#
 * Set up xref:ct-price-book-field-reference[CT Price Books] and
@@ -127,19 +127,19 @@ image:PB-UI.png[]
 === Process Path
 
 . https://help.customertimes.com/articles/ct-mobile-ios-en/compact-layout[Set
-up the compact layout] for the[.object]#Product# object. The
+up the compact layout] for the [.object]#Product# object. The
 title is the value of the first field in a compact layout, and the
 subtitle is the value of the second field in a compact layout.
 . Map objects in OM Settings:
-* Select the[.object]#Product #object in a system.
-* Select the[.object]#Product Component# object in a system.
+* Select the [.object]#Product #object in a system.
+* Select the [.object]#Product Component# object in a system.
 * Specify a field to be used as an SKU-defining attribute of a product
 record.
 . xref:admin-guide/getting-started/setting-up-an-instance/creating-relationships-between-product-and-ct-orders-objects[Create
 lookup fields for Product].
 
 Prior to configuring products hierarchy and other product settings, you
-need to link the[.object]#Product# child records with a number
+need to link the [.object]#Product# child records with a number
 of CT Orders objects by creating a lookup field for each of the
 following objects:
 *[.object]#Catalog Line Item#

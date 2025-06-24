@@ -80,7 +80,7 @@ distributed as freebies.
 ==== Major Features
 
 [NOTE] ==== To work with bundles, please manually create the
-*Product Component* lookup field to the[.object]#Product
+*Product Component* lookup field to the [.object]#Product
 Component ==== object (in
 https://help.customertimes.com/smart/project-ct-cpg/product-component-field-reference[CT
 CPG] or
@@ -159,7 +159,7 @@ the Limit Rule is applied to the order or delivery.
 [[h3_783110532]]
 ==== Major Features
 
-* The[.apiobject]#!Order# shortcut can be set for
+* the [.apiobject]#!Order# shortcut can be set for
 xref:address-setting-field-reference[Address Setting] SOQL
 Filter.
 In previous version, you could use [.apiobject]#!Account# and
@@ -205,7 +205,7 @@ in the left menu of the xref:online-order#h2_735642631[order].
 Availability] entries.
 * Validation for extra parenthesis at the end of JSON in
 the xref:calculation-type-levelformula-c-field-specification[Level
-Formula] field for the[.object]#Calculation type# object does
+Formula] field for the [.object]#Calculation type# object does
 not work on save.
 * The
 xref:condition-advancedcriteria-c-field-specification[Advanced
@@ -530,7 +530,7 @@ specific value. The freebies quantity will be automatically rounded up.
 * The availability of the added freebies in deliveries will be
 validated.
 * In future releases, managers can assign different values for freebie
-products in the *Freebie Value* field of the[.object]#Freebie
+products in the *Freebie Value* field of the [.object]#Freebie
 Condition# object.
 
 
@@ -557,7 +557,7 @@ the connection with the Web Service.
 
 * In future releases, the
  xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc-field-reference[Apply Condition Type] field
-of the[.object]#Calculation Type# object will be responsible
+of the [.object]#Calculation Type# object will be responsible
 for setting the condition(s) to be applied.
 * New JSON keys are available in the *Advanced Criteria* field for the
 [.object]#Condition# object.
@@ -569,9 +569,9 @@ for setting the condition(s) to be applied.
 procedure,  xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc-field-reference[Calculation
 Type], and xref:admin-guide/managing-ct-orders/freebies-management/freebie-data-model/freebie-condition-field-reference/index.adoc[Freebie
 Condition]:
-** The[.apiobject]#minus# and[.apiobject]#divide#
+** the [.apiobject]#minus# and[.apiobject]#divide#
 operators are supported.
-** The[.apiobject]#cutDecimalsTo# and
+** the [.apiobject]#cutDecimalsTo# and
 [.apiobject]#roundTo# keys help you round and truncate the
 number of the decimal places of the resulting value if necessary.
 * For your convenience, the custom SDK price tag always displays the

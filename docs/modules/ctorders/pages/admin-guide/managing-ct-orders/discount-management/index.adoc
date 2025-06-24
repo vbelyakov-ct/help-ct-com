@@ -13,7 +13,7 @@ scenarios with promotions.
 
 * *Calculation Type*
 The unique entity in the system stores the set of rules for calculating
-a particular type of discount. The[.object]#Calculation
+a particular type of discount. the [.object]#Calculation
 Type# determines whether a discount should be calculated separately or
 in combination with other discount types.
 * *Promotions (Promo)*
@@ -116,7 +116,7 @@ recalculated.
 . One of the fields affecting recalculation is changed:
 * *Condition Recalculation Fields*
 API names of fields, that if changed, trigger new condition search and
-discount recalculation for the[.object]#Order Line Item#.
+discount recalculation for the [.object]#Order Line Item#.
 * **Discount Recalculation Fields
 **API names of fields, that if changed trigger discount recalculation,
 but no condition search.
@@ -141,12 +141,12 @@ in xref:ct-orders-solution/general-limitations#h3_1020932784[this article].
 For example:
 . The discount recalculation will be initiated when the following fields
 are changed:
-* The fields specified for the[.apiobject]#basePrice# key in
+* The fields specified for the [.apiobject]#basePrice# key in
 the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/index[Pricing Procedure].
-* The fields specified for the[.apiobject]#value# and
+* The fields specified for the [.apiobject]#value# and
 [.apiobject]#items# keys in the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-set-value-step[Set
 Value step].
-* The fields specified for the[.apiobject]#condition# key in
+* The fields specified for the [.apiobject]#condition# key in
 the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/step-conditions[Step Conditions].
 
 

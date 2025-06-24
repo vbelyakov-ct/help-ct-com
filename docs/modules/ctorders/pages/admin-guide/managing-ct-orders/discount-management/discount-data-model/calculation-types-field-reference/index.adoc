@@ -1,6 +1,6 @@
 = Calculation Type Field Reference
 
-The[.object]#Calculation Type# object stores all data about a
+the [.object]#Calculation Type# object stores all data about a
 particular type of discount calculation.
 
 '''''
@@ -17,7 +17,7 @@ Object API name:
 |Apply Condition Type
 |[.apiobject]#orders__ApplyConditionType__c#
 |Picklist a|
-Select the type of work with the[.object]#Condition# records.
+Select the type of work with the [.object]#Condition# records.
 
 To see the example, refer to
 xref:calculation-type-applyconditiontype-c-field-specification[Calculation
@@ -100,12 +100,12 @@ Specify the API names of fields that will initiate the matching
 conditions search for[.object]#Order Line Item# records from
 the beginning when changed.
 
-* Only fields from the[.object]#Order#
+* Only fields from the [.object]#Order#
 [.object]#Delivery# and[.object]#Order Line Item#
 objects are supported. If the specified fields belong to any other
 object, these fields will be skipped in the process.
 * Users must have access to the specified fields. Otherwise, the price
-fields will be based on the[.apiobject]#$.listPrice# field.
+fields will be based on the [.apiobject]#$.listPrice# field.
 
 |Discount Recalculation Fields
 |[.apiobject]#orders__DiscountRecalculationFields__c#
@@ -113,7 +113,7 @@ fields will be based on the[.apiobject]#$.listPrice# field.
 Specify the API name of a field in JSON format that, when changed, will
 initiate the recalculation of a discount within each condition.
 
-* Only fields from the[.object]#Order#,
+* Only fields from the [.object]#Order#,
 [.object]#Delivery#,[.object]#Order Line Item# and
 [.object]#Delivery Line Item# objects are supported. If the
 specified fields belong to any other object, these fields will be
@@ -146,7 +146,7 @@ the xref:price-tag[Price Tag] logic.
 |Force Condition Fields Update
 |[.apiobject]#orders__IsForceConditionFieldsUpdate__c#
 |Checkbox |If selected, the *Condition Fields List* field will be
-updated after the[.object]#Condition# object fields were
+updated after the [.object]#Condition# object fields were
 changed on the child records.
 The checkbox is required if the _Batch update_ mode is selected in
 *Condition Field Update Type*.
@@ -169,7 +169,7 @@ Select the object where the calculation will be performed:
 * Delivery Line Item.
 
 If the *Delivery Line Item* is selected, the processing of the
-*Condition* records will be the same as for the[.object]#Order
+*Condition* records will be the same as for the [.object]#Order
 Line Item# object and the conditions will be calculated based on values
 on the *Order Line Item* records.
 

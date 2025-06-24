@@ -13,7 +13,7 @@ Orders package to gain advantages from both products.
 === Object Model
 
 The CT Orders object model with CG Cloud support allows you to apply the
-CT Orders logic to the[.object]#Salesforce Product# and
+CT Orders logic to the [.object]#Salesforce Product# and
 [.object]#Retail Store# objects. Depending on your business
 goals, you can either set up support for the Salesforce products or both
 Salesforce products and retail stores.
@@ -60,7 +60,7 @@ Goods Cloud Developer Guide] to see the full description.
 [[h3_656771318]]
 ==== Salesforce Product
 
-To work with the[.object]#Salesforce Product# object:
+To work with the [.object]#Salesforce Product# object:
 
 . xref:cg-cloud-configuring-object-setting[Create an OM Settings
 record] of the Object Setting record type and specify the
@@ -76,7 +76,7 @@ following objects:
 *[.object]##[.object]#Freebie Line Item#
 . ​To work with bundles, in *Object Settings* select the
 [.object]#Product Component# object of the target system, such
-as CT CPG or CT Pharma. If the[.object]#Product Component# is
+as CT CPG or CT Pharma. If the [.object]#Product Component# is
 left blank, but the *Bundle* checkbox is active for
 a [.object]#Salesforce Product# record, this record will be
 considered a regular product.
@@ -105,12 +105,12 @@ should be active on the parent [.object]#Account# object.
 To work with the standard[.object]#Retail Store# object:
 
 . Create a xref:cg-cloud-creating-a-sales-organization[Sales
-Organization] record and specify the[.object]#Retail Store#
+Organization] record and specify the [.object]#Retail Store#
 object for it.
-. Add the[.apiobject]#RetailStoreId__c# lookup to the
+. Add the [.apiobject]#RetailStoreId__c# lookup to the
 [.object]#Catalog# and *Promotion* objects.
 . Assign the desired[.object]#Promotions# and
-[.object]#Catalogs# to the[.object]#Retail Store#
+[.object]#Catalogs# to the [.object]#Retail Store#
 records. If necessary,
 xref:setting-up-a-dynamic-group-assignment-1-0[create a dynamic
 group] with proper retail stores to assign to catalogs and promotions.
@@ -140,7 +140,7 @@ Cloud] article.
 
 In the case of
 xref:cg-cloud-setting-up-dynamic-group-assignment[using dynamic
-groups], set up the support of the[.object]#Retail Store#
+groups], set up the support of the [.object]#Retail Store#
 object with the help of the SDK of the target system, such as CT CPG or
 CT Pharma.
 

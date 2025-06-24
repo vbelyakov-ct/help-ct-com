@@ -1,6 +1,6 @@
 = Condition: ExceptionCondition__c Field Specification
 
-The[.apiobject]#orders__ExceptionCondition__c# field is
+the [.apiobject]#orders__ExceptionCondition__c# field is
 used to exclude a condition from the application affecting the discount
 under the presence of certain products in the order cart.
 
@@ -58,7 +58,7 @@ products.
 
 |[.apiobject]#requiredProducts# |Object |Yes |The specific
 mandatory products. The quantity is defined according to the selected
-operator for the[.apiobject]#productCount# key.
+operator for the [.apiobject]#productCount# key.
 |===
 
 [[h3__1623789156]]
@@ -123,7 +123,7 @@ The key is required when the [.apiobject]#operator# key is
 not [.apiobject]#in# or [.apiobject]#notIn#.
 
 |[.apiobject]#values# |Array of Values |No a|
-The[.apiobject]#values# with the *Text* type, separated by a
+the [.apiobject]#values# with the *Text* type, separated by a
 comma, for example:[.apiobject]#["abc","123"]#
 
 [.apiobject]#
@@ -146,7 +146,7 @@ the #[.apiobject]#in# or [.apiobject]#>notIn#.
 |[.confluence-information-macro-body]#The minimum quantity of unique
 products (a unique number of added product items#) that must be added to
 order to exclude the condition. If this number is lower than values from
-the[.apiobject]#productCount# key then condition will not be
+the [.apiobject]#productCount# key then condition will not be
 excluded).
 |===
 

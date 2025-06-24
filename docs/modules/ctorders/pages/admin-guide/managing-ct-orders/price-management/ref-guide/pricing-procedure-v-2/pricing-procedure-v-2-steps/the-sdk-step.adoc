@@ -25,7 +25,7 @@ this type in order to reduce the calculation time.
 
 |[.apiobject]#fieldsAllowedToChange# |An array of fields allowed
 to change |Yes |An array may contain zero or more items. An array may
-contain only one item for the[.apiobject]#objectName# key. See
+contain only one item for the [.apiobject]#objectName# key. See
 the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-sdk-step#h2_704387152[Fields Allowed to Change].
 
 |[.apiobject]#salesforceSDK# |SDK |No |If the key is not used in
@@ -55,7 +55,7 @@ The API name of the object. Available values:
 *[.apiobject]#orders__DeliveryLineItem__c#
 
 |[.apiobject]#fields# |Array of Strings |Yes a|
-The[.apiobject]#objectName# key is allowed to be changed via
+the [.apiobject]#objectName# key is allowed to be changed via
 the custom logic.
 
 Specify the fields that should be overwritten with new values by the

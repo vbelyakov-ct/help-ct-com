@@ -1,13 +1,12 @@
 = Catalog Assignment Field Reference
 
-The[.object]#Catalog Assignment# object allows assigning
-catalogs to accounts or retail stores. Per each account or retail store,
-a separate *Catalog Assignment* record will be created.
+The [.object]#Catalog Assignment# object allows assigning catalogs to accounts or retail stores. Per each account or retail store, a separate _Catalog Assignment_ record will be created.
+
+include::partial$default-rectype.adoc[]
 
 '''''
 
-Object API
-name: [.apiobject]#orders__CatalogAssignment__c#
+Object API name: [.apiobject]#orders\__CatalogAssignment__c#
 
 '''''
 
@@ -15,24 +14,16 @@ name: [.apiobject]#orders__CatalogAssignment__c#
 |===
 |*Field* |*API name* |*Type* |*Description*
 
-|Account |orders__AccountId__c |Lookup(Account) |An account to
-which the catalog is assigned.
+|Account |[.apiobject]#orders\__AccountId__c# |Lookup(Account) |An account to which the catalog is assigned.
 
-|Active |[.apiobject]#orders__IsActive__c# |Checkbox |If
-selected, the record is active and can be applied in business logic.
+|Active |[.apiobject]#orders\__IsActive__c# |Checkbox |If selected, the record is active and can be applied in business logic.
 
-|Catalog |[.apiobject]#orders__CatalogId__c# a|
-Master-Detail(Catalog)
-
-
+|Catalog |[.apiobject]#orders\__CatalogId__c# a| Master-Detail(Catalog)
 
 |The identifier of the catalog.
 
-|Retail Store |[.apiobject]#RetailStoreId__c#[#ebm]##
-|Lookup(Retail Store) a|
-A retail store to which the catalog is assigned.
+|Retail Store |[.apiobject]#RetailStoreId__c# |Lookup(Retail Store) a| A retail store to which the catalog is assigned.
 
-This field must be manually created in case of integration with CG
-Cloud.
+NOTE: This field must be manually created in case of integration with CG Cloud.
 
 |===

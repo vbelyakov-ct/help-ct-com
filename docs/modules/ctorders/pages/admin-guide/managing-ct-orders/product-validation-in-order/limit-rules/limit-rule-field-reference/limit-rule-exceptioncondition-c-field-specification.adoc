@@ -1,6 +1,6 @@
 = Limit Rule: ExceptionCondition__с Field Specification
 
-The[.apiobject]#orders__ExceptionsCondition__c# field
+the [.apiobject]#orders__ExceptionsCondition__c# field
 contains the condition that this limit rule does not apply to the
 specified order, delivery, or delivery group. If the condition is not
 met, the system checks
@@ -16,11 +16,11 @@ the limit rule.
 for calculating a unique number of products. If the
 [.apiobject]#value# is 0, the condition will not be applied.
 **[.apiobject]#minCount# is a minimum quantity of unique
-products that are found according to the[.apiobject]#filter#.
+products that are found according to the [.apiobject]#filter#.
 Starting this quantity, the limit rule will not be applied.
 
 [TIP] ==== Use the [.apiobject]#AND ==== operator to
-check [.apiobject]#minCount# for all listed products, or use the[.apiobject]#OR# operator if at least one product must meet
+check [.apiobject]#minCount# for all listed products, or use the [.apiobject]#OR# operator if at least one product must meet
 [.apiobject]#minCount#.#
 
 *[.apiobject]#requiredProducts# specifies the mandatory
@@ -32,7 +32,7 @@ with [.apiobject]#minCount#. Otherwise, the product identifier
 from the [.apiobject]#orders__ProductId__c# field is
 used.
 *[.apiobject]#productQuantityField# stores the field API name
-from the[.object]#Order Line Item# object that stores the
+from the [.object]#Order Line Item# object that stores the
 product quantity.
 *[.apiobject]#items# specifies list of products required to be
 added to order cart.

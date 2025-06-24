@@ -124,7 +124,7 @@ The Order Split logic affects the following objects:
 
 *[.object]#Order#
 *[.object]#Order Line Item#
-[NOTE] ==== Any field on the[.object]#Order Line Item
+[NOTE] ==== Any field on the [.object]#Order Line Item
 ==== or its parent objects that cannot be changed by an external logic,
 such as formulas, rollup-summary fields, process builder, apex, etc.,
 can be used as criteria for splitting products between deliveries during
@@ -171,7 +171,7 @@ with the _Object Setting_ record type for an instance.
 . xref:configuring-an-address-settings-1-0[Create] the _Settings_
 record with the _Address Setting_ record type.
 . xref:creating-a-relationship-between-custom-address-object-and-delivery-1-0[Add
-the address lookup] on the[.object]#Delivery# object.
+the address lookup] on the [.object]#Delivery# object.
 A representative should have permission to create, edit, and delete the
 _Delivery_ and _Delivery Line Item_ records.
 . Optionally,

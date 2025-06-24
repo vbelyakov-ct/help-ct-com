@@ -107,7 +107,7 @@ stock-keeping unit that can be added to catalogs.#
 
 To add products to catalogs, it is necessary to create
 xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/layout-setting-field-reference[a Layout Setting record] for
-the[.object]#Promotion Line Item# object. If a *Layout
+the [.object]#Promotion Line Item# object. If a *Layout
 Setting* for the object is not found or no field is specified, the
 record ID will be displayed instead of a product name.
 
@@ -190,11 +190,11 @@ dynamically.
 
 To apply dynamic search logic:
 
-. Define the[.object]#Group# and[.object]#Group
+. Define the [.object]#Group# and[.object]#Group
 Member# objects of the target package in the
 xref:admin-guide/getting-started/setting-up-an-instance/configuring-object-setting[Object Settings].
-. Create a lookup to the[.object]#Group# object of the CT
-package on the[.object]#Promotion# object.
+. Create a lookup to the [.object]#Group# object of the CT
+package on the [.object]#Promotion# object.
 . Make sure the promotion is not available for all accounts (checkbox is
 not selected).
 . Create a dynamic group.

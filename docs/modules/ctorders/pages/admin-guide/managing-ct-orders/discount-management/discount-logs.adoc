@@ -31,11 +31,11 @@ on a schedule.#
 There are controlling fields on the required objects that are used in
 the logic:
 
-* The *Log Id* field of the[.object]#Order#,
+* The *Log Id* field of the [.object]#Order#,
 [.object]#Order line Item#,[.object]#Delivery#, and
 [.object]#Delivery Line Item# objects are responsible for the
 order structure and will be filled out once.
-* The value in the *Log Status* field of the[.object]#Order#
+* The value in the *Log Status* field of the [.object]#Order#
 object is automatically changed and displays the current order status,
 such as requesting or receiving logs.
 

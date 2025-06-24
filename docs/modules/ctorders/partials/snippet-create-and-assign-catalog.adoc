@@ -1,13 +1,8 @@
-= Snippet: Create and Assign Catalog
 
-For this workshop, create a parent catalog and two child catalogs for
-different types of products. The catalogs should only be available for
-the *METRO* account.
-
-:toc: :toclevels: 3
+:toc:
 
 [[h2_1907685214]]
-=== Create a Catalog
+== Create a Catalog
 
 To create a parent catalog and two child catalogs:
 
@@ -15,58 +10,48 @@ To create a parent catalog and two child catalogs:
 . Complete the form as follows:
 * *Catalog Name*: _Dairy Products_.
 * Select the *Order* from the *Order Type* column.
-* Select *Default* Sales Organization.
+* Select *Default* Sales Organization.
 * Make sure the *Available for All Accounts* checkbox is unchecked.
++
 image:create-a-catalog-2020-05-09-1.png[]
 . Click *Save*.
++
 The *Dairy Products* catalog is created.
 . Open the *Product Management* tab.
++
 On this tab, you can see all products in your instance database that
-match the link:admin-guide/managing-ct-orders/product-management/index[required criteria]. Let us create
-two child catalogs for *Milk* and *Sour cream* products.
-. Click the *Add new sub-catalog* button *(1).*
-. Click image:ctorders-edit-catalog-name-icon.png[]
-button and enter the catalog name *(2)*.
-. 
-Click image:ctorders-add-subcatalog-icon.png[]
-button to add a sub-catalog *(3)*.
+match the xref:admin-guide/managing-ct-orders/product-management/index.adoc[required criteria]. Let us create two child catalogs for *Milk* and *Sour cream* products.
+. Click the *Add new sub-catalog* button *(1)*.
+. Click image:ctorders-edit-catalog-name-icon.png[25,25] button and enter the catalog name *(2)*.
+.  Click image:ctorders-add-subcatalog-icon.png[25,25] button to add a sub-catalog *(3)*.
++
 image:create-a-catalog-2020-05-09-3.png[]
-. Click on switch *(4)* to change the list view to hierarchy to add
-multiple product catalogs.
+. Click on switch *(4)* to change the list view to hierarchy to add multiple product catalogs.
 . Enter *Milk* in the *Search* box.
-All products are displayed in catalogs for each brand. Expand the brands
-to see catalogs with various types of milk products.
++
+All products are displayed in catalogs for each brand. Expand the brands to see catalogs with various types of milk products.
 . Select the first three catalogs with milk products *(5)*.
-. Drag the catalogs to the *Milk* catalog you created on the right
-panel.
+. Drag the catalogs to the *Milk* catalog you created on the right panel.
 . Repeat the steps and create a catalog with *Sour cream* products.
 . Click *Save*.
 
 The catalogs are configured.
 
 [[h2_1222266733]]
-=== Assign Catalogs
+== Assign Catalogs
 
 Next, assign the parent catalog to the *METRO* account.
 
-[cols=",",]
-|===
-|image:info.png[] |The child
-catalogs inherit the assignment from the parent catalog.
-|===
+NOTE: The child catalogs inherit the assignment from the parent catalog.
 
-. Open the *Catalog Assignment* tab and enter *METRO* in the *Search*
-box.
-. Drag the account record *(1)* to the designated area on the right
-*(2)*.
+. Open the *Catalog Assignment* tab and enter *METRO* in the *Search* box.
+. Drag the account record *(1)* to the designated area on the right *(2)*.
++
 image:create-a-catalog-2020-05-09-2.png[]
 . Click *Save*.
 
-The *Dairy Products* catalog with both child catalogs is now assigned to
-the *METRO* account.
+The *Dairy Products* catalog with both child catalogs is now assigned to the *METRO* account.
 
+You can also assign catalogs by creating a new assignment record on the *Catalog Assignments* tab:
 
-
-You can also assign catalogs by creating a new assignment record on the
-*Catalog Assignments* tab:
-image:create-a-catalog-2020-05-09-4.png[]
+image::create-a-catalog-2020-05-09-4.png[]

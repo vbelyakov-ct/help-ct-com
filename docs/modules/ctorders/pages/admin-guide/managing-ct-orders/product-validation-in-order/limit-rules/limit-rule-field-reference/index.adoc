@@ -1,6 +1,6 @@
 = Limit Rule Field Reference
 
-The[.object]#Limit Rule# object is intended to store the
+the [.object]#Limit Rule# object is intended to store the
 minimum and maximum product quantity for an order and each delivery.
 
 All appropriate limit rules are applied to a single order.
@@ -18,7 +18,7 @@ Object API name:[.apiobject]#orders__LimitRule__c#
 |Amount Field |[.apiobject]#orders__AmountField__c#
 |Text(255) |The API name of the field from the
 [.object]#Delivery Line Item# object that stores the final price
-for the[.object]#Order#, for example,
+for the [.object]#Order#, for example,
 [.apiobject]#orders__TotalPrice__c#.
 
 |Apply Condition
@@ -64,7 +64,7 @@ objects.
 |[.apiobject]#orders_ExceptionsCondition__c# |Long Text
 Area(32768) a|
 The condition under which the limit rule is not applied to *Delivery
-Line Item * records in the[.object]#Order#.
+Line Item * records in the [.object]#Order#.
 
 * The user must have at least permission to read all fields in the
 condition.

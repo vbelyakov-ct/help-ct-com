@@ -30,13 +30,13 @@ The dynamic group with the appropriate records is created.
 
 Create the required lookups:
 
-. Create a lookup from the[.object]#Catalog# object to the
+. Create a lookup from the [.object]#Catalog# object to the
 [.object]#Account# object. For example,
 [.apiobject]#GroupId__c#.
-. Create a lookup from the[.object]#Catalog Assignment# object
+. Create a lookup from the [.object]#Catalog Assignment# object
 to the dynamic group object. For example,
 [.apiobject]#GroupId__c#.
-. Repeat steps 1—2 for the[.object]#Promotion# and
+. Repeat steps 1—2 for the [.object]#Promotion# and
 [.object]#Promotion Assignment# object if necessary.
 
 The setup is complete.
@@ -44,8 +44,8 @@ The setup is complete.
 We advise using only one lookup field to
 the [.object]#Group# object on
 the [.object]#Catalog#/[.object]#Promotion# object. If
-the[.object]#Catalog#/[.object]#Promotion# object
-contains more than one lookup to the[.object]#Group# object,
+the [.object]#Catalog#/[.object]#Promotion# object
+contains more than one lookup to the [.object]#Group# object,
 make sure to fill in all lookup fields with identical IDs.
 Otherwise, the Dynamic group feature may not work correctly.
 
@@ -63,10 +63,10 @@ Layout Settings] guide.
 
 In order to assign either a Catalog or a Promo to a Dynamic group:
 
-. Create a lookup from the[.object]#Catalog# to the
+. Create a lookup from the [.object]#Catalog# to the
 [.object]#CPG Group#. For example,
 [.apiobject]#CPG_Group__c#.
-. Go to the *Page layouts* settings for the[.object]#Catalog#
+. Go to the *Page layouts* settings for the [.object]#Catalog#
 object and bring up created lookup to the dynamic group to the selected
 layout.
 image:calculation-types-2021-10-06.png[]

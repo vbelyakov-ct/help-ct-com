@@ -11,25 +11,25 @@ To set up addresses:
 . Define the standard or custom object to use as the
 [.object]#Address# object. It is possible to use the
 [.object]#Retail Store#,[.object]#Account#, or custom
-[.object]#Address# object as the[.object]#Address#
+[.object]#Address# object as the [.object]#Address#
 object.
 . Create an _OM Settings_ record with the _Object Setting_ record type
-and specify the API name of the[.object]#Address# object.
+and specify the API name of the [.object]#Address# object.
 Follow the steps in the
 xref:linking-address-to-the-account-object-1-0#h2_1782833325[Specify
 the Address Object] guide.
 . Create an _OM Settings_ record with the _Address Setting_ record type
 and specify the corresponding _Address_ field:
-* Using the[.object]#Account# or[.object]#Retail
+* Using the [.object]#Account# or[.object]#Retail
 Store# object, follow the steps in the
 xref:linking-address-to-the-account-object-1-0#h2__405395202[Specify
 the Address Field] guide.
 * Using the custom[.object]#Address# object, follow the steps
 in the xref:setting-up-a-custom-address-object-1-0[Set Up a Custom
 Address Object] guide.
-. Make sure that there is a lookup from the[.object]#Delivery#
+. Make sure that there is a lookup from the [.object]#Delivery#
 object to the corresponding[.object]#Address# object.
-. Make sure that there is a lookup from the[.object]#Address#
+. Make sure that there is a lookup from the [.object]#Address#
 object to the corresponding[.object]#Account# object.
 
 
@@ -50,15 +50,15 @@ Account
 
 
 |[.apiobject]#Account# a|
-* If an address is specified on the[.object]#Account# object,
+* If an address is specified on the [.object]#Account# object,
 create a custom field with the *Text* data type, for example,
 [.apiobject]#ShippingAddress__c#.
 
 
 
-* If the[.apiobject]#Retail Store# object is used to specify
-the address for the[.apiobject]#Account# object, create a
-custom field with the *Text* data type on the[.object]#Retail
+* If the [.apiobject]#Retail Store# object is used to specify
+the address for the [.apiobject]#Account# object, create a
+custom field with the *Text* data type on the [.object]#Retail
 Store# object, for example,
 [.apiobject]#RetailStoreAddress__c#.
 

@@ -90,7 +90,7 @@ Catalog Assignment record].
 
 To display the *Catalog Assignment* tab on the layout, you need to
 configure xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/layout-setting-field-reference[a Layout Setting
-record] for the[.object]#Catalog Assignment# object. Drag and
+record] for the [.object]#Catalog Assignment# object. Drag and
 drop catalogs to assign them to the selected _Account_ record.
 
 If you selected multiple filters, accounts will be displayed that match
@@ -104,11 +104,11 @@ image:Layout-Catalog-Assignment.png[]
 The CT solutions support a new feature that allows filtering catalogs
 available for a selected account dynamically. To apply dynamic search
 logic:
-. Define the[.object]#Group# and[.object]#Group
+. Define the [.object]#Group# and[.object]#Group
 Member# objects of the CT package you work with (CT CPG, CT Pharma) in
 the xref:admin-guide/getting-started/setting-up-an-instance/configuring-object-setting[Object Settings].
-. Create a lookup to the[.object]#Group# object of the CT
-package on the[.object]#Catalog# object.
+. Create a lookup to the [.object]#Group# object of the CT
+package on the [.object]#Catalog# object.
 . Make sure the catalog is NOT available for all accounts (checkbox is
 not selected).
 . Create a dynamic group.

@@ -1,6 +1,6 @@
 = Pricing Procedure v. 1.0
 
-The[.object]#Pricing Procedure# object defines the method and
+the [.object]#Pricing Procedure# object defines the method and
 succession of discount calculations for each order. The procedure is
 specified in JSON format in the
 xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-fields-reference[Pricing Procedure] field or
@@ -101,7 +101,7 @@ selected *Calculation Method* of[.object]#Calculation Type#.
 Important notes:
 
 *[.object]#Calculation Types# with different *Calculation
-Methods* cannot be used with the[.apiobject]#MAX# operator.
+Methods* cannot be used with the [.apiobject]#MAX# operator.
 * If the parent[.apiobject]#MAX# operator has the child
 [.apiobject]#SUM# operator, you have to compare in *Unit of
 Measure* = *Percent* only.
@@ -121,7 +121,7 @@ selected *Calculation Method* of[.object]#Calculation Type#.
 not apply.
 
 [NOTE] ==== Calculation Types with different *Calculation
-Methods* cannot be used with the[.apiobject]#MIN ====
+Methods* cannot be used with the [.apiobject]#MIN ====
 operator.#
 
 |

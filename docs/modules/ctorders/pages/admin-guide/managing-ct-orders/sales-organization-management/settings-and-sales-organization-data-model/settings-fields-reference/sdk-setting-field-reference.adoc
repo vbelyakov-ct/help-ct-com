@@ -38,7 +38,7 @@ the https://www.lightningdesignsystem.com/icons/#utility[listed].
 |[.apiobject]#orders__Implementation__c# |Text(255) a|
 The API name of the Apex class for displaying custom price tags or
 filling in additional fields on the objects depending on the value in
-the[.apiobject]#orders__SDKType__c# field.
+the [.apiobject]#orders__SDKType__c# field.
 
 [TIP] ==== It is recommended to name the Apex class based on its
 function:
@@ -110,7 +110,7 @@ HTML template choose among these settings:
 |Text(255) a|
 The field is used to select the version of the SDK.
 
-[NOTE] ==== Currently, the[.apiobject]#v1 ==== value
+[NOTE] ==== Currently, the [.apiobject]#v1 ==== value
 should be set to apply the setting. Otherwise, the custom logic will not
 work.#
 

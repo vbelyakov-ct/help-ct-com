@@ -24,11 +24,11 @@ To set up the split:
 . Go to *Setup → Object Manager → Delivery → Fields & Relationships* and
 click *New*.
 . Create two fields:
-* The[.apiobject]#Family__c# field with the *Picklist* type
-that is similar to the[.apiobject]#CTCPG__Family__c#
+* the [.apiobject]#Family__c# field with the *Picklist* type
+that is similar to the [.apiobject]#CTCPG__Family__c#
 field and has the same values.
-* The[.apiobject]#Brand__c# field with the *Picklist* type
-that is similar to the[.apiobject]#CTCPG__Brand__c#
+* the [.apiobject]#Brand__c# field with the *Picklist* type
+that is similar to the [.apiobject]#CTCPG__Brand__c#
 field and has the same values.
 . Go to the *OM Settings* tab and click *New*.
 . Select the *Split Setting* record type and click *Next*.
@@ -36,7 +36,7 @@ field and has the same values.
 * *Sales Organization*: _Default Sales Org_.
 * *Price Book*: _Default Pricebook_.
 * *Order Type*: _Order_.
-* *Split Parameters Path*: add the path to the[.object]#CT
+* *Split Parameters Path*: add the path to the [.object]#CT
 Product# fields that are used for splitting a delivery:
 [.apiobject]#orders__ProductId__r.CTCPG__Brand__c,orders__ProductId__r.CTCPG__Family__c#.
 [NOTE] ==== When managing bundles, make sure that the *Split

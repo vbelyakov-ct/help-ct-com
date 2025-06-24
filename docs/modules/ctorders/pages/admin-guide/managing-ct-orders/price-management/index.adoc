@@ -93,7 +93,7 @@ maintained throughout the pricing procedure:
 xref:admin-guide/managing-ct-orders/delivery-management/delivery-line-item-field-reference.adoc[Delivery Line Item] in the
 order.
 . The _Pricing Procedure_ is defined for an order.
-* The[.apiobject]#orders__PricingProcedure__с# field is
+* the [.apiobject]#orders__PricingProcedure__с# field is
 specified on the object for the _Sales Organization_ and _Order Type_ in
 the order.
 * The _Pricing Procedure_ is active.
@@ -137,7 +137,7 @@ products the discount is applied to each product record.
 
 
 To provide a link between _Pricing Procedure_ and _Calculation Types_,
-the[.object]#Procedure Calculation Type# junction object is
+the [.object]#Procedure Calculation Type# junction object is
 introduced. The _Procedure Calculation Type_ records are created
 automatically for all _Calculation Types_ specified in the Pricing
 Procedure formula.

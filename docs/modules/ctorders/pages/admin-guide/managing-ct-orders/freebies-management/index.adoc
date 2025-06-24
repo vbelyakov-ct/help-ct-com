@@ -14,7 +14,7 @@ during the xref:workshop-3-0-checkpoint[order creation] process.
 
 To use freebies, create a
 xref:admin-guide/getting-started/setting-up-an-instance/creating-relationships-between-product-and-ct-orders-objects[lookup
-to CT Product] from the[.object]#Freebie Line Item# object and
+to CT Product] from the [.object]#Freebie Line Item# object and
 check that the freebie product is active and has _Price Book Line Item_
 records.
 
@@ -167,7 +167,7 @@ This adding method calculation resembles a *Similar* method, but the
 list of products that can be granted as freebies is taken from the
 *Criteria Details* field.
 
-The SOQL request for the[.object]#CT Product# object provides a
+The SOQL request for the [.object]#CT Product# object provides a
 dynamic search among the specified object records and other related
 objects with fields of the _Lookup_ type to[.object]#CT
 Product#. The system compiles a list of all products that matched the
@@ -297,7 +297,7 @@ To set the value, specify the path to the field on the corresponding
 
 If the *Freebie Value* is set.
 
-* On the[.object]#Freebie Level# object, if there are no
+* On the [.object]#Freebie Level# object, if there are no
 records of _Freebie Line Items_:
 ** The quantity in the *Freebies Quantity Min* will be divided by
 *Freebie Value* if the *Similar* adding method is set for the _Freebie
@@ -307,7 +307,7 @@ method, the division is applied only if one freebie is distributed.
 *Freebie Value*.
 ** The quantity calculated according to *Freebie Ratio* will always be
 divided by *Freebie Value*.
-* On the[.object]#Freebie Line Item# object, If the *List
+* On the [.object]#Freebie Line Item# object, If the *List
 Based* adding method is set for the _Freebie Condition_: The *Freebie
 Quantity Max* and *Freebie Quantity Min* will be divided by the value of
 the *Freebie Value* field.

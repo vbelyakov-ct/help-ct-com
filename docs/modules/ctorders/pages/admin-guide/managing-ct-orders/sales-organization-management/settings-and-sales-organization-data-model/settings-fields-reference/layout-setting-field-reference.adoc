@@ -36,7 +36,7 @@ relationship with the object specified in the
 [.apiobject]#orders__Object__c ==== field, the setting
 will not be applied.#
 
-If set, the[.apiobject]#orders__RecordType__c# and
+If set, the [.apiobject]#orders__RecordType__c# and
 [.apiobject]#orders__SalesOrganizationId__c# are
 specified for a parent object.
 
@@ -62,7 +62,7 @@ layout will be applied for the objects specified in the
 |Sales Organization
 |[.apiobject]#orders__SalesOrganizationId__c#
 |Lookup(Sales Organization) |[NOTE] ==== If
-orders__ParentObject__c is set, the[.object]#Sales
+orders__ParentObject__c is set, the [.object]#Sales
 Organization ==== should be specified for this object.#
 
 |Fields to Display
@@ -146,7 +146,7 @@ Display*.
 
 Use *0* for *default width.*
 
-[NOTE] ==== Applies only to the[.object]#Order Line
+[NOTE] ==== Applies only to the [.object]#Order Line
 Item ==== layout.#
 
 |Order Currency |CurrencyIsoCode |Picklist a|

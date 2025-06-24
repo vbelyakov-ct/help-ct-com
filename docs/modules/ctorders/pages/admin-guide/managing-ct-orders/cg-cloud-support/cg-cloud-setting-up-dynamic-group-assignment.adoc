@@ -31,9 +31,9 @@ and Update a Dynamic Pharma Group]
 
 Create the following fields with the _Lookup_ record type:
 
-. Create a lookup from the[.object]#Catalog# object to the
+. Create a lookup from the [.object]#Catalog# object to the
 dynamic group object, for example,[.apiobject]#GroupId__c#.
-. Create a lookup from the[.object]#Promotion# object to the
+. Create a lookup from the [.object]#Promotion# object to the
 dynamic group object if necessary.
 
 These fields will be used by the CT Orders inner mechanics to provide a

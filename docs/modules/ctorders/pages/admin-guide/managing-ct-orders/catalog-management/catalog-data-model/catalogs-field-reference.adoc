@@ -1,12 +1,10 @@
 = Catalog Field Reference
 
-The[.object]#Catalog# object is intended to set up catalogs
-availability for accounts and select the order types that will use the
-selected catalog.
+The [.object]#Catalog# object is intended to set up catalogs availability for accounts and select the order types that will use the selected catalog.
 
 '''''
 
-Object API name:[.apiobject]#orders__Catalog__c#
+Object API name: [.apiobject]#orders\__Catalog__c#
 
 '''''
 
@@ -14,41 +12,28 @@ Object API name:[.apiobject]#orders__Catalog__c#
 |===
 |*Field* |*API name* |*Type* |*Description*
 
-|Active |[.apiobject]#orders__IsActive__c# |Checkbox |If
-selected, the catalog record is active and can be applied in business
-logic.
+|Active |[.apiobject]#orders\__IsActive__c# |Checkbox |If selected, the catalog record is active and can be applied in business logic.
 
-|Available For All Accounts
-|[.apiobject]#orders__IsAvailableForAllAccounts__c#
-|Checkbox |If selected, the catalog is available for all Accounts
-(customers) or Retail Stores (in case of integration with CG Cloud). By
-default, the checkbox is selected.
+|Available For All Accounts |[.apiobject]#orders\__IsAvailableForAllAccounts__c#
+|Checkbox |If selected, the catalog is available for all Accounts (customers) or Retail Stores (in case of integration with CG Cloud). By default, the checkbox is selected.
 
-|Description |[.apiobject]#​​orders__Description__c#
-|Text(255) |The field is used for catalog descriptions.
+|Description |[.apiobject]#orders\__Description__c# |Text(255) |The field is used for catalog descriptions.
 
-|Disable Mass Adding |[.apiobject]#​​IsDisableMassAdding__c#
-|Checkbox |Define whether a sales rep is allowed to add the whole
-catalog to the Order cart.
+|Disable Mass Adding |[.apiobject]#IsDisableMassAdding__c# |Checkbox |Define whether a sales rep is allowed to add the whole catalog to the Order cart.
 
-|External Id |[.apiobject]#orders__ExternalId__c#
-|Text(255) (External ID) (Unique Case Sensitive) |Specifies in case of
-using the ERP system data for deliveries.
+|External Id |[.apiobject]#orders\__ExternalId__c# |Text(255) (External ID) (Unique Case Sensitive) |Specifies in case of using the ERP system data for deliveries.
 
-|Order Type |[.apiobject]#orders__OrderType__c#
-|Picklist (Multi-Select) a|
-The order type for which the setting is configured:
+|Order Type |[.apiobject]#orders\__OrderType__c#
+|Picklist (Multi-Select) a| The order type for which the setting is configured:
 
 * Order
 * Return
 * PreSale
 
 |Parent Catalog
-|[.apiobject]#orders__ParentCatalogId__c#
-|Lookup(Catalog) |The identifier of the parent catalog.
+|[.apiobject]#orders\__ParentCatalogId__c# |Lookup(Catalog) |The identifier of the parent catalog.
 
 |Sales Organization
-|[.apiobject]#orders__SalesOrganizationId__c#
-|Lookup(Sales Organization) |The business unit for which settings are
-configured.
+|[.apiobject]#orders\__SalesOrganizationId__c#
+|Lookup(Sales Organization) |The business unit for which settings are configured.
 |===

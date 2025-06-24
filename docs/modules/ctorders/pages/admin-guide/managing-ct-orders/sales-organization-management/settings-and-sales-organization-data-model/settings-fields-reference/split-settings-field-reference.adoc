@@ -40,7 +40,7 @@ selected Sales Org.
 * Pre-sale
 
 |Price Book |[.apiobject]#orders__PriceBookId__c#
-|Lookup(CT Price Book) |The[.object]#Price Book# with
+|Lookup(CT Price Book) |the [.object]#Price Book# with
 products to which the split will be applied.
 
 |Sales Organization
@@ -48,7 +48,7 @@ products to which the split will be applied.
 |Lookup(Sales Organization) a|
 
 The specified Sales Organization is prioritized over the specified order
-type in the[.apiobject]#orders__OrderType__c# field.
+type in the [.apiobject]#orders__OrderType__c# field.
 
 |Split Fields |[.apiobject]#orders__SplitFieldsList__c#
 a|
@@ -57,12 +57,12 @@ Text(255)
 
 
 a|
-This field contains fields from the[.object]#Delivery# object
+This field contains fields from the [.object]#Delivery# object
 that store the parameters according to which the deliveries are split.
 Fields are separated by the comma with no space. Maximum 5 fields are
 allowed.
 
-Specified fields must be created on the[.object]#Delivery#
+Specified fields must be created on the [.object]#Delivery#
 object manually.
 
 Address and date fields are already used for splitting by default. If

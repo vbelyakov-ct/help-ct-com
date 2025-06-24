@@ -39,7 +39,7 @@ Determines the way to handle filter value. Available values:
 * _picklist_ (multiple choice picklist)
 
 |[.apiobject]#lookupPath# |Optional |String |API name of
-the lookup field to the[.object]#Product# object from the
+the lookup field to the [.object]#Product# object from the
 object specified in the [.apiobject]#object# key. If not
 specified, the package lookup to[.object]#Product# object is
 used, i.e[.apiobject]#orders__ProductId__c#.
@@ -72,7 +72,7 @@ the filtering criteria or when the filter includes custom objects)
 
 
 
-The[.apiobject]#condition# key can have the following keys:
+the [.apiobject]#condition# key can have the following keys:
 
 [width="100%",cols="25%,25%,25%,25%",]
 |===
