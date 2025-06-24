@@ -6,20 +6,20 @@ available.
 
 :toc: :toclevels: 2
 
-[[h2__1836106951]]
+[[h2_1836106951]]
 === The CT Orders Package 25 R1
 
 * xref:sync-transaction-field-reference[Sync Transaction] records
 are now deleted automatically after disconnecting from the
 xref:admin-guide/managing-ct-orders/web-service/index.adoc[Web Service].
-* xref:required-permissions-for-a-specific-role#h2__260496953[orders.Allow
+* xref:required-permissions-for-a-specific-role#h2_260496953[orders.Allow
 Management of AuthData] custom permission added to manually manage
 xref:admin-guide/managing-ct-orders/web-service/ref-guide/auth-data-field-reference.adoc[Auth Data] records.
 
-[[h2__290225989]]
+[[h2_290225989]]
 === The CT Orders Package 24 R2
 
-[[h3__149663536]]
+[[h3_149663536]]
 ==== Major Features
 
 After installing or upgrading to this version, please perform actions on
@@ -36,7 +36,7 @@ promotion is displayed in the order screen.
 hidden by default.
 * Order cart now better fits full screen.
 * Deliveries in the
-xref:delivery-management#h2__1374863314[Delivery Summary] pop-up
+xref:delivery-management#h2_1374863314[Delivery Summary] pop-up
 are now sorted in chronological order according to delivery date.
 * Products are added to *Catalog*/*Promotion* in the same order as they
 have been selected on the xref:product-management[Product
@@ -73,10 +73,10 @@ xref:admin-guide/managing-ct-orders/freebies-management/freebie-data-model/freeb
 If enabled, only _Order Line Item_ records with *Quantity*> 0 are
 distributed as freebies.
 
-[[h2__290225986]]
+[[h2_290225986]]
 === The CT Orders Package 24 R1
 
-[[h3__1126186873]]
+[[h3_1126186873]]
 ==== Major Features
 
 [NOTE] ==== To work with bundles, please manually create the
@@ -119,10 +119,10 @@ is added for *OM Settings*.
 * Pressing the *Tab* button in the order cart switches to editing the
 same field on the next order item.
 
-[[h2__1553777728]]
+[[h2_1553777728]]
 === The CT Orders Package 23 R3
 
-[[h3__1502650940]]
+[[h3_1502650940]]
 ==== Major Features
 
 * The *Field Search Based On* field is added to the
@@ -153,7 +153,7 @@ of the *Apply Condition* field.
 name of custom label, which is displayed as the validation message when
 the Limit Rule is applied to the order or delivery.
 
-[[h2__1746735548]]
+[[h2_1746735548]]
 === The CT Orders Package 23 R2 April
 
 [[h3_783110532]]
@@ -168,14 +168,14 @@ address records for an order. Now, you can also use
 the [.apiobject]#!Order# shortcut for this purpose in the *SOQL
 Filter* field. For example:
 * Support comparison operators in JSON of the *Condition Details* field
-in the xref:freebies-management#h2__623789817[Freebie Condition].
+in the xref:freebies-management#h2_623789817[Freebie Condition].
 In previous version, you could use _equal_, _notEqual_, _contain_,
 _notContain_, _in_, _notIn_ as values for the
 [.apiobject]#operator# key in JSON of *Condition Details* field
 in Freebie Condition. Now, you can also use _greater_, _greaterOrEqual_,
 _less_ and _lessOrEqual_ operators.
 
-[[h3__600655742]]
+[[h3_600655742]]
 ==== Resolved Issues
 
 * In the xref:configuring-object-setting[Object Setting], The
@@ -213,7 +213,7 @@ Criteria] field is required even if the
 xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/index.adoc[Calculation Method] is set to
 _Basic_.
 * Width of the *All* tab in the
-xref:offline-order#h4__1635896381[order cart] varies while
+xref:offline-order#h4_1635896381[order cart] varies while
 switching between this and another tabs.
 * Discount is not recalculated for created orders after changing
 *Discount Rate* field value in the
@@ -233,16 +233,16 @@ becomes hidden by the side panel.
 * xref:condition-advancedcriteria-c-field-specification#h2_1585895621[Advanced
 Criteria 2.0] now works both in xref:admin-guide/managing-ct-orders/web-service/index.adoc[Web Service] and
 in-app discount calculator.
-* xref:admin-guide/managing-ct-orders/web-service/index.adoc#h3__795817566[Calculate discounts] feature works
+* xref:admin-guide/managing-ct-orders/web-service/index.adoc#h3_795817566[Calculate discounts] feature works
 both in xref:admin-guide/managing-ct-orders/web-service/index.adoc[Web Service] and in-app discount
 calculator.
 * *Promotions*, *Catalogs* and their sub-catalogs in the
-xref:offline-order#h4__1635896381[Order Cart] are now displayed in
+xref:offline-order#h4_1635896381[Order Cart] are now displayed in
 alphabetical order.
 * New *Displayed Field Width* field added to
 xref:order-line-item-layout-setting-1-0[Order Line Item Layout]. It
 allows adjusting the width of *Product Name* and *Quantity* fields in
-the xref:offline-order#h4__1635896381[order cart], as well as of
+the xref:offline-order#h4_1635896381[order cart], as well as of
 each field listed in the *Fields To Display*.
 
 [[h2_1975608344]]
@@ -272,7 +272,7 @@ query.
 
 
 
-[[h4__260496953]]
+[[h4_260496953]]
 ===== Custom Permissions and Permission Set Groups
 
 * Assign one of the preconfigured
@@ -286,7 +286,7 @@ custom permissions] to override the standard logic:
 
 
 
-[[h4__419366360]]
+[[h4_419366360]]
 ===== Price tags
 
 * xref:price-tag[The checkmark icon] is displayed when
@@ -297,7 +297,7 @@ different levels are applied in the conditions.
 ==== Other Improvements
 
 * The UX/UI improvement for the order cart:
-** xref:offline-order#h4__1635896381[The promotion] sales and
+** xref:offline-order#h4_1635896381[The promotion] sales and
 delivery dates are displayed in each promotion header. If the sales
 dates are empty, the delivery dates will be displayed instead of them.
 ** The *Product Availability* records are displayed both for products on
@@ -316,13 +316,13 @@ xref:totals-panel-setting-field-reference[Totals Panel Settings]
 record.
 * The ability to edit fields with the *Lookup* type in the order cart.
 
-[[h2__1756148868]]
+[[h2_1756148868]]
 === The CT Orders package 22 R3 July
 
 [[h3_481302646]]
 ==== Major Features
 
-[[h4__260496953]]
+[[h4_260496953]]
 ===== Custom Permissions and Permission Set Groups
 
 * Assign one of the preconfigured
@@ -420,7 +420,7 @@ sequence of applying them to the orders.
 
 
 
-[[h4__313159045]]
+[[h4_313159045]]
 ===== Mixed Discounts
 
 * xref:calculation-type-applyconditiontype-c-field-specification[The
@@ -436,17 +436,17 @@ discounts.
 [[h4_62076529]]
 ===== Freebie Management
 
-* xref:freebies-management#h3__316467656[Freebie Values] allow you
+* xref:freebies-management#h3_316467656[Freebie Values] allow you
 to spread a different number of freebies over the freebie levels and
 deliveries.
 * If Web Service is enabled, freebies will be validated if changes on
-the xref:delivery-management#h2__1374863314[Delivery Summary] popup
+the xref:delivery-management#h2_1374863314[Delivery Summary] popup
 affected them.
 
 [[h3_1921978271]]
 ==== Other Improvements
 
-[[h4__219878134]]
+[[h4_219878134]]
 ===== Discount Management
 
 * If the matching *Condition* record was not found on the *Condition
@@ -455,7 +455,7 @@ Group* record, the system checks the next
 
 
 
-[[h4__1295053106]]
+[[h4_1295053106]]
 ===== Quota
 
 * If a quota has child xref:quota-usage-field-reference[Quota
@@ -467,7 +467,7 @@ date.
 
 
 
-[[h4__1047129545]]
+[[h4_1047129545]]
 ===== Limit Rule
 
 * Cells with zero quantity of a certain product will be highlighted if
@@ -475,7 +475,7 @@ that product fits xref:limit-rules[the limit rule], but the minimum
 quantity or minimum amount for that product was not reached according to
 the limit rule.
 
-[[h2__753275011]]
+[[h2_753275011]]
 === The CT Orders package Winter '22
 
 For correct operation of new features, use the following versions of
@@ -509,13 +509,13 @@ availability] for freebies.
 as when launching a new product, running a promotion for a selected
 customer segment, or withdrawing a product from production, by
 distributing product quotas to sales reps.
-* Sales reps can xref:quotas#h3__576888334[reserve an available
+* Sales reps can xref:quotas#h3_576888334[reserve an available
 number of a product by quota] and still be able to allocate all products
 in that quota among the orders.
 ** When saving the order cart, the system validate distributed products
 against the allotted quotas.
 ** Quotas will be also validated if changes on the
-xref:delivery-management#h2__1374863314[Delivery Summary] popup
+xref:delivery-management#h2_1374863314[Delivery Summary] popup
 affected them.
 * Click the Info icon to see the booked and used quotas.
 
@@ -524,7 +524,7 @@ affected them.
 [[h4_2057147528]]
 ===== Freebie Management
 
-* xref:freebies-management#h3__676523153[Multiplier]: specify
+* xref:freebies-management#h3_676523153[Multiplier]: specify
 whether the number of freebies in the order cart must be multiple to the
 specific value. The freebies quantity will be automatically rounded up.
 * The availability of the added freebies in deliveries will be
@@ -535,7 +535,7 @@ Condition# object.
 
 
 
-[[h4__133304238]]
+[[h4_133304238]]
 ===== Limit Rules
 
 * Limit rules will be validated if changes on the Delivery Summary popup
@@ -552,7 +552,7 @@ the connection with the Web Service.
 
 
 
-[[h4__188392436]]
+[[h4_188392436]]
 ===== Preparing for Mixed Discounts
 
 * In future releases, the
@@ -562,7 +562,7 @@ for setting the condition(s) to be applied.
 * New JSON keys are available in the *Advanced Criteria* field for the
 [.object]#Condition# object.
 
-[[h3__2059353835]]
+[[h3_2059353835]]
 ==== Other Improvements
 
 * For xref:the-set-value-step[the Set Value step] of the pricing
@@ -580,15 +580,15 @@ product name to which it refers.
 button to reduce the time it takes to calculate discounts and the total
 price.
 * In the case of a configured
-xref:delivery-management#h2__1374863314[Delivery Summary] layout,
+xref:delivery-management#h2_1374863314[Delivery Summary] layout,
 the system validates to see if the xref:limit-rules[limit rules]
 and quotas have been violated when the sales rep has made changes to the
 supplies.
 
-[[h2__137398238]]
+[[h2_137398238]]
 === The CT Orders package Summer '21
 
-[[h3__1258541938]]
+[[h3_1258541938]]
 ==== Major Features
 
 [[h4_1379605186]]
@@ -600,14 +600,14 @@ CG Cloud] solution to apply complex order-taking logic to its objects.
 
 * Use the xref:cg-cloud-support#h3_656771318[Salesforce Product]
 object in bundles, catalogs, and promotions.
-* Create orders for the xref:cg-cloud-support#h3__2058563056[Retail
+* Create orders for the xref:cg-cloud-support#h3_2058563056[Retail
 Store] object.
 * Use xref:cg-cloud-setting-up-dynamic-group-assignment[dynamic
 groups] to keep stores and sales products up-to-date.
 
 
 
-[[h4__1068677388]]
+[[h4_1068677388]]
 ===== Discount Management
 
 A fully configurable xref:price-management[pricing procedure] that
@@ -671,7 +671,7 @@ in specific cases.
 
 
 
-[[h4__1132174910]]
+[[h4_1132174910]]
 ===== SDK
 
 With xref:sdk-setting-field-reference[the new setting], tailor the
@@ -685,14 +685,14 @@ custom fields] when adding products to order.
 * Display the xref:5-6-sdk-displaying-info-icon[info icon] with an
 embedded HTML template.
 
-[[h3__1409574029]]
+[[h3_1409574029]]
 ==== Other improvements
 
 * Support for
 https://help.salesforce.com/articleView?id=sf.fields_about_field_validation.htm&type=5[the
 standard Salesforce validations] to control conditions applied during
 the order creation.
-* xref:online-order#h3__1143528965[Editable fields] allow entering
+* xref:online-order#h3_1143528965[Editable fields] allow entering
 data in custom fields in real-time.
 * Decreased processing time when adding many products from catalogs and
 promotions.
@@ -702,13 +702,13 @@ filters and the ability to clear all filters.
 xref:sales-organization-field-reference[turn off closed order
 duplications].
 
-[[h2__580524974]]
+[[h2_580524974]]
 === The CT Orders package Spring '21
 
 [[h3_944897068]]
 ==== Major Features
 
-[[h4__580391303]]
+[[h4_580391303]]
 ===== Order Management
 
 * xref:multiplicator[Multiplicator] provides flexible management of
@@ -737,7 +737,7 @@ company's logistic and financial requirements:
 xref:5-2-setting-up-the-delivery-summary[delivery summary] with
 details for each delivery before finalization.
 
-[[h3__230916525]]
+[[h3_230916525]]
 ==== Other Improvements
 
 * Perform an xref:offline-order#h3_1847490047[advanced search in
@@ -762,13 +762,13 @@ additional session processing agent, that ensures stable operation when
 opening the order cart in the CT Mobile app.
 * Overall product performance has been improved.
 
-[[h2__1703482179]]
+[[h2_1703482179]]
 === The CT Orders package Summer '20
 
-[[h3__2095028261]]
+[[h3_2095028261]]
 ==== Major Features
 
-[[h4__1817507152]]
+[[h4_1817507152]]
 ===== Product Management
 
 xref:managing-bundles[A bundle] is a new product type that includes
@@ -797,14 +797,14 @@ minimum values] on the *Product* and *Price Book* levels.
 
 
 
-[[h4__2034780073]]
+[[h4_2034780073]]
 ===== Delivery Management
 
 Manage multi-address deliveries.
 
 * Control the number of deliveries and the applicable dates.
 
-[[h3__1531464550]]
+[[h3_1531464550]]
 ==== Other Improvements​
 
 xref:online-order[Online Order] is now aligned due to its life

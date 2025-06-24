@@ -5,9 +5,9 @@ xref:admin-guide/managing-ct-orders/web-service/index[Web Service], all mappings
 should be sent to the server.
 
 Only administrators can modify this data. For more information, refer
-to xref:admin-guide/managing-ct-orders/web-service/index#h2__1477820419[User Permissions].
+to xref:admin-guide/managing-ct-orders/web-service/index#h2_1477820419[User Permissions].
 
-[[h2__1931515875]]
+[[h2_1931515875]]
 === Mapping with Sales Organization
 
 It is required to send all mappings so that the Web Service can return
@@ -16,19 +16,19 @@ the value for discounts and freebies into the correct fields.
 * A mapping is created for each[.object]#Sales Organization#
 and combines both global settings and settings for the
 [.object]#Sales Organization#.
-* The mapping is sent xref:admin-guide/managing-ct-orders/web-service/index#h3__364386004[via one of the
+* The mapping is sent xref:admin-guide/managing-ct-orders/web-service/index#h3_364386004[via one of the
 sync processes] based on the *Sync Transaction* records. These records
 are created after mapping updates or in the case of a new
 [.object]#Sales Organization# and deleted after a successful
 mapping transfer to Web Service.
 
-[[h2__513356405]]
+[[h2_513356405]]
 === Master Data to Send
 
 The objects below are responsible for a type of discount and define a
 freebie to apply for the products in the order.
 
-* The master data is sent xref:admin-guide/managing-ct-orders/web-service/index#h3__364386004[via one of
+* The master data is sent xref:admin-guide/managing-ct-orders/web-service/index#h3_364386004[via one of
 the sync processes] based on the *Sync Transaction* records. These
 records are created after master data updates and deleted after a
 successful master data transfer to Web Service.

@@ -23,7 +23,7 @@ excluding those with *Set Quantity On* = _Header_.
 
 :toc: :toclevels: 3
 
-[[h3__1307099884]]
+[[h3_1307099884]]
 === Freebie Type Record Types
 
 CT Orders provides two record types of _Freebie Type_:
@@ -74,11 +74,11 @@ Line Item_ record related to a[.object]#Freebie Condition#.
 while for other methods you can only set the minimum or maximum quantity
 on their respective levels. ====
 
-[[h2__623789817]]
+[[h2_623789817]]
 === Freebies Calculation Process
 
 The calculation process for freebies is similar to the
-xref:admin-guide/managing-ct-orders/discount-management/index#h2__1585481109[Discount Calculation
+xref:admin-guide/managing-ct-orders/discount-management/index#h2_1585481109[Discount Calculation
 process]. The rules which are used for calculation are manifested in the
 xref:admin-guide/managing-ct-orders/freebies-management/freebie-data-model/freebie-condition-field-reference/index.adoc[Freebie Condition] child
 records and filtered and applied one by one in a distinct order.
@@ -118,7 +118,7 @@ record is found for a condition, this _Freebie Condition_ will be
 skipped.
 image:calculation-types-2021-08-27-2.png[]
 
-[[h3__370821239]]
+[[h3_370821239]]
 ==== Processing records with the Similar Adding Method
 
 Freebies quantity is set based on the values in the *Freebies Quantity
@@ -142,7 +142,7 @@ each paid product that matches the conditions in the *Condition Details*
 field.
 image:freebies-2020-08-07-2.jpg[]
 
-[[h3__758219686]]
+[[h3_758219686]]
 ==== Processing Records with List Based Adding Method
 
 An additional _Freebie Line Item_ record should be created for each
@@ -237,7 +237,7 @@ To recalculate and update Freebies:
 
 image:about-ct-vision-2021-08-25-2.png[]
 
-[[h3__676523153]]
+[[h3_676523153]]
 ==== Multiplier
 
 xref:multiplicator[As paid products], you can specify whether
@@ -266,7 +266,7 @@ filled in].
 
 image:2021-09-09_13-19-37.png[]
 
-[[h3__316467656]]
+[[h3_316467656]]
 ==== Freebie Value and Level Formula
 
 [width="100%",cols="50%,50%",]

@@ -5,7 +5,7 @@ let's create an order with the appropriate conditions.
 
 :toc: :toclevels: 3
 
-[[h2__21164539]]
+[[h2_21164539]]
 === Create a Basic Order
 
 When all settings are done, let's create a new order to apply the
@@ -32,7 +32,7 @@ image:Checkpoint-1-2.5.png[]
 The new[.object]#CT Order# is created. On the created CT Order
 page, click the *Edit Cart* button.
 
-[[h2__670939016]]
+[[h2_670939016]]
 === Adding Products and Distributing Freebies based on their Availability
 
 _Product Availabilities_ are automatically applied to the products and
@@ -91,7 +91,7 @@ image:Workshop-6.0-Freebie-Available-PA.png[]
 
 |===
 
-[[h2__708878402]]
+[[h2_708878402]]
 === Applying Limit Rules
 
 _Limit Rules_ are automatically applied when you click *Save Draft*,
@@ -147,7 +147,7 @@ image:Workshop-6.0-Exceed-Limit-Rule-Amount-per-Order.png[]
 |Limit Rule with Condition a|
 The total price for the whole order exceeds the limit.
 
-* xref:creating-limit-rules-with-conditions-6-2#h2__953788261[The
+* xref:creating-limit-rules-with-conditions-6-2#h2_953788261[The
 Limit Rule per Order with the Apply Condition]
 * The maximum number (50) of the specific product (Apply Condition) is
 exceeded.
@@ -156,7 +156,7 @@ image:Screenshot-2021-08-26-at-15.45.20.png[]
 
 |===
 
-[[h2__321233250]]
+[[h2_321233250]]
 === Allocate Quotas
 
 To understand the Quotas flow, let's create two orders and fill them out
@@ -166,7 +166,7 @@ Several quotes may be applied for an[.object]#Order Line Item#
 based on the delivery dates. In Workshop 6.0, we use one quota for the
 _Order Line Item_ record.
 
-[[h3__2047848280]]
+[[h3_2047848280]]
 ==== Allocate Quotas and Save the First Order
 
 Create a basic order with the following:
@@ -200,7 +200,7 @@ Quotas for promotion are calculated based on the created _Quota_ record.
 * The individual _Quota_ record is automatically created based on the
 found _Quota_ record with the _Template_ record type.
 [NOTE] ==== If there is an individual[.object]#Quota
-==== and a [.object]#Quota Template# on the same search level, the individual quota will be applied. For more information, refer to xref:admin-guide/managing-ct-orders/product-validation-in-order/quotas/index#h3__1386411308[Quota Search].#
+==== and a [.object]#Quota Template# on the same search level, the individual quota will be applied. For more information, refer to xref:admin-guide/managing-ct-orders/product-validation-in-order/quotas/index#h3_1386411308[Quota Search].#
 * The quota will be counted for all products added from the specified
 promotion.
 * If you added 2 products from the promotion and set a quantity for each
@@ -325,7 +325,7 @@ Click the *Finalize* button. All used _Quota_ records will be updated.
 |image:Quotas-for-Freebies-(2-orders).png[]
 |===
 
-[[h3__682746901]]
+[[h3_682746901]]
 ==== Finalize the First Order
 
 Open the first order and click *Finalize*.

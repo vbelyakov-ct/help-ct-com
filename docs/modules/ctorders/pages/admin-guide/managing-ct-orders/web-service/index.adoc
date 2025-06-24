@@ -2,7 +2,7 @@
 
 :toc: :toclevels: 3
 
-[[h2__773755849]]
+[[h2_773755849]]
 === Overview
 
 Web service is a new way to calculate discounts, which allows you to
@@ -18,7 +18,7 @@ Criteria 2.0],
 xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/calculation-types-field-reference/calculation-type-applyconditiontype-c-field-specification[Apply
 Condition Types].
 * Freebie management:
-xref:admin-guide/managing-ct-orders/freebies-management/index#h3__316467656[Freebie Values] and
+xref:admin-guide/managing-ct-orders/freebies-management/index#h3_316467656[Freebie Values] and
 xref:admin-guide/managing-ct-orders/freebies-management/freebie-data-model/freebie-condition-field-reference/freebie-condition-levelformula-c-field-specification[Level
 Formula].
 
@@ -40,7 +40,7 @@ image:Web-Service-Object-Model.png[]
 
 
 
-[[h2__1051132047]]
+[[h2_1051132047]]
 ==== General Integration Scheme
 
 [width="100%",cols="50%,50%",]
@@ -68,7 +68,7 @@ Mobile app.
 |image:Web-Service-Integration-Scheme.png[]
 |===
 
-[[h2__1477820419]]
+[[h2_1477820419]]
 === Integrated User Permissions
 
 The integration user must have permission to carry out discount
@@ -79,7 +79,7 @@ User Permissions].
 [[h2_389205030]]
 === Working with Web Service
 
-[[h3__1981203353]]
+[[h3_1981203353]]
 ==== Authorization
 
 A secure two-way authorization is required to transfer data between Web
@@ -109,7 +109,7 @@ SOQL queries on the Salesforce side:
 the *Criteria Based* adding method of[.object]#Freebie
 Condition# uses the SOQL query to retrieve the list of products.
 
-[[h3__364386004]]
+[[h3_364386004]]
 ==== Sync Types
 
 After authorization, administrators should set up the sync process to
@@ -155,7 +155,7 @@ required to activate Web Service for CT Mobile.
 can take quite a long time and therefore, with this type it is worth
 loading only historical data at the start of the project.
 
-[[h3__1022170594]]
+[[h3_1022170594]]
 ==== Sync Transactions
 
 The xref:sync-transaction-field-reference[Sync Transaction] records
@@ -173,7 +173,7 @@ you can run a batch out of schedule.
 
 
 
-[[h3__795817566]]
+[[h3_795817566]]
 ==== Calculate Discounts
 
 Discount calculation using *Web Service* is performed in the same way as

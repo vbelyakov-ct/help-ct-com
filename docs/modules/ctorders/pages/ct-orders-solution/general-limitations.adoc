@@ -20,7 +20,7 @@ Web Security for Lightning web components* checkbox is inactive.
 
 The setup is complete.
 
-[[h3__1728072365]]
+[[h3_1728072365]]
 ==== Custom Field Limitations
 
 To avoid errors, the API name of the custom field must be different from
@@ -53,7 +53,7 @@ entering text without formatting.
 
 image:ctorders-overview-2020-12-25-2.png[]
 
-[[h3__35438396]]
+[[h3_35438396]]
 ==== Address Configuration
 
 CT Orders does not support the processing of
@@ -61,7 +61,7 @@ https://developer.salesforce.com/docs/atlas.en-us.224.0.api.meta/api/compound_fi
 fields] (formulas), such as[.apiobject]#BillingAddress# and
 [.apiobject]#ShippingAddress#.
 
-[[h2__872355444]]
+[[h2_872355444]]
 === Promotion and Catalog Management
 
 By default, there are no layouts for[.object]#Catalog Line
@@ -96,7 +96,7 @@ the *Criteria Based* one.
 Formula fields requiring recalculation during order management are not
 supported for freebies.
 
-[[h3__884774678]]
+[[h3_884774678]]
 === Delivery Management
 
 You cannot create multiple deliveries for the same date and address
@@ -115,10 +115,10 @@ in the order cart, which must be _divisible_ by the *Units in Package*
 value and also _greater than_ that value. I.e. if you set *Units in
 Package* to 5, the *Units Count Step* must be at least 10.
 
-[[h2__176614697]]
+[[h2_176614697]]
 === Calculating Discounts
 
-[[h3__1475579741]]
+[[h3_1475579741]]
 ==== Negative values
 
 The built-in calculator and Web Service are not designed to work with
@@ -130,7 +130,7 @@ applied discounts, then there may be errors in further calculations.
 
 This limitation affects all platforms—Salesforce, iOS, and Windows.
 
-[[h3__1001740197]]
+[[h3_1001740197]]
 ==== Formula Fields
 
 Formula fields requiring recalculation during order management are not

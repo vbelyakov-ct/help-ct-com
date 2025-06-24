@@ -7,15 +7,15 @@ ability to take orders.
 
 :toc: :toclevels: 2
 
-[[h2__1184861495]]
+[[h2_1184861495]]
 === 
 
 ifdef::hidden[]
 
-[[h2__1184861495]]
+[[h2_1184861495]]
 === CT Orders for CT Mobile 2.7
 
-[[h3__1632812796]]
+[[h3_1632812796]]
 ==== Major Features
 
 [[h4_1512079693]]
@@ -29,7 +29,7 @@ required
 permissions xref:../Storage/project-order-module/PDF/CT-Orders-User-Permissions-to-Access-Web-Service.pdf[here].
 * Tap
 the image:WS-Calculation-in-CT-Mobile.png[] button
-in the xref:offline-order#h4__1635896381[order cart] to get the
+in the xref:offline-order#h4_1635896381[order cart] to get the
 valid prices. The invalid prices will be highlighted in red color.
 * The new advanced features—links, mixed discounts, freebie multiplier,
 and freebie values—are only available when working with the
@@ -40,7 +40,7 @@ the *List Price* field.
 
 
 
-[[h4__313159045]]
+[[h4_313159045]]
 ===== Mixed Discounts
 
 * xref:calculation-type-applyconditiontype-c-field-specification[Apply
@@ -54,12 +54,12 @@ a minimum number of products for different size discounts.
 [[h4_62076529]]
 ===== Freebie Management
 
-* xref:freebies-management#h3__316467656[Freebie Values] allow you
+* xref:freebies-management#h3_316467656[Freebie Values] allow you
 to spread freebies over different levels and deliveries.
 
 
 
-[[h4__419366360]]
+[[h4_419366360]]
 ===== Price tags
 
 * xref:price-tag[New price tags] display one or more applied
@@ -70,34 +70,34 @@ the reached level of discounts.
 is displayed when several *Delivery Line Items* are tied to one *Order
 Line Item*, and different levels are applied in the conditions.
 
-[[h3__1878651479]]
+[[h3_1878651479]]
 ==== Other Improvements
 
 * xref:links[Links]: Support the *Reduce* dependency action to
 calculate discounts for Freebies.
 * Edit fields with the *Currency*, *Number,* *Percent*, or *Text* types
-within the xref:delivery-management#h2__1374863314[Delivery
+within the xref:delivery-management#h2_1374863314[Delivery
 Summary] pop-up.
 * The UX/UI improvement for[.object]#Quotas#:
 ** Display the current quota status in the
-xref:offline-order#h4__1635896381[order cart] interface.
+xref:offline-order#h4_1635896381[order cart] interface.
 ** For better visibility, the xref:quotas#h2_275625523[quota info
 pop-up] displays the type of products it affects and the source catalog
 or promotion.
 * The UX/UI improvement for the order cart:
-** xref:offline-order#h4__1635896381[The promotion] sales and
+** xref:offline-order#h4_1635896381[The promotion] sales and
 delivery dates are displayed in each promotion header. If the sales
 dates are empty, the delivery dates will be displayed instead of them.
-** xref:offline-order#h4__589780300[In the catalog and promotion
+** xref:offline-order#h4_589780300[In the catalog and promotion
 left menu], products are arranged according to their order number (if
 given) or alphabetical order.
 * Support Salesforce validation rules when saving or finalizing an
 order.
 
-[[h2__1184861496]]
+[[h2_1184861496]]
 === CT Orders for CT Mobile 2.6
 
-[[h3__2012766947]]
+[[h3_2012766947]]
 ==== Major Features
 
 [[h4_1633116198]]
@@ -140,7 +140,7 @@ product, running a promotion for a selected customer segment, or
 withdrawing a product from production, by distributing product quotas to
 sales reps.
 * Blocking the *Finalize* button until the quota search is completed.
-* Sales reps can xref:quotas#h3__576888334[reserve an available
+* Sales reps can xref:quotas#h3_576888334[reserve an available
 number of a product by quota] and still be able to allocate all products
 in that quota among the orders.
 * xref:quotas#h2_275625523[Tap the Info icon] next to the product
@@ -169,13 +169,13 @@ data loading time.
 xref:catalogs-field-reference[Disable Mass Action] checkbox is
 inactive.
 
-[[h2__1184861497]]
+[[h2_1184861497]]
 === CT Orders for CT Mobile 2.5
 
-[[h3__1258541938]]
+[[h3_1258541938]]
 ==== Major Features
 
-[[h4__719537598]]
+[[h4_719537598]]
 ===== CG Cloud Support
 
 
@@ -186,14 +186,14 @@ CG Cloud] solution to apply complex order-taking logic to its objects.
 
 * Use the xref:cg-cloud-support#h3_656771318[Salesforce Product]
 object in bundles, catalogs, and promotions.
-* Create orders for the xref:cg-cloud-support#h3__2058563056[Retail
+* Create orders for the xref:cg-cloud-support#h3_2058563056[Retail
 Store] object.
 * Use xref:cg-cloud-setting-up-dynamic-group-assignment[dynamic
 groups] to keep stores and sales products up-to-date.
 
 
 
-[[h4__1068677388]]
+[[h4_1068677388]]
 ===== Discount Management
 
 
@@ -242,24 +242,24 @@ cart.
 * Control the xref:freebies-management#h2_1556344363[freebie
 distribution] among several deliveries.
 
-[[h3__1409574029]]
+[[h3_1409574029]]
 ==== Other improvements
 
-* xref:online-order#h3__1143528965[Editable fields] allow entering
+* xref:online-order#h3_1143528965[Editable fields] allow entering
 data in custom fields in real-time.
 * Performance improvements for opening orders with large catalogs,
 promotions, and numerous deliveries.
-* On the xref:offline-order#h4__1635896381[Order Cart] screen, the
+* On the xref:offline-order#h4_1635896381[Order Cart] screen, the
 header bar is fixed so that users can scroll through the order cart
 without losing sight of the names of columns.
 
-[[h2__1184861498]]
+[[h2_1184861498]]
 === CT Orders for CT Mobile 2.4
 
-[[h3__1288754851]]
+[[h3_1288754851]]
 ==== Major Features
 
-[[h4__580391303]]
+[[h4_580391303]]
 ===== Order Management
 
 
@@ -282,7 +282,7 @@ freebies.
 
 
 
-[[h4__2034780073]]
+[[h4_2034780073]]
 ===== Delivery Management
 
 
@@ -310,13 +310,13 @@ interface.
 [.object]#Promotion# and[.object]#Catalog# (or
 sub-catalog) lists to the cart.
 
-[[h2__1184861491]]
+[[h2_1184861491]]
 === CT Orders for CT Mobile 2.3
 
-[[h2__1258541938]]
+[[h2_1258541938]]
 ==== Major Features
 
-[[h3__580391303]]
+[[h3_580391303]]
 ===== Order Management
 
 
@@ -325,7 +325,7 @@ sub-catalog) lists to the cart.
 xref:adding-ct-orders-to-the-ct-mobile-app-4-0[adding the CT
 Orders] module to the app menu.
 * xref:offline-order#h3_1904156377[Create orders] on
-xref:offline-order#h2__2117318770[the Account&#44; Contact&#44; or
+xref:offline-order#h2_2117318770[the Account&#44; Contact&#44; or
 Activity records] through the customizable mini-layout.
 * Manage the created offline orders on
 xref:offline-order#h3_1847490047[the Edit Cart screen]:
@@ -348,7 +348,7 @@ Mobile app.
 
 
 
-[[h4__1817507152]]
+[[h4_1817507152]]
 ===== Product Management
 
 
@@ -364,7 +364,7 @@ includes several products.
 Further product management now allows controlling
 xref:product-data-model[units in a package] on the *Product* level.
 
-[[h3__230916525]]
+[[h3_230916525]]
 ==== Other Improvements
 
 * Freebies management window with the dedicated button.

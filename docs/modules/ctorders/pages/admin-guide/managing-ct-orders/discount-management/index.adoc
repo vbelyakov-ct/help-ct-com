@@ -23,7 +23,7 @@ be configured for a group of clients and a group of products, as the
 _Discount Rate_ differs per each quantity/amount level. Conditions may
 affect different products that have required/min/max attributes.
 
-[[h2__1239990010]]
+[[h2_1239990010]]
 === Object Model
 
 Since CT Orders Summer '22 and CT Mobile iOS 2.7, you can
@@ -34,7 +34,7 @@ different channels in one place instead of a built-in calculator.
 
 image:ctorders-overview-2021-07-20.png[]
 
-[[h2__1585481109]]
+[[h2_1585481109]]
 === Discount Calculation Process
 
 [width="100%",cols="50%,50%",]
@@ -44,7 +44,7 @@ image:ctorders-overview-2021-07-20.png[]
 18-character IDs.
 * The mobile user must have at least read access to the fields in
 the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-fields-reference[Pricing
-Procedure] or xref:admin-guide/managing-ct-orders/discount-management/discount-management#h3__1225315997[recalculation
+Procedure] or xref:admin-guide/managing-ct-orders/discount-management/discount-management#h3_1225315997[recalculation
 fields] to calculate _Total Price_. Otherwise, the total price will be
 calculated by *List Price* fields.
 * Formula fields requiring recalculation during order management are not
@@ -101,7 +101,7 @@ found, the system applies condition settings for discount calculation in
 accordance with the selected Pricing Procedure. The process is repeated
 until all _Calculation Type_ records are checked.
 
-[[h3__1225315997]]
+[[h3_1225315997]]
 ==== Discount Recalculation
 
 When the discount calculation process is finished and the final price

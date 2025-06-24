@@ -21,10 +21,10 @@ xref:promotion-field-reference[a promotion]. The right list section
 displays products added to a promotion, which are represented as the
 xref:promotion-line-item-field-reference[Promotion Line Item]
 records.
-* The xref:admin-guide/managing-ct-orders/discount-management/promotions#h2__1068677388[Discount Management] tab is
+* The xref:admin-guide/managing-ct-orders/discount-management/promotions#h2_1068677388[Discount Management] tab is
 used for the discount level assignment for the selected promotion
 products.
-* The xref:admin-guide/managing-ct-orders/discount-management/promotions#h2__492952072[Promotion Assignment] tab
+* The xref:admin-guide/managing-ct-orders/discount-management/promotions#h2_492952072[Promotion Assignment] tab
 consists of two sections. The left list section displays a list of
 xref:promotion-field-reference[promotions]. In the right list
 section, assign promotions for accounts.
@@ -81,7 +81,7 @@ image:pin-icon.png[].
 
 image:promotions-product-management.png[]
 
-[[h3__2080835998]]
+[[h3_2080835998]]
 ==== Filtering Options
 
 Search is carried out in the fields that are listed on the product
@@ -102,7 +102,7 @@ xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-s
 Salesforce organization. This property signifies that this product is a
 stock-keeping unit that can be added to catalogs.#
 
-[[h3__1395193200]]
+[[h3_1395193200]]
 ==== Promotion Products
 
 To add products to catalogs, it is necessary to create
@@ -128,12 +128,12 @@ xref:promotion-line-item-field-reference[the Promotion Line Item
 record].
 * If the products are not added to the list, try refreshing the page.
 
-[[h2__1068677388]]
+[[h2_1068677388]]
 === Discount Management
 
 The *Discount Management* tab on the _Promotion_ record page allows you
 to assign discount levels according to rates for the selected
-xref:admin-guide/managing-ct-orders/discount-management/promotions#h3__1395193200[promotion products].
+xref:admin-guide/managing-ct-orders/discount-management/promotions#h3_1395193200[promotion products].
 
 * The *Discount Rate* unit of measure is automatically obtained from the
 assigned xref:admin-guide/managing-ct-orders/discount-management/calculation-types[calculation type] for a promotion
@@ -146,17 +146,17 @@ Type **page in the *Condition* section.
 
 image:promotions-discount-management.png[]
 
-[[h2__492952072]]
+[[h2_492952072]]
 === Freebies Management
 
 Once you have selected products to use for freebies in the
 xref:admin-guide/managing-ct-orders/discount-management/promotions#h2_333729072[*Product Management* tab] and set up
-xref:freebies-management#h3__1307099884[Freebie type], you can
+xref:freebies-management#h3_1307099884[Freebie type], you can
 configure Freebies in the *Freebies Management* tab. See detailed
 description here: xref:freebie-management-tab[Freebies Management
 Tab].
 
-[[h2__492952072]]
+[[h2_492952072]]
 === Promotion Assignment
 
 A created promotion can be available for a specific set of accounts or
@@ -180,7 +180,7 @@ all the selected criteria.
 
 image:promotions-promotions-assignment.png[]
 
-[[h3__1519768260]]
+[[h3_1519768260]]
 ==== Dynamic Promotions Assignment
 
 CT Orders allows filtering promotions available for a selected account
@@ -206,7 +206,7 @@ and Update a Dynamic Pharma Group]
 _Object Setting_ record type, and specify the referenced objects in
 *Group Object* and *Group Member Object* fields.
 
-[[h2__1374863314]]
+[[h2_1374863314]]
 === Process Path
 
 The following steps must be performed by the administrator in order to

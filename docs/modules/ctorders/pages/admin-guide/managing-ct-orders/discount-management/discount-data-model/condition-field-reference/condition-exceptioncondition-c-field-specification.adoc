@@ -61,7 +61,7 @@ mandatory products. The quantity is defined according to the selected
 operator for the [.apiobject]#productCount# key.
 |===
 
-[[h3__1623789156]]
+[[h3_1623789156]]
 ==== Filter
 
 A filter defines which[.object]#Delivery Line Items# can be
@@ -81,7 +81,7 @@ Available values:
 
 |[.apiobject]#items# |An array of Filter Items |Yes a|
 See
-xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification#h3__764213188[Filter
+xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification#h3_764213188[Filter
 items].
 
 
@@ -90,7 +90,7 @@ At least one item must be provided.
 
 |===
 
-[[h3__764213188]]
+[[h3_764213188]]
 ==== Filter Items
 
 [NOTE] ==== Only products with a non-zero quantity are counted.
@@ -105,7 +105,7 @@ At least one item must be provided.
 [.apiobject]#operator# key is applied.
 
 |[.apiobject]#operator# |Enum |Yes |See
-xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-exceptioncondition-c-field-specification#h3__1448410204[Items
+xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-exceptioncondition-c-field-specification#h3_1448410204[Items
 Operators].
 
 |[.apiobject]#value# |Boolean |No |A target value for
@@ -208,7 +208,7 @@ Available values:
 quantity.
 |===
 
-[[h3__1448410204]]
+[[h3_1448410204]]
 ==== Item Operators
 
 [width="100%",cols="10%,^9%,^9%,^9%,^9%,^9%,^9%,^9%,^9%,^9%,^9%",]

@@ -31,17 +31,17 @@ xref:admin-guide/managing-ct-orders/order-management/offline-order#h2_2044385779
 
 xref:admin-guide/managing-ct-orders/order-management/offline-order#h3_1847490047[3. Edit the Order Cart]
 
-  xref:admin-guide/managing-ct-orders/order-management/offline-order#h4__589780300[3.1 Promotions and Catalogs]
+  xref:admin-guide/managing-ct-orders/order-management/offline-order#h4_589780300[3.1 Promotions and Catalogs]
 
-  xref:admin-guide/managing-ct-orders/order-management/offline-order#h4__1635896381[3.2 Order Cart]
+  xref:admin-guide/managing-ct-orders/order-management/offline-order#h4_1635896381[3.2 Order Cart]
 
 xref:admin-guide/managing-ct-orders/order-management/offline-order#h2_1980854273[4. Additional Options]
 
   xref:admin-guide/managing-ct-orders/order-management/offline-order#h3_2048041897[4.1 Freebies]
 
-  xref:admin-guide/managing-ct-orders/order-management/offline-order#h3__419365112[4.2 Price Tags]
+  xref:admin-guide/managing-ct-orders/order-management/offline-order#h3_419365112[4.2 Price Tags]
 
-  xref:admin-guide/managing-ct-orders/order-management/offline-order#h3__639588894[4.3 Delivery Summary]
+  xref:admin-guide/managing-ct-orders/order-management/offline-order#h3_639588894[4.3 Delivery Summary]
 
   xref:admin-guide/managing-ct-orders/order-management/offline-order#h3_727125212[4.4 Calculate Price using the SDK
 Step]
@@ -82,7 +82,7 @@ layout.#image:create-order-order-icon.jpeg[]
 
 On the *Edit Cart* screen, the mobile user manages the current order.
 
-[[h4__589780300]]
+[[h4_589780300]]
 ==== 3.1 Promotions and Catalogs
 
 [width="100%",cols="50%,50%",]
@@ -149,7 +149,7 @@ layout].
 
 |===
 
-[[h4__1635896381]]
+[[h4_1635896381]]
 ==== 3.2 Order Cart
 
 Add products and manage them on the order cart.
@@ -191,7 +191,7 @@ record of the _Layout Setting_ record type for
 xref:order-line-item-layout-setting-1-0[the Order Line Item
 object]. ====
 
-[[h4__733574480]]
+[[h4_733574480]]
 ===== Filter products
 
 [[h4_1069920130]]
@@ -220,7 +220,7 @@ a|
 [[h4_1105933755]]
 ===== 
 
-[[h3__519467819]]
+[[h3_519467819]]
 ==== 3.3 Create the First Delivery
 
 When a mobile user adds the first product, the *Delivery* pop-up
@@ -265,7 +265,7 @@ xref:admin-guide/managing-ct-orders/order-management/multiplicator[multiplicator
 xref:admin-guide/managing-ct-orders/product-management/index#h2_1138962735[here].
 ** After making changes to the order cart, new prices will be calculated
 automatically on the
-https://help.customertimes.com/smart/project-ct-mobile-en/application-settings/a/h3__611076828[timer],
+https://help.customertimes.com/smart/project-ct-mobile-en/application-settings/a/h3_611076828[timer],
 if the xref:admin-guide/managing-ct-orders/web-service/index.adoc[Web Service] is disabled.
 * Organize products in cart by *max* or *min quantity* for the selected
 delivery.
@@ -293,7 +293,7 @@ with the xref:configuring-totals-panel-setting-1-0[Totals Panel
 Setting] record type with custom fields. The maximum number of fields
 displayed is 4.
 
-[[h3__408281835]]
+[[h3_408281835]]
 ==== 3.6 Export Order Data
 
 To enable this feature, configure
@@ -310,7 +310,7 @@ image:ios-export-dialog.png[]
 
 . Tap *Share* to open standard iOS sharing dialog.
 
-[[h3__1128524764]]
+[[h3_1128524764]]
 ==== 3.7 Complete the Order
 
 [width="100%",cols="50%,50%",]
@@ -376,7 +376,7 @@ or last delivery. ====
 |For CT Mobile Windows users |The feature has not been implemented yet.
 |===
 
-[[h3__419365112]]
+[[h3_419365112]]
 ==== 4.2 Price Tags
 
 xref:5-3-displaying-price-tags[If specified], the *Price Tag* icon
@@ -391,19 +391,19 @@ icon to view a currently applied discount.
 |For CT Mobile Windows users |The feature has not been implemented yet.
 |===
 
-[[h3__639588894]]
+[[h3_639588894]]
 ==== 4.3 Delivery Summary
 
 The *Delivery Summary* pop-up is used to review and edit (if needed) the
 delivery details. For more information, refer
-to xref:delivery-management#h2__1374863314[Delivery Summary].
+to xref:delivery-management#h2_1374863314[Delivery Summary].
 
 [[h3_727125212]]
 ==== 4.4 Calculate Price using the SDK Step
 
 xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-sdk-step[If the SDK step is implemented], the *Calculate
 Discounts* button appears on the **Order Car**t screen. Tap the button
-to xref:admin-guide/managing-ct-orders/discount-management/index#h2__1225315997[calculate discounts].
+to xref:admin-guide/managing-ct-orders/discount-management/index#h2_1225315997[calculate discounts].
 
 [width="100%",cols="50%,50%",]
 |===

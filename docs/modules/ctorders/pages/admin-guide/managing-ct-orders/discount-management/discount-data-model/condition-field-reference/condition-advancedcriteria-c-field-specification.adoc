@@ -9,7 +9,7 @@ the [.object]#Condition# object is *Advanced*.
 
 :toc: :toclevels: 3
 
-[[h2__1997029544]]
+[[h2_1997029544]]
 === Advanced Criteria 1.0
 
 The *Advanced Criteria* field is used to define the group discount for
@@ -97,12 +97,12 @@ get a discount.
 
 
 Required
-for xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification#h2__1997029544[Advanced
+for xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification#h2_1997029544[Advanced
 Criteria 1.0].
 
 |===
 
-[[h3__1323252625]]
+[[h3_1323252625]]
 ==== Condition
 
 The applied condition.
@@ -124,7 +124,7 @@ The required condition. Available values:
 
 * filter
 See
-xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification#h3__1623789156[Filter].
+xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification#h3_1623789156[Filter].
 * minCount
 Seexref:condition-advancedcriteria-c-field-specification.html#h3_290861277[Minimum
 Quantity].
@@ -143,7 +143,7 @@ will be applied to the products that match the filter criteria.
 
 |===
 
-[[h3__1623789156]]
+[[h3_1623789156]]
 ==== Filter
 
 A filter defines which[.object]#Order Line Items# can be used
@@ -163,7 +163,7 @@ Available values:
 
 |[.apiobject]#items# |An array of Filter Items |Yes a|
 See
-xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification#h3__764213188[Filter
+xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification#h3_764213188[Filter
 items].
 
 
@@ -172,7 +172,7 @@ At least one item must be provided.
 
 |===
 
-[[h3__764213188]]
+[[h3_764213188]]
 ==== Filter Items
 
 [width="100%",cols="25%,25%,25%,25%",]
@@ -289,7 +289,7 @@ Available values:
 quantity
 |===
 
-[[h3__626528442]]
+[[h3_626528442]]
 ==== Level Based on Filter
 
 The list of products that affect the group discount. These products'
@@ -319,7 +319,7 @@ Available values:
 |[.apiobject]#items# |An array of Level Based on Filter Items
 |Yes a|
 See
-xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification#h3__287654427[Level
+xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification#h3_287654427[Level
 Based on Filter Items].
 
 
@@ -328,7 +328,7 @@ At least one item must be provided.
 
 |===
 
-[[h3__287654427]]
+[[h3_287654427]]
 ==== Level Based on Filter Items
 
 Specify[.apiobject]#operator# and[.apiobject]#items#

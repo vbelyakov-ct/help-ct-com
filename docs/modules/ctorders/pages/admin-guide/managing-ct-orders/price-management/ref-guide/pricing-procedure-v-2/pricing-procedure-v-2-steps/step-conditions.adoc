@@ -3,7 +3,7 @@
 Each step's item will be calculated only if the conditions of the step
 are met or if there are no conditions for the step.
 
-[[h2__136084655]]
+[[h2_136084655]]
 === Condition Level Keys
 
 [width="100%",cols="25%,25%,25%,25%",]
@@ -20,7 +20,7 @@ Available values:
 Condition Level or Condition Level Item object must be provided.
 |===
 
-[[h2__625014080]]
+[[h2_625014080]]
 === Condition Level Item keys
 
 [width="100%",cols="25%,25%,25%,25%",]
@@ -34,7 +34,7 @@ xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure
 Formats].
 
 |[.apiobject]#operator# |Enum |Yes
-|xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/step-conditions#h2__748327130[Available operators] depending
+|xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/step-conditions#h2_748327130[Available operators] depending
 on the field data type.
 
 |[.apiobject]#value# |Boolean |No |Target values for fields with
@@ -59,7 +59,7 @@ At least one item is required.
 
 |===
 
-[[h2__748327130]]
+[[h2_748327130]]
 === Condition Operators
 
 Check which operators can be used with the available field data types.
@@ -116,7 +116,7 @@ Yes
 [.apiobject]#object# key
 |===
 
-[[h2__1406500097]]
+[[h2_1406500097]]
 === Examples
 
 [{plus}] xref:javascript:void(0)[Standard AND condition]
