@@ -15,7 +15,7 @@ _CT Products_ from these catalogs to the current order:
 
 * The[.object]#Catalog# object must be available for the sales
 rep.
-* xref:admin-guide/managing-ct-orders/catalog-management/catalog-management[The Catalog record] must be active and:
+* xref:admin-guide/managing-ct-orders/catalog-management/index[The Catalog record] must be active and:
 ** xref:quick-start/creating-and-adding-catalogs-1-0[assigned to the current
 account];
 [NOTE] ==== Set the *Available for All Accounts* checkbox on the
@@ -120,7 +120,7 @@ The *Order Cart* page consists of the following parts:
 image:order-cart-layout.png[]
 
 * *(1)* The main cart area with the configured columns
-xref:order-line-item-field-reference[for Order Line Items] contains
+xref:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/order-line-item-field-reference.adoc[for Order Line Items] contains
 read-only fields with the prices from the corresponding CT Price Book
 and applied discounts, additional fields that are configured using the
 layout setting.

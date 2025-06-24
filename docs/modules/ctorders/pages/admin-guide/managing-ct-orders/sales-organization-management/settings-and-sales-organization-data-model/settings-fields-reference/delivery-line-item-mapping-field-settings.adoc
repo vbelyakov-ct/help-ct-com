@@ -18,7 +18,7 @@ Object record type API name:
 |List Price Field
 |[.apiobject]#orders__ListPriceField__c# |Text(255)
 |The API name of a field on
-xref:ct-price-book-line-item-field-reference[Price Book Line Item]
+xref:admin-guide/managing-ct-orders/product-management/product-data-model/ct-price-book-line-item-field-reference.adoc[Price Book Line Item]
 that stores a product price from the specific price book.
 
 |Product |[.apiobject]#orders__Product2Id__c#
@@ -30,7 +30,7 @@ that stores a product price from the specific price book.
 |Quantity Field
 |[.apiobject]#orders__QuantityField__c# |Text(255)
 |The field API name of a field
-on xref:delivery-line-item-field-reference[Delivery Line
+on xref:admin-guide/managing-ct-orders/delivery-management/delivery-line-item-field-reference.adoc[Delivery Line
 Item] to store the number of products per order delivery.
 
 |Sales Organization
@@ -40,7 +40,7 @@ Item] to store the number of products per order delivery.
 |Total Discount Field
 |[.apiobject]#orders__TotalDiscountField__c#
 |Text(255) |The API name of a field
-on xref:delivery-line-item-field-reference[Delivery Line Item] that
+on xref:admin-guide/managing-ct-orders/delivery-management/delivery-line-item-field-reference.adoc[Delivery Line Item] that
 stores the total discount for a product. Calculation
 formula: [.apiobject]#(ListPrice* quantity) - (UnitPtice
 * quantity)#.
@@ -48,13 +48,13 @@ formula: [.apiobject]#(ListPrice* quantity) - (UnitPtice
 |Total Price Field
 |[.apiobject]#orders__TotalPriceField__c# |Text(255)
 |The API name of of a field
-on xref:delivery-line-item-field-reference[Delivery Line Item] that
+on xref:admin-guide/managing-ct-orders/delivery-management/delivery-line-item-field-reference.adoc[Delivery Line Item] that
 stores the total price with discount for a product. Calculation
 formula: [.apiobject]#UnitPrice* quantity#.
 
 |Unit Price Field
 |[.apiobject]#orders__UnitPriceField__c# |Text(255)
 |The API name of the field
-on xref:delivery-line-item-field-reference[Delivery Line Item] that
+on xref:admin-guide/managing-ct-orders/delivery-management/delivery-line-item-field-reference.adoc[Delivery Line Item] that
 stores a price for one product with a discount.
 |===

@@ -182,7 +182,7 @@ permission to create, edit, and delete the _Delivery_ and _Delivery Line
 Item_ records. If applied, a representative should have permission to
 read the custom _Address_ object. Users with the manager role can also
 have permission to edit _Address_ records.
-. Specify xref:admin-guide/managing-ct-orders/catalog-management/catalog-management[Catalogs] and
+. Specify xref:admin-guide/managing-ct-orders/catalog-management/index[Catalogs] and
 xref:admin-guide/managing-ct-orders/discount-management/promotions[Promotions] based on
 xref:admin-guide/managing-ct-orders/product-management/product-data-model/index[CT Products and Price Books] and assign
 Products. The _Catalog/Promotion_ record should include _CT
@@ -200,7 +200,7 @@ catalogs, price books, and promotions will not be applied.
 representative should have permission to create, edit, and delete the
 _Calculated Discount_ records.
 . xref:configuring-layout-settings-1-0[Create Layout Settings] for
-xref:order-line-item-field-reference[Order Line Item],
+xref:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/order-line-item-field-reference.adoc[Order Line Item],
 xref:admin-guide/managing-ct-orders/catalog-management/catalog-data-model/catalog-line-item-field-reference[Catalog Line Item], and
 xref:admin-guide/managing-ct-orders/discount-management/promotion-data-model/promotion-line-item-field-reference[Promotion Line Item].
 Additionally, specify

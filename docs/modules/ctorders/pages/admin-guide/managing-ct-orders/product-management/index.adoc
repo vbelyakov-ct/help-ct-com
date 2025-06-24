@@ -1,8 +1,8 @@
 = Product Management
 
 Administrators set up products that are assembled into
-xref:catalog-management[Catalogs] and
-xref:promotions[Promotions], and sales representatives used them
+xref:admin-guide/managing-ct-orders/catalog-management/index.adoc[Catalogs] and
+xref:admin-guide/managing-ct-orders/discount-management/promotions.adoc[Promotions], and sales representatives used them
 for xref:workshop1-0-creating-basic-order[creating orders]. You can
 use the standard[.object]#Salesforce Product# object as your
 products, or set up CT Orders integration with the CT CPG or CT Pharma
@@ -30,7 +30,7 @@ is required for this feature and available in case of integration with
 CT CPG or CT Pharma package.#
 * Set up xref:ct-price-book-field-reference[CT Price Books] and
 *List Prices* for each
-product—xref:ct-price-book-line-item-field-reference[CT Price Book
+product—xref:admin-guide/managing-ct-orders/product-management/product-data-model/ct-price-book-line-item-field-reference.adoc[CT Price Book
 Line Item].
 
 

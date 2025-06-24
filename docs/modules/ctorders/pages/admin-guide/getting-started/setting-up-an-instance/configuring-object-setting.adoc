@@ -1,43 +1,23 @@
 = Configuring Object Setting
 
-[cols=",",]
-|===
-|image:info.png[] |By
-default, these settings are already configured after installing the CT
-Order package.
-|===
+NOTE: By default, these settings are already configured after installing the CT  Order package.
 
-Configure xref:settings-fields-reference[the main CT Orders
-settings] for an Instance:
+Configure xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/index.adoc[the main CT Orders settings] for an Instance:
 
 . Go to the *Settings* tab and click *New*.
 . In the *New Settings* window, select *Object Settings* record type.
 . Specify the following:
-* In the *Activity Object*, select the corresponding *Activity* object:
-CT CPG or CT Pharma.
+* In the *Activity Object*, select the corresponding [.object]#Activity# object: CT CPG or CT Pharma.
 * In the *Product Object*, select the corresponding *Product* object.
-* Select the corresponding *Product Component Object*, which will be
-used as the bundle component.
-* Specify *Group
-Object*,* *if https://help.customertimes.com/articles/project-ct-cpg/configuring-cpg-groups[dynamic
-groups] will be used.
-* In the *Address Object*, specify the API name of the standard
-*Address* object.
-* In the *SKU Field*, specify the API name of the standard *Active*
-field of the corresponding[.object]#Product# object.
-** The *SKU Field* setting is required for the proper operation of
-the xref:catalog-management[Catalog] and xref:promotions[Promotions] pages.
-The *SKU* attribute defines whether the product record can be added to
-an order. It distinguishes the product SKU record from other product
-records used to create hierarchy, such as brands, families, etc.
-** If the *SKU Field* is set
-to [.apiobject]#CTCPG__IsSKU__c#, then it will
-correspond with the *SKU* checkbox on the[.object]#Product#
-object. If the *SKU* checkbox is unchecked, the product cannot be added
-to an order, but will be displayed in the product hierarchy.
-
-[TIP] ==== You may create a custom field of the corresponding
-[.object]#Product ==== object to use as the *SKU Field*.#
+* Select the corresponding *Product Component Object*, which will be used as the bundle component.
+* Specify *Group Object*, if xref:ctcpg:admin-guide/cpg-groups-management/create-and-update-a-dynamic-cpg-group.adoc[dynamic groups] will be used.
+* In the *Address Object*, specify the API name of the standard *Address* object.
+* In the *SKU Field*, specify the API name of the standard *Active* field of the corresponding [.object]#Product# object.
+** The *SKU Field* setting is required for the proper operation of the xref:admin-guide/managing-ct-orders/catalog-management/index.adoc[Catalog] and xref:admin-guide/managing-ct-orders/discount-management/promotions.adoc[Promotions] pages. The *SKU* attribute defines whether the product record can be added to an order. It distinguishes the product SKU record from other product records used to create hierarchy, such as brands, families, etc.
+** If the *SKU Field* is set to [.apiobject]#CTCPG\__IsSKU__c#, then it will correspond with the *SKU* checkbox on the [.object]#Product# object. If the *SKU* checkbox is unchecked, the product cannot be added to an order, but will be displayed in the product hierarchy.
++
+TIP: You may create a custom field of the corresponding [.object]#Product object to use as the *SKU Field*.
++
 image:ObjectSettings.png[]
 . Click *Save*.
 

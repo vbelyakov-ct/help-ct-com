@@ -1,7 +1,7 @@
 = Layout Setting Field Reference
 
 The _Layout Setting_ record type is intended to store configurations of
-xref:catalog-management[Catalog], xref:promotions[Promotions],
+xref:admin-guide/managing-ct-orders/catalog-management/index.adoc[Catalog], xref:admin-guide/managing-ct-orders/discount-management/promotions.adoc[Promotions],
 xref:how-to-set-up-delivery-summary[Delivery Summary] and
 xref:order-management[Order] layouts for Salesforce and the CT
 Mobile app.
@@ -153,8 +153,8 @@ Item ==== layout.#
 Available since CT Mobile version 2.9
 
 Applies to xref:ct-order-field-reference[CT Order] related objects
-(xref:order-line-item-field-reference[Order Line Item],
-xref:delivery-line-item-field-reference[Delivery Line Item],
+(xref:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/order-line-item-field-reference.adoc[Order Line Item],
+xref:admin-guide/managing-ct-orders/delivery-management/delivery-line-item-field-reference.adoc[Delivery Line Item],
 xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/calculated-discount-field-reference.adoc[Calculated Discount]) and
 requires
 https://help.salesforce.com/s/articleView?id=sf.admin_enable_multicurrency.htm&type=5[multiple
@@ -179,12 +179,12 @@ It is necessary to create the *Settings* record with the *Layout
 Setting* record type for the following objects:
 
 *[.object]#Catalog Line Item# and [.object]#Catalog
-Assignment# to have the ability xref:catalog-management[to add
+Assignment# to have the ability xref:admin-guide/managing-ct-orders/catalog-management/index.adoc[to add
 products to a catalog and assign accounts].
 [NOTE] ==== It is highly recommended to set up a single catalog
 layout for an instance. ====
 *[.object]#Promotion Line Item# and [.object]#Promotion
-Assignment# to have the ability xref:promotions#h2__492952072[to
+Assignment# to have the ability xref:admin-guide/managing-ct-orders/discount-management/promotions.adoc#h2__492952072[to
 add products to the promotion and assign accounts].
 *[.object]#Order Line Item# to view
 xref:online-order[product details in the order cart].
