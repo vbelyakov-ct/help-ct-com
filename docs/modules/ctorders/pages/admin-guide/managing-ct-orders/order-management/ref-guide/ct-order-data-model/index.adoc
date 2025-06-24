@@ -19,7 +19,7 @@ image:CT-Order-Data-Model.png[]
 |xref:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/ct-order-data-model[CT Order]
 |[.apiobject]#orders__Order__c# | |This object is
 intended to store order data. Each record represents an order with
-specific[.object]#CT Products# from available
+specific [.object]#CT Products# from available
 [.object]#Catalogs#, prices from[.object]#CT Price
 Book# according to pricing procedures and discounts management,
 configured delivery dates, and order status.
@@ -43,7 +43,7 @@ quantity for an order and each delivery.
 |xref:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/order-line-item-field-reference[Order Line Item]
 |[.apiobject]#orders__OrderLineItem__c# | |This
 object is intended to store details about related
-[.object]#Catalog# and[.object]#CT Price Book#, general
+[.object]#Catalog# and [.object]#CT Price Book#, general
 information about promotions, discounts, and totals for each
 [.object]#CT Product#.
 

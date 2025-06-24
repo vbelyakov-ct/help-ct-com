@@ -128,7 +128,7 @@ same field on the next order item.
 * The *Field Search Based On* field is added to the
  xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc-field-reference[Calculation Type] object.
 This field determines if *Condition Fields* will be searched starting
-from[.object]#Order Line Item# or[.object]#Delivery
+from[.object]#Order Line Item# or [.object]#Delivery
 Line Item# when performing calculation for the Web Service.
 * Calculation Types with *Field Search Based On* set to _Delivery Line
 Item_ will be ignored and excluded from the xref:price-tag[Price
@@ -282,7 +282,7 @@ Orders functionalities.
 * Assign
 xref:additional-permissions-to-override-the-standard-logic[new
 custom permissions] to override the standard logic:
-** Allow changing *Condition Details* of[.object]#Promotion#.
+** Allow changing *Condition Details* of [.object]#Promotion#.
 
 
 
@@ -309,7 +309,7 @@ and discount per each delivery.]
 * The Disable Mass Adding option on a Catalog record defines whether a
 sales rep can add a whole catalog to the order cart.
 * Validation for xref:links[Links] with the *Best Of* dependency
-action: conditions from one[.object]#Calculation Type# must
+action: conditions from one [.object]#Calculation Type# must
 have the same value in the *Unit Of Measure* field.
 * Changing criteria for searching the appropriate
 xref:totals-panel-setting-field-reference[Totals Panel Settings]
@@ -332,7 +332,7 @@ Orders functionalities.
 * Assign
 xref:additional-permissions-to-override-the-standard-logic[new
 custom permissions] to override the standard logic:
-** Allow the same[.object]#Calculation Types# in the
+** Allow the same [.object]#Calculation Types# in the
 [.object]#Pricing Procedure# steps.
 
 
@@ -363,7 +363,7 @@ title is the value of the first field in a compact layout, and the
 subtitle is the value of the second field in a compact layout.
 ** In the catalogs and promotions, products are arranged according to
 their order number (if given) or the order defined inside
-[.object]#Catalogs# and[.object]#Promotions#
+[.object]#Catalogs# and [.object]#Promotions#
 . Drag-and-drop products to manage their order.
 ** The ability to
 https://help.customertimes.com/articles/ct-orders-3-0/layout-setting-field-reference[display
@@ -745,7 +745,7 @@ orders] in all fields among all products in *Catalog* or *Promotion*
 sections and already added to the order cart, including freebies.
 * With xref:online-order#h3_2083175848[mass actions in order], add
 or remove all products added to the cart from a selected
-[.object]#Catalog# or[.object]#Promotion# with one
+[.object]#Catalog# or [.object]#Promotion# with one
 click.
 * Use xref:online-order#h2_734239727[the active price filter] to
 apply the filter to all records in your order cart's Catalog and

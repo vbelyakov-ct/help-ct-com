@@ -22,7 +22,7 @@ Advanced Criteria JSON] for the *Advanced* calculation type.
 
 
 
-For[.object]#Calculation Type# with the *Condition* record
+For [.object]#Calculation Type# with the *Condition* record
 type, specify a JSON with the conditions a product must meet.
 
 [TIP] ==== When the [.object]#Calculation Type ==== with
@@ -147,7 +147,7 @@ Yes
 
 If the [.object]#Order Line Item# has the not empty required
 fields specified for the [.object]#Condition Group #object and
-meets the child[.object]#Condition# criterion, a discount will
+meets the child [.object]#Condition# criterion, a discount will
 be applied.
 
 . Specify the list of fields that should be not empty on the *Order Line
@@ -169,7 +169,7 @@ on the *Calculation Type* record with the *Condition Group* record type:
 
 
 Values in the [.apiobject]#orders__ConditionDetails__c#
-field of the child[.object]#Calculation Type# with the
+field of the child [.object]#Calculation Type# with the
 *Condition* record type:
 [.apiobject]#"Agriculture","Customer","a0p3X00000WIvicQAD"# or
 [.apiobject]#Agriculture,Customer,a0p3X00000WIvicQAD#

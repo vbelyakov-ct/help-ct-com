@@ -69,7 +69,7 @@ considering all conditions for the selected _Freebie Type_ record, for
 example, only products of a specified brand.
 * *List Based*
 Apply when you want to grant a specific product selected on the _Freebie
-Line Item_ record related to a[.object]#Freebie Condition#.
+Line Item_ record related to a [.object]#Freebie Condition#.
 [TIP] ==== It is possible to set quantity on a _Product_ record,
 while for other methods you can only set the minimum or maximum quantity
 on their respective levels. ====
@@ -169,7 +169,7 @@ list of products that can be granted as freebies is taken from the
 
 The SOQL request for the [.object]#CT Product# object provides a
 dynamic search among the specified object records and other related
-objects with fields of the _Lookup_ type to[.object]#CT
+objects with fields of the _Lookup_ type to [.object]#CT
 Product#. The system compiles a list of all products that matched the
 criteria. For this method, products for each _Freebie Level_ are
 calculated per group of products that match the conditions in the

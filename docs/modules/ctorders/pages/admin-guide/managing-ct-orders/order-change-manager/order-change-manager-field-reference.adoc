@@ -38,20 +38,20 @@ information about the related deliveries to the particular
 |[.apiobject]#orders__DeliveryLineItemCollection__c#
 |Long Text Area(131072) |This field stores a JSON file for
 [.apiobject]#"type" = "orders__DeliveryLineItem__c"#
-with all information about the related[.object]#Delivery Line
-Items# records to the particular[.object]#Order#.
+with all information about the related [.object]#Delivery Line
+Items# records to the particular [.object]#Order#.
 
 |Order |[.apiobject]#orders__OrderId__c#
 |Master-Detail(CT Order) |This field stores a JSON file for
 [.apiobject]#"type" = "orders__Order__c"# with all
-information about the particular[.object]#Order#.
+information about the particular [.object]#Order#.
 
 |Order Line Item Collection
 |[.apiobject]#orders__ExternalID__c# |Long Text
 Area(131072) |This field stores a JSON file for
 [.apiobject]#"type" = "orders__OrderLineItem__c"# with
-all information about the related[.object]#Order Line Items#
-records to the particular[.object]#Order#.
+all information about the related [.object]#Order Line Items#
+records to the particular [.object]#Order#.
 
 |Order Stage |[.apiobject]#orders__OrderType__c#
 |Text(255) |This field stores the current order stage.
@@ -75,5 +75,5 @@ ID and[.apiobject]#0055J000001L7aTQAS# is the user identifier.
 
 |Session Id |[.apiobject]#orders__SessionId__c#
 |Text(255) |The field stores the identifier of the session, during
-which data of the particular[.object]#Order# was transferred.
+which data of the particular [.object]#Order# was transferred.
 |===

@@ -4,7 +4,7 @@ the [.object]#Condition Dependency# object is used to store
 xref:admin-guide/managing-ct-orders/discount-management/links[a logic of links] for conditions to build dependencies
 of one condition on another.
 
-Available for[.object]#Calculation Type# of *Condition* record
+Available for [.object]#Calculation Type# of *Condition* record
 type.
 
 '''''
@@ -65,7 +65,7 @@ condition is applied:
 appropriate  xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc-field-reference[Calculation
 Type].
 ** The maximum markup if the *Calculation Method* is *Increase* on the
-appropriate[.object]#Calculation Type#.
+appropriate [.object]#Calculation Type#.
 * *Reduce*
 Reduce(A, B): the maximum freebie quantity in condition A will reduce by
 the freebie quantity that were applied when condition B triggered.
@@ -106,7 +106,7 @@ values:
 |Dependent Condition
 |[.apiobject]#orders__DependentConditionId__c#
 |Lookup(Dependent Condition) a|
-Specify the dependent[.object]#Condition#.
+Specify the dependent [.object]#Condition#.
 
 
 
@@ -116,7 +116,7 @@ To Freebie*.
 |Dependent Freebie Condition
 |[.apiobject]#orders__DependentFreebieConditionId__c#
 |Lookup(Dependent Freebie Condition) a|
-Specify the controlling[.object]#Freebie Condition#.
+Specify the controlling [.object]#Freebie Condition#.
 
 
 

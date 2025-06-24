@@ -1,10 +1,10 @@
 = Snippet: Add Price Book Line Item
 
-If you created a new[.object]#CT Price Book#, you will need to
-manually add[.object]#CT Price Book Line Items#.
+If you created a new [.object]#CT Price Book#, you will need to
+manually add [.object]#CT Price Book Line Items#.
 
-If no[.object]#CT Price Book Line Item# is found for a
-[.object]#CT Product#, the[.object]#CT Product# will
+If no [.object]#CT Price Book Line Item# is found for a
+[.object]#CT Product#, the [.object]#CT Product# will
 not be added to the list of products for delivery on the CT Order page.
 
 . Do one of these:
@@ -17,7 +17,7 @@ image:add-a-price-book-line-item-2020-05-09.png[]
 * Set up *Minimum* and *Maximum Quantity Per Delivery*.
 * Set up *Units Count Step*. For example, if you set it as _10_, this
 product can be added in quantity of 10, 20, 30 etc.
-* Enter a *List Price* for a[.object]#CT Product#.
+* Enter a *List Price* for a [.object]#CT Product#.
 * Select *CT Product* from the list of available products.
 [NOTE] ==== This field should be added to the page layout
 manually after you create the lookup to the product object in your

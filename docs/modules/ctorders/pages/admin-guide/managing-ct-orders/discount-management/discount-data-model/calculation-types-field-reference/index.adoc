@@ -26,16 +26,16 @@ Type: ApplyConditionType__c Field Specification].
 Available values:
 
 * *First* is used to apply the first matching condition (if found) to
-the individual[.object]#Calculation Type# and go to the next
+the individual [.object]#Calculation Type# and go to the next
 [.object]#Calculation Type#.
 
 * *FirstNonZero* is used to apply the first non-zero matching condition
-to the individual[.object]#Calculation Type# and go to the next
+to the individual [.object]#Calculation Type# and go to the next
 [.object]#Calculation Type#.
 Available only for the *Condition* record type.
 
 * *AllNonZero* is used to apply all non-zero matching conditions to the
-individual[.object]#Calculation Type# and go to the next
+individual [.object]#Calculation Type# and go to the next
 [.object]#Calculation Type#, and all discount conditions will be
 used to calculate *Unit Price*.
 Available only for the *Condition* record type.
@@ -74,7 +74,7 @@ The applied method of price calculation:
 |Condition Fields List
 |[.apiobject]#orders__ConditionFieldsList__c# |Long Text
 Area(32768) |List of fields that are available for the user. The list
-includes all child fields for[.object]#Condition Group# and
+includes all child fields for [.object]#Condition Group# and
 [.object]#Condition# objects.
 
 The field is automatically updated based on the *Condition Fields Update
@@ -97,11 +97,11 @@ When a batch is processed, the checkbox is deselected.
 |[.apiobject]#orders__ConditionRecalculationFields__c#
 |Long Text Area(32768) a|
 Specify the API names of fields that will initiate the matching
-conditions search for[.object]#Order Line Item# records from
+conditions search for [.object]#Order Line Item# records from
 the beginning when changed.
 
 * Only fields from the [.object]#Order#
-[.object]#Delivery# and[.object]#Order Line Item#
+[.object]#Delivery# and [.object]#Order Line Item#
 objects are supported. If the specified fields belong to any other
 object, these fields will be skipped in the process.
 * Users must have access to the specified fields. Otherwise, the price
@@ -132,7 +132,7 @@ external identifier.
 |[.apiobject]#orders__FieldSearchBasedOn__c#
 |Picklist a|
 Determines if *Condition Fields* will be searched starting from
-[.object]#Order Line Item# or[.object]#Delivery Line
+[.object]#Order Line Item# or [.object]#Delivery Line
 Item#. Available values:
 
 * Order Line Item (default)

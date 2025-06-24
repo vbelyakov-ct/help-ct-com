@@ -69,7 +69,7 @@ Manager],
 and https://help.customertimes.com/articles/ct-mobile-ios-en/online-records-fetching[Online
 Records Fetching], does not apply to those CT Orders objects.
 . On the Salesforce side, the system creates an _Order Change Manager_
-record for the particular[.object]#Order# and fills it out with
+record for the particular [.object]#Order# and fills it out with
 the received JSONs. If a previous _Order Change Manager_ record is
 found, it will be deleted. For more information, refer
 to xref:order-change-manager-field-reference[Order Change Manager

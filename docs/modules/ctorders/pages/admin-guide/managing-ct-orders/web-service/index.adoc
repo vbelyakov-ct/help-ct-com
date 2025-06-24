@@ -11,7 +11,7 @@ service supports all discount calculations as well as the new ones
 available in CT Orders since version 3.0:
 
 * xref:admin-guide/managing-ct-orders/discount-management/links[Links].
-* Applying several conditions in one[.object]#Calculation
+* Applying several conditions in one [.object]#Calculation
 Type#:
 xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification#h2_1585895621[Advanced
 Criteria 2.0],
@@ -106,7 +106,7 @@ SOQL queries on the Salesforce side:
 * xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-sdk-step[The SDK step] of the pricing procedure uses the
 [.apiobject]#CalculatorServiceRest# Apex class.
 * xref:admin-guide/managing-ct-orders/freebies-management/index#h3_972561451[Freebie calculation] with
-the *Criteria Based* adding method of[.object]#Freebie
+the *Criteria Based* adding method of [.object]#Freebie
 Condition# uses the SOQL query to retrieve the list of products.
 
 [[h3_364386004]]

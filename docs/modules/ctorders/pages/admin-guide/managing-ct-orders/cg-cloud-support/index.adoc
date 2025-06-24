@@ -1,148 +1,84 @@
 = CG Cloud Support
+:toc:
 
-To obtain access to the CG Cloud objects, create a case to Salesforce.
+WARNING: To obtain access to the CG Cloud objects, create a case to Salesforce.
 
-https://www.salesforce.com/eu/products/consumer-goods-cloud/overview/[CG
-Cloud] is the standard Salesforce solution for CPG companies to keep
-essential products in the right stores. Integrate CG Cloud with our CT
-Orders package to gain advantages from both products.
-
-:toc: :toclevels: 3
+link:https://www.salesforce.com/eu/products/consumer-goods-cloud/overview/[CG Cloud] is the standard Salesforce solution for CPG companies to keep essential products in the right stores. Integrate CG Cloud with our CT Orders package to gain advantages from both products.
 
 [[h2_546865896]]
-=== Object Model
+== Object Model
 
-The CT Orders object model with CG Cloud support allows you to apply the
-CT Orders logic to the [.object]#Salesforce Product# and
-[.object]#Retail Store# objects. Depending on your business
-goals, you can either set up support for the Salesforce products or both
-Salesforce products and retail stores.
+The CT Orders object model with CG Cloud support allows you to apply the CT Orders logic to the [.object]#Salesforce Product# and [.object]#Retail Store# objects. Depending on your business goals, you can either set up support for the Salesforce products or both Salesforce products and retail stores.
 
-When the CT CPG or CT Pharma package is installed in your Salesforce
-instance, if necessary, set up dynamic groups with Salesforce products
-or retail stores and/or the appropriate[.object]#Product
-Component# object for bundles.
+When the CT CPG or CT Pharma package is installed in your Salesforce instance, if necessary, set up dynamic groups with Salesforce products or retail stores and/or the appropriate [.object]#Product Component# object for bundles.
 
-CT Orders can work without the CT CPG or CT Pharma solution if the Sales
-Cloud, E-Commerce, or CG Cloud license is activated.
+CT Orders can work without the CT CPG or CT Pharma solution if the Sales Cloud, E-Commerce, or CG Cloud license is activated.
 
-
-
-image:CG-Cloud-Object-Model.png[]
-
-
-
-
+image::CG-Cloud-Object-Model.png[align="center"]
 
 [width="100%",cols="15%,20%,10%,55%"]
 |===
 |*Field* |*API* |*Type* |*Description*
 
-|Product |[.apiobject]#Product2# |Standard Object |Go to
-https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_product2.htm[Salesforce
-Developer] to see the full description.
+|Product |[.apiobject]#Product2# |Standard Object |Go to link:https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_product2.htm[Salesforce Developer] to see the full description.
 
 |Product Component a|
-Depend on the target system:
+Depends on the target system:
 
-*[.apiobject]#CTCPG__ProductComponent__c#
-*[.apiobject]#CTPharma__ProductComponent__c#
+* [.apiobject]#CTCPG\__ProductComponent__c#
+* [.apiobject]#CTPharma\__ProductComponent__c#
 
-|Custom Object |Go to xref:admin-guide/managing-ct-orders/product-management/product-data-model/index[Product Data Model]
-to see the full description.
+|Custom Object |Go to xref:admin-guide/managing-ct-orders/product-management/product-data-model/index.adoc[Product Data Model] to see the full description.
 
 |Retail Store |[.apiobject]#RetailStore# |Standard Object
-|Go to
-https://developer.salesforce.com/docs/atlas.en-us.retail_api.meta/retail_api/sforce_api_objects_retailstore.htm[Consumer
-Goods Cloud Developer Guide] to see the full description.
+|Go to link:https://developer.salesforce.com/docs/atlas.en-us.retail_api.meta/retail_api/sforce_api_objects_retailstore.htm[Consumer Goods Cloud Developer Guide] to see the full description.
 |===
 
 [[h3_656771318]]
-==== Salesforce Product
+=== Salesforce Product
 
 To work with the [.object]#Salesforce Product# object:
 
-. xref:cg-cloud-configuring-object-setting[Create an OM Settings
-record] of the Object Setting record type and specify the
-[.object]#Salesforce Product# object.
-. When configuring the settings, use the
-[.apiobject]#orders__Product2Id__c# lookups on the
-following objects:
-*[.object]#Order Line Item#
-*[.object]##[.object]#Delivery Line Item#
-*[.object]##[.object]#Catalog Line Item#
-*[.object]##[.object]#Promotion Line Item#
-*[.object]##[.object]#CT Price Book Line Item#
-*[.object]##[.object]#Freebie Line Item#
-. ​To work with bundles, in *Object Settings* select the
-[.object]#Product Component# object of the target system, such
-as CT CPG or CT Pharma. If the [.object]#Product Component# is
-left blank, but the *Bundle* checkbox is active for
-a [.object]#Salesforce Product# record, this record will be
-considered a regular product.
+. xref:./cg-cloud-configuring-object-setting.adoc[Create an OM Settings record] of the Object Setting record type and specify the [.object]#Salesforce Product# object.
+. When configuring the settings, use the [.apiobject]#orders\__Product2Id__c# lookups on the following objects:
+* [.object]#Order Line Item#
+* [.object]#Delivery Line Item#
+* [.object]#Catalog Line Item#
+* [.object]#Promotion Line Item#
+* [.object]#CT Price Book Line Item#
+* [.object]#Freebie Line Item#
+. To work with bundles, in *Object Settings* select the [.object]#Product Component# object of the target system, such as CT CPG or CT Pharma. If the [.object]#Product Component# is left blank, but the *Bundle* checkbox is active for a _Salesforce Product_ record, this record will be considered a regular product.
 
 [[h3_2058563056]]
-==== Retail Store
+=== Retail Store
 
-Working with retail stores is the same as working with the accounts, for
-example, you can assign retail stores to catalog(s) and promotion(s),
-create a dynamic group with retail stores and/or Salesforce products,
-create orders, and set up deliveries to the retail store addresses.
+Working with retail stores is the same as working with the accounts, for example, you can assign retail stores to catalog(s) and promotion(s), create a dynamic group with retail stores and/or Salesforce products, create orders, and set up deliveries to the retail store addresses.
 
-Please note, that the [.object]#Retail Store# object records
-(child) are always linked to the [.object]#Account# object
-(parent) by the Master-Detail relationship.
-The [.object]#Account# object stores information about retail
-business accounts, including billing and shipping payment information
-and store hierarchies. The [.object]#Retail Store# object stores
-the information about each physical store. Considering this relationship
-for the CT Orders, if you want to create an order from
-the [.object]#Retail Store# object, the *Order Allowed* checkbox
-should be active on the parent [.object]#Account# object.
+Please note, that the [.object]#Retail Store# object records (child) are always linked to the [.object]#Account# object (parent) by the Master-Detail relationship.
+The [.object]#Account# object stores information about retail business accounts, including billing and shipping payment information and store hierarchies. The [.object]#Retail Store# object stores the information about each physical store. Considering this relationship for the CT Orders, if you want to create an order from
+the [.object]#Retail Store# object, the *Order Allowed* checkbox should be active on the parent [.object]#Account# object.
 
+To work with the standard [.object]#Retail Store# object:
 
-
-To work with the standard[.object]#Retail Store# object:
-
-. Create a xref:cg-cloud-creating-a-sales-organization[Sales
-Organization] record and specify the [.object]#Retail Store#
-object for it.
-. Add the [.apiobject]#RetailStoreId__c# lookup to the
-[.object]#Catalog# and *Promotion* objects.
-. Assign the desired[.object]#Promotions# and
-[.object]#Catalogs# to the [.object]#Retail Store#
-records. If necessary,
-xref:setting-up-a-dynamic-group-assignment-1-0[create a dynamic
-group] with proper retail stores to assign to catalogs and promotions.
-. xref:cg-cloud-configuring-addresses[Configure addresses].
+. Create a xref:./cg-cloud-creating-a-sales-organization.adoc[Sales Organization] record and specify the [.object]#Retail Store# object for it.
+. Add the [.apiobject]#RetailStoreId__c# lookup to the [.object]#Catalog# and *Promotion* objects.
+. Assign the desired [.object]#Promotions# and [.object]#Catalogs# to the [.object]#Retail Store# records. If necessary, xref:admin-guide/workshops/workshop1-0-creating-basic-order/creating-and-assigning-catalogs-1-0/setting-up-a-dynamic-group-assignment-1-0.adoc[create a dynamic group] with proper retail stores to assign to catalogs and promotions.
+. xref:./cg-cloud-configuring-addresses.adoc[Configure addresses].
 
 [[h2_2145461642]]
-=== CG Cloud Support in the CT Mobile iOS app
+== CG Cloud Support in the CT Mobile iOS app
 
-To work with CG Cloud in the CT Mobile app, the standard Visit record
-screen must be configured with the help
-of https://help.customertimes.com/articles/ct-layouts-en/creating-a-layout-settings-record[the
-CT Layouts solution]. Mobile users can work with both CG Cloud and CT
-Orders solutions in the CT Mobile app for iOS users.
+To work with CG Cloud in the CT Mobile app, the standard Visit record screen must be configured with the help of link:https://help.customertimes.com/articles/ct-layouts-en/creating-a-layout-settings-record[the CT Layouts solution]. Mobile users can work with both CG Cloud and CT Orders solutions in the CT Mobile app for iOS users.
 
-. Set up xref:admin-guide/managing-ct-orders/cg-cloud-support/cg-cloud-support#h3_656771318[Salesforce Product] and
-xref:admin-guide/managing-ct-orders/cg-cloud-support/cg-cloud-support#h3_2058563056[Retail Stores].
-. To create an order, use
-https://help.customertimes.com/articles/ct-mobile-ios-en/managing-visits-to-retail-stores/a/h3_190353401[the
+. Set up <<h3_656771318, Salesforce Product >>and <<h3_2058563056, Retail Stores>>.
+. To create an order, use link:https://help.customertimes.com/articles/ct-mobile-ios-en/managing-visits-to-retail-stores/a/h3_190353401[the
 Place Order assessment task].
 
-For more information, refer to the
-https://help.customertimes.com/articles/ct-mobile-ios-en/cg-cloud[CG
-Cloud] article.
+For more information, refer to the link:https://help.customertimes.com/articles/ct-mobile-ios-en/cg-cloud[CG Cloud] article.
 
 [[h2_1401497335]]
-=== Dynamic Groups Assignment
+== Dynamic Groups Assignment
 
-In the case of
-xref:cg-cloud-setting-up-dynamic-group-assignment[using dynamic
-groups], set up the support of the [.object]#Retail Store#
-object with the help of the SDK of the target system, such as CT CPG or
-CT Pharma.
+In the case of xref:./cg-cloud-setting-up-dynamic-group-assignment.adoc[using dynamic groups], set up the support of the [.object]#Retail Store# object with the help of the SDK of the target system, such as CT CPG or CT Pharma.
 
-It is necessary to create custom Apex classes and trigger to implement
-this logic.
+NOTE: It is necessary to create custom Apex classes and trigger to implement this logic.

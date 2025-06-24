@@ -14,8 +14,8 @@ Check out the JSON keys and examples.
 Depending on whether an[.object]#Order# was created, edited, or
 deleted on a mobile device, JSON can store the temporary ID or the
 Salesforce record ID for this *Order* record or its related records,
-such as[.object]#Order Line Item#,[.object]#Delivery
-Line Item#, or[.object]#Delivery#.
+such as [.object]#Order Line Item#,[.object]#Delivery
+Line Item#, or [.object]#Delivery#.
 
 
 
@@ -25,7 +25,7 @@ mobile temporary ID in the [.apiobject]#referenceOrderId# and
 were created on the mobile device and will be inserted into the
 Salesforce database after synchronization. The
 xref:admin-guide/managing-ct-orders/order-change-manager/order-change-manager-field-reference[Order Change Manager]
-record will be created for this[.object]#Order#.
+record will be created for this [.object]#Order#.
 
 
 
@@ -68,9 +68,9 @@ the [.apiobject]#referenceOrderId# and [.apiobject]#referenceId# keys.
 collection of the *Order* record and all related records.
 
 |[.apiobject]#attributes# |Array |Yes |A key contains data
-of a particular record, such as[.object]#Order#,
+of a particular record, such as [.object]#Order#,
 [.object]#Order Line Item#,[.object]#Delivery Line
-Item#,[.object]#Delivery#, or[.object]#Calculated
+Item#,[.object]#Delivery#, or [.object]#Calculated
 Discount#.
 
 |[.apiobject]#type# |Enum |Yes |A key stores the object

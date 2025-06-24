@@ -101,15 +101,15 @@ custom *Quantity* field with the required measurement specifications.
 |Text(255) (External ID) (Unique Case Sensitive) |
 
 |Total Discount |[.apiobject]#orders__TotalDiscount__c#
-|Currency(15, 3) |The overall discount for all[.object]#CT
-Products# and[.object]#Deliveries# for the order.
+|Currency(15, 3) |The overall discount for all [.object]#CT
+Products# and [.object]#Deliveries# for the order.
 
 |Total Price |[.apiobject]#orders__TotalPrice__c#
-|Currency(15, 3) |The overall price for all[.object]#CT
-Products# and[.object]#Deliveries# with a discount for the
+|Currency(15, 3) |The overall price for all [.object]#CT
+Products# and [.object]#Deliveries# with a discount for the
 order.
 
 |Unit Price |[.apiobject]#orders__UnitPrice__c#
-|Currency(15, 3) |The price for a single[.object]#CT Product#
+|Currency(15, 3) |The price for a single [.object]#CT Product#
 with a discount for the order.
 |===

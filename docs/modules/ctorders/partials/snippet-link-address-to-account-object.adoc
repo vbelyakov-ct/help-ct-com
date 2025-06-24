@@ -1,9 +1,8 @@
-= Snippet: Link Address to Account Object
 
-You can use an existing default[.object]#Account# object to
+You can use an existing default [.object]#Account# object to
 specify the address.
 
-. To specify the[.object]#Address# object, create a _Settings_
+. To specify the [.object]#Address# object, create a _Settings_
 record with the _Object Settings_ record type.
 . To specify the *Address* field, create a _Settings_ record with the
 _Address Settings_ record type.
@@ -11,18 +10,18 @@ _Address Settings_ record type.
 [[h2_1782833325]]
 === Specify the Address Object
 
-To use the[.object]#Account# object as the
+To use the [.object]#Account# object as the
 [.object]#Address# object:
 
 . Go to the *Settings* tab and click *New*.
 . In the *New Settings* window, select *Object Settings* record type.
 . Specify the desired settings according to the
 link:admin-guide/getting-started/setting-up-an-instance/configuring-object-setting[Configure an Object Setting] guide
-and specify[.object]#Account# in the *Address Object* field.
+and specify [.object]#Account# in the *Address Object* field.
 image:survey1-2021-01-25.jpg[]
 . Click *Save*.
 
-The[.object]#Address# object is set up.
+The [.object]#Address# object is set up.
 
 [[h2_405395202]]
 === Specify the Address Field

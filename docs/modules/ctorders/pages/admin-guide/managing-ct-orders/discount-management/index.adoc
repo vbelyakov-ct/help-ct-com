@@ -52,7 +52,7 @@ supported.
 
 |===
 
-Calculation of discounts for[.object]#Order Line Items# is
+Calculation of discounts for [.object]#Order Line Items# is
 performed by the method of consecutive application of rules with
 appropriate criteria. The rules are manifested in the
 xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/index.adoc[Condition] and
@@ -62,7 +62,7 @@ and filtered and applied one by one in a distinct order.
 . Create an Order.
 *Pricing Procedure* selected in order settings defines _Calculation
 Type_ records which will be checked for appropriate criteria and applied
-to[.object]#Order Line Items#.
+to [.object]#Order Line Items#.
 image:calculation-types-2020-05-24-1.png[]
 . The system picks the first listed _Calculation Type_ record.
 . The records' filtering order is determined by the number in the

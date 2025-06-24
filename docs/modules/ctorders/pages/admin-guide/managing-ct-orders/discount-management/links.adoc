@@ -5,7 +5,7 @@ Service].
 
 The *Links* functionality helps managers to conduct advanced discount
 calculations by creating condition dependencies based on different or
-the same[.object]#Calculation Types#. Links are available both
+the same [.object]#Calculation Types#. Links are available both
 to regular products and freebies and, in case of several appropriate
 records, will be sequentially applied to the order.
 
@@ -30,14 +30,14 @@ records define the links between conditions:
 be displayed, depending on the selected *Dependency Type*. Also, for
 records with errors, a validation will be triggered. ====
 
-* If several conditions are found for one[.object]#Calculation
+* If several conditions are found for one [.object]#Calculation
 Type#, then links are applied sequentially according to the *Order*
 field of the appropriate *Condition Dependency* records.
 * If the condition was canceled on earlier links, it cannot be applied
 in further links in the sequence.
 * xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/calculated-discount-field-reference.adoc[Calculation Logs] are
 generated after all links have been applied and contain all the
-resulting values ​​for all[.object]#Conditions# that have been
+resulting values ​​for all [.object]#Conditions# that have been
 applied for each[.object]#Calculation Type#.
 * Administrators can set 4 types of condition dependencies and the
 sequence of applying them to the orders.
@@ -113,9 +113,9 @@ condition that is suitable for the order. The discount is 30%.
 The conditions are compared, and the best condition is applied.
 
 * The maximum discount if the *Calculation Method* is *Decrease* on the
-appropriate[.object]#Calculation Type#.
+appropriate [.object]#Calculation Type#.
 * The maximum markup if the *Calculation Method* is *Increase* on the
-appropriate[.object]#Calculation Type#.
+appropriate [.object]#Calculation Type#.
 
 a|
 Given:
