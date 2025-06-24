@@ -1,13 +1,14 @@
 = Delivery Field Reference
 
-the [.object]#Delivery# object is intended to store dates and
-other related data about order deliveries.
+the [.object]#Delivery# object is intended to store dates and other related data about order deliveries.
 
-The *Delivery* record will be created for each order delivery.
+NOTE: The *Delivery* record will be created for each order delivery.
+
+include::partial$snippet-formula-fields-not-supported.adoc[]
 
 '''''
 
-Object API name:[.apiobject]#orders__Delivery__c#
+Object API name: [.apiobject]#orders\__Delivery__c#
 
 '''''
 
@@ -16,35 +17,28 @@ Object API name:[.apiobject]#orders__Delivery__c#
 |*Field* |*API Name* |*Type* |*Description*
 
 |Address |[.apiobject]#AddressId__c# |Lookup(Address) a|
-By default, addresses on the Account record are used for deliveries. If
-you want to use the custom [.object]#Address# object, specify it
-in this field. For more information, refer
-to xref:admin-guide/workshops/workshop1-0-creating-basic-order/configuring-an-address-settings-1-0/setting-up-a-custom-address-object-1-0.adoc[Set Up a Custom
-Address Object].
+By default, addresses on the _Account_ record are used for deliveries. If you want to use the custom [.object]#Address# object, specify it in this field. For more information, refer to xref:admin-guide/workshops/workshop1-0-creating-basic-order/configuring-an-address-settings-1-0/setting-up-a-custom-address-object-1-0.adoc[Set Up a Custom Address Object].
 
-The field must be manually created.
+NOTE: The field must be manually created.
 
-|Account |[.apiobject]#orders__AccountId__c#
-|Lookup(Account) |Stores the related *Account* record.
+|Account |[.apiobject]#orders\__AccountId__c#
+|Lookup(Account) |Stores the related _Account_ record.
 
 |Delivery Date
-|[.apiobject]#orders__DeliveryDate__c# |Date |Stores
-the delivery date specified during the order.
+|[.apiobject]#orders\__DeliveryDate__c# |Date |Stores the delivery date specified during the order.
 
-|External Id |[.apiobject]#orders__ExternalId__c#
-|Text(255) (External ID) (Unique Case Sensitive) |Specifies in case of
-using the ERP system data for deliveries.
+|External Id |[.apiobject]#orders\__ExternalId__c#
+|Text(255) (External ID) (Unique Case Sensitive) |Specifies in case of using the ERP system data for deliveries.
 
-|Log Id |[.apiobject]#orders__LogId__c# |Text(255)
-(External ID) (Unique Case Sensitive) |
+|Log Id |[.apiobject]#orders\__LogId__c# |Text(255)
+(External ID) (Unique Case Sensitive) a| include::partial$logid.adoc[]
 
-|Order |[.apiobject]#orders__OrderId__c#
+|Order |[.apiobject]#orders\__OrderId__c#
 |Master-Detail(CT Order) |The parent order identifier.
 
-|Reference Id |[.apiobject]#orders__RefereneId__c#
-|Text(255) (External ID) (Unique Case Sensitive) |
+|Reference Id |[.apiobject]#orders\__RefereneId__c#
+|Text(255) (External ID) (Unique Case Sensitive) a| include::partial$referenceid.adoc[]
 
-|Total Price |[.apiobject]#orders__TotalPrice__c#
-|Currency(15, 3) |The overall price for all CT Products and deliveries
-with discounts in the order.
+|Total Price |[.apiobject]#orders\__TotalPrice__c#
+|Currency(15, 3) |The overall price for all CT Products and deliveries with discounts in the order.
 |===

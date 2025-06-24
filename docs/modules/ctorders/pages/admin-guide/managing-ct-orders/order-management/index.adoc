@@ -172,11 +172,11 @@ type for an instance.
 . xref:admin-guide/managing-ct-orders/sales-organization-management/howtos/how-to-create-a-sales-organization[Create] and
 xref:admin-guide/managing-ct-orders/sales-organization-management/index[set up] a Sales Organization.
 . xref:delivery-management[Set up delivery rules],
-xref:configuring-an-address-settings-1-0[Address Setting], and,
+xref:admin-guide/workshops/workshop1-0-creating-basic-order/configuring-an-address-settings-1-0/index.adoc[Address Setting], and,
 optionally, specify
-xref:adding-delivery-restrictions-to-an-order-1-0[Limit Setting].
+xref:admin-guide/workshops/workshop1-0-creating-basic-order/adding-delivery-restrictions-to-an-order-1-0.adoc[Limit Setting].
 . If you use the custom [.object]#Address# object,
-xref:creating-a-relationship-between-custom-address-object-and-delivery-1-0.html[configure
+xref:admin-guide/workshops/workshop1-0-creating-basic-order/configuring-an-address-settings-1-0/creating-a-relationship-between-custom-address-object-and-delivery-1-0.adoc.html[configure
 the [.object]#Delivery# object]. A representative should have
 permission to create, edit, and delete the _Delivery_ and _Delivery Line
 Item_ records. If applied, a representative should have permission to
@@ -212,12 +212,12 @@ necessary fields for creating order will not be available.
 orders for the corresponding Account record.
 . Specify the xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/totals-panel-setting-field-reference[Totals
 Panel Setting] to display overview metrics on the order creation page.
-. Additionally, specify xref:5-1-setting-up-a-delivery-split[Split
+. Additionally, specify xref:admin-guide/workshops/workshop-5-0-implementing-additional-features/5-1-setting-up-a-delivery-split.adoc[Split
 Setting] to split the finalized order into deliveries according to
 specific logistic conditions.
 
 The setup is complete. The representative can create online or offline
-orders and xref:creating-a-delivery-1-0[set up deliveries].
+orders and xref:admin-guide/workshops/workshop1-0-creating-basic-order/complete-workshop-1-0-checkpoint/creating-a-delivery-1-0.adoc[set up deliveries].
 
 
 

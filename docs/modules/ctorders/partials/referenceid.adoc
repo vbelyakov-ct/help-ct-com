@@ -1,0 +1,8 @@
+The *Reference Id* field is responsible for the deduplication logic and stores the pair of record Id and user Id. For more information, refer to xref:ctorders:admin-guide/managing-ct-orders/order-change-manager/index.adoc[Order Change Manager].
+
+* If the record has not yet been transferred from CT Mobile, the field contains the mobile temporary record Id and the user identifier.
++
+For example, [.apiobject]#a06-AF3AA67B-EA24-4DAB-9C8A-9B70357DAB830055J000001L7aTQAS#, where [.apiobject]#a06-AF3AA67B-EA24-4DAB-9C8A-9B70357DAB83# is the temporary record Id and [.apiobject]#0055J000001L7aTQAS# is the user identifier.
+* If the record was transferred to Salesforce, the field contains the Salesforce record Id and the user identifier.
++
+For example, [.apiobject]#a0g5w00000EQJi1AAH0055J000001L7aTQAS#, where [.apiobject]#a0g5w00000EQJi1AAH# is the Salesforce record Id and [.apiobject]#0055J000001L7aTQAS# is the user identifier.

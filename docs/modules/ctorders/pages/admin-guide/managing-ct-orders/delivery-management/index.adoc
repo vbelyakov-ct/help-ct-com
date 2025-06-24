@@ -1,209 +1,126 @@
 = Delivery Management
+:toc:
 
-Delivery Management is a convenient tool for splitting the product
-deliveries per date according to the Account strategy and the available
-time slots.
+Delivery Management is a convenient tool for splitting the product deliveries per date according to the Account strategy and the available time slots.
 
-If you use customer ERP {plus} Salesforce CRM, you can inherit the
-delivery settings from ERP.
-
-:toc: :toclevels: 3
+TIP: If you use customer ERP {plus} Salesforce CRM, you can inherit the delivery settings from ERP.
 
 [[h2_1261280722]]
-=== CT Order and Delivery Relationship
+== CT Order and Delivery Relationship
 
-When tapping the *Add Cart* button on the selected CT Order, the user
-can xref:creating-a-delivery-1-0[specify preferred delivery dates
-and the number of deliveries].
+When tapping the *Add Cart* button on the selected CT Order, the user can xref:admin-guide/workshops/workshop1-0-creating-basic-order/complete-workshop-1-0-checkpoint/creating-a-delivery-1-0.adoc[specify preferred delivery dates and the number of deliveries].
 
-* By default, the user cannot specify more than 19 deliveries. You can
-reduce the number of deliveries on the appropriate ** _Limit Setting_
-record.
-* ​The delivery date range can be specified in the appropriate _Limit
-Setting_ record.
-* If only one delivery address is available, the *Add Address* field
-will be filled out. If several addresses are available, select the
-corresponding one.
-* ​For each delivery, the _Delivery_ record with the date of delivery and
-the _Delivery Line Item_ record with the quantity of CT Products will be
-created.
+* By default, the user cannot specify more than 19 deliveries. You can reduce the number of deliveries on the appropriate _Limit Setting_ record.
+* The delivery date range can be specified in the appropriate _Limit Setting_ record.
+* If only one delivery address is available, the *Add Address* field will be filled out. If several addresses are available, select the corresponding one.
+* For each delivery, the _Delivery_ record with the date of delivery and the _Delivery Line Item_ record with the quantity of CT Products will be created.
 
+You can add *Deliveries* to the *CT Order* layout.
 
+image::CT-Order-layout-with-Delivery.png[align="center"]
 
-​You can add *Deliveries* to the *CT Order* layout.
+Optionally, specify the *Delivery* layout if you want to monitor records.
 
-image:CT-Order-layout-with-Delivery.png[]
+image::Delivery-Layout.png[align="center"]
 
+Optionally, specify the *Delivery Line Item* layout if you want to monitor records.
 
-
-Optionally, specify the *Delivery* layout if you want to monitor
-records.
-
-image:Delivery-Layout.png[]
-
-
-
-Optionally, specify the *Delivery Line Item* layout if you want to
-monitor records.
-
-image:Delivery-Line-Item-Layout.png[]
+image::Delivery-Line-Item-Layout.png[align="center"]
 
 [[h2_1374863314]]
-=== Delivery Summary
+== Delivery Summary
 
-The *Delivery Summary* pop-up is used to review and edit (if needed) the
-delivery information. It will be displayed if:
+The *Delivery Summary* pop-up is used to review and edit (if needed) the delivery information. It will be displayed if:
 
-* The _Settings_ record with the _Layout Setting_ record type is
-xref:5-2-setting-up-the-delivery-summary[configured and contains at
-least one field to display].
+* The _Settings_ record with the _Layout Setting_ record type is xref:admin-guide/workshops/workshop-5-0-implementing-additional-features/5-2-setting-up-the-delivery-summary.adoc[configured and contains at least one field to display].
 * All validations are passed successfully (no errors in order).
 
-[width="100%",cols="50%,50%",]
-|===
-|For Salesforce users a|
-[cols=",",]
-!===
-! !Available for the instances with the
-enabled xref:admin-guide/managing-ct-orders/web-service/index.adoc[Web Service].
-!===
+[tabs]
+====
+For Salesforce users::
++
+--
+NOTE: Available for the instances with the enabled xref:admin-guide/managing-ct-orders/web-service/index.adoc[Web Service].
 
-If the *Delivery Summary* pop-up is configured, the *Finalize* button on
-the order screen in Salesforce will not be blocked. Click the *Finalize*
-button to open the configured *Delivery Summary* window.
+If the *Delivery Summary* pop-up is configured, the *Finalize* button on the order screen in Salesforce will not be blocked. Click the *Finalize* button to open the configured *Delivery Summary* window.
 
-* Fields with the _Currency_, _Lookup_, or _Text_ data type are
-available for editing if specified.
+* Fields with the _Currency_, _Lookup_, or _Text_ data type are available for editing if specified.
 * The fields with the _Picklist_ data type cannot be edited.
-* Click *Finalize* button in the *Delivery Summary* popup to finish the
-order.
-** If changes in the *Delivery Summary* popup affected quotas and limit
-rules, clicking the *Finalize* button in the *Delivery Summary* pop-up
-will open the order screen with highlighted errors.
-** If changes in the *Delivery Summary* popup affected freebies,
-clicking the *Finalize* button in the *Delivery Summary* pop-up will
-open the order screen with highlighted errors.
-
+* Click *Finalize* button in the *Delivery Summary* popup to finish the order.
+** If changes in the *Delivery Summary* popup affected quotas and limit rules, clicking the *Finalize* button in the *Delivery Summary* pop-up will open the order screen with highlighted errors.
+** If changes in the *Delivery Summary* popup affected freebies, clicking the *Finalize* button in the *Delivery Summary* pop-up will open the order screen with highlighted errors.
++
 image:online-order-2020-06-19.png[]
+--
+For CT Mobile iOS users::
++
+--
+Tap the image:ios-2.9-finalize_order-icon.png[] icon to open the configured *Delivery Summary* window.
 
-|For CT Mobile iOS users a|
-Tap
-the image:ios-2.9-finalize_order-icon.png[] icon
-to open the configured *Delivery Summary* window.
-
-* Fields with the _Currency_, _Number_, _Percent_, or _Text_ data type
-are available for editing if specified.
-* Tap the
-image:ctorders-ios-update-prices-2.7.png[]
- button in to get the valid prices. The invalid prices will be
-highlighted in red color.
-* Tap any column and then tap *Pin delivery* to pin it as the first
-column.
-
+* Fields with the _Currency_, _Number_, _Percent_, or _Text_ data type are available for editing if specified.
+* Tap the image:ctorders-ios-update-prices-2.7.png[] icon in to get the valid prices. The invalid prices will be highlighted in red color.
+* Tap any column and then tap *Pin delivery* to pin it as the first column.
++
 image:delivery-summary-ios-2.9.png[]
-
-|===
+--
+====
 
 [[h2_900882898]]
-=== Order Split
+== Order Split
 
-The Order Split feature is used for distributing products between
-multiple deliveries. This allows your company to create deliveries that
-meet logistic and financial conditions and requirements and make the
-order taking process more efficient and apparent. The split rules are
-commonly based on the following conditions:
+The Order Split feature is used for distributing products between multiple deliveries. This allows your company to create deliveries that meet logistic and financial conditions and requirements and make the order taking process more efficient and apparent. The split rules are commonly based on the following conditions:
 
-* How company delivers products: from different warehouses, different
-suppliers, different types of products, etc.
+* How company delivers products: from different warehouses, different suppliers, different types of products, etc.
 * How company bills customers.
 
 [[h3_2053162833]]
-==== The Split Logic
+=== The Split Logic
 
 The Order Split logic affects the following objects:
 
-*[.object]#Order#
-*[.object]#Order Line Item#
-[NOTE] ==== Any field on the [.object]#Order Line Item
-==== or its parent objects that cannot be changed by an external logic,
-such as formulas, rollup-summary fields, process builder, apex, etc.,
-can be used as criteria for splitting products between deliveries during
-order taking.#
-*[.object]#Delivery#
-*[.object]#Delivery Line Item#
+* [.object]#Order#
+* [.object]#Order Line Item#
++
+NOTE: Any field on the [.object]#Order Line Item# or its parent objects that cannot be changed by an external logic, such as formulas, rollup-summary fields, process builder, apex, etc., can be used as criteria for splitting products between deliveries during order taking.
+* [.object]#Delivery#
+* [.object]#Delivery Line Item#
 
+To set up Order Split, create a _Settings_ record with the _Split Settings_ record type.
 
-
-To set up Order Split, create a _Settings_ record with the _Split
-Settings_ record type.
-
-. When a product is added to order cart, the system defines which
-deliveries should be created according to the values in the *Split
-Fields* and *Split Parameters Path* fields.
-. The system creates required _Deliveries_ and _Delivery Line Items_ for
-each _Order Line Item_ record.
-* All child products in a bundle inherit the parent's split criteria and
-hence are distributed to their parent's product delivery.
+. When a product is added to order cart, the system defines which deliveries should be created according to the values in the *Split Fields* and *Split Parameters Path* fields.
+. The system creates required _Deliveries_ and _Delivery Line Items_ for each _Order Line Item_ record.
+* All child products in a bundle inherit the parent's split criteria and hence are distributed to their parent's product delivery.
 * Freebies are split the same way as paid products.
-. If you remove a product from order cart, the corresponding _Delivery
-Line Item_ record will also be deleted. If no _Delivery Line Item_
-exists for a delivery, the delivery will be cancelled.
-After the order finalization, the actual _Delivery Line Item_ records
-and deliveries will be updated after changing products and their
-quantity in the cart.
+. If you remove a product from order cart, the corresponding _Delivery Line Item_ record will also be deleted. If no _Delivery Line Item_ exists for a delivery, the delivery will be cancelled.
++
+After the order finalization, the actual _Delivery Line Item_ records and deliveries will be updated after changing products and their quantity in the cart.
 
-[[h2_1374863314]]
-=== Process Path
+== Process Path
 
-The following steps must be performed by the administrator in order to
-configure order deliveries:
-[NOTE] ==== A representative should have at least permission to
-read records and all fields of the
-xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/index[Settings] object. Users with the
-manager role can also have permission to edit records. ====
+The following steps must be performed by the administrator in order to configure order deliveries:
+
+NOTE: A representative should have at least permission to read records and all fields of the xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/index.adoc[Settings] object. Users with the manager role can also have permission to edit records.
 
 . Add the custom [.object]#Address# object if needed.
-A representative should have permission to read the custom
-[.object]#Address# object. Users with the manager role can also
-have permission to edit _Address_ records.
-. xref:admin-guide/getting-started/setting-up-an-instance/configuring-object-setting[Create] the _Settings_ record
-with the _Object Setting_ record type for an instance.
-. xref:configuring-an-address-settings-1-0[Create] the _Settings_
-record with the _Address Setting_ record type.
-. xref:creating-a-relationship-between-custom-address-object-and-delivery-1-0[Add
-the address lookup] on the [.object]#Delivery# object.
-A representative should have permission to create, edit, and delete the
-_Delivery_ and _Delivery Line Item_ records.
-. Optionally,
-xref:adding-delivery-restrictions-to-an-order-1-0[create] and set
-up the _Settings_ record with the _Limit Settings_ record type for an
-_Order_ record type.
-. xref:admin-guide/managing-ct-orders/discount-management/promotions[Set up Promotions and promotion delivery dates].
-* A representative should have permission to read the
-[.object]#Promotion# object. Users with the manager role can
-also have permission to edit _Promotion_ records.
-* If xref:admin-guide/managing-ct-orders/discount-management/promotion-data-model/promotion-field-reference[the delivery dates specified on
-the Promotion record] are out
-of xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/limit-setting-field-reference[the delivery dates in the
-Limit Settings record], the order delivery with the products of this
-promotion cannot be done.
-. xref:creating-a-sales-organization-1-0[Create] and set up a Sales
-Organization.
-. xref:creating-a-sales-organization-user-1-0[Assign a Sales Org
-User].
-. xref:admin-guide/managing-ct-orders/order-management/index[Set up the Order management.]
-A representative should have permission to create, edit, and delete the
-_CT Order_ and _Order Line Item_ records.
++
+A representative should have permission to read the custom [.object]#Address# object. Users with the manager role can also have permission to edit _Address_ records.
+. xref:admin-guide/getting-started/setting-up-an-instance/configuring-object-setting.adoc[Create] the _Settings_ record with the _Object Setting_ record type for an instance.
+. xref:admin-guide/workshops/workshop1-0-creating-basic-order/configuring-an-address-settings-1-0/index.adoc[Create] the _Settings_ record with the _Address Setting_ record type.
+. xref:admin-guide/workshops/workshop1-0-creating-basic-order/configuring-an-address-settings-1-0/creating-a-relationship-between-custom-address-object-and-delivery-1-0.adoc[Add the address lookup] on the [.object]#Delivery# object.
+A representative should have permission to create, edit, and delete the _Delivery_ and _Delivery Line Item_ records.
+. Optionally, xref:admin-guide/workshops/workshop1-0-creating-basic-order/adding-delivery-restrictions-to-an-order-1-0.adoc[create] and set up the _Settings_ record with the _Limit Settings_ record type for an _Order_ record type.
+. xref:admin-guide/managing-ct-orders/discount-management/promotions.adoc[Set up Promotions and promotion delivery dates].
+* A representative should have permission to read the [.object]#Promotion# object. Users with the manager role can also have permission to edit _Promotion_ records.
+* If xref:admin-guide/managing-ct-orders/discount-management/promotion-data-model/promotion-field-reference.adoc[the delivery dates specified on the Promotion record] are out of xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/limit-setting-field-reference.adoc[the delivery dates in the Limit Settings record], the order delivery with the products of this promotion cannot be done.
+. xref:admin-guide/workshops/workshop1-0-creating-basic-order/creating-a-sales-organization-1-0.adoc[Create] and set up a Sales Organization.
+. xref:admin-guide/workshops/workshop1-0-creating-basic-order/creating-a-sales-organization-user-1-0.adoc[Assign a Sales Org User].
+. xref:admin-guide/managing-ct-orders/order-management/index.adoc[Set up the Order management.]
+A representative should have permission to create, edit, and delete the _CT Order_ and _Order Line Item_ records.
 
-The setup is complete. The representative can
-xref:admin-guide/managing-ct-orders/order-management/index[create an order] and
-xref:creating-a-delivery-1-0[add deliveries].
-
-
+The setup is complete. The representative can xref:admin-guide/managing-ct-orders/order-management/index.adoc[create an order] and
+xref:admin-guide/workshops/workshop1-0-creating-basic-order/complete-workshop-1-0-checkpoint/creating-a-delivery-1-0.adoc[add deliveries].
 
 See also:
 
-* xref:5-2-setting-up-the-delivery-summary[]xref:5-1-setting-up-a-delivery-split[Workshop
-5.1: Setting up a Delivery Split]
-* xref:5-2-setting-up-the-delivery-summary[Workshop 5.2: Setting up
-the Delivery Summary]
+* xref:admin-guide/workshops/workshop-5-0-implementing-additional-features/5-1-setting-up-a-delivery-split.adoc[Workshop 5.1: Setting up a Delivery Split]
+* xref:admin-guide/workshops/workshop-5-0-implementing-additional-features/5-2-setting-up-the-delivery-summary.adoc[Workshop 5.2: Setting up the Delivery Summary]
