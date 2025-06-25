@@ -1,12 +1,10 @@
 = Condition Field Reference
 
-the [.object]#Condition# object stores the values of the fields
-that trigger the discount calculation, discount rates, and data about
-the calculation type and method.
+The [.object]#Condition# object stores the values of the fields that trigger the discount calculation, discount rates, and data about the calculation type and method.
 
 '''''
 
-Object API name:[.apiobject]#orders__Condition__c#
+Object API name: [.apiobject]#orders\__Condition__c#
 
 '''''
 
@@ -14,141 +12,78 @@ Object API name:[.apiobject]#orders__Condition__c#
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Active |[.apiobject]#orders__IsActive__c# |Checkbox |If
-selected, the record is active and applied in business logic.
+|Active |[.apiobject]#orders__IsActive__c# |Checkbox |If selected, the record is active and applied in business logic.
 
 |Advanced Criteria
-|[.apiobject]#orders__AdvancedCriteria__c # |Long Text
-Area(32768) a|
-Conditions that affect discount calculation in JSON format (required if
-the Advanced Calculation Method is selected).
+|[.apiobject]#orders\__AdvancedCriteria__c# |Long Text
+Area(32768) a| Conditions that affect discount calculation in JSON format (required if the Advanced Calculation Method is selected).
 
-To see the example, refer to
-xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification.adoc[Condition:
-AdvancedCriteria__c Field Specification].
+TIP: To see the example, refer to xref:./condition-advancedcriteria-c-field-specification.adoc[Condition: AdvancedCriteria__c Field Specification].
 
 |Calculation Method
-|[.apiobject]#orders__CalculationMethod__c# a|
-Picklist
-
-
-
-a|
+|[.apiobject]#orders\__CalculationMethod__c# a|Picklist a|
 The method of cost calculation:
 
 * Basic is based on the selected Order Line Item.
-* xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification.adoc[Advanced]
-requires adding conditions/criteria for discount calculation in JSON
-format.
+* xref:./condition-advancedcriteria-c-field-specification.adoc[Advanced]
+requires adding conditions/criteria for discount calculation in JSON format.
 
 |Calculation Type
-|[.apiobject]#orders__CalculationTypeId__c#
+|[.apiobject]#orders\__CalculationTypeId__c#
 |Master-Detail(Calculation Type) |Calculation Type identifier.
 
 |Condition Details
-|[.apiobject]#orders__ConditionDetails__c# a|
-Long Text Area(32768)
+|[.apiobject]#orders\__ConditionDetails__c# a| Long Text Area(32768)
+a| Stores fields values that initialize discount calculation or the advance conditions in JSON to check if the discount should be calculated.
 
+TIP: To see the example, refer to xref:./condition-conditiondetails-c-field-specification.adoc[Condition: ConditionDetails__c Field Specification].
 
-
-a|
-Stores fields values that initialize discount calculation or the advance
-conditions in JSON to check if the discount should be calculated.
-
-To see the example, refer to
-xref:condition-conditiondetails-c-field-specification[Condition:
-ConditionDetails__c Field Specification].
-
-|Condition Group
-|[.apiobject]#orders__ConditionGroupId__c#
+|Condition Group |[.apiobject]#orders\__ConditionGroupId__c#
 |Lookup(Condition Group) |Condition Group identifier.
 
-|Discount Rate (%)
-|[.apiobject]#orders__DiscountRatePercent__c# a|
-Percent(16, 2)
-
-
-
+|Discount Rate (%) |[.apiobject]#orders\__DiscountRatePercent__c# a| Percent(16, 2)
 |Discount in percent.
-
 |Discount Rate (Amt)
-|[.apiobject]#orders__DiscountRateAmount__c# a|
-Number(16, 2)
-
-
-
+|[.apiobject]#orders\__DiscountRateAmount__c# a| Number(16, 2)
 |Discount in amount.
-
 |Discount Rate Location
-|[.apiobject]#orders__DiscountRateLocation__c# a|
-Picklist
-
-
-
-a|
+|[.apiobject]#orders\__DiscountRateLocation__c# a|Picklist a|
 Specifies where the discount rate value is stored:
 
 * Condition Record
 * Level record
 
 |Discount Rate Source Field (%)
-|[.apiobject]#orders__DiscountRateFieldPercent__c#>
-|Text(255) a|
-Specify the API name of the fields for discount calculation (inc.
-manual). Can only contain fields with the type Percent.
+|[.apiobject]#orders\__DiscountRateFieldPercent__c#
+|Text(255) a| Specify the API name of the fields for discount calculation (inc. manual). Can only contain fields with the type Percent.
 
-If the field is empty, the discount calculation will be based on the
-Discount Rate (%) value.
+If the field is empty, the discount calculation will be based on the Discount Rate (%) value.
 
-|Discount Rate Source Field (Amt)
-|[.apiobject]#orders__DiscountRateFieldAmount__c#
-|Text(255) a|
-Specify the API name of the fields for discount calculation (inc.
-manual). Can only contain fields with the type Number.
+|Discount Rate Source Field (Amt) |[.apiobject]#orders\__DiscountRateFieldAmount__c#
+|Text(255) a| Specify the API name of the fields for discount calculation (inc. manual). Can only contain fields with the type Number.
 
-If the field is empty, the discount calculation will be based on the
-Discount Rate (Amt) value.
+If the field is empty, the discount calculation will be based on the Discount Rate (Amt) value.
 
-|End Date |[.apiobject]#orders__EndDate__c# |Date |After
-this date, the condition is no longer available. For example, if the
-*End Date* is set to _14 Mar 2024_, the condition will not be available
-if the current date is _15 Mar 2024_, but remains available on _14 Mar
-2024_.
+|End Date |[.apiobject]#orders\__EndDate__c# |Date |After this date, the condition is no longer available. For example, if the *End Date* is set to _14 Mar 2024_, the condition will not be available if the current date is _15 Mar 2024_, but remains available on _14 Mar 2024_.
 
-|Exception Condition
-|[.apiobject]#orders__ExceptionCondition__c# |Long
-Text Area(32768) a|
-Condition in JSON format, which makes discount inapplicable for the
-order if the condition is matched during the price calculation process.
+|Exception Condition |[.apiobject]#orders\__ExceptionCondition__c# |Long Text Area(32768) a| Condition in JSON format, which makes discount inapplicable for the order if the condition is matched during the price calculation process.
 
-To see the example, refer to
-xref:condition-exceptioncondition-c-field-specification[Condition:
-ExceptionCondition__c Field Specification].
+TIP: To see the example, refer to xref:./condition-exceptioncondition-c-field-specification.adoc[Condition: ExceptionCondition__c Field Specification].
 
-|External Id |[.apiobject]#orders__ExternalId__c#
-|Text(255) (External ID) (Unique Case Insensitive) |
-
+|External Id |[.apiobject]#orders\__ExternalId__c# |Text(255) (External ID) (Unique Case Insensitive) a|include::partial$externalid-c.adoc[]
 |Name |[.apiobject]#Name# |Autonumber |Condition name.
 
-|Order |[.apiobject]#orders__Order__c# |Number(18, 0)
-|Numerical order that used during the search. The system applies a
-record with the lowest number in this field.
+|Order |[.apiobject]#orders\__Order__c# |Number(18, 0)
+|Numerical order that used during the search. The system applies a record with the lowest number in this field.
 
-|Payment Term |[.apiobject]#orders__PaymentTermId__c#
-|Lookup(Payment Term) |Applied payment terms.
+|Payment Term |[.apiobject]#orders\__PaymentTermId__c# |Lookup(Payment Term) |Applied payment terms.
 
-|Promotion Id |[.apiobject]#orders__PromotionId__c#
-|Lookup (Promotion) |Promo identifier.
+|Promotion Id |[.apiobject]#orders\__PromotionId__c# |Lookup (Promotion) |Promo identifier.
 
-|Start Date |[.apiobject]#orders__StartDate__c# |Date
-a|
+|Start Date |[.apiobject]#orders\__StartDate__c# |Date a|
 Since this date, the condition is available.
 
-If a current date (order creation date) does not fall within the
-specified condition date range, the discount will not be calculated.
+If a current date (order creation date) does not fall within the specified condition date range, the discount will not be calculated.
 
-|Unique Id |[.apiobject]#orders__UniqueId__c# |Text(255)
-(External ID) (Unique Case Insensitive) |This field stores the unique
-identifier for a condition to make sure that the order is not repeated
-among Calculation Type or Condition Group records.
+|Unique Id |[.apiobject]#orders\__UniqueId__c# |Text(255) (External ID) (Unique Case Insensitive) |This field stores the unique identifier for a condition to make sure that the order is not repeated among _Calculation Type_ or _Condition Group_ records.
 |===

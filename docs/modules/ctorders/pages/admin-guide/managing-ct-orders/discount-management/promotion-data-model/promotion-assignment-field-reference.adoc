@@ -1,12 +1,12 @@
 = Promotion Assignment Field Reference
 
-the [.object]#Promotion Assignment# object allows assigning
-promotions to accounts or retail stores.
+The [.object]#Promotion Assignment# object allows assigning promotions to accounts or retail stores.
+
+include::partial$default-rectype.adoc[]
 
 '''''
 
-Object API name:
-[.apiobject]#orders__PromotionAssignment__c#
+Object API name: [.apiobject]#orders\__PromotionAssignment__c#
 
 '''''
 
@@ -14,20 +14,14 @@ Object API name:
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Account |[.apiobject]#orders__AccountId__c#
-|Lookup(Account) |An account to which the promotion is assigned.
+|Account |[.apiobject]#orders\__AccountId__c# |Lookup(Account) |An account to which the promotion is assigned.
 
-|Active |[.apiobject]#orders__IsActive__c# |Checkbox |If
-selected, the record is active and can be applied in business logic.
+|Active |[.apiobject]#orders\__IsActive__c# |Checkbox |If selected, the record is active and can be applied in business logic.
 
-|Promotion |[.apiobject]#orders__PromotionId__c#
-|Master-Detail(Promotion) |The Promotion identifier.
+|Promotion |[.apiobject]#orders\__PromotionId__c# |Master-Detail(Promotion) |The Promotion identifier.
 
-|Retail Store |[.apiobject]#RetailStoreId__c#
-|Lookup(Retail Store) a|
-A retail store to which the promotion is assigned.
+|Retail Store |[.apiobject]#RetailStoreId__c# |Lookup(Retail Store) a| A retail store to which the promotion is assigned.
 
-This field must be manually created in case of integration with CG
-Cloud.
+NOTE: This field must be manually created in case of integration with CG Cloud.
 
 |===

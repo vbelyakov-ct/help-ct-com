@@ -1,11 +1,10 @@
 = Condition Group Field Reference
 
-The [.object]#Condition Group# object stores reference to the
-order and applied calculation type data.
+The [.object]#Condition Group# object stores reference to the order and applied calculation type data.
 
 '''''
 
-Object API name:[.apiobject]#orders__ConditionGroup__c#
+Object API name: [.apiobject]#orders\__ConditionGroup__c#
 
 '''''
 
@@ -13,39 +12,24 @@ Object API name:[.apiobject]#orders__ConditionGroup__c#
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Active |[.apiobject]#orders__IsActive__c# |Checkbox |If
-selected, the record is active and applied in business logic.
+|Active |[.apiobject]#orders\__IsActive__c# |Checkbox |If selected, the record is active and applied in business logic.
 
-|Calculation Type
-|[.apiobject]#orders__CalculationTypeId__c#
-|Master-Detail |the [.object]#Calculation Type# identifier.
+|Calculation Type |[.apiobject]#orders\__CalculationTypeId__c#
+|Master-Detail |The [.object]#Calculation Type# identifier.
 
-|Condition Fields
-|[.apiobject]#orders__ConditionFields__c# |Long Text
-Area(32768) a|
+|Condition Fields |[.apiobject]#orders\__ConditionFields__c# |Long Text Area(32768) a|
 List of API names of fields used as conditions.
 
+The specified fields must have a constant value, such as brand, parent account, etc., i.e., they cannot be altered during order creation or editing. Dynamically changing fields can only be specified in the xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification.adoc[Advanced Criteria] of the [.object]#Condition#.
 
+|End Date |[.apiobject]#orders\__EndDate__c# |Date |Since this date, condition group is no longer available.
 
-The specified fields must have a constant value, such as brand, parent
-account, etc., i.e., they cannot be altered during order creation or
-editing. Dynamically changing fields can only be specified in
-the xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification.adoc[Advanced
-Criteria] of the [.object]#Condition#.
-
-|End Date |[.apiobject]#orders__EndDate__c# |Date |Since
-this date, condition group is no longer available.
-
-|External Id |[.apiobject]#orders__ExternalId__c#
-|Text(255) (External ID) (Unique Case Sensitive) |Condition group
-external identifier.
+|External Id |[.apiobject]#orders\__ExternalId__c# |Text(255) (External ID) (Unique Case Sensitive) |Condition group external identifier.
 
 |Name |[.apiobject]#Name# |Autonumber |Condition group name.
 
-|Order |[.apiobject]#orders__Order__c# |Number(18, 0)
-|Numerical order that used during the search. The system applies a
-record with the lowest number in this field.
+|Order |[.apiobject]#orders\__Order__c# |Number(18, 0)
+|Numerical order that used during the search. The system applies a record with the lowest number in this field.
 
-|Start Date |[.apiobject]#orders__StartDate__c# |Date
-|Since this date, the condition group is available/active.
+|Start Date |[.apiobject]#orders\__StartDate__c# |Date |Since this date, the condition group is available/active.
 |===

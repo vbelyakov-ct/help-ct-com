@@ -133,7 +133,7 @@ calculation on the layout. ====
 desired fields, it is necessary to configure the Object Settings record
 with the xref:admin-guide/managing-ct-orders/sales-organization-management/howtos/how-to-configure-totals-panel-setting[Totals Panel
 Setting] record type. The maximum number of displayed fields is 4. If
-the setting is not configured, xref:ct-order-field-reference[the
+the setting is not configured, xref:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/ct-order-field-reference.adoc[the
 Total Price and Total Discount fields] are displayed by default.
 * *(3)* The CT Order button controls.
 xref:admin-guide/workshops/workshop1-0-creating-basic-order/complete-workshop-1-0-checkpoint/creating-a-delivery-1-0.adoc[]
@@ -181,7 +181,7 @@ type.
 The processing logic displaying the fields goes as follows:
 
 . First, search the setting with the *Record Type* value matching the
-xref:ct-order-field-reference[one] that was specified in the pop-up
+xref:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/ct-order-field-reference.adoc[one] that was specified in the pop-up
 window when the order was created.
 . Then goes the setting with the *Sales Organization* field value
 matching the one on the created order.

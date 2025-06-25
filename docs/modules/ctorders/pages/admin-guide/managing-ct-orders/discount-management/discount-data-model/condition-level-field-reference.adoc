@@ -1,12 +1,10 @@
 = Condition Level Field Reference
 
-the [.object]#Condition Level# object stores the minimum amount
-of product for the discount applied discount value and payment terms for
-each level.
+the [.object]#Condition Level# object stores the minimum amount of product for the discount applied discount value and payment terms for each level.
 
 '''''
 
-Object API name:[.apiobject]#orders__ConditionLevel__c#
+Object API name: [.apiobject]#orders\__ConditionLevel__c#
 
 '''''
 
@@ -14,47 +12,31 @@ Object API name:[.apiobject]#orders__ConditionLevel__c#
 |===
 |*Field* |*API name* |*Type* |*Description*
 
-|Condition |[.apiobject]#orders__ConditionId__c#
+|Condition |[.apiobject]#orders\__ConditionId__c#
 |Master-Detail(Condition) |Parent condition identifier.
 
 |Discount (%)
-|[.apiobject]#orders__DiscountRatePercent__c#
+|[.apiobject]#orders\__DiscountRatePercent__c#
 |Percent(16, 2) |Discount in percents.
 
 |Discount (Amt)
-|[.apiobject]#orders__DiscountRateAmount__c# |Number(16,
-2) |Discount in amount.
+|[.apiobject]#orders\__DiscountRateAmount__c# |Number(16, 2) |Discount in amount.
 
-|Discount Rate Source Field (%)
-|[.apiobject]#orders__DiscountRateFieldPercent__c#
-|Text(255) |Specify the API name of the fields for discount
-calculation (inc. manual). Can only contain fields with the type
-Percent.
+|Discount Rate Source Field (%) |[.apiobject]#orders\__DiscountRateFieldPercent__c#
+|Text(255) |Specify the API name of the fields for discount calculation (inc. manual). Can only contain fields with the type Percent.
 
-If the field is empty, the discount calculation will be based on the
-Discount Rate (%) value.
+If the field is empty, the discount calculation will be based on the Discount Rate (%) value.
 
-|Discount Rate Source Field (Amt)
-|[.apiobject]#orders__DiscountRateFieldAmount__c#
-|Text(255) a|
-Specify the API name of the fields for discount calculation (inc.
-manual). Can only contain fields with the type Number.
+|Discount Rate Source Field (Amt) |[.apiobject]#orders\__DiscountRateFieldAmount__c#
+|Text(255) a| Specify the API name of the fields for discount calculation (inc. manual). Can only contain fields with the type Number.
 
+If the field is empty, the discount calculation will be based on the Discount Rate (Amt) value.
 
+|External Id |[.apiobject]#orders\__ExternalId__c# |Text(255) (External ID) (Unique Case Sensitive) a|include::partial$externalid-c.adoc[]
 
-If the field is empty, the discount calculation will be based on the
-Discount Rate (Amt) value.
-
-|External Id |[.apiobject]#orders__ExternalId__c#
-|Text(255) (External ID) (Unique Case Sensitive) |
-
-|Payment Term |[.apiobject]#orders__PaymentTermId__c# a|
-Lookup(Payment Term)
-
-
+|Payment Term |[.apiobject]#orders\__PaymentTermId__c# a| Lookup(Payment Term)
 
 |Applied payment terms.
 
-|Starting From |[.apiobject]#orders__StartingFrom__c#
-|Number(18, 0) |Set the starting quantity of products for the level.
+|Starting From |[.apiobject]#orders\__StartingFrom__c# |Number(18, 0) |Set the starting quantity of products for the level.
 |===

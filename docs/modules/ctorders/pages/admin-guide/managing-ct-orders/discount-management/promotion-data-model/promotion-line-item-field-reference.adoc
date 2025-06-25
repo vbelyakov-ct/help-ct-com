@@ -1,12 +1,10 @@
 = Promotion Line Item Field Reference
 
-the [.object]#Promotion Line Item# object stores basic data
-about a product that has been added to a promotion.
+the [.object]#Promotion Line Item# object stores basic data about a product that has been added to a promotion.
 
 '''''
 
-Object API name:
-[.apiobject]#orders__PromotionLineItem__c#
+Object API name: [.apiobject]#orders\__PromotionLineItem__c#
 
 '''''
 
@@ -14,77 +12,56 @@ Object API name:
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Active |[.apiobject]#orders__IsActive__c# |Checkbox |If
-selected, the record is active and can be applied in business logic.
+|Active |[.apiobject]#orders\__IsActive__c# |Checkbox |If selected, the record is active and can be applied in business logic.
 
 |Exclude from Discount
-|[.apiobject]#orders__IsExcludeFromDiscount__c#
+|[.apiobject]#orders\__IsExcludeFromDiscount__c#
 |Checkbox a|
 If selected, the discount should not be applied to this product.
 
+The product can be used for a discount calculation procedure if the [.apiobject]#orders\__IsUseForDiscount__c# checkbox is selected. To avoid errors, do not assign a product both to *Use for Discount* and *Exclude from Discount*.
 
+|External Id |[.apiobject]#orders\__ExternalId__c#
+|Text(255) (External ID) (Unique Case Sensitive) |External identifier of the Promotion Line Item.
 
-The product can be used for a discount calculation procedure if
-the [.apiobject]#orders__IsUseForDiscount__c# checkbox
-is selected. To avoid errors, do not assign a product both to *Use for
-Discount* and *Exclude from Discount*.
+|Min |[.apiobject]#orders\__RequiredMinForDiscount__c#
+|Number(18, 0) |Specify a minimum quantity of a product that must be added to the order cart to get a discount.
 
-|External Id |[.apiobject]#orders__ExternalId__c#
-|Text(255) (External ID) (Unique Case Sensitive) |External identifier
-of the Promotion Line Item.
+|Order |[.apiobject]#orders\__Order__c#
+|Number(18,0) a| Defines the order of a product in the promotion.
 
-|Min |[.apiobject]#orders__RequiredMinForDiscount__c#
-|Number(18, 0) |Specify a minimum quantity of a product that must be
-added to the order cart to get a discount.
-
-|Order |[.apiobject]#orders__Order__c#
-|Number(18,0) a|
-Defines the order of a product in the promotion.
-
-* If this field is empty, such products are placed at the end of a
-promotion.
-* If this field is empty on all records or a user has no access to this
-field, products are sorted in alphabetical order in promotions.
+* If this field is empty, such products are placed at the end of a promotion.
+* If this field is empty on all records or a user has no access to this field, products are sorted in alphabetical order in promotions.
 
 |Parent Promotion Line Item
-|[.apiobject]#orders__[.ArticleViewer_searchKeywords]#ParentId#__c#
-|Lookup(Promotion Line Item) |Filled out with the linked *Promotion Line
-Item* record that is a bundle including the selected product.
+|[.apiobject]#orders\__[.ArticleViewer_searchKeywords]#ParentId#__c#
+|Lookup(Promotion Line Item) |Filled out with the linked _Promotion Line Item_ record that is a bundle including the selected product.
 
-|Product |[.apiobject]#orders__Product2Id__c#
-|Lookup(Product2) |
+|Product |[.apiobject]#orders\__Product2Id__c#
+|Lookup(Product2) a| include::partial$product2support.adoc[]
 
-|Product |[.apiobject]#orders__ProductId__c#
-|Lookup(CT Product) |
+|Product |[.apiobject]#orders\__ProductId__c#
+|Lookup(CT Product) a|include::partial$productsupport.adoc[]
 
-|Product Component
-|[.apiobject]#orders__ProductComponentId__c#
-|Lookup(Product Component) a|
-Available since CT Orders 24R1.
+|Product Component |[.apiobject]#orders\__ProductComponentId__c#
+|Lookup(Product Component) a| NOTE: Available since CT Orders 24R1.
 
 Lookup to the [.object]#Product Component# object
-(in https://help.customertimes.com/smart/project-ct-cpg/product-component-field-reference[CT
-CPG] or https://help.customertimes.com/smart/project-ct-pharma/product-component-field-reference[CT
-Pharma]) in case of using xref:admin-guide/managing-ct-orders/product-management/managing-bundles[bundles]. Must be
-created manually by the administrator.
+(in xref:ctcpg:admin-guide/ct-products-and-assortments-management/ref-guide/product-component-field-reference.adoc[CT CPG] or xref:ctpharma:admin-guide/pharma-products-management/product-component-field-reference.adoc[CT Pharma]) in case of using xref:admin-guide/managing-ct-orders/product-management/managing-bundles.adoc[bundles]. Must be created manually by the administrator.
 
-|Promotion |[.apiobject]#orders__PromotionId__c#
+|Promotion |[.apiobject]#orders\__PromotionId__c#
 |Master-Detail(Promotion) |The Promotion identifier.
 
-|Removable |[.apiobject]#orders__IsRemovable__c#
-|Checkbox |If selected, a promotion line item can be removed from the
-order cart.
+|Removable |[.apiobject]#orders\__IsRemovable__c#
+|Checkbox |If selected, a promotion line item can be removed from the order cart.
 
-|Required |[.apiobject]#orders__IsRequired__c#
-|Checkbox |If selected, the product is mandatory and must be added to
-cart to get a discount.
+|Required |[.apiobject]#orders\__IsRequired__c#
+|Checkbox |If selected, the product is mandatory and must be added to cart to get a discount.
 
 |Use for Discount
-|[.apiobject]#orders__IsUseForDiscount__c # |Checkbox
-|If selected, the discount should be calculated based on the selected
-product.
+|[.apiobject]#orders\__IsUseForDiscount__c # |Checkbox
+|If selected, the discount should be calculated based on the selected product.
 
 |Units Count Step
-|[.apiobject]#orders__UnitsCountStep__c# |Number(18,
-0) |
+|[.apiobject]#orders\__UnitsCountStep__c# |Number(18, 0) a| include::partial$unitscountstepfield.adoc[]
 |===

@@ -1,16 +1,12 @@
 = Condition Dependency Field Reference
 
-the [.object]#Condition Dependency# object is used to store
-xref:admin-guide/managing-ct-orders/discount-management/links[a logic of links] for conditions to build dependencies
-of one condition on another.
+The [.object]#Condition Dependency# object is used to store xref:admin-guide/managing-ct-orders/discount-management/links.adoc[a logic of links] for conditions to build dependencies of one condition on another.
 
-Available for [.object]#Calculation Type# of *Condition* record
-type.
+NOTE: Available for [.object]#Calculation Type# of _Condition_ record type.
 
 '''''
 
-Object API name:
-[.apiobject]#orders__ConditionDependency__c#
+Object API name: [.apiobject]#orders\__ConditionDependency__c#
 
 '''''
 
@@ -18,115 +14,64 @@ Object API name:
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Active |[.apiobject]#orders__IsActive__c# |Checkbox
-|Defines if the record is active and should be applied in business
-logic.
+|Active |[.apiobject]#orders\__IsActive__c# |Checkbox
+|Defines if the record is active and should be applied in business logic.
 
 |Controlling Condition
-|[.apiobject]#orders__ControllingConditionId__c #
-|Lookup(Condition) a|
-Specify the controlling xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/index.adoc[Condition].
+|[.apiobject]#orders\__ControllingConditionId__c#
+|Lookup(Condition) a| Specify the controlling xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/index.adoc[Condition].
 
+Available when *Dependency Type* is *Discount To Discount* or *Discount To Freebie*.
 
-
-Available when *Dependency Type* is *Discount To Discount* or *Discount
-To Freebie*.
-
-|Controlling Freebie Condition
-|[.apiobject]#orders__ControllingFreebieConditionId__c#
-a|
-Lookup(Freebie Condition)
-
-
-
-a|
-Specify the controlling
+|Controlling Freebie Condition |[.apiobject]#orders\__ControllingFreebieConditionId__c#
+a| Lookup(Freebie Condition) a| Specify the controlling
 xref:admin-guide/managing-ct-orders/freebies-management/freebie-data-model/freebie-condition-field-reference/index.adoc[Freebie Condition].
 
+Available when *Dependency Type* is *Freebie To Freebie* or *Freebie To Discount*.
 
-
-Available when *Dependency Type* is *Freebie To Freebie* or *Freebie To
-Discount*.
-
-|Dependency Action
-|[.apiobject]#orders__DependencyAction__c# |Picklist a|
+|Dependency Action |[.apiobject]#orders\__DependencyAction__c# |Picklist a|
 The action type to be performed. Available values:
 
 * *Apply*
++
 Apply (A, B): condition A will be applied if condition B is triggered.
 * *Exclude*
-Exclude(A, B): condition A will not be applied if condition B is
-applied.
-* *Best Of* (Available when *Dependency Type* is *Discount To
-Discount*.)
-Best Of(A, B): the A and B conditions are compared, and the best
-condition is applied:
-** The maximum discount if the *Calculation Method* is *Decrease* on the
-appropriate  xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc-field-reference[Calculation
-Type].
-** The maximum markup if the *Calculation Method* is *Increase* on the
-appropriate [.object]#Calculation Type#.
++
+Exclude(A, B): condition A will not be applied if condition B is applied.
+* *Best Of* (Available when *Dependency Type* is *Discount To Discount*.)
++
+Best Of(A, B): the A and B conditions are compared, and the best condition is applied:
+** The maximum discount if the *Calculation Method* is *Decrease* on the appropriate  xref:./calculation-types-field-reference/index.adoc[Calculation Type].
+** The maximum markup if the *Calculation Method* is *Increase* on the appropriate [.object]#Calculation Type#.
 * *Reduce*
-Reduce(A, B): the maximum freebie quantity in condition A will reduce by
-the freebie quantity that were applied when condition B triggered.
++
+Reduce(A, B): the maximum freebie quantity in condition A will reduce by the freebie quantity that were applied when condition B triggered.
 
 Available when *Dependency Type* is *Freebie To Freebie*.
 
-* This logic is applied to the maximum quantity of distributed freebies
-based on the value in the *Freebies Quantity Max* field on
-the xref:freebie-level-field-reference[Freebie Level] or the value
-in the *Freebie Ratio* field on the [.object]#Freebie Level# if
-proportionality is enabled for the condition.
-* The calculated value cannot be less than the value in the *Freebies
-Quantity Min* field on the [.object]#Freebie
-Level# or [.object]#Freebie Level Line Item#, or the value in
-the *Freebie Ratio* field on the [.object]#Freebie Level# if
-proportionality is enabled for the condition.
-* The product quantity on the dependent condition should be more than on
-the controlling condition in order to avoid errors.
+* This logic is applied to the maximum quantity of distributed freebies based on the value in the *Freebies Quantity Max* field on the xref:admin-guide/managing-ct-orders/freebies-management/freebie-data-model/freebie-level-field-reference.adoc[Freebie Level] or the value in the *Freebie Ratio* field on the [.object]#Freebie Level# if proportionality is enabled for the condition.
+* The calculated value cannot be less than the value in the *Freebies Quantity Min* field on the [.object]#Freebie Level# or [.object]#Freebie Level Line Item#, or the value in
+the *Freebie Ratio* field on the [.object]#Freebie Level# if proportionality is enabled for the condition.
+* The product quantity on the dependent condition should be more than on the controlling condition in order to avoid errors.
 
-
-
-|Dependency Type
-|[.apiobject]#orders__DependencyType__c# a|
-Picklist
-
-
-
-a|
-Select the dependency type for *Dependency Action,* considering that the
-first condition is controlling and the second is dependent. Available
-values:
+|Dependency Type |[.apiobject]#orders\__DependencyType__c# a|Picklist a|
+Select the dependency type for *Dependency Action,* considering that the first condition is controlling and the second is dependent. Available values:
 
 * Discount To Discount
 * Discount To Freebie
 * Freebie To Freebie
 * Freebie To Discount
 
-|Dependent Condition
-|[.apiobject]#orders__DependentConditionId__c#
-|Lookup(Dependent Condition) a|
-Specify the dependent [.object]#Condition#.
+|Dependent Condition |[.apiobject]#orders\__DependentConditionId__c# |Lookup(Dependent Condition) a| Specify the dependent [.object]#Condition#.
 
+Available when *Dependency Type* is *Discount To Discount* or *Discount To Freebie*.
 
+|Dependent Freebie Condition |[.apiobject]#orders\__DependentFreebieConditionId__c#
+|Lookup(Dependent Freebie Condition) a| Specify the controlling [.object]#Freebie Condition#.
 
-Available when *Dependency Type* is *Discount To Discount* or *Discount
-To Freebie*.
+Available when *Dependency Type* is *Freebie To Freebie* or *Freebie To Discount*.
 
-|Dependent Freebie Condition
-|[.apiobject]#orders__DependentFreebieConditionId__c#
-|Lookup(Dependent Freebie Condition) a|
-Specify the controlling [.object]#Freebie Condition#.
-
-
-
-Available when *Dependency Type* is *Freebie To Freebie* or *Freebie To
-Discount*.
-
-|External Id |[.apiobject]#orders__ExternalId__c#
-|Text(255) (External ID) (Unique Case Insensitive) |
-
-|Order |[.apiobject]#orders__Order__c# |Number(18, 0)
-|The ordinal number of a record for prioritization during condition
-search.
+|External Id |[.apiobject]#orders\__ExternalId__c# |Text(255) (External ID) (Unique Case Insensitive) a|include::partial$externalid-c.adoc[]
+|Order |[.apiobject]#orders\__Order__c# |Number(18, 0)
+|The ordinal number of a record for prioritization during condition search.
 |===

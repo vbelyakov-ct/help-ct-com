@@ -1,13 +1,10 @@
 = Promotion Field References
 
-the [.object]#Promotion# object allows setting up sell-in,
-ordering and delivery dates, stores data about promotion availability
-and its status, and details on discount calculation and freebies
-distribution.
+The [.object]#Promotion# object allows setting up sell-in, ordering and delivery dates, stores data about promotion availability and its status, and details on discount calculation and freebies distribution.
 
 '''''
 
-Object API name:[.apiobject]#orders__Promotion__c#
+Object API name: [.apiobject]#orders\__Promotion__c#
 
 '''''
 
@@ -15,94 +12,74 @@ Object API name:[.apiobject]#orders__Promotion__c#
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Active |[.apiobject]#orders__IsActive__c#
-|Checkbox |If selected, the promo record is active and can be applied
-in business logic.
+|Active |[.apiobject]#orders\__IsActive__c#
+|Checkbox |If selected, the promo record is active and can be applied in business logic.
 
 This checkbox is interrelated with promo Status.
 
-|Assigned On Order |orders__isAssignedOnOrder__c |Checkbox
+|Assigned On Order |[.apiobject]#orders\__isAssignedOnOrder__c# |Checkbox
 a|
-If _true_, the xref:ct-order-field-reference[Promotion Id] lookup
-field is checked on the order. If the field contains SFID of the
-promotion, the promotion will be displayed in the left list of the order
-screen.
+If _true_, the xref:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/ct-order-field-reference.adoc[Promotion Id] lookup field is checked on the order. If the field contains SFID of the promotion, the promotion will be displayed in the left list of the order screen.
 
 Default value is _false_.
 
-Must be created manually by the administrator.
+NOTE: Must be created manually by the administrator.
 
-|Available for All Accounts
-|[.apiobject]#orders__IsAvailableForAllAccounts__c#
-|Checkbox |If selected, a Promotion is available for all customers.
-[TIP] ==== Since Summer '21 Release, the promotion will be
-available for all
-https://developer.salesforce.com/docs/atlas.en-us.retail_api.meta/retail_api/sforce_api_objects_retailstore.htm[retail
-stores] in case of integration with CG Cloud. ====
+|Available for All Accounts |[.apiobject]#orders\__IsAvailableForAllAccounts__c#
+|Checkbox a|If selected, a Promotion is available for all customers.
+
+TIP: Since Summer '21 Release, the promotion will be available for all link:https://developer.salesforce.com/docs/atlas.en-us.retail_api.meta/retail_api/sforce_api_objects_retailstore.htm[retail stores] in case of integration with CG Cloud.
 
 |Calculation Type
-|[.apiobject]#orders__CalculationType__c#
-|Lookup(Calculation Type) a|
-Calculation Type used for the price calculation.
+|[.apiobject]#orders\__CalculationType__c#
+|Lookup(Calculation Type) a|  Calculation Type used for the price calculation.
 
-* Calculation Type should have the same unit of measure as specified in
-the Promo settings
-* The [.apiobject]#orders__IsPromoRelated__c# checkbox
-should be selected.
+* Calculation Type should have the same unit of measure as specified in the Promo settings
+* The [.apiobject]#orders\__IsPromoRelated__c# checkbox should be selected.
 * Calculation Type should have the _Condition_ record type.
 
-|Delivery End Date
-|[.apiobject]#orders__DeliveryEndDate__c# |Date
+|Delivery End Date |[.apiobject]#orders\__DeliveryEndDate__c# |Date
 |Since this date, the delivery is no longer available.
 
 |Delivery Start Date
-|[.apiobject]#orders__DeliveryStartDate__c# |Date
+|[.apiobject]#orders\__DeliveryStartDate__c# |Date
 |Since this date, the delivery is available.
 
-|Description |[.apiobject]#orders__Description__c#
+|Description |[.apiobject]#orders\__Description__c#
 |Text(255) |Add a description if needed.
 
-|External Id |[.apiobject]#orders__ExternalId__c#
-|Text(255) (External ID) (Unique Case Sensitive) |External identifier
-of the promotion.
+|External Id |[.apiobject]#orders\__ExternalId__c#
+|Text(255) (External ID) (Unique Case Sensitive) |External identifier of the promotion.
 
 |Long Term Discount Start Date
-|[.apiobject]#orders__LongTermDiscountStartDate__c#
-|Date |The field will be active on the Promotion form when the
-[.apiobject]#orders__IsSetAsLongTermDiscount__c#
-checkbox is checked.
+|[.apiobject]#orders\__LongTermDiscountStartDate__c#
+|Date |The field will be active on the Promotion form when the [.apiobject]#orders\__IsSetAsLongTermDiscount__c# checkbox is checked.
 
 |Long Term Discount End Date
-|[.apiobject]#orders__LongTermDiscountEndDate__c#
-|Date |The field will be active on the Promotion form when the
-[.apiobject]#orders__IsSetAsLongTermDiscount__c#
-checkbox is checked.
+|[.apiobject]#orders\__LongTermDiscountEndDate__c#
+|Date |The field will be active on the Promotion form when the [.apiobject]#orders\__IsSetAsLongTermDiscount__c# checkbox is checked.
 
 |Order End Date
-|[.apiobject]#orders__OrderEndDate__c# |Date |Since
-this date, the Promotion is no longer available for ordering.
+|[.apiobject]#orders\__OrderEndDate__c# |Date |Since this date, the Promotion is no longer available for ordering.
 
 |Order Start Date
-|[.apiobject]#orders__OrderStartDate__c# |Date
+|[.apiobject]#orders\__OrderStartDate__c# |Date
 |Since this date, the Promotion is available for ordering.
 
-|Order Type |[.apiobject]#orders__OrderType__c#
-|Picklist(Multi-Select) |Displays the selected order type for which
-the promo is available.
+|Order Type |[.apiobject]#orders\__OrderType__c#
+|Picklist(Multi-Select) |Displays the selected order type for which the promo is available.
 
 |Sales Organization
-|[.apiobject]#orders__SalesOrganizationId__c#
-|Lookup(Sales Organization) |The business unit for which the promo is
-configured.
+|[.apiobject]#orders\__SalesOrganizationId__c#
+|Lookup(Sales Organization) |The business unit for which the promo is configured.
 
 |Set As Long Term Discount
-|[.apiobject]#orders__IsSetAsLongTermDiscount__c#
-|Checkbox |If the checkbox is selected, this promo is a long-term
-promotion and can be used multiple times for the same account.
-[TIP] ==== The deal will be created automatically if promotion
-conditions are met while order taking. ====
+|[.apiobject]#orders\__IsSetAsLongTermDiscount__c#
+|Checkbox a|If the checkbox is selected, this promo is a long-term promotion and can be used multiple times for the same account.
 
-|Status |[.apiobject]#orders__Status__c# |Picklist a|
+TIP: The deal will be created automatically if promotion conditions are met while order taking.
+
+|Status |[.apiobject]#orders\__Status__c# |Picklist a|
 Current promotion status:
 
 * _Draft_
@@ -113,9 +90,8 @@ Current promotion status:
 Status is interrelated with the *Active* checkbox.
 
 |Unique Products # for Discounts
-|[.apiobject]#orders__UniqueProductsNumberForDiscounts__c#
-|Number(18,0) |The minimum number of products in the order to allow
-customers to get a discount.
+|[.apiobject]#orders\__UniqueProductsNumberForDiscounts__c#
+|Number(18,0) |The minimum number of products in the order to allow customers to get a discount.
 |===
 
 

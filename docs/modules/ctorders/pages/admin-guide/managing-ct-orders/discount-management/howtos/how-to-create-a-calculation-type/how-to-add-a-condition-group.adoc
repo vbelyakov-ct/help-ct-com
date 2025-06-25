@@ -1,34 +1,19 @@
 = How to Add a Condition Group
 
-[.object]#Condition groups# are intended to advance discount
-logic.[.object]#Condition group# contains
-[.object]#Conditions# and a list of fields on the
-[.object]#Order Line Item# record. If the field set of a
-[.object]#Condition Group# matches the field set of an
-[.object]#Order Line Item#, the system starts to find a proper
-[.object]#Condition# (according to the value of the *Order*
-parameter) to apply a discount.
+[.object]#Condition groups# are intended to advance discount logic. [.object]#Condition group# contains [.object]#Conditions# and a list of fields on the [.object]#Order Line Item# record. If the field set of a [.object]#Condition Group# matches the field set of an
+[.object]#Order Line Item#, the system starts to find a proper [.object]#Condition# (according to the value of the *Order* parameter) to apply a discount.
 
 To create a [.object]#Condition group#:
 
-. On the created *Calculation Type* page, click *New* in the *Condition
-Groups* section.
+. On the created *Calculation Type* page, click *New* in the *Condition Groups* section.
 . Specify the following:
 * Select *Calculation Type*.
-* In the *Order* field, set the order in which
-this [.object]#Condition Group# will be applied. For
-example,  *10* means that this [.object]#Condition Group# will
-be applied after other [.object]#Condition
-Groups# with *Orders* 1, 2, 5 etc.
+* In the *Order* field, set the order in which this [.object]#Condition Group# will be applied. For example, *10* means that this [.object]#Condition Group# will be applied after other [.object]#Condition Groups# with *Orders* 1, 2, 5 etc.
 * (Optional) specify *External Id*.
-* (Optional) in *Condition Dates*, specify *Start Date* and *End
-Date* of the [.object]#Condition Group#.
-* Set *Active* checkbox to enable this [.object]#Condition
-Group# after creation.
-* In the *Condition Fields*, specify fields of the
-[.object]#Order Line Item# record, separated with commas without
-spaces.
-
+* (Optional) in *Condition Dates*, specify *Start Date* and *End Date* of the [.object]#Condition Group#.
+* Set *Active* checkbox to enable this [.object]#Condition Group# after creation.
+* In the *Condition Fields*, specify fields of the [.object]#Order Line Item# record, separated with commas without spaces.
++
 image:ctorders-new-condition-group.png[]
 . Click *Save*.
 

@@ -1,22 +1,14 @@
 = How to Add a Condition Level
 
-_Condition levels_ are responsible for the discount levels. To create a
-_Condition level_:
+_Condition levels_ are responsible for the discount levels. To create a _Condition level_:
 
-. On the created *Calculation Type* page, click on the
-created _Condition_ record under the *Conditions* section → click *New*
-in the *Condition Levels* section.
+. On the created *Calculation Type* page, click on the created _Condition_ record under the *Conditions* section → click *New* in the *Condition Levels* section.
 . Specify the following:
 * (Optional) specify *External Id*.
-* In the *Starting from* field, specify the minimal amount of the
-[.object]#Product# in an[.object]#Order# to get a
-discount.
-* In the *Discount Rate (%)* or *Discount Rate (Amt)*,** **specify
-the discount value as a percentage or in a strict amount, respectively.
-* In the *Discount Rate Source Field (%)* or *Discount Rate Source Field
-(Amt)*,** **specify the API name of the created custom field, if any, to
-get discount value as a percentage or in strict amount, respectively.
-
+* In the *Starting from* field, specify the minimal amount of the [.object]#Product# in an [.object]#Order# to get a discount.
+* In the *Discount Rate (%)* or *Discount Rate (Amt)*, specify the discount value as a percentage or in a strict amount, respectively.
+* In the *Discount Rate Source Field (%)* or *Discount Rate Source Field (Amt)*, specify the API name of the created custom field, if any, to get discount value as a percentage or in strict amount, respectively.
++
 image:Condition-Level-1-2.4.png[]
 . Click *Save*.
 
