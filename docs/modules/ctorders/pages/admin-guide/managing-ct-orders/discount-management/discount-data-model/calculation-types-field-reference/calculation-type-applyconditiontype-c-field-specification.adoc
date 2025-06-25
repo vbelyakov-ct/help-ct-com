@@ -1,43 +1,27 @@
 = Calculation Type: ApplyConditionType__c Field Specification
 
-Available for instances with the enabled xref:admin-guide/managing-ct-orders/web-service/index.adoc[Web
-Service].
+WARNING: Available for instances with the enabled xref:admin-guide/managing-ct-orders/web-service/index.adoc[Web Service].
 
-The *Apply Condition Type* field allows managers to set which
-condition(s) should be applied. In particular, this setting may be used
-to apply multiple conditions from a single [.object]#Calculation
-Type#.
+The *Apply Condition Type* field allows managers to set which condition(s) should be applied. In particular, this setting may be used to apply multiple conditions from a single [.object]#Calculation Type#.
 
-Available only for the *Condition* record type, for
-both *Basic* and xref:condition-advancedcriteria-c-field-specification#h2_1585895621[Advanced] calculation
-methods, and for both *Discount Rate Locations*.
+Available only for the *Condition* record type, for both *Basic* and xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification.adoc#h2_1585895621[Advanced] calculation methods, and for both *Discount Rate Locations*.
 
 * First matching condition
-The system searches related *Calculation Type* records by the *Condition
-Details* field and applies the first matching condition for each
-[.object]#Calculation Type#. The condition may be zero.
++
+The system searches related _Calculation Type_ records by the *Condition Details* field and applies the first matching condition for each [.object]#Calculation Type#. The condition may be zero.
 * First non-zero condition
-The system searches related *Calculation Type* records by the *Condition
-Details* field and applies the first matching non-zero condition for
-each[.object]#Calculation Type#.
++
+The system searches related _Calculation Type_ records by the *Condition Details* field and applies the first matching non-zero condition for each [.object]#Calculation Type#.
 * All non-zero conditions
-The system searches related *Calculation Type* records by the *Condition
-Details* field and applies all matching non-zero conditions for each
-[.object]#Calculation Type#.
++
+The system searches related _Calculation Type_ records by the *Condition Details* field and applies all matching non-zero conditions for each [.object]#Calculation Type#.
 * Maximum discount Condition
-The system searches related *Calculation Type* records by the *Condition
-Details* field and applies the maximum discount condition for
-each [.object]#Calculation Type#. Works only if the discount
-value is specified manually and not from *Discount Rate Source Fields*.
++
+The system searches related _Calculation Type_ records by the *Condition Details* field and applies the maximum discount condition for each [.object]#Calculation Type#. Works only if the discount value is specified manually and not from *Discount Rate Source Fields*.
 * Minimum discount Condition
-The system searches related *Calculation Type* records by the *Condition
-Details* field and applies the minimum discount condition for
-each [.object]#Calculation Type#. Works only if the discount
-value is specified manually and not from *Discount Rate Source
-Fields*.
-
-
++
+The system searches related _Calculation Type_ records by the *Condition Details* field and applies the minimum discount condition for each [.object]#Calculation Type#. Works only if the discount value is specified manually and not from *Discount Rate Source Fields*.
 
 Discounts will be presented in the price tags.
 
-image:Several-Discounts.png[]
+image::Several-Discounts.png[align="center"]

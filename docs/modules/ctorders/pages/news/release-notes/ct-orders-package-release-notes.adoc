@@ -131,7 +131,7 @@ This field determines if *Condition Fields* will be searched starting
 from[.object]#Order Line Item# or [.object]#Delivery
 Line Item# when performing calculation for the Web Service.
 * Calculation Types with *Field Search Based On* set to _Delivery Line
-Item_ will be ignored and excluded from the xref:price-tag[Price
+Item_ will be ignored and excluded from the xref:admin-guide/managing-ct-orders/order-management/price-tag.adoc[Price
 Tag] logic if calculations by Web Service are not use.
 * The *SKU Field* is now mandatory to create an
 xref:configuring-object-setting[object settings].
@@ -208,7 +208,7 @@ the xref:calculation-type-levelformula-c-field-specification[Level
 Formula] field for the [.object]#Calculation type# object does
 not work on save.
 * The
-xref:condition-advancedcriteria-c-field-specification[Advanced
+xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification.adoc[Advanced
 Criteria] field is required even if the
 xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/index.adoc[Calculation Method] is set to
 _Basic_.
@@ -230,7 +230,7 @@ becomes hidden by the side panel.
 [[h3_1956376193]]
 ==== Major Features
 
-* xref:condition-advancedcriteria-c-field-specification#h2_1585895621[Advanced
+* xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification.adoc#h2_1585895621[Advanced
 Criteria 2.0] now works both in xref:admin-guide/managing-ct-orders/web-service/index.adoc[Web Service] and
 in-app discount calculator.
 * xref:admin-guide/managing-ct-orders/web-service/index.adoc#h3_795817566[Calculate discounts] feature works
@@ -289,7 +289,7 @@ custom permissions] to override the standard logic:
 [[h4_419366360]]
 ===== Price tags
 
-* xref:price-tag[The checkmark icon] is displayed when
+* xref:admin-guide/managing-ct-orders/order-management/price-tag.adoc[The checkmark icon] is displayed when
 several *Delivery Line Items* are tied to one *Order Line Item*, and
 different levels are applied in the conditions.
 
@@ -350,7 +350,7 @@ match the selected criteria will be displayed.
 ==== Other Improvements
 
 * New operators are supported for JSON in the
-xref:condition-advancedcriteria-c-field-specification[Advanced
+xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification.adoc[Advanced
 Criteria],
 xref:condition-conditiondetails-c-field-specification[Condition
 Details&#44;] and
@@ -426,7 +426,7 @@ sequence of applying them to the orders.
 * xref:calculation-type-applyconditiontype-c-field-specification[The
 ability] to apply multiple conditions from a
 single [.object]#Calculation Type#.
-* xref:condition-advancedcriteria-c-field-specification#h2_1585895621[Advanced
+* xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification.adoc#h2_1585895621[Advanced
 Criteria 2.0] provides more flexibility by simultaneously setting
 several filters and a minimum number of products for different size
 discounts.
