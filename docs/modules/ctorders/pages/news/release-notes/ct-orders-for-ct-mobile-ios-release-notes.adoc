@@ -29,7 +29,7 @@ required
 permissions xref:../Storage/project-order-module/PDF/CT-Orders-User-Permissions-to-Access-Web-Service.pdf[here].
 * Tap
 the image:WS-Calculation-in-CT-Mobile.png[] button
-in the xref:offline-order#h4_1635896381[order cart] to get the
+in the xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc#h4_1635896381[order cart] to get the
 valid prices. The invalid prices will be highlighted in red color.
 * The new advanced features—links, mixed discounts, freebie multiplier,
 and freebie values—are only available when working with the
@@ -43,7 +43,7 @@ the *List Price* field.
 [[h4_313159045]]
 ===== Mixed Discounts
 
-* xref:calculation-type-applyconditiontype-c-field-specification[Apply
+* xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/calculation-types-field-reference/calculation-type-applyconditiontype-c-field-specification.adoc[Apply
 multiple conditions] from a single [.object]#Calculation Type#.
 * xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification.adoc#h2_1585895621[Advanced
 Criteria 2.0] provides more flexibility by setting multiple filters and
@@ -54,7 +54,7 @@ a minimum number of products for different size discounts.
 [[h4_62076529]]
 ===== Freebie Management
 
-* xref:freebies-management#h3_316467656[Freebie Values] allow you
+* xref:admin-guide/managing-ct-orders/freebies-management/index.adoc#h3_316467656[Freebie Values] allow you
 to spread freebies over different levels and deliveries.
 
 
@@ -76,19 +76,19 @@ Line Item*, and different levels are applied in the conditions.
 * xref:links[Links]: Support the *Reduce* dependency action to
 calculate discounts for Freebies.
 * Edit fields with the *Currency*, *Number,* *Percent*, or *Text* types
-within the xref:delivery-management#h2_1374863314[Delivery
+within the xref:admin-guide/managing-ct-orders/delivery-management/index.adoc#h2_1374863314[Delivery
 Summary] pop-up.
 * The UX/UI improvement for [.object]#Quotas#:
 ** Display the current quota status in the
-xref:offline-order#h4_1635896381[order cart] interface.
+xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc#h4_1635896381[order cart] interface.
 ** For better visibility, the xref:quotas#h2_275625523[quota info
 pop-up] displays the type of products it affects and the source catalog
 or promotion.
 * The UX/UI improvement for the order cart:
-** xref:offline-order#h4_1635896381[The promotion] sales and
+** xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc#h4_1635896381[The promotion] sales and
 delivery dates are displayed in each promotion header. If the sales
 dates are empty, the delivery dates will be displayed instead of them.
-** xref:offline-order#h4_589780300[In the catalog and promotion
+** xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc#h4_589780300[In the catalog and promotion
 left menu], products are arranged according to their order number (if
 given) or alphabetical order.
 * Support Salesforce validation rules when saving or finalizing an
@@ -221,7 +221,7 @@ Enhanced  xref:admin-guide/managing-ct-orders/discount-management/calculation-ty
 * Define  xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc#h3_1022633546[quantity settings]
 for discount calculation on[.object]#Calculation Type#.
 * Set
-xref:condition-exceptioncondition-c-field-specification[exception
+xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-exceptioncondition-c-field-specification.adoc[exception
 conditions] to apply the discount under specific circumstances.
 * Specify any field on any object to be used as
 a  xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc#h3_1561772746[discount rate source].
@@ -236,10 +236,10 @@ recalculation] in the order cart if the selected field value is altered.
 
 
 * Take advantage of full and partial
-xref:freebies-management#autoupdate[recalculation and auto-update]
+xref:admin-guide/managing-ct-orders/freebies-management/index.adoc#autoupdate[recalculation and auto-update]
 of freebies in order triggered by changes in the set of products in the
 cart.
-* Control the xref:freebies-management#h2_1556344363[freebie
+* Control the xref:admin-guide/managing-ct-orders/freebies-management/index.adoc#h2_1556344363[freebie
 distribution] among several deliveries.
 
 [[h3_1409574029]]
@@ -249,7 +249,7 @@ distribution] among several deliveries.
 data in custom fields in real-time.
 * Performance improvements for opening orders with large catalogs,
 promotions, and numerous deliveries.
-* On the xref:offline-order#h4_1635896381[Order Cart] screen, the
+* On the xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc#h4_1635896381[Order Cart] screen, the
 header bar is fixed so that users can scroll through the order cart
 without losing sight of the names of columns.
 
@@ -275,7 +275,7 @@ a convenient visualized method of informing your sales reps about the
 applied calculation type and discount required quantity for reaching the
 next discount level and special conditions for each product added to the
 cart.
-* Perform an xref:offline-order#h3_1847490047[advanced search in
+* Perform an xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc#h3_1847490047[advanced search in
 orders] in all fields among all products in the *Catalog* and
 *Promotion* sections and already added to the order cart, including
 freebies.
@@ -299,7 +299,7 @@ details for each delivery before finalization.
 [[h3_1881527946]]
 ==== Other Improvements
 
-* xref:freebies-management[Improved freebies validation] now
+* xref:admin-guide/managing-ct-orders/freebies-management/index.adoc[Improved freebies validation] now
 provides versatile validations to improve the working experience when
 adding freebies in orders. The system now checks active promotion dates,
 min/max required products, and other settings influencing the final
@@ -324,11 +324,11 @@ sub-catalog) lists to the cart.
 * Work with offline orders in the CT Mobile by
 xref:adding-ct-orders-to-the-ct-mobile-app-4-0[adding the CT
 Orders] module to the app menu.
-* xref:offline-order#h3_1904156377[Create orders] on
-xref:offline-order#h2_2117318770[the Account&#44; Contact&#44; or
+* xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc#h3_1904156377[Create orders] on
+xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc#h2_2117318770[the Account&#44; Contact&#44; or
 Activity records] through the customizable mini-layout.
 * Manage the created offline orders on
-xref:offline-order#h3_1847490047[the Edit Cart screen]:
+xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc#h3_1847490047[the Edit Cart screen]:
 ** Search the regular products, free goods, and product bundles and
 select the right ones with specific prices structured in the catalogs
 hierarchy or joined in promotions, filtered for the customer.

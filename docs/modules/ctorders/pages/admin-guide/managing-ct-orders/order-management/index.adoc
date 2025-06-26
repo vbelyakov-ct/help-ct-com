@@ -132,7 +132,7 @@ for the current Sales Organization) catalogs and promotions.
 [[h3_1058643383]]
 ==== Offline Order in the CT Mobile app
 
-xref:offline-order[When a user creates a new offline order] and
+xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc[When a user creates a new offline order] and
 clicks the *Save Draft* button on the order details screen, the order
 moves to the *On-Hold* stage. It marks that the current order could have
 been saved with errors, the same as in Salesforce.
@@ -171,7 +171,7 @@ the xref:admin-guide/managing-ct-orders/sales-organization-management/settings-a
 type for an instance.
 . xref:admin-guide/managing-ct-orders/sales-organization-management/howtos/how-to-create-a-sales-organization[Create] and
 xref:admin-guide/managing-ct-orders/sales-organization-management/index[set up] a Sales Organization.
-. xref:delivery-management[Set up delivery rules],
+. xref:admin-guide/managing-ct-orders/delivery-management/index.adoc[Set up delivery rules],
 xref:admin-guide/workshops/workshop1-0-creating-basic-order/configuring-an-address-settings-1-0/index.adoc[Address Setting], and,
 optionally, specify
 xref:admin-guide/workshops/workshop1-0-creating-basic-order/adding-delivery-restrictions-to-an-order-1-0.adoc[Limit Setting].
@@ -199,7 +199,7 @@ catalogs, price books, and promotions will not be applied.
 . ​Specify xref:admin-guide/managing-ct-orders/price-management/index[pricing procedures]. A
 representative should have permission to create, edit, and delete the
 _Calculated Discount_ records.
-. xref:configuring-layout-settings-1-0[Create Layout Settings] for
+. xref:admin-guide/workshops/workshop1-0-creating-basic-order/configuring-layout-settings-1-0/index.adoc[Create Layout Settings] for
 xref:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/order-line-item-field-reference.adoc[Order Line Item],
 xref:admin-guide/managing-ct-orders/catalog-management/catalog-data-model/catalog-line-item-field-reference[Catalog Line Item], and
 xref:admin-guide/managing-ct-orders/discount-management/promotion-data-model/promotion-line-item-field-reference[Promotion Line Item].
@@ -224,7 +224,7 @@ orders and xref:admin-guide/workshops/workshop1-0-creating-basic-order/complete-
 See also:
 
 * xref:online-order[Online Order]
-* xref:offline-order[Offline Order]
+* xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc[Offline Order]
 * xref:multiplicator[Multiplicator]
 * xref:admin-guide/managing-ct-orders/order-management/price-tag.adoc[Price Tag]
 * xref:user-permissions-for-offline-orders[User Permissions for

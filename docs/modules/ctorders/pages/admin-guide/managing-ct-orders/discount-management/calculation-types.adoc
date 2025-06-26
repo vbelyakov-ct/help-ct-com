@@ -1,128 +1,58 @@
 = Calculation Types
 
-The  xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc-field-reference[Calculation Type] stores
-the set of rules for calculating a particular type of discount. The
-_Calculation Type_ determines whether a discount should be calculated
-separately or in combination with other discount types.
+The  xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/calculation-types-field-reference/index.adoc[Calculation Type] stores the set of rules for calculating a particular type of discount. The _Calculation Type_ determines whether a discount should be calculated separately or in combination with other discount types.
 
+The discount is calculated according to the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-fields-reference.adoc[Pricing Procedure], which is defined by a  xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/calculation-types-field-reference/index.adoc[Calculation Type] via the xref:admin-guide/managing-ct-orders/price-management/ref-guide/procedure-calculation-type-fields-reference.adoc[Procedure Calculation Type]. The relationship is automatically managed by the system.
 
+Each _Calculation Type_ has conditions and/or a group of conditions that the products in the order must meet to apply to them a discount. On the selected *Calculation Types* tab, select the desired _Calculation Type_ record *(1)* to view all the associated _Procedure Calculation Types_ *(2)*, _Condition Group_ *(3)*, and _Condition_ *(4)* records.
 
-The discount is calculated according to the
-xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-fields-reference[Pricing Procedure], which
-is defined by a  xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc-field-reference[Calculation
-Type] via the
-xref:admin-guide/managing-ct-orders/price-management/ref-guide/procedure-calculation-type-fields-reference[Procedure
-Calculation Type]. The relationship is automatically managed by the
-system.
+* _Condition Group_ is present for the _Calculation Type_ record with the _Group {plus} Condition_ record type.
+* Only one _Condition_ from the _Calculation Type_ can be applied to the _Order Line Item_.
 
-Each _Calculation Type_ has conditions and/or a group of conditions that
-the products in the order must meet to apply to them a discount. On the
-selected *Calculation Types* tab, select the desired _Calculation Type_
-record *(1)* to view all the associated _Procedure Calculation
-Types _*(2)*, _Condition Group _*(3)*, and _Condition _*(4)* records.
+Also, it is possible to avoid a discount application under the presence of certain products in the order cart. For more information, refer to xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-exceptioncondition-c-field-specification.adoc[Condition: ExceptionCondition__c Field Specification].
 
-* _Condition Group_ is present for the _Calculation Type_ record with
-the _Group {plus} Condition_ record type.
-* Only one _Condition_ from the ** _Calculation Type_ can be applied to
-the _Order Line Item_.
-
-Also, it is possible to avoid a discount application under the presence
-of certain products in the order cart. For more information, refer
-to xref:condition-exceptioncondition-c-field-specification[Condition:
-ExceptionCondition__c Field Specification].
-
-
-
-
-
+[.highlighted-table]
 [width="99%",cols="^20%,^16%,^16%,^16%,^16%,^16%",]
 |===
-|*Calculation Type* | | | |*Condition Group* |*Condition*
+4+|*Calculation Type* |*Condition Group* |*Condition* |*Record Type* |*Condition Field List* |*Level Formula* |*Apply Condition Type* a| *Condition Fields* a| *Condition Details*
 
-|*Record Type* |*Condition Field List* |*Level Formula* |*Apply
-Condition Type* a|
-*Condition Fields*
+|Condition {plus} Group |All paths to the *Condition Detail* field on the _Calculation Type_ records with the _Condition Group_ record type.
+.2+a| This field is used to specify the fields by which the quantity for a _Delivery Line Item_ or _Order Line Item_ will be counted, and when the required quantity is reached, a discount will be provided.
 
-a|
-*Condition Derails*
+For more information, refer to xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/calculation-types-field-reference/calculation-type-levelformula-c-field-specification.adoc[].
 
-|Condition {plus} Group |All paths to the *Condition Detail* field on
-the _Calculation Type_ records with the _Condition Group_ record type.
-a|
-This field is used to specify the fields by which the quantity for a
-_Delivery Line Item_ or _Order Line Item_ will be counted, and when the
-required quantity is reached, a discount will be provided.
+|Not Applicable |The list of field API names of the [.object]#Order Line Item# object that should not be empty on the _Order Line Item_ record. a|
+On the child _Condition_ records of the parent _Condition Group_ record, the system checks the expected values for the specified *Order Line Item* fields.
 
-
-
-For more information, refer
-to xref:calculation-type-levelformula-c-field-specification[Calculation
-Type: LevelFormula__c Field Specification].
-
-|Not Applicable |The list of field API names of the
-[.object]#Order Line Item# object that should not be empty on
-the _Order Line Item_ record. a|
-On the child _Condition_ records of the parent _Condition Group_ record,
-the system checks the expected values for the specified *Order Line
-Item* fields.
-
-* When the appropriate record is found and the condition is met, a
-discount is applied. Otherwise, the system checks the next _Condition_
-record according to its *Order* field.
-* There may be no matching conditions. In this case, the system goes to
-the next _Calculation Type_ record.
-[NOTE] ==== Since the CT Orders package Spring '22, if the
-matching _Condition_ record was not found, the system checks the next
-_Condition Group_ record. ====
+* When the appropriate record is found and the condition is met, a discount is applied. Otherwise, the system checks the next _Condition_ record according to its *Order* field.
+* There may be no matching conditions. In this case, the system goes to the next _Calculation Type_ record.
++
+NOTE: Since the CT Orders package Spring '22, if the matching _Condition_ record was not found, the system checks the next _Condition Group_ record.
 
 |Condition a|
-All paths to the *Condition Detail* field on the _Calculation Type_
-records with the _Condition_ record type.
+All paths to the *Condition Detail* field on the _Calculation Type_ records with the _Condition_ record type.
 
-
-
-This occurs automatically when creating the conditions, but may require
-manual editing of the *Condition Field List* if any changes or the
-removal of the conditions were made.
-
-| a|
-Depending on the value, either the first appropriate condition, or only
-the first non-zero condition, or all non-zero conditions of the
-_Calculation Type_ record will be considered for the discount.
-
-
-
-For more information, refer
-to xref:calculation-type-applyconditiontype-c-field-specification[Calculation
-Type: ApplyConditionType__c Field Specification].
+This occurs automatically when creating the conditions, but may require manual editing of the *Condition Field List* if any changes or the removal of the conditions were made.
 
 a|
-Not Applicable
+Depending on the value, either the first appropriate condition, or only the first non-zero condition, or all non-zero conditions of the _Calculation Type_ record will be considered for the discount.
 
-a|
-On the _Condition_ ** record, the system checks the JSON with the path
-to the *Order Line Item* fields and the expected values used for
-checking for matching conditions.
+For more information, refer to xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/calculation-types-field-reference/calculation-type-applyconditiontype-c-field-specification.adoc[].
 
-* When the appropriate record is found, a discount is applied.
-Otherwise, the system checks the next _Condition_ record according to
-its *Order* field.
-* There may be no matching conditions. In this case, the system goes to
-the next _Calculation Type_ record.
+a| Not Applicable
+
+a| On the _Condition_ record, the system checks the JSON with the path to the *Order Line Item* fields and the expected values used for checking for matching conditions.
+
+* When the appropriate record is found, a discount is applied. Otherwise, the system checks the next _Condition_ record according to its *Order* field.
+* There may be no matching conditions. In this case, the system goes to the next _Calculation Type_ record.
 
 |===
 
-
-
-image:2021-08-19_17-43-55.png[]
-
-
+image::2021-08-19_17-43-55.png[align="center"]
 
 See also:
 
-* xref:how-to-create-a-calculation-type[How to Create a Calculation
-Type]
-* xref:how-to-add-a-condition-for-a-calculation-type[How to Add a
-Condition for a Calculation Type]
-* xref:how-to-add-a-condition-level[How to Add a Condition Level]
-* xref:how-to-add-a-condition-group[How to Add a Condition Group]
+* xref:./howtos/how-to-create-a-calculation-type/index.adoc[]
+* xref:./howtos/how-to-create-a-calculation-type/how-to-add-a-condition-for-a-calculation-type.adoc[]
+* xref:./howtos/how-to-create-a-calculation-type/how-to-add-a-condition-level.adoc[]
+* xref:./howtos/how-to-create-a-calculation-type/how-to-add-a-condition-group.adoc[]

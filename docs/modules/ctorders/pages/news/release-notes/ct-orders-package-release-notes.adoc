@@ -36,7 +36,7 @@ promotion is displayed in the order screen.
 hidden by default.
 * Order cart now better fits full screen.
 * Deliveries in the
-xref:delivery-management#h2_1374863314[Delivery Summary] pop-up
+xref:admin-guide/managing-ct-orders/delivery-management/index.adoc#h2_1374863314[Delivery Summary] pop-up
 are now sorted in chronological order according to delivery date.
 * Products are added to *Catalog*/*Promotion* in the same order as they
 have been selected on the xref:product-management[Product
@@ -126,7 +126,7 @@ same field on the next order item.
 ==== Major Features
 
 * The *Field Search Based On* field is added to the
- xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc-field-reference[Calculation Type] object.
+ xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/calculation-types-field-reference/index.adoc[Calculation Type] object.
 This field determines if *Condition Fields* will be searched starting
 from[.object]#Order Line Item# or [.object]#Delivery
 Line Item# when performing calculation for the Web Service.
@@ -168,7 +168,7 @@ address records for an order. Now, you can also use
 the [.apiobject]#!Order# shortcut for this purpose in the *SOQL
 Filter* field. For example:
 * Support comparison operators in JSON of the *Condition Details* field
-in the xref:freebies-management#h2_623789817[Freebie Condition].
+in the xref:admin-guide/managing-ct-orders/freebies-management/index.adoc#h2_623789817[Freebie Condition].
 In previous version, you could use _equal_, _notEqual_, _contain_,
 _notContain_, _in_, _notIn_ as values for the
 [.apiobject]#operator# key in JSON of *Condition Details* field
@@ -204,7 +204,7 @@ in the left menu of the xref:online-order#h2_735642631[order].
 * Info icon displays more than 3 xref:product-availability[Product
 Availability] entries.
 * Validation for extra parenthesis at the end of JSON in
-the xref:calculation-type-levelformula-c-field-specification[Level
+the xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/calculation-types-field-reference/calculation-type-levelformula-c-field-specification.adoc[Level
 Formula] field for the [.object]#Calculation type# object does
 not work on save.
 * The
@@ -213,7 +213,7 @@ Criteria] field is required even if the
 xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/index.adoc[Calculation Method] is set to
 _Basic_.
 * Width of the *All* tab in the
-xref:offline-order#h4_1635896381[order cart] varies while
+xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc#h4_1635896381[order cart] varies while
 switching between this and another tabs.
 * Discount is not recalculated for created orders after changing
 *Discount Rate* field value in the
@@ -237,12 +237,12 @@ in-app discount calculator.
 both in xref:admin-guide/managing-ct-orders/web-service/index.adoc[Web Service] and in-app discount
 calculator.
 * *Promotions*, *Catalogs* and their sub-catalogs in the
-xref:offline-order#h4_1635896381[Order Cart] are now displayed in
+xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc#h4_1635896381[Order Cart] are now displayed in
 alphabetical order.
 * New *Displayed Field Width* field added to
 xref:order-line-item-layout-setting-1-0[Order Line Item Layout]. It
 allows adjusting the width of *Product Name* and *Quantity* fields in
-the xref:offline-order#h4_1635896381[order cart], as well as of
+the xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc#h4_1635896381[order cart], as well as of
 each field listed in the *Fields To Display*.
 
 [[h2_1975608344]]
@@ -264,8 +264,8 @@ each field listed in the *Fields To Display*.
 [[h4_1273943364]]
 ===== Freebie Management
 
-* New *xref:freebie-management-tab[Freebie
-Management]*xref:freebie-management-tab[ tab] added to set up
+* New *xref:admin-guide/managing-ct-orders/freebies-management/freebie-management-tab.adoc[Freebie
+Management]*xref:admin-guide/managing-ct-orders/freebies-management/freebie-management-tab.adoc[ tab] added to set up
 [.object]#Freebies# for Promotion in one place. Now you can set
 up Freebie conditions using friendly interface instead of writing JSON
 query.
@@ -297,7 +297,7 @@ different levels are applied in the conditions.
 ==== Other Improvements
 
 * The UX/UI improvement for the order cart:
-** xref:offline-order#h4_1635896381[The promotion] sales and
+** xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc#h4_1635896381[The promotion] sales and
 delivery dates are displayed in each promotion header. If the sales
 dates are empty, the delivery dates will be displayed instead of them.
 ** The *Product Availability* records are displayed both for products on
@@ -354,7 +354,7 @@ xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/cond
 Criteria],
 xref:condition-conditiondetails-c-field-specification[Condition
 Details&#44;] and
-xref:condition-exceptioncondition-c-field-specification[Exception
+xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-exceptioncondition-c-field-specification.adoc[Exception
 Condition] fields of the [.object]#Condition# object:
 * The UX/UI improvement:
 ** https://help.customertimes.com/articles/ct-mobile-ios-en/compact-layout[Set
@@ -423,7 +423,7 @@ sequence of applying them to the orders.
 [[h4_313159045]]
 ===== Mixed Discounts
 
-* xref:calculation-type-applyconditiontype-c-field-specification[The
+* xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/calculation-types-field-reference/calculation-type-applyconditiontype-c-field-specification.adoc[The
 ability] to apply multiple conditions from a
 single [.object]#Calculation Type#.
 * xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification.adoc#h2_1585895621[Advanced
@@ -436,11 +436,11 @@ discounts.
 [[h4_62076529]]
 ===== Freebie Management
 
-* xref:freebies-management#h3_316467656[Freebie Values] allow you
+* xref:admin-guide/managing-ct-orders/freebies-management/index.adoc#h3_316467656[Freebie Values] allow you
 to spread a different number of freebies over the freebie levels and
 deliveries.
 * If Web Service is enabled, freebies will be validated if changes on
-the xref:delivery-management#h2_1374863314[Delivery Summary] popup
+the xref:admin-guide/managing-ct-orders/delivery-management/index.adoc#h2_1374863314[Delivery Summary] popup
 affected them.
 
 [[h3_1921978271]]
@@ -515,7 +515,7 @@ in that quota among the orders.
 ** When saving the order cart, the system validate distributed products
 against the allotted quotas.
 ** Quotas will be also validated if changes on the
-xref:delivery-management#h2_1374863314[Delivery Summary] popup
+xref:admin-guide/managing-ct-orders/delivery-management/index.adoc#h2_1374863314[Delivery Summary] popup
 affected them.
 * Click the Info icon to see the booked and used quotas.
 
@@ -524,7 +524,7 @@ affected them.
 [[h4_2057147528]]
 ===== Freebie Management
 
-* xref:freebies-management#h3_676523153[Multiplier]: specify
+* xref:admin-guide/managing-ct-orders/freebies-management/index.adoc#h3_676523153[Multiplier]: specify
 whether the number of freebies in the order cart must be multiple to the
 specific value. The freebies quantity will be automatically rounded up.
 * The availability of the added freebies in deliveries will be
@@ -556,7 +556,7 @@ the connection with the Web Service.
 ===== Preparing for Mixed Discounts
 
 * In future releases, the
- xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc-field-reference[Apply Condition Type] field
+ xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/calculation-types-field-reference/index.adoc[Apply Condition Type] field
 of the [.object]#Calculation Type# object will be responsible
 for setting the condition(s) to be applied.
 * New JSON keys are available in the *Advanced Criteria* field for the
@@ -566,7 +566,7 @@ for setting the condition(s) to be applied.
 ==== Other Improvements
 
 * For xref:the-set-value-step[the Set Value step] of the pricing
-procedure,  xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc-field-reference[Calculation
+procedure,  xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/calculation-types-field-reference/index.adoc[Calculation
 Type], and xref:admin-guide/managing-ct-orders/freebies-management/freebie-data-model/freebie-condition-field-reference/index.adoc[Freebie
 Condition]:
 ** the [.apiobject]#minus# and[.apiobject]#divide#
@@ -580,7 +580,7 @@ product name to which it refers.
 button to reduce the time it takes to calculate discounts and the total
 price.
 * In the case of a configured
-xref:delivery-management#h2_1374863314[Delivery Summary] layout,
+xref:admin-guide/managing-ct-orders/delivery-management/index.adoc#h2_1374863314[Delivery Summary] layout,
 the system validates to see if the xref:limit-rules[limit rules]
 and quotas have been violated when the sales rep has made changes to the
 supplies.
@@ -633,7 +633,7 @@ Enhanced  xref:admin-guide/managing-ct-orders/discount-management/calculation-ty
 * Define  xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc#h3_1022633546[quantity settings]
 for discount calculation on[.object]#Calculation Type#.
 * Set
-xref:condition-exceptioncondition-c-field-specification[exception
+xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-exceptioncondition-c-field-specification.adoc[exception
 conditions] to apply the discount under specific circumstances.
 * Specify any field on any object to be used as a
  xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc#h3_1561772746[discount rate source].
@@ -646,10 +646,10 @@ recalculation] in the order cart if the selected field value is altered.
 ===== Freebies
 
 * Take advantage of full and partial
-xref:freebies-management#autoupdate[recalculation and auto-update]
+xref:admin-guide/managing-ct-orders/freebies-management/index.adoc#autoupdate[recalculation and auto-update]
 of freebies in order triggered by changes in the set of products in the
 cart.
-* Control the xref:freebies-management#h2_1556344363[freebie
+* Control the xref:admin-guide/managing-ct-orders/freebies-management/index.adoc#h2_1556344363[freebie
 distribution] among several deliveries.
 
 
@@ -740,7 +740,7 @@ details for each delivery before finalization.
 [[h3_230916525]]
 ==== Other Improvements
 
-* Perform an xref:offline-order#h3_1847490047[advanced search in
+* Perform an xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc#h3_1847490047[advanced search in
 orders] in all fields among all products in *Catalog* or *Promotion*
 sections and already added to the order cart, including freebies.
 * With xref:online-order#h3_2083175848[mass actions in order], add
@@ -751,7 +751,7 @@ click.
 apply the filter to all records in your order cart's Catalog and
 Promotion sections and display only actual products with assigned
 [.object]#Price Book# and *List Price*.
-* xref:freebies-management[Improved freebies validation] now
+* xref:admin-guide/managing-ct-orders/freebies-management/index.adoc[Improved freebies validation] now
 provides versatile validations to improve the working experience when
 adding freebies in orders. The system now checks active promotion dates,
 min/max required products, and other settings influencing the final

@@ -1,62 +1,33 @@
 = Discount Logs
 
-Available in Salesforce.
+NOTE: Available in Salesforce.
 
-When calculating discounts, CT Orders creates logs that take up much
-space on the Salesforce side. Set up log storage on the Salesforce side
-to free up space.
+When calculating discounts, CT Orders creates logs that take up much space on the Salesforce side. Set up log storage on the Salesforce side to free up space.
 
+For each xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/sales-organization-field-reference.adoc[Sales Organization]:
 
+* In the *Logging Mode* field, select what type of logs to store, for example, only calculation logs. If you use the internal calculator, this is a single option to manage logs.
+* In the *Log Request Trigger* field, define when to request order logs from the Web Service: when saving the order cart or only when finalizing the order. This option is used when the Web Service is active for discount calculations. The user should have
+the _CommercialCondition_Calculate_ custom permission.
 
-For each xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/sales-organization-field-reference[Sales
-Organization]:
-
-* In the *Logging Mode* field, select what type of logs to store, for
-example, only calculation logs. If you use the internal calculator, this
-is a single option to manage logs.
-* In the *Log Request Trigger* field, define when to request order logs
-from the Web Service: when saving the order cart or only when finalizing
-the order. This option is used when the Web Service is active for
-discount calculations. The user should have
-the *CommercialCondition_Calculate* custom permission.
-
-[TIP] ==== You can schedule the
-[.apiobject]#Database.executeBatch(new
-Batch_CalculatorServiceLogDataSender()); ==== batch to receive logs
-on a schedule.#
+TIP: You can schedule the [.apiobject]#Database.executeBatch(new Batch_CalculatorServiceLogDataSender());# batch to receive logs on a schedule.
 
 [[h2_635175015]]
-=== Request and Receive Logs from Web Service
+== Request and Receive Logs from Web Service
 
-There are controlling fields on the required objects that are used in
-the logic:
+There are controlling fields on the required objects that are used in the logic:
 
-* The *Log Id* field of the [.object]#Order#,
-[.object]#Order line Item#,[.object]#Delivery#, and
-[.object]#Delivery Line Item# objects are responsible for the
-order structure and will be filled out once.
-* The value in the *Log Status* field of the [.object]#Order#
-object is automatically changed and displays the current order status,
-such as requesting or receiving logs.
-
-
+* The *Log Id* field of the [.object]#Order#, [.object]#Order line Item#,[.object]#Delivery#, and [.object]#Delivery Line Item# objects are responsible for the order structure and will be filled out once.
+* The value in the *Log Status* field of the [.object]#Order# object is automatically changed and displays the current order status, such as requesting or receiving logs.
 
 Steps to receive logs in Salesforce:
 
-. Salesforce sends a request to Web Service depending on the selected
-*Log Request Trigger* option or when the batch has started on the
-schedule.
-. Salesforce changes the value in the *Log Status* field of the
-[.object]#Order# object from *Not Requested* to *Requested*.
-. After receiving the request, the Web Service waits a bit for the logs
-to be generated on the server and then generates a
-[.apiobject]#.csv# file based on the Log Ids.
+. Salesforce sends a request to Web Service depending on the selected *Log Request Trigger* option or when the batch has started on the schedule.
+. Salesforce changes the value in the *Log Status* field of the [.object]#Order# object from *Not Requested* to *Requested*.
+. After receiving the request, the Web Service waits a bit for the logs to be generated on the server and then generates a [.apiobject]#.csv# file based on the Log Ids.
 . Web Service sends logs to Salesforce.
-. Web Service changes the value of the *Log Status* field of the
-[.object]#Order# object from *Requested* to *Received*.
+. Web Service changes the value of the *Log Status* field of the [.object]#Order# object from *Requested* to *Received*.
 
-Logs are stored in the
-xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/calculated-discount-field-reference.adoc[Calculated Discounts]
-records.
+Logs are stored in the xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/calculated-discount-field-reference.adoc[Calculated Discounts] records.
 
-Changing *Log Ids* deletes all *Calculated Discounts* records.
+NOTE: Changing *Log Ids* deletes all *Calculated Discounts* records.

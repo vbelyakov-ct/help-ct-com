@@ -1,53 +1,28 @@
 = Links
+:toc:
 
-Available for instances with the enabled xref:admin-guide/managing-ct-orders/web-service/index.adoc[Web
-Service].
+WARNING: Available for instances with the enabled xref:admin-guide/managing-ct-orders/web-service/index.adoc[Web Service].
 
-The *Links* functionality helps managers to conduct advanced discount
-calculations by creating condition dependencies based on different or
-the same [.object]#Calculation Types#. Links are available both
-to regular products and freebies and, in case of several appropriate
-records, will be sequentially applied to the order.
-
-:toc: :toclevels: 3
+The *Links* functionality helps managers to conduct advanced discount calculations by creating condition dependencies based on different or the same [.object]#Calculation Types#. Links are available both to regular products and freebies and, in case of several appropriate records, will be sequentially applied to the order.
 
 [[h2_773755849]]
-=== Overview
+== Overview
 
-Links are based on non-zero conditions and applied after calculating all
-freebie conditions and discount conditions according to *Apply Condition
-Type* of the appropriate
- xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc-field-reference[Calculation Type] **
-records. Available for [.object]#Calculation
-Type# of *Condition* record type.
+Links are based on non-zero conditions and applied after calculating all freebie conditions and discount conditions according to *Apply Condition Type* of the appropriate
+ xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/calculation-types-field-reference/index.adoc[Calculation Type] records. Available for [.object]#Calculation Type# of _Condition_ record type.
 
+The xref:./discount-data-model/condition-dependency-field-reference.adoc[Condition Dependency] records define the links between conditions:
 
+TIP: When creating a record, only the required fields will be displayed, depending on the selected *Dependency Type*. Also, for records with errors, a validation will be triggered.
 
-The xref:condition-dependency-field-reference[Condition Dependency]
-records define the links between conditions:
-
-[TIP] ==== When creating a record, only the required fields will
-be displayed, depending on the selected *Dependency Type*. Also, for
-records with errors, a validation will be triggered. ====
-
-* If several conditions are found for one [.object]#Calculation
-Type#, then links are applied sequentially according to the *Order*
-field of the appropriate *Condition Dependency* records.
-* If the condition was canceled on earlier links, it cannot be applied
-in further links in the sequence.
-* xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/calculated-discount-field-reference.adoc[Calculation Logs] are
-generated after all links have been applied and contain all the
-resulting values ​​for all [.object]#Conditions# that have been
-applied for each[.object]#Calculation Type#.
-* Administrators can set 4 types of condition dependencies and the
-sequence of applying them to the orders.
-
-
+* If several conditions are found for one [.object]#Calculation Type#, then links are applied sequentially according to the *Order* field of the appropriate _Condition Dependency_ records.
+* If the condition was canceled on earlier links, it cannot be applied in further links in the sequence.
+* xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/calculated-discount-field-reference.adoc[Calculation Logs] are generated after all links have been applied and contain all the resulting values for all [.object]#Conditions# that have been applied for each [.object]#Calculation Type#.
+* Administrators can set 4 types of condition dependencies and the sequence of applying them to the orders.
 
 [width="100%",cols="15%,20%,10%,55%"]
 |===
-|*Dependency Action* |*Available Dependency Type* |*Description*
-|*Example*
+|*Dependency Action* |*Available Dependency Type* |*Description* |*Example*
 
 |Apply a|
 * Discount To Discount
@@ -55,9 +30,7 @@ sequence of applying them to the orders.
 * Freebie To Freebie
 * Freebie To Discount
 
-|The dependent condition will be applied only when the controlling
-condition is applied. a|
-Given:
+|The dependent condition will be applied only when the controlling condition is applied. a|Given:
 
 Condition 1 is 30% and suitable for the order
 
@@ -71,13 +44,9 @@ Link 2: Condition 3 depends on Condition 1
 
 Sequence: Link 1 and Link 2
 
-
-
 Then:
 
-Then Link 1 cannot be applied due to Condition 2 does not fit the order.
-The system checks Link 2 and applies both Condition 3 and Condition 1.
-The discount is 50%.
+Then Link 1 cannot be applied due to Condition 2 does not fit the order. The system checks Link 2 and applies both Condition 3 and Condition 1. The discount is 50%.
 
 |Exclude a|
 * Discount To Discount
@@ -85,9 +54,7 @@ The discount is 50%.
 * Freebie To Freebie
 * Freebie To Discount
 
-|The dependent condition will be applied only when the controlling
-condition is not suitable for the order. a|
-Given:
+|The dependent condition will be applied only when the controlling condition is not suitable for the order. a|Given:
 
 Condition 1 is 30% and suitable for the order
 
@@ -101,24 +68,17 @@ Link 2: Condition 3 depends on Condition 1
 
 Sequence: Link 1 and Link 2
 
-
-
 Then:
 
-Then Link 1 is applied due to Condition 2 does not fit the order. The
-system then checks Link 2 that cannot be applied due to the controlling
-condition that is suitable for the order. The discount is 30%.
+Then Link 1 is applied due to Condition 2 does not fit the order. The system then checks Link 2 that cannot be applied due to the controlling condition that is suitable for the order. The discount is 30%.
 
 |Best Of |Discount To Discount a|
 The conditions are compared, and the best condition is applied.
 
-* The maximum discount if the *Calculation Method* is *Decrease* on the
-appropriate [.object]#Calculation Type#.
-* The maximum markup if the *Calculation Method* is *Increase* on the
-appropriate [.object]#Calculation Type#.
+* The maximum discount if the *Calculation Method* is *Decrease* on the appropriate [.object]#Calculation Type#.
+* The maximum markup if the *Calculation Method* is *Increase* on the appropriate [.object]#Calculation Type#.
 
-a|
-Given:
+a|Given:
 
 List Price is 100$
 
@@ -144,8 +104,6 @@ The maximum freebie quantity in the dependent condition will reduce by
 the freebie quantity that was applied when the controlling condition is
 triggered.
 
-
-
 The [.object]#Freebie Condition# for the dependent freebie:
 
 * Cannot be proportional (the *Proportional* checkbox must be inactive).
@@ -158,53 +116,42 @@ Controlling Freebie Condition: 8 freebies.
 
 Dependent Freebie Condition: 24 freebies.
 
-
-
 Then:
 
-8 freebies are taken from the controlling condition, and then 24 – 8 =
-16 freebies are taken from the dependent condition.
+8 freebies are taken from the controlling condition, and then 24 – 8 = 16 freebies are taken from the dependent condition.
 
 |===
 
 [[h2_414795498]]
-=== Working with Links
+== Working with Links
 
-Links with different dependency actions may be used for the same order
-according to the *Order* field in case to reduce the discount
-conditions.
+Links with different dependency actions may be used for the same order according to the *Order* field in case to reduce the discount conditions.
 
-* Links with the *Apply*, *Exclude*, and *Best Of* dependency actions
-for regular products are calculated when a sales rep:
+* Links with the *Apply*, *Exclude*, and *Best Of* dependency actions for regular products are calculated when a sales rep:
 ** opens the order cart and click the *Calculate Discounts* button;
 ** opens the *Freebies* window;
 ** clicks *Save* in the *Freebie* window;
 ** clicks *Save* in the *Delivery Summary* window.
-* Links with the *Apply*, *Exclude*, and *Reduce* dependency actions for
-freebies are applied when a sales rep opens a *Freebie* window.
-[NOTE] ==== If the freebie condition is set as *Controlling
-Freebie Condition* in the [.object]#Condition Dependency ==== ,
-then it is applicable only when adding a freebie to the order. #
+* Links with the *Apply*, *Exclude*, and *Reduce* dependency actions for freebies are applied when a sales rep opens a *Freebie* window.
++
+NOTE: If the freebie condition is set as *Controlling Freebie Condition* in the [.object]#Condition Dependency, then it is applicable only when adding a freebie to the order.
++
+When a sales rep opens the order cart, they will see a warning about non-valid prices. To calculate discounts, they should click the *Calculate Discounts* button.
+* The system checks all freebies in the order and finds all matching conditions from the appropriate _Calculation Type_ records for [.object]#Delivery Line Items#. If there are non-zero conditions and these conditions are used in the *Links* logic, they will be applied to the order according to the _Condition Dependency_ records in the sequence based on the *Order* field.
 
-When a sales rep opens the order cart, they will see a warning about
-non-valid prices. To calculate discounts, they should click the
-*Calculate Discounts* button.
+If the sales rep saves changes for freebies in the *Freebies* window, discounts for both regular products and freebies will be recalculated.
 
-* The system checks all freebies in the order and finds all matching
-conditions from the appropriate *Calculation Type* records for
-[.object]#Delivery Line Items#. If there are non-zero conditions
-and these conditions are used in the *Links* logic, they will be applied
-to the order according to the *Condition Dependency* records in the
-sequence based on the *Order* field.
+[tabs]
+====
+For Salesforce users::
++
+--
+image:Calculate-Discounts-Links-WS.png[]
+--
+For CT Mobile iOS users::
++
+--
+image:Calculate-Discounts-Links-iOS-WS.png[]
+--
+====
 
-If the sales rep saves changes for freebies in the *Freebies* window,
-discounts for both regular products and freebies will be recalculated.
-
-[width="100%",cols="50%,50%",]
-|===
-|For Salesforce users
-|image:Calculate-Discounts-Links-WS.png[]
-
-|For CT Mobile iOS users
-|image:Calculate-Discounts-Links-iOS-WS.png[]
-|===

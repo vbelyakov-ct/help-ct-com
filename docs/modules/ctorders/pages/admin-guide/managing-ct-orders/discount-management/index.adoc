@@ -1,172 +1,116 @@
 = Discount Management
+:toc:
 
-Discount management provides full control over the discount calculation
-procedures, including the creation of different calculation types with
-specific conditions according to your organization's marketing approach
-and elaborate adjustment of the advanced calculation method for complex
-scenarios with promotions.
-
-:toc: :toclevels: 3
+Discount management provides full control over the discount calculation procedures, including the creation of different calculation types with specific conditions according to your organization's marketing approach and elaborate adjustment of the advanced calculation method for complex scenarios with promotions.
 
 [[h3_1756450500]]
-=== Definition
+== Definition
 
 * *Calculation Type*
-The unique entity in the system stores the set of rules for calculating
-a particular type of discount. the [.object]#Calculation
-Type# determines whether a discount should be calculated separately or
-in combination with other discount types.
++
+The unique entity in the system stores the set of rules for calculating a particular type of discount. The [.object]#Calculation Type# determines whether a discount should be calculated separately or in combination with other discount types.
 * *Promotions (Promo)*
-A particular _Calculation Type_ that uses specific syntax and can be
-configured via the user-friendly web interface. Promotion conditions can
-be configured for a group of clients and a group of products, as the
-_Discount Rate_ differs per each quantity/amount level. Conditions may
-affect different products that have required/min/max attributes.
++
+A particular _Calculation Type_ that uses specific syntax and can be configured via the user-friendly web interface. Promotion conditions can be configured for a group of clients and a group of products, as the _Discount Rate_ differs per each quantity/amount level. Conditions may affect different products that have required/min/max attributes.
 
 [[h2_1239990010]]
-=== Object Model
+== Object Model
 
-Since CT Orders Summer '22 and CT Mobile iOS 2.7, you can
-use xref:admin-guide/managing-ct-orders/web-service/index.adoc[the Web Service] to execute calculations from
-different channels in one place instead of a built-in calculator.
+TIP: Since CT Orders Summer '22 and CT Mobile iOS 2.7, you can use xref:admin-guide/managing-ct-orders/web-service/index.adoc[the Web Service] to execute calculations from different channels in one place instead of a built-in calculator.
 
-
-
-image:ctorders-overview-2021-07-20.png[]
+image::ctorders-overview-2021-07-20.png[align="center"]
 
 [[h2_1585481109]]
-=== Discount Calculation Process
+== Discount Calculation Process
 
-[width="100%",cols="50%,50%",]
-|===
-|image:warning.png[] a|
-* If you are using Salesforce record IDs in discount settings, use only
-18-character IDs.
-* The mobile user must have at least read access to the fields in
-the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-fields-reference[Pricing
-Procedure] or xref:admin-guide/managing-ct-orders/discount-management/discount-management#h3_1225315997[recalculation
-fields] to calculate _Total Price_. Otherwise, the total price will be
-calculated by *List Price* fields.
-* Formula fields requiring recalculation during order management are not
-supported.
+[NOTE]
+====
+* If you are using Salesforce record IDs in discount settings, use only 18-character IDs.
+* The mobile user must have at least read access to the fields in the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-fields-reference.adoc[Pricing Procedure] or xref:admin-guide/managing-ct-orders/discount-management/index.adoc#h3_1225315997[recalculation fields] to calculate _Total Price_. Otherwise, the total price will be calculated by *List Price* fields.
+* Formula fields requiring recalculation during order management are not supported.
+====
 
-|===
-
-Calculation of discounts for [.object]#Order Line Items# is
-performed by the method of consecutive application of rules with
-appropriate criteria. The rules are manifested in the
-xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/index.adoc[Condition] and
-xref:condition-group-field-reference[Condition Group] child records
-and filtered and applied one by one in a distinct order.
+Calculation of discounts for [.object]#Order Line Items# is performed by the method of consecutive application of rules with appropriate criteria. The rules are manifested in the xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/index.adoc[Condition] and xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-group-field-reference.adoc[Condition Group] child records and filtered and applied one by one in a distinct order.
 
 . Create an Order.
-*Pricing Procedure* selected in order settings defines _Calculation
-Type_ records which will be checked for appropriate criteria and applied
-to [.object]#Order Line Items#.
++
+*Pricing Procedure* selected in order settings defines _Calculation Type_ records which will be checked for appropriate criteria and applied to [.object]#Order Line Items#.
++
 image:calculation-types-2020-05-24-1.png[]
 . The system picks the first listed _Calculation Type_ record.
-. The records' filtering order is determined by the number in the
-*Order* field on each _Condition_ or _Condition Group_ child record.
-Search is executed starting from 0 in ascending order. You can set up
-the order in which the records will be checked.
-. If *Start Date* and *End Date* are specified on the _Condition Group_
-or _Condition_ record, they should lie within the date range specified
-in order settings.
-. For _Condition Group_ records only: fields specified in the *Condition
-Fields* are not empty on the _Order Line Items_ and can be accessed by a
-current user.
+. The records' filtering order is determined by the number in the *Order* field on each _Condition_ or _Condition Group_ child record. Search is executed starting from 0 in ascending order. You can set up the order in which the records will be checked.
+. If *Start Date* and *End Date* are specified on the _Condition Group_ or _Condition_ record, they should lie within the date range specified in order settings.
+. For _Condition Group_ records only: fields specified in the *Condition Fields* are not empty on the _Order Line Items_ and can be accessed by a current user.
++
 image:calculation-types-2020-05-22-2.png[]
-_Example interpretation:_ the first field is located on the _Order Line
-Item_ record, then the search mechanism jumps to next objects:
-[.apiobject]#orders__OrderLineItem__c# →
-[.apiobject]#orders__Order__c# →
-[.apiobject]#order__Account__c# → the
-[.apiobject]#Personal_Discount__c# custom field.
-. *Condition Details* field on the _Condition_ record should contain
-expected values for a field specified in the *Condition Fields List*
-field.
-. The system checks the *Exception Condition* field on each condition
-and if the criteria are met, drops the condition and processes the next.
++
+_Example interpretation:_ the first field is located on the _Order Line Item_ record, then the search mechanism jumps to next objects: [.apiobject]#orders\__OrderLineItem__c# →
+[.apiobject]#orders\__Order__c# → [.apiobject]#order\__Account__c# → the [.apiobject]#Personal_Discount__c# custom field.
+. *Condition Details* field on the _Condition_ record should contain expected values for a field specified in the *Condition Fields List* field.
+. The system checks the *Exception Condition* field on each condition and if the criteria are met, drops the condition and processes the next.
 . Define *Discount Rate Location* field:
-* If a *Condition Record* is selected, the discount % of the amount is
-taken from the _Condition_ record.
-* If a *Level Record* is selected, product quantity and discount should
-be specified on the _Condition Level_ records.
+* If a *Condition Record* is selected, the discount % of the amount is taken from the _Condition_ record.
+* If a *Level Record* is selected, product quantity and discount should be specified on the _Condition Level_ records.
 
-*Advanced Calculation Method* can only be selected if *Level Records*
-are set as a discount rate location.
+*Advanced Calculation Method* can only be selected if *Level Records* are set as a discount rate location.
 
-After the ** _Condition_ record that matches all search criteria is
-found, the system applies condition settings for discount calculation in
-accordance with the selected Pricing Procedure. The process is repeated
-until all _Calculation Type_ records are checked.
+After the _Condition_ record that matches all search criteria is found, the system applies condition settings for discount calculation in accordance with the selected Pricing Procedure. The process is repeated until all _Calculation Type_ records are checked.
 
 [[h3_1225315997]]
-==== Discount Recalculation
+=== Discount Recalculation
 
-When the discount calculation process is finished and the final price
-with discount is applied, the system starts to track changes that can
-occur in the order and restart discount calculation in some cases.
-Discount recalculation in order happens in real-time and can be
-triggered by the following:
+When the discount calculation process is finished and the final price with discount is applied, the system starts to track changes that can occur in the order and restart discount calculation in some cases. Discount recalculation in order happens in real-time and can be triggered by the following:
 
 . Product quantity change.
-Each time you change the quantity of a product, the discount will be
-recalculated.
++
+Each time you change the quantity of a product, the discount will be recalculated.
 . One of the fields affecting recalculation is changed:
 * *Condition Recalculation Fields*
-API names of fields, that if changed, trigger new condition search and
-discount recalculation for the [.object]#Order Line Item#.
-* **Discount Recalculation Fields
-**API names of fields, that if changed trigger discount recalculation,
-but no condition search.
-
-The fields are specified in JSON format, similar to
-the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-sdk-step[SDK step syntax]. The fields from the
++
+API names of fields, that if changed, trigger new condition search and discount recalculation for the [.object]#Order Line Item#.
+* *Discount Recalculation Fields*
++
+API names of fields, that if changed trigger discount recalculation, but no condition search.
++
+The fields are specified in JSON format, similar to the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-sdk-step.adoc[SDK step syntax]. The fields from the
 following objects can be used:
-*[.apiobject]#Order#
-*[.apiobject]#Delivery#
-*[.apiobject]#OrderLineItem#
-*[.apiobject]#DeliveryLineItem
 
-#
-
-[cols=",",]
-|===
-|image:warning.png[] | Some
-fields cannot be used as recalculation triggers. See the full list
-in xref:ct-orders-solution/general-limitations#h3_1020932784[this article].
-|===
-
+** [.apiobject]#Order#
+** [.apiobject]#Delivery#
+** [.apiobject]#OrderLineItem#
+** [.apiobject]#DeliveryLineItem#
++
+NOTE: Some fields cannot be used as recalculation triggers. See the full list in xref:ct-orders-solution/general-limitations.adoc#h2_176614697[this article].
++
 For example:
-. The discount recalculation will be initiated when the following fields
-are changed:
-* The fields specified for the [.apiobject]#basePrice# key in
-the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/index[Pricing Procedure].
-* The fields specified for the [.apiobject]#value# and
-[.apiobject]#items# keys in the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-set-value-step[Set
-Value step].
-* The fields specified for the [.apiobject]#condition# key in
-the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/step-conditions[Step Conditions].
++
+[source, json]
+----
+[
+    {
+        "objectName": "orders__OrderLineItem__c",
+        "fields": [
+            "orders__Test__c"
+        ]
+    }
+]
+----
 
-
+. The discount recalculation will be initiated when the following fields are changed:
+* The fields specified for the [.apiobject]#basePrice# key in the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/index.adoc[Pricing Procedure].
+* The fields specified for the [.apiobject]#value# and [.apiobject]#items# keys in the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-set-value-step.adoc[Set Value step].
+* The fields specified for the [.apiobject]#condition# key in the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/step-conditions.adoc[Step Conditions].
 
 See also:
 
-*  xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc[Calculation Types]
-* xref:calculate-discounts[Calculate
-Discounts] xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc.html[
-]
-* xref:discount-logs[Discount Logs]
-* xref:links[Links]
-* xref:admin-guide/managing-ct-orders/discount-management/promotions.adoc[Promotions]
-* xref:how-to-create-a-calculation-type[How to Create a Calculation
-Type]
-* xref:how-to-create-a-promotion[How to Create a Promotion]
-* xref:how-to-manage-products-in-promotion[How to Manage Products
-in Promotion]
-* xref:how-to-manage-discount-settings-for-a-promotion[How to
-Manage Discount Settings for a Promotion]xref:admin-guide/managing-ct-orders/discount-management/promotions.adoc.html[
-]
-* xref:discount-data-model[Discount Data Model]
-* xref:promotion-data-model[Promotion Data Model]
+*  xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc[]
+* xref:admin-guide/managing-ct-orders/discount-management/calculate-discounts.adoc[]
+* xref:./discount-logs.adoc[]
+* xref:./links.adoc[]
+* xref:admin-guide/managing-ct-orders/discount-management/promotions.adoc[]
+* xref:./howtos/how-to-create-a-calculation-type/index.adoc[]
+* xref:./howtos/how-to-create-a-promotion.adoc[]
+* xref:./howtos/how-to-manage-products-in-promotion.adoc[]
+* xref:./howtos/how-to-manage-discount-settings-for-a-promotion.adoc[]
+* xref:./discount-data-model/index.adoc[]
+* xref:./promotion-data-model/index.adoc[]
