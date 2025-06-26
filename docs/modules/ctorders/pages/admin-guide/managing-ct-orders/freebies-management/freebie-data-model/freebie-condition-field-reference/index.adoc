@@ -1,12 +1,10 @@
 = Freebie Condition Field Reference
 
-the [.object]#Freebie Condition# object stores conditions that
-should be met to distribute freebies.
+The [.object]#Freebie Condition# object stores conditions that should be met to distribute freebies.
 
 '''''
 
-Object API name:
-[.apiobject]#orders__FreebieCondition__c#
+Object API name: [.apiobject]#orders\__FreebieCondition__c#
 
 '''''
 
@@ -14,120 +12,82 @@ Object API name:
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Active |[.apiobject]#orders__IsActive__c# |Checkbox
-|Defines if the record is active and should be applied in business
-logic.
+|Active |[.apiobject]#orders\__IsActive__c# |Checkbox
+|Defines if the record is active and should be applied in business logic.
 
-|Adding Method |[.apiobject]#orders__AddingMethod__c#
+|Adding Method |[.apiobject]#orders\__AddingMethod__c#
 |Picklist a|
-Select a principle according to which freebies will be added to the
-order:
+Select a principle according to which freebies will be added to the order:
 
 * _List Based_
-To distribute products that are added to the related
-xref:admin-guide/managing-ct-orders/freebies-management/freebie-data-model/freebie-line-item-field-reference[Freebie Line Item] records.
++
+To distribute products that are added to the related xref:admin-guide/managing-ct-orders/freebies-management/freebie-data-model/freebie-line-item-field-reference.adoc[Freebie Line Item] records.
 * _Criteria Based_
-Freebies are selected based on the SOQL filter in the *Condition
-Details* field.
++
+Freebies are selected based on the SOQL filter in the *Condition Details* field.
 * _Similar_
-To distribute the same product that is added to the order cart in the
-required number.
++
+To distribute the same product that is added to the order cart in the required number.
 
 |Condition Details
-|[.apiobject]#orders__ConditionDetails__c# |Long Text
-Area(32768) a|
-Stores fields values that initialize freebies calculation or the advance
-conditions in JSON to check if freebies should be added to the order.
-The following operators are available for specifying the SOQL request:
+|[.apiobject]#orders\__ConditionDetails__c# |Long Text Area(32768) a|
+Stores fields values that initialize freebies calculation or the advance conditions in JSON to check if freebies should be added to the order. The following operators are available for specifying the SOQL request:
 
-*[.apiobject]#equal#
-*[.apiobject]##notEqual
-*[.apiobject]##contain
-*[.apiobject]##notContain.
+* [.apiobject]#equal#
+* [.apiobject]#notEqual#
+* [.apiobject]#contain#
+* [.apiobject]#notContain#
 
-Cannot bed edited in
-the xref:adding-a-freebie-condition-with-the-criteria-based-method-3-1[layout form] if
-the [.apiobject]#orders__PromotionId__c# of the freebie
-condition is specified.
+Cannot bed edited in the xref:admin-guide/workshops/workshop-3-0-working-with-freebies/workshop-3-1-configuring-prioritized-freebie-type/adding-a-freebie-condition-with-the-criteria-based-method-3-1.adoc[layout form] if the [.apiobject]#orders\__PromotionId__c# of the freebie condition is specified.
 
-|Criteria Details
-|[.apiobject]#orders__CriteriaDetails__c# |Long Text
-Area(32768) |Criteria that define which Freebies will be available for
-a Group Freebie.
+|Criteria Details |[.apiobject]#orders\__CriteriaDetails__c# |Long Text Area(32768) |Criteria that define which Freebies will be available for a Group Freebie.
 
-|Delivery Control
-|[.apiobject]#orders__DeliveryControl__c# |Picklist
-|Defines whether the freebies will be added only to the first/last or
-across the deliveries.
+|Delivery Control |[.apiobject]#orders\__DeliveryControl__c# |Picklist |Defines whether the freebies will be added only to the first/last or across the deliveries.
 
-|End Date |[.apiobject]#orders__EndDate__c# |Date |Last
-date when the condition is applied.
+|End Date |[.apiobject]#orders\__EndDate__c# |Date |Last date when the condition is applied.
 
-|External Id |[.apiobject]#orders__ExternalId__c#
-|Text(255) (External ID) (Unique Case Sensitive) |
+|External Id |[.apiobject]#orders\__ExternalId__c# |Text(255) (External ID) (Unique Case Sensitive) a|include::partial$externalid-c.adoc[]
 
-|Freebie Type |[.apiobject]#orders__FreebieTypeId__c#
-|Master-Detail(Freebie Type) |A freebie type related to the _Freebie
-Condition_ record.
+|Freebie Type |[.apiobject]#orders\__FreebieTypeId__c# |Master-Detail(Freebie Type) |A freebie type related to the _Freebie Condition_ record.
 
-|Freebie Value
-|[.apiobject]#orders__FreebieValueField__c# |Text(255)
-a|
-Specify a field with the value on the corresponding
-[.object]#Product# object, for example,
-CTCPG__ParentId__r.Value__c.
+|Freebie Value |[.apiobject]#orders\__FreebieValueField__c# |Text(255)
+a| Specify a field with the value on the corresponding [.object]#Product# object, for example, [.apiobject]#CTCPG\__ParentId__r.Value__c#.
 
 * The field must be with the _Number_, _Currency_, or _Percent_ type.
 * The mobile user should have access to the specified field.
-* The specified field will be automatically added into the *Condition
-Fields List* field of the corresponding
-xref:admin-guide/managing-ct-orders/freebies-management/freebie-data-model/freebie-type-field-reference[Freebie Type] record.
+* The specified field will be automatically added into the *Condition Fields List* field of the corresponding xref:admin-guide/managing-ct-orders/freebies-management/freebie-data-model/freebie-type-field-reference.adoc[Freebie Type] record.
 
-|Ignore Product Availability
-|[.apiobject]#orders__IgnoreProductAvailability__c#
-|Checkbox a|
-It defines whether the product availability should be considered for the
+|Ignore Product Availability |[.apiobject]#orders\__IgnoreProductAvailability__c#
+|Checkbox a| It defines whether the product availability should be considered for the
 freebie condition.
 
 The default value is _false_.
 
-|Level Formula |[.apiobject]#orders__LevelFormula__c#
-|Long Text Area(32768) |The formula in JSON format that is used to
-calculate quantity across multiple fields.
+|Level Formula |[.apiobject]#orders\__LevelFormula__c#
+|Long Text Area(32768) |The formula in JSON format that is used to calculate quantity across multiple fields.
 
-|Order |[.apiobject]#orders__Order__c# |Number(18, 0)
-|The ordinal number of a record for prioritization during condition
-search.
+|Order |[.apiobject]#orders\__Order__c# |Number(18, 0)
+|The ordinal number of a record for prioritization during condition search.
 
-|Promotion |[.apiobject]#orders__PromotionId__c# |Lookup
-|Related promotion identifier. If specified,
-the [.apiobject]#orders__ConditionDetails__c# of the
-freebie condition cannot be edited in the
-xref:adding-a-freebie-condition-with-the-criteria-based-method-3-1[layout form].
+|Promotion |[.apiobject]#orders\__PromotionId__c# |Lookup
+|Related promotion identifier. If specified, the [.apiobject]#orders\__ConditionDetails__c# of the freebie condition cannot be edited in the xref:admin-guide/workshops/workshop-3-0-working-with-freebies/workshop-3-1-configuring-prioritized-freebie-type/adding-a-freebie-condition-with-the-criteria-based-method-3-1.adoc[layout form].
 
-|Proportional |[.apiobject]#orders__IsProportional__c#
-|Checkbox |An attribute that defines if products must be distributed
-proportionally.
+|Proportional |[.apiobject]#orders\__IsProportional__c# |Checkbox |An attribute that defines if products must be distributed proportionally.
 
-|Restrict by Order content
-|[.apiobject]#orders__isRestrictByOrderContent__c#
-|Checkbox a|
-Available only if the *Adding Method* is set to _List Based_ or
+|Restrict by Order content |[.apiobject]#orders\__isRestrictByOrderContent__c#
+|Checkbox a| NOTE: Available only if the *Adding Method* is set to _List Based_ or
 _Criteria Based._
 
-If _true_, then only xref:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/order-line-item-field-reference.adoc[Order
-Line Items] with *Quantity* > 0 will be distributed as freebies.
-Default value is _false_.
+If _true_, then only xref:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/order-line-item-field-reference.adoc[Order Line Items] with *Quantity* > 0 will be distributed as freebies. Default value is _false_.
 
 The field requires the following permissions:
 
 * _Read/Write_ for Administrator and Sales Administrator roles
 * _Read_ for Sales Representative role
 
-|Start Date |[.apiobject]#orders__StartDate__c# |Date
+|Start Date |[.apiobject]#orders\__StartDate__c# |Date
 |Since this date, the freebie condition will be applied.
 
-|Unique Id |[.apiobject]#orders__UniqueId__c# |Text(255)
-(External ID) (Unique Case Insensitive) |The unique identifier for a
-freebie condition.
+|Unique Id |[.apiobject]#orders\__UniqueId__c# |Text(255)
+(External ID) (Unique Case Insensitive) |The unique identifier for a freebie condition.
 |===

@@ -1,55 +1,46 @@
 = Freebie Management Tab
-
-:toc: :toclevels: 3
+:toc:
 
 [[h2_1644201065]]
-=== Prerequisites
+== Prerequisites
 
 To manage [.object]#Freebies#:
 
 . Add the *Freebie type* field to the *Promotion* page layout:
 .. Go to *Setup* → *Object Manager*.
-.. Search for [.apiobject]#orders__Promotion__c# object
-and open it.
+.. Search for [.apiobject]#orders\__Promotion__c# object and open it.
 .. Go to *Page Layouts* and click *Promotion*.
-..  In the *Fields* sections, drag and drop *Freebie Type* to the
-desired area.
+..  In the *Fields* sections, drag and drop *Freebie Type* to the desired area.
 .. Click *Save*.
-. Set up a xref:admin-guide/managing-ct-orders/discount-management/promotions[Promotion] with a specified
-xref:freebie-type-field-reference[Freebie Type] and at least one
-xref:admin-guide/managing-ct-orders/product-management/index[Product] chosen to use for Freebies. If the
-*Use for freebies* column is missing, add it in the
- xref:promotion-layout-settings-1-0[Promotion layout settings]. Use
-search and filters to find products.
-
-
+. Set up a xref:admin-guide/managing-ct-orders/discount-management/promotions.adoc[Promotion] with a specified xref:./freebie-data-model/freebie-type-field-reference.adoc[Freebie Type] and at least one xref:admin-guide/managing-ct-orders/product-management/index.adoc[Product] chosen to use for Freebies. If the *Use for freebies* column is missing, add it in the  xref:admin-guide/workshops/workshop1-0-creating-basic-order/configuring-layout-settings-1-0/promotion-layout-settings-1-0.adoc[Promotion layout settings]. [[Product_search]]Use search and filters to find products.
++
+include::partial$product-filtering-options.adoc[]
++
 image:freebie-management6.png[]
++
 . Select *Freebies Management* tab in your [.object]#Promotion#.
 
 [[h2_2051240644]]
-=== Configuration
+== Configuration
 
 To configure Freebies:
 
 . In the *Configuration* block:
++
 image:freebie-management1.png[]
+
 .. In the *Freebie Adding Method list*, select:
 * *Similar*
-The same product for which the condition is applied will be granted as a
-Freebie.
++
+The same product for which the condition is applied will be granted as a Freebie.
 * *Criteria Based*
-Apply if you want to grant a product specified with SOQL filter
-considering all conditions for the selected *Freebie Type* record, for
-example, only products of a specified brand.
++
+Apply if you want to grant a product specified with SOQL filter considering all conditions for the selected _Freebie Type_ record, for example, only products of a specified brand.
 * *List Based*
-Apply when you want to grant a specific product selected on the *Freebie
-Line Item* record related to a Freebie Condition.
-.. In the *Depends On* list, select *Quantity* (number of Paid Products)
-or *Amount* (price of paid products).
-.. If at the step above you selected *Amount*, in the *Currency field*
-list select price type which
-https://help.customertimes.com/articles/ct-orders-3-0/order-line-item-field-reference[is
-set for the Order]:
++
+Apply when you want to grant a specific product selected on the _Freebie Line Item_ record related to a Freebie Condition.
+.. In the *Depends On* list, select *Quantity* (number of Paid Products) or *Amount* (price of paid products).
+.. If at the step above you selected *Amount*, in the *Currency field* list select price type which xref:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/order-line-item-field-reference.adoc[is set for the Order]:
 * *List price*
 * *Total Discount*
 * *Total Price*
@@ -57,53 +48,48 @@ set for the Order]:
 * *Manual Discount Amount*
 * *Total for Discount*
 * *Manual Price*
-.. (Optional) turn on *Price Per One Unit* to check if
-the [.object]#Freebies# are applicable to any *Freebie Level*
-(see step 2 below). In this case, the formula of matching
-[.object]#Freebies# to *Freebie level* is Quantity* List
-Price, where Quantity is the value on the
-[.object]#Order# and List Price is the price selected in the
+.. (Optional) turn on *Price Per One Unit* to check if the [.object]#Freebies# are applicable to any *Freebie Level* (see step 2 below). In this case, the formula of matching [.object]#Freebies# to *Freebie level* is Quantity* List Price, where Quantity is the value on the [.object]#Order# and List Price is the price selected in the
 step above.
-.. (Optional) turn on *Set* *Required Promo Products* if you need to
-specify which products and in which quantity are required for the
-[.object]#Freebie# to be received on the next step. This option
-is available for *Criteria Based* and *List Based* adding methods only.
+.. (Optional) turn on *Set* *Required Promo Products* if you need to specify which products and in which quantity are required for the [.object]#Freebie# to be received on the next step. This option is available for *Criteria Based* and *List Based* adding methods only.
 .. Click *Save*.
-. Setup [.object]#Freebie# parameters depending on *Freebie
-Adding Method* you previously set in the *Configuration* block (see step
-1):
-
-[width="100%",cols="50%,50%",]
-|===
-|For *Similar* Freebie Adding Method a|
-
-|For *Criteria Based* Freebie Adding Method a|
-.. {blank}
+. Setup [.object]#Freebie# parameters depending on *Freebie Adding Method* you previously set in the *Configuration* block (see step 1):
++
+[tabs]
+====
+For *Similar* Freebie Adding Method::
++
+--
+include::partial$setup-level.adoc[]
+--
+For *Criteria Based* Freebie Adding Method::
++
+--
+include::partial$setup-required-promo-products.adoc[]
 .. On the *Setup Criteria* tab:
 image:freebie-management7.png[]
 ... Setup criteria in SOQL Query format using query instruments: *OR*,
 *AND*, *{plus}* and *Add group*. Click *Check SOQL Query* to verify your
 criteria.
 ... Click *Save&Next*.
-.. 
-
-|For *List Based* Freebie Adding Method a|
-.. {blank}
+include::partial$setup-level.adoc[]
+--
+For *List Based* Freebie Adding Method::
++
+--
+include::partial$setup-required-promo-products.adoc[]
 .. On the *Select Freebie Products* tab:
 image:freebie-management3.png[]
 [loweralpha]
-... xref:admin-guide/managing-ct-orders/freebies-management/freebie-management-tab#Product_search[Search for Freebie
+... xref:admin-guide/managing-ct-orders/freebies-management/freebie-management-tab.adoc#Product_search[Search for Freebie
 products].
 ... Drag and drop Freebie Products from the left list to the right one.
 ... Click *Save&Next*.
-.. {blank}
+include::partial$setup-freebie-levels.adoc[]
+--
+====
 
-|===
 . Click *Save*.
 
 See also:
 
-* xref:workshop-3-0-working-with-freebies[Workshop 3.0: Working
-with Freebies]
-
-. 
+* xref:admin-guide/workshops/workshop-3-0-working-with-freebies/index.adoc[]

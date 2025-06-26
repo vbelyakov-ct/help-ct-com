@@ -1,333 +1,189 @@
 = Freebies Management
+:toc:
 
-_Freebie_ is a free-of-charge product that can be granted for products
-added from _Catalogs_ or _Promotions_ and added to the order cart as a
-gift when a customer meets the conditions for receiving freebies for a
-set of paid products.
+_Freebie_ is a free-of-charge product that can be granted for products added from _Catalogs_ or _Promotions_ and added to the order cart as a gift when a customer meets the conditions for receiving freebies for a set of paid products.
 
+Freebies are added or removed from the cart manually by a sales rep during the xref:admin-guide/workshops/workshop-3-0-working-with-freebies/workshop-3-0-checkpoint.adoc[order creation] process.
 
+To use freebies, create a xref:admin-guide/getting-started/setting-up-an-instance/creating-relationships-between-product-and-ct-orders-objects.adoc[lookup to CT Product] from the [.object]#Freebie Line Item# object and check that the freebie product is active and has _Price Book Line Item_ records.
 
-Freebies are added or removed from the cart manually by a sales rep
-during the xref:workshop-3-0-checkpoint[order creation] process.
-
-
-
-To use freebies, create a
-xref:admin-guide/getting-started/setting-up-an-instance/creating-relationships-between-product-and-ct-orders-objects[lookup
-to CT Product] from the [.object]#Freebie Line Item# object and
-check that the freebie product is active and has _Price Book Line Item_
-records.
-
-xref:admin-guide/managing-ct-orders/product-management/managing-bundles[Bundles] can also be added as freebies,
-excluding those with *Set Quantity On* = _Header_.
-
-:toc: :toclevels: 3
+NOTE: xref:admin-guide/managing-ct-orders/product-management/managing-bundles.adoc[Bundles] can also be added as freebies, excluding those with *Set Quantity On* = _Header_.
 
 [[h3_1307099884]]
-=== Freebie Type Record Types
+== Freebie Type Record Types
 
 CT Orders provides two record types of _Freebie Type_:
 
 * *Prioritized*
-
-The system applies _Freebie Condition_ records that have the lowest or
-highest order number among multiple records that match the criteria.
++
+The system applies _Freebie Condition_ records that have the lowest or highest order number among multiple records that match the criteria.
 * *Selective*
++
+The system applies all _Freebie Condition_ records that match the criteria.
 
-The system applies all _Freebie Condition_ records that match the
-criteria.
+NOTE: Only one selective and one priority _Freebie Type_ record can be used for one _Sales Organization_ at a time. It is recommended to avoid linking two records of the same _Freebie Type_ with one _Sales Organization_ to avoid incorrect freebie calculations.
 
-[width="100%",cols="50%,50%",]
-|===
-|image:warning.png[] |Only one
-selective and one priority _Freebie Type_ record can be used for
-one _Sales Organization_ at a time. It is recommended to avoid linking
-two records of the same _Freebie Type_ with one _Sales Organization_ to
-avoid incorrect freebie calculations.
-|===
+The *Freebie Type* window page has the main information *(1)* of the current xref:./freebie-data-model/freebie-type-field-reference.adoc[Freebie Type] record and related _Freebie Condition_ *(2)* and _Sales Organization_ *(3)* records.
 
-The *Freebie Type* window page has the main information *(1)* of the
-current xref:freebie-type-field-reference[Freebie Type] record and
-related _Freebie Condition _*(2)* and _Sales Organization _*(3)*
-records.
+image::2021-09-09_13-06-12.png[align="center"]
 
-image:2021-09-09_13-06-12.png[]
-
-
-
-Each _Freebie Type_ includes a set of conditions that should be applied
-to calculate the number of freebies available for each order. Freebies
-are added to the order cart depending on a principle selected in the
-*Adding Method* field:
+Each _Freebie Type_ includes a set of conditions that should be applied to calculate the number of freebies available for each order. Freebies are added to the order cart depending on a principle selected in the *Adding Method* field:
 
 * *Similar*
-The same product for which the condition is applied will be granted as a
-freebie.
++
+The same product for which the condition is applied will be granted as a freebie.
 * *Criteria Based*
-Apply if you want to grant a product specified with SOQL filter
-considering all conditions for the selected _Freebie Type_ record, for
-example, only products of a specified brand.
++
+Apply if you want to grant a product specified with SOQL filter considering all conditions for the selected _Freebie Type_ record, for example, only products of a specified brand.
 * *List Based*
-Apply when you want to grant a specific product selected on the _Freebie
-Line Item_ record related to a [.object]#Freebie Condition#.
-[TIP] ==== It is possible to set quantity on a _Product_ record,
-while for other methods you can only set the minimum or maximum quantity
-on their respective levels. ====
++
+Apply when you want to grant a specific product selected on the _Freebie Line Item_ record related to a [.object]#Freebie Condition#.
++
+TIP: It is possible to set quantity on a _Product_ record, while for other methods you can only set the minimum or maximum quantity on their respective levels.
 
 [[h2_623789817]]
-=== Freebies Calculation Process
+== Freebies Calculation Process
 
-The calculation process for freebies is similar to the
-xref:admin-guide/managing-ct-orders/discount-management/index#h2_1585481109[Discount Calculation
-process]. The rules which are used for calculation are manifested in the
-xref:admin-guide/managing-ct-orders/freebies-management/freebie-data-model/freebie-condition-field-reference/index.adoc[Freebie Condition] child
-records and filtered and applied one by one in a distinct order.
+The calculation process for freebies is similar to the xref:admin-guide/managing-ct-orders/discount-management/index.adoc#h2_1585481109[Discount Calculation process]. The rules which are used for calculation are manifested in the xref:admin-guide/managing-ct-orders/freebies-management/freebie-data-model/freebie-condition-field-reference/index.adoc[Freebie Condition] child records and filtered and applied one by one in a distinct order.
 
 . Create a new order and add a required number of products to your cart.
-. The system checks the mapping on the _Settings_ record with the
-xref:admin-guide/getting-started/setting-up-an-instance/configuring-object-setting[Object Setting] record type to
-determine the object which contains the product *Quantity* field.
-. The system checks if _Freebie Type_ records exist for the _Sales
-Organization_ and specified _Order Type_.
-[NOTE] ==== The _Freebie Condition_ record for the applied
-_Freebie Type_ must have at least one *_Freebie Level_* record. ====
-. The system checks that all fields in the *Condition Fields List* field
-(on the applied _Freebie Type_) are accessible for a current user. If at
-least one field is not accessible, freebies will not be available for
-the order.
-The *Condition Fields List* field is filled out automatically with the
-values pulled from the *Condition Details* fields on the _Freebie
-Condition_ child records. The field update is performed in one of two
-possible ways, depending on the option selected in the *Condition Fields
-Update Type* field.
-. After a _Freebie Type_ is successfully processed, the system analyzes
-each _Freebie Condition_ record related to the _Freebie Type_:
-.. The system checks _Freebie Level_ and _Freebie Line Item_ (only for
-the *List Based* method) records.
-.. A list of products granting freebies is compiled from suitable _Order
-Line Items_.
-.. The *Condition Details* field on the _Freebie Condition_ record is
-parsed.
+. The system checks the mapping on the _Settings_ record with the xref:admin-guide/getting-started/setting-up-an-instance/configuring-object-setting.adoc[Object Setting] record type to determine the object which contains the product *Quantity* field.
+. The system checks if _Freebie Type_ records exist for the _Sales Organization_ and specified _Order Type_.
++
+NOTE: The _Freebie Condition_ record for the applied _Freebie Type_ must have at least one *_Freebie Level_* record.
+. The system checks that all fields in the *Condition Fields List* field (on the applied _Freebie Type_) are accessible for a current user. If at least one field is not accessible, freebies will not be available for the order.
++
+The *Condition Fields List* field is filled out automatically with the values pulled from the *Condition Details* fields on the _Freebie Condition_ child records. The field update is performed in one of two possible ways, depending on the option selected in the *Condition Fields Update Type* field.
++
+include::partial$snippet-formula-fields-not-supported.adoc[]
+. After a _Freebie Type_ is successfully processed, the system analyzes each _Freebie Condition_ record related to the _Freebie Type_:
+.. The system checks _Freebie Level_ and _Freebie Line Item_ (only for the *List Based* method) records.
+.. A list of products granting freebies is compiled from suitable _Order Line Items_.
+.. The *Condition Details* field on the _Freebie Condition_ record is parsed.
++
 image:calculation-types-2021-08-27.png[]
-If a *Criteria Based* method is selected for this _Freebie Condition_,
-the *Criteria Details* field is parsed.
-
+If a *Criteria Based* method is selected for this _Freebie Condition_, the *Criteria Details* field is parsed.
++
 image:calculation-types-2021-08-27-1.png[]
-.. All _Freebie Level_ child records are analyzed. If no _Freebie Level_
-record is found for a condition, this _Freebie Condition_ will be
-skipped.
+.. All _Freebie Level_ child records are analyzed. If no _Freebie Level_ record is found for a condition, this _Freebie Condition_ will be skipped.
++
 image:calculation-types-2021-08-27-2.png[]
 
 [[h3_370821239]]
-==== Processing records with the Similar Adding Method
+=== Processing records with the Similar Adding Method
 
-Freebies quantity is set based on the values in the *Freebies Quantity
-Min* and *Freebies Quantity Max* field on a _Freebie Level_. If the
-*Proportional* checkbox is selected, the *Product Ratio* and *Freebie
-Ratio* fields are considered in the calculation.
+Freebies quantity is set based on the values in the *Freebies Quantity Min* and *Freebies Quantity Max* field on a _Freebie Level_. If the *Proportional* checkbox is selected, the *Product Ratio* and *Freebie Ratio* fields are considered in the calculation.
 
+The *Freebie Ratio* field defines the maximum number of freebies available for a number of products that are already in your cart. Meanwhile, *Freebies Quantity Max* specifies the number of freebies for the whole level.
 
+A freebie is granted when the number of paid products in the order cart reaches the value specified in the *Starting From* field. For this method, products for each _Freebie Level_ are calculated separately for each paid product that matches the conditions in the *Condition Details* field.
 
-The *Freebie Ratio* field defines the maximum number of freebies
-available for a number of products that are already in your cart.
-Meanwhile, *Freebies Quantity Max* specifies the number of freebies for
-the whole level.
-
-
-
-A freebie is granted when the number of paid products in the order cart
-reaches the value specified in the *Starting From* field. For this
-method, products for each _Freebie Level_ are calculated separately for
-each paid product that matches the conditions in the *Condition Details*
-field.
-image:freebies-2020-08-07-2.jpg[]
+image::freebies-2020-08-07-2.jpg[align="center"]
 
 [[h3_758219686]]
-==== Processing Records with List Based Adding Method
+=== Processing Records with List Based Adding Method
 
-An additional _Freebie Line Item_ record should be created for each
-product you want to grant as a freebie. The freebie is specified in the
-*Product* field. In the *Freebie Level* field, you can also define if
-the freebies should be calculated proportionally or by maximum and
-minimum values.
+An additional _Freebie Line Item_ record should be created for each product you want to grant as a freebie. The freebie is specified in the *Product* field. In the *Freebie Level* field, you can also define if the freebies should be calculated proportionally or by maximum and minimum values.
 
-The product quantity and proportionality are defined on _Freebie
-Level_ records the same way as for other methods. You can set a quantity
-of each freebie for each level by adding _Freebie Level Line Items_.
+The product quantity and proportionality are defined on _Freebie Level_ records the same way as for other methods. You can set a quantity of each freebie for each level by adding _Freebie Level Line Items_.
 
-Products for each _Freebie Level_ are calculated per group of products
-that match the conditions in the *Condition Details* field.
+Products for each _Freebie Level_ are calculated per group of products that match the conditions in the *Condition Details* field.
 
-image:freebies-2020-08-07.jpg[]
+image::freebies-2020-08-07.jpg[align="center"]
 
 [[h3_972561451]]
-==== Processing Records with Criteria Based Adding Method
+=== Processing Records with Criteria Based Adding Method
 
-This adding method calculation resembles a *Similar* method, but the
-list of products that can be granted as freebies is taken from the
-*Criteria Details* field.
+This adding method calculation resembles a *Similar* method, but the list of products that can be granted as freebies is taken from the *Criteria Details* field.
 
-The SOQL request for the [.object]#CT Product# object provides a
-dynamic search among the specified object records and other related
-objects with fields of the _Lookup_ type to [.object]#CT
-Product#. The system compiles a list of all products that matched the
-criteria. For this method, products for each _Freebie Level_ are
-calculated per group of products that match the conditions in the
-*Condition Details* field.
+The SOQL request for the [.object]#CT Product# object provides a dynamic search among the specified object records and other related objects with fields of the _Lookup_ type to [.object]#CT Product#. The system compiles a list of all products that matched the
+criteria. For this method, products for each _Freebie Level_ are calculated per group of products that match the conditions in the *Condition Details* field.
 
-image:freebies-2020-08-07-1.jpg[]
+image::freebies-2020-08-07-1.jpg[align="center"]
 
 [[h2_1556344363]]
-=== Freebies Distribution
+== Freebies Distribution
 
 [[h3_599666667]]
-==== Auto-update
+=== Auto-update
 
-Freebies are automatically distributed. Open the *Freebies* window by
-clicking on the *Get Freebie* button while in the order cart, and the
-system will calculate and distribute the correct amount among available
-freebies where possible.
-
-
+Freebies are automatically distributed. Open the *Freebies* window by clicking on the *Get Freebie* button while in the order cart, and the system will calculate and distribute the correct amount among available freebies where possible.
 
 The following auto-update logic is implemented:
 
-* Fully automated distribution is applied in case when a specific
-_Freebie Line Item_ reaches freebies minimum quantity and/or the
-proportionality condition is met. For example, a _Freebie Condition_
-with the following settings:
+* Fully automated distribution is applied in case when a specific _Freebie Line Item_ reaches freebies minimum quantity and/or the proportionality condition is met. For example, a _Freebie Condition_ with the following settings:
 ** the *Similar* adding method
 ** *Proportional* is active
 ** *Ratio* of Product/Freebie is *12:1*
 
-image:about-ct-vision-2021-08-25.png[]
+image::about-ct-vision-2021-08-25.png[align="center"]
 
-
-
-* Freebies update after changing product quantity: freebies that no
-longer fit the order conditions will be automatically removed.
-* If the *Delivery Control* is active, automatically distribute freebies
-to the first or last delivery when deliveries are created or deleted.
-** This option is selected in the _Freebie Condition_ ** setup and
-defined in the xref:admin-guide/managing-ct-orders/freebies-management/freebie-data-model/freebie-condition-field-reference/index.adoc[Freebie
-Condition].
+* Freebies update after changing product quantity: freebies that no longer fit the order conditions will be automatically removed.
+* If the *Delivery Control* is active, automatically distribute freebies to the first or last delivery when deliveries are created or deleted.
+** This option is selected in the _Freebie Condition_ setup and defined in the xref:admin-guide/managing-ct-orders/freebies-management/freebie-data-model/freebie-condition-field-reference/index.adoc[Freebie Condition].
++
 image:2021-08-26_12-36-46.png[]
-* If the *Delivery Control* is inactive, all freebies that can be
-automatically distributed are added to the first delivery by default.
-You can distribute *List Based* and *Criteria Based* freebies if more
-than 2 freebies are available between deliveries as desired.
-* For group *List Based* or *Criteria Based* freebies when more than one
-product matches the condition criteria, you need to manually distribute
-available freebies amount in the delivery or deliveries, if *Delivery
-Control* is off. When the maximum for the group is reached, all empty
-cells are locked out. If you enter more than allowed by the *Freebie
-Quantity Max* field on the _Freebie Condition Level_, the error will
-display, and you'll need to manually fix the number of distributed
-freebies.
+* If the *Delivery Control* is inactive, all freebies that can be automatically distributed are added to the first delivery by default. You can distribute *List Based* and *Criteria Based* freebies if more than 2 freebies are available between deliveries as desired.
+* For group *List Based* or *Criteria Based* freebies when more than one product matches the condition criteria, you need to manually distribute available freebies amount in the delivery or deliveries, if *Delivery Control* is off. When the maximum for the group is reached, all empty cells are locked out. If you enter more than allowed by the *Freebie
+Quantity Max* field on the _Freebie Condition Level_, the error will display, and you'll need to manually fix the number of distributed freebies.
 
-
-
-The order cannot be finalized if the freebies in order are not relevant.
-To recalculate and update Freebies:
+The order cannot be finalized if the freebies in order are not relevant. To recalculate and update Freebies:
 
 . Click *Get Freebies* in the order cart to open the *Freebies* window.
 . Click *Save* to apply distribution changes.
 
-
-
-image:about-ct-vision-2021-08-25-2.png[]
+image::about-ct-vision-2021-08-25-2.png[align="center"]
 
 [[h3_676523153]]
-==== Multiplier
+=== Multiplier
 
-xref:multiplicator[As paid products], you can specify whether
-freebies must be added to the order cart in a multiple of a specific
-value. On the corresponding product, activate the *Use Freebie
-Multiplier* checkbox and specify the quantity in the *Units in Package*
-field.
+xref:admin-guide/managing-ct-orders/order-management/multiplicator.adoc[As paid products], you can specify whether freebies must be added to the order cart in a multiple of a specific value. On the corresponding product, activate the *Use Freebie
+Multiplier* checkbox and specify the quantity in the *Units in Package* field.
 
-The multiplicity works only for the product per one delivery.
+NOTE: The multiplicity works only for the product per one delivery.
 
 When you add a freebie to the order cart:
 
-. The system checks whether the *Freebie Multiplier* is toggled on. If
-no, the multiplier is not in use.
-. If the *Freebie Multiplier* is toggled on, the system checks a value
-in the *Unit In Package* field:
+. The system checks whether the *Freebie Multiplier* is toggled on. If no, the multiplier is not in use.
+. If the *Freebie Multiplier* is toggled on, the system checks a value in the *Unit In Package* field:
 * For an empty field or when the value is zero, the multiplier is 1.
-* If the value is other than 0 then the freebie quantity in the
-*Quantity* field on the _Delivery Line Item_ must be a multiple of a
-number specified in the *Unit In Package* field.
+* If the value is other than 0 then the freebie quantity in the *Quantity* field on the _Delivery Line Item_ must be a multiple of a number specified in the *Unit In Package* field.
 
-In the *Freebie* window, the quantity will be rounded to a multiple of
-the value, regardless of whether you manually specify the quantity
-or xref:admin-guide/managing-ct-orders/freebies-management/freebies-management#h3_599666667[the value is automatically
-filled in].
+In the *Freebie* window, the quantity will be rounded to a multiple of the value, regardless of whether you manually specify the quantity or xref:admin-guide/managing-ct-orders/freebies-management/index.adoc#h3_599666667[the value is automatically filled in].
 
-image:2021-09-09_13-19-37.png[]
+image::2021-09-09_13-19-37.png[align="center"]
 
 [[h3_316467656]]
-==== Freebie Value and Level Formula
+=== Freebie Value and Level Formula
 
-[width="100%",cols="50%,50%",]
-|===
-|image:warning.png[] a|
- Available for instances with the enabled xref:admin-guide/managing-ct-orders/web-service/index.adoc[Web
-Service].
+[NOTE]
+====
+Available for instances with the enabled xref:admin-guide/managing-ct-orders/web-service/index.adoc[Web Service].
 
+For more information about using the *Level Formula* field for _Freebies_, refer to xref:admin-guide/managing-ct-orders/freebies-management/freebie-data-model/freebie-condition-field-reference/freebie-condition-levelformula-c-field-specification.adoc[].
+====
 
- For more information about using the *Level Formula* field
-for _Freebies_, refer
-to xref:admin-guide/managing-ct-orders/freebies-management/freebie-data-model/freebie-condition-field-reference/freebie-condition-levelformula-c-field-specification.adoc[Freebie
-Condition: LevelFormula__c Field Specification].
+Admins may assign different values for freebie products. For example, one freebie might be worth 3 points and another 1 point. The value of a freebie determines how many freebies are distributed for each _Freebie Level_.
 
-|===
-
-Admins may assign different values for freebie products. For example,
-one freebie might be worth 3 points and another 1 point. The value of a
-freebie determines how many freebies are distributed for each _Freebie
-Level_.
-
-To set the value, specify the path to the field on the corresponding
-[.object]#Product# object in the *Freebie Value* field of the
-[.object]#Freebie Condition# object, for example,
-[.apiobject]#CTCPG__ParentId__r.Value__c#.
-
-
+To set the value, specify the path to the field on the corresponding [.object]#Product# object in the *Freebie Value* field of the [.object]#Freebie Condition# object, for example, [.apiobject]#CTCPG\__ParentId__r.Value__c#.
 
 If the *Freebie Value* is set.
 
-* On the [.object]#Freebie Level# object, if there are no
-records of _Freebie Line Items_:
-** The quantity in the *Freebies Quantity Min* will be divided by
-*Freebie Value* if the *Similar* adding method is set for the _Freebie
-Condition_. In the case of *List Based* or *Criteria Based* adding
-method, the division is applied only if one freebie is distributed.
-** The quantity in the *Freebies Quantity Max* will always be divided by
-*Freebie Value*.
-** The quantity calculated according to *Freebie Ratio* will always be
-divided by *Freebie Value*.
-* On the [.object]#Freebie Line Item# object, If the *List
-Based* adding method is set for the _Freebie Condition_: The *Freebie
-Quantity Max* and *Freebie Quantity Min* will be divided by the value of
-the *Freebie Value* field.
+* On the [.object]#Freebie Level# object, if there are no records of _Freebie Line Items_:
+** The quantity in the *Freebies Quantity Min* will be divided by *Freebie Value* if the *Similar* adding method is set for the _Freebie Condition_. In the case of *List Based* or *Criteria Based* adding method, the division is applied only if one freebie is distributed.
+** The quantity in the *Freebies Quantity Max* will always be divided by *Freebie Value*.
+** The quantity calculated according to *Freebie Ratio* will always be divided by *Freebie Value*.
+* On the [.object]#Freebie Line Item# object, If the *List Based* adding method is set for the _Freebie Condition_: The *Freebie Quantity Max* and *Freebie Quantity Min* will be divided by the value of the *Freebie Value* field.
 
-
-
-Important notes:
-
-* The result of dividing the minimum freebie quantity is rounded
-upwards.
+[NOTE]
+====
+* The result of dividing the minimum freebie quantity is rounded upwards.
 * The result of dividing the maximum freebie quantity is rounded down.
-* It is not recommended to use *Freebie Value* __ if the same value for
-the minimum and maximum amount of product is set for _Freebie Level_,
-[.object]## as this can lead to a validation error.
-
-
+* It is not recommended to use *Freebie Value* __ if the same value for the minimum and maximum amount of product is set for _Freebie Level_, [.object]## as this can lead to a validation error.
+====
 
 See also:
 
-* xref:admin-guide/managing-ct-orders/freebies-management/freebie-management-tab.adoc[Freebie Management Tab]
-* xref:freebie-data-model[Freebie Data Model]
-* xref:workshop-3-0-working-with-freebies[Workshop 3.0: Working
-with Freebies]xref:freebie-data-model[]
+* xref:admin-guide/managing-ct-orders/freebies-management/freebie-management-tab.adoc[]
+* xref:./freebie-data-model/index.adoc[]
+* xref:admin-guide/workshops/workshop-3-0-working-with-freebies/index.adoc[]

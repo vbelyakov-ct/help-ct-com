@@ -1,12 +1,10 @@
 = Freebie Type Field Reference
 
-the [.object]#Freebie Type# object stores details about a
-freebie record type that defines how [.object]#Freebie
-Conditions# will be applied.
+The [.object]#Freebie Type# object stores details about a freebie record type that defines how [.object]#Freebie Conditions# will be applied.
 
 '''''
 
-Object API name:[.apiobject]#orders__FreebieType__c#
+Object API name: [.apiobject]#orders\__FreebieType__c#
 
 '''''
 
@@ -14,58 +12,42 @@ Object API name:[.apiobject]#orders__FreebieType__c#
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Active |[.apiobject]#orders__IsActive__c# |Checkbox
+|Active |[.apiobject]#orders\__IsActive__c# |Checkbox
 |Defines if the record is active and applied in business logic.
 
-|Condition Fields List
-|[.apiobject]#orders__ConditionFieldsList__c # |Long
-Text Area(32768) a|
-List of fields that are available for the user and that are used in the
-conditions specified in the _Freebie Condition_ records.
+|Condition Fields List |[.apiobject]#orders\__ConditionFieldsList__c# |Long Text Area(32768) a| List of fields that are available for the user and that are used in the conditions specified in the _Freebie Condition_ records.
 
+The source object for tracing the path to a field is the [.object]#Order Line Item# object.
 
-The source object for tracing the path to a field is
-the [.object]#Order Line Item# object.
-
-|Condition Fields Update Type
-|[.apiobject]#orders__ConditionFieldsUpdateType__c#
-|Picklist a|
-The way of updating the conditions fields list:
+|Condition Fields Update Type |[.apiobject]#orders\__ConditionFieldsUpdateType__c#
+|Picklist a| The way of updating the conditions fields list:
 
 * _Real-time_
-Condition fields will be updated whenever the values in the *Condition
-Details* field on[.object]#Freebie Condition# object are
-changed.
++
+Condition fields will be updated whenever the values in the *Condition Details* field on [.object]#Freebie Condition# object are changed.
 * _Batch update_
++
 A batch will be launched to update the condition fields.
-[NOTE] ==== It can be enabled only if the *Force Condition
-Fields Update* checkbox is selected. When a batch is processed, the
-checkbox is unchecked. ====
++
+NOTE: It can be enabled only if the *Force Condition Fields Update* checkbox is selected. When a batch is processed, the checkbox is unchecked.
 
-|External Id |[.apiobject]#rders__ExternalId__c#
-|Text(255) (External ID) (Unique Case Sensitive) |
+|External Id |[.apiobject]#orders\__ExternalId__c#
+|Text(255) (External ID) (Unique Case Sensitive) a|include::partial$externalid-c.adoc[]
 
-|Force Condition Fields Update
-|[.apiobject]#orders__IsForceConditionFieldsUpdate__c#
-|Checkbox a|
-If selected, the *Condition Field List* field will be updated after the
-[.object]#Freebie Condition# object fields are changed on the
-child records.
+|Force Condition Fields Update |[.apiobject]#orders\__IsForceConditionFieldsUpdate__c#
+|Checkbox a| If selected, the *Condition Field List* field will be updated after the [.object]#Freebie Condition# object fields are changed on the child records.
 
-[NOTE] ==== The checkbox is required if the *Batch Update* mode
-is selected in *Condition Field Update Type*. ====
+NOTE: The checkbox is required if the *Batch Update* mode is selected in *Condition Field Update Type*.
 
-|Order Type |[.apiobject]#orders__OrderType__c#
-|Picklist |Select the order type for which the freebie type is set up.
+|Order Type |[.apiobject]#orders\__OrderType__c# |Picklist |Select the order type for which the freebie type is set up.
 
-|Record Type |[.apiobject]#RecordType# |RecordType a|
-Available values:
+|Record Type |[.apiobject]#RecordType# |RecordType a| Available values:
 
 * _Prioritized_
-The system applies _Freebie Condition_ records that have the lowest or
-highest order number among multiple records that match the criteria.
-* _Selective_**
-**The system applies all _Freebie Condition_ records that match the
-criteria.
++
+The system applies _Freebie Condition_ records that have the lowest or highest order number among multiple records that match the criteria.
+* _Selective_
++
+The system applies all _Freebie Condition_ records that match the criteria.
 
 |===

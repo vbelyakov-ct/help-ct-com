@@ -82,7 +82,7 @@ image:ctorders-overview-2020-08-24.png[]
 ==== SOQL Specifications
 
 For freebies with the
-xref:adding-a-freebie-condition-with-the-criteria-based-method-3-1[Criteria
+xref:admin-guide/workshops/workshop-3-0-working-with-freebies/workshop-3-1-configuring-prioritized-freebie-type/adding-a-freebie-condition-with-the-criteria-based-method-3-1.adoc[Criteria
 Based] condition type, the system applies a SOQL filter to search
 through the list of records. If [.apiobject]#IN# operator is
 required, we suggest selecting
@@ -110,7 +110,7 @@ image:ctorders-overview-2020-11-17-1.jpg[]
 [[h3_1206446755]]
 ==== Multiplicator
 
-*Units Count Step* is xref:multiplicator[a>multiplicity step]
+*Units Count Step* is xref:admin-guide/managing-ct-orders/order-management/multiplicator.adoc[a>multiplicity step]
 in the order cart, which must be _divisible_ by the *Units in Package*
 value and also _greater than_ that value. I.e. if you set *Units in
 Package* to 5, the *Units Count Step* must be at least 10.

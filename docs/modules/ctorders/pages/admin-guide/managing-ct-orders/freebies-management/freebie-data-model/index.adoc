@@ -2,44 +2,27 @@
 
 This data model consists of the following objects:
 
-image:Freebie-Data-Model.png[]
-
-
+image::Freebie-Data-Model.png[align="center"]
 
 [width="100%",cols="15%,20%,10%,55%"]
 |===
 |*Object Label* |*API Name* |*Record Type* |*Description*
 
-|xref:freebie-type-field-reference[Freebie Type]
-|[.apiobject]#orders__FreebieType__c# a|
+|xref:./freebie-type-field-reference.adoc[Freebie Type] |[.apiobject]#orders\__FreebieType__c# a|
 * Prioritized
 * Selective
 
-|This object stores details about a freebie record type that defines how
-Freebie Conditions will be applied.
+|This object stores details about a freebie record type that defines how Freebie Conditions will be applied.
 
-|xref:admin-guide/managing-ct-orders/freebies-management/freebie-data-model/freebie-level-field-reference.adoc[Freebie Level]
-|[.apiobject]#orders__FreebieLevel__c# |  |This object
-stores the number of freebies for a defined amount of products.
+|xref:admin-guide/managing-ct-orders/freebies-management/freebie-data-model/freebie-level-field-reference.adoc[Freebie Level] |[.apiobject]#orders\__FreebieLevel__c# |  |This object stores the number of freebies for a defined amount of products.
 
-|xref:freebie-level-item-field-reference[Freebie Level Line Item]
-|[.apiobject]#orders__FreebieLevelLineItem__c# | |A
-record for each freebie if different [.object]#Freebie Levels#
-are defined for different products and product quantity, and products
-are not distributed proportionally.
+|xref:./freebie-level-item-field-reference.adoc[Freebie Level Line Item] |[.apiobject]#orders\__FreebieLevelLineItem__c# | |A record for each freebie if different [.object]#Freebie Levels# are defined for different products and product quantity, and products are not distributed proportionally.
 
-|xref:freebie-line-item-field-reference[Freebie Line Item]
-|[.apiobject]#orders__FreebieLineItem__c# | |This
-object stores information about each[.object]#Order Line Item#
-which will be distributed as a freebie.
+|xref:./freebie-line-item-field-reference.adoc[Freebie Line Item] |[.apiobject]#orders\__FreebieLineItem__c# | |This object stores information about each [.object]#Order Line Item# which will be distributed as a freebie.
 
-|xref:admin-guide/managing-ct-orders/freebies-management/freebie-data-model/freebie-condition-field-reference/index.adoc[Freebie Condition]
-|[.apiobject]#orders__FreebieCondition__c# | |This
-object stores conditions for applying freebies.
+|xref:admin-guide/managing-ct-orders/freebies-management/freebie-data-model/freebie-condition-field-reference/index.adoc[Freebie Condition] |[.apiobject]#orders\__FreebieCondition__c# | |This object stores conditions for applying freebies.
 
-|xref:organization-freebie-type-field-reference[Organization
-Freebie Type]
-|[.apiobject]#orders__OrganizationFreebieType__c# |
-|The junction object between[.object]#Freebie Type# and
-[.object]#Sales Organization#.
+|xref:./organization-freebie-type-field-reference.adoc[Organization Freebie Type]
+|[.apiobject]#orders\__OrganizationFreebieType__c# |
+|The junction object between [.object]#Freebie Type# and [.object]#Sales Organization#.
 |===

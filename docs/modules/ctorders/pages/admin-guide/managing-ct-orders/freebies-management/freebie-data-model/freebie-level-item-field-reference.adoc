@@ -1,14 +1,11 @@
 = Freebie Level Line Item Field Reference
 
-the [.object]#Freebie Level Line Item# object is responsible for
-the freebie distribution when different Freebie Levels are defined for
-different products and product quantity, and products are not
-distributed proportionally.
+The [.object]#Freebie Level Line Item# object is responsible for the freebie distribution when different Freebie Levels are defined for different products and product quantity, and products are not distributed proportionally.
 
 '''''
 
 Object API name:
-[.apiobject]#orders__FreebieLevelLineItem__c#
+[.apiobject]#orders\__FreebieLevelLineItem__c#
 
 '''''
 
@@ -16,26 +13,19 @@ Object API name:
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Freebie Level |[.apiobject]#orders__FreebieLevelId__c#
+|Freebie Level |[.apiobject]#orders\__FreebieLevelId__c#
 |Master-Detail(Freebie Level) |A link to the _Freebie Level_ record.
 
 |Freebie Line Item
-|[.apiobject]#orders__FreebieLineItemId__c#
-|Master-Detail(Freebie Line Item) |A link to the _Freebie Line Item_
-record.
+|[.apiobject]#orders\__FreebieLineItemId__c#
+|Master-Detail(Freebie Line Item) |A link to the _Freebie Line Item_ record.
 
 |Freebies Quantity Max
-|[.apiobject]#orders__FreebiesQuantityMax__c#
-|Number(18, 0) a|
-The maximum amount of freebies that can be given off for the level.
+|[.apiobject]#orders\__FreebiesQuantityMax__c#
+|Number(18, 0) a| The maximum amount of freebies that can be given off for the level.
 
-
-
-If the *Proportional* checkbox is selected on the _Freebie
-Condition_ record, the max quantity will increase proportionally.
+If the *Proportional* checkbox is selected on the _Freebie Condition_ record, the max quantity will increase proportionally.
 
 |Freebies Quantity Min
-|[.apiobject]#orders__FreebiesQuantityMin__c#
-|Number(18, 0) |The minimum amount of freebies that can be given off for
-the level. If set, you cannot add fewer freebies to your order cart.
+|[.apiobject]#orders\__FreebiesQuantityMin__c# |Number(18, 0) |The minimum amount of freebies that can be given off for the level. If set, you cannot add fewer freebies to your order cart.
 |===

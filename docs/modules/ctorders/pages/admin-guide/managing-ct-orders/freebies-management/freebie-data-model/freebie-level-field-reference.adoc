@@ -1,11 +1,10 @@
 = Freebie Level Field Reference
 
-the [.object]#Freebie Level# object stores the number of
-freebies for a defined amount of products.
+The [.object]#Freebie Level# object stores the number of freebies for a defined amount of products.
 
 '''''
 
-Object API name:[.apiobject]#orders__FreebieLevel__c#
+Object API name: [.apiobject]#orders\__FreebieLevel__c#
 
 '''''
 
@@ -13,50 +12,24 @@ Object API name:[.apiobject]#orders__FreebieLevel__c#
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|External Id |[.apiobject]#orders__ExternalId__c#
-|Text(255) (External ID) (Unique Case Sensitive) |
+|External Id |[.apiobject]#orders\__ExternalId__c# |Text(255) (External ID) (Unique Case Sensitive) a|include::partial$externalid-c.adoc[]
 
-|Freebie Condition
-|[.apiobject]#orders__FreebieConditionId__c#
-|Master-Detail |A link to the _Freebie Condition_ record.
+|Freebie Condition |[.apiobject]#orders\__FreebieConditionId__c# |Master-Detail |A link to the _Freebie Condition_ record.
 
-|Freebie Ratio |[.apiobject]#orders__FreebieRatio__c#
-|Number(18, 0) a|
-​A number of freebies distributed for the number of products specified in
-the *Product Ratio* field.
+|Freebie Ratio |[.apiobject]#orders\__FreebieRatio__c# |Number(18, 0) a|
+A number of freebies distributed for the number of products specified in the *Product Ratio* field.
 
+Active if the *Proportional* checkbox on the _Freebie Condition_ record is selected.
 
+|Freebies Quantity Max |[.apiobject]#orders\__FreebiesQuantityMax__c# |Number(18, 0) |A maximum number of freebies available for the range (between level 1 min amount to level 2 min amount). For proportional freebies: max quantity of freebies that can be proportionally distributed for this level.
 
-Active if the *Proportional* checkbox on the _Freebie Condition_ record
-is selected.
+|Freebies Quantity Min |[.apiobject]#orders\__FreebiesQuantityMin__с# |Number(18, 0) |A minimum number of freebies available for the range.
 
-|Freebies Quantity Max
-|[.apiobject]#orders__FreebiesQuantityMax__c#
-|Number(18, 0) |A maximum number of freebies available for the range
-(between level 1 min amount to level 2 min amount). For proportional
-freebies: max quantity of freebies that can be proportionally
-distributed for this level.
+|Product Ratio |[.apiobject]#orders\__ProductRatio__c# |Number(18, 0) a| A number of products that is required to get a number of freebies specified in the *Freebie Ratio* field.
 
-|Freebies Quantity Min
-|[.apiobject]#orders__FreebiesQuantityMin__с#
-|Number(18, 0) |A minimum number of freebies available for the
-range.
+Active if the *Proportional* checkbox on the _Freebie Condition_ record is selected.
 
-|Product Ratio |[.apiobject]#orders__ProductRatio__c#
-|Number(18, 0) a|
-A number of products that is required to get a number of freebies
-specified in the *Freebie Ratio* field.
+|Starting From |[.apiobject]#orders\__StartingFrom__c# |Number(18, 0) |Set the starting quantity of products required to get freebies for the level.
 
-
-
-Active if the *Proportional* checkbox on the _Freebie Condition_ record
-is selected.
-
-|Starting From |[.apiobject]#orders__StartingFrom__c#
-|Number(18, 0) |Set the starting quantity of products required to get
-freebies for the level.
-
-|Unique Id |[.apiobject]#orders__UniqueId__c# |Text(255)
-(External ID) (Unique Case Insensitive) |The unique identifier for a
-freebie level.
+|Unique Id |[.apiobject]#orders\__UniqueId__c# |Text(255) (External ID) (Unique Case Insensitive) |The unique identifier for a freebie level.
 |===
