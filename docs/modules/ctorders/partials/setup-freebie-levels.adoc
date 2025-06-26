@@ -1,25 +1,19 @@
-= setup-freebie-levels
+.. On the *Setup Freebie Levels* tab:
 
-On the *Setup Freebie Levels* tab:
+... On the *Setup Levels* subtab:
++
+image:freebie-management4.png[]
 
-. On the *Setup Levels* subtab:
-image:/resources/Storage/ct-orders-4-0/freebie-management4.png[/resources/Storage/ct-orders-4-0/freebie-management4]
-.. In the *Starting From* field, set the number of paid products in the
-order cart to grant a Freebie.
-.. In the *Freebie Group Min* and *Freebie Group Max* set minimum and
-maximum number of Freebies for the Freebie Level.
-.. Click *Add Level* to add more Freebie levels.
-.. Turn on *Proportional* to set *Product Ratio* and *Freebie Ratio*.
-*Product Ratio* is the number of products that are already in your cart,
-and *Freebie Ratio* is the maximum number of Freebies available for
-the *Product Ratio*.
-. On the *Setup Details* subtab:
-image:/resources/Storage/ct-orders-4-0/freebie-management5.png[/resources/Storage/ct-orders-4-0/freebie-management5]
-.. Set minimum and maximum number of Freebies for each product.  Their
-sum must be equal to  *Freebie Group Min* and *Freebie Group
-Max* values.
-.. Set *Delivery Control* to automatically distribute freebies to the
-first or last delivery when deliveries are created or deleted.
-.. Turn on *IgnoreFree Product Availability* to allow order to be
-completed if Freebies are out of stock and their minimum and maximum
-numbers are equal.
+.... In the *Starting From* field, set the number of paid products in the order cart to grant a Freebie.
+.... In the *Freebie Group Min* and *Freebie Group Max* set minimum and maximum number of Freebies for the Freebie Level.
+.... Click *Add Level* to add more Freebie levels.
+.... Turn on *Proportional* to set *Product Ratio* and *Freebie Ratio*.
++
+*Product Ratio* is the number of products that are already in your cart, and *Freebie Ratio* is the maximum number of Freebies available for the *Product Ratio*.
+... On the *Setup Details* subtab:
++
+image:freebie-management5.png[]
+
+.... Set minimum and maximum number of Freebies for each product. Their sum must be equal to  *Freebie Group Min* and *Freebie Group Max* values.
+.... Set *Delivery Control* to automatically distribute freebies to the first or last delivery when deliveries are created or deleted.
+.... Turn on *IgnoreFree Product Availability* to allow order to be completed if Freebies are out of stock and their minimum and maximum numbers are equal.
