@@ -1,7 +1,7 @@
 = Condition: ExceptionCondition__c Field Specification
 :toc:
 
-the [.apiobject]#orders\__ExceptionCondition__c# field is used to exclude a condition from the application affecting the discount under the presence of certain products in the order cart.
+The [.apiobject]#orders\__ExceptionCondition__c# field is used to exclude a condition from the application affecting the discount under the presence of certain products in the order cart.
 
 The Exclude Condition logic is reversed to the xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification.adoc[Advanced Criteria] option. While the Advanced Criteria blocks the application of the discount until the condition requirements are met, Exception Condition is used to block the discount application until the condition is met. At the same time, the logic works with the [.apiobject]#orders\__LevelBasedOn__c# option to determine the discount exclusion for a specific [.object]#Order Line Item# or [.object]#Delivery Line Item# and the
 corresponding object's quantity. The Exclude Condition logic may be applied for both paid products and freebies.
