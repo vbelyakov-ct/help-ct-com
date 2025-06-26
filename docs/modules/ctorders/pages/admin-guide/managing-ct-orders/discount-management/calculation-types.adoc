@@ -12,9 +12,9 @@ Each _Calculation Type_ has conditions and/or a group of conditions that the pro
 Also, it is possible to avoid a discount application under the presence of certain products in the order cart. For more information, refer to xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-exceptioncondition-c-field-specification.adoc[Condition: ExceptionCondition__c Field Specification].
 
 [.highlighted-table]
-[width="99%",cols="^20%,^16%,^16%,^16%,^16%,^16%",]
+[width="99%",cols="20%,16%,16%,16%,16%,16%",]
 |===
-4+|*Calculation Type* |*Condition Group* |*Condition* |*Record Type* |*Condition Field List* |*Level Formula* |*Apply Condition Type* a| *Condition Fields* a| *Condition Details*
+4+^|*Calculation Type* ^|*Condition Group* ^|*Condition* ^|*Record Type* ^|*Condition Field List* ^|*Level Formula* ^|*Apply Condition Type* ^| *Condition Fields* ^| *Condition Details*
 
 |Condition {plus} Group |All paths to the *Condition Detail* field on the _Calculation Type_ records with the _Condition Group_ record type.
 .2+a| This field is used to specify the fields by which the quantity for a _Delivery Line Item_ or _Order Line Item_ will be counted, and when the required quantity is reached, a discount will be provided.

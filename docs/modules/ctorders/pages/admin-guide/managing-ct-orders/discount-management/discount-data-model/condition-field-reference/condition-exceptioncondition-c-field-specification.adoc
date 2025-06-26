@@ -97,7 +97,7 @@ Available values:
 * OR
 
 |[.apiobject]#items# |An array of Filter Items |Yes a|
-See xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification.adoc#h3_764213188[Filter items].
+See <<Filter Items>>.
 
 At least one item must be provided.
 |===
@@ -113,7 +113,7 @@ NOTE: Only products with a non-zero quantity are counted.
 
 |[.apiobject]#field# |String |Yes |The field from the [.object]#Delivery Line Item# or its parent object for which the [.apiobject]#operator# key is applied.
 
-|[.apiobject]#operator# |Enum |Yes |See xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-exceptioncondition-c-field-specification.adoc#h3_1448410204[Items Operators].
+|[.apiobject]#operator# |Enum |Yes |See <<Item Operators>>.
 
 .3+|[.apiobject]#value# |Boolean .3+|No |A target value for fields with the *Boolean* type.
 
@@ -166,7 +166,7 @@ At least the quantity of one product has reached the minimum value.
 
 |[.apiobject]#items# |An array of Required Product Items
 |Yes a|
-The list of required products. See the xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification.adoc#h3_2075634919[Required Products Items].
+The list of required products. See the <<Required Product Items>>.
 
 The condition may be satisfied if there are no specified values.
 

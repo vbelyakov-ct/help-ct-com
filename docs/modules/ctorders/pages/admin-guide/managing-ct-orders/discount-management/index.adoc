@@ -52,7 +52,7 @@ _Example interpretation:_ the first field is located on the _Order Line Item_ re
 * If a *Condition Record* is selected, the discount % of the amount is taken from the _Condition_ record.
 * If a *Level Record* is selected, product quantity and discount should be specified on the _Condition Level_ records.
 
-*Advanced Calculation Method* can only be selected if *Level Records* are set as a discount rate location.
+NOTE: *Advanced Calculation Method* can only be selected if *Level Records* are set as a discount rate location.
 
 After the _Condition_ record that matches all search criteria is found, the system applies condition settings for discount calculation in accordance with the selected Pricing Procedure. The process is repeated until all _Calculation Type_ records are checked.
 

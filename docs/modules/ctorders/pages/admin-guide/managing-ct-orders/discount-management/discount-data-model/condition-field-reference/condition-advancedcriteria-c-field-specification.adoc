@@ -1,7 +1,7 @@
 = Condition: AdvancedCriteria__c Field Specification
 :toc:
 
-the [.apiobject]#orders\__AdvancedCriteria__c# field is used to specify the complex logic specified in JSON format for granting discounts in an order.
+The [.apiobject]#orders\__AdvancedCriteria__c# field is used to specify the complex logic specified in JSON format for granting discounts in an order.
 
 The logic is applied when the *Calculation Method* on the [.object]#Condition# object is *Advanced*.
 
@@ -10,9 +10,7 @@ The logic is applied when the *Calculation Method* on the [.object]#Condition# o
 
 The *Advanced Criteria* field is used to define the group discount for the product. It means that the condition in *Condition Details* and additionally the condition specified in this field must be satisfied.
 
-For example, specify products that affect the discount or the presence of which product can determine whether a discount will be granted. Also, there are the products, whose quantity would determine whether a suitable _Condition Level_ record would be selected. The quantity is counted for all products, that matched the condition in the *Advanced Criteria* field. This syntax is also applied for parsing the _Criteria Based_ and _List Based_ freebies. All [.object]#Order Line Items# of the order will. be checked. See the example below:
-
-Click to view an example:
+For example, specify products that affect the discount or the presence of which product can determine whether a discount will be granted. Also, there are the products, whose quantity would determine whether a suitable _Condition Level_ record would be selected. The quantity is counted for all products, that matched the condition in the *Advanced Criteria* field. This syntax is also applied for parsing the _Criteria Based_ and _List Based_ freebies. All [.object]#Order Line Items# of the order will. be checked. Click to the example below:
 
 [%collapsible]
 ====
@@ -252,11 +250,11 @@ Conditions on the number of unique products and mandatory products to get a disc
 
 To use several conditions, apply [.apiobject]#AND# and [.apiobject]#OR# operators.
 
-Required for xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification.adoc#h2_1585895621[Advanced Criteria 2.0].
+Required for <<h2_1585895621, Advanced Criteria 2.0>>.
 
 |[.apiobject]#levelConditions# |Object |No a| Conditions on the number of unique products and mandatory products to get a discount.
 
-Required for xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification.adoc#h2_1997029544[Advanced Criteria 1.0].
+Required for <<h2_1997029544, Advanced Criteria 1.0>>.
 |===
 
 [[h3_1323252625]]
@@ -279,13 +277,13 @@ The required condition. Available values:
 
 * filter
 +
-See xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification.adoc#h3_1623789156[Filter].
+See <<Filter>>.
 * minCount
 +
-See xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification.adoc#h3_290861277[Minimum Quantity].
+See <<Minimum Quantity>>.
 * requiredProducts
 +
-See xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification.adoc#h3_1542681245[Required Products].
+See <<Required Products>>.
 
 The condition must contain [.apiobject]#minCount# or [.apiobject]#requiredProducts#.
 If [.apiobject]#filter# is used, the [.apiobject]#minCount# or [.apiobject]#requiredProducts# logic will be applied to the products that match the filter criteria.
@@ -307,7 +305,7 @@ Available values:
 * OR
 
 |[.apiobject]#items# |An array of Filter Items |Yes a|
-See xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification.adoc#h3_764213188[Filter items].
+See <<Filter Items>>.
 
 At least one item must be provided.
 |===
@@ -321,7 +319,7 @@ At least one item must be provided.
 
 |[.apiobject]#field# |String |Yes |The field from the [.object]#Order Line Item# or its parent object for which the operator key is applied.
 
-|[.apiobject]#operator# |Enum |Yes |See xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification.adoc#h3_1330481294[Items Operators].
+|[.apiobject]#operator# |Enum |Yes |See <<Item Operators>>.
 
 .3+|[.apiobject]#value# |Boolean .3+|No |A target value for fields with the *Boolean* type.
 
@@ -376,7 +374,7 @@ It is used when one of the products is required to get a discount
 
 |[.apiobject]#items# |An array of Required Product Items
 |Yes a|
-The list of required products. See the xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification.adoc#h3_2075634919[Required Products Items].
+The list of required products. See the <<Required Product Items>>.
 
 The condition may be satisfied if there are no specified values.
 
@@ -419,8 +417,7 @@ Available values:
 
 |[.apiobject]#items# |An array of Level Based on Filter Items
 |Yes a|
-See xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification.adoc#h3_287654427[Level
-Based on Filter Items].
+See <<Level Based on Filter Items>>.
 
 At least one item must be provided.
 
@@ -439,7 +436,7 @@ The format is the same as for the xref:admin-guide/managing-ct-orders/discount-m
 
 |[.apiobject]#field# |String |Yes |The field from the [.object]#Order Line Item# or its parent object for which the [.apiobject]#operator# key is applied.
 
-|[.apiobject]#operator# |Enum |Yes |See xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification.adoc#h3_1330481294[Items Operators].
+|[.apiobject]#operator# |Enum |Yes |See <<Item Operators>>.
 
 .3+|[.apiobject]#value# |Boolean .3+|No |A target value for fields with the *Boolean* type.
 

@@ -34,7 +34,7 @@ The product can be used for a discount calculation procedure if the [.apiobject]
 * If this field is empty on all records or a user has no access to this field, products are sorted in alphabetical order in promotions.
 
 |Parent Promotion Line Item
-|[.apiobject]#orders\__[.ArticleViewer_searchKeywords]#ParentId#__c#
+|[.apiobject]#orders\__ParentId__c#
 |Lookup(Promotion Line Item) |Filled out with the linked _Promotion Line Item_ record that is a bundle including the selected product.
 
 |Product |[.apiobject]#orders\__Product2Id__c#
@@ -59,7 +59,7 @@ Lookup to the [.object]#Product Component# object
 |Checkbox |If selected, the product is mandatory and must be added to cart to get a discount.
 
 |Use for Discount
-|[.apiobject]#orders\__IsUseForDiscount__c # |Checkbox
+|[.apiobject]#orders\__IsUseForDiscount__c# |Checkbox
 |If selected, the discount should be calculated based on the selected product.
 
 |Units Count Step

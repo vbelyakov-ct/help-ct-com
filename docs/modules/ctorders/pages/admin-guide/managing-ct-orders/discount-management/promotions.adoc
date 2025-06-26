@@ -5,7 +5,7 @@ Promotion is a particular type of discount that uses specific syntax and is effe
 
 The *Promotion* page is implemented as a Lightning component with four tabs:
 
-* The <<h2_1422482942, Details>> tab with the main promotion info, such as status, promotion availability, order dates, and delivery dates.
+* The <<Details>> tab with the main promotion info, such as status, promotion availability, order dates, and delivery dates.
 * The <<Product Management>> tab consists of two sections. The left list section displays a list or hierarchy view of products available for adding to xref:./promotion-data-model/promotion-field-reference.adoc[a promotion]. The right list section displays products added to a promotion, which are represented as the xref:./promotion-data-model/promotion-line-item-field-reference.adoc[Promotion Line Item] records.
 * The <<Discount Management>> tab is used for the discount level assignment for the selected promotion products.
 * The <<Promotion Assignment>> tab consists of two sections. The left list section displays a list of xref:./promotion-data-model/promotion-field-reference.adoc[promotions]. In the right list section, assign promotions for accounts.
@@ -13,7 +13,7 @@ The *Promotion* page is implemented as a Lightning component with four tabs:
 image::promotions-details.png[align="center"]
 
 [[h2_1422482942]]
-== Promotion Settings
+== Details
 
 On the *Details* tab, you can see and edit the following:
 
@@ -56,7 +56,7 @@ You can search:
 * by External IDs;
 * by a product name.
 +
-NOTE: Create the *SKU* checkbox for the target [.object]#Product object and specify it in the xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/object-setting-field-reference.adoc[Object Setting] record for the Salesforce organization. This property signifies that this product is a stock-keeping unit that can be added to catalogs.
+NOTE: Create the *SKU* checkbox for the target [.object]#Product# object and specify it in the xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/object-setting-field-reference.adoc[Object Setting] record for the Salesforce organization. This property signifies that this product is a stock-keeping unit that can be added to catalogs.
 
 [[h3_1395193200]]
 === Promotion Products
@@ -89,7 +89,7 @@ image::promotions-discount-management.png[align="center"]
 [[h2_492952072]]
 == Freebies Management
 
-Once you have selected products to use for freebies in the xref:admin-guide/managing-ct-orders/discount-management/promotions.adoc#h2_333729072[*Product Management* tab] and set up xref:admin-guide/managing-ct-orders/freebies-management/index.adoc#h3_1307099884[Freebie type], you can configure Freebies in the *Freebies Management* tab. See detailed description here: xref:admin-guide/managing-ct-orders/freebies-management/freebie-management-tab.adoc[Freebies Management Tab].
+Once you have selected products to use for freebies in the xref:admin-guide/managing-ct-orders/discount-management/promotions.adoc#h2_333729072[Product Management tab] and set up xref:admin-guide/managing-ct-orders/freebies-management/index.adoc#h3_1307099884[Freebie type], you can configure Freebies in the *Freebies Management* tab. See detailed description here: xref:admin-guide/managing-ct-orders/freebies-management/freebie-management-tab.adoc[Freebies Management Tab].
 
 == Promotion Assignment
 

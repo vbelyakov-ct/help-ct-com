@@ -105,7 +105,7 @@ The checkbox is required if the _Batch update_ mode is selected in *Condition Fi
 |Checkbox (hidden) a|
 Selected, if the *Condition Fields Update Type* field is set to _Batch update_ and the *Force Condition Fields Update* checkbox is set to active. It is unchecked after the update process is finished.
 
-It is hidden from the interface, intended only for develop customization purposes.
+NOTE: It is hidden from the interface, intended only for develop customization purposes.
 
 |Level Based On |[.apiobject]#orders\__LevelBasedOn__c#
 |Picklist a| Select the object where the calculation will be performed:
@@ -123,7 +123,7 @@ The source object for formula fields is defined in the *Level Based On* field.
 
 It is possible to use fields with the *Number* and *Currency* types to calculate quantity or amount, and the values from these fields can be used for the discount calculation based on the entire order or the previous deliveries. In this case, an additional step should be specified in the Pricing Procedure to process this summary.
 
-To see the example, refer to xref:./calculation-type-levelformula-c-field-specification.adoc[Calculation Type: LevelFormula__c Field Specification].
+TIP: To see the example, refer to xref:./calculation-type-levelformula-c-field-specification.adoc[Calculation Type: LevelFormula__c Field Specification].
 
 |Promo Related
 |[.apiobject]#orders\__IsPromoRelated__c# |Checkbox
