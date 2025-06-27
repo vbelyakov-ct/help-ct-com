@@ -51,7 +51,7 @@ to xref:./order-change-manager-field-reference.adoc[Order Change Manager Field R
 [[h2_23704773]]
 == Order Deduplication Logic
 
-The deduplication logic allows you to handle conflicts and keep data consistency of created orders and related object records. For this purpose, the [.apiobject]#orders__ReferenceId__c# field is created on the following objects:
+The deduplication logic allows you to handle conflicts and keep data consistency of created orders and related object records. For this purpose, the [.apiobject]#orders\__ReferenceId__c# field is created on the following objects:
 
 * [.object]#Order#
 * [.object]#Order Line Item#
@@ -66,7 +66,7 @@ The *Reference Id* field stores the pair of record ID and user ID.
 * If the record has not yet been transferred from CT Mobile, the field contains the mobile temporary record ID and the user identifier.
 +
 For example, [.apiobject]#a06-AF3AA67B-EA24-4DAB-9C8A-9B70357DAB830055J000001L7aTQAS#,
-where [.apiobject]#a06-AF3AA67B-EA24-4DAB-9C8A-9B70357DAB83# is the temporary record Id and [.apiobject]#0055J000001L7aTQAS# is the user identifier.
+where [.apiobject]#a06-AF3AA67B-EA24-4DAB-9C8A-9B70357DAB83# is the temporary record ID and [.apiobject]#0055J000001L7aTQAS# is the user identifier.
 * If the record was transferred to Salesforce, the field contains the Salesforce record ID and the user identifier.
 +
 For example, [.apiobject]#a0g5w00000EQJi1AAH0055J000001L7aTQAS#, where [.apiobject]#a0g5w00000EQJi1AAH# is the Salesforce record ID and [.apiobject]#0055J000001L7aTQAS# is the user identifier.

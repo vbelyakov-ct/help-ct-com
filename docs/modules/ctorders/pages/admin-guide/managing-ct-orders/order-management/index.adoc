@@ -1,238 +1,140 @@
 = Order Management
+:toc:
 
-[WARNING] ==== Before starting to work with orders, please check
-that you have at least the _Read_ permission to the *Logging Mode* field
-on the xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/sales-organization-field-reference[Sales Organization]
-object. ====
+WARNING: Before starting to work with orders, please check that you have at least the _Read_ permission to the *Logging Mode* field on the xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/sales-organization-field-reference.adoc[Sales Organization] object.
 
-*Order Management* is a combination of settings that match your business
-purposes.
-
-:toc: :toclevels: 3
+Order Management is a combination of settings that match your business purposes.
 
 [[h2_2068007851]]
-=== Order Taking Overview
+== Order Taking Overview
 
-The *Order Life Cycle* allows using advanced sales strategies with
-multiple conditions. The optional integration with ERP helps to easily
-create orders based on all provided data.
+The *Order Life Cycle* allows using advanced sales strategies with multiple conditions. The optional integration with ERP helps to easily create orders based on all provided data.
 
-* Order differentiation based on territories and roles in a company, as
-well as the ability to customize the order page for each client.
-* Set up comprehensive pricing procedures, long and short-term
-promotions, and discounts based on different conditions.
-* Define your order types or use the pre-configured ones to cover
-specific needs per each client.
-* Add the same products with different price conditions in one order,
-for example, from an ordinary catalog or a short-term promotion.
+* Order differentiation based on territories and roles in a company, as well as the ability to customize the order page for each client.
+* Set up comprehensive pricing procedures, long and short-term promotions, and discounts based on different conditions.
+* Define your order types or use the pre-configured ones to cover specific needs per each client.
+* Add the same products with different price conditions in one order, for example, from an ordinary catalog or a short-term promotion.
 * Specify bundles to add them with ordinary products in one order.
-* Create multiple deliveries for several addresses based on the
-available dates, products, and specific limits.
+* Create multiple deliveries for several addresses based on the available dates, products, and specific limits.
 * Real-time calculation based on all provided details.
-* Specify your order stages or re-use pre-configured ones to build order
-processes according to the company needs.
-* ​Apply validations to be sure to have the ability to correct all
-order/delivery issues.
+* Specify your order stages or re-use pre-configured ones to build order processes according to the company needs.
+* Apply validations to be sure to have the ability to correct all order/delivery issues.
 
 Order management allows you to create online and offline orders:
 
-* Accept online orders at the call center or provide the customer access
-to create online orders.
-* Use field sales forces to create offline orders and then synchronize
-all data from the CT Mobile app with CRM.
-[.confluence-information-macro-information]#Offline orders are available
-in CT Orders version 1.5 and higher.#
+* Accept online orders at the call center or provide the customer access to create online orders.
+* Use field sales forces to create offline orders and then synchronize all data from the CT Mobile app with CRM.
++
+NOTE: Offline orders are available in CT Orders version 1.5 and higher.
 
 [[h2_596462762]]
-=== The CT Orders tab
+== The CT Orders tab
 
-The *CT Orders* tab is the standard Salesforce page to monitor all order
-records, create, edit, and delete orders. Click on the appropriate order
-to view the order details.
+The *CT Orders* tab is the standard Salesforce page to monitor all order records, create, edit, and delete orders. Click on the appropriate order to view the order details.
 
 . Set up a header with all the necessary order information.
 . The *CT Order* button panel:
 * Click *Edit Cart* to form orders and set up deliveries.
-* Click *Edit* to make some changes in the main order information, such
-as specify *Account*, *Price Books*, *Sales Organizations*, etc.
+* Click *Edit* to make some changes in the main order information, such as specify *Account*, *Price Books*, *Sales Organizations*, etc.
 * Click *Delete* to remove the order.
-* Click *Clone* to create a new _Order_ record with the same order
-information.
+* Click *Clone* to create a new _Order_ record with the same order information.
 . Specify the display of the main order info.
 . Specify the display of available related lists on the order layout.
-* *Order Line Items* are the records of *CT Products* added to the
-current order.
-* *Deliveries* are the number of order deliveries with the *Delivery
-Line Items* that represent *CT Products* in the current delivery.
+* *Order Line Items* are the records of *CT Products* added to the current order.
+* *Deliveries* are the number of order deliveries with the *Delivery Line Items* that represent *CT Products* in the current delivery.
 
-image:CT-Order-Overview.png[]
+image::CT-Order-Overview.png[align="center"]
 
 [[h2_1882122703]]
-=== Order Types
+== Order Types
 
-the [.object]#CT Order# object has no record types by default.
-You can specify record types according to your needs and create the
-specific xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/layout-setting-field-reference[Layout Settings]
-record for each record type. In this case, when you create a CT Order
-record, you should first select the record type and then the order type.
+NOTE: The [.object]#CT Order# object has no record types by default. You can specify record types according to your needs and create the specific xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/layout-setting-field-reference.adoc[Layout Settings] record for each record type. In this case, when you create a CT Order record, you should first select the record type and then the order type.
 
 By default, the following order types are available:
 
 * *Order*
++
 Create a standard order and set up deliveries.
 * *Return*
++
 Select this type for an order that should be returned.
-* **Pre-Sale
-**Select this type for an order with CT Products that have not been
-released to the public yet.
+* *Pre-Sale*
++
+Select this type for an order with CT Products that have not been released to the public yet.
 
 [[h2_158967301]]
-=== Order Stages
+== Order Stages
 
-There are several pre-configured stages, which are different for mobile
-devices and Salesforce. The available stages:
+There are several pre-configured stages, which are different for mobile devices and Salesforce. The available stages:
 
 * On-Hold
 * Completed
 * Finalized
 * Validated
 
-Create a custom flow and xref:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/ct-order-field-reference.adoc[add new
-stages] to match your business flow. Consider the following:
+Create a custom flow and xref:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/ct-order-field-reference.adoc[add new stages] to match your business flow. Consider the following:
 
 * The standard flow does not include the _Validated_ stage.
 * The _Completed_ and _Finalized_ stages cannot be overridden.
 
 [[h3_1884354907]]
-==== Online Order in Salesforce
+=== Online Order in Salesforce
 
-xref:online-order[When a user creates a new online order] and
-clicks the *Save Draft* button on the order details page, the order
-moves to the _On-Hold_ stage. It marks that the current order could have
-been saved with errors, for example:
+xref:./online-order.adoc[When a user creates a new online order] and clicks the *Save Draft* button on the order details page, the order moves to the _On-Hold_ stage. It marks that the current order could have been saved with errors, for example:
 
 * Delivery dates in the past for orders with the _Return_ order type.
-* ​Products from expired promotions or not available catalogs.
+* Products from expired promotions or not available catalogs.
 * A not specified number of products for deliveries.
 
+When a user clicks the *Finalize* button on the order details page, the current order will be validated. If it met all validations, it moves to the *Finalized* stage, will be locked, and cannot be edited anymore.
 
+TIP: You can create business logic to send finalized orders to the ERP system if applied.
 
-When a user clicks the *Finalize* button on the order details page, the
-current order will be validated. If it met all validations, it moves to
-the _Finalized_ stage, will be locked, and cannot be edited anymore.
-
-You can create business logic to send finalized orders to the ERP system
-if applied.
-
-* All products in the order are from available (and optionally assigned
-for the current Sales Organization) catalogs and promotions.
+* All products in the order are from available (and optionally assigned for the current Sales Organization) catalogs and promotions.
 * The delivery rules are applied.
 * All corresponding discounts are applied.
 
 [[h3_1058643383]]
-==== Offline Order in the CT Mobile app
+=== Offline Order in the CT Mobile app
 
-xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc[When a user creates a new offline order] and
-clicks the *Save Draft* button on the order details screen, the order
-moves to the *On-Hold* stage. It marks that the current order could have
-been saved with errors, the same as in Salesforce.
+xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc[When a user creates a new offline order] and clicks the *Save Draft* button on the order details screen, the order moves to the *On-Hold* stage. It marks that the current order could have been saved with errors, the same as in Salesforce.
 
+When a user clicks the *Complete* button on the order details screen, the current order will be validated, and if it met all validations, it moves to the *Completed* stage.
 
+WARNING: Do not manually change the *Stage* value on the _Order_ record screen to avoid missing validations.
 
-When a user clicks the *Complete* button on the order details screen,
-the current order will be validated, and if it met all validations, it
-moves to the *Completed* stage.
-
-[WARNING] ==== Do not manually change the *Stage* value on the
-[.object]#Order ==== record screen to avoid missing
-validations.#
-
-Once completed, an order cannot be edited on a mobile device. Perform a
-synchronization to edit if necessary and finalize the order in
-Salesforce. Also, finalized orders received from Salesforce cannot be
-edited on the mobile device.
+Once completed, an order cannot be edited on a mobile device. Perform a synchronization to edit if necessary and finalize the order in Salesforce. Also, finalized orders received from Salesforce cannot be edited on the mobile device.
 
 [[h2_1374863314]]
-=== Process Path
+== Process Path
 
-The following steps must be performed by the administrator to configure
-the order:
+The following steps must be performed by the administrator to configure the order:
 
-. Check the representative and manager permissions to target system
-objects. Also, if the additional custom objects will be created, for
-example, [.apiobject]#Address__c#, specify permission for
-representatives and managers. A representative should have at least
-permission to read records and all fields of
-the xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/index[Settings] object and all objects
-of the CT Orders package. Users with the manager role can also have
-permission to edit records.
-. xref:admin-guide/getting-started/setting-up-an-instance/configuring-object-setting[Create] the _Setting_ record with
-the xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/object-setting-field-reference[Object Settings] record
-type for an instance.
-. xref:admin-guide/managing-ct-orders/sales-organization-management/howtos/how-to-create-a-sales-organization[Create] and
-xref:admin-guide/managing-ct-orders/sales-organization-management/index[set up] a Sales Organization.
+. Check the representative and manager permissions to target system objects. Also, if the additional custom objects will be created, for example, [.apiobject]#Address__c#, specify permission for representatives and managers. A representative should have at least permission to read records and all fields of the xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/index.adoc[Settings] object and all objects of the CT Orders package. Users with the manager role can also have permission to edit records.
+. xref:admin-guide/getting-started/setting-up-an-instance/configuring-object-setting.adoc[Create] the _Setting_ record with the xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/object-setting-field-reference.adoc[Object Settings] record type for an instance.
+. xref:admin-guide/managing-ct-orders/sales-organization-management/howtos/how-to-create-a-sales-organization.adoc[Create] and xref:admin-guide/managing-ct-orders/sales-organization-management/index.adoc[set up] a Sales Organization.
 . xref:admin-guide/managing-ct-orders/delivery-management/index.adoc[Set up delivery rules],
-xref:admin-guide/workshops/workshop1-0-creating-basic-order/configuring-an-address-settings-1-0/index.adoc[Address Setting], and,
-optionally, specify
-xref:admin-guide/workshops/workshop1-0-creating-basic-order/adding-delivery-restrictions-to-an-order-1-0.adoc[Limit Setting].
-. If you use the custom [.object]#Address# object,
-xref:admin-guide/workshops/workshop1-0-creating-basic-order/configuring-an-address-settings-1-0/creating-a-relationship-between-custom-address-object-and-delivery-1-0.adoc.html[configure
-the [.object]#Delivery# object]. A representative should have
-permission to create, edit, and delete the _Delivery_ and _Delivery Line
-Item_ records. If applied, a representative should have permission to
-read the custom _Address_ object. Users with the manager role can also
-have permission to edit _Address_ records.
-. Specify xref:admin-guide/managing-ct-orders/catalog-management/index[Catalogs] and
-xref:admin-guide/managing-ct-orders/discount-management/promotions[Promotions] based on
-xref:admin-guide/managing-ct-orders/product-management/product-data-model/index[CT Products and Price Books] and assign
-Products. The _Catalog/Promotion_ record should include _CT
-Product_ records, be assigned to at least one _Account_ record that
-relates to selected CT Products, and be active as well as _Catalog Line
-Items/Promotion Line Item_ records should be active too. It is
-required xref:admin-guide/getting-started/setting-up-an-instance/creating-relationships-between-product-and-ct-orders-objects[to
-configure the Order Line Item and Promotion Line Item object].
-. xref:admin-guide/managing-ct-orders/catalog-management/how-to-create-and-assign-catalog[Assign Catalogs],
-xref:admin-guide/managing-ct-orders/product-management/howtos/how-to-add-a-pricebook/index[Price
-Books], and xref:admin-guide/managing-ct-orders/discount-management/promotions[Promotions]. If no Sales Organization
-is defined for a _Catalog_, _Price Book_, and _Promotion_ record, these
-catalogs, price books, and promotions will not be applied.
-. ​Specify xref:admin-guide/managing-ct-orders/price-management/index[pricing procedures]. A
-representative should have permission to create, edit, and delete the
-_Calculated Discount_ records.
-. xref:admin-guide/workshops/workshop1-0-creating-basic-order/configuring-layout-settings-1-0/index.adoc[Create Layout Settings] for
-xref:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/order-line-item-field-reference.adoc[Order Line Item],
-xref:admin-guide/managing-ct-orders/catalog-management/catalog-data-model/catalog-line-item-field-reference[Catalog Line Item], and
-xref:admin-guide/managing-ct-orders/discount-management/promotion-data-model/promotion-line-item-field-reference[Promotion Line Item].
-Additionally, specify
-xref:admin-guide/managing-ct-orders/catalog-management/catalog-data-model/catalog-assignment-field-reference[Catalog] and
-xref:admin-guide/managing-ct-orders/discount-management/promotion-data-model/promotion-assignment-field-reference[Promotion]
-Assignments. If the _Layout Setting_ is not specified for an object, the
-necessary fields for creating order will not be available.
-. xref:configuring-an-account-1-0[Add permission] for creating
-orders for the corresponding Account record.
-. Specify the xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/totals-panel-setting-field-reference[Totals
-Panel Setting] to display overview metrics on the order creation page.
-. Additionally, specify xref:admin-guide/workshops/workshop-5-0-implementing-additional-features/5-1-setting-up-a-delivery-split.adoc[Split
-Setting] to split the finalized order into deliveries according to
-specific logistic conditions.
+xref:admin-guide/workshops/workshop1-0-creating-basic-order/configuring-an-address-settings-1-0/index.adoc[Address Setting], and, optionally, specify xref:admin-guide/workshops/workshop1-0-creating-basic-order/adding-delivery-restrictions-to-an-order-1-0.adoc[Limit Setting].
+. If you use the custom [.object]#Address# object, xref:admin-guide/workshops/workshop1-0-creating-basic-order/configuring-an-address-settings-1-0/creating-a-relationship-between-custom-address-object-and-delivery-1-0.adoc[configure the [.object]#Delivery# object]. A representative should have permission to create, edit, and delete the _Delivery_ and _Delivery Line Item_ records. If applied, a representative should have permission to read the custom _Address_ object. Users with the manager role can also have permission to edit _Address_ records.
+. Specify xref:admin-guide/managing-ct-orders/catalog-management/index.adoc[Catalogs] and
+xref:admin-guide/managing-ct-orders/discount-management/promotions.adoc[Promotions] based on xref:admin-guide/managing-ct-orders/product-management/product-data-model/index.adoc[CT Products and Price Books] and assign Products. The _Catalog/Promotion_ record should include _CT Product_ records, be assigned to at least one _Account_ record that relates to selected CT Products, and be active as well as _Catalog Line Items/Promotion Line Item_ records should be active too. It is required xref:admin-guide/getting-started/setting-up-an-instance/creating-relationships-between-product-and-ct-orders-objects.adoc[to configure the Order Line Item and Promotion Line Item object].
+. xref:admin-guide/managing-ct-orders/catalog-management/how-to-create-and-assign-catalog.adoc[Assign Catalogs], xref:admin-guide/managing-ct-orders/product-management/howtos/how-to-add-a-pricebook/index.adoc[Price Books], and xref:admin-guide/managing-ct-orders/discount-management/promotions.adoc[Promotions]. If no Sales Organization is defined for a _Catalog_, _Price Book_, and _Promotion_ record, these catalogs, price books, and promotions will not be applied.
+. Specify xref:admin-guide/managing-ct-orders/price-management/index.adoc[pricing procedures]. A representative should have permission to create, edit, and delete the _Calculated Discount_ records.
+. xref:admin-guide/workshops/workshop1-0-creating-basic-order/configuring-layout-settings-1-0/index.adoc[Create Layout Settings] for xref:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/order-line-item-field-reference.adoc[Order Line Item], xref:admin-guide/managing-ct-orders/catalog-management/catalog-data-model/catalog-line-item-field-reference.adoc[Catalog Line Item], and xref:admin-guide/managing-ct-orders/discount-management/promotion-data-model/promotion-line-item-field-reference.adoc[Promotion Line Item]. Additionally, specify
+xref:admin-guide/managing-ct-orders/catalog-management/catalog-data-model/catalog-assignment-field-reference.adoc[Catalog] and xref:admin-guide/managing-ct-orders/discount-management/promotion-data-model/promotion-assignment-field-reference.adoc[Promotion] Assignments. If the _Layout Setting_ is not specified for an object, the necessary fields for creating order will not be available.
+. xref:admin-guide/workshops/workshop1-0-creating-basic-order/configuring-an-account-1-0.adoc[Add permission] for creating orders for the corresponding Account record.
+. Specify the xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/totals-panel-setting-field-reference.adoc[Totals Panel Setting] to display overview metrics on the order creation page.
+. Additionally, specify xref:admin-guide/workshops/workshop-5-0-implementing-additional-features/5-1-setting-up-a-delivery-split.adoc[Split Setting] to split the finalized order into deliveries according to specific logistic conditions.
 
-The setup is complete. The representative can create online or offline
-orders and xref:admin-guide/workshops/workshop1-0-creating-basic-order/complete-workshop-1-0-checkpoint/creating-a-delivery-1-0.adoc[set up deliveries].
-
-
+The setup is complete. The representative can create online or offline orders and xref:admin-guide/workshops/workshop1-0-creating-basic-order/complete-workshop-1-0-checkpoint/creating-a-delivery-1-0.adoc[set up deliveries].
 
 See also:
 
-* xref:online-order[Online Order]
-* xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc[Offline Order]
-* xref:admin-guide/managing-ct-orders/order-management/multiplicator.adoc[Multiplicator]
-* xref:admin-guide/managing-ct-orders/order-management/price-tag.adoc[Price Tag]
-* xref:user-permissions-for-offline-orders[User Permissions for
-Offline Orders]
-* xref:ct-order-data-model[CT Order Data Model]
-* xref:workshop1-0-creating-basic-order[Workshop 1.0: Creating
-Basic Order]
-* xref:workshop-4-0-working-with-offline-orders[Workshop 4.0:
-Working with Offline
-Orders]xref:ct-order-data-model[]xref:admin-guide/managing-ct-orders/order-management/price-tag.adoc.html[
-]
+* xref:./online-order.adoc[]
+* xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc[]
+* xref:admin-guide/managing-ct-orders/order-management/multiplicator.adoc[]
+* xref:admin-guide/managing-ct-orders/order-management/price-tag.adoc[]
+* xref:./ref-guide/user-permissions-for-offline-orders.adoc[]
+* xref:./ref-guide/ct-order-data-model/index.adoc[]
+* xref:admin-guide/workshops/workshop1-0-creating-basic-order/index.adoc[]
+* xref:admin-guide/workshops/workshop-4-0-working-with-offline-orders/index.adoc[]

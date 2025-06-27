@@ -26,7 +26,7 @@ Select the [.object]#Activity# object:
 |[.apiobject]#orders__AddressObject__c# |Text(255)
 |A custom object(s) that stores the address for deliveries (separated by
 a comma, without a blank space).[NOTE] ====
-xref:delivery-field-reference[The Delivery object] requires a
+xref:admin-guide/managing-ct-orders/delivery-management/delivery-field-reference.adoc[The Delivery object] requires a
 reference field to this field, for example, the lookup to
 [.apiobject]#Address__c ==== field.#
 

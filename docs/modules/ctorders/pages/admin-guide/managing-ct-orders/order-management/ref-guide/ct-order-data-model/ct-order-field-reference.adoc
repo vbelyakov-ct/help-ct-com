@@ -1,25 +1,16 @@
 = CT Order Field Reference
 
-the [.object]#CT Order# object is intended to store order data.
-Each record represents an order with specific CT products from available
-Catalogs, prices from Price Book according to pricing procedures and
-discounts management, configured delivery dates, and order status.
+The [.object]#CT Order# object is intended to store order data. Each record represents an order with specific CT products from available Catalogs, prices from Price Book according to pricing procedures and discounts management, configured delivery dates, and order status.
 
+You can specify additional fields for the advanced order, e.g., in case of using delivery fees, create a roll-up summary field.
 
+By default, the [.object]#CT Order# object has no record types. You can specify record types according to your needs and create the specific xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/layout-setting-field-reference.adoc[Layout Settings] record for each record type.
 
-You can specify additional fields for the advanced order, e.g., in case
-of using delivery fees, create a roll-up summary field.
-
-
-
-By default, the CT Order object has no record types. You can specify
-record types according to your needs and create the
-specific xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/layout-setting-field-reference[Layout
-Settings] record for each record type.
+include::partial$snippet-formula-fields-not-supported.adoc[]
 
 '''''
 
-Object API name:[.apiobject]#orders__Order__c#
+Object API name: [.apiobject]#orders\__Order__c#
 
 '''''
 
@@ -27,76 +18,66 @@ Object API name:[.apiobject]#orders__Order__c#
 |===
 |*Field* |*API* |*Type* |*Description*
 
-|Account |[.apiobject]#orders__AccountId__c#
-|Lookup(Account) |The linked _Account_ record for which the order is set
-up.
+|Account |[.apiobject]#orders\__AccountId__c#
+|Lookup(Account) |The linked _Account_ record for which the order is set up.
 
-|Activity |[.apiobject]#orders__ActivityId__c#
-|Lookup(Activity) |Create the custom field to relate the _CT Order_
-record to the selected _Activity_ record.
+|Activity |[.apiobject]#orders\__ActivityId__c#
+|Lookup(Activity) |Create the custom field to relate the _CT Order_ record to the selected _Activity_ record.
 
-|Contact |[.apiobject]#orders__ContactId__c#
-|Lookup(Contact) |Optionally, the linked _Contact_ record for which the
-order is set up.
+|Contact |[.apiobject]#orders\__ContactId__c#
+|Lookup(Contact) |Optionally, the linked _Contact_ record for which the order is set up.
 
 |Data Exchange Completed
-|[.apiobject]#orders__IsDataExchangeCompleted__c#
+|[.apiobject]#orders\__IsDataExchangeCompleted__c#
 |Checkbox |
 
-|Description |[.apiobject]#orders__Description__c#
+|Description |[.apiobject]#orders\__Description__c#
 |Text(255) |Short order description.
 
-|External Id |[.apiobject]#orders__ExternalId__c#
-|Text(255) (External ID) (Unique Case Sensitive) |In the case of using
-pre-configured orders from the related ERP.
+|External Id |[.apiobject]#orders\__ExternalId__c#
+|Text(255) (External ID) (Unique Case Sensitive) |In the case of using pre-configured orders from the related ERP.
 
-|Log Id |[.apiobject]#orders__LogId__c# |Text(255)
-(External ID) (Unique Case Sensitive) |
+|Log Id |[.apiobject]#orders\__LogId__c# |Text(255)
+(External ID) (Unique Case Sensitive) a|include::partial$logid.adoc[]
 
-|Log Status |[.apiobject]#orders__LogStatus__c#
+|Log Status |[.apiobject]#orders\__LogStatus__c#
 |Picklist a|
-The current order log status depends on whether the logs have been
-requested or not from the web service. Available values:
+The current order log status depends on whether the logs have been requested or not from the web service. Available values:
 
 * _Not Requested_
 * _Requested_
 * _Received_
 
-|Order Type |[.apiobject]#orders__OrderType__c#
+|Order Type |[.apiobject]#orders\__OrderType__c#
 |Picklist a|
 Select the order type for a newly created order:
 
 * _Order_
-* _​Return_
+* _Return_
 * _Pre-Sale_
 
-|Price Book |[.apiobject]#orders__PriceBookId__c#
-|Lookup(CT Price Book) |The available CT Price Book for CT Products in
-the order.
+|Price Book |[.apiobject]#orders\__PriceBookId__c#
+|Lookup(CT Price Book) |The available CT Price Book for CT Products in the order.
 
 |Pricing Procedure
-|[.apiobject]#orders__PricingProcedureId__c#
-|Lookup(PricingProcedure) |A pricing procedure is used for the order
-calculation.
+|[.apiobject]#orders\__PricingProcedureId__c#
+|Lookup(PricingProcedure) |A pricing procedure is used for the order calculation.
 
-|Promotion Id |orders__PromotionId__c |Lookup(Promotion)
+|Promotion Id |[.apiobject]#orders\__PromotionId__c# |Lookup(Promotion)
 a|
 SFID of promotion used in the order.
 
-* Is used only if the xref:admin-guide/managing-ct-orders/discount-management/promotion-data-model/promotion-field-reference[Assigned On
-Order] checkbox is selected.
-* Must be manually created by the administrator with any _Field Name_
-and _API Name_.
+* Is used only if the xref:admin-guide/managing-ct-orders/discount-management/promotion-data-model/promotion-field-reference.adoc[Assigned On Order] checkbox is selected.
+* Must be manually created by the administrator with any _Field Name_ and _API Name_.
 
-|Reference Id |orders__RefereneId__c |Text(255) (External
-ID) (Unique Case Sensitive) |
+|Reference Id |[.apiobject]#orders\__RefereneId__c# |Text(255) (External
+ID) (Unique Case Sensitive) a|include::partial$referenceid.adoc[]
 
 |Sales Organization
-|[.apiobject]#orders__SalesOrganizationId__c#
-|Lookup(Sales Organization) |The linked _Sales Organization_ record for
-which the order is set up.
+|[.apiobject]#orders\__SalesOrganizationId__c#
+|Lookup(Sales Organization) |The linked _Sales Organization_ record for which the order is set up.
 
-|Stage |[.apiobject]#orders__Stage__c# |Picklist a|
+|Stage |[.apiobject]#orders\__Stage__c# |Picklist a|
 Current order state:
 
 * _On-Hold_
@@ -104,14 +85,11 @@ Current order state:
 * _Finalized_
 * _Validated_
 
-Create new stages or reuse the current ones to reach your business
-goals.
+TIP: Create new stages or reuse the current ones to reach your business goals.
 
-|Total Discount |[.apiobject]#orders__TotalDiscount__c#
-|Currency(15, 3) |The overall discount for all CT Products and
-deliveries in the order.
+|Total Discount |[.apiobject]#orders\__TotalDiscount__c#
+|Currency(15, 3) |The overall discount for all CT Products and deliveries in the order.
 
-|Total Price |[.apiobject]#orders__TotalPrice__c#
-|Currency(15, 3) |The overall price for all CT Products and deliveries
-with discounts in the order.
+|Total Price |[.apiobject]#orders\__TotalPrice__c#
+|Currency(15, 3) |The overall price for all CT Products and deliveries with discounts in the order.
 |===

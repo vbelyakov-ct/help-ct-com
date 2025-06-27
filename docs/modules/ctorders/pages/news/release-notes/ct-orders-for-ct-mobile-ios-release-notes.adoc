@@ -105,9 +105,9 @@ order.
 
 * Dynamic control over the quantity and cost of products, bundles, or
 freebies for the whole order or several deliveries.
-* Downloading xref:limit-rules[Limit Rules] during the sync
+* Downloading xref:admin-guide/managing-ct-orders/product-validation-in-order/limit-rules/index.adoc[Limit Rules] during the sync
 process.
-* xref:limit-rules[Applying limit rules] to orders or deliveries
+* xref:admin-guide/managing-ct-orders/product-validation-in-order/limit-rules/index.adoc[Applying limit rules] to orders or deliveries
 and checking the real-time validation during the order creation.
 
 
@@ -115,17 +115,17 @@ and checking the real-time validation during the order creation.
 [[h4_57267150]]
 ===== Product Availability
 
-* xref:product-availability[Dynamic control] over the availability
+* xref:admin-guide/managing-ct-orders/product-validation-in-order/product-availability/index.adoc[Dynamic control] over the availability
 of products, bundles, and freebies for order and deliveries on certain
 dates.
 * Support for xref:product-data-model[new product fields] to
 implement the product availability logic.
 * During the sync process, the
-xref:product-availability-field-reference[Product Availability]
+xref:admin-guide/managing-ct-orders/product-validation-in-order/product-availability/index.adoc-field-reference[Product Availability]
 records will be downloaded for all active products on the mobile device.
 * Automatic check to display only available products and bundles in
 catalogs and promotions.
-* xref:product-availability#h2_813222365[Tap the Info icon] next to
+* xref:admin-guide/managing-ct-orders/product-validation-in-order/product-availability/index.adoc#h2_813222365[Tap the Info icon] next to
 the product in the promotion, catalog, order cart, or freebie window to
 see up to 3 records of availability dates for a paid product or freebie.
 
@@ -134,7 +134,7 @@ see up to 3 records of availability dates for a paid product or freebie.
 [[h4_878037613]]
 ===== Quotas
 
-* Dynamic control of xref:quota-field-reference[a limited number of
+* Dynamic control of xref:admin-guide/managing-ct-orders/product-validation-in-order/quotas/index.adoc[a limited number of
 products&#44; bundles&#44; and freebies], such as when launching a new
 product, running a promotion for a selected customer segment, or
 withdrawing a product from production, by distributing product quotas to
@@ -270,7 +270,7 @@ based on multiplicity settings processed on three levels:
 [.object]#Product#,[.object]#Price Book Line Item#,
 [.object]#Catalog Line Item,# or [.object]#Promotion
 Line Item#.
-* Add the display of xref:5-3-displaying-price-tags[price tags] for
+* Add the display of xref:admin-guide/workshops/workshop-5-0-implementing-additional-features/5-3-displaying-price-tags.adoc[price tags] for
 a convenient visualized method of informing your sales reps about the
 applied calculation type and discount required quantity for reaching the
 next discount level and special conditions for each product added to the
@@ -322,7 +322,7 @@ sub-catalog) lists to the cart.
 
 
 * Work with offline orders in the CT Mobile by
-xref:adding-ct-orders-to-the-ct-mobile-app-4-0[adding the CT
+xref:admin-guide/workshops/workshop-4-0-working-with-offline-orders/adding-ct-orders-to-the-ct-mobile-app-4-0.adoc[adding the CT
 Orders] module to the app menu.
 * xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc#h3_1904156377[Create orders] on
 xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc#h2_2117318770[the Account&#44; Contact&#44; or

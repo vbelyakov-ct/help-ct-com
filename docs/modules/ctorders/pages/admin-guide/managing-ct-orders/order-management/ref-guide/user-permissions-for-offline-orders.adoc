@@ -1,126 +1,86 @@
 = User Permissions for Offline Orders
 
-Consider that the mobile users should have the appropriate permissions
-for objects listed below and required for proper operation of the CT
-Orders features.
-Perform https://help.customertimes.com/articles/ct-mobile-ios-en/synchronization[the
+Consider that the mobile users should have the appropriate permissions for objects listed below and required for proper operation of the CT Orders features.
+Perform link:https://help.customertimes.com/articles/ct-mobile-ios-en/synchronization[the
 full synchronization] to download these objects to the mobile device.
 
-[NOTE] ==== Records are loaded to the device according to a
-specific set of predefined conditions. Currently, there is no
-possibility to change the records' loading conditions. ====
-ifdef::hidden[]
+NOTE: Records are loaded to the device according to a specific set of predefined conditions. Currently, there is no possibility to change the records' loading conditions.
 
+////
 https://jira.customertimes.com/browse/CTOM-131
 
+You can xref:admin-guide/workshops/workshop-4-0-working-with-offline-orders/adding-ct-orders-to-the-ct-mobile-app-4-0.adoc#h2_1358985369[set up a filter for loading records for these objects]:
 
-
-You
-can xref:adding-ct-orders-to-the-ct-mobile-app-4-0#h2_1358985369[set
-up a filter for loading records for these objects]:
-
-*[.apiobject]#orders__Order__с#
-*[.apiobject]#orders__PriceBook__c#
-*[.apiobject]#orders__PriceBookLineItem__c#
+* [.apiobject]#orders\__Order__с#
+* [.apiobject]#orders\__PriceBook__c#
+* [.apiobject]#orders\__PriceBookLineItem__c#
+////
 
 [width="100%",cols="15%,20%,10%,55%"]
 |===
-|*Object Group* |*Object API name* |*Required Access for User*
-|*Comments*
+|*Object Group* |*Object API name* |*Required Access for User* |*Comments*
 
-|Settings |[.apiobject]#orders__OMSettings__c# |Read
-|If any changes have been made to the OM Settings records, perform full
-synchronization to apply new settings.
+|Settings |[.apiobject]#orders\__OMSettings__c# |Read
+|If any changes have been made to the OM Settings records, perform full synchronization to apply new settings.
 
-|Limit Rules |[.apiobject]#orders__LimitRule__c#
-|Read |
+|Limit Rules |[.apiobject]#orders\__LimitRule__c# |Read |
 
 |Product Availability
-|[.apiobject]#orders__ProductAvailability__c# |Read
-|
+|[.apiobject]#orders\__ProductAvailability__c# |Read|
 
-|Quota |[.apiobject]#orders__Quota__c# |Read |
+|Quota |[.apiobject]#orders\__Quota__c# |Read |
 
-| |[.apiobject]#orders__QuotaUsage__c# |Read |
+| |[.apiobject]#orders\__QuotaUsage__c# |Read |
 
-|Order |[.apiobject]#orders__Order__c# |Read; Create;
-Edit |
+|Order |[.apiobject]#orders\__Order__c# |Read; Create; Edit |
 
-| |[.apiobject]#orders__OrderLineItem__c# |Read;
-Create; Edit |
+| |[.apiobject]#orders\__OrderLineItem__c# |Read; Create; Edit |
 
-| |[.apiobject]#orders__Delivery__c# |Read; Create;
-Edit |
+| |[.apiobject]#orders\__Delivery__c# |Read; Create; Edit |
 
-| |[.apiobject]#orders__DeliveryLineItem__c# |Read;
-Create; Edit |
+| |[.apiobject]#orders\__DeliveryLineItem__c# |Read; Create; Edit |
 
-|Price Book |[.apiobject]#orders__PriceBook__c# |Read
-|
+|Price Book |[.apiobject]#orders\__PriceBook__c# |Read|
 
-| |[.apiobject]#orders__PriceBookLineItem__c# |Read
-|
+| |[.apiobject]#orders\__PriceBookLineItem__c# |Read|
 
-a|
-Sales Organization
+a|Sales Organization
 
+|[.apiobject]#orders\__SalesOrganization__c# |Read|
 
+| |[.apiobject]#orders\__SalesOrganizationUser__c#|Read |
 
-|[.apiobject]#orders__SalesOrganization__c# |Read
-|
+|Promotion a| [.apiobject]#orders\__Promotion__c#
 
-| |[.apiobject]#orders__SalesOrganizationUser__c#
-|Read |
+|Read | | |[.apiobject]#orders\__PromotionLineItem__c# |Read|
 
-|Promotion a|
-[.apiobject]#orders__Promotion__c#
+| |[.apiobject]#orders\__PromotionAssignment__c#|Read |
 
+|Catalog |[.apiobject]#orders\__Catalog__c# |Read |
 
+| |[.apiobject]#orders\__CatalogLineItem__c# |Read|
 
-|Read |
+| |[.apiobject]#orders\__CatalogAssignment__c# |Read|
 
-| |[.apiobject]#orders__PromotionLineItem__c# |Read
-|
+|Discount |[.apiobject]#orders\__PricingProcedure__c#|Read |
 
-| |[.apiobject]#orders__PromotionAssignment__c#
-|Read |
+| |[.apiobject]#orders\__ProcedureCalculationType__c#|Read |
 
-|Catalog |[.apiobject]#orders__Catalog__c# |Read |
+| |[.apiobject]#orders\__CalculationType__c# |Read|
 
-| |[.apiobject]#orders__CatalogLineItem__c# |Read
-|
+| |[.apiobject]#orders\__Condition__c# |Read |
 
-| |[.apiobject]#orders__CatalogAssignment__c# |Read
-|
+| |[.apiobject]#orders\__ConditionGroup__c# |Read|
 
-|Discount |[.apiobject]#orders__PricingProcedure__c#
-|Read |
+| |[.apiobject]#orders\__ConditionLevel__c# |Read |
 
-| |[.apiobject]#orders__ProcedureCalculationType__c#
-|Read |
+| |[.apiobject]#orders\__CalculatedDiscount__c# |Read;Create; Edit |
 
-| |[.apiobject]#orders__CalculationType__c# |Read
-|
+|Target package objects |Depending on the target system |Read a| Possible values:
 
-| |[.apiobject]#orders__Condition__c# |Read |
-
-| |[.apiobject]#orders__ConditionGroup__c# |Read
-|
-
-| |[.apiobject]#orders__ConditionLevel__c# |Read |
-
-| |[.apiobject]#orders__CalculatedDiscount__c# |Read;
-Create; Edit |
-
-|Target package objects |Depending on the target system |Read a|
-Possible values:
-
-* using https://help.customertimes.com/articles/ct-pharma-publication/ct-pharma-solution[CT
-Pharma], CTPHARMA__Product__c
-* using https://help.customertimes.com/articles/ct-cpg-publication/ct-cpg-solution[CT
-CPG], CTCPG__Product__c
-* using xref:cg-cloud-support[CG Cloud], or without installed CT
-Pharma and CT CPG solution, Product2
+* using xref:ctpharma:about-ct-pharma-solution/index.adoc[CT Pharma], [.apiobject]#CTPHARMA\__Product__c#
+* using xref:ctcpg:ct-cpg-solution/index.adoc[CT CPG], [.apiobject]#CTCPG\__Product__c#
+* using xref:admin-guide/managing-ct-orders/cg-cloud-support/index.adoc[CG Cloud], or without installed CT Pharma and CT CPG solution, [.apiobject]#Product2#
 
 | |[.apiobject]#ProductComponent__c# |Read |
 

@@ -48,7 +48,7 @@ freebies.
 ** New design of the xref:product-management[Product Management]
 tab for promotions and catalogs, including bundles components.
 ** New *Ignore Bundle Components* checkbox added for
-xref:quota-field-reference[Quota] record. If enabled, the quota is
+xref:admin-guide/managing-ct-orders/product-validation-in-order/quotas/index.adoc[Quota] record. If enabled, the quota is
 not available for bundle components.
 ** *List Price* value for _Header-Components_ bundles is displayed as a
 sum of listPrice values of the bundle's components after adding them to
@@ -135,7 +135,7 @@ Item_ will be ignored and excluded from the xref:admin-guide/managing-ct-orders/
 Tag] logic if calculations by Web Service are not use.
 * The *SKU Field* is now mandatory to create an
 xref:configuring-object-setting[object settings].
-* New features for xref:limit-rules[Limit Rules]:
+* New features for xref:admin-guide/managing-ct-orders/product-validation-in-order/limit-rules/index.adoc[Limit Rules]:
 ** Limit Rules are now validated, if their *Apply Conditions* contain a
 reference via *Order Line Item Id* field and the order draft has not
 been saved.
@@ -197,11 +197,11 @@ the xref:split-settings-field-reference[Split setting] is set.
 * The left panel of the order cart is not minimized after switching to
 delivery tab, if the xref:split-settings-field-reference[Split
 setting] is set.
-* Negative values are allowed for xref:limit-rules[Limit Rules] and
+* Negative values are allowed for xref:admin-guide/managing-ct-orders/product-validation-in-order/limit-rules/index.adoc[Limit Rules] and
 can be applied for an order.
 * The bundle structure is not displayed when clicking on the bundle icon
 in the left menu of the xref:online-order#h2_735642631[order].
-* Info icon displays more than 3 xref:product-availability[Product
+* Info icon displays more than 3 xref:admin-guide/managing-ct-orders/product-validation-in-order/product-availability/index.adoc[Product
 Availability] entries.
 * Validation for extra parenthesis at the end of JSON in
 the xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/calculation-types-field-reference/calculation-type-levelformula-c-field-specification.adoc[Level
@@ -222,7 +222,7 @@ xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/cond
 xref:online-order#h2_915453080[order cart] window, the *Add* button
 becomes hidden by the side panel.
 * Different validation notifications for empty *Limit Quantity* and
-*Limit Amount* fields in xref:quota-field-reference[Quotas].
+*Limit Amount* fields in xref:admin-guide/managing-ct-orders/product-validation-in-order/quotas/index.adoc[Quotas].
 
 [[h2_699818774]]
 === The CT Orders package 23 R1 March
@@ -240,7 +240,7 @@ calculator.
 xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc#h4_1635896381[Order Cart] are now displayed in
 alphabetical order.
 * New *Displayed Field Width* field added to
-xref:order-line-item-layout-setting-1-0[Order Line Item Layout]. It
+xref:admin-guide/workshops/workshop1-0-creating-basic-order/configuring-layout-settings-1-0/order-line-item-layout-setting-1-0.adoc[Order Line Item Layout]. It
 allows adjusting the width of *Product Name* and *Quantity* fields in
 the xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc#h4_1635896381[order cart], as well as of
 each field listed in the *Fields To Display*.
@@ -458,9 +458,9 @@ Group* record, the system checks the next
 [[h4_1295053106]]
 ===== Quota
 
-* If a quota has child xref:quota-usage-field-reference[Quota
+* If a quota has child xref:admin-guide/managing-ct-orders/product-validation-in-order/quotas/quota-usage-field-reference.adoc[Quota
 Usage] records or was created based on a
-xref:quota-field-reference#h2_12722709[Quota Template], you cannot
+xref:admin-guide/managing-ct-orders/product-validation-in-order/quotas/index.adoc#h2_12722709[Quota Template], you cannot
 change the quota except to extend its validity period by hanging the end
 date.
 * Updates to keep *Quota Usage* records up-to-date.
@@ -471,7 +471,7 @@ date.
 ===== Limit Rule
 
 * Cells with zero quantity of a certain product will be highlighted if
-that product fits xref:limit-rules[the limit rule], but the minimum
+that product fits xref:admin-guide/managing-ct-orders/product-validation-in-order/limit-rules/index.adoc[the limit rule], but the minimum
 quantity or minimum amount for that product was not reached according to
 the limit rule.
 
@@ -490,14 +490,14 @@ target systems:
 [[h4_57267150]]
 ===== Product Availability
 
-* Set up availability dates of xref:product-availability[paid
+* Set up availability dates of xref:admin-guide/managing-ct-orders/product-validation-in-order/product-availability/index.adoc[paid
 products and freebies] for offline and online orders and deliveries.
 * Click the Info icon in the order cart to see up to 3 records of
 availability dates for a paid product or freebie.
 * Automatic check of catalogs and promos to display only available
 products and bundles in the order cart.
 * Optionally define whether to
-xref:product-availability#h3_2048041897[ignore the default
+xref:admin-guide/managing-ct-orders/product-validation-in-order/product-availability/index.adoc#h3_2048041897[ignore the default
 availability] for freebies.
 
 
@@ -581,7 +581,7 @@ button to reduce the time it takes to calculate discounts and the total
 price.
 * In the case of a configured
 xref:admin-guide/managing-ct-orders/delivery-management/index.adoc#h2_1374863314[Delivery Summary] layout,
-the system validates to see if the xref:limit-rules[limit rules]
+the system validates to see if the xref:admin-guide/managing-ct-orders/product-validation-in-order/limit-rules/index.adoc[limit rules]
 and quotas have been violated when the sales rep has made changes to the
 supplies.
 
@@ -660,7 +660,7 @@ distribution] among several deliveries.
 Dynamic control over the product quantity and cost for the whole order
 or several deliveries:
 
-* Apply xref:limit-rules[limit rules] to all products in the order,
+* Apply xref:admin-guide/managing-ct-orders/product-validation-in-order/limit-rules/index.adoc[limit rules] to all products in the order,
 or only for those that match conditions.
 * Apply limit rules to a single delivery or a group of deliveries in the
 order.
@@ -717,7 +717,7 @@ based on multiplicity settings processed on three levels:
 [.object]#Product#,[.object]#Price Book Line Item#,
 [.object]#Catalog Line Item#,[.object]# or Promotion
 Line Item#.
-* Add the display of xref:5-3-displaying-price-tags[price tags] for
+* Add the display of xref:admin-guide/workshops/workshop-5-0-implementing-additional-features/5-3-displaying-price-tags.adoc[price tags] for
 a convenient visualized method of informing your sales reps about the
 applied calculation type and discount required quantity for reaching the
 next discount level and special conditions for each product added to the
@@ -757,7 +757,7 @@ adding freebies in orders. The system now checks active promotion dates,
 min/max required products, and other settings influencing the final
 freebies calculation per order and displays errors in the user
 interface.
-* A brand new xref:order-change-manager[Order Change Manager] is an
+* A brand new xref:admin-guide/managing-ct-orders/order-change-manager/index.adoc[Order Change Manager] is an
 additional session processing agent, that ensures stable operation when
 opening the order cart in the CT Mobile app.
 * Overall product performance has been improved.
