@@ -8,7 +8,7 @@ Get familiar with the online order creation process and main features. xref:admi
 
 The conditions to view the _Catalog_ records and have the ability to add _CT Products_ from these catalogs to the current order:
 
-* the [.object]#Catalog# object must be available for the sales rep.
+* The [.object]#Catalog# object must be available for the sales rep.
 * xref:admin-guide/managing-ct-orders/catalog-management/index.adoc[The Catalog record] must be active and:
 ** xref:quick-start/creating-and-adding-catalogs-1-0.adoc[assigned to the current account];
 +
@@ -19,7 +19,7 @@ NOTE: Set the *Available for All Accounts* checkbox on the _Catalog_ record to u
 
 The conditions to view the _Promotion_ records and have the ability to add _CT Products_ from these promotions to the current order:
 
-* the [.object]#Promotion# object must be available for the sales rep.
+* The [.object]#Promotion# object must be available for the sales rep.
 * xref:admin-guide/managing-ct-orders/discount-management/promotions.adoc[The Promotion record] must be active and:
 ** assigned to the current account;
 +
@@ -84,7 +84,7 @@ NOTE: To form an order, it is necessary to configure the xref:admin-guide/managi
 * *(3)* The CT Order button controls.
 ** Click *Get Freebie* to xref:admin-guide/managing-ct-orders/freebies-management/index.adoc#h2_1556344363[distribute freebies].
 ** Click *Add Delivery* to split products in the current order per delivery dates and addresses.
-** If the order has 140 *Delivery Line Items *or more, the *Calculate Discounts* button appears to reduce the calculation time. Click the button to calculate discounts and the total price.
+** If the order has 140 *Delivery Line Items* or more, the *Calculate Discounts* button appears to reduce the calculation time. Click the button to calculate discounts and the total price.
 +
 By default, there are only two available split criteria: date and address. You can add up to three more conditions for xref:admin-guide/workshops/workshop-5-0-implementing-additional-features/5-1-setting-up-a-delivery-split.adoc[splitting an order].
 ** Click *Save Draft* to save newly created order or changes in the editing one. xref:admin-guide/managing-ct-orders/order-management/index.adoc#h2_158967301[By default], the *On Hold* stage will be set. Price calculations based on values in the formula fields will be performed after clicking *Save Draft*.
