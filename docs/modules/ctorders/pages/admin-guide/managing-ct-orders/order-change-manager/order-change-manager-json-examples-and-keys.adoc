@@ -1,52 +1,104 @@
 = Order Change Manager: JSON Examples and Keys
+:toc:
 
-During synchronization, the CT Mobile app sends package(s) with a JSON
-file that stores information about the particular order that the user
-was working with on the mobile device to the Salesforce database.
+During synchronization, the CT Mobile app sends package(s) with a JSON file that stores information about the particular order that the user was working with on the mobile device to the Salesforce database.
 
 Check out the JSON keys and examples.
 
-:toc: :toclevels: 3
-
 [[h2_1406500097]]
-=== Examples
+== Examples
 
-Depending on whether an [.object]#Order# was created, edited, or
-deleted on a mobile device, JSON can store the temporary ID or the
-Salesforce record ID for this *Order* record or its related records,
-such as [.object]#Order Line Item#,[.object]#Delivery
+Depending on whether an [.object]#Order# was created, edited, or deleted on a mobile device, JSON can store the temporary ID or the Salesforce record ID for this *Order* record or its related records, such as [.object]#Order Line Item#, [.object]#Delivery
 Line Item#, or [.object]#Delivery#.
 
+In this JSON file, the _Order_ and _Order Line Item_ records have the mobile temporary ID in the [.apiobject]#referenceOrderId# and [.apiobject]#referenceId# keys, which means that these records were created on the mobile device and will be inserted into the Salesforce database after synchronization. The xref:admin-guide/managing-ct-orders/order-change-manager/order-change-manager-field-reference.adoc[Order Change Manager] record will be created for this [.object]#Order#.
 
+[source,json]
+----
+{
+    "isLastPackage": true,
+    "referenceOrderId": "a06-AF3AA67B-EA24-4DAB-9C8A-9B70357DAB830055J000001L7aTQAS",
+    "records": [
+        {
+            "attributes": {
+                "type": "orders__Order__c",
+                "referenceId": "a06-AF3AA67B-EA24-4DAB-9C8A-9B70357DAB830055J000001L7aTQAS"
+            },
+            "orders__AccountId__c": "0013N00000IX5sNQAT",
+            "orders__OrderType__c": "Order",
+            "orders__PriceBookId__c": "a0w3N00000189ZHQAY",
+            "orders__PricingProcedureId__c": "a0x3N000000XT1YQAW",
+            "orders__SalesOrganizationId__c": "a153N000000FOjyQAG",
+            "orders__Stage__c": "OnHold",
+            "orders__TotalDiscount__c": 38.58,
+            "orders__TotalPrice__c": 4294.92
+        },
+        {
+            "attributes": {
+                "type": "orders__OrderLineItem__c",
+                "referenceId": "a06-AC3AB63B-FA23-4DAB-7D4F-9B70357DAB830055J000001L7aTQAS"
+            },
+            "orders__CatalogId__c": "a0l3N000000GlXhQAK",
+            "orders__CatalogLineItemId__c": "a0k3N000000h3cXQAQ",
+            "orders__ListPrice__c": 8.1,
+            "orders__OrderId__c": "@39F9C16B-08D2-4B64-AFE5-F91508E53922",                   // reference field with the temporary Id
+            "orders__ParentId__c": "",
+            "orders__PriceBookId__c": "a0w3N00000189ZHQAY",
+            "orders__PriceBookLineItemId__c": "a0v3N000000JMLiQAO",
+            "orders__Product2Id__c": "",
+            "orders__ProductComponentId__c": "",
+            "orders__ProductId__c": "a0U3N000000Ca5eUAC",
+            "orders__PromotionId__c": "",
+            "orders__PromotionLineItemId__c": "",
+            "orders__Quantity__c": 20,
+            "orders__TotalDiscount__c": 0,
+            "orders__TotalPrice__c": 162,
+            "orders__UnitPrice__c": 8.1
+        }
+       ]
+}
+----
 
-In this JSON file, the *Order* and *Order Line Item* records have the
-mobile temporary ID in the [.apiobject]#referenceOrderId# and
-[.apiobject]#referenceId# keys, which means that these records
-were created on the mobile device and will be inserted into the
-Salesforce database after synchronization. The
-xref:admin-guide/managing-ct-orders/order-change-manager/order-change-manager-field-reference[Order Change Manager]
-record will be created for this [.object]#Order#.
+In this example, the _Order_ record already has the Salesforce record ID in both [.apiobject]#referenceOrderId# and [.apiobject]#referenceId# keys, which means that the Order has been created before in Salesforce or CT Mobile app and was updated on the mobile device.
 
+Also, the Order Line Item record has the mobile temporary ID, which means that it was created on the mobile device. The _Order Change Manager_ record will be created for this [.object]#Order#, and the previously created _Order Change Manager_ record for this Order will be deleted.
 
-
-
-
-In this example, the *Order* record already has the Salesforce record ID
-in both[.apiobject]#referenceOrderId# and
-[.apiobject]#referenceId# keys, which means that the Order has
-been created before in Salesforce or CT Mobile app and was updated on
-the mobile device.
-
-Also, the Order Line Item record has the mobile temporary ID, which
-means that it was created on the mobile device. The *Order Change
-Manager* record will be created for this [.object]#Order#, and
-the previously created *Order Change Manager* record for this Order will
-be deleted.
-
-
+[source,json]
+----
+{
+    "isLastPackage": true,
+    "referenceOrderId": "a0g5w00000EQJi1AAH0055J000001L7aTQAS",
+    "records": [
+        {
+            "attributes": {
+                "type": "orders__Order__c",
+                "referenceId": "a0g5w00000EQJi1AAH0055J000001L7aTQAS"
+            },
+            "Id": "a0g5w00000EQJi1AAH",
+            "orders__AccountId__c": "0015w00002DaFim",
+            "orders__OrderType__c": "Order",
+            "orders__PriceBookId__c": "",
+            "orders__PricingProcedureId__c": "",
+            "orders__SalesOrganizationId__c": "",
+            "orders__Stage__c": "OnHold",
+            "orders__TotalDiscount__c": null,
+            "orders__TotalPrice__c": 4294.92
+        },
+        {
+            "attributes": {
+                "type": "orders__OrderLineItem__c",
+                "referenceId": "a06-AC3AB63B-FA23-4DAB-7D4F-9B70357DAB830055J000001L7aTQAS"
+            },
+            "orders__CatalogId__c": "",
+            "orders__OrderId__c": "a0g5w00000EQJi1AAH",
+            "orders__Quantity__c": 212
+        }
+    ]
+}
+----
 
 [[h2_469009993]]
-=== JSON Key Description
+== JSON Key Description
 
 [width="100%",cols="15%,20%,10%,55%"]
 |===
@@ -55,48 +107,25 @@ be deleted.
 |[.apiobject]#isLastPackage# |Boolean |Yes a|
 Available values:
 
-*[.apiobject]#true#, if all data for the order is stored in
-that package or if this package is the last one for the order.
-* false
+* [.apiobject]#true#, if all data for the order is stored in that package or if this package is the last one for the order.
+* [.apiobject]#false#
 
-|[.apiobject]#referenceOrderId# |String |No |A key stores
-the mobile temporary Id or Salesforce Id of the current *Order*
-record. For the *Order* record, the same value is stored in
-the [.apiobject]#referenceOrderId# and [.apiobject]#referenceId# keys.
+|[.apiobject]#referenceOrderId# |String |No |A key stores the mobile temporary Id or Salesforce Id of the current _Order_ record. For the _Order_ record, the same value is stored in the [.apiobject]#referenceOrderId# and [.apiobject]#referenceId# keys.
 
-|[.apiobject]#records# |Array |Yes |A key stores the
-collection of the *Order* record and all related records.
+|[.apiobject]#records# |Array |Yes |A key stores the collection of the _Order_ record and all related records.
 
-|[.apiobject]#attributes# |Array |Yes |A key contains data
-of a particular record, such as [.object]#Order#,
-[.object]#Order Line Item#,[.object]#Delivery Line
-Item#,[.object]#Delivery#, or [.object]#Calculated
-Discount#.
+|[.apiobject]#attributes# |Array |Yes |A key contains data of a particular record, such as [.object]#Order#, [.object]#Order Line Item#, [.object]#Delivery Line Item#, [.object]#Delivery#, or [.object]#Calculated Discount#.
 
-|[.apiobject]#type# |Enum |Yes |A key stores the object
-API name, which data must be transferred.
+|[.apiobject]#type# |Enum |Yes |A key stores the object API name, which data must be transferred.
 
-|[.apiobject]#referenceId# |String |Yes |A key stores the
-mobile temporary Id or Salesforce Id of the record of the object
-specified in the [.apiobject]#type# key.
+|[.apiobject]#referenceId# |String |Yes |A key stores the mobile temporary Id or Salesforce Id of the record of the object specified in the [.apiobject]#type# key.
 
-|[.apiobject]#Id# |String |Yes |A key stores Salesforce
-ID for the record. The key is not specified for a new record.
+|[.apiobject]#Id# |String |Yes |A key stores Salesforce ID for the record. The key is not specified for a new record.
 
-|[.apiobject]#orders__AccounId__c#,
-[.apiobject]#orders__OrderType__c#, etc. |String
-|No a|
-The key is the API name of the field of the current record. The current
-record is defined by the values in the [.apiobject]#type#,
-[.apiobject]#referenceId#, and[.apiobject]#Id# keys.
+|[.apiobject]#orders\__AccounId__c#, [.apiobject]#orders\__OrderType__c#, etc. |String
+|No a| The key is the API name of the field of the current record. The current record is defined by the values in the [.apiobject]#type#, [.apiobject]#referenceId#, and [.apiobject]#Id# keys.
 
-* In case of a new record (the [.apiobject]#Id# key is empty),
-all fields with the [.apiobject]#creatable = true# attribute.
-* In case of a modified record (the [.apiobject]#Id# key is
-set), all fields with the [.apiobject]#creatable = true# and
-[.apiobject]#editable = true# attributes, including the empty
-fields.
+* In case of a new record (the [.apiobject]#Id# key is empty), all fields with the [.apiobject]#creatable = true# attribute.
+* In case of a modified record (the [.apiobject]#Id# key is set), all fields with the [.apiobject]#creatable = true# and [.apiobject]#editable = true# attributes, including the empty fields.
 
 |===
-
-
