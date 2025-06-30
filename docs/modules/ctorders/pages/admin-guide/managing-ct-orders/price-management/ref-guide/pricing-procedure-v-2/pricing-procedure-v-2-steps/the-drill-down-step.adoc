@@ -1,41 +1,33 @@
 = The Drill Down Step
 
-This step is used to drill down (copy) field values from the parent
-records to the child records.
+This step is used to drill down (copy) field values from the parent records to the child records.
 
 [[h3_109049444]]
-==== Step Keys
+== Step Keys
 
 [width="100%",cols="15%,20%,10%,55%"]
 |===
 |*Key* |*Type* |*Required* |*Comment*
 
-|[.apiobject]#>type# |String |Yes |It is filled out with the
-[.apiobject]#drillDown# constant.
+|[.apiobject]#>type# |String |Yes |It is filled out with the [.apiobject]#drillDown# constant.
 
-|[.apiobject]#condition# |Step Conditions |No |See
-the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/step-conditions[Step Conditions].
+|[.apiobject]#condition# |Step Conditions |No |See the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/step-conditions.adoc[Step Conditions].
 
 |[.apiobject]#>baseObject# |Enum |Yes a|
 The API name of the parent object. Available values:
 
-*[.apiobject]#orders__OrderLineItem__c#
-*[.apiobject]#orders__Delivery__c#
-*[.apiobject]#orders__Order__c#
+* [.apiobject]#orders\__OrderLineItem__c#
+* [.apiobject]#orders\__Delivery__c#
+* [.apiobject]#orders\__Order__c#
 
-|[.apiobject]#basePrice# |String |Yes |The
-'[.apiobject]#baseObject# field to drill down values to
-child records. See the
-xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-available-field-formats[Available Field
-Formats].
+|[.apiobject]#basePrice# |String |Yes |The [.apiobject]#baseObject# field to drill down values to child records. See the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-available-field-formats.adoc[Available Field Formats].
 
-|[.apiobject]#result# |Array |Yes |At least one item must be
-provided. See the
-xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-drill-down-step#h2_1299271578[Drill-down Result Keys].
+|[.apiobject]#result# |Array |Yes |At least one item must be provided. See the
+<<Drill-down Result Keys>>.
 |===
 
 [[h2_1299271578]]
-=== Drill-down Result Keys
+== Drill-down Result Keys
 
 [width="100%",cols="15%,20%,10%,55%"]
 |===
@@ -44,81 +36,56 @@ xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure
 |[.apiobject]#resultObject# |Enum |Yes a|
 The API name of the child object. Available values:
 
-*[.apiobject]#orders__DeliveryLineItem__c#
-*[.apiobject]#orders__OrderLineItem__c#
-*[.apiobject]#orders__Delivery__c#
+* [.apiobject]#orders\__DeliveryLineItem__c#
+* [.apiobject]#orders\__OrderLineItem__c#
+* [.apiobject]#orders\__Delivery__c#
 
-|[.apiobject]#resultPrice# |String |Yes |The
-[.apiobject]#resultObject# field to store drilled-down prices
-from the parent record. See the
-xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-available-field-formats[Available Field
-Formats].
+|[.apiobject]#resultPrice# |String |Yes |The [.apiobject]#resultObject# field to store drilled-down prices from the parent record. See the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-available-field-formats.adoc[Available Field Formats].
 |===
 
 [[h2_151004117]]
-=== Result Object Dependency
+== Result Object Dependency
 
+[.highlighted-table]
 [width="100%",cols="^20%,^20%,^20%,^20%,^20%",]
 |===
-|*baseObject* |*resultObject* | | |
-
-| |*orders__DeliveryLineItem__c*
-|*orders__OrderLineItem__c* |*orders__Delivery__c*
-|*orders__Order__c*
-
-|*orders__DeliveryLineItem__c* a|
-—
-
-a|
-—
-
-a|
-—
-
-a|
-—
-
-|*orders__OrderLineItem__c* a|
-{plus}
-
-a|
-—
-
-a|
-—
-
-a|
-—
-
-|*orders__Delivery__c* a|
-{plus}
-
-a|
-* — *
-
-a|
-—
-
-a|
-—
-
-|*orders__Order__c* a|
-{plus}
-
-a|
-{plus}
-
-a|
-{plus}
-
-|—
+.2+|*baseObject* 4+|*resultObject* |*orders\__DeliveryLineItem__c* |*orders\__OrderLineItem__c* |*orders\__Delivery__c* |*orders\__Order__c* |*orders\__DeliveryLineItem__c* |—|—|—|—
+|*orders\__OrderLineItem__c* |{plus} |—|—|—
+|*orders\__Delivery__c* |{plus} |—|—|—
+|*orders\__Order__c* |{plus} | {plus} | {plus}|—
 |===
 
 [[h2_1689083776]]
-=== Example
+== Example
 
-[{plus}] xref:javascript:void(0)[Standard Drill-down Step:]
+Click to view:
 
-.[-] Hide[%collapsible] ====
+Standard Drill-down Step:
 
+[%collapsible]
+====
+--
+[source,json]
+----
+{
+    "type": "drillDown",
+    "baseObject": "orders__Order__c",
+    "basePrice": "orders__CustomerDiscount__c",
+    "result": [
+        {
+            "resultObject": "orders__Delivery__c",
+            "resultPrice": "orders__CustomerDiscount__c"
+        },
+        {
+            "resultObject": "orders__OrderLineItem__c",
+            "resultPrice": "orders__CustomerDiscount__c"
+        },
+        {
+            "resultObject": "orders__DeliveryLineItem__c",
+            "resultPrice": "orders__CustomerDiscount__c"
+        }
+    ]
+}
+----
+--
 ====

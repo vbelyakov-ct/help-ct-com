@@ -1,36 +1,201 @@
 = Steps
 
-The updated Pricing Procedure v. 2.0 with pricing procedure steps that
-enrich the control over the calculation algorithm and allow recording
-intermediate values calculated for each record of the
-[.object]#Delivery Line Item#.
+The updated Pricing Procedure v. 2.0 with pricing procedure steps that enrich the control over the calculation algorithm and allow recording intermediate values calculated for each record of the [.object]#Delivery Line Item#.
 
 [[h2_1185303549]]
-=== Sample Syntax
+== Sample Syntax
 
-[cols=",",]
-|===
-|Sample Syntax |
-|Commentary |
-|===
+[tabs]
+====
+Sample Syntax::
++
+--
+[source, json]
+----
+{
+    "version": 2,
+    "steps": [
+        {
+            "type": "procedure",
+            "basePrice": "$.listPrice",
+            "resultPrice": "$.unitPrice",
+            "procedure": {
+                "type": "MULT",
+                "round": "item",
+                "roundTo": 4,
+                "items": [
+                    {
+                        "calculationType": "structural"
+                    },
+                    {
+                        "calculationType": "contract"
+                    },
+                    {
+                        "type": "MAX",
+                        "items": [
+                            {
+                                "calculationType": "season"
+                            },
+                            {
+                                "calculationType": "promo_percent"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "type": "setValue",
+            "object": "orders__DeliveryLineItem__c",
+            "resultPrice": "$.unitPrice",
+            "condition": {
+                "operator": "AND",
+                "items": [
+                    {
+                        "field": "$.unitPrice",
+                        "operator": "less",
+                        "value": 0
+                    }
+                ]
+            },
+            "value": 0
+        },
+        {
+            "type": "rollUp",
+            "baseObject": "orders__DeliveryLineItem__c",
+            "basePrice": "$.unitPrice",
+            "method": "copyEqual",
+            "result": [
+                {
+                    "resultObject": "orders__OrderLineItem__c",
+                    "resultPrice": "$.unitPrice"
+                }
+            ]
+        },
+        {
+            "type": "setValue",
+            "object": "orders__DeliveryLineItem__c",
+            "resultPrice": "$.totalPrice",
+            "value": {
+                "operator": "multi",
+                "items": [
+                    "$.unitPrice",
+                    "$.quantity"
+                ]
+            }
+        },
+        {
+            "type": "rollUp",
+            "baseObject": "orders__DeliveryLineItem__c",
+            "basePrice": "$.totalPrice",
+            "method": "sum",
+            "result": [
+                {
+                    "resultObject": "orders__Order__c",
+                    "resultPrice": "$.totalPrice"
+                },
+                {
+                    "resultObject": "orders__Delivery__c",
+                    "resultPrice": "$.totalPrice"
+                },
+                {
+                    "resultObject": "orders__OrderLineItem__c",
+                    "resultPrice": "$.totalPrice"
+                }
+            ]
+        },
+        {
+            "type": "setValue",
+            "object": "orders__DeliveryLineItem__c",
+            "resultPrice": "$.totalDiscount",
+            "value": {
+                "operator": "multi",
+                "items": [
+                    {
+                        "operator": "sum",
+                        "items": [
+                            "$.listPrice",
+                            "- $.unitPrice"
+                        ]
+                    },
+                    "$.quantity"
+                ]
+            }
+        },
+        {
+            "type": "rollUp",
+            "baseObject": "orders__DeliveryLineItem__c",
+            "basePrice": "$.totalDiscount",
+            "method": "sum",
+            "result": [
+                {
+                    "resultObject": "orders__Order__c",
+                    "resultPrice": "$.totalDiscount"
+                },
+                {
+                    "resultObject": "orders__Delivery__c",
+                    "resultPrice": "$.totalDiscount"
+                },
+                {
+                    "resultObject": "orders__OrderLineItem__c",
+                    "resultPrice": "$.totalDiscount"
+                }
+            ]
+        }
+    ]
+}
+----
+
+--
+Commentary::
++
+--
+[source, json]
+----
+{
+  "version": "value",
+  "steps": [
+    {
+      "type": "procedure"   // beginning of the first step;
+      "basePrice": "$.listPrice",   // the name of the field for the actual price source;
+      "resultPrice": "$.unitPrice",   // the name of the field for the calculation end results;
+      "procedure": {   // beginning of the procedure within the first step;
+      "type"(operation type):"value",   // MIN or MAX or MULT or SUM
+      "round":"value",   // "item" or "group"
+      "roundTo":"value",   // the number of decimals
+      "items": [   // an array of the calculated discounts;
+        {
+          "calculationType":"external id of the discount 1"
+        },
+        {
+          "calculationType":"external id of the discount 2"
+        }
+      ]
+    }
+  }
+ ]
+}
+----
+--
+====
 
 [[h2_1426969465]]
-=== JSON Key Description
+== JSON Key Description
 
 [width="100%",cols="15%,20%,10%,55%"]
 |===
 |*Key* |*Type* |*Required* |*Comment*
 
 |[.apiobject]#steps# |Array |Yes a|
-​At least one item must be provided.
+At least one item must be provided.
 
-* xref:the-procedure-step[The Procedure Step]
-* xref:the-set-value-step[The Set Value Step]
-* xref:the-roll-up-step[The Roll-up Step]
-* xref:the-drill-down-step[The Drill Down Step]
-* xref:the-sdk-step[The SDK Step]
+* xref:./the-procedure-step.adoc[The Procedure Step]
+* xref:./the-set-value-step.adoc[The Set Value Step]
+* xref:./the-roll-up-step.adoc[The Roll-up Step]
+* xref:./the-drill-down-step.adoc[The Drill Down Step]
+* xref:./the-sdk-step.adoc[The SDK Step]
 
-|[.apiobject]#version# |Number |Yes |Constant: 2.
-[NOTE] ==== Specify 1 to perform
-xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-1/index[pricing procedure v. 1.0].  ====
+|[.apiobject]#version# |Number |Yes a|Constant: 2.
+
+NOTE: Specify 1 to perform xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-1/index.adoc[pricing procedure v. 1.0].
 |===

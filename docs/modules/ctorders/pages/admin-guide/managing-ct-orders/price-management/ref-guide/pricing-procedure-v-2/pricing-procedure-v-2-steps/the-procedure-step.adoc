@@ -1,39 +1,28 @@
 = The Procedure Step
 
-This step is used to calculate the price based on the conditions
-specified in the  xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/calculation-types-field-reference/index.adoc[Calculation
-Type] record.
+This step is used to calculate the price based on the conditions specified in the  xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/calculation-types-field-reference/index.adoc[Calculation Type] record.
 
 [[h2_109049444]]
-=== Step Keys
+== Step Keys
 
 [width="100%",cols="15%,20%,10%,55%"]
 |===
 |*Key* |*Type* |*Required* |*Comment*
 
-|[.apiobject]#type# |String |Yes |It is filled out with the
-[.apiobject]#procedure# constant.
+|[.apiobject]#type# |String |Yes |It is filled out with the [.apiobject]#procedure# constant.
 
-|[.apiobject]#condition# |Step Conditions |No |See the
-xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/step-conditions[Step Conditions].
+|[.apiobject]#condition# |Step Conditions |No |See the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/step-conditions.adoc[Step Conditions].
 
 |[.apiobject]#basePrice# |String |Yes |The field from the
-xref:admin-guide/managing-ct-orders/delivery-management/delivery-line-item-field-reference.adoc[Delivery Line Item] object
-for obtaining the price for calculating the discount. See the
-xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-available-field-formats[Available Field
-Formats].
+xref:admin-guide/managing-ct-orders/delivery-management/delivery-line-item-field-reference.adoc[Delivery Line Item] object for obtaining the price for calculating the discount. See the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-available-field-formats.adoc[Available Field Formats].
 
-|[.apiobject]#resultPrice# |String |Yes |The field from the
-[.object]#Delivery Line Item# object for storing the price with
-the applied discount. See the
-xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-available-field-formats[Available Field
-Formats].
+|[.apiobject]#resultPrice# |String |Yes |The field from the [.object]#Delivery Line Item# object for storing the price with the applied discount. See the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-available-field-formats.adoc[Available Field Formats].
 
 |[.apiobject]#procedure# |Object |Yes |Pricing Procedure.
 |===
 
 [[h2_71686657]]
-=== Pricing Procedure Keys
+== Pricing Procedure Keys
 
 [width="100%",cols="15%,20%,10%,55%"]
 |===
@@ -47,64 +36,135 @@ Available values:
 * MIN
 * MAX
 
-|[.apiobject]#round# |Enum |No a|
-If set, values will be rounded according to the selected value.
-Available values:
+|[.apiobject]#round# |Enum |No a| If set, values will be rounded according to the selected value. Available values:
 
-*[.apiobject]#item# is used to round a value separately for
-each [.object]#Calculation Type#.
-*[.apiobject]#group# is used to round the total cost of all
-listed [.object]#Calculation Types#.
+* [.apiobject]#item# is used to round a value separately for each [.object]#Calculation Type#.
+* [.apiobject]#group# is used to round the total cost of all listed [.object]#Calculation Types#.
 
-Otherwise, the value will be rounded after all discounts are calculated
-according to the number of digits in the *Unit Price* field on the
-*Order Line Item* record.
+Otherwise, the value will be rounded after all discounts are calculated according to the number of digits in the *Unit Price* field on the _Order Line Item_ record.
 
-|[.apiobject]#roundTo# |Integer |No a|
-The rounding precision, the number of decimals (digits after the comma).
-The default value is 0.
+|[.apiobject]#roundTo# |Integer |No a| The rounding precision, the number of decimals (digits after the comma). The default value is 0.
 
-Used if the [.apiobject]#round# key is set.
+NOTE: Used if the [.apiobject]#round# key is set.
 
-|[.apiobject]#isIgnoreNulls# |Boolean |No a|
-The default value is[.apiobject]#true#.
+|[.apiobject]#isIgnoreNulls# |Boolean |No a| The default value is [.apiobject]#true#.
 
-If[.apiobject]#true# that between *Calculated Type* records
-will be selected minimum discount except for 0 discounts. The result
-will be 0 if all Calculated Types are 0.
+If [.apiobject]#true# that between _Calculated Type_ records will be selected minimum discount except for 0 discounts. The result will be 0 if all Calculated Types are 0.
 
-Applicable if[.apiobject]#"type":"MIN"#.
+NOTE: Applicable if [.apiobject]#"type":"MIN"#.
 
-|[.apiobject]#items# |Array |Yes |At least one item must be
-provided.
+|[.apiobject]#items# |Array |Yes |At least one item must be provided.
 
-|[.apiobject]#items[i].calculationType# |String |No |The
-value from the *External ID* field of the *Calculation Type* record.
+|[.apiobject]#items[i].calculationType# |String |No |The value from the *External ID* field of the _Calculation Type_ record.
 
-|[.apiobject]#items[i].type# |Enum |
-Yes, if there is no
-[.apiobject]#items[i].calculationTypes#
- a|
-Embed next-level procedures. using the same format as presented in this
-table.
+|[.apiobject]#items[i].type# |Enum .2+| Yes, if there is no [.apiobject]#items[i].calculationTypes#
+ .2+| Embed next-level procedures. using the same format as presented in this table.
 
+|[.apiobject]#items[i].item# |Array |
 
-
-|[.apiobject]#items[i].item# |Array | |
 |===
 
 [[h2_1406500097]]
-=== Examples
+== Examples
 
-[{plus}] xref:javascript:void(0)[Standard Procedure: MULT]
+Click to view:
 
-.[-] Hide[%collapsible] ==== ====
+* Standard Procedure: MULT
++
+[%collapsible]
+====
+--
+[source,json]
+----
+{
+    "type": "procedure",
+    "basePrice": "$.listPrice",
+    "resultPrice": "$.unitPrice",
+    "procedure": {
+        "type": "MULT",
+        "items": [
+            {
+                "calculationType": "structural"
+            },
+            {
+                "calculationType": "contract"
+            }
+        ]
+    }
+}
+----
+--
+====
 
-[{plus}] xref:javascript:void(0)[Standard Procedure: MULT (with
-rounding)]
+* Standard Procedure: MULT (with rounding)
++
+[%collapsible]
+====
+--
+[source,json]
+----
+{
+    "type": "procedure",
+    "basePrice": "$.listPrice",
+    "resultPrice": "$.unitPrice",
+    "procedure": {
+        "type": "MULT",
+        "round": "item",
+        "roundTo": 4,
+        "items": [
+            {
+                "calculationType": "structural"
+            },
+            {
+                "calculationType": "contract"
+            }
+        ]
+    }
+}
+----
+--
+====
 
-.[-] Hide[%collapsible] ==== ====
+* Standard Multi-level Procedure
++
+[%collapsible]
+====
+--
+[source,json]
+----
+{
+    "type": "procedure",
+    "basePrice": "$.listPrice",
+    "resultPrice": "orders__UnitPriceWithoutVAT__c",
+    "procedure": {
+        "type": "MULT",
+        "round": "item",
+        "roundTo": 4,
+        "items": [
+            {
+                "calculationType": "structural"
+            },
+            {
+                "calculationType": "contract"
+            },
+            {
+                "type": "MAX",
+                "items": [
+                    {
+                        "calculationType": "season"
+                    },
+                    {
+                        "calculationType": "promo_percent"
+                    },
+                    {
+                        "calculationType": "promo_amount"
+                    }
+                ]
+            }
+        ]
+    }
+}
+----
+--
+====
 
-[{plus}] xref:javascript:void(0)[Standard Multi-level Procedure]
-
-.[-] Hide[%collapsible] ==== ====

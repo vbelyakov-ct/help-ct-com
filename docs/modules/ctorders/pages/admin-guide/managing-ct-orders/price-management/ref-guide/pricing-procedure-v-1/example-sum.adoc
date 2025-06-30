@@ -4,30 +4,43 @@
 |===
 |*Input Conditions* |*JSON* |*Discount Calculation Flow*
 
-a|
-Unit of Measure = Percent
+a|Unit of Measure = Percent
 
 Calculation Method = Decrease Price
 
-
-
 Product List Price = 100$
 
-
-
-3 Сaculation Types are created for the Pricing Procedure:
+3 Calculation Types are created for the Pricing Procedure:
 
 . Calculation Method = Decrease and Structural 10%
 . Calculation Method = Decrease and Contract 10%
-. Calculation Method =Decrease and Promo 10%
+. Calculation Method = Decrease and Promo 10%
 
-| a|
-Percents are summarized and applied to the initial price specified in
-the *List Price* field:
+a|
+[source, json]
+----
+{
+  "procedure": {
+    "type": "SUM",
+    "items": [
+      {
+        "calculationType": "structural" = 10%
+      },
+      {
+        "calculationType": "contract" = 10%
+      },
+      {
+        "calculationType": "promo" = 10%
+      }
+    ]
+  }
+}
+----
+
+a|
+Percents are summarized and applied to the initial price specified in the *List Price* field:
 
 100* (1 – (0.1 {plus} 0.1 {plus} 0.1)) = 70$
-
-
 
 Total price for an [.object]#Order Line Item# = 70$
 

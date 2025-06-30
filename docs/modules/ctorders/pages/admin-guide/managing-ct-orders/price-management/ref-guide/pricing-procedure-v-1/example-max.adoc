@@ -9,27 +9,40 @@ Unit of Measure = Amount
 
 Calculation Method = Decrease
 
-
-
 Product List Price = 100$
 
-
-
-3 Сaculation Types are created for the Pricing Procedure:
+3 Calculation Types are created for the Pricing Procedure:
 
 . Calculation Method = Decrease and Structural 10$
 . Calculation Method = Decrease and Contract 20$
-. Calculation Method =Increase and Promo 15$
+. Calculation Method = Increase and Promo 15$
 
-| a|
-Calculating discounts and selecting the maximum discount according to
-the formula:
+a|[source, json]
+----
+{
+  "procedure": {
+    "type": "MAX",
+    "items": [
+      {
+        "calculationType": "structural" = 10$
+      },
+      {
+        "calculationType": "contract" = 20$
+      },
+      {
+        "calculationType": "promo" = 15$
+      }
+    ]
+  }
+}
+----
+
+a|
+Calculating discounts and selecting the maximum discount according to the formula:
 
 . 100 – 10 = 90$
 . 100 – 20 = 80$
 . 100 – 15 = 85$
-
-
 
 Total price for an [.object]#Order Line Item# = 80$
 

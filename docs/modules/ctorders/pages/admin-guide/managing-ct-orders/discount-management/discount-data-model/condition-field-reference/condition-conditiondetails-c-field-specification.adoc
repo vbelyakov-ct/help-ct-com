@@ -106,13 +106,11 @@ The available operators: [.apiobject]#in#, [.apiobject]#notIn#.
 [width="100%",cols="10%,^9%,^9%,^9%,^9%,^9%,^9%,^9%,^9%,^9%,^9%",]
 |===
 
-.2+|*Field Data Type* 10+|*Operator* |*contain* |*notContain* a| *in* |*notIn* |*equal* |*notEqual* a| *greater*|*greaterOrEqual* a|*less* a|*lessOrEqual*|*Currency* |No |No |No |No |Yes |Yes |Yes |Yes |Yes
-a|Yes
+.2+|*Field Data Type* 10+|*Operator* |*contain* |*notContain* | *in* |*notIn* |*equal* |*notEqual* | *greater*|*greaterOrEqual* |*less* |*lessOrEqual*|*Currency* |No |No |No |No |Yes |Yes |Yes |Yes |Yes |Yes
 
-|*Number* |No |No |No |No |Yes |Yes |Yes |Yes |Yes
-a|Yes
+|*Number* |No |No |No |No |Yes |Yes |Yes |Yes |Yesь|Yes
 
-|*Text* a|Yes
+|*Text* |Yes
 
 |Yes |Yes |Yes |Yes |Yes |No |No |No |No
 |===

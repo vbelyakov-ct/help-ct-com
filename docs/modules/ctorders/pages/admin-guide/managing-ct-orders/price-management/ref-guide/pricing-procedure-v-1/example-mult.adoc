@@ -3,22 +3,39 @@
 [width="100%",cols="34%,33%,33%",]
 |===
 |*Input Conditions* |*JSON* |*Discount Calculation Flow*
-a|
-Unit of Measure = Percent, Amount
 
-
+a| Unit of Measure = Percent, Amount
 
 Product List Price = 100$
 
-
-
-3 Сaculation Types are created for the Pricing Procedure:
+3 Calculation Types are created for the Pricing Procedure:
 
 . Calculation Method = Decrease and Structural 10%
 . Calculation Method = Decrease and Contract 10$
-. Calculation Method =Increase and Vat –10%
+. Calculation Method = Increase and Vat –10%
 
-| a|
+a|
+[source, json]
+----
+{
+  "procedure": {
+    "type": "MULT",
+    "items": [
+      {
+        "calculationType": "structural" = 10%
+      },
+      {
+        "calculationType": "contract" = 10$
+      },
+      {
+        "calculationType": "vat" = -10%
+      }
+    ]
+  }
+}
+----
+
+a|
 Calculating discount according to the formula:
 
 . 100* (1 – 0.1) = 90$
