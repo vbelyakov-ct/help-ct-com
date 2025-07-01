@@ -10,7 +10,7 @@ Please, refer to the xref:admin-guide/managing-ct-orders/discount-management/ind
 
 Before getting into details on the configuration of _Pricing Procedure_ and _Calculation Types_, let's explore the overall pricing workflow that is performed by the new CT Orders advanced pricing engine:
 
-[width="99%",cols="16%,14%,14%,14%,14%,14%,14%",frame="none",grid="none"]
+[width="100%",cols="10%,10%,10%,30%,10%,10%,30%",frame="none",grid="none"]
 |===
 |xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/index.adoc[Check objects mapping]
 a|→
@@ -23,6 +23,7 @@ Load *List Prices*
 | | a|*[2]*
 |Check [.apiobject]#orders\__PricingProcedure__c#: the procedure is set and
 active a| [.red-text]#No#
+
 →
 | a|[.red-text]#Price calculated without a discount#
 | | | a|↓
@@ -57,7 +58,7 @@ specified on the object for the _Sales Organization_ and _Order Type_ in the ord
 . _Condition_ or _Group And Condition_ record type exists for this _Calculation Type_.
 
 [[h1_644400073]]
-=== Pricing Procedure
+== Pricing Procedure
 
 The pricing procedure is carried out with the help of the xref:./ref-guide/pricing-procedure-fields-reference.adoc[Pricing Procedure] object, which determines the methods and sequence of price calculation procedures for each order.
 

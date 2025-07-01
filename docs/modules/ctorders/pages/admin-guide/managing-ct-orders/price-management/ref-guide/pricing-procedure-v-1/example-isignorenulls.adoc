@@ -1,6 +1,6 @@
 = Example: isIgnoreNulls
 
-[width="100%",cols="34%,33%,33%",]
+[width="100%",cols="30%,40%,30%"]
 |===
 |*Input Conditions* |*JSON* |*Discount Calculation Flow*
 
@@ -44,9 +44,9 @@ a|
 a|
 Calculating discounts and selecting the minimum discount according to the formula:
 
-. 100* (1 – 0.1) = 90$
-. 100* (1 – 0.20) = 80$
-. 100* (1 – 0) = 100$
+. 100 * (1 – 0.1) = 90$
+. 100 * (1 – 0.20) = 80$
+. 100 * (1 – 0) = 100$
 
 Total price for an [.object]#Order Line Item# = 100$
 

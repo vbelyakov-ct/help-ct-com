@@ -5,7 +5,7 @@ Each step's item will be calculated only if the conditions of the step are met o
 [[h2_136084655]]
 == Condition Level Keys
 
-[width="100%",cols="15%,20%,10%,55%"]
+[width="100%",cols="10%,10%,10%,70%"]
 |===
 |*Key* |*Type* |*Required* |*Comment*
 
@@ -21,7 +21,7 @@ Available values:
 [[h2_625014080]]
 == Condition Level Item keys
 
-[width="100%",cols="15%,20%,10%,55%"]
+[width="100%",cols="10%,10%,10%,70%"]
 |===
 |*Key* |*Type* |*Required* |*Comment*
 
@@ -31,11 +31,11 @@ Available values:
 |[.apiobject]#operator# |Enum |Yes
 |xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/step-conditions.adoc#h2_748327130[Available operators] depending on the field data type.
 
-|[.apiobject]#value# |Boolean |No |Target values for fields with the *Boolean* data type.
+.3+|[.apiobject]#value# |Boolean .3+|No |Target values for fields with the *Boolean* data type.
 
-| |Number | |Target values for fields with the *Currency* and *Number* data type.
+|Number |Target values for fields with the *Currency* and *Number* data type.
 
-| |String | a|
+|String a|
 Target values for fields with the *Text* data type.
 
 NOTE: The key is required if [.apiobject]#"operator" != "in"# or [.apiobject]#"operator "!= "notIn"#.
@@ -75,7 +75,7 @@ NOTE: The [.apiobject]#in# and [.apiobject]#notIn# keys must contain multiple va
 [[h2_680034043]]
 == Value in the Object Key
 
-[width="100%",cols="50%,50%",]
+[width="50%"]
 |===
 |*Value* |*CT Orders Object*
 

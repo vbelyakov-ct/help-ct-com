@@ -37,7 +37,7 @@ Roll-up method. Available values:
 [[h2_369440874]]
 == Roll-up Result Keys
 
-[width="100%",cols="15%,20%,10%,55%"]
+[width="100%",cols="10%,10%,10%,70%"]
 |===
 |*Key* |*Type* |*Required* |*Comment*
 
@@ -56,9 +56,9 @@ The API name of the parent object. Available values:
 == Result Object Dependency
 
 [.highlighted-table]
-[width="100%",cols="^20%,^20%,^20%,^20%,^20%",]
+[width="100%",cols="20%,^20%,^20%,^20%,^20%",]
 |===
-.2+|*baseObject* 4+|*resultObject* |*orders\__DeliveryLineItem__c* |*orders\__OrderLineItem__c* |*orders\__Delivery__c* |*orders\__Order__c* |*orders\__DeliveryLineItem__c*
+.2+^|*baseObject* 4+|*resultObject* |*orders\__DeliveryLineItem__c* |*orders\__OrderLineItem__c* |*orders\__Delivery__c* |*orders\__Order__c* |*orders\__DeliveryLineItem__c*
 |–|{plus} |{plus} |{plus}|
 *orders\__OrderLineItem__c*
 |– |– |– |{plus}|

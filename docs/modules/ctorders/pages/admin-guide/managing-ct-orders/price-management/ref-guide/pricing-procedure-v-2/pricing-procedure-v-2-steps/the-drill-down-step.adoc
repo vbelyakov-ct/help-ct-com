@@ -9,11 +9,11 @@ This step is used to drill down (copy) field values from the parent records to t
 |===
 |*Key* |*Type* |*Required* |*Comment*
 
-|[.apiobject]#>type# |String |Yes |It is filled out with the [.apiobject]#drillDown# constant.
+|[.apiobject]#type# |String |Yes |It is filled out with the [.apiobject]#drillDown# constant.
 
 |[.apiobject]#condition# |Step Conditions |No |See the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/step-conditions.adoc[Step Conditions].
 
-|[.apiobject]#>baseObject# |Enum |Yes a|
+|[.apiobject]#baseObject# |Enum |Yes a|
 The API name of the parent object. Available values:
 
 * [.apiobject]#orders\__OrderLineItem__c#
@@ -47,9 +47,9 @@ The API name of the child object. Available values:
 == Result Object Dependency
 
 [.highlighted-table]
-[width="100%",cols="^20%,^20%,^20%,^20%,^20%",]
+[width="100%",cols="20%,^20%,^20%,^20%,^20%",]
 |===
-.2+|*baseObject* 4+|*resultObject* |*orders\__DeliveryLineItem__c* |*orders\__OrderLineItem__c* |*orders\__Delivery__c* |*orders\__Order__c* |*orders\__DeliveryLineItem__c* |—|—|—|—
+.2+^|*baseObject* 4+|*resultObject* |*orders\__DeliveryLineItem__c* |*orders\__OrderLineItem__c* |*orders\__Delivery__c* |*orders\__Order__c* |*orders\__DeliveryLineItem__c* |—|—|—|—
 |*orders\__OrderLineItem__c* |{plus} |—|—|—
 |*orders\__Delivery__c* |{plus} |—|—|—
 |*orders\__Order__c* |{plus} | {plus} | {plus}|—

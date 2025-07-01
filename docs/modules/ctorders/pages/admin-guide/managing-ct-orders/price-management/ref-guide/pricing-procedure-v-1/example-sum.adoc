@@ -1,6 +1,6 @@
 = Example: SUM
 
-[width="100%",cols="34%,33%,33%",]
+[width="100%",cols="30%,40%,30%"]
 |===
 |*Input Conditions* |*JSON* |*Discount Calculation Flow*
 
@@ -40,7 +40,7 @@ a|
 a|
 Percents are summarized and applied to the initial price specified in the *List Price* field:
 
-100* (1 – (0.1 {plus} 0.1 {plus} 0.1)) = 70$
+100 * (1 – (0.1 {plus} 0.1 {plus} 0.1)) = 70$
 
 Total price for an [.object]#Order Line Item# = 70$
 

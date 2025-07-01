@@ -1,6 +1,6 @@
 = Example: MIN
 
-[width="100%",cols="34%,33%,33%",]
+[width="100%",cols="30%,40%,30%"]
 |===
 |*Input Conditions* |*JSON* |*Discount Calculation Flow*
 
@@ -41,9 +41,9 @@ a|[source, json]
 a|
 Calculating discounts and selecting the minimum discount according to the formula:
 
-. 100* (1 – 0.1) = 91$
+. 100 * (1 – 0.1) = 91$
 . 100 –9 = 91$
-. 100* (1 – 0) = 100$ because [.apiobject]#isIgnoreNulls = true# by default.
+. 100 * (1 – 0) = 100$ because [.apiobject]#isIgnoreNulls = true# by default.
 
 Total price for an [.object]#Order Line Item# = 90$
 
