@@ -11,7 +11,7 @@ This step is used to calculate the price based on the conditions specified in th
 
 |[.apiobject]#type# |String |Yes |It is filled out with the [.apiobject]#procedure# constant.
 
-|[.apiobject]#condition# |Step Conditions |No |See the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/step-conditions.adoc[Step Conditions].
+|[.apiobject]#condition# |Step Conditions |No |See the xref:./step-conditions.adoc[Step Conditions].
 
 |[.apiobject]#basePrice# |String |Yes |The field from the
 xref:admin-guide/managing-ct-orders/delivery-management/delivery-line-item-field-reference.adoc[Delivery Line Item] object for obtaining the price for calculating the discount. See the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-available-field-formats.adoc[Available Field Formats].
@@ -58,9 +58,10 @@ NOTE: Applicable if [.apiobject]#"type":"MIN"#.
 |[.apiobject]#items[i].calculationType# |String |No |The value from the *External ID* field of the _Calculation Type_ record.
 
 |[.apiobject]#items[i].type# |Enum .2+| Yes, if there is no [.apiobject]#items[i].calculationTypes#
- .2+| Embed next-level procedures. using the same format as presented in this table.
 
-|[.apiobject]#items[i].item# |Array |
+.2+| Embed next-level procedures. Using the same format as presented in this table.
+
+| [.apiobject]#items[i].item# | Array
 
 |===
 

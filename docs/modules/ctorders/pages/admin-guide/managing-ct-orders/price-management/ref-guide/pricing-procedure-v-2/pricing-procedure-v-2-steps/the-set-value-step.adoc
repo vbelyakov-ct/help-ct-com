@@ -3,56 +3,46 @@
 This step is used to calculate and set the field's value.
 
 [[h2_109049444]]
-=== Step Keys
+== Step Keys
 
 [width="100%",cols="15%,20%,10%,55%"]
 |===
 |*Key* |*Type* |*Required* |*Comment*
 
-|[.apiobject]#type# |String |Yes |It is filled out with the
-[.apiobject]#setValue# constant.
+|[.apiobject]#type# |String |Yes |It is filled out with the [.apiobject]#setValue# constant.
 
-|[.apiobject]#condition# |Step Conditions |No |See the
-xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/step-conditions[Step Conditions].
+|[.apiobject]#condition# |Step Conditions |No |See the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/step-conditions.adoc[Step Conditions].
 
 |[.apiobject]#object# |Enum |Yes a|
 API name of an object. Available values:
 
-*[.apiobject]#orders__DeliveryLineItem__c#
-*[.apiobject]#orders__OrderLineItem__c#
-*[.apiobject]#orders__Delivery__c#
-*[.apiobject]#orders__Order__c#
+* [.apiobject]#orders\__DeliveryLineItem__c#
+* [.apiobject]#orders\__OrderLineItem__c#
+* [.apiobject]#orders\__Delivery__c#
+* [.apiobject]#orders\__Order__c#
 
 |[.apiobject]#resultPrice# |String |Yes |The
-[.apiobject]#object# key to store the calculated price. See the
-xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-available-field-formats[Available Field
-Formats].
+[.apiobject]#object# key to store the calculated price. See the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-available-field-formats.adoc[Available Field Formats].
 
-|[.apiobject]#value# |Formula Value Item |Yes |See the
-xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-set-value-step#h3_71686657[Formula Value Item].
+|[.apiobject]#value# |Formula Value Item |Yes |See the <<Formula Value Item>>.
 |===
 
 [[h2_424773932]]
-=== Formula Value Item
+== Formula Value Item
 
 [width="100%",cols="34%,33%,33%",]
 |===
 |*Type* |*Required* |*Comment*
 
-|[.apiobject]#Number# |Yes |Hardcoded Number value
+|[.apiobject]#Number# .3+|Yes |Hardcoded Number value
 
-|[.apiobject]#String# | |the [.apiobject]#object# key to
-get a price for calculation. See the
-xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-available-field-formats[Available Field
-Formats].
+|[.apiobject]#String#  |The [.apiobject]#object# key to get a price for calculation. See the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-available-field-formats.adoc[Available Field Formats].
 
-|[.apiobject]#Object# | |Value calculation formula. See the
-xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-set-value-step#h2_1231388848[Set Value Calculation
-Formula].
+|[.apiobject]#Object#  |Value calculation formula. See the <<Set Value Condition Formula>>.
 |===
 
 [[h2_1231388848]]
-=== Set Value Condition Formula
+== Set Value Condition Formula
 
 [width="100%",cols="15%,20%,10%,55%"]
 |===
@@ -66,39 +56,95 @@ Calculation operator. Available values:
 * minus
 * divide
 
-If you select the minus operator, you can use the minus sign for a
-value, for example,[.apiobject]#-$.quantity#.
+NOTE: If you select the minus operator, you can use the minus sign for a value, for example,[.apiobject]#-$.quantity#.
 
-|[.apiobject]#items# |Array |Yes |See the
-xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-set-value-step#h3_71686657[Formula Value Item].
+|[.apiobject]#items# |Array |Yes |See the <<Formula Value Item>>.
 |===
 
 [[h2_1406500097]]
-=== Examples
+== Examples
 
-[{plus}] xref:javascript:void(0)[Standard Set Value Step:
-Number]
+Click to view:
 
-.[-] Hide[%collapsible] ====
-
+* Standard Set Value Step: Number
++
+[%collapsible]
 ====
-
-[{plus}] xref:javascript:void(0)[Standard Set Value Step: Field]
-
-.[-] Hide[%collapsible] ====
-
+--
+[source,json]
+----
+{
+    "type": "setValue",
+    "object": "orders__Delivery__c",
+    "resultPrice": "orders__DeliveryFee__c",
+    "value": 20
+}
+----
+--
 ====
-
-[{plus}] xref:javascript:void(0)[Standard Set Value Step: Flat
-Formula]
-
-.[-] Hide[%collapsible] ====
-
+* Standard Set Value Step: Field
++
+[%collapsible]
 ====
-
-[{plus}] xref:javascript:void(0)[Standard Set Value Step:
-Complex Formula]
-
-.[-] Hide[%collapsible] ====
-
+--
+[source,json]
+----
+{
+    "type": "setValue",
+    "object": "orders_DeliveryLineItem__c",
+    "resultPrice": "$.unitPrice",
+    "value": "orders__ManualPrice__c"
+}
+----
+--
+====
+* Standard Set Value Step: Flat Formula
++
+[%collapsible]
+====
+--
+[source,json]
+----
+{
+    "type": "setValue",
+    "object": "orders_DeliveryLineItem__c",
+    "resultPrice": "$.totalPrice",
+    "value": {
+        "operator": "multi",
+        "items": [
+            "$.unitPrice",
+            "$.quantity"
+        ]
+    }
+}
+----
+--
+====
+* Standard Set Value Step: Complex Formula
++
+[%collapsible]
+====
+--
+[source,json]
+----
+{
+    "type": "setValue",
+    "object": "orders_DeliveryLineItem__c",
+    "resultPrice": "$.totalDiscount",
+    "value": {
+        "operator": "sum",
+        "items": [
+            {
+                "operator": "multi",
+                "items": [
+                    "$.listPrice",
+                    "$.quantity"
+                ]
+            },
+            " - $.totalPrice"
+        ]
+    }
+}
+----
+--
 ====

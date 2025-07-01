@@ -1,12 +1,10 @@
 = Pricing Procedure Fields Reference
 
-the [.object]#Pricing Procedure# object stores the price
-calculation formula for the selected *Order Type* and
-[.object]#Sales Organization#.
+The [.object]#Pricing Procedure# object stores the price calculation formula for the selected _Order Type_ and [.object]#Sales Organization#.
 
 '''''
 
-Object API name: orders__PricingProcedure__c
+Object API name: [.apiobject]#orders\__PricingProcedure__c#
 
 '''''
 
@@ -14,30 +12,17 @@ Object API name: orders__PricingProcedure__c
 |===
 |*Field* |*API* |*Type* |*Description*
 
-|Active |[.apiobject]#orders__IsActive__c# |Picklist
-|If selected, the record is active and applied in business logic.
+|Active |[.apiobject]#orders\__IsActive__c# |Picklist |If selected, the record is active and applied in business logic.
 
-|Order Type |[.apiobject]#orders__OrderType__c# |Text
-|The order type for which the settings are configured.
+|Order Type |[.apiobject]#orders\__OrderType__c# |Text |The order type for which the settings are configured.
 
 |Pricing Procedure
-|[.apiobject]#orders__PricingProcedure__c# |Text(255) a|
-The formula for calculating the price of each [.object]#Order
-Line Item# by applying different [.object]#Calculation Types#
-and operators.
+|[.apiobject]#orders\__PricingProcedure__c# |Text(255) a| The formula for calculating the price of each [.object]#Order Line Item# by applying different [.object]#Calculation Types# and operators.
 
-* For more information about [.object]#Pricing Procedure#
-version 1.0, refer to xref:pricing-procedure-v-1[Pricing Procedure
-v. 1.0].
-* For more information about [.object]#Pricing Procedure#
-version 2.0, refer to xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/index.adoc[Pricing
-Procedure v. 2.0: Steps].
+* For more information about [.object]#Pricing Procedure# version 1.0, refer to xref:./pricing-procedure-v-1/index.adoc[Pricing Procedure v. 1.0].
+* For more information about [.object]#Pricing Procedure# version 2.0, refer to xref:./pricing-procedure-v-2/pricing-procedure-v-2-steps/index.adoc[Pricing Procedure v. 2.0: Steps].
 
-|Procedure Name |[.apiobject]#Name# |Checkbox |Name of the
-pricing procedure.
+|Procedure Name |[.apiobject]#Name# |Checkbox |Name of the pricing procedure.
 
-|Sales Organization
-|[.apiobject]#orders__SalesOrganizationId__c#
-|Master-Detail (Sales Organization) |The business unit for which the
-settings are configured.
+|Sales Organization |[.apiobject]#orders\__SalesOrganizationId__c# |Master-Detail (Sales Organization) |The business unit for which the settings are configured.
 |===

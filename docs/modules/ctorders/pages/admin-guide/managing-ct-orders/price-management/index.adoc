@@ -1,82 +1,40 @@
 = Price Management
+:toc:
 
-Price management means implemented in the package are based on the
-calculation algorithm set in _Pricing Procedure_ and _Calculation Type_
-records with specified rules and conditions that are applied during the
-calculation.
+Price management means implemented in the package are based on the calculation algorithm set in _Pricing Procedure_ and _Calculation Type_ records with specified rules and conditions that are applied during the calculation.
 
-Please, refer to the xref:discount-management[Discount
-Management] articles to see the full discount and price calculation
-object model.
-
-:toc: :toclevels: 3
+Please, refer to the xref:admin-guide/managing-ct-orders/discount-management/index.adoc[Discount Management] articles to see the full discount and price calculation object model.
 
 [[h2_841873119]]
-=== Price Calculation Workflow
+== Price Calculation Workflow
 
-Before getting into details on the configuration of _Pricing Procedure_
-and _Calculation Types_, let's explore the overall pricing workflow that
-is performed by the new CT Orders advanced pricing engine:
+Before getting into details on the configuration of _Pricing Procedure_ and _Calculation Types_, let's explore the overall pricing workflow that is performed by the new CT Orders advanced pricing engine:
 
-[width="99%",cols="16%,14%,14%,14%,14%,14%,14%",]
+[width="99%",cols="16%,14%,14%,14%,14%,14%,14%",frame="none",grid="none"]
 |===
-|xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/index[Check objects mapping] a|
-→
-
-a|
-*[1]*
-
-a|
-xref:admin-guide/managing-ct-orders/product-management/index[Define product types for discount];
+|xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/index.adoc[Check objects mapping]
+a|→
+a|*[1]*
+a| xref:admin-guide/managing-ct-orders/product-management/index.adoc[Define product types for discount];
 Load *List Prices*
-
 | | |
-
-| | | a|
-↓
-
+| | | a|↓
 | | |
-
-| | a|
-*[2]*
-
-|Check orders__PricingProcedure__c: the procedure is set and
-active a|
-No
-
+| | a|*[2]*
+|Check [.apiobject]#orders\__PricingProcedure__c#: the procedure is set and
+active a| [.red-text]#No#
 →
-
-
-
-| a|
-Price calculated without a discount
-
-| | | a|
-↓
-
+| a|[.red-text]#Price calculated without a discount#
+| | | a|↓
+| | a|[.red-text]#No# ↑
 | | a|
-No ↑
-
-| | a|
-*[3]*
-
-|Define orders__CalculationType__c records;
-check mandatory fields a|
-→
-
-a|
-*[4]*
-
+*[3]* |Define [.apiobject]#orders\__CalculationType__c# records;
+check mandatory fields a|→
+a|*[4]*
 |Check field accessibility in the *Condition Fields List* field
-
-| | | | | | a|
-↓
-
-| | | | | a|
-*[5]*
-
-a|
-Apply *Calculation Type* record type:
+| | | | | | a|↓
+| | | | | a|*[5]*
+a|Apply _Calculation Type_ record type:
 
 * Group and Condition
 * Condition
@@ -84,94 +42,49 @@ Apply *Calculation Type* record type:
 |===
 
 [[h3_1755691536]]
-==== Discount Calculation Requirements
+=== Discount Calculation Requirements
 
-To successfully calculate a discount, the following conditions must be
-maintained throughout the pricing procedure:
+To successfully calculate a discount, the following conditions must be maintained throughout the pricing procedure:
 
-. _List Prices_ are created for each
-xref:admin-guide/managing-ct-orders/delivery-management/delivery-line-item-field-reference.adoc[Delivery Line Item] in the
-order.
+. _List Prices_ are created for each xref:admin-guide/managing-ct-orders/delivery-management/delivery-line-item-field-reference.adoc[Delivery Line Item] in the order.
 . The _Pricing Procedure_ is defined for an order.
-* the [.apiobject]#orders__PricingProcedure__с# field is
-specified on the object for the _Sales Organization_ and _Order Type_ in
-the order.
+* The [.apiobject]#orders\__PricingProcedure__с# field is
+specified on the object for the _Sales Organization_ and _Order Type_ in the order.
 * The _Pricing Procedure_ is active.
-.  xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc[Calculation Type] is linked to the applied
-_Pricing Procedure_, and _Calculation Type_ is included in the JSON
-formula.
-* The *Calculation Method*, *Unit of Measure*, and *External Id* fields
-are filled out.
-. All fields specified in the **Condition Fields List**​ field must be
-accessible to a current user.
-. _Condition_ or _Group And Condition_ record type exists for this
-_Calculation Type_.
+.  xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc[Calculation Type] is linked to the applied _Pricing Procedure_, and _Calculation Type_ is included in the JSON formula.
+* The *Calculation Method*, *Unit of Measure*, and *External Id* fields are filled out.
+. All fields specified in the *Condition Fields List* field must be accessible to a current user.
+. _Condition_ or _Group And Condition_ record type exists for this _Calculation Type_.
 
 [[h1_644400073]]
 === Pricing Procedure
 
-The pricing procedure is carried out with the help of the
-xref:pricing-procedure-fields-reference[Pricing Procedure] object,
-which determines the methods and sequence of price calculation
-procedures for each order.
+The pricing procedure is carried out with the help of the xref:./ref-guide/pricing-procedure-fields-reference.adoc[Pricing Procedure] object, which determines the methods and sequence of price calculation procedures for each order.
 
-* The *Pricing Procedure* field on this object contains calculation
-algorithm steps in JSON format.
-* The pricing procedure can be set up differently for each _Sales
-Organization_ and _Order Type_.
+* The *Pricing Procedure* field on this object contains calculation algorithm steps in JSON format.
+* The pricing procedure can be set up differently for each _Sales Organization_ and _Order Type_.
 
-The mobile user must have at least read access to the fields in the
-xref:pricing-procedure-fields-reference[Pricing Procedure] or
-xref:discount-management#h3_1225315997[recalculation fields] to
-calculate *Total Price*. Otherwise, the total price will be calculated
-by the *List Price* fields.
+NOTE: The mobile user must have at least read access to the fields in the xref:./ref-guide/pricing-procedure-fields-reference.adoc[Pricing Procedure] or xref:admin-guide/managing-ct-orders/discount-management/index.adoc#h3_1225315997[recalculation fields] to calculate *Total Price*. Otherwise, the total price will be calculated by the *List Price* fields.
 
-Price is calculated for each _Delivery Line Item_ record based on the
-quantity entered on each _Delivery Line Item_ or _Order Line Item_
-record and conditions specified in the applied _Calculation Type_.
-Depending on the type of product, the system applies specific rules for
-discount calculation. For bundles, there are
-xref:admin-guide/managing-ct-orders/product-management/index[three possible calculation scenarios], for
-products the discount is applied to each product record.
+Price is calculated for each _Delivery Line Item_ record based on the quantity entered on each _Delivery Line Item_ or _Order Line Item_ record and conditions specified in the applied _Calculation Type_.
 
+Depending on the type of product, the system applies specific rules for discount calculation. For bundles, there are xref:admin-guide/managing-ct-orders/product-management/index.adoc[three possible calculation scenarios], for products the discount is applied to each product record.
 
-
-To provide a link between _Pricing Procedure_ and _Calculation Types_,
-the [.object]#Procedure Calculation Type# junction object is
-introduced. The _Procedure Calculation Type_ records are created
-automatically for all _Calculation Types_ specified in the Pricing
-Procedure formula.
-
-
+To provide a link between _Pricing Procedure_ and _Calculation Types_, the [.object]#Procedure Calculation Type# junction object is introduced. The _Procedure Calculation Type_ records are created automatically for all _Calculation Types_ specified in the Pricing Procedure formula.
 
 The following procedure versions are supported:
 
-* xref:pricing-procedure-v-1[Pricing Procedure v. 1.0] requires
-only the *Procedure* step, as in previous CT Orders versions. In this
-step, a formula is used to calculate the price of each _Delivery Line
-Item_ by applying different discount _Calculation Types_ listed in a
-sequence with[.apiobject]#MAX#, MIN, MULT, or SUM operators.
-* xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/index.adoc[Pricing Procedure v. 2.0]
-requires all steps of the price calculation to be specified in the JSON
-formula.
+* xref:./ref-guide/pricing-procedure-v-1/index.adoc[Pricing Procedure v. 1.0] requires only the *Procedure* step, as in previous CT Orders versions. In this step, a formula is used to calculate the price of each _Delivery Line Item_ by applying different discount _Calculation Types_ listed in a sequence with [.apiobject]#MAX#, [.apiobject]#MIN#, [.apiobject]#MULT#, or [.apiobject]#SUM# operators.
+* xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/index.adoc[Pricing Procedure v. 2.0] requires all steps of the price calculation to be specified in the JSON formula.
 
-[cols=",",]
-|===
-|image:warning.png[] |Use
-the [.apiobject]#ExternalId__с# value of the *Calculation
-Type* record in the JSON formula.
-|===
+NOTE: Use the [.apiobject]#ExternalId__с# value of the _Calculation Type_ record in the JSON formula.
 
-image:pricing-procedure-2020-05-22.png[]
-
-
+image::pricing-procedure-2020-05-22.png[align="center"]
 
 See also:
 
-* xref:procedure-builder-tab[Procedure Builder Tab]
-* xref:pricing-procedure-v-1[Pricing Procedure v. 1.0]
-* xref:pricing-procedure-2-0-head[Pricing Procedure v. 2.0]
-* xref:pricing-procedure-fields-reference[Pricing Procedure Fields
-Reference]
-* xref:procedure-calculation-type-fields-reference[Procedure
-Calculation Type Fields Reference]
+* xref:./procedure-builder-tab.adoc[]
+* xref:./ref-guide/pricing-procedure-v-1/index.adoc[]
+* xref:./ref-guide/pricing-procedure-v-2/index.adoc[]
+* xref:./ref-guide/pricing-procedure-fields-reference.adoc[]
+* xref:./ref-guide/procedure-calculation-type-fields-reference.adoc[]

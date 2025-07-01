@@ -1,168 +1,320 @@
 = Procedure Builder Tab
 
-*Procedure Builder* tab is a convenient tool to set up a
-Pricing [.object]# #Procedure [.object]# #step by step, so
-you do not need to manually build the JSON query.
+*Procedure Builder* tab is a convenient tool to set up a Pricing [.object]#Procedure# step by step, so you do not need to manually build the JSON query.
 
-To use it, click the *Procedure Builder* button on the
-[.object]#Pricing Procedure# object:
+To use it, click the *Procedure Builder* button on the [.object]#Pricing Procedure# object:
 
-image:procedure-builder-button.png[]
+image::procedure-builder-button.png[align="center"]
 
+By default, Builder for xref:./ref-guide/pricing-procedure-v-1/index.adoc[Pricing Procedure 1.0] is opened. To open Builder for xref:./ref-guide/pricing-procedure-v-2/index.adoc[Pricing Procedure 2.0], click *Move to Advance Version*:
 
+image::procedure-builder-1-0.png[align="center"]
 
-By default, Builder for xref:pricing-procedure-v-1[Pricing
-Procedure 1.0] is opened. To open Builder
-for xref:pricing-procedure-2-0-head[Pricing Procedure 2.0], click
-*Move to Advance Version*:
+image::procedure-builder-2-0.png[align="center"]
 
-
-
-image:procedure-builder-1-0.png[]
-
-
-
-image:procedure-builder-2-0.png[]
-
-
-
-[width="100%",cols="50%,50%",]
-|===
-|Procedure Builder for v 1.0 a|
+[tabs]
+====
+Procedure Builder for v 1.0::
++
+--
 . Set up Pricing procedure settings:
 * Procedure Type:
-** xref:example-sum[SUM]
-** xref:example-mult[MULT]
-** xref:example-min[MIN]
-** xref:example-max[MAX]
-* xref:example-round-roundto[Round]:
+** xref:./ref-guide/pricing-procedure-v-1/example-sum.adoc[SUM]
+** xref:./ref-guide/pricing-procedure-v-1/example-mult.adoc[MULT]
+** xref:./ref-guide/pricing-procedure-v-1/example-min.adoc[MIN]
+** xref:./ref-guide/pricing-procedure-v-1/example-max.adoc[MAX]
+* xref:./ref-guide/pricing-procedure-v-1/example-round-roundto.adoc[Round]:
 ** Item
 ** Group
-* xref:example-round-roundto[Round To]
-* xref:example-isignorenulls[Ignore Nulls]
-* xref:procedure-calculation-type-fields-reference[Procedure
-Calculation Type Settings]
+* xref:./ref-guide/pricing-procedure-v-1/example-round-roundto.adoc[Round To]
+* xref:./ref-guide/pricing-procedure-v-1/example-isignorenulls.adoc[Ignore Nulls]
+* xref:./ref-guide/procedure-calculation-type-fields-reference.adoc[Procedure Calculation Type Settings]
++
+NOTE: The *Item type* setting is missing in the resulting JSON itself, but it defines the JSON structure.
 
-[cols=",",]
-!===
-!image:info.png[] !The *Item
-type* setting is missing in the resulting JSON itself, but it defines
-the JSON structure.
-!===
-
-Click *Save*.
-
-|Procedure Builder for v 2.0 a|
+. Click *Save*.
+--
+Procedure Builder for v 2.0::
++
+--
 . Set up Pricing Procedure steps:
-* https://help.customertimes.com/articles/ct-orders-4-0/the-procedure-step[Procedure
-Step]
-
-[cols=",",]
-!===
-!image:info.png[] !The *Item
-type* setting is missing in the resulting JSON itself, but it defines
+* xref:./ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-procedure-step.adoc[Procedure Step]
++
+NOTE: The *Item type* setting is missing in the resulting JSON itself, but it defines
 the JSON structure.
-!===
-* https://help.customertimes.com/articles/ct-orders-4-0/the-set-value-step[Set
-Value Step]
-
-https://help.customertimes.com/articles/ct-orders-4-0/the-set-value-step[]
-* https://help.customertimes.com/articles/ct-orders-4-0/the-roll-up-step[Roll
-Up Step]
-* https://help.customertimes.com/articles/ct-orders-4-0/the-drill-down-step[Drill
-Down Step]
-* https://help.customertimes.com/articles/ct-orders-4-0/the-sdk-step[SDK
-Step]
-
-** Drag and drop steps
-with image:drag-n-drop-icon.png[] to
-arrange them in your desired order.
-** Use *Add Step* and *Delete Step* buttons to make a desired number of
-steps.
+* xref:./ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-set-value-step.adoc[Set Value Step]
+* xref:./ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-roll-up-step.adoc[Roll Up Step]
+* xref:./ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-drill-down-step.adoc[Drill Down Step]
+* xref:./ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-sdk-step.adoc[SDK Step]
+** Drag and drop steps with image:drag-n-drop-icon.png[] to arrange them in your desired order.
+** Use *Add Step* and *Delete Step* buttons to make a desired number of steps.
 ** For the *Type field* in the *Value Settings,* select:
 *** *String* to select the price type
 *** *Number* to enter the decimal value
 *** *Formula* to set up formula settings:
++
 image:procedure-builder-2-0-formula.png[]
-
-[cols=",",]
-!===
-!image:info.png[] !The
-*MULTIPLY* formula operator is displayed as multi in the JSON query.
-!===
-
-For each step, you can also set
-up https://help.customertimes.com/articles/ct-orders-4-0/step-conditions[Step
-Conditions]. Useful notes:
-* Use *OR*, *AND*, *{plus}* and *Add Group* buttons to set up condition
-groups:
++
+NOTE: The *MULTIPLY* formula operator is displayed as multi in the JSON query.
++
+For each step, you can also set up xref:./ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/step-conditions.adoc[Step Conditions]. Useful notes:
+* Use *OR*, *AND*, *{plus}* and *Add Group* buttons to set up condition groups:
 ** You can add up to 3 subgroups for each group.
-** For the *AND* group type, its subgroup type is automatically set to
-*OR* and vice versa.
-* Click *Delete group* to delete condition group
-and image:delete-string-icon.png[]
+** For the *AND* group type, its subgroup type is automatically set to *OR* and vice versa.
+* Click *Delete group* to delete condition group and image:delete-string-icon.png[25,25]
 to delete condition string.
+. Click *Save*.
 
-
-
-Click *Save*.
-
-|===
-
-
-
-[[h2_1406500097]]
-=== Examples
-
-[[h3_98762040]]
-==== Pricing Procedure 1.0
-
-To generate xref:setting-up-a-pricing-procedure-2-2[JSON from the
-Workshop 2.2], do the following in the Procedure Builder for v 1.0:
-
-image:pricing_procedure_v1_example.png[]
-
-These settings will generate the following JSON:
-
-
-
-[[h3_98762009]]
-==== Pricing Procedure 2.0
-
-To generate xref:setting-up-a-pricing-procedure-2-3[JSON from the
-Workshop 2.3], make the following settings in the Procedure Builder for
-v 2.0:
-
-. Drill Down
-image:pricing_procedure_v2_example_step1.png[]
-. Procedure
-image:pricing_procedure_v2_example_step2.png[] image:pricing_procedure_v2_example_step2-condition.png[]
-. Procedure
-image:pricing_procedure_v2_example_step3.png[] image:pricing_procedure_v2_example_step3-condition.png[]
-. Set Value
-image:pricing_procedure_v2_example_step4.png[] image:pricing_procedure_v2_example_step4-condition.png[]
-. Roll Up
-image:pricing_procedure_v2_example_step5.png[]
-. Set Value
-image:pricing_procedure_v2_example_step6.png[]
-. Roll Up
-image:pricing_procedure_v2_example_step7.png[]
-. Set Value
-image:pricing_procedure_v2_example_step8.png[]
-. Roll Up
-image:pricing_procedure_v2_example_step9.png[]
-
-These settings will generate the following JSON:
-
-[{plus}] xref:javascript:void(0)[Click to expand a JSON]
-
-.[-] Click to hide[%collapsible] ====
-
+--
 ====
 
+[[h2_1406500097]]
+== Examples
 
+[[h3_98762040]]
+=== Pricing Procedure 1.0
+
+To generate xref:admin-guide/workshops/workshop-2-0-setting-up-discounts/workshop-2-2-configuring-a-new-promotion/setting-up-a-pricing-procedure-2-2.adoc[JSON from the Workshop 2.2], do the following in the Procedure Builder for v 1.0:
+
+image::pricing_procedure_v1_example.png[align="center"]
+
+These settings will generate the following JSON:
+
+[source, json]
+----
+{ "procedure": { "type":"SUM", "items": [ {"calculationType":"Promo" } ] }}
+----
+
+[[h3_98762009]]
+=== Pricing Procedure 2.0
+
+To generate xref:admin-guide/workshops/workshop-2-0-setting-up-discounts/workshop-2-3-setting-up-a-manual-discount/setting-up-a-pricing-procedure-2-3.adoc[JSON from the Workshop 2.3], make the following settings in the Procedure Builder for v 2.0:
+
+. Drill Down
++
+image:pricing_procedure_v2_example_step1.png[]
+. Procedure
++
+image:pricing_procedure_v2_example_step2.png[]
++
+image:pricing_procedure_v2_example_step2-condition.png[]
+. Procedure
++
+image:pricing_procedure_v2_example_step3.png[]
++
+image:pricing_procedure_v2_example_step3-condition.png[]
+. Set Value
++
+image:pricing_procedure_v2_example_step4.png[]
++
+image:pricing_procedure_v2_example_step4-condition.png[]
++
+. Roll Up
++
+image:pricing_procedure_v2_example_step5.png[]
++
+. Set Value
++
+image:pricing_procedure_v2_example_step6.png[]
++
+. Roll Up
++
+image:pricing_procedure_v2_example_step7.png[]
++
+. Set Value
++
+image:pricing_procedure_v2_example_step8.png[]
++
+. Roll Up
++
+image:pricing_procedure_v2_example_step9.png[]
+
+These settings will generate the following JSON (click to view):
+
+[%collapsible]
+====
+--
+[source,json]
+----
+{
+  "version": 2,
+  "steps": [
+    {
+      "type": "drillDown",
+      "baseObject": "orders__OrderLineItem__c",
+      "basePrice": "ManualDiscountPercent__c",
+      "result": [
+        {
+          "resultObject": "orders__DeliveryLineItem__c",
+          "resultPrice": "ManualDiscountPercent__c"
+        }
+      ]
+    },
+    {
+      "type": "procedure",
+      "basePrice": "$.listPrice",
+      "resultPrice": "$.unitPrice",
+      "condition": {
+        "operator": "OR",
+        "items": [
+          {
+            "field": "ManualDiscountPercent__c",
+            "operator": "lessOrEqual",
+            "value": 0
+          },
+          {
+            "field": "ManualDiscountPercent__c",
+            "operator": "equal",
+            "value": null
+          }
+
+        ]
+      },
+      "procedure": {
+        "type": "MULT",
+        "round": "item",
+        "roundTo": 4,
+        "items": [
+          {
+            "calculationType": "ClientBased"
+          },
+          {
+            "calculationType": "Promo"
+          }
+        ]
+      }
+    },
+    {
+      "type": "procedure",
+      "basePrice": "$.listPrice",
+      "resultPrice": "$.unitPrice",
+      "condition": {
+        "operator": "AND",
+        "items": [
+          {
+            "field": "ManualDiscountPercent__c",
+            "operator": "greater",
+            "value": 0
+          }
+        ]
+      },
+      "procedure": {
+        "type": "MULT",
+        "round": "item",
+        "roundTo": 4,
+        "items": [
+          {
+            "calculationType": "manualdiscountpercent"
+          }
+
+        ]
+      }
+    },
+    {
+      "type": "setValue",
+      "object": "orders__DeliveryLineItem__c",
+      "resultPrice": "$.unitPrice",
+      "condition": {
+        "operator": "AND",
+        "items": [
+          {
+            "field": "$.unitPrice",
+            "operator": "less",
+            "value": 0
+          }
+        ]
+      },
+      "value": 0
+    },
+    {
+      "type": "rollUp",
+      "baseObject": "orders__DeliveryLineItem__c",
+      "basePrice": "$.unitPrice",
+      "method": "copyEqual",
+      "result": [
+        {
+          "resultObject": "orders__OrderLineItem__c",
+          "resultPrice": "$.unitPrice"
+        }
+      ]
+    },
+    {
+      "type": "setValue",
+      "object": "orders__DeliveryLineItem__c",
+      "resultPrice": "$.totalPrice",
+      "value": {
+        "operator": "multi",
+        "items": [
+          "$.unitPrice",
+          "$.quantity"
+        ]
+      }
+    },
+    {
+      "type": "rollUp",
+      "baseObject": "orders__DeliveryLineItem__c",
+      "basePrice": "$.totalPrice",
+      "method": "sum",
+      "result": [
+        {
+          "resultObject": "orders__Order__c",
+          "resultPrice": "$.totalPrice"
+        },
+        {
+          "resultObject": "orders__Delivery__c",
+          "resultPrice": "$.totalPrice"
+        },
+        {
+          "resultObject": "orders__OrderLineItem__c",
+          "resultPrice": "$.totalPrice"
+        }
+      ]
+    },
+    {
+      "type": "setValue",
+      "object": "orders__DeliveryLineItem__c",
+      "resultPrice": "$.totalDiscount",
+      "value": {
+        "operator": "multi",
+        "items": [
+          {
+            "operator": "sum",
+            "items": [
+              "$.listPrice",
+              "- $.unitPrice"
+            ]
+          },
+          "$.quantity"
+        ]
+      }
+    },
+    {
+      "type": "rollUp",
+      "baseObject": "orders__DeliveryLineItem__c",
+      "basePrice": "$.totalDiscount",
+      "method": "sum",
+      "result": [
+        {
+          "resultObject": "orders__Order__c",
+          "resultPrice": "$.totalDiscount"
+        },
+        {
+          "resultObject": "orders__Delivery__c",
+          "resultPrice": "$.totalDiscount"
+        },
+        {
+          "resultObject": "orders__OrderLineItem__c",
+          "resultPrice": "$.totalDiscount"
+        }
+      ]
+    }
+  ]
+}
+----
+--
+====
 
 See also:
 
-* xref:pricing-procedure-v-1[Pricing Procedure v. 1.0]
-* xref:pricing-procedure-2-0-head[Pricing Procedure v. 2.0]
+* xref:./ref-guide/pricing-procedure-v-1/index.adoc[]
+* xref:./ref-guide/pricing-procedure-v-2/index.adoc[]

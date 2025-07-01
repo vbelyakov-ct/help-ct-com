@@ -1,33 +1,26 @@
 = The Roll-up Step
 
-This step is used to roll up field values from the children's records to
-the parent records.
+This step is used to roll up field values from the children's records to  the parent records.
 
 [[h2_109049444]]
-=== Step Keys
+== Step Keys
 
 [width="100%",cols="15%,20%,10%,55%"]
 |===
 |*Key* |*Type* |*Required* |*Comment*
 
-|[.apiobject]#type# |String |Yes |It is filled out with the
-[.apiobject]#rollUp# constant.
+|[.apiobject]#type# |String |Yes |It is filled out with the [.apiobject]#rollUp# constant.
 
-|[.apiobject]#condition# |Step Conditions |No |See the
-xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/step-conditions[Step Conditions].
+|[.apiobject]#condition# |Step Conditions |No |See the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/step-conditions.adoc[Step Conditions].
 
 |[.apiobject]#baseObject# |Enum |Yes a|
 The API name of the child object. Available values:
 
-*[.apiobject]#orders__DeliveryLineItem__c#
-*[.apiobject]#orders__OrderLineItem__c#
-*[.apiobject]#orders__Delivery__c#
+* [.apiobject]#orders\__DeliveryLineItem__c#
+* [.apiobject]#orders\__OrderLineItem__c#
+* [.apiobject]#orders\__Delivery__c#
 
-|[.apiobject]#basePrice# |String |Yes |The
-[.apiobject]#baseObject# field rolls up values to the parent
-records. See the
-xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-available-field-formats[Available Field
-Formats].
+|[.apiobject]#basePrice# |String |Yes |The [.apiobject]#baseObject# field rolls up values to the parent records. See the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-available-field-formats.adoc[Available Field Formats].
 
 |[.apiobject]#method# |Enum |Yes a|
 Roll-up method. Available values:
@@ -38,13 +31,11 @@ Roll-up method. Available values:
 * max
 * copyEqual
 
-|[.apiobject]#result# |Array |Yes |At least one item must be
-provided. See the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-roll-up-step#h2_369440874[Roll-up
-Result Keys].
+|[.apiobject]#result# |Array |Yes a|At least one item must be provided. See the <<Roll-up Result Keys>>.
 |===
 
 [[h2_369440874]]
-=== Roll-up Result Keys
+== Roll-up Result Keys
 
 [width="100%",cols="15%,20%,10%,55%"]
 |===
@@ -53,54 +44,62 @@ Result Keys].
 |[.apiobject]#resultObject# |Enum |Yes a|
 The API name of the parent object. Available values:
 
-*[.apiobject]#orders__OrderLineItem__c#
-*[.apiobject]#orders__Delivery__c#
-*[.apiobject]#orders__Order__c#
+* [.apiobject]#orders\__OrderLineItem__c#
+* [.apiobject]#orders\__Delivery__c#
+* [.apiobject]#orders\__Order__c#
 
 |[.apiobject]#resultPrice# |String |Yes |The
-[.apiobject]#resultObject# field to storing rolled-up prices
-from children. See
-the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-available-field-formats[Available Field
-Formats].
+[.apiobject]#resultObject# field to storing rolled-up prices from children. See the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-available-field-formats.adoc[Available Field Formats].
 |===
 
 [[h2_830677094]]
-=== Result Object Dependency
+== Result Object Dependency
 
+[.highlighted-table]
 [width="100%",cols="^20%,^20%,^20%,^20%,^20%",]
 |===
-|*baseObject* |*resultObject* | | |
-
-| |*orders__DeliveryLineItem__c*
-|*orders__OrderLineItem__c* |*orders__Delivery__c*
-|*orders__Order__c*
-
-|*orders__DeliveryLineItem__c* a|
-–
-
-|{plus} |{plus} |{plus}
-
-a|
-*orders__OrderLineItem__c*
-
-|– |– |– |{plus}
-
-a|
-*orders__Delivery__c*
-
-|– |– |– |{plus}
-
-a|
-*orders__Order__c*
-
+.2+|*baseObject* 4+|*resultObject* |*orders\__DeliveryLineItem__c* |*orders\__OrderLineItem__c* |*orders\__Delivery__c* |*orders\__Order__c* |*orders\__DeliveryLineItem__c*
+|–|{plus} |{plus} |{plus}|
+*orders\__OrderLineItem__c*
+|– |– |– |{plus}|
+*orders\__Delivery__c*
+|– |– |– |{plus}|
+*orders\__Order__c*
 |– |– |– |–
 |===
 
 [[h2_1689083776]]
-=== Example
+== Example
 
-[{plus}] xref:javascript:void(0)[Standard Roll-up Step:]
+Click to view:
 
-.[-] Hide[%collapsible] ====
+Standard Roll-up Step:
 
+[%collapsible]
+====
+--
+[source,json]
+----
+{
+    "type": "rollUp",
+    "method": "sum",
+    "baseObject": "orders__DeliveryLineItem__c",
+    "basePrice": "orders__TotalPriceWithoutVAT__c",
+    "result": [
+        {
+            "resultObject": "orders__Delivery__c",
+            "resultPrice": "orders__TotalPriceWithoutVAT__c"
+        },
+        {
+            "resultObject": "orders__OrderLineItem__c",
+            "resultPrice": "orders__TotalPriceWithoutVAT__c"
+        },
+        {
+            "resultObject": "orders__Order__c",
+            "resultPrice": "orders__TotalPriceWithoutVAT__c"
+        }
+    ]
+}
+----
+--
 ====
