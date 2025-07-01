@@ -1,11 +1,10 @@
 = CT Price Book Field Reference
 
-the [.object]#CT Price Book# object contains the list of
-products that the company sells.
+The [.object]#CT Price Book# object contains the list of products that the company sells.
 
 '''''
 
-Object API name:[.apiobject]#orders__PriceBook__c#
+Object API name: [.apiobject]#orders\__PriceBook__c#
 
 '''''
 
@@ -13,30 +12,25 @@ Object API name:[.apiobject]#orders__PriceBook__c#
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Active |[.apiobject]#orders__IsActive__c# |Checkbox |If
-selected, the record is active and applied in business logic.
+|Active |[.apiobject]#orders\__IsActive__c# |Checkbox |If selected, the record is active and applied in business logic.
 
 |Default Product Availability Type
-|[.apiobject]#orders__DefaultProductAvailabilityType__c#
-|Picklist a|
-Defines the availability of the Product Availability child object:
+|[.apiobject]#orders\__DefaultProductAvailabilityType__c#
+|Picklist a| Defines the availability of the Product Availability child object:
 
 * Available
 * Out Of Stock
 
-|Description |[.apiobject]#orders__Description__c#
+|Description |[.apiobject]#orders\__Description__c#
 |Text(255) |Description of the Price Book in free form.
 
-|External ID |[.apiobject]#orders__ExternalID__c#
-|Text(255) (External ID) (Unique Case Sensitive) |Price Book external
-identifier.
+|External ID |[.apiobject]#orders\__ExternalID__c#
+|Text(255) (External ID) (Unique Case Sensitive) |Price Book external identifier.
 
-|Order Type |[.apiobject]#orders__OrderType__c#
-|Picklist (Multi-Select) |The Order Type for which the settings are
-configured.
+|Order Type |[.apiobject]#orders\__OrderType__c#
+|Picklist (Multi-Select) |The Order Type for which the settings are configured.
 
 |Sales Organization
-|[.apiobject]#orders__SalesOrganizationId__c#
-|Lookup(Sales Organization) |The business unit for which the settings
-are configured.
+|[.apiobject]#orders\__SalesOrganizationId__c#
+|Lookup(Sales Organization) |The business unit for which the settings are configured.
 |===

@@ -1,12 +1,4 @@
-= Snippet: Add Product
-
-[cols=",",]
-|===
-|image:info.png[] |The method
-of adding products described in this article is just a working example.
-To import your existing products' database, please contact your
-Customertimes sales representative.
-|===
+NOTE: The method of adding products described in this article is just a working example. To import your existing products' database, please contact your Customertimes sales representative.
 
 To add a [.object]#Product#:
 
@@ -17,17 +9,15 @@ To add a [.object]#Product#:
 * *Product name*;
 * In the *Default Availability Type* picklist select _Available_;
 * Select the *Active* checkbox.
-
++
 image:ctorders-add-product.png[]
 . Click *Save*.
-. Go to the *Related* tab of the just created [.object]#Product#
-record.
+. Go to the *Related* tab of the just created _Product_ record.
 . In the *Catalog Line Items*, click *New*.
 . Fill out the fields:
 * Select *Catalog*;
 * Select the *Active* checkbox.
-
++
 image:ctorders-add-catalog-line-item.png[]
-. If necessary, specify the
-link:admin-guide/managing-ct-orders/catalog-management/catalog-data-model/catalog-line-item-field-reference[Unit Count Step].
+. If necessary, specify the xref:admin-guide/managing-ct-orders/catalog-management/catalog-data-model/catalog-line-item-field-reference.adoc[Unit Count Step].
 . Click *Save*.

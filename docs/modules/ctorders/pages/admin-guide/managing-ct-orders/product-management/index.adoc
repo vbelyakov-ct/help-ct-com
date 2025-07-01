@@ -1,96 +1,61 @@
 = Product Management
+:toc:
 
-Administrators set up products that are assembled into
-xref:admin-guide/managing-ct-orders/catalog-management/index.adoc[Catalogs] and
-xref:admin-guide/managing-ct-orders/discount-management/promotions.adoc[Promotions], and sales representatives used them
-for xref:admin-guide/workshops/workshop1-0-creating-basic-order/index.adoc[creating orders]. You can
-use the standard [.object]#Salesforce Product# object as your
-products, or set up CT Orders integration with the CT CPG or CT Pharma
-target package to enrich your product management process.
-
-:toc: :toclevels: 3
+Administrators set up products that are assembled into xref:admin-guide/managing-ct-orders/catalog-management/index.adoc[Catalogs] and xref:admin-guide/managing-ct-orders/discount-management/promotions.adoc[Promotions], and sales representatives used them for xref:admin-guide/workshops/workshop1-0-creating-basic-order/index.adoc[creating orders]. You can use the standard [.object]#Salesforce Product# object as your products, or set up CT Orders integration with the CT CPG or CT Pharma target package to enrich your product management process.
 
 [[h2_1157195842]]
-=== Workflow Overview
+== Workflow Overview
 
 First, define a [.object]#Product# object to use in the system.
 
-* Determine an *SKU* property of the [.object]#Product# object
-by creating a _Settings_ record with the _Object Settings_ record type.
-This attribute signifies that a product is the smallest stock unit for
-sale that can be used to comprise higher-level items (product bundles)
-and compile orders.
+* Determine an *SKU* property of the [.object]#Product# object by creating a _Settings_ record with the _Object Settings_ record type. This attribute signifies that a product is the smallest stock unit for sale that can be used to comprise higher-level items (product bundles) and compile orders.
++
 image:product-management-2020-05-20-1.png[]
-* Specify *Units in Package*—a ratio that defines the quantity of
-product to add in the order by one tap.
-* Set up bundles and a ratio for multiplying a component quantity in the
-bundle if needed.
-[NOTE] ==== the [.object]#Product Component ==== object
-is required for this feature and available in case of integration with
-CT CPG or CT Pharma package.#
-* Set up xref:ct-price-book-field-reference[CT Price Books] and
-*List Prices* for each
-product—xref:admin-guide/managing-ct-orders/product-management/product-data-model/ct-price-book-line-item-field-reference.adoc[CT Price Book
-Line Item].
+* Specify *Units in Package*—a ratio that defines the quantity of product to add in the order by one tap.
+* Set up bundles and a ratio for multiplying a component quantity in the bundle if needed.
++
+NOTE: The [.object]#Product Component# object is required for this feature and available in case of integration with CT CPG or CT Pharma package.
+* Set up xref:./product-data-model/ct-price-book-field-reference.adoc[CT Price Books] and *List Prices* for each product—xref:admin-guide/managing-ct-orders/product-management/product-data-model/ct-price-book-line-item-field-reference.adoc[CT Price Book Line Item].
 
+The list of products is managed in the *Product Management* section on the *Catalogs* and *Promotions* tabs. Here you can add products and build a catalog hierarchy with products and bundles:
 
+image::catalog-mgmt-product-mgmt.png[align="center"]
 
-The list of products is managed in the *Product Management* section on
-the *Catalogs* and *Promotions* tabs. Here you can add products and
-build a catalog hierarchy with products and bundles:
-image:catalog-mgmt-product-mgmt.png[]
+Created catalogs and promotions are then used by sales representatives for filling in the order cart:
 
-Created catalogs and promotions are then used by sales representatives
-for filling in the order cart:
-
-image:catalogs-product-management-order-cart.png[]
+image::catalogs-product-management-order-cart.png[align="center"]
 
 [[h2_1138962735]]
-=== Managing Products Quantity
+== Managing Products Quantity
 
-To manage quantity per delivery for each paid product, add *Min Quantity
-Per Delivery*, *Max Quantity Per Delivery*, and *Multiplier* fields to
-the _Product_ and _Price Book Line Item_ page layouts.
+To manage quantity per delivery for each paid product, add *Min Quantity Per Delivery*, *Max Quantity Per Delivery*, and *Multiplier* fields to the _Product_ and _Price Book Line Item_ page layouts.
 
-Min/max values specified on a [.object]#Price Book Line Item#
-object are prioritized over a _Product_ object record.
+NOTE: Min/max values specified on a [.object]#Price Book Line Item# object are prioritized over a [.object]#Product# object record.
 
-* If the values are set, when you add a product to the order cart, the
-minimum quantity value will be displayed automatically. If you enter a
-value outside the specified range, the system will automatically round
-the number to the value either *Max Quantity Per Delivery* or *Min
-Quantity Per Delivery* field.
-* The same rules are applied for products in bundles in the case when
-the *Set Quantity Level* field is set to [.object]#Product
-Component#.[TIP] ==== For more information, refer to
-xref:managing-bundles[Managing Bundles]. ====
+* If the values are set, when you add a product to the order cart, the minimum quantity value will be displayed automatically. If you enter a value outside the specified range, the system will automatically round the number to the value either *Max Quantity Per Delivery* or *Min Quantity Per Delivery* field.
+* The same rules are applied for products in bundles in the case when the *Set Quantity Level* field is set to [.object]#Product Component#.
++
+TIP: For more information, refer to xref:./managing-bundles.adoc[Managing Bundles].
 
-image:product-management-2020-05-19-2.png[]
+image::product-management-2020-05-19-2.png[align="center"]
 
 [[h3_1789771621]]
-==== Multiplying Product Component Quantity
+=== Multiplying Product Component Quantity
 
-The *Multiplier* field is added to the _Product Component_ layout to
-specify a ratio for multiplying a component quantity in the bundle when
-a bundle is added to the order cart. For example:
-
-
+The *Multiplier* field is added to the _Product Component_ layout to specify a ratio for multiplying a component quantity in the bundle when a bundle is added to the order cart. For example:
 
 [width="100%",cols="34%,33%,33%",]
 |===
 |*Input Data* |*Operation* |*Result*
-a|
-Set Quantity Level = Header
 
-
+a|Set Quantity Level = Header
 
 A bundle has:
 
 * Product A with Multiplier = 3
 * Product B with Multiplier = 2
 
-|Add 2 bundles to the order cart. a|
-Bundle = 2
+|Add 2 bundles to the order cart. a|Bundle = 2
 
 * Product A with Multiplier = 6
 * Product B with Multiplier = 4
@@ -98,74 +63,46 @@ Bundle = 2
 |===
 
 [[h2_718618717]]
-=== Managing Product List Prices
+== Managing Product List Prices
 
-Each _Product_ record must be assigned to a [.object]#CT Price
-Book# and get a ** *List Price*.
+Each _Product_ record must be assigned to a [.object]#CT Price Book# and get a _List Price_.
 
-* A single product can be available in several [.object]#CT
-Price Books# and has different list prices.
-* a [.object]#CT Price Book# can be assigned to the specific
-*Sales Organization* or *Order Type*.
+* A single product can be available in several [.object]#CT Price Books# and has different list prices.
+* A [.object]#CT Price Book# can be assigned to the specific _Sales Organization_ or _Order Type_.
 
+On the *CT Price Book* tab, add new [.object]#CT Price Book List Items# for products that you are going to add to your catalogs or promotions.
 
+* Products without _List Prices_ are not displayed in the list on the *Catalog Product Management* tab and cannot be added to the order cart.
+* You need to create [.object]#CT Price Book Line Items# with _List Price_ for the bundle header, even if the price is calculated on bundle components. Otherwise, a bundle will not be added to the order cart.
 
-On the *CT Price Book* tab, add new [.object]#CT Price Book List
-Items# for products that you are going to add to your catalogs or
-promotions.
-
-* Products without *List Prices* are not displayed in the list on the
-*Catalog Product Management* tab and cannot be added to the order cart.
-* You need to create [.object]#CT Price Book Line Items# with
-*List Price* for the bundle header, even if the price is calculated on
-bundle components. Otherwise, a bundle will not be added to the order
-cart.
-
-image:PB-UI.png[]
+image::PB-UI.png[align="center"]
 
 [[h2_1374863314]]
-=== Process Path
+== Process Path
 
-. https://help.customertimes.com/articles/ct-mobile-ios-en/compact-layout[Set
-up the compact layout] for the [.object]#Product# object. The
-title is the value of the first field in a compact layout, and the
-subtitle is the value of the second field in a compact layout.
+. link:https://help.customertimes.com/articles/ct-mobile-ios-en/compact-layout[Set up the compact layout] for the [.object]#Product# object. The title is the value of the first field in a compact layout, and the subtitle is the value of the second field in a compact layout.
 . Map objects in OM Settings:
 * Select the [.object]#Product #object in a system.
 * Select the [.object]#Product Component# object in a system.
-* Specify a field to be used as an SKU-defining attribute of a product
-record.
-. xref:admin-guide/getting-started/setting-up-an-instance/creating-relationships-between-product-and-ct-orders-objects[Create
-lookup fields for Product].
+* Specify a field to be used as an SKU-defining attribute of a product record.
+. xref:admin-guide/getting-started/setting-up-an-instance/creating-relationships-between-product-and-ct-orders-objects.adoc[Create lookup fields for Product].
++
+Prior to configuring products hierarchy and other product settings, you need to link the [.object]#Product# child records with a number of CT Orders objects by creating a lookup field for each of the following objects:
 
-Prior to configuring products hierarchy and other product settings, you
-need to link the [.object]#Product# child records with a number
-of CT Orders objects by creating a lookup field for each of the
-following objects:
-*[.object]#Catalog Line Item#
-*[.object]#Promo Line Item#
-*[.object]#Order Line Item#
-*[.object]#Freebie Line Item#
-*[.object]#Price Book Line Item#
-*[.object]#Delivery Line Item#
-. xref:managing-bundles[Create and configure bundles].
-. Configure product quantity per delivery using the *Max Product Per
-Delivery* and *Min Product Per Delivery* fields for
-[.object]#Product# and [.object]#CT Price Book Line
-Item# records.
-. xref:creating-and-assigning-a-ct-price-book-1-0[Create and assign
-a Price Book].
-. xref:adding-a-price-book-line-item-1-0[Set up product list price]
-for [.object]#CT Price Book Line Items#.
-
-
+* [.object]#Catalog Line Item#
+* [.object]#Promo Line Item#
+* [.object]#Order Line Item#
+* [.object]#Freebie Line Item#
+* [.object]#Price Book Line Item#
+* [.object]#Delivery Line Item#
+. xref:./managing-bundles.adoc[Create and configure bundles].
+. Configure product quantity per delivery using the *Max Product Per Delivery* and *Min Product Per Delivery* fields for _Product_ and _CT Price Book Line Item_ records.
+. xref:./howtos/how-to-add-a-pricebook/index.adoc[Create and assign a Price Book].
+. xref:./howtos/how-to-add-a-pricebook/how-to-create-a-price-book-line-item.adoc[Set up product list price] for [.object]#CT Price Book Line Items#.
 
 See also:
 
-* xref:managing-bundles[Managing Bundles]
-* xref:how-to-add-a-product[How to Add a Product]
-* xref:how-to-add-a-pricebook[How to Create and Assign a Price
-Book]
-* xref:product-data-model[Product Data
-Model]xref:managing-bundles.html[
-]
+* xref:./managing-bundles.adoc[]
+* xref:./howtos/how-to-add-a-product.adoc[]
+* xref:./howtos/how-to-add-a-pricebook/index.adoc[]
+* xref:admin-guide/managing-ct-orders/product-management/product-data-model/index.adoc[]

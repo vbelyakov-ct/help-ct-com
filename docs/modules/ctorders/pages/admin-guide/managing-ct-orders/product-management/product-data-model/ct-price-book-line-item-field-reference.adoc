@@ -1,12 +1,10 @@
 = CT Price Book Line Item Field Reference
 
-The *CT Price Book Line Item* object contains data about a product in
-the price book (line item), and product quantity for delivery details.
+The [.object]#CT Price Book Line Item# object contains data about a product in  the price book (line item), and product quantity for delivery details.
 
 '''''
 
-Object API name:
-[.apiobject]#orders__PriceBookLineItem__c#
+Object API name: [.apiobject]#orders\__PriceBookLineItem__c#
 
 '''''
 
@@ -14,37 +12,32 @@ Object API name:
 |===
 |*Field* |*API name* |*Type* |*Description*
 
-|Active |[.apiobject]#orders__IsActive__c# |Checkbox |If
-selected, the record is active and applied in business logic.
+|Active |[.apiobject]#orders\__IsActive__c# |Checkbox |If selected, the record is active and applied in business logic.
 
-|External Id |[.apiobject]#orders__ExternalId__c#
-|Text(255) (External ID) (Unique Case Sensitive) |External identifier of
-the [.object]#Price Book Line Item#.
+|External Id |[.apiobject]#orders\__ExternalId__c#
+|Text(255) (External ID) (Unique Case Sensitive) |External identifier of the [.object]#Price Book Line Item#.
 
-|List Price |[.apiobject]#orders__ListPrice__c#
+|List Price |[.apiobject]#orders\__ListPrice__c#
 |Currency (15, 3) |Product price from the current price list.
 
 |Max Quantity Per Delivery
-|[.apiobject]#orders__MaxQuantityPerDelivery__c#
-|Number(18, 0) |Max limit of products for delivery. The quantity must
-correspond to the *Units in Package* value.
+|[.apiobject]#orders\__MaxQuantityPerDelivery__c#
+|Number(18, 0) |Max limit of products for delivery. The quantity must correspond to the *Units in Package* value.
 
 |Min Quantity Per Delivery
-|[.apiobject]#orders__MinQuantityPerDelivery__c#
-|Number(18, 0) |Min limit of products for delivery. The quantity must
-correspond to the *Units in Package* value.
+|[.apiobject]#orders\__MinQuantityPerDelivery__c#
+|Number(18, 0) |Min limit of products for delivery. The quantity must correspond to the *Units in Package* value.
 
-|Price Book |[.apiobject]#orders__PriceBookId__c#
-|Lookup(CT Price Book) |Standard catalog or custom catalog, where the
-product was added.
+|Price Book |[.apiobject]#orders\__PriceBookId__c#
+|Lookup(CT Price Book) |Standard catalog or custom catalog, where the product was added.
 
-|Product |[.apiobject]#orders__Product2Id__c#
-|Lookup(Product2) |
+|Product |[.apiobject]#orders\__Product2Id__c#
+|Lookup(Product2) a|include::partial$product2support.adoc[]
 
-|Product |[.apiobject]#ProductId__c# |Lookup(CT
-Product) |
+
+
+|Product |[.apiobject]#ProductId__c# |Lookup(CT Product) a|include::partial$productsupport.adoc[]
 
 |Units Count Step
-|[.apiobject]#orders__UnitsCountStep__c# |Number(18,
-0) |
+|[.apiobject]#orders\__UnitsCountStep__c# |Number(18, 0) a|include::partial$unitscountstepfield.adoc[]
 |===
