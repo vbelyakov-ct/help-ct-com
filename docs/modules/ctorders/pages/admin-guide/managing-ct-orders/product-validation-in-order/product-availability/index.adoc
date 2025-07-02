@@ -1,48 +1,24 @@
 = Product Availability
+:toc:
 
-Product availability allows managers to set up dates when regular paid
-products and freebies are available for offline and online orders and
-deliveries. Use product availability alone or in conjunction with
-xref:quotas[quotas] and xref:admin-guide/managing-ct-orders/product-validation-in-order/limit-rules/index[limit rules].
-
-:toc: :toclevels: 3
+Product availability allows managers to set up dates when regular paid products and freebies are available for offline and online orders and deliveries. Use product availability alone or in conjunction with xref:admin-guide/managing-ct-orders/product-validation-in-order/quotas/index.adoc[quotas] and xref:admin-guide/managing-ct-orders/product-validation-in-order/limit-rules/index.adoc[limit rules].
 
 [[h2_773755849]]
-=== Overview
+== Overview
 
-Select whether the product is available or not by default in the
-*Default Availability Type* field on the corresponding
-[.object]#Product# object. Also, you can enable the *Ignore
-Product Availability* checkbox on
-the xref:admin-guide/managing-ct-orders/freebies-management/freebie-data-model/freebie-condition-field-reference/index[Freebie Condition] or
-https://help.customertimes.com/smart/project-ct-cpg/ct-product-field-reference[Product]
-objects.
+Select whether the product is available or not by default in the *Default Availability Type* field on the corresponding [.object]#Product# object. Also, you can enable the *Ignore Product Availability* checkbox on the xref:admin-guide/managing-ct-orders/freebies-management/freebie-data-model/freebie-condition-field-reference/index.adoc[Freebie Condition] or xref:ctcpg:admin-guide/ct-products-and-assortments-management/ref-guide/ct-product-field-reference.adoc[Product] objects.
 
-To learn more about the object model, refer to
-xref:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/index[CT Order Data Model].
-
-
+TIP: To learn more about the object model, refer to xref:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/index.adoc[CT Order Data Model].
 
 Please note that:
 
-* The _Product Availability_ record may not have a lookup to
-the [.object]#Account# (or [.object]#Retail Store#) but
-be assigned to its parent or any higher in the hierarchy account. So,
-the appropriate _Product Availability_ record will be searched according
+* The _Product Availability_ record may not have a lookup to the [.object]#Account# (or [.object]#Retail Store#) but be assigned to its parent or any higher in the hierarchy account. So, the appropriate _Product Availability_ record will be searched according
 to the account hierarchy, starting at the lowest level.
-* If a sales representative has no access to one of the accounts in the
-hierarchy, then CT Orders will not look for _Product
-Availability_ records for the parent account. For example, if you
-assigned a _Product Availability_ record to a store network, but did not
-give the user access to this parent _Account_ record, that _Product
-Availability_ record will not be applied.
-* _Product Availability_ record may not be assigned to any _Account_
-record. But in case of conflicts between different _Product
-Availability_ records (like overlapping conditions of product
-availability), records with assigned _Accounts_ have higher priority.
+* If a sales representative has no access to one of the accounts in the hierarchy, then CT Orders will not look for _Product Availability_ records for the parent account. For example, if you assigned a _Product Availability_ record to a store network, but did not
+give the user access to this parent _Account_ record, that _Product Availability_ record will not be applied.
+* _Product Availability_ record may not be assigned to any _Account_ record. But in case of conflicts between different _Product Availability_ records (like overlapping conditions of product availability), records with assigned _Accounts_ have higher priority.
 
-The administrator or manager can override the default availability for
-desired dates, depending on:
+The administrator or manager can override the default availability for desired dates, depending on:
 
 * order type
 * product type
@@ -50,153 +26,97 @@ desired dates, depending on:
 * sales organization
 * sales points (accounts or retail stores).
 
-
-
-There can be multiple availability time slots for a single product, and
-a sales representative can
-xref:admin-guide/managing-ct-orders/product-validation-in-order/product-availability/product-availability#product-availability[tap the info icon
-next to the product in the cart] to view its availability on the closest
-dates.
-
-
+There can be multiple availability time slots for a single product, and a sales representative can <<product-availability, tap the info icon next to the product in the cart>> to view its availability on the closest dates.
 
 The product availability is useful in the following cases:
 
 * New product launch
-Managers can schedule new product launch dates by region, and sales reps
-can track product availability dates and plan promotions to promote the
++
+Managers can schedule new product launch dates by region, and sales reps can track product availability dates and plan promotions to promote the
 product.
 * Limited edition products
-Managers can schedule the sale of limited-edition products for New
-Year's Eve, Easter, and other holidays.
++
+Managers can schedule the sale of limited-edition products for New Year's Eve, Easter, and other holidays.
 * Excise goods
-Managers can specify the availability of drugs or excise goods at
-certain licensed stores. Combined with quotas, managers can allow the
-sale of products to users who have been trained or licensed to operate.
++
+Managers can specify the availability of drugs or excise goods at certain licensed stores. Combined with quotas, managers can allow the sale of products to users who have been trained or licensed to operate.
 * Out-of-stock products
-Sales reps can see that products are not available to order for selected
-dates.
++
+Sales reps can see that products are not available to order for selected dates.
 * Discontinued products
-Managers can control products that sales reps can add to return orders,
-but not in future orders.
++
+Managers can control products that sales reps can add to return orders, but not in future orders.
 
 [[h3_1797639439]]
-==== Availability Settings Combinations for Products and Freebies
+=== Availability Settings Combinations for Products and Freebies
 
-Products always have default availability and can have _Product
-Availability_ records to override the default availability for specific
-dates. For your convenience, the table below shows all possible cases.
+Products always have default availability and can have _Product Availability_ records to override the default availability for specific dates. For your convenience, the table below shows all possible cases.
 
-For specific dates, we recommend using only one _Product
-Availability_ record. Otherwise, if multiple records are found for the
-delivery date, the system applies a record with the _Not
-Available_ record type. If the records have the same availability type,
+For specific dates, we recommend using only one _Product Availability_ record. Otherwise, if multiple records are found for the delivery date, the system applies a record with the _Not Available_ record type. If the records have the same availability type,
 any of them will be applied.
 
 [width="100%",cols="^20%,^20%,^20%,^20%,^20%",]
 |===
-|*Default Availability Type on the Produсt record* |*Is there an
-appropriate Product Availability record?* |*The Availability Type of the
-found Product Availability record for Delivery Line Item* |*The Delivery
-Line Item cell in the order cart* |*Product Info Icon*
+|*Default Availability Type on the Produсt record* |*Is there an appropriate Product Availability record?* |*The Availability Type of the found Product Availability record for Delivery Line Item* |*The Delivery Line Item cell in the order cart* |*Product Info Icon*
 
-a|
-Not Available
+a|Not Available
 
-|Yes |Available |Available a|
-Available dates are displayed.
+|Yes |Available |Available a|Available dates are displayed.
 
-|Available |Yes |Available |Available a|
-Available dates are displayed.
+|Available |Yes |Available |Available a|Available dates are displayed.
 
-|Not Available |Yes |Not Available |Blocked a|
-Unavailable dates are displayed.
+|Not Available |Yes |Not Available |Blocked a|Unavailable dates are displayed.
 
-|Available |Yes |Not Available |Blocked a|
-Unavailable dates are displayed.
+|Available |Yes |Not Available |Blocked a|Unavailable dates are displayed.
 
-|Not Available |Yes a|
-No _Product Availability_ record was found.
+|Not Available |Yes a|No _Product Availability_ record was found.
 
-|Blocked a|
-The nearest dates (available or unavailable) are displayed.
+|Blocked a|The nearest dates (available or unavailable) are displayed.
 
-|Available |Yes a|
-No _Product Availability_ record was found.
+|Available |Yes a|No _Product Availability_ record was found.
 
-|Available a|
-No _Product Availability_ info is displayed.
+|Available a|No _Product Availability_ info is displayed.
 
-|Not Available |No a|
-No _Product Availability_ record was found.
+|Not Available |No a|No _Product Availability_ record was found.
 
-a|
-The appropriate product is not displayed in catalogs and promotions.
+a|The appropriate product is not displayed in catalogs and promotions.
 
-ifdef::hidden[]
-
+////
 * The appropriate freebie is not included in the freebie list.
-[NOTE] ==== Administrators can select the *Ignore Product
-Availability* checkbox on the corresponding *Freebie Condition* record
-to consider only the product *Default Availability Type* and
-ignore *Product Availability* records that are found. ====
++
+NOTE: Administrators can select the *Ignore Product Availability* checkbox on the corresponding *Freebie Condition* record to consider only the product _Default Availability Type_ and ignore _Product Availability_ records that are found.
+////
 
 |Not applicable
 
-|Available |No a|
-No _Product Availability_ record was found.
+|Available |No a|No _Product Availability_ record was found.
 
 |Available |No _Product Availability_ info is displayed.
 |===
 
 [[h3_235262888]]
-==== Availability Settings Combinations for Bundles
+=== Availability Settings Combinations for Bundles
 
-To define bundle availability, the system first checks the *Calculate
-Price On* field on a bundle product to apply the logic to the header or
-component and then checks the availability of the product. If the
-_Product Availability_ ** records are not found for a product, the
-system checks a value in the *Default Availability Type* field on the
-product, considering the logic for bundles.
+To define bundle availability, the system first checks the *Calculate Price On* field on a bundle product to apply the logic to the header or component and then checks the availability of the product. If the _Product Availability_ records are not found for a product, the system checks a value in the *Default Availability Type* field on the product, considering the logic for bundles.
 
+For your convenience, the table below shows all possible cases for this bundle structure:
 
-
-For your convenience, the table below shows all possible cases for this
-bundle structure:
-
-
-
+[source]
+----
 Parent Bundle
-
 -----Product 1
-
 -----Child Bundle
-
 ----------Product 2
-
 ----------Product 3
+----
 
-
-
-[width="99%",cols="^16%,^14%,^14%,^14%,^14%,^14%,^14%",]
+[.highlighted-table]
+[width="99%",cols="16%,14%,14%,14%,14%,14%,14%",]
 |===
-|*Parent Bundle* | |*Child Bundle* | |*Where to check the Product
-Availability record?* a|
-*If the Product Availability record is found, which Delivery Line Items
-cells are read-only?*
 
+2+^|*Parent Bundle*  2+^|*Child Bundle* .2+^|*Where to check the Product Availability record?* .2+^|*If the Product Availability record is found, which Delivery Line Items cells are read-only?* .2+^|*If Product Availability = Not Available or N/A, *which Delivery Line Item cells are zeroed and blocked?* ^|*Value in the Calculate Price On field* ^|*Value in the Set Quantity On field* ^|*Value in the Calculate Price On field* ^|*Value in the Set Quantity On field*
 
-
-|*If Product Availability = Not Available or N/A, *which Delivery Line
-Item cells are zeroed and blocked*?
-*
-
-|*Value in the Calculate Price On field* |*Value in the Set Quantity
-On field* |*Value in the Calculate Price On field* |*Value in the
-Set Quantity On field* | | |
-
-|Header |Header |Header |Header |Parent Bundle a|
-Product 1
+|Header |Header |Header |Header |Parent Bundle |Product 1
 
 Child Bundle
 
@@ -275,7 +195,7 @@ Product 3
 a|
 Parent Bundle
 
-If at least one component of any bundle is unavailable, all cells are
+NOTE: If at least one component of any bundle is unavailable, all cells are
 zeroed and blocked.
 
 |Components |Components |Components |Header a|
@@ -350,119 +270,84 @@ Child Bundle
 |===
 
 [[h2_813222365]]
-=== Working with Product Availability
+== Working with Product Availability
 
 [[h3_1387482064]]
-==== Paid Products
+=== Paid Products
 
 The product availability is checked:
 
 . When a sales rep adds a product to the order cart.
-. For all products in a delivery, when a sales rep creates a new
-delivery.
-. For all products in the order cart, when a sales rep reopens or
-finalizes the order.
-. If one or more products are not available for the order, the warning
-will be shown, and a sales rep should remove these products from the
-order cart.
-. If found, the appropriate _Product Availability_ record is applied and
-the product quantity cell will be available or blocked based on the
-*Availability Type* field of the found record.
-. If there is no matching record, the system checks the default
-availability on the appropriate _Product_ record:
+. For all products in a delivery, when a sales rep creates a new delivery.
+. For all products in the order cart, when a sales rep reopens or finalizes the order.
+. If one or more products are not available for the order, the warning will be shown, and a sales rep should remove these products from the order cart.
+. If found, the appropriate _Product Availability_ record is applied and the product quantity cell will be available or blocked based on the *Availability Type* field of the found record.
+. If there is no matching record, the system checks the default availability on the appropriate _Product_ record:
 
-* For promotion products, the *Delivery Start Date* and *Delivery End
-Date* fields on xref:admin-guide/managing-ct-orders/discount-management/promotion-data-model/promotion-field-reference[Promotion] are
-prioritized over the product availability dates. If delivery is outside
-of promotion delivery dates, the product cannot be added despite the
+* For promotion products, the *Delivery Start Date* and *Delivery End Date* fields on xref:admin-guide/managing-ct-orders/discount-management/promotion-data-model/promotion-field-reference.adoc[Promotion] are prioritized over the product availability dates. If delivery is outside of promotion delivery dates, the product cannot be added despite the
 *Availability Type*.
 
-* If the product is no longer available on the delivery dates, the
-corresponding quantity cells for the Delivery Line Item Component are
-reset and locked.
-* If the product becomes available, the quantity cells for corresponding
-deliveries become available.
+* If the product is no longer available on the delivery dates, the corresponding quantity cells for the Delivery Line Item Component are reset and locked.
+* If the product becomes available, the quantity cells for corresponding deliveries become available.
 
+A sales rep can tap the product info icon on the added product in the cart to view the dates when a product is available or not.
 
+NOTE: If multiple _Product Availability_ records for different dates are found, the info icon shows a maximum of 3 records sorted by dates, closest to the first delivery date.
 
-A sales rep can tap the product info icon on the added product in the
-cart to view the dates when a product is available or not.
+[[product-availability]]For example, a product in the cart is not available for the selected delivery date. The quantity cell for this delivery is reset and blocked.
 
-[NOTE] ==== If multiple _Product Availability_ records for
-different dates are found, the info icon shows a maximum of 3 records
-sorted by dates, closest to the first delivery date. ====
-
-
-
-For example, a product in the cart is not available for the selected
-delivery date. The quantity cell for this delivery is reset and blocked.
-
-
-
-[width="100%",cols="50%,50%",]
-|===
-|Salesforce a|
+[tabs]
+====
+Salesforce::
++
+--
 The *Product Availability* records are displayed both for products on
 the left side in catalogs/promotions and added to the order cart.
 
 image:PA_Products-Available.png[]
-
-|CT Mobile
-|image:PA_Products-iOS.png[]
-|===
+--
+CT Mobile::
++
+--
+image:PA_Products-iOS.png[]
+--
+====
 
 [[h3_2048041897]]
-==== Freebies
+=== Freebies
 
 The freebie availability is checked for all deliveries:
 
-. When a sales rep opens the *Freebies* window. All _Freebie Line Item_
-and _Freebie Level Line Item_ records will be checked.
-. When a sales rep reopens or finalizes the order. All _Order Line Item_
-records with the _Freebie_ record type will be checked.
+. When a sales rep opens the *Freebies* window. All _Freebie Line Item_ and _Freebie Level Line Item_ records will be checked.
+. When a sales rep reopens or finalizes the order. All _Order Line Item_ records with the _Freebie_ record type will be checked.
 
-If one or more products or freebies are not available for the order, the
-warning will be shown for a mobile user to open the Freebies window for
-recalculation.
+If one or more products or freebies are not available for the order, the warning will be shown for a mobile user to open the Freebies window for recalculation.
 
-The quantity cells will be blocked and nulled for deliveries in cases
-when a freebie is not available.
+The quantity cells will be blocked and nulled for deliveries in cases when a freebie is not available.
 
+The system checks if the *Ignore Product Availability* checkbox is selected on the corresponding _Freebie Condition_ record.
 
+* If selected, the *Default Product Availability* type is checked on the appropriate _Product_ record.
+* If not selected, the freebie availability is searched according to the value in the *Availability Type* field of the _Product Availability_ record. If there is no matching record, the system checks the default availability on the appropriate _Product_ record.
 
-The system checks if the *Ignore Product Availability* checkbox is
-selected on the corresponding _Freebie Condition_ record.
+* If a freebie is no longer available, the delivery column is reset and blocked in the *Freebie* window. For freebies with autopopulated quantity, the quantity is set to 0 and blocked.
 
-* If selected, the *Default Product Availability* type is checked on the
-appropriate _Product_ record.
-* If not selected, the freebie availability is searched according to the
-value in the *Availability Type* field of the _Product Availability_
-record. If there is no matching record, the system checks the default
-availability on the appropriate _Product_ record.
+For example, freebies are not available for the selected delivery dates but have the available dates in the future.
 
-* If a freebie is no longer available, the delivery column is reset and
-blocked in the *Freebie* window. For freebies with auto-populated
-quantity, the quantity is set to 0 and blocked.
-
-
-
-For example, freebies are not available for the selected delivery dates
-but have the available dates in the future.
-
-
-
-[cols=",",]
-|===
-|Salesforce
-|image:PA_Freebie-Unavailable.png[]
-
-|CT Mobile
-|image:313.png[]
-|===
-
-
+[tabs]
+====
+Salesforce::
++
+--
+image:PA_Freebie-Unavailable.png[]
+--
+CT Mobile::
++
+--
+image:313.png[]
+--
+====
 
 See also:
 
-* xref:workshop-6-1-configuring-product-availability[Workshop 6.1:
-Configuring Product Availability]
+* xref:admin-guide/workshops/workshop-6-0-working-with-product-availability-limit-rule-and-quota/workshop-6-1-configuring-product-availability/index.adoc[]

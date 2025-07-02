@@ -1,45 +1,25 @@
 = Limit Rules
 
-The Limit Rules functionality introduces the ability to control the
-minimum and maximum quantity or amount of products per the order or per
-single delivery.
+The Limit Rules functionality introduces the ability to control the minimum and maximum quantity or amount of products per the order or per single delivery.
 
-To learn more about the object model, refer to
-xref:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/index[CT Order Data Model].
+TIP: To learn more about the object model, refer to xref:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/index.adoc[CT Order Data Model].
 
 The process path:
 
-. Search for all matching xref:limit-rule-field-reference[Limit
-Rule] records for the order.
-.. Search for a _Limit Rule_ record where the *Order Type* and *Sales
-Organization* fields are specified.
-.. Search for a _Limit Rule_ record where the *Sales Organization* field
-is specified.
-.. Search for a _Limit Rule_ record where the *Order Type* field is
-specified.
-.. Search for a _Limit Rule_ record where neither of these fields is
-specified.
-
+. Search for all matching xref:./limit-rule-field-reference/index.adoc[Limit Rule] records for the order.
+.. Search for a _Limit Rule_ record where the *Order Type* and *Sales Organization* fields are specified.
+.. Search for a _Limit Rule_ record where the *Sales Organization* field is specified.
+.. Search for a _Limit Rule_ record where the *Order Type* field is specified.
+.. Search for a _Limit Rule_ record where neither of these fields is specified.
++
 All found matching records will be applied.
-. Depending on the _Limit Rule_ record type, the systems checks if there
-are criteria in the *Delivery Criteria Path* field for grouping
-deliveries. If yes, the system groups deliveries and applies limit rules
-to each delivery group.
-* The values in the *Maximum Amount*, *Minimum Amount*, *Maximum
-Quantity*, and *Minimum Quantity* fields are applied only to the group
-of deliveries that match the criteria.
-* The bundle components are always distributed to their parent's product
-group.
-. The system checks the *Exception Condition* field on the selected
-_Limit Rule_ record. If the _Delivery Line Item_ record matches the
-*Exception Condition* criteria, the limit rule will not be applied to
-it.
-. The system checks the *Apply Condition* field on the selected _Limit
-Rule_ record. If the _Delivery Line Item_ record matches the *Apply
-Condition* criteria, the system applies the limit rule to a delivery or
-a delivery group.
+
+. Depending on the _Limit Rule_ record type, the systems checks if there are criteria in the *Delivery Criteria Path* field for grouping deliveries. If yes, the system groups deliveries and applies limit rules to each delivery group.
+* The values in the *Maximum Amount*, *Minimum Amount*, *Maximum Quantity*, and *Minimum Quantity* fields are applied only to the group of deliveries that match the criteria.
+* The bundle components are always distributed to their parent's product group.
+. The system checks the *Exception Condition* field on the selected _Limit Rule_ record. If the _Delivery Line Item_ record matches the *Exception Condition* criteria, the limit rule will not be applied to it.
+. The system checks the *Apply Condition* field on the selected _Limit Rule_ record. If the _Delivery Line Item_ record matches the *Apply Condition* criteria, the system applies the limit rule to a delivery or a delivery group.
 
 See also:
 
-* xref:workshop-6-2-configuring-limit-rules[Workshop 6.2:
-Configuring Limit Rules]
+* xref:admin-guide/workshops/workshop-6-0-working-with-product-availability-limit-rule-and-quota/workshop-6-2-configuring-limit-rules/index.adoc[]

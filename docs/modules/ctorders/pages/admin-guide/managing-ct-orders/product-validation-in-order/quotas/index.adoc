@@ -1,277 +1,169 @@
 = Quotas
-
-Quotas allow managers to regulate the sale by restricting sales reps
-from adding products to offline and online orders if a customer has a
-limited number of products available on the required delivery dates. Use
-quotas alone or in conjunction with
-xref:admin-guide/managing-ct-orders/product-validation-in-order/product-availability/index[product availability] and
-xref:admin-guide/managing-ct-orders/product-validation-in-order/limit-rules/index[limit rules].
-
 :toc: :toclevels: 3
 
+Quotas allow managers to regulate the sale by restricting sales reps from adding products to offline and online orders if a customer has a limited number of products available on the required delivery dates. Use quotas alone or in conjunction with xref:admin-guide/managing-ct-orders/product-validation-in-order/product-availability/index.adoc[product availability] and xref:admin-guide/managing-ct-orders/product-validation-in-order/limit-rules/index.adoc[limit rules].
+
 [[h2_773755849]]
-=== Overview
+== Overview
 
-To learn more about the object model, refer to
-xref:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/index[CT Order Data Model].
+TIP: To learn more about the object model, refer to xref:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/index.adoc[CT Order Data Model].
 
-Managers distribute quotas for regular paid products or freebies to
-sales reps. Managers can also limit products per quota and allocate them
-either by quantity or total amount in a single delivery.
+Managers distribute quotas for regular paid products or freebies to sales reps. Managers can also limit products per quota and allocate them either by quantity or total amount in a single delivery.
 
-Sales representatives determine how to allocate the quota allotted to
-them to one or more customers and, if necessary, reserve part of the
-quota or the entire quota for an order. Also, they can track quotas in
-the product info icons.
+Sales representatives determine how to allocate the quota allotted to them to one or more customers and, if necessary, reserve part of the quota or the entire quota for an order. Also, they can track quotas in the product info icons.
 
-
-
-Important notes:
-
+[NOTE]
+====
 * _Quotas_ must be assigned to a specific user.
 * The _Quota Usage_ record is created only when you bind a quota to an
 order.
-
-
+====
 
 Use quota in the following cases:
 
-* Allocate products to points of sale for specific days. For example,
-deliver POS materials to promote products in several retail stores or
-the desired regions.
-* Launch sales of new products. For example, deliver a stand with new
-products for a single promotion.
-* Promote products of the desired brand for a selected client segment.
-For example, allocate the amount among sales representatives and (or) by
-the area to promote such products.
-* Return products that are not on sale to free up shelf space. For
-example, create a return order with a promotion that lists products for
-a commercial return. In this case, the amount of recalled products will
-be deducted from the quota assigned to the sales rep.
+* Allocate products to points of sale for specific days. For example, deliver POS materials to promote products in several retail stores or the desired regions.
+* Launch sales of new products. For example, deliver a stand with new products for a single promotion.
+* Promote products of the desired brand for a selected client segment. For example, allocate the amount among sales representatives and (or) by the area to promote such products.
+* Return products that are not on sale to free up shelf space. For example, create a return order with a promotion that lists products for a commercial return. In this case, the amount of recalled products will be deducted from the quota assigned to the sales rep.
 
 [[h3_576888334]]
-==== Quota Types
+=== Quota Types
 
 There are two quota types:
 
-* Quota with the ** _Template_ type.
-This type can be reused and helps admins save space in the Salesforce
-organization. If a quota template fits conditions, then based on it, an
-individual quota is created and linked through the *Quota Usage* record
-to the corresponding [.object]#Order#.
+* Quota with the _Template_ type.
++
+This type can be reused and helps admins save space in the Salesforce organization. If a quota template fits conditions, then based on it, an individual quota is created and linked through the *Quota Usage* record to the corresponding [.object]#Order#.
 * Quota with the _Individual_ type.
-This type can be automatically created based on a template or created by
-sales managers.
++
+This type can be automatically created based on a template or created by sales managers.
 
+Working with quotas depends on xref:admin-guide/managing-ct-orders/order-management/index.adoc#h2_158967301[the related order stage]:
 
-
-Working with quotas depends on
-xref:admin-guide/managing-ct-orders/order-management/index#h2_158967301[the related order stage]:
-
-* A quota is *Booked* if the related order is not *Finalized* or
-*Completed*.
-A sales rep can allocate the whole quantity or amount of products
-according to the quota.
+* A quota is *Booked* if the related order is not *Finalized* or *Completed*.
++
+A sales rep can allocate the whole quantity or amount of products according to the quota.
 * A quota is *Used* if the related order is not *On Hold*.
-A sales rep can distribute only the remaining quantity or amount
-according to the quota.
++
+A sales rep can distribute only the remaining quantity or amount according to the quota.
 
+==== Important notes:
 
-
-Important notes:
-
-* The following fields on the _Quota Template_ record cannot be changed
-if at least one individual quota is created based on the template:
-**[.apiobject]#orders__OrderType__c#
-**[.apiobject]#orders__AccountId__с# /
-[.apiobject]#RetailStore#
-**[.apiobject]#ProductId__c# /
-[.apiobject]#orders__Product2Id__c#
-**[.apiobject]#orders__SalesOrganizationId__c#
-**[.apiobject]#orders__ProductType__с#
-**[.apiobject]#orders__StartDate__с#
-**[.apiobject]#orders__EndDate__с#
-**[.apiobject]#orders__PromotionId__с#
-**[.apiobject]#orders__CatalogId__с#
-**[.apiobject]#orders__UnitOfMeasure__с#
-**[.apiobject]#orders__AmountField__c#
-**[.apiobject]#RecordType#
-* Also, these fields on the _Quota_ record cannot be changed if it has
-at least one child _Quota Usage_ record.
-* Values in these fields (except for[.apiobject]#RecordType#)
-on the _Quota_ record that is created based on the template must match
-values in the same fields on this template.
+* The following fields on the _Quota Template_ record cannot be changed if at least one individual quota is created based on the template:
+** [.apiobject]#orders\__OrderType__c#
+** [.apiobject]#orders\__AccountId__с# / [.apiobject]#RetailStore#
+** [.apiobject]#ProductId\__c# / [.apiobject]#orders__Product2Id__c#
+** [.apiobject]#orders\__SalesOrganizationId__c#
+** [.apiobject]#orders\__ProductType__с#
+** [.apiobject]#orders\__StartDate__с#
+** [.apiobject]#orders\__EndDate__с#
+** [.apiobject]#orders\__PromotionId__с#
+** [.apiobject]#orders\__CatalogId__с#
+** [.apiobject]#orders\__UnitOfMeasure__с#
+** [.apiobject]#orders\__AmountField__c#
+** [.apiobject]#RecordType#
+* Also, these fields on the _Quota_ record cannot be changed if it has at least one child _Quota Usage_ record.
+* Values in these fields (except for [.apiobject]#RecordType#) on the _Quota_ record that is created based on the template must match values in the same fields on this template.
 
 [[h3_1386411308]]
-==== Quota Search
+=== Quota Search
 
 There are two steps to find the suitable quota for a specific product:
-[TIP] ==== In case of integration with CG Cloud solution,
-records will be searched by retail store instead of account. ====
+TIP: In case of integration with CG Cloud solution, records will be searched by retail store instead of account.
 
-. Search all individual quotas and quota templates assigned to the
-current sales rep. If a suitable quota template is found,
-xref:admin-guide/managing-ct-orders/product-validation-in-order/quotas/quota-field-reference#h2_12722709[an individual quota record
-will be created based on it]. Important notes:
+. Search all individual quotas and quota templates assigned to the current sales rep. If a suitable quota template is found, xref:admin-guide/managing-ct-orders/product-validation-in-order/quotas/quota-field-reference.adoc#h2_12722709[an individual quota record will be created based on it].
++
+[NOTE]
+====
 * An individual quota has a priority over a quota template.
 * Quote templates and individual quotas are created for a specific
 product, and the same _Quota_ record cannot be used both for catalog and
 promotion.
-
+====
++
 Search is performed by _Quota_ fields in the following order:
-..[.apiobject]#orders__SalesOrganization__c#
-..[.apiobject]#orders__OrderType__c#
-..[.apiobject]#orders__AccountId__c# or
-[.apiobject]#RetailStoreId__c#
-..[.apiobject]#orders__PromotionId__с#
-..[.apiobject]#ProductId__c#
-..[.apiobject]#orders__CatalogId__с#
-. Search suitable _Delivery Line Item_ records for quotas found in the
-first step in the following hierarchy:
-..[.apiobject]#orders__PromotionId__с#,
-[.apiobject]#orders__ProductId__c#,
-[.apiobject]#orders__ProductType__с#,
-[.apiobject]#orders__OrderType__c#,
-[.apiobject]#orders__AccountId__c# or
-[.apiobject]#RetailStoreId__c#
-..[.apiobject]#orders__PromotionId__с#,
-[.apiobject]#orders__ProductId__c#,
-[.apiobject]#orders__ProductType__с#,[.apiobject]#orders__OrderType__c#
-..[.apiobject]#orders__PromotionId__с#,
-[.apiobject]#orders__ProductType__с#,
-[.apiobject]#orders__OrderType__c#,
-[.apiobject]#orders__AccountId__c# or
-[.apiobject]#RetailStoreId__c#
-..[.apiobject]# orders__PromotionId__с#,
-[.apiobject]#orders__ProductType__с#,
-[.apiobject]#orders__OrderType__c#
-..[.apiobject]# orders__CatalogId__с#,
-[.apiobject]#orders__ProductId__c#,
-[.apiobject]#orders__ProductType__с#,
-[.apiobject]#orders__OrderType__c#,
-[.apiobject]#orders__AccountId__c# or
-[.apiobject]#RetailStoreId__c#
-..[.apiobject]# orders__CatalogId__с#,
-[.apiobject]#orders__ProductId__c#, [.apiobject]#orders__ProductType__с#,
-[.apiobject]#orders__OrderType__c#
-..[.apiobject]#orders__CatalogId__с#,
-[.apiobject]#orders__ProductType__с#,
-[.apiobject]#orders__OrderType__c#, [.apiobject]#orders__AccountId__c or RetailStoreId__c#
-..[.apiobject]#orders__CatalogId__с#,
-[.apiobject]##[.apiobject]#orders__ProductType__с#,
-[.apiobject]#orders__OrderType__c#
-..[.apiobject]#orders__ProductId__c#,
-[.apiobject]#orders__ProductType__с#,
-[.apiobject]#orders__OrderType__c#,
-[.apiobject]#orders__AccountId__c# or
-[.apiobject]#RetailStoreId__c#
-..[.apiobject]#orders__ProductId__c#,
-[.apiobject]#orders__ProductType__с#,
-[.apiobject]#orders__OrderType__c#
-..[.apiobject]#orders__ProductType__с#,
-[.apiobject]#orders__OrderType__c#,
-[.apiobject]#orders__AccountId__c# or
-[.apiobject]#RetailStoreId__c#
-..[.apiobject]#orders__ProductType__с#,
-[.apiobject]#orders__OrderType__c#
+
+.. [.apiobject]#orders\__SalesOrganization__c#
+.. [.apiobject]#orders\__OrderType__c#
+.. [.apiobject]#orders\__AccountId__c# or [.apiobject]#RetailStoreId__c#
+.. [.apiobject]#orders\__PromotionId__с#
+.. [.apiobject]#ProductId__c#
+.. [.apiobject]#orders\__CatalogId__с#
+. Search suitable _Delivery Line Item_ records for quotas found in the first step in the following hierarchy:
+.. [.apiobject]#orders\__PromotionId__с#, [.apiobject]#orders\__ProductId__c#, [.apiobject]#orders\__ProductType__с#, [.apiobject]#orders\__OrderType__c#, [.apiobject]#orders\__AccountId__c# or [.apiobject]#RetailStoreId__c#
+.. [.apiobject]#orders\__PromotionId__с#, [.apiobject]#orders\__ProductId__c#, [.apiobject]#orders\__ProductType__с#,[.apiobject]#orders\__OrderType__c#
+.. [.apiobject]#orders\__PromotionId__с#, [.apiobject]#orders\__ProductType__с#, [.apiobject]#orders\__OrderType__c#, [.apiobject]#orders\__AccountId__c# or [.apiobject]#RetailStoreId__c#
+.. [.apiobject]#orders\__PromotionId__с#, [.apiobject]#orders\__ProductType__с#, [.apiobject]#orders\__OrderType__c#
+.. [.apiobject]#orders\__CatalogId__с#, [.apiobject]#orders\__ProductId__c#, [.apiobject]#orders\__ProductType__с#, [.apiobject]#orders\__OrderType__c#, [.apiobject]#orders\__AccountId__c# or [.apiobject]#RetailStoreId__c#
+.. [.apiobject]#orders\__CatalogId__с#, [.apiobject]#orders\__ProductId__c#, [.apiobject]#orders\__ProductType__с#, [.apiobject]#orders\__OrderType__c#
+.. [.apiobject]#orders\__CatalogId__с#, [.apiobject]#orders\__ProductType__с#, [.apiobject]#orders\__OrderType__c#, [.apiobject]#orders\__AccountId__c or RetailStoreId__c#
+.. [.apiobject]#orders\__CatalogId__с#, [.apiobject]#orders\__ProductType__с#, [.apiobject]#orders\__OrderType__c#
+.. [.apiobject]#orders\__ProductId__c#, [.apiobject]#orders\__ProductType__с#, [.apiobject]#orders\__OrderType__c#, [.apiobject]#orders\__AccountId__c# or [.apiobject]#RetailStoreId__c#
+.. [.apiobject]#orders\__ProductId__c#, [.apiobject]#orders\__ProductType__с#, [.apiobject]#orders\__OrderType__c#
+.. [.apiobject]#orders\__ProductType__с#, [.apiobject]#orders\__OrderType__c#, [.apiobject]#orders\__AccountId__c# or [.apiobject]#RetailStoreId__c#
+.. [.apiobject]#orders\__ProductType__с#, [.apiobject]#orders\__OrderType__c#
 
 [[h2_275625523]]
-=== Using Quotas
+== Using Quotas
 
-Add quotas for online orders in Salesforce and offline orders in the CT
-Mobile app. We do not recommend using quotas in the same online and
-offline orders simultaneously, as this can result in duplicate quota
-records, and any of them can be applied.
+Add quotas for online orders in Salesforce and offline orders in the CT Mobile app. We do not recommend using quotas in the same online and offline orders simultaneously, as this can result in duplicate quota records, and any of them can be applied.
 
-The sales reps can keep track of the quota usage (as well as product
-availability) with the help of info icons. Product quota information is
-available in catalogs and promos on the left side and for products added
-to the cart, including freebies.
-[TIP] ==== Info icons are displayed by default, even if no quota
-or product availability is configured. In addition, administrators can
-configure informational icons
-xref:5-6-sdk-displaying-info-icon[using the SDK]. ====
+The sales reps can keep track of the quota usage (as well as product availability) with the help of info icons. Product quota information is available in catalogs and promos on the left side and for products added to the cart, including freebies.
 
-* If there is no delivery in orders, in the catalogs and promotions on
-the left side, the product info icon displays a quota that matches
-today.
-* If the sales rep has already created deliveries, the product info icon
-displays all booked and used quotas in orders both on the left side and
-the cart or freebie window.
+TIP: Info icons are displayed by default, even if no quota or product availability is configured. In addition, administrators can configure informational icons
+xref:admin-guide/workshops/workshop-5-0-implementing-additional-features/5-6-sdk-displaying-info-icon.adoc[using the SDK].
 
+* If there is no delivery in orders, in the catalogs and promotions on the left side, the product info icon displays a quota that matches today.
+* If the sales rep has already created deliveries, the product info icon displays all booked and used quotas in orders both on the left side and the cart or freebie window.
 
+[.object]#Quotas# are searched when a sales rep adds a product, specifies its quantity, and creates delivery dates. If successful, a _Quota Usage_ record is created.
 
-[.object]#Quotas# are searched when a sales rep adds a product,
-specifies its quantity, and creates delivery dates. If successful, a
-_Quota Usage_ record is created.
+The _Quota Usage_ record relates the suitable quota to the order and stores information about the quantity or amount of booked or used products. If a sales rep updates or removes a product from the delivery, the appropriate _Quota Usage_ record will also be updated or deleted.
 
-The _Quota Usage_ record relates the suitable quota to the order and
-stores information about the quantity or amount of booked or used
-products. If a sales rep updates or removes a product from the delivery,
-the appropriate _Quota Usage_ record will also be updated or deleted.
+* In CT Mobile, quotas and _Quota Usage_ records will automatically recalculate when products and deliveries are added or removed.
+* In Salesforce, click *Recalculate* to calculate the number of remaining products or their quota values.
 
-* In CT Mobile, quotas and _Quota Usage_ records will automatically
-recalculate when products and deliveries are added or removed.
-* In Salesforce, click *Recalculate* to calculate the number of
-remaining products or their quota values.
+When a sales rep saves the order, the system validates the product cart, and in case of any errors, notifies the sales rep. The order will only be finalized once any errors have been resolved, and a mobile user cannot add new quotas or edit *Quantity*, *Amount*, and *Status* on the corresponding _Quota Usage_ records if the *Stage* is *Finalized* on the _Delivery Line Item_ in that order.
 
-When a sales rep saves the order, the system validates the product cart,
-and in case of any errors, notifies the sales rep. The order will only
-be finalized once any errors have been resolved, and a mobile user
-cannot add new quotas or edit *Quantity*, *Amount*, and *Status* on the
-corresponding _Quota Usage_ records if the *Stage* is *Finalized* on the
-_Delivery Line Item_ in that order.
+Look at the info icons with quota and product availability for the products in the cart:
 
+image::Paid-Product-Quota-in-Cart.png[align="center"]
 
+Here is an example of info icons with quota and product availability for freebies:
 
-Look at the info icons with quota and product availability for the
-products in the cart:
+image::Freebie-Quota.png[align="center"]
 
-image:Paid-Product-Quota-in-Cart.png[]
+////
 
-
-
-Here is an example of info icons with quota and product availability for
-freebies:
-
-image:Freebie-Quota.png[]
-
-
-
-ifdef::hidden[]
-
-[width="100%",cols="50%,50%",]
-|===
-|Salesforce |image
-
-|CT Mobile iOS a|
+[tabs]
+====
+Salesforce::
++
+--
+image
+--
+CT Mobile iOS::
++
+--
 Paid Product
 
 image:Paid-Product-Quota-in-Cart.png[]
 
-
-
 Freebie
 
 image:Freebie-Quota.png[]
-
-|===
-
-
+--
+====
+////
 
 [[h2_1149549305]]
-=== Checking quotas on bundles
+== Checking Quotas on Bundles
 
-Quotas are checked on bundles depending on the value of the *Calculate
-Price On* value of the [.object]## bundle:
+Quotas are checked on bundles depending on the value of the *Calculate Price On* value of the bundle:
 
-* If *Calculate Prices On* = _Header_, quota is checked for the header
-product and is applied for the whole bundle.
-* If *Calculate Prices On* = _Components_,__ __quota is checked for both
-header and components and validates both header and components of the
-bundle.
+* If *Calculate Prices On* = _Header_, quota is checked for the header product and is applied for the whole bundle.
+* If *Calculate Prices On* = _Components_, quota is checked for both header and components and validates both header and components of the bundle.
 
 See also:
 
-* xref:workshop-6-3-configuring-quotas[Workshop 6.3: Configuring
-Quotas]
+* xref:admin-guide/workshops/workshop-6-0-working-with-product-availability-limit-rule-and-quota/workshop-6-3-configuring-quotas/index.adoc[]
