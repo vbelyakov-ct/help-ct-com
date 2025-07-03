@@ -1,15 +1,8 @@
 = Split Settings Field Reference
 
-The *Split Setting* record type is intended to store configuration which
-is used to split the order into suborders for further integration with
-the customer ERP system. The setting is applied upon
-xref:order-management[order finalization].
+The _Split Setting_ record type is intended to store configuration which  is used to split the order into suborders for further integration with the customer ERP system. The setting is applied upon xref:admin-guide/managing-ct-orders/order-management/index.adoc#h2_158967301[order finalization].
 
-
-
-The *Settings* record with the *Split Settings* record type will be
-applied when the criteria are met. The search is carried out in the
-following order:
+The _Settings_ record with the _Split Settings_ record type will be applied when the criteria are met. The search is carried out in the following order:
 
 . With the specified sales organization, order type, and price book.
 . With the specified sales organization and price book.
@@ -20,7 +13,7 @@ following order:
 
 '''''
 
-Object record type API name:[.apiobject]#SplitSetting#
+Object record type API name: [.apiobject]#SplitSetting#
 
 '''''
 
@@ -28,57 +21,42 @@ Object record type API name:[.apiobject]#SplitSetting#
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Order Type |[.apiobject]#orders__OrderType__c#
+|Order Type |[.apiobject]#orders\__OrderType__c#
 |Text(255) a|
 The order type for which the settings are configured.
 
-If not set, the setting will be applied for all order types of the
-selected Sales Org.
+NOTE: If not set, the setting will be applied for all order types of the selected Sales Org.
 
 * Order
 * Return
 * Pre-sale
 
-|Price Book |[.apiobject]#orders__PriceBookId__c#
-|Lookup(CT Price Book) |the [.object]#Price Book# with
-products to which the split will be applied.
+|Price Book |[.apiobject]#orders\__PriceBookId__c#
+|Lookup(CT Price Book) |the [.object]#Price Book# with products to which the split will be applied.
 
 |Sales Organization
-|[.apiobject]#orders__SalesOrganizationId__c#
-|Lookup(Sales Organization) a|
+|[.apiobject]#orders\__SalesOrganizationId__c#
+|Lookup(Sales Organization) a|include::partial$sales-org-field.adoc[]
 
-The specified Sales Organization is prioritized over the specified order
-type in the [.apiobject]#orders__OrderType__c# field.
+NOTE: The specified Sales Organization is prioritized over the specified order type in the [.apiobject]#orders\__OrderType__c# field.
 
-|Split Fields |[.apiobject]#orders__SplitFieldsList__c#
-a|
-Text(255)
+|Split Fields |[.apiobject]#orders\__SplitFieldsList__c#
+a| Text(255)
 
+a| This field contains fields from the [.object]#Delivery# object that store the parameters according to which the deliveries are split. Fields are separated by the comma with no space. Maximum 5 fields are allowed.
 
+[NOTE]
+====
+* Specified fields must be created on the [.object]#Delivery# object manually.
 
-a|
-This field contains fields from the [.object]#Delivery# object
-that store the parameters according to which the deliveries are split.
-Fields are separated by the comma with no space. Maximum 5 fields are
-allowed.
+* Address and date fields are already used for splitting by default. If you specify them, the system will skip these fields.
+====
 
-Specified fields must be created on the [.object]#Delivery#
-object manually.
-
-Address and date fields are already used for splitting by default. If
-you specify them, the system will skip these fields.
 
 |Split Parameters Path
-|[.apiobject]#orders__SplitParametersPath__c# |Long
-Text Area(32768) a|
-Defines the principle according to which the delivery will be split.
-Specify a path to the fields that store parameters on the
-[.object]#Delivery# object (specified in
-the orders__SplitFieldsList__c field). Maximum 5 fields are
-allowed.
+|[.apiobject]#orders\__SplitParametersPath__c# |Long Text Area(32768) a|
+Defines the principle according to which the delivery will be split. Specify a path to the fields that store parameters on the [.object]#Delivery# object (specified in the orders\__SplitFieldsList__c field). Maximum 5 fields are allowed.
 
-[NOTE] ==== When managing bundles, make sure that the ====
-*Split Parameter Path* value is the same for both the bundle header and
-its components. Otherwise, the split settings might work incorrectly.
+NOTE: When managing bundles, make sure that the *Split Parameter Path* value is the same for both the bundle header and its components. Otherwise, the split settings might work incorrectly.
 
 |===

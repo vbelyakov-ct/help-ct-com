@@ -1,12 +1,10 @@
 = Address Setting Field Reference
 
-The ** _Address Setting_ record type is intended to store the address
-field location and SOQL filter to search for available delivery
-addresses for an account.
+The _Address Setting_ record type is intended to store the address field location and SOQL filter to search for available delivery addresses for an account.
 
 '''''
 
-Object record type API name:[.apiobject]#AddressSetting#
+Object record type API name: [.apiobject]#AddressSetting#
 
 '''''
 
@@ -15,35 +13,25 @@ Object record type API name:[.apiobject]#AddressSetting#
 |*Field* |*API Name* |*Type* |*Description*
 
 |Address Field
-|[.apiobject]#orders__AddressField__с# |Text(255) a|
-Specify the field API name of the **Address **object that contains the
-delivery address of a selected *Sales Organization*.
+|[.apiobject]#orders\__AddressField__с# |Text(255) a|
+Specify the field API name of the [.object]#Address# object that contains the delivery address of a selected *Sales Organization*.
 
 * Account
 * RetailStore
-* the API name of the custom **Address **object[NOTE] ==== The
-custom *Address* object should be created by the administrator. ====
+* the API name of the custom [.object]#Address# object
++
+NOTE: The custom [.object]#Address# object should be created by the administrator.
 
 |Sales Organization
-|[.apiobject]#orders__SalesOrganizationId__c#
-|Lookup(Sales Organization) |
+|[.apiobject]#orders\__SalesOrganizationId__c#
+|Lookup(Sales Organization) a|include::partial$sales-org-field.adoc[]
 
-|SOQL Filter |[.apiobject]#orders__SOQLFilter__c#
-|Long Text Area(32768) a|
-Specifies the SOQL filter that will be used for searching the delivery
-addresses.
+|SOQL Filter |[.apiobject]#orders\__SOQLFilter__c#
+|Long Text Area(32768) a| Specifies the SOQL filter that will be used for searching the delivery addresses.
 
-* use the [.apiobject]#WHERE# clause and following operators:
-[.apiobject]#OR#,[.apiobject]#AND#, LIKE, ORDER BY,
-[.apiobject]#LIMIT#, =, !=,>,<,>=,<=,<
-* To define the corresponding account, use
-[.apiobject]#{!Account.Id}#[.apiobject]# or
-{!RetailStore.Id}#
+* use the [.apiobject]#WHERE# clause and following operators: [.apiobject]#OR#,[.apiobject]#AND#, [.apiobject]#LIKE#, [.apiobject]#ORDER BY#, [.apiobject]#LIMIT#, [.apiobject]#=#, [.apiobject]#!=#, [.apiobject]#>#, [.apiobject]#<#, [.apiobject]#>=#, [.apiobject]#\<=#
+* To define the corresponding account, use [.apiobject]#{!Account.Id}# or [.apiobject]#{!RetailStore.Id}#
 
-
-
-The result will be the ID list of the custom *Address* records and
-values specified in the appropriate field of this object, for example,
-[.apiobject]#Address__с#.
+The result will be the ID list of the custom _Address_ records and values specified in the appropriate field of this object, for example, [.apiobject]#Address__с#.
 
 |===

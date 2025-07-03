@@ -1,19 +1,15 @@
 = Settings and Sales Organization Data Model
 
-The data model outlines the primary settings that define compatibility
-between CT Orders and a target system, such as CT CPG or CT Pharma.
-These settings are required for online and offline order taking.
+The data model outlines the primary settings that define compatibility between CT Orders and a target system, such as CT CPG or CT Pharma. These settings are required for online and offline order taking.
 
-image:Sales-Organization-Data-Model.png[]
+image::Sales-Organization-Data-Model.png[align="center"]
 
-
-
-[width="100%",cols="15%,20%,10%,55%"]
+[width="100%"]
 |===
-|*Object* |*API Name * |*Record Type* |*Description*
+|*Object* |*API Name* |*Record Type* |*Description*
 
 |xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/index.adoc[Settings]
-|`orders__OMSettings__c` a|
+|[.apiobject]#orders\__OMSettings__c# a|
 * DeliveryLineItemMapping
 * LayoutSetting
 * LimitSetting
@@ -27,25 +23,19 @@ image:Sales-Organization-Data-Model.png[]
 * SDKSetting
 * WebServiceSetting
 
-a|
-The main settings are stored in the object record types.
+a| The main settings are stored in the object record types.
 
 * mapping CT Orders and the target system objects;
 * CT Orders layouts settings for Salesforce and CT Mobile;
 * Order record types and status management;
 * General delivery and pricing settings
-*  Transfer and load the master data into AWS DB.
+* Transfer and load the master data into AWS DB.
 
-|xref:sales-organization-user-field-reference[Sales Organization
-User] |`orders__SalesOrganizationUser__c` |You can specify
-record types if needed.
-|xref:sales-organization-user-field-reference[Specify users] for
-each Sales Organization to have the ability to use CT Orders features.
+|xref:./sales-organization-user-field-reference.adoc[Sales Organization User] |[.apiobject]#orders\__SalesOrganizationUser__c# |You can specify record types if needed.
+|xref:./sales-organization-user-field-reference.adoc[Specify users] for each Sales Organization to have the ability to use CT Orders features.
 
-|xref:sales-organization-field-reference[Sales Organization]
-|`orders__SalesOrganization__c` |You can specify record types
-if needed. |Stores Sales Organization data.
-[NOTE] ==== In the case of using data from customer ERP, it is
-necessary to xref:sales-organization-field-reference[specify the
-relationship] between ERP and Salesforce CRM.  ====
+|xref:./sales-organization-field-reference.adoc[Sales Organization]
+|[.apiobject]#orders\__SalesOrganization__c# |You can specify record types if needed. a|Stores Sales Organization data.
+
+NOTE: In the case of using data from customer ERP, it is necessary to xref:./sales-organization-field-reference.adoc[specify the relationship] between ERP and Salesforce CRM.
 |===

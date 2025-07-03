@@ -1,61 +1,45 @@
-= Snippet: Custom Address Object
+To use a custom [.object]#Address# object as the [.object]#Address# object:
 
-To use a custom [.object]#Address# object as the
-[.object]#Address# object:
+. Create a custom [.object]#Address# object with the *Address* field(s) of the _Text_ data type, for example, [.apiobject]#CustomAddress__c#.
+. Create an _OM Settings_ record with the _Object Setting_ record type and specify the API name of the custom [.object]#Address# object.
+. Create an _OM Settings_ record with the _Address Setting_ record type and specify the corresponding *Address* field, for example, [.apiobject]#CustomAddress__c#.
+. xref:admin-guide/workshops/workshop1-0-creating-basic-order/configuring-an-address-settings-1-0/creating-a-relationship-between-custom-address-object-and-delivery-1-0.adoc[Create a lookup] from the [.object]#Delivery# object to the custom [.object]#Address# object.
+. Create a lookup from the custom [.object]#Address# object on the [.object]#Account# object.
 
-. Create a custom [.object]#Address# object with the *Address*
-field(s) of the _Text_ data type, for example,
-[.apiobject]#CustomAddress__c#.
-. Create an _OM Settings_ record with the _Object Setting_ record type
-and specify the API name of the custom [.object]#Address#
-object.
-. Create an _OM Settings_ record with the _Address Setting_ record type
-and specify the corresponding *Address* field, for example,
-[.apiobject]#CustomAddress__c#.
-. link:admin-guide/workshops/workshop1-0-creating-basic-order/configuring-an-address-settings-1-0/creating-a-relationship-between-custom-address-object-and-delivery-1-0[Create
-a lookup] from the [.object]#Delivery# object to the custom
-[.object]#Address# object.
-. Create a lookup from the custom [.object]#Address# object on
-the [.object]#Account# object.
-
-
-
-After you created the custom [.object]#Address# object and
-field(s), relate delivery addresses to the required _Sales Organization_
-record by creating the _Settings_ record with the
-link:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/address-setting-field-reference[Address Setting] record type.
+After you created the custom [.object]#Address# object and field(s), relate delivery addresses to the required _Sales Organization_ record by creating the _Settings_ record with the xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/address-setting-field-reference.adoc[Address Setting] record type.
 
 . Go to *Settings* and click *New*.
-. In the *New Settings* window, select the *Address Setting* record
-type.
+. In the *New Settings* window, select the *Address Setting* record type.
 . Configure the setting as follows:
-* In the *Sales Organization* field, select the Sales Organization if
-required.
+* In the *Sales Organization* field, select the Sales Organization if required.
++
+TIP: If you create the setting from the *Sales Organization* page, the _Sales Organization_ record will be already specified.
+* In the *Address Field*, enter the API name of the *Address* field on the [.object]#Account# object.
++
+include::partial$addressnote.adoc[]
 
-[TIP] ==== If you create the setting from the *Sales
-Organization* page, the *Sales Organization* record will be already
-specified. ====
-* In the *Address Field*, enter the API name of the *Address* field on
-the [.object]#Account# object.
-* In *SOQL Filter*, specify the SOQL query to sort delivery addresses
-given the selected _Account_ record.
-
+* In *SOQL Filter*, specify the SOQL query to sort delivery addresses given the selected _Account_ record.
++
 Filter example:
-
-
-
++
+[source, soql]
+----
+WHERE ParentId = '{!Account.Id}'
+----
++
 This query will be considered by the system as:
-
-
-
++
+[source, soql]
+----
+SELECT id FROM orders__Address__c WHERE (id = '{!Account.Id}') OR (ParentId = '{!Account.Id}')
+----
++
 where:
-**[.apiobject]#orders__Address__c# is the address
-object you specified in the _Object Settings_.
-**[.apiobject]#ParentId# is the API name of the lookup from
-_Address_ to _Account_.
-**[.apiobject]#'{!Account.Id}'# is a keyword that is
-replaced with the ID of the _Account_ for which the order is created.
 
+** [.apiobject]#orders\__Address__c# is the address object you specified in the _Object Settings_.
+** [.apiobject]#ParentId# is the API name of the lookup from _Address_ to _Account_.
+** [.apiobject]#'{!Account.Id}'# is a keyword that is replaced with the ID of the _Account_ for which the order is created.
++
 image:configure-address-settings-2020-05-07.png[]
 . Click *Save*.
 

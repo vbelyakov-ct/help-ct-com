@@ -1,13 +1,12 @@
 = Object Setting Field Reference
 
-The *Object Setting* record type is intended to configure the mapping of
-the target package objects.
+The _Object Setting_ record type is intended to configure the mapping of  the target package objects.
 
-This is a primary setting that is configured only once for the instance.
+NOTE: his is a primary setting that is configured only once for the instance.
 
 '''''
 
-Object record type API name: ObjectSettings
+Object record type API name: [.apiobject]#ObjectSettings#
 
 '''''
 
@@ -16,29 +15,27 @@ Object record type API name: ObjectSettings
 |*Field* |*API Name* |*Type* |*Description*
 
 |Activity Object
-|[.apiobject]#orders__ActivityObject__c# |PicklistT a|
+|[.apiobject]#orders\__ActivityObject__c# |PicklistT a|
 Select the [.object]#Activity# object:
 
 * CPG Activity
 * Pharma Activity
 
 |Address Objects
-|[.apiobject]#orders__AddressObject__c# |Text(255)
-|A custom object(s) that stores the address for deliveries (separated by
-a comma, without a blank space).[NOTE] ====
-xref:admin-guide/managing-ct-orders/delivery-management/delivery-field-reference.adoc[The Delivery object] requires a
-reference field to this field, for example, the lookup to
-[.apiobject]#Address__c ==== field.#
+|[.apiobject]#orders\__AddressObject__c# |Text(255)
+a|A custom object(s) that stores the address for deliveries (separated by a comma, without a blank space).
+
+NOTE: xref:admin-guide/managing-ct-orders/delivery-management/delivery-field-reference.adoc[The Delivery object] requires a reference field to this field, for example, the lookup to [.apiobject]#Address__c# field.
 
 |Group Member Object
-|[.apiobject]#orders__GroupMemberObject__c#
+|[.apiobject]#orders\__GroupMemberObject__c#
 |Picklist a|
 Select the [.object]#Group Member# object:
 
 * CPG Group Member
 * Pharma Group Member
 
-|Group Object |[.apiobject]#orders__GroupObject__c#
+|Group Object |[.apiobject]#orders\__GroupObject__c#
 |Picklist a|
 Select the [.object]#Group# object:
 
@@ -46,29 +43,24 @@ Select the [.object]#Group# object:
 * Pharma Group
 
 |Product Component Object
-|[.apiobject]#orders__ProductComponentObject__c#
-|Picklist a|
-Select the [.object]#Product Component# object:
+|[.apiobject]#orders\__ProductComponentObject__c#
+|Picklist a| Select the [.object]#Product Component# object:
 
 * CPG Product Component
 * Pharma Product Component
 
 |Product Object
-|[.apiobject]#orders__ProductObject__c# |Picklist a|
-Select the [.object]#Product# object.
+|[.apiobject]#orders\__ProductObject__c# |Picklist a| Select the [.object]#Product# object.
 
 * CPG Product
 * Pharma Object
 * Salesforce Object
 
-|SKU Field |[.apiobject]#orders__SKUField__c#
-|Text(255) a|
-Specify the field API name, which carries an SKU attribute for the
-object specified in the orders__ProductObject__c field.
+|SKU Field |[.apiobject]#orders\__SKUField__c#
+|Text(255) a| Specify the field API name, which carries an SKU attribute for the
+object specified in the [.apiobject]#orders\__ProductObject__c# field.
 
-* The SKU attribute is a checkbox that defines whether the product
-record can be added to an order.
-* It identifies the product SKU record from other product records used
-to create a hierarchy (brand, family, etc.).
+* The SKU attribute is a checkbox that defines whether the product record can be added to an order.
+* It identifies the product SKU record from other product records used to create a hierarchy (brand, family, etc).
 
 |===

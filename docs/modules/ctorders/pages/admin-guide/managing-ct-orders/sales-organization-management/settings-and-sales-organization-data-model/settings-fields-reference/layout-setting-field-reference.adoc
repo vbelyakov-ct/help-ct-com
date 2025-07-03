@@ -1,16 +1,12 @@
 = Layout Setting Field Reference
+:toc:
 
-The _Layout Setting_ record type is intended to store configurations of
-xref:admin-guide/managing-ct-orders/catalog-management/index.adoc[Catalog], xref:admin-guide/managing-ct-orders/discount-management/promotions.adoc[Promotions],
-xref:how-to-set-up-delivery-summary[Delivery Summary] and
-xref:order-management[Order] layouts for Salesforce and the CT
-Mobile app.
-
-:toc: :toclevels: 3
+The _Layout Setting_ record type is intended to store configurations of xref:admin-guide/managing-ct-orders/catalog-management/index.adoc[Catalog], xref:admin-guide/managing-ct-orders/discount-management/promotions.adoc[Promotions],
+xref:admin-guide/managing-ct-orders/delivery-management/how-to-set-up-delivery-summary.adoc[Delivery Summary] and xref:admin-guide/managing-ct-orders/order-management/index.adoc[Order] layouts for Salesforce and the CT Mobile app.
 
 '''''
 
-Object record type API name:[.apiobject]#LayoutSetting#
+Object record type API name: [.apiobject]#LayoutSetting#
 
 '''''
 
@@ -18,197 +14,147 @@ Object record type API name:[.apiobject]#LayoutSetting#
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Object |[.apiobject]#orders__Object__c#
-|Text(255) a|
-Specify the API name of the object for which the settings are
-configured.
+|Object |[.apiobject]#orders\__Object__c#
+|Text(255) a| Specify the API name of the object for which the settings are configured.
 
-If set, it will be prioritized over the
-[.apiobject]#orders__ParentObject__c# field.
+NOTE: If set, it will be prioritized over the
+[.apiobject]#orders\__ParentObject__c# field.
 
 |Parent Object
-|[.apiobject]#orders__ParentObject__c# |Text(255) a|
-Specify the API name of the parent object for which the settings are
-configured if the object has master-detail relationships with another
-object.
-[NOTE] ==== If the object does not have the master-detail
-relationship with the object specified in the
-[.apiobject]#orders__Object__c ==== field, the setting
-will not be applied.#
+|[.apiobject]#orders\__ParentObject__c# |Text(255) a| Specify the API name of the parent object for which the settings are configured if the object has master-detail relationships with another object.
 
-If set, the [.apiobject]#orders__RecordType__c# and
-[.apiobject]#orders__SalesOrganizationId__c# are
-specified for a parent object.
+NOTE: If the object does not have the master-detail relationship with the object specified in the [.apiobject]#orders\__Object__c# field, the setting will not be applied.
 
-|Record Type |[.apiobject]#orders__RecordType__c#
-|Text(255) a|
-A record type for which the layout is configured.
+If set, the [.apiobject]#orders\__RecordType__c# and [.apiobject]#orders\__SalesOrganizationId__c# are specified for a parent object.
 
-[NOTE] ==== Pay attention that
-xref:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/ct-order-field-reference.adoc[the CT Order object] has no record
-types by default. ====
+|Record Type |[.apiobject]#orders\__RecordType__c#
+|Text(255) a| A record type for which the layout is configured.
 
-[NOTE] ==== To use different layouts depending on the
-[.object]#CT Order ==== record type, create a separate record of
-this setting for each desired record type.#
+[NOTE]
+====
+* Pay attention that xref:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/ct-order-field-reference.adoc[the CT Order object] has no record
+types by default.
+* To use different layouts depending on the [.object]#CT Order# record type, create a separate record of this setting for each desired record type.
+====
 
 * If not specified, the settings will be applied to all record types.
-* If[.apiobject]#orders__ParentObject__c# is set, the
-record type should be specified for this object. If not set, the same
-layout will be applied for the objects specified in the
-[.apiobject]#orders__Object__c# or
-[.apiobject]#orders__ParentObject__c# fields.
+* If [.apiobject]#orders\__ParentObject__c# is set, the record type should be specified for this object. If not set, the same layout will be applied for the objects specified in the [.apiobject]#orders\__Object__c# or [.apiobject]#orders\__ParentObject__c# fields.
 
 |Sales Organization
-|[.apiobject]#orders__SalesOrganizationId__c#
-|Lookup(Sales Organization) |[NOTE] ==== If
-orders__ParentObject__c is set, the [.object]#Sales
-Organization ==== should be specified for this object.#
+|[.apiobject]#orders\__SalesOrganizationId__c#
+|Lookup(Sales Organization) a|include::partial$sales-org-field.adoc[]
+
+NOTE: If [.apiobject]#orders\__ParentObject__c# is set, the _Sales Organization_ should be specified for this object.
 
 |Fields to Display
-|[.apiobject]#orders__FeildsToDisplay__c# |Long Text
-Area(1000) a|
-Specify the list of fields that will be displayed on the layout
-(separated by a comma, without spaces).
+|[.apiobject]#orders\__FeildsToDisplay__c# |Long Text Area(1000) a|
+Specify the list of fields that will be displayed on the layout (separated by a comma, without spaces).
 
-[TIP] ==== Support display fields on the related
-[.object]#Product ==== object in the
-[.apiobject]#ParentId__r.Field# format, only as read-only
-fields on the Catalog Line Item and Promotion Line Item layouts.#
+TIP: Support display fields on the related [.object]#Product# object in the [.apiobject]#ParentId__r.Field# format, only as read-only fields on the Catalog Line Item and Promotion Line Item layouts.
 
 |Required Attributes
-|[.apiobject]#orders__RerquiredAttributes__c#
-|Text(255) a|
-For the specified fields in the
-[.apiobject]#orders__FeildsToDisplay__c# field, list
-correspondingly the attributes true/false (separated by the comma,
-without spaces) to define which fields should be mandatorily filled
-out. An empty value of the attribute is
-applied as [.apiobject]#false#.
-
-
+|[.apiobject]#orders\__RerquiredAttributes__c#
+|Text(255) a| For the specified fields in the [.apiobject]#orders\__FeildsToDisplay__c# field, list correspondingly the attributes true/false (separated by the comma, without spaces) to define which fields should be mandatorily filled out. An empty value of the attribute is applied as [.apiobject]#false#.
 
 The specified fields must be of the following types:
 
-Fields of any other type will remain read-only regardless of the applied
-settings.
+NOTE: Fields of any other type will remain read-only regardless of the applied settings.
 
-[width="100%",cols="34%,33%,33%",]
+[frame="none",grid="none"]
 !===
-! ! !
+a!
+* Text
+* Number
+* Currency
+* Percent
+
+a!
+* Date
+* DateTime
+* Email
+* URL
+
+a!
+* Phone
+* PickList
+* MultiPickList
+
 !===
+
 
 |Read Only Attributes
-|[.apiobject]#orders__ReadOnlyAttributes__c#
-|Text(255) a|
-For the specified fields in the Fields to Display, list correspondingly
-the attributes[.apiobject]#true/false# (separated by the coma,
-without spaces) to define which fields should be set as read-only.
+|[.apiobject]#orders\__ReadOnlyAttributes__c#
+|Text(255) a| For the specified fields in the Fields to Display, list correspondingly the attributes [.apiobject]#true/false# (separated by the coma, without spaces) to define which fields should be set as read-only.
 
-An empty value of the attribute is applied as
-[.apiobject]#false#.
+An empty value of the attribute is applied as [.apiobject]#false#.
 
-[NOTE] ==== In the CT Mobile app, fields with this attribute
-will not be displayed on the layout, for example, when
-xref:admin-guide/workshops/workshop-4-0-working-with-offline-orders/adding-ct-orders-to-the-ct-mobile-app-4-0.adoc[creating a new
-order]. ====
+NOTE: In the CT Mobile app, fields with this attribute will not be displayed on the layout, for example, when xref:admin-guide/workshops/workshop-4-0-working-with-offline-orders/adding-ct-orders-to-the-ct-mobile-app-4-0.adoc[creating a new order].
 
-Some fields are filled automatically on the objects when a product is
-being added and have always a read-only status.
+Some fields are filled automatically on the objects when a product is being added and have always a read-only status.
 
-*[.object]#Order Line Item#:
-**[.apiobject]#orders__ListPrice__c#
-**[.apiobject]#orders__CatalogId__c
-orders__CatalogLineItemId__c#
-**[.apiobject]#orders__FreebieConditionId__c#
-**[.apiobject]#orders__FreebieLevelId__c,
-orders__FreebieTypeId__c#
-**[.apiobject]#orders__OrderId__c#
-**[.apiobject]#orders__ParentId__c#
-**[.apiobject]#orders__PriceBookId__c#
-**[.apiobject]#orders__PriceBookLineItemId__c#
-**[.apiobject]#orders__Product2Id__c#
-**[.apiobject]#orders__ProductId__c#
-**[.apiobject]#orders__ProductComponentId__c#
-**[.apiobject]#orders__PromotionId__c#
-**[.apiobject]#orders__PromotionLineItemId__c#
-*[.object]#OM Settings#:
-**[.apiobject]#orders__QuantityField__c#
+* [.object]#Order Line Item#:
+** [.apiobject]#orders\__ListPrice__c#
+** [.apiobject]#orders\__CatalogId__c#
+** [.apiobject]#orders\__CatalogLineItemId__c#
+** [.apiobject]#orders\__FreebieConditionId__c#
+** [.apiobject]#orders\__FreebieLevelId__c#, [.apiobject]#orders\__FreebieTypeId__c#
+** [.apiobject]#orders\__OrderId__c#
+** [.apiobject]#orders\__ParentId__c#
+** [.apiobject]#orders\__PriceBookId__c#
+** [.apiobject]#orders\__PriceBookLineItemId__c#
+** [.apiobject]#orders\__Product2Id__c#
+** [.apiobject]#orders\__ProductId__c#
+** [.apiobject]#orders\__ProductComponentId__c#
+** [.apiobject]#orders\__PromotionId__c#
+** [.apiobject]#orders\__PromotionLineItemId__c#
+* [.object]#OM Settings#:
+** [.apiobject]#orders\__QuantityField__c#
 
 |Displayed Field Width
-|[.apiobject]#orders__DisplayedFieldWidth__c#
-|Text(255) a|
-Set fields width as a percentage of visible part of the screen in the
+|[.apiobject]#orders\__DisplayedFieldWidth__c#
+|Text(255) a| Set fields width as a percentage of visible part of the screen in the
 following format:
+
 [.apiobject]#'Product Name,Quantity,Field1,Field2,..,FieldN'#
-where _Field1_, _Field2_, _FieldN_ are fields listed in the *Fields To
-Display*.
+
+where _Field1_, _Field2_, _FieldN_ are fields listed in the *Fields To Display*.
 
 Use *0* for *default width.*
 
-[NOTE] ==== Applies only to the [.object]#Order Line
-Item ==== layout.#
+NOTE: Applies only to the [.object]#Order Line Item layout#.
 
 |Order Currency |CurrencyIsoCode |Picklist a|
-Available since CT Mobile version 2.9
+NOTE: Available since CT Mobile version 2.9
 
-Applies to xref:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/ct-order-field-reference.adoc[CT Order] related objects
-(xref:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/order-line-item-field-reference.adoc[Order Line Item],
-xref:admin-guide/managing-ct-orders/delivery-management/delivery-line-item-field-reference.adoc[Delivery Line Item],
-xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/calculated-discount-field-reference.adoc[Calculated Discount]) and
-requires
-https://help.salesforce.com/s/articleView?id=sf.admin_enable_multicurrency.htm&type=5[multiple
-currency activation]. Is the standard Salesforce field to select
-currency while xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc#h2_2044385779[creating order in
-the CT Mobile app].  Do not change the currency after saving the order.
+Applies to xref:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/ct-order-field-reference.adoc[CT Order] related objects (xref:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/order-line-item-field-reference.adoc[Order Line Item], xref:admin-guide/managing-ct-orders/delivery-management/delivery-line-item-field-reference.adoc[Delivery Line Item], xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/calculated-discount-field-reference.adoc[Calculated Discount]) and requires link:https://help.salesforce.com/s/articleView?id=sf.admin_enable_multicurrency.htm&type=5[multiple currency activation]. Is the standard Salesforce field to select currency while xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc#h2_2044385779[creating order in the CT Mobile app].  Do not change the currency after saving the order.
 
-|===
-
-[cols=",",]
-|===
-|image:info.png[] |For lookup
-fields, you can set
-up https://help.salesforce.com/s/articleView?id=sf.fields_lookup_filters.htm&type=5[lookup
-filters] to control data that should be displayed in *Delivery Summary*.
+NOTE: For lookup fields, you can set up link:https://help.salesforce.com/s/articleView?id=sf.fields_lookup_filters.htm&type=5[lookup filters] to control data that should be displayed in *Delivery Summary*.
 |===
 
 [[h2_966181550]]
-=== Required Layouts
+== Required Layouts
 
-It is necessary to create the *Settings* record with the *Layout
-Setting* record type for the following objects:
+It is necessary to create the _Settings_ record with the _Layout Setting_ record type for the following objects:
 
-*[.object]#Catalog Line Item# and [.object]#Catalog
-Assignment# to have the ability xref:admin-guide/managing-ct-orders/catalog-management/index.adoc[to add
-products to a catalog and assign accounts].
-[NOTE] ==== It is highly recommended to set up a single catalog
-layout for an instance. ====
-*[.object]#Promotion Line Item# and [.object]#Promotion
-Assignment# to have the ability xref:admin-guide/managing-ct-orders/discount-management/promotions.adoc#h2_492952072[to
-add products to the promotion and assign accounts].
-*[.object]#Order Line Item# to view
-xref:online-order[product details in the order cart].
-[NOTE] ==== It is highly recommended to set up the order layout
-for each *Sales Organization* separately. ====
+* [.object]#Catalog Line Item# and [.object]#Catalog Assignment# to have the ability xref:admin-guide/managing-ct-orders/catalog-management/index.adoc[to add products to a catalog and assign accounts].
++
+NOTE: It is highly recommended to set up a single catalog layout for an instance.
+* [.object]#Promotion Line Item# and [.object]#Promotion Assignment# to have the ability xref:admin-guide/managing-ct-orders/discount-management/promotions.adoc#h2_492952072[to add products to the promotion and assign accounts].
+* [.object]#Order Line Item# to view xref:admin-guide/managing-ct-orders/order-management/online-order.adoc[product details in the order cart].
++
+NOTE: It is highly recommended to set up the order layout for each _Sales Organization_ separately.
 
-
-
-Additionally, xref:admin-guide/workshops/workshop-4-0-working-with-offline-orders/adding-ct-orders-to-the-ct-mobile-app-4-0.adoc#h2_552129946[customize
-a mini layout] for the [.object]#CT Order# object to display
-desired fields when creating a new order in the CT Mobile app.
+Additionally, xref:admin-guide/workshops/workshop-4-0-working-with-offline-orders/adding-ct-orders-to-the-ct-mobile-app-4-0.adoc#h2_552129946[customize a mini layout] for the [.object]#CT Order# object to display desired fields when creating a new order in the CT Mobile app.
 
 [[h2_2072530411]]
-=== Search the Appropriate Layout
+== Search the Appropriate Layout
 
-The *Settings* record with the *Layout Settings* record type will be
-applied when the criteria are met. The search is carried out in the
-following order:
+The _Settings_ record with the _Layout Settings_ record type will be applied when the criteria are met. The search is carried out in the following order:
 
-
-
-[width="100%",cols="^50%,^50%",]
+[width="100%",cols="50%,50%",]
 |===
-|*Salesforce* |*CT Mobile*
+^|*Salesforce* ^|*CT Mobile*
+
 a|
 . With the specified record type and sales organization.
 . With the specified record type.

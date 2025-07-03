@@ -30,7 +30,7 @@ xref:installing-the-ct-orders-package#self-api[here].
 xref:condition-level-field-reference[Condition Level] object are
 now validated for negative values.
 * New *Assigned On Order* checkbox on the
-xref:promotion-field-reference[Promotion] object. If enabled, the
+xref:admin-guide/managing-ct-orders/discount-management/promotion-data-model/promotion-field-reference.adoc[Promotion] object. If enabled, the
 promotion is displayed in the order screen.
 * The *Payment Terms* column on the *Discount Management* tab is now
 hidden by default.
@@ -180,7 +180,7 @@ _less_ and _lessOrEqual_ operators.
 
 * In the xref:configuring-object-setting[Object Setting], The
 *isActive* field is used disregarding *Object Settings SKU* field value.
-* xref:online-order#h2_735642631[Products from the parent catalog]
+* xref:admin-guide/managing-ct-orders/order-management/online-order.adoc#h2_735642631[Products from the parent catalog]
 cannot be added to an order.
 * Checkboxes defined as optional, appear as required on the
 xref:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/order-line-item-field-reference.adoc[Order Line Item] and
@@ -200,7 +200,7 @@ setting] is set.
 * Negative values are allowed for xref:admin-guide/managing-ct-orders/product-validation-in-order/limit-rules/index.adoc[Limit Rules] and
 can be applied for an order.
 * The bundle structure is not displayed when clicking on the bundle icon
-in the left menu of the xref:online-order#h2_735642631[order].
+in the left menu of the xref:admin-guide/managing-ct-orders/order-management/online-order.adoc#h2_735642631[order].
 * Info icon displays more than 3 xref:admin-guide/managing-ct-orders/product-validation-in-order/product-availability/index.adoc[Product
 Availability] entries.
 * Validation for extra parenthesis at the end of JSON in
@@ -219,7 +219,7 @@ switching between this and another tabs.
 *Discount Rate* field value in the
 xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/index.adoc[Condition] record.
 * After decreasing the width of the
-xref:online-order#h2_915453080[order cart] window, the *Add* button
+xref:admin-guide/managing-ct-orders/order-management/online-order.adoc#h2_915453080[order cart] window, the *Add* button
 becomes hidden by the side panel.
 * Different validation notifications for empty *Limit Quantity* and
 *Limit Amount* fields in xref:admin-guide/managing-ct-orders/product-validation-in-order/quotas/index.adoc[Quotas].
@@ -692,7 +692,7 @@ embedded HTML template.
 https://help.salesforce.com/articleView?id=sf.fields_about_field_validation.htm&type=5[the
 standard Salesforce validations] to control conditions applied during
 the order creation.
-* xref:online-order#h3_1143528965[Editable fields] allow entering
+* xref:admin-guide/managing-ct-orders/order-management/online-order.adoc#h3_1143528965[Editable fields] allow entering
 data in custom fields in real-time.
 * Decreased processing time when adding many products from catalogs and
 promotions.
@@ -743,11 +743,11 @@ details for each delivery before finalization.
 * Perform an xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc#h3_1847490047[advanced search in
 orders] in all fields among all products in *Catalog* or *Promotion*
 sections and already added to the order cart, including freebies.
-* With xref:online-order#h3_2083175848[mass actions in order], add
+* With xref:admin-guide/managing-ct-orders/order-management/online-order.adoc#h3_2083175848[mass actions in order], add
 or remove all products added to the cart from a selected
 [.object]#Catalog# or [.object]#Promotion# with one
 click.
-* Use xref:online-order#h2_734239727[the active price filter] to
+* Use xref:admin-guide/managing-ct-orders/order-management/online-order.adoc#h2_734239727[the active price filter] to
 apply the filter to all records in your order cart's Catalog and
 Promotion sections and display only actual products with assigned
 [.object]#Price Book# and *List Price*.
@@ -807,7 +807,7 @@ Manage multi-address deliveries.
 [[h3_1531464550]]
 ==== Other Improvements​
 
-xref:online-order[Online Order] is now aligned due to its life
+xref:admin-guide/managing-ct-orders/order-management/online-order.adoc[Online Order] is now aligned due to its life
 cycle with the following features:
 
 * Validation for the order on the *On Hold* stage.

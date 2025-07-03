@@ -1,14 +1,12 @@
 = Sales Organization Field Reference
 
-the [.object]#Sales Organization# object is intended to
-represent the customer organization based, for example, on territory or
-departments.
+The [.object]#Sales Organization# object is intended to represent the customer organization based, for example, on territory or departments.
 
-At least one *Sales Organization* should be created.
+At least one _Sales Organization_ should be created.
 
 '''''
 
-Object API name: orders__SalesOrganization__c.
+Object API name: [.apiobject]#orders\__SalesOrganization__c#.
 
 '''''
 
@@ -16,22 +14,17 @@ Object API name: orders__SalesOrganization__c.
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|External Id |[.apiobject]#orders__ExternalId__c#
+|External Id |[.apiobject]#orders\__ExternalId__c#
 |Text(255) (External ID) (Unique Case Sensitive) a|
-Specify only in the case if there is a target ERP system that provides
-data with accounts, delivery addresses, price books, etc.
+Specify only in the case if there is a target ERP system that provides data with accounts, delivery addresses, price books, etc.
 
-You can add all data using in one file with the .csv extension.
+TIP: You can add all data using in one file with the `.csv` extension.
 
-|Logging Mode |[.apiobject]#orders__LoggingMode__c#
+|Logging Mode |[.apiobject]#orders\__LoggingMode__c#
 |Picklist a|
-[WARNING] ==== At least _Read_ permission to this field is
-required to work with xref:order-management[orders]. ====
+WARNING: At least _Read_ permission to this field is required to work with xref:admin-guide/managing-ct-orders/order-management/index.adoc[orders].
 
-This field is used to define information to store in the
-xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/calculated-discount-field-reference.adoc[Calculated Discounts]
-records. For more information, refer to xref:discount-logs[Discount
-Logs].
+This field is used to define information to store in the xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/calculated-discount-field-reference.adoc[Calculated Discounts] records. For more information, refer to xref:admin-guide/managing-ct-orders/discount-management/discount-logs.adoc[Discount Logs].
 
 Available values:
 
@@ -41,53 +34,40 @@ Available values:
 * All
 
 |Log Request Trigger
-|[.apiobject]#orders__LogRequestTrigger__c# |Picklist a|
-This field is responsible for determining when and for which records
-logs from Web Service will be requested. Available values:
+|[.apiobject]#orders\__LogRequestTrigger__c# |Picklist a|
+This field is responsible for determining when and for which records logs from Web Service will be requested. Available values:
 
-[NOTE] ==== The request will be sent only if
-the orders__LoggingMode__c ====  field is not empty, the
-[.apiobject]#orders__LogStatus__c# field on the
-[.object]#Order# object has the _Not Requested_ value, and the
-[.apiobject]#orders__LogId__c# field on the
-[.object]#Order# object is empty.
+NOTE: The request will be sent only if the [.apiobject]#orders\__LoggingMode__c#  field is not empty, the [.apiobject]#orders\__LogStatus__c# field on the [.object]#Order# object has the _Not Requested_ value, and the [.apiobject]#orders\__LogId__c# field on the [.object]#Order# object is empty.
 
-It is possible to schedule the batch.
+TIP: It is possible to schedule the batch.
 
 * Save Order
 * Finalize Order
 
-|Sales Organization |[.apiobject]#Name# |Text(80) |The
-business unit for which the settings are configured.
+|Sales Organization |[.apiobject]#Name# |Text(80) |The business unit for which the settings are configured.
 
 |Sales Point |[.apiobject]#orders_SalesPoint__c#
-|Picklist a|
-Specify the object to work with. Available Values:
+|Picklist a| Specify the object to work with. Available Values:
 
 * Account
 * Retail Store
 
-If the value is not set, the CT Orders will work with the *Account*
-object.
+[NOTE]
+====
+* If the value is not set, the CT Orders will work with the [.object]#Account# object.
 
-Please note that you cannot change the value when there are:
+* Please note that you cannot change the value when there are:
 
-* *Promotion* and/or *Catalog* with the related *Catalog Assignment* and
-*Promotion Assignment* records are created for the current *Sales
-Organization* record;
-* *Promotion* and/or *Catalog* has the related dynamic group;
-* related unfinalized *CT Order* records.
+* [.object]#Promotion# and/or [.object]#Catalog# with the related _Catalog Assignment_ and _Promotion Assignment_ records are created for the current _Sales Organization_ record;
+* [.object]#Promotion# and/or [.object]#Catalog# has the related dynamic group;
+* related unfinalized _CT Order_ records.
+====
+
 
 |Turn Off Closed Orders Duplication
-|[.apiobject]#orders__IsTurnOffClosedOrdersDuplication__c#
-|Checkbox a|
-If enabled, the deduplication logic is applied to processing the
-completed orders. Duplicated records will not be created if a user tries
-to complete an order which is the same as the order already completed
-online.
+|[.apiobject]#orders\__IsTurnOffClosedOrdersDuplication__c#
+|Checkbox a| If enabled, the deduplication logic is applied to processing the completed orders. Duplicated records will not be created if a user tries to complete an order which is the same as the order already completed online.
 
-[TIP] ==== For more information, refer to
-xref:admin-guide/managing-ct-orders/order-change-manager/index.adoc#h3_1662160851[Deduplication Logic for the
-Finalized Order]. ====
+TIP: For more information, refer to xref:admin-guide/managing-ct-orders/order-change-manager/index.adoc#h3_1662160851[Deduplication Logic for the Finalized Order].
 
 |===

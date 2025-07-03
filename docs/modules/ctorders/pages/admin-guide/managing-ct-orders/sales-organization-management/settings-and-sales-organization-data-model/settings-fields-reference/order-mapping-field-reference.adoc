@@ -1,11 +1,14 @@
 = Order Mapping Field Reference
 
-The **Order Mapping **record type is intended for storing
-[.object]#Order# fields that are used in discount calculations.
+The _Order Mapping_ record type is intended for storing [.object]#Order# fields that are used in discount calculations.
+
+include::partial$om-required-setting.adoc[]
+
+include::partial$override-price-and-quantity-fields.adoc[]
 
 '''''
 
-Object record type API name:[.apiobject]#OrderMapping#
+Object record type API name: [.apiobject]#OrderMapping#
 
 '''''
 
@@ -14,18 +17,14 @@ Object record type API name:[.apiobject]#OrderMapping#
 |*Field* |*API Name* |*Type* |*Description*
 
 |Sales Organization
-|[.apiobject]#orders__SalesOrganizationId__c#
-|Lookup(Sales Organization) |
+|[.apiobject]#orders\__SalesOrganizationId__c#
+|Lookup(Sales Organization) a|include::partial$sales-org-field.adoc[]
 
 |Total Discount Field
-|[.apiobject]#orders__TotalDiscountField__c#
-|Text(255) |The API name of the field specified in
-the [.apiobject]#orders__TotalDiscountField__c# field of
-the corresponding *Order Line Item Mapping* record.
+|[.apiobject]#orders\__TotalDiscountField__c#
+|Text(255) |The API name of the field specified in the [.apiobject]#orders\__TotalDiscountField__c# field of the corresponding _Order Line Item Mapping_ record.
 
 |Total Price Field
-|[.apiobject]#orders__TotalPriceField__c#
-|Text(255)  |The API name of the field specified in
-the [.apiobject]#orders__TotalPriceField__c# field of
-the corresponding *Order Line Item Mapping* record.
+|[.apiobject]#orders\__TotalPriceField__c#
+|Text(255)  |The API name of the field specified in the [.apiobject]#orders\__TotalPriceField__c# field of the corresponding _Order Line Item Mapping_ record.
 |===

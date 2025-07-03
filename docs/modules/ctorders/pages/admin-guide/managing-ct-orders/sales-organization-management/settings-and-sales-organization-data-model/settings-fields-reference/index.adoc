@@ -1,18 +1,13 @@
 = Settings Fields Reference
 
-The [.object]#Settings# object are the main settings that store
-all configurations of the CT Orders package and configurations to
-link CT Orders objects with the target system, such as CT CPG or CT
-Pharma.
+The [.object]#Settings# object are the main settings that store all configurations of the CT Orders package and configurations to link CT Orders objects with the target system, such as CT CPG or CT Pharma.
 
 '''''
 
-Object API name: [.apiobject]#orders__OMSettings__c#
+Object API name: [.apiobject]#orders\__OMSettings__c#
 
 '''''
 
-If no *Sales Organization* is defined for an OM Setting record, it will
-be applied globally to all records without configured *Sales
-Organization*.
+NOTE: If no _Sales Organization_ is defined for an _OM Setting_ record, it will be applied globally to all records without configured _Sales Organization_.
 
 The object has several record types per each required setting.

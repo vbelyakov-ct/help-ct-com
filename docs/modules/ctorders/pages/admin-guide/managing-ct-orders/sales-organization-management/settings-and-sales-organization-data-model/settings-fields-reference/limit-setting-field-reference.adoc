@@ -1,24 +1,17 @@
 = Limit Setting Field Reference
 
-The *Limit Setting* record type is intended to store delivery limit
-setups for an order.
+The _Limit Setting_ record type is intended to store delivery limit setups for an order.
 
-
-
-The *Settings* record with the *Limit Settings* record type will be
-applied when the criteria are met. The search is carried out in the
-following order:
+The _Settings_ record with the _Limit Settings_ record type will be applied when the criteria are met. The search is carried out in the following order:
 
 . With the specified order type and sales organization.
 . With the specified sales organization.
 . Without specified order type and sales organization.
-. If there is no appropriate record then the maximum number of
-deliveries is 19, and the first date of delivery cannot be earlier than
-today.
+. If there is no appropriate record then the maximum number of deliveries is 19, and the first date of delivery cannot be earlier than today.
 
 '''''
 
-Object record type API name:[.apiobject]#LimitSetting#
+Object record type API name: [.apiobject]#LimitSetting#
 
 '''''
 
@@ -26,25 +19,22 @@ Object record type API name:[.apiobject]#LimitSetting#
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|# of Days till First Delivery
-|[.apiobject]#orders__DaysToFirstDelivery__c#
-|Number a|
-The number of days before the closest possible delivery date.
+| # of Days till First Delivery
+|[.apiobject]#orders\__DaysToFirstDelivery__c# |Number a| The number of days before the closest possible delivery date.
 
-For example, if the value is 3 and the order is placed on Monday, the
-closest possible delivery is on Thursday.
+For example, if the value is 3 and the order is placed on Monday, the closest possible delivery is on Thursday.
 
 |# of Days till Last Delivery
-|[.apiobject]#orders__DaysToLastDelivery__c# |Number
+|[.apiobject]#orders\__DaysToLastDelivery__c# |Number
 |The number of days left for the last possible delivery date.
 
 |Max # of Deliveries per Order
-|[.apiobject]#orders__MaxDeliveriesPerOrder__c#
-|Number |A maximum number of deliveries for a user in one order.
-[NOTE] ==== For a single order, you cannot specify more than 19
-deliveries.  ====
+|[.apiobject]#orders\__MaxDeliveriesPerOrder__c#
+|Number a|A maximum number of deliveries for a user in one order.
 
-|Order Type |[.apiobject]#orders__OrderType__c#
+NOTE: For a single order, you cannot specify more than 19 deliveries.
+
+|Order Type |[.apiobject]#orders\__OrderType__c#
 |Text(255) a|
 The order type for which the settings are configured.
 
@@ -52,14 +42,13 @@ The order type for which the settings are configured.
 * Return
 * Pre-sale
 
-If not set, the setting will be applied for all orders of the Sales Org
-in the orders__SalesOrganizationId__c field.
+NOTE: If not set, the setting will be applied for all orders of the Sales Org in the orders\__SalesOrganizationId__c field.
 
 |Sales Organization
-|[.apiobject]#orders__SalesOrganizationId__c# |Lookup
-(Sales Organization) a|
+|[.apiobject]#orders\__SalesOrganizationId__c# |Lookup
+(Sales Organization) a|include::partial$sales-org-field.adoc[]
 
-The specified Sales Org prioritizes over the specified order type in
-the orders__OrderType__c field.
+NOTE: The specified Sales Org prioritizes over the specified order type in
+the orders\__OrderType__c field.
 
 |===

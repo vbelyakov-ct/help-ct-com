@@ -1,0 +1,10 @@
+By default, the *Quantity* field specifies an integer number of products and prices are rounded to 2 decimal places in price fields, for example, in the *Total Price* field, on the [.object]#Order#, [.object]#Order Line Item#, [.object]#Delivery#, and [.object]#Delivery Line Item# objects.
+
+If you want to calculate quantity in other units, such as ml, or change the rounding rules for prices, create custom *Quantity* and price fields on the above objects and specify these fields in the appropriate settings:
+
+* xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/delivery-line-item-mapping-field-settings.adoc[Delivery Line Item Mapping]
+* xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/delivery-mapping-field-settings.adoc[Delivery Mapping]
+* xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/order-line-item-mapping-field-settings.adoc[Order Line Item Mapping]
+* xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/order-mapping-field-reference.adoc[Order Mapping]
+
+Otherwise, specify the standard fields, e.g., [.apiobject]#orders\__Quantity__c#.

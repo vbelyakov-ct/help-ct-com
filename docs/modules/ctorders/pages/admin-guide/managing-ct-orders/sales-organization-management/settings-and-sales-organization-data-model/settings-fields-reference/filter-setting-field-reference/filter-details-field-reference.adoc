@@ -1,12 +1,10 @@
 = Filter Details Field Reference
 
-The *Filter Details* field contains JSON with filter setting for the
-order cart. Each object in *Filter Details* array can have the following
-keys:
+The *Filter Details* field contains JSON with filter setting for the order cart. Each object in *Filter Details* array can have the following keys:
 
 '''''
 
-Field API name:[.apiobject]#FilterDetails #
+Field API name: [.apiobject]#FilterDetails#
 
 '''''
 
@@ -14,23 +12,17 @@ Field API name:[.apiobject]#FilterDetails #
 |===
 |*Key* |*Required/Optional* |*Type* |*Description*
 
-|[.apiobject]#condition# |Optional |List of objects |List of
-additional conditions that are applied to the object key. See available
-keys in the table below.
+|[.apiobject]#condition# |Optional |List of objects |List of additional conditions that are applied to the object key. See available keys in the table below.
 
 |[.apiobject]#defaultVisibility# |Optional |Boolean a|
-Specifies if the filter will be displayed when first opening filter
-options pop-up. Available values:
+Specifies if the filter will be displayed when first opening filter options pop-up. Available values:
 
-* _true_ (the filter will be displayed when first opening filter options
-pop-up)
+* _true_ (the filter will be displayed when first opening filter options pop-up)
 * _false_ (default)
 
-|[.apiobject]#field# |Required |String |API name of the
-field that will be searched for the filter value.
+|[.apiobject]#field# |Required |String |API name of the field that will be searched for the filter value.
 
-|[.apiobject]#filterLabel# |Required |String |Name of the
-filter that will be displayed in UI.
+|[.apiobject]#filterLabel# |Required |String |Name of the filter that will be displayed in UI.
 
 |[.apiobject]#filterType# |Required |Enum a|
 Determines the way to handle filter value. Available values:
@@ -38,16 +30,9 @@ Determines the way to handle filter value. Available values:
 * _text_
 * _picklist_ (multiple choice picklist)
 
-|[.apiobject]#lookupPath# |Optional |String |API name of
-the lookup field to the [.object]#Product# object from the
-object specified in the [.apiobject]#object# key. If not
-specified, the package lookup to [.object]#Product# object is
-used, i.e[.apiobject]#orders__ProductId__c#.
+|[.apiobject]#lookupPath# |Optional |String |API name of the lookup field to the [.object]#Product# object from the object specified in the [.apiobject]#object# key. If not specified, the package lookup to [.object]#Product# object is used, i.e [.apiobject]#orders\__ProductId__c#.
 
-|[.apiobject]#object# |Optional |String |Object that will
-be used to search for the filter value. If not specified, the
-[.object]#Product# object is used as determined in
-xref:admin-guide/getting-started/setting-up-an-instance/configuring-object-setting[Object Settings].
+|[.apiobject]#object# |Optional |String |Object that will be used to search for the filter value. If not specified, the [.object]#Product# object is used as determined in xref:admin-guide/getting-started/setting-up-an-instance/configuring-object-setting.adoc[Object Settings].
 
 |[.apiobject]#operator# |Optional |Enum a|
 Handling of additional conditions. Available values:
@@ -55,31 +40,20 @@ Handling of additional conditions. Available values:
 * _AND_
 * _OR_
 
-|[.apiobject]#searchLogic# |Required |Enum a|
-Query format. Available values:
+|[.apiobject]#searchLogic# |Required |Enum a| Query format. Available values:
 
 * _basic_
-* _advanced_ (filtration of line items that have no direct relation to
-the filtering criteria or when the filter includes custom objects)
+* _advanced_ (filtration of line items that have no direct relation to the filtering criteria or when the filter includes custom objects)
 
 |===
 
-
-
-
-
-
-
-
-
-the [.apiobject]#condition# key can have the following keys:
+The [.apiobject]#condition# key can have the following keys:
 
 [width="100%",cols="15%,20%,10%,55%"]
 |===
 |*Key* |*Required/Optional* |*Type* |*Description*
 
-|[.apiobject]#field# |Required |String |Field that will be
-used in subquery.
+|[.apiobject]#field# |Required |String |Field that will be used in subquery.
 
 |[.apiobject]#operator# |Required |Enum a|
 Operator that will be used in subquery. Available values:
@@ -88,16 +62,74 @@ Operator that will be used in subquery. Available values:
 * _notEqual_
 
 |[.apiobject]#value# |Required |String, number, boolean
-|Value that will be used in subquery. Lookup fields must be provided in
-the [.apiobject]#{!Order.fieldName}# format.
+|Value that will be used in subquery. Lookup fields must be provided in the [.apiobject]#{!Order.fieldName}# format.
 |===
 
+Filter Details JSON example (click to view):
 
-
-Filter Details JSON example:
-
-[{plus}] xref:javascript:void(0)[Click to show]
-
-.[-] Click to hide[%collapsible] ====
-
+[%collapsible]
+====
+--
+[source,json]
+----
+[
+   {
+      "filterLabel":"External ID",
+      "defaultVisibility":true,
+      "filterType":"text",
+      "searchLogic":"basic",
+      "object":"CTCPG__Product__c",
+      "lookupPath":"orders__ProductId__c",
+      "field":"CTCPG__ExternalId__c"
+   },
+   {
+      "filterLabel":"Family",
+      "defaultVisibility":true,
+      "filterType":"picklist",
+      "searchLogic":"basic",
+      "object":"CTCPG__Product__c",
+      "lookupPath":"orders__ProductId__c",
+      "field":"CTCPG__Family__c"
+   },
+   {
+      "filterLabel":"Is in stock",
+      "defaultVisibility":false,
+      "filterType":"text",
+      "SearchLogic":"advanced",
+      "Object":"orders__StoreProduct__c",
+      "LookupPath":"orders__ProductId__c",
+      "Field":"orders__HasStock__c",
+      "operator":"AND",
+      "conditions":[
+         {
+            "field":"orders__AccountId__c",
+            "operator":"equal",
+            "value":"{!Order.orders__AccountId__c}"
+         },
+         {
+            "field":"orders__isActive__c",
+            "operator":"notEqual",
+            "value":false
+         }
+      ]
+   },
+   {
+      "filterLabel":"Selling Group",
+      "filterType":"picklist",
+      "searchLogic":"advanced",
+      "object":"orders__SellingGroup__c",
+      "lookupPath":"orders__ProductId__c",
+      "field":"Name",
+      "operator":"AND",
+      "conditions":[
+         {
+            "field":"orders__AccountId__c",
+            "operator":"equal",
+            "value":"{!Order.orders__AccountId__c}"
+         }
+      ]
+   }
+]
+----
+--
 ====

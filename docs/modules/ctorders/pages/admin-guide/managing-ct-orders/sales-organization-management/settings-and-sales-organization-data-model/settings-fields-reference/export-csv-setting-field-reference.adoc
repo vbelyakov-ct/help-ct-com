@@ -1,15 +1,10 @@
 = Export CSV Setting Field Reference
 
-The _Export CSV Setting_ record type is intended for storing settings
-for the exporting order details to the CSV format. Applies only
-to xref:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/order-line-item-field-reference.adoc[Order Line Item],
-xref:admin-guide/managing-ct-orders/delivery-management/delivery-field-reference.adoc[Delivery] and xref:admin-guide/managing-ct-orders/delivery-management/delivery-line-item-field-reference.adoc[Delivery
-Line Item] objects. Only one _Export CSV Setting_ record at a time can
-be applied.
+The _Export CSV Setting_ record type is intended for storing settings for the exporting order details to the CSV format. Applies only to xref:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/order-line-item-field-reference.adoc[Order Line Item], xref:admin-guide/managing-ct-orders/delivery-management/delivery-field-reference.adoc[Delivery] and xref:admin-guide/managing-ct-orders/delivery-management/delivery-line-item-field-reference.adoc[Delivery Line Item] objects. Only one _Export CSV Setting_ record at a time can be applied.
 
 '''''
 
-Object record type API name:[.apiobject]#ExportCSVSetting#
+Object record type API name: [.apiobject]#ExportCSVSetting#
 
 '''''
 
@@ -18,17 +13,9 @@ Object record type API name:[.apiobject]#ExportCSVSetting#
 |*Field Label* |*API name* |*Type* |*Description*
 
 |Default Export Columns
-|[.apiobject]#orders__DefaultExportColumns__c# |Long
-Text Area(32768) |Stores a default list of fields, which are available
-for selecting for the export to the CSV format, separated by comma. If
-it is empty, then the user must select fields for the export.
+|[.apiobject]#orders\__DefaultExportColumns__c# |Long Text Area(32768) |Stores a default list of fields, which are available for selecting for the export to the CSV format, separated by comma. If it is empty, then the user must select fields for the export.
 
-|Allow Select Export Columns |[.apiobject]#
-IsAllowedSelectExportColumns__с# |Checkbox |Enables ability of
-selecting fields that must be included in the export to the CSV format.
-Default value is _false_ (the user cannot select fields).
+|Allow Select Export Columns |[.apiobject]#IsAllowedSelectExportColumns__с# |Checkbox |Enables ability of selecting fields that must be included in the export to the CSV format. Default value is _false_ (the user cannot select fields).
 |===
 
-Both fields must have the *Write* permission for the _System
-Administrator_ and _Sales Administrator_ roles, and *Read* permission
-for the _Sales Representative_ role.
+Both fields must have the *Write* permission for the _System Administrator_ and _Sales Administrator_ roles, and *Read* permission for the _Sales Representative_ role.

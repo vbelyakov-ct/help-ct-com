@@ -1,18 +1,13 @@
 = Totals Panel Setting Field Reference
 
-The *Totals Panel Setting* record type is intended to store the
-parameters of the summarized price displayed according to conditions
-xref:order-management[on the order layout].
+The _Totals Panel Setting_ record type is intended to store the parameters of the summarized price displayed according to conditions xref:admin-guide/managing-ct-orders/order-management/index.adoc[on the order layout].
 
+The _Settings_ record with the _Totals Panel Settings_ record type record will be applied when the criteria are met. The search is carried out in the following order:
 
-
-The *Settings* record with the *Totals Panel Settings* record type
-record will be applied when the criteria are met. The search is carried
-out in the following order:
-
-[width="100%",cols="^50%,^50%",]
+[width="100%",cols="50%,50%",]
 |===
-|*Salesforce* |*CT Mobile*
+^|*Salesforce* ^|*CT Mobile*
+
 a|
 . With the specified record type and sales organization.
 . With the specified record type.
@@ -28,7 +23,7 @@ a|
 
 '''''
 
-Object record type API name:[.apiobject]#TotalsPanelSetting#
+Object record type API name: [.apiobject]#TotalsPanelSetting#
 
 '''''
 
@@ -37,39 +32,30 @@ Object record type API name:[.apiobject]#TotalsPanelSetting#
 |*Field* |*API Name* |*Type* |*Description*
 
 |Fields to Display
-|[.apiobject]#orders__FieldsToDisplay__c# |Long Text
-Area(1000) a|
-Specify the list of fields that will be displayed on the layout
-(separated by a comma, without a blank space).
+|[.apiobject]#orders\__FieldsToDisplay__c# |Long Text Area(1000) a|
+Specify the list of fields that will be displayed on the layout (separated by a comma, without a blank space).
 
-[NOTE] ==== The maximum number of fields displayed is 4. If you
-specify more, only the first four fields will be displayed. ====
+NOTE: The maximum number of fields displayed is 4. If you specify more, only the first four fields will be displayed.
 
-|Labels |[.apiobject]#orders__Labels__c# |Text(255)
-|Specify the short and more convenient labels for the fields in the
-[.apiobject]#orders__FieldsToDisplay__c# field.
+|Labels |[.apiobject]#orders\__Labels__c# |Text(255)
+|Specify the short and more convenient labels for the fields in the [.apiobject]#orders\__FieldsToDisplay__c# field.
 
-|Object |[.apiobject]#orders__Object__c# |Text(255)
-|Specify the API name of the object for which layout the settings are
-configured.
+|Object |[.apiobject]#orders\__Object__c# |Text(255)
+|Specify the API name of the object for which layout the settings are configured.
 
 |Record Type
-|[.apiobject]#orders__ReadOnlyAttributes__c#
-|Text(255) a|
-A record type for which the layout is configured.
+|[.apiobject]#orders\__ReadOnlyAttributes__c#
+|Text(255) a| A record type for which the layout is configured.
 
-If not set, the same layout will be applied for all configured layouts.
+NOTE: If not set, the same layout will be applied for all configured layouts.
 
 * If not specified, the settings will be applied to all record types.
-* If[.apiobject]#orders__Object__c# is set, the record
-type should be specified for this object.
+* If [.apiobject]#orders\__Object__c# is set, the record type should be specified for this object.
 
 |Sales Organization
-|[.apiobject]#orders__SalesOrganizationId__c#
-|Lookup(Sales Organization) a|
+|[.apiobject]#orders\__SalesOrganizationId__c#
+|Lookup(Sales Organization) a|include::partial$sales-org-field.adoc[]
 
-If[.apiobject]#orders__ParentObject__c# is set, the
-[.object]#Sales Organization# should be specified for this
-object.
+NOTE: If [.apiobject]#orders\__ParentObject__c# is set, the [.object]#Sales Organization# should be specified for this object.
 
 |===

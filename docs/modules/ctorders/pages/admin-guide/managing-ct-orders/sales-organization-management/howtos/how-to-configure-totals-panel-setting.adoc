@@ -1,26 +1,23 @@
 = How to Configure Totals Panel Setting
 
-You can also configure the Totals Panel to display *Total Price* and
-*Total Discount* per each delivery:
+include::partial$snippet-configure-totals-panel-setting.adoc[]
 
-. Create a custom field on the [.object]#CT Order# object you
-want to add to the Totals Panel. For example, let's create a formula
-field that will show the total price excluding the discounted amount:
+You can also configure the Totals Panel to display *Total Price* and *Total Discount* per each delivery:
+
+. Create a custom field on the [.object]#CT Order# object you want to add to the Totals Panel. For example, let's create a formula field that will show the total price excluding the discounted amount:
++
 image:reassigning-access-rights-after-changing-custom-tab-2021-02-04.jpg[]
 . Go to *Settings* and click *New*.
 . In the *New Settings* window, select *Totals Panel Setting*.
 . Configure the setting as follows:
-* Leave the *Sales Organization* field empty, if you want to apply the
-setting across all Sales Organizations.
-* *Object*: orders__Delivery__c.
-* *Fields To Display*:
-[.apiobject]#orders__TotalPrice__c,orders__TotalDiscount__c#.
-* *Labels*:[.apiobject]#Delivery Price, Delivery Discount#.
-
+* Leave the *Sales Organization* field empty, if you want to apply the setting across all Sales Organizations.
+* *Object*: [.apiobject]#orders\__Delivery__c#.
+* *Fields To Display*: [.apiobject]#orders\__TotalPrice__c,orders\__TotalDiscount__c#.
+* *Labels*: [.apiobject]#Delivery Price, Delivery Discount#.
++
 image:ctorders-delivery-total-panel-settings.png[]
 . Click *Save*.
 
-Now you can click on desired delivery tab to view its price and
-discount. To view total order price and discount, click the *All* tab.
+Now you can click on desired delivery tab to view its price and discount. To view total order price and discount, click the *All* tab.
 
-image:ctorders-delivery-total-info-switch.gif[]
+image::ctorders-delivery-total-info-switch.gif[align="center"]

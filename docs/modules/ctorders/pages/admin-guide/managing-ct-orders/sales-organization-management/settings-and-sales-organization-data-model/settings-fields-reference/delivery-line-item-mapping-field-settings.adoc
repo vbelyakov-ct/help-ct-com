@@ -1,13 +1,14 @@
 = Delivery Line Item Mapping Field Settings
 
-The _Delivery Line Item Mapping_ record type is intended for storing
-[.object]#Delivery Line Item# fields that are used in discount
-calculations.
+The _Delivery Line Item Mapping_ record type is intended for storing [.object]#Delivery Line Item# fields that are used in discount calculations.
+
+include::partial$om-required-setting.adoc[]
+
+include::partial$override-price-and-quantity-fields.adoc[]
 
 '''''
 
-Object record type API name:
-[.apiobject]#DeliveryLineItemMapping#
+Object record type API name: [.apiobject]#DeliveryLineItemMapping#
 
 '''''
 
@@ -16,45 +17,32 @@ Object record type API name:
 |*Field* |*API Name* |*Type* |*Description*
 
 |List Price Field
-|[.apiobject]#orders__ListPriceField__c# |Text(255)
-|The API name of a field on
-xref:admin-guide/managing-ct-orders/product-management/product-data-model/ct-price-book-line-item-field-reference.adoc[Price Book Line Item]
-that stores a product price from the specific price book.
+|[.apiobject]#orders\__ListPriceField__c# |Text(255)
+|The API name of a field on xref:admin-guide/managing-ct-orders/product-management/product-data-model/ct-price-book-line-item-field-reference.adoc[Price Book Line Item] that stores a product price from the specific price book.
 
-|Product |[.apiobject]#orders__Product2Id__c#
-|Lookup(Product2) |
+|Product |[.apiobject]#orders\__Product2Id__c#
+|Lookup(Product2) a|include::partial$product2support.adoc[]
 
-|Product |[.apiobject]#orders__ProductId__c#
-|Lookup( CT Product) |
+|Product |[.apiobject]#orders\__ProductId__c#
+|Lookup( CT Product) a|include::partial$productsupport.adoc[]
 
 |Quantity Field
-|[.apiobject]#orders__QuantityField__c# |Text(255)
-|The field API name of a field
-on xref:admin-guide/managing-ct-orders/delivery-management/delivery-line-item-field-reference.adoc[Delivery Line
-Item] to store the number of products per order delivery.
+|[.apiobject]#orders\__QuantityField__c# |Text(255)
+|The field API name of a field on xref:admin-guide/managing-ct-orders/delivery-management/delivery-line-item-field-reference.adoc[Delivery Line Item] to store the number of products per order delivery.
 
 |Sales Organization
-|[.apiobject]#orders__SalesOrganizationId__c#
-|Lookup(Sales Organization) |
+|[.apiobject]#orders\__SalesOrganizationId__c#
+|Lookup(Sales Organization) a|include::partial$sales-org-field.adoc[]
 
 |Total Discount Field
-|[.apiobject]#orders__TotalDiscountField__c#
-|Text(255) |The API name of a field
-on xref:admin-guide/managing-ct-orders/delivery-management/delivery-line-item-field-reference.adoc[Delivery Line Item] that
-stores the total discount for a product. Calculation
-formula: [.apiobject]#(ListPrice* quantity) - (UnitPtice
-* quantity)#.
+|[.apiobject]#orders\__TotalDiscountField__c#
+|Text(255) |The API name of a field on xref:admin-guide/managing-ct-orders/delivery-management/delivery-line-item-field-reference.adoc[Delivery Line Item] that stores the total discount for a product. Calculation formula: [.apiobject]#(ListPrice * quantity) - (UnitPtice * quantity)#.
 
 |Total Price Field
-|[.apiobject]#orders__TotalPriceField__c# |Text(255)
-|The API name of of a field
-on xref:admin-guide/managing-ct-orders/delivery-management/delivery-line-item-field-reference.adoc[Delivery Line Item] that
-stores the total price with discount for a product. Calculation
-formula: [.apiobject]#UnitPrice* quantity#.
+|[.apiobject]#orders\__TotalPriceField__c# |Text(255)
+|The API name of a field on xref:admin-guide/managing-ct-orders/delivery-management/delivery-line-item-field-reference.adoc[Delivery Line Item] that stores the total price with discount for a product. Calculation formula: [.apiobject]#UnitPrice * quantity#.
 
 |Unit Price Field
-|[.apiobject]#orders__UnitPriceField__c# |Text(255)
-|The API name of the field
-on xref:admin-guide/managing-ct-orders/delivery-management/delivery-line-item-field-reference.adoc[Delivery Line Item] that
-stores a price for one product with a discount.
+|[.apiobject]#orders\__UnitPriceField__c# |Text(255)
+|The API name of the field on xref:admin-guide/managing-ct-orders/delivery-management/delivery-line-item-field-reference.adoc[Delivery Line Item] that stores a price for one product with a discount.
 |===

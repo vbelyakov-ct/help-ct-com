@@ -1,24 +1,17 @@
-= Snippet: Create a Sales Org
-
-To create a new sales organization that supports the
-[.object]#Account# object:
+To create a new sales organization that supports the [.object]#Account# object:
 
 . Go to the *Sales Organizations* tab and click *New*.
 . Specify the following:
-* *Sales Organization*: enter the organization's name. For example,
-_Default Sales Org._
-* (Optional) *External Id*: fill out in case of the inheritance of
-segmentation from the customer ERP.
+* *Sales Organization*: enter the organization's name. For example, _Default Sales Org._
+* (Optional) *External Id*: fill out in case of the inheritance of segmentation from the customer ERP.
 * *Sales Point*: select *Account*.
++
+TIP: Use the xref:admin-guide/managing-ct-orders/cg-cloud-support/cg-cloud-creating-a-sales-organization.adoc[Retail Store] option to work with the standard object from the xref:admin-guide/managing-ct-orders/cg-cloud-support/index.adoc[CG Cloud managed package].
 
-[TIP] ==== Use the
-link:admin-guide/managing-ct-orders/cg-cloud-support/cg-cloud-creating-a-sales-organization[Retail Store] option to
-work with the standard object from the link:admin-guide/managing-ct-orders/cg-cloud-support/index[CG
-Cloud managed package].  ====
 * If needed, select the
-*link:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/sales-organization-field-reference[Turn Off Closed Orders
-Duplication]* checkbox.
-
+xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/sales-organization-field-reference.adoc[Turn Off Closed Orders
+Duplication] checkbox.
++
 image:Creating-a-Sales-Organization-Summer-21.png[]
 . Click *Save*.
 

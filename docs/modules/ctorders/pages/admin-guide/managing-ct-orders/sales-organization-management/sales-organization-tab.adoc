@@ -1,83 +1,38 @@
 = Sales Organization Tab
 
-[[h2_1409396653]]
-=== The Sales Organization Tab
+The Sales Organization tab is the Lightning page which you can customize  for convenient use. On this tab, all related order info is displayed in one place. You can track orders, products, prices, and discounts. For example:
 
-The Sales Organization tab is the Lightning page which you can customize
-for convenient use. On this tab, all related order info is displayed in
-one place. You can track orders, products, prices, and discounts. For
-example:
-
-image:Sales-Org-page.png[]
-
-
+image::Sales-Org-page.png[align="center"]
 
 Per each Sales Organization:
 
-. https://help.customertimes.com/articles/ct-orders-3-0/settings-fields-reference[The
-main CT Orders settings] are divided into corresponding record types for
-the selected Sales Organization.
-* *Object Settings* is intended to configure the mapping of CPG / Pharma
-package objects.
-* *Address Setting* is intended to store the address field location and
-SOQL filter to search for delivery addresses for an account.
+. xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/index.adoc[The main CT Orders settings] are divided into corresponding record types for the selected Sales Organization.
+* *Object Settings* is intended to configure the mapping of CPG / Pharma package objects.
+* *Address Setting* is intended to store the address field location and SOQL filter to search for delivery addresses for an account.
 * *Order Mapping* is intended to configure field mapping for orders.
-* *Order Line Item Mapping* is intended to store order parameters given
-the price books and discounts.
-* *Delivery Line Item Mapping* is intended to store the number of
-products per order delivery.
-* *Layout Settings* is intended to store configurations
-of https://help.customertimes.com/articles/ct-orders-3-0/catalog-management[Catalog], https://help.customertimes.com/articles/ct-orders-3-0/promotions[Promotions],
-and https://help.customertimes.com/articles/ct-orders-3-0/order-management[Order] layouts
-for Salesforce and the CT Mobile app.
-* *Total Panel Settings* is intended to store the parameters of the
-summarized price display according to
-conditions https://help.customertimes.com/articles/ct-orders-3-0/order-management[on
-the order layout].
-* *Limit Settings* is intended to store delivery limit setups for an
-order.
-* *Split Settings* is intended to store setups, which are used to split
-the order into suborders for further integration with the customer ERP
-system.
-[NOTE] ==== Available since CT Orders 2.0. ====
-. https://help.customertimes.com/articles/ct-orders-3-0/sales-organization-user-field-reference[Assigned
-users] can create orders for the Sales Organization.
-. At least one
-assigned https://help.customertimes.com/articles/ct-orders-3-0/catalog-management[Catalog] to
-create an order. Catalogs can have a hierarchy and be assigned per
+* *Order Line Item Mapping* is intended to store order parameters given the price books and discounts.
+* *Delivery Line Item Mapping* is intended to store the number of products per order delivery.
+* *Layout Settings* is intended to store configurations of xref:admin-guide/managing-ct-orders/catalog-management/index.adoc[Catalog], xref:admin-guide/managing-ct-orders/discount-management/promotions.adoc[Promotions], and xref:admin-guide/managing-ct-orders/order-management/index.adoc[Order] layouts for Salesforce and the CT Mobile app.
+* *Total Panel Settings* is intended to store the parameters of the summarized price display according to conditions xref:admin-guide/managing-ct-orders/order-management/index.adoc[on the order layout].
+* *Limit Settings* is intended to store delivery limit setups for an order.
+* *Split Settings* is intended to store setups, which are used to split the order into suborders for further integration with the customer ERP system.
++
+NOTE: Available since CT Orders 2.0.
+. xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/sales-organization-user-field-reference.adoc[Assigned users] can create orders for the Sales Organization.
+. At least one assigned xref:admin-guide/managing-ct-orders/catalog-management/index.adoc[Catalog] to create an order. Catalogs can have a hierarchy and be assigned per
 Accounts.
-. At
-least https://help.customertimes.com/articles/ct-orders-3-0/ct-price-book-line-item-field-reference[one
-assigned price book] in which prices
-per https://help.customertimes.com/articles/ct-orders-3-0/product-management[CT
-Product] in the catalog are listed.
-. Optionally, an
-assigned https://help.customertimes.com/articles/ct-orders-3-0/promotions[Promotion] that
-defines the availability of discounts and freebies. Specify the
-structural discounts and promotion conditions, such as priority,
-multiplication or addition, and exceptions, based on the CT products and
-the CT product quantity in the order basket.
-. https://help.customertimes.com/articles/ct-orders-3-0/pricing-procedure-fields-reference[Pricing
-procedures] define discount prices, promotions, and contracted
-conditions. Pricing procedures relate to an order type and Sales
-Organization.
-. https://help.customertimes.com/articles/ct-orders-3-0/order-management[The
-Order creation section].
-
-
+. At least xref:admin-guide/managing-ct-orders/product-management/product-data-model/ct-price-book-line-item-field-reference.adoc[one assigned price book] in which prices per xref:admin-guide/managing-ct-orders/product-management/index.adoc[CT Product] in the catalog are listed.
+. Optionally, an assigned xref:admin-guide/managing-ct-orders/discount-management/promotions.adoc[Promotion] that defines the availability of discounts and freebies. Specify the structural discounts and promotion conditions, such as priority, multiplication or addition, and exceptions, based on the CT products and the CT product quantity in the order basket.
+. xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-fields-reference.adoc[Pricing procedures] define discount prices, promotions, and contracted
+conditions. Pricing procedures relate to an order type and Sales Organization.
+. xref:admin-guide/managing-ct-orders/order-management/index.adoc[The Order creation section].
 
 See also:
 
-* xref:admin-guide/managing-ct-orders/sales-organization-management/sales-organization-tab[Sales Organization Tab]
-* xref:how-to-create-a-sales-organization[How to Create a Sales
-Organization]
-* xref:how-to-create-a-sales-organization-user[How to Create a
-Sales Organization User]
-* xref:how-to-create-an-account[How to Create an Account]
-* xref:how-to-define-an-order-type[How to Define an Order Type]
-* xref:how-to-configure-totals-panel-setting[How to Configure
-Totals Panel Setting]
-* xref:settings-and-sales-organization-data-model[Settings and
-Sales Organization Data Model]
-* xref:admin-guide/workshops/workshop1-0-creating-basic-order/index.adoc[Workshop 1.0: Creating
-Basic Order]
+* xref:./howtos/how-to-create-a-sales-organization.adoc[]
+* xref:./howtos/how-to-create-a-sales-organization-user.adoc[]
+* xref:./howtos/how-to-create-an-account/index.adoc[]
+* xref:./howtos/how-to-define-an-order-type.adoc[]
+* xref:./howtos/how-to-configure-totals-panel-setting.adoc[]
+* xref:./settings-and-sales-organization-data-model/index.adoc[]
+* xref:admin-guide/workshops/workshop1-0-creating-basic-order/index.adoc[]

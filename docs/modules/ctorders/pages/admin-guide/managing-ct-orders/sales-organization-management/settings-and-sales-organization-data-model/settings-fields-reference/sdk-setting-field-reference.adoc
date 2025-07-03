@@ -1,20 +1,11 @@
 = SDK Setting Field Reference
 
-The *SDK Setting* record type allows overriding the standard logic:
+The _SDK Setting_ record type allows overriding the standard logic:
 
-* to display xref:5-4-sdk-configuring-a-custom-price-tag[custom
-price tags] and an xref:info-icon[info icon] with a custom HTML
-template.
-* to select additional fields to fill on [.object]#Order#,
-[.object]#Order Line Item#,[.object]#Delivery Line
-Item#,and [.object]#Delivery# objects, depending on the setting
-type.
+* to display xref:admin-guide/managing-ct-orders/sdk/custom-price-tag.adoc[custom price tags] and an xref:admin-guide/managing-ct-orders/sdk/info-icon.adoc[info icon] with a custom HTML template.
+* to select additional fields to fill on [.object]#Order#, [.object]#Order Line Item#,[.object]#Delivery Line Item#,and [.object]#Delivery# objects, depending on the setting type.
 
-
-
-The *Settings* record with the *SDK Settings* record type will be
-applied when the criteria are met. The search is carried out in the
-following order:
+The _Settings_ record with the _SDK Settings_ record type will be applied when the criteria are met. The search is carried out in the following order:
 
 . With the specified order type and sales organization.
 . With the specified sales organization.
@@ -22,7 +13,7 @@ following order:
 
 '''''
 
-Object record type API name:[.apiobject]#SDKSetting#
+Object record type API name: [.apiobject]#SDKSetting#
 
 '''''
 
@@ -30,88 +21,58 @@ Object record type API name:[.apiobject]#SDKSetting#
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Icon Name |[.apiobject]#orders__IconImageName__c#
-|Text(255) |The name of the displayed info icon that is picked among
-the https://www.lightningdesignsystem.com/icons/#utility[listed].
+|Icon Name |[.apiobject]#orders\__IconImageName__c# |Text(255)
+|The name of the displayed info icon that is picked among the link:https://www.lightningdesignsystem.com/icons/#utility[listed].
 
-|Implementation
-|[.apiobject]#orders__Implementation__c# |Text(255) a|
-The API name of the Apex class for displaying custom price tags or
-filling in additional fields on the objects depending on the value in
-the [.apiobject]#orders__SDKType__c# field.
+|Implementation |[.apiobject]#orders\__Implementation__c# |Text(255) a|
+The API name of the Apex class for displaying custom price tags or filling in additional fields on the objects depending on the value in the [.apiobject]#orders\__SDKType__c# field.
 
-[TIP] ==== It is recommended to name the Apex class based on its
-function:
-e.g.: [.apiobject]#OrderImplementation.SetUnitPriceAsListPrice
-==== #
+TIP: It is recommended to name the Apex class based on its function, e.g.: [.apiobject]#OrderImplementation.SetUnitPriceAsListPrice#
 
-|Order Type |[.apiobject]#orders__OrderType__c#
+|Order Type |[.apiobject]#orders\__OrderType__c#
 |Picklist a|
 The order type for which the settings are configured. Available values:
 
-If not set, the setting will be applied for all order types of the
-selected Sales Org.
+NOTE: If not set, the setting will be applied for all order types of the selected Sales Org.
 
 * Order
 * Return
 * Pre-sale
 
 |Parameters a|
-[.apiobject]#orders__Parameters__c#
+[.apiobject]#orders\__Parameters__c# a| Long Text Area(32768)
 
+|A list of additional fields written in the JSON format, which will be displayed to fill in when the [.apiobject]#updateDataOnAfterOrderLineItemUpsert# SDK Type is selected.
 
+|Platform |[.apiobject]#orders\__Platform__c# |Picklist
+a| Defines the platform where an SDK Setting will be implemented:
 
-a|
-Long Text Area(32768)
-
-
-
-|A list of additional fields written in the JSON format, which will be
-displayed to fill in when the
-[.apiobject]#updateDataOnAfterOrderLineItemUpsert# SDK Type is
-selected.
-
-|Platform |[.apiobject]#orders__Platform__c#
-|Picklist a|
-Defies the platform where an SDK Setting will be implemented:
-
-* CT Mobile [WARNING] ==== Currently, SDK is not available on
-this platform. ====
+* CT Mobile
++
+WARNING: Currently, SDK is not available on this platform.
 * Salesforce
 
 |Sales Organization
-|[.apiobject]#orders__SalesOrganizationId__c# a|
-Lookup (Sales
+|[.apiobject]#orders\__SalesOrganizationId__c# a| Lookup (Sales Organization)
 
-Organization)
+a|include::partial$sales-org-field.adoc[]
 
-|
-
-|SDK type |[.apiobject]#orders__SDKType__c#
-|Picklist a|
+|SDK type |[.apiobject]#orders\__SDKType__c# |Picklist a|
 A picklist to select where to apply the setting:
 
-*[.apiobject]#updateDataOnAfterOrderLineItemUpsert# – to set
-additional fields to fill in on the objects.
-*[.apiobject]#getOrderLineItemPriceTag# – to override the
-standard logic and display the custom price tags defined in the HTML
-file that is requested by the Apex class from the
-[.apiobject]#orders__Implementation__c# field.
-* To display an xref:info-icon[info icon] containing an embedded
-HTML template choose among these settings:
-**[.apiobject]#getOrderLineItemInfoIcon#;
-**[.apiobject]#getPromotionLineItemInfoIcon#;
-**[.apiobject]#getCatalogLineItemInfoIcon#;
-**[.apiobject]#getOrderInfoIcon#;
-**[.apiobject]#getCatalogInfoIcon#;
-**[.apiobject]#getPromotionInfoIcon#
+* [.apiobject]#updateDataOnAfterOrderLineItemUpsert# to set additional fields to fill in on the objects.
+* [.apiobject]#getOrderLineItemPriceTag# to override the standard logic and display the custom price tags defined in the HTML file that is requested by the Apex class from the [.apiobject]#orders\__Implementation__c# field.
+* To display an xref:admin-guide/managing-ct-orders/sdk/info-icon.adoc[info icon] containing an embedded HTML template choose among these settings:
+** [.apiobject]#getOrderLineItemInfoIcon#;
+** [.apiobject]#getPromotionLineItemInfoIcon#;
+** [.apiobject]#getCatalogLineItemInfoIcon#;
+** [.apiobject]#getOrderInfoIcon#;
+** [.apiobject]#getCatalogInfoIcon#;
+** [.apiobject]#getPromotionInfoIcon#
 
-|Version |[.apiobject]#orders__Version__c#
-|Text(255) a|
-The field is used to select the version of the SDK.
+|Version |[.apiobject]#orders\__Version__c#
+|Text(255) a| The field is used to select the version of the SDK.
 
-[NOTE] ==== Currently, the [.apiobject]#v1 ==== value
-should be set to apply the setting. Otherwise, the custom logic will not
-work.#
+NOTE: Currently, the [.apiobject]#v1# value should be set to apply the setting. Otherwise, the custom logic will not work.
 
 |===

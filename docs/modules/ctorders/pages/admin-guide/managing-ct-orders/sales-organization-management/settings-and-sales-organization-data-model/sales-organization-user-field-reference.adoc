@@ -1,13 +1,10 @@
 = Sales Organization User Field Reference
 
-the [.object]#Sales Organization User# object is intended to
-relate the CT Orders with the target system, e.g., CT CPG / CT Pharma.
-Without this setting, a user cannot use the CT Orders features.
+The [.object]#Sales Organization User# object is intended to relate the CT Orders with the target system, e.g., CT CPG / CT Pharma. Without this setting, a user cannot use the CT Orders features.
 
 '''''
 
-Object API name:
-[.apiobject]#orders__SalesOrganizationUser__c#
+Object API name: [.apiobject]#orders\__SalesOrganizationUser__c#
 
 '''''
 
@@ -15,21 +12,18 @@ Object API name:
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|External Id |[.apiobject]#orders__ExternalId__c#
+|External Id |[.apiobject]#orders\__ExternalId__c#
 |Text(255) (External ID) (Unique Case Sensitive) a|
-Specify only in the case if there is a target ERP system that provides
-data with accounts, delivery addresses, price books, etc.
+Specify only in the case if there is a target ERP system that provides data with accounts, delivery addresses, price books, etc.
 
-You can add all data using in one file with the .csv extension.
+TIP: You can add all data using in one file with the `.csv` extension.
 
-|Primary |[.apiobject]#orders__IsPrimary__c# |Checkbox
+|Primary |[.apiobject]#orders\__IsPrimary__c# |Checkbox
 |If selected, the specified Sales Org is primary for a user.
 
 |Sales Organization
-|[.apiobject]#orders__SalesOrganizationId__c#
-|Master-Detail(Sales Organization) |The business unit for which the
-settings are configured.
+|[.apiobject]#orders\__SalesOrganizationId__c#
+|Master-Detail(Sales Organization) |The business unit for which the settings are configured.
 
-|User |[.apiobject]#orders__UserId__c# |Lookup(User) |A
-user account for which a Sales Org is selected.
+|User |[.apiobject]#orders\__UserId__c# |Lookup(User) |A user account for which a Sales Org is selected.
 |===
