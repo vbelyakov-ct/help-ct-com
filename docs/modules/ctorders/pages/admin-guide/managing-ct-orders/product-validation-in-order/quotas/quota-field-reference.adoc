@@ -126,7 +126,7 @@ NOTE: The delivery date should be within the start and end dates of the quota av
 |Currency(16,2) a| The actual amount of products in the delivery used in the order. The
 default value is _0_.
 
-It is used when the [.apiobject]#orders\__UnitOfMeasure__c# field is _Amount_ and the [.apiobject]#orders\__OrderStage__c# field of the order [.object]## is not _On Hold._
+It is used when the [.apiobject]#orders\__UnitOfMeasure__c# field is _Amount_ and the [.apiobject]#orders\__OrderStage__c# field of the order is not _On Hold._
 
 |Used Quantity |[.apiobject]#orders\__UsedQuantity__c# |Number(18,0)
 a| The actual quantity of products used in the order. The default value is _0_.
