@@ -2,7 +2,7 @@
 
 The [.object]#Sales Organization# object is intended to represent the customer organization based, for example, on territory or departments.
 
-At least one _Sales Organization_ should be created.
+NOTE: At least one _Sales Organization_ should be created.
 
 '''''
 
@@ -56,11 +56,11 @@ TIP: It is possible to schedule the batch.
 ====
 * If the value is not set, the CT Orders will work with the [.object]#Account# object.
 
-* Please note that you cannot change the value when there are:
+* You cannot change the value when there are:
 
-* [.object]#Promotion# and/or [.object]#Catalog# with the related _Catalog Assignment_ and _Promotion Assignment_ records are created for the current _Sales Organization_ record;
-* [.object]#Promotion# and/or [.object]#Catalog# has the related dynamic group;
-* related unfinalized _CT Order_ records.
+** [.object]#Promotion# and/or [.object]#Catalog# with the related _Catalog Assignment_ and _Promotion Assignment_ records are created for the current _Sales Organization_ record;
+** [.object]#Promotion# and/or [.object]#Catalog# has the related dynamic group;
+** related unfinalized _CT Order_ records.
 ====
 
 

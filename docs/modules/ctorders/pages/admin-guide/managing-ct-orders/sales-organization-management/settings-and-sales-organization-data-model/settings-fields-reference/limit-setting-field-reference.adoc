@@ -42,13 +42,13 @@ The order type for which the settings are configured.
 * Return
 * Pre-sale
 
-NOTE: If not set, the setting will be applied for all orders of the Sales Org in the orders\__SalesOrganizationId__c field.
+NOTE: If not set, the setting will be applied for all orders of the Sales Org in the [.apiobject]#orders\__SalesOrganizationId__c# field.
 
 |Sales Organization
 |[.apiobject]#orders\__SalesOrganizationId__c# |Lookup
 (Sales Organization) a|include::partial$sales-org-field.adoc[]
 
 NOTE: The specified Sales Org prioritizes over the specified order type in
-the orders\__OrderType__c field.
+the [.apiobject]#orders\__OrderType__c# field.
 
 |===

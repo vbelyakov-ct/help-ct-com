@@ -16,9 +16,8 @@ Object record type API name: [.apiobject]#FilterSetting#
 |Picklist a|Specifies for which side will the filters apply. Available values:
 
 * *RightSide*: the filtering will be carried out only for [.object]#Order Line Item# records. The left side will not be influenced by applied filters.
-* *LeftSide*: the filtering will be carried out only for [.object]#Catalog Line Item# and [.object]#Promotion Line Item# records. The right side will not be influenced by applied
-filters.
-* *All*: the filtering will apply to [.object]#Catalog Line Item#,[.object]#Promotion Line Item# and [.object]#Order Line Item# records. Both sides will be influenced by applied filters.
+* *LeftSide*: the filtering will be carried out only for [.object]#Catalog Line Item# and [.object]#Promotion Line Item# records. The right side will not be influenced by applied filters.
+* *All*: the filtering will apply to [.object]#Catalog Line Item#, [.object]#Promotion Line Item# and [.object]#Order Line Item# records. Both sides will be influenced by applied filters.
 
 |Filter Details |[.apiobject]#FilterDetails# |Long Text Area(32768)  |Contains xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/filter-setting-field-reference/filter-details-field-reference.adoc[JSON with filter setting] for the order cart.
 
