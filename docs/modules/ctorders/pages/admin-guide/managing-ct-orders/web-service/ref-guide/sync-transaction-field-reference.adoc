@@ -1,18 +1,12 @@
 = Sync Transaction Field Reference
 
-the [.object]#Sync Transaction# object is used to store
-information about the success of the data transfer. A new record will be
-created when the record of one of
-xref:admin-guide/managing-ct-orders/web-service/ref-guide/data-to-send-to-web-service[the discount calculation objects]
-is changed.
+The [.object]#Sync Transaction# object is used to store information about the success of the data transfer. A new record will be created when the record of one of xref:admin-guide/managing-ct-orders/web-service/ref-guide/data-to-send-to-web-service.adoc[the discount calculation objects] is changed.
 
-After disconnecting from the Web Service, all _Sync Transaction_ records
-will be deleted.
+After disconnecting from the Web Service, all _Sync Transaction_ records will be deleted.
 
 '''''
 
-Object record type API name:
-[.apiobject]#orders__SyncTransaction__c#
+Object record type API name: [.apiobject]#orders\__SyncTransaction__c#
 
 '''''
 
@@ -20,20 +14,16 @@ Object record type API name:
 |===
 |*Field Label* |*API name* |*Type* |*Description*
 
-|Error |[.apiobject]#orders__Error__c# |Long Text
-Area(32768) |The text of the error received during the sync process.
+|Error |[.apiobject]#orders\__Error__c# |Long Text Area(32768) |The text of the error received during the sync process.
 
-|Object Name |[.apiobject]#orders__ObjectName__c#
-|Text(255) a|
-The API name of the object whose record is to be synchronized.
+|Object Name |[.apiobject]#orders\__ObjectName__c# |Text(255) a| The API name of the object whose record is to be synchronized.
 
-|Record Id |[.apiobject]#orders__RecordId__c#
-|Text(255) |The ID of the record to be synchronized.
+|Record Id |[.apiobject]#orders\__RecordId__c# |Text(255) |The ID of the record to be synchronized.
 
-|Type |[.apiobject]#orders__Type__c# |Picklist a|
+|Type |[.apiobject]#orders\__Type__c# |Picklist a|
 The operation type:
 
-*[.apiobject]#upsert#
-*[.apiobject]#delete#
+* [.apiobject]#upsert#
+* [.apiobject]#delete#
 
 |===
