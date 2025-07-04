@@ -1,37 +1,21 @@
 = SDK
 
-Available for Salesforce users only.
+NOTE: Available for Salesforce users only.
 
-Since CT Orders 2.0, the Software Development Kit (SDK) is introduced to
-provide special tools enriching the functionality of currently
-implemented functions of the package.
-
-
+Since CT Orders 2.0, the Software Development Kit (SDK) is introduced to provide special tools enriching the functionality of currently implemented functions of the package.
 
 SDK allows you:
 
-* xref:updating-values-in-the-order-and-delivery-fields[]xref:admin-guide/managing-ct-orders/sdk/custom-price-tag.adoc[To
-specify custom price tags&#44;] expanding the functionality of the
-regular one with the ability to use altered calculations logic or to
-display custom information using the HTML format.
-* xref:admin-guide/managing-ct-orders/sdk/info-icon.adoc[To add Info icons] to the order layout elements,
-displaying the embedded HTML or a completely new web page.
-* xref:updating-values-in-the-order-and-delivery-fields[To update
-specific fields] on the order and delivery layouts with new values used
-for further discount and freebies calculations.
-
-
+* xref:./updating-values-in-the-order-and-delivery-fields.adoc[To specify custom price tags&#44;] expanding the functionality of the regular one with the ability to use altered calculations logic or to display custom information using the HTML format.
+* xref:admin-guide/managing-ct-orders/sdk/info-icon.adoc[To add Info icons] to the order layout elements, displaying the embedded HTML or a completely new web page.
+* xref:./updating-values-in-the-order-and-delivery-fields.adoc[To update specific fields] on the order and delivery layouts with new values used for further discount and freebies calculations.
 
 See also:
 
-* xref:admin-guide/managing-ct-orders/sdk/custom-price-tag.adoc[Custom Price Tag]
-* xref:admin-guide/managing-ct-orders/sdk/info-icon.adoc[Info Icon]
-* xref:updating-values-in-the-order-and-delivery-fields[Updating
-Values in the Order and Delivery Fields]
+* xref:admin-guide/managing-ct-orders/sdk/custom-price-tag.adoc[]
+* xref:admin-guide/managing-ct-orders/sdk/info-icon.adoc[]
+* xref:./updating-values-in-the-order-and-delivery-fields.adoc[]
 
-* xref:5-4-sdk-configuring-a-custom-price-tag[Workshop 5.4: SDK
-Configuring a Custom Price Tag]
-* xref:5-5-sdk-updating-values-in-the-order-and-delivery-fields[Workshop
-5.5: SDK Updating Values in the Order and Delivery Fields]
-* xref:5-6-sdk-displaying-info-icon[Workshop 5.6: SDK Displaying
-Info Icon]
+* xref:admin-guide/workshops/workshop-5-0-implementing-additional-features/5-4-sdk-configuring-a-custom-price-tag.adoc[]
+* xref:admin-guide/workshops/workshop-5-0-implementing-additional-features/5-5-sdk-updating-values-in-the-order-and-delivery-fields.adoc[]
+* xref:admin-guide/workshops/workshop-5-0-implementing-additional-features/5-6-sdk-displaying-info-icon.adoc[Workshop 5.6: SDK Displaying Info Icon]

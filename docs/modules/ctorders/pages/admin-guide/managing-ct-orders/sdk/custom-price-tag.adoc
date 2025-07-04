@@ -1,31 +1,21 @@
 = Custom Price Tag
 
-Available for Salesforce users only.
+NOTE: Available for Salesforce users only.
 
-With the help of SDK, implement the custom price tags instead of the
-default ones available out of the box.
+With the help of SDK, implement the custom price tags instead of the default ones available out of the box.
 
 Custom price tags allow you:
 
 * To supplement the currently used price tags.
-* To implement the current calculation logic but altering the displayed
-results.
-* To completely rewrite the price tags to display any kind of
-information embedded in an HTML format.
+* To implement the current calculation logic but altering the displayed results.
+* To completely rewrite the price tags to display any kind of information embedded in an HTML format.
 
+To set up a new custom info icon, xref:admin-guide/workshops/workshop-5-0-implementing-additional-features/5-4-sdk-configuring-a-custom-price-tag.adoc[create an OM Settings record] with the _SDK Setting_ record type. For more information, refer to xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/sdk-setting-field-reference.adoc[SDK Setting Field Reference].
 
+Here is an example for the case requiring to display the list of freebies that can be given based on the quantity of the paid product:
 
-To set up a new custom info icon,
-xref:5-4-sdk-configuring-a-custom-price-tag[create an OM Settings
-record] with the *SDK Setting* record type. For more information, refer
-to xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/sdk-setting-field-reference[SDK Setting Field Reference].
-
-Here is an example for the case requiring to display the list of
-freebies that can be given based on the quantity of the paid product:
-
-image:image2021-5-21_10-46-17.png[]
+image::image2021-5-21_10-46-17.png[align="center"]
 
 See also:
 
-* xref:5-4-sdk-configuring-a-custom-price-tag[Workshop 5.4: SDK
-Configuring a Custom Price Tag]
+* xref:admin-guide/workshops/workshop-5-0-implementing-additional-features/5-4-sdk-configuring-a-custom-price-tag.adoc[]

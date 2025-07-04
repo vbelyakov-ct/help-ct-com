@@ -1,96 +1,67 @@
 = Updating Values in the Order and Delivery Fields
 
-Available for Salesforce users only.
+NOTE: Available for Salesforce users only.
 
-SDK allows you to insert values into custom fields when adding a product
-to an order.
+SDK allows you to insert values into custom fields when adding a product to an order.
 
 * The predefined list of fields on the following objects can be updated.
-**[.object]#Order#
-**[.object]#Order Line Item#
-**[.object]#Delivery#
-**[.object]#Delivery Line Item#
-* The following fields are filled automatically at the moment when a
-product is being added to the order and will be skipped when processed:
+** [.object]#Order#
+** [.object]#Order Line Item#
+** [.object]#Delivery#
+** [.object]#Delivery Line Item#
+* The following fields are filled automatically at the moment when a product is being added to the order and will be skipped when processed:
 
-[width="100%",cols="15%,20%,10%,55%"]
+[width="100%"]
 |===
 |*Order Line Item* |*Delivery Line Item* |*Order* |*Delivery*
 
 a|
-**[.apiobject]#$.quantity#
-**[.apiobject]#$.listPrice#
-**[.apiobject]#orders__CatalogId__c#
-**[.apiobject]# orders__CatalogLineItemId__c#
-**[.apiobject]#orders__FreebieConditionId__c#
-**[.apiobject]#orders__FreebieLevelId__c#
-**[.apiobject]#orders__FreebieTypeId__c#
-**[.apiobject]#orders__OrderId__c#
-**[.apiobject]#orders__ParentId__c#
-**[.apiobject]#orders__PriceBookId__c#
-**[.apiobject]#orders__PriceBookLineItemId__c#
-**[.apiobject]#orders__ProductComponentId__c#
-**[.apiobject]#orders__PromotionId__c#
-**[.apiobject]#orders__PromotionLineItemId__c#
-**[.apiobject]#Lookup(Product)#
+** [.apiobject]#$.quantity#
+** [.apiobject]#$.listPrice#
+** [.apiobject]#orders\__CatalogId__c#
+** [.apiobject]#orders\__CatalogLineItemId__c#
+** [.apiobject]#orders\__FreebieConditionId__c#
+** [.apiobject]#orders\__FreebieLevelId__c#
+** [.apiobject]#orders\__FreebieTypeId__c#
+** [.apiobject]#orders\__OrderId__c#
+** [.apiobject]#orders\__ParentId__c#
+** [.apiobject]#orders\__PriceBookId__c#
+** [.apiobject]#orders\__PriceBookLineItemId__c#
+** [.apiobject]#orders\__ProductComponentId__c#
+** [.apiobject]#orders\__PromotionId__c#
+** [.apiobject]#orders\__PromotionLineItemId__c#
+** [.apiobject]#Lookup(Product)#
 
 a|
-**[.apiobject]#$.listPrice#
-**[.apiobject]#orders__DeliveryId__c#
-**[.apiobject]#orders__OrderLineItemId__c#
-**[.apiobject]#Lookup(Product# )
-
-
+** [.apiobject]#$.listPrice#
+** [.apiobject]#orders\__DeliveryId__c#
+** [.apiobject]#orders\__OrderLineItemId__c#
+** [.apiobject]#Lookup(Product# )
 
 a|
-**[.apiobject]#orders__AccountId__c#
-**[.apiobject]#orders__PriceBookId__c#
-**[.apiobject]#orders__PricingProcedureId__c#
-**[.apiobject]#orders__SalesOrganizationId__c#
-**[.apiobject]#orders__OrderType__c#
-**[.apiobject]#orders__Stage__c#
-**[.apiobject]#Lookup(RetailStore)#
-
-
+** [.apiobject]#orders\__AccountId__c#
+** [.apiobject]#orders\__PriceBookId__c#
+** [.apiobject]#orders\__PricingProcedureId__c#
+** [.apiobject]#orders\__SalesOrganizationId__c#
+** [.apiobject]#orders\__OrderType__c#
+** [.apiobject]#orders\__Stage__c#
+** [.apiobject]#Lookup(RetailStore)#
 
 a|
-**[.apiobject]#orders__OrderId__c#
+** [.apiobject]#orders\__OrderId__c#
 ** xref:admin-guide/workshops/workshop1-0-creating-basic-order/configuring-an-address-settings-1-0/creating-a-relationship-between-custom-address-object-and-delivery-1-0.adoc[Lookup(Address)]
-** Fields in the
-[.apiobject]#xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/split-settings-field-reference[order__SplitFields__c]#
-
-
+** Fields in the [.apiobject]#xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/split-settings-field-reference.adoc[orders\__SplitFields__c]#
 
 |===
-* Fields related to the *Pricing Procedure* field on the
-[.object]#Pricing Procedure# and a lookup from the
-[.object]#Order# object cannot be filled since they will be
-rewritten by the implemented logic.
-** For xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-1/index[Pricing Procedure v.1], do not
-use the [.apiobject]#orders__UnitPrice__c#,
-[.apiobject]#orders__TotalPrice__c#, and
-[.apiobject]#orders__TotalDiscount__с# fields.
-** For xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/index[Pricing Procedure v. 2], do
-not use fields specified for the [.apiobject]#resultPrice# and
-[.apiobject]#object# keys.
+* Fields related to the *Pricing Procedure* field on the [.object]#Pricing Procedure# and a lookup from the [.object]#Order# object cannot be filled since they will be rewritten by the implemented logic.
+** For xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-1/index.adoc[Pricing Procedure v.1], do not use the [.apiobject]#orders\__UnitPrice__c#,
+[.apiobject]#orders\__TotalPrice__c#, and [.apiobject]#orders\__TotalDiscount__с# fields.
+** For xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/index.adoc[Pricing Procedure v. 2], do not use fields specified for the [.apiobject]#resultPrice# and [.apiobject]#object# keys.
 
+To set up updating custom fields in objects when adding a product to an order to further calculate discounts and freebies, xref:admin-guide/workshops/workshop-5-0-implementing-additional-features/5-5-sdk-updating-values-in-the-order-and-delivery-fields.adoc[create an OM Settings record] with the *SDK Setting* record type. For more information, refer to xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/sdk-setting-field-reference.adoc[SDK Setting Field Reference].
 
-
-To set up updating custom fields in objects when adding a product to an
-order to further calculate discounts and freebies,
-xref:5-5-sdk-updating-values-in-the-order-and-delivery-fields[create
-an OM Settings record] with the *SDK Setting* record type. For more
-information, refer to xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/sdk-setting-field-reference[SDK Setting
-Field Reference].
-
-When writing code for this logic, follow the version format according to
-the *Version* field of the *OM Settings* record. Otherwise, a warning
-will be shown that the calculator will be disabled and the total price
-will be calculated based on *List Price* values.
-
-
+When writing code for this logic, follow the version format according to the *Version* field of the _OM Settings_ record. Otherwise, a warning will be shown that the calculator will be disabled and the total price will be calculated based on *List Price* values.
 
 See also:
 
-* xref:5-5-sdk-updating-values-in-the-order-and-delivery-fields[Workshop
-5.5: SDK Updating Values in the Order and Delivery Fields]
+* xref:admin-guide/workshops/workshop-5-0-implementing-additional-features/5-5-sdk-updating-values-in-the-order-and-delivery-fields.adoc[]
