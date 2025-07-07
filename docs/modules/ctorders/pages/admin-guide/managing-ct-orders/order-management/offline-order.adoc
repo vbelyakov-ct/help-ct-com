@@ -104,7 +104,7 @@ a|
 * Promotion products are grouped separately under their respective *Promotion* names. The promotion sales and delivery dates are displayed in each promotion header. If the sales dates are empty, the delivery dates will be displayed instead of them.
 * The administrator can add custom fields for the order cart layout, including formulas and roll-up field types. The title bar is fixed so that users can scroll through the order cart without losing sight of the names of columns.
 +
-TIP: The _Order Cart_ layout is managed by the _Settings_ record of the _Layout Setting_ record type for xref:admin-guide/workshops/workshop1-0-creating-basic-order/configuring-layout-settings-1-0/order-line-item-layout-setting-1-0.adoc[the Order Line Item object].
+TIP: The _Order Cart_ layout is managed by the _Settings_ record of the _Layout Setting_ record type for xref:admin-guide/workshops/workshop-1-0-creating-basic-order/configuring-layout-settings-1-0/order-line-item-layout-setting-1-0.adoc[the Order Line Item object].
 
 [[h4_733574480]]
 ==== Filter products
@@ -140,14 +140,14 @@ image:Order-Cart_Windows.png[]
 [[h3_519467819]]
 === 3.3 Create the First Delivery
 
-When a mobile user adds the first product, the *Delivery* pop-up appears. Delivery dates are controlled by the _Settings_ record with the _Limit Setting_ record type. To add delivery limits, xref:admin-guide/workshops/workshop1-0-creating-basic-order/adding-delivery-restrictions-to-an-order-1-0.adoc[follow this guide]. To set up delivery
-addresses, xref:admin-guide/workshops/workshop1-0-creating-basic-order/configuring-an-address-settings-1-0/index.adoc[refer to this article].
+When a mobile user adds the first product, the *Delivery* pop-up appears. Delivery dates are controlled by the _Settings_ record with the _Limit Setting_ record type. To add delivery limits, xref:admin-guide/workshops/workshop-1-0-creating-basic-order/adding-delivery-restrictions-to-an-order-1-0.adoc[follow this guide]. To set up delivery
+addresses, xref:admin-guide/workshops/workshop-1-0-creating-basic-order/configuring-an-address-settings-1-0/index.adoc[refer to this article].
 
 NOTE: The mobile user cannot delete a single delivery.
 
 * If no limits are set, the first delivery date is set as the current date and the end date is set as the last date defined by the calendar.
 * Deliveries are sorted by date. If multiple deliveries are added for the same date, they will be sorted by the *Address* field (in ascending alphabetical order).
-* The *Address* field is populated based on the xref:admin-guide/workshops/workshop1-0-creating-basic-order/configuring-an-address-settings-1-0/index.adoc[Address Setting] record defined for the Sales Org.
+* The *Address* field is populated based on the xref:admin-guide/workshops/workshop-1-0-creating-basic-order/configuring-an-address-settings-1-0/index.adoc[Address Setting] record defined for the Sales Org.
 
 In the CT Mobile iOS app, tap the *Expand Order Cart* icon to hide the catalogs and promotions on the left side for a better experience with items in a filled cart.
 
@@ -183,7 +183,7 @@ image:Create-Delivery_Windows.png[]
 === 3.5 Review the Order
 
 * When the cart is full and all deliveries are set, review the order price and discounts in the *Total Panel* at the bottom of the screen.
-* To customize fields in the total panel, create the _Settings_ record with the xref:admin-guide/workshops/workshop1-0-creating-basic-order/configuring-totals-panel-setting-1-0.adoc[Totals Panel Setting] record type with custom fields. The maximum number of fields displayed is 4.
+* To customize fields in the total panel, create the _Settings_ record with the xref:admin-guide/workshops/workshop-1-0-creating-basic-order/configuring-totals-panel-setting-1-0.adoc[Totals Panel Setting] record type with custom fields. The maximum number of fields displayed is 4.
 
 [[h3_408281835]]
 === 3.6 Export Order Data

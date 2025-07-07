@@ -5,10 +5,10 @@ There are several options to configure addresses for retail stores,  which allow
 To set up addresses:
 
 . Define the standard or custom object to use as the [.object]#Address# object. It is possible to use the [.object]#Retail Store#, [.object]#Account#, or custom [.object]#Address# object as the [.object]#Address# object.
-. Create an _OM Settings_ record with the _Object Setting_ record type and specify the API name of the [.object]#Address# object. Follow the steps in the xref:admin-guide/workshops/workshop1-0-creating-basic-order/configuring-an-address-settings-1-0/linking-address-to-the-account-object-1-0.adoc#h2_1782833325[Specify the Address Object] guide.
+. Create an _OM Settings_ record with the _Object Setting_ record type and specify the API name of the [.object]#Address# object. Follow the steps in the xref:admin-guide/workshops/workshop-1-0-creating-basic-order/configuring-an-address-settings-1-0/linking-address-to-the-account-object-1-0.adoc#h2_1782833325[Specify the Address Object] guide.
 . Create an _OM Settings_ record with the _Address Setting_ record type and specify the corresponding _Address_ field:
-* Using the [.object]#Account# or [.object]#Retail Store# object, follow the steps in the xref:admin-guide/workshops/workshop1-0-creating-basic-order/configuring-an-address-settings-1-0/linking-address-to-the-account-object-1-0.adoc#h2_405395202[Specify the Address Field] guide.
-* Using the custom [.object]#Address# object, follow the steps in the xref:admin-guide/workshops/workshop1-0-creating-basic-order/configuring-an-address-settings-1-0/setting-up-a-custom-address-object-1-0.adoc[Set Up a Custom Address Object] guide.
+* Using the [.object]#Account# or [.object]#Retail Store# object, follow the steps in the xref:admin-guide/workshops/workshop-1-0-creating-basic-order/configuring-an-address-settings-1-0/linking-address-to-the-account-object-1-0.adoc#h2_405395202[Specify the Address Field] guide.
+* Using the custom [.object]#Address# object, follow the steps in the xref:admin-guide/workshops/workshop-1-0-creating-basic-order/configuring-an-address-settings-1-0/setting-up-a-custom-address-object-1-0.adoc[Set Up a Custom Address Object] guide.
 . Make sure that there is a lookup from the [.object]#Delivery# object to the corresponding [.object]#Address# object.
 . Make sure that there is a lookup from the [.object]#Address# object to the corresponding [.object]#Account# object.
 

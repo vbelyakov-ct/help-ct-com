@@ -1,7 +1,7 @@
 = Online Order
 :toc:
 
-Get familiar with the online order creation process and main features. xref:admin-guide/workshops/workshop1-0-creating-basic-order/index.adoc[Workshop 1.0] helps you to configure your first order and understand relationships inside the CT Orders data model.
+Get familiar with the online order creation process and main features. xref:admin-guide/workshops/workshop-1-0-creating-basic-order/index.adoc[Workshop 1.0] helps you to configure your first order and understand relationships inside the CT Orders data model.
 
 [[h2_1519086166]]
 == Prerequisites
@@ -79,7 +79,7 @@ image::order-cart-layout.png[align="center"]
 
 * *(1)* The main cart area with the configured columns xref:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/order-line-item-field-reference.adoc[for Order Line Items] contains read-only fields with the prices from the corresponding CT Price Book and applied discounts, additional fields that are configured using the layout setting.
 +
-NOTE: To form an order, it is necessary to configure the xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/layout-setting-field-reference.adoc[Object Settings] record with the xref:admin-guide/workshops/workshop1-0-creating-basic-order/configuring-layout-settings-1-0/index.adoc[Layout Setting] record type. You can add read-only and editable fields affecting discount calculation on the layout.
+NOTE: To form an order, it is necessary to configure the xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/layout-setting-field-reference.adoc[Object Settings] record with the xref:admin-guide/workshops/workshop-1-0-creating-basic-order/configuring-layout-settings-1-0/index.adoc[Layout Setting] record type. You can add read-only and editable fields affecting discount calculation on the layout.
 * *(2)* The bottom panel with overview metrics (optionally). To add the desired fields, it is necessary to configure the Object Settings record with the xref:admin-guide/managing-ct-orders/sales-organization-management/howtos/how-to-configure-totals-panel-setting.adoc[Totals Panel Setting] record type. The maximum number of displayed fields is 4. If the setting is not configured, xref:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/ct-order-field-reference.adoc[the Total Price and Total Discount fields] are displayed by default.
 * *(3)* The CT Order button controls.
 ** Click *Get Freebie* to xref:admin-guide/managing-ct-orders/freebies-management/index.adoc#h2_1556344363[distribute freebies].
@@ -90,7 +90,7 @@ By default, there are only two available split criteria: date and address. You c
 ** Click *Save Draft* to save newly created order or changes in the editing one. xref:admin-guide/managing-ct-orders/order-management/index.adoc#h2_158967301[By default], the *On Hold* stage will be set. Price calculations based on values in the formula fields will be performed after clicking *Save Draft*.
 ** Click *Exit* if you do not want to save the current order or changes made in the existing order.
 ** Click *Finalize* to restrict editing the current order. If xref:admin-guide/workshops/workshop-5-0-implementing-additional-features/5-2-setting-up-the-delivery-summary.adoc[the Delivery Summary window] is set up, you can review and edit the delivery details after clicking *Finalize*. For more information, refer to xref:admin-guide/managing-ct-orders/delivery-management/index.adoc#h2_1374863314[Delivery Summary].
-* *(4)* xref:admin-guide/workshops/workshop1-0-creating-basic-order/complete-workshop-1-0-checkpoint/creating-a-delivery-1-0.adoc[The added delivery dates] with the product quantity per delivery.
+* *(4)* xref:admin-guide/workshops/workshop-1-0-creating-basic-order/complete-workshop-1-0-checkpoint/creating-a-delivery-1-0.adoc[The added delivery dates] with the product quantity per delivery.
 * To delete deliveries, click the drop-down arrow and select *Delete delivery*.
 +
 If a _Delivery_ record was created for the order, you cannot delete all deliveries from the order, at least one delivery should exist.
@@ -98,7 +98,7 @@ If a _Delivery_ record was created for the order, you cannot delete all deliveri
 [[h3_1143528965]]
 === Editable Fields
 
-The editable fields were implemented to support the application of the manually set discounts and can be used in calculations or to display additional information. These fields should be first created on the [.object]#Order Line Item# object and then specified in the Settings record with the xref:admin-guide/workshops/workshop1-0-creating-basic-order/configuring-layout-settings-1-0/order-line-item-layout-setting-1-0.adoc[Layout Setting] record type.
+The editable fields were implemented to support the application of the manually set discounts and can be used in calculations or to display additional information. These fields should be first created on the [.object]#Order Line Item# object and then specified in the Settings record with the xref:admin-guide/workshops/workshop-1-0-creating-basic-order/configuring-layout-settings-1-0/order-line-item-layout-setting-1-0.adoc[Layout Setting] record type.
 
 The processing logic displaying the fields goes as follows:
 
@@ -114,4 +114,4 @@ image::ctorders-editable-fields.gif[align="center"]
 
 See also:
 
-* xref:admin-guide/workshops/workshop1-0-creating-basic-order/index.adoc[]
+* xref:admin-guide/workshops/workshop-1-0-creating-basic-order/index.adoc[]

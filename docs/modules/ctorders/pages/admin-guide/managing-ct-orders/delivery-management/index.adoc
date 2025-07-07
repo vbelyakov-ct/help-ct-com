@@ -8,7 +8,7 @@ TIP: If you use customer ERP {plus} Salesforce CRM, you can inherit the delivery
 [[h2_1261280722]]
 == CT Order and Delivery Relationship
 
-When tapping the *Add Cart* button on the selected CT Order, the user can xref:admin-guide/workshops/workshop1-0-creating-basic-order/complete-workshop-1-0-checkpoint/creating-a-delivery-1-0.adoc[specify preferred delivery dates and the number of deliveries].
+When tapping the *Add Cart* button on the selected CT Order, the user can xref:admin-guide/workshops/workshop-1-0-creating-basic-order/complete-workshop-1-0-checkpoint/creating-a-delivery-1-0.adoc[specify preferred delivery dates and the number of deliveries].
 
 * By default, the user cannot specify more than 19 deliveries. You can reduce the number of deliveries on the appropriate _Limit Setting_ record.
 * The delivery date range can be specified in the appropriate _Limit Setting_ record.
@@ -105,20 +105,20 @@ NOTE: A representative should have at least permission to read records and all f
 +
 A representative should have permission to read the custom [.object]#Address# object. Users with the manager role can also have permission to edit _Address_ records.
 . xref:admin-guide/getting-started/setting-up-an-instance/configuring-object-setting.adoc[Create] the _Settings_ record with the _Object Setting_ record type for an instance.
-. xref:admin-guide/workshops/workshop1-0-creating-basic-order/configuring-an-address-settings-1-0/index.adoc[Create] the _Settings_ record with the _Address Setting_ record type.
-. xref:admin-guide/workshops/workshop1-0-creating-basic-order/configuring-an-address-settings-1-0/creating-a-relationship-between-custom-address-object-and-delivery-1-0.adoc[Add the address lookup] on the [.object]#Delivery# object.
+. xref:admin-guide/workshops/workshop-1-0-creating-basic-order/configuring-an-address-settings-1-0/index.adoc[Create] the _Settings_ record with the _Address Setting_ record type.
+. xref:admin-guide/workshops/workshop-1-0-creating-basic-order/configuring-an-address-settings-1-0/creating-a-relationship-between-custom-address-object-and-delivery-1-0.adoc[Add the address lookup] on the [.object]#Delivery# object.
 A representative should have permission to create, edit, and delete the _Delivery_ and _Delivery Line Item_ records.
-. Optionally, xref:admin-guide/workshops/workshop1-0-creating-basic-order/adding-delivery-restrictions-to-an-order-1-0.adoc[create] and set up the _Settings_ record with the _Limit Settings_ record type for an _Order_ record type.
+. Optionally, xref:admin-guide/workshops/workshop-1-0-creating-basic-order/adding-delivery-restrictions-to-an-order-1-0.adoc[create] and set up the _Settings_ record with the _Limit Settings_ record type for an _Order_ record type.
 . xref:admin-guide/managing-ct-orders/discount-management/promotions.adoc[Set up Promotions and promotion delivery dates].
 * A representative should have permission to read the [.object]#Promotion# object. Users with the manager role can also have permission to edit _Promotion_ records.
 * If xref:admin-guide/managing-ct-orders/discount-management/promotion-data-model/promotion-field-reference.adoc[the delivery dates specified on the Promotion record] are out of xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/limit-setting-field-reference.adoc[the delivery dates in the Limit Settings record], the order delivery with the products of this promotion cannot be done.
-. xref:admin-guide/workshops/workshop1-0-creating-basic-order/creating-a-sales-organization-1-0.adoc[Create] and set up a Sales Organization.
-. xref:admin-guide/workshops/workshop1-0-creating-basic-order/creating-a-sales-organization-user-1-0.adoc[Assign a Sales Org User].
+. xref:admin-guide/workshops/workshop-1-0-creating-basic-order/creating-a-sales-organization-1-0.adoc[Create] and set up a Sales Organization.
+. xref:admin-guide/workshops/workshop-1-0-creating-basic-order/creating-a-sales-organization-user-1-0.adoc[Assign a Sales Org User].
 . xref:admin-guide/managing-ct-orders/order-management/index.adoc[Set up the Order management.]
 A representative should have permission to create, edit, and delete the _CT Order_ and _Order Line Item_ records.
 
 The setup is complete. The representative can xref:admin-guide/managing-ct-orders/order-management/index.adoc[create an order] and
-xref:admin-guide/workshops/workshop1-0-creating-basic-order/complete-workshop-1-0-checkpoint/creating-a-delivery-1-0.adoc[add deliveries].
+xref:admin-guide/workshops/workshop-1-0-creating-basic-order/complete-workshop-1-0-checkpoint/creating-a-delivery-1-0.adoc[add deliveries].
 
 See also:
 

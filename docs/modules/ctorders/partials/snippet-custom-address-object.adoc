@@ -3,7 +3,7 @@ To use a custom [.object]#Address# object as the [.object]#Address# object:
 . Create a custom [.object]#Address# object with the *Address* field(s) of the _Text_ data type, for example, [.apiobject]#CustomAddress__c#.
 . Create an _OM Settings_ record with the _Object Setting_ record type and specify the API name of the custom [.object]#Address# object.
 . Create an _OM Settings_ record with the _Address Setting_ record type and specify the corresponding *Address* field, for example, [.apiobject]#CustomAddress__c#.
-. xref:admin-guide/workshops/workshop1-0-creating-basic-order/configuring-an-address-settings-1-0/creating-a-relationship-between-custom-address-object-and-delivery-1-0.adoc[Create a lookup] from the [.object]#Delivery# object to the custom [.object]#Address# object.
+. xref:admin-guide/workshops/workshop-1-0-creating-basic-order/configuring-an-address-settings-1-0/creating-a-relationship-between-custom-address-object-and-delivery-1-0.adoc[Create a lookup] from the [.object]#Delivery# object to the custom [.object]#Address# object.
 . Create a lookup from the custom [.object]#Address# object on the [.object]#Account# object.
 
 After you created the custom [.object]#Address# object and field(s), relate delivery addresses to the required _Sales Organization_ record by creating the _Settings_ record with the xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/address-setting-field-reference.adoc[Address Setting] record type.

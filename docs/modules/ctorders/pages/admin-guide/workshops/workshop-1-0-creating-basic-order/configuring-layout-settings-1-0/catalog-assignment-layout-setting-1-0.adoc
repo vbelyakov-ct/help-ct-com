@@ -1,10 +1,6 @@
 = Catalog Assignment Layout Setting (1.0)
 
-Set up the Catalog Assignment layout if you want to
-xref:quick-start/creating-and-adding-catalogs-1-0[assign accounts to a catalog]
-on the *Product Management* tab on the *Catalog* record page.
-
-
+Set up the Catalog Assignment layout if you want to xref:quick-start/creating-and-adding-catalogs-1-0.adoc[assign accounts to a catalog] on the *Product Management* tab on the *Catalog* record page.
 
 To create the Catalog Assignment layout:
 
@@ -13,14 +9,12 @@ To create the Catalog Assignment layout:
 . Configure the settings as follows:
 * Enter *Participant* in the *Record Type* field.
 * Select a *Sales Organization*.
-* In the *Object* field, specify
-[.apiobject]#orders__CatalogAssignment__c#.
-* In *Fields To Display*, specify
-[.apiobject]#orders__AccountId__c#.
-
+* In the *Object* field, specify [.apiobject]#orders\__CatalogAssignment__c#.
+* In *Fields To Display*, specify [.apiobject]#orders\__AccountId__c#.
++
 image:catalog-assignment-layout-setting-2020-05-08.png[]
 . Click *Save*.
 
 The Catalog Assignment layout is set up.
 
-image:Layout-Catalog-Assignment.png[]
+image::Layout-Catalog-Assignment.png[align="center"]
