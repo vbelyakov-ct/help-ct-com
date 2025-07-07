@@ -5,32 +5,26 @@ Let's create an order with a promo discount:
 . Go to *CT Orders* and click *New*.
 . Complete the form as follows:
 * *Order Type*: _Order_.
-* *Account*: select an xref:admin-guide/workshops/workshop-1-0-creating-basic-order/configuring-an-account-1-0[account],
-which is allowed to place orders.
-* *Price
-Book*: xref:admin-guide/workshops/workshop-1-0-creating-basic-order/creating-and-assigning-a-ct-price-book-1-0/index[price book]
-you created earlier.
+* *Account*: select an xref:admin-guide/workshops/workshop-1-0-creating-basic-order/configuring-an-account-1-0.adoc[account], which is allowed to place orders.
+* *Price Book*: xref:admin-guide/workshops/workshop-1-0-creating-basic-order/creating-and-assigning-a-ct-price-book-1-0/index.adoc[price book] you created earlier.
 * *Sales Organization*: _Default_.
-* *Pricing
-Procedure*: xref:admin-guide/workshops/workshop-2-0-setting-up-discounts/workshop-2-1-configuring-a-client-based-discount/setting-up-a-pricing-procedure-2-1[Promo].
+* *Pricing Procedure*: xref:admin-guide/workshops/workshop-2-0-setting-up-discounts/workshop-2-1-configuring-a-client-based-discount/setting-up-a-pricing-procedure-2-1.adoc[Promo].
 * *Stage*: _On-hold_.
++
 image:setup-a-pricing-procedure-2-2-2020-08-26-7.png[]
 . Click *Save*.
 . On the *CT Orders* tab, click on the newly created order.
 . On the selected *CT Order* page, click *Edit Cart*.
-. Open the *Promotion* tab and expand the _SummerJam_ list of promo
-products on the left side.
-. Select three products that you specified earlier in the *Promo
-Products* section (marked by a red frame) and click *Add (1)*.
+. Open the *Promotion* tab and expand the _SummerJam_ list of promo products on the left side.
+. Select three products that you specified earlier in the *Promo Products* section (marked by a red frame) and click *Add (1)*.
++
 image:setup-a-pricing-procedure-2-2-2020-08-26-8.png[]
-You can also add other products from the *Promotion* list, the discount
-will be automatically applied to each line item.
++
+You can also add other products from the *Promotion* list, the discount will be automatically applied to each line item.
 . Fill out the *Delivery* window.
-. Set a different amount of items for each product to check the discount
-by level.
-[.confluence-information-macro-information]#Notice, the product which
-was excluded from the discount calculation *(2)* does not have a
-discount.#
+. Set a different amount of items for each product to check the discount by level.
++
+NOTE: Notice, the product which was excluded from the discount calculation *(2)* does not have a discount.
 . Click *Save Draft*.
 
 The discount will be applied and the totals panel values updated.

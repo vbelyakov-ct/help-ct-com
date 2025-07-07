@@ -1,23 +1,25 @@
 = Setting up a Pricing Procedure (2.2)
 
-Now you need to specify the pricing procedure that should be applied to
-calculate a discount for the promotion.
-
-
+Now you need to specify the pricing procedure that should be applied to calculate a discount for the promotion.
 
 To configure a pricing procedure:
 
 . Go to the *Pricing Procedure* tab.
++
+include::partial$create-a-pricing-procedure-tab.adoc[]
 . Click *New*. The *New Pricing Procedure* window pops up.
 . Complete the form as follows:
 .. Specify the new *Procedure Name*.
 .. Set the *Active* checkbox.
-.. Select the *Sales Organization* for which the procedure will be
-available.
+.. Select the *Sales Organization* for which the procedure will be available.
 .. Select *Order Types* for which you want to apply this procedure.
 .. Specify the *Pricing Procedure* in JSON format:
-
-
++
+[source, json]
+----
+{ "procedure": { "type":"SUM", "items": [ {"calculationType":"Promo" } ] }}
+----
++
 image:setup-a-pricing-procedure-2-2-2020-08-26.png[]
 . Click *Save*.
 
