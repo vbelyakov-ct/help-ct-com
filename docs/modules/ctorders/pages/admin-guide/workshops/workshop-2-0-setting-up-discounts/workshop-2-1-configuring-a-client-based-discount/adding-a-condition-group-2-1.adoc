@@ -2,16 +2,13 @@
 
 To create a new _Condition Group_ record:
 
-. On the created *Calculation Type* page, click *New* in the *Condition
-Groups* section.
+. On the created *Calculation Type* page, click *New* in the *Condition Groups* section.
 . Complete the form as follows:
 * *Calculation type*: _Client Based_.
 * *Order*: enter the product amount to grant a discount for the order.
 * *Active:* select the** **checkbox.
-* *Condition Fields*:
-[.apiobject]#orders__OrderId__r.orders__AccountId__r.Name
-#
-
+* *Condition Fields*: [.apiobject]#orders\__OrderId__r.orders\__AccountId__r.Name#
++
 image:calculation-types-2020-08-25-1.png[]
 . Click *Save*.
 

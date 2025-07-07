@@ -11,18 +11,14 @@ Condition_ calculation type:
 * *External ID*: _ClientBased_
 * *Calculation Method*: _Decrease Price_
 * *Unit of Measure*: _Percent_
-* *Condition Fields Update Type*: ** _Real-Time_
-* *Condition Fields
-List*: [.apiobject]#orders__OrderId__r.orders__AccountId__r.Name
-
-#It is the API name of the field that will be used for discount
-calculation. You can leave this field empty, as the system will
-automatically update it with values from the Condition Group records
-created for this calculation type.[.apiobject]#
-#[NOTE] ==== The current user must have access to all the fields
-listed in the *Conditions Fields List*. ====
-
-image:/resources/Storage/ct-orders-4-0/calculation-types-2020-08-25.png[/resources/Storage/ct-orders-4-0/calculation-types-2020-08-25]
+* *Condition Fields Update Type*: _Real-Time_
+* *Condition Fields List*: [.apiobject]#orders\__OrderId__r.orders\__AccountId__r.Name#
++
+It is the API name of the field that will be used for discount calculation. You can leave this field empty, as the system will automatically update it with values from the Condition Group records created for this calculation type.
++
+NOTE: The current user must have access to all the fields listed in the *Conditions Fields List*.
++
+image:calculation-types-2020-08-25.png[calculation-types-2020-08-25]
 . Click *Save*.
 
 The setup is complete.

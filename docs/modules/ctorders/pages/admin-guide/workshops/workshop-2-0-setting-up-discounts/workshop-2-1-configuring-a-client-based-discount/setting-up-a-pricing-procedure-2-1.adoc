@@ -1,10 +1,8 @@
 = Setting up a Pricing Procedure (2.1)
 
-After you configure all required conditions for the calculation type,
-you need to specify the pricing procedure that should be applied to
-calculate a discount for the orders.
+After you configure all required conditions for the calculation type, you need to specify the pricing procedure that should be applied to calculate a discount for the orders.
 
-
+include::partial$create-a-pricing-procedure-tab.adoc[]
 
 To configure a pricing procedure:
 
@@ -17,7 +15,20 @@ To configure a pricing procedure:
 available.
 .. Select *Order Types* for which you want to apply this procedure.
 .. Specify the *Pricing Procedure* in JSON format:
-
++
+[source,json]
+----
+{
+  "procedure": {
+    "type":"MAX",
+    "items": [
+      {"calculationType":"ClientBased"
+      }
+    ]
+  }
+}
+----
++
 image:calculation-types-2020-08-25-6.png[]
 . Click *Save*.
 
