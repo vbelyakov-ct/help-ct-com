@@ -1,63 +1,393 @@
 = Setting up a Pricing Procedure (2.3)
 
-To enter a manual discount, you need to create a new _Pricing Procedure_
-record that will ignore any other discounts and that can be applied to
-the order if the *Manual Discount* *Percent* field is filled out during
-the order-taking process.
-
-
+To enter a manual discount, you need to create a new _Pricing Procedure_ record that will ignore any other discounts and that can be applied to the order if the *Manual Discount* *Percent* field is filled out during the order-taking process.
 
 To configure a new procedure:
 
 . Go to the *Pricing Procedure* tab and click *New.*
++
+include::partial$create-a-pricing-procedure-tab.adoc[]
 . Specify the following:
 * Specify the new *Procedure Name*.
 * Set *Active*.
-* Select the *Sales Organization*, for which the procedure will be
-available.
+* Select the *Sales Organization*, for which the procedure will be available.
 * Select *Order Types*, for which you want to apply this procedure.
-* Specify the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/index[Pricing Procedure in
-JSON format]. Please note that:
-** This JSON uses a new _Manual Discount Percent_** **calculation type
-and two additional _Calculation Types_ that can be configured by
-completing xref:admin-guide/workshops/workshop-2-0-setting-up-discounts/workshop-2-1-configuring-a-client-based-discount/index[Workshop
-2.1] and xref:admin-guide/workshops/workshop-2-0-setting-up-discounts/workshop-2-2-configuring-a-new-promotion/index[Workshop
-2.2]. Carefully check the values specified for
-the [.apiobject]#procedure# key as they define which discounts
-will be applied in the order. In case the values are not correct, the
-system displays an error.
-** This JSON is an example of the procedure for manual discount
-calculation, which requires adding
-the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-drill-down-step[Drill Down Step] and
-the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/step-conditions[List Price check] at the beginning of the
-pricing procedure. This allows to check if the *Manual Discount
-Percent* field contains a value (not empty), so it would be either
-applied as a discount for the order line item or skipped for the
-following matching conditions to be applied instead.
-** The full description of the _Pricing Procedure_ steps is
-available xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/index[here].
-** *JSON with Comments* only meant to explain the pricing steps and will
-not work for the [.object]#Pricing Procedure#.
-
-[width="100%",cols="50%,50%",]
-|===
-|Insert this JSON a|
-[{plus}] Click to expand a JSON
-
-.[-] Click to hide[%collapsible] ====
-
+* Specify the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/index.adoc[Pricing Procedure in JSON format]. Please note that:
+** This JSON uses a new _Manual Discount Percent_ calculation type and two additional _Calculation Types_ that can be configured by completing xref:admin-guide/workshops/workshop-2-0-setting-up-discounts/workshop-2-1-configuring-a-client-based-discount/index.adoc[Workshop 2.1] and xref:admin-guide/workshops/workshop-2-0-setting-up-discounts/workshop-2-2-configuring-a-new-promotion/index.adoc[Workshop 2.2]. Carefully check the values specified for the [.apiobject]#procedure# key as they define which discounts will be applied in the order. In case the values are not correct, the system displays an error.
+** This JSON is an example of the procedure for manual discount calculation, which requires adding the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-drill-down-step.adoc[Drill Down Step] and the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/step-conditions.adoc[List Price check] at the beginning of the pricing procedure. This allows to check if the *Manual Discount Percent* field contains a value (not empty), so it would be either applied as a discount for the order line item or skipped for the following matching conditions to be applied instead.
+** The full description of the _Pricing Procedure_ steps is available xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/index.adoc[here].
+** *JSON with Comments* only meant to explain the pricing steps and will not work for the [.object]#Pricing Procedure#.
+*** Insert this JSON (click to view):
++
+[%collapsible]
 ====
+--
+[source,json]
+----
+{
+  "version": 2,
+  "steps": [
+    {
+      "type": "drillDown",
+      "baseObject": "orders__OrderLineItem__c",
+      "basePrice": "ManualDiscountPercent__c",
+      "result": [
+        {
+          "resultObject": "orders__DeliveryLineItem__c",
+          "resultPrice": "ManualDiscountPercent__c"
+        }
+      ]
+    },
+    {
+      "type": "procedure",
+      "basePrice": "$.listPrice",
+      "resultPrice": "$.unitPrice",
+      "condition": {
+        "operator": "OR",
+        "items": [
+          {
+            "field": "ManualDiscountPercent__c",
+            "operator": "lessOrEqual",
+            "value": 0
+          },
+          {
+            "field": "ManualDiscountPercent__c",
+            "operator": "equal",
+            "value": null
+          }
 
-|JSON with Comments a|
-[{plus}] Click to expand a JSON
+        ]
+      },
+      "procedure": {
+        "type": "MULT",
+        "round": "item",
+        "roundTo": 4,
+        "items": [
+          {
+            "calculationType": "ClientBased"
+          },
+          {
+            "calculationType": "Promo"
+          }
+        ]
+      }
+    },
+    {
+      "type": "procedure",
+      "basePrice": "$.listPrice",
+      "resultPrice": "$.unitPrice",
+      "condition": {
+        "operator": "AND",
+        "items": [
+          {
+            "field": "ManualDiscountPercent__c",
+            "operator": "greater",
+            "value": 0
+          }
+        ]
+      },
+      "procedure": {
+        "type": "MULT",
+        "round": "item",
+        "roundTo": 4,
+        "items": [
+          {
+            "calculationType": "manualdiscountpercent"
+          }
 
-.[-] Click to hide[%collapsible] ====
-
-
-
+        ]
+      }
+    },
+    {
+      "type": "setValue",
+      "object": "orders__DeliveryLineItem__c",
+      "resultPrice": "$.unitPrice",
+      "condition": {
+        "operator": "AND",
+        "items": [
+          {
+            "field": "$.unitPrice",
+            "operator": "less",
+            "value": 0
+          }
+        ]
+      },
+      "value": 0
+    },
+    {
+      "type": "rollUp",
+      "baseObject": "orders__DeliveryLineItem__c",
+      "basePrice": "$.unitPrice",
+      "method": "copyEqual",
+      "result": [
+        {
+          "resultObject": "orders__OrderLineItem__c",
+          "resultPrice": "$.unitPrice"
+        }
+      ]
+    },
+    {
+      "type": "setValue",
+      "object": "orders__DeliveryLineItem__c",
+      "resultPrice": "$.totalPrice",
+      "value": {
+        "operator": "multi",
+        "items": [
+          "$.unitPrice",
+          "$.quantity"
+        ]
+      }
+    },
+    {
+      "type": "rollUp",
+      "baseObject": "orders__DeliveryLineItem__c",
+      "basePrice": "$.totalPrice",
+      "method": "sum",
+      "result": [
+        {
+          "resultObject": "orders__Order__c",
+          "resultPrice": "$.totalPrice"
+        },
+        {
+          "resultObject": "orders__Delivery__c",
+          "resultPrice": "$.totalPrice"
+        },
+        {
+          "resultObject": "orders__OrderLineItem__c",
+          "resultPrice": "$.totalPrice"
+        }
+      ]
+    },
+    {
+      "type": "setValue",
+      "object": "orders__DeliveryLineItem__c",
+      "resultPrice": "$.totalDiscount",
+      "value": {
+        "operator": "multi",
+        "items": [
+          {
+            "operator": "sum",
+            "items": [
+              "$.listPrice",
+              "- $.unitPrice"
+            ]
+          },
+          "$.quantity"
+        ]
+      }
+    },
+    {
+      "type": "rollUp",
+      "baseObject": "orders__DeliveryLineItem__c",
+      "basePrice": "$.totalDiscount",
+      "method": "sum",
+      "result": [
+        {
+          "resultObject": "orders__Order__c",
+          "resultPrice": "$.totalDiscount"
+        },
+        {
+          "resultObject": "orders__Delivery__c",
+          "resultPrice": "$.totalDiscount"
+        },
+        {
+          "resultObject": "orders__OrderLineItem__c",
+          "resultPrice": "$.totalDiscount"
+        }
+      ]
+    }
+  ]
+}
+----
+--
 ====
+*** JSON with Comments (click to view):
++
+[%collapsible]
+====
+--
+[source,json]
+----
+{
+  "version": 2,
+  "steps": [
+    {
+      "type": "drillDown",
+      "baseObject": "orders__OrderLineItem__c",
+      "basePrice": "ManualDiscountPercent__c",                  // The custom field added to the Order Line Item object. Check that the correct API name is specified.
+      "result": [
+        {
+          "resultObject": "orders__DeliveryLineItem__c",
+          "resultPrice": "ManualDiscountPercent__c"             // The custom field added to the Delivery Line Item object. Check that the correct API name is specified.
+        }
+      ]
+    },
+    {
+      "type": "procedure",
+      "basePrice": "$.listPrice",
+      "resultPrice": "$.unitPrice",
+      "condition": {
+        "operator": "OR",
+        "items": [
+          {
+            "field": "ManualDiscountPercent__c",                // The custom field added to the Delivery Line Item object. Check that the correct API name is specified.
+            "operator": "lessOrEqual",
+            "value": 0
+          },
+          {
+            "field": "ManualDiscountPercent__c",                // The custom field added to the Delivery Line Item object. Check that the correct API name is specified.
+            "operator": "equal",
+            "value": null
+          }
 
-|===
+        ]
+      },
+      "procedure": {
+        "type": "MULT",
+        "round": "item",
+        "roundTo": 4,
+        "items": [
+          {
+            "calculationType": "ClientBased"
+          },
+          {
+            "calculationType": "Promo"
+          }
+        ]
+      }
+    },
+    {
+      "type": "procedure",                                       // In this step of the Pricing Procedure, we calculate a Manual Discount.
+      "basePrice": "$.listPrice",
+      "resultPrice": "$.unitPrice",
+      "condition": {
+        "operator": "AND",
+        "items": [
+          {
+            "field": "ManualDiscountPercent__c",                // The custom field added to the Order Line Item object. Check that the correct API name is specified.
+            "operator": "greater",
+            "value": 0
+          }
+        ]
+      },
+      "procedure": {
+        "type": "MULT",
+        "round": "item",
+        "roundTo": 4,
+        "items": [
+          {
+            "calculationType": "manualdiscountpercent"          // External Id of the Calculation Type record. Check that the correct External Id is used.
+          }
+
+        ]
+      }
+    },
+    {
+      "type": "setValue",                                       // In this step of the Pricing Procedure, we set the Unit Price field of the Delivery Line Item record to 0 if the result Unit Price for Delivery Line Item is less than 0.
+      "object": "orders__DeliveryLineItem__c",
+      "resultPrice": "$.unitPrice",
+      "condition": {
+        "operator": "AND",
+        "items": [
+          {
+            "field": "$.unitPrice",
+            "operator": "less",
+            "value": 0
+          }
+        ]
+      },
+      "value": 0
+    },
+    {
+      "type": "rollUp",                                         // In this step of the Pricing Procedure, we copy Unit Price of Delivery Line Items to Order Line items if they are the same for all Delivery Line Items.
+      "baseObject": "orders__DeliveryLineItem__c",
+      "basePrice": "$.unitPrice",
+      "method": "copyEqual",
+      "result": [
+        {
+          "resultObject": "orders__OrderLineItem__c",
+          "resultPrice": "$.unitPrice"
+        }
+      ]
+    },
+    {
+      "type": "setValue",                                       // In this step of the Pricing Procedure, we calculate Total Price for all Delivery Line Items.
+      "object": "orders__DeliveryLineItem__c",
+      "resultPrice": "$.totalPrice",
+      "value": {
+        "operator": "multi",
+        "items": [
+          "$.unitPrice",
+          "$.quantity"
+        ]
+      }
+    },
+    {
+      "type": "rollUp",                                         // In this step of the Pricing Procedure, we calculate Total Price with the applied manual discounts for Order, Delivery, and Order Line Items.
+      "baseObject": "orders__DeliveryLineItem__c",
+      "basePrice": "$.totalPrice",
+      "method": "sum",
+      "result": [
+        {
+          "resultObject": "orders__Order__c",
+          "resultPrice": "$.totalPrice"
+        },
+        {
+          "resultObject": "orders__Delivery__c",
+          "resultPrice": "$.totalPrice"
+        },
+        {
+          "resultObject": "orders__OrderLineItem__c",
+          "resultPrice": "$.totalPrice"
+        }
+      ]
+    },
+    {
+      "type": "setValue",                                       // In this step of the Pricing Procedure, we calculate Manual Discount for all Delivery Line Items.
+      "object": "orders__DeliveryLineItem__c",
+      "resultPrice": "$.totalDiscount",
+      "value": {
+        "operator": "multi",
+        "items": [
+          {
+            "operator": "sum",
+            "items": [
+              "$.listPrice",
+              "- $.unitPrice"
+            ]
+          },
+          "$.quantity"
+        ]
+      }
+    },
+    {
+      "type": "rollUp",                                          // In this step of the Pricing Procedure, we calculate Manual Discount for Order, Delivery, and Order Line Items.
+      "baseObject": "orders__DeliveryLineItem__c",
+      "basePrice": "$.totalDiscount",
+      "method": "sum",
+      "result": [
+        {
+          "resultObject": "orders__Order__c",
+          "resultPrice": "$.totalDiscount"
+        },
+        {
+          "resultObject": "orders__Delivery__c",
+          "resultPrice": "$.totalDiscount"
+        },
+        {
+          "resultObject": "orders__OrderLineItem__c",
+          "resultPrice": "$.totalDiscount"
+        }
+      ]
+    }
+  ]
+}
+
+----
+--
+====
 . Click *Save*.
 
 The _Pricing Procedure_ record is created.
+
+
