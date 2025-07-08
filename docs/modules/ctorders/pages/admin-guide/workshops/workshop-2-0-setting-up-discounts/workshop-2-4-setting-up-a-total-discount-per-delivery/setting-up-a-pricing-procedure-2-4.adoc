@@ -3,13 +3,16 @@
 To apply all discounts, configure a new procedure:
 
 . Go to the *Pricing Procedure* tab and click *New.*
++
+include::partial$create-a-pricing-procedure-tab.adoc[]
 . Specify the following:
 * *Procedure Name*: _Discounts per Delivery_.
 * Set *Active*.
 * Select the *Sales Organization*, for which the procedure will be available.
 * Select *Order Types*, for which you want to apply this procedure.
 * In the *Pricing Procedure* window, enter the following JSON:
-**
++
+include::partial$snippet-pricing-procedure-note.adoc[]
 +
 [tabs]
 ======
