@@ -14,6 +14,19 @@ type and click *Next*.
 * *Condition Fields Update Type*: _Real-Time_.
 * *Level Based On*: _Order Line Items_.
 * *Level Formula*: enter the following:
++
+[source,json]
+----
+{
+  "operator": "sum",
+  "items": [
+    "TotalForDiscount__c"
+  ]
+}
+----
++
+include::partial$conditions-fields-list-access.adoc[]
++
 image:Calculation-Type-2.5.png[]
 . Click *Save*.
 
