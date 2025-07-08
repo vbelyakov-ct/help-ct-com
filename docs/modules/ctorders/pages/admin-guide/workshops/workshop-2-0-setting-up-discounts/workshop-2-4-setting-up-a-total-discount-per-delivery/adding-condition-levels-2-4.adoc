@@ -1,24 +1,19 @@
 = Adding Condition Levels (2.4)
 
-Condition levels are responsible for the discount levels. Set up 2
-discount levels based on the total price for products in a single
-delivery.
+Condition levels are responsible for the discount levels. Set up 2 discount levels based on the total price for products in a single delivery.
 
-. On the created *Calculation Type* page, click on the
-created *Condition* record under the *Conditions* section → click *New*
-in the *Condition Levels* section.
+. On the created *Calculation Type* page, click on the created *Condition* record under the *Conditions* section → click *New* in the *Condition Levels* section.
 . Specify the following:
 * *Starting from*: _100_.
 * *Discount Rate (%)*: _10_.
++
 image:Condition-Level-1-2.4.png[]
 . Click *Save & New*.
 . Specify the following:
 * *Starting from*: _150_.
 * *Discount Rate (%)*: _15_.
++
 image:Condition-Level-2-2.4.png[]
 . Click *Save*.
 
-The _Condition Level_ records are created. So, a 10% discount will be
-applied when the total price for products in a single delivery reaches
-$100, and a 15% discount will be applied when the total price is over
-$150.
+The _Condition Level_ records are created. So, a 10% discount will be applied when the total price for products in a single delivery reaches $100, and a 15% discount will be applied when the total price is over $150.

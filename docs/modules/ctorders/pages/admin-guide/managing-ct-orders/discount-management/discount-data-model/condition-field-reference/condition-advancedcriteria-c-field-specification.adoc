@@ -10,8 +10,9 @@ The logic is applied when the *Calculation Method* on the [.object]#Condition# o
 
 The *Advanced Criteria* field is used to define the group discount for the product. It means that the condition in *Condition Details* and additionally the condition specified in this field must be satisfied.
 
-For example, specify products that affect the discount or the presence of which product can determine whether a discount will be granted. Also, there are the products, whose quantity would determine whether a suitable _Condition Level_ record would be selected. The quantity is counted for all products, that matched the condition in the *Advanced Criteria* field. This syntax is also applied for parsing the _Criteria Based_ and _List Based_ freebies. All [.object]#Order Line Items# of the order will. be checked. Click to the example below:
+For example, specify products that affect the discount or the presence of which product can determine whether a discount will be granted. Also, there are the products, whose quantity would determine whether a suitable _Condition Level_ record would be selected. The quantity is counted for all products, that matched the condition in the *Advanced Criteria* field. This syntax is also applied for parsing the _Criteria Based_ and _List Based_ freebies. All [.object]#Order Line Items# of the order will. be checked.
 
+.Click to see the example
 [%collapsible]
 ====
 --
@@ -95,8 +96,7 @@ See the example below, where the discount will be applied when one of the condit
 * 6 SKUs from Brand3 and 4 SKUs from Brand4
 * 4 SKUs from Brand4 and 2 SKUs from Brand5
 
-Click to view an example:
-
+.*Click to view an example*
 [%collapsible]
 ====
 --

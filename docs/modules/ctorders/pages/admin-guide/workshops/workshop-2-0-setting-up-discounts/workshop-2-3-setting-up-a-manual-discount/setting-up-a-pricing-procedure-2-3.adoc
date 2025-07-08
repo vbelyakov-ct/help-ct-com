@@ -17,11 +17,14 @@ include::partial$create-a-pricing-procedure-tab.adoc[]
 ** This JSON is an example of the procedure for manual discount calculation, which requires adding the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-drill-down-step.adoc[Drill Down Step] and the xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/step-conditions.adoc[List Price check] at the beginning of the pricing procedure. This allows to check if the *Manual Discount Percent* field contains a value (not empty), so it would be either applied as a discount for the order line item or skipped for the following matching conditions to be applied instead.
 ** The full description of the _Pricing Procedure_ steps is available xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/index.adoc[here].
 ** *JSON with Comments* only meant to explain the pricing steps and will not work for the [.object]#Pricing Procedure#.
-*** Insert this JSON (click to view):
 +
+[tabs]
+======
+Insert this JSON::
++
+.Click to view
 [%collapsible]
 ====
---
 [source,json]
 ----
 {
@@ -199,13 +202,12 @@ include::partial$create-a-pricing-procedure-tab.adoc[]
   ]
 }
 ----
---
 ====
-*** JSON with Comments (click to view):
+JSON with Comments::
 +
+.Click to view
 [%collapsible]
 ====
---
 [source,json]
 ----
 {
@@ -384,8 +386,8 @@ include::partial$create-a-pricing-procedure-tab.adoc[]
 }
 
 ----
---
 ====
+======
 . Click *Save*.
 
 The _Pricing Procedure_ record is created.

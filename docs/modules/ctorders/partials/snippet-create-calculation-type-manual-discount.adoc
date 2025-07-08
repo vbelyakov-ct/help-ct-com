@@ -2,7 +2,7 @@
 . In the *New Calculation Type* window, select the *Condition* record type and click *Next*.
 . Enter the following:
 * *Calculation Type Name*: _Manual Discount %_.
-* *External Id*:* *_manualdiscountpercent_.
+* *External Id*: _manualdiscountpercent_.
 * *Calculation Method*: _Decrease Price_.
 * *Unit of Measure*: _Percent_.
 * *Condition Fields Update Type*: _Real-Time_.
@@ -20,11 +20,7 @@
 ]
 ----
 +
-[NOTE]
-====
-* The current user must have access to all the fields listed in the *Condition Fields List* field.
-* Do not enter any values in the *Condition Fields List* field. This field will be automatically filled in later.
-====
+include::partial$conditions-fields-list-access.adoc[]
 +
 image:2021-08-16_14-23-06.png[]
 . Click *Save*.
