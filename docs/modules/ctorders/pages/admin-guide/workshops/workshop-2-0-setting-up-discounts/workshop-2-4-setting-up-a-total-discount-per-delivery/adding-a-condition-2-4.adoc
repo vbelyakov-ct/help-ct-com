@@ -31,7 +31,7 @@ TIP: In the [.apiobject]#field# key you may either specify [.apiobject]#orders\_
 * *Discount Rate Location*: _Level Records_.
 * *Advanced Criteria*: add this JSON, according to which the condition with discount will trigger for the product, which is not a promotional product:
 +
-TIP: In the [.apiobject]#field# key, you may either specify [.apiobject]#orders\__PromotionId__r.orders\__ExternalId__c# or [.apiobject]#orders\__PromotionId__c#, depending on whether your products have *External Id*.
+include::partial$field-key-tip.adoc[]
 +
 [source,json]
 ----

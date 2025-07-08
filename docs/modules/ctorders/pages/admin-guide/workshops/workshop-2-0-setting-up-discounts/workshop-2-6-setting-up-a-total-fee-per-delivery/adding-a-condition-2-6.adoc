@@ -1,32 +1,77 @@
 = Adding a Condition (2.6)
 
-For the newly created _Calculation Type_ record, you will need to
-specify the conditions to calculate fees for products in order.
+For the newly created _Calculation Type_ record, you will need to specify the conditions to calculate fees for products in order.
 
-. ​On the created *Calculation Type* page, click *New* in
-the *Conditions* section.
+. On the created *Calculation Type* page, click *New* in the *Conditions* section.
 . Enter the following:
 * *Order*: _10_.
-[TIP] ==== The field is responsible for the order in which
-[.object]#Conditions ==== of [.object]#Calculation Type# are applied. Since we only use one [.object]#Condition# in the
-workshop, you can specify any value in this field.#
++
+TIP: The field is responsible for the order in which [.object]#Conditions# of [.object]#Calculation Type# are applied. Since we only use one [.object]#Condition# in the
+workshop, you can specify any value in this field.
 * Set *Active*.
-* *Condition Details*: add this JSON, according to which the condition
-with discount will trigger for the product, which is not a promotional
-product:
-[TIP] ==== In the [.apiobject]#field ==== key, you may
-either specify
-[.apiobject]#orders__PromotionId__r.orders__ExternalId__c# or[.apiobject]#orders__PromotionId__c#, depending on
-whether your products have *External Id*.#
+* *Condition Details*: add this JSON, according to which the condition with discount will trigger for the product, which is not a promotional product:
++
+include::partial$field-key-tip.adoc[]
++
+[source,json]
+----
+{
+   "conditions":{
+      "operator":"AND",
+      "items":[
+         {
+            "field":"orders__PromotionId__r.orders__ExternalId__c",
+            "operator":"equal",
+            "value":""
+         }
+      ]
+   }
+}
+----
 * *Calculation Method*: _Advanced_.
 * *Discount Rate Location*: _Level Records_.
-* *Advanced Criteria*: add this JSON, according to which the condition
-with discount will trigger for the product, which is not a promotional
-product:[TIP] ==== In the [.apiobject]#field ==== key,
-you may either specify
-[.apiobject]#orders__PromotionId__r.orders__ExternalId__c# or[.apiobject]#orders__PromotionId__c#, depending on
-whether your products have *External Id*.#
+* *Advanced Criteria*: add this JSON, according to which the condition with discount will trigger for the product, which is not a promotional product:
++
+include::partial$field-key-tip.adoc[]
++
+[source,json]
+----
+{
+   "levelConditions":{
+      "operator":"AND",
+      "productCount":{
+         "filter":{
+            "operator":"AND",
+            "items":[
+               {
+                  "field":"orders__PromotionId__r.orders__ExternalId__c",
+                  "operator":"equal",
+                  "value":""
+               }
+            ]
+         },
+         "minCount":1
+      },
+      "requiredProducts":{
+         "productIdField":"orders__ProductId__r.CTCPG__ExternalId__c",
+         "operator":"AND",
+         "items":[
 
+         ]
+      }
+   },
+   "levelBasedOnFilter":{
+      "operator":"AND",
+      "items":[
+         {
+            "field":"orders__PromotionId__r.orders__ExternalId__c",
+            "operator":"equal",
+            "value":""
+         }
+      ]
+   }
+}
+----
 image:Condition-2.6.png[]
 . Click *Save*.
 

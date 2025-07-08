@@ -3,37 +3,413 @@
 To apply all discounts and fees, configure a new procedure:
 
 . Go to the *Pricing Procedure* tab and click *New.*
++
+include::partial$create-a-pricing-procedure-tab.adoc[]
 . Specify the following:
 * *Procedure Name*: _Fee per Delivery_.
 * Set *Active*.
-* Select the *Sales Organization*, for which the procedure will be
-available.
+* Select the *Sales Organization*, for which the procedure will be available.
 * Select *Order Types*, for which you want to apply this procedure.
 * In the *Pricing Procedure* window, enter the following JSON:
-
-
-
-[width="100%",cols="50%,50%",]
-|===
-|Insert this JSON  a|
-[{plus}] Click to expand a JSON
-
-.[-] Click to hide[%collapsible] ====
-
-
-
++
+include::partial$snippet-pricing-procedure-note.adoc[]
++
+[tabs]
+======
+Insert this JSON ::
++
+.Click to view
+[%collapsible]
 ====
-
-|JSON with Comments a|
-[{plus}] Click to expand a JSON
-
-.[-] Click to hide[%collapsible] ====
-
-
-
+[source,json]
+----
+{
+   "version":2,
+   "steps":[
+      {
+         "type":"procedure",
+         "basePrice":"$.listPrice",
+         "resultPrice":"$.unitPrice",
+         "procedure":{
+            "type":"MULT",
+            "round":"item",
+            "roundTo":4,
+            "items":[
+               {
+                  "calculationType":"structural"
+               },
+               {
+                  "calculationType":"contract"
+               },
+               {
+                  "type":"MAX",
+                  "items":[
+                     {
+                        "calculationType":"season"
+                     },
+                     {
+                        "calculationType":"promo_percent"
+                     }
+                  ]
+               }
+            ]
+         }
+      },
+      {
+         "type":"setValue",
+         "object":"orders__DeliveryLineItem__c",
+         "resultPrice":"$.unitPrice",
+         "condition":{
+            "operator":"AND",
+            "items":[
+               {
+                  "field":"$.unitPrice",
+                  "operator":"less",
+                  "value":0
+               }
+            ]
+         },
+         "value":0
+      },
+      {
+         "type":"setValue",
+         "object":"orders__DeliveryLineItem__c",
+         "resultPrice":"TotalForDiscount__c",
+         "value":{
+            "operator":"multi",
+            "items":[
+               "$.unitPrice",
+               "$.quantity"
+            ]
+         }
+      },
+      {
+         "type":"rollUp",
+         "baseObject":"orders__DeliveryLineItem__c",
+         "basePrice":"TotalForDiscount__c",
+         "method":"sum",
+         "result":[
+            {
+               "resultObject":"orders__OrderLineItem__c",
+               "resultPrice":"TotalForDiscount__c"
+            }
+         ]
+      },
+      {
+         "type":"procedure",
+         "basePrice":"$.unitPrice",
+         "resultPrice":"$.unitPrice",
+         "procedure":{
+            "type":"MULT",
+            "round":"item",
+            "roundTo":4,
+            "items":[
+               {
+                  "calculationType":"totaldiscountperorder"
+               }
+            ]
+         }
+      },
+      {
+         "type":"setValue",
+         "object":"orders__DeliveryLineItem__c",
+         "resultPrice":"$.unitPrice",
+         "condition":{
+            "operator":"AND",
+            "items":[
+               {
+                  "field":"$.unitPrice",
+                  "operator":"less",
+                  "value":0
+               }
+            ]
+         },
+         "value":0
+      },
+      {
+         "type":"rollUp",
+         "baseObject":"orders__DeliveryLineItem__c",
+         "basePrice":"$.unitPrice",
+         "method":"copyEqual",
+         "result":[
+            {
+               "resultObject":"orders__OrderLineItem__c",
+               "resultPrice":"$.unitPrice"
+            }
+         ]
+      },
+      {
+         "type":"setValue",
+         "object":"orders__DeliveryLineItem__c",
+         "resultPrice":"$.totalPrice",
+         "value":{
+            "operator":"multi",
+            "items":[
+               "$.unitPrice",
+               "$.quantity"
+            ]
+         }
+      },
+      {
+         "type":"rollUp",
+         "baseObject":"orders__DeliveryLineItem__c",
+         "basePrice":"$.totalPrice",
+         "method":"sum",
+         "result":[
+            {
+               "resultObject":"orders__Order__c",
+               "resultPrice":"$.totalPrice"
+            },
+            {
+               "resultObject":"orders__Delivery__c",
+               "resultPrice":"$.totalPrice"
+            },
+            {
+               "resultObject":"orders__OrderLineItem__c",
+               "resultPrice":"$.totalPrice"
+            }
+         ]
+      },
+      {
+         "type":"setValue",
+         "object":"orders__DeliveryLineItem__c",
+         "resultPrice":"$.totalDiscount",
+         "value":{
+            "operator":"multi",
+            "items":[
+               {
+                  "operator":"sum",
+                  "items":[
+                     "$.listPrice",
+                     "- $.unitPrice"
+                  ]
+               },
+               "$.quantity"
+            ]
+         }
+      },
+      {
+         "type":"rollUp",
+         "baseObject":"orders__DeliveryLineItem__c",
+         "basePrice":"$.totalDiscount",
+         "method":"sum",
+         "result":[
+            {
+               "resultObject":"orders__Order__c",
+               "resultPrice":"$.totalDiscount"
+            },
+            {
+               "resultObject":"orders__Delivery__c",
+               "resultPrice":"$.totalDiscount"
+            },
+            {
+               "resultObject":"orders__OrderLineItem__c",
+               "resultPrice":"$.totalDiscount"
+            }
+         ]
+      }
+   ]
+}
+----
 ====
-
-|===
+JSON with Comments::
++
+.Click to view
+[%collapsible]
+====
+[source,json]
+----
+{
+   "version":2,
+   "steps":[
+      {
+         "type":"procedure",
+         "basePrice":"$.listPrice",
+         "resultPrice":"$.unitPrice",
+         "procedure":{                                          // Calculation Types that are used to calculate discounts.
+            "type":"MULT",
+            "round":"item",
+            "roundTo":4,
+            "items":[
+               {
+                  "calculationType":"structural"               // The name of one of the preconfigured Calculation Types. You can create other Calculation Types and use them in the pricing procedure.
+               },
+               {
+                  "calculationType":"contract"
+               },
+               {
+                  "type":"MAX",
+                  "items":[
+                     {
+                        "calculationType":"season"
+                     },
+                     {
+                        "calculationType":"promo_percent"
+                     }
+                  ]
+               }
+            ]
+         }
+      },
+      {
+         "type":"setValue",                                     // In this step of the Pricing Procedure, we check that the Unit Price is greater than or equal to 0. If not, this step sets the Unit Price field of the Delivery Line Item record to 0.
+         "object":"orders__DeliveryLineItem__c",
+         "resultPrice":"$.unitPrice",
+         "condition":{
+            "operator":"AND",
+            "items":[
+               {
+                  "field":"$.unitPrice",
+                  "operator":"less",
+                  "value":0
+               }
+            ]
+         },
+         "value":0
+      },
+      {
+         "type":"setValue",                                   // In this step of the Pricing Procedure, we calculate Total Price for the Delivery Line Item record and set the result value in the custom Total For Discount field. This result value will be used for discount calculation.
+         "object":"orders__DeliveryLineItem__c",
+         "resultPrice":"TotalForDiscount__c",                 // The custom field added to the Delivery Line Item object. Check that the correct API name is specified.
+         "value":{
+            "operator":"multi",
+            "items":[
+               "$.unitPrice",
+               "$.quantity"
+            ]
+         }
+      },
+      {
+         "type":"rollUp",                                    // In this step of the Pricing Procedure, we sum all the Total for Discount values for the Delivery Line Items and set the result value in the Total For Discount field of the Order Line Item records.
+         "baseObject":"orders__DeliveryLineItem__c",
+         "basePrice":"TotalForDiscount__c",                  // The custom field added to the Delivery Line Item object. Check that the correct API name is specified.
+         "method":"sum",
+         "result":[
+            {
+               "resultObject":"orders__OrderLineItem__c",
+               "resultPrice":"TotalForDiscount__c"           // The custom field added to the Delivery Line Item object. Check that the correct API name is specified.
+            }
+         ]
+      },
+      {
+         "type":"procedure",                                 // In this step of the Pricing Procedure, we calculate Total Discount per Order.
+         "basePrice":"$.unitPrice",
+         "resultPrice":"$.unitPrice",
+         "procedure":{
+            "type":"MULT",
+            "round":"item",
+            "roundTo":4,
+            "items":[
+               {
+                  "calculationType":"totaldiscountperorder"  // External Id of the Calculation Type record. Check that the correct External Id is used.
+               }
+               }
+            ]
+         }
+      },
+      {
+         "type":"setValue",                                  // In this step of the Pricing Procedure, we set the Unit Price field of the Delivery Line Item record to 0 if the result Unit Price for Delivery Line Item is less than 0.
+         "object":"orders__DeliveryLineItem__c",
+         "resultPrice":"$.unitPrice",
+         "condition":{
+            "operator":"AND",
+            "items":[
+               {
+                  "field":"$.unitPrice",
+                  "operator":"less",
+                  "value":0
+               }
+            ]
+         },
+         "value":0
+      },
+      {
+         "type":"rollUp",                                    // In this step of the Pricing Procedure, we copy Unit Price of Delivery Line Iems to Order Line items if they are the same for all Delivery Line Items.
+         "baseObject":"orders__DeliveryLineItem__c",
+         "basePrice":"$.unitPrice",
+         "method":"copyEqual",
+         "result":[
+            {
+               "resultObject":"orders__OrderLineItem__c",
+               "resultPrice":"$.unitPrice"
+            }
+         ]
+      },
+      {
+         "type":"setValue",                                  // In this step of the Pricng Procedure, we calculate Total Price for all Delivery Line Items.
+         "object":"orders__DeliveryLineItem__c",
+         "resultPrice":"$.totalPrice",
+         "value":{
+            "operator":"multi",
+            "items":[
+               "$.unitPrice",
+               "$.quantity"
+            ]
+         }
+      },
+      {
+         "type":"rollUp",                                   // In this step of the Pricing Procedure, we calcualte Total Price with the applied discounts for Order, Delivery, and Order Line Items.
+         "baseObject":"orders__DeliveryLineItem__c",
+         "basePrice":"$.totalPrice",
+         "method":"sum",
+         "result":[
+            {
+               "resultObject":"orders__Order__c",
+               "resultPrice":"$.totalPrice"
+            },
+            {
+               "resultObject":"orders__Delivery__c",
+               "resultPrice":"$.totalPrice"
+            },
+            {
+               "resultObject":"orders__OrderLineItem__c",
+               "resultPrice":"$.totalPrice"
+            }
+         ]
+      },
+      {
+         "type":"setValue",                                // In this step of the Pricing Procedure, we calculate Total Discount for all Delivery Line Items.
+         "object":"orders__DeliveryLineItem__c",
+         "resultPrice":"$.totalDiscount",
+         "value":{
+            "operator":"multi",
+            "items":[
+               {
+                  "operator":"sum",
+                  "items":[
+                     "$.listPrice",
+                     "- $.unitPrice"
+                  ]
+               },
+               "$.quantity"
+            ]
+         }
+      },
+      {
+         "type":"rollUp",                                 // In this step of the Pricing Procedure, we calculate Total Discount for Order, Delivery, and Order Line Items.
+         "baseObject":"orders__DeliveryLineItem__c",
+         "basePrice":"$.totalDiscount",
+         "method":"sum",
+         "result":[
+            {
+               "resultObject":"orders__Order__c",
+               "resultPrice":"$.totalDiscount"
+            },
+            {
+               "resultObject":"orders__Delivery__c",
+               "resultPrice":"$.totalDiscount"
+            },
+            {
+               "resultObject":"orders__OrderLineItem__c",
+               "resultPrice":"$.totalDiscount"
+            }
+         ]
+      }
+   ]
+}
+----
+====
+======
 . Click *Save*.
 
 The _Pricing Procedure_ record is created.

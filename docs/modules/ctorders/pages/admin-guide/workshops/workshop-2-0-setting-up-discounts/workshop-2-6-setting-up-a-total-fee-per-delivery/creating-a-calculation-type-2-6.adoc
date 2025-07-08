@@ -3,8 +3,7 @@
 First, set up a _Calculation Type_ record:
 
 . Go to *Calculation Types* and click *New*.
-. In the *New Calculation Type* window, select the *Condition* record
-type and click *Next*.
+. In the *New Calculation Type* window, select the *Condition* record type and click *Next*.
 . Enter the following:
 * *Calculation Type Name*: _Total Fee per Delivery_.
 * *External Id*: _totalfeeperdelivery_.
@@ -14,6 +13,19 @@ type and click *Next*.
 * *Condition Fields Update Type*: _Real-Time_.
 * *Level Based On*: _Delivery Line Items_.
 * *Level Formula*:** **enter the following:
++
+[source,json]
+----
+{
+  "operator": "sum",
+  "items": [
+    "TotalForDiscount__c"
+  ]
+}
+----
++
+include::partial$conditions-fields-list-access.adoc[]
++
 image:Calculation-Type-2.6.png[]
 . Click *Save*.
 

@@ -1,32 +1,26 @@
 = Workshop 2.6 Checkpoint
 
-When all settings are done, let's create a new order to apply the
-configured discounts and fees:
+When all settings are done, let's create a new order to apply the configured discounts and fees:
 
 . Go to the *CT Orders* tab and click *New*.
 . Specify the following:
 * *Order Type*: _Order_.
 * Select *Account*.
-[NOTE] ==== The xref:admin-guide/workshops/workshop-1-0-creating-basic-order/configuring-an-account-1-0[Order
-Allowed] checkbox must be selected on the account details page. ====
-* *Price Book*: select
-xref:admin-guide/workshops/workshop-1-0-creating-basic-order/creating-and-assigning-a-ct-price-book-1-0/index[a price book] that
-you have created earlier.
++
+include::partial$order-allowed-checkbox.adoc[]
+* *Price Book*: select xref:admin-guide/workshops/workshop-1-0-creating-basic-order/creating-and-assigning-a-ct-price-book-1-0/index.adoc[a price book] that you have created earlier.
 * *Sales Organization*: _Default Sales Org_.
 * *Pricing Procedure*: _Fee per Delivery_.
 * *Order Stage*: _On-Hold_.
++
 image:Checkpoint-1-2.6.png[]
 . Click *Save*. The new CT Order is created.
 . On the created *CT Order* page, click the *Edit Cart* button.
-. On the left side, expand the *Catalogs* or *Promotion* in the
-corresponding section, select a catalog, promotion, or product, and
-click *Add*.
+. On the left side, expand the *Catalogs* or *Promotion* in the corresponding section, select a catalog, promotion, or product, and click *Add*.
 . Create the first delivery in the *Delivery* window and click *OK*.
-. Set the quantity for each product and click the price tag to view the
-applied discounts. The totals panel values will be automatically
-updated.
-.. If you do not reach the required total price for a single delivery,
-the total fee per delivery will be applied.
+. Set the quantity for each product and click the price tag to view the applied discounts. The totals panel values will be automatically updated.
+.. If you do not reach the required total price for a single delivery, the total fee per delivery will be applied.
++
 image:Checkpoint-2-2.6.png[]
 . Click *Save Draft*.
 
