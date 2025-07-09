@@ -1,30 +1,36 @@
 = Adding a Freebie Condition with the Similar Method (3.1)
 
-Set the conditions to determine how freebies should be shared in the
-order based on the added products.
+Set the conditions to determine how freebies should be shared in the order based on the added products.
 
-* The second condition is to distribute one freebie in the last delivery
-for every 12 products added.
+* The second condition is to distribute one freebie in the last delivery for every 12 products added.
 * The same product should be distributed as a freebie.
-
-
 
 To create a second _Freebie Condition_ record:
 
-. Go to the created *Freebie Type* record → click the *Related* tab →
-click *New* in the *Freebie Condition* section.
+. Go to the created *Freebie Type* record → click the *Related* tab → click *New* in the *Freebie Condition* section.
 . Enter the following:
 * *Freebie Condition Name*: _All Brands 12 {plus} 1_.
-* *Delivery Control*: select _Last_ to share freebies in the first
-delivery.
+* *Delivery Control*: select _Last_ to share freebies in the first delivery.
 * *Order*: specify _2_ to apply this condition in a second order.
 * Set *Active*.
-* *Condition Details*: add this JSON, according to which the condition
-will trigger for all products, which are not promotional products if the
-required number of such products is added to the order cart.
-
-* *Adding Method*: select _Similar_ ** to distribute the same product
-that matches the condition.
+* *Condition Details*: add this JSON, according to which the condition will trigger for all products, which are not promotional products if the required number of such products is added to the order cart.
++
+[source,json]
+----
+{
+  "conditions": {
+    "operator": "AND",
+    "items": [
+      {"field": "orders__PromotionId__c",
+       "operator": "equal",
+       "value": ""
+      }
+    ]
+  }
+}
+----
+* *Adding Method*: select _Similar_ to distribute the same product that matches the condition.
++
 image:Freebie-Condition-2-3.1.png[]
 . Click *Save*.
 

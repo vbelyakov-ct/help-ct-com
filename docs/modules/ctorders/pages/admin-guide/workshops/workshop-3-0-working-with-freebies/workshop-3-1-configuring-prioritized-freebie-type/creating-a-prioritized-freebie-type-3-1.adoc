@@ -1,8 +1,6 @@
 = Creating a Prioritized Freebie Type (3.1)
 
-First, create a _Freebie Type_ record with the _Prioritized_ record type
-to apply only the one matched condition that is a priority among all
-suitable conditions:
+First, create a _Freebie Type_ record with the _Prioritized_ record type to apply only the one matched condition that is a priority among all suitable conditions:
 
 . Go to the *Freebie Types* tab and click *New*.
 . Select a *Prioritized* record type and click *Next*.
@@ -12,6 +10,9 @@ suitable conditions:
 * *External Id*: _structural_.
 * Set *Active*.
 * *Condition Fields Update Type*: _Real-Time_.
++
+include::partial$conditions-fields-list-access.adoc[]
++
 image:Freebie-Type-3.1.png[]
 . Click *Save*.
 

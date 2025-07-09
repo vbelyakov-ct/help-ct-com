@@ -1,57 +1,144 @@
 = Adding a Freebie Condition with the Criteria Based Method (3.1)
 
-Set the conditions to determine how freebies should be shared in the
-order based on the added products.
+Set the conditions to determine how freebies should be shared in the order based on the added products.
 
-* The first and priority condition is to distribute eight freebies in
-the first delivery for every certain 48 products added.
-* Freebies are distributed based on the filter, in this workshop, we
-give out products of the selected brand.
+* The first and priority condition is to distribute eight freebies in the first delivery for every certain 48 products added.
+* Freebies are distributed based on the filter, in this workshop, we give out products of the selected brand.
 
+To create a priority _Freebie Condition_ record:
 
-
-To create a priority _Freebie Condition_ ** record:
-
-. Go to the created _Freebie Type_ record → click the *Related* tab →
-click *New* in the *Freebie Condition* section.
+. Go to the created _Freebie Type_ record → click the *Related* tab → click *New* in the *Freebie Condition* section.
 . Enter the following:
 * *Freebie Condition Name*: _Certain Brand 48 {plus} 8_.
-* *Delivery Control*: select _First_ to share freebies in the first
-delivery.
+* *Delivery Control*: select _First_ to share freebies in the first delivery.
 * **Order: **specify _1_ to apply this condition in priority order.
 * Set *Active*.
-* *Condition Details*: add this JSON, according to which the condition
-will trigger for the certain product or a product, which is not a
-promotional product, if the required number of such products is added to
-the order cart.
-
-[width="100%",cols="50%,50%",]
-|===
-|Insert this JSON a|
-[{plus}] Click to expand a JSON
-
-.[-] Click to hide[%collapsible] ====
-
+* *Condition Details*: add this JSON, according to which the condition will trigger for the certain product or a product, which is not a promotional product, if the required number of such products is added to the order cart.
++
+[tabs]
+======
+Insert this JSON::
++
+.Click to view
+[%collapsible]
 ====
+[source,json]
+----
+{
+   "levelConditions":{
+      "operator":"AND",
+      "productCount":{
+         "filter":{
+            "operator":"AND",
+            "items":[
+               {
+                  "field":"orders__PromotionId__c",
+                  "operator":"equal",
+                  "value":""
+               },
+               {
+                  "field":"orders__ProductId__r.CTCPG__ParentId__r.CTCPG__ParentId__r.CTCPG__ParentId__r.CTCPG__ExternalId__c",
+                  "operator":"equal",
+                  "value":"40011"
+               }
+            ]
+         },
+         "minCount":1
+      },
+      "requiredProducts":{
+         "productIdField":"orders__ProductId__c",
+         "operator":"AND",
+         "items":[
 
-|JSON with Comments a|
-[{plus}] Click to expand a JSON
+         ]
+      }
+   },
+   "levelBasedOnFilter":{
+      "operator":"AND",
+      "items":[
+         {
+            "field":"orders__PromotionId__c",
+            "operator":"equal",
+            "value":""
+         },
+         {
+            "field":"orders__ProductId__r.CTCPG__ParentId__r.CTCPG__ParentId__r.CTCPG__ParentId__r.CTCPG__ExternalId__c",
+            "operator":"equal",
+            "value":"40011"
+         }
+      ]
+   }
+}
+----
+====
+JSON with Comments::
++
+.Click to view
+[%collapsible]
+====
+[source,json]
+----
+{
+   "levelConditions":{
+      "operator":"AND",
+      "productCount":{
+         "filter":{
+            "operator":"AND",
+            "items":[
+               {
+                  "field":"orders__PromotionId__c",
+                  "operator":"equal",
+                  "value":""
+               },
+               {
+                  "field":"orders__ProductId__c",            // If the External Id is not set, use this notation.
+                  "operator":"equal",
+                  "value":"40011"                            // The code of the product.
+               }
+            ]
+         },
+         "minCount":1
+      },
+      "requiredProducts":{
+         "productIdField":"orders__ProductId__c",
+         "operator":"AND",
+         "items":[
 
-.[-] Click to hide[%collapsible] ==== ====
+         ]
+      }
+   },
+   "levelBasedOnFilter":{
+      "operator":"AND",
+      "items":[
+         {
+            "field":"orders__PromotionId__c",
+            "operator":"equal",
+            "value":""
+         },
+         {
+            "field":"orders__ProductId__r.CTCPG__ParentId__r.CTCPG__ParentId__r.CTCPG__ParentId__r.CTCPG__ExternalId__c",    // If the External Id is set, use this notation.
+            "operator":"equal",
+            "value":"40011"                                                                                                  // The code of the product.
+         }
+      ]
+   }
+}
+----
+====
+======
 
-|===
-* *Adding Method*: select *Criteria Based* to set up a filter for
-freebies.
-* *Criteria Details*: add this condition to share a certain product as a
-freebie:
-
-
-[TIP] ==== You may either specify
-[.apiobject]#CTCPG__ParentId__r.CTCPG__ParentId__r.CTCPG__ParentId__r.CTCPG__ExternalId__c
-==== or [.apiobject]#CTCPG__ParentId__c#, depending on whether your products have *External Id*.#
+* *Adding Method*: select *Criteria Based* to set up a filter for freebies.
+* *Criteria Details*: add this condition to share a certain product as a freebie:
++
+[source,json]
+----
+WHERE CTCPG__ParentId__c = '40011'
+----
++
+TIP: You may either specify [.apiobject]#CTCPG\__ParentId__r.CTCPG\__ExternalId__c# or [.apiobject]#CTCPG\__ParentId__c#, depending on whether your products have *External Id*.
++
 image:Freebie-Condition-1-3.1.png[]
+
 . Click *Save & New*.
 
-The priority _Freebie Condition_ is created.
-xref:admin-guide/workshops/workshop-3-0-working-with-freebies/workshop-3-1-configuring-prioritized-freebie-type/adding-a-freebie-condition-with-the-similar-method-3-1[Add the
-second one].
+The priority _Freebie Condition_ is created. xref:admin-guide/workshops/workshop-3-0-working-with-freebies/workshop-3-1-configuring-prioritized-freebie-type/adding-a-freebie-condition-with-the-similar-method-3-1.adoc[Add the second one].
