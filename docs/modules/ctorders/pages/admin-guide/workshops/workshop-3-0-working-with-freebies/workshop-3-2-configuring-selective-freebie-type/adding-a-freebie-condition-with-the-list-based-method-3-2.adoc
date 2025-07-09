@@ -1,43 +1,82 @@
 = Adding a Freebie Condition with the List Based Method (3.2)
 
-Set the conditions to determine how freebies should be shared in the
-order based on the added products.
+Set the conditions to determine how freebies should be shared in the order based on the added products.
 
-* One condition is to distribute certain freebies in the first delivery
-when the minimum number of required promotional products are added to
-the order cart.
-* Products that will be distributed as freebies must be separate related
-records.
-
-
+* One condition is to distribute certain freebies in the first delivery when the minimum number of required promotional products are added to the order cart.
+* Products that will be distributed as freebies must be separate related records.
 
 To create a priority _Freebie Condition_ record:
 
-. Go to the created _Freebie Type_ record → click the *Related* tab →
-click *New* in the *Freebie Condition* section.
+. Go to the created _Freebie Type_ record → click the *Related* tab → click *New* in the *Freebie Condition* section.
 . Enter the following:
 * *Freebie Condition Name*: _All. Bio Balance.Kefir_.
-* *Delivery Control*: select _First_ to share freebies in the first
-delivery.
+* *Delivery Control*: select _First_ to share freebies in the first delivery.
 * *Order*: _1_.
-[TIP] ==== The field is responsible for the order in which
-_Freebie Conditions_ of _Freebie Type_ are applied. Since we only use
-one _Freebie Condition_ in the workshop, you can specify any value in
-this field. ====
-* Select a *Promotion* for which you are creating a condition. Promotion
-is required for the correct distribution of freebies for
-the _Selective_ freebie type.
++
+TIP: The field is responsible for the order in which _Freebie Conditions_ of _Freebie Type_ are applied. Since we only use one _Freebie Condition_ in the workshop, you can specify any value in this field.
+* Select a *Promotion* for which you are creating a condition. Promotion is required for the correct distribution of freebies for the _Selective_ freebie type.
 * Set *Active*.
-* *Condition Details*: add this JSON, according to which the condition
-will trigger for the certain promotion product if the required number of
-such products is added to the order cart.
+* *Condition Details*: add this JSON, according to which the condition will trigger for the certain promotion product if the required number of such products is added to the order cart.
++
+.Click to view JSON
+[%collapsible]
+====
+[source,json]
+----
+{ "levelConditions": {
+  "operator": "AND",
+  "productCount": {
+    "filter": {
+      "operator": "AND",
+      "items": [
+        {
+          "field": "orders__PromotionId__r.orders__ExternalId__c",
+          "operator": "equal",
+          "value": "all_bb_kefir"
+        },
+        {
+          "field": "orders__PromotionLineItemId__r.RecordType.DeveloperName",
+          "operator": "equal",
+          "value": "Product"
+        }
 
-[{plus}] Click to expand JSON
+      ]
 
-.[-] Click to hide[%collapsible] ====
+    },
+    "minCount": 1
+  },
+  "requiredProducts": {
+    "productIdField": "ProductId__r.CTCPG__ExternalId__c",
+    "operator": "AND",
+    "items": [
 
+    ]
+
+  }
+
+},
+ "levelBasedOnFilter": {
+   "operator": "AND",
+   "items": [
+     {
+       "field": "orders__PromotionId__r.orders__ExternalId__c",
+       "operator": "equal",
+       "value": "all_bb_kefir"
+     },
+     {
+       "field": "orders__PromotionLineItemId__r.RecordType.DeveloperName",
+       "operator": "equal",
+       "value": "Product"
+     }
+
+   ]
+
+ }
+}
+----
 ====
 * *Adding Method*: select *List Based* to distribute certain products.
++
 image:2021-08-06_18-30-07.jpeg[]
 . Click *Save*.
 
