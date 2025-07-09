@@ -1,51 +1,115 @@
 = Workshop 5.5: SDK Updating Values in the Order and Delivery Fields
 
-This option is provided by
-the xref:admin-guide/managing-ct-orders/sdk/updating-values-in-the-order-and-delivery-fields[SDK]
-allowing to update the fields on [.object]#Order#,
-[.object]#Order Line Item#,[.object]#Delivery#, and
-[.object]#Delivery Line Item# objects with new values used for
-further discount and freebies calculations and defined by the logic in
-the Apex class. This update occurs at a moment when a product is being
-added to the order.
-
-
+This option is provided by the xref:admin-guide/managing-ct-orders/sdk/updating-values-in-the-order-and-delivery-fields.adoc[SDK] allowing to update the fields on [.object]#Order#,
+[.object]#Order Line Item#,[.object]#Delivery#, and [.object]#Delivery Line Item# objects with new values used for further discount and freebies calculations and defined by the logic in the Apex class. This update occurs at a moment when a product is being added to the order.
 
 To set up fields for update:
 
-. Create and add
-an https://help.salesforce.com/articleView?id=sf.code_manage_packages.htm&type=5[Apex
-class] to your Salesforce org to specify the update logic of the
+. Create and add an link:https://help.salesforce.com/articleView?id=sf.code_manage_packages.htm&type=5[Apex class] to your Salesforce org to specify the update logic of the
 selected fields.
-
-[{plus}] xref:javascript:void(0)[Apex class example:]
-
-.[-] Hide[%collapsible] ====
-
++
+.Click to view Apex class example
+[%collapsible]
 ====
+[source,apex]
+----
+public with sharing class SDKCalculateDiscount {
+    public class setUnitPriceAsListPrice extends orders.SDK.v1 {
+        public override void calculateDiscount(Order.Data data) {
+            System.debug('>>> SetUnitPriceAsListPrice ');
+            String orderId = data.order.keySet()[0];
+            if (data.dli.size() > 0) {
+                for (Order.Record dli : data.dli.values()) {
+                    dli.set('orders__UnitPrice__c', dli.get('orders__ListPrice__c'));
+                }
+            }
+        }
+        public override void updateAfterOLIUpsert(Order.Data data) {
+            String orderId = data.order.keySet()[0];
+            if (data.oli.size() > 0) {
+                for (Order.Record oli : data.oli.values()) {
+                    oli.set('orders__UnitPrice__c', oli.get('orders__ListPrice__c'));
+                }
+            }
+        }
+    }
+    public class CustomTagPrice extends orders.SDK.v1 {
+        public override Map<String, Object> getPriceTagHTML(Order.Data data) {
+            return new Map<String, Object> {
+                'html' => '<div><h3>This is custom tag.</h3></div>'
+            };
+        }
+    }
+}
+----
+====
+
 . Go to *Settings* and click *New*.
 . Select *SDKSetting* record type and click *Next*.
 . Fill in the fields:
-[TIP] ==== The full description of the fields is available
-xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/sdk-setting-field-reference[here]. ====
++
+TIP: The full description of the fields is available xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/sdk-setting-field-reference.adoc[here].
+
 * Fill in *Order type* and *Sales Organization* fields.
++
+include::partial$so-and-order-type.adoc[]
 * *SDK Type*: updateDataOnAfterOrderLineItemUpsert.
 * *Platform*: select where to apply the setting.
-[NOTE] ==== Currently, the setting cannot be applied on mobile
-devices. ====
-* *Version*: v1. Currently, only v1 is available, otherwise, the setting
-won't be applied.
++
+NOTE: Currently, the setting cannot be applied on mobile devices.
+* *Version*: v1. Currently, only v1 is available, otherwise, the setting won't be applied.
 * *Implementation*: enter the name of the created Apex class of step 2.
 * *Parameters*:** **fill in the list of fields in JSON format:
-[NOTE] ==== The fields written in the Apex class should match
-those written in the JSON, otherwise the setting won't work.  ====
-
-[{plus}] xref:javascript:void(0)[JSON example]
-
-.[-] Hide[%collapsible] ====
-
++
+NOTE: The fields written in the Apex class should match those written in the JSON, otherwise the setting won't work.
++
+.Click to view JSON example
+[%collapsible]
 ====
-
+[source,json]
+----
+[
+  {
+    "objectName": "orders__Order__c",
+    "fields": [
+      "orders__AccountId__c",
+      "orders__TotalDiscount__c",
+      "orders__TotalPrice__c"
+    ]
+  },
+  {
+    "objectName": "orders__Delivery__c",
+    "fields": [
+      "orders__TotalDiscount__c",
+      "orders__TotalPrice__c"
+    ]
+  },
+  {
+    "objectName": "orders__OrderLineItem__c",
+    "fields": [
+      "$.unitPrice",
+      "$.quantity",
+      "orders__Quantity__c",
+      "orders__TotalDiscount__c",
+      "orders__ListPrice__c",
+      "orders__First__c",
+      "orders__Last__c",
+      "orders__TotalPrice__c"
+    ]
+  },
+  {
+    "objectName": "orders__DeliveryLineItem__c",
+    "fields": [
+      "orders__ListPrice__c",
+      "$.unitPrice",
+      "orders__TotalDiscount__c",
+      "orders__TotalPrice__c"
+    ]
+  }
+]
+----
+====
++
 image:display-custom-price-tag-2021-08-26.png[]
 . Click *Save*.
 

@@ -1,40 +1,153 @@
 = Workshop 5.4: SDK Configuring a Custom Price Tag
 
-Custom prices tags unlike the xref:admin-guide/managing-ct-orders/order-management/price-tag[regular ones] allow
-displaying additional information on the order whether as any kind of
-calculated discounts or amount of freebies.
-
+Custom prices tags unlike the xref:admin-guide/managing-ct-orders/order-management/price-tag.adoc[regular ones] allow displaying additional information on the order whether as any kind of calculated discounts or amount of freebies.
 
 To create a custom price tag:
 
-. Create an HTML template that will replace the standard display of
-price tags.
+. Create an HTML template that will replace the standard display of price tags.
++
+.Click to view an example of the HTML template
+[%collapsible]
+====
+[source,html]
+----
+<div
+    class="price-tag-sdk-tooltip__custom"
+    style="font-family: 'Salesforce Sans', Arial, sans-serif; max-width: 400px"
+>
+    <h4
+        class="price-tag-heading__custom"
+        style="
+            text-transform: uppercase;
+            background: #e6e6e6;
+            color: #3e3e3c;
+            min-height: 30px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            font-size: 16px;
+            padding-left: 30px;
+            padding-right: 30px;
+        "
+    >
+        Discounts Title
+    </h4>
+    <ul
+        style="list-style: none; margin: 0; padding: 0"
+        class="price-tag-discount-list__custom"
+    >
+        <li
+            style="
+                padding-left: 30px;
+                padding-right: 30px;
+                border-bottom: 1px solid #d0d0d0;
+            "
+            class="discount-item__custom"
+        >
+            <h5
+                style="
+                    box-sizing: border-box;
+                    margin: 0;
+                    padding: 0;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    position: relative;
+                    font-weight: 700;
+                    font-size: 14px;
+                    line-height: 30px;
+                    display: flex;
+                    align-items: center;
+                "
+                class="discount-heading__custom"
+            >
+                <div
+                    style="font-weight: 700; font-size: 14px; line-height: 30px"
+                    class="discount-heading__name"
+                >
+                    Discount Name
+                </div>
+                <div
+                    style="
+                        font-weight: 700;
+                        font-size: 14px;
+                        line-height: 30px;
+                        display: flex;
+                        align-items: center;
+                        color: #76bb31;
+                        justify-content: center;
+                    "
+                    class="discount-heading__rate__custom"
+                >
+                    7%
+                </div>
+            </h5>
+        </li>
+        <li
+            style="padding-left: 30px; padding-right: 30px"
+            class="discount-item__custom"
+        >
+            <h5
+                style="
+                    box-sizing: border-box;
+                    margin: 0;
+                    padding: 0;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    position: relative;
+                    font-weight: 700;
+                    font-size: 14px;
+                    line-height: 30px;
+                    display: flex;
+                    align-items: center;
+                "
+                class="discount-heading__custom"
+            >
+                <div
+                    style="font-weight: 700; font-size: 14px; line-height: 30px"
+                    class="discount-heading__name__custom"
+                >
+                    Discount Name 2
+                </div>
+                <div
+                    style="
+                        font-weight: 700;
+                        font-size: 14px;
+                        line-height: 30px;
+                        display: flex;
+                        align-items: center;
+                        color: #76bb31;
+                        justify-content: center;
+                    "
+                    class="discount-heading__rate__custom"
+                >
+                    10%
+                </div>
+            </h5>
+        </li>
+    </ul>
+</div>
+----
+====
 
-[{plus}] xref:javascript:void(0)[Click to view an example of the
-HTML template]
-
-[-] xref:javascript:void(0)[Hide]
-. Create and add an
-https://help.salesforce.com/articleView?id=sf.code_manage_packages.htm&type=5[Apex
-class] to your Salesforce org to bring the created HTML layout over the
-standard price tag display.
+. Create and add an link:https://help.salesforce.com/articleView?id=sf.code_manage_packages.htm&type=5[Apex class] to your Salesforce org to bring the created HTML layout over the standard price tag display.
 . Go to *Settings* and click *New*.
 . Select *SDK Setting* record type and click *Next*.
 . Fill in the fields:
-[TIP] ==== The full description of the fields is available
-xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/sdk-setting-field-reference[here]. ====
++
+TIP: The full description of the fields is available xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/sdk-setting-field-reference.adoc[here].
+
 * Fill in *Order type* and *Sales Organization* fields.
-* *SDK Type:* getOrderLineItemPriceTag.
-* *Platform*: select where to apply the setting. [NOTE] ====
-Currently, the setting will be not applied on mobile devices.  ====
-* *Version*: v1. Currently, only v1 is available, otherwise, the setting
-won't be applied.
-* *Implementation*: type in the name of the created Apex class in step
-2.
++
+include::partial$so-and-order-type.adoc[]
+* *SDK Type:* [.apiobject]#getOrderLineItemPriceTag#.
+* *Platform*: select where to apply the setting.
++
+NOTE: Currently, the setting will be not applied on mobile devices.
+* *Version*: v1. Currently, only v1 is available, otherwise, the setting won't be applied.
+* *Implementation*: type in the name of the created Apex class in step 2.
 * *Parameters*: leave empty.
 . Click *Save*.
 
-Now, when the setting is complete, you should be able to see the custom
-layout on the order display.
+Now, when the setting is complete, you should be able to see the custom layout on the order display.
 
-image:image2021-5-21_10-46-17.png[]
+image::image2021-5-21_10-46-17.png[align="center"]

@@ -1,0 +1,6 @@
+The setting is searched by the information set in the fields and applied accordingly:
+
+.. First searched the setting with *Order Type* and *Sales Organization* filled in so that the setting will be applied to the records of mentioned order types and sales organizations.
+.. If not found with both fields, the next suitable setting is searched with only the *Sales Organization* filled so that the setting will be applied to all records going by the mentioned sales organization.
+.. Last searched the suitable setting with no specified fields.
+.. If nothing is found, the setting won't be applied.

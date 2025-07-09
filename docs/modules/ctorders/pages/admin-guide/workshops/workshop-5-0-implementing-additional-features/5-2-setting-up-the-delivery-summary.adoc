@@ -1,57 +1,34 @@
 = Workshop 5.2: Setting up the Delivery Summary
 
-The Delivery Summary window may be used to review the delivery
-information and also to edit deliveries if permitted.
+The Delivery Summary window may be used to review the delivery information and also to edit deliveries if permitted.
 
-* To use custom fields in Delivery Summary, create them on
-the [.object]#Delivery# object, for
-example, [.apiobject]#Brand__c#, [.apiobject]#Warehouse__c#.
+* To use custom fields in Delivery Summary, create them on the [.object]#Delivery# object, for example, [.apiobject]#Brand\__c#, [.apiobject]#Warehouse__c#.
 * Delivery Summary is available for both offline and online orders.
 
-
-
-In Workshop 5.2, we create a _Layout Setting_ record to display the
-Delivery Summary with the delivery date, product brand, and product
-family.
-
-
+In Workshop 5.2, we create a _Layout Setting_ record to display the Delivery Summary with the delivery date, product brand, and product family.
 
 To set up Delivery Summary:
 
-. Go to *Setup → Object Manager → Delivery → Fields & Relationships* and
-click *New*.
+. Go to *Setup → Object Manager → Delivery → Fields & Relationships* and click *New*.
 . Create two fields:
-* The [.apiobject]#Family__c# field with the *Picklist* type
-that is similar to
-the [.apiobject]#CTCPG__Family__c# field and has the
-same values.
-* The [.apiobject]#Brand__c# field with the *Picklist* type
-that is similar to
-the [.apiobject]#CTCPG__Brand__c# field and has the same
-values.
-. Go to the** Settings** tab and click *New*.
-. Select the** Layout Setting** record type and click *Next*.
+* The [.apiobject]#Family\__c# field with the *Picklist* type that is similar to the [.apiobject]#CTCPG__Family__c# field and has the same values.
+* The [.apiobject]#Brand\__c# field with the *Picklist* type that is similar to the [.apiobject]#CTCPG__Brand__c# field and has the same values.
+. Go to the *Settings* tab and click *New*.
+. Select the *Layout Setting* record type and click *Next*.
 . Enter the following:
 * *Sales Organization*: _Default Sales Org_.
-* *Parent Object*:[.apiobject]#orders__Order__c#.
-* *Object*:[.apiobject]#orders__Delivery__c#.
-* *Fields to Display*: enter API names of those fields that you want to
-view in the Delivery Summary window:
-[.apiobject]#orders__DeliveryDate__c,Brand__c,Family__c#.
+* *Parent Object*: [.apiobject]#orders\__Order__c#.
+* *Object*: [.apiobject]#orders\__Delivery__c#.
+* *Fields to Display*: enter API names of those fields that you want to view in the Delivery Summary window: [.apiobject]#orders\__DeliveryDate__c,Brand\__c,Family__c#.
++
 image:Delivery-Summary-Layout-Setting.png[]
 . Click *Save*.
 
 The setup is complete.
 
+Now, when you create an order, add products, and click *Finalize* in the order cart, the *Delivery Summary* window will be displayed. Review information and click *Finalize*.
 
+TIP: In the *Delivery Summary* window, you can edit some fields if in the *Layout Settings* you enter false in the Read-Only Attributes for these fields. For more information, refer to
+xref:admin-guide/managing-ct-orders/delivery-management/index.adoc#h2_1374863314[Delivery Management].
 
-Now, when you create an order, add products, and click *Finalize* in the
-order cart, the *Delivery Summary* window will be displayed. Review
-information and click *Finalize*.
-
-In the *Delivery Summary* window, you can edit some fields if in the
-*Layout Settings* you enter false in the Read-Only Attributes for these
-fields. For more information, refer to
-xref:admin-guide/managing-ct-orders/delivery-management/index#h2_1374863314[Delivery Management].
-
-image:Delivery-Summary-in-the-Order-Cart.png[]
+image::Delivery-Summary-in-the-Order-Cart.png[align="center"]

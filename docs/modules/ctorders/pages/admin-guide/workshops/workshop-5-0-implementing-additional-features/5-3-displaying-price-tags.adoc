@@ -1,30 +1,19 @@
 = Workshop 5.3: Displaying Price Tags
 
-The xref:admin-guide/managing-ct-orders/order-management/price-tag[Price Tag] option is a visual display of a
-currently applied product discount.
-
-
+The xref:admin-guide/managing-ct-orders/order-management/price-tag.adoc[Price Tag] option is a visual display of a currently applied product discount.
 
 To add the price tags to the layout:
 
-. Go to **Settings **and open the existing layout for the
-[.object]#Order Line Item# object.
-. In the *Fields to Display* field, add the
-[.apiobject]#PriceTag# keyword to the list of API names of
-fields that exist on the [.object]#Order Line Item# object
-(separated by a comma, without a blank space).
-[TIP] ==== The Price Tag is always displayed after the last
-column in the order cart, despite the order of fields in the *Fields to
-Display* field. ====
+. Go to **Settings **and open the existing layout for the [.object]#Order Line Item# object.
+. In the *Fields to Display* field, add the [.apiobject]#PriceTag# keyword to the list of API names of fields that exist on the [.object]#Order Line Item# object (separated by a comma, without a blank space).
++
+TIP: The Price Tag is always displayed after the last column in the order cart, despite the order of fields in the *Fields to Display* field.
++
 image:ctorders-overview-2021-02-03-3.jpg[]
 . Click *Save*.
 
 The setup is complete.
 
+If set correctly, the price tags with the information about the available discounts will be displayed in the order cart next to each added product:
 
-
-If set correctly, the price tags with the information about the
-available discounts will be displayed in the order cart next to each
-added product:
-
-image:static-PriceTagnew.png[]
+image::static-PriceTagnew.png[align="center"]
