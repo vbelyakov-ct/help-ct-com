@@ -1,214 +1,165 @@
 = Adding CT Orders to the CT Mobile app (4.0)
+:toc:
 
-[NOTE] ==== The CT Orders module is available offline since
-version 1.5 in the CT Mobile iOS 2.3 and higher or CT Mobile Windows 1.3
-and higher. ====
+NOTE: The CT Orders module is available offline since version 1.5 in the CT Mobile iOS 2.3 and higher or CT Mobile Windows 1.3 and higher.
 
-Add the CT Orders module in the CT Mobile app menu and follow the steps
-to display the *Order* button.
-
-:toc: :toclevels: 3
+Add the CT Orders module in the CT Mobile app menu and follow the steps to display the *Order* button.
 
 [[h2_827845120]]
-=== Add CT Orders to the CT Mobile app
+== Add CT Orders to the CT Mobile app
 
-To add the *CT Order* module to the
-https://help.customertimes.com/articles/project-ct-mobile-en/app-menu[app
-menu]:
+To add the *CT Order* module to the link:https://help.customertimes.com/articles/project-ct-mobile-en/app-menu[app menu]:
 
-[width="100%",cols="50%,50%",]
-|===
-|In CT Mobile Control Panel a|
-. Go to
-https://help.customertimes.com/articles/project-ct-mobile-en/ct-mobile-control-panel-app-menu[CT
-Mobile Control Panel: App Menu] tab.
-. Select the required profile in the *Location* picklist. *General
-Settings* will be applied to all the profiles without individual
-settings.
-. Click the
-image:/resources/Storage/project-ct-mobile-en/CMPD/attachments/26613385/62562483.png[/resources/Storage/project-ct-mobile-en/CMPD/attachments/26613385/62562483]
-button to open the *Add menu item* tool.
+[tabs]
+====
+In CT Mobile Control Panel::
++
+--
+. Go to link:https://help.customertimes.com/articles/project-ct-mobile-en/ct-mobile-control-panel-app-menu[CT Mobile Control Panel: App Menu] tab.
+. Select the required profile in the *Location* picklist. *General Settings* will be applied to all the profiles without individual settings.
+. Click the image:ctmobile:62562483.png[] button to open the *Add menu item* tool.
 . Select the *Orders* item.
 . Click *Add* to close the *Add menu item* tool.
-. Specify the order of the *CT Orders* module in the app menu by
-dragging the items in the list.
-You can add other objects of the *CT Orders* package in the CT Mobile
-app menu if they were added
-in https://help.customertimes.com/smart/project-ct-mobile-en/ct-mobile-control-panel-offline-objects[the
-offline objects].
+. Specify the order of the *CT Orders* module in the app menu by dragging the items in the list.
+You can add other objects of the *CT Orders* package in the CT Mobile app menu if they were added in link:https://help.customertimes.com/smart/project-ct-mobile-en/ct-mobile-control-panel-offline-objects[the offline objects].
 . Click *Save*.
-
-|In CT Mobile Control Panel 2.0 a|
-. Go
-to https://help.customertimes.com/articles/project-ct-mobile-en/ct-mobile-control-panel-app-menu-new[CT
-Mobile Control Panel 2.0: App Menu] tab.
-. Select the required profile in the *Profile* picklist. To apply
-settings to all the profiles, select *General Settings*.
+--
+In CT Mobile Control Panel 2.0::
++
+--
+. Go to link:https://help.customertimes.com/articles/project-ct-mobile-en/ct-mobile-control-panel-app-menu-new[CT Mobile Control Panel 2.0: App Menu] tab.
+. Select the required profile in the *Profile* picklist. To apply settings to all the profiles, select *General Settings*.
 . Click *Show Module Menu*.
-. On the *All* or *Application Modules* tab, select the ***CT
-Orders* **item.
-. Specify the order of the *CT Orders* module in the app menu by moving
-the items in the list.
+. On the *All* or *Application Modules* tab, select the *CT Orders* item.
+. Specify the order of the *CT Orders* module in the app menu by moving the items in the list.
 . Click *Save*.
-
-|===
+--
+====
 
 The *CT Orders* module is now available in the CT Mobile app.
 
 [[h2_13449601]]
-=== Display The Order button in the Actions menu
+== Display The Order button in the Actions menu
 
-xref:admin-guide/workshops/workshop-4-0-working-with-offline-orders/creating-an-offline-order-4-0[To create an order], the mobile
-user taps the *Order* button in the
-https://help.customertimes.com/articles/ct-mobile-ios-en/actions[Actions]
-combo-menu on the records of [.object]#Accounts#,
-[.object]#Contacts#, and [.object]#Activity# objects. To
-display the button:
+xref:admin-guide/workshops/workshop-4-0-working-with-offline-orders/creating-an-offline-order-4-0.adoc[To create an order], the mobile user taps the *Order* button in the link:https://help.customertimes.com/articles/ct-mobile-ios-en/actions[Actions]
+combo-menu on the records of [.object]#Accounts#, [.object]#Contacts#, and [.object]#Activity# objects. To display the button:
 
-[.active:not(.aui-dropdown2-disabled) .confluence-information-macro-note]#Since
-CT Mobile iOS 2.9, the *Order* button has its own place next to the
-*Actions* menu (see the image below).#
+NOTE: Since CT Mobile iOS 2.9, the *Order* button has its own place next to the
+*Actions* menu (see the image below).
 
-* Specify the appropriate [.object]#Product# object on the
-https://help.customertimes.com/smart/project-ct-mobile-en/ct-mobile-control-panel-general/a/h3_2141706831[CT
-Mobile Control Panel:
-General]/https://help.customertimes.com/smart/project-ct-mobile-en/ct-mobile-control-panel-app-menu-new/a/h2_1511584348[CT
-Mobile Control Panel 2.0: App Menu] tab:
+* Specify the appropriate [.object]#Product# object on the link:https://help.customertimes.com/smart/project-ct-mobile-en/ct-mobile-control-panel-general/a/h3_2141706831[CT Mobile Control Panel: General] / link:https://help.customertimes.com/smart/project-ct-mobile-en/ct-mobile-control-panel-app-menu-new/a/h2_1511584348[CT Mobile Control Panel 2.0: App Menu] tab:
++
+[tabs]
+====
+In CT Mobile Control Panel::
++
+--
+image:adding-ct-orders-to-the-ct-mobile-app-2020-09-04-1.png[]
+--
+In CT Mobile Control Panel 2.0::
++
+--
+image:/product-object-panel2.0.png[]
+--
+====
 
-[width="100%",cols="50%,50%",]
-|===
-|In CT Mobile Control Panel
-|image:adding-ct-orders-to-the-ct-mobile-app-2020-09-04-1.png[]
+* xref:admin-guide/getting-started/setting-up-an-instance/index.adoc[Follow the steps] to customize the Salesforce organization.
+* Specify the [.object]#Activity# object in the xref:admin-guide/getting-started/setting-up-an-instance/configuring-object-setting.adoc[Object Settings] record.
+* xref:admin-guide/workshops/workshop-1-0-creating-basic-order/configuring-an-account-1-0.adoc[Allow the order creation] for the [.object]#Account# object.
++
+NOTE: For the _Contact_ and _Activity_ records, the *Order* button will be displayed only if the _Account_ record with allowed order creation is specified in the reference field of these records.
 
-|In CT Mobile Control Panel 2.0
-|image:/resources/Storage/ct-mobile-ios-en/product-object-panel2.0.png[/resources/Storage/ct-mobile-ios-en/product-object-panel2.0]
-|===
-* xref:admin-guide/getting-started/setting-up-an-instance/index[Follow the steps] to customize the
-Salesforce organization.
-* Specify the [.object]#Activity# object in the
-xref:admin-guide/getting-started/setting-up-an-instance/configuring-object-setting[Object Settings] record.
-* xref:admin-guide/workshops/workshop-1-0-creating-basic-order/configuring-an-account-1-0[Allow the order creation] for the
-[.object]#Account# object.
-[NOTE] ==== For the _Contact_ and _Activity_ records, the
-*Order* button will be displayed only if the _Account_ record with
-allowed order creation is specified in the reference field of these
-records. ====
+[tabs]
+====
+For CT Mobile iOS users::
++
+--
+image:actions_order.png[]
+--
+For CT Mobile iOS 2.9 users::
++
+--
+image:ctmobile:order-button-2.9.png[]
+--
+For CT Mobile Windows users::
++
+--
+image:actions_order_win.png[]
+--
+====
 
-[width="100%",cols="50%,50%",]
-|===
-|For CT Mobile iOS users
-|image:actions_order.png[]
-
-|For CT Mobile iOS 2.9 users
-|image:/resources/Storage/ct-mobile-ios-en/order-button-2.9.png[/resources/Storage/ct-mobile-ios-en/order-button-2.9]
-
-|For CT Mobile Windows users
-|image:actions_order_win.png[]
-|===
 
 [[h2_552129946]]
-=== Customize Mini Layout for Order Creation
+== Customize Mini Layout for Order Creation
 
-The mini-layout is designed to allow the mobile user to quickly fill in
-the required data and check the pre-filled fields in a mini layout
-before opening the *Order Cart* screen.
+The mini-layout is designed to allow the mobile user to quickly fill in the required data and check the pre-filled fields in a mini layout before opening the *Order Cart* screen.
 
-Before setup, we recommend getting familiar with
-the xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/layout-setting-field-reference[Layout Settings] fields.
+Before setup, we recommend getting familiar with the xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/layout-setting-field-reference.adoc[Layout Settings] fields.
 
-* These fields are displayed by default, cannot be removed from the
-layout, and will be filled if only one record fits the conditions, for
-example, if only one *Sales Organization* is available for the mobile
-user:
+* These fields are displayed by default, cannot be removed from the layout, and will be filled if only one record fits the conditions, for example, if only one *Sales Organization* is available for the mobile user:
 ** *Sales Organization*
 ** *Order Type*
 ** *Price Book*
 ** *Account*
-* If the mobile user changes *Sales Organization* or *Order Type*, the
-pre-filled fields, such as *Price Book* or *Pricing Procedure* (if
-added), are cleared.
-* The mobile user can manually fill out fields with the available
-records.
+* If the mobile user changes *Sales Organization* or *Order Type*, the pre-filled fields, such as *Price Book* or *Pricing Procedure* (if added), are cleared.
+* The mobile user can manually fill out fields with the available records.
 
-
-
-To customize the mini-layout and add additional fields, create a new
-_Settings_ record with the _Layout Setting_ record type:
+To customize the mini-layout and add additional fields, create a new _Settings_ record with the _Layout Setting_ record type:
 
 . Go to *Settings* and click *New*.
 . In the *New Settings* window, select *Layout Setting*.
 . Configure the settings as follows:
-* Enter *Order* in the *Record Type* field. In the case of more than
-one [.object]#Order# record type, it is possible to define the
-different mini layouts for each record type.
-
-[NOTE] ==== By default,[.object]#CT Order ==== has no
-*Record Types* and a set of *Order Types*. If you create record types,
-they will be hierarchically higher than the order types, and the
-combination of record types and order types allows you to perform the
-desired business logic.#
+* Enter *Order* in the *Record Type* field. In the case of more than one [.object]#Order# record type, it is possible to define the different mini layouts for each record type.
++
+NOTE: By default, [.object]#CT Order# has no *Record Types* and a set of *Order Types*. If you create record types, they will be hierarchically higher than the order types, and the
+combination of record types and order types allows you to perform the desired business logic.
 * Select a *Sales Organization*.
-* *Object*:[.apiobject]#orders__Order__c#.
-* *Fields to display*: API names of fields to add to the layout
-(separated by a comma, without a blank space).
-* If you want to make the additional field compulsory, enter _True_ in
-the *Required Attributes* field.
+* *Object*: [.apiobject]#orders\__Order__c#.
+* *Fields to display*: API names of fields to add to the layout (separated by a comma, without a blank space).
+* If you want to make the additional field compulsory, enter _True_ in the *Required Attributes* field.
++
 image:adding-ct-orders-to-the-ct-mobile-app-2020-12-23.png[]
 . Click *Save*.
-. https://help.customertimes.com/articles/ct-mobile-ios-en/synchronization-launch/a/h3_1369866827[Launch
-full synchronization].
+. link:https://help.customertimes.com/articles/ct-mobile-ios-en/synchronization-launch/a/h3_1369866827[Launch full synchronization].
 
 The setup is complete.
 
+So, when the mobile user taps the *Order* button, he selects the _Order_ record type (if created), fills out the mini layout, and taps *Create*. Next, the *Order Cart* screen appears, where the mobile user adds products, specifies deliveries and manages freebies.
 
+NOTE: The *Create* button is active when all data is validated.
 
-So, when the mobile user taps the *Order* button, he selects the _Order_
-record type (if created), fills out the mini layout, and taps *Create*.
-Next, the *Order Cart* screen appears, where the mobile user adds
-products, specifies deliveries and manages freebies.
+[tabs]
+====
+For CT Mobile iOS users::
++
+--
+image:Order-Creation.png[]
+--
+For CT Mobile Windows users::
++
+--
+image:Order-Creation-Win.png[]
+--
+====
 
-[NOTE] ==== The *Create* button is active when all data is
-validated. ====
-
-[cols=",",]
-|===
-|For CT Mobile iOS users
-|image:Order-Creation.png[]
-
-|For CT Mobile Windows users
-|image:Order-Creation-Win.png[]
-|===
-
-[[h2_1358985369]]
-=== 
-
+////
 ifdef::hidden[]
 
 [[h2_1358985369]]
 === Configure the SOQL Filter for Loading Records
 
-Optionally, you can redefine default conditions for loading records of
-[.object]#CT Price Book#, and [.object]#CT Price Book
-Line Item# to the mobile device on the Offline Objects tab.
+Optionally, you can redefine default conditions for loading records of [.object]#CT Price Book#, and [.object]#CT Price Book Line Item# to the mobile device on the Offline Objects tab.
 
 You can change conditions for loading records if required:
 
-. Go to
-https://help.customertimes.com/smart/project-ct-mobile-en/ct-mobile-control-panel-offline-objects[CT
+. Go to link:https://help.customertimes.com/smart/project-ct-mobile-en/ct-mobile-control-panel-offline-objects[CT
 Mobile Control Panel: Offline Objects].
-. Select the required profile in the *Location* picklist. *General
-Settings* will be applied to all the profiles without individual
-settings.
-. In the *Available* section, drag-and-drop, for example, *CT Price
-Book* in the *Selected* section.
-[NOTE] ==== Features in the *Options* section cannot be applied
-to this object. ====
-. Specify
-https://help.customertimes.com/smart/project-ct-mobile-en/managing-offline-objects[the
-offline object settings&#44;] such as permission to create or delete
-records and related lists.
-. Add *SOQL filter* for the *CT Order* records and related lists to
-download only appropriate records to the mobile device.
+. Select the required profile in the *Location* picklist. *General Settings* will be applied to all the profiles without individual settings.
+. In the *Available* section, drag-and-drop, for example, *CT Price Book* in the *Selected* section.
++
+NOTE: Features in the *Options* section cannot be applied to this object.
+. Specify link:https://help.customertimes.com/smart/project-ct-mobile-en/managing-offline-objects[the offline object settings], such as permission to create or delete records and related lists.
+. Add *SOQL filter* for the _CT Order_ records and related lists to download only appropriate records to the mobile device.
 . Click *Save*.
 
 The setup is complete.
