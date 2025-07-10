@@ -1,20 +1,11 @@
 = Workshop 6.3: Configuring Quotas
 
-In Workshop 6.3, you will learn how to apply quotas in order to allow
-sales reps to distribute a limited number of products available on the
-required delivery dates.
+In Workshop 6.3, you will learn how to apply quotas in order to allow sales reps to distribute a limited number of products available on the required delivery dates.
 
 . Create an individual _Quota_ record for a product.
 . Create an individual _Quota_ record for a freebie.
-. Create a _Quota Template_ record based on which a sales rep will share
-goods from a promotion.
+. Create a _Quota Template_ record based on which a sales rep will share goods from a promotion.
 
+If you exceed the quota limit for your orders, the system will display a validation message when you try to revalidate or finalize the order. If you allocate quotas without finalizing orders, you can save order drafts and see how much of the quota is already booked.
 
-
-If you exceed the quota limit for your orders, the system will display a
-validation message when you try to revalidate or finalize the order. If
-you allocate quotas without finalizing orders, you can save order drafts
-and see how much of the quota is already booked.
-
-[NOTE] ==== Keep in mind that all found suitable
-[.object]#Quotas ==== and [.object]#Quota Templates# will be applied to the orders. The search is done xref:admin-guide/managing-ct-orders/product-validation-in-order/quotas/index#h3_1386411308[in the following sequence].#
+NOTE: Keep in mind that all found suitable [.object]#Quotas# and [.object]#Quota Templates# will be applied to the orders. The search is done xref:admin-guide/managing-ct-orders/product-validation-in-order/quotas/index.adoc#h3_1386411308[in the following sequence].

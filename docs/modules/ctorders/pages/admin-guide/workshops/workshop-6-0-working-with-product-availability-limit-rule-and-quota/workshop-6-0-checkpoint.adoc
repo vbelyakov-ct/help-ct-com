@@ -1,173 +1,138 @@
 = Workshop 6.0 Checkpoint
+:toc:
 
-To make sure you have correctly configured the order validation options,
-let's create an order with the appropriate conditions.
-
-:toc: :toclevels: 3
+To make sure you have correctly configured the order validation options, let's create an order with the appropriate conditions.
 
 [[h2_21164539]]
-=== Create a Basic Order
+== Create a Basic Order
 
-When all settings are done, let's create a new order to apply the
-configured discounts:
+When all settings are done, let's create a new order to apply the configured discounts:
 
 . Go to the *CT Orders* tab and click *New*.
 . Specify the following:
 * *Order Type*: _Order_.
 * Select *Account*.
-[NOTE] ==== The xref:admin-guide/workshops/workshop-1-0-creating-basic-order/configuring-an-account-1-0[Order
-Allowed] checkbox must be selected on the _Account_ details page. ====
-* *Price Book*: select
-xref:admin-guide/workshops/workshop-1-0-creating-basic-order/creating-and-assigning-a-ct-price-book-1-0/index[a price book] that
-you have created earlier.
++
+include::partial$order-allowed-checkbox.adoc[]
+* *Price Book*: select xref:admin-guide/workshops/workshop-1-0-creating-basic-order/creating-and-assigning-a-ct-price-book-1-0/index.adoc[a price book] that you have created earlier.
 * *Sales Organization*: _Default Sales Org_.
-* *Pricing Procedure*: select one of the created pricing procedures, for
-example,
-xref:admin-guide/workshops/workshop-2-0-setting-up-discounts/workshop-2-4-setting-up-a-total-discount-per-delivery/index[Total
-Discount (%) per Delivery].
+* *Pricing Procedure*: select one of the created pricing procedures, for example,
+xref:admin-guide/workshops/workshop-2-0-setting-up-discounts/workshop-2-4-setting-up-a-total-discount-per-delivery/index.adoc[Total Discount (%) per Delivery].
 * *Order Stage*: _On-Hold_.
++
 image:Checkpoint-1-2.5.png[]
 . Click *Save*.
 
-The new [.object]#CT Order# is created. On the created CT Order
-page, click the *Edit Cart* button.
+The new [.object]#CT Order# is created. On the created CT Order page, click the *Edit Cart* button.
 
 [[h2_670939016]]
-=== Adding Products and Distributing Freebies based on their Availability
+== Adding Products and Distributing Freebies based on their Availability
 
-_Product Availabilities_ are automatically applied to the products and
-freebies.
+_Product Availabilities_ are automatically applied to the products and freebies.
 
-* Click xref:admin-guide/workshops/workshop-5-0-implementing-additional-features/5-6-sdk-displaying-info-icon[the info icon] next to
-the product or freebie to see the availability dates if they are
-specified.
-* Cells of unavailable products and freebies will be automatically
-blocked.
+* Click xref:admin-guide/workshops/workshop-5-0-implementing-additional-features/5-6-sdk-displaying-info-icon.adoc[the info icon] next to the product or freebie to see the availability dates if they are specified.
+* Cells of unavailable products and freebies will be automatically blocked.
 
-[width="100%",cols="50%,50%",]
-|===
-|Product Availability and Info Icons a|
-The cells are blocked for the products that cannot be distributed on the
-4 of July.
+[tabs]
+====
+Product Availability and Info Icons::
++
+--
+The cells are blocked for the products that cannot be distributed on the 4th of July.
 
-* xref:setting-up-product-availability-for-product-6-1[The Product
-Availability records for Product]
-
-
+* xref:./workshop-6-1-configuring-product-availability/setting-up-product-availability-for-product-6-1.adoc[The Product Availability records for Product]
 
 [.object]#CT Product# is unavailable for the delivery date:
 
 image:Workshop-6.0-Product-Unavailable-PA.png[]
 
-
-
-[.object]#CT Product# is unavailable due to availability dates
-are later than the delivery date:
+[.object]#CT Product# is unavailable due to availability dates are later than the delivery date:
 
 image:Workshop-6.0-Product-Available-PA.png[]
 
-|Freebie Availability a|
-The cells are blocked for the freebies that cannot be distributed on the
-4 of July.
+--
+Freebie Availability::
++
+--
+The cells are blocked for the freebies that cannot be distributed on the 4th of July.
 
-* xref:setting-up-product-availability-for-freebie-6-1[The Product
-Availability records for Freebie]
+* xref:./workshop-6-1-configuring-product-availability/setting-up-product-availability-for-freebie-6-1.adoc[The Product Availability records for Freebie]
 
 image:Workshop-6.0-Freebie-Blocked-Cells-due-to-PA.png[]
-
-
-
-|Freebie Info Icon a|
+--
+Freebie Info Icon::
++
+--
 [.object]#Freebie# is unavailable for the delivery date:
 
 image:Workshop-6.0-Freebie-Unavailable-PA.png[]
 
-
-
-[.object]#Freebie# is unavailable due to availability dates are
-later than the delivery date:
+[.object]#Freebie# is unavailable due to availability dates are later than the delivery date:
 
 image:Workshop-6.0-Freebie-Available-PA.png[]
 
-|===
+--
+====
 
 [[h2_708878402]]
-=== Applying Limit Rules
+== Applying Limit Rules
 
-_Limit Rules_ are automatically applied when you click *Save Draft*,
-*Finalize*, or *Revalidate*.
+_Limit Rules_ are automatically applied when you click *Save Draft*, *Finalize*, or *Revalidate*.
 
 * The cells with validation errors are highlighted in red color.
 * The validation error is displayed in the header of the order cart.
-* When you made changes that match the limit rules, click *Save Draft*,
-*Finalize*, or *Revalidate* to update the order.
+* When you made changes that match the limit rules, click *Save Draft*, *Finalize*, or *Revalidate* to update the order.
 
-[width="100%",cols="50%,50%",]
-|===
-|Limit Rule per Delivery a|
-According to the _Order Split_ record, products with the same family and
-brand will be placed in the same delivery, and, according to the _Limit
-Rule_ record, if the total number of such products is less than the
-minimum quantity or higher than the maximum quantity, a validation error
-will be displayed.
+[tabs]
+====
+Limit Rule per Delivery::
++
+--
+According to the _Order Split_ record, products with the same family and brand will be placed in the same delivery, and, according to the _Limit Rule_ record, if the total number of such products is less than the minimum quantity or higher than the maximum quantity, a validation error will be displayed.
 
-* xref:admin-guide/workshops/workshop-5-0-implementing-additional-features/5-1-setting-up-a-delivery-split[The Order Split setting] is
-responsible for dividing products according to the criteria. Here are 4
-deliveries because there are 4 unique combinations of brand and family
-for added products.
+* xref:admin-guide/workshops/workshop-5-0-implementing-additional-features/5-1-setting-up-a-delivery-split.adoc[The Order Split setting] is responsible for dividing products according to the criteria. Here are 4 deliveries because there are 4 unique combinations of brand and family for added products.
++
 image:Workshop-6.0-Number-of-deliveries-Order-Split-.png[]
-* xref:creating-limit-rule-for-delivery-6-2[The Limit Rule per
-Delivery]: the maximum quantity for a single delivery is 100.
-* xref:admin-guide/workshops/workshop-2-0-setting-up-discounts/workshop-2-4-setting-up-a-total-discount-per-delivery/index[The
-applied discount]: the highest
-xref:admin-guide/workshops/workshop-2-0-setting-up-discounts/workshop-2-4-setting-up-a-total-discount-per-delivery/adding-condition-levels-2-4[condition level] is met (starting
-from 150 products, you will get the 15% discount)
-* xref:admin-guide/workshops/workshop-3-0-working-with-freebies/workshop-3-1-configuring-prioritized-freebie-type/index[The
-distributed freebies]: the prioritized
-xref:admin-guide/workshops/workshop-3-0-working-with-freebies/workshop-3-1-configuring-prioritized-freebie-type/adding-a-freebie-level-48-8-3-1[freebie level] is met (for
+* xref:./workshop-6-2-configuring-limit-rules/creating-limit-rule-for-delivery-6-2.adoc[The Limit Rule per Delivery]: the maximum quantity for a single delivery is 100.
+* xref:admin-guide/workshops/workshop-2-0-setting-up-discounts/workshop-2-4-setting-up-a-total-discount-per-delivery/index.adoc[The applied discount]: the highest xref:admin-guide/workshops/workshop-2-0-setting-up-discounts/workshop-2-4-setting-up-a-total-discount-per-delivery/adding-condition-levels-2-4.adoc[condition level] is met (starting from 150 products, you will get the 15% discount)
+* xref:admin-guide/workshops/workshop-3-0-working-with-freebies/workshop-3-1-configuring-prioritized-freebie-type/index.adoc[The distributed freebies]: the prioritized xref:admin-guide/workshops/workshop-3-0-working-with-freebies/workshop-3-1-configuring-prioritized-freebie-type/adding-a-freebie-level-48-8-3-1.adoc[freebie level] is met (for
 every 48 products of a certain brand, you will share 8 freebies)
-
++
 image:Workshop-6.0-Exceed-Limit-Rule-Quantity-per-Delivery.png[]
-
-|Limit Rule per Order a|
+--
+Limit Rule per Order::
++
+--
 The total price for the whole order exceeds the limit.
 
-* xref:creating-limit-rule-for-order-6-2[The Limit Rule per Order]
-* xref:admin-guide/workshops/workshop-2-0-setting-up-discounts/workshop-2-4-setting-up-a-total-discount-per-delivery/index[The
-applied discount]: the
-highest xref:admin-guide/workshops/workshop-2-0-setting-up-discounts/workshop-2-4-setting-up-a-total-discount-per-delivery/adding-condition-levels-2-4[condition level] is met
+* xref:./workshop-6-2-configuring-limit-rules/creating-limit-rule-for-order-6-2.adoc[The Limit Rule per Order]
+* xref:admin-guide/workshops/workshop-2-0-setting-up-discounts/workshop-2-4-setting-up-a-total-discount-per-delivery/index.adoc[The applied discount]: the highest xref:admin-guide/workshops/workshop-2-0-setting-up-discounts/workshop-2-4-setting-up-a-total-discount-per-delivery/adding-condition-levels-2-4.adoc[condition level] is met
 (starting from 150 products, you will get the 15% discount)
-* xref:admin-guide/workshops/workshop-3-0-working-with-freebies/workshop-3-1-configuring-prioritized-freebie-type/index[The
-distributed freebies]: the
-second xref:admin-guide/workshops/workshop-3-0-working-with-freebies/workshop-3-1-configuring-prioritized-freebie-type/adding-a-freebie-level-48-8-3-1[freebie level] is met
-(for every 12 products, you will share 1 freebie of the same product)
-
+* xref:admin-guide/workshops/workshop-3-0-working-with-freebies/workshop-3-1-configuring-prioritized-freebie-type/index.adoc[The distributed freebies]: the second xref:admin-guide/workshops/workshop-3-0-working-with-freebies/workshop-3-1-configuring-prioritized-freebie-type/adding-a-freebie-level-48-8-3-1.adoc[freebie level] is met (for every 12 products, you will share 1 freebie of the same product)
++
 image:Workshop-6.0-Exceed-Limit-Rule-Amount-per-Order.png[]
-
-|Limit Rule with Condition a|
+--
+Limit Rule with Condition::
++
+--
 The total price for the whole order exceeds the limit.
 
-* xref:creating-limit-rules-with-conditions-6-2#h2_953788261[The
-Limit Rule per Order with the Apply Condition]
-* The maximum number (50) of the specific product (Apply Condition) is
-exceeded.
-
+* xref:./workshop-6-2-configuring-limit-rules/creating-limit-rules-with-conditions-6-2.adoc#h2_953788261[The Limit Rule per Order with the Apply Condition]
+* The maximum number (50) of the specific product (Apply Condition) is exceeded.
++
 image:Screenshot-2021-08-26-at-15.45.20.png[]
-
-|===
+--
+====
 
 [[h2_321233250]]
-=== Allocate Quotas
+== Allocate Quotas
 
-To understand the Quotas flow, let's create two orders and fill them out
-with the specific products to allocate quotas and calculate freebies.
+To understand the Quotas flow, let's create two orders and fill them out with the specific products to allocate quotas and calculate freebies.
 
-Several quotes may be applied for an [.object]#Order Line Item#
-based on the delivery dates. In Workshop 6.0, we use one quota for the
-_Order Line Item_ record.
+NOTE: Several quotes may be applied for an [.object]#Order Line Item# based on the delivery dates. In Workshop 6.0, we use one quota for the _Order Line Item_ record.
 
 [[h3_2047848280]]
-==== Allocate Quotas and Save the First Order
+=== Allocate Quotas and Save the First Order
 
 Create a basic order with the following:
 
@@ -175,77 +140,54 @@ Create a basic order with the following:
 . Add the *All. Bio Balance.Kefir* promotion: 2 products.
 . Click *Get Freebie* and add freebies.
 
-
-
 When you click the info icon:
 
-[width="100%",cols="50%,50%",]
-|===
-|Quotas for a Product a|
-Quotas for a product are calculated based on the created individual
-_Quota_ record.
+[tabs]
+====
+Quotas for a Product::
++
+--
+Quotas for a product are calculated based on the created individual _Quota_ record.
 
-* If you have added 50 products, you have exceeded your quota by 2
-products, which is reflected in the *Remaining* line.
-* In addition, in the info icon, you see the unit of measure for the
-quota: quantity.
-
-
-
+* If you have added 50 products, you have exceeded your quota by 2 products, which is reflected in the *Remaining* line.
+* In addition, in the info icon, you see the unit of measure for the quota: quantity.
++
 image:First-Order-Quota-for-a-Product.png[]
-
-|Quotas for Promotion a|
+--
+Quotas for Promotion::
++
+--
 Quotas for promotion are calculated based on the created _Quota_ record.
 
-* The individual _Quota_ record is automatically created based on the
-found _Quota_ record with the _Template_ record type.
-[NOTE] ==== If there is an individual [.object]#Quota
-==== and a [.object]#Quota Template# on the same search level, the individual quota will be applied. For more information, refer to xref:admin-guide/managing-ct-orders/product-validation-in-order/quotas/index#h3_1386411308[Quota Search].#
-* The quota will be counted for all products added from the specified
-promotion.
-* If you added 2 products from the promotion and set a quantity for each
-of them, the quota will be reduced by the total price of the 2 added
-products, and the remaining amount is reflected in the *Remaining* line.
-* In addition, in the info icon, you see the unit of measure for the
-quota: amount.
-
-
-
+* The individual _Quota_ record is automatically created based on the found _Quota_ record with the _Template_ record type.
++
+NOTE: If there is an individual [.object]#Quota and a [.object]#Quota Template# on the same search level, the individual quota will be applied. For more information, refer to xref:admin-guide/managing-ct-orders/product-validation-in-order/quotas/index.adoc#h3_1386411308[Quota Search].
+* The quota will be counted for all products added from the specified promotion.
+* If you added 2 products from the promotion and set a quantity for each of them, the quota will be reduced by the total price of the 2 added products, and the remaining amount is reflected in the *Remaining* line.
+* In addition, in the info icon, you see the unit of measure for the quota: amount.
++
 image:First-Order-Quota-for-a-Promo.png[]
+--
+Quotas for Freebies::
++
+--
+Quotas for a freebie are calculated based on the created individual _Quota_ record.
 
-|Quotas for Freebies a|
-Quotas for a freebie are calculated based on the created individual
-_Quota_ record.
-
-* If you have added 4 freebies, the remaining quantity is reflected in
-the *Remaining* line. In this case,
-the xref:admin-guide/workshops/workshop-3-0-working-with-freebies/workshop-3-1-configuring-prioritized-freebie-type/adding-a-freebie-level-48-8-3-1[Certain Brand 48 {plus}
-8] condition is met, so you should add 8 freebies
-that xref:admin-guide/workshops/workshop-3-0-working-with-freebies/workshop-3-1-configuring-prioritized-freebie-type/adding-a-freebie-condition-with-the-criteria-based-method-3-1[match
-the criteria].
-* In addition, in the info icon, you see the unit of measure for the
-quota: quantity.
-
-
-
+* If you have added 4 freebies, the remaining quantity is reflected in the *Remaining* line. In this case, the xref:admin-guide/workshops/workshop-3-0-working-with-freebies/workshop-3-1-configuring-prioritized-freebie-type/adding-a-freebie-level-48-8-3-1.adoc[Certain Brand 48 {plus} 8] condition is met, so you should add 8 freebies that xref:admin-guide/workshops/workshop-3-0-working-with-freebies/workshop-3-1-configuring-prioritized-freebie-type/adding-a-freebie-condition-with-the-criteria-based-method-3-1.adoc[match the criteria].
+* In addition, in the info icon, you see the unit of measure for the quota: quantity.
++
 image:First-Order-Quota-for-a-Freebie.png[]
-
-|===
-
-
+--
+====
 
 Click the *Save Draft* button.
 
-* The individual quota for a product will be updated, and in the *Booked
-Quantity* field the 50 value will be added.
-* The individual quota for a promotion will be created based on the
-_Quota Template_ record for this promotion, and in the *Booked Amount*
-field, 203,8 will be added.
-* The individual quota for a freebie will be updated, and in the *Booked
-Quantity* field the 4 value will be added.
+* The individual quota for a product will be updated, and in the *Booked Quantity* field the 50 value will be added.
+* The individual quota for a promotion will be created based on the _Quota Template_ record for this promotion, and in the *Booked Amount* field, 203,8 will be added.
+* The individual quota for a freebie will be updated, and in the *Booked Quantity* field the 4 value will be added.
 
 [[h3_834551858]]
-==== Allocate Quotas and Finalize the Second Order
+=== Allocate Quotas and Finalize the Second Order
 
 Create a basic order with the following:
 
@@ -253,129 +195,125 @@ Create a basic order with the following:
 . Add the *All. Bio Balance.Kefir* promotion: 5 products.
 . Click *Get Freebie* and add freebies.
 
-
-
 When you click the info icon:
 
-[width="100%",cols="50%,50%",]
-|===
-|Quotas for a Product a|
-Quotas for a product are calculated based on the created individual
-_Quota_ record.
-
-* The booked product quantity for the first order is written in the
-*Booked* line. Quotas that have been booked will not affect the number
-of remaining quotas until the order in which those quotas have been
-distributed is finalized.
-* If you have added 40 products, only 8 products will be available in
-the *Remaining* line.
-[NOTE] ==== The quota for other orders is placed in the *Booked*
-line while the quota for the current order is in the *Remaining* line.
+[tabs]
 ====
+Quotas for a Product::
++
+--
+Quotas for a product are calculated based on the created individual _Quota_ record.
 
-
-
+* The booked product quantity for the first order is written in the *Booked* line. Quotas that have been booked will not affect the number of remaining quotas until the order in which those quotas have been distributed is finalized.
+* If you have added 40 products, only 8 products will be available in the *Remaining* line.
++
+NOTE: The quota for other orders is placed in the *Booked* line while the quota for the current order is in the *Remaining* line.
++
 image:Second-Order-Quota-for-a-Product.png[]
-
-|Quotas for Promotion a|
-Quotas for promotion are calculated based on the individual _Quota_
-record that is created based on the found _Quota_ record with the
-_Template_ record type.
+--
+Quotas for Promotion::
++
+--
+Quotas for promotion are calculated based on the individual _Quota_ record that is created based on the found _Quota_ record with the _Template_ record type.
 
 * There are 5 different products (the number of each is 20).
 * The booked quota for the first order is written in the *Booked* line.
 * The remaining quota is written in the *Remaining* line.
-
-
-
++
 image:Second-Order-Quota-for-a-Promo.png[]
+--
+Quotas for Freebies::
++
+--
+Quotas for a freebie are calculated based on the created individual _Quota_ record.
 
-|Quotas for Freebies a|
-Quotas for a freebie are calculated based on the created individual
-_Quota_ record.
-
-* The quota for a specific freebie will not be applied due to the
-condition is not met. For the quota,
-the xref:admin-guide/workshops/workshop-3-0-working-with-freebies/workshop-3-1-configuring-prioritized-freebie-type/adding-a-freebie-level-48-8-3-1[Certain Brand 48 {plus}
-8] condition must be met. In this case, we have less than 48 products,
-so for products, the xref:admin-guide/workshops/workshop-3-0-working-with-freebies/workshop-3-1-configuring-prioritized-freebie-type/adding-a-freebie-level-12-1-3-1[All 12
-{plus} 1] condition is applied, and for promotion,
-the xref:admin-guide/workshops/workshop-3-0-working-with-freebies/workshop-3-2-configuring-selective-freebie-type/adding-a-freebie-level-for-promotion-3-2[Selective] freebie
+* The quota for a specific freebie will not be applied due to the condition is not met. For the quota, the xref:admin-guide/workshops/workshop-3-0-working-with-freebies/workshop-3-1-configuring-prioritized-freebie-type/adding-a-freebie-level-48-8-3-1.adoc[Certain Brand 48 {plus} 8] condition must be met. In this case, we have less than 48 products, so for products, the xref:admin-guide/workshops/workshop-3-0-working-with-freebies/workshop-3-1-configuring-prioritized-freebie-type/adding-a-freebie-level-12-1-3-1.adoc[All 12 {plus} 1] condition is applied, and for promotion, the xref:admin-guide/workshops/workshop-3-0-working-with-freebies/workshop-3-2-configuring-selective-freebie-type/adding-a-freebie-level-for-promotion-3-2.adoc[Selective] freebie
 type is applied.
-
-
-
++
 image:Second-Order-Quota-for-a-Freebie.png[]
-
-|===
-
-
+--
+====
 
 Click the *Finalize* button. All used _Quota_ records will be updated.
 
-[width="100%",cols="50%,50%",]
-|===
-|Quotas for a Product
-|image:Quotas-for-a-Product-(2-orders).png[]
-
-|Quotas for Promotion
-|image:Quotas-for-Promotion-(2-orders).png[]
-
-|Quotas for Freebies
-|image:Quotas-for-Freebies-(2-orders).png[]
-|===
+[tabs]
+====
+Quotas for a Product::
++
+--
+image:Quotas-for-a-Product-(2-orders).png[]
+--
+Quotas for Promotion::
++
+--
+image:Quotas-for-Promotion-(2-orders).png[]
+--
+Quotas for Freebies::
++
+--
+image:Quotas-for-Freebies-(2-orders).png[]
+--
+====
 
 [[h3_682746901]]
-==== Finalize the First Order
+=== Finalize the First Order
 
 Open the first order and click *Finalize*.
 
 * The validation message to recalculate freebies appeared.
-* The validation message in the header of the order cart says that the
-quota is exceeded.
+* The validation message in the header of the order cart says that the quota is exceeded.
 
-image:First-Order-Exceeded-Quota-.png[]
-
-
+image::First-Order-Exceeded-Quota-.png[align="center"]
 
 Update the product quantity to match the quota usage.
 
-[width="100%",cols="50%,50%",]
-|===
-|Quotas for a Product a|
+[tabs]
+====
+Quotas for a Product::
++
+--
 Add 8 products to fully use up the quota.
 
 image:First-Order-Quota-for-a-Product-2.png[]
-
-|Quotas for Promotion a|
-Add 20 items of 2 different promo products to leave part of the quota
-unused.
+--
+Quotas for Promotion::
++
+--
+Add 20 items of 2 different promo products to leave part of the quota unused.
 
 image:First-Order-Quota-for-a-Promo-2.png[]
-
-|Quotas for Freebies a|
-Open the *Freebies* window and click the info icon next to the product
-with quotas—the remaining quota quantity is displayed.
+--
+Quotas for Freebies::
++
+--
+Open the *Freebies* window and click the info icon next to the product with quotas—the remaining quota quantity is displayed.
 
 image:First-Order-Quota-for-a-Freebie-2.png[]
-
-|===
-
-
+--
+====
 
 Click the *Finalize* button. All used _Quota_ records will be updated.
 
-[cols=",",]
-|===
-|Finalized Order Cart
-|image:First-Order-Finalized.png[]
-
-|Quotas for a Product
-|image:Quotas-for-a-Product-(2-orders)-2.png[]
-
-|Quotas for Promotion
-|image:Quotas-for-Promotion-(2-orders)-2.png[]
-
-|Quotas for Freebies
-|image:Quotas-for-Freebies-(2-orders)-2.png[]
-|===
+[tabs]
+====
+Finalized Order Cart::
++
+--
+image:First-Order-Finalized.png[]
+--
+Quotas for a Product::
++
+--
+image:Quotas-for-a-Product-(2-orders)-2.png[]
+--
+Quotas for Promotion::
++
+--
+image:Quotas-for-Promotion-(2-orders)-2.png[]
+--
+Quotas for Freebies::
++
+--
+image:Quotas-for-Freebies-(2-orders)-2.png[]
+--
+====

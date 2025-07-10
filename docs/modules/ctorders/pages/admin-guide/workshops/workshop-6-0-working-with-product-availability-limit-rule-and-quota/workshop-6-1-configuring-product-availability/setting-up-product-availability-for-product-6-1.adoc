@@ -2,23 +2,19 @@
 
 Create two _Product Availability_ records:
 
-* Change the default product availability and set up the availability
-dates for the first [.object]#CT Product#.
-* Set the unavailability dates for the second [.object]#CT
-Product#.
+* Change the default product availability and set up the availability dates for the first [.object]#CT Product#.
+* Set the unavailability dates for the second [.object]#CT Product#.
 
-You can create multiple _Product Availability_ records for one product.
-If such records are found, the info icon shows a maximum of 3 records
-sorted by date, closest to the first delivery date.
-In Workshop 6.1, we create one _Product Availability_ record for a
-product.
+[TIP]
+====
+You can create multiple _Product Availability_ records for one product. If such records are found, the info icon shows a maximum of 3 records sorted by date, closest to the first delivery date.
 
-
+In Workshop 6.1, we create one _Product Availability_ record for a product.
+====
 
 For the first [.object]#CT Product#:
 
-. Go to the *CT Products →* click *DM SPOON YOG 105 CRNCH-GNG-CIN/plast
-cup*.
+. Go to the *CT Products →* click *DM SPOON YOG 105 CRNCH-GNG-CIN/plast cup*.
 . In the *Default Availability Type* field, select *Not Available*.
 . Click *Save*.
 . Go to the *Product Availability* tab and click *New*.
@@ -31,12 +27,11 @@ cup*.
 * *Availability Type*: _Available_.
 * *Product*: _DM SPOON YOG 105 CRNCH-GNG-CIN/plast cup_.
 * *Product Type*: _Product_.
++
 image:Workshop-6.1-PA-Available-Product.png[]
 . Click *Save & New*.
 
 The availability dates are created.
-
-
 
 For the second [.object]#CT Product#:
 
@@ -49,6 +44,7 @@ For the second [.object]#CT Product#:
 * *Availability Type*: _Not Available_.
 * *Product*: _DM SPOON YOG 105 CRNCH-MAR-MAN/plast cup_.
 * *Product Type*: _Product_.
++
 image:Workshop-6.1-PA-Not-Available-Product.png[]
 . Click *Save*.
 

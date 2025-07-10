@@ -1,30 +1,17 @@
 = Workshop 6.2: Configuring Limit Rules
 
-In Workshop 6.2, you will learn how to set a limit of products that can
-be distributed in one delivery or a limit of products per order. In this
-workshop:
+In Workshop 6.2, you will learn how to set a limit of products that can be distributed in one delivery or a limit of products per order. In this workshop:
 
 . Create a _Limit Rule_ record for a single delivery.
 . Create a _Limit Rule_ record for an order cart.
-. Create a _Limit Rule_ record with the *Exception Condition* for a
-single delivery.
-. Create a _Limit Rule_ record with the *Apply Condition* for the whole
-order cart.
+. Create a _Limit Rule_ record with the _Exception Condition_ for a single delivery.
+. Create a _Limit Rule_ record with the _Apply Condition_ for the whole order cart.
 
+If you exceed the product limit for a single delivery or for the order, the system will show a validation message when you try to save the draft or finalize the order.
 
+Keep in mind that all found suitable [.object]#Limit Rules# will be applied to the order. The search is done in the following sequence:
 
-If you exceed the product limit for a single delivery or for the order,
-the system will show a validation message when you try to save the draft
-or finalize the order.
-
-Keep in mind that all found suitable [.object]#Limit Rules# will
-be applied to the order. The search is done in the following sequence:
-
-. Search for a _Limit Rule_ record where the *Order Type* and *Sales
-Organization* fields are specified.
-. Search for a _Limit Rule_ record where the *Sales Organization* field
-is specified.
-. Search for a _Limit Rule_ record where the *Order Type* field is
-specified.
-. Search for a _Limit Rule_ record where neither of these fields is
-specified.
+. Search for a _Limit Rule_ record where the *Order Type* and *Sales Organization* fields are specified.
+. Search for a _Limit Rule_ record where the *Sales Organization* field is specified.
+. Search for a _Limit Rule_ record where the *Order Type* field is specified.
+. Search for a _Limit Rule_ record where neither of these fields is specified.

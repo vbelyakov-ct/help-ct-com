@@ -1,63 +1,45 @@
 = Setting up Product Availability (6.1)
+:toc:
 
-Now, each product has the default product availability that can be
-overridden or ignored depending on the product type (paid product or
-freebie).
-
-:toc: :toclevels: 3
+Now, each product has the default product availability that can be overridden or ignored depending on the product type (paid product or freebie).
 
 [[h2_1850295918]]
-=== The Default Product Availability
+== The Default Product Availability
 
-the [.object]#CT Product# object has a new field that stores the
-default product availability. By default, all products are available,
-but you can manually change their availability, for example, for excise
-products or out-of-stock goods.
+The [.object]#CT Product# object has a new field that stores the default product availability. By default, all products are available, but you can manually change their availability, for example, for excise products or out-of-stock goods.
 
 . Go to *CT Products →* click the required product.
-. Click *Edit* next to the *Product Availability* field and select
-*NotAvailable*.
+. Click *Edit* next to the *Product Availability* field and select *NotAvailable*.
++
 image:6.1-Change-the-default-PA.png[]
 . Click *Save*.
 
 Repeat steps for all required products.
 
 [[h2_2122468267]]
-=== Ignore Freebie Availability
+== Ignore Freebie Availability
 
-You can set up different availability depending on whether the product
-is added from a catalog/promo or given away as a freebie—it is possible
-to ignore the default product availability and Product Availability
-records for a certain [.object]#Freebie Condition#:
+You can set up different availability depending on whether the product is added from a catalog/promo or given away as a freebie—it is possible to ignore the default product availability and _Product Availability_ records for a certain [.object]#Freebie Condition#:
 
-. Go to *Freebie Types →* click the required one → open the *Related*
-tab → click the required *Freebie Condition*.
+. Go to *Freebie Types →* click the required one → open the *Related* tab → click the required *Freebie Condition*.
 . Select the *Ignore Product Availability* checkbox.
++
 image:6.1-Ignore-PA-for-Freebie.png[]
 . Click *Save*.
 
 Repeat the steps for all required freebie conditions.
 
 [[h2_903212972]]
-=== Configure the Product Availability object
+== Configure the Product Availability object
 
-The _Product Availability_ records must be applied for a single product,
-so it is necessary to relate the [.object]#Product Availability#
-and [.object]#CT Product# objects.
+The _Product Availability_ records must be applied for a single product, so it is necessary to relate the [.object]#Product Availability# and [.object]#CT Product# objects.
 
-[TIP] ==== The _Product Availability_ record can only be
-assigned to a single _CT Product_ record. However, you can create
-multiple _Product Availability_ records for the same product, as long as
-the availability dates in those records do not overlap. ====
+TIP: The _Product Availability_ record can only be assigned to a single _CT Product_ record. However, you can create multiple _Product Availability_ records for the same product, as long as the availability dates in those records do not overlap.
 
-. Go to *Setup → Object Manager → Product Availability → Fields &
-Relationships → New*.
-. Create a *Product Id* field with the *Lookup* type, for example,
-[.apiobject]#ProductId__c#.
-. Go to *Setup → Object Manager → Product Availability → Page Layouts →
-Product Availability*.
+. Go to *Setup → Object Manager → Product Availability → Fields & Relationships → New*.
+. Create a *Product Id* field with the *Lookup* type, for example, [.apiobject]#ProductId__c#.
+. Go to *Setup → Object Manager → Product Availability → Page Layouts → Product Availability*.
 . Add the *Product Id* field to the page layout.
 . Click *Save*.
 
-The setup is complete. Now, set up availability for products and
-freebies.
+The setup is complete. Now, set up availability for products and freebies.
