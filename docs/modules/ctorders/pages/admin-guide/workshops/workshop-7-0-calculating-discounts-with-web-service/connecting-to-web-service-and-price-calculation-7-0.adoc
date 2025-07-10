@@ -1,22 +1,20 @@
 = Connecting to Web Service and Price Calculation (7.0)
 
-This setting is global for the instance.
+WARNING: This setting is global for the instance.
 
-Set up the sync process to send the master data and keep it up-to-date
-on the Web Service side:
+Set up the sync process to send the master data and keep it up-to-date on the Web Service side:
 
 . Go to the *Settings Panel* page and open the *Settings* tab.
 . Activate one or more of the methods to sync master data.
-[NOTE] ==== A warning will be displayed If you haven't enough
-permissions. The required permissions are
-listed xref:admin-guide/managing-ct-orders/web-service/index#h3_241107400[here]. ====
++
+NOTE: A warning will be displayed If you haven't enough permissions. The required permissions are listed xref:admin-guide/managing-ct-orders/web-service/index.adoc#h2_1477820419[here].
+
 .. Select *Real Time Type of Sync*.
 .. Select *Batch in Schedule Type of Sync* and set a schedule.
-.. Select *Enable WS for Mobile* if you use
-xref:admin-guide/managing-ct-orders/web-service/index#h2_773755849[new functionalities] in offline
-orders.
+.. Select *Enable WS for Mobile* if you use xref:admin-guide/managing-ct-orders/web-service/index.adoc#h2_773755849[new functionalities] in offline orders.
 .. Click *Run Batch*.
 .. Click *Run Historical Batch* to send all master data.
++
 image:6.2-sync-process.png[]
 . Click *Save*.
 
