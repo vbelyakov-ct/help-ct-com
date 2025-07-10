@@ -1,86 +1,50 @@
 = About CT Orders Solution
 
-*CT Orders* is a powerful and comprehensive order management solution
-that works in conjunction with your ERP or Salesforce CRM system and the
-CT Mobile app. Go to xref:ct-orders-features-overview[CT Orders
-Features Overview] to find all the features available in the CT Orders
-package and CT Mobile app by the feature release version.
+*CT Orders* is a powerful and comprehensive order management solution that works in conjunction with your ERP or Salesforce CRM system and the CT Mobile app. Go to xref:./ct-orders-features-overview.adoc[CT Orders Features Overview] to find all the features available in the CT Orders package and CT Mobile app by the feature release version.
 
-[cols=",",]
-|===
-|image:info.png[] |Available
-only in Salesforce Lightning Experience interface.
-|===
+NOTE: Available only in Salesforce Lightning Experience interface.
 
 [[h2_1478584389]]
-=== Architecture
+== Architecture
 
-The CT Orders package is designed to seamlessly fit into your
-organization's workflow, offering three various approaches to the
-implementation of the CT Orders:
+The CT Orders package is designed to seamlessly fit into your organization's workflow, offering three various approaches to the implementation of the CT Orders:
 
 . *CRM: CT Pharma / CT CPG {plus} CT Mobile*.
-. *ERP {plus} CRM as front end: SAP {plus} CT Pharma / CT CPG {plus} CT
-Mobile*.
+. *ERP {plus} CRM as front end: SAP {plus} CT Pharma / CT CPG {plus} CT Mobile*.
++
 In this case, promotions must be received from SAP.
-. *Combination of ERP and CRM: SAP {plus} CT Pharma / CT CPG {plus} CT
-Mobile*.
+. *Combination of ERP and CRM: SAP {plus} CT Pharma / CT CPG {plus} CT Mobile*.
++
 In this case, you can set parameters in both ERP and CRM. For example,
 ERP stores long-term discounts per segment according to the client and
 brand. On the CRM side, brand managers can provide short-term promotions
 given the marketing strategy for a new product.
 
-image:ctorders-overview-2020-11-02.jpeg[]
-
-[[h3_1620090360]]
-==== 
+image::ctorders-overview-2020-11-02.jpeg[align="center"]
 
 [[h2_1497949164]]
-=== Package Setup and Configuration
+== Package Setup and Configuration
 
-To start using CT Orders, the system administrator should follow these
-steps:
+To start using CT Orders, the system administrator should follow these steps:
 
-. Install CT Pharma/CT CPG and
-xref:installing-the-ct-orders-package[CT Orders] packages.
-. xref:setting-up-an-instance[Set up the Salesforce instance].
-.. Define [.object]#Product# and [.object]#Activity#
-objects.
+. Install CT Pharma/CT CPG and xref:quick-start/installing-the-ct-orders-package.adoc[CT Orders] packages.
+. xref:admin-guide/getting-started/setting-up-an-instance/index.adoc[Set up the Salesforce instance].
+.. Define [.object]#Product# and [.object]#Activity# objects.
 .. Configure the required mappings.
-.. Add permission to create orders
-xref:configuring-an-account-1-0[for required accounts].
-.. Create and assign xref:admin-guide/managing-ct-orders/catalog-management/index.adoc[Catalogs] and
-xref:admin-guide/managing-ct-orders/discount-management/promotions.adoc[Promotions].
-. xref:admin-guide/workshops/workshop-1-0-creating-basic-order/creating-a-sales-organization-1-0.adoc[Create a Sales
-Organization].
+.. Add permission to create orders xref:admin-guide/workshops/workshop-1-0-creating-basic-order/configuring-an-account-1-0.adoc[for required accounts].
+.. Create and assign xref:admin-guide/managing-ct-orders/catalog-management/index.adoc[Catalogs] and xref:admin-guide/managing-ct-orders/discount-management/promotions.adoc[Promotions].
+. xref:admin-guide/workshops/workshop-1-0-creating-basic-order/creating-a-sales-organization-1-0.adoc[Create a Sales Organization].
 .. xref:admin-guide/workshops/workshop-1-0-creating-basic-order/creating-a-sales-organization-user-1-0.adoc[Assign users].
-.. xref:creating-and-assigning-a-ct-price-book-1-0[Create and
-assign price books].
+.. xref:admin-guide/workshops/workshop-1-0-creating-basic-order/creating-and-assigning-a-ct-price-book-1-0/index.adoc[Create and assign price books].
 . xref:admin-guide/workshops/workshop-1-0-creating-basic-order/configuring-an-address-settings-1-0/index.adoc[Set up addresses].
-. xref:admin-guide/workshops/workshop-1-0-creating-basic-order/configuring-layout-settings-1-0/index.adoc[Create the appropriate
-layouts] and xref:admin-guide/workshops/workshop-1-0-creating-basic-order/configuring-totals-panel-setting-1-0.adoc[customize
-the Totals panel].
-. Additionally, xref:defining-an-order-type-1-0[define the desired
-order types] and
-xref:admin-guide/workshops/workshop-1-0-creating-basic-order/adding-delivery-restrictions-to-an-order-1-0.adoc[delivery
-restrictions].
-. Configure xref:price-management[the price calculations] and
-xref:discount-management[discounts].
+. xref:admin-guide/workshops/workshop-1-0-creating-basic-order/configuring-layout-settings-1-0/index.adoc[Create the appropriate layouts] and xref:admin-guide/workshops/workshop-1-0-creating-basic-order/configuring-totals-panel-setting-1-0.adoc[customize the Totals panel].
+. Additionally, xref:admin-guide/workshops/workshop-1-0-creating-basic-order/defining-an-order-type-1-0.adoc[define the desired order types] and xref:admin-guide/workshops/workshop-1-0-creating-basic-order/adding-delivery-restrictions-to-an-order-1-0.adoc[delivery restrictions].
+. Configure xref:admin-guide/managing-ct-orders/price-management/index.adoc[the price calculations] and xref:admin-guide/managing-ct-orders/discount-management/index.adoc[discounts].
 . xref:admin-guide/managing-ct-orders/freebies-management/index.adoc[Set up Freebies distribution].
-. xref:product-validation-in-order[Add product validations in the
-order cart] with the help of limit rules, product availability, and
-quotas.
-. Additionally, xref:admin-guide/workshops/workshop-4-0-working-with-offline-orders/adding-ct-orders-to-the-ct-mobile-app-4-0.adoc[set
-up integration with CT Mobile] for offline order creation.
+. xref:admin-guide/managing-ct-orders/product-validation-in-order/index.adoc[Add product validations in the order cart] with the help of limit rules, product availability, and quotas.
+. Additionally, xref:admin-guide/workshops/workshop-4-0-working-with-offline-orders/adding-ct-orders-to-the-ct-mobile-app-4-0.adoc[set up integration with CT Mobile] for offline order creation.
 . Additionally, configure xref:admin-guide/managing-ct-orders/web-service/index.adoc[Web Service].
-In Salesforce, Web Service may be used to execute calculations from
-different channels in one place instead of a built-in calculator.
-Consider that some features are available only with the active Web
-Service.  In CT Mobile 2.7, calculations are only performed using the
-Web Service. In future releases, it will be possible to choose between
-the internal calculator and the Web Service.
-. Create orders in xref:admin-guide/managing-ct-orders/order-management/online-order.adoc[Salesforce] and
-xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc[CT Mobile].
-. Additionally,
-xref:workshop-5-0-implementing-additional-features[implement
-additional features], including SD features.
++
+In Salesforce, Web Service may be used to execute calculations from different channels in one place instead of a built-in calculator. Consider that some features are available only with the active Web Service.  In CT Mobile 2.7, calculations are only performed using the Web Service. In future releases, it will be possible to choose between the internal calculator and the Web Service.
+. Create orders in xref:admin-guide/managing-ct-orders/order-management/online-order.adoc[Salesforce] and xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc[CT Mobile].
+. Additionally, xref:admin-guide/workshops/workshop-5-0-implementing-additional-features/index.adoc[implement additional features], including SD features.

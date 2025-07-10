@@ -1,0 +1,11 @@
+For the stable performance of the CT Orders module in the CT Mobile iOS application, the following load values are recommended:
+
+* Catalogs: 1500 product per each catalog (excluding bundles)
+* Orders: 500 products per each order (for 1 delivery)
+* 30000 commercial conditions, including records of the following objects:
+** xref:ctorders:admin-guide/managing-ct-orders/discount-management/discount-data-model/calculated-discount-field-reference.adoc[Calculated Discounts]
+** xref:ctorders:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-level-field-reference.adoc[Condition Levels]
+** xref:ctorders:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-group-field-reference.adoc[Condition Groups]
+** xref:ctorders:admin-guide/managing-ct-orders/discount-management/discount-data-model/calculation-types-field-reference/index.adoc[Calculation Types]
+** xref:ctorders:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/index.adoc[Conditions]
+** xref:ctorders:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-dependency-field-reference.adoc[Condition Dependencies]
