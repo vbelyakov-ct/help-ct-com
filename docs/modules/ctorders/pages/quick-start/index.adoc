@@ -1,39 +1,24 @@
 = Quick Start Guide
 
-In this Quick Start Guide, you will learn how to create a Sales
-Organization and a basic order:
+In this Quick Start Guide, you will learn how to create a Sales Organization and a basic order:
 
+xref:./installing-the-ct-orders-package.adoc[]
 
+xref:./create-a-sales-organization/index.adoc[]
 
-xref:quick-start/installing-the-ct-orders-package.adoc[1. Install the CT Orders
-Package]
+xref:./create-an-account.adoc[]
 
-xref:create-a-sales-organization[2. Create a Sales Organization]
+xref:./creating-and-adding-catalogs-1-0.adoc[]
 
-xref:create-an-account[3. Create an Account]
+xref:./create-and-assign-a-ct-price-book.adoc[]
 
-xref:creating-and-adding-catalogs-1-0[4. Create and Assign Catalog]
+xref:./add-products/index.adoc[]
 
-xref:create-and-assign-a-ct-price-book[5. Create and Assign a CT
-Price Book]
-
-xref:add-products[6. Add Products]
-
-xref:create-an-order[7. Create an Order]
-
-xref:workshop-2-1-checkpoint[]
-
-
+xref:./create-an-order.adoc[]
 
 The following sample data will be used:
 
-[cols=",",]
-|===
-|image:info.png[] | This is
-sample data. You can replace specified records
-of [.object]#Sales Organization#, [.object]#Account#,
-and [.object]#Catalogs# with the desired ones.
-|===
+TIP: This is sample data. You can replace specified records of [.object]#Sales Organization#, [.object]#Account#, and [.object]#Catalogs# with the desired ones.
 
 * *Sales Organization*: _Default Sales Org_
 * *Account*: _METRO_
@@ -42,3 +27,4 @@ and [.object]#Catalogs# with the desired ones.
 * *Sub-catalogs*: _Sour Cream_, _Milk_
 * *CT Price Book*: _Main PB '20_
 * *Order Type*: _Order_
+

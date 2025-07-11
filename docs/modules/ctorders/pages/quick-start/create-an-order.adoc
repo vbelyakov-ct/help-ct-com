@@ -6,38 +6,33 @@ Let's create an order with a discount for the selected client's account:
 . Complete the form as follows:
 * *Order Type:* _Order_.
 * *Account*: _METRO_.
-* *Price Book*: select the
-xref:quick-start/7-create-and-assign-a-ct-price-book[price book] you created
-earlier.
+* *Price Book*: select the xref:./create-and-assign-a-ct-price-book.adoc[price book] you created earlier.
 * *Sales Organization*: _Default_.
 * *Stage*: _On-hold_.
-
++
 image:ctorders-create-order-quickstart.png[]
 . Click *Save*.
 . On the *CT Order* tab, click on the newly created order.
 . On the selected *CT Order* page, click *Edit Cart*.
 . Expand the catalog on the left side and select some products.
 . Click *Add*.
++
 image:add-conditions-2020-08-26-1.png[]
 . Fill out the *Delivery* window.
-. Set the different amounts of items for each product to check the
-discount by the levels.
+. Set the different amounts of items for each product to check the discount by the levels.
 . Click *Finalize*.
 
-
-
-Congratulations! You created your first order in your organization. Now,
-you can apply advanced functions of CT Orders:
+Congratulations! You created your first order in your organization. Now, you can apply advanced functions of CT Orders:
 
 * xref:admin-guide/managing-ct-orders/product-management/index.adoc[Product management].
 * xref:admin-guide/managing-ct-orders/catalog-management/index.adoc[Catalog management].
-* xref:price-management[Price management].
-* xref:discount-management[Discount management].
+* xref:admin-guide/managing-ct-orders/price-management/index.adoc[Price management].
+* xref:admin-guide/managing-ct-orders/discount-management/index.adoc[Discount management].
 ** xref:admin-guide/managing-ct-orders/discount-management/promotions.adoc[Promotions].
 * xref:admin-guide/managing-ct-orders/freebies-management/index.adoc[Freebies management].
 * xref:admin-guide/managing-ct-orders/order-management/index.adoc[Order Management].
 ** xref:admin-guide/managing-ct-orders/order-management/price-tag.adoc[Price tag].
-* xref:product-validation-in-order[Product validation].
+* xref:admin-guide/managing-ct-orders/product-validation-in-order/index.adoc[Product validation].
 * xref:admin-guide/managing-ct-orders/delivery-management/index.adoc[Delivery management].
 * xref:admin-guide/managing-ct-orders/web-service/index.adoc[Web service].
 
