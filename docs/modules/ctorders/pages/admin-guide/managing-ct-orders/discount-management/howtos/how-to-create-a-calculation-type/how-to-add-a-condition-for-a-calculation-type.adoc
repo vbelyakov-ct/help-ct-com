@@ -14,7 +14,7 @@ For the newly created _Calculation Type_ record, you will need to specify the co
 * In the *Condition Details* field, add a JSON, which describes conditions under which the [.object]#Calculation Type# will be applied for the product discount.
 * Select *Discount Rate Location*:
 ** *Condition Record*: the discount rate will be applied from the *Discount Rate (%)* field on this form.
-** *Level Records:* the discount rate will be applied from the *Condition Level* record.
+** *Level Records:* the discount rate will be applied from the _Condition Level_ record.
 * Select *Calculation Method*:
 ** *Basic*: discount will be calculated for each product separately.
 ** *Advanced* (available only if *Discount Rate Location* is set to *Level Records*): discount will be calculated based on JSON from the *Advanced Criteria* field on this form.

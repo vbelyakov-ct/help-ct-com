@@ -8,7 +8,7 @@ Check out the JSON keys and examples.
 [[h2_1406500097]]
 == Examples
 
-Depending on whether an [.object]#Order# was created, edited, or deleted on a mobile device, JSON can store the temporary ID or the Salesforce record ID for this *Order* record or its related records, such as [.object]#Order Line Item#, [.object]#Delivery
+Depending on whether an [.object]#Order# was created, edited, or deleted on a mobile device, JSON can store the temporary ID or the Salesforce record ID for this _Order_ record or its related records, such as [.object]#Order Line Item#, [.object]#Delivery
 Line Item#, or [.object]#Delivery#.
 
 In this JSON file, the _Order_ and _Order Line Item_ records have the mobile temporary ID in the [.apiobject]#referenceOrderId# and [.apiobject]#referenceId# keys, which means that these records were created on the mobile device and will be inserted into the Salesforce database after synchronization. The xref:admin-guide/managing-ct-orders/order-change-manager/order-change-manager-field-reference.adoc[Order Change Manager] record will be created for this [.object]#Order#.

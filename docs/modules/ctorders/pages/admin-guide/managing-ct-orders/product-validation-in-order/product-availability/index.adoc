@@ -84,7 +84,7 @@ a|The appropriate product is not displayed in catalogs and promotions.
 ////
 * The appropriate freebie is not included in the freebie list.
 +
-NOTE: Administrators can select the *Ignore Product Availability* checkbox on the corresponding *Freebie Condition* record to consider only the product _Default Availability Type_ and ignore _Product Availability_ records that are found.
+NOTE: Administrators can select the *Ignore Product Availability* checkbox on the corresponding _Freebie Condition_ record to consider only the product _Default Availability Type_ and ignore _Product Availability_ records that are found.
 ////
 
 |Not applicable
@@ -301,8 +301,7 @@ NOTE: If multiple _Product Availability_ records for different dates are found, 
 Salesforce::
 +
 --
-The *Product Availability* records are displayed both for products on
-the left side in catalogs/promotions and added to the order cart.
+The _Product Availability_ records are displayed both for products on the left side in catalogs/promotions and added to the order cart.
 
 image:PA_Products-Available.png[]
 --

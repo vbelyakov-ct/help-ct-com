@@ -50,7 +50,7 @@ The calculation process for freebies is similar to the xref:admin-guide/managing
 . The system checks the mapping on the _Settings_ record with the xref:admin-guide/getting-started/setting-up-an-instance/configuring-object-setting.adoc[Object Setting] record type to determine the object which contains the product *Quantity* field.
 . The system checks if _Freebie Type_ records exist for the _Sales Organization_ and specified _Order Type_.
 +
-NOTE: The _Freebie Condition_ record for the applied _Freebie Type_ must have at least one *_Freebie Level_* record.
+NOTE: The _Freebie Condition_ record for the applied _Freebie Type_ must have at least one _Freebie Level_ record.
 . The system checks that all fields in the *Condition Fields List* field (on the applied _Freebie Type_) are accessible for a current user. If at least one field is not accessible, freebies will not be available for the order.
 +
 The *Condition Fields List* field is filled out automatically with the values pulled from the *Condition Details* fields on the _Freebie Condition_ child records. The field update is performed in one of two possible ways, depending on the option selected in the *Condition Fields Update Type* field.

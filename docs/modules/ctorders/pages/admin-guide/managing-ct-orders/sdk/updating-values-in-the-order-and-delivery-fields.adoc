@@ -58,7 +58,7 @@ a|
 [.apiobject]#orders\__TotalPrice__c#, and [.apiobject]#orders\__TotalDiscount__с# fields.
 ** For xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/index.adoc[Pricing Procedure v. 2], do not use fields specified for the [.apiobject]#resultPrice# and [.apiobject]#object# keys.
 
-To set up updating custom fields in objects when adding a product to an order to further calculate discounts and freebies, xref:admin-guide/workshops/workshop-5-0-implementing-additional-features/5-5-sdk-updating-values-in-the-order-and-delivery-fields.adoc[create an OM Settings record] with the *SDK Setting* record type. For more information, refer to xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/sdk-setting-field-reference.adoc[SDK Setting Field Reference].
+To set up updating custom fields in objects when adding a product to an order to further calculate discounts and freebies, xref:admin-guide/workshops/workshop-5-0-implementing-additional-features/5-5-sdk-updating-values-in-the-order-and-delivery-fields.adoc[create an OM Settings record] with the _SDK Setting_ record type. For more information, refer to xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/sdk-setting-field-reference.adoc[SDK Setting Field Reference].
 
 When writing code for this logic, follow the version format according to the *Version* field of the _OM Settings_ record. Otherwise, a warning will be shown that the calculator will be disabled and the total price will be calculated based on *List Price* values.
 
