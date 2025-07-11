@@ -1,372 +1,215 @@
 = CT Orders for CT Mobile iOS Release Notes
+:toc:
 
-Here you could find a CT Orders feature, the link to the corresponding
-article, and the version of CT Mobile since which the feature is
-available. Add the CT Orders module to the CT Mobile iOS app to have the
-ability to take orders.
+Here you could find a CT Orders feature, the link to the corresponding article, and the version of CT Mobile since which the feature is available. Add the CT Orders module to the CT Mobile iOS app to have the ability to take orders.
 
-:toc: :toclevels: 2
-
+////
 [[h2_1184861495]]
-=== 
-
-ifdef::hidden[]
-
-[[h2_1184861495]]
-=== CT Orders for CT Mobile 2.7
+== CT Orders for CT Mobile 2.7
 
 [[h3_1632812796]]
-==== Major Features
+=== Major Features
 
 [[h4_1512079693]]
-===== Web Service
+==== Web Service
 
-* In CT Mobile 2.7, you
-can xref:connecting-to-web-service-and-price-calculation-7-0[choose
-between the internal calculator and the Web Service] to calculate
-discounts. Before starting work with the Web Service, check all the
-required
+* In CT Mobile 2.7, you can xref:admin-guide/workshops/workshop-7-0-calculating-discounts-with-web-service/connecting-to-web-service-and-price-calculation-7-0.adoc[choose between the internal calculator and the Web Service] to calculate discounts. Before starting work with the Web Service, check all the required
 permissions xref:../Storage/project-order-module/PDF/CT-Orders-User-Permissions-to-Access-Web-Service.pdf[here].
-* Tap
-the image:WS-Calculation-in-CT-Mobile.png[] button
-in the xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc#h4_1635896381[order cart] to get the
-valid prices. The invalid prices will be highlighted in red color.
-* The new advanced features—links, mixed discounts, freebie multiplier,
-and freebie values—are only available when working with the
-xref:admin-guide/managing-ct-orders/web-service/index.adoc[Web Service].
-* Validations that a sales rep has access to all necessary fields to
-calculate discounts. Otherwise, the calculation will be carried out by
-the *List Price* field.
-
-
+* Tap the image:WS-Calculation-in-CT-Mobile.png[25,25] button in the xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc#h4_1635896381[order cart] to get the valid prices. The invalid prices will be highlighted in red color.
+* The new advanced features—links, mixed discounts, freebie multiplier, and freebie values—are only available when working with the xref:admin-guide/managing-ct-orders/web-service/index.adoc[Web Service].
+* Validations that a sales rep has access to all necessary fields to calculate discounts. Otherwise, the calculation will be carried out by the *List Price* field.
 
 [[h4_313159045]]
-===== Mixed Discounts
+==== Mixed Discounts
 
 * xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/calculation-types-field-reference/calculation-type-applyconditiontype-c-field-specification.adoc[Apply
 multiple conditions] from a single [.object]#Calculation Type#.
-* xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification.adoc#h2_1585895621[Advanced
-Criteria 2.0] provides more flexibility by setting multiple filters and
-a minimum number of products for different size discounts.
-
-
+* xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-advancedcriteria-c-field-specification.adoc#h2_1585895621[Advanced Criteria 2.0] provides more flexibility by setting multiple filters and a minimum number of products for different size discounts.
 
 [[h4_62076529]]
-===== Freebie Management
+==== Freebie Management
 
-* xref:admin-guide/managing-ct-orders/freebies-management/index.adoc#h3_316467656[Freebie Values] allow you
-to spread freebies over different levels and deliveries.
-
-
+* xref:admin-guide/managing-ct-orders/freebies-management/index.adoc#h3_316467656[Freebie Values] allow you to spread freebies over different levels and deliveries.
 
 [[h4_419366360]]
-===== Price tags
+==== Price tags
 
-* xref:admin-guide/managing-ct-orders/order-management/price-tag.adoc[New price tags] display one or more applied
-conditions on the discount scale with the current product quantity and
-the reached level of discounts.
+* xref:admin-guide/managing-ct-orders/order-management/price-tag.adoc[New price tags] display one or more applied conditions on the discount scale with the current product quantity and the reached level of discounts.
 * xref:admin-guide/managing-ct-orders/order-management/price-tag.adoc[The checkmark icon]
 (image:boolean-price-tag.png[])
-is displayed when several *Delivery Line Items* are tied to one *Order
-Line Item*, and different levels are applied in the conditions.
+is displayed when several *Delivery Line Items* are tied to one *Order Line Item*, and different levels are applied in the conditions.
 
 [[h3_1878651479]]
-==== Other Improvements
+=== Other Improvements
 
-* xref:links[Links]: Support the *Reduce* dependency action to
-calculate discounts for Freebies.
-* Edit fields with the *Currency*, *Number,* *Percent*, or *Text* types
-within the xref:admin-guide/managing-ct-orders/delivery-management/index.adoc#h2_1374863314[Delivery
+* xref:admin-guide/managing-ct-orders/discount-management/links.adoc[Links]: Support the *Reduce* dependency action to calculate discounts for Freebies.
+* Edit fields with the *Currency*, *Number,* *Percent*, or *Text* types within the xref:admin-guide/managing-ct-orders/delivery-management/index.adoc#h2_1374863314[Delivery
 Summary] pop-up.
 * The UX/UI improvement for [.object]#Quotas#:
-** Display the current quota status in the
-xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc#h4_1635896381[order cart] interface.
-** For better visibility, the xref:admin-guide/managing-ct-orders/product-validation-in-order/quotas/index.adoc#h2_275625523[quota info
-pop-up] displays the type of products it affects and the source catalog
-or promotion.
+** Display the current quota status in the xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc#h4_1635896381[order cart] interface.
+** For better visibility, the xref:admin-guide/managing-ct-orders/product-validation-in-order/quotas/index.adoc#h2_275625523[quota info pop-up] displays the type of products it affects and the source catalog or promotion.
 * The UX/UI improvement for the order cart:
-** xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc#h4_1635896381[The promotion] sales and
-delivery dates are displayed in each promotion header. If the sales
+** xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc#h4_1635896381[The promotion] sales and delivery dates are displayed in each promotion header. If the sales
 dates are empty, the delivery dates will be displayed instead of them.
-** xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc#h4_589780300[In the catalog and promotion
-left menu], products are arranged according to their order number (if
-given) or alphabetical order.
-* Support Salesforce validation rules when saving or finalizing an
-order.
+** xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc#h4_589780300[In the catalog and promotion left menu], products are arranged according to their order number (if given) or alphabetical order.
+* Support Salesforce validation rules when saving or finalizing an order.
+////
 
 [[h2_1184861496]]
-=== CT Orders for CT Mobile 2.6
+== CT Orders for CT Mobile 2.6
 
 [[h3_2012766947]]
-==== Major Features
+=== Major Features
 
 [[h4_1633116198]]
-===== Limit Rules
+==== Limit Rules
 
-* Dynamic control over the quantity and cost of products, bundles, or
-freebies for the whole order or several deliveries.
-* Downloading xref:admin-guide/managing-ct-orders/product-validation-in-order/limit-rules/index.adoc[Limit Rules] during the sync
-process.
-* xref:admin-guide/managing-ct-orders/product-validation-in-order/limit-rules/index.adoc[Applying limit rules] to orders or deliveries
-and checking the real-time validation during the order creation.
-
-
+* Dynamic control over the quantity and cost of products, bundles, or freebies for the whole order or several deliveries.
+* Downloading xref:admin-guide/managing-ct-orders/product-validation-in-order/limit-rules/index.adoc[Limit Rules] during the sync process.
+* xref:admin-guide/managing-ct-orders/product-validation-in-order/limit-rules/index.adoc[Applying limit rules] to orders or deliveries and checking the real-time validation during the order creation.
 
 [[h4_57267150]]
-===== Product Availability
+==== Product Availability
 
-* xref:admin-guide/managing-ct-orders/product-validation-in-order/product-availability/index.adoc[Dynamic control] over the availability
-of products, bundles, and freebies for order and deliveries on certain
-dates.
-* Support for xref:product-data-model[new product fields] to
-implement the product availability logic.
-* During the sync process, the
-xref:admin-guide/managing-ct-orders/product-validation-in-order/product-availability/index.adoc-field-reference[Product Availability]
-records will be downloaded for all active products on the mobile device.
-* Automatic check to display only available products and bundles in
-catalogs and promotions.
-* xref:admin-guide/managing-ct-orders/product-validation-in-order/product-availability/index.adoc#h2_813222365[Tap the Info icon] next to
-the product in the promotion, catalog, order cart, or freebie window to
-see up to 3 records of availability dates for a paid product or freebie.
-
-
+* xref:admin-guide/managing-ct-orders/product-validation-in-order/product-availability/index.adoc[Dynamic control] over the availability of products, bundles, and freebies for order and deliveries on certain dates.
+* Support for xref:admin-guide/managing-ct-orders/product-management/product-data-model/index.adoc[new product fields] to implement the product availability logic.
+* During the sync process, the xref:admin-guide/managing-ct-orders/product-validation-in-order/product-availability/product-availability-field-reference.adoc[Product Availability] records will be downloaded for all active products on the mobile device.
+* Automatic check to display only available products and bundles in catalogs and promotions.
+* xref:admin-guide/managing-ct-orders/product-validation-in-order/product-availability/index.adoc#h2_813222365[Tap the Info icon] next to the product in the promotion, catalog, order cart, or freebie window to see up to 3 records of availability dates for a paid product or freebie.
 
 [[h4_878037613]]
-===== Quotas
+==== Quotas
 
-* Dynamic control of xref:admin-guide/managing-ct-orders/product-validation-in-order/quotas/index.adoc[a limited number of
-products&#44; bundles&#44; and freebies], such as when launching a new
-product, running a promotion for a selected customer segment, or
-withdrawing a product from production, by distributing product quotas to
-sales reps.
+* Dynamic control of xref:admin-guide/managing-ct-orders/product-validation-in-order/quotas/index.adoc[a limited number of products, bundles, and freebies], such as when launching a new product, running a promotion for a selected customer segment, or withdrawing a product from production, by distributing product quotas to sales reps.
 * Blocking the *Finalize* button until the quota search is completed.
-* Sales reps can xref:admin-guide/managing-ct-orders/product-validation-in-order/quotas/index.adoc#h3_576888334[reserve an available
-number of a product by quota] and still be able to allocate all products
-in that quota among the orders.
-* xref:admin-guide/managing-ct-orders/product-validation-in-order/quotas/index.adoc#h2_275625523[Tap the Info icon] next to the product
-in the promotion, catalog, order cart, or freebie window to see the
-booked and used quotas.
-
-
+* Sales reps can xref:admin-guide/managing-ct-orders/product-validation-in-order/quotas/index.adoc#h3_576888334[reserve an available number of a product by quota] and still be able to allocate all products in that quota among the orders.
+* xref:admin-guide/managing-ct-orders/product-validation-in-order/quotas/index.adoc#h2_275625523[Tap the Info icon] next to the product in the promotion, catalog, order cart, or freebie window to see the booked and used quotas.
 
 [[h4_2076452535]]
-===== Validation
+==== Validation
 
 In case of errors, error messages will be displayed.
 
-* Highlighting of all triggered [.object]#Delivery Line Items#
-for the same error.
-* Switch between error messages and tap *Revalidate* to recalculate the
-limit and quota rules again.
+* Highlighting of all triggered [.object]#Delivery Line Items# for the same error.
+* Switch between error messages and tap *Revalidate* to recalculate the limit and quota rules again.
 
 [[h3_1371842020]]
-==== Other Improvements
+=== Other Improvements
 
 * Code refactoring and performance improvements.
-* Dynamic loading of products during catalog or promo opening to reduce
-data loading time.
-* The ability to add the whole catalog if the
-xref:admin-guide/managing-ct-orders/catalog-management/catalog-data-model/catalogs-field-reference.adoc[Disable Mass Action] checkbox is
-inactive.
+* Dynamic loading of products during catalog or promo opening to reduce data loading time.
+* The ability to add the whole catalog if the xref:admin-guide/managing-ct-orders/catalog-management/catalog-data-model/catalogs-field-reference.adoc[Disable Mass Action] checkbox is inactive.
 
 [[h2_1184861497]]
-=== CT Orders for CT Mobile 2.5
+== CT Orders for CT Mobile 2.5
 
 [[h3_1258541938]]
-==== Major Features
+=== Major Features
 
 [[h4_719537598]]
-===== CG Cloud Support
+==== CG Cloud Support
 
+Integrate with link:https://www.salesforce.com/eu/products/consumer-goods-cloud/overview/[Salesforce CG Cloud] solution to apply complex order-taking logic to its objects.
 
-
-Integrate with
-https://www.salesforce.com/eu/products/consumer-goods-cloud/overview/[Salesforce
-CG Cloud] solution to apply complex order-taking logic to its objects.
-
-* Use the xref:cg-cloud-support#h3_656771318[Salesforce Product]
-object in bundles, catalogs, and promotions.
-* Create orders for the xref:cg-cloud-support#h3_2058563056[Retail
-Store] object.
-* Use xref:cg-cloud-setting-up-dynamic-group-assignment[dynamic
-groups] to keep stores and sales products up-to-date.
-
-
+* Use the xref:admin-guide/managing-ct-orders/cg-cloud-support/index.adoc#h3_656771318[Salesforce Product] object in bundles, catalogs, and promotions.
+* Create orders for the xref:admin-guide/managing-ct-orders/cg-cloud-support/index.adoc#h3_2058563056[Retail Store] object.
+* Use xref:admin-guide/managing-ct-orders/cg-cloud-support/cg-cloud-setting-up-dynamic-group-assignment.adoc[dynamic groups] to keep stores and sales products up-to-date.
 
 [[h4_1068677388]]
-===== Discount Management
+==== Discount Management
 
-
-
-A fully configurable xref:price-management[pricing procedure] that
-allows you to implement complex custom scenarios with manual and total
+A fully configurable xref:admin-guide/managing-ct-orders/price-management/index.adoc[pricing procedure] that allows you to implement complex custom scenarios with manual and total
 discounts if needed:
 
-[NOTE] ==== The standard Pricing Procedure version 1 is also
-supported. Use either the standard v.1 syntax or customize the new
-pricing procedure using the steps with a broadened
-xref:pricing-procedure-v-1[syntax]. ====
+NOTE: The standard Pricing Procedure version 1 is also supported. Use either the standard v.1 syntax or customize the new pricing procedure using the steps with a broadened
+xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-1/index.adoc[syntax].
 
-* Set xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/index.adoc[pricing procedure steps] to
-write the intermediate discount results.
-* Add xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/step-conditions.adoc[step conditions] to determine the step
-applicability.
-* Implement xref:the-sdk-step[SDK step] to use custom project
-logic.
+* Set xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/index.adoc[pricing procedure steps] to write the intermediate discount results.
+* Add xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/step-conditions.adoc[step conditions] to determine the step applicability.
+* Implement xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/the-sdk-step.adoc[SDK step] to use custom project logic.
 
+Enhanced xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc[discount calculation] capabilities:
 
-
-Enhanced  xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc[discount calculation] capabilities:
-
-* Define  xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc#h3_1022633546[quantity settings]
-for discount calculation on [.object]#Calculation Type#.
-* Set
-xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-exceptioncondition-c-field-specification.adoc[exception
-conditions] to apply the discount under specific circumstances.
-* Specify any field on any object to be used as
-a  xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc#h3_1561772746[discount rate source].
-* Launch  xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc#h3_1022633546[full or partial
-recalculation] in the order cart if the selected field value is altered.
-
-
+* Define xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc[quantity settings] for discount calculation on [.object]#Calculation Type#.
+* Set xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-exceptioncondition-c-field-specification.adoc[exception conditions] to apply the discount under specific circumstances.
+* Specify any field on any object to be used as a  xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc[discount rate source].
+* Launch xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc[full or partial recalculation] in the order cart if the selected field value is altered.
 
 [[h4_2048041897]]
-===== Freebies
+==== Freebies
 
-
-
-* Take advantage of full and partial
-xref:admin-guide/managing-ct-orders/freebies-management/index.adoc#autoupdate[recalculation and auto-update]
-of freebies in order triggered by changes in the set of products in the
-cart.
-* Control the xref:admin-guide/managing-ct-orders/freebies-management/index.adoc#h2_1556344363[freebie
-distribution] among several deliveries.
+* Take advantage of full and partial xref:admin-guide/managing-ct-orders/freebies-management/index.adoc#h3_599666667[recalculation and auto-update] of freebies in order triggered by changes in the set of products in the cart.
+* Control the xref:admin-guide/managing-ct-orders/freebies-management/index.adoc#h2_1556344363[freebie distribution] among several deliveries.
 
 [[h3_1409574029]]
-==== Other improvements
+=== Other improvements
 
-* xref:admin-guide/managing-ct-orders/order-management/online-order.adoc#h3_1143528965[Editable fields] allow entering
-data in custom fields in real-time.
-* Performance improvements for opening orders with large catalogs,
-promotions, and numerous deliveries.
-* On the xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc#h4_1635896381[Order Cart] screen, the
-header bar is fixed so that users can scroll through the order cart
-without losing sight of the names of columns.
+* xref:admin-guide/managing-ct-orders/order-management/online-order.adoc#h3_1143528965[Editable fields] allow entering data in custom fields in real-time.
+* Performance improvements for opening orders with large catalogs, promotions, and numerous deliveries.
+* On the xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc#h4_1635896381[Order Cart] screen, the header bar is fixed so that users can scroll through the order cart without losing sight of the names of columns.
 
 [[h2_1184861498]]
-=== CT Orders for CT Mobile 2.4
+== CT Orders for CT Mobile 2.4
 
 [[h3_1288754851]]
-==== Major Features
+=== Major Features
 
 [[h4_580391303]]
-===== Order Management
+==== Order Management
 
-
-
-* xref:admin-guide/managing-ct-orders/order-management/multiplicator.adoc[Multiplicator] provides flexible management of
-product quantity per delivery. The quantity is calculated automatically
-based on multiplicity settings processed on three levels:
-[.object]#Product#,[.object]#Price Book Line Item#,
-[.object]#Catalog Line Item,# or [.object]#Promotion
-Line Item#.
-* Add the display of xref:admin-guide/workshops/workshop-5-0-implementing-additional-features/5-3-displaying-price-tags.adoc[price tags] for
-a convenient visualized method of informing your sales reps about the
-applied calculation type and discount required quantity for reaching the
-next discount level and special conditions for each product added to the
-cart.
-* Perform an xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc#h3_1847490047[advanced search in
-orders] in all fields among all products in the *Catalog* and
-*Promotion* sections and already added to the order cart, including
-freebies.
-
-
+* xref:admin-guide/managing-ct-orders/order-management/multiplicator.adoc[Multiplicator] provides flexible management of product quantity per delivery. The quantity is calculated automatically based on multiplicity settings processed on three levels:
+[.object]#Product#,[.object]#Price Book Line Item#, [.object]#Catalog Line Item,# or [.object]#Promotion Line Item#.
+* Add the display of xref:admin-guide/workshops/workshop-5-0-implementing-additional-features/5-3-displaying-price-tags.adoc[price tags] for a convenient visualized method of informing your sales reps about the applied calculation type and discount required quantity for reaching the next discount level and special conditions for each product added to the cart.
+* Perform an xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc#h3_1847490047[advanced search in orders] in all fields among all products in the *Catalog* and *Promotion* sections and already added to the order cart, including freebies.
 
 [[h4_2034780073]]
-===== Delivery Management
+==== Delivery Management
 
-
-
-xref:admin-guide/workshops/workshop-5-0-implementing-additional-features/5-1-setting-up-a-delivery-split.adoc[Order split] allows the
-distribution of products between multiple deliveries to meet your
-company's logistic and financial requirements:
+xref:admin-guide/workshops/workshop-5-0-implementing-additional-features/5-1-setting-up-a-delivery-split.adoc[Order split] allows the distribution of products between multiple deliveries to meet your company's logistic and financial requirements:
 
 * Define the split parameters for different departments and order types;
-* Review the split
-xref:admin-guide/workshops/workshop-5-0-implementing-additional-features/5-2-setting-up-the-delivery-summary.adoc[delivery summary] with
-details for each delivery before finalization.
+* Review the split xref:admin-guide/workshops/workshop-5-0-implementing-additional-features/5-2-setting-up-the-delivery-summary.adoc[delivery summary] with details for each delivery before finalization.
 
 [[h3_1881527946]]
-==== Other Improvements
+=== Other Improvements
 
-* xref:admin-guide/managing-ct-orders/freebies-management/index.adoc[Improved freebies validation] now
-provides versatile validations to improve the working experience when
-adding freebies in orders. The system now checks active promotion dates,
-min/max required products, and other settings influencing the final
-freebies calculation per order and displays errors in the user
-interface.
+* xref:admin-guide/managing-ct-orders/freebies-management/index.adoc[Improved freebies validation] now provides versatile validations to improve the working experience when
+adding freebies in orders. The system now checks active promotion dates, min/max required products, and other settings influencing the final freebies calculation per order and displays errors in the user interface.
 * Optimized process for discount calculations.
-* Instead of adding products per unit, use a mass action to add
-[.object]#Promotion# and [.object]#Catalog# (or
-sub-catalog) lists to the cart.
+* Instead of adding products per unit, use a mass action to add [.object]#Promotion# and [.object]#Catalog# (or sub-catalog) lists to the cart.
 
 [[h2_1184861491]]
-=== CT Orders for CT Mobile 2.3
+== CT Orders for CT Mobile 2.3
 
 [[h2_1258541938]]
-==== Major Features
+=== Major Features
 
 [[h3_580391303]]
-===== Order Management
+==== Order Management
 
+* Work with offline orders in the CT Mobile by xref:admin-guide/workshops/workshop-4-0-working-with-offline-orders/adding-ct-orders-to-the-ct-mobile-app-4-0.adoc[adding the CT Orders] module to the app menu.
+* xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc#h2_2044385779[Create orders] on the _Account_, _Contact_, or _Activity_ records through the customizable mini-layout.
+* Manage the created offline orders on xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc#h3_1847490047[the Edit Cart screen]:
+** Search the regular products, free goods, and product bundles and select the right ones with specific prices structured in the catalogs hierarchy or joined in promotions, filtered for the customer.
+** Manage multi-address deliveries. Control the number of deliveries and the applicable dates.
+** Apply quantity rules for xref:admin-guide/workshops/workshop-1-0-creating-basic-order/creating-and-assigning-a-ct-price-book-1-0/adding-a-price-book-line-item-1-0.adoc[setting up min and max] products in delivery.
+** Finalize the order to restrict any changes in the CT Mobile app and send the order for further processing in Salesforce.
+* Advanced logic allows offline calculation of each discount separately or in combinations tailored for the type of the order.
 
-
-* Work with offline orders in the CT Mobile by
-xref:admin-guide/workshops/workshop-4-0-working-with-offline-orders/adding-ct-orders-to-the-ct-mobile-app-4-0.adoc[adding the CT
-Orders] module to the app menu.
-* xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc#h3_1904156377[Create orders] on
-xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc#h2_2117318770[the Account&#44; Contact&#44; or
-Activity records] through the customizable mini-layout.
-* Manage the created offline orders on
-xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc#h3_1847490047[the Edit Cart screen]:
-** Search the regular products, free goods, and product bundles and
-select the right ones with specific prices structured in the catalogs
-hierarchy or joined in promotions, filtered for the customer.
-** Manage multi-address deliveries. Control the number of deliveries and
-the applicable dates.
-** Apply quantity rules for
-xref:adding-a-price-book-line-item-1-0[setting up min and max]
-products in delivery.
-** Finalize the order to restrict any changes in the CT Mobile app and
-send the order for further processing in Salesforce.
-* Advanced logic allows offline calculation of each discount separately
-or in combinations tailored for the type of the order.
-
-* Validation of the product list, prices, and quantities in the CT
-Mobile app.
+* Validation of the product list, prices, and quantities in the CT Mobile app.
 * The total price is displayed on the Order cart screen.
 
-
-
 [[h4_1817507152]]
-===== Product Management
+==== Product Management
 
+xref:admin-guide/managing-ct-orders/product-management/managing-bundles.adoc[A bundle] is a new type of product that includes several products.
 
+* Bundles are now supported for use in [.object]#Catalogs# in [.object]#Promotions#.
 
-xref:managing-bundles[A bundle] is a new type of product that
-includes several products.
-
-* Bundles are now supported for use in [.object]#Catalogs# in
-[.object]#Promotions#.
-
-
-
-Further product management now allows controlling
-xref:product-data-model[units in a package] on the *Product* level.
+Further product management now allows controlling xref:admin-guide/managing-ct-orders/product-management/product-data-model/index.adoc[units in a package] on the *Product* level.
 
 [[h3_230916525]]
-==== Other Improvements
+=== Other Improvements
 
 * Freebies management window with the dedicated button.
-* xref:admin-guide/workshops/workshop-5-0-implementing-additional-features/5-2-setting-up-the-delivery-summary.adoc[Delivery summary] window
-display before finalizing the order.
+* xref:admin-guide/workshops/workshop-5-0-implementing-additional-features/5-2-setting-up-the-delivery-summary.adoc[Delivery summary] window display before finalizing the order.

@@ -1,100 +1,61 @@
 = CT Orders for CT Mobile Windows Release Notes
+:toc:
 
-Here you could find a CT Orders feature, the link to the corresponding
-article, and the version of CT Mobile since which the feature is
-available. Add the CT Orders module to the CT Mobile Windows app to have
-the ability to take orders.
-
-:toc: :toclevels: 2
+Here you could find a CT Orders feature, the link to the corresponding article, and the version of CT Mobile since which the feature is available. Add the CT Orders module to the CT Mobile Windows app to have the ability to take orders.
 
 [[h2_1184861462]]
-=== CT Orders for CT Mobile 1.3
+== CT Orders for CT Mobile 1.3
 
 [[h3_1817507152]]
-==== Product Management
+=== Product Management
 
-xref:managing-bundles[A bundle] is a new type of product to include
-several products.
+xref:admin-guide/managing-ct-orders/product-management/managing-bundles.adoc[A bundle] is a new type of product to include several products.
 
-* Bundles are now supported for use in [.object]#Catalogs# and
-[.object]#Promotions#.
+* Bundles are now supported for use in [.object]#Catalogs# and [.object]#Promotions#.
 
-
-
-Product management allows controlling xref:product-data-model[units
-in a package] on the *Product* level.
+Product management allows controlling xref:admin-guide/managing-ct-orders/product-management/product-data-model/index.adoc[units in a package] on the *Product* level.
 
 [[h3_62076529]]
-==== Freebie Management
+=== Freebie Management
 
 Freebies management window with the dedicated button.
 
-* xref:admin-guide/managing-ct-orders/freebies-management/index.adoc[Freebies validation] provides versatile
-validations to improve the working experience when adding freebies to
-orders. The system checks active promotion dates, min/max required
-products, and other settings influencing the final freebies calculation
-per order and displays errors in the user interface.
+* xref:admin-guide/managing-ct-orders/freebies-management/index.adoc[Freebies validation] provides versatile validations to improve the working experience when adding freebies to
+orders. The system checks active promotion dates, min/max required products, and other settings influencing the final freebies calculation per order and displays errors in the user interface.
 
-* Take advantage of full and partial
-xref:admin-guide/managing-ct-orders/freebies-management/index.adoc#autoupdate[recalculation and auto-update]
-of freebies in order triggered by changes in the set of products in the
-cart.
-* Control the xref:admin-guide/managing-ct-orders/freebies-management/index.adoc#h2_1556344363[freebie
-distribution] among several deliveries.
+* Take advantage of full and partial xref:admin-guide/managing-ct-orders/freebies-management/index.adoc#h3_599666667[recalculation and auto-update] of freebies in order triggered by changes in the set of products in the cart.
+* Control the xref:admin-guide/managing-ct-orders/freebies-management/index.adoc#h2_1556344363[freebie distribution] among several deliveries.
 
 [[h3_580391303]]
-==== Order Management
+=== Order Management
 
-* Work with offline orders in the CT Mobile by
-xref:admin-guide/workshops/workshop-4-0-working-with-offline-orders/adding-ct-orders-to-the-ct-mobile-app-4-0.adoc[adding the CT
-Orders] module to the app menu.
-* xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc#h3_1904156377[Create orders] on
-xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc#h2_2117318770[the Account&#44; Contact&#44; or
-Activity records] through the customizable mini-layout.
-* Manage the created offline orders
-on xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc#h3_1847490047[the Edit Cart screen]:
-** Search the regular products, free goods, and product bundles and
-select the right ones with specific prices structured in the catalogs
-hierarchy or joined in promotions, filtered for the customer.
+* Work with offline orders in the CT Mobile by xref:admin-guide/workshops/workshop-4-0-working-with-offline-orders/adding-ct-orders-to-the-ct-mobile-app-4-0.adoc[adding the CT Orders] module to the app menu.
+* xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc#h2_2044385779[Create orders] on the Account, Contact, or Activity records through the customizable mini-layout.
+* Manage the created offline orders on xref:admin-guide/managing-ct-orders/order-management/offline-order.adoc#h3_1847490047[the Edit Cart screen]:
+** Search the regular products, free goods, and product bundles and select the right ones with specific prices structured in the catalogs hierarchy or joined in promotions, filtered for the customer.
 ** Manage addresses for deliveries.
-** Apply quantity rules for
-xref:adding-a-price-book-line-item-1-0[setting up min and max]
-products in delivery.
-** Finalize the order to restrict any changes in the CT Mobile app and
-send the order for further processing in Salesforce.
-** xref:admin-guide/managing-ct-orders/order-management/online-order.adoc#h3_1143528965[Editable fields] allow entering
-data in custom fields in real-time.
-* Validation of the product list, prices, and quantities in the CT
-Mobile app.
+** Apply quantity rules for xref:admin-guide/workshops/workshop-1-0-creating-basic-order/creating-and-assigning-a-ct-price-book-1-0/adding-a-price-book-line-item-1-0.adoc[setting up min and max] products in delivery.
+** Finalize the order to restrict any changes in the CT Mobile app and send the order for further processing in Salesforce.
+** xref:admin-guide/managing-ct-orders/order-management/online-order.adoc#h3_1143528965[Editable fields] allow entering data in custom fields in real-time.
+* Validation of the product list, prices, and quantities in the CT Mobile app.
 * The total price is displayed on the Order cart screen.
 
 [[h3_1068677388]]
-==== Discount Management
+=== Discount Management
 
-A fully configurable xref:price-management[pricing procedure] that
-allows you to implement complex custom scenarios with manual and total
+A fully configurable xref:admin-guide/managing-ct-orders/price-management/index.adoc[pricing procedure] that allows you to implement complex custom scenarios with manual and total
 discounts if needed:
 
-[NOTE] ==== The standard pricing procedure version 1 is also
-supported. Use either the standard v.1 syntax or customize the new
-pricing procedure using the steps with a broadened
-xref:pricing-procedure-v-1[syntax]. ====
+NOTE: The standard pricing procedure version 1 is also supported. Use either the standard v.1 syntax or customize the new pricing procedure using the steps with a broadened
+xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-1/index.adoc[syntax].
 
-* Set xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/index.adoc[pricing procedure steps] to
-write the intermediate discount results.
+* Set xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/index.adoc[pricing procedure steps] to write the intermediate discount results.
 * Add xref:admin-guide/managing-ct-orders/price-management/ref-guide/pricing-procedure-v-2/pricing-procedure-v-2-steps/step-conditions.adoc[step conditions] to determine the step
 applicability.
 
+Enhanced xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc[discount calculation] capabilities:
 
-
-Enhanced  xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc[discount calculation] capabilities:
-
-* Define  xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc#h3_1022633546[quantity settings]
-for discount calculation on [.object]#Calculation Type#.
-* Set
-xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-exceptioncondition-c-field-specification.adoc[exception
-conditions] to apply the discount under specific circumstances.
-* Specify any field on any object to be used as
-a  xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc#h3_1561772746[discount rate source].
-* Launch  xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc#h3_1022633546[full or partial
-recalculation] in the order cart if the selected field value is altered.
+* Define xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc[quantity settings] for discount calculation on [.object]#Calculation Type#.
+* Set xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-exceptioncondition-c-field-specification.adoc[exception conditions] to apply the discount under specific circumstances.
+* Specify any field on any object to be used as a xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc[discount rate source].
+* Launch  xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc[full or partial recalculation] in the order cart if the selected field value is altered.
