@@ -1,5 +1,6 @@
 = CT Orders Package Release Notes
 :toc:
+:toclevels: 1
 
 Here you could find a feature, the link to the corresponding article, and the version of the CT Orders package since which the feature is available.
 
@@ -144,7 +145,7 @@ _Basic_.
 [[h4_1273943364]]
 ==== Freebie Management
 
-* New *xref:admin-guide/managing-ct-orders/freebies-management/freebie-management-tab.adoc[Freebie Management tab] added to set up [.object]#Freebies# for Promotion in one place. Now you can set up Freebie conditions using friendly interface instead of writing JSON query.
+* New xref:admin-guide/managing-ct-orders/freebies-management/freebie-management-tab.adoc[Freebie Management tab] added to set up [.object]#Freebies# for Promotion in one place. Now you can set up Freebie conditions using friendly interface instead of writing JSON query.
 
 [[h4_260496953]]
 ==== Custom Permissions and Permission Set Groups
@@ -197,8 +198,7 @@ xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/cond
 xref:admin-guide/managing-ct-orders/discount-management/discount-data-model/condition-field-reference/condition-exceptioncondition-c-field-specification.adoc[Exception Condition] fields of the [.object]#Condition# object:
 * The UX/UI improvement:
 ** link:https://help.customertimes.com/articles/ct-mobile-ios-en/compact-layout[Set up the compact layout] for the [.object]#Product# object. The title is the value of the first field in a compact layout, and the subtitle is the value of the second field in a compact layout.
-** In the catalogs and promotions, products are arranged according to their order number (if given) or the order defined inside [.object]#Catalogs# and [.object]#Promotions#
-. Drag-and-drop products to manage their order.
+** In the catalogs and promotions, products are arranged according to their order number (if given) or the order defined inside [.object]#Catalogs# and [.object]#Promotions#. Drag-and-drop products to manage their order.
 ** The ability to xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/layout-setting-field-reference.adoc[display fields from parent objects] in the order cart and the *Product Management* tab for catalogs and promotions.
 
 [[h2_1527186819]]
@@ -253,7 +253,7 @@ ability] to apply multiple conditions from a single [.object]#Calculation Type#.
 [[h4_219878134]]
 ==== Discount Management
 
-* If the matching _Condition_ record was not found on the _Condition Group_ record, the system checks the next  xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc[Condotoion Group] record.
+* If the matching _Condition_ record was not found on the _Condition Group_ record, the system checks the next  xref:admin-guide/managing-ct-orders/discount-management/calculation-types.adoc[Condition Group] record.
 
 [[h4_1295053106]]
 ==== Quota
