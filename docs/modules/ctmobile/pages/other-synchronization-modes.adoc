@@ -1,0 +1,52 @@
+= Other Synchronization Modes
+
+ifdef::ios[]
+
+[[h2__1958232390]]
+=== Quick Record Synchronization
+
+This type of synchronization is triggered when you pull down the
+record's layout.
+
+
+
+*The steps*:
+
+* The current record is sent to Salesforce.
+* The child records, which are connected with the current record via the
+master-detail relationship, are sent to Salesforce.
+* The record is uploaded from Salesforce.
+
+[[h2_740581689]]
+=== Workflow Synchronization
+
+This type of synchronization is run when link:ct-mobile-workflow.html[CT
+Mobile Workflow] conditions are triggered.
+
+
+
+*The steps*:
+
+* The current record is sent to Salesforce.
+* The child records, which are connected with the current record via the
+master-detail relationship, are sent to Salesforce.
+
+[[h2_233027861]]
+=== Launch synchronization within CLM-presentation
+
+This type of synchronization is triggered when
+the [.apiobject]#sync()# method of link:js-bridge-api.html[JS
+Bridge] is requested.
+
+
+
+*The steps*:
+
+* The current record is sent to Salesforce.
+* The child records, which are connected with the current record via the
+master-detail relationship, are sent to Salesforce.
+
+[NOTE] ==== All uploaded data are stored in separate temporary
+storage. New data can replace the current data existing in the database
+only after the synchronization is completed. This helps to avoid data
+discard if synchronization is interrupted. ====

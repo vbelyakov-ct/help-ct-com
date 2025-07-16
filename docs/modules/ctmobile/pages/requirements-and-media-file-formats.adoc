@@ -1,0 +1,312 @@
+= Requirements and Media File Formats
+
+There is a list of requirements and media file formats for CLM
+presentations
+
+:toc: :toclevels: 3
+
+[[h2_1563031520]]
+=== Common Recommendations
+
+ifdef::ios,win[]
+
+Consider the quantity and image quality of the media assets to ensure
+the CT Mobile app responds quickly, and the user does not wait long
+during the synchronization or slide transition in the *Remote Detailing*
+meetings.
+
+[TIP] ==== It is important to test the CLM presentations for the
+*Remote Detailing* meetings on different mobile devices to ensure
+compatibility across device versions as well as cross-browser
+compatibility. For more information, read
+link:remote-detailing-f-a-q.html[Remote Detailing F.A.Q].  ====
+ifdef::andr[]
+
+Consider the quantity and image quality of the media assets to ensure
+the CT Mobile app responds quickly, and the user does not wait
+long link:synchronization.html[during the synchronization].
+
+The CLM presentation aspect ratio should depend on the screens of the
+mobile device to display, mostly it is 16:9 or 4:3.
+
+ifdef::ios[]
+
+Media is displayed full screen with a resolution 2048x1536 px for iPad
+Retina (non-PRO version) and 1024×768 px for non-retina iPad.
+
+ARKit models are supported.
+
+ifdef::andr,win[]
+
+Use media according to the resolution of the target device.
+
+
+
+HTML5 can handle large files, but you should make sure that these files
+do not use all the memory of a mobile device. Otherwise, CT Mobile may
+crash while displaying the content or soon after returning to the rest
+of CT Mobile functionality.
+
+* XML parsing within HTML5, while it may be technically possible, has
+been known to use up all the memory.
+* We recommend testing the display of HTML5 content and interactions
+with it repeatedly to ensure memory issues will not occur. However,
+memory warnings may appear in the device log to identify possible memory
+issues, although not every time.
+* For long-format, like reports and articles, we recommend using PDF
+that may be link:creating-clm-presentation-from-pdf.html[converted into
+HTML5 code].
+* For short-format media, HTML5 will provide a better navigation
+experience, more accurate reporting, and interactivity.
+* Also, it is possible to convert[.apiobject]#.ppt(x)# or
+[.apiobject]#JPG/JPEG# into HTML5 code with slide snapshots
+(degraded resolution is used to optimize image/file size).
+
+
+
+We recommend that you consider default gestures when implementing custom
+actions. For example, do not override the two-finger swipe that is used
+to switch slides in a scenario. Or do not implement custom action by
+double-tapping the sides of a screen because this gesture calls out the
+navigation bar or the standard action menu.
+
+* Adobe Flash is not supported.
+* Do not name methods as the top-level domains. For example, if the
+[.apiobject]#.to# method is used in the class on the slide
+markup, the[.apiobject]#classname.to# will be interpreted as
+the link.
+
+[[h3__682202319]]
+==== Recommended Media Formats
+
+[width="100%",cols="20%,20%,20%,20%,20%",]
+|===
+|*Type* |*Extension* |*Recommended Size* |*Display (on Mobile Device)*
+|*Additional Guidelines*
+
+|HTML5 a|
+* .html
+* .htm
+
+a|
+* 13 000 symbols per slide
+* 2 MB
+
+|Fullscreen in the landscape view a|
+Support files such as HTML, CSS, images, video, and PDF are stored in
+multiple folders.
+
+Media included with the HTML should be referenced using relative paths,
+like[.apiobject]#/css/styles.css# rather than
+[.apiobject]#http://server.com/css/styles.css#.
+
+link:gestures-in-clm-presentations.html[Default gestures] to switch and
+interact with slides are supported.
+
+ifdef::ios[]
+
+Overriding the two-finger swipe and double-tap gesture is not supported.
+
+|Video a|
+* .mp4
+* .m4v
+* .mov
+* .avi
+
+|10 MB per video 60 seconds long a|
+* Fullscreen in landscape view
+* Small video can be scaled to the full screen
+
+a|
+ifdef::ios[]
+
+Videos must be playable in the iPad video player or the video player of
+the target device.
+
+H.264 MPEG4 is recommended.
+
+Large files increase the battery use of the device during syncing: using
+the highest level of video compression that creates the desired effect
+is strongly recommended.
+
+|Images a|
+* .jpg
+* .png
+
+| |The minimum resolution is 1024x768 for landscape view |
+
+|PDF a|
+.pdf
+
+[.apiobject]##
+
+a|
+* 2.5 MB per 10 pages with images
+* 2.5 MB per 50 pages with text
+* not more than 75 MB
+
+a|
+* Fullscreen in landscape view
+* Small video can be scaled to the full screen
+* Scroll vertically
+
+a|
+In the current version of CT Presenter, PDFs are displayed only as
+attachments on mobile devices.
+
+Do not insert any fields or forms in PDF files.
+
+If a PDF file contains any interactive elements, such as videos, gifs,
+and links, they will not be available in the converted CLM presentation.
+
+Do not use the *&* symbol in the PDF file name, otherwise the
+presentation will not be loaded.
+
+ifndef::andr[]
+
+For presentations in link:the-remote-detailing-functionality.html[Remote
+Detailing], we recommend using HTML5 or images instead of PDF.
+
+|PPT a|
+.ppt/.ppt(x)
+
+
+
+a|
+not more than 75 MB
+
+
+
+| a|
+* https://support.office.com/en-us/article/embed-fonts-in-word-or-powerpoint-cb3982aa-ea76-4323-b008-86670f222dbc?omkt=en-US&ui=en-US&rs=en-US&ad=US#OfficeVersion=macOS[Embed
+fonts] in a CLM presentation to be sure that the fonts, special
+characters, layout, and styling of the document won't change while
+sharing.
+
+* If a [.apiobject]#.ppt(x)# file contains any interactive
+elements, such as videos, gifs, and links, they will not be available in
+the converted CLM presentation.
+* ​Slides animation from converted [.apiobject]#.ppt# files is
+not supported.
+* Violation of converted slides' proportion is possible when other than
+iPad format slides are used in the source document.
+
+
+
+|ZIP |.zip a|
+* [.ui-provider .uz .b .c .d .e .f .g .h .i .j .k .l .m .n .o .p .q .r .s .t .u .v .w .x .y .z .ab .ac .ae .af .ag .ah .ai .aj .ak]#not
+more than 73 MB#
+* [.ui-provider .uz .b .c .d .e .f .g .h .i .j .k .l .m .n .o .p .q .r .s .t .u .v .w .x .y .z .ab .ac .ae .af .ag .ah .ai .aj .ak]#not
+more than 200 slides#
+
+| a|
+* The ZIP file structure must not contain subdirectories.
+* Slides must be located in the root directory.
+* Do not use the *&* symbol in the ZIP file name, otherwise the
+presentation will not be loaded.
+
+|===
+
+
+
+Go back to
+link:requirements-and-media-file-formats.html#ListofRequirements[the
+list of requirements].
+
+[[h2_1593603134]]
+=== PDF and PowerPoint Requirements
+
+Consider these parameters when converting CLM presentation based on
+[.apiobject]#.pdf# or[.apiobject]#.ppt(x)#.
+
+
+
+[width="100%",cols="20%,20%,20%,20%,20%",]
+|===
+|*Parameter* |*Image Size, pixels* |*Default Rendering Quality, DPI*
+|*Physical Size, in* |*Physical Size, cm*
+
+|[.apiobject]#.pdf# | | | |
+
+|*Width* |4096 |300 |13.65 |34.67
+
+|*Height* |3072 |300 |10.24 |26.00
+
+|[.apiobject]#.ppt(x)# | | | |
+
+|*Width* |4800 |300 |16 |40.64
+
+|*Height* |3600 |300 |12 |30.48
+|===
+
+
+
+For the[.apiobject]#.ppt(x)# format, these parameters mean the
+slide size:
+
+image:pptx-size.png[]
+
+The slide size for the [.apiobject]#.ppt(x)# format was tested
+and is recommended as a workable value. Presentations with other sizes
+of .ppt(x) slides may not work properly. 
+
+Go back to
+link:requirements-and-media-file-formats.html#ListofRequirements[the
+list of requirements].
+
+[[h2_1549430477]]
+=== Video in CLM presentations
+
+* The link should have the following
+format https://www.youtube.com/embed/GhpE_7cBu44[**https://**www.youtube.com**/embed/**GhpE_7cBu44].
+* We suggest you upload videos to YouTube by selecting
+the *Unlisted* value in
+the *Visibility* option https://support.google.com/youtube/answer/157177[to
+avoid public dissemination].
+* During synchronization, the CT Mobile app downloads the video into its
+local repository for offline access. The code for correct video
+insertion in slide markup:
+
+
+
+
+
+Go back to
+link:requirements-and-media-file-formats.html#ListofRequirements[the
+list of requirements].
+
+[[h2_2044220847]]
+=== Links in CLM presentations
+
+To open a link in the CLM presentation, the link should be as
+https://www.google.com/, for example:
+
+
+
+
+
+Go back to
+link:requirements-and-media-file-formats.html#ListofRequirements[the
+list of requirements]. 
+
+[[h2_1169375241]]
+=== Required JS Resources
+
+The following JS library should be represented in the
+[.apiobject]#<head># tag of each slide.
+
+
+
+
+
+The following scripts and styles should also be specified in the
+[.apiobject]#<head># tag of a slide for editing via
+link:application-editor.html[Application Editor].
+
+
+
+
+
+Go back to
+link:requirements-and-media-file-formats.html#ListofRequirements[the
+list of requirements].

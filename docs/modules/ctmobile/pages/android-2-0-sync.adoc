@@ -1,0 +1,160 @@
+= android 2.0 sync
+
+[width="100%",cols="50%,50%",]
+|===
+|First Full Synchronization a|
+The first full synchronization must be launched after
+link:logging-in.html[the authorization] of the current user.
+
+The first full synchronization is intended to download the entire
+database of the CT Mobile app, link:metadata-archive.html[metadata
+components],
+link:user-permissions-required-to-synchronize-objects-to-offline-work-with-functionalities.html[required
+objects], and app settings from Salesforce to the mobile device.
+
+* The first full synchronization may take a lot of time according to the
+database size.
+
+
+
+Steps:
+
+. Metadata components are downloaded from the metadata archive.
+. The current data model is created.
+. Records of link:custom-settings.html[the custom settings&#44; custom
+metadata types], link:managing-offline-objects.html[offline objects]
+(based on SOQL filters), and objects, which are necessary for activated
+link:mobile-application-modules.html[modules], are downloaded if a
+record matches the conditions set in
+link:related-list-filters.html[Related List Filters].
+. The audit fields of the current *User* record are updated.
+
+
+
+image:full-sync-kotlin.png[]
+
+|Fast Synchronization a|
+Fast synchronization is the preferred type for daily work with the CT
+Mobile app. We recommend doing a fast synchronization once a day at the
+beginning or end of the work day to maintain data consistency in the CT
+Mobile app and Salesforce.
+
+The fast synchronization is intended to align the records' main
+information.
+
+* Data changes, such as deletions, insertions, and updates of records,
+will be sent from CT Mobile to Salesforce and vice versa.
+* Enable link:ct-mobile-replication.html[CT Mobile Replication] if
+territory coordinates have been altered to download all actual data on
+the mobile device.
+
+
+
+Steps:
+
+. Records of link:custom-settings.html[the custom settings and custom
+metadata types] are downloaded if the value in the
+[.apiobject]#SystemModstamp# field is a date later than the date
+of the last successful synchronization.
+. The audit fields of the current *User* record are updated and then
+audit fields and data changes in the application, such as deletions,
+insertions, and updates, are sent to Salesforce.
+. Data changes,
+including https://help.customertimes.com/articles/ct-mobile-ios-en/managing-offline-objects[offline
+objects] (based on SOQL filters), are downloaded from Salesforce to the
+mobile device.
+.* If configured, the records of the specified objects mentioned in
+the link:ct-mobile-replication.html[CT Mobile Replication] setting are
+updated.
+
+
+
+image:fast-sync-kotlin.png[]
+
+|Mixed Synchronization a|
+We recommend running mixed synchronization in case of metadata changes,
+e.g., updating validation rules, adding new lookup filters, etc.
+
+The mixed synchronization is intended to align the records' main
+information and update metadata since the date of the last successful
+synchronization.
+
+* Settings and records are downloaded without re-load of previously
+downloaded records, which helps to reduce the sync time.
+
+
+
+Steps:
+
+. Metadata components are downloaded from the metadata archive.
+. The structure (if it has been changed) and records of
+https://help.customertimes.com/articles/ct-mobile-ios-en/custom-settings[custom
+settings&#44; custom metadata types],
+https://help.customertimes.com/articles/ct-mobile-ios-en/managing-offline-objects[offline
+objects] (based on SOQL filters), and objects, which are necessary for
+activated
+https://help.customertimes.com/articles/ct-mobile-ios-en/mobile-application-modules[modules],
+are downloaded if the value in the[.apiobject]#SystemModstamp#
+field is a date later than the date of the last successful
+synchronization and a record matches the conditions in the
+https://help.customertimes.com/articles/ct-mobile-ios-en/related-list-filters[Related
+List Filters].
+. The audit fields of the current *User* record are updated and then
+audit fields and data changes in the application, such as deletions,
+insertions, and updates, are sent to Salesforce.
+. Data changes are downloaded from Salesforce to the mobile device.
+.* If configured, the records of the specified objects mentioned in
+the link:ct-mobile-replication.html[CT Mobile Replication] setting are
+updated.
+
+
+
+image:mixed-sync-kotlin.png[]
+
+|Auto-Synchronization a|
+For user convenience, automatic fast synchronization will be launched at
+the end of every working day to maintain data consistency in the CT
+Mobile app and Salesforce.
+
+We are currently working on updating the information.
+
+ifdef::hidden[]
+
+To set the working hours:
+
+. Go to the link:ct-mobile-control-panel-calendar.html#h3_256846269[CT
+Mobile Control Panel: Calendar] tab.
+. Customize the *Visible Hours Range* period using the slider. The left
+pointer is responsible for the beginning of the workday and the right
+one for the end.
+[TIP] ==== This setting is stored in the corresponding record of
+the link:mobile-application-setup.html[Mobile Application Setup] custom
+setting. ====
+. Click *Save*.
+
+The setup is complete. Perform a synchronization on a mobile device to
+apply this setting.
+
+
+
+To set the working hours:
+
+. Go to *Setup → Company Settings → Business Hours*.
+
+[TIP] ==== For more information, refer to
+https://help.salesforce.com/s/articleView?language=en_US&type=5&id=sf.customize_supporthours.htm[Set
+Business Hours]. ====
+. Click *Edit* next to the *Default* record or click the *New Business
+Hours* button to create a new setting.
+. Specify the following:
+* Enter *Business Hours Name*.
+* Select *Time Zone*.
+* Set up the start and end times for each workday.
+. Click *Save*.
+
+The setup is complete. Perform a synchronization on a mobile device to
+apply this setting.
+
+|===
+
+

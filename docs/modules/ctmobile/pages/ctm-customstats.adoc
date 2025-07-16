@@ -1,0 +1,33 @@
+= ctm.customStats
+
+The method of link:js-bridge-api.html[JS Bridge] functionality is
+intended to collect slide statistics after actions in native windows on
+a slide on various devices and CLM presentation components.
+
+[[h2__905713055]]
+=== Query Format
+
+
+
+The[.apiobject]#slideName# line should be Latin, 40 characters
+max, and without blank spaces.
+
+* Requesting this method, CT Mobile creates an *Application Stats*
+record with the *Slide Stats* record type where it keeps records of view
+time, likes, displays, etc. until[.apiobject]#ctm.customStats#
+with a different[.apiobject]#slideName# is requested or the CLM
+presentation display mode is closed.
+* The[.apiobject]#slideName# value will be stored
+link:clm-applicationstats.html[in the File Name field].
+* If the method with the same[.apiobject]#slideName# is called
+again, CT Mobile must append the previously created *Application Stats*
+record.
+
+[[h2_442663712]]
+=== Handler
+
+
+
+
+
+The results:

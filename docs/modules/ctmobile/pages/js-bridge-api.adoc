@@ -1,0 +1,46 @@
+= JS Bridge API
+
+JS Bridge is the interface of the interaction of CLM-presentation with
+Salesforce data. To start using it,
+link:activating-js-bridge.html[activate the JS Bridge library]. 
+
+It is used for capturing and displaying data from the Salesforce system
+objects ([.object]#Accounts#,[.object]#Contacts#,
+[.object]#Calls#, etc.), for launching the CT Mobile features,
+e.g., the synchronization process, and for slide navigation during the
+CLM presentation.
+
+
+
+It can be used for capturing data during the CLM-presentation for
+further storage in CT Mobile and then synchronize with Salesforce. For
+example, if a user starts a CLM presentation from the *Activity* mobile
+layout and this *Activity* record is related to an *Account* and a
+*Contact* records, the platform allows
+link:crm-data-display.html[displaying data from the following objects]:
+
+*[.object]#Account# (in case if relationship from visit
+exists).
+*[.object]#Contact# (in case if relationship from visit
+exists).
+*[.object]#Reference# (in case if relationship from visit
+exists).
+*[.object]#Activity#.
+*[.object]#Activity Data#.
+
+
+
+Data, registered in one slide, can be stored only on a single object
+without exceeding the field number limitations. Saving field values is
+performed after changing a slide or closing the slideshow.
+
+Example of JS Bridge API that fetches data from the system (Account
+name, Contact name of this account) and displays in a presentation:
+
+
+
+image:57216166.png[]
+
+
+
+image:57216167.png[]

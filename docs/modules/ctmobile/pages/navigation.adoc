@@ -1,0 +1,76 @@
+= Navigation
+
+Do not use navigation frameworks to avoid overlap with CT Presenter
+navigation methods.
+
+
+
+Branches are sets of CLM presentation slides, single scenarios that run
+depending on the user's choice. To navigate among scenarios, restrict
+default gestures on slides:
+
+* Activate the Fixed attribute of a Slide object to disable a default
+gesture to swipe a slide to the next one. 
+* Default gestures are not in use to switch the last slide in a branch.
+
+[[h3__1793408620]]
+==== Switching Slides
+
+To switch a slide:
+
+* Use default gestures for switching slides within a branch
+* Add in a slide markup one of the following methods to start a branch
+and switching among branches:
+**[.apiobject]#<a
+href="#slide[k]">Text</a>#, where
+[.apiobject]#[k]# is a slide order.
+**[.apiobject]#<a
+href="[n][k]_start_slide.html">Home</a>#,
+where:
+***[.apiobject]#[n]# is the number of a branch
+***[.apiobject]#[k]# is the number of a slide in the
+appropriate branch
+***[.apiobject]#start_slide# is a name of a file that
+represents a slide.
+[NOTE] ==== This markup works only for web browsers. ====
+* Use the[.apiobject]#CTAPPgoTo…# methods or a library to
+process a default gesture, for example,[.apiobject]#hammer.js#,
+to switch the last or fixed slide.
+
+[[h3_1578877299]]
+==== CTAPPgoTo… Methods
+
+Use these methods in a slide markup to switch among slides and branches,
+including the fixed and last slides:
+
+[width="100%",cols="50%,50%",options="header",]
+|===
+|*Method* |*Action*
+|[.apiobject]#CTAPPgoToSlide(slideNum)# |Jump to a specific
+slide.
+
+|[.apiobject]#CTAPPgoToPrevious()# |Jump to the previous
+slide.
+
+|[.apiobject]#CTAPPgoToNext()# |Jump to the next slide.
+
+|[.apiobject]#CTAPPgoToFirst()# |Jump to the first slide.
+|===
+
+
+
+To use CTAPPgoTo… methods:
+
+. Create a[.apiobject]#slide-name.html# with the following
+markup and upload it to Salesforce:
+
+. {blank}
+
+Create a script with the[.apiobject]#CTAPPgoTo…# methods:
+
+
+[[h3__702407821]]
+==== Example of Transitions between Slides
+
+[[h3__1124899109]]
+==== image:ctpresenter-transition-between-slides-example.png[]

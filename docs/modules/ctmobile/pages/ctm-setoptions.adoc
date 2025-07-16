@@ -1,0 +1,27 @@
+= ctm.setOptions
+
+ifdef::ios[]
+
+The method of link:js-bridge-api.html[JS Bridge] functionality is
+intended to apply additional logic with specified parameters. The method
+can only be used in custom CT Mobile apps.
+
+[[h2__905745855]]
+=== Query Format
+
+ifdef::win[]
+
+The method of link:js-bridge-api.html[JS Bridge] functionality is
+intended to disable link:clm-presentation-controls.html[button controls
+and navigation feed with slides] by using double tap and specified
+parameters. Also, it is possible to specify additional logic with the
+desired parameters if you are using a custom CT Mobile app.
+
+[[h2__905745855]]
+=== Query Format
+
+*[.apiobject]#disableAllMenu#: to disable button controls and
+navigation feed with slides;
+*[.apiobject]#disableBottomMenu#: to disable navigation feed
+with slides;
+*[.apiobject]#disableSideMenu#: to disable button controls.

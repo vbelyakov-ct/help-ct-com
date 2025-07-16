@@ -1,0 +1,84 @@
+= CTM Settings
+
+ifdef::kotlin[] ifdef::andr[][NOTE] ==== Not available.
+====
+
+[.object]#CTM Settings# is intended to store settings defined in
+the link:ct-mobile-control-panel.html[CT Mobile Control Panel].
+[.object]#CTM Settings# has record types that correspond to
+specific link:custom-settings.html[custom settings].
+
+:toc: :toclevels: 3
+
+'''''
+
+Object API name:[.apiobject]#clm__CTMSettings__c#
+
+'''''
+
+[[h2__1375710402]]
+=== Permissions
+
+Assign link:application-permission-settings.html#h3_2115044027[the
+preconfigured permission sets]: _CT Mobile Administrator_ and _CT Mobile
+User_.
+
+Depending on their type, all users should have required access to
+[.object]#CTM Settings#. There is no need to specify sharing
+rules for records of the[.object]#CTM Settings# object. During
+synchronization, only settings related to the current user will be
+downloaded.
+
+[[h2__687217078]]
+=== Current limitations
+
+[WARNING] ==== Any changes to the settings must be made using
+the *CT Mobile Control Panel*. Manually changing the custom settings or
+[.object]#CTM Settings ==== records can cause data
+inconsistencies between Salesforce and the CT Mobile app. #
+ifdef::ios[]
+
+Due to
+https://help.salesforce.com/articleView?id=cs_limits.htm&type=5[the
+limitations of custom settings] and since CT Mobile 2.2:
+
+ifdef::win[]
+
+Due to
+https://help.salesforce.com/articleView?id=cs_limits.htm&type=5[the
+limitations of custom settings] and since CT Mobile 1.3:
+
+* Settings for the link:menu-settings-and-offline-objects.html[menu],
+link:related-list-filters.html[offline objects&#44; and standard related
+lists] will b saved both in custom settings and[.object]#CTM
+Settings#.
+* To support consistency of applied settings, the ID of the record of
+the corresponding custom settings will be specified in the
+[.apiobject]#clm__ExternaId__c# field of the
+[.object]#CTM Settings# record with the corresponding record
+type.
+* Settings for the menu offline objects and standard related lists will
+be downloaded to the CT Mobile app from the records of *CTM Settings*
+with the following record types.
+** link:ctm-settings-menu.html[Menu]
+** link:ctm-settings-offline-objects.html[Offline Objects]
+** link:ctm-settings-standard-related-list.html[Standard Related List]
+* Other settings will still be downloaded from custom settings.
+* The *CT Mobile Control Panel* displays settings of the menu, offline
+objects, and standard related lists given the *CTM Settings* records and
+other settings given custom settings.
+
+ifdef::ios[]
+
+For devices with installed CT Mobile below 2.2, all settings for the CT
+Mobile app are still synchronized from custom settings.
+
+ifdef::win[]
+
+For devices with installed CT Mobile below 1.3, all settings for the CT
+Mobile app are still synchronized from custom settings.
+
+ifdef::andr,kotlin[]
+
+For devices on the Android platform, all settings for the CT Mobile app
+are still synchronized from custom settings.

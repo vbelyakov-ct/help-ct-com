@@ -1,0 +1,888 @@
+= Synchronization F.A.Q.
+
+Here is a list of frequently asked questions:
+
+:toc: :toclevels: 3
+
+ifndef::kotlin[]
+
+[[h2__1632467576]]
+=== Synchronization Modes
+
+[[h3__2097853915]]
+==== When to launch the full synchronization?
+
+The full synchronization should be launched:
+
+* to download the current user database (data, metadata, app settings):
+** when a mobile user launches the first synchronization after
+link:logging-in.html[logging in];
+** when the new version of the CT Mobile app is installed.
+* to send data changes (deletions, insertions, and updates of records)
+from the CT Mobile app to Salesforce and ​completely replace the current
+user database (data, metadata, app settings) if changes were made on
+the link:ct-mobile-control-panel.html[CT Mobile Control
+Panel]/link:ct-mobile-control-panel-new.html[CT Mobile Control Panel
+2.0].
+
+
+
+Important notes:
+
+* In case of any errors, the full synchronization is interrupted.
+* The CT Mobile app is locked during the full synchronization except for
+the first full synchronization.
+* The sync process may take a lot of time, depending on the database
+size.
+
+
+
+For more information, read link:full-synchronization.html[the Full
+Synchronization article].
+
+
+
+Go back to link:synchronization-f-a-q.html#F.A.Q.list[the F.A.Q. list].
+
+[[h3__965238074]]
+==== When to launch the fast synchronization?
+
+The fast synchronization is intended to:
+
+* send data change (deletions, insertions, and updates of records) from
+the CT Mobile app to Salesforce, including changes in the field
+attributes;
+* download data changes (deletions, insertions, and updates of records)
+from Salesforce to the device, including changes in the field
+attributes;
+* update CLM presentations in case of
+link:publishing-clm-presentations.html[republishing]. The CT Mobile app
+compares the current version of the CLM presentation with the one
+previously saved. If any discrepancies are found, slides and
+attachments, which were updated after the last synchronization, will be
+loaded.
+** In case of the future date in the *Forced Load Date* field
+link:clm-application.html[on the CLM presentation record], the CT mobile
+app asks the current user to download the CLM presentation or not.
+** In the case of the past date or an empty value in the *Forced Load
+Date* field, the CLM presentation will be downloaded.
+
+
+
+Important notes:
+
+In the case of record errors, the fast synchronization continues. Errors
+could be managed on link:errors-screen.html[the Errors screen].
+
+The CT Mobile app is not locked during the fast synchronization.
+
+ifndef::win,andr[]
+
+The sync process may include link:ct-mobile-replication.html[CT Mobile
+Replication];
+
+The sync process may include the link:sync-recovery.html[Sync Recovery]
+functionality.
+
+
+
+For more information, read link:fast-synchronization.html[the Fast
+Synchronization article].
+
+
+
+Go back to link:synchronization-f-a-q.html#F.A.Q.list[the F.A.Q. list].
+
+[[h3__1232469734]]
+==== When does the mixed synchronization automatically launch instead of the fast synchronization?
+
+The mixed synchronization launches when:
+
+* the date of the last successful synchronization on the
+link:clm-user.html[current user's record] is earlier than the date of
+the last metadata change in the
+[.apiobject]#clm__MetadataLastModifiedDate__c# field of
+the link:mobile-application-setup.html[Mobile Application Setup] record
+for the current user's profile (if this record exists) or for the
+current user's Salesforce organization;
+* the date of the last metadata change is not set in the
+[.apiobject]#clm__MetadataLastModifiedDate__c# field of
+the link:mobile-application-setup.html[Mobile Application Setup] record.
+
+
+
+The mixed synchronization is intended to:
+
+* download settings and records without re-load of previously downloaded
+records, which helps to reduce the sync time.
+* download link:metadata-archive.html[metadata] changes in ZIP
+archive(s) and via API according to the current user profile;
+* send data changes (deletions, insertions, and updates of records) from
+the CT Mobile app to Salesforce;
+* download data changes (deletions, insertions, and updates of records)
+from Salesforce to the device;
+* update CLM presentations in case of
+link:publishing-clm-presentations.html[republishing]. The CT Mobile app
+compares the current version of the CLM presentation with the one
+previously saved. If any discrepancies are found, slides and
+attachments, which were updated after the last synchronization, will be
+loaded.
+** In case of the future date in the *Forced Load Date* field
+link:clm-application.html[on the CLM presentation record], the CT mobile
+app asks the current user to download the CLM presentation or not.
+** In the case of the past date or an empty value in the *Forced Load
+Date* field, the CLM presentation will be downloaded.
+
+
+
+Important notes:
+
+The date of the last metadata change will be updated each time you make
+a change on link:ct-mobile-control-panel.html[CT Mobile Control
+Panel]/link:ct-mobile-control-panel-new.html[CT Mobile Control Panel
+2.0].
+
+You can manually update the date for the corresponding profile by
+editing the
+[.apiobject]#clm__MetadataLastModifiedDate__c# field of
+the link:mobile-application-setup.html[Mobile Application Setup] record
+for the current user's profile (if this record exists) or for the
+current user's Salesforce organization.
+
+In the case of record errors, the mixed synchronization continues.
+Errors could be managed on link:errors-screen.html[the Errors screen];
+
+The CT Mobile app is not locked during the mixed synchronization;
+
+ifndef::win,andr[]
+
+The sync process may include link:ct-mobile-replication.html[CT Mobile
+Replication];
+
+The sync process may include the link:sync-recovery.html[Sync Recovery]
+functionality;
+
+To refresh metadata in the ZIP archive
+
+* link:metadata-checker.html#h2__682427009[Manually create the metadata
+archive].
+* link:metadata-checker.html#h2__1244689107[Enable Metadata Checker] to
+refresh metadata.
+
+
+
+For more information, read link:fast-synchronization.html[the Fast
+Synchronization article].
+
+
+
+Go back to link:synchronization-f-a-q.html#F.A.Q.list[the F.A.Q. list].
+
+ifdef::ios[]
+
+[[h3__115254474]]
+==== When to use the quick record synchronization?
+
+The common use case is to download changes for a particular record. For
+example, link:remote-detailing-launch-the-ct-mobile-app.html[to download
+the invite link] for the Remote Detailing functionality or update the
+record related lists.
+
+
+
+Go back to link:synchronization-f-a-q.html#F.A.Q.list[the F.A.Q. list].
+
+[[h3__371527703]]
+==== When to use the Sync Recovery functionality?
+
+The Sync Recovery functionality allows sending records with any errors
+to Salesforce. Records can be sent as usual or as the JSON file for
+post-processing by the administrator. The errors will not be erased from
+the sync logs and, hence, from the reports.
+
+
+
+For more information, read link:sync-recovery.html[the Sync Recovery
+article]. Error types are listed in
+https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_calls_concepts_core_data_objects.htm[the
+Salesforce Developer Guide article].
+
+
+
+Go back to link:synchronization-f-a-q.html#F.A.Q.list[the F.A.Q. list].
+
+[[h3_2034589294]]
+==== When to use CT Mobile Replication?
+
+During the fast synchronization, only records with the modified
+[.apiobject]#SystemModStamp# field will be downloaded. However,
+if you changed
+https://help.salesforce.com/articleView?id=security_about_sharing_rules.htm&type=5[sharing
+rules] (via organization-wide defaults or per each record), the value in
+the[.apiobject]#SystemModStamp# field is not modified. In this
+case, link:ct-mobile-replication.html[create a CT Mobile Replication
+setting] to keep data up to date on the device. The corresponding
+records will be downloaded and records, which are no longer available,
+will be hidden.
+
+
+
+The CT Mobile Replication example is available
+link:ct-mobile-replication-use-cases-and-steps.html[here].
+
+
+
+Go back to link:synchronization-f-a-q.html#F.A.Q.list[the F.A.Q. list].
+
+ifdef::ios,win[]
+
+[[h3__2143775923]]
+==== How to know that the synchronization is successful?
+
+If the synchronization was successful, the notification
+*«Synchronization completed. Duration: HH:MM:SS.»* If an error occurred
+during the sync process, a notification appears with the text of the
+error, and the user should close it.
+
+ifndef::win[]
+
+To find out the time and date of the last successful synchronization,
+and to see the number of records waiting to be sent to Salesforce, tap
+on link:home-screen.html#h2__396225247[the status indicator] at the
+bottom of the screen.
+
+
+
+Go back to link:synchronization-f-a-q.html#F.A.Q.list[the F.A.Q. list].
+
+[[h2__490564468]]
+=== Synchronization Details
+
+[[h3__11590014]]
+==== What are the synchronization statuses?
+
+Depending on the selected debug level, the sync log record with the
+corresponding status will be saved for synchronization and all performed
+operations, except for Geo Tracing and Geolocation. For more
+information, read link:sync-log.html[the Sync Log article].
+
+
+
+*Success*
+
+* full synchronization is complete;
+* fast/mixed synchronization is complete (with or without the Sync
+Recovery functionality and CT Mobile Replication);
+* completed operation.
+
+
+
+*Partially Success*
+
+* fast/mixed synchronization if there are errors, for example, if the
+required field is blank or the start date is later than the end date
+(with or without the Sync Recovery functionality and CT Mobile
+Replication);
+* operation if some records are not successfully created, updated,
+deleted, or inserted.
+
+
+
+*Failed*
+
+* the internet connection has been lost;
+* ​the device screen has been turned off;
+* the device has been turned off;
+* any errors during first/full synchronization.
+* for operation if all records have errors due to which they were not
+created, updated, deleted, or inserted.
+
+
+
+Go back to link:synchronization-f-a-q.html#F.A.Q.list[the F.A.Q. list].
+
+[[h3_1530730493]]
+==== Where are the synchronization statistics stored?
+
+The link:sync-log.html[Sync Log] object is intended to store logs for
+each performed synchronization.
+
+* the main Sync log record with the type of synchronization;
+* sync log records for each operation performed during the sync process.
+
+
+
+The Sync Log record may include attachments:
+
+the[.apiobject]#SyncSingle.log# file with all operations for
+the first, full, fast, mixed, and quick record synchronization.
+
+the[.apiobject]#sync.log# file for the
+link:send-application-data-dump.html#SendApplicationDataDump-SpecifyDatatoSend[Sync
+Log History] operation.
+
+the[.apiobject]#Documents.zip# for the Export Data operation;
+
+ifndef::andr,win[]
+
+In the case of Sync Recovery, the
+[.apiobject]#RecoveryData_2019-12-06 10:53:16.log# file for
+the create, update, or insert operation along with the JSON file.
+
+
+
+For more information, read link:sync-logs.html[the Sync Logs article].
+
+
+
+Go back to link:synchronization-f-a-q.html#F.A.Q.list[the F.A.Q. list].
+
+ifdef::ios[]
+
+[[h3_666651666]]
+==== How many API requests are used within the first full synchronization?
+
+A single API request contains from 10 to 2 000 records. All requested
+data volume is divided into batches depending on the number of fields
+and field types of the object. Also,
+link:attachments-and-files.html[attachments] can be downloaded one at a
+time.
+
+* Approximately, the CT Mobile app is loading around 1 000 records per
+second, assuming the objects do not have fields with the «heavy» type,
+such as *Text Area (Long)*, *Text Area (Rich)*, etc.
+* To view the number of API requests, perform the synchronization, go to
+*Setup → Company Settings → Company Information*, and check the *API
+Requests, Last 24 Hours* field.
+
+
+
+Go back to link:synchronization-f-a-q.html#F.A.Q.list[the F.A.Q. list].
+
+[[h2__2101954030]]
+=== Metadata Components and Related Error Handling
+
+[[h3_831436350]]
+==== What components are included in the metadata archive?
+
+The list of components is available
+link:metadata-archive.html#h2_1854953360[here]. Also, the metadata
+archive includes all offline objects that were specified on the
+link:ct-mobile-control-panel-offline-objects.html[CT Mobile Control
+Panel: Offline
+Objects]/link:ct-mobile-control-panel-offline-objects-new.html[CT Mobile
+Control Panel 2.0: Offline Objects].
+
+
+
+Go back to link:synchronization-f-a-q.html#F.A.Q.list[the F.A.Q. list].
+
+[[h3_317222557]]
+==== How often should you rebuild the metadata archive?
+
+We recommend enabling link:metadata-checker.html[a metadata checker] and
+link:metadata-checker.html#h3_1645525423[setting a schedule] for a
+metadata checker according to your business processes, such as the
+frequency of updating settings on the CT Mobile Control Panel tabs,
+changing lookup filters, creating custom labels, managing validation
+rules, etc.
+
+
+
+Go back to link:synchronization-f-a-q.html#F.A.Q.list[the F.A.Q. list].
+
+[[h3__335611687]]
+==== Why were not the up-to-date metadata components downloaded during the full or mixed synchronization?
+
+The metadata archive has not been created or updated. Some functionality
+may incorrectly work, for example, link:validation.html[offline
+validation rules].
+
+. Check link:ct-mobile-control-panel-tools.html#h3_2011978[the cloud
+token] (refer to link:ct-mobile-control-panel-tools.html#h3_2011978[CT
+Mobile Control Panel:
+Tools]/link:ct-mobile-control-panel-tools-new.html#h2_2011978[CT Mobile
+Control Panel 2.0: Tools]) is valid.
+. Create a ZIP archive or refresh metadata in the ZIP archive. We
+recommend enabling link:metadata-checker.html[a metadata checker]. Also,
+it is possible link:metadata-checker.html#h3_1645525423[to set a
+schedule] for a metadata checker or
+link:metadata-checker.html#h2__1657467916[manually create/update] the
+metadata archive.  
+
+
+
+Go back to link:synchronization-f-a-q.html#F.A.Q.list[the F.A.Q. list].
+
+[[h3_439788848]]
+==== Why is the new translation for an object or a field not displayed in the CT Mobile app?
+
+https://help.salesforce.com/articleView?id=sf.adding_and_editing_translated_languages.htm&type=5[Translation
+Workbench] is used to maintain translated values for metadata and data
+labels in Salesforce org, for example, to translate fields, objects,
+related lists, etc.
+
+* If the translation is absent, the label will be displayed.
+* If the translation has been added, check the metadata archive is
+created or updated. We recommend enabling link:metadata-checker.html[a
+metadata checker]. Also, it is possible
+link:metadata-checker.html#h3_1645525423[to set a schedule] for a
+metadata checker or link:metadata-checker.html#h2__1657467916[manually
+create/update] the metadata archive.
+* Also, check the link:application-language.html[Application Language]
+article.
+
+
+
+Go back to link:synchronization-f-a-q.html#F.A.Q.list[the F.A.Q. list].
+
+[[h3__1646090375]]
+==== The lookup filter has been changed. Why has not it been downloaded to the device?
+
+The lookup filters are the components of the metadata archive. If you
+created or changed the lookup filter, it is necessary to rebuild
+link:metadata-archive.html[a metadata archive]. We recommend enabling
+link:metadata-checker.html[a metadata checker]. Also, it is possible
+link:metadata-checker.html#h3_1645525423[to set a schedule] for a
+metadata checker or link:metadata-checker.html#h2__1657467916[manually
+create/update] the metadata archive.
+
+
+
+Go back to link:synchronization-f-a-q.html#F.A.Q.list[the F.A.Q. list].
+
+[[h3__98900833]]
+==== The metadata checker has been enabled. Why are not the up-to-date metadata components downloaded to the device?
+
+Please note that the creation of the metadata archive may take some
+time.
+
+
+
+Follow steps:
+
+. Go to the *Setup →* enter _Apex Jobs_ in the *Quick Find* box → click
+the
+https://help.salesforce.com/articleView?id=code_apex_job.htm&type=5[Apex
+Jobs] page.
+. Check that there are no errors in the classes:
+*[.apiobject]#Schedule_LastModifiledDate# is used to build
+a metadata archive. If the status of the Apex class is *Failed*, then
+the metadata archive has not been compiled. Refresh the cloud token
+value and re-build the archive;
+*[.apiobject]#Schedule_CheckRetrieveStatus# is used to
+retrieve a metadata archive. If the status of the Apex class is
+*Aborted*, then the metadata archive has not been compiled. The class
+will request the archive until the archive is compiled, and then the
+class status will change to *Completed*.
+
+
+
+Go back to link:synchronization-f-a-q.html#F.A.Q.list[the F.A.Q. list].
+
+[[h2__1094723947]]
+=== Synchronization Error Handling
+
+[[h3__1178930529]]
+==== How to send the application data dump?
+
+Go to the link:send-application-data-dump.html[Send Application Data
+Dump] article.
+
+
+
+Go back to link:synchronization-f-a-q.html#F.A.Q.list[the F.A.Q. list].
+
+[[h3__2090909248]]
+==== What to do if the sync process has stopped due to missing the CT Mobile license?
+
+To use the CT Mobile app, assign the CT Mobile license to the mobile
+users.
+
+
+
+Go back to link:synchronization-f-a-q.html#F.A.Q.list[the F.A.Q. list].
+
+[[h3__755626042]]
+==== What to do if the sync process has stopped due to an inactive organization error?
+
+This error occurs when the Salesforce organization is no longer active.
+Disconnect then reconnect from Salesforce.
+
+
+
+Go back to link:synchronization-f-a-q.html#F.A.Q.list[the F.A.Q. list].
+
+[[h3_2051887665]]
+==== What to do if synchronization takes too long?
+
+The duration of the sync process depends on:
+
+* the internet connection. Check
+link:technical-requirements-for-devices-and-network.html#h2_1498128754[the
+requirements for the connection].
+* amount of data. To avoid the synchronization of the large data,
+link:managing-offline-objects.html[customize the criteria] to download
+desired records of offline objects.
+
+* amount of modified components (objects, fields, layouts) or changes
+provided on the link:ct-mobile-control-panel.html[CT Mobile Control
+Panel]/link:ct-mobile-control-panel-new.html[CT Mobile Control Panel
+2.0]. In this case, mixed synchronization is in progress instead of fast
+synchronization, and the sync process takes more time.
+
+
+
+Go back to link:synchronization-f-a-q.html#F.A.Q.list[the F.A.Q. list].
+
+[[h3_381741377]]
+==== What to do if the INVALID_TYPE error occurs?
+
+The[.apiobject]#INVALID_TYPE# error occurs if you haven't
+access to a field because of revoked access in Salesforce. When you
+perform fast synchronization, the system cannot retrieve records of
+objects because the current user has no access to several object fields.
+
+
+
+To avoid this issue, we recommend this sequence of steps:
+
+. Users perform fast synchronization.
+. The administrator makes changes to the object model in Salesforce
+(sharing rules, adding and removing fields, changing a profile for a
+user).
+. Users perform a full synchronization.
+
+
+
+Go back to link:synchronization-f-a-q.html#F.A.Q.list[the F.A.Q. list].
+
+[[h3_1079670190]]
+==== What to do if the UNKNOWN_EXCEPTION error occurs?
+
+The[.apiobject]#UNKNOWN_EXCEPTION# error occurs due to
+either an incorrect setting or a Salesforce error.
+
+* Identify the query where the error occurs during synchronization, and
+check it in https://workbench.developerforce.com/login.php[Workbench].
+* If the queries are correct, contact Salesforce and report the error.
+
+
+
+Go back to link:synchronization-f-a-q.html#F.A.Q.list[the F.A.Q. list].
+
+[[h3_1189028288]]
+==== What to do if the MALFORMED_QUERY error occurs?
+
+The[.apiobject]#MALFORMED_QUERY# error occurs when the SOQL
+filter is incorrectly specified for the offline object. Check the
+link:managing-offline-objects.html[SOQL query] in the error message.
+
+
+
+Go back to link:synchronization-f-a-q.html#F.A.Q.list[the F.A.Q. list].
+
+[[h3_1710675976]]
+==== What to do if the INVALID_FILTER_QUERY_OPERATOR: invalid ID field occurs?
+
+The[.apiobject]#INVALID_FILTER_QUERY_OPERATOR:
+invalid ID field# error is due to a temporary mobile record ID being
+inserted into link:reference-fields.html[the reference field] when the
+query is formed. Check the custom logic that inserts the temporary ID ​in
+the field.
+
+
+
+Go back to link:synchronization-f-a-q.html#F.A.Q.list[the F.A.Q. list].
+
+[[h3_528467127]]
+==== When does No connection to Salesforce occur?
+
+This error occurs in the following cases:
+
+* No internet connection on the device.
+* There is an incident on the Salesforce side, for example,
+https://status.salesforce.com/incidents/6406.
+
+
+
+Go back to link:synchronization-f-a-q.html#F.A.Q.list[the F.A.Q. list].
+
+ifdef::win[]
+
+[[h3__1995855573]]
+==== What to do if the synchronization does not work when VPN is enabled?
+
+We recommend granting permissions to the following sites in your VPN
+settings:
+
+*[.apiobject]#*.force.com #
+*[.apiobject]#*.salesforce.com #
+*[.apiobject]#*.lightning.com #
+*[.apiobject]#*.salesforce-communities.com #
+*[.apiobject]#*.visualforce.com #
+*[.apiobject]#*.documentforce.com #
+*[.apiobject]#*.forceusercontent.com#
+
+
+
+Go back to link:synchronization-f-a-q.html#F.A.Q.list[the F.A.Q. list].
+
+ifdef::kotlin[]
+
+[[h2_1173330258]]
+=== Synchronization Modes
+
+[[h3__2097853915]]
+==== When to launch the full synchronization?
+
+The first full synchronization must be launched after
+https://help.customertimes.com/articles/ct-mobile-android-2-0-en/logging-in[the
+authorization] of the current user in order to download the current user
+database (data, metadata, app settings).
+
+The sync process may take a lot of time, depending on the database size.
+
+[[h3__965238074]]
+==== When to launch the fast synchronization?
+
+Fast synchronization is the preferred type for daily work with the CT
+Mobile app. We recommend doing a fast synchronization once a day at the
+beginning or end of the work day to maintain data consistency in the CT
+Mobile app and Salesforce.
+
+The sync process may include link:ct-mobile-replication.html[CT Mobile
+Replication].
+
+[[h3__1232469734]]
+==== When to launch the mixed synchronization?
+
+The mixed synchronization is intended to align the records' main
+information and update metadata since the date of the last successful
+synchronization.
+
+The sync process may include link:ct-mobile-replication.html[CT Mobile
+Replication].
+
+
+
+We recommend running mixed synchronization in case of metadata changes,
+for example:
+
+* adding lookup filters;
+* updating layouts for records;
+* changing validation rules;
+* etc.
+
+[[h3_2034589294]]
+==== When to use CT Mobile Replication?
+
+We recommend using CT Mobile Replication when you changed
+https://help.salesforce.com/articleView?id=security_about_sharing_rules.htm&type=5[sharing
+rules] (via organization-wide defaults or per each record). In this
+case, link:ct-mobile-replication.html[create a CT Mobile Replication
+setting] to keep data up to date on the device. The corresponding
+records will be downloaded and records, which are no longer available,
+will be hidden.
+
+[[h2_1282672032]]
+==== What synchronization mode should I use when updating CT Mobile?
+
+When updating the CT Mobile app, we recommend:
+
+. Run the fast synchronization.
+. Remove the previous version of the CT Mobile app from the mobile
+device.
+
+[TIP] ==== When we release the new version of CT Mobile, we
+check its compatibility with the previous version and let you know if
+removing the CT Mobile app can be skipped. In this case, run the fast
+synchronization, install a new version of CT Mobile on top of an
+existing one, and then run the mixed synchronization for the correct
+operation of the CT Mobile app. ====
+. Install the new version of the CT Mobile app.
+. Run first full synchronization.
+
+CT Mobile is ready to use.
+
+[[h2__2143775923]]
+==== How to know that the synchronization is successful?
+
+If the synchronization was successful, the notification appears. Also,
+the status indicator in the lower left corner shows the date of the last
+successful synchronization.
+
+
+
+Go back to link:synchronization-f-a-q.html#F.A.Q.list[the F.A.Q. list].
+
+[[h3__577265032]]
+==== How to reduce the synchronization time?
+
+If you have a lot of objects with attached files, you can adjust
+downloading these files:
+
+* Enable the link:application-settings.html#h3_1768799377[Background
+content loading] option. The files in *Libraries* will be downloaded in
+the background mode after the full synchronization is complete. 
+* Disable the link:ctm-settings-offline-objects.html[Files Download
+Enabled] option for offline objects. The files attached to offline
+objects will be downloaded as previews.
+* Set up the link:ctm-settings-offline-objects.html[Files Filter] option
+to set up the last date of files to download.  
+
+[[h2_466216120]]
+=== Synchronization Details
+
+[[h2_482845786]]
+==== In what order are records synchronized?
+
+During any synchronization mode, the parent records are synchronized
+first, and then their child records are synchronized. To learn more
+about the steps for each synchronization mode, refer to
+link:synchronization-launch.html[Synchronization Launch].
+
+[[h2__2110567442]]
+==== Does the application lock during the sync process?
+
+The mobile application is available to work during any synchronization
+mode. Also, you can collapse Mobile, and a system notification will pop
+up when the synchronization is complete.
+
+[[h3_1530730493]]
+==== Where are the synchronization statistics stored?
+
+Enable logs on the
+link:ct-mobile-control-panel-general.html#h3__272409891[CT Mobile
+Control Panel:
+General]/link:ct-mobile-control-panel-general-new.html#h2__1687169837[CT
+Mobile Control Panel 2.0: General] tab to collect statistics in the
+[.object]#Sync Log# object. The link:sync-log.html[Sync Log]
+record for the selected synchronization type keeps:
+
+* Operation. Currently, there are two available types:
+** *Sync Log History* is used to store statistics for any
+synchronization
+** *Export Data* is used to send changes made in the CT Mobile app but
+is not yet synchronized.
+* Status
+* Date
+* Description
+* Duration
+* The number of transmitted records
+* The number of errors occurred.
+* Failed Messages
+
+
+
+Go back to link:synchronization-f-a-q.html#F.A.Q.list[the F.A.Q. list].
+
+[[h2_2007803127]]
+=== Metadata Archive and Related Errors Handling
+
+[[h3_831436350]]
+==== What components are included in the metadata archive?
+
+The list of components is available
+link:metadata-archive.html#h2_1854953360[here]. Also, the metadata
+archive includes all offline objects that were specified on the
+link:ct-mobile-control-panel-offline-objects.html[CT Mobile Control
+Panel: Offline
+Objects]/link:ct-mobile-control-panel-offline-objects-new.html[CT Mobile
+Control Panel 2.0: Offline Objects].
+
+[[h3_317222557]]
+==== How often to rebuild the metadata archive?
+
+The frequency depends on the frequency of updating settings on the *CT
+Mobile Control Panel*/*CT Mobile Control Panel 2.0* tabs, changing
+lookup filters, creating custom labels, managing validation rules, etc.
+
+[[h3__335611687]]
+==== Why were not the up-to-date metadata components downloaded?
+
+The metadata archive has not been updated. Go to the
+https://help.customertimes.com/articles/ct-mobile-android-2-0-en/ct-mobile-control-panel-tools/a/h3_1003786176[CT
+Mobile Control Panel:
+Tools]/link:ct-mobile-control-panel-tools-new.html#h3_1003786176[CT
+Mobile Control Panel 2.0: Tools] tab and click the *Refresh metadata
+archive* button.
+
+
+
+Go back to link:synchronization-f-a-q.html#F.A.Q.list[the F.A.Q. list].
+
+[[h2_778518628]]
+=== Synchronization Error Handling
+
+[[h3__1178930529]]
+==== How to send the application data dump?
+
+Go to the *Settings* screen and tap the *Send database* button to create
+a ZIP archive with the app database and send it via the standard *Share*
+menu on Android devices.
+
+[[h3_1087243679]]
+==== What to do if the sync process is interrupted due to a lack of an Internet connection?
+
+If the Internet is interrupted during the sync process, you will see a
+_«Network unavailable»_ notification. In that case:
+
+. Connect your device to the Internet and wait for a while for the
+device to start all the necessary services.
+. Tap the
+image:Start-Fast-Sync.png[]
+icon in the lower-left corner to start the sync process.
+. In the pop-up, tap *Start full sync* to run the mixed synchronization
+or tap *Start fast sync anyway* to launch the fast synchronization.
+
+When the sync process is complete, CT Mobile is ready to work.
+
+[[h3_1928606629]]
+==== What to do if the INSUFFICIENT ACCESS error occurs?
+
+The error occurs when access to the records has been revoked. For
+example, a mobile user created an *Activity* record for an *Account*
+record, and the manager in Salesforce revoked the user's access to that
+*Account*. When the mobile user runs a fast synchronization to submit
+the created *Activity* record, they will receive an *Insufficient
+Access* error.
+
+
+
+To solve this problem, contact your administrator, request to restore
+access to the parent record, and run a fast synchronization afterward.
+
+[[h3_730956645]]
+==== What to do if the mobile user is not allowed to edit the field?
+
+The error occurs when access to a field has been revoked. For example,
+while creating a record, a mobile user filled out the field, and the
+manager in Salesforce revoked the user's permission to edit that field.
+When the mobile user runs a fast synchronization to submit the created
+record, they will receive an *Unable to create/update fields* error.
+
+
+
+To solve this problem, contact your administrator, request to restore
+access to the field, and run a fast synchronization afterward.
+
+[[h3_996655423]]
+==== What to do if the validation error occurs?
+
+The error occurs when the validation rules are violated. For example,
+while creating a record, a mobile user filled out a field with a value
+that violates the validation rule created in Salesforce after the last
+successful synchronization. When the mobile user runs a fast
+synchronization to submit the created record, they will receive the
+validation error with the error description.
+
+
+
+To solve this problem, go to the *Validation Errors* screen, tap the
+record to open it, fix the error, and run a fast synchronization
+afterward.
+
+
+
+Go back to link:synchronization-f-a-q.html#F.A.Q.list[the F.A.Q. list].

@@ -1,0 +1,301 @@
+= CT Mobile Control Panel: Presenter
+
+ifdef::kotlin[]
+
+The *Presenter* tab is intended to configure the
+link:the-remote-detailing-functionality.html[Remote Detailing]
+functionality.
+
+According to the selected profile, several settings on this tab will be
+saved in the corresponding fields of the link:clm-settings.html[CLM
+Settings] record.
+
+:toc: :toclevels: 2
+
+*Click to view the interface*link:javascript:void(0)[]
+
+.Click to hide[%collapsible] ====
+
+image:CTM_Panel_Presenter_new_en.png[]
+
+====
+
+[[h2_985373192]]
+=== Remote Detailing Settings
+
+Switch to enable the Remote Detailing functionality and display
+available options.
+
+[[h3_172954036]]
+==== Video Streaming Enabled
+
+If enabled, the participants are allowed to stream video and audio
+during the Remote Detailing meeting.
+
+[[h3__1970573228]]
+==== Text Chat Enabled
+
+If enabled, the participants are allowed to communicate with each other
+on the *Chat* tab (for Remote Detailing 1.0) or *Comments* tab (for
+Remote Detailing 2.0) during the Remote Detailing meeting.
+
+[[h3__743522332]]
+==== Text Chat History Enabled
+
+If enabled, the chat history of the Remote Detailing meeting will be
+saved as the[.apiobject]#.html# file in the *Attachment*
+section of the *Activity* record.
+
+[[h3_949497961]]
+==== CRM Data Sharing Enabled
+
+If enabled, certain JS Bridge methods will be available on the CLM
+presentation slides during the Remote Detailing meeting. Please, refer
+to link:js-bridge-methods-availability.html[JS Bridge Methods
+Availability].
+
+[[h3_856955672]]
+==== Detailed Statistics Enabled
+
+If enabled, link:remote-detailing-statistics.html[the statistics] per
+each slide will be gathered not only for the presenter but also for each
+participant too.
+
+[[h3_341694305]]
+==== Call Repeat Allowed
+
+If enabled, the presenter
+link:remote-detailing-1-0-ui-for-presenter.html[can resume] the finished
+Remote Detailing session. The statistics will be collected for the
+resuming meeting too. Use
+link:remote-detailing-f-a-q.html#h2__106650128[the same link] to enter
+the previously finished meeting.
+
+[[h3_298754890]]
+==== Custom Subdomain Enabled
+
+If enabled, you can specify a custom domain name for your meeting URL:
+
+. Type in your domain name to the *Subdomain Name* and click *Check
+availability*:
+
+image:ctpresenter-custom-domain-check-availability.png[]
+. If this domain name is available, you will get the message about it
+from your web browser, click *OK*:
+
+image:ctpresenter-custom-domain-available.png[]
+. Click *Create Subdomain*.
+. You will get the message about domain name availability again, click
+*OK*.
+. Click *OK* to confirm the subdomain creation:
+
+image:ctpresenter-custom-domain-confirmation.png[]
+. Click *OK* on the message about subdomain creation request:
+
+image:ctpresenter-custom-domain-creation-request.png[]
+. Click *Save* at the bottom of the page.
+
+[cols=",",]
+|===
+|image:warning.png[] |If you do
+not click *Save*, the subdomain name will not be created.
+|===
+
+To change your custom domain name:
+
+. Disable the *Custom Subdomain Enabled* toggle.
+. Click *OK* to confirm the releasing of your subdomain name:
+
+image:ctpresenter-custom-domain-deletion.png[]
+. Click *OK* on the message about subdomain deletion request:
+
+image:ctpresenter-custom-domain-deletion-request.png[]
+. Enable the *Custom Subdomain Enabled* toggle.
+. Repeat all the steps (1 – 7) to set your custom domain name.
+
+[[h3_912321036]]
+==== Audio Record Enabled
+
+If enabled, audio of the Remote Detailing meeting may be recorded and
+saved as a Lightning component to the corresponding *Activity* record.
+
+* The presenter should receive the participant's permission to record
+audio using the Terms of Use on the Welcome Screen (refer to
+link:ct-mobile-control-panel-presenter.html#h3_1019207818[CT Mobile
+Control Panel:
+Presenter]/link:ct-mobile-control-panel-remote-detailing-new.html#h3_1019207818[CT
+Mobile Control Panel 2.0: Remote Detailing]).
+* If a guest did not accept, they cannot participate in the Remote
+Detailing meeting.
+* A notification will be sent to the administrator when the audio record
+exceeds available space and cannot be saved.
+
+For more information, refer
+to link:remote-detailing-2-0-audio-recording.html[Remote Detailing 2.0:
+Audio Recording].
+
+[[h3_1230065320]]
+==== Scheduled Activity Audio Cleanup
+
+If enabled, the audio of the Remote Detailing meeting will be
+automatically deleted from the *Activity* record according to the
+expiration date in the
+link:ct-mobile-control-panel-presenter.html#h3_1157844415[Delete After
+(days)] field.
+
+[[h3_1157844415]]
+==== Delete After (days)
+
+The number of days to keep an audio recording in Salesforce if the
+link:ct-mobile-control-panel-presenter.html#h3_1230065320[Scheduled
+Activity Audio Cleanup] attribute is enabled.
+
+* The default value is 30 days.
+* After the expiration date, the audio recording is deleted from the
+*Activity* record.
+* Participant permissions are still in the *Activity* record.
+
+[[h3_1019207818]]
+==== Terms of Use on the Welcome Screen
+
+If enabled, you can specify the terms of use that will be displayed on
+the *Welcome* screen. If a user does not accept the terms of use,
+they will not be able to participate in the Remote Detailing or
+Self-Detailing meeting.
+
+
+
+[[h4_1782060860]]
+===== Data for Terms of Use
+
+Specify your company and agreement type in the corresponding fields to
+replace them automatically in the draft agreement.
+
+
+
+[[h4_986969989]]
+===== Text for terms of Use
+
+By default, there is a draft agreement in English.
+
+
+
+[[h4__826226552]]
+===== Language of Terms of Use
+
+Add another language and text to the agreement, if necessary.
+
+* Click *Add language,* to specify terms of use for additional language.
+* Click *Delete language*, to remove terms of use on the selected
+language.
+
+.Click to view[%collapsible] ==== *Click to view an example*
+==== .Click to hide[%collapsible] ====
+image:Terms-of-Use_en.png[]
+====
+
+[[h3__1123335710]]
+==== Session Timeout (in seconds)
+
+For the *Remote Detailing* meeting, the session timeout is the time
+interval after the presenter left the meeting, for example, in case of
+internet connection loss. When the timeout is reached, all participants
+will be automatically logged out.
+
+For the *Self Detailing* meeting, the session timeout is the time
+interval when a participant does not perform any action. When the
+timeout is reached, the inactive participant session expires, a
+participant is automatically logged out, and their statistics at the
+meeting are sent to Salesforce.
+
+[[h3__201439959]]
+==== Applications List Field
+
+The field API name of the link:clm-activity.html[Activity] object for
+the Application IDs storing, for example,
+[.apiobject]#ApplicationIds__c#.
+
+* The field to store Application IDs should have the same API name on
+any[.object]#Activity# object for the Remote Detailing or Self
+Detailing session.
+* The same field will be automatically entered for all available
+profiles.
+
+[[h3__1311451422]]
+==== Link Field
+
+The field API name of the link:clm-activity.html[Activity] object for
+the invite link storing, for example,[.object]#RDLink__c#.
+
+* The field to store an invitation link should have the same API name on
+any[.object]#Activity# object for the Remote Detailing or Self
+Detailing session.
+* The same field will be automatically entered for all available
+profiles.
+
+[[h3__608996078]]
+==== Endpoint URL
+
+Not applied since CT Mobile package v. 3.63.
+
+Specify link:remote-detailing-setup.html[the active site URL] for
+logging in, viewing the CLM presentation, and collecting the statistics
+of the CLM presentation via the Self Detailing functionality.
+
+[[h3__868233337]]
+==== Email Required Field
+
+Available since CT Mobile package v. 3.66.
+
+Enter the API name of a checkbox of the link:clm-activity.html[Activity]
+object, for example,[.apiobject]#IsRequiredEmail__c#. If
+the checkbox is active, the participant should fill out an email on
+link:remote-detailing-2-0-ui-for-participants.html#h2__555694282[the
+Welcome screen] to access the Remote Detailing meeting.
+
+[[h3__193092178]]
+==== Login URL
+
+In the *Available* section, there are domains, for example, the instance
+or community URL, that can be used to connect with the *Remote
+Detailing* session. If several URLs are added in the *Selected* section,
+the presenter should select the appropriate URL to launch the Remote
+Detailing session.
+
+[[h3__53846510]]
+==== Self-Detailed User
+
+Available since CT Mobile package v. 3.63.
+
+To access the Self Detailing functionality:
+
+. https://help.salesforce.com/articleView?id=000331470&mode=1&type=1[Create
+the integration user].
+. Click *Connect*.
+. Authorize as the integration user in Salesforce.
+
+All statistics for participants of the Self-Detailing meeting will now
+be collected for the connected integration user.
+
+[[h2__891805269]]
+=== Refresh CLM-presentations
+
+For the Self Detailing mode, click the *Refresh CLM-presentations*
+button to send JSON files of appropriate CLM-presentations and specified
+session timeout to the Customertimes server. Also, when the Self
+Detailing meeting is finished, the participant's statistics will be sent
+to Salesforce.
+
+
+
+Select CLM presentations to send, for example, only active CLM
+presentations or only available for the Remote Detailing session, click
+the *Send data* button, wait for the confirmation, and click *Close*.
+
+*Click to view the interface*link:javascript:void(0)[]
+
+.Click to hide[%collapsible] ====
+
+image:Refresh_CLM_RD_en.png[]image:Refresh_CLM_RD_2_en.png[]
+
+====

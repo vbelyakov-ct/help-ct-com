@@ -1,0 +1,121 @@
+= Remote Detailing Statistics
+
+For users of the CT Mobile package version below 3.46, the statistics
+for each participant are collected in the *Application Stats* record of
+the *Web Detailing* record type, where the *Parent Id* field stores the
+parent presenter's *Application Stats* record with the *Global
+Stats* record type.
+
+The *Application Stats* record stores statistics with the participant's
+username, e-mail, the total number of clicks/taps, likes, dislikes, the
+start date and time when a participant joined the remote CLM
+presentation, and the navigation path.
+
+
+
+Collect separately the presenter and participants' statistics during the
+*Remote Detailing* or *Self Detailing* meeting.
+
+* To track certain parameters, they should be enabled on
+link:application-editor.html#h2__213917439[the appropriate CLM
+presentation record]. Also,
+link:remote-detailing-1-0-ui-for-presenter.html[the presenter should
+define] allow participants or not to like and dislike slides.
+* The[.object]#Application Stats# object should have the field
+with the *Lookup* type on the[.object]#Activity# object, e.g.,
+the[.apiobject]#VisitId__c#, and this field should be
+specified in the *Activity Field API* field of the *Mobile Application
+Setup* record.
+* If needed, specify the
+link:ct-mobile-control-panel-presenter.html#h3_856955672[Detailed
+Statistics Enabled]/link:ct-mobile-control-panel-remote-detailing-new.html#h4_247168521[Detailed
+Statistics] option.
+* Apply and process only single clicks and taps to launch interactive
+elements on the slides of CLM presentations for their correct display on
+participants' devices during a *Remote Detailing* meeting. Double and
+long clicks and taps may be incorrectly transmitted to participants.
+
+[[h2_1279002041]]
+=== Remote Detailing
+
+The remote CLM presentation can be streamed simultaneously to up to 35
+participants.
+
+[NOTE] ==== Since CT Mobile package 3.66, the browser name and
+IP address will be gathered for the presenter and participants. ====
+
+[[h3_1586033863]]
+==== For Presenter
+
+On all *Application Stats* records, the
+link:clm-applicationstats.html[Guest Stats] field is populated with the
+[.apiobject]#false# value.
+
+* The *Global Stats* record type
+
+Statistics summary for the presenter, calculated based on all sessions
+performed, the navigation path, and the overall viewing time.
+* The *Slide Stats* record type
+
+For each slide, the record stores the number of clicks/taps, likes,
+dislikes, the start date and time, and viewing time.
+
+[[h3__1636611486]]
+==== For Participant
+
+On all *Application Stats* records, the *Guest Stats* field is populated
+with the[.apiobject]#true# value.
+
+
+
+If gathering the detailed stats is enabled:
+
+* The *Global Stats* record type
+
+Statistics summary, calculated based on all sessions performed, the
+navigation path, and the overall viewing time.
+* The *Slide Stats* record type
+
+For each slide, the record stores the number of clicks/taps, likes,
+dislikes, the start date and time, and viewing time.
+
+
+
+If gathering the detailed stats is disabled:
+
+* The *Global Stats* record type
+
+For each participant, collects statistics with the participant's
+username and e-mail, which were populated on the *Hello* page, a total
+number of clicks/taps, likes, dislikes, the start date and time when a
+participant joined the remote CLM presentation, and the navigation path.
+
+[[h2__1854710639]]
+=== Self Detailing
+
+On all *Application Stats* records, the *Guest Stats* field is populated
+with the[.apiobject]#true# value.
+
+
+
+If gathering the detailed stats is enabled:
+
+* The *Global Stats* record type
+
+Statistics summary, calculated based on all sessions performed, the
+navigation path, and the overall viewing time.
+* The *Slide Stats* record type
+
+For each slide, the record stores the number of clicks/taps, likes,
+dislikes, the start date and time, and viewing time.
+
+
+
+If gathering the detailed stats is disabled:
+
+* The *Global Stats* record type
+
+For each participant, collects statistics with the participant's
+username and e-mail, which were populated on the *Hello* page, a total
+number of clicks/taps, likes, dislikes, the start date and time when a
+participant joined the remote CLM presentation, and the navigation path.

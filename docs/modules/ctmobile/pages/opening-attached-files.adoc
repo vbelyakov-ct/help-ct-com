@@ -1,0 +1,38 @@
+= Opening Attached Files
+
+The CT Mobile app allows opening the attached files in a native window.
+The opened files may be sent to an email address.
+
+
+
+To open the PDF file, for example,[.apiobject]#filename.pdf#
+from attachments of the CLM presentation:
+
+
+
+To open a file from the[.apiobject]#sources.zip# with the
+*filename* name:
+
+This method also works via
+the link:the-remote-detailing-functionality.html[Remote
+Detailing] session.
+
+
+
+To open any file from the[.apiobject]#sources.zip#, use the
+following according to the path:
+
+
+
+Also, it is possible to launch the script from the
+[.apiobject]#sources.zip# using the path to it:
+
+
+
+ifdef::ios[]
+
+It is possible to open files that are locally stored in
+link:libraries.html[the Libraries module]. The file name should be
+written without spaces. 
+
+Opens the file from the Libraries module with the *15Mb.mp4* file name:

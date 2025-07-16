@@ -1,0 +1,52 @@
+= Activating JS Bridge
+
+The *JS Bridge* functionality is intended for managing CRM data on a CLM
+presentation by generating pre-configured JavaScript methods on a slide.
+
+To activate JS Bridge, enable the JS Bridge library in the
+[.apiobject]#<head># tag of a slide:
+
+
+
+
+
+The source code of the JS Bridge library can be downloaded from the
+static resource of Salesforce. The file name is
+[.apiobject]#JsLibrary.zip#.
+
+[[h2__1614277225]]
+=== Event of functional readiness of JS Bridge:
+
+To check JS Bridge availability for use it is recommended to perform the
+entire logic of interaction through addEventListener.
+
+
+
+[[h2__1136353801]]
+=== Available JS Bridge Methods
+
+link:methods-for-interaction-with-crm-data.html[Methods for Interaction
+with CRM data]
+
+link:methods-for-accessing-external-functionality.html[Methods for
+Accessing External Functionality]
+
+link:methods-for-clm-presentation-control.html[Methods for CLM
+Presentation Control]
+
+ifdef::ios,win[]
+
+link:methods-for-clm-presentation-navigation.html[Methods for
+CLM-presentation Navigation]
+
+link:methods-for-remote-detailing-2-0.html[Methods for Remote Detailing
+2.0]
+
+
+
+The following methods are outdated:
+
+*[.apiobject]#getUSValues#
+*[.apiobject]##[.apiobject]#playVideo#
+*[.apiobject]##[.apiobject]#skipTenPercent#
+*[.apiobject]##[.apiobject]#CTAPPNewRecord#.

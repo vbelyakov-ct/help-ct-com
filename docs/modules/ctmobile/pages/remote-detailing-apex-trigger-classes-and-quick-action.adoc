@@ -1,0 +1,211 @@
+= Remote Detailing: Apex Trigger, Classes and Quick Action
+
+One of the steps in setting up the *Remote Detailing* and *Self
+Detailing* functionality is to create Apex classes and trigger to be
+able to generate an invitation link and collect statistics. Also, add a
+quick action so that Lightning Experience users can specify sets of CLM
+presentations to be shown during the meeting.
+
+:toc: :toclevels: 3
+
+[[h2_249047963]]
+=== Apex Classes and Trigger to Create an Invitation Link and
+
+Add Apex trigger and classes:
+
+. Get the Apex classes:
+* https://github.com/ctsf/CLM-RemoteDetailing-Public/blob/master/source/remoteDetailing/src/classes/ApexRestHelper.cls[ApexRestHelper.cls]
+* ​https://github.com/ctsf/CLM-RemoteDetailing-Public/blob/master/source/remoteDetailing/tests/classes/Test_ApexRestHelper.cls[Test_ApexRestHelper.cls]
+. Go to *Setup → Custom Code → Apex Classes →* click *New* and add
+separately the afore Apex classes.
+. Go to *Setup → Object Manager →* click an[.object]#Activity#
+object.​
+. In the *Triggers* section, click *New* and add
+https://github.com/ctsf/CLM-RemoteDetailing-Public/blob/master/source/remoteDetailing/src/triggers/ActivitySetLinkProcess.trigger[ActivitySetLinkProcess.trigger]
+to generate invite links on the *Activity* record for *Remote Detailing*
+or *Self Detailing* meetings.
+* Check that the object selected for the Apex trigger is specified as
+the[.object]#Activity# object on
+link:ct-mobile-control-panel-calendar.html#h2_70500171[CT Mobile Control
+Panel: Calendar]/link:ct-mobile-control-panel-activities-new.html[CT
+Mobile Control Panel 2.0: Activities].
+* Please beware that API names of objects and fields in this trigger
+should be aligned with API names of objects and fields used in your
+Salesforce org for the *Remote Detailing* functionality. Replace API
+names in the code if needed:
+
+
+
+[width="100%",cols="50%,50%",]
+|===
+|*API Name in the Code* |*Description*
+
+|[.apiobject]#Event# a|
+Depending on the[.object]#Activity# object, specify its API
+Name instead of [.underline]#*Event*# in this line:
+[.apiobject]#trigger EventSetLinkProcess on
+[.underline]#*Event*# (after insert, after update){#
+
+[.apiobject]#
+#
+
+[.apiobject]#You can specify several triggers for
+different #[.object]#Activity# objects. In this case, use a
+unique name per each trigger.
+
+[.apiobject]##
+
+By default, an invitation link is generated after creating a new record
+or updating an existing one ([.apiobject]#after
+insert#, [.apiobject]#after update#). In the trigger code, you
+can specify other events to generate an invitation link.
+
+|[.apiobject]#Timeoff# a|
+Specify the API name of a record type of the[.object]#Activity#
+object to generate an invitation link for *Self Detailing*.
+
+The same record type cannot be simultaneously used for *Self
+Detailing* and *Remote Detailing*.
+
+|[.apiobject]#Visit# a|
+Specify the API name of a record type of the[.object]#Activity#
+object to generate an invitation link for *Remote Detailing*.
+
+The same record type cannot be simultaneously used for *Self
+Detailing* and *Remote Detailing*.
+
+|===
+
+The Apex trigger and classes are added.
+
+[[h2_636817742]]
+=== The Applications Button for Several CLM presentations Selection on Activity Record
+
+[TIP] ==== Available for the Lightning Experience users. ====
+
+It is possible to demonstrate several CLM presentations along with the
+available custom scenarios during a single *Remote Detailing* meeting.
+
+. Add the *Applications* button on the *Activity* layout.
+Currently, for Salesforce Classic users, the *Applications* button
+cannot be added. It is necessary to manually specify CLM presentation
+IDs in the specific field on the [.object]#Activity# object
+(separated by a comma, without blank space),
+e.g., [.apiobject]#ApplicationIds__c#.
+. Select available CLM presentations for the *Remote Detailing* meeting
+on the appropriate *Activity* record. The custom scenario available for
+users will also be added to the set.
+
+To add a CLM presentation to the set, the CLM presentation should be
+active and available for the *Remote Detailing* functionality.
+
+On the CLM presentation record, link:clm-application.html[check the
+Active and Available for Remote Detailing fields].
+
+[[h3_848494787]]
+==== Add the Applications Button
+
+To add the *Applications* button on the *Activity* tab for the creation
+of the CLM presentation set:
+
+. Get the archive with components
+https://github.com/ctsf/CLM-RemoteDetailing-Public/blob/master/activityApplications.zip[here].
+. Unzip the archive.
+. Click *src* and then *classes* to get Apex classes.
+. Specify the following in the Apex classes:
+..[.apiobject]#ActivityApplications.cls#
+
+Please beware that API names of objects and fields in this class should
+be aligned with API names of objects and fields used in your Salesforce
+org for the *Remote Detailing* functionality.
+
+Replace API names in the code if needed:
+
+
+
+[width="100%",cols="50%,50%",]
+|===
+|*API Name in the Code* |*Description*
+
+|[.apiobject]#CTPHARMA__Activity__c# |Specify the API
+name of an[.object]#Activity# object, for which an invitation
+link will be created.
+
+|[.apiobject]#ApplicationIds__c# a|
+Specify the API name of the field on the[.object]#Activity#
+object that stores CLM presentations IDs: a field with the *Text* type
+to store a few IDs (separated by a comma, without blank space).
+
+Fields with the *Lookup* type are not supported.
+
+|===
+
+
+..[.apiobject]#TestActivityApplications.cls#
+
+Please beware that API names of objects and fields in this class should
+be aligned with API names of objects and fields used in your Salesforce
+org for the *Remote Detailing* functionality.
+
+Replace API names in the code if needed:
+
+
+
+[width="100%",cols="50%,50%",]
+|===
+|*API Name in the Code* |*Description*
+
+|[.apiobject]#CTPHARMA__Activity__c# |Specify the API
+name of an[.object]#Activity# object, for which an invitation
+link will be created.
+
+|[.apiobject]#ApplicationIds__c# a|
+Specify the API name of the field on the[.object]#Activity#
+object that stores CLM presentations IDs: a field with the *Text* type
+to store a few IDs (separated by a comma, without blank space).
+
+Fields with the *Lookup* type are not supported.
+
+|===
+
+
+. Click *src* and then *quickActions*.
+. Rename the file for the appropriate *Activity* object.
+
+For example, for the[.apiobject]#CustomActivity__c# write
+*CustomActivity__c.Applications.quickAction*.
+. Zip the *src* folder. The ZIP archive can have any name.
+. Log in as the administrator on
+https://workbench.developerforce.com/[Workbench].
+. Click *migration → Deploy →* add the ZIP archive from step 3 → click
+*Next* → click *Deploy*.
+. In Salesforce, go to *Setup → Object Manager →* click the appropriate
+*Activity* object *→ Page Layouts →* click the appropriate page layout
+*→* add the *Applications* button → click *Save*.
+
+[NOTE] ==== Currently, the *Applications* button can be added
+for only one *Activity* object. ====
+image:presentation-set-button.png[]
+
+
+
+The *Applications* button is added to the *Activities* tab.
+
+[[h3__2024838382]]
+==== Create the CLM Presentation Set for the Remote Detailing Meeting
+
+To form the CLM presentation set for the *Remote Detailing* meeting on
+the appropriate *Activity* record:
+
+. Click the *Activities* tab.
+. Select the appropriate *Activity* record.
+. Click the *Applications* button.
+. In the *Applications* window, select the available CLM presentations
+for the *Remote Detailing* meetings.
+
+image:Applications_button.png[]
+
+
+. Click *Save Applications List*.
+
+The CLM presentation set is formed.

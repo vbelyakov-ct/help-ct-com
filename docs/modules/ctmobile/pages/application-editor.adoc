@@ -1,0 +1,94 @@
+= Application Editor
+
+[TIP] ==== Before the CLM presentation creation, read
+https://help.customertimes.com/articles/ct-mobile-ios-en/requirements-and-media-file-formats[Requirements
+and Media File Formats] and
+https://help.customertimes.com/articles/ct-mobile-ios-en/remote-site-settings[set
+up remote sites]. ====
+
+The *Application Editor* is intended to create CLM presentations with
+the *Application* record type. The CLM presentation is based on HTML
+code, PowerPoint, or PDF. Each slide can be formed based on templates
+with placeholders and widgets.
+
+:toc: :toclevels: 3
+
+[[h2__213917439]]
+=== Create a CLM Presentation https://help.customertimes.com/articles/ct-mobile-ios-en/application-editor/a/h2__213917439[]
+
+image:application-editor-2023-02-13.png[]
+
+To create the new CLM presentation with the *Application* record type:
+
+. Go to the *Application Editor* tab and click *New*.
+. In the *New Application* window, select the *Application* record type.
+. Specify fields:
+* Enter the CLM presentation name.
+* Set *Active* to make the CLM presentation available for users.
+* Select the *Slide reordering enabled* checkbox if you plan to create a
+custom scenario.
+* Check the required boxes to track actions and collect statistics in
+the
+https://help.customertimes.com/articles/ct-mobile-ios-en/clm-applicationstats[Application
+Stats] record.
+
+[TIP] ==== Read the description of each parameter
+https://help.customertimes.com/articles/ct-mobile-ios-en/clm-application[here].
+====
+image:/resources/Storage/ct-mobile-ios-en/Application.png[/resources/Storage/ct-mobile-ios-en/Application]
+
+
+. Click *OK*.
+
+The new CLM presentation record is created: 
+
+
+
+image:application-editor-2023-02-13-1.png[]
+
+
+
+
+
+[.ui-provider .uz .b .c .d .e .f .g .h .i .j .k .l .m .n .o .p .q .r .s .t .u .v .w .x .y .z .ab .ac .ae .af .ag .ah .ai .aj .ak]##
+
+Also, you can create a CLM presentation from the *Application* tab:
+
+. Click *New*.
+. Select the *Application* record type.
+. Specify all required fields.
+. Click *Save*.
+
+[[h2_1226060150]]
+=== Add Slides to the CLM-presentation https://help.customertimes.com/articles/ct-mobile-ios-en/application-editor/a/h2_1226060150[]
+
+Add slides to CLM presentations:
+
+* Manually create slides using one of the options below.
+** specify templates with placeholders and widgets;
+** add markup for a slide.
+
+image:/resources/Storage/ct-mobile-ios-en/New-Slide-on-the-Application-Editor-tab.png[/resources/Storage/ct-mobile-ios-en/New-Slide-on-the-Application-Editor-tab]
+
+
+
+* https://help.customertimes.com/articles/ct-mobile-ios-en/creating-clm-presentation-from-powerpoint[Create
+a CLM presentation from PowerPoint] by clicking the
+*[.ui-provider .uz .b .c .d .e .f .g .h .i .j .k .l .m .n .o .p .q .r .s .t .u .v .w .x .y .z .ab .ac .ae .af .ag .ah .ai .aj .ak]#Upload
+PPT/PDF/ZIP#* button;
+* https://help.customertimes.com/articles/ct-mobile-ios-en/creating-clm-presentation-from-pdf[Create
+a CLM presentation from PDF] by clicking the
+*[.ui-provider .uz .b .c .d .e .f .g .h .i .j .k .l .m .n .o .p .q .r .s .t .u .v .w .x .y .z .ab .ac .ae .af .ag .ah .ai .aj .ak]#Upload
+PPT/PDF/ZIP# * button.
+[NOTE] ==== The *Application Editor* creates slides of the CLM
+presentations by taking screenshots of PDF pages and ppt(x) slides. If a
+PDF or ppt(x) file contains any interactive elements, such as videos,
+gifs, and links, they will not be available in the converted CLM
+presentation. ====
+* https://help.customertimes.com/articles/ct-mobile-ios-en/creating-clm-presentation-from-jpeg-jpg[Create
+a CLM presentation from JPEG/JPG] by clicking the
+*[.ui-provider .uz .b .c .d .e .f .g .h .i .j .k .l .m .n .o .p .q .r .s .t .u .v .w .x .y .z .ab .ac .ae .af .ag .ah .ai .aj .ak]#Upload
+PPT/PDF/ZIP# * button.
+
+https://help.customertimes.com/articles/ct-mobile-ios-en/publishing-clm-presentations[Publish
+a CLM presentation] after creation.

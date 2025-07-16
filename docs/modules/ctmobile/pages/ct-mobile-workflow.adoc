@@ -1,0 +1,168 @@
+= CT Mobile Workflow Field Reference
+
+*CT Mobile Workflow* is a custom metadata type that is intended to store
+the conditions for triggering CT Mobile Workflows (refer to
+link:ct-mobile-control-panel-workflows.html[CT Mobile Control Panel:
+Workflows]/link:ct-mobile-control-panel-workflows-new.html[CT Mobile
+Control Panel 2.0: Workflows]). Actions of CT Mobile Workflow are stored
+in the link:ct-mobile-workflow-step.html[CT Mobile Workflow Step]
+object.
+
+
+
+*CT Mobile Workflows* override the logic defined by the code of the CT
+Mobile app. For example, if a CT Mobile Workflow is created on
+link:start-finish-functionality.html[the Start/Visit button], the
+*Capture Geoposition* and *Update Start/End Date Fields* options will no
+longer be applied even if they are enabled on the
+link:ct-mobile-control-panel-calendar.html[CT Mobile Control Panel:
+Calendar] tab (*Capture Geolocation when Activity is Started* and
+*Update Start/End Date when Starting/Ending Activity* options in
+link:ct-mobile-control-panel-activities-new.html[CT Mobile Control Panel
+2.0: Activities] tab).
+
+'''''
+
+Custom metadata type API name:
+[.apiobject]#clm__Workflow__mdt#
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Active |[.apiobject]#clm__IsActive__c# |Checkbox |If
+enabled, the CT Mobile Workflow is activated.
+
+|Description |[.apiobject]#clm__Description__c# |Text
+Area(255) a|
+The description of the CT Mobile Workflow.
+
+It is recommended to fully describe all affected fields, established
+rules, and corresponding actions.
+
+|Object API Name |[.apiobject]#clm__ObjectAPIName__c#
+|Text(255) |The API name of the object, on which the CT Mobile Workflow
+will be triggered.
+
+|Trigger Context |[.apiobject]#clm__TriggerContext__c#
+|Picklist a|
+Event for triggering CT Mobile Workflow**.** Available values:
+
+* on trigger:
+** _after create_
+** _after update_
+** _after delete_
+
+[NOTE] ==== Currently, the _after create_ and _after
+delete_ contexts are not supported. ====
+
+* tapping a button**:**
+** _On Click
+_[NOTE] ==== With this value, the *Evaluation Criteria* field is
+not used. ====
+
+Proposed values:
+
+* on trigger:
+** _before create_
+** _before update_
+** _before delete_
+
+|Button/Action API Name
+|[.apiobject]#clm__ButtonAPIName__c# |Text(255) a|
+link:ct-mobile-workflow.html#h2__925686890[The button API name] to
+trigger the CT Mobile Workflow.
+
+It is used with the On Click value in the *Trigger Context* field.
+
+|Trigger Criteria |[.apiobject]#clm__TriggerCriteria__c#
+|Text(255) a|
+The *CT Mobile Workflow* will run on those records of the object in the
+[.apiobject]#clm__ObjectAPIName__c# field that meet the
+criteria of the SOQL filter.
+
+* To check the null values, use the [.apiobject]#null# operator,
+for example, [.apiobject]#WHERE ActivityDate != null#.
+* For _after create_, _after update_, or _after delete_ context, the CT
+Mobile Workflow will also consider the value in
+the clm__EvaluationCriteria__c field if it is set.
+* To specify the value of a lookup field, use the exact ID of
+the record. For example, instead
+of [.apiobject]#RecordTypeId.DeveloperName = 'Volume'# use
+[.apiobject]#RecordTypeId = 'Id RT'#.
+
+|Evaluation Criteria
+|[.apiobject]#clm__EvaluationCriteria__c# |Picklist a|
+The criterion to trigger the CT Mobile Workflow. Available values:
+
+* _every time it's edited_
+
+Whenever editing a record that matches the criteria in the *Trigger
+Criteria* field.
+* _any time it's edited to subsequently meet criteria_
+
+When the edited record matches the criteria in the *Trigger
+Criteria* field.
+
+It is used with the _after create_, _after update_, or _after
+delete_ value in the *Trigger Context* field. If the *Trigger
+Context* field is set to _On Click_, the *Evaluation Criteria* field is
+not used.  
+
+|===
+
+[[h2__925686890]]
+=== API-names of available buttons
+
+[width="100%",cols="50%,50%",]
+|===
+|*API Name* |*Description*
+
+|[.apiobject]#CTM.Button.StartActivity#
+|link:start-finish-functionality.html[The Start button] of the
+[.object]#Activity# object.
+
+|[.apiobject]#CTM.Button.FinishActivity#
+|link:start-finish-functionality.html[The Finish button] of the
+[.object]#Activity# object.
+
+|[.apiobject]#CTM.Button.TakePhoto# |Pressing the button
+displays a layout with all available photos.
+
+|[.apiobject]#CTM.Button.AddObject# |The button defines
+link:managing-offline-objects.html[record creation] in related lists.
+
+|[.apiobject]#CTM.Button.Geoposition# |The button displays a
+link:actions.html[combo menu] to define Geolocation.
+
+|[.apiobject]#CTM.Button.ActivityHistory# |The icon displays
+link:historical-activities.html[historical activities].
+
+|[.apiobject]#CTM.Button.Signature# |The
+link:actions.html[combo-menu] button displays a pop-up signature window.
+
+|[.apiobject]#CTM.Button.ScanBarсode# |The icon displays
+link:barcode-scanner.html[the EAN code scanner] on the related list.
+
+|[.apiobject]#CTM.Button.Mail# |After pressing the button, the
+data are sent via Email.
+
+|[.apiobject]#CTM.Button.AddPost# |After pressing the button,
+link:actions.html[a new post] in the link:chatter.html[Chatter feed] is
+added.
+
+|[.apiobject]#CTM.Button.ConvertLead# |Pressing the button
+link:lead-convert.html[converts Leads] into an
+[.object]#Account# record.
+
+|[.apiobject]#CTM.Button.SortSwitch# |The switcher is to edit
+the visibility of records in link:custom-related-lists.html[a custom
+related list].
+
+|[.apiobject]#CTM.Button.DocConstructor# |The button displays
+the
+https://help.customertimes.com/articles/the-documents-module/about-document-module[Document
+Module] layout.
+|===

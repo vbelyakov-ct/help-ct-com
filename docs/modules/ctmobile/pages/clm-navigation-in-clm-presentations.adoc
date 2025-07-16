@@ -1,0 +1,71 @@
+= Navigation in CLM Presentations
+
+There is a list of management tools to control CLM presentations:
+
+The link:applications.html[Application] module, Carousel of CLM
+presentations link:mobile-layouts-applications.html[on the mobile
+layout] and link:home-screen.html[Home Screen].
+
+link:gestures-in-clm-presentations.html[Gestures]
+
+link:clm-presentation-controls.html[Button controls]
+
+link:opening-attached-files.html[Opening Attached files]
+
+link:changing-slides.html[Changing Slides]
+
+ifndef::andr[]
+
+link:methods-for-clm-presentation-navigation.html[JS Bridge methods]
+
+ifndef::andr[]
+
+The link:the-remote-detailing-functionality.html[Remote Detailing]
+functionality.
+
+The UI of the Remote Detailing functionality is adapted for the
+co-browsing session. The presenter UI is intended to show slides and
+enable remote controls for participants, such as, like/dislike slides,
+stream video, calls, etc. The participant's UI is adapted according to
+the presenter's choice. Additionally, the following is available:
+
+* link:methods-for-clm-presentation-navigation.html[JS Bridge methods]
+* link:changing-slides.html[Changing Slides]
+
+[[h2__21685430]]
+=== Branches
+
+Slides from one or several CLM presentation(s) may be organized in the
+branches, and each branch will be launched depending on the choice of
+the user.
+
+[TIP] ==== Double tap at the bottom of the screen to display
+slides in a branch for rapid switching between the slides. To jump to
+another branch, use one of
+link:methods-for-clm-presentation-navigation.html[the JS Bridge methods
+for navigation]. ====
+
+For example, the presentation may include a home page that contains
+buttons for navigating through the presentation. On this slide, a user
+can choose what path of the presentation to take by tapping one of the
+headers.
+
+image:Branch.png[]
+
+
+
+Each slide should have a unique order number.
+
+
+
+image:57218546.png[]
+
+
+
+It is recommended to number branches as 0, 1, 2, etc., and number slides
+as 01, 02, …, 11, 12, etc., where a first number is a branch number, and
+a second is an order slide number in this branch.
+
+
+
+image:Branches.png[]

@@ -1,0 +1,34 @@
+= Template
+
+The[.object]#Template# object is used to store an HTML layout
+with placeholders.
+
+'''''
+
+Object API Name:[.apiobject]#clm__Template__c#
+
+'''''
+
+[cols=",,,",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Active |[.apiobject]#clm__isActive__c# |Checkbox |If
+enabled, the template can be used in an HTML markup for a slide.
+
+|Application |[.apiobject]#clm__ApplicationId__c#
+|Master-Detail(Application) |The CLM presentation to which the template
+is related.
+
+|Description |[.apiobject]#clm__Description__c# |Long
+Text(32768) |The template description.
+
+|Markup |[.apiobject]#clm__Code__c# |Long Text(131072)
+|The HTML code for the template.
+
+|Max components |[.apiobject]#clm__MaxComponents__c#
+|Number(18,0) |The number of placeholders in the template.
+
+|Template Name |[.apiobject]#Name# |Text(80) |The template
+label.
+|===

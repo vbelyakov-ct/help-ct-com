@@ -1,0 +1,73 @@
+= Menu Settings and Offline Objects
+
+*Menu Settings and Offline Objects* is a custom setting to store object
+details that are uploaded offline and are displayed in the Mobile
+Application main menu, according to a user profile.
+
+ifdef::ios,win[]Settings of the main menu are also stored as records
+of the link:ctm-settings-menu.html[Menu] record type of the
+custom link:ctm-settings.html[CTM Settings] object. 
+[TIP] ==== For easy setup, go to
+link:ct-mobile-control-panel.html[CT Mobile Control Panel]. CT Mobile
+Control Panel makes duplicates of the offline objects list in
+link:related-list-filters.html[Related List Filters] so that to be able
+to use an unlimited offline objects list. ====
+
+'''''
+
+Custom setting API name:
+[.apiobject]#clm__TopLvlObjects__c#
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Conflict Manager Attribute
+|[.apiobject]#clm__ConflictManagerAttribute__c#
+|Text(255) a|
+List of attributes for managing conflict records in CT Mobile app and
+Salesforce. Available values:
+
+* true
+* 1
+* false
+* 0
+
+|Group Fields |[.apiobject]#clm__GroupFields__c#
+|Text(255) |List of fields' API names responsible for records grouping
+in the menu on the left side. If the field is left blank, records will
+be grouped by the title of link:compact-layout.html[a compact layout].
+
+|Menu Settings |[.apiobject]#clm__MenuSettings__c#
+|Text(255) |List of menu items available in the CT Mobile menu.
+
+|Offline Objects |[.apiobject]#clm__TopLvlObjects__c#
+|Text(255) |List of objects' API names available in the CT Mobile.
+
+|Online Attribute |[.apiobject]#clm__OnlineAttribute__c#
+|Text(255) a|
+List of attributes used to display a link for records loading in the
+menu on the left side.
+
+Available values:
+
+* true
+* 1
+* false
+* 0
+
+|Sort Order |[.apiobject]#clm__SortOrder__c# |Text(255)
+a|
+The list of sorting operators is applied to the selected grouping
+fields. Available values:
+
+* ASC
+* DESC
+
+If a sorting operator is not set, the sorted order is ASC. Sort order is
+applied only to the grouping sections, records in groups are sorted
+alphabetically.
+
+|===

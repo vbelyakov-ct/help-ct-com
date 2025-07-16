@@ -1,0 +1,20 @@
+= Fields with the Double Type
+
+Consider the following notes that can affect formula calculation when
+filling fields with the *Double* type with numbers longer than 16
+characters:
+
+* Salesforce automatically rounds a number longer than 16 digits: an
+18-digit number will be rounded by two digits, and a 17-digit number
+will be rounded by one digit. After synchronization, CT Mobile gets a
+number that is already rounded. For example:
+** 222 222 222 222 222 222 → 222 222 222 222 222 200
+** 222 222 222 222 222 22 → 222 222 222 222 222 24
+* When working with the CT Mobile app:
+** A 15-digit number is stored in exponential form.
+** A 16-digit number is stored in numeric form.
+** A 17 or 18-digit number is automatically converted to exponential.
+After synchronization, the number will be rounded on the Salesforce
+side. For example:
+
+222 222 222 222 222 222 → 222 222 222 222 222 000 = 2,22222222222222e17

@@ -1,0 +1,31 @@
+= Snippet: Sharing File
+
+To share by standard iOS sharing dialog window, tap
+image:ctmi-share-icon-2.9.png[]. 
+
+To share by sending email:
+
+. Tap image:ctmi-email-icon-2.9.png[].
+. (Optional) select an link:email-templates.html[Email template], or
+tap *Skip*.
+image:ctmi-choose-template-2.9.png[]
+. (Optional) select a contact from the list, or tap *Skip*:
+[NOTE] ==== You can send an email only to contacts who have a
+specified email address in Salesforce. Also, if you are sending email
+from a record that has lookup to an _Account_ or _Retail Store_ record,
+you will see only contacts related to this _Account_ or _Retail Store_.
+====
+* fill out the standard *Email* field for the desired _Contact_ record;
+* if you use Person Accounts, fill out the standard *Email* field for
+the desired _Person Account_ record.
+image:ctmi-choose-email-2.9.png[]
+. Tap *iOS Mail* to send the file using standard iOS mail client, or tap
+*Other apps* to open** **the standard iOS sharing dialog window. Select
+the desired way to share the file. 
+
+You can send an email using a third-party mail client (like Microsoft
+Outlook), if it is set as default in your iOS settings. In this case:
+
+* The recipient's address will not be inserted automatically, but will
+be copied to clipboard. Please paste it manually.
+* The subject string will be duplicated in the message body.

@@ -1,0 +1,35 @@
+= CRM Data Display
+
+If the CLM presentation is launched on the *Activity* record, it is
+possible to display values from the records related to the *Activity*
+record. You can create, insert, update, or delete CRM data.
+
+
+
+The common use cases:
+
+* CLM presentation personalization.
+* ​Create[.object]#Activity Data# for[.object]#Order
+Taking# or[.object]#Stock-Taking#.
+* Create contacts on a slide.
+* Displaying of required data using markers in the
+[.apiobject]#{!Object.Field}# format.
+
+
+
+The label markups should be in the
+[.apiobject]#{!CTPHARMA__Activity__c.Id}# format.
+
+The following label must be placed in the slide markup, and the
+JavaScript file connected to the slide had to refer to that variable.
+
+
+
+For example, use the link:ctm-query.html[ctm.query] method on the slide
+markup to display the record of the parent object:
+
+
+
+Or you can display child records of the *Activity* record:
+
+

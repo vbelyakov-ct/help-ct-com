@@ -1,0 +1,131 @@
+= Validation Rules
+
+https://help.salesforce.com/articleView?id=fields_about_field_validation.htm&type=5[Validation
+rules] verify that the data a user enters in a record meets the
+standards you specify before the user can save a record. A validation
+rule can contain a formula or expression that evaluates the data in one
+or more fields and returns a value of[.apiobject]#true# or
+[.apiobject]#false#.
+
+:toc: :toclevels: 3
+
+
+
+Validation rules are retrieved by the CT Mobile app during
+synchronization as part of the link:metadata-archive.html[metadata
+archive] and then are applied offline. There are several limitations and
+conditions for validations applied on mobile devices that consider a
+correlation between synchronized records and the validation process:
+
+* Synchronized records cannot be validated before the changes are
+introduced (on the record layout and
+link:custom-related-lists.html[custom related list]).
+* If changes are made in an already synchronized record, this record
+becomes unsynced.
+
+[[h2_1260268493]]
+=== Validation Logic for Records
+
+The following logic is applied for *Activity* records that were created
+in the *Calendar* or *Nearby Accounts* modules.
+
+ifdef::ios,andr[][NOTE] ==== The
+link:start-finish-functionality.html[Start/Finish functionality] and
+link:ct-mobile-control-panel-calendar.html#h3__1036133099[Lock/Unlock
+Record]
+(link:ct-mobile-control-panel-activities-new.html#h4_1219382202[Lock
+Activities for Editing after Finishing]) must be disabled. ====
+
+* After you create a record and open its layout (an unsynchronized
+record), the validation is performed on records of all tabs and custom
+related lists.
+* When a synchronized record is changed, for example, a user changes one
+of the field values, all tabs will be validated, but records of custom
+related lists are not affected.
+
+ifdef::ios,andr[]
+
+
+
+For the _Activity_ records with *the Start/Finish functionality* and
+*Lock/Unlock Record (Lock Activities for Editing after Finishing)*:
+
+* Additional validation is performed for the *Start Date/End Date*
+fields.
+* If you attempt to leave the unfinished _Activity_ record, the system
+will prompt a message: _“You must finish the activity before leaving the
+record”_.
+* Validation for these _Activity_ records is not prompted until the
+_Activity_ record is started, even if the record is not synchronized.
+
+[[h2_383652875]]
+=== Validation Logic for Custom Related Lists
+
+ifdef::win[]
+
+If a record is created or changed on a custom related list, the parent
+record layout will not be validated. Errors that occur on a record of
+custom related lists are displayed in a separate section on
+link:errors-screen.html#h2__479754125[the Errors screen].
+
+ifdef::ios,andr[]
+
+If a record is created or changed on a custom related list, the parent
+record layout will not be validated.
+
+* Validation is performed on the *Activity* record and records of custom
+related lists when you tap the *Finish* button on the *Activity* record.
+* If link:errors-screen.html[an error occurs] during validation, the
+system displays a warning message: __Something went wrong on the tab(s):
+(tab name). Do you want to leave the record or fix it now? __After
+confirming, the layout or the first custom related list with errors
+opens.
+
+
+
+If you tap the *Finish* button on the *Activity* record, the system
+validates the activity and its custom related list. The following
+principles are applied:
+
+* All unsynced records are validated when you close the custom related
+list.
+
+* Validation is performed only on a particular created or changed record
+in a custom related list.
+* The new records creation is allowed even if the validation error
+occurs on a custom related list.
+
+Errors that occur on a record of custom related lists are displayed in a
+separate section on link:errors-screen.html#h2__479754125[the Errors
+screen].
+
+[[h2__549128247]]
+=== User Permissions
+
+The mobile user should have the following permissions:
+
+* All fields that are listed in validation rules must be available for
+editing for a mobile device user, otherwise, they won't be able to
+correct the value that might be causing a validation error.
+* If a formula field is applied for validation, the data that is used
+for the formula must also be accessible for editing by a mobile user and
+loaded to the device for offline mode usage. For example, if the formula
+references another object.
+
+If a formula field in the validation rule is set to perform a comparison
+of record ID fields with other values specified in the formula, the
+second value must contain the same amount of characters as the first
+one, i.e. the right and the left parts of the comparison must match.
+
+
+
+For example, the ID field is compared to a specified ID number or
+another ID field.
+
+[[h2_1647137905]]
+=== Example of a Validation Rule
+
+For example, for a *Pharma Activity* record the following rule is set:
+
+[NOTE] ==== Please, use only 18-character ID fields in
+validation rules. ====

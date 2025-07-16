@@ -1,0 +1,46 @@
+= User
+
+The[.object]#User# object is a standard Salesforce object.
+
+'''''
+
+Object API name:[.apiobject]#User#
+
+'''''
+
+* The changes in the following fields of the current user's record are
+sent to Salesforce and to the mobile device during each
+link:synchronization-launch.html[synchronization].
+* The current user's profile should have permission to edit the fields
+in the table below.
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Device Model |[.apiobject]#clm__DeviceModel__c#
+|Text(255) a|
+[NOTE] ==== Available since CT Mobile package v. 3.65. ====
+ifdef::ios[]
+
+The version of the device model.
+
+ifdef::andr,win[] Not in use.
+
+|Device Token |[.apiobject]#clm__DeviceToken__c#
+|Text(255) |The unique identifier of the current user's mobile device.
+
+|Last Sync Date |[.apiobject]#clm__LastSyncDate__c#
+|Date/time |The date and time of any last successful synchronization.
+
+|Mobile MAC |[.apiobject]#clm__MobileMAC__c# |Text(255)
+|ifdef::ios[]https://en.wikipedia.org/wiki/MAC_address[MAC Address].
+ifdef::andr,win[]Not in use.
+
+|Mobile Version |[.apiobject]#clm__MobileVersion__c#
+|Text(255) |The version of the CT Mobile app on the current user's
+mobile device.
+
+|Operation System |[.apiobject]#clm__DeviceOSVersion__c#
+|Text(255) |The version of the OS of the current user's mobile device.
+|===

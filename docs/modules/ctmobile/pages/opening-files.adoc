@@ -1,0 +1,58 @@
+= Opening Files
+
+
+
+[[h3__102315547]]
+==== Opening Files in Interactive CLM Presentations
+
+To open files within CLM presentations, add one of the following in a
+slide markup:
+
+* to open a _Name.pdf_ file added to the *Notes & Attachments section*
+of the CLM presentation:
+[.apiobject]#<a href="Name.pdf">Open a
+file</a>#
+Also, you can open files added to the *Libraries* module.
+
+* to open a _Name.pdf_ file added to _sources.zip_:
+[.apiobject]#window.open("[path]/Name.pdf")#
+
+* to open dynamically loaded files:
+
+<a href="Name.pdf----AhrefLink">Open a file</a>
+
+* to open external links (when online):
+[.apiobject]#<a href="https://...">Open a
+file</a>#
+
+[[h3__437403350]]
+==== Open Video Files
+
+To play a video, the file may be uploaded to _sources.zip_. The video
+cannot exceed 25 MB.
+
+
+
+To play a YouTube video or a video from the *Libraries* module within
+CLM presentation:
+
+* We suggest you upload videos on YouTube selecting the *Unlisted* value
+in the **Visibility **option to avoid
+https://support.google.com/youtube/answer/157177[public dissemination]. 
+* The size of a video can exceed 25 MB.
+* During synchronization, the CT Mobile app downloads the video into its
+local repository for offline access.
+* To add a video on a slide markup, use the *Video* widget.
+
+To add a widget, use templates and placeholders. Placeholders must
+be marked as [.apiobject]#{!POSITION_n}#,
+where [.apiobject]#n# is a position number. An associated widget
+has the corresponding position number
+in [.apiobject]#{!POSITION_n} #will be added to the
+slide.
+
+To add a YouTube video:
+
+
+
+To add a video from the Libraries module:

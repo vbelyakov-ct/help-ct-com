@@ -1,0 +1,23 @@
+= ctm.openQuiz
+
+The method of link:js-bridge-api.html[JS Bridge] functionality is
+intended to launch a link:quizzes.html[quiz] and then attach quiz
+statistics to a record.
+
+[[h2__905713055]]
+=== Query format
+
+
+
+[.apiobject]#quiz# is the ID or the API name of a Quiz record to
+open.
+
+[.apiobject]#RefererId# is the ID of a record to attach quiz
+statistics (optional attribute).
+
+[.apiobject]#Reload# is responsible for the necessity of
+reloading the current slide when closing the native window with the quiz
+(optional attribute).
+
+[[h2_442663712]]
+=== Query Example

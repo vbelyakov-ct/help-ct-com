@@ -1,0 +1,68 @@
+= Full Synchronization
+
+To run full synchronization, long tap the *Sync* button in the top right
+corner of the link:home-screen.html[Home Screen] and select *Full
+synchronization* from the picklist.
+
+ifdef::ios[][NOTE] ==== Due to the
+https://developer.apple.com/documentation/uikit/app_and_environment/scenes/preparing_your_ui_to_run_in_the_background[iOS
+platform limitations], do not collapse the application and do not turn
+off the screen during the first or full synchronization.  ====
+
+* The full synchronization is triggered when you run your first
+synchronization.
+* During the full synchronization except for the first full
+synchronization, the application is locked.
+* The full synchronization process will be interrupted in case of
+errors.
+
+[[h2_266746590]]
+=== Sync Steps
+
+. Data changes in the application such as deletions, insertions, and
+updates are sent to Salesforce.
+The step is skipped during the first full synchronization because the
+database is empty.
+. The changes in link:clm-user.html[the audit fields] of the current
+user record are sent to Salesforce.
+
+[NOTE] ==== The change of the
+[.apiobject]#clm__LastSyncDate__c ==== field will be
+updated only if the previous synchronization was successful, but has
+been interrupted before the field sync date was updated. #
+. link:metadata-archive.html[Metadata components] are downloaded.
+ifdef::ios,win[]Metadata components are downloaded from ZIP
+archive(s) or directly using administrator credentials depending
+on link:ct-mobile-managed-package-update-to-v-3-54.html[the CT Mobile
+package version]. The cloud token should be valid to retrieve components
+from the ZIP archive(s) (refer
+to link:ct-mobile-control-panel-tools.html#h3_2011978[CT Mobile Control
+Panel: Tools]/link:ct-mobile-control-panel-tools-new.html#h2_2011978[CT
+Mobile Control Panel 2.0: Tools]). The synchronization process can
+proceed without a valid cloud token or administrator credentials, and in
+that case, link:validation.html[validation rules], offline reports, and
+some operators in formulas might not operate properly. 
+ifdef::andr[]Metadata components are downloaded using valid
+administrator credentials. The synchronization process can proceed
+without valid administrator credentials,
+but link:validation.html[validation rules] offline reports, and some
+operators in formulas might not operate properly. 
+. The current data model:
+* is created in case of *the first full synchronization*.
+* is replaced by the newly updated in case of *full synchronization*.
+. Records of link:custom-settings.html[the custom settings&#44; custom
+metadata types], link:managing-offline-objects.html[offline objects],
+and objects, which are necessary for activated
+link:mobile-application-modules.html[modules], are downloaded if a
+record matches the conditions set in
+link:related-list-filters.html[related list filters].
+. link:clm-user.html[The audit fields] of the current user record are
+updated:
+
+[NOTE] ==== The
+[.apiobject]#clm__LastSyncDate__c ==== field will be
+updated only if the first full or full synchronization was successful.
+This field shows that the actual information is downloaded on the
+device. #
+
+image:synchronization-30703765-2020-04-01-1.png[]

@@ -1,0 +1,99 @@
+= CT Mobile Notes
+
+* Если задали SOQL-фильтр на загрузку записей объекта, то захардкоженный
+фильтр не применяется/отменяется в стандартном приложении.
+* Логи CT Mobile Windows лежат по пути
+\AppData\Local\Packages\CustomertimesCorp.CTMobile_e1ttzdnvmc8dr\LocalState\Logs 
+* Поиск (вопрос был в Windows, т.к. в старом SDK есть
+задокументированный код по SOSL)
+** SOSL используется для поиска в форсе. В мобильном пока не нужен,
+только если может быть пригодится в функционале дозагрузки записей. 
+* Удалить поле из управляемого пакета можно с некоторыми ограничениями:
+
+. Перед удалением необходимо убрать все зависимости на это поле в
+пакете.
+. Поле добавляется в список удаленных компонентов в релизной орге и его
+больше нельзя будет добавить в пакет.
+. Если у клиентов уже установлена версия пакета с этим полем, поле у них
+не удалится.
+
+* {blank}
+
+в link:metadata-checker.html[Metadata Checker] используется tooling api
+для запроса last modified date по объектам → не отлавливает некоторые
+изменения в метаданных, например, значения в раскрывающихся списках,
+т.к. last modified date не меняется при активации/деактивации
+раскрывающихся списков
+* Если в приложении отображаются виджеты Лого, Календарь и Карусель
+презентаций, которых нет в настройках Control Panel и это песочница, то
+нужно в классике открыть documents, перейти в папку ct clm и удалить из
+неё файл CT Mobile homepage settings (так удалятся настройки дом.
+страницы для всех профилей)
+
+[[h2__805853773]]
+=== Архив
+
+Проверка правильно собранного архива:
+
+. взять link:metadata-checker.html#h2__1657467916[отсюда] скрипт для
+ручного запуска сборки архива, запустить его под админом
+. после запуска подождать пять минут и посмотреть логи в setup - apex
+jobs
+. если там все успешно, то убедиться, что ссылка верно сформирована, в
+ней должен быть 18-значный orgId и cloud token, который можно посмотреть
+в кастом сете mobile application setup
+
+[[h2__426537371]]
+=== Превью слайдов
+
+Причем превью для самой презы, которое отображается в форсе, и превью
+для мобилки лежат в разных папках на серваке. Если на серваке нет скрина
+для мобилки, то мобилка делает скрин сама во время синхры.
+
+[[h2__1841396242]]
+=== Search in CT Mobile
+
+. Перечень полей для поиска хранится в CustomObject – это компонент
+Metadata API, соответственно доступ к нему возможен только с
+полномочиями админа.
+. Список полей для отображения результатов поиска возвращает метод
+DescribeSearchLayout - это вызов SOAP API доступный под любым юзером.
+Такая логика заложена именно из-за ограничений (использование Metadata
+API) для получения списка полей поиска.
+. Поиск по заданным полям, а не по всем searchable у нас сделан для
+ускорения.
+
+[[h2_1834374197]]
+=== Single-Sign-On
+
+В одной из систем настроен вход с использованием SSO, для входа из
+браузера необходимо:
+
+. Перейти на
+сайт https://ctclm.my.salesforce.com/[https://ctclm.my.salesforce.com]
+. Ввыбрать вариант входа через OneLogin
+. Выполнить вход под учетной записью dsnmpx@gmail.com / MoS475Qog1
+
+[[h2__1147236989]]
+=== Useful links
+
+* CT Mobile Demo
+Kit https://sites.google.com/customertimes.com/ctpharma-ctmobile/home
+* link:../Storage/project-ct-mobile-en/PDF/The-CT-Presenter-app-User-Manual-(App-Store).pdf[CT
+Presenter app User Manual (App Store)]
+* link:../Storage/project-ct-mobile-en/PDF/CTPresenter-app(схема1).pdf[CT
+Presenter app Scheme]
+* https://help.salesforce.com/articleView?id=000323031&type=1&mode=1[Salesforce
+→ Grant Login Access]
+* https://web.microsoftstream.com/video/a92157d7-a16b-40ea-a85b-c44dc34738a8[Products
+Intro]
+
+
+
+Не хватает переводов
+
+* Mobile Custom Details Screen → Column Width 
+* CT Mobile Workflow → Evaluation Criteria
+* CT Mobile Control Panel: AppMenu → Add menu item → Дашборды
+
+

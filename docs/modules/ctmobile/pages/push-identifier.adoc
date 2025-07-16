@@ -1,0 +1,46 @@
+= Push Identifier
+
+The push identifier is a unique identifier to enable the push
+notification for users who are working with the following
+functionalities:
+
+link:chatter-push-notifications.html[Chatter]
+A user receives notifications about new posts and mentions.
+
+ifdef::ios[]
+
+link:geolocation-center.html[Geolocation Center] 
+When the manager clicks the *Locate* button on the
+link:using-geolocation-center.html#h2_1635597370[Users] tab to define
+the current user's location.
+
+link:notification-center.html[Notification Center]
+Send to users messages from the Notification Center tab.
+
+Custom notification
+For example, to notify users to perform synchronization, update the app,
+etc.
+
+[[h2__956989378]]
+=== Obtain a Push Identifier for a Custom CT Mobile app
+
+To obtain the unique push identifier for the custom CT Mobile app:
+
+. Specify the link:mobile-application-bundle-id.html[bundle ID] of your
+custom CT Mobile app.
+
+For example, for the CT Mobile app in the App Store, the bundle ID is
+[.apiobject]#com.customertimes.appstore.ctmobile#.
+. To activate push notifications, please create a ticket with the
+subject “Push Notifications” at
+https://ctsupport.force.com/customerportal. In the ticket, provide the
+bundle ID and a list of organization IDs for which you want to enable
+notifications. After that, the Customertimes team will add the push
+identifier to your custom CT Mobile app.
+
+The setup is complete.
+
+
+
+To receive push notifications on your device, it is also necessary to
+fill out the *Device Token* field on the current *User* record.

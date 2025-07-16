@@ -1,0 +1,160 @@
+= Related List Filters
+
+*Related List Filters* is a setting of the list type to store data about
+filters applied to the corresponding
+https://help.salesforce.com/articleView?id=customizing_related_lists.htm&type=5[related
+lists] of records while displaying them in the mobile application. This
+parameter is also responsible for selection criteria that are used for
+link:managing-offline-objects.html[offline object] data upload.
+
+[TIP] ==== For easy setup, go to
+link:ct-mobile-control-panel-offline-objects.html[CT Mobile Control
+Panel: Offline
+Objects]/link:ct-mobile-control-panel-offline-objects-new.html[CT Mobile
+Control Panel 2.0: Offline Objects]. ====
+
+The following system variables can be used as criteria:
+
+*[.apiobject]#$User#
+*[.apiobject]#$UserRole#
+*[.apiobject]#$Profile#
+
+For example, the[.apiobject]#{$User.Id}# criterion
+specified in parameters will automatically be set to a current user ID.
+Using such system variables will dynamically query the data relevant to
+the current user.
+
+'''''
+
+Custom setting API Name:
+[.apiobject]#clm__MobileRelatedListFilters__c#
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Conflict Manager
+|[.apiobject]#clm__isConflictManagerEnabled__c#
+|Checkbox |The link:conflict-manager-control.html[Conflict Manager] is
+used to track the changes made in a single record in the mobile
+application and on the Salesforce side.
+
+|Create Allowed |[.apiobject]#clm__isCreateAllowed__c#
+|Checkbox a|
+Enable to create records:
+
+* Of the offline object, if the API Name of this object is set in the
+[.apiobject]#clm__sObjectRelated__c# field.
+* Of the related list's object, if the API Name of the related list's
+object is set in the[.apiobject]#clm_sObjectRelated__c#
+field.
+
+The permission to create a record cannot overcome the same profile
+permission.
+
+|Delete Allowed |[.apiobject]#clm__isDeleteAllowed__c#
+|Checkbox a|
+Enable to delete records:
+
+* Of the offline object, if the API Name of this object is set in the
+[.apiobject]#clm__sObjectRelated__c# field.
+* Of the related list's object, if the API Name of the related list's
+object is set in the[.apiobject]#clm_sObjectRelated__c#
+field.
+
+The permission to delete a record cannot overcome the same profile
+permission.
+
+The records which have not been synchronized may always be deleted, no
+matter what access the profile is granted.
+
+|Group Field |[.apiobject]#clm__GroupFieldAPIName__c#
+|Text(255) |The API name of the field by which the entries will be
+grouped in the lists.
+
+|Online Fetching
+|[.apiobject]#clm__isOnlineFetchingEnabled__c#
+|Checkbox |The setting defines if the
+link:online-records-fetching.html[Load more records] button is available
+in the application.
+
+|Order |[.apiobject]#clm__Order__c# |Number(18, 0) |The
+parameter defines the loading order of an offline object during
+synchronization.
+
+|Parent Object |[.apiobject]#clm__ParentObject__c#
+|Text(255) |The API name of the offline object, if the API Name of the
+related list's object is set in the
+[.apiobject]#clm_sObjectRelated__c# field.
+
+|Profile |[.apiobject]#clm__Profile__c# |Text(255) |
+
+|Quick Record Sync
+|[.apiobject]#clm__IsQuickSyncEnabled__c# |Checkbox
+|Enable link:synchronization-launch.html[Quick Record Synchronization]
+for records of the offline object.
+
+|RecordType |[.apiobject]#clm__RecordType__c# |Text(255)
+|The API Name of a record type of the offline object, if the API Name of
+the related list's object is set in the
+[.apiobject]#clm_sObjectRelated__c# field.
+
+|Related List Filters
+|[.apiobject]#clm__isRelatedListFilter__c# |Checkbox |An
+attribute defines whether the parameter belongs to the records of the
+related list's object.
+
+|Related Object |[.apiobject]#clm__sObjectRelated__c#
+|Text(255) a|
+* The API Name of the offline object, if the setting is applicable for
+this object;
+* the API Name of the related list's object, if the setting is
+applicable for the records of the related list.
+
+|Relationship Name
+|[.apiobject]#clm__RelationshipName__c# |Text(255)
+|[NOTE] ==== Not in use. ====
+
+|Show Application Launcher
+|[.apiobject]#clm__isApplicationLaunchEnabled__c#
+|Checkbox |If the API Name of the related list's object is set in the
+[.apiobject]#clm_sObjectRelated__c# field.
+
+|SOQL Filter |[.apiobject]#clm__SOQL__c# |Text(255) a|
+link:filters-in-related-lists.html[The SOQL query to filter]:
+
+* records of the offline object for displaying in the mobile
+application, if the API Name of this object is set in the
+[.apiobject]#clm__sObjectRelated__c# field.
+* records of the related list for displaying in the mobile application,
+if the API Name of the related list's object is set in the
+[.apiobject]#clm_sObjectRelated__c# field.
+
+|Sort Order |[.apiobject]#clm__SortOrder__c# |Text(255)
+|The parameter defines the ascending (ASC) or descending
+(DESC) link:filters-in-related-lists.html[sorting order of records in
+the list].
+
+|Sort Tree by Field
+|[.apiobject]#clm__SortTreeByFieldName__c# |Text(255)
+|The API name of a field with the date or date/time type to display the
+related list records in the link:timeline-view.html[timeline view] if
+the API Name of the related list's object is set in the
+[.apiobject]#clm_sObjectRelated__c# field.
+
+|Sync Recovery |[.apiobject]#clm__SyncRecovery__c#
+|Text(255) a|
+Enable link:sync-recovery.html[Sync Recovery] to deliver records that
+could not be synchronized to Salesforce anyway. Available values:
+
+* An empty value means that the web service is not involved.
+* *Direct access* means the pushing of the record changes directly to an
+object via the additional web service.
+* *Proxy object* means the pushing of the record change as a modifiable
+JSON file in the[.object]#Sync Log# object attachments.
+
+|===
+
+

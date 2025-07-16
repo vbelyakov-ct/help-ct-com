@@ -1,0 +1,27 @@
+= ctm.openDataTableByParentRecord
+
+The method of the link:js-bridge-api.html[JS Bridge] functionality is
+intended to open link:custom-related-lists.html[a custom related list]
+with child records.
+
+[[h2__905713055]]
+=== Query Format
+
+
+
+[.apiobject]#SObject# is the JS object that indicates the API
+name of the offline object with the following fields:
+
+*[.apiobject]#ParentId# is the ID of the parent record. In the
+list will be stored child records that have a reference to that object;
+*[.apiobject]#SettingName# is a list of settings names of the
+link:mobile-custom-details-settings.html[Mobile Custom Details
+Settings], such as permissions to create and/or delete a record in the
+custom related list, a list of columns to display, filter and sort
+criteria, for the custom related list displaying;
+*[.apiobject]#Reload# is responsible for the necessity of
+reloading the current slide when closing the native window with the
+records of the custom related list (optional attribute).
+
+[[h2_442663712]]
+=== Query Example

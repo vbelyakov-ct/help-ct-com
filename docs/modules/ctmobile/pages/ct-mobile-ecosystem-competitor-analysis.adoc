@@ -1,0 +1,262 @@
+= CT Mobile Ecosystem Competitor Analysis
+
+[cols=",,,,,,,,",options="header",]
+|===
+|  |*CT Mobile Ecosystem* |*Salesforce CG Cloud 2.0 Mobile* |*Pitcher*
+|*Aforza* |*Pepperi* |*Ivy Mobility* |*Accenture Cloud RE* |*Axsy*
+|*Salesforce Native Solution* |✅ *Yes*. Built on Salesforce, deeply
+integrated |✅ *Yes*. Salesforce-native core product |❌ *No*.
+Independent platform, integrates with SF |✅ *Yes*. Built natively on
+Salesforce |❌ *No*. Standalone platform with integrations |🟡
+*Partial*. Can run on SF or standalone |✅ *Yes*. On Salesforce
+AppExchange |✅ *Yes*. 100% Salesforce-native
+
+|*Offline Access* |✅ *Yes*. Full offline functionality, allowing access
+to CRM data, order management, AI-powered store checks, and sales
+content. Syncs later. |✅ *Yes*. Offline capabilities exist but may be
+limited for certain processes. Offline order-taking performance is an
+issue. |✅ *Yes*. Seamless offline for all key modules and workflows.
+|✅ *Yes*. Full offline mobile experience for field sales, order
+capture, surveys, and execution. Auto-sync when online. |✅ *Yes*.
+Robust offline support for orders, inventory, surveys. |✅ *Yes*. Full
+offline incl. orders, DSD, surveys, and audits. |✅ *Yes*. Offline via
+Axsy; supports full visit flow with tasks and surveys. |✅ *Yes*.
+Offline-first, syncs Salesforce data for all key tasks.
+
+|*Automated Synchronization* |✅ *Yes*. New Auto-Sync feature with
+scheduled syncs, visual status, error handling, and optimized metadata
+handling. |❌ *No*. Manual sync required; lacks automated metadata
+updates. |✅ *Yes*. Auto-sync with error handling and background
+updates. |✅ *Yes*. Auto-sync with seamless background updates. Mobile
+and backend data kept in sync across all modules. |✅ *Yes*. Auto-sync
+supported after offline work, stable integration. |✅ *Yes*. Optimized
+auto-sync with flexible rules and status UI. |🟡 *Limited*. Uses Axsy;
+no advanced auto-sync or metadata optimization. |🟡 *Limited*. Reliable
+sync but lacks advanced auto-sync flow.
+
+|*AI-Powered Store Check (Image Recognition)* |✅ *Yes*. CT Vision
+provides offline AI-powered planogram and compliance checks. |🟡
+*Partial*. Einstein Vision needs setup and only works online. |✅ *Yes*.
+Built-in image recognition and AR overlay for compliance. |✅ *Yes*.
+AI-based photo recognition validates merchandising, detects product
+placements and planogram compliance. |❌ *No*. Photo audit supported but
+no native AI recognition. |✅ *Yes*. Ivy Eye provides native shelf photo
+recognition offline. |🟡 *Partial*. Supports Einstein Vision if
+configured, not built-in. |🟡 *Partial*. Depends on Salesforce Einstein
+Vision availability.
+
+|*AI Use Cases Support* |✅ *Yes*. AI in CT Vision, smart sync, guided
+selling with logic. |🟡 *Partial*. Einstein AI optional and needs setup;
+limited mobile AI. |✅ *Yes*. Strong AI for guided selling, analytics,
+image recognition. |✅ *Yes*. Embedded AI for retail insights, order
+recommendations. |❌ *No*. No advanced AI use cases available. |✅
+*Yes*. Ivy Eye image recognition, recommendation engine. |🟡 *Partial*.
+Can use Einstein AI if configured; no native AI layer. |🟡 *Partial*.
+Supports SF AI if configured, no native AI engine.
+
+|*Built-in EasyPicky Integration* |✅ *Yes*. Built-in connector for
+automated shelf audits and photo analysis. |❌ *No*. No native EasyPicky
+integration. |❌ *No*. No native EasyPicky integration. |❌ *No*. No
+native EasyPicky integration. |❌ *No*. No native EasyPicky integration.
+|❌ *No*. No native EasyPicky integration. |❌ *No*. No native EasyPicky
+integration. |❌ *No*. No native EasyPicky integration.
+
+|*Smart Photo Management* |✅ *Yes*. Tagged, structured photo capture,
+metadata enrichment, and AI-based photo analytics. |❌ *No*. No
+dedicated photo management; images handled manually. |✅ *Yes*. Smart
+tagging, AI-supported image handling and linking. |✅ *Yes*. Offline
+photo capture with watermarking, AI tagging, and compliance tracking.
+|✅ *Yes*. Tagged images, geo-location, linked to surveys. |✅ *Yes*.
+Supports image tagging, shelf audit linkage, AI scoring. |❌ *No*.
+Photos via Axsy, but no dedicated smart management features. |🟡
+*Partial*. Supports photo capture; no advanced smart mgmt.
+
+|*Guided Visit Execution* |✅ *Yes*. Fully customizable step-by-step
+visit workflows, in-app guidance, and task execution. |✅ *Yes*.
+Supports structured visit flows and visit planning. |✅ *Yes*. Highly
+visual guided selling with AI prompts. |✅ *Yes*. Smart visit agendas,
+step-by-step retail tasks, and AI-coaching during visits. |🟡 *Limited*.
+Tasks exist but not full guided visit. |✅ *Yes*. Visit planning,
+execution, task flows supported. |✅ *Yes*. Uses Axsy for guided
+workflows with tasks and sequencing. |✅ *Yes*. Guided visits through
+Axsy mobile workflow.
+
+|*Order Management* |✅ *Yes*. Robust offline order-taking, with complex
+pricing, promotion logic, and ERP integrations. Highest performance with
+comlex pricing conditions. |🟡 *With performance limitations*.
+Performance issues and limited flexibility with discounts and inventory
+views. |🟡 *With performance limitations*. Robust, supports logic,
+bundling, visual flow. |🟡 *With performance limitations*. Unified order
+capture (offline and online), AI-based recommendations, discounting, and
+real-time inventory visibility. |🟡 *With performance limitations*.
+Flexible order rules, bundles, DSD included. |🟡 *With performance
+limitations*. Handles pricing rules, van sales, returns. |🟡 *Limited*.
+Standard Salesforce order object with TPM links. |🟡 *With performance
+limitations*. Based on SF Order object, works offline.
+
+|*Sales Content (Digital Sales Aid)* |✅ *Yes*. CT Presenter delivers
+interactive sales content (PDF, video, AR) with analytics. |❌ *No*. No
+dedicated sales content module. |✅ *Yes*. CT Presenter-style content
+engine built-in. |✅ *Yes*. Integrated content via digital assets with
+guided workflows and availability across all channels. |❌ *No*. No
+dynamic sales presentation module. |❌ *No*. No full sales content
+module like CT Presenter. |❌ *No*. No dedicated content module; static
+content only. |❌ *No*. No dedicated sales content module.
+
+|*Offline Dashboards* |✅ *Yes*. Reps access key dashboards and KPIs
+even offline. |🟡 *Limited*. Dashboards require connectivity for
+real-time data. |✅ *Yes*. Mobile dashboards available offline,
+regularly synced. |✅ *Yes*. Offline field analytics and dashboards;
+full reporting when synced. |✅ *Yes*. KPI visibility available offline
+for field users. |✅ *Yes*. Mobile app offers offline dashboard views.
+|🟡 *Limited*. Reports depend on Salesforce, limited native dashboards.
+|🟡 *Limited*. Depends on pre-synced Salesforce data.
+
+|*Offline Surveys* |✅ *Yes*. Fully offline-capable survey execution,
+synced later. |🟡  *Limited*. Restricted offline capabilities for
+surveys. |✅ *Yes*. Full offline survey capabilities with logic and
+sync. |✅ *Yes*. Survey and in-store audit data captured offline and
+integrated into dashboards. |✅ *Yes*. Form-based surveys supported
+offline with logic. |✅ *Yes*. Full offline survey support with template
+flexibility. |🟡 *Limited*. Surveys supported via Axsy but not a core
+focus. |🟡 *Limited*. Basic forms offline; lacks advanced UX.
+
+|*Chatter Support* |✅ *Yes*. Integrated Salesforce Chatter support
+within mobile app. |✅ *Yes*. Full Chatter integration in CG Cloud
+mobile app. |🟡 *Partial*. Not Salesforce-native, integrated with
+Salesforce Chatter API. |❌ *No*. No native Chatter; communication via
+internal task/comments. |❌ *No*. No built-in collaboration features
+like Chatter. |❌ *No*. Chatter not available; app does not extend
+Salesforce natively. |✅ *Yes*. Fully supports Chatter through
+Salesforce backend. |✅ *Yes*. Native Chatter via Salesforce
+integration.
+
+|*Analytics & Insights* |✅ *Yes*. Real-time, AI-driven engagement and
+performance analytics. |✅ *Yes*. Einstein AI, but lacks
+engagement-specific insights. |✅ *Yes*. AI-powered content engagement
+and retail execution analytics. |✅ *Yes*. AI-powered analytics across
+field, order, and promotion data. Real-time dashboards across modules.
+|✅ *Yes*. Includes business analytics and dashboards. |✅ *Yes*. Native
+dashboards and retail insights module. |🟡 *Partial*. Relies on
+Salesforce reporting tools and Einstein. |🟡 *Partial*. Uses Salesforce
+analytics tools if configured.
+
+|*All-in-one Solution (Seamless Integration of Components)* |✅ *Yes*.
+CT Mobile, Orders, Vision, Presenter work as one suite. |🟡 *Limited*.
+Relies on Salesforce {plus} partners for full suite. |✅ *Yes*. Single
+mobile app integrates sales, orders, content. |✅ *Yes*. Unified
+platform for execution, orders, TPM. |✅ *Yes*. Integrated platform for
+orders, execution, DSD. |✅ *Yes*. Unified DMS, retail execution, TPM,
+AR in one system. |🟡 *Partial*. RE and TPM integrated, but often via
+separate apps. |❌ *No*. Focused only on offline Salesforce mobile
+extension.
+
+|*Customization without Code* |✅ *Yes*. Admin UI and Salesforce configs
+for easy non-code updates. |🟡  *Limited*. Requires technical tools
+(e.g., Visual Studio Modeler). |✅ *Yes*. Drag-and-drop UI builder and
+logic flow editors. |✅ *Yes*. Admin-managed configurability with
+real-time updates and drag-and-drop tools. |✅ *Yes*. Web UI editor for
+forms, flows, and content. |✅ *Yes*. Admin UI allows business logic
+changes without coding. |✅ *Yes*. Leverages Salesforce UI and Axsy
+Admin tools. |✅ *Yes*. Admin UI on Salesforce plus Axsy-specific
+configs.
+
+|*Customization with Code* |✅ *Yes*. Supports deep customization via
+Apex, JavaScript. |🔴 *Difficult*. Complex and risky to customize
+deeply. |✅ *Yes*. Supports scripting, UI branding, advanced behavior.
+|✅ *Yes*. Full extensibility via Salesforce-native code (Apex),
+low-code & pro-code hybrid approach. |✅ *Yes*. Allows JS scripting and
+custom field logic. |✅ *Yes*. Offers full extensibility with APIs and
+custom logic. |✅ *Yes*. Apex and Lightning support; customizable via SF
+platform. |🟡 *Limited*. Some customization via SF; limited code
+extensibility.
+
+|*Support & Deployment Assistance* |✅ *Yes*. Customertimes provides
+implementation, customization, and change management. |🟡 *Limited*.
+Relies on 3rd-party partners for support. |✅ *Yes*. Delivered by
+Pitcher team directly. |✅ *Yes*. End-to-end Aforza-managed onboarding
+and enablement; support team included. |✅ *Yes*. In-house onboarding
+and support services. |✅ *Yes*. Ivy handles implementation and
+post-launch support. |❌ *No*. Delivered via Accenture implementation
+projects. |✅ *Yes*. Delivered by Axsy with SF alignment.
+
+|*License Costs* |✅ *Lower*. Flexible per-user pricing with product
+bundling options (CT Vision, CT Presenter, etc.). |🔴 *Higher*. Separate
+pricing for each Salesforce module (TPM, Analytics, etc.). |🔴 *Higher*.
+Premium positioning with rich features. |🟡 *Mid-range*. Modular pricing
+by functionality; lower TCO due to single platform replacing multiple
+tools. |🟡 *Moderate*. Modular pricing by features and users. |🟡
+*Moderate*. Pricing varies by modules and regions. |🔴 *Higher*.
+Requires both Salesforce and Accenture service licenses. |🟡 *Moderate*.
+Axsy license {plus} Salesforce subscription.
+
+|*Implementation Costs* |✅ *Lower*. Template-based rollouts and
+packaged support services. |🔴 *Higher*. Complex implementation and
+partner consulting required. |🟡 *Moderate*. Delivered in-house with
+streamlined processes. |🟡 *Mid-range*. Pre-configured flows and
+onboarding tools accelerate go-lives. |✅ *Low–Moderate*. Quick
+deployment and low-code platform. |🟡 *Moderate*. Can vary by module
+complexity. |🔴 *High*. Accenture services are premium-tier. |🟡
+*Moderate*. Requires alignment with Salesforce config.
+
+|*Multi-Country Rollout Simplicity* |✅ *Yes*. Easy scaling with
+language, currency, and workflow localization. |🔴 *Complex*. Requires
+setup duplication and configuration per region. |✅ *Yes*. Fast
+deployment with multilingual and regional templates. |✅ *Yes*. Fast
+rollout with templated setup, segment-specific customization, and full
+language support. |✅ *Yes*. Multi-language, regional control with
+role-based features. |✅ *Yes*. Designed for regional scaling and global
+configurations. |🔴 *Complex*. Complex multi-org setup required per
+region. |🔴 *Complex*. Complex multi-org setup required per region.
+
+|*Implementation Capabilities Without 3rd Party Partners* |✅ *Yes*.
+Delivered and maintained by Customertimes directly. |❌ *No*. Requires
+partners for setup, customization, support. |✅ *Yes*. Pitcher owns
+product and implementation delivery. |✅ *Yes*. Aforza team is able to
+deliver and implement directly. Also has 3-rd party partners for setup,
+customization, support. |✅ *Yes*. Offers implementation in-house, no
+partner needed. |✅ *Yes*. Ivy team delivers with optional partner
+engagement. |✅ *Yes*. Delivered and maintained via Accenture
+implementation projects. |✅ *Yes*. Axsy provides implementation and
+product support.
+
+|*Key Client Segment - Industry* |Consumer Goods, Consumer Health,
+Pharma |Consumer Goods (Food, Bev, Tobacco) |CPG, Pharma, Med Devices
+|CPG, Food & Beverage, Personal Care |Food & Beverage, Wholesale,
+Cosmetics |Consumer Goods, Route to Market |FMCG, Retail Execution
+{plus} Trade Promotion |Consumer Goods on Salesforce
+
+|*Key Client Segment - Client Size* |Mid to Large Enterprises |Large
+Enterprises |Mid to Large Enterprises |Mid to Large Enterprises |SMBs to
+Mid Enterprises |Large Enterprises |Large Enterprises |Mid to Large
+Enterprises
+
+|*Solution Maturity* |✅ *High*. 10{plus} years, proven deployments,
+evolving |🟡 *Medium*. Actively developed, still maturing |✅ *High*.
+Recognized by POI, 10{plus} years |🟡 *Medium*. Fast-growing, under 10
+years |✅ *High*. Proven with thousands of reps |✅ *High*. End-to-end
+RTM platform |✅ *High*. Mature product, ex-CAS evolution |🟡 *Medium*.
+Specialized mobile extension
+
+|*Regions of Presence* |Global, strong in Europe & CIS |Global, strong
+in US and EU |Global presence, strong in Europe and US |Global,
+Europe-focused |Global, strong in US and EMEA |Global, strong in APAC &
+emerging markets |Global, deployed across continents |Global, strong in
+Europe
+
+|*French-speaking Team* |✅ *Yes*. French support available |🟡
+*Partial*. Depends on Salesforce team location |✅ *Yes*.
+French-speaking support team |🟡 *Partial*. Relies on 3-rd party
+partners in France |🟡 *Partial*. Support available upon request |❌
+*No*. Team mainly English-speaking |✅ *Yes*. Accenture team supports FR
+markets |✅ *Yes*. Supports FR in Salesforce ecosystem
+|===
+
+
+
+
+
+
+
+
+

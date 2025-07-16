@@ -1,0 +1,70 @@
+= Attach Files to Offline Objects
+
+[NOTE] ==== To use this feature in a custom CT Mobile app,
+developers should specify it in their project. ==== ifdef::ios[]
+There are two ways to attach a file to the records of offline objects:
+using *Files* and *Notes & Attachments* sections. We recommend using the
+*Files* section as a more flexible and convenient way to work with
+files.
+
+[[h2__1514578626]]
+=== Attach a File in the Notes & Attachment Section
+
+Supported file formats:
+
+video: [.apiobject]#.avi#, [.apiobject]#.wmf#, [.apiobject]#.3gp#, [.apiobject]#.mp4#
+
+ifndef::ios[]
+
+images: [.apiobject]#.jpg#, [.apiobject]#.bmp#, [.apiobject]#.png#
+
+ifdef::ios[]
+
+images: [.apiobject]#.jpg#, [.apiobject]#.bmp#, [.apiobject]#.png# , [.apiobject]#.heic# .
+Images in .heic format will be automatically converted to .jpg
+
+documents: [.apiobject]#.txt#, [.apiobject]#.doc#, [.apiobject]#.rtf#, [.apiobject]#.docx#, [.apiobject]#.pdf#
+
+audio: [.apiobject]#.mp3#, [.apiobject]#.wma#, [.apiobject]#.wav#
+
+other: [.apiobject]#.rar#, [.apiobject]#.zip#, [.apiobject]#.apk#
+
+Use the
+standard image:load-button-apple.png[] button
+to attach any files to the records of offline objects.
+
+* By default,
+the [.object]#Accounts#, [.object]#Contacts#,
+and [.object]#Activity# objects are available.
+* To attach a file, the *Notes & Attachments* section for the
+appropriate offline object should be available in the CT Mobile app.
+* The file size must not exceed 20 MB. 
+
+
+
+To attach a file in the *Notes & Attachment* Section: 
+
+. Open the appropriate file.
+. Tap the
+image:load-button-apple.png[]
+button.
+. Tap *Copy to CT Mobile*.
+
+image:attach_file_to_offline.png[]
+
+
+. In the pop-up, select an object and then a record to attach the file.
+
+{empty}[.confluence-information-macro-information]#When you tap an
+object without the *Notes & Attachment* section, the _«There are no
+records to which you can attach the file»_ info message will be
+displayed.#
+image:attach_file_to_offline_2.png[]
+
+
+. Click *Save*.
+
+The record's main screen is open. Go to the *Notes & Attachment* section
+of the record and perform
+link:synchronization-launch.html#h2__966867633[quick record
+synchronization] to update the record in Salesforce.

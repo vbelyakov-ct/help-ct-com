@@ -1,0 +1,164 @@
+= Sync Logs
+
+Enable sync logs and configure the appropriate reports for efficient
+management of synchronization statistics: average synchronization
+duration, the ratio of succeeded synchronizations to failed, and many
+more.
+
+:toc: :toclevels: 3
+
+[[h2__1487877011]]
+=== Sync Log Records
+
+ifdef::ios,win,andr[]
+
+The *Sync Log* record is created for each synchronization and each
+operation, such as login, create, etc., after the synchronization
+completion or interruption due to sync errors.
+
+[TIP] ==== For more information, refer to
+link:sync-log.html[Sync Log]. ====
+
+For example, if you performed the successful fast synchronization with
+the insert operation of *Account* and *Contact* records and the update
+operation of the *User* record, the following *Sync Log* records per
+each operation will be created:
+
+* The summary *Sync Log* record for the selected synchronization type:
+** Operation: *Fast Sync*
+** Status: *Success*
+** Date
+** Duration
+** Description: *Part 1 from 1*
+** The number of transmitted records
+** The number of errors occurred.
+
+The summary *Sync Log* record has the attachment which stores the text
+file with the sync logs:
+** Name: *syncSingle.log*
+** ParentId which stores the ID of the summary Sync Log record
+** Description: *Part 1 from 1*.
+* ​The *Sync Log* record with the insert operation of *Account* record:
+** Operation: *Insert*
+** Status
+** Object Name: *Account*
+** Date
+** Duration
+** The number of transmitted records for the object
+** The number of errors that occurred
+** Failed messages
+** Failed IDs.
+* ​The *Sync Log* record with the insert operation of the *Contact*
+record.
+* ​The *Sync Log* record with the update operation of the *User* record.
+
+ifdef::kotlin[]
+
+The *Sync Log* record is created for each synchronization after its
+completion or interruption due to sync errors.
+
+For more information, refer to link:sync-log.html[Sync Log].
+
+The *Sync Log* record for the selected synchronization type:
+
+* Operation. Currently, there are two available types:
+** *Sync Log History* is used to store statistics for any
+synchronization
+** *Export Data* is used to send changes made in the CT Mobile app but
+is not yet synchronized.
+* Status
+* Date
+* Description
+* Duration
+* The number of transmitted records
+* The number of errors occurred.
+* Failed Messages
+
+
+
+image:Sync-Logs-Android.png[]
+
+[[h2__272409891]]
+=== Enable Sync Logs
+
+To enable and configure Sync Logs:
+
+[width="100%",cols="50%,50%",]
+|===
+|In CT Mobile Control Panel a|
+. Go to link:ct-mobile-control-panel-general.html[CT Mobile Control
+Panel: General].
+. {blank}
+. In the *Support and logs* section, activate the *Enable Sync logs*
+switch.
+. In the *Debug Level* picklist, select the logging level:
+* *None*. Logging is disabled.
+* *Error*. A log entry is created only in case of occurred
+synchronization error.
+* *All*. Each synchronization is logged as a separate entry
+irrespectively of whether it contains errors or not.
+[WARNING] ==== Enabling the *All* option for a long time will
+result in an overflow of the data storage at Salesforce and a
+significant increase in the CT Mobile synchronization time. ====
+image:52802816.png[]
+. Click *Save*.
+
+
+
+|In CT Mobile Control Panel 2.0 a|
+. Go to link:ct-mobile-control-panel-general-new.html[CT Mobile Control
+Panel 2.0: General].
+. Select the required profile in the *Set up profile* picklist. To apply
+settings to all the profiles, select *General Settings*. 
+. In the *Logs and Support* section, select the logging level:
+.. *Disabled*: sync log record is not created.
+.. *Error*. A log entry is created only in case of occurred
+synchronization error.
+.. *All*. Each synchronization is logged as a separate entry
+irrespectively of whether it contains errors or not.
+[WARNING] ==== Enabling the *All* option for a long time will
+result in an overflow of the data storage at Salesforce and a
+significant increase in the CT Mobile synchronization time. ====
+image:debug-level-2.0.png[]
+. Click *Save*.
+
+|===
+
+
+
+The sync log functionality is enabled.
+
+
+ifdef::andr,ios,win[]
+
+[[h2__1454825892]]
+=== Sync Log Reports
+
+CT Mobile package is preconfigured with reports _Average Synchronization
+Duration_ and _Synchronization Statuses by Types_. By default, the
+reports are stored in the _Sync Log Reports_ folder.
+
+To open a Sync Log report:
+
+. Click the
+image:62573302.png[] button
+in the upper left corner and select *Reports*.
+. Select the *All Folders* filter (or any other suitable filter) to
+display the folder list.
+. Select the *Sync Logs Reports* folder.
+. Select a report from the list.
+
+The selected report opens.
+
+image:62573313.png[]
+
+
+
+You can adjust the configuration of default reports according to your
+needs or create your specific reports by using the standard Salesforce
+functionality.
+
+[TIP] ==== For more information about reports, refer to
+https://help.salesforce.com/articleView?id=sf.rd_reports_overview.htm&type=5[Salesforce
+Help: Reports]. ====
+image:62573314.png[]

@@ -1,0 +1,203 @@
+= Application Stats
+
+The[.object]#Application Stats# object is intended to store
+statistics of every time the CLM presentation is viewed whether the
+current preview is attached to the _Activity_ record or not.
+
+* Statistics of one CLM presentation can be linked to multiple
+link:clm-activity.html[activity] records.
+* A list of monitored parameters is set up for each CLM presentation
+separately.
+* Statistics collection stops when a user exits the CLM presentation.
+
+'''''
+
+Object API name:[.apiobject]#clm__ApplicationStats__c#
+
+'''''
+
+[NOTE] ==== To collect certain parameters of statistics, it is
+necessary to use preconfigured
+link:gestures-in-clm-presentations.html[gestures].  ====
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Activity |depends on the[.object]#Activity# object
+|Lookup(Activity) for the custom[.object]#Activity# object /
+Text for the standard[.object]#Task# and
+[.object]#Event# objects a|
+A field with the lookup type for the[.object]#Activity# object
+will be automatically created for each[.object]#Activity#
+object specified on link:ct-mobile-control-panel-calendar.html[CT Mobile
+Control Panel:
+Calendar]/link:ct-mobile-control-panel-activities-new.html[CT Mobile
+Control Panel 2.0: Activities], for example,
+[.apiobject]#ActivityId__c# or
+[.apiobject]#TaskId__c#.
+
+The field will be filled out with the _Activity_ record ID:
+
+* When you link the CLM presentation to the activity record in the
+*Applications* module.
+* If you launch the CLM presentation or the
+link:the-remote-detailing-functionality.html[Remote Detailing] meeting
+from the record's layout.
+
+|Application |[.apiobject]#clm__ApplicationId__c#
+|Master-Detail(Application) |The ID of the CLM presentation to which the
+statistics record is linked.
+
+|Browser |[.apiobject]#clm__Browser__c# |Text (255) |To
+store the participant's browser name during the Remote Detailing
+meeting.
+
+|Clicks |[.apiobject]#clm__Clicks__c# |Number(18,0) a|
+* *Slide Stats*
+
+Collect the number of taps/clicks per slide.
+* *Global Stats*
+
+The total number of taps/clicks for all slides.
+
+|Custom Scenario |[.apiobject]#clm__CustomScenarioId__c#
+|Lookup(Custom Scenario) a|
+*Slide Stats*
+
+The link:clm-customscenario.html[custom scenario] record in which a
+slide was shown.
+
+|Description |[.apiobject]#clm__Description__c# |Long
+Text Area(32768) |To store
+link:clm-presentation-controls.html#h3_300583250[a comment] left by a
+user while viewing the CLM presentation.
+
+|Dislikes |[.apiobject]#clm__Dislikes__c# |Number(18,0)
+a|
+* *Slide Stats*
+
+Collect the number of dislikes per slide.
+* *Global Stats*
+
+The total number of dislikes for all slides.
+
+|Email |[.apiobject]#clm__Email__c# |Email |To store the
+participant's email address (if specified) for the *Remote Detailing*
+meeting.
+
+|File name |[.apiobject]#clm__FileName__c# |Text(255)
+|Stores the value obtained by
+link:ctm-customstats.html[ctm.CustomStats()]
+
+|Finished by Timeout
+|[.apiobject]#clm__IsFinishedByTimeout__c# |Checkbox a|
+For the *Self-Detailing* meeting.
+
+* If enabled, the statistics will be pulled into Salesforce after a
+certain time (timeout of the participant's session), and the field
+switches to the[.apiobject]#true# value.
+
+|Guest Stats |[.apiobject]#clm__IsGuestStats__c#
+|Checkbox a|
+For the *Remote Detailing* meeting, automatically set:
+
+*[.apiobject]#false#, if statistics relate to the presenter.
+*[.apiobject]#true#, if statistics relate to a participant.
+
+|IP Address |[.apiobject]#clm__IPAddress__c# |Text (255)
+|To store the participant's IP address during the *Remote Detailing*
+meeting.
+
+|Likes |[.apiobject]#clm__Likes__c# |Number(18,0) a|
+* *Slide Stats*
+
+Collect the number of likes per slide.
+* *Global Stats*
+
+The total number of likes for all slides.​
+
+|Order |[.apiobject]#clm__Order__c# |Number(18,0) a|
+*Slide Stats*
+
+The slide order in the custom scenario or CLM presentation.
+
+|OrgSummary Count |[.apiobject]#clm__OrgSummaryCount__c#
+|Number(18,0) |Not in use.
+
+|OrgSummary Speciality
+|[.apiobject]#clm__OrgSummarySpeciality__c# |Text(255)
+|Not in use.
+
+|OrgSummary Type |[.apiobject]#clm__OrgSummaryType__c#
+|Text(1) |Not in use.
+
+|OrgSummary User Count
+|[.apiobject]#clm__OrgSummaryUserCount__c# |Number(18,0)
+|Not in use.
+
+|Parent |[.apiobject]#clm__ParentId__c#
+|Lookup(Application Stats) |For the *Slide Stats* record type, it stores
+the parent *Global Stats* record.
+
+|Record Type |[.apiobject]#RecordTypeId# |Record Type a|
+* *Slide Stats* – statistics collected during the CLM presentation per
+slide.
+* *Global Stats* – slide statistics summary, calculated based on all
+visits to an organization performed.
+
+|Slide |[.apiobject]#clm__SlideId__c# |Lookup(Slide)
+|For the *Slide Stats* record type, it stores the appropriate *Slide*
+record.
+
+|Slide Navigation Path
+|[.apiobject]#clm__NavigationPath__c# |Long Text
+Area(131072) a|
+* *Global Stats*
+
+The navigation path of slides.
+
+|Start Time |[.apiobject]#clm__StartTime__c#
+|Date/Time a|
+* *Slide Stats*
+
+The starting time of the slide demonstration.
+* *Global Stats*
+
+The starting time of the CLM presentation demonstration.
+
+|Terms Accepted |[.apiobject]#clm__TermsAccepted__c#
+|Checkbox a|
+For a record of the *Slide Stats* type:
+
+*[.apiobject]#true# if the participant accepted the Terms of
+Use (refer to
+link:ct-mobile-control-panel-presenter.html#h3_1019207818[CT Mobile
+Control Panel:
+Presenter]/link:ct-mobile-control-panel-remote-detailing-new.html#h3_1019207818[CT
+Mobile Control Panel 2.0: Remote Detailing])
+*[.apiobject]#false# if the participant did not accept the
+Terms of Use
+
+|User |[.apiobject]#clm__User__c# |Text(255) |To store
+the participant's username during the *Remote Detailing* meeting.
+
+|Views |[.apiobject]#clm__Views__c# |Number(18,0) a|
+* *Slide Stats*
+
+The number of slide views.
+* *Global Stats*
+
+For the *Remote Detailing* meeting, the number of slide views by the
+presenter and participants.
+
+|View time (in seconds) |[.apiobject]#clm__ViewTime__c#
+|Number(18,0) a|
+* *Slide Stats*
+
+The view time for a slide.
+* *Global Stats*
+
+The view time for all slides.
+
+|===

@@ -1,0 +1,50 @@
+= Placeholder
+
+The[.object]#Placeholder# object is intended to indicate a
+place for interactive widget content storage on
+link:clm-template.html[the HTML template].
+
+The list of widgets available for insertion varies depending on
+link:creating-a-placeholder.html[the type of placeholder] selected.
+
+'''''
+
+Object API Name:[.apiobject]#clm__Placeholder__c#
+
+'''''
+
+[cols=",,,",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Active |[.apiobject]#clm__isActive__c# |Checkbox |If
+enabled, the placeholder can be applied in the HTML5 markup of a slide.
+
+|Allowed Types |[.apiobject]#clm__Type__c# |Picklist
+(Multi-Select) |Select one or several types of using
+link:clm-widget.html[widgets].
+
+|Application |[.apiobject]#clm__ApplicationId__c#
+|Master-Detail(Application) |The CLM presentation to which the
+placeholder is related.
+
+|Description |[.apiobject]#clm__Description__c# |Long
+Text(32768) |The placeholder description.
+
+|Height |[.apiobject]#clm__Height__c# |Number(18,0) |The
+height of the placeholders (pixels).
+
+|Name |[.apiobject]#Name# |Text(80) |The label of the
+placeholder.
+
+|Position |[.apiobject]#clm__Position__c# |Number(18,0)
+|The placeholder order number is on a slide. Placeholders are marked as
+[.apiobject]#{!POSITION_n}#, where
+[.apiobject]#n# is an ordinal integer.
+
+|Template |[.apiobject]#clm__TemplateId__c#
+|Lookup(Template) |The template with the placeholder.
+
+|Width |[.apiobject]#clm__Width__c# |Number(18,0) |The
+width of the placeholders (pixels).
+|===

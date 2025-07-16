@@ -1,0 +1,236 @@
+= Remote Detailing 2.0: UI for Presenter
+
+[NOTE] ==== Available since CT Mobile package v. 3.63. ====
+
+A presenter can launch the CLM presentation
+link:remote-detailing-launch-salesforce-side.html[from Salesforce] or
+link:remote-detailing-launch-the-ct-mobile-app.html[the CT Mobile app].
+
+Read link:remote-detailing-f-a-q.html[Remote Detailing: F.A.Q.] to check
+supported browsers, recommended bandwidth, and CLM-presentations
+features availability.
+
+:toc: :toclevels: 3
+
+[[h2__1056929534]]
+=== Start a Remote Detailing session
+
+To start the meeting:
+
+. Click link:remote-detailing-f-a-q.html#h2__106650128[the invitation
+link] to start the CLM presentation.
+. ifdef::ios[] In the pop-up menu, select *Launch in app* or *Open
+in browser*.
+image:RD20-launch-options.png[]
+. Click the *Presenter Login* button in the top right corner of the
+screen.
+* If you enter participant details and click Join, you can log out on
+the next screen and re-enter as the presenter. Also, you can return to
+https://rd.ctclm.com/[the CT Presenter site] and join the meeting by
+entering the Meeting ID.
+* If you start the *Remote Detailing* meeting from the CT Mobile app,
+you do not need to re-enter as the presenter. The CLM presentation will
+be launched in the new app window.
+
+You are logged in and the meeting is started. In case of the first
+login, grant the requested permissions.
+
+[[h2_561326567]]
+=== Manage a Remote Detailing meeting
+
+ifdef::ios[]
+
+Please note, that the following features are available only for browser
+version of Remote Detailing and are not available for the in-app
+version:
+
+* Zooming in\out and entering full-screen mode.
+* Recording audio part of the meeting.
+* Screen sharing.
+* Sharing control to participants.
+* Likes *On/Off* option.
+
+Also, the presentation controls are located in the lower part of the
+sidebar.
+image:RD20-inapp-interface.png[]
+
+[[h3__449942769]]
+==== Main Screen
+
+[width="100%",cols="50%,50%",]
+|===
+|image:RD-2.0-mode_1.png[]
+a|
+When you started the meeting, the meeting screen is opened. Now,
+participants link:remote-detailing-1-0-ui-for-participants.html[can
+join] the meeting.
+
+* In the case of
+link:remote-detailing-apex-trigger-classes-and-quick-action.html#h3__2024838382[several
+CLM presentations], select a CLM presentation or custom scenario.
+* Zoom in or out with the slider for a comfortable view, or use the
+pinch gesture on tablets.
+[NOTE] ==== Not available in the in-app version of Remote
+Detailing. ====
+* Enter full-screen mode if needed.
+[.confluence-information-macro-note]#Not available in the in-app version
+of Remote Detailing.#
+* Collapse the sidebar with the participants or maximize it.
+[.confluence-information-macro-note]#Not available in the in-app version
+of Remote Detailing.#
+* Navigate between slides.
+* Hide or show the slide navigation bar.
+
+|===
+
+[[h3__111154998]]
+==== Sidebar
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+The sidebar has the *Conference* tab to manage the *Remote Detailing*
+meeting, select audio and video options, and enable participant actions.
+
+* Click *Meeting ID* in the bottom right corner to copy the Meeting ID
+and share it if needed.
+[.confluence-information-macro-note]#Not available in the in-app version
+of Remote Detailing.#
+* When participants join or leave a meeting or a new comment appears,
+the corresponding pop-up will be shown in the bottom right corner.
+
+
+
+If specified in
+the link:ct-mobile-control-panel-presenter.html#h2_985373192[CT Mobile
+Control Panel:
+Presenter]/link:ct-mobile-control-panel-remote-detailing-new.html#h3_650556118[CT
+Mobile Control Panel 2.0: Remote Detailing], the *Comments* tab will be
+displayed and all users can leave a comment. The red dot on the tab
+indicates the unread messages.
+
+
+
+[[h4_218961852]]
+===== Record on
+
+Not available in the in-app version of Remote Detailing.
+
+If allowed in the
+link:ct-mobile-control-panel-presenter.html#h3_912321036[CT Mobile
+Control Panel:
+Presenter]/link:ct-mobile-control-panel-remote-detailing-new.html#h4__1165812577[CT
+Mobile Control Panel 2.0: Remote Detailing] tab, click to record the
+audio of the meeting.
+
+* The warning is displayed while audio recording.
+* link:remote-detailing-2-0-audio-recording.html[The audio record is
+available] on the corresponding *Activity* record page.
+
+
+
+[[h4__1551924251]]
+===== Audio/Video On/Off
+
+* Click to enable the microphone and camera if video streaming is
+allowed in the
+link:ct-mobile-control-panel-presenter.html#h3_172954036[CT Mobile
+Control Panel:
+Presenter]/link:ct-mobile-control-panel-remote-detailing-new.html#h4__1182643139[CT
+Mobile Control Panel 2.0: Remote Detailing] tab. The browser asks
+permission if it has not been granted yet.
+* Click the arrow next to the microphone or camera button to select the
+desired device.
+
+
+
+[[h4__1837856184]]
+===== Screen Share On/Off
+
+Not available in the in-app version of Remote Detailing.
+
+* Click to start sharing the screen and select what to share. By
+default, the screen will be shared in the sidebar instead of a video if
+the video is turned on.
+* Click the *Video out of focus* button next to you in the sidebar to
+share the screen or video on the main screen instead of the current CLM
+presentation slide.
+
+
+
+[[h4__816803511]]
+===== End Call
+
+Click to leave the meeting. If call repeat is allowed in the
+link:ct-mobile-control-panel-presenter.html#h3_341694305[CT Mobile
+Control Panel:
+Presenter]/link:ct-mobile-control-panel-remote-detailing-new.html#h4__1185385739[CT
+Mobile Control Panel 2.0: Remote Detailing] tab, you can launch it
+again.
+
+
+
+[[h4__2031411715]]
+===== Likes On/Off
+
+Not available in the in-app version of Remote Detailing. 
+
+Enable the ability to like or dislike slides for participants.
+
+To view the participants' likes/dislikes in
+link:remote-detailing-statistics.html[the CLM Presentation statistics],
+the *Track slide likes/dislikes* option should be enabled on
+link:application-editor.html#h2__213917439[the CLM presentation record].
+
+
+
+[[h4__808130950]]
+===== Pointer On/Off
+
+Click to enable the presenter pointer display on participants' screens.
+
+
+
+[[h4_1768762957]]
+===== Manage Participants
+
+Not available in the in-app version of Remote Detailing. 
+
+* Mute or unmute the participant's microphone.
+* Enable the participant pointer to view it on the main screen, for
+example, when the participant wants to draw attention to something on
+the slide.
+* If a participant share video or screen, the video streaming is
+displayed next to a participant in a separate window in the *Conference*
+tab.
+** Click the *Video out of focus* button next to a participant in the
+sidebar to share the screen or video on the main screen instead of the
+current CLM presentation slide. The CLM presentation will continue to
+broadcast next to you in the *Conference* tab.
+** Click the video/screen sharing window to zoom it out in the
+*Conference* tab.
+
+|image:RD-2.0-mode_2.png[]
+|===
+
+[[h2_847221785]]
+=== Finish a Remote Detailing session
+
+Click *End call* to finish the meeting.
+
+* All participants forcibly leave the meeting.
+* Allow the repeated meeting on the
+link:ct-mobile-control-panel-presenter.html#h3_341694305[CT Mobile
+Control Panel:
+Presenter]/link:ct-mobile-control-panel-remote-detailing-new.html#h4__1185385739[CT
+Mobile Control Panel 2.0: Remote Detailing] tab to have the ability to
+restart the finished meeting.
+
+image:presenter_mode_3.png[]
+
+
+
+You can enter the *Meeting ID* and join as a participant in another
+*Remote Detailing* meeting.
+
+image:meeting_id_screen.png[]

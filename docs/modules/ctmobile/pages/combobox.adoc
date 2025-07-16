@@ -1,0 +1,71 @@
+= Combobox
+
+Set up a display of any field as a drop-down list with predefined values
+but with the possibility to manually input any value.
+
+
+
+To enable this option, specify the following in the field description,
+refresh metadata archive (refer to
+link:ct-mobile-control-panel-tools.html#h3_1003786176[CT Mobile Control
+Panel:
+Tools]/link:ct-mobile-control-panel-tools-new.html#h3_1003786176[CT
+Mobile Control Panel 2.0: Tools]) and
+link:synchronization-launch.html#h3__1175148825[launch mixed
+synchronization].
+
+
+
+Where[.apiobject]#value# is the predefined text for the
+field. The custom labels
+of [.apiobject]#$Label.LabelAPIName# type can be used as a
+value. 
+
+
+
+image:custom-combo-field-description.png[]
+
+
+
+The setup is complete.
+
+
+
+[width="100%",cols="34%,33%,33%",]
+|===
+|image:veni-vedi-vici-list.png[]
+a|
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  → 
+
+|image:veni-vedi-vici-list-custom.png[]
+|===

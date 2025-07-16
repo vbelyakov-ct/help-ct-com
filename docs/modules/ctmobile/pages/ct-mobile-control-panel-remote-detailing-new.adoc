@@ -1,0 +1,226 @@
+= CT Mobile Control Panel 2.0: Remote Detailing
+
+The *Remote Detailing* tab is intended to configure
+the https://help.customertimes.com/articles/ct-mobile-ios-en/the-remote-detailing-functionality[Remote
+Detailing] functionality. According to the selected profile, several
+settings on this tab will be saved in the corresponding fields of
+the https://help.customertimes.com/articles/ct-mobile-ios-en/clm-settings[CLM
+Settings] record. 
+
+* Prior to configuring Remote Detailing, select user profile from the
+list and switch on the *Activate* toggle. 
+* To create link:test-clm-presentations.html[test CLM presentations],
+click the *Create Demo Presentations* button.
+
+
+
+To store viewing statistics of CLM presentations:
+
+. On the link:clm-applicationstats.html[Application Stats] object,
+create lookup fields to every [.object]#Activity#
+object configured on the
+link:ct-mobile-control-panel-activities-new.html#h2_2014841429[Activities]
+tab.
+. In the link:mobile-application-setup.html[Mobile Application Setup],
+specify API names of the created lookup fields on
+the [.apiobject]#clm__ActivityFieldAPI__c# object (comma
+separated). The fields must be listed in the same order as the objects
+they correspond to, specified in the field
+[.apiobject]#clm__ActivityObjectAPIName__c#. 
+
+
+
+Remote Detailing settings are divided into the following sections:
+
+[[h2__389408561]]
+=== Global
+
+image:ctm-control-panel-remote-detailing-global.png[]
+
+[[h3__756893933]]
+==== Main
+
+[[h4__201439959]]
+===== Applications List Field 
+
+The field API name of
+the https://help.customertimes.com/articles/ct-mobile-ios-en/clm-activity[Activity] object
+for the Application IDs storing, for
+example, [.apiobject]#ApplicationIds__c#.
+
+* The field to store Application IDs should have the same API name on
+any [.object]#Activity# object for the Remote Detailing or Self
+Detailing session.
+* The same field will be automatically entered for all available
+profiles.
+
+[[h4__1311451422]]
+===== Link Field
+
+The field API name of
+the https://help.customertimes.com/articles/ct-mobile-ios-en/clm-activity[Activity] object
+for the invite link storing, for
+example, [.apiobject]#RDLink__c#.
+
+* The field to store an invitation link should have the same API name on
+any [.object]#Activity# object for the Remote Detailing or Self
+Detailing session.
+* The same field will be automatically entered for all available
+profiles.
+
+[[h4_1433734342]]
+===== CRM Data Sharing
+
+If enabled, certain JS Bridge methods will be available on the CLM
+presentation slides during the Remote Detailing meeting. Please, refer
+to https://help.customertimes.com/articles/ct-mobile-ios-en/js-bridge-methods-availability[JS
+Bridge Methods Availability]. 
+
+[[h4_247168521]]
+===== Detailed Statistics
+
+If
+enabled, https://help.customertimes.com/articles/ct-mobile-ios-en/remote-detailing-statistics[the
+statistics] per each slide will be gathered not only for the presenter
+but also for each participant too.
+
+[[h4__1123335710]]
+===== Session Timeout (in seconds)
+
+* For the *Remote Detailing* meeting, the session timeout is the time
+interval after the presenter left the meeting, for example, in case of
+internet connection loss. When the timeout is reached, all participants
+will be automatically logged out.
+* For the *Self Detailing* meeting, the session timeout is the time
+interval when a participant does not perform any action. When the
+timeout is reached, the inactive participant session expires, a
+participant is automatically logged out, and their statistics at the
+meeting are sent to Salesforce.
+
+[[h4__193092178]]
+===== Login URL
+
+A domain, for example, the instance or community URL, that can be used
+to connect with the *Remote Detailing* session.
+
+[[h3_650556118]]
+==== Meeting Room
+
+[[h4__1182643139]]
+===== Video Streaming
+
+If enabled, the participants are allowed to stream video and audio
+during the Remote Detailing meeting.
+
+[[h4__1185385739]]
+===== Call Repeat
+
+If enabled, the
+presenter https://help.customertimes.com/articles/ct-mobile-ios-en/remote-detailing-1-0-ui-for-presenter[can
+resume] the finished Remote Detailing session. The statistics will be
+collected for the resuming meeting too.
+Use https://help.customertimes.com/articles/ct-mobile-ios-en/remote-detailing-f-a-q/a/h2__106650128[the
+same link] to enter the previously finished meeting.
+
+[[h4__689237757]]
+===== Text Chat
+
+If enabled, the participants are allowed to communicate with each other
+on the *Chat* tab (for Remote Detailing 1.0) or *Comments* tab (for
+Remote Detailing 2.0)* * during the Remote Detailing meeting.
+
+[[h4_2012565557]]
+===== Text Chat History
+
+If enabled, the chat history of the Remote Detailing meeting will be
+saved as the [.apiobject]#.html# file in
+the *Attachment* section of the _Activity_ record.
+
+[[h4__1165812577]]
+===== Audio Recording
+
+If enabled, audio of the Remote Detailing meeting may be recorded and
+saved as a Lightning component to the corresponding _Activity_ record.
+
+* The presenter should receive the participant's permission to record
+audio using
+the https://help.customertimes.com/articles/ct-mobile-ios-en/ct-mobile-control-panel-presenter/a/h3_1019207818[Terms
+of Use on the Welcome Screen].
+* If a guest did not accept, they cannot participate in the Remote
+Detailing meeting.
+* A notification will be sent to the administrator when the audio record
+exceeds available space and cannot be saved.
+
+For more information, refer
+to https://help.customertimes.com/articles/ct-mobile-ios-en/remote-detailing-2-0-audio-recording[Remote
+Detailing 2.0: Audio Recording].
+
+[[h4_559792493]]
+===== "Email Required" Checkbox API Name
+
+The API name of a checkbox of
+the https://help.customertimes.com/articles/ct-mobile-ios-en/clm-activity[Activity] object,
+for example, [.apiobject]#IsRequiredEmail__c#. If the
+checkbox is active, the participant should fill out an email
+on https://help.customertimes.com/articles/ct-mobile-ios-en/remote-detailing-2-0-ui-for-participants/a/h2__555694282[the
+Welcome screen] to access the Remote Detailing meeting.
+
+[[h3_1019207818]]
+==== Terms of Use on Welcome Screen
+
+Switch on the *Configure* toggle to enable this feature. If enabled, you
+can specify the terms of use that will be displayed on
+the *Welcome* screen. If a user does not accept the terms of use,
+they will not be able to participate in the Remote Detailing or
+Self-Detailing meeting. 
+
+[[h4__826226552]]
+===== Language of Terms of Use
+
+Add another language and text to the agreement, if necessary.
+
+* Click *Add language* to specify terms of use for additional language.
+* Click image:ctm-control-panel-new-remove-icon.png[]
+** to remove terms of use on the selected language.
+
+[[h4_1754382693]]
+===== Text for Terms of Use
+
+By default, there is a draft agreement in English.
+
+[[h2_1878698647]]
+=== Subdomain and Self-Detailing
+
+image:ctm-control-panel-remote-detailing-subdomain.png[]
+
+[[h3_1243606343]]
+==== Custom Domain
+
+Create a custom domain name for your meeting URL:
+
+.  Specify a domain name in the *Subdomain Name* field.
+. Click *Check Availability*.
+. If this domain name is available, you will see
+the image:ctm-control-panel-new-domain-available-icon.png[]
+icon and *Create Subdomain* button. Click on it and wait until the
+subdomain is created.
+
+If you do not need this subdomain anymore, click *Delete Subdomain*
+button.
+
+[[h3__1851583290]]
+==== Self-Detailing
+
+To access the Self Detailing functionality:
+
+. https://help.salesforce.com/articleView?id=000331470&mode=1&type=1[Create
+the integration user].
+. Click *Connect to Self-Detailing*.
+. Authorize as the integration user in Salesforce.
+
+All statistics for participants of the Self-Detailing meeting will now
+be collected for the connected integration user.
+
+
+
+Click *Save* to apply new settings.
