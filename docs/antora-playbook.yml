@@ -28,8 +28,8 @@ asciidoc:
   attributes:
     source-highlighter: highlight.js
     ios: ${IOS_ENABLED:-''}
-    andr: ${ANDROID_ENABLED:-''}
-    win: ${WINDOWS_ENABLED:-''}
+    andr: ${ANDROID_ENABLED:-'false'}
+    win: ${WINDOWS_ENABLED:-'false'}
 
 #antora:
 #  extensions:
