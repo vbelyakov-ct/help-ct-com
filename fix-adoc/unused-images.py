@@ -11,7 +11,7 @@ from pathlib import Path
 import argparse
 
 
-def find_image_references(pages_dir):
+def find_image_references(pages_dir, partials_dir=None):
     """
     Ищет все ссылки на изображения в .adoc файлах
     Возвращает множество имен файлов изображений, которые используются
@@ -26,20 +26,26 @@ def find_image_references(pages_dir):
         r'include::([^[\]]+\.(?:png|jpg|jpeg|gif|svg|webp|bmp|tiff|ico))',  # include::image.png
     ]
 
-    for adoc_file in Path(pages_dir).rglob('*.adoc'):
-        try:
-            with open(adoc_file, 'r', encoding='utf-8') as f:
-                content = f.read()
+    # Список директорий для сканирования
+    dirs_to_scan = [pages_dir]
+    if partials_dir and os.path.exists(partials_dir):
+        dirs_to_scan.append(partials_dir)
 
-            for pattern in patterns:
-                matches = re.findall(pattern, content, re.IGNORECASE)
-                for match in matches:
-                    # Извлекаем только имя файла из пути
-                    image_name = os.path.basename(match)
-                    used_images.add(image_name)
+    for scan_dir in dirs_to_scan:
+        for adoc_file in Path(scan_dir).rglob('*.adoc'):
+            try:
+                with open(adoc_file, 'r', encoding='utf-8') as f:
+                    content = f.read()
 
-        except Exception as e:
-            print(f"Ошибка при чтении файла {adoc_file}: {e}")
+                for pattern in patterns:
+                    matches = re.findall(pattern, content, re.IGNORECASE)
+                    for match in matches:
+                        # Извлекаем только имя файла из пути
+                        image_name = os.path.basename(match)
+                        used_images.add(image_name)
+
+            except Exception as e:
+                print(f"Ошибка при чтении файла {adoc_file}: {e}")
 
     return used_images
 
@@ -108,6 +114,8 @@ def main():
     )
     parser.add_argument("--pages", default="pages",
                         help="Папка с .adoc файлами (по умолчанию: pages)")
+    parser.add_argument("--partials", default="partials",
+                        help="Папка с .adoc файлами partials (по умолчанию: partials)")
     parser.add_argument("--images", default="images",
                         help="Папка с изображениями (по умолчанию: images)")
     parser.add_argument("--extra", default="extra",
@@ -128,8 +136,15 @@ def main():
         print(f"Ошибка: папка {args.images} не существует")
         return 1
 
-    print(f"Поиск ссылок на изображения в папке: {args.pages}")
-    used_images = find_image_references(args.pages)
+    # Проверяем существование папки partials (опциональная)
+    partials_exists = os.path.exists(args.partials)
+    if partials_exists:
+        print(f"Поиск ссылок на изображения в папках: {args.pages} и {args.partials}")
+    else:
+        print(f"Поиск ссылок на изображения в папке: {args.pages}")
+        print(f"Папка {args.partials} не найдена, пропускаем её")
+
+    used_images = find_image_references(args.pages, args.partials if partials_exists else None)
 
     if args.verbose:
         print(f"Найдено используемых изображений: {len(used_images)}")
