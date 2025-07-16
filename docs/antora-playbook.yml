@@ -1,6 +1,6 @@
 site:
   title: CT Software Help Portal
-  start_page: ROOT::public-methods.adoc
+  start_page: ROOT::index.adoc
 content:
   sources:
   - url: https://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@github.com/vbelyakov-ct/help-ct-com.git
@@ -26,10 +26,9 @@ asciidoc:
   extensions:
     - '@asciidoctor/tabs'
   attributes:
-    source-highlighter: highlight.js
-    ios: ${IOS_ENABLED:-''}
-    andr: ${ANDROID_ENABLED:-'false'}
-    win: ${WINDOWS_ENABLED:-'false'}
+    ios: ''
+    andr: ''
+    win: ''
 
 #antora:
 #  extensions:
