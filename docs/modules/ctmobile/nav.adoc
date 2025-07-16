@@ -1,8 +1,21 @@
 .CT Mobile
 * iOS
-** xref:ios/index.adoc[]
-*** xref:ios/features.adoc[]
+** xref:index.adoc[]
+
+ifdef::ios[]
+** iOS only contents
+endif::[]
 
 * Android
-** xref:android/index.adoc[]
-*** xref:android/features.adoc[]
+** xref:index.adoc[]
+
+ifdef::andr[]
+** Android only contents
+endif::[]
+
+* Windows
+** xref:index.adoc[]
+
+ifdef::win[]
+** Windows only contents
+endif::[]

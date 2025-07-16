@@ -25,6 +25,11 @@ ui:
 asciidoc:
   extensions:
     - '@asciidoctor/tabs'
+  attributes:
+    source-highlighter: highlight.js
+    ios: ${IOS_ENABLED:-''}
+    andr: ${ANDROID_ENABLED:-''}
+    win: ${WINDOWS_ENABLED:-''}
 
 #antora:
 #  extensions:
