@@ -1,0 +1,77 @@
+= Geo Tracing Sync Log
+
+When the user performed the first synchronization, the *Sync Log* record
+for the *Geo Tracing* operation will be created.
+
+
+
+According to the tracking interval (refer to
+link:ios/ct-mobile-control-panel-general#h3__1808523151[CT Mobile
+Control Panel:
+General]/link:ios/ct-mobile-control-panel-general-new#h3__1808523151[CT
+Mobile Control Panel 2.0: General]), CT Mobile monitors the user's
+coordinates. If the user has changed their location, the coordinates
+will be saved in the[.apiobject]#clm__GeoTracing__c#
+field, and the time will be saved in the
+[.apiobject]#clm__GeoTiming__c# field. If the user has
+not changed their location, the fields will not be updated.
+
+
+
+Once a day, the *Sync Log* record for the *Geo Tracing* operation will
+be sent to Salesforce. If a *Sync Log* record is already stored on the
+server, it will be downloaded from Salesforce.
+
+* The *Sync Log* record stores the set of the user's coordinates
+captured on the current user's local time according to the tracking
+interval.
+* The received coordinates per user's local time are used to build a
+route on link:ios/using-geolocation-center#h2_1475553155[the Activities
+tab] of the *Geolocation Center* tab.
+
+image:Geo-Tracing-Sync-Log.png[]
+
+
+
+The following fields of the[.object]#Sync Log# object will be
+filled out:
+
+
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Date |[.apiobject]#clm__Date__c# |Date/Time |The date
+of the geolocation marks. The set time is always 12:00 AM.
+
+|Description |[.apiobject]#clm__Description__c# |Long
+Text Area(32768) a|
+The order number of the *Sync Log* record if there are more geolocation
+marks than can be stored in the
+[.apiobject]#clm__GeoTracing__c#.
+
+
+
+If the user has no access
+to [.apiobject]#clm__GeoTiming__c# and [.apiobject]#clm__GeoTracing__c# fields,
+there is a «_Please check field visibility settings for fields: Geo
+Timing (clm__GeoTiming__c) and Geo Tracing
+(clm__GeoTracing__c)_.» warning.
+
+|Geo Timing |[.apiobject]#clm__GeoTiming__c# |Long Text
+Area(131072) |The user local time when the coordinates were captured
+(separated by a semicolon, without blank spaces).
+
+|Geo Tracing |[.apiobject]#clm__GeoTracing__c# |Long
+Text Area(131072) a|
+The user coordinates (separated by a semicolon, without blank spaces)
+will be captured if the user has moved 50 or more meters from the
+previous location.
+
+
+
+If the tracking interval is 0, the user's coordinates will not be
+captured.
+
+|===

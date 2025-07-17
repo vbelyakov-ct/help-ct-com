@@ -1,0 +1,62 @@
+= Creating Plain CLM Presentation from PowerPoint
+
+ifdef::ios[][NOTE] ==== The CLM presentation converting
+from the [.apiobject]#.ppt(x) ==== file will be displayed
+against a black background, and slides, which size is less than the
+screen area, will be aligned to the center of the screen.#
+
+
+
+Please refer
+to link:ios/requirements-and-media-file-formats[Requirements and Media
+File Formats] before converting a PowerPoint file to CLM-presentation.
+
+
+
+To convert a PowerPoint file to CLM-presentation:
+
+. Go to *Application Editor*.
+. Select a plain CLM presentation from the picklist in the upper left
+corner, or click *New* to create a new CLM presentation with the *Plain
+Application* record type, or click *Clone* to add a new CLM presentation
+identical to the selected one.
+. Click *Import from PPT*.
+
+image:Plain-Editor-Types.png[]
+
+
+. In the *Import PPT* window, click *Browse*, select the *PowerPoint*
+file, and click *Upload*.
+
+[NOTE] ==== The CLM presentation limit is 25 slides. In the case
+of exceeding the limit, a warning will be displayed. The PowerPoint file
+will not be uploaded. ====
+image:PlainImportPPT.png[]
+
+
+. Wait a minute and slides converted from the PowerPoint file will be
+displayed. In the *CT Mobile* menu, click *Save*.
+
+[TIP] ==== Also, you can upload the PowerPoint by clicking
+*Import PPT* in the *CT Mobile* menu. ====
+
+image:SavePlainPresentation.png[]
+
+
+
+The CLM presentation is created.
+
+
+
+You can customize CLM presentations with
+link:ios/creating-plain-clm-presentation[the Plain Application Editor
+tools].
+
+* Select and click *Impress* to view the CLM presentation with
+https://github.com/impress/impress.js/[the impress.js framework]. Click
+the right/left side to switch slides, or use key arrows and a spacebar.
+* Select and click *Bespoke* to view the CLM presentation with
+https://github.com/bespokejs/bespoke[the bespoke.js framework]. Use key
+arrows and a spacebar to navigate.
+
+image:PlainPPTedit.png[]

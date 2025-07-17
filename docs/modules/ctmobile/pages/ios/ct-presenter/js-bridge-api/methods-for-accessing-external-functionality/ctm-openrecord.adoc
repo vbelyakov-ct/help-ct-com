@@ -1,0 +1,16 @@
+= ctm.openRecord
+
+The method of link:ios/js-bridge-api[JS Bridge] functionality is
+intended to open a record in the CT Mobile app. Tap the *Close* button
+to hide the record screen and go back to the CLM presentation.
+
+[[h2__905745855]]
+=== Query Format
+
+
+
+*[.apiobject]#record_id#: the open record ID.
+*[.apiobject]#show_relatedlists#: show or hide the related
+lists of an open record.
+*[.apiobject]#show_sidebar#: show or hide the app menu
+(fullscreen mode).

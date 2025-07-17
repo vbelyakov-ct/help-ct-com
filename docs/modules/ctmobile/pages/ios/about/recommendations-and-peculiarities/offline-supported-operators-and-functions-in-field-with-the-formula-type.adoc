@@ -1,0 +1,378 @@
+= Offline Supported Operators and Functions in Field with the Formula Type
+
+[width="100%",cols="50%,50%",]
+|===
+|image:info.png[] a|
+* The tables below are incomplete. We are working on updating the
+information.
+* Learn more in Help
+Salesforce: https://help.salesforce.com/articleView?id=customize_functions.htm&type=5[Formula
+Operators and Functions].
+
+|===
+
+List of operators and functions:
+
+:toc: :toclevels: 3
+
+[[h2__181225665]]
+=== Math Operators
+
+[width="100%",cols="34%,33%,33%",]
+|===
+|*Operator* |*iOS* |*Windows*
+|{plus} (Add) |Yes a|
+Yes
+
+
+
+Field types
+
+* Number {plus} Number
+* Date {plus} Number
+* Date/Time{plus} Number
+* Time {plus} Number
+* String {plus} String
+
+|- (Subtract) |Yes a|
+Yes
+
+
+Field types since CT Mobile Windows 1.1
+
+* NUMBER - NUMBER
+* DATE - NUMBER
+* DATETIME - NUMBER
+* DATETIME - DATETIME
+
+
+
+Field types since CT Mobile Windows 1.2
+
+* TIME - NUMBER
+* DATE - DATE
+
+|* (Multiply) |Yes a|
+Yes
+
+
+
+Field types
+
+* Number* Number
+
+|/ (Divide) |Yes a|
+Yes
+
+
+
+Field types
+
+* Number / Number
+
+|^ (Exponentiation) | |Yes
+|() (Open Parenthesis and Close Parenthesis) |Yes |Yes
+|===
+
+
+
+Back to
+link:ios/offline-supported-operators-and-functions-in-field-with-the-formula-type#ListOfOperators[the
+list of operators and functions].
+
+[[h2__1409994860]]
+=== Logical Operators
+
+[cols=",,",]
+|===
+|*Operator* |*iOS* |*Windows*
+|= and == (Equal) |Yes |Yes
+|<> and != (Not Equal) |Yes |Yes
+|< (Less Than) |Yes |Yes
+|> (Greater Than) |Yes |Yes
+|<= (Less Than or Equal) |Yes |Yes
+|>= (Greater Than or Equal) |Yes |Yes
+|&& (AND) |Yes |Yes
+|{vbar}{vbar} (OR) |Yes |Yes
+|===
+
+
+
+Back to
+link:ios/offline-supported-operators-and-functions-in-field-with-the-formula-type#ListOfOperators[the
+list of operators and functions].
+
+[[h2__1691374148]]
+=== Text Operators
+
+[cols=",,",]
+|===
+|*Operator* |*iOS* |*Windows*
+|& (Concatenate) |Yes |Yes
+|===
+
+
+
+Back to
+link:ios/offline-supported-operators-and-functions-in-field-with-the-formula-type#ListOfOperators[the
+list of operators and functions].
+
+[[h2_1663638067]]
+=== Date and Time Functions
+
+[width="100%",cols="34%,33%,33%",]
+|===
+|*Function* |*iOS* |*Windows*
+|ADDMONTHS | |No
+|DATE |Yes |Yes
+|DATEVALUE |Yes |Yes
+|DATETIMEVALUE |Yes |Yes
+|DAY |Yes |Yes
+|HOUR | |Yes
+|MILLISECOND | |Yes
+|MINUTE | |Yes
+|MONTH |Yes |Yes
+|NOW |Yes |Yes
+|SECOND | |Yes
+|TIMENOW | |No
+|TIMEVALUE | |Yes
+|TODAY |Yes |Yes
+|WEEKDAY a|
+Yes
+
+[NOTE] ==== Since CT Mobile 2.7. ====
+
+|Yes
+|YEAR |Yes |Yes
+|===
+
+
+
+Back to
+link:ios/offline-supported-operators-and-functions-in-field-with-the-formula-type#ListOfOperators[the
+list of operators and functions].
+
+[[h2_49471360]]
+=== Logical Functions
+
+[width="100%",cols="34%,33%,33%",]
+|===
+|*Function* |*iOS* |*Windows*
+
+|AND |Yes |Yes
+
+|BLANKVALUE |Yes |Yes
+
+|CASE |Yes |Yes
+
+|IF |Yes |Yes
+
+|ISBLANK |Yes |Yes
+
+|ISCLONE | |No
+
+|ISNEW |Synced records: returns *True*.
+Unsynced records: returns *False*.  |
+
+|ISNULL |Yes |Yes
+
+|ISNUMBER |Yes |Yes
+
+|NOT |Yes |Yes
+
+|NULLVALUE |Yes |Yes
+
+|OR |Yes |Yes
+
+|PRIORVALUE a|
+* Synced records: returns the value after the last successful
+synchronization.
+* Unsynced records: returns the current value.
+* Trigger: after tapping a field, even if the value will not be changed.
+
+|Yes
+|===
+
+
+
+Back to
+link:ios/offline-supported-operators-and-functions-in-field-with-the-formula-type#ListOfOperators[the
+list of operators and functions].
+
+[[h2_1387231209]]
+=== Math Functions
+
+[width="100%",cols="34%,33%,33%",]
+|===
+|*Function* |*iOS* |*Windows*
+|ABS |​ |Yes
+|CEILING |Yes |Yes
+|DISTANCE |Yes |Yes
+|EXP | |Yes
+|FLOOR | |Yes
+|GEOLOCATION |Yes (since CT Mobile 2.7.)  |Yes
+|LN | |Yes
+|LOG | |Yes
+|MAX | |Yes
+|MCEILING |No |No
+|MFLOOR | |No
+|MIN | |Yes
+|MOD | |Yes
+|ROUND |Yes |Yes
+|SQRT | |Yes
+|===
+
+
+
+Back to
+link:ios/offline-supported-operators-and-functions-in-field-with-the-formula-type[the
+list of operators and functions].
+
+[[h2_161189532]]
+=== Text Functions
+
+[width="100%",cols="34%,33%,33%",]
+|===
+|*Function* |*iOS* |*Windows*
+|BEGINS |Yes |Yes
+|BR |Yes |Yes
+|CASESAFEID |Yes |Yes
+|CONTAINS |Yes |Yes
+|FIND |Yes |Yes
+|GETSESSIONID | |Blank value.
+|HTMLENCODE | |Yes
+|HYPERLINK |Yes (since CT Mobile 2.7.)  |Yes
+|IMAGE |Yes |Yes
+|INCLUDES |Yes |Yes
+|ISPICKVAL |Yes |Yes
+|JSENCODE | |Yes
+|JSINHTMLENCODE | |Yes
+|LEFT |Yes |Yes
+|LEN |Yes |Yes
+|LOWER |Yes |Yes
+|LPAD | |Yes
+|MID |Yes |Yes
+|RIGHT |Yes |Yes
+|RPAD | |Yes
+|SUBSTITUTE |Yes |Yes
+|TEXT |Yes |Yes
+|TRIM | |Yes
+|UPPER |Yes |Yes
+|URLENCODE | |Yes
+|VALUE |Yes |Yes
+|===
+
+
+
+Back to
+link:ios/offline-supported-operators-and-functions-in-field-with-the-formula-type#ListOfOperators[the
+list of operators and functions].
+
+[[h2__1972051623]]
+=== Summary Functions
+
+[width="100%",cols="34%,33%,33%",]
+|===
+|*Function* |*iOS* |*Windows*
+|PARENTGROUPVAL | |No
+|PREVGROUPVAL | |No
+|===
+
+
+
+Back to
+link:ios/offline-supported-operators-and-functions-in-field-with-the-formula-type#ListOfOperators[the
+list of operators and functions].
+
+[[h2__1539976917]]
+=== Advanced Functions
+
+[width="100%",cols="34%,33%,33%",]
+|===
+|*Function* |*iOS* |*Windows*
+|CURRENCYRATE | |No
+|GETRECORDIDS | |No
+|IMAGEPROXYURL | |No
+|INCLUDE | |No
+|ISCHANGED |Unsynced records: returns *False*.  |Yes
+|JUNCTIONIDLIST | |No
+|LINKTO | |No
+|REGEX | |No
+|REQUIRESCRIPT | |No
+|URLFOR | |No
+|VLOOKUP | |No
+|===
+
+
+
+Back to
+link:ios/offline-supported-operators-and-functions-in-field-with-the-formula-type#ListOfOperators[the
+list of operators and functions].
+
+[[h2__333494742]]
+=== Global Constants
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Function* |*iOS* |*Windows* |*Comments*
+
+|$Api |No | |
+
+|$CustomMetadata |Yes | |Records of link:ios/custom-settings[custom
+metadata types].
+
+|$Label |Yes | |
+
+|$Organization |No |Yes |
+
+|Owner: Queue |Yes | |
+
+|Owner: User |Yes | |
+
+|$Profile |Yes |Yes |
+
+|$recordtype |Yes | |
+
+|$Setup |Yes |Yes |Records of link:ios/custom-settings[custom
+settings].
+
+|$System |No | |
+
+|$User |Yes |Yes |
+
+|$UserRole |Yes |Yes |
+|===
+
+
+
+Back to
+link:ios/offline-supported-operators-and-functions-in-field-with-the-formula-type#ListOfOperators[the
+list of operators and functions].
+
+ifdef::ios[]
+
+[[h2_794969542]]
+=== iOS Functions
+
+The following iOS functions are supported:
+
+* avg
+* begins
+* case
+* chord
+* concat
+* cvs
+* like
+* mean
+* modulo
+* "tau_2"
+* trunc
+* ver
+* vercos
+* vers
+
+
+
+Back to
+link:ios/offline-supported-operators-and-functions-in-field-with-the-formula-type#ListOfOperators[the
+list of operators and functions].

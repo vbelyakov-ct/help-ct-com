@@ -1,0 +1,174 @@
+= Standard Related List
+
+ifdef::kotlin[] ifdef::andr,win[][NOTE] ==== Not
+available. ====
+
+The *Standard Related List* record type is intended to store settings
+for a standard related list of a specific
+link:ios/managing-offline-objects[offline object&#44;] as well as
+permissions and available actions with records of the standard related
+list for a specific profile.
+
+[TIP] ==== To create or update the settings for the standard
+related lists, go to
+link:ios/ct-mobile-control-panel-offline-objects[CT Mobile Control
+Panel: Offline
+Objects]/link:ios/ct-mobile-control-panel-offline-objects-new[CT Mobile
+Control Panel 2.0: Offline Objects]. ====
+
+The following system variables can be used as a criterion:
+
+*[.apiobject]#$User#
+*[.apiobject]#$UserRole#
+*[.apiobject]#$Profile#
+
+For example, the[.apiobject]#{$User.Id}# criterion
+specified in parameters will automatically be set to a current user ID.
+Using such system variables will dynamically query the data relevant to
+the current user.
+
+'''''
+
+Record Type API name:[.apiobject]#StandardRelatedList#
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Component |[.apiobject]#clm__Component__c#
+|Text(255) |List of menu items available in the CT Mobile menu.
+
+|Conflict Manager
+|[.apiobject]#clm__IsConflictManagerEnabled__c#
+|Checkbox |The link:ios/conflict-manager-control[Conflict Manager] is
+used to track the changes made in a single record in the mobile
+application and on the Salesforce side.
+
+|Creating Allowed
+|[.apiobject]#clm__IsCreatingAllowed__c# |Checkbox a|
+Enable to create records:
+
+* Of the offline object, if the API Name of this object is set in
+the [.apiobject]#clm__sObjectRelated__c# field.
+* Of the related list's object, if the API Name of the related list's
+object is set in
+the [.apiobject]#clm_sObjectRelated__c# field.
+
+The permission to create a record cannot overcome the same profile
+permission.
+
+|Criteria |[.apiobject]#clm__Criteria__c# |Long Text
+Area(32768) a|
+Stores link:ios/filters-in-related-lists[a SOQL query] to filter
+related objects' records in the standard related list to display. Tap
+the switch button on the *Related* tab in the mobile application to
+display all records or only records that are eligible for criteria.
+
+
+
+The criteria line should start with the 'WHERE' keyword.
+
+|Default View |[.apiobject]#clm__View__c# |Text(255)
+|Stores the *Timeline* value to display records in
+link:ios/timeline-view[Timeline] view. In other cases, left blank.
+
+|Deleting Allowed
+|[.apiobject]#clm__IsDeletingAllowed__c# |Checkbox a|
+Enable to delete records:
+
+* Of the offline object, if the API Name of this object is set in
+the [.apiobject]#clm__sObjectRelated__c# field.
+* Of the related list's object, if the API Name of the related list's
+object is set in
+the [.apiobject]#clm_sObjectRelated__c# field.
+
+The permission to delete a record cannot overcome the same profile
+permission.
+
+The records which have not been synchronized may always be deleted, no
+matter what access the profile is granted.
+
+|External Id |[.apiobject]#clm__ExternalId__c#
+|Text(255) |Contains the ID of the corresponding record of custom
+settings.
+
+|Grouping Field |[.apiobject]#clm__GroupingField__c#
+|Text(255) |The API name of the field by which the entries will be
+grouped in the lists.
+
+|Object |[.apiobject]#clm__Object__c# |Text(255) |The
+API name of the offline object, if the API Name of the related list's
+object is set in
+the [.apiobject]#clm_sObjectRelated__c# field.
+
+|Object Record Type
+|[.apiobject]#clm__ObjectRecordType__c# |Text(255)
+|Stores an API Name of a record type of the offline object that is
+specified in the[.apiobject]#clm__Object__c# field.
+
+|Online Fetching
+|[.apiobject]#clm__IsOnlineFetchingEnabled__c#
+|Checkbox |The setting defines if
+the link:ios/online-records-fetching[Load more records] button is
+available in the application.
+
+|Order |[.apiobject]#clm__Order__c# |Number(18, 0) |The
+parameter defines the loading order of an offline object during
+synchronization.
+
+|Org ID/Profile ID |[.apiobject]#clm__OrgProfileId__c#
+|Text(255) a|
+link:ios/application-permission-settings[Organization ID/Profile ID] to
+which this setting is applicable:
+
+* if Profile ID is set, the setting is applied only to the profile;
+* if Organization ID is set, the setting is applied to all
+non-configured profiles.
+* if Profile ID and Organization ID are not set, the setting is applied
+to all non-configured profiles.
+
+|Quick Sync |[.apiobject]#clm__IsQuickSyncEnabled__c#
+|Checkbox |Enable link:ios/synchronization-launch[Quick Record
+Synchronization] for records of the offline object.
+
+|Reference Field |[.apiobject]#clm__ReferenceField__c#
+|Text(255) |Stores an API Name of the field of the related object with a
+reference to the record of the parent object specified in the
+[.apiobject]#clm__Object__c# field.
+
+|Related Object |[.apiobject]#clm__RelatedObject__c#
+|Text(255) a|
+* the API Name of the offline object, if the setting is applicable for
+this object;
+* the API Name of the related list's object, if the setting is
+applicable for the records of the related list.
+
+|Sorting Criteria |[.apiobject]#clm__SortingCriteria__c#
+|Text(255) |Stores a field to sort records in Timeline view if the
+*Timeline* value is set in the
+[.apiobject]#clm__View__c# field.
+
+|Sorting Order |[.apiobject]#clm__SortingOrder__c#
+|Text(255) a|
+Stores an ascendant (ASC) or descendant (DESC) sorting order for records
+of a standard related list.
+
+
+
+Do not specify the field if the *Timeline* value is set in
+the [.apiobject]#clm__View__c# field.
+
+|Sync Recovery |[.apiobject]#clm__SyncRecovery__c#
+|Text(255) a|
+Enable link:ios/sync-recovery[Sync Recovery] to deliver records that
+could not be synchronized to Salesforce anyway. Available values:
+
+* An empty value means that the web service is not involved.
+* *Direct access* means the pushing of the record changes directly to an
+object via the additional web service.
+* *Proxy object* means the pushing of the record change as a modifiable
+JSON file in the [.object]#Sync Log# object attachments.
+
+|===

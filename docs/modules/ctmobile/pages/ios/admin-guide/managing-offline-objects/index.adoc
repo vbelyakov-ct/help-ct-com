@@ -1,0 +1,260 @@
+= Managing Offline Objects
+
+Specify objects that should be available offline, customize user
+permissions, and add and configure standard related lists. To configure
+a custom related list, refer to link:ios/custom-related-lists[Custom
+Related Lists].
+
+Before specifying objects,
+configure link:ios/remote-site-settings[remote site settings].
+
+:toc: :toclevels: 3
+
+[[h2_1551357854]]
+=== Add Offline Objects
+
+To add an object to work with it in the CT Mobile app:
+
+[width="100%",cols="50%,50%",]
+|===
+|In CT Mobile Control Panel a|
+. Go to link:ios/ct-mobile-control-panel-offline-objects[CT Mobile
+Control Panel: Offline Objects].
+. {blank}
+. Drag and drop desired objects from the *Available* list to the
+*Selected* list.
+* The *Available* list contains all objects, but only objects in the
+*Selected* list will be available offline.
+* Make sure that the current profile has at least *View* permission for
+the selected objects. You can review the profile’s permissions in *Setup
+→ Users → Profiles*.
+* By default, the *Available* list contains only the objects with the
+page layouts. Enable the *Advanced List* option to also display objects
+without page layouts.
+* Enter the label or API name of the desired object in the *Search* box
+to find it in the *Available* list.
+* To display objects in the desired order in the CT Mobile app menu,
+re-order them in the *Selected* list.
+. Click *Save*.
+image:62556079.png[]
+
+|In CT Mobile Control Panel 2.0 a|
+. Go to link:ios/ct-mobile-control-panel-offline-objects-new[CT Mobile
+Control Panel 2.0: Offline Objects].
+. Select the required profile in the *Profile* picklist. To apply
+settings to all the profiles, select *General Settings*.
+. Click image:ctm-control-panel-new-move-icon.png[]
+to move desired objects from the *Available* list to the *Selected*
+list.
+* The *Available* list contains all objects, but only objects in the
+*Selected* list will be available offline.
+* Make sure that the current profile has at least *View* permission for
+the selected objects. You can review the profile’s permissions in *Setup
+→ Users → Profiles*.
+* By default, the *Available* list contains only the objects with the
+page layouts. Enable the *Show Advanced List* option to also display
+objects without page layouts.
+* Enter the label or API name of the desired object in the search box to
+find it in the *Available* list.
+. Click *Save*.
+image:ctm-control-panel-new-emanaging-offline-objects-add-offline-objects.png[]
+
+|===
+
+The setup is complete.
+
+[[h2__1747811907]]
+=== Set up Permissions to Offline Objects and Standard Related Lists
+
+[NOTE] ==== These settings cannot overcome the user's profile
+permissions. ====
+
+To set up permissions for the offline object:
+
+[width="100%",cols="50%,50%",]
+|===
+|In CT Mobile Control Panel a|
+. Click the offline object in the *Selected* list. The *Object
+Permissions* options appear on the right side of the screen.
+. In the *Object Permissions* section, use toggles to grant permission
+to create and delete records of the offline object.
+* This permission will not affect the ability to create or delete a
+record of the current object in the *Related Lists* section of another
+offline object. For example, if you restricted the creation of
+a *Contact* record in the *Object Permission* section, you may allow
+creating the *Contact* records in the *Related Lists* section of
+the [.object]#Account# object.
+* {blank}
+. In the *Related Lists* section:
+* Select the record type of the offline object from the drop-down list
+of record types available for the user profile.
+* Use toggles to grant permission to create and delete records of the
+standard related lists.
+. Click *Save*.
+For more information, refer to link:ios/standard-related-lists[Standard
+Related Lists].
+image:47745401.png[]
+
+|In CT Mobile Control Panel 2.0 a|
+. Click the offline object in the *Selected* list.
+. In the *Allowed to* section, use checkboxes to grant permission to
+*create* and *delete* records of the offline object.
+.. This permission will not affect the ability to create or delete a
+record of the current object in the *Related Lists* section of another
+offline object. For example, if you restricted the creation of
+a *Contact* record in the *Allowed to* section, you may allow creating
+the *Contact* records in the *Related Lists* section of
+the [.object]#Account# object.
+.. {blank}
+. In the *Related Lists* tab:
+.. Select the record type of the offline object from the drop-down list
+of record types available for the user profile.
+[.confluence-information-macro-information]#If a record has no custom
+record type associated with it, then the _Master_ record type will be
+used.#
+.. Use checkboxes to grant permission to *create* and *delete* records
+of the standard related lists.
+. Click *Save*.
+For more information, refer to link:ios/standard-related-lists[Standard
+Related Lists].
+image:ctm-control-panel-new-managing-offline-objects-related-lists.png[]
+
+|===
+
+The permissions are set.
+
+ifdef::ios[]
+
+You can also specify the icon for an offline object to display on
+the *Main* tab
+via https://help.salesforce.com/articleView?id=creating_custom_object_tabs.htm&type=5[the
+standard Salesforce procedure].
+
+ifdef::ios[]
+
+image:permissions-offline-objects-related-lists.png[]
+
+ifdef::win[]
+
+image:permisson_settings_win_en.png[]
+
+ifdef::kotlin[]
+
+image:Objects-and-Related-Lists-Permissions-Kotlin.png[]
+
+[[h2_879469097]]
+=== Set up SOQL Filters
+
+SOQL filters are available both for offline objects and standard related
+lists.
+
+[width="100%",cols="50%,50%",]
+|===
+|In CT Mobile Control Panel a|
+image:62556082.png[]
+
+Click the SOQL filter icon to specify the required criteria.
+
+image:62556080.png[]
+
+|In CT Mobile Control Panel 2.0 a|
+image:ctm-control-panel-new-managing-offline-objects-SOQL-filters.png[]Click
+the *Filter* tab to specify the required criteria for the offline
+object, or *Add Filter* button for the related list.
+
+image:ctm-control-panel-new-managing-offline-objects-SOQL-filters-details.png[]
+
+|===
+
+
+
+[[h3_1468985423]]
+==== Offline Objects
+
+Use SOQL filters to sort the records of selected offline objects, and
+download only those records that meet the criteria to your mobile
+device.
+
+ifdef::ios[]
+
+Add the Load more records button to allow users to load one or more
+records that do not meet the filter conditions.
+
+To set up a SOQL filter:
+
+[width="100%",cols="50%,50%",]
+|===
+|In CT Mobile Control Panel a|
+. In the *Object Permission* section, click the setup icon
+image:62556081.png[]
+next to the offline object.
+. In the *Query Editor* window, add criteria by specifying a field,
+operator, and required value. All SOQL syntax is supported.
+. Click *Add new filter criteria* to add a new line if required.
+. Enable the *Filter logic* and define the criteria logic, e.g.,
+[.apiobject]#1 and 2 or 3#.
+. Click *Save*.
+
+|In CT Mobile Control Panel 2.0 a|
+. Click the *Filter* tab of the selected offline object.
+. Click *Add Filter* button and add criteria by specifying a field,
+operator, and required value. All SOQL syntax is supported.
+. Click *Add Filter* to add a new line if required.
+. Click *Add Group* to define the AND/OR criteria logic.
+. Click *Add Sorting and Limit* to specify sorting criteria, order, and
+records display limit.
+. Click *Save*.
+
+|===
+
+The SOQL filter is configured. Here is an example with the SOQL
+subquery.
+
+[[h3__264512811]]
+==== Standard Related Lists
+
+Set up SOQL filters and use the toggle in the CT Mobile app to switch
+the display between all downloaded records of a standard related list
+and only those that meet the criteria.
+
+ifdef::win, kotlin[][NOTE] ==== Currently, SOQL filters are
+not applied to standard related lists.
+====
+
+To set up a SOQL filter:
+
+[width="100%",cols="50%,50%",]
+|===
+|In CT Mobile Control Panel a|
+. Click the setup icon
+image:62556081.png[]
+next to the desired standard related list.
+. In the *Query Editor* tab, add criteria by specifying a field,
+operator, and required value.
+Filter criteria for related lists are carried out in the CT Mobile app
+and do not support full SOQL syntax from Salesforce. Specify the simple
+criteria.
+. Click *Add new filter criteria* to add a new line if required.
+. Enable the *Filter logic* and define the criteria logic, e.g.,
+[.apiobject]#1 and 2 or 3#.
+. In the *Display Settings* tab, enable link:ios/timeline-view[the
+timeline view] if needed.
+. Click *Save*.
+
+|In CT Mobile Control Panel 2.0 a|
+. Click *Add Filter* button for the selected standard related list.
+. Add criteria by specifying a field, operator, and required value. All
+SOQL syntax is supported.
+. Click *Add Filter* to add a new line if required.
+. Click *Add Group* to define the AND/OR criteria logic.
+. Click *Add Sorting and Limit* to specify sorting criteria, order, and
+records display limit.
+. Click *Save*.
+
+|===
+
+The SOQL filter is configured. Here are some examples:
+
+
+ifdef::ios[]
+image:../Storage/project-ct-mobile-en/Related-Lists-SOQL-ios.PNG[../Storage/project-ct-mobile-en/Related-Lists-SOQL-ios]

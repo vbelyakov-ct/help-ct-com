@@ -1,0 +1,137 @@
+= Publishing CLM Presentations
+
+When all the necessary information is placed on slides and widgets, the
+CLM presentation is ready to publish. Publication of the CLM
+presentation is a confirmation for all changes to be visible to the
+users of the CT Mobile app and a command for the CT Mobile app to upload
+an updated CLM presentation.
+
+:toc: :toclevels: 3
+
+[[h2_1149854286]]
+=== Applications Tab
+
+To publish a CLM presentation:
+
+. Go to the *Applications* tab.
+. Click the required CLM presentation.
+. Click the *Publish Application* button.
+. Click the *Forced Load Date* field and select the appropriate date.
+. Click *Save*.
+
+image:publishing-clm-presentations-2020-05-02.png[]
+
+
+
+After the publication is confirmed, the CLM presentation is marked as
+*Active*, and the current version of the CLM presentation is updated.
+
+
+
+During fast or mixed synchronization, the CT Mobile app compares the
+current version of the CLM presentation with the one previously saved.
+If any discrepancies are found, only those slides and attachments will
+be loaded that have been updated after the last synchronization.
+
+* In case of the future date is set in the *Forced Load Date* field
+link:ios/clm-application[on the CLM presentation record], the CT mobile
+app asks the current user to download the CLM presentation or not.
+* In the case of the past date or an empty value being set in the
+*Forced Load Date* field, the CLM presentation will be downloaded.
+
+[[h3_1098755975]]
+==== Renew Slides
+
+ifdef::ios,win[] To view slides in the navigation feed on the
+link:ios/applications[Applications] module, on
+link:ios/mobile-layouts-applications[the mobile layout] of a record,
+link:ios/home-screen[Home Screen], or during a co-browsing session with
+the *Remote Detailing* functionality, it is necessary to take slide
+screenshots. The *Renew Slides* functionality creates or replaces the
+screenshots, for example, if some information was changed or the
+animation was added. Taking a slide screenshot with a delay helps to
+capture all animating details. Also, if you want to enable or disable
+the *link:ios/creating-application-record[Available for Download]*
+option, use the *Renew slides* function to apply this option.
+ifdef::ios[][TIP] ==== The CT Mobile app takes screenshots
+if they have not been taken. ====
+
+ifdef::andr[]
+
+To view slides in the navigation feed on the
+link:ios/applications[Applications] module, on
+link:ios/mobile-layouts-applications[the mobile layout] of a record,
+and link:ios/home-screen[Home Screen], it is necessary to take slide
+screenshots. The *Renew Slides* functionality creates or replaces the
+screenshots, for example, if some information was changed or the
+animation was added. Taking a slide screenshot with a delay helps to
+capture all animating details.
+
+Currently, the screenshots of slides that use the following HTML
+features are taken incorrectly:
+
+* csstransforms3d
+* WebGL
+* geolocation
+* indexeddb
+* video
+* audio
+
+The process of preparing slide screenshots may take up to 10–15 minutes,
+depending on the current service load.
+
+
+
+To renew slide screenshots:
+
+[NOTE] ==== If
+link:ios/ct-presenter-introduction#h2_1251281241[the required remote
+sites] are not activated, slides will not be updated and the error
+message will be shown. ====
+
+. Go to the *Applications* tab.
+. Click the required CLM presentation.
+. Click the *Renew Slides* button.
+. Select the delay: 3, 7, or 15 seconds.
+
+image:publishing-clm-presentations-2020-05-02-1.png[]
+
+
+. Click *OK*.
+
+Slides screenshots will be replaced. Wait for 2–3 minutes to publish the
+CLM presentation.
+
+[NOTE] ==== If an error occurs, check the numbering and order of
+slides and branches. ====
+
+[[h2_104022594]]
+=== Application Editor Tab
+
+To publish a CLM presentation right through the *Application Editor*:
+
+. On the *Application Editor* tab, select the required CLM presentation.
+. Click the *Publish* button.
+. Select the *Forced Load date* from available values such as
+immediately, in 3, 7, or 15 days.
+
+image:publishing-clm-presentations-2020-05-02-2.png[]
+
+
+. Click the *Publish* button.
+
+After the publication is confirmed, the CLM presentation is marked as
+*Active*, and the current version of the CLM presentation is updated.
+
+
+
+During fast or mixed synchronization, the CT Mobile app compares the
+current version of the CLM presentation with the one previously saved.
+If any discrepancies are found, only those slides and attachments will
+be loaded that have been updated after the last synchronization.
+
+* In case of the future date in the *Forced Load Date* field
+link:ios/clm-application[on the CLM presentation record], the CT mobile
+app asks the current user to download the CLM presentation or not.
+* In the case of the past date or an empty value being set in the
+*Forced Load Date* field, the CLM presentation will be downloaded.

@@ -1,0 +1,28 @@
+= ctm.storeFile
+
+The method of link:ios/js-bridge-api[JS Bridge] functionality is
+intended to save the file attachment as the
+[.object]#Attachment# object.
+
+[[h2__905713055]]
+=== Query format
+
+
+
+[.apiobject]#Name# is the name and extension that will be
+assigned to the file attachment;
+
+[.apiobject]#ParentId# is the ID of the record that stores the
+file attachment;
+
+[.apiobject]#File_url# is a local path that can be obtained
+with the link:ios/ctm-getfile[ctm.getFile] method.
+
+[[h2_442663712]]
+=== Handler
+
+
+
+
+
+The result:

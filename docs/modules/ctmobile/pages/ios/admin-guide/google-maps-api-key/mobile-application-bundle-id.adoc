@@ -1,0 +1,25 @@
+= Mobile Application Bundle ID
+
+The bundle ID is a unique internal application identifier. In CT Mobile,
+the following identifiers are used:
+
+ifdef::ios[]
+
+*[.apiobject]#com.customertimes.appstore.ctmobile#
+*[.apiobject]#com.customertimes.sample#
+
+Custom systems can use identifiers that differ from the ones mentioned
+above.
+
+[NOTE] ==== If Google Maps are used on iOS devices, the bundle
+ID should be specified in link:ios/google-maps-api-key[API key
+settings] when the *iOS apps* parameter is selected in *Application
+restrictions*. API key is unique for each bundle ID. ====
+ifdef::andr[]
+
+*[.apiobject]#com.customertimes.ctmobile#
+
+
+
+Custom systems can use identifiers that differ from the ones mentioned
+above.

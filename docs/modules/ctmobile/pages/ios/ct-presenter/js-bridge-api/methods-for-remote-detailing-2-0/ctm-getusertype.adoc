@@ -1,0 +1,23 @@
+= ctm.getUserType
+
+The method of link:ios/js-bridge-api[JS Bridge] functionality is
+intended to return to the user role, who launched the *Remote Detailing*
+or *Self Detailing* meeting.
+
+[[h2__905745855]]
+=== Query Format
+
+
+
+[.apiobject]#userType# is the user role in the *Remote
+Detailing* or *Self Detailing* meeting. Available responses:
+
+*[.apiobject]#presenter# if the current user is the presenter.
+*[.apiobject]#guest# if the current user is the guest.
+
+[[h2__908049738]]
+=== Handler
+
+
+
+The result:

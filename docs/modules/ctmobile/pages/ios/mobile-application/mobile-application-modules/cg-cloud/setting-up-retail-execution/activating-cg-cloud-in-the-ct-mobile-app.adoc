@@ -1,0 +1,193 @@
+= Activating CG Cloud in the CT Mobile app
+
+link:ios/activating-cg-cloud-in-salesforce[After activating CG Cloud]
+in your Salesforce org,  follow these steps to work offline with CG
+Cloud features and objects in the CT Mobile app.
+
+:toc: :toclevels: 3
+
+[[h2__1079380618]]
+=== Activating CG Cloud in the CT Mobile app
+
+To activate CG Cloud features in the CT Mobile app:
+
+. Go to link:ios/ct-mobile-control-panel-app-menu[CT Mobile Control
+Panel: App Menu] tab.
+. {blank}
+. Click the
+image:62562609.png[]
+button to open the *Add menu item* tool.
+. Select the *Consumer Goods* item.
+. Click *Add* to close the *Add menu item* tool.
+. Click *Save*.
+
+After performing the synchronization, the *Retail Store* records are
+available for viewing only in the *Retail Stores* menu item and on the
+*Retail Stores* tab in the *Calendar*, *Nearby Accounts*, and *Routes*
+modules.
+
+
+
+To work with records, add the[.object]#Retail Store# object to
+offline objects and assign permissions to users.
+
+[[h2_513015429]]
+=== Adding CG Cloud Objects to the Offline Objects
+
+If mobile users need the ability to create, edit, or delete records of
+CG Cloud objects, for example,[.object]#Retail Store# or
+[.object]#Visit#, it is necessary to make these objects
+available offline and assign permissions to users:
+
+[width="100%",cols="50%,50%",]
+|===
+|CT Mobile Control Panel a|
+. Go to link:ios/ct-mobile-control-panel-offline-objects[CT Mobile
+Control Panel: Offline Objects].
+. Select the required profile in the *Location* picklist. To apply
+settings to all the profiles, select *General Settings*.
+. Drag and drop[.object]#Retail Store# and
+[.object]#Visit# from the *Available* list to the *Selected*
+list.
+. link:ios/managing-offline-objects#h2__1747811907[Set up user
+permissions].
+. Click *Save*.
+
+|CT Mobile Control Panel 2.0 a|
+. Go to link:ios/ct-mobile-control-panel-offline-objects-new[CT Mobile
+Control Panel 2.0: Offline Objects].
+. Select the required profile in the *Profile* picklist. To apply
+settings to all the profiles, select *General Settings*.
+. Move[.object]#Retail Store# and[.object]#Visit# from
+the *Available* list to the *Selected* list.
+. link:ios/managing-offline-objects#h2__1747811907[Set up user
+permissions].
+. Click *Save*.
+
+|===
+
+After performing the synchronization, mobile users can create, edit, or
+delete *Retail Store* and *Visit* records depending on the user
+permissions.
+
+ifdef::win[]
+
+[[h2__1912229978]]
+=== Creating CTM Settings Records
+
+This setting is responsible for displaying related *CG Cloud* records in
+the same way as the regular custom related lists. So, on the *Detailing*
+tab, there can be sections with the related CG Cloud records and
+sections with the custom related list records
+link:ios/custom-related-lists[if configured].
+
+
+
+Administrators can customize the display of related *CG Cloud* records
+according to their type, such as *Inventory Check*, *Promotion Check*,
+or *Other*. To check out the example settings,
+refer to link:ios/managing-visits-to-retail-stores[Managing Visits to
+Retail Stores].
+
+
+
+To create a new *CTM Settings* record:
+
+. Go to the *CTM Settings* tab → click *New*. If the tab is
+missing, https://help.salesforce.com/s/articleView?id=sf.creating_custom_object_tabs.htm&type=5[create
+a custom tab] for the CTM Settings object.
+. In the *New CTM Setting* window, select the *CG Cloud* record type and
+click *Next*.
+. Specify parameters and click *Save*. To learn more about the available
+parameters, refer to link:ios/ctm-settings-cg-cloud-record-type[CTM
+Settings: CG Cloud Record Type].
+. Repeat steps 2—3 to create all required *CTM Settings* records.
+
+The setup is complete.
+
+[[h2_242799573]]
+=== User Permissions and Synchronization
+
+Consider that the mobile users should have the appropriate permission
+for the CG Cloud objects listed below and required for proper operation
+of the CG Cloud features. Perform full synchronization to load all
+objects from the table to the mobile device.
+
+ifdef::ios[]
+
+Take into consideration
+https://help.customertimes.com/smart/project-order-module/offline-order/a/h2_1850278800[user
+permissions to the CT Orders objects] when using CG Cloud and CT Orders
+together.
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Object API Name* |*Required Access for User* |*Conditions for
+Downloading Records* |*Comments*
+
+|[.apiobject]#ActionPlan# |Read; Create; Edit | |Only the
+*Visit Execution* type is supported.
+
+|[.apiobject]#ActionPlanItem# |Read; Create; Edit | |
+
+|[.apiobject]#ActionPlanTemplateItem# |Read | |
+
+|[.apiobject]#ActionPlanTemplateItemValue# |Read | |
+
+|[.apiobject]#ActionPlanTemplateVersion# |Read | |
+
+|[.apiobject]#AssessmentIndicatorDefinition# |Read | |
+
+|[.apiobject]#AssessmentTask# |Read; Create; Edit | |As
+assessment tasks in the *Action Plan Template* record, you can add
+records of[.object]#Assessment Task# or[.object]#Task#
+objects.
+
+|[.apiobject]#AssessmentTaskDefinition# |Read | |
+
+|[.apiobject]#AssessmentTaskIndDefinition# |Read | |
+
+|[.apiobject]#InStoreLocation# |Read | |
+
+|[.apiobject]#OperatingHours# |Read | |
+
+|[.apiobject]#ProductCategory# |Read | |
+
+|[.apiobject]#ProductCategoryProduct# |Read | |
+
+|[.apiobject]#Product2# |Read | |
+
+|[.apiobject]#Promotion# |Read | |
+
+|[.apiobject]#RetailLocationGroup# |Read | |
+
+|[.apiobject]#RetailStore# |Read | |
+
+|[.apiobject]#RetailStoreGroupAssignment# |Read | |
+
+|[.apiobject]#RetailStoreKpi# |Read; Create; Edit | |
+
+|[.apiobject]#RetailVisitKpi# |Read | |
+
+|[.apiobject]#StoreProduct# |Read | |
+
+|[.apiobject]#Survey# |Read | |
+
+|[.apiobject]#SurveyInvitation# |Read
+|[.apiobject]#WHERE SurveyId IN
+('downloaded_Survey_records')# |
+
+|[.apiobject]#SurveySubject# |Read | |
+
+|[.apiobject]#SurveyVersion# |Read |[.apiobject]# WHERE
+SurveyId IN ('downloaded_Survey_records') AND SurveyStatus =
+'Active'# |
+
+|[.apiobject]#Task# |Read; Create; Edit | |
+
+|[.apiobject]#TaskStatus# |Read | |
+
+|[.apiobject]#TimeSlot# |Read | |
+
+|[.apiobject]#Visit# |Read; Create; Edit | |
+|===

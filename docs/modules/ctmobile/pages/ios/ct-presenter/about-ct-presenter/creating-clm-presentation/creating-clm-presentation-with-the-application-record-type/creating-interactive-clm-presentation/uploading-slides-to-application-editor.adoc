@@ -1,0 +1,39 @@
+= Uploading Slides to Application Editor
+
+CLM presentation slides must be loaded to the Application Editor as the
+link:ios/clm-slide[Slide] object.
+
+To simplify work with slides, especially when there are several
+scenarios within a CLM presentation, use the following format for
+naming:[.apiobject]#slide-[n][k].html#, where
+[.apiobject]#[n]# is the number of a branch and
+[.apiobject]#[k]# is the number of a slide in the
+appropriate branch.
+
+You can count slides from either 0 or 1. Branches are always counted
+from 0. For example, the first slide of a CLM presentation always has
+[.apiobject]#[n] = 0# and may have
+[.apiobject]#[k] = 0# or
+[.apiobject]#[k] = 1: slide-00.html#,
+[.apiobject]#slide-01.html#.
+
+[NOTE] ==== When you uploaded slides in Salesforce, you should
+specify the Order and Branch for a slide. Note that Salesforce
+automatically[.apiobject]#hide[n] = 0 ==== in the
+slide order.#
+
+image:ctpresenter-slides-structure.png[]When
+you have uploaded ZIP archive(s) to the Application Editor and you need
+to change something on a slide, like adding a new image or replacing a
+video:
+
+. Download[.apiobject]#sources.zip# from the Application Editor
+that contains the content you want to replace.
+. Remove the sources.zip (step 1) from the Application Editor.
+. Replace the content in the downloaded sources.zip.
+. Upload the updated sources.zip (step 3) to the Application Editor.
+
+[WARNING] ==== Do not modify or remove from the Application
+Editor other sources.zip ==== that used in the CLM presentation.
+
+

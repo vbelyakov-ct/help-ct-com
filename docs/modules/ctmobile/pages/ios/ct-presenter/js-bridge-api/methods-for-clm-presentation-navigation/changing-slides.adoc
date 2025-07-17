@@ -1,0 +1,46 @@
+= Changing Slides
+
+Here are HTML code examples that can be used to navigate within CLM
+presentations in CT Mobile app along with
+link:ios/methods-for-clm-presentation-navigation[JS Bridge methods],
+link:ios/gestures-in-clm-presentations[gestures], and
+link:ios/clm-presentation-controls[button controls].
+
+
+
+To jump from the current slide to the slide by its branch number in the
+[.apiobject]#clm__Branch__c# field and the order number
+in the[.apiobject]#clm__Order__c# field, add the
+following code into the current slide markup:
+
+ifdef::ios,win[][TIP] ==== Available with the
+link:ios/the-remote-detailing-functionality[Remote Detailing]
+functionality. ====
+
+
+
+To switch from the current slide to a slide in another CLM presentation,
+add a label to the[.apiobject]#clm__APPID__c# of
+link:ios/clm-application[the desired CLM presentation record] and add
+the following code into the current slide markup, where
+[.apiobject]#appID# is the label to the
+[.apiobject]#clm__APPID__c# field:
+
+
+
+To open the first slide of the scenario, add a label to the
+[.apiobject]#clm__APPID__c# of the desired CLM
+presentation record, specify the scenario label in the
+[.apiobject]#clm__ScenarioName__c# of
+link:ios/clm-customscenario[the desired Scenario record], and add the
+following code into the current slide markup, where
+the [.apiobject]#appID# is the label to the
+[.apiobject]#clm__APPID__c# field and
+[.apiobject]#scenario_name# is the label from the
+[.apiobject]#clm__ScenarioName__c# field:
+
+
+
+For more information about slide navigation, refer
+to link:ios/clm-navigation-in-clm-presentations[Navigation in CLM
+Presentations].

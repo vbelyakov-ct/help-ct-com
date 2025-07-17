@@ -1,0 +1,88 @@
+= The CT Presenter app: Interactions during the Remote Detailing Meeting
+
+Working with the CLM presentation in the CT Presenter app is the same as
+link:ios/remote-detailing-1-0-ui-for-participants[in the browser
+window].
+
+:toc: :toclevels: 3
+
+[[h2__1426199188]]
+=== Grant Access
+
+When a participant joined the meeting, they should grant access to the
+device's camera or microphone. The pop-ups with the requested permission
+will be displayed when the participant taps on the camera or microphone
+icon in
+link:ios/the-ct-presenter-app-interactions-during-the-remote-detailing-meeting#h2__111154998[the
+sidebar].
+
+image:access_Microphone_en.png[]
+
+
+
+If the participant decided to change the permission, they could open the
+device *Settings* and specify the required permissions.
+
+image:grant-permission.png[]
+
+[[h2__111154998]]
+=== Using Sidebar
+
+On the right side of the screen, the sidebar is displayed.
+
+* According to link:ios/clm-settings[Remote Detailing settings], video
+streaming, audio calls, and chat will be available for participants.
+* On the participant icon, there is info about the enabled participant’s
+camera and microphone.
+* The sidebar can be hidden.
+
+The sidebar has two tabs if video streaming, audio calls, and chat are
+enabled:
+
+image:Interact_Actions_en.png[]
+
+
+
+The *Chat* section if video streaming, audio calls, and chat are
+enabled.
+
+{empty}[.confluence-information-macro-information]# When somebody sends
+a message, the pop-up with the text will be displayed. Click the *Chat*
+tab to view the message. #
+image:Interact_Actions_2_en.png[]
+
+
+
+The settings of the sidebar:
+
+* Select the sound device (a phone or a speaker).
+* Enable low bandwidth mode in the case of a slow connection.
+
+image:Interact_Actions_3_en.png[]
+
+Tap *More options* to open other settings:
+
+* Toggle the camera if available.
+* ​Enter the tile view to display several participants' videos.
+* Start showing subtitles if available.
+
+image:Interact_Actions_4_en.png[]
+
+[[h2__203213019]]
+=== Presentation Remote Control
+
+Participants could zoom in and zoom out a slide with the two-finger
+pinch gesture.
+
+image:zoom_gestures_en.png[]
+
+link:ios/remote-detailing-1-0-ui-for-presenter[The presenter could
+grant permission] to participants:
+
+* Like and dislike slides.
+* View the presenter pointer.
+* Remote control of the presentation. The participant can interact with
+the presentation, for example, enter data, toggle switchers, or answer
+questions.
+
+image:Interact_Presentation_en.png[]

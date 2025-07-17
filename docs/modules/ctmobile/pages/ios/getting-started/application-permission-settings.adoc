@@ -1,0 +1,183 @@
+= Application Permission Settings
+
+CT Mobile users should be divided by their roles, for example, admins,
+supervisors, and field forces. For this purpose, define profiles for
+various user types and assign permission sets or use permission set
+groups to extend user access. Also, manage sharing rules to define
+access exceptions.
+
+:toc: :toclevels: 3
+
+[[h2__104944228]]
+=== Profiles
+
+[WARNING] ==== We kindly ask you to set up a separate profile
+for a user who configures the system. The user should have the _Modify
+All Data_ and _Modify Metadata Through Metadata API Functions_
+permissions and access to all fields and objects. ====
+
+To use link:ios/home-screen#h3__1361691321[the mobile logo], a mobile
+user should have access to the *Documents* folder. Please check the
+following:
+
+* At least permission to read the *Documents* object is assigned to the
+mobile user.
+* At least permission to read and edit the *Documents* object is
+assigned to the administrator.
+* The _CT CLM_ folder
+is https://help.salesforce.com/s/articleView?id=sf.creating_and_editing_folders.htm&type=5[accessible
+by all users].
+
+https://help.salesforce.com/articleView?id=sf.admin_userprofiles.htm&type=5[A
+profile] is an array of settings and permissions that define what a user
+can do in the CT Mobile app.
+
+* A profile controls object permissions, field permissions, user
+permissions, tab settings, app settings, Apex class access, Visualforce
+page access, page layouts, record types, login hours, and login IP
+ranges.
+* A profile can be assigned to many users, but a user can be assigned to
+a single profile at a time.
+* A user's profile should be specified on some
+link:ios/ct-mobile-control-panel[CT Mobile Control Panel] tabs to
+define the required user's permissions.
+
+
+
+There are two types of profiles:
+
+* *Standard profiles* are provided by default. These profiles cannot be
+deleted.
+* *Custom profiles* are user-defined profiles. These profiles can be
+deleted if no users are assigned to them.
+
+[[h3__1485360783]]
+==== Set Up a New Profile
+
+Define profiles by the user’s function. You can create and assign a new
+profile to a user or change the profile for another one. Changing the
+user's profile may cause access issues to records in the CT Mobile app
+and errors during the synchronization.
+
+
+
+ifdef::ios[]
+
+For example, access to an object has been withdrawn from the mobile
+user's profile after the last full synchronization. During the next fast
+synchronization, the[.apiobject]#INVALID_TYPE# error may
+occur because some records are no more available. We recommend enabling
+link:ios/sync-recovery[Sync Recovery] to process errors or
+link:ios/ct-mobile-replication[CT Mobile Replication] to hide these
+unavailable records and download the correct ones.
+
+ifdef::andr,win[]
+
+For example, access to an object has been withdrawn from the mobile
+user's profile after the last full synchronization. During the next fast
+synchronization, the[.apiobject]#INVALID_TYPE# error may
+occur because some records are no more available.
+
+ifdef::kotlin[]
+
+For example, access to an object has been withdrawn from the mobile
+user's profile after the last full synchronization. During the next fast
+synchronization, the[.apiobject]#INVALID_TYPE# error may
+occur because some records are no more available. We recommend enabling
+link:ios/ct-mobile-replication[CT Mobile Replication] to hide these
+unavailable records and download the correct ones.
+
+
+
+To create and set up a new profile:
+
+. Go to *Setup → Users → Profiles*.
+
+
+image:47745357.png[]
+. Click *New Profile*.
+Also, you can click *Clone* next to the desired profile to copy all its
+settings to a new one.
+. Select the *Existing Profile* from the drop-down list.
+. Enter the new profile name and click *Save*.
+. Click *Edit* and set up permissions.
+. Click *Save*.
+
+The profile is ready to use.
+https://help.salesforce.com/articleView?id=sf.users_profiles_assigned_users.htm&type=5[Assign
+desired users] to a profile.
+
+[[h2_939760070]]
+=== Permission Sets and Permission Set Groups
+
+A user can be assigned to a single profile at a time, but can also have
+multiple permission sets.
+https://help.salesforce.com/articleView?id=perm_sets_overview.htm&type=5[A
+permission set] is a collection of settings and permissions that give
+users access to various tools and functions.
+
+* A profile gives minimum permissions and settings access for a user or
+specific user groups.
+* A permission set extends a user's permissions and grants more access
+without changing a user's profile.
+* https://help.salesforce.com/articleView?id=sf.perm_set_groups.htm&type=5[A
+permission set group] helps to assign several permission sets together
+based on user job functions. Users with assigned the permission set
+group receive the combined permissions of all the permission sets in the
+group.
+
+[[h3_2115044027]]
+==== Required Permission Sets
+
+[WARNING] ==== We kindly ask you to assign the preconfigured
+permission sets to all users in your system according to their roles.
+====
+
+For your convenience, we create two permission sets that include
+configured access to all required objects and fields depending on the
+user type.
+
+* _CT Mobile Administrator_ should be assigned to admins. It contains
+all required permissions and access to all required Apex classes for the
+correct operation of the CT Mobile package and CT Mobile app.
+* _CT Mobile User_ should be assigned to users who will work with the CT
+Mobile app as field forces, supervisors, etc. according to your business
+purposes. If a user needs to work with presentations, _CT Mobile
+Presenter_ permission set also should be assigned.
+* _CT Mobile List View_ should be assigned to those who need to view and
+edit offline list views (access to[.object]#CTM User Settings#
+object).
+* _CT Mobile Presenter_ should be assigned to those who need to work
+with CLM presentations.
+
+[[h2__1133416231]]
+=== Sharing Rules
+
+https://help.salesforce.com/articleView?id=sf.managing_the_sharing_model.htm&type=5[Sharing
+rules] are used to control user access at the record level. Currently,
+the CT Mobile app cannot correctly handle records with the *Public
+Read-Only* access.
+
+
+
+For example, the *Public Read-Only* access is specified for the
+[.object]#Account# object, and the mobile user's profile has
+permission to edit and delete records of the[.object]#Account#
+object. In the CT Mobile app, the mobile user can edit and delete all
+downloaded _Account_ records, but errors will occur during the
+synchronization if the mobile user has deleted or edited records that
+they do not own.
+
+[[h2_631577805]]
+=== Restriction Rules
+
+https://help.salesforce.com/s/articleView?id=sf.security_restriction_rule.htm&type=5[Restriction
+rules] are used to allow certain users to access only specified records.
+They prevent users from accessing records that contain sensitive data or
+information that isn’t essential to their work.
+
+
+
+After setting restriction rules, the user does not see certain records
+in Salesforce, and the same records will not be able to the user in the
+CT Mobile after synchronization.

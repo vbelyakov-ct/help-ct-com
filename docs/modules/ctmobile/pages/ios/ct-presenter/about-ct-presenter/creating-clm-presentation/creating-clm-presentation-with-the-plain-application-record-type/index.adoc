@@ -1,0 +1,42 @@
+= Creating CLM Presentation with the Plain Application record type
+
+* CLM presentations with the *Plain Application* record type can be
+created without HTML programming. Import a PowerPoint file or create a
+CLM presentation using templates, slides with images, texts, videos,
+etc.
+* Markups for all slides will be stored in the first slide record. We
+recommend creating no more than 25 slides.
+* Before the CLM presentation creation,
+read link:ios/requirements-and-media-file-formats[Requirements and
+Media File Formats] and link:ios/remote-site-settings[set up remote
+sites].
+
+
+
+To create CLM presentations with the *Plain Application* record type:
+
+. Go to the *Application Editor* tab.
+. Select the application in the picklist.
+. Select the desired way to create the CLM Presentation:
+
+* link:ios/creating-plain-clm-presentation[Create a CLM presentation by
+adding slide by slide&#44; and configure template placeholders and
+widgets].
+* link:ios/creating-plain-clm-presentation-using-templates[Create a CLM
+presentation based on the template]link:ios/creating-a-widget[].
+* link:ios/creating-plain-clm-presentation-from-powerpoint[Create a CLM
+presentation based on PowerPoint].
+
+[NOTE] ====
+
+The *Application Editor* creates slides of the CLM presentations by
+taking screenshots of[.apiobject]#.ppt(x) ==== slides.
+
+If a
+
+.ppt(x)# file contains any interactive elements, such as videos, gifs,
+and links, they will not be available in the converted CLM presentation.
+
+image:Plain-Editor-Types.png[]
+
+

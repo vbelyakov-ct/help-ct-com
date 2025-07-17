@@ -1,0 +1,35 @@
+= PDF Files Generator
+
+The CT Mobile app allows you to generate PDF documents during the
+display of CLM presentations.
+
+ifdef::ios[]This functionality is used when a
+user link:ios/clm-presentation-controls#h2_1347300086[sends a PDF
+file] from a CLM presentation or calls
+the link:ios/ctm-generatepdf[ctm.generatePDF] method.
+
+
+
+You can attach several templates to a single CLM presentation.
+
+* templates should be added as an
+link:ios/attachments-and-files[attachment] to the CLM presentation.
+** The template *filename* should have the format as
+[.apiobject]#template.html#,
+[.apiobject]#template1.html#,
+[.apiobject]#template0012.html#
+** The template *name* should be specified in the *Description* field of
+the[.object]#Attachment# object. The selected value will be
+displayed in the list of templates available for generation.
+* each template must contain markers of the following type:
+[.apiobject]#{!Contact.FirstName}#,
+[.apiobject]#{!Account.Name}#,
+[.apiobject]#{!CustomObject__c.SomeField__c}#.
+** At the document generation, markers will be replaced by the values of
+the indicated fields of available offline objects.
+** If a field is empty or the object of this field is not available
+offline, the marker will be replaced by a blank space.
+
+[NOTE] ==== The values are substituted from the local database
+records, as well as the values collected during the display of a CLM
+presentation. ====

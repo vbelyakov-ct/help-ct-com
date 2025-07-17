@@ -1,0 +1,26 @@
+= ctm.delete
+
+The method of the link:ios/js-bridge-api[JS Bridge] functionality is
+intended to bulk delete fields of records of offline objects:
+
+* link:ios/application-permission-settings[the user profile] should
+have permission to delete records of the required object.
+* link:ios/managing-offline-objects#h2_1534686659[permission to delete]
+the required offline object is allowed.
+
+[[h2__905713055]]
+=== Query Format
+
+
+
+[.apiobject]#SObject# is the JS object that indicates the API
+name of the offline object and the ID of the record to delete.
+
+[[h2_442663712]]
+=== Handler
+
+
+
+
+
+The result:

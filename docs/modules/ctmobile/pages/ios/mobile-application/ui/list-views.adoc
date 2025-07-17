@@ -1,0 +1,203 @@
+= List Views
+
+https://help.salesforce.com/articleView?id=listviews_parent.htm&type=5[A
+list view] allows you to see a filtered list of records in the CT Mobile
+app.
+
+ifndef::kotlin[]
+
+:toc: :toclevels: 3
+
+[[h2__1312699748]]
+=== List Views
+
+The list views are pulled from Salesforce and available in:
+
+link:ios/managing-offline-objects[Offline objects], such as
+[.object]#Accounts#,[.object]#Contacts#,
+[.object]#Opportunities#, etc.
+
+Reference fields, for example, for[.object]#Accounts#,
+[.object]#Contacts#,[.object]#Opportunities#, etc.
+
+The ​**Routes** module for the[.object]#Activity# objects.
+
+The *Nearby Accounts* module for[.object]#Account#,
+[.object]#Activity#, and[.object]#Contact# objects.
+
+​The *Calendar* module for[.object]#Activity# and
+[.object]#Account# objects.
+
+ifndef::kotlin[]
+
+The *Applications* module (if list views are created).
+
+
+
+Some list views in CT Mobile do not come from Salesforce:
+
+* All{Object Name}
+* Last viewed
+
+Values are displayed based on the
+https://developer.salesforce.com/docs/atlas.en-us.sfFieldRef.meta/sfFieldRef/salesforce_field_reference_RecentlyViewed.htm[Last
+Viewed Date] field retrieved from Salesforce. When a user opens a record
+in the CT Mobile app, the value in the *Last Viewed Date* field of this
+record is also changed, but this change will not be sent into
+Salesforce.
+
+ifdef::ios,win[]
+
+My{Object Name}
+
+ifndef::win[]Records available to the user according
+to https://help.salesforce.com/s/articleView?id=sf.security_about_sharing_rules.htm&type=5[the
+sharing rules] will not be displayed.
+
+This week
+
+Today
+
+ifdef::ios[]If the object has no standard *Name* field, the column
+of the field with the [.apiobject]#nameField = true# attribute
+will be displayed. In other cases, the [.apiobject]#ID# column
+will be displayed.
+
+
+
+List views are displayed above records in the left menu.
+
+ifdef::ios[]
+
+The last selected list view of one of the offline objects or modules
+will be displayed the next time a user opens the corresponding offline
+object (including reference fields) or module.
+
+You can pin the desired list view (currently available only for the
+link:ios/using-calendar#h3__632854949[Calendar] module).
+
+ifdef::win[]
+
+The last selected list view of one of the offline objects or modules
+will be displayed the next time a user opens the corresponding offline
+object (including reference fields) or module. The logic does not affect
+the list view display in the *Calendar* module.
+
+After the first synchronization, the *Accounts* tab will be displayed in
+the Calendar module. Then, the last selected list view will be displayed
+the next time a user opens the *Calendar* module.
+
+Records (regardless of case) are displayed in the list views if they
+match the filter criteria, for example,[.apiobject]#Record# and
+[.apiobject]#RECORD#. Next to the list view name the counter of
+records is displayed. ifndef::ios[][NOTE] ==== The counter
+of records next to the list view name is only displayed if there are
+fewer than 500 records per an object downloaded on the device.
+Otherwise, the counter is not shown. ====
+
+ifdef::ios[]
+image:List-View-Menu.png[]
+
+[[h2_1248088428]]
+=== Detailed List Views
+
+Tap
+image:detailed-list-view-button.png[]
+to maximize the list view display:
+
+* create and delete records
+link:ios/managing-offline-objects#h2_1534686659[if permission is
+granted];
+
+* the created or opened record will be displayed in the standard view
+with the left record list;
+* sort records by columns. Records will be sorted in the alphabetic
+order regardless of the case;
+* search records;
+* the last selected list view will be saved and displayed the next time
+a user opens the corresponding offline object;
+* export columns to a CSV file if link:ios/actions#h2_1173923582[the
+setting is enabled].
+
+image:detailed-list-view.png[]
+
+
+
+For the list views not sourced from Salesforce, only the *Name* column
+is displayed.
+
+If the object has no standard *Name* field, the column of the field with
+the [.apiobject]#nameField = true# attribute will be displayed.
+In other cases, the [.apiobject]#ID# column will be displayed.
+
+image:Hardcoded-List-View.png[]
+
+[[h2__380480215]]
+=== Mobile List Views
+
+The user can create list views in the CT Mobile app.
+
+* The conditions for the mobile list view will be written in the
+link:ios/ctm-user-settings[CTM User Settings] record after the sync
+process.
+* To create the mobile list view, the user should have permission to
+create the *CTM User Settings* records and edit its fields.
+* To edit the mobile list view in the CT Mobile app, the user should
+have permission to edit the[.object]#CTM User Settings# object
+and its fields.
+
+
+
+To create a mobile list view:
+
+. Tap the required menu item to open it.
+. Tap the list view name in the left records list.
+. Tap the *Plus* button in the pop-up with the available list views.
+* Under the *Filter Name* section, specify the list view name.
+* Next, specify the criteria.
+* Customize the *Records Preview* section by adding the required fields
+to display the matched records.
+[NOTE] ==== You can set list of fields displayed in criteria
+setting and *Records preview* section by specifying them in the *Fields*
+field of the link:ios/ctm-settings-menu[CTM Settings → Menu] object.
+====
+. Tap *Save*.
+
+The mobile list view is created. According to permissions, the mobile
+user can or not edit the mobile list view.
+
+Your browser does not support the HTML5 video element
+
+ifdef::win[]
+
+image:List-View-Menu-Windows.png[]
+
+[[h2__1243490689]]
+=== Detailed List View
+
+Tap
+image:detailed-list-view-button-windows.png[]
+to maximize the list view display:
+
+* create and delete records
+link:ios/managing-offline-objects#h2_1534686659[if permission is
+granted];
+
+* the created or opened record will be displayed in the standard view
+with the left record list;
+* sort records by tapping the column name.
+** Records will be sorted in the alphabetic order regardless of the
+case;
+** Records will be sorted within groups if specified;
+* search records by their title and subtitle from the compact layout and
+by fields from the search layout;
+* the last selected list view will be saved and displayed the next time
+a user opens the corresponding offline object.
+
+image:Detailed_List_View_win_en.png[]
+
+
+
+ifdef::kotlin[]
+
+image:List-Views-Kotlin.png[]

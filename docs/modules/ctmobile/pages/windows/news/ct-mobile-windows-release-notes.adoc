@@ -1,0 +1,342 @@
+= CT Mobile Windows Release Notes
+
+Here you could find a feature, the link to the corresponding article,
+and the version of CT Mobile since which the feature is available.
+
+:toc: :toclevels: 2
+
+[[h2__487586830]]
+=== CT Mobile 1.2
+
+CT Mobile 1.2 requires Windows 10 version 1903.
+
+[[h3_863123394]]
+==== New Features and Improvements
+
+[[h4__572108650]]
+===== Authentication and Synchronization
+
+* The user could link:ios/application-settings#h3_1819839796[change the
+current password or update the password] in case it was changed on the
+Salesforce side.
+* link:ios/send-application-data-dump[The automatically sending sync
+logs] according to the specified debug level.
+* Use link:ios/fast-synchronization[the mixed synchronization] instead
+of the full for downloading up-to-date metadata and reducing
+synchronization time.
+* The fast and mixed synchronizations are not interrupted in case of
+errors. The unsynchronized records containing errors can be later
+corrected and synchronized by any mode.
+* If the synchronization was interrupted, for example, due to the
+internet connection failure,
+link:ios/synchronization-launch#SynchronizationModes-ResumingtheSynchronization[continue
+it from the last successful checkpoint].
+* CT Mobile Windows 1.2 integrates with App Center analytics to help the
+support team quickly spot and fix issues.
+
+
+
+[[h4__855145658]]
+===== link:using-calendar.html[Planning Calendar]
+
+* The ability to copy or move the selected activity in the day or week
+view on the calendar greed.
+
+
+
+[[h4__851812003]]
+===== CT Presenter
+
+* Use link:ios/applications#h3_1236408094[Mobile Scenario Editor] for
+creating and editing custom scenarios with slides from various CLM
+presentations for a more efficient and personalized activity.
+* Use link:ios/applications[list views] to filter records in the
+*Applications* module.
+* If the CLM presentation was started not from the *Activity* record,
+then during finishing the presentation it is possible
+link:ios/clm-presentation-controls#h2_1659281393[to link the
+presentation statistics] to the *Activity* record.
+* When switching between branches, use
+link:ios/clm-presentation-controls[the navigation bar] to return to the
+initial slide.
+
+
+
+[[h4__513251252]]
+===== The Chatter module
+
+* Use link:ios/chatter[the Chatter menu item] with *Groups* and
+*People* feeds.
+* The ability to add the *Chatter* tab
+link:ios/mobile-layouts-chatter-feed[on the mobile layout] to view the
+record feed.
+* The ability to update a feed by tapping the refresh button.
+* Create, edit, and delete posts and comments:
+** Attach a file, link, or photo;
+** Format text and number lists.
+* Like posts and comments.
+
+
+
+Go back to
+link:ios/ct-mobile-windows-release-notes#ListOfWinReleases[the list of
+CT Mobile releases].
+
+[[h2__487586831]]
+=== CT Mobile 1.1
+
+[[h3_863123394]]
+==== New Features and Improvements
+
+[[h4_1414246047]]
+===== Core
+
+* The ability to attach photos to link:ios/actions[the Account&#44;
+Contact&#44; and Activity records].
+* Now, when filling out link:ios/reference-fields#h2__1554731138[the
+reference field], it is possible not only to choose the existing record
+but also to create a new one.
+* Customizable link:ios/search[set of search fields].
+* https://help.salesforce.com/articleView?id=fields_lookup_filters.htm&type=5[Lookup
+filters] supported for the reference fields.
+* Ability to filter records in link:ios/custom-related-lists[the custom
+related list]. The user can switch between displaying all related
+records or only those that match the filter criteria.
+* When filling out the mini layout of the activity, it is validated that
+the start date is no later than the activity end date.
+
+
+
+[[h4__402257090]]
+===== Authentication, Synchronization, and Logs
+
+* For data protection, set link:ios/application-pin-code[an
+app-specific PIN code] to unblock the mobile application after a period
+of inactivity.
+* By using a metadata archive, the synchronization process is now faster
+and does not require administrator credentials
+* If the record is not downloaded to the mobile device, the cloud icon
+is displayed next to the reference field with the record ID.
+link:ios/reference-fields#h2__1514470758[Tap the cloud icon] to
+download the record. Tap the arrow to open the record screen.
+* The ability to link:ios/send-application-data-dump[send database dump
+and sync logs] to the administrator to simplify the support team
+process.
+
+
+
+[[h4__1064329440]]
+===== link:using-calendar.html[Planning Calendar]
+
+* Use the hierarchical view tab to see accounts and related contacts or
+references.
+* The ability to switch the week view to the day view by tapping the
+appropriate day header.
+
+
+
+[[h4__1510457233]]
+===== CT Presenter
+
+* Use branches to create paths in the advanced CLM presentations.
+* Switch slides within a branch using a scroll gesture or arrow keys on
+the laptop.
+* link:ios/clm-slide[Restrict a scroll gesture and use of arrow keys]
+on slides such as a menu slide or a questionnaire slide. Use
+link:ios/methods-for-clm-presentation-navigation[the href attribute or
+the CTAPPgoToSlide() method on HTML5] to jump to the corresponding
+slide.
+* link:ios/crm-data-display[Display of CRM data] within CLM
+presentation associated with the activity record without the need for JS
+Bridge.
+* In the slide markup, specify the Feedback class with the API names of
+the object and its fields link:ios/ctm-update#h2__471282633[to fill out
+these fields with values from the CLM presentation] without invoking JS
+Bridge.
+* JS Bridge improvements:
+** link:ios/ctm-getfile[ctm.getFile]: obtain a local path to the file
+attachment of the[.object]#Attachment# or
+[.object]#Content Version# objects by using their ID.
+** link:ios/ctm-storefile[ctm.storeFile]: Tap/left-click the *Delete*
+button to remove the activity. Confirm the action on the confirmation
+box.
+
+
+
+[[h4_996012044]]
+===== Nearby Accounts
+
+* Select a tab with the[.object]#Account#,
+[.object]#Contact#, or[.object]#Activity# object, to
+view the location of their records on the map in
+link:ios/nearby-accounts[the Nearby Accounts module].
+
+
+
+[[h4_512944023]]
+===== Links
+
+* link:ios/links-list[The Links module] is supported. The in-app
+browser allows quick access to favorite websites.
+
+
+
+Go back to
+link:ios/ct-mobile-windows-release-notes#ListOfWinReleases[the list of
+CT Mobile releases].
+
+[[h2__487586832]]
+=== CT Mobile 1.0
+
+To install CT Mobile on a Windows device, please refer to the
+link:ios/installing-the-ct-mobile-app[Installing CT Mobile Windows from
+the Microsoft Store] article.
+
+[[h3__438406446]]
+==== New Features and Improvements
+
+[[h4_1816113469]]
+===== Authentication and Synchronization
+
+* The multi-user mode.
+* The fast and full link:ios/synchronization[synchronization modes].
+
+
+
+[[h4__559203458]]
+===== link:metadata-archive.html[Salesforce Metadata]
+
+* Work with custom and standard objects and their records, e.g.,
+[.object]#Account#,[.object]#Contact#,
+[.object]#Contract#, and[.object]#Activities#.
+* Support page layouts and basic field attributes such as label, type
+length, help text, default field values, etc.
+* Support roll-up summary fields, dependent picklists, offline formulas,
+and offline validation rules.
+
+
+
+[[h4__1047667523]]
+===== Custom Related Lists
+
+* Create and manage link:ios/custom-related-lists[custom related
+lists].
+
+
+
+[[h4_1605987230]]
+===== Color Settings
+
+* The ability to link:ios/custom-color-settings[set the color theme]
+for link:ios/managing-offline-objects[records in the left menu],
+activities in the link:ios/calendar[Calendar], and
+link:ios/nearby-accounts[Nearby Accounts] modules.
+
+
+
+[[h4_532816385]]
+===== Layout Widgets
+
+* View link:ios/mobile-layouts-applications[the carousel of favorite
+applications and custom scenarios] on the record’s details screen.
+* View the location of an organization or contact
+link:ios/mobile-layouts-maps[on a map fragment] on the record’s details
+screen.
+
+
+
+[[h4_869626826]]
+===== Opportunity Management
+
+* Support specific logic for objects and their fields in the
+https://help.salesforce.com/articleView?id=opportunities.htm&type=5[Opportunity
+management] for tracking and managing potential deals.
+
+
+
+[[h4_656259478]]
+===== Search
+
+* link:ios/search[Search] the object’s records in list view results.
+
+
+
+[[h4__1868937389]]
+===== link:ct-mobile-control-panel-calendar.html[Planning Calendar]
+
+* Multiple activity objects support, viz.[.object]#Activity#,
+[.object]#Task#, and[.object]#Event#.
+* Calendar Settings.
+** Select the default view, such as a month, week, or day.
+** Specify the week format. Select the first day of the week, the first,
+and the last workday.
+** Allow or forbid users to hide weekends on the calendar grid.
+** Customize a visible range of working hours on the calendar grid.
+** Specify the default duration of activities.
+* Create, move, and delete activities using taps, clicks, and
+drag-and-drop functionality.
+* All-day slot to display multi-day activities and activities with a
+duration of more than a range of visible hours.
+* Drag-and-drop several *Contact* or *Reference* records on the
+*Calendar* grid to create multiple activities.
+* View additional information on the activity in the pop-up.
+* Use mass actions to move, copy, or delete several activities of a day
+or a week.
+* Tap the *Today* button to quickly jump to the current date.
+
+
+
+[[h4_1082669359]]
+===== link:clm-presentation-controls.html[CT Presenter]
+
+* Convert formats .ppt, .pptx, PDF into presentations and use
+interactive HTML5 presentations.
+* View the usage statistics by each slide, such as the viewing time,
+likes, dislikes, etc.
+* Support custom scenarios – specific sets of slides. Add scenarios to
+favorites.
+* Support basic JS Bridge methods.
+
+
+
+[[h4__735612696]]
+===== Routes
+
+* Build the best routes among the activities in the
+link:ios/routes[Routes] module.
+
+
+
+[[h4_295983841]]
+===== Nearby Accounts
+
+* Create activities to the nearest accounts on the map based on the
+current or planned location in the link:ios/nearby-accounts[Nearby
+Accounts] module.
+
+
+
+[[h4_722835965]]
+===== Libraries
+
+* View files and documents uploaded to Salesforce Content in the
+link:ios/libraries[Libraries] module.
+
+
+
+[[h4_1969395071]]
+===== Dashboards
+
+* View online dashboards available for the current user in the
+link:ios/dashboards[Dashboards] module.
+
+
+
+For more information about the CT Mobile functionality, please refer to
+link:ios/ct-mobile-os-comparison[CT Mobile OS Comparison].
+
+
+
+Go back to
+link:ios/ct-mobile-windows-release-notes#ListOfWinReleases[the list of
+CT Mobile releases].

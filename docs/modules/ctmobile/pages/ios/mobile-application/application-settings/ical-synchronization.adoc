@@ -1,0 +1,116 @@
+= iCal Synchronization
+
+iCal synchronization is intended to synchronize activities between your
+device and link:ios/calendar[CT Mobile] calendars.
+
+[NOTE] ==== iCal synchronization settings are saved until the
+current user link:ios/log-out[logs out]. link:ios/synchronization[The
+sync process], the CT Mobile update and running in the background mode
+do not affect iCal settings. ====
+
+You can set up multiple calendars on iPad or iPhone The following
+calendars will be synchronized with CT Mobile: iOS calendars, Google
+calendars, and Microsoft Outlook (not including Microsoft Exchange
+integration).
+
+
+
+To set up and view multiple calendars, go to Apple Support:
+
+* https://support.apple.com/guide/ipad/use-multiple-calendars-ipad1b02bf5b/ipados[Set
+up multiple calendars on the iPad]
+* https://support.apple.com/guide/iphone/use-multiple-calendars-iph3d1110d4/ios[Set
+up multiple calendars on iPhone]
+
+
+
+To use iCal synchronization:
+
+. link:ios/ical-synchronization[Enable iCal synchronization].
+. Select one or both available options:
+* link:ios/ical-synchronization[Sync Activities from CT Mobile Calendar
+to Device Calendar].
+
+Select a device calendar to synchronize activities from the CT Mobile
+calendar.
+* link:ios/ical-synchronization[Show Device Calendars Activities in CT
+Mobile Calendar].
+
+Select device calendars to show their activities in the CT Mobile
+calendar.
+
+[[h2_1811882598]]
+=== Enable iCal synchronization
+
+To enable iCal synchronization:
+
+. On a mobile device, open the *CT Mobile* app.
+. Tap link:ios/application-settings[Settings] on link:ios/app-menu[the
+main menu].
+. In the *Additional options* section, enable *iCal sync*.
+
+Available iCal options are displayed.
+
+image:ical_settings_en.png[]
+
+
+
+[[h2__1645467578]]
+=== Sync Activities from CT Mobile Calendar to Device Calendar
+
+To synchronize activities from the CT Mobile calendar to the device
+calendar, in the *iCal calendar to save activities*, select a device
+calendar, e.g., *Home* or *Work*. As a result, in the selected device
+calendar, activities will be created identical to records in the CT
+Mobile calendar.
+
+[NOTE] ==== For correct work of this functionality, please move,
+edit, and delete records only in the CT Mobile calendar. ====
+
+For custom and standard activities:
+
+* the title of a record is the same as the title of
+link:ios/compact-layout[a compact layout];
+* the *Notes* section displays the subtitle of
+link:ios/compact-layout[a compact layout].
+
+[width="100%",cols="^50%,^50%",]
+|===
+|*CT Mobile Calendar* |*Device Calendar*
+
+|image:calendar.png[]
+|image:calendar-ipad.png[]
+|===
+
+[[h2_183949499]]
+=== Show Device Calendars Activities in CT Mobile Calendar
+
+To show device calendars activities in the CT Mobile calendar, in *iCal
+calendars to show*, select one or more device calendars,
+e.g., *Home* and *Work*. As a result, activities from the device
+calendar(s) are displayed in the CT Mobile calendar (new records are not
+created). The color and name of each activity are the same as in the
+device calendar.
+
+[width="100%",cols="^50%,^50%",]
+|===
+|*Device Calendar* |*CT Mobile Calendar*
+
+|image:calendar-multiple-ipad.png[]
+|image:calendar-multiple.png[]
+|===
+
+
+
+A mobile user can:
+
+* tap the activity to edit and delete a record,
+link:ios/event-notifications[specify an event notification], and change
+the device calendar in the open pop-up;
+
+image:calendar-tap-activity.png[]
+
+
+* double-tap the activity to view or edit the record details.
+
+image:calendar-double-tap-activity.png[]

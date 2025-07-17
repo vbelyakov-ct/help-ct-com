@@ -1,0 +1,12 @@
+= Custom Settings
+
+Parameters defined in the CT Mobile Control Panel are stored by the
+system in the following custom settings:
+
+ifdef::ios,win[][NOTE] ==== Due to
+https://help.salesforce.com/articleView?id=cs_limits.htm&type=5[the
+limitations of custom settings], a new custom link:ios/ctm-settings[CTM
+Settings] object will be used to store settings defined in the
+link:ios/ct-mobile-control-panel[CT Mobile Control Panel]. Until
+transferring for new logic is complete, settings will be stored both in
+custom settings and in the[.object]#CTM Settings ==== object. #

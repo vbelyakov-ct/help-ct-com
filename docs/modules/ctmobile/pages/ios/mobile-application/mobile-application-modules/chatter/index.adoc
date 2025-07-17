@@ -1,0 +1,201 @@
+= Chatter
+
+ifdef::win,andr[] The *Chatter* module displays users' messages.
+Users can create posts and comments and add attachments. You can add
+Chatter to the link:ios/mobile-layouts-chatter-feed[mobile layout].
+ifdef::ios[] The *Chatter* module displays users' messages. Users
+can create posts and comments, add attachments, and receive
+link:ios/chatter-push-notifications[push notifications]. You can add
+Chatter to the link:ios/mobile-layouts-chatter-feed[mobile layout].
+
+The red dot on the *Chatter* item in the left menu means that new
+application records have been downloaded since the last synchronization:
+
+image:chatter-menu-new-posts.png[]
+
+image:chatter.png[]
+ifdef::win[]
+image:chatter_win_en.png[]
+ifdef::andr[]
+image:62562625.png[]
+
+[[h2_1295891821]]
+=== Adding Chatter to the Menu
+
+To add the *Chatter* module to the link:ios/app-menu[app menu]:
+
+[width="100%",cols="50%,50%",]
+|===
+|In CT Mobile Control Panel a|
+. Go to link:ios/ct-mobile-control-panel-app-menu[CT Mobile Control
+Panel: App Menu] tab.
+. {blank}
+. Click the
+image:62562609.png[]
+button to open the *Add menu item* tool.
+. Select the *Chatter* item.
+. Click *Add* to close the *Add menu item* tool.
+. Click *Save*.
+
+|In CT Mobile Control Panel 2.0 a|
+. Go to link:ios/ct-mobile-control-panel-app-menu-new[CT Mobile Control
+Panel 2.0: App Menu] tab.
+. Select the required profile in the *Profile* picklist. To apply
+settings to all the profiles, select *General Settings*.
+. Click *Show Module Menu*.
+. On the *All* or *Application Modules* tab, select the *Chatter* item.
+. Click *Save*.
+
+|===
+
+The setup is complete.
+
+ifndef::andr[]
+
+[[h2__299223618]]
+=== Chatter Menu
+
+ifdef::ios[]
+
+In the Chatter menu, the feeds, groups, and people sections are
+available. Tap a group, a contact, or select a feed to view the related
+posts and comments.
+
+Due to SOAP limitations, polls and @mention are not supported.
+
+ifdef::win[]
+
+In the Chatter menu, the feeds, groups, and people sections are
+available. Tap a group, a contact, or select a feed to view the related
+posts and comments. To update posts and comments, click the
+image:chatter_update.png[]
+button. The spinner will be shown during the synchronization. The
+records (text posts, link posts, and content posts), comments, and likes
+will be synchronized.
+
+[NOTE] ==== Due to SOAP limitations, polls are not supported.
+====
+
+[[h3_28836937]]
+==== Feeds
+
+The following
+https://help.salesforce.com/articleView?id=collab_feed_filters.htm&type=5[Chatter
+feeds] are available by default. Click the feed to view posts and
+comments.
+
+* *What I follow*
+
+All posts and comments of the feeds the current user is subscribed to
+all posts and comments by the current user, and all posts and comments
+from the groups the current user created or participated.
+* *To Me*
+
+All posts and comments on the current user wall, all comments for the
+current user posts.
+* *All Company*
+
+All posts and comments from all company groups even if the current user
+is not a group member.
+
+[[h3_2071547954]]
+==== Groups
+
+https://help.salesforce.com/articleView?id=collab_group_creating.htm&type=5[Private
+and public groups] the current user created or in which the current user
+participates are displayed. Tap the group to view all related posts and
+comments. Create a new Chatter group in Salesforce, perform mixed
+synchronization, and track the group posts and comments in the mobile
+app.
+
+ifdef::ios[]
+
+
+
+To update posts and comments in a group, pull down the chatter screen.
+The records (text posts, link posts, and content posts), comments, and
+likes will be synchronized.
+
+[[h3__1434067361]]
+==== People
+
+Tap the *Recently viewed* tab to view the recently opened contacts,
+their feeds, posts, and comments.
+
+Tap the *All People* tab to view all company contacts, their feeds,
+posts, and comments.
+
+[[h2__779708391]]
+=== Chatter Posts and Comments
+
+ifdef::ios[] By default, posts, and comments for the last 6 weeks.
+To update posts and comments, pull down the chatter screen. The records
+(text posts, link posts, and content posts), comments, and likes will be
+synchronized. ifdef::win[] You can create, edit, or delete posts and
+comments.
+Tap/left-click image:chatter-ru-2020-07-08-1.png[]
+next to your post or comment to edit or delete it. The confirmation
+dialog box appears when you delete the record.
+
+
+
+Tapimage:62562618.png[]
+to add a new message to the feed, group, or contact.
+
+Take a photo or select a photo from the gallery.
+
+Attach the audio message or select the audio from the device.
+
+Attach a link.
+
+ifdef::win[]
+
+Use @ to mention a user.
+
+Tap *Add comment*
+image:62562619.png[]
+under the post to comment. Tap
+image:chatter-2020-06-17.png[]
+to view comments for the related post.
+
+Take a photo or select a photo from the gallery;
+
+Attach the audio message or select the audio from the device.
+
+ifdef::win[]
+
+Use @ to mention a user.
+
+[NOTE] ==== Only one attachment can be added to a post or
+comment. ====
+
+Tap
+image:like_chatter.png[]
+to like a post or comment. Tap the record name to open its feed.
+
+ifdef::andr[]
+
+* The following
+https://help.salesforce.com/articleView?id=collab_feed_filters.htm&type=5[Chatter
+feeds] are available by default.
+** *What I follow*
+
+All posts and comments of the feeds the current user is subscribed to
+all posts and comments by the current user, and all posts and comments
+from the groups the current user created or participate.
+** *To Me*
+
+All posts and comments on the current user wall, all comments for the
+current user posts.
+** *All Company*
+
+All company group posts and comments, even if the current user is not a
+group member.
+* Create a new
+https://help.salesforce.com/articleView?id=collab_group_creating.htm&type=5[private
+or public group] in Salesforce, perform the full synchronization, and
+track the group posts and comments in the mobile app.
+* To update a feed, pull down the chatter screen. The records (text
+posts, link posts, and content posts), comments, and likes will be
+synchronized.
+* Tap *Add comment* under the post to comment.

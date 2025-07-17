@@ -1,0 +1,201 @@
+= Metadata Archive
+
+Metadata archive contains metadata components such as custom object
+definitions and page layouts, attributes, current user permissions, etc.
+
+ifndef::andr[]
+
+The mobile app downloads metadata from the metadata archive and uses the
+https://developer.salesforce.com/docs/atlas.en-us.api_meta.meta/api_meta/meta_intro.htm[Metadata
+API] and other APIs. Proper
+https://developer.salesforce.com/docs/atlas.en-us.api_meta.meta/api_meta/meta_modify_metadata_perm.htm[permission
+settings] are required.
+
+To update the metadata archive, go to the
+link:ios/ct-mobile-control-panel-tools#h3_1003786176[CT Mobile Control
+Panel:
+Tools]/link:ios/ct-mobile-control-panel-tools-new#h3_1003786176[CT
+Mobile Control Panel 2.0: Tools] tab and click the *Refresh metadata
+archive* button. ifndef::kotlin[]It is possible to set up a schedule
+to refresh metadata archive. For more information, refer
+to link:ios/metadata-checker[Metadata Checker].
+
+ifndef::ios,win,kotlin[]
+
+The mobile app downloads metadata using administrator credentials.
+
+* To work with the metadata archive, specify the Cloud token first
+in link:ios/ct-mobile-control-panel-tools#h3_2011978[CT Mobile Control
+Panel: Tools]/link:ios/ct-mobile-control-panel-tools-new#h2_2011978[CT
+Mobile Control Panel 2.0: Tools] tab.
+
+[[h2_1854953360]]
+=== Metadata Components
+
+The components listed below are downloaded in the ZIP archive.
+
+
+
+[width="100%",cols="34%,33%,33%",]
+|===
+|*Component* |*Attribute* |*Description*
+
+|CustomLabel |*
+|https://help.salesforce.com/articleView?id=cl_about.htm&type=5[Custom
+labels metadata].
+
+|CustomObject |ValidationRule
+|https://help.salesforce.com/articleView?id=fields_about_field_validation.htm&type=5[Validation
+rules] verify that the data a user enters in a record meets the
+standards you specify before the user can save the record.
+
+|CustomObject/https://developer.salesforce.com/docs/atlas.en-us.api_meta.meta/api_meta/customfield.htm[CustomField]
+|Description |The description of
+link:ios/fields-display-on-the-screen-of-the-mobile-application[optional
+fields is displayed on the screen of the CT Mobile app (iOS)].
+
+|CustomObject/CustomField |LookupFilter
+|https://help.salesforce.com/articleView?id=fields_lookup_filters.htm&type=5[Lookup
+filters] are administrator settings that restrict the valid values and
+lookup dialog results for lookup, master-detail, and hierarchical
+relationship fields.
+
+|CustomObject/CustomField |SummerizedField
+SummaryFilterItems
+SummaryForeignKey
+SummaryOperation a|
+Data on
+https://help.salesforce.com/articleView?id=fields_about_roll_up_summary_fields.htm&type=5[summarized
+fields] and their criteria.
+
+* SummarizedField represents the field on the detail row that is being
+summarized;
+* SummaryFilterItem represents the set of filter conditions for this
+field if it is a summary field;
+* SummaryForeignKey represents the master-detail field on the child that
+defines the relationship between the parent and the child;
+* SummaryOperation represents the sum operation, such as
+[.apiobject]#count#,[.apiobject]#sum#,
+[.apiobject]#min#, and [.apiobject]#max#, to be
+performed.
+
+|CustomObject/CustomField |VisibleLines |The number of lines displayed
+for fields of the *TextArea* and *Rich Text* types.
+
+|Dashboard |* |Data on
+https://help.salesforce.com/articleView?id=rd_dashboards_overview.htm&type=5[dashboards]
+that have been added. Due to Salesforce limits, CT Mobile downloads a
+maximum of 9999 of the most recently modified dashboards.
+
+|Report |* a|
+Data on
+https://developer.salesforce.com/docs/atlas.en-us.api_meta.meta/api_meta/meta_report.htm[configurable
+reports] that have been added.
+
+Due to Salesforce limits, CT Mobile downloads a maximum of 1000 of the
+last most recently modified reports.
+
+|ReportType |* |Data on
+https://developer.salesforce.com/docs/atlas.en-us.api_meta.meta/api_meta/meta_reporttype.htm[types
+of configurable reports].
+
+|https://developer.salesforce.com/docs/atlas.en-us.api_meta.meta/api_meta/meta_standardvalueset.htm[StandardValueSet]
+|* |Set of values in the standard field with the *Picklist* type.
+|===
+
+ifndef::kotlin[]
+
+[[h2_1283174333]]
+=== Criteria when Components Are Included in the Metadata Archive
+
+The following components are always included in the metadata archive.
+
+[.object]#User#
+
+[.object]#Activity#
+
+ifndef::andr[]
+
+[.object]#CTM Settings#
+
+ifdef::ios[]
+
+[.object]#CTM User Settings#
+
+
+
+The following components will be added to the metadata archive when
+objects are added to the offline objects:
+
+For any offline object:
+
+* The corresponding object, for example,[.object]#Account#,
+[.object]#Custom Meeting#, etc.
+
+For the[.object]#Task# object:
+
+*[.object]#Task#
+* Task Status (value set)
+
+For the[.object]#Opportunity# object:
+
+*[.object]#Opportunity#
+* Opportunity Stage (value set)
+*[.object]#Opportunity Line Item#
+*[.object]#Product 2#
+*[.object]#Pricebook 2#
+*[.object]#Pricebook Entry#
+
+ifndef::andr,win[]
+
+For the[.object]#Lead# object:
+
+*[.object]#Lead#
+* Lead Status (value set)
+
+For the[.object]#Order# object:
+
+*[.object]#Order#
+*[.object]#Opportunity#
+*[.object]#Order Item#
+*[.object]#Product 2#
+*[.object]#Pricebook 2#
+*[.object]#Pricebook Entry#
+
+For the[.object]#Quote# object:
+
+*[.object]#Quote#
+*[.object]#Quote Line Item#
+* OpportunityStage (value set)
+
+ifndef::andr[]
+
+For CT Orders:
+
+* all objects with the[.apiobject]#orders# prefix, for example,
+[.apiobject]#orders__Promotion__c#
+
+For CT Sign:
+
+*[.object]#Sign Document#
+*[.object]#Sign Settings#
+
+The following components will be added to the metadata archive when the
+module is added in the main menu:
+
+For the *Applications* module:
+
+*[.object]#Application#
+*[.object]#Application Stats#
+*[.object]#Slide#
+*[.object]#Custom Scenario#
+
+ifndef::andr,win[]
+
+For the *Quizzes* module:
+
+*[.object]#Quiz#
+*[.object]#Quiz Question#
+*[.object]#Quiz Completion#
+*[.object]#Quiz Answer#
+*[.object]#Quiz Partaker#

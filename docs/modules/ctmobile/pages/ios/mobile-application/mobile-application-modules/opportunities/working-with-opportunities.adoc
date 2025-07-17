@@ -1,0 +1,111 @@
+= Working with Opportunities
+
+Available options depend on the settings for the *Opportunity* module.
+In this article, we share with you the best practices and specific
+features.
+
+:toc: :toclevels: 4
+
+[[h2__1058527485]]
+=== Best Practice
+
+We recommend:
+
+* link:ios/custom-related-lists#h2__993780705[Create the custom related
+list] and customize its columns to display[.object]#Opportunity
+Products# with all required information in the *Opportunity* module.
+* link:ios/mini-layouts[Customize mini layouts] with desired fields to
+create[.object]#Opportunity Products# more conveniently.
+* Add the *Currency ISO Code* field on the *Opportunity* page layout
+when using
+link:ios/working-with-opportunities#h3__1187857038[multi-currencies].
+
+
+
+To create an *Opportunity* record, a user should have permission
+link:ios/managing-offline-objects#h2_1534686659[to create records].
+
+[[h2__1745858670]]
+=== Working with Opportunities in the CT Mobile app
+
+[[h3__1187857038]]
+==== Multi-Currency Support
+
+In the case of link:ios/manage-currencies[multi-currency support], all
+objects will have the *Currency ISO Code* field to select the required
+currency.
+
+* If a user changes the currency for[.object]#Opportunity#, all
+added[.object]#Opportunity Products# will be removed.
+* The user works only with those price books and products that have the
+same currency.
+
+[[h3__1490877833]]
+==== Forecast Category and Probability
+
+Business purposes
+link:ios/adding-opportunities-to-the-ct-mobile-app#h3__404689442[divide
+the opportunity flow into several stages] with a given *Forecast
+Category* and *Probability* for each stage.
+
+* When a user changes the *Stage* for[.object]#Opportunity#,
+the appropriate values of *Forecast Category* and *Probability* are set.
+* The user can manually fill out the *Probability* field from 0 to 100.
+
+[[h3_1947985277]]
+==== Create an Opportunity and add Opportunity Products
+
+To create an[.object]#Opportunity# and add
+[.object]#Opportunity Products#:
+
+. Tap the *Opportunities* menu item and tap the desired *Opportunity*
+record or create a new one
+link:ios/managing-offline-objects#h2_1534686659[if enabled].
+. Go to the tab with the custom related list of
+[.object]#Opportunity Products# and perform one of the
+following:
+* Tap the *Plus* button and manually add the desired products.
+[TIP] ==== A price book will be automatically filled out when a
+user adds a product. ====
+* Tap the *Plus* button and, if configured, select the desired price
+book to it using a mini layout. Then, add a product from the selected
+price book.
+. Repeat step 3 to add other products.
+
+The products are added.
+
+
+
+[[h4__868831931]]
+===== Important Notes
+
+* A user can select only products available to
+[.object]#Opportunity# and with the same currency as for it.
+* When a user selects the price book for[.object]#Opportunity#,
+all products may be added only from the selected price book.
+* To change the price book, delete all added products and then add new
+ones from the desired price book.
+* When a product has been added, the *Sales Price* field of the
+*Opportunity Product* record is automatically filled out but the mobile
+user can edit it.
+* When the *Opportunity Product* records have been synchronized, they
+cannot be edited despite the user and object permissions.
+
+[[h3_1108315328]]
+==== 
+
+[[h3__284876274]]
+==== ​Calculate Amount and Expected Revenue
+
+The *Amount* field of[.object]#Opportunity# may be edited when
+there are no related *Opportunity Products* records. Otherwise, its
+value will be the sum of the values from the *Total Price* field of the
+*Opportunity Products* records. Also, the value will be recalculated
+each time a user creates, edits, or removes the
+[.object]#Opportunity Products# records.
+
+
+
+The *Expected Revenue* field has the formula type and will be
+recalculated each time when a value is changed in the *Amount* or
+*Probability* field.

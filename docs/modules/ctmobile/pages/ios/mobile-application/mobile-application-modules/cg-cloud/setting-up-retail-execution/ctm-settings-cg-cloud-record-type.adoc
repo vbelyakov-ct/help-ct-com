@@ -1,0 +1,179 @@
+= CTM Settings: CG Cloud Record Type
+
+The *CG Cloud* record type of the[.object]#CTM Settings# object
+is intended to store the settings to display the related CG Cloud
+records on the record of the appropriate offline object in the CT Mobile
+app.
+
+
+
+The mobile user can work with the related *CG Cloud* records and fill
+out the available fields with the actual values obtained during the
+visit to the retail store. The appropriate setting is defined by a
+combination of the[.apiobject]#clm__Object__c#,
+[.apiobject]#clm__ObjectRecordType__c#, and
+[.apiobject]#clm__OrgProfileId__c# fields.
+
+* If there is only one appropriate setting, a tab with the name
+specified in the[.apiobject]#clm__Label__c# field will
+be displayed.
+* In the case of several appropriate settings, the *Detailing* tab with
+sections named according to the
+[.apiobject]#clm__Label__c# field will be displayed.
+* If there are link:ios/custom-related-lists[custom related lists], the
+*Detailing* tab will have sections with related *CG Cloud* records and
+custom related lists.
+
+'''''
+
+Record Type API name:[.apiobject]#CGCloud#
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Columns |[.apiobject]#Columns__c# |Long Text Area(32768)
+a|
+List of column headers (separated by a comma, without blank space).
+
+Available values:
+
+*[.apiobject]#$Photo# is the header for the product photo
+column.
+* The[.apiobject]#Name# of the *Assessment Indicator
+Definition* record, for example,[.apiobject]#$Out of stock#
+* The API name of the related object field, for example,
+[.apiobject]#ProductId#
+
+The field should be manually created.
+
+The number of headers must match the number of fields in
+the [.apiobject]#clm__Fields__c# field.
+
+|Creating Allowed
+|[.apiobject]#clm__IsCreatingAllowed__c# |Checkbox a|
+If enabled, the mobile user can create records of
+[.apiobject]#clm__RelatedObject__c#.
+
+The permission to create a record cannot overcome the same profile
+permission.
+
+|Criteria |[.apiobject]#clm__Criteria__c# |Long Text
+Area(32768) a|
+A SOQL query is used to display only matched records of
+[.apiobject]#clm__RelatedObject__c#.
+
+The criteria line should start with
+the [.apiobject]#WHERE# keyword.
+
+|Deleting Allowed
+|[.apiobject]#clm__IsDeletingAllowed__c# |Checkbox a|
+If enabled, the mobile user can delete records of
+[.apiobject]#clm__RelatedObject__c#.
+
+The permission to delete a record cannot overcome the same profile
+permission.
+
+|Drilldown |[.apiobject]#clm__IsDrilldownEnabled__c#
+|Checkbox |If enabled, the mobile user can drill down to record details
+when taping on it.
+
+|Fields |[.apiobject]#clm__Fields__c# |Long Text
+Area(32768) a|
+List of fields (separated by a comma, without blank space).
+
+Available values:
+
+*[.apiobject]#$Photo# is used to display a photo of the
+product.
+
+[NOTE] ==== The[.apiobject]#DisplayUrl ==== field of
+the *Salesforce Product* record must contain the URL address of the
+photo. #
+* The API name of the *Retail Visit KPI* record field to write the
+actual value of the assessment indicator into this field.
+* API name of the related object field, for example,
+[.apiobject]#ProductId#
+
+The number of fields must match the number of columns in
+the [.apiobject]#Columns__c# field.
+
+|Label |[.apiobject]#clm__Label__c# |Text(255) |The name
+of the tab or the name of the section in the *Detailing* tab if there
+are several appropriate *CTM Settings* records of the *CG Cloud* record
+type or custom related lists.
+
+|Object |[.apiobject]#clm__Object__c# |Text(255) |The
+API name of the offline object. The tab with related CG Cloud records
+will be displayed on the offline object record screen.
+
+|Object Record Type
+|[.apiobject]#clm__ObjectRecordType__c# |Text(255) |The
+record type API name for[.apiobject]#clm__Object__c#.
+
+|Order |[.apiobject]#clm__Order__c# |Number(18,0) |If
+there are several appropriate *CTM Settings* records of the *CG Cloud*
+record type, the number in this field defines the order of the section
+on the *Detailing* tab.
+
+|Org ID/Profile ID |[.apiobject]#clm__OrgProfileId__c#
+|Text(255) a|
+The profile's ID.
+
+Left blank or specify an Organization ID to apply for all non-configured
+profiles.
+
+|Read-Only Attributes
+|[.apiobject]#clm__ReadOnlyAttributes__c# |Text(255) a|
+List of[.apiobject]#true# and[.apiobject]#false#
+values (separated by a comma, without blank space) for every field
+specified in the[.apiobject]#clm__Fields__c# field.
+
+If[.apiobject]#true#, the field is read-only.
+
+|Reference Field |[.apiobject]#clm__ReferenceField__c#
+|Text(255) |The reference field from
+[.apiobject]#clm__RelatedObject__c# to
+[.apiobject]#clm__Object__c#.
+
+|Related Object
+|[.apiobject]#>clm__RelatedObject__c# |Text(255)
+|The API Name of the related object, for example,
+[.apiobject]#RetailVisitKpi#.
+
+|Related Object Record Type
+|[.apiobject]#clm__RelatedObjectRecordType__c#
+|Text(255) |The record type API name for
+[.apiobject]#clm__RelatedObject__c#.
+
+|Required Attributes
+|[.apiobject]#clm__RequiredAttributes__c# |Text(255) a|
+List of[.apiobject]#true# and[.apiobject]#false#
+values (separated by a comma, without blank space) for every field
+specified in the[.apiobject]#clm__Fields__c# field.
+
+If[.apiobject]#true#, the field should be filled out.
+
+|Sorting Criteira |[.apiobject]#clm__SortingCriteria__c#
+|Text(255) a|
+The API name of the field, which is used to sort records of
+[.apiobject]#lm__RelatedObject__c#.
+
+By default, records are sorted by [.apiobject]#ProductId# field
+in ascending order.
+
+|Task Type |[.apiobject]#TaskType__c# |Text(255) a|
+link:ios/setting-up-task-definitions-and-action-plan-templates#h2__1302650526[The
+type of the visit task]. The following tasks are available:
+
+* Inventory Check
+* Promotion Check
+* Other
+
+Tasks of different types can be presented on one tab.
+
+The field should be manually created.
+
+|===

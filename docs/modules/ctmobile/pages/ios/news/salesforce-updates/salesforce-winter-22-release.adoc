@@ -1,0 +1,25 @@
+= Salesforce Winter &#39;22 Release
+
+https://help.salesforce.com/s/articleView?id=release-notes.rn_lc_oauth_ru.htm&type=5&release=232[In
+this release], Salesforce enforces the scope of an OAuth token used to
+authenticate a Lightning app.
+
+* The scope of an OAuth token is defined in a connected app.
+* This change prevents a Lightning app from using OAuth tokens with
+unintended permissions.
+
+
+
+The OAuth scope should be set to one of the following values, depending
+on your app’s requirements.
+
+* Allow access to Lightning applications (lightning)
+* Provide access to custom applications (visualforce)
+* Provide access to your data via the Web (web)
+* Full access (full). Use this option only if none of the other options
+are sufficient.
+
+
+
+The *CT Mobile* and *CT Presenter* connected apps have full access,
+which means no actions are required to prepare for this update.

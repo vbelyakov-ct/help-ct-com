@@ -1,0 +1,225 @@
+= Sync Recovery
+
+The *Sync Recovery* functionality is intended to pass created, updated,
+or deleted records with errors from the CT Mobile app to Salesforce
+within the fast or mixed synchronization.
+
+
+
+We recommend using the Sync Recovery functionality in case of sensitive
+data with dynamic user permission settings.
+
+[NOTE] ==== Sync Recovery cannot be applied to the CT Orders
+objects. To learn more, refer
+to https://help.customertimes.com/smart/project-order-module/order-change-manager[Order
+Change Manager]. ====
+
+:toc: :toclevels: 3
+
+[[h2_2077060874]]
+=== Activation
+
+To activate the *Sync Recovery* functionality, make sure that the user
+profile has access:
+
+[width="100%",cols="50%,50%",]
+|===
+|In CT Mobile Control Panel a|
+. Go to link:ios/ct-mobile-control-panel-offline-objects[CT Mobile
+Control Panel: Offline Objects].
+. {blank}
+.  Drag and drop the required object from the *Available* list to the
+*Selected* list.
+.  Enable the *Sync Recovery* setting.
+.  Choose the *Sync Recovery* option from the drop-down list.
+.  Click *Save*.
+
+|In CT Mobile Control Panel 2.0 a|
+. Go to link:ios/ct-mobile-control-panel-offline-objects-new[CT Mobile
+Control Panel 2.0: Offline Objects].
+. Select the required profile in the *Profile* picklist. To apply
+settings to all the profiles, select *General Settings*.
+. Move the required object from the *Available* list to the *Selected*
+list.
+. Choose the *Sync Recovery* option from the drop-down list.
+. Click *Save*.
+
+|===
+
+
+
+The setup is complete.
+
+[[h2_1726980570]]
+=== Sync Recovery Options
+
+Considering the following:
+
+* The selected *Sync Recovery* option will be checked for the object for
+which the error occurred.
+* Depending on object relationships:
+** If there is _a master-detail relationship_, the same *Sync Recovery*
+option should be applied for both objects, for example,
+[.object]#Activity# and[.object]#Activity Data#. The
+system checks which *Sync Recovery* option is selected for the parent
+object.
+** If there is _a lookup relationship_, *Sync Recovery* may be enabled
+for one or both objects. For example,[.object]#Activity# and
+[.object]#Account#.
+** If objects _have no relationship_, different *Sync Recovery* options
+may be enabled for each of them.
+* If an error has been caught on the *Attachment* record, the *Sync
+Recovery* option will be checked for its parent object.
+* Please note that the maximum size of the data to send via *Sync
+Recovery* is about 4.2 MB (including attachments, files, etc.) due to
+https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_rest_intro.htm[APEX
+limits].
+
+[[h3__576874370]]
+==== Empty value
+
+This option is set by default. Any occurred errors will not be processed
+and will be listed in link:ios/errors-screen[the Errors menu item].
+
+[[h3_459631233]]
+==== Direct access
+
+This option is intended to push record changes directly to an object via
+the web service using Apex code in a system context.
+
+* The inaccessible records remain available for the user until the full
+synchronization will be performed.
+* The information about using the web service will be written in the
+*Sync Log* record.
+
+[[h3_356910769]]
+==== Proxy object
+
+This option is intended to save record changes as a JSON file attached
+to the *Sync Log* record. In Salesforce, you can apply the custom logic
+for JSON files.
+
+* If the operation during the sync process is complete, a pop-up
+displays the types and number of records hidden in the CT Mobile app due
+to a lack of permissions.
+* The information about using the web service will be written in the
+*Sync Log* record.
+
+[[h2__2109026354]]
+=== Web Service Errors
+
+If errors occur during the sending of records via web service due to a
+violation of
+https://help.salesforce.com/articleView?id=fields_about_field_validation.htm&type=5[a
+validation rule] or the incorrect response from the web service, error
+messages will be added to a *Sync Log* record, and records will be added
+to the *Errors* screen.
+
+The server returns *SyncRecovery is off* error if neither the *Direct
+access* option nor the *Proxy object* option is set for the object. For
+example, if the *Sync Recovery* functionality was turned off on the
+Salesforce side after the last successful synchronization.
+
+[[h2__1386371957]]
+=== Error Processing
+
+All types of errors trigger the *Sync Recovery* functionality.
+
+* The following errors will be processed according to the selected
+option:
+**[.apiobject]#INSUFFICIENT_ACCESS_ON_CROSS_REFERENCE_ENTITY#
+** INSUFFICIENT_ACCESS_OR_READONLY.
+
+These errors occur when the records are becoming unavailable for the
+user due to changes in the permissions adjustments.
+
+* Records with any other error will be processed according to the *Proxy
+object* option, even if the *Direct access* option is selected.
+
+
+
+Records, excluding *Attachments*, will be processed using the *Proxy
+object* option if they match both criteria:
+
+* the *Direct access* option is selected for the object of records
+* records contain errors, for example, validation errors, a blank
+required field, a link to a record that is not present on the Salesforce
+side, etc.
+
+[[h3_356943569]]
+==== Parameters of JSON File and Salesforce Response for the Proxy Object Option
+
+A JSON file is attached to the *Sync Log* record.
+
+
+
+
+
+The JSON file parameters:
+
+[width="100%",cols="50%,50%",]
+|===
+|*Key* |The name of the *Attachment* record, for example,
+[.apiobject]#RecoveryData_2019-12-06 10:53:16.log#.
+
+|[.apiobject]#data# |The description of the request.
+
+|[.apiobject]#userId# |The current user ID. It is used to find
+the appropriate *Sync Recovery* option.
+
+|[.apiobject]#action# a|
+The type of operation:
+
+* *insert*
+* *update*
+* *delete*
+
+|[.apiobject]#items# |Records of parent and child objects.
+
+|[.apiobject]#type# |The API Name or ID of records that are not
+accessible to the user.
+
+|[.apiobject]#errors# |The API Name or ID of the object of the
+record with an error.
+
+|[.apiobject]#errorMessage# |Text of an error message.
+
+|[.apiobject]#ID# a|
+The ID of the record with an error.
+
+
+
+In the case of the insert operation or if the web service didn't return
+the ID of the record with an error, the value is empty.
+
+|[.apiobject]#exceptionCode#
+|https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_calls_concepts_core_data_objects.htm#i1421571[The
+type of occurred error].
+|===
+
+
+
+The parameters of Salesforce response:
+
+[cols=",",]
+|===
+|*Key* |*Description*
+
+|[.apiobject]#keyValue# |The API Name of an object or ID of a
+parent record.
+
+|[.apiobject]#success# |The status attribute.
+
+|[.apiobject]#mobileId# |The temporal ID of the record.
+
+|[.apiobject]#Id# |The ID of the record.
+
+|[.apiobject]#errors# |Errors that occurred during the
+operation.
+
+|[.apiobject]#hideOnDevice# |The attribute stores the
+[.apiobject]#true# value if the *Sync Recovery* was applied for
+the record and the record was hidden on the device.
+|===
+
+

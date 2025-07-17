@@ -1,0 +1,72 @@
+= Barcode Scanner
+
+The barcode scanner allows a user to add a product record to a custom
+related list. The product record should have a field in which the number
+encoded in the barcode is specified.
+
+* The following types of barcodes are supported:
+https://en.wikipedia.org/wiki/International_Article_Number[EAN-13],
+https://en.wikipedia.org/wiki/EAN-8[EAN-8],
+https://en.wikipedia.org/wiki/Universal_Product_Code#UPC-E[UPC-E],
+https://en.wikipedia.org/wiki/Code_39[Code-39],
+https://en.wikipedia.org/wiki/Code_128[Code-128],
+https://en.wikipedia.org/wiki/PDF417[PDF417],
+https://en.wikipedia.org/wiki/QR_code[QR Code],
+https://en.wikipedia.org/wiki/Aztec_Code[Aztec Code],
+and https://en.wikipedia.org/wiki/Data_Matrix[Data Matrix].
+* The following types of barcodes can be supported if needed:
+https://en.wikipedia.org/wiki/Code_39#Code_39_mod_43[Code-39 mod 43],
+https://en.wikipedia.org/wiki/Code_93[Code-93],
+https://en.wikipedia.org/wiki/ITF-14[ITF-14],
+and https://en.wikipedia.org/wiki/Interleaved_2_of_5[Interleaved 2 of
+5].
+
+To display the barcode scanner button on the custom related list screen,
+the following are required:
+
+. Create a[.apiobject]#ProductCode# or
+[.apiobject]#ProductCode__c# field with the text type on a
+[.object]#Product# object. Specify in the field the number
+encoded in the barcode.
+
+[NOTE] ==== On the link:ios/ct-mobile-control-panel-general[CT
+Mobile Control Panel: General] tab, the[.object]#Product ====
+object should be selected in the *Product Object API Name* field#.
+. On the[.object]#Activity Data# object:
+* add a field with the lookup relationship type to link the
+[.object]#Activity Data# object with the
+[.object]#Product# object;
+* add a field with the lookup relationship type to link the
+[.object]#Activity Data# object with the
+[.object]#Activity# object.
+. Create link:ios/custom-related-lists[a custom related list] of the
+[.object]#Activity# object with the[.object]#Activity
+Data# object as a child object.
+* add a field with the lookup relationship type, which links the
+[.object]#Activity Data# object with the
+[.object]#Product# object, as a column of the list.
+. Add the[.object]#Activity#,[.object]#Activity Data,#
+and[.object]#Product# objects to
+link:ios/ctm-settings-offline-objects[offline objects].
+
+[NOTE] ==== The user's profile should have access to read and
+edit records of all the objects mentioned above. ====
+
+To create a record using the barcode scanner:
+
+. In the CT Mobile app open the *Activity* record screen.
+. Go to the *Detailing* tab and tap the custom related list subtab.
+. Tap the barcode scanner button to switch on the camera for scanning
+barcodes. The product information will be added as a record in the
+custom related list if the product record with that number encoded in
+the barcode is found.
+
+A new record is created.
+
+* When rescanning previously added barcodes, duplicate records are not
+created.
+* If link:ios/start-finish-functionality[the Start/Finish
+functionality] is enabled, the barcode scanner button will be available
+after the activity is starting.
+
+image:barcode-scanner.png[]

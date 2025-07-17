@@ -1,0 +1,128 @@
+= CT Mobile Control Panel: Offline Objects
+
+The *Offline Objects* tab is intended for managing offline objects and
+standard related lists.
+
+According to the selected profile, settings on this tab will be saved in
+the records of the [.object]#CTM Settings# object with
+the link:ios/ctm-settings-offline-objects[Offline
+Objects] and link:ios/ctm-settings-standard-related-list[Standard
+Related List] record type.
+ifdef::ios,win[] :toc: :toclevels: 3
+
+*Click to view the interface*link:javascript:void(0)[]
+
+.Click to hide[%collapsible] ====
+
+image:cmcp_offline_obj.png[]
+
+====
+
+[[h2_1468985423]]
+=== Offline Objects
+
+Enter the object label or API name in the *Search* box to find it in the
+*Available* list and add it to the *Selected* list if this object should
+be available offline.
+
+If an object is added to the *Selected* list, it will be available in
+the *Selected* list on the link:ios/ct-mobile-control-panel-app-menu[CT
+Mobile Control Panel: App Menu] tab.
+
+* Use the *Advanced List* option to display all objects in the
+*Available* list regardless of whether the object has a page layout.
+
+* Click the object name in the *Selected* list to set up the user's
+permissions to work with this object and standard related lists.
+
+[[h2_70757812]]
+=== Options
+
+The options described below are not available for the number of CT
+Orders objects:
+
+* https://help.customertimes.com/smart/project-order-module/ct-order-field-reference[Order]
+* https://help.customertimes.com/smart/project-order-module/delivery-field-reference[Delivery]
+* https://help.customertimes.com/smart/project-order-module/order-line-item-field-reference[Order
+Line Item]
+* https://help.customertimes.com/smart/project-order-module/delivery-line-item-field-reference[Delivery
+Line Item]
+* https://help.customertimes.com/smart/project-order-module/calculated-discount-field-reference[Calculated
+Discount ]
+
+If turned on, the synchronization will result in an error.
+
+ifdef::kotlin[]
+
+[[h3_1442227750]]
+==== Enable Conflict Manager
+
+If enabled, the link:ios/conflict-manager-control[Conflict Manager]
+will track changes made to the same record in CT Mobile and Salesforce.
+In the event of a conflict, the mobile user can choose which change to
+save.
+
+[[h3_202390671]]
+==== Quick Record Sync
+
+If enabled, a mobile user with the corresponding profile can
+link:ios/other-synchronization-modes#h2__1958232390[sync a single
+record] and its child records by applying the pull-to-refresh gesture on
+the record's layout.
+
+[[h3_37043680]]
+==== Sync Recovery
+
+If enabled, records with errors will still be sent to Salesforce.
+Available values:
+
+* *Empty value* is set by default—Sync Recovery is disabled.
+* Use *Direct access* for pushing the changes directly to an object via
+the additional web service.
+* Use *Proxy object* for pushing the changes as a JSON file attached to
+the *Sync Log* record via the additional web service. In Salesforce, you
+can apply the custom logic for JSON files.
+
+
+
+For more information, refer to link:ios/sync-recovery[Sync Recovery].
+
+[[h2__263612775]]
+=== Object Permissions
+
+Restrict the profile permissions to create or delete records of the
+desired offline object. Set up SOQL filters to download only the
+required records.
+
+
+
+For more information, refer to
+link:ios/managing-offline-objects[Managing Offline Objects].
+
+[[h2_946326628]]
+=== Related Lists
+
+Restrict the profile permissions to create or delete records of the
+standard related lists that are added to the page layout of an offline
+object and available for the selected record type. Set up SOQL filters
+for using a toggle in the CT Mobile app to display all records or only
+records that match the criteria. Enable link:ios/timeline-view[the
+timeline view] instead of the standard view of standard related lists if
+needed.
+
+
+
+For more information, refer to
+link:ios/managing-offline-objects[Managing Offline Objects]. Also, get
+familiar with the information in the
+link:ios/standard-related-lists[Standard Related Lists] article.
+
+To set up custom related lists of an offline object, go
+to link:ios/ct-mobile-control-panel-custom-details[CT Mobile Control
+Panel: Custom details].
+
+
+
+See also:
+
+* link:ios/managing-offline-objects[Managing Offline Objects]

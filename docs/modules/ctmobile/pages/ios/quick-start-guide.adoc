@@ -1,0 +1,70 @@
+= Quick Start Guide
+
+. To start working with the CT Mobile solution:
+.. link:ios/installing-ct-mobile-package[Install the CT Mobile
+Package].
+.. link:ios/installing-the-ct-mobile-app[Install the CT Mobile
+application], link:ios/logging-in[log in] and launch the first
+synchronization.
+.. Configure Offline Objects (in
+link:ios/ct-mobile-control-panel-offline-objects[CT Mobile Control
+Panel: Offline Objects] or
+link:ios/ct-mobile-control-panel-offline-objects-new[CT Mobile Control
+Panel 2.0: Offline Objects]).
+.. Configure link:ios/ct-mobile-control-panel-app-menu[App Menu] (in
+link:ios/ct-mobile-control-panel-app-menu[CT Mobile Control Panel: App
+Menu] or link:ios/ct-mobile-control-panel-app-menu-new[CT Mobile
+Control Panel 2.0: App Menu]) items and additional modules, such as:
+* link:ios/ct-mobile-control-panel-calendar[Calendar] (in CT Mobile
+Control Panel) or
+link:ios/ct-mobile-control-panel-activities-new[Activities] (in CT
+Mobile Control Panel 2.0)
+* link:ios/routes[Routes]
+* link:ios/nearby-accounts[Nearby Accounts]
+[NOTE] ==== To use Google Maps, Routes and Nearby Accounts,
+link:ios/google-maps-api-key[get the Google Maps API Key] and specify
+it in the
+https://help.customertimes.com/articles/ct-mobile-ios-en/ct-mobile-control-panel-general[CT
+Mobile Control Panel:
+General]/link:ios/ct-mobile-control-panel-general-new[CT Mobile Control
+Panel 2.0: General] section. ====
+.. (Recommended) configure link:ios/mobile-layouts[Mobile layouts] to
+improve usability of CT Mobile.
+.. (Optional) configure other settings of CT Mobile Control Panel/CT
+Mobile Control Panel 2.0:
+* link:ios/ct-mobile-control-panel-color-settings[Color Settings] (in
+CT Mobile Control Panel) or
+link:ios/ct-mobile-control-panel-colors-new[Colors] (in CT Mobile
+Control Panel 2.0)
+* Workflows (in link:ios/ct-mobile-control-panel-workflows[CT Mobile
+Control Panel: Workflows] or
+link:ios/ct-mobile-control-panel-workflows-new[CT Mobile Control Panel
+2.0: Workflows])
+* link:ios/ct-mobile-control-panel-presenter[Presenter] (in CT Mobile
+Control Panel) or
+link:ios/ct-mobile-control-panel-remote-detailing-new[Remote Detailing]
+(in CT Mobile Control Panel 2.0)
+. Then, install and configure packages that you need to work with CT
+Mobile:
+
+* https://help.customertimes.com/smart/project-order-module/working-with-ct-orders[CT
+Orders Quick Start Guide]
+* https://help.customertimes.com/smart/project-ct-vision-en/getting-started[Getting
+Started with CT Vision]
+* https://help.customertimes.com/smart/project-ct-sign-en/ct-sign-administrator-guide[CT
+Sign Administrator Guide]
+
+
+
+*Important notes*:
+
+* After making changes in CT Mobile and other packages configuration,
+link:ios/synchronization-launch#h3__1369866827[launch full
+synchronization] to apply them.
+* If you are facing issues with collecting
+the link:ios/metadata-archive[Metadata Archive], any issues
+with link:ios/ct-presenter[CT Presenter], issues with authorization to
+CT Vision, go to the link:ios/ct-mobile-control-panel-tools[CT Mobile
+Control Panel: Tools]/link:ios/ct-mobile-control-panel-tools-new[CT
+Mobile Control Panel 2.0: Tools] and click *Refresh* near the *Cloud
+Token* field.
