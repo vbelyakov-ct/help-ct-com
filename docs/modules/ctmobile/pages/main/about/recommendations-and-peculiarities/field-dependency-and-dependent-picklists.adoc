@@ -19,6 +19,7 @@ In the CT Mobile app on the layout, mini-layout, pseudo layout, and custom relat
 * When the desired value is selected in the control field, only the values specified to the selected are available in the dependent field.
 
 On the layout, mini-layout, pseudo layout, and custom related list, the default value for the dependent picklist will be taken according to the specific record type of the record if at least one record type of the object is available for the user's profile. Otherwise, the value will be set according to the properties of the field itself.
+
 // end::win[]
 // end::ios[]
 
@@ -26,9 +27,11 @@ On the layout, mini-layout, pseudo layout, and custom related list, the default 
 // tag::andr[]
 
 The dependent fields are not supported in the CT Mobile Android and Android 2.0 apps.
+
 // end::andr[]
 
 // tag::main[]
+
 [[h2__1106274213]]
 == Conditions to Display the None Value in the Picklists
 
@@ -43,10 +46,12 @@ On the layout, mini-layout, and custom related list:
 // tag::andr[]
 // tag::win[]
 The *None* value is absent.
+
 // end::win[]
 // end::andr[]
 
 // tag::win[]
 
 The field with the *Picklist (Multi-Select)* type always has the *None* value to select in case of the need to erase all selected values.
+
 // end::win[]
