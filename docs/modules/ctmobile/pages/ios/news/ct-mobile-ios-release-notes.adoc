@@ -38,7 +38,7 @@ product from cart._
 === CT Mobile 2.9​
 
 See the
-link:ios/compatible-versions-of-ct-mobile-and-other-packages[compatibility
+link:compatible-versions-of-ct-mobile-and-other-packages[compatibility
 list] of CT Mobile, CT Orders and CT Vision versions.
 
 * Minimum supported iOS version: iOS 15.
@@ -48,33 +48,33 @@ filters.
 ** Updated outlook of the calendar events with duration of 15 minutes or
 less.
 ** 3 first fields can be displayed for each record in the
-link:ios/calendar#h3_645629234[left menu], if they are set up in the
-object link:ios/compact-layout[compact layout].
+link:calendar#h3_645629234[left menu], if they are set up in the
+object link:compact-layout[compact layout].
 ** Up to 5 events can be displayed for one day in the
-link:ios/using-calendar#h3_860090196[month view].
+link:using-calendar#h3_860090196[month view].
 ** Customizable *All activities per day* hint added to the
-link:ios/home-screen#h3_1292798904[calendar widget] for the Home
+link:home-screen#h3_1292798904[calendar widget] for the Home
 Screen.
 ** User can see
 https://help.customertimes.com/articles/ct-mobile-ios-en/using-calendar/a/h3__1703324288[calendar
 agenda] while working with custom _Date/Time_ field during creating new
 _Activity_.
 * Badge on the Chatter icon in the left menu if new posts are available.
-* Records counter in a link:ios/list-views[list view] is now displayed
+* Records counter in a link:list-views[list view] is now displayed
 if there are more than 500 records.
 * Files sharing workflow has been upgraded, including
-link:ios/attaching-files-in-the-files-section#h3__1261438429[attached
-files for offline objects], link:ios/sharing-clm-presentations[CLM
+link:attaching-files-in-the-files-section#h3__1261438429[attached
+files for offline objects], link:sharing-clm-presentations[CLM
 presentations] in CT Presenter and
 https://help.customertimes.com/smart/project-ct-sign-en/sign-a-document-the-ct-mobile-app/a/h3__1085191960[signed
 documents] in CT Sign. Also, the contacts list is now limited to
 contacts that are related to the current _Account_ record.
-* link:ios/actions#h2_1173923582[Export .csv] item added to the
+* link:actions#h2_1173923582[Export .csv] item added to the
 *Actions* menu to allow exporting selected fields of an offline object
 to CSV file.
 * List of fields available while creating a new mobile list view can be
 now predefined in the *Fields* field of
-the link:ios/ctm-settings-offline-objects[Offline objects] record
+the link:ctm-settings-offline-objects[Offline objects] record
 type.
 
 [[h3__1184861485]]
@@ -160,13 +160,13 @@ Minimum supported iOS version: iOS 15.
 Please upgarde the CT Mobile package version to 3.85 to get access to
 the following features:
 
-* The link:ios/ctm-settings-offline-objects[Files Download Enabled]
+* The link:ctm-settings-offline-objects[Files Download Enabled]
 checkbox added for Offline objects. If disabled, files attached to
 offline objects will be displayed as previews and synchronization time
 will be reduced.
-* The link:ios/ctm-settings-offline-objects[Files Filter] field
+* The link:ctm-settings-offline-objects[Files Filter] field
 added for Offline objects. You can
-link:ios/attaching-files-in-the-files-section#h3_1720123861[specify the
+link:attaching-files-in-the-files-section#h3_1720123861[specify the
 latest date of the offline object creation] that should be downloaded
 during the sync.
 
@@ -177,12 +177,12 @@ version:
 list views.
 
 * Formed Documents, Signatures, and SyncLogs are now stored in the
-link:ios/attaching-files-in-the-files-section[Files] section of an
+link:attaching-files-in-the-files-section[Files] section of an
 offline object. You can add or delete files in the
-link:ios/attaching-files-in-the-files-section#h3__2018099316[Actions]
+link:attaching-files-in-the-files-section#h3__2018099316[Actions]
 menu of an offline object.
 * Adding and pinning list views for the
-link:ios/using-calendar#h3__632854949[Calendar].
+link:using-calendar#h3__632854949[Calendar].
 
 [[h3__1646834508]]
 ==== Integrations
@@ -242,7 +242,7 @@ by email.
 Charts] are available offline in the Dashboards module.
 * Support the ORDER BY and LIMIT operators in Workflow Steps.
 * Support the GEOLOCATION, HYPERLINK, and WEEKDAY operators in
-link:ios/offline-supported-operators-and-functions-in-field-with-the-formula-type[formulas].
+link:offline-supported-operators-and-functions-in-field-with-the-formula-type[formulas].
 * The height for fields with the *Picklist* type changes depending on
 the value, and becomes scrollable when exceeding five lines.
 * Support calculation for fields with the *Formula* type if they have
@@ -289,8 +289,8 @@ start date.
 [[h3__871715723]]
 ==== Attachments, Chatter, and Libraries
 
-* The ability to minimize the link:ios/libraries[Libraries] content and
-link:ios/attachments-and-files[Attachments] of a record. Move the
+* The ability to minimize the link:libraries[Libraries] content and
+link:attachments-and-files[Attachments] of a record. Move the
 floating window around the screen. Tap the floating window to resume
 full mode.
 * Now you can use a third-party mail client (like MS Outlook) for mail
@@ -327,7 +327,7 @@ photo interface for Vision Lite.
 layout.
 ** Business administrator can assign tags for photos per public group.
 * *CT Presenter for *CT Mobile 2.7**
-** link:ios/remote-detailing-2-0-ui-for-participants[Remote Detailing
+** link:remote-detailing-2-0-ui-for-participants[Remote Detailing
 2.0]: all participants of the meeting will receive notifications about
 new comments.* *
 * *CT Orders for CT Mobile 2.7*
@@ -427,7 +427,7 @@ finished.
 **** After tapping on the quantity value, it is automatically selected,
 and you can type the new value without the need of deleting the previous
 one.
-**** Now you can link:ios/application-settings#h3__611076828[set up the
+**** Now you can link:application-settings#h3__611076828[set up the
 timer before calculating prices] after making changes to the order
 cart, from 0 to 6 seconds. Successful recalculation will be indicated.
 *** Support Salesforce validation rules when saving or finalizing an
@@ -444,7 +444,7 @@ been improved:
 **** Mass adding products to cart.
 **** Opening draft order.
 **** Finalizing order.
-*** link:ios/limitations-for-the-ct-orders-module[Recommended load
+*** link:limitations-for-the-ct-orders-module[Recommended load
 values] are added to the documentation.
 *** Lookup fields are now filled in while creating a new order from an
 [.object]#Activity# object.
@@ -464,9 +464,9 @@ specified in the order cart.
 === CT Mobile 2.6
 
 * CT Mobile 2.6 uses the Salesforce API v. 52.0. We recommend reading
-link:ios/technical-requirements-for-devices-and-network[requirements
+link:technical-requirements-for-devices-and-network[requirements
 for devices] and installing
-link:ios/ct-mobile-package-release-notes[the latest CT Mobile package
+link:ct-mobile-package-release-notes[the latest CT Mobile package
 version].
 
 * CT Mobile 2.6 supports *Split View* and *Slide Over* multitasking
@@ -517,7 +517,7 @@ not be hidden until the user presses OK.
 [[h4__1603447305]]
 ===== Salesforce Metadata
 
-* link:ios/ct-mobile-control-panel-calendar#h3_808313222[The default
+* link:ct-mobile-control-panel-calendar#h3_808313222[The default
 duration] will be set for the activity created in the related lists, the
 timeline view, and the *Activity* menu item.​
 * On the *Settings* screen, the version for the custom application based
@@ -535,7 +535,7 @@ to attach required documents, images, etc. to an offline object.
 
 
 
-Go back to link:ios/ct-mobile-ios-release-notes#ListOfReleases[the list
+Go back to link:ct-mobile-ios-release-notes#ListOfReleases[the list
 of CT Mobile releases].
 
 [[h2__487586802]]
@@ -543,7 +543,7 @@ of CT Mobile releases].
 
 CT Mobile 2.5 uses the Salesforce API v. 52.0 and requires iOS 13 or
 later. We recommend installing
-link:ios/ct-mobile-package-release-notes[the latest CT Mobile package
+link:ct-mobile-package-release-notes[the latest CT Mobile package
 version].
 
 [[h3__1910914881]]
@@ -572,42 +572,42 @@ Vision], take photos of the large shelves, add tags, and work with the
 [[h3_254019950]]
 ==== Work Offline with the CG Cloud
 
-* link:ios/activating-cg-cloud-in-salesforce[Activate CG Cloud in your
+* link:activating-cg-cloud-in-salesforce[Activate CG Cloud in your
 Salesforce org] to work with retail stores
-link:ios/activating-cg-cloud-in-the-ct-mobile-app[in the CT Mobile
+link:activating-cg-cloud-in-the-ct-mobile-app[in the CT Mobile
 app].
-* link:ios/managing-visits-to-retail-stores#h2_1751285824[Find the
+* link:managing-visits-to-retail-stores#h2_1751285824[Find the
 nearby stores],
-link:ios/managing-visits-to-retail-stores#h2__1880003381[build optimal
+link:managing-visits-to-retail-stores#h2__1880003381[build optimal
 routes], and
-link:ios/managing-visits-to-retail-stores#h2_535537278[schedule your
+link:managing-visits-to-retail-stores#h2_535537278[schedule your
 visits] to the right stores at the right time.
 ** Drag and drop the activity to the retail store on the *Calendar* grid
 in a day and week calendar view. Time slots are highlighted with the red
 color when out of retail store's operating hours.
 * Select the action plan
-link:ios/managing-visits-to-retail-stores#h2__1592083570[to generate
+link:managing-visits-to-retail-stores#h2__1592083570[to generate
 tasks] for the desired activity based on it.
 * https://help.customertimes.com/smart/project-ct-layouts-en/creating-a-layout-settings-record[Customize
 screens with CT Layouts] to use a variety of data types to gather
 information on sales, effectiveness, and availability of products:
-** link:ios/setting-up-task-definitions-and-action-plan-templates#h2__1302650526[Monitor
+** link:setting-up-task-definitions-and-action-plan-templates#h2__1302650526[Monitor
 key processes] such as
-link:ios/managing-visits-to-retail-stores#h3_1867622910[inventory
+link:managing-visits-to-retail-stores#h3_1867622910[inventory
 audits],
-link:ios/managing-visits-to-retail-stores#h3__696266799[promotion
+link:managing-visits-to-retail-stores#h3__696266799[promotion
 checks], and
-link:ios/managing-visits-to-retail-stores#h3__85077301[in-store
+link:managing-visits-to-retail-stores#h3__85077301[in-store
 surveys] with predefined templates.
-** link:ios/managing-visits-to-retail-stores#h3__481270469[Using
+** link:managing-visits-to-retail-stores#h3__481270469[Using
 Einstein Detection and CT Vision], audit shelves, measure share and
 shelf, manage stock and optimize product sales.
-** link:ios/managing-visits-to-retail-stores#h3_190353401[Using CT
+** link:managing-visits-to-retail-stores#h3_190353401[Using CT
 Orders], create your orders and manage deliveries.
 * Gather information
-link:ios/managing-visits-to-retail-stores#h3__582599340[using custom
+link:managing-visits-to-retail-stores#h3__582599340[using custom
 metrics] and
-link:ios/managing-visits-to-retail-stores#h3__1516408339[perform ad-hoc
+link:managing-visits-to-retail-stores#h3__1516408339[perform ad-hoc
 tasks].
 
 image:Planogram-Check-(en).png[]
@@ -619,7 +619,7 @@ image:Planogram-Check-(en).png[]
 ===== Synchronization
 
 * The user’s device model and version of the operating system
-link:ios/clm-user[are saved] after each synchronization to optimize the
+link:clm-user[are saved] after each synchronization to optimize the
 work of the support team for incoming cases.
 
 
@@ -628,12 +628,12 @@ work of the support team for incoming cases.
 ===== Salesforce Metadata
 
 * The color of the object's tab in Salesforce is now used for
-link:ios/coloring-menu-items-and-modules[that object icon] in the CT
+link:coloring-menu-items-and-modules[that object icon] in the CT
 Mobile app.
 
 image:color_menu_item_ios_en.png[]
 * Use the detailed list view to see records in full screen when filling
-out link:ios/reference-fields#h2__1554731138[the reference field].
+out link:reference-fields#h2__1554731138[the reference field].
 * https://help.salesforce.com/s/articleView?id=sf.customviews_edit_filters.htm&type=5[The
 My filter] is supported in list views to display only records owned by
 the current mobile user.
@@ -649,12 +649,12 @@ tags] are supported in the read-only fields with the *Text Area* and
 [[h4_1648197581]]
 ===== Calendar
 
-* To go to the record screen, link:ios/using-calendar#h3__243561528[use
+* To go to the record screen, link:using-calendar#h3__243561528[use
 the Open button] when tapping activity or double-tap activity in the
 calendar grid.
 * For better visibility, all activities less than 30 minutes occupy a
 30-minute slot in the calendar grid.
-* In the left list of records link:ios/home-screen#h3_1292798904[of the
+* In the left list of records link:home-screen#h3_1292798904[of the
 Calendar widget], the limit of 20 records has been removed, so that the
 user can view the agenda of the whole selected day.
 
@@ -663,7 +663,7 @@ user can view the agenda of the whole selected day.
 [[h4_780929262]]
 ===== Routes
 
-* link:ios/routes#h3_1243841833[The route points] are now numbered, and
+* link:routes#h3_1243841833[The route points] are now numbered, and
 when tapping on activity on the map, you can use the *Open* button to go
 to the record layout.
 
@@ -677,7 +677,7 @@ start the meeting in the CT Mobile app or default browser.
 
 
 
-Go back to link:ios/ct-mobile-ios-release-notes#ListOfReleases[the list
+Go back to link:ct-mobile-ios-release-notes#ListOfReleases[the list
 of CT Mobile releases].
 
 [[h1__487586801]]
@@ -685,7 +685,7 @@ of CT Mobile releases].
 
 CT Mobile 2.4 uses the Salesforce API v. 50.0 and requires iOS 13 or
 later. We recommend installing
-link:ios/ct-mobile-package-release-notes#h2_62734607[the latest CT
+link:ct-mobile-package-release-notes#h2_62734607[the latest CT
 Mobile package version].
 
 [[h3__992243427]]
@@ -715,7 +715,7 @@ Orders].
 ==== Mobile List Views
 
 The ability for field forces to create offline
-link:ios/list-views#h2__380480215[list views].
+link:list-views#h2__380480215[list views].
 
 
 
@@ -725,7 +725,7 @@ Your browser does not support the HTML5 video element
 ==== Work while an Activity in Progress
 
 The ability to allow users to leave
-link:ios/start-finish-functionality#h2_239706372[the unfinished
+link:start-finish-functionality#h2_239706372[the unfinished
 activity] for working with other features.
 
 image:Unfinished-Activitty-EN.gif[]
@@ -737,8 +737,8 @@ image:Unfinished-Activitty-EN.gif[]
 ===== UI/UX
 
 * The long library name is fully displayed in
-link:ios/libraries[Libraries].
-* When link:ios/log-out[logging out] of the CT Mobile app, a
+link:libraries[Libraries].
+* When link:log-out[logging out] of the CT Mobile app, a
 notification appears to clarify to a user that the database will be
 erased.
 
@@ -748,11 +748,11 @@ erased.
 ===== Salesforce Metadata
 
 * Security update: cloud token is now stored in the protected
-link:ios/api-key[API Key] custom setting.
+link:api-key[API Key] custom setting.
 * https://help.salesforce.com/articleView?id=fields_using_rich_text_area.htm&type=5[Special
-characters] are supported in link:ios/mobile-layouts[mobile layouts],
-standard and custom link:ios/list-views[list views], and
-link:ios/chatter#h2__779708391[Chatter] posts and comments.
+characters] are supported in link:mobile-layouts[mobile layouts],
+standard and custom link:list-views[list views], and
+link:chatter#h2__779708391[Chatter] posts and comments.
 
 
 
@@ -760,23 +760,23 @@ link:ios/chatter#h2__779708391[Chatter] posts and comments.
 ===== Planning Calendar
 
 * Performance improvements for a large number of activities
-link:ios/using-calendar[in the calendar grid].
+link:using-calendar[in the calendar grid].
 
 
 
 [[h4_1014032374]]
 ===== CT Presenter
 
-* Use link:ios/clm-application[new attributes of CLM presentation] to
+* Use link:clm-application[new attributes of CLM presentation] to
 choose whether the CLM presentation should be available
-link:ios/applications[offline], used in the
-link:ios/remote-detailing-launch[Remote Detailing] meeting, or both.
+link:applications[offline], used in the
+link:remote-detailing-launch[Remote Detailing] meeting, or both.
 
 image:RN_available_offline.png[]
 
 
 
-Go back to link:ios/ct-mobile-ios-release-notes#ListOfReleases[the list
+Go back to link:ct-mobile-ios-release-notes#ListOfReleases[the list
 of CT Mobile releases].
 
 [[h2__487586799]]
@@ -833,10 +833,10 @@ https://help.salesforce.com/articleView?id=custom_field_types.htm&type=5[Picklis
 (Multiselect)&#44; Text&#44; Text Area&#44; Text Area (Long)&#44; or
 Text Area (Rich) type] is dynamically changed and becomes scrollable if
 the max height of 5 lines is exceeded.
-* link:ios/app-menu[Assign the icon for the main tab] to help a user
+* link:app-menu[Assign the icon for the main tab] to help a user
 quickly find out the object he is working with when viewing the record
 screen.
-* link:ios/search[Searching in the left record list] now displays the
+* link:search[Searching in the left record list] now displays the
 results of the full match search.
 
 
@@ -845,7 +845,7 @@ results of the full match search.
 ===== Planning Calendar
 
 * When opening activity from the day or week view in
-link:ios/using-calendar[the Calendar module], the agenda with records
+link:using-calendar[the Calendar module], the agenda with records
 of all activities for that day is displayed on the left side.
 
 
@@ -853,7 +853,7 @@ of all activities for that day is displayed on the left side.
 [[h4__735612696]]
 ===== Routes
 
-* In the link:ios/routes[Routes] module, the selected options are
+* In the link:routes[Routes] module, the selected options are
 saved.
 
 
@@ -864,19 +864,19 @@ saved.
 [NOTE] ==== After the CT Mobile 2.3 update, slides of some CLM
 presentations may no longer display in full-screen mode. Please revise
 the slide width and height to fit the screen size of your mobile device.
-Remember to link:ios/publishing-clm-presentations[re-publish these CLM
+Remember to link:publishing-clm-presentations[re-publish these CLM
 presentations] and perform the fast sync. ====
 
 * The ability to zoom in or out a CLM presentation using
-link:ios/gestures-in-clm-presentations[a two-finger pinch].
+link:gestures-in-clm-presentations[a two-finger pinch].
 * Add https://developer.apple.com/documentation/arkit[ARKit models] in
 the[.apiobject]#sources.zip# for displaying in the CLM
 presentations.
 * Remote Detailing
 ** Start the remote presentation right from the app
-link:ios/remote-detailing-launch-the-ct-mobile-app[with one tap].
+link:remote-detailing-launch-the-ct-mobile-app[with one tap].
 ** Multitasking: switch between the meeting window and record details
-link:ios/remote-detailing-1-0-ui-for-presenter[with one tap]. Resume
+link:remote-detailing-1-0-ui-for-presenter[with one tap]. Resume
 the presentation from the last checkpoint.
 
 
@@ -900,12 +900,12 @@ DFG module] is supported.
 
 
 
-link:ios/application-settings#h3__353973580[The option to choose]
+link:application-settings#h3__353973580[The option to choose]
 whether to save the attached photos locally or not is available again.
 
 
 
-Go back to link:ios/ct-mobile-ios-release-notes#ListOfReleases[the list
+Go back to link:ct-mobile-ios-release-notes#ListOfReleases[the list
 of CT Mobile releases].
 
 [[h2_2128279152]]
@@ -919,7 +919,7 @@ of CT Mobile releases].
 The new custom CTM Settings object will be used to store CT Mobile
 settings instead of custom settings due to
 https://help.salesforce.com/articleView?id=cs_limits.htm&type=5[their
-limitations]. We highly recommend link:ios/ctm-settings[referring to
+limitations]. We highly recommend link:ctm-settings[referring to
 information] about how the settings migration will affect the work with
 the mobile application and *CT Mobile Control Panel*, what settings were
 automatically transferred, and what permissions should be granted.
@@ -929,18 +929,18 @@ automatically transferred, and what permissions should be granted.
 [[h4_302499989]]
 ===== Synchronization
 
-* Refreshed link:ios/sync-recovery[Sync Recovery] functionality allows
+* Refreshed link:sync-recovery[Sync Recovery] functionality allows
 pushing records with any errors as a JSON file with information about
 error type and error message text from the mobile device to Salesforce.
 * The additional info message will be displayed during
-link:ios/synchronization-launch[the fast and full synchronization] to
+link:synchronization-launch[the fast and full synchronization] to
 remind a user not to collapse the application and not to turn off the
 screen to avoid the interruption of synchronization. Nevertheless, if
 the user switched to another app or turned off the screen for a long
 time, the mobile application still sends an alert before synchronization
 will be interrupted.
 * The new update logic of the *Last Sync Date* field of the User record
-allows making sure that link:ios/synchronization[the synchronization]
+allows making sure that link:synchronization[the synchronization]
 is complete.
 
 
@@ -948,16 +948,16 @@ is complete.
 [[h4__64119727]]
 ===== CT Presenter
 
-* For easy work with link:ios/attachments-and-files[CLM presentation
+* For easy work with link:attachments-and-files[CLM presentation
 source data] and quick source data generation, use archives that were
 automatically split into parts with a size of less than 25 MB.
 * In the interactive presentation, to open files from Attachments of a
 presentation or Libraries, specify the file name with the file extension
-in link:ios/clm-navigation-in-clm-presentations[the href attribute] of
+in link:clm-navigation-in-clm-presentations[the href attribute] of
 the slide layout.
 * Converting a CLM presentation from
-link:ios/creating-clm-presentation-from-pdf[a PDF
-file] or link:ios/creating-clm-presentation-from-powerpoint[PowerPoint
+link:creating-clm-presentation-from-pdf[a PDF
+file] or link:creating-clm-presentation-from-powerpoint[PowerPoint
 presentation] in Application Editor, the black background color will be
 set and slides will be aligned to the center of the screen.
 
@@ -968,22 +968,22 @@ set and slides will be aligned to the center of the screen.
 
 * The mobile application needs access to certain data, e.g., geolocation
 or Photos. For your convenience and better clarity, we added
-link:ios/application-prompts-for-requesting-permissions[pop-ups] with
+link:application-prompts-for-requesting-permissions[pop-ups] with
 functionalities that need the requested permission.
 * Labels of menu items and modules in the menu, such as *Home Screen*,
-*Routes*, or *Libraries*, link:ios/renaming-menu-items-and-modules[can
+*Routes*, or *Libraries*, link:renaming-menu-items-and-modules[can
 be translated] using custom labels.
-* On the link:ios/ipad[detailed list view] screen, remove a record as
+* On the link:ipad[detailed list view] screen, remove a record as
 well as create a record if permissions are granted.
 * The support of the standard *Shipping Address* and *Billing Address*
-fields as link:ios/mobile-application-setup[Account Geolocation Field]
-in link:ios/nearby-accounts[Nearby Accounts] and
-link:ios/routes[Routes] modules, in link:ios/mobile-layouts-maps[the
-Map widget], and within link:ios/actions[the Determine Location button]
+fields as link:mobile-application-setup[Account Geolocation Field]
+in link:nearby-accounts[Nearby Accounts] and
+link:routes[Routes] modules, in link:mobile-layouts-maps[the
+Map widget], and within link:actions[the Determine Location button]
 in the combo-menu.
-* Use list views of link:ios/clm-application[the Application object] to
-filter records in link:ios/applications[the Applications module].
-* To quickly return to link:ios/calendar[the Calendar] after moving on
+* Use list views of link:clm-application[the Application object] to
+filter records in link:applications[the Applications module].
+* To quickly return to link:calendar[the Calendar] after moving on
 the details screen of the selected activity, tap once again *Calendar*
 on the menu. Also, the back and forward buttons are available to jump to
 the calendar.
@@ -1003,7 +1003,7 @@ Salesforce SOS functionality is no longer supported.
 
 
 
-Go back to link:ios/ct-mobile-ios-release-notes#ListOfReleases[the list
+Go back to link:ct-mobile-ios-release-notes#ListOfReleases[the list
 of CT Mobile releases].
 
 [[h2__487586798]]
@@ -1015,39 +1015,39 @@ of CT Mobile releases].
 ==== New Features and Improvements
 
 * A brand-new UI for intuitive user experience:
-** New icons, link:ios/application-theme[vivid app themes], and modern
+** New icons, link:application-theme[vivid app themes], and modern
 fonts.
-** Upgraded link:ios/calendar[Calendar], link:ios/routes[Routes], and
-link:ios/nearby-accounts[Nearby Accounts] modules with user-friendly
+** Upgraded link:calendar[Calendar], link:routes[Routes], and
+link:nearby-accounts[Nearby Accounts] modules with user-friendly
 logic.
-** link:ios/ipad[The collapsible main menu] provides a much wider
+** link:ipad[The collapsible main menu] provides a much wider
 working area on your iPad.
-** link:ios/ipad[Detailed List Views]. Look through the detailed list
+** link:ipad[Detailed List Views]. Look through the detailed list
 views on your iPad.
-** link:ios/clm-presentation-controls[Multitasking during an activity]
+** link:clm-presentation-controls[Multitasking during an activity]
 on your iPad. Switch between the presentation and record details with
 one tap. Resume the presentation from the last checkpoint.
-** New UI for link:ios/iphone[iPhone devices].
-* The link:ios/logging-in[Login screen] is implemented using the
-link:ios/oauth-2-0[OAuth 2.0] protocol and standard Salesforce UI.
-* link:ios/libraries[The content module] now supports folder hierarchy.
-* link:ios/sync-recovery[Sync Recovery]. Recovering the records which
+** New UI for link:iphone[iPhone devices].
+* The link:logging-in[Login screen] is implemented using the
+link:oauth-2-0[OAuth 2.0] protocol and standard Salesforce UI.
+* link:libraries[The content module] now supports folder hierarchy.
+* link:sync-recovery[Sync Recovery]. Recovering the records which
 could not be properly sent to Salesforce due to permissions issues.
-* Adjust the link:ios/columns-width-for-related-lists[width of columns]
+* Adjust the link:columns-width-for-related-lists[width of columns]
 of the related lists and custom related lists.
 * The long-hoped-for plus button is now available in the *Calendar*. It
-is another way link:ios/using-calendar[to create an activity in the
+is another way link:using-calendar[to create an activity in the
 Calendar] by selecting start and end dates in a mini-layout.
 * Turn on/off the ability to synchronize a single record and its child
 records by pulling down the record details screen.
-* link:ios/set-up-holidays[Salesforce Holidays] are now supported and
+* link:set-up-holidays[Salesforce Holidays] are now supported and
 are highlighted in the app's calendar.
-* link:ios/ct-mobile-control-panel-general[Image Quality]. Set the
+* link:ct-mobile-control-panel-general[Image Quality]. Set the
 amount of image compression to control the data volume sent to
 Salesforce.
-* link:ios/mini-layouts[Mini Layouts] can be assigned to a specific
+* link:mini-layouts[Mini Layouts] can be assigned to a specific
 user profile.
-* Each user profile can have its link:ios/custom-color-settings[custom
+* Each user profile can have its link:custom-color-settings[custom
 color settings] for record lists, calendar events, and the timeline
 view.
 
@@ -1062,7 +1062,7 @@ constants] are supported as SOQL-filter criteria for the custom related
 lists.
 
 [NOTE] ==== The list view button is removed, but don't worry.
-All functionality is available link:ios/ipad[by clicking the name of
+All functionality is available link:ipad[by clicking the name of
 the current list view]. In a pop-up window, you can find all available
 list views for this object to switch.  ====[NOTE] ==== Now all
 attached photos are saved on a device. We are working to give you back
@@ -1071,7 +1071,7 @@ them on a device. ====
 
 
 
-Go back to link:ios/ct-mobile-ios-release-notes#ListOfReleases[the list
+Go back to link:ct-mobile-ios-release-notes#ListOfReleases[the list
 of CT Mobile releases].
 
 [[h2__917121525]]
@@ -1089,15 +1089,15 @@ release requires iOS 10 or later. ====
 
 * Synchronization data monitoring (type, date and time, status, and
 duration). The data is automatically transferred to Salesforce as the
-records of the link:ios/sync-log[Sync Log] object with an attachment
+records of the link:sync-log[Sync Log] object with an attachment
 containing detailing information (log file). Use
-link:ios/sync-logs[reports to analyze] the synchronization.
+link:sync-logs[reports to analyze] the synchronization.
 * New synchronization algorithm with accelerated identification of the
 created and updated records.
-* link:ios/libraries[The Libraries module] download process can be
+* link:libraries[The Libraries module] download process can be
 moved to the background, which significantly improves the
 synchronization time.
-* link:ios/metadata-archive[Metadata downloading] optimization.
+* link:metadata-archive[Metadata downloading] optimization.
 * The fast and mixed synchronization processes are not interrupted in
 case of errors. The unsynchronized records containing errors can be
 synchronized after the errors are corrected.
@@ -1127,21 +1127,21 @@ Workflow rules.
 dependency support] (filters that allow changing the contents of a
 picklist based on the value of another field).
 * Dashboards created via Salesforce Lightning UI are supported on the
-link:ios/home-screen[Home Screen].
+link:home-screen[Home Screen].
 * Attachments multi-select. Select multiple images from the Photos app
 to add them to a record.
-* link:ios/ct-mobile-replication[Improved replication]. Shared records
+* link:ct-mobile-replication[Improved replication]. Shared records
 (previously unavailable) can be synchronized via fast synchronization.
 * The administrator credentials are no longer required to access the
 Salesforce Metadata API during the synchronization.
 * External libraries are updated to the latest versions.
-* link:ios/nearby-accounts[The Nearby Accounts module]. The records
+* link:nearby-accounts[The Nearby Accounts module]. The records
 list displays only the[.object]#Accounts# with defined
 geolocation and the records which are related to such
 [.object]#Accounts#.
 * The minus key (-) is available on the In-App keyboard while editing
 the *Number*, *Percent*, and *Currency* type fields.
-* The link:ios/search[Search] box value lower limit is reduced from
+* The link:search[Search] box value lower limit is reduced from
 three symbols to one.
 
 [[h3__116462914]]
@@ -1166,17 +1166,17 @@ attachment folder orientation (portrait or landscape) corresponds to the
 current mobile application orientation.
 * Fix for the *Date/Time* field values during the daylight saving time
 clock adjustment.
-* The link:ios/person-accounts[Person Account] record type can be
+* The link:person-accounts[Person Account] record type can be
 created from a reference field.
 * *Dashboards*. Graphs with summary formulas involved are displayed
-correctly on link:ios/home-screen[Home Screen].
+correctly on link:home-screen[Home Screen].
 * Inactive filter criteria are no longer applied to reference fields.
 * Fixed swipe right functionality (to open the main menu or the records
-list) in the related lists link:ios/iphone[on iPhone devices].
+list) in the related lists link:iphone[on iPhone devices].
 
 
 
-Go back to link:ios/ct-mobile-ios-release-notes#ListOfReleases[the list
+Go back to link:ct-mobile-ios-release-notes#ListOfReleases[the list
 of CT Mobile releases].
 
 [[h2__1182701537]]
@@ -1190,17 +1190,17 @@ of CT Mobile releases].
 Roll-Up Summary fields support].
 * The ability to create and manage detailed records for standard objects
 *Task* and *Event*.
-* link:ios/application-editor[Customizable statistics gathering] on
+* link:application-editor[Customizable statistics gathering] on
 displaying individual screens and elements in CLM presentations.
-* link:ios/synchronization[Selective synchronization] in case of user
+* link:synchronization[Selective synchronization] in case of user
 access rules to object records is changed.
-* Now you can sort link:ios/related-lists[the custom and standard
+* Now you can sort link:related-lists[the custom and standard
 related lists] by lookup fields.
 * The *Determine Location* button is not displayed when using
-positioning link:ios/actions[on activity start].
-* link:ios/clm-presentation-controls[Presentation exit screen
+positioning link:actions[on activity start].
+* link:clm-presentation-controls[Presentation exit screen
 improvements].
-* The link:ios/managing-offline-objects[offline-objects] customization
+* The link:managing-offline-objects[offline-objects] customization
 and loading process logic are revised.
 * Prefixes and postfixes are now considered when working with objects
 and their fields.
@@ -1212,10 +1212,10 @@ additional information about activities.
 * Work with several types of object records within a single custom
 related list.
 * Metadata API to SOAP API migration.
-* link:ios/sync-logs[Application log records] are more detailed.
-* link:ios/person-accounts[Person Accounts] will now display in *Nearby
+* link:sync-logs[Application log records] are more detailed.
+* link:person-accounts[Person Accounts] will now display in *Nearby
 Accounts* with appropriate settings.
-* The improved logic of link:ios/using-calendar[copying activities] in
+* The improved logic of link:using-calendar[copying activities] in
 the calendar.
 
 [[h3__1652028519]]
@@ -1224,7 +1224,7 @@ the calendar.
 * The *Picklist* fields. The fields are now displaying the correct
 values dependent (field dependency) from checkbox fields.
 * Fix for users with *Partner Community* license type. Now they can add
-new posts in link:ios/chatter[Chatter].
+new posts in link:chatter[Chatter].
 * The corrected logic of using *Open Activities* and *Activity History*
 related lists.
 * Can no longer copy text to the *Text* field that exceeds the number of
@@ -1232,7 +1232,7 @@ characters allowed.
 
 
 
-Go back to link:ios/ct-mobile-ios-release-notes#ListOfReleases[the list
+Go back to link:ct-mobile-ios-release-notes#ListOfReleases[the list
 of CT Mobile releases].
 
 [[h2__432069667]]
@@ -1242,17 +1242,17 @@ of CT Mobile releases].
 ==== New Features and Components
 
 * Updated for iOS 11.
-* link:ios/ical-synchronization[Two-way sync with iPad/iPhone internal
+* link:ical-synchronization[Two-way sync with iPad/iPhone internal
 Calendar].[.object]#Events# from the internal iPad/iPhone
 calendar can be displayed in the CT Mobile planning calendar.
 * Standard Salesforce[.object]#Orders# are now supported in the
 CT Mobile app.
 * New Salesforce SOS functionality - video calls to technical support
 with mobile device screen sharing capability.
-* Optimized link:ios/synchronization[synchronization] for organizations
+* Optimized link:synchronization[synchronization] for organizations
 with an extended data model and large data volumes.
-* Customizable set of link:ios/search[search fields] for each object.
-* link:ios/reference-fields#h2__1554731138[Quick record creation in
+* Customizable set of link:search[search fields] for each object.
+* link:reference-fields#h2__1554731138[Quick record creation in
 reference fields] (lookup) selection window.
 * Custom report types are now supported for Salesforce
 https://help.salesforce.com/articleView?id=analytics_overview.htm&type=5[reports
@@ -1260,31 +1260,31 @@ and dashboards].
 * Separate settings for displaying[.object]#Event# and
 [.object]#Task# object records in *Open Activities* and
 *Activity History* related lists.
-* The link:ios/actions[Determine Geolocation] functionality in the
+* The link:actions[Determine Geolocation] functionality in the
 *Accounts* combo menu now depends on the user’s access rights to the
 geolocation field.
-* link:ios/debug-console[Application log] search functionality added.
+* link:debug-console[Application log] search functionality added.
 * The *Time* type fields are now supported.
 * Multiple currencies functionality added.
-* link:ios/home-screen[Customizable Home screen] for iPhone added.
-* The link:ios/chatter[Chatter] functionality for iPhone was added.
+* link:home-screen[Customizable Home screen] for iPhone added.
+* The link:chatter[Chatter] functionality for iPhone was added.
 
 [[h3_118294372]]
 ==== CLM-presentations
 
 * JS Bridge methods added:
-** link:ios/ctm-disableslidescroll[ctm.isableSlideScroll]: optional
+** link:ctm-disableslidescroll[ctm.isableSlideScroll]: optional
 lock for slides scrolling using gestures.
-** link:ios/ctm-enableslidescroll[ctm.enableSlideScroll]: slide
+** link:ctm-enableslidescroll[ctm.enableSlideScroll]: slide
 scrolling unlock option.
-** link:ios/ctm-storefile[ctm.storeFile]: saving a file attachment as
+** link:ctm-storefile[ctm.storeFile]: saving a file attachment as
 an attachment to a record.
-** link:ios/ctm-getfile[ctm.getFile] - getting the contents of an
+** link:ctm-getfile[ctm.getFile] - getting the contents of an
 attachment to a record.
 ** Ability to open contents using[.apiobject]#window.open# in
 the native preview window.
 * Added capability to select rendering mode for interactive content
-(link:ios/mobile-application-setup[Mobile Application Setup]).
+(link:mobile-application-setup[Mobile Application Setup]).
 ** wk - more productive and modern, suitable for most presentations.
 Used by default on mobile devices running iOS 9 and above.
 ** wks - local server for presentations display, created using MVC
@@ -1293,10 +1293,10 @@ modules and components.
 ** UI - a classic renderer for backward compatibility with previously
 created presentations.
 * Fix the list scrolling of available
-link:ios/applications#h3_1236408094[custom scenarios] in the
+link:applications#h3_1236408094[custom scenarios] in the
 presentation details screen.
 
 
 
-Go back to link:ios/ct-mobile-ios-release-notes#ListOfReleases[the list
+Go back to link:ct-mobile-ios-release-notes#ListOfReleases[the list
 of CT Mobile releases].

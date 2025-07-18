@@ -2,25 +2,25 @@
 
 There is a list of management tools to control CLM presentations:
 
-The link:ios/applications[Application] module, Carousel of CLM
-presentations link:ios/mobile-layouts-applications[on the mobile
-layout] and link:ios/home-screen[Home Screen].
+The link:applications[Application] module, Carousel of CLM
+presentations link:mobile-layouts-applications[on the mobile
+layout] and link:home-screen[Home Screen].
 
-link:ios/gestures-in-clm-presentations[Gestures]
+link:gestures-in-clm-presentations[Gestures]
 
-link:ios/clm-presentation-controls[Button controls]
+link:clm-presentation-controls[Button controls]
 
-link:ios/opening-attached-files[Opening Attached files]
+link:opening-attached-files[Opening Attached files]
 
-link:ios/changing-slides[Changing Slides]
-
-ifndef::andr[]
-
-link:ios/methods-for-clm-presentation-navigation[JS Bridge methods]
+link:changing-slides[Changing Slides]
 
 ifndef::andr[]
 
-The link:ios/the-remote-detailing-functionality[Remote Detailing]
+link:methods-for-clm-presentation-navigation[JS Bridge methods]
+
+ifndef::andr[]
+
+The link:the-remote-detailing-functionality[Remote Detailing]
 functionality.
 
 The UI of the Remote Detailing functionality is adapted for the
@@ -29,8 +29,8 @@ enable remote controls for participants, such as, like/dislike slides,
 stream video, calls, etc. The participant's UI is adapted according to
 the presenter's choice. Additionally, the following is available:
 
-* link:ios/methods-for-clm-presentation-navigation[JS Bridge methods]
-* link:ios/changing-slides[Changing Slides]
+* link:methods-for-clm-presentation-navigation[JS Bridge methods]
+* link:changing-slides[Changing Slides]
 
 [[h2__21685430]]
 === Branches
@@ -42,7 +42,7 @@ the user.
 [TIP] ==== Double tap at the bottom of the screen to display
 slides in a branch for rapid switching between the slides. To jump to
 another branch, use one of
-link:ios/methods-for-clm-presentation-navigation[the JS Bridge methods
+link:methods-for-clm-presentation-navigation[the JS Bridge methods
 for navigation]. ====
 
 For example, the presentation may include a home page that contains

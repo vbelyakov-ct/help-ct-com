@@ -28,11 +28,11 @@ Search a library, folder, or file by its name or format.
 ifdef::ios[]
 
 Tap the file name to send the file by e-mail using
-link:ios/email-templates[email templates] if available.
+link:email-templates[email templates] if available.
 
-Enable link:ios/application-settings#h3_1768799377[background content
+Enable link:application-settings#h3_1768799377[background content
 loading] to download Salesforce Content documents in background mode.
-You can also select the link:ios/ctm-settings-menu[Files Download
+You can also select the link:ctm-settings-menu[Files Download
 Enabled] checkbox for Library to adjust the background downloading
 process.
 
@@ -59,15 +59,15 @@ image:libraries-kotlin.png[]
 
 If [.object]#ContentDocument#, [.object]#ContentVersion#,
 [.object]#ContentDocumentLink# objects are added as
-link:ios/managing-offline-objects[offline objects], the *Libraries*
+link:managing-offline-objects[offline objects], the *Libraries*
 module will not work correctly.
 
-To add the *Libraries* module to the link:ios/app-menu[app menu]:
+To add the *Libraries* module to the link:app-menu[app menu]:
 
 [width="100%",cols="50%,50%",]
 |===
 |In CT Mobile Control Panel a|
-. Go to link:ios/ct-mobile-control-panel-app-menu[CT Mobile Control
+. Go to link:ct-mobile-control-panel-app-menu[CT Mobile Control
 Panel: App Menu] tab.
 . {blank}
 . Click the
@@ -78,7 +78,7 @@ button to open the *Add menu item* tool.
 . Click *Save*.
 
 |In CT Mobile Control Panel 2.0 a|
-. Go to link:ios/ct-mobile-control-panel-app-menu-new[CT Mobile Control
+. Go to link:ct-mobile-control-panel-app-menu-new[CT Mobile Control
 Panel 2.0: App Menu] tab.
 . Select the required profile in the *Profile* picklist. To apply
 settings to all the profiles, select *General Settings*.

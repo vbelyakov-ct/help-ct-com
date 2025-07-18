@@ -12,16 +12,16 @@ Salesforce and vice versa.
 === Synchronization Modes
 
 For information about settings for tracking and gathering the
-synchronization statistics, refer to link:ios/sync-logs[Sync Logs].
+synchronization statistics, refer to link:sync-logs[Sync Logs].
 
 [[h3__21591833]]
 ==== First Full Synchronization
 
 The entire database of the CT Mobile app,
-link:ios/metadata-archive[metadata components], and app settings will
+link:metadata-archive[metadata components], and app settings will
 be downloaded from Salesforce to the mobile device.
 
-This synchronization should be used after link:ios/logging-in[the
+This synchronization should be used after link:logging-in[the
 authorization] of the current user.
 
 The first full synchronization may take a lot of time according to the
@@ -32,7 +32,7 @@ ifndef::andr,kotlin,ios[]
 The CT Mobile app is locked during the first full synchronization, and
 the sync process will be interrupted in case of any errors.
 
-For more information, go to link:ios/full-synchronization[First Full
+For more information, go to link:full-synchronization[First Full
 and Full Synchronization].
 
 [[h3__1369866827]]
@@ -45,7 +45,7 @@ Salesforce.
 Full synchronization may take a lot of time according to the database
 size.
 
-For more information, go to link:ios/full-synchronization[First Full
+For more information, go to link:full-synchronization[First Full
 and Full Synchronization].
 
 [[h3__116633872]]
@@ -61,14 +61,14 @@ The CT Mobile app will not be locked during the fast synchronization.
 
 ifndef::andr,win[]
 
-Enable link:ios/ct-mobile-replication[CT Mobile Replication] if
+Enable link:ct-mobile-replication[CT Mobile Replication] if
 territory coordinates have been altered to download all actual data on
 the mobile device.
 
-Set up link:ios/sync-recovery[Sync Recovery] to have the ability to
+Set up link:sync-recovery[Sync Recovery] to have the ability to
 upload records with the errors to Salesforce.
 
-For more information, go to link:ios/fast-synchronization[Fast and
+For more information, go to link:fast-synchronization[Fast and
 Mixed Synchronization].
 
 ifndef::andr[]
@@ -79,17 +79,17 @@ ifndef::andr[]
 This type is intended to upload the data differential since the specific
 date mentioned in the
 [.apiobject]#clm__MetadataLastModifiedDate__c#field of
-the link:ios/mobile-application-setup[Mobile Application Setup] custom
+the link:mobile-application-setup[Mobile Application Setup] custom
 setting and all metadata to avoid the full synchronization performing,
 reduce synchronization time, and use the CT Mobile app during the
 synchronization.
 
-[TIP] ==== Enable link:ios/metadata-checker[Metadata Checker]
+[TIP] ==== Enable link:metadata-checker[Metadata Checker]
 to automatically update the date in the
 [.apiobject]#clm__MetadataLastModifiedDate__c ==== field
 if the metadata was changed in Salesforce.#
 
-For more information, go to link:ios/fast-synchronization[Fast and
+For more information, go to link:fast-synchronization[Fast and
 Mixed Synchronization].
 
 ifndef::andr,win[]
@@ -97,28 +97,28 @@ ifndef::andr,win[]
 [[h3__2018975044]]
 ==== Other Synchronization Modes
 
-* link:ios/other-synchronization-modes#h2__1958232390[Quick Record
+* link:other-synchronization-modes#h2__1958232390[Quick Record
 Synchronization]
 Used to update a single record and its child records by using the
 pull-to-refresh gesture on the record's layout. Requires
 permission (refer to
-link:ios/ct-mobile-control-panel-offline-objects#h3_202390671[CT Mobile
+link:ct-mobile-control-panel-offline-objects#h3_202390671[CT Mobile
 Control Panel: Offline
-objects]/link:ios/ct-mobile-control-panel-offline-objects-new#h4_202390671[CT
+objects]/link:ct-mobile-control-panel-offline-objects-new#h4_202390671[CT
 Mobile Control Panel 2.0: Offline Objects]).
-You can update link:ios/chatter[the Chatter feed] the same way but this
+You can update link:chatter[the Chatter feed] the same way but this
 functionality does not depend on permission to quick record
 synchronization.
-* link:ios/other-synchronization-modes#h2_740581689[Workflow
+* link:other-synchronization-modes#h2_740581689[Workflow
 Synchronization]
-This mode of synchronization is run when link:ios/ct-mobile-workflow[CT
+This mode of synchronization is run when link:ct-mobile-workflow[CT
 Mobile Workflow] conditions are triggered.
-* link:ios/other-synchronization-modes#h2_233027861[CT Presenter
+* link:other-synchronization-modes#h2_233027861[CT Presenter
 Synchronization]
 This mode of synchronization is triggered when the
-link:ios/ctm-sync[sync()] method of JS Bridge is requested.
+link:ctm-sync[sync()] method of JS Bridge is requested.
 
-For more information, go to link:ios/other-synchronization-modes[Other
+For more information, go to link:other-synchronization-modes[Other
 Synchronization Modes].
 
 [[h2_1868373451]]
@@ -131,7 +131,7 @@ turn off the screen during the full or fast synchronization.  ====
 
 To launch the synchronization:
 
-. Open the link:ios/home-screen[Home screen].
+. Open the link:home-screen[Home screen].
 . Tap and hold the *Sync* button.
 . In the pop-up, select the synchronization mode.
 image:sync-launch-select-mode.png[]
@@ -238,10 +238,10 @@ CT Mobile provides several synchronization modes that can be run by the
 mobile user.
 
 [WARNING] ==== For the correct operation,
-link:ios/metadata-archive[the metadata archive] must be collected and
+link:metadata-archive[the metadata archive] must be collected and
 the cloud token (refer to
-link:ios/ct-mobile-control-panel-tools#h3_2011978[CT Mobile Control
-Panel: Tools]/link:ios/ct-mobile-control-panel-tools-new#h2_2011978[CT
+link:ct-mobile-control-panel-tools#h3_2011978[CT Mobile Control
+Panel: Tools]/link:ct-mobile-control-panel-tools-new#h2_2011978[CT
 Mobile Control Panel 2.0: Tools]) must be valid. ====
 
 [[h3__868873179]]
@@ -254,7 +254,7 @@ audit fields of the current *User* record.
 ** *Mobile MAC*
 ** *Mobile Version*
 ** *Operation System*
-* The link:ios/sync-logs[Sync Log] records store the information of
+* The link:sync-logs[Sync Log] records store the information of
 each synchronization.
 
 [[h3_1173330258]]
@@ -264,12 +264,12 @@ each synchronization.
 |===
 |First Full Synchronization a|
 The first full synchronization must be launched after
-link:ios/logging-in[the authorization] of the current user.
+link:logging-in[the authorization] of the current user.
 
 The first full synchronization is intended to download the entire
-database of the CT Mobile app, link:ios/metadata-archive[metadata
+database of the CT Mobile app, link:metadata-archive[metadata
 components],
-link:ios/user-permissions-required-to-synchronize-objects-to-offline-work-with-functionalities[required
+link:user-permissions-required-to-synchronize-objects-to-offline-work-with-functionalities[required
 objects], and app settings from Salesforce to the mobile device.
 
 The first full synchronization may take a lot of time according to the
@@ -281,12 +281,12 @@ Steps:
 
 . Metadata components are downloaded from the metadata archive.
 . The current data model is created.
-. Records of link:ios/custom-settings[the custom settings&#44; custom
-metadata types], link:ios/managing-offline-objects[offline objects]
+. Records of link:custom-settings[the custom settings&#44; custom
+metadata types], link:managing-offline-objects[offline objects]
 (based on SOQL filters), and objects, which are necessary for activated
-link:ios/mobile-application-modules[modules], are downloaded if a
+link:mobile-application-modules[modules], are downloaded if a
 record matches the conditions set in
-link:ios/related-list-filters[Related List Filters].
+link:related-list-filters[Related List Filters].
 . The audit fields of the current *User* record are updated.
 
 
@@ -304,7 +304,7 @@ information.
 
 * Data changes, such as deletions, insertions, and updates of records,
 will be sent from CT Mobile to Salesforce and vice versa.
-* Enable link:ios/ct-mobile-replication[CT Mobile Replication] if
+* Enable link:ct-mobile-replication[CT Mobile Replication] if
 territory coordinates have been altered to download all actual data on
 the mobile device.
 
@@ -312,7 +312,7 @@ the mobile device.
 
 Steps:
 
-. Records of link:ios/custom-settings[the custom settings and custom
+. Records of link:custom-settings[the custom settings and custom
 metadata types] are downloaded if the value in the
 [.apiobject]#SystemModstamp# field is a date later than the date
 of the last successful synchronization.
@@ -326,7 +326,7 @@ activated https://help.customertimes.com/articles/ct-mobile-ios-en/mobile-applic
 downloaded from Salesforce to the mobile device since the date of the
 last successful synchronization.
 .* If configured, the records of the specified objects mentioned in
-the link:ios/ct-mobile-replication[CT Mobile Replication] setting are
+the link:ct-mobile-replication[CT Mobile Replication] setting are
 updated.
 
 
@@ -371,7 +371,7 @@ activated https://help.customertimes.com/articles/ct-mobile-ios-en/mobile-applic
 downloaded from Salesforce to the mobile device since the date of the
 last successful synchronization.
 .* If configured, the records of the specified objects mentioned in
-the link:ios/ct-mobile-replication[CT Mobile Replication] setting are
+the link:ct-mobile-replication[CT Mobile Replication] setting are
 updated.
 
 
@@ -457,7 +457,7 @@ downloading page layouts.
 
 In case of errors related to the records, the sync process continues.
 When the synchronization is complete, go
-to link:ios/android-2-0-sync#h3__479754125[the Errors screen] and tap a
+to link:android-2-0-sync#h3__479754125[the Errors screen] and tap a
 record to correct the error. Then run a fast synchronization.
 
 If the sync process was interrupted, tap the

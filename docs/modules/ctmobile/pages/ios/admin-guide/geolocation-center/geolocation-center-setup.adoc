@@ -2,9 +2,9 @@
 
 To use features of Geolocation Center:
 
-. Make sure link:ios/remote-site-settings[the required remote site
+. Make sure link:remote-site-settings[the required remote site
 settings] are specified and active.
-. link:ios/google-maps-api-key[Get a Google Maps API Key(s)] and enable
+. link:google-maps-api-key[Get a Google Maps API Key(s)] and enable
 the following APIs:
 * https://developers.google.com/maps/documentation/directions/start[Directions
 API]
@@ -24,7 +24,7 @@ Panel 2.0:
 |===
 |CT Mobile Control Panel a|
 .. Go to the *Geolocation* section on
-link:ios/ct-mobile-control-panel-general#h2_670774632[CT Mobile Control
+link:ct-mobile-control-panel-general#h2_670774632[CT Mobile Control
 Panel: General]:
 * Enable *Location Tracking*.
 * Enable *Background Location Tracking*.
@@ -34,10 +34,10 @@ can reduce the battery life of the mobile device. The more often the
 location is tracked, the faster the battery will drain.#
 * Select the *Account Geolocation* and **Account Full Address **fields.
 The account geolocation settings are required to display
-link:ios/using-geolocation-center#h2_1758655018[account marks] on the
+link:using-geolocation-center#h2_1758655018[account marks] on the
 map in Geolocation Center.
 ** If at least one of these fields
-is blank, link:ios/using-geolocation-center#h2_1475553155[activities] will
+is blank, link:using-geolocation-center#h2_1475553155[activities] will
 be available in the Geolocation Center but not displayed on the map.
 ** The user should have permission to read and edit the field selected
 in the *Account Geolocation* and *Account Full Address* fields.
@@ -45,7 +45,7 @@ in the *Account Geolocation* and *Account Full Address* fields.
 * Specify *Google Maps Javascript API Key*.
 * Click *Save*.
 .. Go to the *Activity Setting* section on the
-link:ios/ct-mobile-control-panel-calendar[CT Mobile Control Panel:
+link:ct-mobile-control-panel-calendar[CT Mobile Control Panel:
 Calendar] tab:
 * Specify the[.object]#Activity# object.
 On the [.object]#Activity# object, there should be a field with
@@ -55,7 +55,7 @@ the [.object]#Account# object.
 field API name*.
 * Specify *Activity Geolocation Field API Name*. The activity
 geolocation settings are required to display
-link:ios/using-geolocation-center#h2_1475553155[activity marks] on the
+link:using-geolocation-center#h2_1475553155[activity marks] on the
 map in Geolocation Center.
 The user should have permission to read and edit the field selected in
 the *Activity Geolocation* field.
@@ -63,7 +63,7 @@ the *Activity Geolocation* field.
 
 |CT Mobile Control Panel 2.0 a|
 .. Go to the *Maps* section on
-link:ios/ct-mobile-control-panel-general-new#h2_670774632[CT Mobile
+link:ct-mobile-control-panel-general-new#h2_670774632[CT Mobile
 Control Panel 2.0: General]:
 * Enable *Background Location Tracking*.
 * Specify the interval of tracking a user location in seconds.
@@ -72,17 +72,17 @@ can reduce the battery life of the mobile device. The more often the
 location is tracked, the faster the battery will drain.#
 * Select the *Account Geolocation* and *Account Full Address Field*
 fields. The account geolocation settings are required to display
-link:ios/using-geolocation-center#h2_1758655018[account marks] on the
+link:using-geolocation-center#h2_1758655018[account marks] on the
 map in Geolocation Center.
 ** If at least one of these fields
-is blank, link:ios/using-geolocation-center#h2_1475553155[activities] will
+is blank, link:using-geolocation-center#h2_1475553155[activities] will
 be available in the Geolocation Center but not displayed on the map.
 ** The user should have permission to read and edit the field selected
 in the *Account Geolocation* *Field* and *Account Full Address* *Field*.
 * Specify *Google Maps iOS API Key*.
 * ​Specify *Google Maps Javascript API Key*.
 * Click *Save*.
-..  Go to the link:ios/ct-mobile-control-panel-activities-new[CT Mobile
+..  Go to the link:ct-mobile-control-panel-activities-new[CT Mobile
 Control Panel 2.0: Activities] tab:
 * In the *Calendar Activities* section, specify the
 [.object]#Activity# object.
@@ -92,21 +92,21 @@ the [.object]#Account# object.
 * Specify *Start Date Field* and *End Date Field*.
 * Specify *Geolocation Field*. The activity geolocation settings are
 required to display
-link:ios/using-geolocation-center#h2_1475553155[activity marks] on the
+link:using-geolocation-center#h2_1475553155[activity marks] on the
 map in Geolocation Center.
 The user should have permission to read and edit the field selected in
 the** Geolocation** *Field*.
 * Click *Save*.
 
 |===
-. link:ios/application-permission-settings[Assign permission] to read,
-create, and edit the following fields of the link:ios/sync-log[Sync
+. link:application-permission-settings[Assign permission] to read,
+create, and edit the following fields of the link:sync-log[Sync
 Log] object to users.
 *[.apiobject]#clm__Date__c#
 *[.apiobject]#clm__Description__c#
 *[.apiobject]#clm__GeoTiming__c#
 *[.apiobject]#clm__GeoTracing__c#.
-. link:ios/push-identifier[Obtain the push identifier] and enable push
+. link:push-identifier[Obtain the push identifier] and enable push
 notifications.
 . Enable location tracking for the CT Mobile app in *Settings* on a
 mobile device.

@@ -27,24 +27,24 @@ image:CT-Mobile-Architecture.png[]
 
 CT Mobile is deployed in the following order:
 
-. link:ios/ct-mobile-description-and-deployment#h2_1760736937[Install
+. link:ct-mobile-description-and-deployment#h2_1760736937[Install
 the CT Mobile package] in your Salesforce organization.
-. link:ios/ct-mobile-description-and-deployment#h2_720612721[Integrate
+. link:ct-mobile-description-and-deployment#h2_720612721[Integrate
 the CT Mobile package] with the target system.
-. link:ios/ct-mobile-description-and-deployment#h2_1575473858[Configure
+. link:ct-mobile-description-and-deployment#h2_1575473858[Configure
 the CT Mobile solution].
-. link:ios/ct-mobile-description-and-deployment#h2__501372078[Install
+. link:ct-mobile-description-and-deployment#h2__501372078[Install
 the CT Mobile app] on your mobile device.
-. link:ios/ct-mobile-description-and-deployment#h2_586849428[Log in to
+. link:ct-mobile-description-and-deployment#h2_586849428[Log in to
 the CT Mobile app] and
-link:ios/ct-mobile-description-and-deployment#h2_1500017970[perform the
+link:ct-mobile-description-and-deployment#h2_1500017970[perform the
 first synchronization].
 . Set up desired integrations, for example, with CT Orders, CT Sign, CG
 Cloud, etc.
 
 To find out more about integrations, go
-to link:ios/ct-mobile-os-comparison#h3_839939660[Other modules
-availability] and link:ios/ct-mobile-os-comparison#h2__303479492[Integrations].
+to link:ct-mobile-os-comparison#h3_839939660[Other modules
+availability] and link:ct-mobile-os-comparison#h2__303479492[Integrations].
 
 [[h2_1760736937]]
 === CT Mobile Package Installation
@@ -62,9 +62,9 @@ CT Mobile package is available for the following Salesforce editions:
 CT Mobile is an add-on to Salesforce that is provided as an Appexchange
 ISV product and allows users to work with Salesforce offline.
 
-link:ios/installing-ct-mobile-package[Follow the guide] to install the
+link:installing-ct-mobile-package[Follow the guide] to install the
 CT Mobile package. After installation,
-link:ios/remote-site-settings[set up remote site settings].
+link:remote-site-settings[set up remote site settings].
 
 [[h3__273727017]]
 ==== CT Mobile Package Description
@@ -75,15 +75,15 @@ a|
 [[h4_1423918535]]
 ===== UI Tools
 
-* link:ios/ct-mobile-control-panel[CT Mobile Control Panel]​ is a tool
+* link:ct-mobile-control-panel[CT Mobile Control Panel]​ is a tool
 to provide a clear and convenient UI for CT Mobile settings. It is based
 on Angular and REST API. Since the , you can use
-link:ios/ct-mobile-control-panel-new[CT Mobile Control Panel 2.0] with
+link:ct-mobile-control-panel-new[CT Mobile Control Panel 2.0] with
 more modern user interface and better performance.
 * Application Editor​ is a tool to edit
-link:ios/manual-creating-clm-presentation[CLM presentations]. For
-link:ios/creating-plain-clm-presentation[plain CLM presentations],
-the link:ios/plain-application-editor[Plain Application Editor] is in
+link:manual-creating-clm-presentation[CLM presentations]. For
+link:creating-plain-clm-presentation[plain CLM presentations],
+the link:plain-application-editor[Plain Application Editor] is in
 use. It is located on Azure infrastructure
 with [.apiobject]#Node.JS/Mongo DB.#
 * **Geolocation Center**​ is the core functionality to work with
@@ -98,7 +98,7 @@ sending PUSH messages to mobile users.
 [[h4__559203458]]
 ===== Salesforce Metadata
 
-link:ios/metadata-archive#h2_1854953360[Salesforce metadata] is
+link:metadata-archive#h2_1854953360[Salesforce metadata] is
 responsible for the correct operation of CT Mobile workflows, lookup
 filters, and dashboards in offline mode.
 
@@ -112,7 +112,7 @@ ifdef::ios,win,kotlin[]
 
 The CT Mobile app requests metadata using the
 https://developer.salesforce.com/docs/atlas.en-us.api_meta.meta/api_meta/meta_intro.htm[Metadata
-API] and link:ios/metadata-checker#h2__1036043893[the metadata archive]
+API] and link:metadata-checker#h2__1036043893[the metadata archive]
 and other APIs.
 
 
@@ -122,19 +122,19 @@ and other APIs.
 
 ifdef::andr,kotlin[]
 
-link:ios/custom-settings[Custom settings and custom metadata types] are
+link:custom-settings[Custom settings and custom metadata types] are
 used to store profile and list type settings for CT Mobile app
 customization specified on the tabs of the CT Mobile Control Panel.
 
 ifdef::ios,win[]
 
-link:ios/custom-settings[Custom settings&#44; custom metadata types],
-and the link:ios/ctm-settings[CTM Settings] object are used to store
+link:custom-settings[Custom settings&#44; custom metadata types],
+and the link:ctm-settings[CTM Settings] object are used to store
 profile and list type settings for CT Mobile app customization specified
 on the tabs of the CT Mobile Control Panel.
 
 [TIP] ==== Use the
-link:ios/ct-mobile-control-panel-tools#h3__1658362952[Refresh CTM
+link:ct-mobile-control-panel-tools#h3__1658362952[Refresh CTM
 Settings] button ==== to align consistency between CTM Settings and
 Custom Settings in case of errors.
 
@@ -143,7 +143,7 @@ Custom Settings in case of errors.
 [[h4_789622594]]
 ===== Components
 
-* Apex classes and link:ios/trigger-settings[triggers] are used for
+* Apex classes and link:trigger-settings[triggers] are used for
 managing CLM presentations and the content publishing routine.
 * Visualforce and Lightning components for UI Tools.
 * https://help.salesforce.com/articleView?id=sf.cl_about.htm&type=5[Custom
@@ -171,36 +171,36 @@ To create a relationship between CT Mobile package components and a
 client system:
 
 * Fill out the
-link:ios/ct-mobile-control-panel-general#h3__2141706831[Product Object
+link:ct-mobile-control-panel-general#h3__2141706831[Product Object
 API Name] and
-link:ios/ct-mobile-control-panel-general#h3_494016929[Reference Object
+link:ct-mobile-control-panel-general#h3_494016929[Reference Object
 API Name] fields on *CT Mobile Control Panel: General*, or
-link:ios/ct-mobile-control-panel-general-new#h4__351797814[Relate
+link:ct-mobile-control-panel-general-new#h4__351797814[Relate
 Contact to Multiple Accounts by Junction Object] in *CT Mobile Control
 Panel 2.0: General*.
 * Create the lookup field to the required[.object]#Activity#
-object on the link:ios/clm-applicationstats[Application Stats] object.
+object on the link:clm-applicationstats[Application Stats] object.
 In the case of using several[.object]#Activity# objects, the
 relationship field has to be created for each of them. A field with the
 lookup type for the[.object]#Activity# object will be
 automatically created for each[.object]#Activity# object
-specified on the link:ios/ct-mobile-control-panel-calendar[CT Mobile
+specified on the link:ct-mobile-control-panel-calendar[CT Mobile
 Control Panel: Calendar] (or
-link:ios/ct-mobile-control-panel-activities-new[CT Mobile Control Panel
+link:ct-mobile-control-panel-activities-new[CT Mobile Control Panel
 2.0: Activities]).
 * Create the lookup field to the specified _Product_ object on the
-link:ios/clm-application[Application] object.
+link:clm-application[Application] object.
 
 ifdef::ios[][TIP] ==== CT mobile allows identifying
-link:ios/system-label[the records created or edited in the CT Mobile
+link:system-label[the records created or edited in the CT Mobile
 app]. ====
 
 [[h2_1575473858]]
 === CT Mobile Solution Configuration
 
 We kindly ask you to perform all customization
-via link:ios/ct-mobile-control-panel[CT Mobile Control
-Panel]/link:ios/ct-mobile-control-panel-new[CT Mobile Control Panel
+via link:ct-mobile-control-panel[CT Mobile Control
+Panel]/link:ct-mobile-control-panel-new[CT Mobile Control Panel
 2.0] and set up a separate profile for a user who configures the system.
 
 * The user should have the _Modify All Data_ and _Modify Metadata
@@ -221,79 +221,79 @@ The CT Mobile solution provides offline record management and customized
 screen forms for the CT Mobile app to simplify and upscale the field
 sales force teams' work. In your Salesforce organization, you can:
 
-Customize the link:ios/home-screen[Home Screen].
+Customize the link:home-screen[Home Screen].
 
-Add objects and modules to link:ios/app-menu[the main menu].
+Add objects and modules to link:app-menu[the main menu].
 
 Specify available offline objects (refer to
-link:ios/ct-mobile-control-panel-offline-objects[CT Mobile Control
+link:ct-mobile-control-panel-offline-objects[CT Mobile Control
 Panel: Offline
-Objects]/link:ios/ct-mobile-control-panel-offline-objects-new[CT Mobile
+Objects]/link:ct-mobile-control-panel-offline-objects-new[CT Mobile
 Control Panel 2.0: Offline Objects]),
-link:ios/custom-related-lists[custom related lists],
-link:ios/list-views[list views],
-link:ios/managing-offline-objects#ManagingOfflineObjects-SOQLFilters[SOQL
+link:custom-related-lists[custom related lists],
+link:list-views[list views],
+link:managing-offline-objects#ManagingOfflineObjects-SOQLFilters[SOQL
 filters], lookup filters, and
-link:ios/actions[actions]. link:ios/person-accounts[Person
+link:actions[actions]. link:person-accounts[Person
 Accounts] are supported.
 
 ifdef::ios[]
 
-Specify screen forms, such as link:ios/compact-layout[compact layouts],
-link:ios/mini-layouts[mini layouts], link:ios/mobile-layouts[mobile
+Specify screen forms, such as link:compact-layout[compact layouts],
+link:mini-layouts[mini layouts], link:mobile-layouts[mobile
 layouts],
-link:ios/fields-display-on-the-screen-of-the-mobile-application[custom
-fields display], link:ios/custom-color-settings[custom color settings],
-add link:ios/app-menu#h2__312093935[the custom icon for the main tab]
+link:fields-display-on-the-screen-of-the-mobile-application[custom
+fields display], link:custom-color-settings[custom color settings],
+add link:app-menu#h2__312093935[the custom icon for the main tab]
 of the record screen, and
-link:ios/renaming-menu-items-and-modules[rename menu items].
+link:renaming-menu-items-and-modules[rename menu items].
 
 Configure CT Mobile workflows (refer to
-link:ios/ct-mobile-control-panel-workflows[CT Mobile Control Panel:
-Workflows] or link:ios/ct-mobile-control-panel-workflows-new[CT Mobile
+link:ct-mobile-control-panel-workflows[CT Mobile Control Panel:
+Workflows] or link:ct-mobile-control-panel-workflows-new[CT Mobile
 Control Panel 2.0: Workflows]).
 
-Configure sync options, such as link:ios/ct-mobile-replication[CT
-Mobile Replication], link:ios/conflict-manager-control[Conflict
-Manager], link:ios/online-records-fetching[online record fetching], and
+Configure sync options, such as link:ct-mobile-replication[CT
+Mobile Replication], link:conflict-manager-control[Conflict
+Manager], link:online-records-fetching[online record fetching], and
 quick record sync (refer
-to link:ios/ct-mobile-control-panel-offline-objects#h3_202390671[CT
+to link:ct-mobile-control-panel-offline-objects#h3_202390671[CT
 Mobile Control Panel: Offline Objects] or
-link:ios/ct-mobile-control-panel-offline-objects-new#h4_202390671[CT
+link:ct-mobile-control-panel-offline-objects-new#h4_202390671[CT
 Mobile Control Panel 2.0: Offline Objects]).
 
 Configure Geolocation Center and Notification Center.
 
 ifdef::andr,kotlin,win[]
 
-Specify screen forms, such as link:ios/compact-layout[compact layouts],
-link:ios/mini-layouts[mini layouts], link:ios/mobile-layouts[mobile
-layouts], and link:ios/custom-color-settings[custom color settings].
+Specify screen forms, such as link:compact-layout[compact layouts],
+link:mini-layouts[mini layouts], link:mobile-layouts[mobile
+layouts], and link:custom-color-settings[custom color settings].
 
 ifdef::kotlin[]
 
-Configure link:ios/ct-mobile-replication-use-cases-and-steps[CT Mobile
+Configure link:ct-mobile-replication-use-cases-and-steps[CT Mobile
 Replication].
 
 ifdef::ios,win[]
 
-Implement link:ios/js-bridge-api[JS Bridge methods] in CLM
+Implement link:js-bridge-api[JS Bridge methods] in CLM
 presentations and set up
-link:ios/the-remote-detailing-functionality[the Remote Detailing
+link:the-remote-detailing-functionality[the Remote Detailing
 functionality].
 
 ifdef::andr[]
 
-Implement link:ios/js-bridge-api[JS Bridge methods] in CLM
+Implement link:js-bridge-api[JS Bridge methods] in CLM
 presentations.
 
 [[h2__501372078]]
 === CT Mobile App Installation
 
 Before installation, read
-link:ios/technical-requirements-for-devices-and-network[the technical
+link:technical-requirements-for-devices-and-network[the technical
 requirements]. To install the CT Mobile app, go to
-link:ios/installing-the-ct-mobile-app[the article].
+link:installing-the-ct-mobile-app[the article].
 
 Contact the Customertimes team if you want to use the custom CT Mobile
 build.
@@ -313,22 +313,22 @@ interacting with each other via the application interface.
 [[h4__1887042366]]
 ===== Core and Modules
 
-Go to link:ios/ct-mobile-os-comparison[CT Mobile OS Comparison] to view
+Go to link:ct-mobile-os-comparison[CT Mobile OS Comparison] to view
 the core functionalities and learn about the difference between the CT
 Mobile app on iOS, Windows, or Android devices.
 
 ifdef::ios[]
 
-link:ios/home-screen[Status Indicator] suggests to a user to perform a
+link:home-screen[Status Indicator] suggests to a user to perform a
 synchronization. Depending on the number of modified records, added
 attachments or the date of the last synchronization, the color of the
 indicator as well as the frequency of its flashing will change.
 
-link:ios/sync-logs[Specify the logging level] for saving sync logs of
+link:sync-logs[Specify the logging level] for saving sync logs of
 the CT Mobile app, which can be useful for the Customertimes Support
 team in case of issues with the mobile app.
 
-link:ios/application-settings[Application Settings] are intended to
+link:application-settings[Application Settings] are intended to
 manage additional functions and control individual options.
 
 a|
@@ -356,18 +356,18 @@ solution.
 [[h2_586849428]]
 === Logging in to the CT Mobile app
 
-link:ios/logging-in[Log in to the CT Mobile app] using your Salesforce
+link:logging-in[Log in to the CT Mobile app] using your Salesforce
 credentials to a production environment, sandbox instance, or custom
 domain.
 
 ifdef::ios[]
 
-CT Mobile is implemented with link:ios/oauth-2-0[OAuth 2.0] and
-supports link:ios/logging-in-with-single-sign-on[Single Sign-On].
+CT Mobile is implemented with link:oauth-2-0[OAuth 2.0] and
+supports link:logging-in-with-single-sign-on[Single Sign-On].
 
 ifdef::kotlin,win[]
 
-CT Mobile is implemented with the link:ios/oauth-2-0[OAuth
+CT Mobile is implemented with the link:oauth-2-0[OAuth
 2.0] protocol.
 
 For the full functionality of CT Mobile on devices, it is necessary to
@@ -389,6 +389,6 @@ database will be replaced after the synchronization is complete to avoid
 data discard if synchronization is interrupted.
 
 To learn more about the sync process and sync modes, refer
-to link:ios/synchronization[Synchronization].
+to link:synchronization[Synchronization].
 
 

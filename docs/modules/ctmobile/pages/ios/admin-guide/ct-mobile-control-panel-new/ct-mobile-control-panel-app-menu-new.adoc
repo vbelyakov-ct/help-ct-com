@@ -1,11 +1,11 @@
 = CT Mobile Control Panel 2.0: App Menu
 
 The *App Menu* tab is intended to set up menu items and their order in
-link:ios/app-menu[the main menu].
+link:app-menu[the main menu].
 
 ifdef::ios,win[]According to the selected profile, settings on this
 tab will be saved in the records of the [.object]#CTM
-Settings# object with the link:ios/ctm-settings-menu[Menu] record
+Settings# object with the link:ctm-settings-menu[Menu] record
 type.
 
 :toc: :toclevels: 2
@@ -26,7 +26,7 @@ image:ctm-control-panel-new-move-icon-left.jpg[] and
 image:ctm-control-panel-new-move-icon-right.png[] arrows
 to move items between *Available* and *Selected* lists. The *Home* item
 cannot be moved. Module items can be added and removed only by using the
-link:ios/ct-mobile-control-panel-app-menu-new#h3__259736469[Module
+link:ct-mobile-control-panel-app-menu-new#h3__259736469[Module
 menu].
 * Use image:ctm-control-panel-new-move-icon-up.jpg[]
 and image:ctm-control-panel-new-move-icon-down.jpg[]
@@ -47,19 +47,19 @@ available options are displayed on the right:
 
 
 
-Refer to link:ios/home-screen[Home screen] for more details.
+Refer to link:home-screen[Home screen] for more details.
 
 [[h3_1468985423]]
 ==== Offline Objects
 
-* link:ios/grouping-records[Group records] by the criterion and
+* link:grouping-records[Group records] by the criterion and
 ascending or descending order of records.
 * Define fields available for filtering in
-link:ios/list-views#h2__380480215[mobile list view].
+link:list-views#h2__380480215[mobile list view].
 
 
 
-Refer to link:ios/managing-offline-objects[Managing Offline
+Refer to link:managing-offline-objects[Managing Offline
 Objects] for more details.
 
 [[h3__330756966]]
@@ -67,16 +67,16 @@ Objects] for more details.
 
 Click *Add Category* to add a link list.
 
-Refer to link:ios/links-list[Links] for more details.
+Refer to link:links-list[Links] for more details.
 
 [[h3_1292798904]]
 ==== Calendar
 
-Configure the link:ios/calendar[Calendar] options:
+Configure the link:calendar[Calendar] options:
 
 * *Activity Duration (min)*: specify the default duration in minutes for
 scheduled activities.
-* *Default View*: select link:ios/using-calendar#h2__1759778354[the
+* *Default View*: select link:using-calendar#h2__1759778354[the
 default calendar view]. The available options:
 ** Month
 ** Week
@@ -90,20 +90,20 @@ to display or hide weekends on the calendar grid.
 
 
 
-Refer to link:ios/ct-mobile-control-panel-activities-new[CT Mobile
+Refer to link:ct-mobile-control-panel-activities-new[CT Mobile
 Control Panel 2.0: Activities] to learn about calendar activities.
 
 [[h3_595932522]]
 ==== CT Orders
 
 * *Product Object*: select an object that will be used as a product.
-* link:ios/grouping-records[Group records] by the criterion and
+* link:grouping-records[Group records] by the criterion and
 ascending or descending order of records.
 
 [[h3__1016751028]]
 ==== Salesforce Content
 
-Define the way how files uploaded to the link:ios/libraries[Libraries]
+Define the way how files uploaded to the link:libraries[Libraries]
 module must be downloaded during synchronization. Available values:
 
 * *Download As Preview*: only preview images will be downloaded. Tap on
@@ -119,7 +119,7 @@ Module Menu
 
 Click *Show Module Menu* to view the icons of the modules that can be
 added to the CT Mobile app. The modules' availability depends on the
-link:ios/ct-mobile-os-comparison[device platform].
+link:ct-mobile-os-comparison[device platform].
 
 Hover the cursor over a module to see its short description.
 

@@ -6,15 +6,15 @@ activities.
 [[h2_1037365166]]
 === Requirements
 
-Add the *Routes* module to link:ios/app-menu[the app menu].
+Add the *Routes* module to link:app-menu[the app menu].
 
 ifdef::ios,andr,kotlin[]
 
-To use Google Maps, specify the link:ios/google-maps-api-key[Google
+To use Google Maps, specify the link:google-maps-api-key[Google
 Maps API key] on the
-link:ios/ct-mobile-control-panel-general#h3_604215198[CT Mobile Control
+link:ct-mobile-control-panel-general#h3_604215198[CT Mobile Control
 Panel:
-General]/link:ios/ct-mobile-control-panel-general-new#h3__1293801021[CT
+General]/link:ct-mobile-control-panel-general-new#h3__1293801021[CT
 Mobile Control Panel 2.0: General] tab.
 
 ifdef::win[]
@@ -22,9 +22,9 @@ ifdef::win[]
 To use maps, specify the
 https://docs.microsoft.com/en-us/bingmaps/getting-started/bing-maps-dev-center-help/getting-a-bing-maps-key[Bing
 Maps API key] on the
-link:ios/ct-mobile-control-panel-general#h3__1990058335[CT Mobile
+link:ct-mobile-control-panel-general#h3__1990058335[CT Mobile
 Control Panel:
-General]/link:ios/ct-mobile-control-panel-general-new#h3__1424081301[CT
+General]/link:ct-mobile-control-panel-general-new#h3__1424081301[CT
 Mobile Control Panel 2.0: General] tab.
 
 ifdef::win,andr,kotlin[]
@@ -32,9 +32,9 @@ ifdef::win,andr,kotlin[]
 * A field to store an address for the[.object]#Account# object
 should be specified on the *CT Mobile Control Panel: General* tab.
 * The[.object]#Activity# object should be specified on
-link:ios/ct-mobile-control-panel-calendar#h3_1397263211[CT Mobile
+link:ct-mobile-control-panel-calendar#h3_1397263211[CT Mobile
 Control Panel:
-Calendar]/link:ios/ct-mobile-control-panel-activities-new#h2_2014841429[CT
+Calendar]/link:ct-mobile-control-panel-activities-new#h2_2014841429[CT
 Mobile Control Panel 2.0: Activities] tab. Add a field with the *Lookup*
 type from the[.object]#Activity# object to the
 [.object]#Account# object.
@@ -50,12 +50,12 @@ image:62562557.png[]
 [[h2__724838406]]
 === Adding Routes to the Menu
 
-To add the *Routes* module to the link:ios/app-menu[app menu]:
+To add the *Routes* module to the link:app-menu[app menu]:
 
 [width="100%",cols="50%,50%",]
 |===
 |In CT Mobile Control Panel a|
-. Go to link:ios/ct-mobile-control-panel-app-menu[CT Mobile Control
+. Go to link:ct-mobile-control-panel-app-menu[CT Mobile Control
 Panel: App Menu] tab.
 . {blank}
 . Click the
@@ -66,7 +66,7 @@ button to open the *Add menu item* tool.
 . Click *Save*.
 
 |In CT Mobile Control Panel 2.0 a|
-. Go to link:ios/ct-mobile-control-panel-app-menu-new[CT Mobile Control
+. Go to link:ct-mobile-control-panel-app-menu-new[CT Mobile Control
 Panel 2.0: App Menu] tab.
 . Select the required profile in the *Profile* picklist. To apply
 settings to all the profiles, select *General Settings*.
@@ -106,9 +106,9 @@ day.
 
 [NOTE] ==== The mobile user should have access to the *Start
 Date field* (refer to
-link:ios/ct-mobile-control-panel-calendar#h3_1674628596[CT Mobile
+link:ct-mobile-control-panel-calendar#h3_1674628596[CT Mobile
 Control Panel: Calendar] or
-link:ios/ct-mobile-control-panel-activities-new#h4__1766544266[CT
+link:ct-mobile-control-panel-activities-new#h4__1766544266[CT
 Mobile Control Panel 2.0: Activities]). Otherwise, if this field is
 blank, records will be randomly grouped in the section without a title.
 ====
@@ -174,7 +174,7 @@ Select the activities from the list.
 ifdef::ios,win[]
 
 The maximum number of activities for a
-route link:ios/google-maps-api-key#h3__1529349083[is limited].
+route link:google-maps-api-key#h3__1529349083[is limited].
 
 ifdef::ios[]
 

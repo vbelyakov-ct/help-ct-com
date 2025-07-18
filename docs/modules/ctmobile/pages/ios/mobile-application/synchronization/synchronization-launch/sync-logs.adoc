@@ -17,7 +17,7 @@ operation, such as login, create, etc., after the synchronization
 completion or interruption due to sync errors.
 
 [TIP] ==== For more information, refer to
-link:ios/sync-log[Sync Log]. ====
+link:sync-log[Sync Log]. ====
 
 For example, if you performed the successful fast synchronization with
 the insert operation of *Account* and *Contact* records and the update
@@ -57,7 +57,7 @@ ifdef::kotlin[]
 The *Sync Log* record is created for each synchronization after its
 completion or interruption due to sync errors.
 
-For more information, refer to link:ios/sync-log[Sync Log].
+For more information, refer to link:sync-log[Sync Log].
 
 The *Sync Log* record for the selected synchronization type:
 
@@ -86,7 +86,7 @@ To enable and configure Sync Logs:
 [width="100%",cols="50%,50%",]
 |===
 |In CT Mobile Control Panel a|
-. Go to link:ios/ct-mobile-control-panel-general[CT Mobile Control
+. Go to link:ct-mobile-control-panel-general[CT Mobile Control
 Panel: General].
 . {blank}
 . In the *Support and logs* section, activate the *Enable Sync logs*
@@ -106,7 +106,7 @@ image:52802816.png[]
 
 
 |In CT Mobile Control Panel 2.0 a|
-. Go to link:ios/ct-mobile-control-panel-general-new[CT Mobile Control
+. Go to link:ct-mobile-control-panel-general-new[CT Mobile Control
 Panel 2.0: General].
 . Select the required profile in the *Set up profile* picklist. To apply
 settings to all the profiles, select *General Settings*.

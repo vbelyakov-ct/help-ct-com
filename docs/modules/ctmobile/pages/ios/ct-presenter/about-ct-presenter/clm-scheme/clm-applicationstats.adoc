@@ -5,7 +5,7 @@ statistics of every time the CLM presentation is viewed whether the
 current preview is attached to the _Activity_ record or not.
 
 * Statistics of one CLM presentation can be linked to multiple
-link:ios/clm-activity[activity] records.
+link:clm-activity[activity] records.
 * A list of monitored parameters is set up for each CLM presentation
 separately.
 * Statistics collection stops when a user exits the CLM presentation.
@@ -18,7 +18,7 @@ Object API name:[.apiobject]#clm__ApplicationStats__c#
 
 [NOTE] ==== To collect certain parameters of statistics, it is
 necessary to use preconfigured
-link:ios/gestures-in-clm-presentations[gestures].  ====
+link:gestures-in-clm-presentations[gestures].  ====
 
 [width="100%",cols="25%,25%,25%,25%",]
 |===
@@ -30,9 +30,9 @@ Text for the standard[.object]#Task# and
 [.object]#Event# objects a|
 A field with the lookup type for the[.object]#Activity# object
 will be automatically created for each[.object]#Activity#
-object specified on link:ios/ct-mobile-control-panel-calendar[CT Mobile
+object specified on link:ct-mobile-control-panel-calendar[CT Mobile
 Control Panel:
-Calendar]/link:ios/ct-mobile-control-panel-activities-new[CT Mobile
+Calendar]/link:ct-mobile-control-panel-activities-new[CT Mobile
 Control Panel 2.0: Activities], for example,
 [.apiobject]#ActivityId__c# or
 [.apiobject]#TaskId__c#.
@@ -42,7 +42,7 @@ The field will be filled out with the _Activity_ record ID:
 * When you link the CLM presentation to the activity record in the
 *Applications* module.
 * If you launch the CLM presentation or the
-link:ios/the-remote-detailing-functionality[Remote Detailing] meeting
+link:the-remote-detailing-functionality[Remote Detailing] meeting
 from the record's layout.
 
 |Application |[.apiobject]#clm__ApplicationId__c#
@@ -65,12 +65,12 @@ The total number of taps/clicks for all slides.
 |Lookup(Custom Scenario) a|
 *Slide Stats*
 
-The link:ios/clm-customscenario[custom scenario] record in which a
+The link:clm-customscenario[custom scenario] record in which a
 slide was shown.
 
 |Description |[.apiobject]#clm__Description__c# |Long
 Text Area(32768) |To store
-link:ios/clm-presentation-controls#h3_300583250[a comment] left by a
+link:clm-presentation-controls#h3_300583250[a comment] left by a
 user while viewing the CLM presentation.
 
 |Dislikes |[.apiobject]#clm__Dislikes__c# |Number(18,0)
@@ -88,7 +88,7 @@ meeting.
 
 |File name |[.apiobject]#clm__FileName__c# |Text(255)
 |Stores the value obtained by
-link:ios/ctm-customstats[ctm.CustomStats()]
+link:ctm-customstats[ctm.CustomStats()]
 
 |Finished by Timeout
 |[.apiobject]#clm__IsFinishedByTimeout__c# |Checkbox a|
@@ -172,9 +172,9 @@ For a record of the *Slide Stats* type:
 
 *[.apiobject]#true# if the participant accepted the Terms of
 Use (refer to
-link:ios/ct-mobile-control-panel-presenter#h3_1019207818[CT Mobile
+link:ct-mobile-control-panel-presenter#h3_1019207818[CT Mobile
 Control Panel:
-Presenter]/link:ios/ct-mobile-control-panel-remote-detailing-new#h3_1019207818[CT
+Presenter]/link:ct-mobile-control-panel-remote-detailing-new#h3_1019207818[CT
 Mobile Control Panel 2.0: Remote Detailing])
 *[.apiobject]#false# if the participant did not accept the
 Terms of Use

@@ -5,8 +5,8 @@ standard related lists.
 
 According to the selected profile, settings on this tab will be saved in
 the records of the [.object]#CTM Settings# object with
-the link:ios/ctm-settings-offline-objects[Offline
-Objects] and link:ios/ctm-settings-standard-related-list[Standard
+the link:ctm-settings-offline-objects[Offline
+Objects] and link:ctm-settings-standard-related-list[Standard
 Related List] record type.
 ifdef::ios,win[] :toc: :toclevels: 3
 
@@ -26,7 +26,7 @@ Enter the object label or API name in the *Search* box to find it in the
 be available offline.
 
 If an object is added to the *Selected* list, it will be available in
-the *Selected* list on the link:ios/ct-mobile-control-panel-app-menu[CT
+the *Selected* list on the link:ct-mobile-control-panel-app-menu[CT
 Mobile Control Panel: App Menu] tab.
 
 * Use the *Advanced List* option to display all objects in the
@@ -57,7 +57,7 @@ ifdef::kotlin[]
 [[h3_1442227750]]
 ==== Enable Conflict Manager
 
-If enabled, the link:ios/conflict-manager-control[Conflict Manager]
+If enabled, the link:conflict-manager-control[Conflict Manager]
 will track changes made to the same record in CT Mobile and Salesforce.
 In the event of a conflict, the mobile user can choose which change to
 save.
@@ -66,7 +66,7 @@ save.
 ==== Quick Record Sync
 
 If enabled, a mobile user with the corresponding profile can
-link:ios/other-synchronization-modes#h2__1958232390[sync a single
+link:other-synchronization-modes#h2__1958232390[sync a single
 record] and its child records by applying the pull-to-refresh gesture on
 the record's layout.
 
@@ -85,7 +85,7 @@ can apply the custom logic for JSON files.
 
 
 
-For more information, refer to link:ios/sync-recovery[Sync Recovery].
+For more information, refer to link:sync-recovery[Sync Recovery].
 
 [[h2__263612775]]
 === Object Permissions
@@ -97,7 +97,7 @@ required records.
 
 
 For more information, refer to
-link:ios/managing-offline-objects[Managing Offline Objects].
+link:managing-offline-objects[Managing Offline Objects].
 
 [[h2_946326628]]
 === Related Lists
@@ -106,23 +106,23 @@ Restrict the profile permissions to create or delete records of the
 standard related lists that are added to the page layout of an offline
 object and available for the selected record type. Set up SOQL filters
 for using a toggle in the CT Mobile app to display all records or only
-records that match the criteria. Enable link:ios/timeline-view[the
+records that match the criteria. Enable link:timeline-view[the
 timeline view] instead of the standard view of standard related lists if
 needed.
 
 
 
 For more information, refer to
-link:ios/managing-offline-objects[Managing Offline Objects]. Also, get
+link:managing-offline-objects[Managing Offline Objects]. Also, get
 familiar with the information in the
-link:ios/standard-related-lists[Standard Related Lists] article.
+link:standard-related-lists[Standard Related Lists] article.
 
 To set up custom related lists of an offline object, go
-to link:ios/ct-mobile-control-panel-custom-details[CT Mobile Control
+to link:ct-mobile-control-panel-custom-details[CT Mobile Control
 Panel: Custom details].
 
 
 
 See also:
 
-* link:ios/managing-offline-objects[Managing Offline Objects]
+* link:managing-offline-objects[Managing Offline Objects]

@@ -13,7 +13,7 @@ To configure data dump sending:
 [width="100%",cols="50%,50%",]
 |===
 |In CT Mobile Control Panel a|
-. Go to link:ios/ct-mobile-control-panel-general[CT Mobile Control
+. Go to link:ct-mobile-control-panel-general[CT Mobile Control
 Panel: General].
 . {blank}
 . In the *Support and logs* field, enable *Sync Logs*.
@@ -23,14 +23,14 @@ send the database dump:
 * *Salesforce.com*
 
 The ZIP archive with the data will be transferred as an attachment to
-the link:ios/sync-log[Sync Log] record. The size of the ZIP archive
+the link:sync-log[Sync Log] record. The size of the ZIP archive
 cannot be larger than 25 MB. In case of exceeding the limit, the
 database dump will be split into a few ZIP archives and each one will be
 attached to its own _Sync Log_ record.
 
 
 To use this option,
-link:ios/ct-mobile-control-panel-tools#h3_2011978[the cloud token]
+link:ct-mobile-control-panel-tools#h3_2011978[the cloud token]
 should be valid. In the case the cloud token is not specified, the
 password will be[.apiobject]#ctmobile#.
 * *E-mail*
@@ -43,7 +43,7 @@ sending data. ====
 . Click *Save*.
 
 |In CT Mobile Control Panel 2.0 a|
-. Go to link:ios/ct-mobile-control-panel-general-new[CT Mobile Control
+. Go to link:ct-mobile-control-panel-general-new[CT Mobile Control
 Panel 2.0: General].
 . In the *Logs and Support* section, select the appropriate option from
 the *Debug Level* picklist.
@@ -51,13 +51,13 @@ the *Debug Level* picklist.
 send the database dump:
 * **​Salesforce.com
 **The ZIP archive with the data will be transferred as an attachment to
-the link:ios/sync-log[Sync Log] record. The size of the ZIP archive
+the link:sync-log[Sync Log] record. The size of the ZIP archive
 cannot be larger than 25 MB. In case of exceeding the limit, the
 database dump will be split into a few ZIP archives and each one will be
 attached to its own _Sync Log_ record.
 
 To use this option,
-link:ios/ct-mobile-control-panel-tools-new#h2_2011978[the cloud token]
+link:ct-mobile-control-panel-tools-new#h2_2011978[the cloud token]
 should be valid. In the case the cloud token is not specified, the
 password will be[.apiobject]#ctmobile#.
 * *E-mail*
@@ -79,8 +79,8 @@ The setup is complete.
 
 To send a data dump from the CT Mobile app:
 
-. Go to link:ios/application-settings[Settings] from
-link:ios/app-menu[the main menu].
+. Go to link:application-settings[Settings] from
+link:app-menu[the main menu].
 . Tap *Send application data*.
 . In the open window, select which data you want to send.
 * Send sync logs

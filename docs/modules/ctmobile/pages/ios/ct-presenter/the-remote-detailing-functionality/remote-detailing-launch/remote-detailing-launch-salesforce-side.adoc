@@ -1,8 +1,8 @@
 = Remote Detailing Launch: Salesforce Side
 
 In Salesforce, launch a CLM presentation on the
-link:ios/clm-application[Application] or
-link:ios/clm-activity[Activity] record.
+link:clm-application[Application] or
+link:clm-activity[Activity] record.
 
 :toc: :toclevels: 3
 
@@ -77,7 +77,7 @@ Salesforce.
 
 Specify the desired record type of
 the [.object]#Activity# object in
-the link:ios/remote-detailing-apex-trigger-classes-and-quick-action#h2_249047963[Apex
+the link:remote-detailing-apex-trigger-classes-and-quick-action#h2_249047963[Apex
 trigger] to launch the *Remote Detailing* or *Self Detailing* meeting.
 Optionally, specify a Salesforce workflow to send an email/SMS/etc. to
 the contact of the *Activity* record after generating an invitation link
@@ -95,9 +95,9 @@ To add a custom field on the *Activity* page layout:
 [.apiobject]#RDLink__c#.
 
 [TIP] ==== Specify the API name of the field in the *Link Field*
-on the link:ios/ct-mobile-control-panel-presenter#h3__1311451422[CT
+on the link:ct-mobile-control-panel-presenter#h3__1311451422[CT
 Mobile Control Panel:
-Presenter]/link:ios/ct-mobile-control-panel-remote-detailing-new#h4__1311451422[CT
+Presenter]/link:ct-mobile-control-panel-remote-detailing-new#h4__1311451422[CT
 Mobile Control Panel 2.0: Remote Detailing] tab. ====
 . Click *Save*.
 . Go to the *Page Layout* section.
@@ -114,7 +114,7 @@ To launch the *Remote Detailing* meeting:
 
 . Create a new *Activity* record.
 . Click the
-link:ios/remote-detailing-apex-trigger-classes-and-quick-action#h3__2024838382[Applications]
+link:remote-detailing-apex-trigger-classes-and-quick-action#h3__2024838382[Applications]
 button.
 . In the *Applications* window, select the available CLM presentations
 for the *Remote Detailing* meetings.
@@ -124,10 +124,10 @@ default value for the ApplicationIds__c field, or create your custom
 process to populate the[.apiobject]#ApplicationIds__c ====
 field.#
 . After a while,
-link:ios/remote-detailing-launch-salesforce-side#h3_2144641458[the
+link:remote-detailing-launch-salesforce-side#h3_2144641458[the
 specific field] will be populated with the invite link, for the *Remote
 Detailing* or *Self Detailing* meeting, according to
-link:ios/remote-detailing-setup[Remote Detailing Setup].
+link:remote-detailing-setup[Remote Detailing Setup].
 
 
 

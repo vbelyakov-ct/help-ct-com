@@ -1,7 +1,7 @@
 = ctm.openDataTableByParentRecord
 
-The method of the link:ios/js-bridge-api[JS Bridge] functionality is
-intended to open link:ios/custom-related-lists[a custom related list]
+The method of the link:js-bridge-api[JS Bridge] functionality is
+intended to open link:custom-related-lists[a custom related list]
 with child records.
 
 [[h2__905713055]]
@@ -15,7 +15,7 @@ name of the offline object with the following fields:
 *[.apiobject]#ParentId# is the ID of the parent record. In the
 list will be stored child records that have a reference to that object;
 *[.apiobject]#SettingName# is a list of settings names of the
-link:ios/mobile-custom-details-settings[Mobile Custom Details
+link:mobile-custom-details-settings[Mobile Custom Details
 Settings], such as permissions to create and/or delete a record in the
 custom related list, a list of columns to display, filter and sort
 criteria, for the custom related list displaying;

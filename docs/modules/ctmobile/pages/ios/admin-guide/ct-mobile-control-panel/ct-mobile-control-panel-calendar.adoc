@@ -2,11 +2,11 @@
 
 The *Calendar* tab is intended to enable planning activities, manage
 [.object]#Activity# objects, and specify the view of the
-link:ios/calendar[Calendar] module.
+link:calendar[Calendar] module.
 
 According to the selected profile, settings on this tab will be saved in
 the corresponding fields of
-the link:ios/mobile-application-setup[Mobile Application
+the link:mobile-application-setup[Mobile Application
 Setup] record.
 
 :toc: :toclevels: 2
@@ -34,7 +34,7 @@ Specify the view of the Calendar module.
 ==== Calendar View
 
 From the *Calendar View* picklist, select
-link:ios/using-calendar#h2__1759778354[the default calendar view]. The
+link:using-calendar#h2__1759778354[the default calendar view]. The
 available options:
 
 * Month
@@ -76,12 +76,12 @@ ifdef::andr,win[]Not available.
 ==== Start/Finish Functionality
 
 If enabled, the mobile user can
-link:ios/start-finish-functionality[start and finish an activity] using
+link:start-finish-functionality[start and finish an activity] using
 the additional logic that may be applied to a started activity.
 
 ifdef::ios[]
 
-[NOTE] ==== If you have a link:ios/ct-mobile-workflow[CT Mobile
+[NOTE] ==== If you have a link:ct-mobile-workflow[CT Mobile
 Workflow] using the *Start* or *Finish* buttons, the additional
 functionality listed below will be disabled even if these settings are
 applied. ====
@@ -100,7 +100,7 @@ ifdef::kotlin[]
 
 If enabled, tapping the *Start* button will record the current
 geolocation of the *Activity* record in the
-link:ios/ct-mobile-control-panel-calendar#h3__717585460[Activity
+link:ct-mobile-control-panel-calendar#h3__717585460[Activity
 Geolocation Field API Name] field.
 
 [[h3_276361556]]
@@ -118,7 +118,7 @@ field of the *Activity* record.
 
 ifdef::kotlin[]
 
-link:ios/start-finish-functionality#h2_239706372[Enable this option],
+link:start-finish-functionality#h2_239706372[Enable this option],
 and the mobile user will be able to leave the started *Activity* record
 and then come back to finish the *Activity* record.
 
@@ -170,5 +170,5 @@ to store the description of the *Activity* record.
 ==== Activity Geolocation Field API Name
 
 Specify the API name of the field with the *Geolocation* type where
-link:ios/ct-mobile-control-panel-general[the geolocation data] of the
+link:ct-mobile-control-panel-general[the geolocation data] of the
 *Activity* record will be written.

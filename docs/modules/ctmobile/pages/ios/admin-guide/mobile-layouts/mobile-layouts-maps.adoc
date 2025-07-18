@@ -9,15 +9,15 @@ ifdef::ios[]
 === Specify Google Maps API Key
 
 If you selected Google Maps service as
-the link:ios/application-settings#h2__1872639157[map type in the CT
+the link:application-settings#h2__1872639157[map type in the CT
 Mobile app settings], you need Google Maps API Key.
 
 To specify the Google Maps API key:
 
-. Generate link:ios/google-maps-api-key[the Google Maps API key].
-. Go to the link:ios/ct-mobile-control-panel-general#h3_604215198[CT
+. Generate link:google-maps-api-key[the Google Maps API key].
+. Go to the link:ct-mobile-control-panel-general#h3_604215198[CT
 Mobile Control Panel:
-General]/link:ios/ct-mobile-control-panel-general-new#h3_604215198[CT
+General]/link:ct-mobile-control-panel-general-new#h3_604215198[CT
 Mobile Control Panel 2.0: General] tab and insert the generated key in
 the *Google Maps iOS API Key* field.;
 . Click *Save*.
@@ -34,9 +34,9 @@ To specify a Bing Maps API Key.
 . Obtain
 https://docs.microsoft.com/en-us/bingmaps/getting-started/bing-maps-dev-center-help/getting-a-bing-maps-key[a
 Bing Maps API key].
-. Go to link:ios/ct-mobile-control-panel-general#h3__1990058335[CT
+. Go to link:ct-mobile-control-panel-general#h3__1990058335[CT
 Mobile Control Panel:
-General]/link:ios/ct-mobile-control-panel-general-new#h3__1424081301[CT
+General]/link:ct-mobile-control-panel-general-new#h3__1424081301[CT
 Mobile Control Panel 2.0: General] and insert the API key in the *Bing
 Maps Windows API Key* field.
 . Click *Save*.
@@ -50,10 +50,10 @@ ifdef::andr[]
 
 To specify the Google Maps API key.
 
-. Generate link:ios/google-maps-api-key[the Google Maps API key].
-. Go to link:ios/ct-mobile-control-panel-general#h3_375370096[CT Mobile
+. Generate link:google-maps-api-key[the Google Maps API key].
+. Go to link:ct-mobile-control-panel-general#h3_375370096[CT Mobile
 Control Panel:
-General]/link:ios/ct-mobile-control-panel-general-new#h3_375370096[CT
+General]/link:ct-mobile-control-panel-general-new#h3_375370096[CT
 Mobile Control Panel 2.0: General] and insert the API key in the *Google
 Maps Android API Key* field.
 . Click *Save*.
@@ -67,10 +67,10 @@ ifdef::kotlin[]
 
 It is necessary to generate the Google Maps API key.
 
-. Generate link:ios/google-maps-api-key[the Google Maps API key].
-. Go to link:ios/ct-mobile-control-panel-general#h3_375370096[CT Mobile
+. Generate link:google-maps-api-key[the Google Maps API key].
+. Go to link:ct-mobile-control-panel-general#h3_375370096[CT Mobile
 Control Panel:
-General]/link:ios/ct-mobile-control-panel-general-new#h3_375370096[CT
+General]/link:ct-mobile-control-panel-general-new#h3_375370096[CT
 Mobile Control Panel 2.0: General] and insert the API key in the *Google
 Maps Android API Key* field.
 . Click *Save*.
@@ -106,8 +106,8 @@ object.
 * To use account coordinates, create a field with the *Geolocation*
 type.
 * To use geocoding, create a field with the *Formula* type.
-. Go to link:ios/ct-mobile-control-panel-general[CT Mobile Control
-Panel: General]/link:ios/ct-mobile-control-panel-general-new[CT Mobile
+. Go to link:ct-mobile-control-panel-general[CT Mobile Control
+Panel: General]/link:ct-mobile-control-panel-general-new[CT Mobile
 Control Panel 2.0: General]:
 .. In the *Account Geolocation Field* picklist, select the field with
 the *Geolocation* type.
@@ -120,13 +120,13 @@ The setup is complete.
 [[h2__1309855414]]
 === Add Accounts to the Menu
 
-To add the[.object]#Account# to the link:ios/app-menu[app
+To add the[.object]#Account# to the link:app-menu[app
 menu]:
 
 [width="100%",cols="50%,50%",]
 |===
 |In CT Mobile Control Panel a|
-. Go to link:ios/ct-mobile-control-panel-app-menu[CT Mobile Control
+. Go to link:ct-mobile-control-panel-app-menu[CT Mobile Control
 Panel: App Menu] tab.
 .  Select the required profile in the *Location* picklist.
 [TIP] ==== *General Settings* will be applied to all the
@@ -137,7 +137,7 @@ to the *Selected*.
 .  Click *Save*.
 
 |In CT Mobile Control Panel 2.0 a|
-. Go to link:ios/ct-mobile-control-panel-app-menu-new[CT Mobile Control
+. Go to link:ct-mobile-control-panel-app-menu-new[CT Mobile Control
 Panel 2.0: App Menu].
 . Select the required profile in the *Profile* picklist. To apply
 settings to all the profiles, select *General Settings*.
@@ -175,7 +175,7 @@ The *Maps* widget is configured.
 
 ifdef::ios,win,kotlin[]
 
-Use the link:ios/actions#h2__1355154294[Determine Location] button to
+Use the link:actions#h2__1355154294[Determine Location] button to
 determine the current device location data.
 
 ifdef::ios[]

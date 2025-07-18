@@ -5,12 +5,12 @@ filters applied to the corresponding
 https://help.salesforce.com/articleView?id=customizing_related_lists.htm&type=5[related
 lists] of records while displaying them in the mobile application. This
 parameter is also responsible for selection criteria that are used for
-link:ios/managing-offline-objects[offline object] data upload.
+link:managing-offline-objects[offline object] data upload.
 
 [TIP] ==== For easy setup, go to
-link:ios/ct-mobile-control-panel-offline-objects[CT Mobile Control
+link:ct-mobile-control-panel-offline-objects[CT Mobile Control
 Panel: Offline
-Objects]/link:ios/ct-mobile-control-panel-offline-objects-new[CT Mobile
+Objects]/link:ct-mobile-control-panel-offline-objects-new[CT Mobile
 Control Panel 2.0: Offline Objects]. ====
 
 The following system variables can be used as criteria:
@@ -37,7 +37,7 @@ Custom setting API Name:
 
 |Conflict Manager
 |[.apiobject]#clm__isConflictManagerEnabled__c#
-|Checkbox |The link:ios/conflict-manager-control[Conflict Manager] is
+|Checkbox |The link:conflict-manager-control[Conflict Manager] is
 used to track the changes made in a single record in the mobile
 application and on the Salesforce side.
 
@@ -77,7 +77,7 @@ grouped in the lists.
 |Online Fetching
 |[.apiobject]#clm__isOnlineFetchingEnabled__c#
 |Checkbox |The setting defines if the
-link:ios/online-records-fetching[Load more records] button is available
+link:online-records-fetching[Load more records] button is available
 in the application.
 
 |Order |[.apiobject]#clm__Order__c# |Number(18, 0) |The
@@ -93,7 +93,7 @@ related list's object is set in the
 
 |Quick Record Sync
 |[.apiobject]#clm__IsQuickSyncEnabled__c# |Checkbox
-|Enable link:ios/synchronization-launch[Quick Record Synchronization]
+|Enable link:synchronization-launch[Quick Record Synchronization]
 for records of the offline object.
 
 |RecordType |[.apiobject]#clm__RecordType__c# |Text(255)
@@ -123,7 +123,7 @@ applicable for the records of the related list.
 [.apiobject]#clm_sObjectRelated__c# field.
 
 |SOQL Filter |[.apiobject]#clm__SOQL__c# |Text(255) a|
-link:ios/filters-in-related-lists[The SOQL query to filter]:
+link:filters-in-related-lists[The SOQL query to filter]:
 
 * records of the offline object for displaying in the mobile
 application, if the API Name of this object is set in the
@@ -134,19 +134,19 @@ if the API Name of the related list's object is set in the
 
 |Sort Order |[.apiobject]#clm__SortOrder__c# |Text(255)
 |The parameter defines the ascending (ASC) or descending
-(DESC) link:ios/filters-in-related-lists[sorting order of records in
+(DESC) link:filters-in-related-lists[sorting order of records in
 the list].
 
 |Sort Tree by Field
 |[.apiobject]#clm__SortTreeByFieldName__c# |Text(255)
 |The API name of a field with the date or date/time type to display the
-related list records in the link:ios/timeline-view[timeline view] if
+related list records in the link:timeline-view[timeline view] if
 the API Name of the related list's object is set in the
 [.apiobject]#clm_sObjectRelated__c# field.
 
 |Sync Recovery |[.apiobject]#clm__SyncRecovery__c#
 |Text(255) a|
-Enable link:ios/sync-recovery[Sync Recovery] to deliver records that
+Enable link:sync-recovery[Sync Recovery] to deliver records that
 could not be synchronized to Salesforce anyway. Available values:
 
 * An empty value means that the web service is not involved.

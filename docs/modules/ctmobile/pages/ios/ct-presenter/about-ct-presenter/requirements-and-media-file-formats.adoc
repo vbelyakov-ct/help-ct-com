@@ -19,12 +19,12 @@ meetings.
 *Remote Detailing* meetings on different mobile devices to ensure
 compatibility across device versions as well as cross-browser
 compatibility. For more information, read
-link:ios/remote-detailing-f-a-q[Remote Detailing F.A.Q].  ====
+link:remote-detailing-f-a-q[Remote Detailing F.A.Q].  ====
 ifdef::andr[]
 
 Consider the quantity and image quality of the media assets to ensure
 the CT Mobile app responds quickly, and the user does not wait
-long link:ios/synchronization[during the synchronization].
+long link:synchronization[during the synchronization].
 
 The CLM presentation aspect ratio should depend on the screens of the
 mobile device to display, mostly it is 16:9 or 4:3.
@@ -54,7 +54,7 @@ with it repeatedly to ensure memory issues will not occur. However,
 memory warnings may appear in the device log to identify possible memory
 issues, although not every time.
 * For long-format, like reports and articles, we recommend using PDF
-that may be link:ios/creating-clm-presentation-from-pdf[converted into
+that may be link:creating-clm-presentation-from-pdf[converted into
 HTML5 code].
 * For short-format media, HTML5 will provide a better navigation
 experience, more accurate reporting, and interactivity.
@@ -100,7 +100,7 @@ Media included with the HTML should be referenced using relative paths,
 like[.apiobject]#/css/styles.css# rather than
 [.apiobject]#http://server.com/css/styles.css#.
 
-link:ios/gestures-in-clm-presentations[Default gestures] to switch and
+link:gestures-in-clm-presentations[Default gestures] to switch and
 interact with slides are supported.
 
 ifdef::ios[]
@@ -164,7 +164,7 @@ presentation will not be loaded.
 
 ifndef::andr[]
 
-For presentations in link:ios/the-remote-detailing-functionality[Remote
+For presentations in link:the-remote-detailing-functionality[Remote
 Detailing], we recommend using HTML5 or images instead of PDF.
 
 |PPT a|
@@ -210,7 +210,7 @@ presentation will not be loaded.
 
 
 Go back to
-link:ios/requirements-and-media-file-formats#ListofRequirements[the
+link:requirements-and-media-file-formats#ListofRequirements[the
 list of requirements].
 
 [[h2_1593603134]]
@@ -251,7 +251,7 @@ and is recommended as a workable value. Presentations with other sizes
 of .ppt(x) slides may not work properly.
 
 Go back to
-link:ios/requirements-and-media-file-formats#ListofRequirements[the
+link:requirements-and-media-file-formats#ListofRequirements[the
 list of requirements].
 
 [[h2_1549430477]]
@@ -272,7 +272,7 @@ insertion in slide markup:
 
 
 Go back to
-link:ios/requirements-and-media-file-formats#ListofRequirements[the
+link:requirements-and-media-file-formats#ListofRequirements[the
 list of requirements].
 
 [[h2_2044220847]]
@@ -286,7 +286,7 @@ https://www.google.com/, for example:
 
 
 Go back to
-link:ios/requirements-and-media-file-formats#ListofRequirements[the
+link:requirements-and-media-file-formats#ListofRequirements[the
 list of requirements].
 
 [[h2_1169375241]]
@@ -301,12 +301,12 @@ The following JS library should be represented in the
 
 The following scripts and styles should also be specified in the
 [.apiobject]#<head># tag of a slide for editing via
-link:ios/application-editor[Application Editor].
+link:application-editor[Application Editor].
 
 
 
 
 
 Go back to
-link:ios/requirements-and-media-file-formats#ListofRequirements[the
+link:requirements-and-media-file-formats#ListofRequirements[the
 list of requirements].

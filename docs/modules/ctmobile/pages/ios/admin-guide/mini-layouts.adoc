@@ -5,7 +5,7 @@ are used to create a record in a more convenient way. A mini layout will
 appear, for example, when tapping the plus button to create a new
 *Account* record or creating a new *Activity* record on the calendar
 grid. A mini layout can be assigned per each active record type of
-link:ios/managing-offline-objects[the offline object].
+link:managing-offline-objects[the offline object].
 
 [NOTE] ==== If a mini layout for an offline object or its record
 type is not configured, the default page layout will be open when
@@ -24,7 +24,7 @@ To create a mini layout:
 [width="100%",cols="50%,50%",]
 |===
 |In CT Mobile Control Panel a|
-. Go to link:ios/ct-mobile-control-panel-mini-layouts[CT Mobile Control
+. Go to link:ct-mobile-control-panel-mini-layouts[CT Mobile Control
 Panel: Mini Layouts].
 . Click *Create layout*.
 image:47745554.png[]
@@ -32,7 +32,7 @@ image:47745554.png[]
 . Select the *Object* from the drop-down list.
 . Select the *Record Type* from the drop-down list.
 [NOTE] ==== Make sure that the target profile has the proper
-link:ios/application-permission-settings[permissions for the selected
+link:application-permission-settings[permissions for the selected
 record type]. You can review the profile permissions in *Setup* →
 *Users* → *Profiles*. ====
 . Click *Add new field* and select a field from the drop-down list,
@@ -41,7 +41,7 @@ which will be displayed on the mini layout.
 . Click *Create*.
 
 |In CT Mobile Control Panel 2.0 a|
-. Go to link:ios/ct-mobile-control-panel-mini-layouts-new[CT Mobile
+. Go to link:ct-mobile-control-panel-mini-layouts-new[CT Mobile
 Control Panel 2.0: Mini Layouts].
 . Select an offline object from the left list.
 . Click  *Add Settings*.
@@ -49,7 +49,7 @@ image:ctm-control-panel-new-mini-layout-add-settings.png[]
 . Select a record type for creating a mini layout. You can create one
 mini layout for each record type.
 * Make sure that the target profile has the
-link:ios/application-permission-settings[proper permissions for the
+link:application-permission-settings[proper permissions for the
 selected record type]. You can review the profile permissions in *Setup*
 → *Users* → *Profiles*.
 * If a record has no custom record type associated with it, then the
@@ -64,7 +64,7 @@ to remove the field.
 |===
 
 
-link:ios/ct-mobile-control-panel-mini-layouts[]
+link:ct-mobile-control-panel-mini-layouts[]
 
 ifdef::andr,ios,win[] The mini layout is configured. Perform a
 synchronization to apply the changes. ifdef::kotlin[]

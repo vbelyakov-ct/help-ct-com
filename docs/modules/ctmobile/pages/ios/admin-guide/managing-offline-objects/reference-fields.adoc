@@ -11,21 +11,21 @@ reference field via a lookup or master-detail relationship.
 
 For the reference field, a mobile user can:
 
-* link:ios/reference-fields#h2__1514470758[download additional
+* link:reference-fields#h2__1514470758[download additional
 record] if the reference field refers to the not downloaded record;
-* link:ios/reference-fields#h2__1554731138[search value] or create a
+* link:reference-fields#h2__1554731138[search value] or create a
 new record to add;
-* use link:ios/reference-fields#h2__321327715[lookup filters] to see
+* use link:reference-fields#h2__321327715[lookup filters] to see
 records that match required or optional criteria.
 
 [[h2__1514470758]]
 === Online One Record Fetching
 
-Along with link:ios/online-records-fetching[online records fetching], a
+Along with link:online-records-fetching[online records fetching], a
 mobile user can download one additional record
 tappingimage:62573543.png[]next
 to the field, which refers to the not downloaded
-record, on link:ios/mobile-layouts[the mobile layout] of the linked
+record, on link:mobile-layouts[the mobile layout] of the linked
 record.
 
 
@@ -33,7 +33,7 @@ Online one record fetching is available when:
 
 * one of the downloaded records is linked to a not downloaded record;
 * the object of the not downloaded record is
-available link:ios/managing-offline-objects[offline].
+available link:managing-offline-objects[offline].
 
 
 
@@ -42,7 +42,7 @@ the _Contact_ record value and another lookup field with
 the _Account_ record value. The linked record of
 the [.object]#Contact# object was downloaded on a mobile device,
 but the linked record of the [.object]#Account# object is not
-available offline due to link:ios/related-list-filters[Related List
+available offline due to link:related-list-filters[Related List
 Filters]. When a mobile user opens the _Activity_ record, they can open
 the available related _Contact_ record and download
 the related _Account_ record to the mobile device.
@@ -60,7 +60,7 @@ to the reference field.
 
 The record is synchronized. The mobile layout of the record opens.
 
-* If a current user launches link:ios/synchronization-launch[one of the
+* If a current user launches link:synchronization-launch[one of the
 synchronization modes], the loaded record via online one record fetching
 will still be available on a mobile device. The record will only be
 removed after the database is reset.
@@ -68,7 +68,7 @@ removed after the database is reset.
 download a record.
 * A mobile user can clear value from the reference field by tapping on a
 field with the record and then tapping the *Clear* button.
-* If link:ios/managing-offline-objects#h2_1534686659[a record in the
+* If link:managing-offline-objects#h2_1534686659[a record in the
 reference field was deleted] in the CT Mobile app,
 the image:deleted.png[] icon
 next to the reference field will be shown.
@@ -76,7 +76,7 @@ next to the reference field will be shown.
 [[h2__1554731138]]
 === Online record search
 
-Enter a record in the reference field link:ios/search[using search].
+Enter a record in the reference field link:search[using search].
 Search is carried out in the fields that are listed on
 the https://help.salesforce.com/articleView?id=search_results_setup_parent.htm&type=5[Search
 Results] search layout.
@@ -92,9 +92,9 @@ search results, tap a record you want to specify in the
 reference field.
 * Tap image:66361426.png[] to
 create and add a new record to the reference field
-using link:ios/mini-layouts[a mini layout].
+using link:mini-layouts[a mini layout].
 * Tap image:detailed-list-view-button.png[]
-to expand link:ios/list-views#h2_1248088428[the detailed list view].
+to expand link:list-views#h2_1248088428[the detailed list view].
 * Tap image:66359461.png[] to
 online search for a record in Salesforce. In the search results, tap a
 record and confirm to download it.
@@ -126,17 +126,17 @@ open the record details screen.
 If the object of the record is not available offline, a mobile user
 cannot download a record.
 
-If a current user launches link:ios/synchronization-launch[one of the
+If a current user launches link:synchronization-launch[one of the
 synchronization modes], the loaded record via online one record fetching
 will be still available on a mobile device. The record will be removed
-only after link:ios/log-out[the reset database or log out of the
+only after link:log-out[the reset database or log out of the
 current user].
 
 [[h2__1554731138]]
 === Online Record Search
 
 A mobile user can specify a value for the lookup or master-detail
-relationship field by link:ios/search[searching] or creating a
+relationship field by link:search[searching] or creating a
 record. Search is carried out in the fields that are listed on
 the https://help.salesforce.com/articleView?id=search_results_setup_parent.htm&type=5[Search
 Results] search layout. To find a record:
@@ -148,7 +148,7 @@ filters image:66368059.png[] to
 select another list view.
 * Tap image:66362246.png[]  to
 create and add a new record to the reference field by
-using link:ios/mini-layouts[a mini layout].
+using link:mini-layouts[a mini layout].
 * Tap the *Clear* button to clear the value from the reference field. If
 a reference field is empty, the *Clear* button is not displayed.
 image:66368056.png[]
@@ -164,7 +164,7 @@ master-detail relationship.
 === Online Record Search
 
 A mobile user can specify a value for the lookup or master-detail
-relationship field by link:ios/search[searching] or creating a
+relationship field by link:search[searching] or creating a
 record. Search is carried out in the fields that are listed on
 the https://help.salesforce.com/articleView?id=search_results_setup_parent.htm&type=5[Search
 Results] search layout. To find a record:
@@ -174,7 +174,7 @@ search results, tap a record you want to specify in the
 reference field.
 * Tap the list view name to select another list view.
 * Tap the *Plus* button to create and add a new record to the reference
-field by using link:ios/mini-layouts[a mini layout].
+field by using link:mini-layouts[a mini layout].
 * Tap the *Clear* button to clear the value from the reference field. If
 a reference field is empty, the *Clear* button is not displayed.
 
@@ -191,8 +191,8 @@ Help].
 ifdef::ios,win[]
 
 If you created or changed the lookup filter, it is necessary to
-rebuild link:ios/metadata-archive[a metadata
-archive] using link:ios/metadata-checker[one of the available
+rebuild link:metadata-archive[a metadata
+archive] using link:metadata-checker[one of the available
 options] to download the proper lookup filters via synchronization.
 
 Lookup filter can be required or optional:

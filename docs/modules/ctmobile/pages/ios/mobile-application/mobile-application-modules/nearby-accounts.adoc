@@ -19,15 +19,15 @@ You can select the appropriate list view.
 [[h2_1037365166]]
 === Requirements
 
-Add the *Nearby Accounts* module to link:ios/app-menu[the app menu].
+Add the *Nearby Accounts* module to link:app-menu[the app menu].
 
 ifdef::ios,andr,kotlin[]
 
-To use Google Maps, specify the link:ios/google-maps-api-key[Google
+To use Google Maps, specify the link:google-maps-api-key[Google
 Maps API key] on the
-link:ios/ct-mobile-control-panel-general#h3_604215198[CT Mobile Control
+link:ct-mobile-control-panel-general#h3_604215198[CT Mobile Control
 Panel:
-General]/link:ios/ct-mobile-control-panel-general-new#h3_604215198[CT
+General]/link:ct-mobile-control-panel-general-new#h3_604215198[CT
 Mobile Control Panel 2.0: General] tab.
 
 ifdef::win[]
@@ -35,9 +35,9 @@ ifdef::win[]
 To use maps, specify the
 https://docs.microsoft.com/en-us/bingmaps/getting-started/bing-maps-dev-center-help/getting-a-bing-maps-key[Bing
 Maps API key] on the
-link:ios/ct-mobile-control-panel-general#h3__1990058335[CT Mobile
+link:ct-mobile-control-panel-general#h3__1990058335[CT Mobile
 Control Panel:
-General]/link:ios/ct-mobile-control-panel-general-new#h3__1424081301[CT
+General]/link:ct-mobile-control-panel-general-new#h3__1424081301[CT
 Mobile Control Panel 2.0: General] tab.
 
 ifdef::win,andr,kotlin[]
@@ -45,9 +45,9 @@ ifdef::win,andr,kotlin[]
 * A field to store an address for the[.object]#Account# object
 should be specified on the *CT Mobile Control Panel: General* tab.
 * An[.object]#Activity# object should be specified on
-link:ios/ct-mobile-control-panel-calendar#h3_1397263211[CT Mobile
+link:ct-mobile-control-panel-calendar#h3_1397263211[CT Mobile
 Control Panel:
-Calendar]/link:ios/ct-mobile-control-panel-activities-new#h2_2014841429[CT
+Calendar]/link:ct-mobile-control-panel-activities-new#h2_2014841429[CT
 Mobile Control Panel 2.0: Activities] tab. Create a field with the
 *Lookup* type from the[.object]#Activity# object to the
 [.object]#Account# object.
@@ -71,12 +71,12 @@ image:Nearby-Accounts-Kotlin.png[]
 [[h2_163800537]]
 === Adding Nearby Accounts to the Menu
 
-To add the *Nearby Accounts* module to the link:ios/app-menu[app menu]:
+To add the *Nearby Accounts* module to the link:app-menu[app menu]:
 
 [width="100%",cols="50%,50%",]
 |===
 |In CT Mobile Control Panel a|
-. Go to link:ios/ct-mobile-control-panel-app-menu[CT Mobile Control
+. Go to link:ct-mobile-control-panel-app-menu[CT Mobile Control
 Panel: App Menu] tab.
 . {blank}
 . Click the
@@ -87,7 +87,7 @@ button to open the *Add menu item* tool.
 . Click *Save*.
 
 |In CT Mobile Control Panel 2.0 a|
-. Go to link:ios/ct-mobile-control-panel-app-menu-new[CT Mobile Control
+. Go to link:ct-mobile-control-panel-app-menu-new[CT Mobile Control
 Panel 2.0: App Menu] tab.
 . Select the required profile in the *Profile* picklist. To apply
 settings to all the profiles, select *General Settings*.
@@ -125,9 +125,9 @@ references, or activity records with the specified geolocation.
 
 * Records will be randomly grouped in the section without a title if the
 current user profile has no access to the start date field (refer to
-link:ios/ct-mobile-control-panel-calendar#h3_1674628596[CT Mobile
+link:ct-mobile-control-panel-calendar#h3_1674628596[CT Mobile
 Control Panel: Calendar] or
-link:ios/ct-mobile-control-panel-activities-new#h4__1766544266[CT
+link:ct-mobile-control-panel-activities-new#h4__1766544266[CT
 Mobile Control Panel 2.0: Activities]) or this field is blank.
 * Records will be grouped by day according to the
 [.object]#Activity# object with a title that contains the day,
@@ -146,9 +146,9 @@ sorted in ascending or descending order according to the start date
 To view related contacts or references, specify the API name of the
 required object on the *CT Mobile Control Panel: General* tab and add
 this object to offline objects (refer to
-link:ios/ct-mobile-control-panel-offline-objects[CT Mobile Control
+link:ct-mobile-control-panel-offline-objects[CT Mobile Control
 Panel: Offline objects] or
-link:ios/ct-mobile-control-panel-offline-objects-new[CT Mobile Control
+link:ct-mobile-control-panel-offline-objects-new[CT Mobile Control
 Panel 2.0: Offline Objects]). There should be a field with
 the *Lookup* type on
 the [.object]#Contact# or [.object]#Reference# object to
@@ -165,9 +165,9 @@ decreasing order. You can select the appropriate list view.
 To view related contacts, specify the API name of the required object on
 the *CT Mobile Control Panel: General* tab and add this object
 to offline objects (refer to
-link:ios/ct-mobile-control-panel-offline-objects[CT Mobile Control
+link:ct-mobile-control-panel-offline-objects[CT Mobile Control
 Panel: Offline objects] or
-link:ios/ct-mobile-control-panel-offline-objects-new[CT Mobile Control
+link:ct-mobile-control-panel-offline-objects-new[CT Mobile Control
 Panel 2.0: Offline Objects]). There should be a field with
 the *Lookup* type from the specified [.object]#Contact# object
 to the [.object]#Account# object.
@@ -212,7 +212,7 @@ view the list of _Activity_ records. Select an _Activity_ from the list
 to show its related _Accounts_ on the map.
 ** Tap image:ctmi-retailstore-icon.png[] to
 view the list of retail stores (the
-link:ios/activating-cg-cloud-in-salesforce[CG Cloud] must be
+link:activating-cg-cloud-in-salesforce[CG Cloud] must be
 activated). Select a retail store from the list to show it on the map.
 
 The record details from the compact layout will be displayed at the top

@@ -7,8 +7,8 @@ for sending attachments of records. ifdef::ios[]
 
 https://help.salesforce.com/articleView?id=email_templates_landing_page.htm&type=5[Email
 templates] are the standard Salesforce functionality that can be used
-for sending files from link:ios/libraries[Libraries] and slides and
-attachments of link:ios/applications[CLM presentations].
+for sending files from link:libraries[Libraries] and slides and
+attachments of link:applications[CLM presentations].
 
 
 
@@ -21,7 +21,7 @@ To use email templates in the CT Mobile app, they should be active, and
 the mobile user should have access to appropriate email templates.
 
 Specify markers in the[.apiobject]#{!Object.Field}# format
-link:ios/crm-data-display[to display CRM data], for example,
+link:crm-data-display[to display CRM data], for example,
 [.apiobject]#{!User.Name}#,
 [.apiobject]#{!User.LastName}#,
 [.apiobject]#{!User.MobilePhone}#.
@@ -44,7 +44,7 @@ A mobile user can send an email only to contacts who have a specified
 email address in Salesforce:
 
 * fill out the standard *Email* field for the desired _Contact_ record;
-* if you use link:ios/person-accounts[Person Accounts], fill out the
+* if you use link:person-accounts[Person Accounts], fill out the
 standard *Email* field for the desired *Person Account* record.
 
 ifdef::kotlin[]
@@ -82,7 +82,7 @@ for the[.apiobject]#{{{Recipient.FirstName}}}# markers.
 * The attached files are not supported.
 * Images used in a template and stored in the static resources or
 documents (without the selected *Externally Available Image* option) may
-not be downloaded during link:ios/synchronization[the sync process].
+not be downloaded during link:synchronization[the sync process].
 * You can send an email using a third-party mail client (like
 Microsoft Outlook), if it is set as default in your iOS settings. In
 this case:

@@ -6,9 +6,9 @@ for the *Geo Tracing* operation will be created.
 
 
 According to the tracking interval (refer to
-link:ios/ct-mobile-control-panel-general#h3__1808523151[CT Mobile
+link:ct-mobile-control-panel-general#h3__1808523151[CT Mobile
 Control Panel:
-General]/link:ios/ct-mobile-control-panel-general-new#h3__1808523151[CT
+General]/link:ct-mobile-control-panel-general-new#h3__1808523151[CT
 Mobile Control Panel 2.0: General]), CT Mobile monitors the user's
 coordinates. If the user has changed their location, the coordinates
 will be saved in the[.apiobject]#clm__GeoTracing__c#
@@ -26,7 +26,7 @@ server, it will be downloaded from Salesforce.
 captured on the current user's local time according to the tracking
 interval.
 * The received coordinates per user's local time are used to build a
-route on link:ios/using-geolocation-center#h2_1475553155[the Activities
+route on link:using-geolocation-center#h2_1475553155[the Activities
 tab] of the *Geolocation Center* tab.
 
 image:Geo-Tracing-Sync-Log.png[]

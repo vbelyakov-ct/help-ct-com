@@ -36,7 +36,7 @@ To customize the Home Screen:
 [width="100%",cols="50%,50%",]
 |===
 |In CT Mobile Control Panel a|
-. Go to link:ios/ct-mobile-control-panel-app-menu[CT Mobile Control
+. Go to link:ct-mobile-control-panel-app-menu[CT Mobile Control
 Panel: App Menu].
 . {blank}
 . Click the *Home* item in the *SELECTED* list.
@@ -49,7 +49,7 @@ Panel: App Menu].
 image:customize_home_screen.png[]
 
 |In CT Mobile Control Panel 2.0 a|
-. Go to link:ios/ct-mobile-control-panel-app-menu-new[CT Mobile Control
+. Go to link:ct-mobile-control-panel-app-menu-new[CT Mobile Control
 Panel 2.0: App Menu] tab.
 . Select the required profile in the *Profile* picklist. To apply
 settings to all the profiles, select *General Settings*.
@@ -84,9 +84,9 @@ button] is locked.
 ==== Logo
 
 A logo can be specified per profile. Select a profile on
-link:ios/ct-mobile-control-panel-general#h3_1354766135[CT Mobile
+link:ct-mobile-control-panel-general#h3_1354766135[CT Mobile
 Control Panel:
-General]/link:ios/ct-mobile-control-panel-user-interface-new#h3_1354766135[CT
+General]/link:ct-mobile-control-panel-user-interface-new#h3_1354766135[CT
 Mobile Control Panel 2.0: User Interface] and add a new logo.
 
 [[h3_1292798904]]
@@ -119,7 +119,7 @@ not activated.
 
 ifndef::win[]
 
-If link:ios/start-finish-functionality[the Start/Finish functionality]
+If link:start-finish-functionality[the Start/Finish functionality]
 is enabled, on activity is unfinished when the
 [.apiobject]#IsDone__c# checkbox on the _Activity_ object is
 not activated. If the user of the mobile device taps the *Finish* button
@@ -128,10 +128,10 @@ will automatically be selected.
 [NOTE] ==== The API names of the checkboxes on the _Activity_
 objects, for example, the[.apiobject]#IsDone__c ==== field,
 should be specified (separated by a comma, without blank space) in the
-[.apiobject]#clm__ActivityDoneAPI__c# field on the link:ios/mobile-application-setup[Mobile Application Setup].#
+[.apiobject]#clm__ActivityDoneAPI__c# field on the link:mobile-application-setup[Mobile Application Setup].#
 
 Tap the icon to view and manage all activities of that day if
-link:ios/application-permission-settings[permission to create and
+link:application-permission-settings[permission to create and
 delete records is granted].
 
 To modify the *All activities per day* hint, create the _CalendarWidget_
@@ -158,13 +158,13 @@ ifdef::ios,win,andr[]
 Display the standard scenario and favorite custom scenarios of CLM
 presentations.
 
-In the Applications module, link:ios/applications#h3__1557359819[add
+In the Applications module, link:applications#h3__1557359819[add
 CLM-presentation(s) or scenario(s) to favorites]. The favorite CLM
 presentations will be displayed in the carousel.
 
 Scroll the carousel and tap on the CLM presentation to open it. In the
-presentation mode, use link:ios/gestures-in-clm-presentations[gestures]
-and link:ios/clm-presentation-controls[buttons].
+presentation mode, use link:gestures-in-clm-presentations[gestures]
+and link:clm-presentation-controls[buttons].
 
 ifndef::win,andr[]
 
@@ -178,7 +178,7 @@ ifdef::ios[]
 ==== Reports and Dashboards
 
 After creating or editing a dashboard or
-report, link:ios/ct-mobile-control-panel-tools-new#h3_1003786176[refresh
+report, link:ct-mobile-control-panel-tools-new#h3_1003786176[refresh
 the metadata archive] to ensure that reports and dashboards have been
 included correctly.
 
@@ -191,18 +191,18 @@ is based on an offline dashboard, the dashboard also should be located
 in a custom folder.
 * Objects used for chart building should be added to the list of the
 objects available offline (refer
-to link:ios/managing-offline-objects[CT Mobile Control Panel: Managing
+to link:managing-offline-objects[CT Mobile Control Panel: Managing
 Offline
-Objects]/link:ios/ct-mobile-control-panel-offline-objects-new[CT Mobile
+Objects]/link:ct-mobile-control-panel-offline-objects-new[CT Mobile
 Control Panel 2.0: Offline Objects]).
 On the Home screen, as well as on
-link:ios/mobile-layouts-dashboards[the mobile layout], only offline
+link:mobile-layouts-dashboards[the mobile layout], only offline
 reports and dashboards are available. When a dashboard collects data
 that is not stored in the mobile application, for example,
-link:ios/sync-logs[Sync Logs reports] or
-link:ios/clm-applicationstats[CLM-presentation statistics], the message
+link:sync-logs[Sync Logs reports] or
+link:clm-applicationstats[CLM-presentation statistics], the message
 «_No data to display_» will be shown on the Dashboard widget. A mobile
-user can view these dashboards online in link:ios/dashboards[the
+user can view these dashboards online in link:dashboards[the
 Dashboards module] if the module was added to the main menu.
 * To view or update dashboards and reports, launch a full
 synchronization. A valid cloud token is required.
@@ -213,7 +213,7 @@ dashboards criteria is working as the *Calendar year*.
 === Status Indicator
 
 The Status Indicator in the lower part of the home screen informs you
-about the data relevancy and if link:ios/synchronization[the
+about the data relevancy and if link:synchronization[the
 synchronization] is required. The Indicator begins to blink if you have
 updated some records or haven't performed the synchronization for a long
 time.
@@ -336,16 +336,16 @@ ifdef::kotlin[] The *Home Screen* is the starting page of the CT
 Mobile app.
 
 * Specify a logo per profile. Select a profile on the
-link:ios/ct-mobile-control-panel-general#h3_1354766135[CT Mobile
+link:ct-mobile-control-panel-general#h3_1354766135[CT Mobile
 Control Panel:
-General]/link:ios/ct-mobile-control-panel-user-interface-new#h3_1354766135[CT
+General]/link:ct-mobile-control-panel-user-interface-new#h3_1354766135[CT
 Mobile Control Panel 2.0: User Interface] tab and add a new logo.
-* Customize link:ios/application-theme[the application theme].
+* Customize link:application-theme[the application theme].
 * Use the global search bar to search records which object added to the
 main menu. For more information, please refer
-to link:ios/search[Search].
+to link:search[Search].
 * Tap the burger icon to minimize the main menu up to menu icons.
-* Specify menu items and their order in link:ios/app-menu[the main
+* Specify menu items and their order in link:app-menu[the main
 menu].
 ** Add menu items to the *Favorites* section. Long tap the menu item and
 drag-and-drop it above the line.
@@ -353,7 +353,7 @@ drag-and-drop it above the line.
 items.
 * The Status Indicator displays the date of the last successful
 synchronization. Tap the icon to start the fast sync. For more
-information, go to link:ios/synchronization-launch[Synchronization
+information, go to link:synchronization-launch[Synchronization
 Launch].
 
 image:Home-Screen-Kotlin.png[]

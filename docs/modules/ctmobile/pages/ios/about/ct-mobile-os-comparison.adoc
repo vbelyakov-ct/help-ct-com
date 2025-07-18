@@ -14,11 +14,11 @@
 
 | |*iOS* |*Android* |*Android 2.0* |*Windows* |*Android* |
 
-|Basic via API with link:ios/logging-in[login&#44; password], and
-link:ios/security-token[security token] |Yes
+|Basic via API with link:logging-in[login&#44; password], and
+link:security-token[security token] |Yes
 (optionally) |Yes |Yes |Yes |Yes |
 
-|link:ios/oauth-2-0[OAuth 2.0] |Yes |Yes
+|link:oauth-2-0[OAuth 2.0] |Yes |Yes
 (optionally) |Yes |Since v.1.3 |Yes
 (optionally) |
 
@@ -40,7 +40,7 @@ sign-on] |Yes |Yes |No |No |Yes |
 |In-app password changing |Yes |No |No |No |No |Not available when using
 OAuth 2.0.
 
-|link:ios/application-pin-code[In-app PIN code] |Yes |No |No |Yes |No
+|link:application-pin-code[In-app PIN code] |Yes |No |No |Yes |No
 |
 |===
 
@@ -55,46 +55,46 @@ OAuth 2.0.
 
 | |*iOS* |*Android* |*Android 2.0* |*Windows* |*Android*
 
-|link:ios/fast-synchronization[Fast synchronization] |Yes |Yes |Yes
+|link:fast-synchronization[Fast synchronization] |Yes |Yes |Yes
 |Yes |Yes
 
-|link:ios/full-synchronization[Full synchronization] |Yes |Yes |Yes
+|link:full-synchronization[Full synchronization] |Yes |Yes |Yes
 |Yes |Yes
 
 |Mixed synchronization |Yes |No |Yes |Yes |No
 
 |Continue synchronization |Yes |No |No |Yes |No
 
-|link:ios/other-synchronization-modes[Quick record synchronization]
+|link:other-synchronization-modes[Quick record synchronization]
 |Yes |No |No |No |No
 
-|link:ios/other-synchronization-modes[Synchronization under the CT
+|link:other-synchronization-modes[Synchronization under the CT
 Mobile Workflow rule] |Yes |No |No |No |No
 
-|link:ios/sync-recovery[Sync Recovery] |Yes |No |No |No |No
+|link:sync-recovery[Sync Recovery] |Yes |No |No |No |No
 
-|link:ios/ct-mobile-replication[CT Mobile Replication] |Yes |No |Yes
+|link:ct-mobile-replication[CT Mobile Replication] |Yes |No |Yes
 |No |No
 
-|link:ios/conflict-manager-control[Conflict Manager] |Yes |No |No |No
+|link:conflict-manager-control[Conflict Manager] |Yes |No |No |No
 |No
 
-|link:ios/online-records-fetching[Online records fetching] |Yes |No
+|link:online-records-fetching[Online records fetching] |Yes |No
 |No |No |No
 
-|link:ios/reference-fields#h2__1514470758[Online one record fetching]
+|link:reference-fields#h2__1514470758[Online one record fetching]
 |Yes |No |No |Yes |No
 
 |link:/articles/project-ct-mobile-en[Status Indicator] |Yes |Yes |Yes
 |No |Yes
 
-|link:ios/ct-mobile-control-panel-tools#h2__203730205[Sync metadata
+|link:ct-mobile-control-panel-tools#h2__203730205[Sync metadata
 using administrator credentials] |Yes |Yes |Yes |Yes |Yes
 
-|link:ios/metadata-archive[Sync metadata using ZIP archive(s)] |Yes
+|link:metadata-archive[Sync metadata using ZIP archive(s)] |Yes
 |No |Yes |Yes |No
 
-|link:ios/metadata-checker[Metadata checker] |Yes |No |No |Yes |No
+|link:metadata-checker[Metadata checker] |Yes |No |No |Yes |No
 |===
 
 
@@ -135,7 +135,7 @@ SQLCipher can be used as a custom encryption logic.
 
 | |*iOS* |*Android* |*Android 2.0* |*Windows* |*Android*
 
-|link:ios/application-language[Application Language Selection] |Yes
+|link:application-language[Application Language Selection] |Yes
 |Yes |Yes |Yes |Yes
 
 |Basic field attributes (label, type, length, default field values) |Yes
@@ -161,38 +161,38 @@ tags] are supported in Read-Only fields with the Text Area and Text Area
 |Emoji support in titles and subtitles, layouts, and related lists |Yes
 |No |No |No |No
 
-|link:ios/reference-fields#h2__321327715[Lookup filters] |Yes |Yes |Yes
+|link:reference-fields#h2__321327715[Lookup filters] |Yes |Yes |Yes
 |Yes |Yes
 
-|link:ios/roll-up-summary-fields[Roll-up summary fields] |Yes |Yes |Yes
+|link:roll-up-summary-fields[Roll-up summary fields] |Yes |Yes |Yes
 |Yes |Yes
 
-|link:ios/field-dependency-and-dependent-picklists[Field dependency and
+|link:field-dependency-and-dependent-picklists[Field dependency and
 dependent picklists] |Yes |Yes |No |Yes |Yes
 
-|link:ios/offline-supported-operators-and-functions-in-field-with-the-formula-type[Offline
+|link:offline-supported-operators-and-functions-in-field-with-the-formula-type[Offline
 formulas] |Yes |Yes |Yes |Yes |Yes
 
-|link:ios/validation[Offline validation rules] |Yes |Yes |Yes |Yes |Yes
+|link:validation[Offline validation rules] |Yes |Yes |Yes |Yes |Yes
 
-|link:ios/mobile-layouts-dashboards[Offline dashboards] |Yes |No |No
+|link:mobile-layouts-dashboards[Offline dashboards] |Yes |No |No
 |No |No
 
 |Encrypted fields support |Yes |No |No |No |No
 
-|link:ios/compact-layout[Compact layouts] |Yes |Yes |Yes |Yes |Yes
+|link:compact-layout[Compact layouts] |Yes |Yes |Yes |Yes |Yes
 
-|link:ios/search[Search layouts for each object] |Yes |No |Yes |Yes |No
+|link:search[Search layouts for each object] |Yes |No |Yes |Yes |No
 
-|Page layouts and link:ios/mobile-layouts[mobile layouts] |Yes |Yes
+|Page layouts and link:mobile-layouts[mobile layouts] |Yes |Yes
 |Yes |Yes |Yes
 
-|link:ios/list-views[List views] |Yes |Yes |Yes |Yes |Yes
+|link:list-views[List views] |Yes |Yes |Yes |Yes |Yes
 
 |Create, edit, and delete list views in the CT Mobile app |Yes |No |No
 |No |No
 
-|link:ios/list-views#h2__1243490689[Detailed list views] |Yes |No |No
+|link:list-views#h2__1243490689[Detailed list views] |Yes |No |No
 |Since v.1.3 |No
 |===
 
@@ -223,16 +223,16 @@ formulas] |Yes |Yes |Yes |Yes |Yes
 
 |Mapping |No |No |No |No |No
 
-|link:ios/ctm-settings-menu[Menu] |Yes |No |No |Since v.1.3 |No
+|link:ctm-settings-menu[Menu] |Yes |No |No |Since v.1.3 |No
 
 |Mini Layouts |No |No |No |No |No
 
-|link:ios/ctm-settings-offline-objects[Offline Objects] |Yes |No |No
+|link:ctm-settings-offline-objects[Offline Objects] |Yes |No |No
 |Since v.1.3 |No
 
 |Remote Detailing |No |No |No |No |No
 
-|link:ios/ctm-settings-standard-related-list[Standard Related List]
+|link:ctm-settings-standard-related-list[Standard Related List]
 |Yes |No |No |Since v.1.3 |No
 |===
 
@@ -247,19 +247,19 @@ formulas] |Yes |Yes |Yes |Yes |Yes
 
 | |*iOS* |*Android* |*Android 2.0* |*Windows* |*Android* |
 
-|link:ios/sync-logs[Log errors and system actions] |Yes |No |Yes |Yes
+|link:sync-logs[Log errors and system actions] |Yes |No |Yes |Yes
 |No |
 
-|link:ios/ct-mobile-control-panel-general#h3_1226274811[Debug Level]
+|link:ct-mobile-control-panel-general#h3_1226274811[Debug Level]
 |Yes |Yes |Yes |Yes |Yes |
 
-|link:ios/sync-logs#h2__272409891[Sending sync logs (automatic)] |Yes
+|link:sync-logs#h2__272409891[Sending sync logs (automatic)] |Yes
 |No |No |Yes |No |
 
-|link:ios/send-application-data-dump#h2_432975122[Sending sync log to
+|link:send-application-data-dump#h2_432975122[Sending sync log to
 Salesforce (manually)] |Yes |No |No |Yes |No |
 
-|link:ios/send-application-data-dump[Export database dump to
+|link:send-application-data-dump[Export database dump to
 Salesforce] |Yes |No |No |Yes |No |
 
 |Export database dump to support team by email |Yes |No |Yes |Yes |No
@@ -269,9 +269,9 @@ device.
 |Import database dump |Yes |No |No |Yes |No |
 
 |Root access |Yes
-(link:ios/jailbreak-checker[jailbreak]) |No |No |No |No |
+(link:jailbreak-checker[jailbreak]) |No |No |No |No |
 
-|link:ios/ct-mobile-control-panel-general#h3_1567195273[Log geolocation
+|link:ct-mobile-control-panel-general#h3_1567195273[Log geolocation
 in background mode] |Yes |No |No |No |No |
 |===
 
@@ -286,13 +286,13 @@ in background mode] |Yes |No |No |No |No |
 
 | |*iOS* |*Android* |*Android 2.0* |*Windows* |*Android*
 
-|link:ios/notification-center[Notification Center] |Yes |No |No |Since
+|link:notification-center[Notification Center] |Yes |No |No |Since
 v.1.3 |No
 
-|link:ios/geolocation-center[Geolocation Center] |Yes |No |No |Since
+|link:geolocation-center[Geolocation Center] |Yes |No |No |Since
 v.1.3 |No
 
-|link:ios/chatter-push-notifications[Custom push notifications
+|link:chatter-push-notifications[Custom push notifications
 (e.g.&#44; Chatter push notification)] |Yes |No |No |Since v.1.3 |No
 |===
 
@@ -307,7 +307,7 @@ v.1.3 |No
 
 | |*iOS* |*Android* |*Android 2.0* |*Windows* |*Android*
 
-|link:ios/ct-mobile-control-panel-workflows[Button Triggers (workflow
+|link:ct-mobile-control-panel-workflows[Button Triggers (workflow
 on button click)] |Yes |No |No |No |No
 
 |CRUD Triggers (workflow on CRUD functions) |Yes |No |No |No |No
@@ -324,70 +324,70 @@ on button click)] |Yes |No |No |No |No
 
 | |*iOS* |*Android* |*Android 2.0* |*Windows* |*Android*
 
-|link:ios/app-menu[Configuring the main menu] |Yes |Yes |Yes |Yes |Yes
+|link:app-menu[Configuring the main menu] |Yes |Yes |Yes |Yes |Yes
 
-|link:ios/mini-layouts[Mini layouts] |Yes |Yes |Yes |Yes |Yes
+|link:mini-layouts[Mini layouts] |Yes |Yes |Yes |Yes |Yes
 
-|link:ios/grouping-records[Grouping records] |Yes |Yes |Yes |Yes |Yes
+|link:grouping-records[Grouping records] |Yes |Yes |Yes |Yes |Yes
 
-|link:ios/application-theme[Application theme] |Yes |Yes |Yes |Yes |Yes
+|link:application-theme[Application theme] |Yes |Yes |Yes |Yes |Yes
 
-|link:ios/application-theme[Title and Home patterns] |Yes |No |Yes |No
+|link:application-theme[Title and Home patterns] |Yes |No |Yes |No
 |No
 
-|link:ios/custom-color-settings[Color settings] |Yes |Yes |Yes |Yes
+|link:custom-color-settings[Color settings] |Yes |Yes |Yes |Yes
 |Yes
 
-|link:ios/ct-mobile-control-panel-general#h3__377059502[Image Quality]
+|link:ct-mobile-control-panel-general#h3__377059502[Image Quality]
 |Yes |Yes |No |No |Yes
 
-|link:ios/demonstration-mode[Demonstration Mode] |Yes |No |No |No |No
+|link:demonstration-mode[Demonstration Mode] |Yes |No |No |No |No
 
-|link:ios/application-settings#h3__828881719[Show field hints] |Yes
+|link:application-settings#h3__828881719[Show field hints] |Yes
 |Yes |Yes |No |Yes
 
-|link:ios/application-settings#h3__1857935580[Tutorial mode] |Yes |No
+|link:application-settings#h3__1857935580[Tutorial mode] |Yes |No
 |No |No |No
 
-|link:ios/application-settings#h3__115565593[Send diagnostic data] |Yes
+|link:application-settings#h3__115565593[Send diagnostic data] |Yes
 |No |No |No |No
 
-|link:ios/attaching-files-in-the-notes-attachments-section[On-demand
+|link:attaching-files-in-the-notes-attachments-section[On-demand
 files downloading in Notes & Attachments] |Yes |No |No |No |No
 
-|link:ios/device-lock-screen-widget[Device lock screen widget] |Yes |No
+|link:device-lock-screen-widget[Device lock screen widget] |Yes |No
 |No |No |No
 
-|link:ios/person-accounts[Person Accounts] |Yes |Yes |Yes |Yes |Yes
+|link:person-accounts[Person Accounts] |Yes |Yes |Yes |Yes |Yes
 
-|link:ios/ct-mobile-control-panel-general[Customizable reference
+|link:ct-mobile-control-panel-general[Customizable reference
 object] |Yes |Yes |Yes |Yes |Yes
 
 |Multiple currencies support |Yes |Yes |Yes |Yes |Yes
 
-|link:ios/actions#h2__1355154294[The Determine Location button] on
+|link:actions#h2__1355154294[The Determine Location button] on
 [.object]#Accounts# and the[.object]#Activity# objects
 |Yes |Yes |Yes |No |Yes
 
-|link:ios/actions#h2_62618674[Attach photos] to
+|link:actions#h2_62618674[Attach photos] to
 [.object]#Accounts#,[.object]#Contacts#, and
 [.object]#Activity# objects |Yes |Yes |Yes |Yes |Yes
 
-|link:ios/attaching-files-in-the-files-section[Attach files] to
+|link:attaching-files-in-the-files-section[Attach files] to
 specified offline objects
-and link:ios/attaching-files-in-the-files-section#h3_1720123861[Filtering files] to
+and link:attaching-files-in-the-files-section#h3_1720123861[Filtering files] to
 upload during synchronization by the last creation date |Yes |No
 |No |No |No
 
-|link:ios/attaching-files-in-the-files-section#h3_479250607[Downloading
+|link:attaching-files-in-the-files-section#h3_479250607[Downloading
 entire files or only previews] |Yes |No |No |No |No
 
-|link:ios/history-buttons[Back and forward buttons] |Yes |Yes |Yes
+|link:history-buttons[Back and forward buttons] |Yes |Yes |Yes
 |Since v.1.3 |Yes
 
-|link:ios/caller-id[Caller ID] |Yes |No |Yes |No |No
+|link:caller-id[Caller ID] |Yes |No |Yes |No |No
 
-|link:ios/email-templates[Email Templates] |Yes |No |No |No |No
+|link:email-templates[Email Templates] |Yes |No |No |No |No
 
 |Ability to change the width of the menu or a record list |No |No
 |Yes |No |No
@@ -405,7 +405,7 @@ entire files or only previews] |Yes |No |No |No |No
 
 | |*iOS* |*Android* |*Android 2.0* |*Windows* |*Android*
 
-|link:ios/using-calendar[Multiple object support] |Yes |Yes |Yes |Yes
+|link:using-calendar[Multiple object support] |Yes |Yes |Yes |Yes
 |Yes
 
 |Hierarchical view of[.object]#Accounts# with linked
@@ -454,7 +454,7 @@ creating new Activity |Yes |No |No |No |No
 
 |The *Today* button |Yes |Yes |Yes |Yes |Yes
 
-|link:ios/set-up-holidays[Salesforce Holidays] |Yes |No |No |No |No
+|link:set-up-holidays[Salesforce Holidays] |Yes |No |No |No |No
 
 |Recurring the standard[.object]#Event# object |No |No |No |No
 |No
@@ -471,10 +471,10 @@ creating new Activity |Yes |No |No |No |No
 
 | |*iOS* |*Android* |*Android 2.0* |*Windows* |*Android*
 
-|link:ios/ct-mobile-control-panel-calendar#h3__1876502572[Multiple
+|link:ct-mobile-control-panel-calendar#h3__1876502572[Multiple
 object support] |Yes |Yes |Yes |Yes |Yes
 
-|link:ios/start-finish-functionality[The Start/Finish functionality]
+|link:start-finish-functionality[The Start/Finish functionality]
 |Yes |Yes |Yes |No |Yes
 
 |The Start/Finish functionality: capture geoposition |Yes |Yes |No |No
@@ -489,10 +489,10 @@ object support] |Yes |Yes |Yes |Yes |Yes
 |The ability to switch from the unfinished[.object]#Activity#
 to other CT Mobile screens |Yes |No |No |No |No
 
-|link:ios/historical-activities[Historical activities] |Yes |No |No |No
+|link:historical-activities[Historical activities] |Yes |No |No |No
 |No
 
-|link:ios/timeline-view[Timeline view] |Yes |No |No |Since v.1.3 |No
+|link:timeline-view[Timeline view] |Yes |No |No |Since v.1.3 |No
 |===
 
 
@@ -508,13 +508,13 @@ to other CT Mobile screens |Yes |No |No |No |No
 
 |Custom related tab on a record detail screen |Yes |Yes |Yes |Yes |Yes
 
-|link:ios/managing-offline-objects#h2_879469097[The SOQL filters switch
+|link:managing-offline-objects#h2_879469097[The SOQL filters switch
 to display only the filtered records] |Yes |No |No |Yes |No
 
-|link:ios/columns-width-for-related-lists[Customizable columns width]
+|link:columns-width-for-related-lists[Customizable columns width]
 |Yes |No |No |No |No
 
-|link:ios/barcode-scanner[Barcode scanner] |Yes |No |No |No |No
+|link:barcode-scanner[Barcode scanner] |Yes |No |No |No |No
 |===
 
 
@@ -526,7 +526,7 @@ to display only the filtered records] |Yes |No |No |Yes |No
 |===
 |*Feature* |*Tablet* | | | |*Phone*
 | |*iOS* |*Android* |*Android 2.0* |*Windows* |*Android*
-|link:ios/search[Global Search] |Yes |Yes |Yes |No |Yes
+|link:search[Global Search] |Yes |Yes |Yes |No |Yes
 |Search in the list of records |Yes |Yes |Yes |Yes |Yes
 |Search operators (*,?) |Yes |No |No |No |No
 |===
@@ -542,7 +542,7 @@ to display only the filtered records] |Yes |No |No |Yes |No
 
 | |*iOS* |*Android* |*Android 2.0* |*Windows* |*Android*
 
-|link:ios/routes[Offline routes] |Yes |No |No |No |Yes
+|link:routes[Offline routes] |Yes |No |No |No |Yes
 
 |Route optimization |Yes |Yes |Yes |Yes |Yes
 
@@ -558,9 +558,9 @@ to display only the filtered records] |Yes |No |No |Yes |No
 
 |Historical routes |Yes |No |Yes |No |No
 
-|link:ios/google-maps-api-key[Apple Maps] |Yes |No |No |No |No
+|link:google-maps-api-key[Apple Maps] |Yes |No |No |No |No
 
-|link:ios/google-maps-api-key[Google Maps] |Yes |Yes |Yes |No |Yes
+|link:google-maps-api-key[Google Maps] |Yes |Yes |Yes |No |Yes
 
 |https://docs.microsoft.com/en-us/bingmaps/getting-started/bing-maps-dev-center-help/getting-a-bing-maps-key[Bing
 Maps] |No |No |No |Yes |No
@@ -583,7 +583,7 @@ Maps] |No |No |No |Yes |No
 
 |Multicolor waypoints for objects |Yes |No |Yes |Yes |No
 
-|link:ios/nearby-accounts[Create an activity on the map] |Yes |Yes |Yes
+|link:nearby-accounts[Create an activity on the map] |Yes |Yes |Yes
 |Yes |Yes
 
 |Apple Maps |Yes |No |No |No |No
@@ -606,7 +606,7 @@ Maps] |No |No |No |Yes |No
 
 |Additional information for files |Yes |No |No |Yes |No
 
-|link:ios/libraries[Folders] |Yes |No |Yes |Yes |No
+|link:libraries[Folders] |Yes |No |Yes |Yes |No
 
 |Opening files |Yes |No |Yes |Yes |No
 
@@ -614,7 +614,7 @@ Maps] |No |No |No |Yes |No
 
 |Send files using email templates |Yes |No |No |No |No
 
-|link:ios/application-settings#h3_1768799377[Background download] |Yes
+|link:application-settings#h3_1768799377[Background download] |Yes
 |No |No |No |No
 |===
 
@@ -629,34 +629,34 @@ Maps] |No |No |No |Yes |No
 
 | |*iOS* |*Android* |*Android 2.0* |*Windows* |*Android* |
 
-|link:ios/clm-customscenario[Custom Scenarios] |Yes |Yes |No |Yes
+|link:clm-customscenario[Custom Scenarios] |Yes |Yes |No |Yes
 |Yes |
 
-|link:ios/applications#h3_1236408094[Mobile scenario editor] |Yes |No
+|link:applications#h3_1236408094[Mobile scenario editor] |Yes |No
 |No |Yes |No |
 
-|link:ios/clm-navigation-in-clm-presentations#h2__21685430[Branches]
+|link:clm-navigation-in-clm-presentations#h2__21685430[Branches]
 |Yes |No |No |Yes |No |
 
-|link:ios/applications#h3_1236408094g[In-app scenario generator] based
+|link:applications#h3_1236408094g[In-app scenario generator] based
 on slide rating |Yes |No |No |No |No |
 
 |Favorite CLM presentations |Yes |Yes |No |Yes |No |
 
 |Slides tab |Yes |Yes |No |Yes |No |
 
-|The *Available Offline* attribute of a link:ios/clm-application[CLM
+|The *Available Offline* attribute of a link:clm-application[CLM
 presentation] |Yes |No |No |Since v.1.3 |No |
 
-|The *Fixed* attribute of a link:ios/clm-slide[slide] |Yes |No |No |Yes
+|The *Fixed* attribute of a link:clm-slide[slide] |Yes |No |No |Yes
 |No |
 
 |The *Attachments* tab |Yes |Yes |No |Yes |No |
 
-|link:ios/clm-presentation-controls#h2__1807389398[Send slides via
+|link:clm-presentation-controls#h2__1807389398[Send slides via
 email] |Yes |Yes |No |No |No |
 
-|link:ios/email-templates[Send slides using email templates] |Yes |Yes
+|link:email-templates[Send slides using email templates] |Yes |Yes
 |No |No |No |
 
 |The *Statistics* screen when exiting the CLM presentation |Yes |Yes |No
@@ -674,18 +674,18 @@ email] |Yes |Yes |No |No |No |
 |Reload the current slide with the rotate gesture |Yes |No |No |No |No
 |
 
-|link:ios/gestures-in-clm-presentations[Likes/Dislikes gestures] |Yes
+|link:gestures-in-clm-presentations[Likes/Dislikes gestures] |Yes
 |Yes |No |Yes |No |
 
 |Multitasking during an[.object]#Activity# |Yes |No |No |Since
 v.1.3 |No |
 
-|link:ios/the-remote-detailing-functionality[The Remote Detailing
+|link:the-remote-detailing-functionality[The Remote Detailing
 functionality] |Yes |No |No |Yes |No |If the video is not in use, the
 presenter and participants can join the Remote Detailing meeting via
 Safari on their iPhone.
 
-|link:ios/the-ct-presenter-app[The CT Presenter app] |Yes |No |No |No
+|link:the-ct-presenter-app[The CT Presenter app] |Yes |No |No |No
 |No |This application is an outdated solution. It is recommended that
 you use the Safari browser.
 
@@ -704,104 +704,104 @@ you use the Safari browser.
 
 | |*iOS* |*Android* |*Android 2.0* |*Windows* |*Android* |
 
-|Create records: link:ios/ctm-create[ctm.create] |Yes |Yes |No |Yes
+|Create records: link:ctm-create[ctm.create] |Yes |Yes |No |Yes
 |No |
 
-|Update records: link:ios/ctm-update[ctm.update] |Yes |Yes |No |Yes |No
+|Update records: link:ctm-update[ctm.update] |Yes |Yes |No |Yes |No
 |
 
-|Query records: link:ios/ctm-query[ctm.query] |Yes |Yes |No |Yes |No
+|Query records: link:ctm-query[ctm.query] |Yes |Yes |No |Yes |No
 |
 
-|Delete records: link:ios/ctm-delete[ctm.delete] |Yes |Yes |No |Yes |No
+|Delete records: link:ctm-delete[ctm.delete] |Yes |Yes |No |Yes |No
 |
 
-|link:ios/changing-slides[Switch between slides using the href
+|link:changing-slides[Switch between slides using the href
 attribute] |Yes |Yes |No |Yes |No |
 
-|Start fast sync: link:ios/ctm-sync[ctm.sync] |Yes |Yes |No |No |No |
+|Start fast sync: link:ctm-sync[ctm.sync] |Yes |Yes |No |No |No |
 
-|Camera access: link:ios/ctm-photo[ctm.photo] |Yes |Yes |No |No |No |
+|Camera access: link:ctm-photo[ctm.photo] |Yes |Yes |No |No |No |
 
 |Custom data tables according to related record:
-link:ios/ctm-opendatatablebyparentrecord[ctm.openDataTableByParentRecord]
+link:ctm-opendatatablebyparentrecord[ctm.openDataTableByParentRecord]
 |Yes |No |No |No |No |
 
 |Custom data tables according to SOQL query:
-link:ios/ctm-opendatatablebyquery[ctm.openDataTableByQuery] |Yes |No
+link:ctm-opendatatablebyquery[ctm.openDataTableByQuery] |Yes |No
 |No |No |No |
 
-|Quiz launch: link:ios/ctm-openquiz[ctm.openQuiz] |Yes |No |No |No
+|Quiz launch: link:ctm-openquiz[ctm.openQuiz] |Yes |No |No |No
 |No |
 
-|PDF generation: link:ios/ctm-generatepdf[ctm.generatePDF] |Yes |No |No
+|PDF generation: link:ctm-generatepdf[ctm.generatePDF] |Yes |No |No
 |No |No |
 
-|Open QR Code: link:ios/ctm-openqrscanner[ctm.openQRScanner] |Yes |No
+|Open QR Code: link:ctm-openqrscanner[ctm.openQRScanner] |Yes |No
 |No |No |No |
 
-|link:ios/crm-data-display[Markup labels] |Yes |Yes |No |Yes |No |
+|link:crm-data-display[Markup labels] |Yes |Yes |No |Yes |No |
 
-|link:ios/opening-attached-files[Opening attached files] |Yes |Yes |No
+|link:opening-attached-files[Opening attached files] |Yes |Yes |No
 |Yes |No |
 
-|Like / Dislike: link:ios/ctm-like[ctm.like] /
-link:ios/ctm-dislike[ctm.dislike] |Yes |Yes |No |Yes |No |
+|Like / Dislike: link:ctm-like[ctm.like] /
+link:ctm-dislike[ctm.dislike] |Yes |Yes |No |Yes |No |
 
 |Exit from the CLM-presentation:
-link:ios/ctm-autoexitpresenter[ctm.autoExitPresenter] |Yes |No |No |Yes
+link:ctm-autoexitpresenter[ctm.autoExitPresenter] |Yes |No |No |Yes
 |No |
 
 |Disable slide scroll:
-link:ios/ctm-disableslidescroll[ctm.disableSlideScroll] |Yes |No |No
+link:ctm-disableslidescroll[ctm.disableSlideScroll] |Yes |No |No
 |No |No |
 
 |Enable slide scroll:
-link:ios/ctm-enableslidescroll[ctm.enableSlideScroll] |Yes |No |No |No
+link:ctm-enableslidescroll[ctm.enableSlideScroll] |Yes |No |No |No
 |No |
 
-|Obtain the path to the file: link:ios/ctm-getfile[ctm.getFile] |Yes
+|Obtain the path to the file: link:ctm-getfile[ctm.getFile] |Yes
 |No |No |Yes |No |
 
-|Save attachments: link:ios/ctm-storefile[ctm.storeFile] |Yes |No |No
+|Save attachments: link:ctm-storefile[ctm.storeFile] |Yes |No |No
 |Yes |No |
 
 |The transition from the CLM presentation display to Sales Order:
-link:ios/ctm-createsalesorderwithanimations[ctm.createSalesOrderWithAnimations]
+link:ctm-createsalesorderwithanimations[ctm.createSalesOrderWithAnimations]
 |Yes |No |No |No |No |
 
 |Activate gathering statistics of the CLM presentation:
-link:ios/ctm-customstats[ctm.customStats] |Yes |No |No |No |No |
+link:ctm-customstats[ctm.customStats] |Yes |No |No |No |No |
 
-|link:ios/activating-js-bridge#h2__1136353801[skipTenPercent] |Yes |No
+|link:activating-js-bridge#h2__1136353801[skipTenPercent] |Yes |No
 |No |No |No |
 
-|link:ios/activating-js-bridge#h2__1136353801[playVideo] |Yes |No |No
+|link:activating-js-bridge#h2__1136353801[playVideo] |Yes |No |No
 |No |No |
 
-|link:ios/activating-js-bridge#h2__1136353801[getJSValues] |Yes |No |No
+|link:activating-js-bridge#h2__1136353801[getJSValues] |Yes |No |No
 |No |No |
 
-|link:ios/ctm-setoptions[ctm.setOptions] |No |No |No |Yes |No |
+|link:ctm-setoptions[ctm.setOptions] |No |No |No |Yes |No |
 
-|link:ios/ctappgotoslide[CTAPPgoToSlide] |Yes |No |No |Yes |No |
+|link:ctappgotoslide[CTAPPgoToSlide] |Yes |No |No |Yes |No |
 
-|link:ios/ctappgotofirst[CTAPPgoToFirst] |Yes |No |No |Yes |No |
+|link:ctappgotofirst[CTAPPgoToFirst] |Yes |No |No |Yes |No |
 
-|link:ios/ctappgotonext[CTAPPgoToNext] |Yes |No |No |Yes |No |
+|link:ctappgotonext[CTAPPgoToNext] |Yes |No |No |Yes |No |
 
-|link:ios/ctappgotoprevious[CTAPPgoToPrevious] |Yes |No |No |Yes |No
+|link:ctappgotoprevious[CTAPPgoToPrevious] |Yes |No |No |Yes |No
 |
 
 |Sound recording:
-link:ios/ctappstoprecordingaudio[CTAPPstopRecordingAudio] |Yes |No |No
+link:ctappstoprecordingaudio[CTAPPstopRecordingAudio] |Yes |No |No
 |No |No |
 
 |Sound recording:
-link:ios/ctappstartrecordingaudio[CTAPPstartRecordingAudio] |Yes |No
+link:ctappstartrecordingaudio[CTAPPstartRecordingAudio] |Yes |No
 |No |No |No |
 
-|link:ios/activating-js-bridge#h2__1136353801[CTAPPNewRecord] |Yes |No
+|link:activating-js-bridge#h2__1136353801[CTAPPNewRecord] |Yes |No
 |No |No |No |
 
 |CTAPPturnOnAudio |No |No |No |No |No |The Remote Detailing and Self
@@ -813,17 +813,17 @@ Detailing functionality.
 
 |CTAPPturnOffVideo |No |No |No |No |No |
 
-|Secure query records: link:ios/ctm-securequery[ctm.secureQuery] |No
+|Secure query records: link:ctm-securequery[ctm.secureQuery] |No
 |No |No |No |No |
 
-|Define the meeting type: link:ios/ctm-getappenv[ctm.getAppEnv] |No |No
+|Define the meeting type: link:ctm-getappenv[ctm.getAppEnv] |No |No
 |No |No |No |
 
-|Define the user role: link:ios/ctm-getusertype[ctm.getUserType] |No
+|Define the user role: link:ctm-getusertype[ctm.getUserType] |No
 |No |No |No |No |
 
 |Define the Id of the Activity record:
-link:ios/ctm-getvisitid[ctm.getVisitId] |No |No |No |No |No |
+link:ctm-getvisitid[ctm.getVisitId] |No |No |No |No |No |
 |===
 
 
@@ -837,7 +837,7 @@ link:ios/ctm-getvisitid[ctm.getVisitId] |No |No |No |No |No |
 
 | |*iOS* |*Android* |*Android 2.0* |*Windows* |*Android* |
 
-|link:ios/chatter[Group feeds] |Yes |Yes |No |Yes |Yes |
+|link:chatter[Group feeds] |Yes |Yes |No |Yes |Yes |
 
 |Record feeds |Yes |Yes |No |Yes |Yes |
 
@@ -851,7 +851,7 @@ link:ios/ctm-getvisitid[ctm.getVisitId] |No |No |No |No |No |
 
 |Instant post sending |Yes |No |No |Yes |No |
 
-|link:ios/chatter-push-notifications[Push notifications] |Yes |Yes |No
+|link:chatter-push-notifications[Push notifications] |Yes |Yes |No
 |Since v.1.3 |Yes |
 
 |On-demand attachments downloading to posts |Yes |Yes |No |Yes |Yes |
@@ -874,7 +874,7 @@ applied to iOS devices.
 
 | |*iOS* |*Android* |*Android 2.0* |*Windows* |*Android*
 
-|link:ios/home-screen[Offline charts based on Reports] |Yes |No |No |No
+|link:home-screen[Offline charts based on Reports] |Yes |No |No |No
 |No
 
 |Offline charts based on Dashboards |Yes |No |No |No |No
@@ -902,23 +902,23 @@ applied to iOS devices.
 
 | |*iOS* |*Android* |*Android 2.0* |*Windows* |*Android* |
 
-|link:ios/cg-cloud[CG Cloud] |Yes |No |No |Since v.1.3 |No |
+|link:cg-cloud[CG Cloud] |Yes |No |No |Since v.1.3 |No |
 
-|link:ios/lead-convert[Lead Convert (online)] |Yes |No |No |No |No |The
+|link:lead-convert[Lead Convert (online)] |Yes |No |No |No |No |The
 REST API limitation is applied to Windows devices.
 
-|link:ios/opportunities[Opportunity management] |Yes |Yes |Yes |No |Yes
+|link:opportunities[Opportunity management] |Yes |Yes |Yes |No |Yes
 |Support multiple currencies and price books.
 
 |Quote management |No |No |No |No |No |
 
-|link:ios/recent-items[Recent Items] |Yes |Yes |No |No |No |
+|link:recent-items[Recent Items] |Yes |Yes |No |No |No |
 
-|link:ios/dashboards[Dashboards (online)] |Yes |No |Yes |Yes |No |
+|link:dashboards[Dashboards (online)] |Yes |No |Yes |Yes |No |
 
-|link:ios/quizzes[Quizzes] |Yes |No |No |No |No |
+|link:quizzes[Quizzes] |Yes |No |No |No |No |
 
-|link:ios/links-list[Links] |Yes |No |No |Yes |No |
+|link:links-list[Links] |Yes |No |No |Yes |No |
 |===
 
 [[h2_1840437629]]
@@ -933,23 +933,23 @@ REST API limitation is applied to Windows devices.
 
 | |*iOS* |*Android* |*Android 2.0* |*Windows* |*Android*
 
-|link:ios/extending-field-values-to-the-entire-layout-width-without-label[Extending
+|link:extending-field-values-to-the-entire-layout-width-without-label[Extending
 field without a label] |Yes |No |No |No |No
 
-|link:ios/slider-for-the-numeric-currency-and-percentage-fields[Slider
+|link:slider-for-the-numeric-currency-and-percentage-fields[Slider
 for a field with currency&#44; percentage&#44; and numeric type] |Yes
 |No |No |No |No
 
-|link:ios/buttons-for-the-numeric-currency-percentage-fields["{plus}/-"
+|link:buttons-for-the-numeric-currency-percentage-fields["{plus}/-"
 controls for a field with currency&#44; percentage&#44; and numeric
 type] |Yes |No |No |No |No
 
-|link:ios/date-field-limits[Limitation of Date/DateTime fields] |Yes
+|link:date-field-limits[Limitation of Date/DateTime fields] |Yes
 |No |No |No |No
 
-|link:ios/combobox[Combobox for custom fields] |Yes |No |No |No |No
+|link:combobox[Combobox for custom fields] |Yes |No |No |No |No
 
-|link:ios/columns-width-for-related-lists[Columns width for standard
+|link:columns-width-for-related-lists[Columns width for standard
 and custom related lists] |Yes |No |No |No |No
 |===
 
@@ -964,17 +964,17 @@ and custom related lists] |Yes |No |No |No |No
 
 | |*iOS* |*Android* |*Android 2.0* |*Windows* |*Android*
 
-|link:ios/mobile-layouts-maps[Maps] |Yes |Yes |Yes |Yes |Yes
+|link:mobile-layouts-maps[Maps] |Yes |Yes |Yes |Yes |Yes
 
-|link:ios/mobile-layouts-dashboards[Dashboards] |Yes |No |No |No |No
+|link:mobile-layouts-dashboards[Dashboards] |Yes |No |No |No |No
 
-|link:ios/mobile-layouts-applications[Applications] |Yes |Yes |No |Yes
+|link:mobile-layouts-applications[Applications] |Yes |Yes |No |Yes
 |Yes
 
-|link:ios/mobile-layouts-chatter-feed[Chatter feed] |Yes |Yes |No |Yes
+|link:mobile-layouts-chatter-feed[Chatter feed] |Yes |Yes |No |Yes
 |Yes
 
-|link:ios/mobile-layouts-qr-code[QR code] |Yes |Yes |No |No |Yes
+|link:mobile-layouts-qr-code[QR code] |Yes |Yes |No |No |Yes
 
 |Interactive presentation embedded into record layout |No |No |No |No
 |No
@@ -1011,13 +1011,13 @@ planning the number of photos to take for the shelf.
 
 |In-app browser |Yes |Yes |Yes |Yes |Yes |
 
-|link:ios/ical-synchronization[Device calendar] |Yes
+|link:ical-synchronization[Device calendar] |Yes
 (iCal) |No |No |No |No |
 
-|link:ios/application-settings#h3__353973580[Store photos in the device
+|link:application-settings#h3__353973580[Store photos in the device
 gallery] |Yes |No |Yes |No |No |
 
-|link:ios/attaching-files-in-the-notes-attachments-section[Attach files
+|link:attaching-files-in-the-notes-attachments-section[Attach files
 from device to Salesforce records] |Yes |Yes |Yes |No |No |
 
 |Attach a photo (from the device gallery or take a photo) |Yes |Yes |Yes

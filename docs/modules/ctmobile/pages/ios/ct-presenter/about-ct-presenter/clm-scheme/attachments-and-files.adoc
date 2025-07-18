@@ -61,13 +61,13 @@ but CT Mobile can download files only as record attachments.
 [.object]#Attachments# and[.object]#Files# are used to
 store:
 
-link:ios/attach-files-to-clm-presentation[CLM presentation sources],
+link:attach-files-to-clm-presentation[CLM presentation sources],
 for example, images, scripts, and styles.
 
-link:ios/actions#h2_62618674[photos] and signatures of *Activity*
+link:actions#h2_62618674[photos] and signatures of *Activity*
 records;
 
-attachments to the link:ios/chatter[Chatter feed] posts;
+attachments to the link:chatter[Chatter feed] posts;
 
 ifndef::ios[]
 
@@ -95,9 +95,9 @@ following standard] and any custom objects.
 *[.object]# Task #
 
 We recommend using
-the link:ios/ct-mobile-control-panel-general#h3__377059502[Image
+the link:ct-mobile-control-panel-general#h3__377059502[Image
 Quality] (in CT Mobile Control
-Panel)/link:ios/ct-mobile-control-panel-general-new#h3__377059502[Quality
+Panel)/link:ct-mobile-control-panel-general-new#h3__377059502[Quality
 of Attached Images] (in CT Mobile Control Panel 2.0) setting to
 downscale the image size because Salesforce
 has https://help.salesforce.com/articleView?id=collab_files_attach_records.htm&type=5[limits
@@ -132,4 +132,4 @@ Versioning is not supported for attachments.
 ==== object to offline objects.#
 
 To upload attachments from the CT Mobile app to Salesforce, launch the
-link:ios/fast-synchronization[fast synchronization].
+link:fast-synchronization[fast synchronization].

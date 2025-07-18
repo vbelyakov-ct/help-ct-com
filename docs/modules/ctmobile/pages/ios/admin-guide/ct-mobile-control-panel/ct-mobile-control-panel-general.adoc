@@ -7,7 +7,7 @@ has the following sections:
 
 [TIP] ==== According to the selected profile, settings on this
 tab will be saved in the corresponding fields of
-the link:ios/mobile-application-setup[Mobile Application Setup] record.
+the link:mobile-application-setup[Mobile Application Setup] record.
 ====
 
 :toc: :toclevels: 2
@@ -38,12 +38,12 @@ The main settings are copied.
 ==== Person Accounts Enabled
 
 This attribute must be set if the client system uses the
-link:ios/person-accounts[Person Accounts] functionality. If enabled:
+link:person-accounts[Person Accounts] functionality. If enabled:
 
 *[.object]#Person Accounts# are displayed in the *Contacts*
 menu item and on the *Contacts* tab of the modules, except for the cases
 if the _Reference_ object is selected in
-the link:ios/ct-mobile-control-panel-general#h3_494016929[Reference
+the link:ct-mobile-control-panel-general#h3_494016929[Reference
 Object API Name] field.
 *[.object]#Accounts# are displayed in the *Accounts* menu item
 and on the *Accounts* tab of the modules.
@@ -54,10 +54,10 @@ and on the *Accounts* tab of the modules.
 ifdef::kotlin[]
 
 If enabled, the first time the user launches the CT Mobile app, the app
-will ask the user link:ios/application-pin-code[to set a personal
+will ask the user link:application-pin-code[to set a personal
 passcode]. Then, every time the user opens the app, a password will be
 required to access the app. When you enter the wrong passcode three
-times in a row, link:ios/log-out[the database will be reset].
+times in a row, link:log-out[the database will be reset].
 
 [[h3__377059502]]
 ==== Image Quality
@@ -80,7 +80,7 @@ is disabled.
 [[h2__1037766202]]
 === User Interface
 
-This section is intended to link:ios/application-theme[personalize the
+This section is intended to link:application-theme[personalize the
 CT Mobile interface].
 
 . Click *Customize* next to *Set App Color, Patterns, and Logo*.
@@ -137,7 +137,7 @@ code.
 ==== Homepage Logo
 
 Select the homepage logo to display when
-link:ios/home-screen#h3__1361691321[the Logo widget] is added on the
+link:home-screen#h3__1361691321[the Logo widget] is added on the
 *Home Screen*. Click *Choose file* to add a new logo.
 
 * The logo file size limit is 4 MB.
@@ -155,20 +155,20 @@ Salesforce Classic, go to *Documents* and open the *CT CLM* folder.
 [[h2_670774632]]
 === Geolocation
 
-Geolocation data may be used for link:ios/mobile-layouts-maps[the Maps
-widget] on a record, in the link:ios/routes[Routes] and
-link:ios/nearby-accounts[Nearby Accounts] modules.
+Geolocation data may be used for link:mobile-layouts-maps[the Maps
+widget] on a record, in the link:routes[Routes] and
+link:nearby-accounts[Nearby Accounts] modules.
 
 [[h3__335024009]]
 ==== Enable Location Tracking
 
 If enabled, geolocation data on the[.object]#Account# and
 [.object]#Activity# objects will be collected in the
-link:ios/ct-mobile-control-panel-general#h3_612123135[Account
+link:ct-mobile-control-panel-general#h3_612123135[Account
 Geolocation] or
-link:ios/ct-mobile-control-panel-general#h3__1092547330[Account Full
+link:ct-mobile-control-panel-general#h3__1092547330[Account Full
 Address] field according to selection and in the
-link:ios/ct-mobile-control-panel-calendar#h3__717585460[Activity
+link:ct-mobile-control-panel-calendar#h3__717585460[Activity
 Geolocation Field API Name] field.
 
 [[h3_1567195273]]
@@ -204,7 +204,7 @@ this field in the *Account Geolocation Field* picklist.
 
 [NOTE] ==== If geolocation data is not specified, the account
 location will be retrieved from the
-link:ios/ct-mobile-control-panel-general#h3__1092547330[Account Full
+link:ct-mobile-control-panel-general#h3__1092547330[Account Full
 Address] field. ====
 
 [[h3__1092547330]]
@@ -232,7 +232,7 @@ following:
 [[h3_604215198]]
 ==== Google Maps iOS API Key
 
-Obtain and enter your link:ios/google-maps-api-key[Google Maps API key]
+Obtain and enter your link:google-maps-api-key[Google Maps API key]
 for using Google Maps in the CT Mobile iOS app.
 
 [[h3__1990058335]]
@@ -247,7 +247,7 @@ Windows app.
 ==== Google Maps Android API Key
 
 Obtain and enter your
-https://docs.microsoft.com/en-us/bingmaps/getting-started/bing-maps-dev-center-help/getting-a-bing-maps-key[]link:ios/google-maps-api-key[Google
+https://docs.microsoft.com/en-us/bingmaps/getting-started/bing-maps-dev-center-help/getting-a-bing-maps-key[]link:google-maps-api-key[Google
 Maps API key] on this tab for using Google Maps in the CT Mobile Android
 apps.
 
@@ -256,9 +256,9 @@ apps.
 
 ifdef::kotlin[]
 
-Obtain and enter your link:ios/google-maps-api-key[Google Maps
+Obtain and enter your link:google-maps-api-key[Google Maps
 JavaScript API Key] to track the geolocation of CT Mobile iOS users in
-real-time via the link:ios/geolocation-center[Geolocation Centre] in
+real-time via the link:geolocation-center[Geolocation Centre] in
 Salesforce.
 
 [[h2__1687169837]]
@@ -267,7 +267,7 @@ Salesforce.
 [[h3__272409891]]
 ==== Enable Sync Logs
 
-If enabled, the link:ios/sync-logs[Sync Log] records will be created
+If enabled, the link:sync-logs[Sync Log] records will be created
 during the sync process on the mobile device.
 
 [[h3_1226274811]]
@@ -287,7 +287,7 @@ overloaded. #
 [[h3_813073278]]
 ==== Send database dump to
 
-Choose where to link:ios/send-application-data-dump[send the customer's
+Choose where to link:send-application-data-dump[send the customer's
 database dump] of the CT Mobile app. Select an option:
 
 * http://Salesforce.com[Salesforce.com]
@@ -306,10 +306,10 @@ and screenshots of synchronization errors.
 ==== Product Object API Name
 
 Select an object that will be used as a product. The *Product Object API
-Name* field of the link:ios/mobile-application-setup[Mobile Application
+Name* field of the link:mobile-application-setup[Mobile Application
 Setup] should be correctly specified for each
 [.object]#Activity# object in the
-link:ios/ct-mobile-control-panel-calendar#h3_1397263211[Activity Object
+link:ct-mobile-control-panel-calendar#h3_1397263211[Activity Object
 API Name] field.
 
 [[h3_494016929]]
@@ -337,5 +337,5 @@ and _Contact_ objects
 
 If the many-to-many relationship between the Account and Contact objects
 is not used in the system, please leave this field blank.
-For more information, refer to link:ios/reference-object[Reference
+For more information, refer to link:reference-object[Reference
 Object].

@@ -17,7 +17,7 @@ Please note that the links are provided to update your production
 Salesforce environment. To update the safe environment, replace the
 path [.apiobject]#https://login.salesforce.com/... #in the link
 with [.apiobject]#https://test.salesforce.com/...#
-* Since link:ios/ct-mobile-managed-package-update-to-v-3-54[CT Mobile
+* Since link:ct-mobile-managed-package-update-to-v-3-54[CT Mobile
 package version 3.54], the administrator credentials are not
 used.[.apiobject]#
 #
@@ -25,7 +25,7 @@ used.[.apiobject]#
 [[h2_1111809725]]
 === CT Mobile package v. 4.5
 
-* link:ios/ct-mobile-control-panel-new[CT Mobile Control Panel
+* link:ct-mobile-control-panel-new[CT Mobile Control Panel
 2.0]: redesigned with a modern interface and enhanced usability to
 provide a smoother, more intuitive user experience. This version
 includes improved navigation, faster performance, and new features that
@@ -53,22 +53,22 @@ package is not installed in your environment, simply install version
 === CT Mobile package v. 3.90
 
 [NOTE] ==== Please remove the  ====
-link:ios/ability-to-specify-metadata-components-or-the-number-of-entities-in-one-request[archive
+link:ability-to-specify-metadata-components-or-the-number-of-entities-in-one-request[archive
 component custom metadata type] before upgrading to this version.
 
 [[h3_1844278829]]
 ==== Fixes
 
-* Fixed displaying link:ios/mini-layouts[Mini Layouts] editing window.
+* Fixed displaying link:mini-layouts[Mini Layouts] editing window.
 * Fixed displaying fields in the
-link:ios/ct-mobile-control-panel-custom-details[Custom Details] editing
+link:ct-mobile-control-panel-custom-details[Custom Details] editing
 window.
 
 [[h2_466019125]]
 === CT Mobile package v. 3.89
 
 Please remove the
-link:ios/ability-to-specify-metadata-components-or-the-number-of-entities-in-one-request[archive
+link:ability-to-specify-metadata-components-or-the-number-of-entities-in-one-request[archive
 component custom metadata type] before upgrading to this version.
 
 * Regarding migration of the metadata archive to the new infrastructure,
@@ -77,13 +77,13 @@ of the *CT Mobile Control Panel*. After installing the CT Mobile package
 v. 3.89:
 . Login to your Salesforce organization with the _System Administrator_
 profile credentials.
-. Go to link:ios/ct-mobile-control-panel-tools[CT Mobile Control Panel
+. Go to link:ct-mobile-control-panel-tools[CT Mobile Control Panel
 → Tools].
 . Click *Authorize* button next to *Authorize Heroku Service*.
 . Click *Allow* in the appeared authorization window.
 [NOTE] ==== Each user with the _System Administrator_ profile
 must authorize the Heroku service before
-link:ios/ct-mobile-control-panel-tools#h3_1003786176[refreshing the
+link:ct-mobile-control-panel-tools#h3_1003786176[refreshing the
 metadata archive]. ====
 * Progress bar has been added under the *Refresh metadata
 archive* button in the *CT Mobile Control Panel* → *Tools* tab.
@@ -97,7 +97,7 @@ removed from the *CT Mobile Control Panel* → *Tools* tab.
 ==== Fixes
 
 * Fixed creation multiple identical _CTM Settings_ records for offline
-objects with link:ios/related-list-filters[related list filters].
+objects with link:related-list-filters[related list filters].
 
 [[h2_466019133]]
 === CT Mobile package v. 3.81
@@ -108,7 +108,7 @@ objects with link:ios/related-list-filters[related list filters].
 [[h4__1542142448]]
 ===== CT Presenter
 
-* Fixed editing link:ios/custom-scenario-editor[custom scenarios].
+* Fixed editing link:custom-scenario-editor[custom scenarios].
 
 [[h2_1225534012]]
 === CT Mobile package v. 3.79
@@ -120,15 +120,15 @@ objects with link:ios/related-list-filters[related list filters].
 ===== Remote Detailing 2.0
 
 * Now you can specify a
-link:ios/ct-mobile-control-panel-presenter#h3_298754890[custom domain
+link:ct-mobile-control-panel-presenter#h3_298754890[custom domain
 name for your meeting URL].
 * The *Available for Download* checkbox is added to the
-link:ios/creating-application-record#h2_1960465655[application creation
+link:creating-application-record#h2_1960465655[application creation
 form]. If selected, the presentation can be
-link:ios/self-detailing-2-0-ui[downloaded as PDF] during the Self
+link:self-detailing-2-0-ui[downloaded as PDF] during the Self
 Detailing.
 * Updated
-link:ios/application-permission-settings#h3_2115044027[required
+link:application-permission-settings#h3_2115044027[required
 permissions sets] for CT Mobile users, who need to work with CLM
 presentations:
 ** CT Mobile User (edited);
@@ -178,7 +178,7 @@ Components]_ custom metadata type).
 [[h4_1434818080]]
 ===== Remote Detailing 2.0
 
-* link:ios/remote-detailing-2-0-audio-recording[Saving audio recording]
+* link:remote-detailing-2-0-audio-recording[Saving audio recording]
 on the corresponding *Activity* record.
 
 [[h3_473996418]]
@@ -213,7 +213,7 @@ the App Exchange]. ====
 [[h4__487563059]]
 ===== CT Mobile Control Panel
 
-* The ability to activate link:ios/cg-cloud[the CG Cloud support] to
+* The ability to activate link:cg-cloud[the CG Cloud support] to
 work with it in the CT Mobile app if the CG Cloud is configured in the
 Salesforce organization.
 
@@ -225,19 +225,19 @@ Salesforce organization.
 * A warning about the paid *Remote Detailing* feature is displayed for
 the first logging in.
 * During the[.object]#Activity# creation,
-link:ios/remote-detailing-launch-salesforce-side#h3__135274013[users
+link:remote-detailing-launch-salesforce-side#h3__135274013[users
 will be notified] if CLM presentations are not found on a server.
 * The *Terms Accepted* attribute in the
-link:ios/clm-applicationstats[application statistics] stores a
+link:clm-applicationstats[application statistics] stores a
 participant's agreement to the terms of use.
 
 * During the *Self Detailing* meeting.
-** The ability to use the link:ios/ctm-securequery[cm .secureQuery]
+** The ability to use the link:ctm-securequery[cm .secureQuery]
 method in the CLM presentations to make secure requests to Salesforce
 data.
-** Support the link:ios/ctm-create[ctm.create] and
-link:ios/ctm-update[ctm.update] methods in the CLM presentations.
-* link:ios/remote-detailing-launch-salesforce-side#h3__135274013[For
+** Support the link:ctm-create[ctm.create] and
+link:ctm-update[ctm.update] methods in the CLM presentations.
+* link:remote-detailing-launch-salesforce-side#h3__135274013[For
 user convenience]:
 ** A message will inform the user that the CLM presentations are not
 added to the server.
@@ -249,7 +249,7 @@ added to the server.
 
 * Only a maximum of 9999 of the most recently modified dashboards and a
 maximum of 1000 of the last most recently modified reports
-link:ios/metadata-archive[will be downloaded] in the CT Mobile app
+link:metadata-archive[will be downloaded] in the CT Mobile app
 during the sync process.
 
 
@@ -259,7 +259,7 @@ during the sync process.
 
 * Only records with the record types of the CT Mobile package will be
 deleted with the
-link:ios/ct-mobile-control-panel-tools#h3__1658362952[Refresh CTM
+link:ct-mobile-control-panel-tools#h3__1658362952[Refresh CTM
 Settings] button.
 
 [[h3_715488940]]
@@ -305,9 +305,9 @@ Detailing* meeting was started.
 
 * The ability to select or manually add the value in the fields with the
 *Date* and *Date/Time* data type
-link:ios/ct-mobile-control-panel-offline-objects[during creating a SOQL
+link:ct-mobile-control-panel-offline-objects[during creating a SOQL
 filter].
-* link:ios/ct-mobile-control-panel-presenter#h3_1019207818[New options]
+* link:ct-mobile-control-panel-presenter#h3_1019207818[New options]
 to specify and add terms of use on the *Welcome* screen during the
 *Remote Detailing* or *Self Detailing* meeting. Currently, not in use.
 
@@ -316,11 +316,11 @@ to specify and add terms of use on the *Welcome* screen during the
 [[h4_10826665]]
 ===== Remote Detailing 2.0
 
-* If link:ios/ct-presenter-introduction#h2_1251281241[the required
+* If link:ct-presenter-introduction#h2_1251281241[the required
 remote sites] are not activated, an error message will be displayed when
 a user tries to
-link:ios/publishing-clm-presentations#h3_1098755975[renew slides].
-* link:ios/remote-detailing-statistics[The browser name and IP address]
+link:publishing-clm-presentations#h3_1098755975[renew slides].
+* link:remote-detailing-statistics[The browser name and IP address]
 will be stored in the statistics record for the presenter and
 participants.
 
@@ -330,7 +330,7 @@ participants.
 ===== CT Presenter
 
 * The ability to create a CLM presentation based on a ZIP archive with
-the images in link:ios/creating-clm-presentation-from-jpeg-jpg[JPEG or
+the images in link:creating-clm-presentation-from-jpeg-jpg[JPEG or
 JPG format].
 
 
@@ -349,14 +349,14 @@ Customertimes team to get the additional information.
 ===== CT Mobile Control Panel
 
 * Fixed the ability
-link:ios/ct-mobile-control-panel-tools#h3_847464003[to download the
+link:ct-mobile-control-panel-tools#h3_847464003[to download the
 metadata archive].
 
 [[h2__340549918]]
 === CT Mobile package v. 3.65
 
 The list of permissions has been updated with the
-link:ios/clm-user[User audit fields] for the _CT Mobile Administrator_
+link:clm-user[User audit fields] for the _CT Mobile Administrator_
 and _CT Mobile User_ permission sets.
 
 [[h3__1552158643]]
@@ -365,7 +365,7 @@ and _CT Mobile User_ permission sets.
 [[h4_904461181]]
 ===== CT Mobile Control Panel
 
-* Use the link:ios/ct-mobile-control-panel-tools#h3_840249901[New
+* Use the link:ct-mobile-control-panel-tools#h3_840249901[New
 settings only] toggle to specify whether to store settings both in
 custom settings and as *CTM Settings* records or only as *CTM Settings*
 records.
@@ -375,11 +375,11 @@ records.
 [[h4__222227263]]
 ===== Remote Detailing 2.0
 
-* The ability to specify whether link:ios/clm-settings[the participant
+* The ability to specify whether link:clm-settings[the participant
 is required] to add the email to access the *Remote Detailing* meeting.
-* link:ios/clm-settings[The new parameter] for future audio recording
+* link:clm-settings[The new parameter] for future audio recording
 storage is added.
-* link:ios/remote-detailing-launch-salesforce-side#h3__135274013[For
+* link:remote-detailing-launch-salesforce-side#h3__135274013[For
 user convenience]:
 ** A message will inform the user of the reason CLM presentations are
 not available for a *Remote Detailing* meeting.
@@ -391,7 +391,7 @@ launch a *Remote Detailing* meeting.
 [[h4_1156290882]]
 ===== Salesforce Metadata
 
-* link:ios/clm-user[The new audit field] is intended to store the
+* link:clm-user[The new audit field] is intended to store the
 user's device model for better customer support. The logic will be
 implemented in the next releases of CT Mobile apps.
 
@@ -404,12 +404,12 @@ implemented in the next releases of CT Mobile apps.
 [[h4_2102547473]]
 ===== Remote Detailing 2.0
 
-* If link:ios/ct-presenter-introduction#h2_1251281241[the required
+* If link:ct-presenter-introduction#h2_1251281241[the required
 remote sites] are not activated, an error message will be displayed when
 a user tries to save a CLM presentation in
-link:ios/application-editor[Application Editor].
+link:application-editor[Application Editor].
 * If CLM presentations are not set for the[.object]#Activity#
-record, all link:ios/clm-application[active and available for Remote
+record, all link:clm-application[active and available for Remote
 Detailing meetings] CLM presentations will be available during the
 *Remote Detailing* session.
 
@@ -419,7 +419,7 @@ Detailing meetings] CLM presentations will be available during the
 ===== Salesforce Metadata
 
 * To reduce sync time and use fast sync instead of mixed one,
-link:ios/metadata-checker[the metadata checker] now only tracks reports
+link:metadata-checker[the metadata checker] now only tracks reports
 and dashboards that have been added to the Home screen of the CT Mobile
 app or specified in a custom folder that starts with the CLM keyword.
 
@@ -443,7 +443,7 @@ Detailing* meeting.
 ===== Remote Detailing 2.0
 
 We kindly ask you to refer to the
-link:ios/migration-to-remote-detailing-2-0[Migration to Remote
+link:migration-to-remote-detailing-2-0[Migration to Remote
 Detailing 2.0] article to set up the Remote Detailing 2.0 functionality.
 
 * New CT Presenter connected app.
@@ -476,7 +476,7 @@ many custom settings records.
 ===== Salesforce Metadata
 
 * Performance improvement: Reducing the number of objects in
-link:ios/metadata-archive[the metadata archive].
+link:metadata-archive[the metadata archive].
 
 [[h2__340549921]]
 === CT Mobile package v. 3.61
@@ -487,9 +487,9 @@ link:ios/metadata-archive[the metadata archive].
 [[h4_1241289621]]
 ===== Remote Detailing 2.0
 
-* link:ios/remote-site-settings[The new RD endpoint] should be
+* link:remote-site-settings[The new RD endpoint] should be
 activated when installing or updating the CT Mobile package.
-* link:ios/remote-detailing-ui-basics[Enhanced UI] for the presenter
+* link:remote-detailing-ui-basics[Enhanced UI] for the presenter
 and participants.
 
 [[h2__340549922]]
@@ -505,10 +505,10 @@ Administrator_ and _CT Mobile User_ permission sets.
 ===== Remote Detailing 2.0
 
 * Security Update:
-link:ios/ct-mobile-control-panel-presenter#h3__53846510[specify the
+link:ct-mobile-control-panel-presenter#h3__53846510[specify the
 integration user] to connect to the *Self Detailing* meeting and collect
 statistics.
-* link:ios/remote-detailing-f-a-q#h2__106650128[New direct links] to
+* link:remote-detailing-f-a-q#h2__106650128[New direct links] to
 access *Remote Detailing* and *Self Detailing* meetings.
 * The *ActivityProcessHandler* class will check if only active and valid
 CLM presentations are specified for[.object]#Activity# objects.
@@ -520,7 +520,7 @@ If not, the error message will be written in logs.
 ===== CT Mobile Control Panel
 
 * For your convenience, use the
-link:ios/ct-mobile-control-panel-tools#h3_847464003[Download metadata
+link:ct-mobile-control-panel-tools#h3_847464003[Download metadata
 archive] button to download the archive and send it to support in case
 of any issues.
 
@@ -530,9 +530,9 @@ of any issues.
 ===== CT Presenter
 
 * The maximum size of the .pdf and ppt(x) file for
-link:ios/application-editor[converting to CLM presentation] has been
+link:application-editor[converting to CLM presentation] has been
 enlarged up to 75 MB.
-* link:ios/js-bridge-methods-availability[New JS Bridge methods] to
+* link:js-bridge-methods-availability[New JS Bridge methods] to
 manage audio and video on the presenter device.
 
 
@@ -553,7 +553,7 @@ __link:attachments-and-files.html[Attachment]__which size is more than
 * Fixed an issue with a lack of user permissions to access the *Sync
 Recovery* functionality.
 * Fixed deactivation of the *Unfinished Activity Allowed* option when
-the link:ios/start-finish-functionality[Start/Finish functionality] is
+the link:start-finish-functionality[Start/Finish functionality] is
 disabled.
 
 
@@ -562,8 +562,8 @@ disabled.
 ===== CT Presenter
 
 * Fixed the trigger operation: add and activate the required trigger in
-the link:ios/trigger-settings[Trigger Settings].
-* Fixed link:ios/download-clm-presentations-as-pdf[saving CLM
+the link:trigger-settings[Trigger Settings].
+* Fixed link:download-clm-presentations-as-pdf[saving CLM
 presentation as PDF] when the CLM presentation name contains invalid
 characters.
 
@@ -574,9 +574,9 @@ characters.
 
 * Fixed the *ActivityProcessHandler* class errors when there are no
 actual values in the
-link:ios/ct-mobile-control-panel-presenter#h3__1311451422[Link Field]
+link:ct-mobile-control-panel-presenter#h3__1311451422[Link Field]
 and
-link:ios/ct-mobile-control-panel-presenter#h3__201439959[Application
+link:ct-mobile-control-panel-presenter#h3__201439959[Application
 List Field].
 
 
@@ -597,7 +597,7 @@ objects that are not specified as offline objects.
 [[h4__801880401]]
 ===== CT Mobile Control Panel
 
-* Improved link:ios/sync-recovery[Sync Recovery] functionality: force
+* Improved link:sync-recovery[Sync Recovery] functionality: force
 insertion of records through the *Proxy object* option when these
 records contain errors that prevent these records from being inserted
 using the *Direct access* option.
@@ -608,7 +608,7 @@ using the *Direct access* option.
 In the _CT Mobile User_ and _CT Mobile Administrator_ permission sets:
 
 * The corresponding access to the *Unfinished Activity Allowed* field of
-link:ios/mobile-application-setup[Mobile Application Setup] is added.
+link:mobile-application-setup[Mobile Application Setup] is added.
 * The corresponding access to the *Slide Zoom Enabled* and *Available
 Offline* field of the[.object]#Application# object is added.
 
@@ -619,8 +619,8 @@ Offline* field of the[.object]#Application# object is added.
 ===== CT Mobile Control Panel
 
 * During the installation of the package,
-link:ios/ct-mobile-control-panel-tools#h3_2011978[the cloud token] will
-be copied to the protected link:ios/api-key[API Key] custom setting.
+link:ct-mobile-control-panel-tools#h3_2011978[the cloud token] will
+be copied to the protected link:api-key[API Key] custom setting.
 
 [[h2_62734608]]
 === CT Mobile package v. 3.57
@@ -643,7 +643,7 @@ CLM presentations that were available offline.
 
 * If the *Sync Recovery* functionality is enabled and the *Attachment*
 record has a temporary Id of the parent record in the reference field,
-the attachment will be sent as link:ios/sync-recovery#h3_356910769[a
+the attachment will be sent as link:sync-recovery#h3_356910769[a
 Proxy object] to Salesforce.
 
 [[h2__2026747377]]
@@ -656,20 +656,20 @@ Proxy object] to Salesforce.
 ===== CT Mobile Control Panel
 
 * Specify the ability
-link:ios/ct-mobile-control-panel-calendar#h3_1856075785[to leave the
+link:ct-mobile-control-panel-calendar#h3_1856075785[to leave the
 unfinished activity] for users' profiles.
 * The ability
 https://help.customertimes.com/smart/project-ct-sign-en/add-the-ct-sign-to-the-ct-mobile-app[to
 activate the CT Sign module] for the CT Mobile app.
 
 * Due to security reasons, the
-link:ios/ct-mobile-control-panel-tools#h3__1876917838[Scheduled
+link:ct-mobile-control-panel-tools#h3__1876917838[Scheduled
 metadata check] toggle and the
-link:ios/ct-mobile-control-panel-tools#h3_1003786176[Refresh metadata
+link:ct-mobile-control-panel-tools#h3_1003786176[Refresh metadata
 archive] button are displayed only for users with the _Modify All Data_
 and _Modify Metadata Through Metadata API Functions_ permission or with
 the assigned
-link:ios/application-permission-settings#h2__1046081510[_CT Mobile
+link:application-permission-settings#h2__1046081510[_CT Mobile
 Administrator_] permission set.
 
 [[h3_453966740]]
@@ -679,8 +679,8 @@ Administrator_] permission set.
 ===== CT Mobile Control Panel
 
 * The *Create* button will be inactive if there is no field added when
-link:ios/mini-layouts#h2__684572466[creating a mini layout].
-* Fixes for link:ios/custom-related-lists#h2__993780705[the creation of
+link:mini-layouts#h2__684572466[creating a mini layout].
+* Fixes for link:custom-related-lists#h2__993780705[the creation of
 custom related lists].
 * Fixed the display of the settings on the *CT Mobile Control Panel*
 tabs for Safari users.
@@ -690,12 +690,12 @@ tabs for Safari users.
 [[h4_639945830]]
 ===== CT Presenter
 
-* The ability to work with the link:ios/custom-scenario-editor[Custom
+* The ability to work with the link:custom-scenario-editor[Custom
 Scenario Editor] in Lightning Experience.
 * Fixed the process of
-link:ios/publishing-clm-presentations#h3_1098755975[renewing slides] if
+link:publishing-clm-presentations#h3_1098755975[renewing slides] if
 there is only one slide in the CLM presentation.
-* Fixed link:ios/attach-files-to-clm-presentation[attaching files to
+* Fixed link:attach-files-to-clm-presentation[attaching files to
 CLM presentations] in Lightning Experience.
 
 [[h2__907547183]]
@@ -704,7 +704,7 @@ CLM presentations] in Lightning Experience.
 [[h3_248816688]]
 ==== New Features and Improvements
 
-In this release, the new link:ios/ctm-user-settings[CTM User Settings]
+In this release, the new link:ctm-user-settings[CTM User Settings]
 object is added to store list views created by the mobile user in the CT
 Mobile app. The required permissions are added in the _CT Mobile User_
 and _CT Mobile Administrator_ permission sets.
@@ -715,15 +715,15 @@ and _CT Mobile Administrator_ permission sets.
 ===== CT Mobile Control Panel
 
 * The ability
-to link:ios/ct-mobile-control-panel-app-menu#h2_1511584348[specify the
+to link:ct-mobile-control-panel-app-menu#h2_1511584348[specify the
 ascending or descending order] for records in the *Routes* module.
-* The link:ios/ct-mobile-control-panel-tools#h3_1380764274[Remove
+* The link:ct-mobile-control-panel-tools#h3_1380764274[Remove
 metadata archive from server] button is added to simplify the QA
 process.
 * The ability to specify
-link:ios/ct-mobile-control-panel-general#h3__1990058335[Bing Maps API
+link:ct-mobile-control-panel-general#h3__1990058335[Bing Maps API
 Key] for CT Mobile Windows and
-link:ios/ct-mobile-control-panel-general#h3_375370096[Google Maps API
+link:ct-mobile-control-panel-general#h3_375370096[Google Maps API
 Key] for CT Mobile Android to select Bing or Google Maps in the *Routes*
 module, in the *Nearby Accounts* module, and the *Maps* widget.
 
@@ -732,7 +732,7 @@ module, in the *Nearby Accounts* module, and the *Maps* widget.
 [[h4_1865396414]]
 ===== Activity Management
 
-* Users of CT Mobile iOS with link:ios/start-finish-functionality[the
+* Users of CT Mobile iOS with link:start-finish-functionality[the
 enabled Start/Finish functionality] may be given the ability to leave
 the unfinished *Activity* record to work with other functionalities.
 
@@ -772,7 +772,7 @@ corresponding CLM-presentation record opens instead of the Home page.
 [[h3_248816688]]
 ==== New Features and Improvements
 
-link:ios/api-key[The new private API key custom setting] is used to
+link:api-key[The new private API key custom setting] is used to
 store the cloud token and restrict user access to the cloud token
 following the Salesforce security policy.
 
@@ -781,11 +781,11 @@ following the Salesforce security policy.
 [[h4_45068577]]
 ===== CT Mobile Control Panel
 
-* The link:ios/ct-mobile-control-panel-tools#h4_1003786176[Refresh
+* The link:ct-mobile-control-panel-tools#h4_1003786176[Refresh
 metadata archive] button is intended to replace the manual collecting of
 the metadata archive.
 * The ability to use reference fields in
-link:ios/managing-offline-objects#ManagingOfflineObjects-SOQLFilters[SOQL
+link:managing-offline-objects#ManagingOfflineObjects-SOQLFilters[SOQL
 filters].
 
 
@@ -799,7 +799,7 @@ CT Orders module] is available for at least one profile, the description
 for the CT Orders objects will be added to the metadata archive to
 provide offline the full CT Orders functionality.
 * Metadata will be added to the metadata archive based on
-link:ios/ctm-settings-offline-objects[the CTM Settings records] of the
+link:ctm-settings-offline-objects[the CTM Settings records] of the
 *Offline Object* record type to reduce the sync process time.
 
 
@@ -807,7 +807,7 @@ link:ios/ctm-settings-offline-objects[the CTM Settings records] of the
 [[h4__2028405529]]
 ===== Remote Detailing
 
-* link:ios/clm-customscenario[Custom scenarios] can be selected within
+* link:clm-customscenario[Custom scenarios] can be selected within
 the *Remote Detailing* session.
 
 [[h3__112451824]]
@@ -835,7 +835,7 @@ are created based on the Production environment.
 [[h4_45068577]]
 ===== CT Mobile Control Panel
 
-* The *Show* button link:ios/ct-mobile-control-panel-tools[to view the
+* The *Show* button link:ct-mobile-control-panel-tools[to view the
 cloud token value].
 
 
@@ -843,12 +843,12 @@ cloud token value].
 [[h4__2028405529]]
 ===== Remote Detailing
 
-* The link:ios/ct-mobile-control-panel-presenter#h3_341694305[Call
+* The link:ct-mobile-control-panel-presenter#h3_341694305[Call
 Repeat Allowed] option allows resuming the finished meeting. Statistics
 will be collected too.
 * The indicator of the enabled attendee's remote control is highlighted
 in red color
-link:ios/remote-detailing-1-0-ui-for-presenter#h2_561326567[for better
+link:remote-detailing-1-0-ui-for-presenter#h2_561326567[for better
 visibility].
 
 [[h2_62734605]]
@@ -860,12 +860,12 @@ visibility].
 [[h4__82973874]]
 ===== CT Mobile Control Panel
 
-* link:ios/ct-mobile-control-panel-presenter[The corresponding tab]
+* link:ct-mobile-control-panel-presenter[The corresponding tab]
 allows customizing the *Remote Detailing* and *Self Detailing*
 functionality in one place.
 * For the users' convenience, the objects in the picklists are now
 sorted by label instead of API Names.
-* link:ios/ct-mobile-control-panel-tools#h3__1658362952[The Refresh CTM
+* link:ct-mobile-control-panel-tools#h3__1658362952[The Refresh CTM
 Settings button] helps to support consistency between *CTM Settings* and
 *Custom Settings* records in case of errors.
 * The ability to add the CT Orders module to the CT Mobile app on the
@@ -877,24 +877,24 @@ Settings button] helps to support consistency between *CTM Settings* and
 ===== Applications
 
 * In Lightning Experience, add
-link:ios/download-clm-presentations-as-pdf[the Download as PDF button]
+link:download-clm-presentations-as-pdf[the Download as PDF button]
 to the *Applications* tab for generating PDF files for several CLM
 presentations.
 * Improved quality for slides generated from PDF or PPT files via
-link:ios/application-editor[Application Editor].
+link:application-editor[Application Editor].
 
 
 
 [[h4__1401231549]]
 ===== Remote Detailing
 
-* The enhanced link:ios/remote-detailing-setup[setup process] for the
+* The enhanced link:remote-detailing-setup[setup process] for the
 *Remote Detailing* and *Self Detailing* functionality.
 * In Lightning Experience, add
-link:ios/remote-detailing-launch-salesforce-side#h2_1396626265[the
+link:remote-detailing-launch-salesforce-side#h2_1396626265[the
 Remote Detailing button] on the *Application* record to launch the
 *Remote Detailing* meeting.
-* On the link:ios/remote-detailing-1-0-ui-for-participants[Attendee
+* On the link:remote-detailing-1-0-ui-for-participants[Attendee
 Details] screen, the username field is now required for filling out.
 * In the Salesforce Classic, the *Remote Detailing* and *Self Detailing*
 buttons are no more supported.

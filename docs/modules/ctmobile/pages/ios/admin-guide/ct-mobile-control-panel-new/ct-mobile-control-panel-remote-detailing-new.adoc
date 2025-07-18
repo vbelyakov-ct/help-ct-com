@@ -9,19 +9,19 @@ Settings] record.
 
 * Prior to configuring Remote Detailing, select user profile from the
 list and switch on the *Activate* toggle.
-* To create link:ios/test-clm-presentations[test CLM presentations],
+* To create link:test-clm-presentations[test CLM presentations],
 click the *Create Demo Presentations* button.
 
 
 
 To store viewing statistics of CLM presentations:
 
-. On the link:ios/clm-applicationstats[Application Stats] object,
+. On the link:clm-applicationstats[Application Stats] object,
 create lookup fields to every [.object]#Activity#
 object configured on the
-link:ios/ct-mobile-control-panel-activities-new#h2_2014841429[Activities]
+link:ct-mobile-control-panel-activities-new#h2_2014841429[Activities]
 tab.
-. In the link:ios/mobile-application-setup[Mobile Application Setup],
+. In the link:mobile-application-setup[Mobile Application Setup],
 specify API names of the created lookup fields on
 the [.apiobject]#clm__ActivityFieldAPI__c# object (comma
 separated). The fields must be listed in the same order as the objects

@@ -16,13 +16,13 @@ The full synchronization should be launched:
 
 * to download the current user database (data, metadata, app settings):
 ** when a mobile user launches the first synchronization after
-link:ios/logging-in[logging in];
+link:logging-in[logging in];
 ** when the new version of the CT Mobile app is installed.
 * to send data changes (deletions, insertions, and updates of records)
 from the CT Mobile app to Salesforce and ​completely replace the current
 user database (data, metadata, app settings) if changes were made on
-the link:ios/ct-mobile-control-panel[CT Mobile Control
-Panel]/link:ios/ct-mobile-control-panel-new[CT Mobile Control Panel
+the link:ct-mobile-control-panel[CT Mobile Control
+Panel]/link:ct-mobile-control-panel-new[CT Mobile Control Panel
 2.0].
 
 
@@ -37,12 +37,12 @@ size.
 
 
 
-For more information, read link:ios/full-synchronization[the Full
+For more information, read link:full-synchronization[the Full
 Synchronization article].
 
 
 
-Go back to link:ios/synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
+Go back to link:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
 [[h3__965238074]]
 ==== When to launch the fast synchronization?
@@ -56,13 +56,13 @@ attributes;
 from Salesforce to the device, including changes in the field
 attributes;
 * update CLM presentations in case of
-link:ios/publishing-clm-presentations[republishing]. The CT Mobile app
+link:publishing-clm-presentations[republishing]. The CT Mobile app
 compares the current version of the CLM presentation with the one
 previously saved. If any discrepancies are found, slides and
 attachments, which were updated after the last synchronization, will be
 loaded.
 ** In case of the future date in the *Forced Load Date* field
-link:ios/clm-application[on the CLM presentation record], the CT mobile
+link:clm-application[on the CLM presentation record], the CT mobile
 app asks the current user to download the CLM presentation or not.
 ** In the case of the past date or an empty value in the *Forced Load
 Date* field, the CLM presentation will be downloaded.
@@ -72,26 +72,26 @@ Date* field, the CLM presentation will be downloaded.
 Important notes:
 
 In the case of record errors, the fast synchronization continues. Errors
-could be managed on link:ios/errors-screen[the Errors screen].
+could be managed on link:errors-screen[the Errors screen].
 
 The CT Mobile app is not locked during the fast synchronization.
 
 ifndef::win,andr[]
 
-The sync process may include link:ios/ct-mobile-replication[CT Mobile
+The sync process may include link:ct-mobile-replication[CT Mobile
 Replication];
 
-The sync process may include the link:ios/sync-recovery[Sync Recovery]
+The sync process may include the link:sync-recovery[Sync Recovery]
 functionality.
 
 
 
-For more information, read link:ios/fast-synchronization[the Fast
+For more information, read link:fast-synchronization[the Fast
 Synchronization article].
 
 
 
-Go back to link:ios/synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
+Go back to link:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
 [[h3__1232469734]]
 ==== When does the mixed synchronization automatically launch instead of the fast synchronization?
@@ -99,15 +99,15 @@ Go back to link:ios/synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 The mixed synchronization launches when:
 
 * the date of the last successful synchronization on the
-link:ios/clm-user[current user's record] is earlier than the date of
+link:clm-user[current user's record] is earlier than the date of
 the last metadata change in the
 [.apiobject]#clm__MetadataLastModifiedDate__c# field of
-the link:ios/mobile-application-setup[Mobile Application Setup] record
+the link:mobile-application-setup[Mobile Application Setup] record
 for the current user's profile (if this record exists) or for the
 current user's Salesforce organization;
 * the date of the last metadata change is not set in the
 [.apiobject]#clm__MetadataLastModifiedDate__c# field of
-the link:ios/mobile-application-setup[Mobile Application Setup] record.
+the link:mobile-application-setup[Mobile Application Setup] record.
 
 
 
@@ -115,20 +115,20 @@ The mixed synchronization is intended to:
 
 * download settings and records without re-load of previously downloaded
 records, which helps to reduce the sync time.
-* download link:ios/metadata-archive[metadata] changes in ZIP
+* download link:metadata-archive[metadata] changes in ZIP
 archive(s) and via API according to the current user profile;
 * send data changes (deletions, insertions, and updates of records) from
 the CT Mobile app to Salesforce;
 * download data changes (deletions, insertions, and updates of records)
 from Salesforce to the device;
 * update CLM presentations in case of
-link:ios/publishing-clm-presentations[republishing]. The CT Mobile app
+link:publishing-clm-presentations[republishing]. The CT Mobile app
 compares the current version of the CLM presentation with the one
 previously saved. If any discrepancies are found, slides and
 attachments, which were updated after the last synchronization, will be
 loaded.
 ** In case of the future date in the *Forced Load Date* field
-link:ios/clm-application[on the CLM presentation record], the CT mobile
+link:clm-application[on the CLM presentation record], the CT mobile
 app asks the current user to download the CLM presentation or not.
 ** In the case of the past date or an empty value in the *Forced Load
 Date* field, the CLM presentation will be downloaded.
@@ -138,45 +138,45 @@ Date* field, the CLM presentation will be downloaded.
 Important notes:
 
 The date of the last metadata change will be updated each time you make
-a change on link:ios/ct-mobile-control-panel[CT Mobile Control
-Panel]/link:ios/ct-mobile-control-panel-new[CT Mobile Control Panel
+a change on link:ct-mobile-control-panel[CT Mobile Control
+Panel]/link:ct-mobile-control-panel-new[CT Mobile Control Panel
 2.0].
 
 You can manually update the date for the corresponding profile by
 editing the
 [.apiobject]#clm__MetadataLastModifiedDate__c# field of
-the link:ios/mobile-application-setup[Mobile Application Setup] record
+the link:mobile-application-setup[Mobile Application Setup] record
 for the current user's profile (if this record exists) or for the
 current user's Salesforce organization.
 
 In the case of record errors, the mixed synchronization continues.
-Errors could be managed on link:ios/errors-screen[the Errors screen];
+Errors could be managed on link:errors-screen[the Errors screen];
 
 The CT Mobile app is not locked during the mixed synchronization;
 
 ifndef::win,andr[]
 
-The sync process may include link:ios/ct-mobile-replication[CT Mobile
+The sync process may include link:ct-mobile-replication[CT Mobile
 Replication];
 
-The sync process may include the link:ios/sync-recovery[Sync Recovery]
+The sync process may include the link:sync-recovery[Sync Recovery]
 functionality;
 
 To refresh metadata in the ZIP archive
 
-* link:ios/metadata-checker#h2__682427009[Manually create the metadata
+* link:metadata-checker#h2__682427009[Manually create the metadata
 archive].
-* link:ios/metadata-checker#h2__1244689107[Enable Metadata Checker] to
+* link:metadata-checker#h2__1244689107[Enable Metadata Checker] to
 refresh metadata.
 
 
 
-For more information, read link:ios/fast-synchronization[the Fast
+For more information, read link:fast-synchronization[the Fast
 Synchronization article].
 
 
 
-Go back to link:ios/synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
+Go back to link:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
 ifdef::ios[]
 
@@ -184,13 +184,13 @@ ifdef::ios[]
 ==== When to use the quick record synchronization?
 
 The common use case is to download changes for a particular record. For
-example, link:ios/remote-detailing-launch-the-ct-mobile-app[to download
+example, link:remote-detailing-launch-the-ct-mobile-app[to download
 the invite link] for the Remote Detailing functionality or update the
 record related lists.
 
 
 
-Go back to link:ios/synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
+Go back to link:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
 [[h3__371527703]]
 ==== When to use the Sync Recovery functionality?
@@ -202,14 +202,14 @@ the sync logs and, hence, from the reports.
 
 
 
-For more information, read link:ios/sync-recovery[the Sync Recovery
+For more information, read link:sync-recovery[the Sync Recovery
 article]. Error types are listed in
 https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_calls_concepts_core_data_objects.htm[the
 Salesforce Developer Guide article].
 
 
 
-Go back to link:ios/synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
+Go back to link:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
 [[h3_2034589294]]
 ==== When to use CT Mobile Replication?
@@ -220,7 +220,7 @@ if you changed
 https://help.salesforce.com/articleView?id=security_about_sharing_rules.htm&type=5[sharing
 rules] (via organization-wide defaults or per each record), the value in
 the[.apiobject]#SystemModStamp# field is not modified. In this
-case, link:ios/ct-mobile-replication[create a CT Mobile Replication
+case, link:ct-mobile-replication[create a CT Mobile Replication
 setting] to keep data up to date on the device. The corresponding
 records will be downloaded and records, which are no longer available,
 will be hidden.
@@ -228,11 +228,11 @@ will be hidden.
 
 
 The CT Mobile Replication example is available
-link:ios/ct-mobile-replication-use-cases-and-steps[here].
+link:ct-mobile-replication-use-cases-and-steps[here].
 
 
 
-Go back to link:ios/synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
+Go back to link:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
 ifdef::ios,win[]
 
@@ -248,12 +248,12 @@ ifndef::win[]
 
 To find out the time and date of the last successful synchronization,
 and to see the number of records waiting to be sent to Salesforce, tap
-on link:ios/home-screen#h2__396225247[the status indicator] at the
+on link:home-screen#h2__396225247[the status indicator] at the
 bottom of the screen.
 
 
 
-Go back to link:ios/synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
+Go back to link:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
 [[h2__490564468]]
 === Synchronization Details
@@ -264,7 +264,7 @@ Go back to link:ios/synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 Depending on the selected debug level, the sync log record with the
 corresponding status will be saved for synchronization and all performed
 operations, except for Geo Tracing and Geolocation. For more
-information, read link:ios/sync-log[the Sync Log article].
+information, read link:sync-log[the Sync Log article].
 
 
 
@@ -299,12 +299,12 @@ created, updated, deleted, or inserted.
 
 
 
-Go back to link:ios/synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
+Go back to link:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
 [[h3_1530730493]]
 ==== Where are the synchronization statistics stored?
 
-The link:ios/sync-log[Sync Log] object is intended to store logs for
+The link:sync-log[Sync Log] object is intended to store logs for
 each performed synchronization.
 
 * the main Sync log record with the type of synchronization;
@@ -318,7 +318,7 @@ the[.apiobject]#SyncSingle.log# file with all operations for
 the first, full, fast, mixed, and quick record synchronization.
 
 the[.apiobject]#sync.log# file for the
-link:ios/send-application-data-dump#SendApplicationDataDump-SpecifyDatatoSend[Sync
+link:send-application-data-dump#SendApplicationDataDump-SpecifyDatatoSend[Sync
 Log History] operation.
 
 the[.apiobject]#Documents.zip# for the Export Data operation;
@@ -331,11 +331,11 @@ the create, update, or insert operation along with the JSON file.
 
 
 
-For more information, read link:ios/sync-logs[the Sync Logs article].
+For more information, read link:sync-logs[the Sync Logs article].
 
 
 
-Go back to link:ios/synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
+Go back to link:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
 ifdef::ios[]
 
@@ -345,7 +345,7 @@ ifdef::ios[]
 A single API request contains from 10 to 2 000 records. All requested
 data volume is divided into batches depending on the number of fields
 and field types of the object. Also,
-link:ios/attachments-and-files[attachments] can be downloaded one at a
+link:attachments-and-files[attachments] can be downloaded one at a
 time.
 
 * Approximately, the CT Mobile app is loading around 1 000 records per
@@ -357,7 +357,7 @@ Requests, Last 24 Hours* field.
 
 
 
-Go back to link:ios/synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
+Go back to link:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
 [[h2__2101954030]]
 === Metadata Components and Related Error Handling
@@ -366,22 +366,22 @@ Go back to link:ios/synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 ==== What components are included in the metadata archive?
 
 The list of components is available
-link:ios/metadata-archive#h2_1854953360[here]. Also, the metadata
+link:metadata-archive#h2_1854953360[here]. Also, the metadata
 archive includes all offline objects that were specified on the
-link:ios/ct-mobile-control-panel-offline-objects[CT Mobile Control
+link:ct-mobile-control-panel-offline-objects[CT Mobile Control
 Panel: Offline
-Objects]/link:ios/ct-mobile-control-panel-offline-objects-new[CT Mobile
+Objects]/link:ct-mobile-control-panel-offline-objects-new[CT Mobile
 Control Panel 2.0: Offline Objects].
 
 
 
-Go back to link:ios/synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
+Go back to link:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
 [[h3_317222557]]
 ==== How often should you rebuild the metadata archive?
 
-We recommend enabling link:ios/metadata-checker[a metadata checker] and
-link:ios/metadata-checker#h3_1645525423[setting a schedule] for a
+We recommend enabling link:metadata-checker[a metadata checker] and
+link:metadata-checker#h3_1645525423[setting a schedule] for a
 metadata checker according to your business processes, such as the
 frequency of updating settings on the CT Mobile Control Panel tabs,
 changing lookup filters, creating custom labels, managing validation
@@ -389,30 +389,30 @@ rules, etc.
 
 
 
-Go back to link:ios/synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
+Go back to link:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
 [[h3__335611687]]
 ==== Why were not the up-to-date metadata components downloaded during the full or mixed synchronization?
 
 The metadata archive has not been created or updated. Some functionality
-may incorrectly work, for example, link:ios/validation[offline
+may incorrectly work, for example, link:validation[offline
 validation rules].
 
-. Check link:ios/ct-mobile-control-panel-tools#h3_2011978[the cloud
-token] (refer to link:ios/ct-mobile-control-panel-tools#h3_2011978[CT
+. Check link:ct-mobile-control-panel-tools#h3_2011978[the cloud
+token] (refer to link:ct-mobile-control-panel-tools#h3_2011978[CT
 Mobile Control Panel:
-Tools]/link:ios/ct-mobile-control-panel-tools-new#h2_2011978[CT Mobile
+Tools]/link:ct-mobile-control-panel-tools-new#h2_2011978[CT Mobile
 Control Panel 2.0: Tools]) is valid.
 . Create a ZIP archive or refresh metadata in the ZIP archive. We
-recommend enabling link:ios/metadata-checker[a metadata checker]. Also,
-it is possible link:ios/metadata-checker#h3_1645525423[to set a
+recommend enabling link:metadata-checker[a metadata checker]. Also,
+it is possible link:metadata-checker#h3_1645525423[to set a
 schedule] for a metadata checker or
-link:ios/metadata-checker#h2__1657467916[manually create/update] the
+link:metadata-checker#h2__1657467916[manually create/update] the
 metadata archive.
 
 
 
-Go back to link:ios/synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
+Go back to link:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
 [[h3_439788848]]
 ==== Why is the new translation for an object or a field not displayed in the CT Mobile app?
@@ -424,32 +424,32 @@ related lists, etc.
 
 * If the translation is absent, the label will be displayed.
 * If the translation has been added, check the metadata archive is
-created or updated. We recommend enabling link:ios/metadata-checker[a
+created or updated. We recommend enabling link:metadata-checker[a
 metadata checker]. Also, it is possible
-link:ios/metadata-checker#h3_1645525423[to set a schedule] for a
-metadata checker or link:ios/metadata-checker#h2__1657467916[manually
+link:metadata-checker#h3_1645525423[to set a schedule] for a
+metadata checker or link:metadata-checker#h2__1657467916[manually
 create/update] the metadata archive.
-* Also, check the link:ios/application-language[Application Language]
+* Also, check the link:application-language[Application Language]
 article.
 
 
 
-Go back to link:ios/synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
+Go back to link:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
 [[h3__1646090375]]
 ==== The lookup filter has been changed. Why has not it been downloaded to the device?
 
 The lookup filters are the components of the metadata archive. If you
 created or changed the lookup filter, it is necessary to rebuild
-link:ios/metadata-archive[a metadata archive]. We recommend enabling
-link:ios/metadata-checker[a metadata checker]. Also, it is possible
-link:ios/metadata-checker#h3_1645525423[to set a schedule] for a
-metadata checker or link:ios/metadata-checker#h2__1657467916[manually
+link:metadata-archive[a metadata archive]. We recommend enabling
+link:metadata-checker[a metadata checker]. Also, it is possible
+link:metadata-checker#h3_1645525423[to set a schedule] for a
+metadata checker or link:metadata-checker#h2__1657467916[manually
 create/update] the metadata archive.
 
 
 
-Go back to link:ios/synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
+Go back to link:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
 [[h3__98900833]]
 ==== The metadata checker has been enabled. Why are not the up-to-date metadata components downloaded to the device?
@@ -478,7 +478,7 @@ class status will change to *Completed*.
 
 
 
-Go back to link:ios/synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
+Go back to link:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
 [[h2__1094723947]]
 === Synchronization Error Handling
@@ -486,12 +486,12 @@ Go back to link:ios/synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 [[h3__1178930529]]
 ==== How to send the application data dump?
 
-Go to the link:ios/send-application-data-dump[Send Application Data
+Go to the link:send-application-data-dump[Send Application Data
 Dump] article.
 
 
 
-Go back to link:ios/synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
+Go back to link:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
 [[h3__2090909248]]
 ==== What to do if the sync process has stopped due to missing the CT Mobile license?
@@ -501,7 +501,7 @@ users.
 
 
 
-Go back to link:ios/synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
+Go back to link:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
 [[h3__755626042]]
 ==== What to do if the sync process has stopped due to an inactive organization error?
@@ -511,7 +511,7 @@ Disconnect then reconnect from Salesforce.
 
 
 
-Go back to link:ios/synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
+Go back to link:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
 [[h3_2051887665]]
 ==== What to do if synchronization takes too long?
@@ -519,21 +519,21 @@ Go back to link:ios/synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 The duration of the sync process depends on:
 
 * the internet connection. Check
-link:ios/technical-requirements-for-devices-and-network#h2_1498128754[the
+link:technical-requirements-for-devices-and-network#h2_1498128754[the
 requirements for the connection].
 * amount of data. To avoid the synchronization of the large data,
-link:ios/managing-offline-objects[customize the criteria] to download
+link:managing-offline-objects[customize the criteria] to download
 desired records of offline objects.
 
 * amount of modified components (objects, fields, layouts) or changes
-provided on the link:ios/ct-mobile-control-panel[CT Mobile Control
-Panel]/link:ios/ct-mobile-control-panel-new[CT Mobile Control Panel
+provided on the link:ct-mobile-control-panel[CT Mobile Control
+Panel]/link:ct-mobile-control-panel-new[CT Mobile Control Panel
 2.0]. In this case, mixed synchronization is in progress instead of fast
 synchronization, and the sync process takes more time.
 
 
 
-Go back to link:ios/synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
+Go back to link:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
 [[h3_381741377]]
 ==== What to do if the INVALID_TYPE error occurs?
@@ -555,7 +555,7 @@ user).
 
 
 
-Go back to link:ios/synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
+Go back to link:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
 [[h3_1079670190]]
 ==== What to do if the UNKNOWN_EXCEPTION error occurs?
@@ -569,31 +569,31 @@ check it in https://workbench.developerforce.com/login.php[Workbench].
 
 
 
-Go back to link:ios/synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
+Go back to link:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
 [[h3_1189028288]]
 ==== What to do if the MALFORMED_QUERY error occurs?
 
 The[.apiobject]#MALFORMED_QUERY# error occurs when the SOQL
 filter is incorrectly specified for the offline object. Check the
-link:ios/managing-offline-objects[SOQL query] in the error message.
+link:managing-offline-objects[SOQL query] in the error message.
 
 
 
-Go back to link:ios/synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
+Go back to link:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
 [[h3_1710675976]]
 ==== What to do if the INVALID_FILTER_QUERY_OPERATOR: invalid ID field occurs?
 
 The[.apiobject]#INVALID_FILTER_QUERY_OPERATOR:
 invalid ID field# error is due to a temporary mobile record ID being
-inserted into link:ios/reference-fields[the reference field] when the
+inserted into link:reference-fields[the reference field] when the
 query is formed. Check the custom logic that inserts the temporary ID ​in
 the field.
 
 
 
-Go back to link:ios/synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
+Go back to link:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
 [[h3_528467127]]
 ==== When does No connection to Salesforce occur?
@@ -606,7 +606,7 @@ https://status.salesforce.com/incidents/6406.
 
 
 
-Go back to link:ios/synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
+Go back to link:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
 ifdef::win[]
 
@@ -626,7 +626,7 @@ settings:
 
 
 
-Go back to link:ios/synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
+Go back to link:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
 ifdef::kotlin[]
 
@@ -651,7 +651,7 @@ Mobile app. We recommend doing a fast synchronization once a day at the
 beginning or end of the work day to maintain data consistency in the CT
 Mobile app and Salesforce.
 
-The sync process may include link:ios/ct-mobile-replication[CT Mobile
+The sync process may include link:ct-mobile-replication[CT Mobile
 Replication].
 
 [[h3__1232469734]]
@@ -661,7 +661,7 @@ The mixed synchronization is intended to align the records' main
 information and update metadata since the date of the last successful
 synchronization.
 
-The sync process may include link:ios/ct-mobile-replication[CT Mobile
+The sync process may include link:ct-mobile-replication[CT Mobile
 Replication].
 
 
@@ -680,7 +680,7 @@ for example:
 We recommend using CT Mobile Replication when you changed
 https://help.salesforce.com/articleView?id=security_about_sharing_rules.htm&type=5[sharing
 rules] (via organization-wide defaults or per each record). In this
-case, link:ios/ct-mobile-replication[create a CT Mobile Replication
+case, link:ct-mobile-replication[create a CT Mobile Replication
 setting] to keep data up to date on the device. The corresponding
 records will be downloaded and records, which are no longer available,
 will be hidden.
@@ -714,7 +714,7 @@ successful synchronization.
 
 
 
-Go back to link:ios/synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
+Go back to link:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
 [[h3__577265032]]
 ==== How to reduce the synchronization time?
@@ -722,13 +722,13 @@ Go back to link:ios/synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 If you have a lot of objects with attached files, you can adjust
 downloading these files:
 
-* Enable the link:ios/application-settings#h3_1768799377[Background
+* Enable the link:application-settings#h3_1768799377[Background
 content loading] option. The files in *Libraries* will be downloaded in
 the background mode after the full synchronization is complete.
-* Disable the link:ios/ctm-settings-offline-objects[Files Download
+* Disable the link:ctm-settings-offline-objects[Files Download
 Enabled] option for offline objects. The files attached to offline
 objects will be downloaded as previews.
-* Set up the link:ios/ctm-settings-offline-objects[Files Filter] option
+* Set up the link:ctm-settings-offline-objects[Files Filter] option
 to set up the last date of files to download.
 
 [[h2_466216120]]
@@ -740,7 +740,7 @@ to set up the last date of files to download.
 During any synchronization mode, the parent records are synchronized
 first, and then their child records are synchronized. To learn more
 about the steps for each synchronization mode, refer to
-link:ios/synchronization-launch[Synchronization Launch].
+link:synchronization-launch[Synchronization Launch].
 
 [[h2__2110567442]]
 ==== Does the application lock during the sync process?
@@ -753,11 +753,11 @@ up when the synchronization is complete.
 ==== Where are the synchronization statistics stored?
 
 Enable logs on the
-link:ios/ct-mobile-control-panel-general#h3__272409891[CT Mobile
+link:ct-mobile-control-panel-general#h3__272409891[CT Mobile
 Control Panel:
-General]/link:ios/ct-mobile-control-panel-general-new#h2__1687169837[CT
+General]/link:ct-mobile-control-panel-general-new#h2__1687169837[CT
 Mobile Control Panel 2.0: General] tab to collect statistics in the
-[.object]#Sync Log# object. The link:ios/sync-log[Sync Log]
+[.object]#Sync Log# object. The link:sync-log[Sync Log]
 record for the selected synchronization type keeps:
 
 * Operation. Currently, there are two available types:
@@ -775,7 +775,7 @@ is not yet synchronized.
 
 
 
-Go back to link:ios/synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
+Go back to link:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
 [[h2_2007803127]]
 === Metadata Archive and Related Errors Handling
@@ -784,11 +784,11 @@ Go back to link:ios/synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 ==== What components are included in the metadata archive?
 
 The list of components is available
-link:ios/metadata-archive#h2_1854953360[here]. Also, the metadata
+link:metadata-archive#h2_1854953360[here]. Also, the metadata
 archive includes all offline objects that were specified on the
-link:ios/ct-mobile-control-panel-offline-objects[CT Mobile Control
+link:ct-mobile-control-panel-offline-objects[CT Mobile Control
 Panel: Offline
-Objects]/link:ios/ct-mobile-control-panel-offline-objects-new[CT Mobile
+Objects]/link:ct-mobile-control-panel-offline-objects-new[CT Mobile
 Control Panel 2.0: Offline Objects].
 
 [[h3_317222557]]
@@ -804,13 +804,13 @@ lookup filters, creating custom labels, managing validation rules, etc.
 The metadata archive has not been updated. Go to the
 https://help.customertimes.com/articles/ct-mobile-android-2-0-en/ct-mobile-control-panel-tools/a/h3_1003786176[CT
 Mobile Control Panel:
-Tools]/link:ios/ct-mobile-control-panel-tools-new#h3_1003786176[CT
+Tools]/link:ct-mobile-control-panel-tools-new#h3_1003786176[CT
 Mobile Control Panel 2.0: Tools] tab and click the *Refresh metadata
 archive* button.
 
 
 
-Go back to link:ios/synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
+Go back to link:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
 [[h2_778518628]]
 === Synchronization Error Handling
@@ -885,4 +885,4 @@ afterward.
 
 
 
-Go back to link:ios/synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
+Go back to link:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].

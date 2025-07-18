@@ -1,6 +1,6 @@
 = ctm.customStats
 
-The method of link:ios/js-bridge-api[JS Bridge] functionality is
+The method of link:js-bridge-api[JS Bridge] functionality is
 intended to collect slide statistics after actions in native windows on
 a slide on various devices and CLM presentation components.
 
@@ -18,7 +18,7 @@ time, likes, displays, etc. until[.apiobject]#ctm.customStats#
 with a different[.apiobject]#slideName# is requested or the CLM
 presentation display mode is closed.
 * The[.apiobject]#slideName# value will be stored
-link:ios/clm-applicationstats[in the File Name field].
+link:clm-applicationstats[in the File Name field].
 * If the method with the same[.apiobject]#slideName# is called
 again, CT Mobile must append the previously created *Application Stats*
 record.

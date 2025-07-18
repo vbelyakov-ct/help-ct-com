@@ -1,12 +1,12 @@
-= Columns&#39; Widths for Standard and Custom Related Lists
+= Columns' Widths for Standard and Custom Related Lists
 
 By default, the columns' widths of standard and custom related lists are
 spread evenly along the working area. Customize column width if needed.
 
 ifdef::ios[][NOTE] ==== The actual metadata is required to
 successfully apply the settings. For more information, go to
-link:ios/metadata-archive[Metadata Archive] and
-link:ios/metadata-checker[Metadata Checker]. ==== ifdef::kotlin[]
+link:metadata-archive[Metadata Archive] and
+link:metadata-checker[Metadata Checker]. ==== ifdef::kotlin[]
 [NOTE] ==== The actual metadata is required to successfully
 apply the settings. ====
 
@@ -48,7 +48,7 @@ image:column-width.png[]
 This setting is applied to fields in custom related lists. To specify
 the columns' width:
 
-. Go to link:ios/ct-mobile-control-panel-custom-details[CT Mobile
+. Go to link:ct-mobile-control-panel-custom-details[CT Mobile
 Control Panel: Custom details].
 . Click
 image:58832190.png[]
@@ -66,7 +66,7 @@ ifdef::ios[]This setting overrides the configured column width in
 the object field properties.
 
 The configuration is completed. Perform the
-link:ios/synchronization[full synchronization] to apply the changes.
+link:synchronization[full synchronization] to apply the changes.
 
 If a custom related list consists of several columns, the non-configured
 columns will be spread evenly along the rest of the working area.

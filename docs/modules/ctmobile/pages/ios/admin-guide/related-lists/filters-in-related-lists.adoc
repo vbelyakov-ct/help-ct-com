@@ -1,6 +1,6 @@
 = Filters in Related Lists
 
-link:ios/managing-offline-objects#ManagingOfflineObjects-SOQLFilters[Set
+link:managing-offline-objects#ManagingOfflineObjects-SOQLFilters[Set
 up a SOQL filter] for the related lists. The toggle in the CT Mobile
 allows a user to display all downloaded records or only records that
 matched the filter criteria.
@@ -93,8 +93,8 @@ ifdef::kotlin[]
 The sorting order for
 https://help.salesforce.com/articleView?id=customizing_related_lists.htm&type=5[a
 standard related list] is stored in the
-link:ios/ctm-settings-standard-related-list[Standard Related List]
-record type of the link:ios/ctm-settings[CTM Settings] object.
+link:ctm-settings-standard-related-list[Standard Related List]
+record type of the link:ctm-settings[CTM Settings] object.
 
 
 
@@ -105,8 +105,8 @@ In the CT Mobile app, record sorting is carried out by the first column.
 
 ifdef::ios,andr[]
 
-The sorting order for link:ios/custom-related-lists[a custom related
-list] is stored in link:ios/mobile-custom-details-settings[Mobile
+The sorting order for link:custom-related-lists[a custom related
+list] is stored in link:mobile-custom-details-settings[Mobile
 Custom Details Settings].
 
 . If the *Order By* request is set in the
@@ -137,8 +137,8 @@ will be performed in descending order;
 
 ifdef::win[]
 
-The sorting order for link:ios/custom-related-lists[a custom related
-list] is stored in link:ios/mobile-custom-details-settings[Mobile
+The sorting order for link:custom-related-lists[a custom related
+list] is stored in link:mobile-custom-details-settings[Mobile
 Custom Details Settings].
 
 . If the *Order By* request is set in the
@@ -163,8 +163,8 @@ are sorted in ascending order.
 
 ifdef::kotlin[]
 
-The sorting order for link:ios/custom-related-lists[a custom related
-list] is stored in link:ios/mobile-custom-details-settings[Mobile
+The sorting order for link:custom-related-lists[a custom related
+list] is stored in link:mobile-custom-details-settings[Mobile
 Custom Details Settings].
 
 . The sorting will be performed according to the value in the

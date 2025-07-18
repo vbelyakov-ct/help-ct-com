@@ -3,10 +3,10 @@
 *Mobile Layout* is a special type of layout dedicated to mobile device
 usage. To apply a mobile layout, follow the steps:
 
-. Create link:ios/mobile-layouts#h2__959581907[an inactive mobile
+. Create link:mobile-layouts#h2__959581907[an inactive mobile
 record type].
-. Create link:ios/mobile-layouts#h2__1436774974[a mobile layout].
-. link:ios/mobile-layouts#h2_1961857618[Assign the mobile layout] to a
+. Create link:mobile-layouts#h2__1436774974[a mobile layout].
+. link:mobile-layouts#h2_1961857618[Assign the mobile layout] to a
 record type for a specific profile.
 
 If there is no configured mobile layout, the standard assigned page
@@ -16,11 +16,11 @@ A mobile layout can have several widgets:
 
 ifdef::ios[]
 
-* link:ios/mobile-layouts-chatter-feed[Chatter Feed]
-* link:ios/mobile-layouts-maps[Maps]
-* link:ios/mobile-layouts-applications[Carousel of CLM Presentations]
-* link:ios/mobile-layouts-dashboards[Dashboards]
-* link:ios/mobile-layouts-qr-code[QR code]
+* link:mobile-layouts-chatter-feed[Chatter Feed]
+* link:mobile-layouts-maps[Maps]
+* link:mobile-layouts-applications[Carousel of CLM Presentations]
+* link:mobile-layouts-dashboards[Dashboards]
+* link:mobile-layouts-qr-code[QR code]
 
 [width="100%",cols="50%,50%",]
 |===
@@ -38,9 +38,9 @@ image:47749460.png[]
 
 ifdef::win[]
 
-* link:ios/mobile-layouts-chatter-feed[Chatter Feed]
-* link:ios/mobile-layouts-maps[Maps]
-* link:ios/mobile-layouts-applications[Carousel of CLM Presentations]
+* link:mobile-layouts-chatter-feed[Chatter Feed]
+* link:mobile-layouts-maps[Maps]
+* link:mobile-layouts-applications[Carousel of CLM Presentations]
 
 [cols=",",]
 |===
@@ -57,14 +57,14 @@ and the record types on the object are absent, the mobile application
 displays the record in the currently assigned layout, converting it into
 a single-column view on devices. ====
 
-* link:ios/mobile-layouts-chatter-feed[Chatter Feed]
-* link:ios/mobile-layouts-maps[Maps]
-* link:ios/mobile-layouts-applications[Carousel of CLM Presentations]
-* link:ios/mobile-layouts-qr-code[QR code]
+* link:mobile-layouts-chatter-feed[Chatter Feed]
+* link:mobile-layouts-maps[Maps]
+* link:mobile-layouts-applications[Carousel of CLM Presentations]
+* link:mobile-layouts-qr-code[QR code]
 
 ifdef::kotlin[]
 
-* link:ios/mobile-layouts-maps[Maps]
+* link:mobile-layouts-maps[Maps]
 
 [[h2__959581907]]
 === Creating the Mobile Record Type

@@ -3,7 +3,7 @@
 The *Calendar* module allows you to create and manage multiple activity
 objects, viz.[.object]#Activity#,[.object]#Task#, and
 [.object]#Event#. Configure the *Calendar* view and apply
-link:ios/custom-color-settings[custom color settings] to different
+link:custom-color-settings[custom color settings] to different
 activity types.
 
 :toc: :toclevels: 3
@@ -12,7 +12,7 @@ activity types.
 === Calendar Interface
 
 To learn how to work with the Calendar module, go to the
-link:ios/using-calendar[Using Calendar] article.
+link:using-calendar[Using Calendar] article.
 
 The calendar includes two main sections.
 
@@ -25,7 +25,7 @@ ifdef::kotlin[] Select the appropriate list view with accounts or
 contacts/references.
 
 * If the[.object]#Reference# object is not selected in the
-link:ios/ct-mobile-control-panel-general#h3_494016929[Reference Object
+link:ct-mobile-control-panel-general#h3_494016929[Reference Object
 API Name] field, records of the [.object]#Contact# object will
 be displayed in the *Calendar* left menu. Otherwise, records of the
 [.object]#Reference# object are displayed.
@@ -45,19 +45,19 @@ simultaneously from the left menu to plan new activities.
 ifdef::kotlin[] Drag-and-drop a record from the left menu to plan
 new activities, or tap the Plus button.
 
-If configured (in link:ios/ct-mobile-control-panel-mini-layouts[CT
+If configured (in link:ct-mobile-control-panel-mini-layouts[CT
 Mobile Control Panel: Mini
-Layouts]/link:ios/ct-mobile-control-panel-mini-layouts-new[CT Mobile
+Layouts]/link:ct-mobile-control-panel-mini-layouts-new[CT Mobile
 Control Panel 2.0: Mini Layouts]), fill in the required fields in the
 mini layout.
 
 The title of the activity in the calendar grid is the value of the first
-field in link:ios/compact-layout[the compact layout], and the subtitle
+field in link:compact-layout[the compact layout], and the subtitle
 is the value of the second field in the compact layout.
 
 ifdef::ios[]
 
-If necessary, link:ios/set-up-holidays[set up Salesforce Holidays] to
+If necessary, link:set-up-holidays[set up Salesforce Holidays] to
 see them on the calendar grid.
 
 ifdef::ios[]
@@ -75,12 +75,12 @@ image:62562443.png[]
 [[h2__447958262]]
 === Adding Calendar to the Menu
 
-To add the *Calendar* module to the link:ios/app-menu[app menu]:
+To add the *Calendar* module to the link:app-menu[app menu]:
 
 [width="100%",cols="50%,50%",]
 |===
 |In CT Mobile Control Panel a|
-. Go to link:ios/ct-mobile-control-panel-app-menu[CT Mobile Control
+. Go to link:ct-mobile-control-panel-app-menu[CT Mobile Control
 Panel: App Menu] tab.
 . Select the required profile in the *Location* picklist.
 [TIP] ==== *General Settings* will be applied to all the
@@ -94,7 +94,7 @@ button to open the *Add menu item* tool.
 . Click *Save*.
 
 |In CT Mobile Control Panel 2.0 a|
-. Go to link:ios/ct-mobile-control-panel-app-menu-new[CT Mobile Control
+. Go to link:ct-mobile-control-panel-app-menu-new[CT Mobile Control
 Panel 2.0: App Menu] tab.
 . Select the required profile in the *Profile* picklist. To apply
 settings to all the profiles, select *General Settings*.
@@ -115,7 +115,7 @@ To configure Calendar:
 [width="100%",cols="50%,50%",]
 |===
 |In CT Mobile Control Panel a|
-. Go to link:ios/ct-mobile-control-panel-calendar[CT Mobile Control
+. Go to link:ct-mobile-control-panel-calendar[CT Mobile Control
 Panel: Calendar] tab.
 . Select the required profile in the *Location* picklist.
 [TIP] ==== *General Settings* will be applied to all the
@@ -127,13 +127,13 @@ objects.
 . Click *Save*.
 
 |In CT Mobile Control Panel 2.0 a|
-. Go to link:ios/ct-mobile-control-panel-activities-new[CT Mobile
+. Go to link:ct-mobile-control-panel-activities-new[CT Mobile
 Control Panel 2.0: Activities] tab.
 . Select the required profile in the *Profile* picklist. To apply
 settings to all the profiles, select *General Settings*.
-. link:ios/ct-mobile-control-panel-activities-new#h2_2014841429[Specify
+. link:ct-mobile-control-panel-activities-new#h2_2014841429[Specify
 Activity objects].
-. Go to link:ios/ct-mobile-control-panel-app-menu-new[CT Mobile Control
+. Go to link:ct-mobile-control-panel-app-menu-new[CT Mobile Control
 Panel 2.0: App Menu] tab.
 . Select Calendar module in the *Selected* list.
 . Customize the calendar options.
@@ -203,9 +203,9 @@ object and the values in these fields:
 in the *Day* and *Week* views.
 .. When the value in one or both fields exceeds the specified visible
 hour range (refer to
-link:ios/ct-mobile-control-panel-calendar#h3_256846269[CT Mobile
+link:ct-mobile-control-panel-calendar#h3_256846269[CT Mobile
 Control Panel:
-Calendar]/link:ios/ct-mobile-control-panel-app-menu-new#h2_1511584348[CT
+Calendar]/link:ct-mobile-control-panel-app-menu-new#h2_1511584348[CT
 Mobile Control Panel 2.0: App Menu]), the *Activity* record is displayed
 in the *All-Day* slot in the *Day* and *Week* views.
 .. When only one of the fields is filled out, the *Activity* record is

@@ -1,6 +1,6 @@
 = User Permissions Required to Synchronize Objects to Offline Work with Functionalities
 
-[TIP] ==== Launch link:ios/full-synchronization[the full
+[TIP] ==== Launch link:full-synchronization[the full
 synchronization] to download these objects to the mobile device. ====
 
 Tap the header to open the corresponding table.
@@ -24,9 +24,9 @@ ifdef::ios[]
 
 !Document ![.apiobject]#Document# !Read !It is required to
 display the CT Mobile logo (refer to
-link:ios/ct-mobile-control-panel-general#h3_1354766135[CT Mobile
+link:ct-mobile-control-panel-general#h3_1354766135[CT Mobile
 Control Panel: General] or
-link:ios/ct-mobile-control-panel-user-interface-new#h3_1354766135[CT
+link:ct-mobile-control-panel-user-interface-new#h3_1354766135[CT
 Mobile Control Panel 2.0: User Interface]).
 
 !Email Template ![.apiobject]#EmailTemplate# !Read !If active.
@@ -84,7 +84,7 @@ ifdef::ios[]
 !*Functionality/Integration* !*Object* !*Object API Name* !*User
 Permission* !*Comments*
 
-!link:ios/applications[Applications] !Application
+!link:applications[Applications] !Application
 ![.apiobject]#clm__Application__c# !Read; Edit !
 
 ! !Application Stats
@@ -95,8 +95,8 @@ Permission* !*Comments*
 
 ! !Slide ![.apiobject]#clm__Slide__c# !Read !
 
-!link:ios/cg-cloud[CG Cloud]
-!link:ios/activating-cg-cloud-in-the-ct-mobile-app#h2_242799573[The
+!link:cg-cloud[CG Cloud]
+!link:activating-cg-cloud-in-the-ct-mobile-app#h2_242799573[The
 list of CG Cloud objects] !— !— !
 
 !https://help.customertimes.com/smart/project-ct-sign-en/add-the-ct-sign-to-the-ct-mobile-app[CT
@@ -113,25 +113,25 @@ Orders] !Group ![.apiobject]#Group# !Read !
 !https://help.customertimes.com/articles/ct-orders-4-0/offline-order/a/h2_1850278800[The
 list of CT Orders objects] !— !— !
 
-!link:ios/home-screen#h3__1761919763[Dashboards] (online) !Dashboard
+!link:home-screen#h3__1761919763[Dashboards] (online) !Dashboard
 ![.apiobject]#Dashboard# !Read !
 
 ! !Report ![.apiobject]#Report# !Read !
 
-! !Report Type ![.apiobject]#ReportType# !Read ! !link:ios/lead-convert[Lead] !Lead Status ![.apiobject]#LeadStatus# !Read !If the list of offline objects
+! !Report Type ![.apiobject]#ReportType# !Read ! !link:lead-convert[Lead] !Lead Status ![.apiobject]#LeadStatus# !Read !If the list of offline objects
 contains the _Lead_ object.
 
-!link:ios/managing-offline-objects[Offline Objects] !The list of
+!link:managing-offline-objects[Offline Objects] !The list of
 offline objects !— !Read; Edit; Delete (depend on the object) !It is
 based on data from
-link:ios/related-list-filters[clm__RelatedListFillters__c],
-link:ios/menu-settings-and-offline-objects[clm__TopLvlObjects__c]
-(will be deprecated in future), or link:ios/ctm-settings[CTM Settings].
+link:related-list-filters[clm__RelatedListFillters__c],
+link:menu-settings-and-offline-objects[clm__TopLvlObjects__c]
+(will be deprecated in future), or link:ctm-settings[CTM Settings].
 
 ! !Task Status ![.apiobject]#TaskStatus# !Read; Edit !If the
 list of offline objects contains the _Task_ object.
 
-!link:ios/opportunities[Opportunity] !Opportunity
+!link:opportunities[Opportunity] !Opportunity
 ![.apiobject]#Opportunity# !Read !If the list of offline
 objects contains the _Order_ and _Quote_ objects.
 
@@ -165,19 +165,19 @@ ifdef::kotlin[]
 !*Functionality/Integration* !*Object* !*Object API Name* !*User
 Permission* !*Comments*
 
-!link:ios/home-screen#h3__1761919763[Dashboards] (online) !Dashboard
+!link:home-screen#h3__1761919763[Dashboards] (online) !Dashboard
 ![.apiobject]#Dashboard# !Read !
 
-!link:ios/managing-offline-objects[Offline Objects] !The list of
+!link:managing-offline-objects[Offline Objects] !The list of
 offline objects !— !Read; Edit; Delete (depend on the object) !It is
 based on data from
-link:ios/related-list-filters[clm__RelatedListFillters__c] and
-link:ios/menu-settings-and-offline-objects[clm__TopLvlObjects__c].
+link:related-list-filters[clm__RelatedListFillters__c] and
+link:menu-settings-and-offline-objects[clm__TopLvlObjects__c].
 
 ! !Task Status ![.apiobject]#TaskStatus# !Read; Edit !If the
 list of offline objects contains the _Task_ object.
 
-!link:ios/opportunities[Opportunity] !Opportunity
+!link:opportunities[Opportunity] !Opportunity
 ![.apiobject]#Opportunity# !Read !If the list of offline
 objects contains the _Opportunity_ object.
 

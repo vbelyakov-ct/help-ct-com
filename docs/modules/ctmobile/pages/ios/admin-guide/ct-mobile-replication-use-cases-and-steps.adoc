@@ -1,6 +1,6 @@
 = CT Mobile Replication: Use Cases and Steps
 
-link:ios/ct-mobile-replication[CT Mobile Replication] is intended to
+link:ct-mobile-replication[CT Mobile Replication] is intended to
 save the consistency of the records available for the current user. With
 the configured and enabled *CT Mobile Replication*, the fast
 synchronization will take longer.
@@ -12,19 +12,19 @@ synchronization will take longer.
 
 For example, 100 records of the[.object]#Account# object with
 related[.object]#Contacts# and[.object]#Activities#
-were downloaded via link:ios/synchronization-launch#h2__966867633[full
+were downloaded via link:synchronization-launch#h2__966867633[full
 synchronization]. Then, sharing rules for[.object]#Accounts#
 were modified on the Salesforce side, and some records became
 inaccessible, but some other records are now available for the current
 user. Therefore, any changes in the no longer available *Account*
-records will lead to link:ios/errors-screen[errors], and the newly
+records will lead to link:errors-screen[errors], and the newly
 available records will not be downloaded on the device.
 
 
 
 Create a *CT Mobile Replication* setting to update
 [.object]#Account# and[.object]#Contact# records for
-the corresponding user during link:ios/fast-synchronization[the fast or
+the corresponding user during link:fast-synchronization[the fast or
 mixed synchronization]. After performing the CT Mobile Replication
 setting, the appropriate records will be downloaded, and no longer
 available records will be hidden.
@@ -86,11 +86,11 @@ a comma, without blank spaces).
 separate *CT Mobile Replication* settings, and fill in the
 [.apiobject]#clm__ObjectAPIName__c# field with the API
 name of the required object.
-. Run link:ios/synchronization[the fast synchronization].
+. Run link:synchronization[the fast synchronization].
 . The CT Mobile app requests the ID of all records of the object
 specified in the[.apiobject]#clm__ObjectAPIName__c#
 field from Salesforce given the conditions in
-link:ios/related-list-filters[Related List Filters].
+link:related-list-filters[Related List Filters].
 . The CT Mobile app compares the requested records with the records on
 the mobile device by ID.
 . The records of the parent object:

@@ -5,12 +5,12 @@ details that are uploaded offline and are displayed in the Mobile
 Application main menu, according to a user profile.
 
 ifdef::ios,win[]Settings of the main menu are also stored as records
-of the link:ios/ctm-settings-menu[Menu] record type of the
-custom link:ios/ctm-settings[CTM Settings] object.
+of the link:ctm-settings-menu[Menu] record type of the
+custom link:ctm-settings[CTM Settings] object.
 [TIP] ==== For easy setup, go to
-link:ios/ct-mobile-control-panel[CT Mobile Control Panel]. CT Mobile
+link:ct-mobile-control-panel[CT Mobile Control Panel]. CT Mobile
 Control Panel makes duplicates of the offline objects list in
-link:ios/related-list-filters[Related List Filters] so that to be able
+link:related-list-filters[Related List Filters] so that to be able
 to use an unlimited offline objects list. ====
 
 '''''
@@ -38,7 +38,7 @@ Salesforce. Available values:
 |Group Fields |[.apiobject]#clm__GroupFields__c#
 |Text(255) |List of fields' API names responsible for records grouping
 in the menu on the left side. If the field is left blank, records will
-be grouped by the title of link:ios/compact-layout[a compact layout].
+be grouped by the title of link:compact-layout[a compact layout].
 
 |Menu Settings |[.apiobject]#clm__MenuSettings__c#
 |Text(255) |List of menu items available in the CT Mobile menu.

@@ -31,7 +31,7 @@ Sign-On], the *Change Password* option is not available.
 [[h3__424681661]]
 ==== Show touch indicator
 
-If enabled, link:ios/demonstration-mode[the demonstration mode] allows
+If enabled, link:demonstration-mode[the demonstration mode] allows
 displaying touches and gestures performed by the user on the screen.
 
 [[h2__1872639157]]
@@ -63,14 +63,14 @@ icon is displayed next to a field. Tap the icon to see a help text.
 ==== Save photos locally
 
 If enabled, the photos taken in the CT Mobile app will be saved in the
-device gallery. The new photos in link:ios/actions[the CT Mobile
+device gallery. The new photos in link:actions[the CT Mobile
 gallery] will have a dotted border.
 
 [[h3__731651659]]
 ==== Enable iCal sync
 
 If enabled, the CT Mobile calendar can be
-link:ios/ical-synchronization[one-way or both way synchronized] ;with
+link:ical-synchronization[one-way or both way synchronized] ;with
 the device's standard calendars.
 
 * *iCal calendar to save activities*
@@ -84,7 +84,7 @@ Select calendars to show their activities in the CT Mobile Calendar.
 ==== Event notifications
 
 If enabled, the current user will receive
-link:ios/event-notifications[a notification of upcoming events]. The
+link:event-notifications[a notification of upcoming events]. The
 available options are 15 mins, 30 mins, 1 hour, or 2 hours before the
 event.
 
@@ -92,7 +92,7 @@ event.
 ==== Warn about nearby accounts
 
 If enabled, the current user will receive
-link:ios/nearby-accounts-notifications[a notification of nearby
+link:nearby-accounts-notifications[a notification of nearby
 accounts].
 
 [[h3_1768799377]]
@@ -128,7 +128,7 @@ caused the crash.
 Time before calculating prices after making changes to the order cart,
 in seconds. Default value is 2 seconds. Applies only if:
 
-* Order module application is added to the link:ios/app-menu[App menu].
+* Order module application is added to the link:app-menu[App menu].
 * The
 https://help.customertimes.com/smart/project-order-module/web-service[Web
 Service] is not enabled.
@@ -139,16 +139,16 @@ Service] is not enabled.
 [[h3__748267454]]
 ==== Change Passcode
 
-Change link:ios/application-pin-code[the passcode]. The option is
+Change link:application-pin-code[the passcode]. The option is
 visible when the passcode is enabled
-in link:ios/ct-mobile-control-panel-general[CT Mobile Control Panel:
-General]/link:ios/ct-mobile-control-panel-general-new#h3_643998525[CT
+in link:ct-mobile-control-panel-general[CT Mobile Control Panel:
+General]/link:ct-mobile-control-panel-general-new#h3_643998525[CT
 Mobile Control Panel 2.0: General].
 
 [[h3__1321398704]]
 ==== Log out
 
-Logging out link:ios/log-out[to reset all application data].
+Logging out link:log-out[to reset all application data].
 
 CT Mobile asks the confirmation. After logging out, all the current
 user's data from the mobile device will be removed.
@@ -156,7 +156,7 @@ user's data from the mobile device will be removed.
 [[h3__1008940466]]
 ==== Send application data
 
-CT Mobile allows link:ios/send-application-data-dump[sending a dump]
+CT Mobile allows link:send-application-data-dump[sending a dump]
 with the current user's data from the mobile device to the Salesforce or
 support service.
 
@@ -177,7 +177,7 @@ image:application-settings-win.png[]
 [[h2__1008940466]]
 === Send application data
 
-CT Mobile allows link:ios/send-application-data-dump[sending a dump]
+CT Mobile allows link:send-application-data-dump[sending a dump]
 with the current user's data from the mobile device to the Salesforce or
 support service. Available options:
 
@@ -203,16 +203,16 @@ be used to log in to Salesforce.
 [[h2__397515857]]
 === Change User
 
-CT Mobile allows link:ios/logging-in[multiple user access]. Changing
+CT Mobile allows link:logging-in[multiple user access]. Changing
 the current user, the database of the previous user remains on the
 mobile device as well as the previous user will still be authorized.
-link:ios/logging-in[To change the current user], select the *User*
+link:logging-in[To change the current user], select the *User*
 record or tap the plus button to add a new one.
 
 [[h2__1321398704]]
 === Log out
 
-Logging out link:ios/log-out[to reset all application data].
+Logging out link:log-out[to reset all application data].
 
 CT Mobile asks you for confirmation. After logging out, all the current
 user's data from the mobile device will be removed.
@@ -243,7 +243,7 @@ email, hangouts, Bluetooth, etc.
 [[h2_1594942057]]
 === Reset
 
-Logging out link:ios/log-out[to reset all application data].
+Logging out link:log-out[to reset all application data].
 
 CT Mobile asks you for confirmation. After logging out, all the current
 user's data from the mobile device will be removed.
@@ -263,7 +263,7 @@ synchronization.
 in to the CT Mobile app, including attachments, as a ZIP file in the
 *Downloads* folder on the mobile device.
 * *Action logs*. Tap to view sync logs of the last synchronization.
-* *link:ios/log-out[Log out and Erase]*. Tap to log out from the CT
+* *link:log-out[Log out and Erase]*. Tap to log out from the CT
 Mobile app.
 
 

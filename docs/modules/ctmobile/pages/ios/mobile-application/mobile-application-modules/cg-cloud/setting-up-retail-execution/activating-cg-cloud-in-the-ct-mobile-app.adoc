@@ -1,6 +1,6 @@
 = Activating CG Cloud in the CT Mobile app
 
-link:ios/activating-cg-cloud-in-salesforce[After activating CG Cloud]
+link:activating-cg-cloud-in-salesforce[After activating CG Cloud]
 in your Salesforce org,  follow these steps to work offline with CG
 Cloud features and objects in the CT Mobile app.
 
@@ -11,7 +11,7 @@ Cloud features and objects in the CT Mobile app.
 
 To activate CG Cloud features in the CT Mobile app:
 
-. Go to link:ios/ct-mobile-control-panel-app-menu[CT Mobile Control
+. Go to link:ct-mobile-control-panel-app-menu[CT Mobile Control
 Panel: App Menu] tab.
 . {blank}
 . Click the
@@ -42,25 +42,25 @@ available offline and assign permissions to users:
 [width="100%",cols="50%,50%",]
 |===
 |CT Mobile Control Panel a|
-. Go to link:ios/ct-mobile-control-panel-offline-objects[CT Mobile
+. Go to link:ct-mobile-control-panel-offline-objects[CT Mobile
 Control Panel: Offline Objects].
 . Select the required profile in the *Location* picklist. To apply
 settings to all the profiles, select *General Settings*.
 . Drag and drop[.object]#Retail Store# and
 [.object]#Visit# from the *Available* list to the *Selected*
 list.
-. link:ios/managing-offline-objects#h2__1747811907[Set up user
+. link:managing-offline-objects#h2__1747811907[Set up user
 permissions].
 . Click *Save*.
 
 |CT Mobile Control Panel 2.0 a|
-. Go to link:ios/ct-mobile-control-panel-offline-objects-new[CT Mobile
+. Go to link:ct-mobile-control-panel-offline-objects-new[CT Mobile
 Control Panel 2.0: Offline Objects].
 . Select the required profile in the *Profile* picklist. To apply
 settings to all the profiles, select *General Settings*.
 . Move[.object]#Retail Store# and[.object]#Visit# from
 the *Available* list to the *Selected* list.
-. link:ios/managing-offline-objects#h2__1747811907[Set up user
+. link:managing-offline-objects#h2__1747811907[Set up user
 permissions].
 . Click *Save*.
 
@@ -79,14 +79,14 @@ This setting is responsible for displaying related *CG Cloud* records in
 the same way as the regular custom related lists. So, on the *Detailing*
 tab, there can be sections with the related CG Cloud records and
 sections with the custom related list records
-link:ios/custom-related-lists[if configured].
+link:custom-related-lists[if configured].
 
 
 
 Administrators can customize the display of related *CG Cloud* records
 according to their type, such as *Inventory Check*, *Promotion Check*,
 or *Other*. To check out the example settings,
-refer to link:ios/managing-visits-to-retail-stores[Managing Visits to
+refer to link:managing-visits-to-retail-stores[Managing Visits to
 Retail Stores].
 
 
@@ -99,7 +99,7 @@ a custom tab] for the CTM Settings object.
 . In the *New CTM Setting* window, select the *CG Cloud* record type and
 click *Next*.
 . Specify parameters and click *Save*. To learn more about the available
-parameters, refer to link:ios/ctm-settings-cg-cloud-record-type[CTM
+parameters, refer to link:ctm-settings-cg-cloud-record-type[CTM
 Settings: CG Cloud Record Type].
 . Repeat steps 2—3 to create all required *CTM Settings* records.
 

@@ -13,7 +13,7 @@ data captured by JS Bridge will be uploaded to Salesforce and not stored
 on the mobile device. A user should have permission to edit records of
 the corresponding object. For example, if you create a new record using
 [.apiobject]#ctm.create#, it will be uploaded to Salesforce, and
-you should launch link:ios/fast-synchronization[fast synchronization]
+you should launch link:fast-synchronization[fast synchronization]
 to download it to a mobile device.
 
 
@@ -32,110 +32,110 @@ records. To upload data to Salesforce, perform the fast synchronization.
 
 | | |*iOS* |*Android* |*Windows* | |
 
-|Methods for interaction with CRM data |link:ios/crm-data-display[CRM
+|Methods for interaction with CRM data |link:crm-data-display[CRM
 data display] |Yes |Yes |Yes |Yes |
 
-| |link:ios/opening-attached-files[Opening attached files] |Yes |Yes
+| |link:opening-attached-files[Opening attached files] |Yes |Yes
 |Yes |No |
 
-| |Query records: link:ios/ctm-query[ctm.query] |Yes |Yes |Yes |Yes
+| |Query records: link:ctm-query[ctm.query] |Yes |Yes |Yes |Yes
 |These methods are forbidden during the *Self Detailing* and *Self
 Detailing 2.0* meetings.
 
-| |Create records: link:ios/ctm-create[ctm.create] |Yes |Yes |Yes |Yes
+| |Create records: link:ctm-create[ctm.create] |Yes |Yes |Yes |Yes
 |
 
-| |Update records: link:ios/ctm-update[ctm.update] |Yes |Yes |Yes |Yes
+| |Update records: link:ctm-update[ctm.update] |Yes |Yes |Yes |Yes
 |
 
-| |Delete records: link:ios/ctm-delete[ctm.delete] |Yes |Yes |Yes |Yes
+| |Delete records: link:ctm-delete[ctm.delete] |Yes |Yes |Yes |Yes
 |
 
-| |Start fast sync: link:ios/ctm-sync[ctm.sync] |Yes |Yes |No |No |
+| |Start fast sync: link:ctm-sync[ctm.sync] |Yes |Yes |No |No |
 
-| |Obtain the path to the file: link:ios/ctm-getfile[ctm.getFile] |Yes
+| |Obtain the path to the file: link:ctm-getfile[ctm.getFile] |Yes
 |No |Yes |No |
 
-| |Save attachments: link:ios/ctm-storefile[ctm.storeFile] |Yes |No
+| |Save attachments: link:ctm-storefile[ctm.storeFile] |Yes |No
 |Yes |No |
 
 | |Custom data tables according to related record:
-link:ios/ctm-opendatatablebyparentrecord[ctm.openDataTableByParentRecord]
+link:ctm-opendatatablebyparentrecord[ctm.openDataTableByParentRecord]
 |Yes |No |No |No |
 
 | |Custom data tables according to SOQL query:
-link:ios/ctm-opendatatablebyquery[ctm.openDataTableByQuery] |Yes |No
+link:ctm-opendatatablebyquery[ctm.openDataTableByQuery] |Yes |No
 |No |No |
 
 |Methods for Accessing External Functionality |Camera access:
-link:ios/ctm-photo[ctm.photo] |Yes |Yes |No |No |
+link:ctm-photo[ctm.photo] |Yes |Yes |No |No |
 
-| |Open QR Code: link:ios/ctm-openqrscanner[ctm.openQRScanner] |Yes |No
+| |Open QR Code: link:ctm-openqrscanner[ctm.openQRScanner] |Yes |No
 |No |No |
 
-| |Quiz launch: link:ios/ctm-openquiz[ctm.openQuiz] |Yes |No |No |No
+| |Quiz launch: link:ctm-openquiz[ctm.openQuiz] |Yes |No |No |No
 |
 
-| |PDF generation: link:ios/ctm-generatepdf[ctm.generatePDF] |Yes |No
+| |PDF generation: link:ctm-generatepdf[ctm.generatePDF] |Yes |No
 |No |No |
 
 | |Sound recording:
-link:ios/ctappstoprecordingaudio[CTAPPstopRecordingAudio] |Yes |No |No
+link:ctappstoprecordingaudio[CTAPPstopRecordingAudio] |Yes |No |No
 |No |
 
 | |Sound recording:
-link:ios/ctappstartrecordingaudio[CTAPPstartRecordingAudio] |Yes |No
+link:ctappstartrecordingaudio[CTAPPstartRecordingAudio] |Yes |No
 |No |No |
 
 | |The transition from Animation to Sales Order:
-link:ios/ctm-createsalesorderwithanimations[ctm.createSalesOrderWithAnimations]
+link:ctm-createsalesorderwithanimations[ctm.createSalesOrderWithAnimations]
 |Yes |No |No |No |
 
 | |Exit from presentation:
-link:ios/ctm-autoexitpresenter[ctm.autoExitPresenter] |Yes |No |Yes |No
+link:ctm-autoexitpresenter[ctm.autoExitPresenter] |Yes |No |Yes |No
 |
 
 |Methods for CLM presentation control |Like:
-link:ios/ctm-like[ctm.like] |Yes |Yes |Yes |No |
+link:ctm-like[ctm.like] |Yes |Yes |Yes |No |
 
-| |Dislike: link:ios/ctm-dislike[ctm.dislike] |Yes |Yes |Yes |No |
+| |Dislike: link:ctm-dislike[ctm.dislike] |Yes |Yes |Yes |No |
 
 | |Disable slide scroll:
-link:ios/ctm-disableslidescroll[ctm.disableSlideScroll] |Yes |No |No
+link:ctm-disableslidescroll[ctm.disableSlideScroll] |Yes |No |No
 |No |
 
 | |Enable slide scroll:
-link:ios/ctm-enableslidescroll[ctm.enableSlideScroll] |Yes |No |No |No
+link:ctm-enableslidescroll[ctm.enableSlideScroll] |Yes |No |No |No
 |
 
 | |Activate gathering statistics of presentation:
-link:ios/ctm-customstats[ctm.customStats] |Yes |No |No |No |
+link:ctm-customstats[ctm.customStats] |Yes |No |No |No |
 
-| |link:ios/ctm-setoptions[ctm.setOptions] |No |No |Yes |No |
+| |link:ctm-setoptions[ctm.setOptions] |No |No |Yes |No |
 
 |Methods for CLM presentation navigation
-|link:ios/ctappgotoslide[CTAPPgoToSlide] |Yes |No |Yes |Yes |
+|link:ctappgotoslide[CTAPPgoToSlide] |Yes |No |Yes |Yes |
 
-| |link:ios/ctappgotofirst[CTAPPgoToFirst] |Yes |No |Yes |Yes |
+| |link:ctappgotofirst[CTAPPgoToFirst] |Yes |No |Yes |Yes |
 
-| |link:ios/ctappgotoprevious[CTAPPgoToPrevious] |Yes |No |Yes |Yes |
+| |link:ctappgotoprevious[CTAPPgoToPrevious] |Yes |No |Yes |Yes |
 
-| |link:ios/ctappgotonext[CTAPPgoToNext] |Yes |No |Yes |Yes |
+| |link:ctappgotonext[CTAPPgoToNext] |Yes |No |Yes |Yes |
 
-| |link:ios/changing-slides[Switch between slides using the href
+| |link:changing-slides[Switch between slides using the href
 attribute] |Yes |Yes |Yes |No |
 
 |Methods for Remote Detailing 2.0 |Define the meeting type:
-link:ios/ctm-getappenv[ctm.getAppEnv] |No |No |No |Yes |These methods
+link:ctm-getappenv[ctm.getAppEnv] |No |No |No |Yes |These methods
 are used during the Remote Detailing 2.0 or Self Detailing 2.0 meeting.
 
 | |Define the Id of the Activity record:
-link:ios/ctm-getvisitid[ctm.getVisitId] |No |No |No |Yes |
+link:ctm-getvisitid[ctm.getVisitId] |No |No |No |Yes |
 
-| |Define the user role: link:ios/ctm-getusertype[ctm.getUserType] |No
+| |Define the user role: link:ctm-getusertype[ctm.getUserType] |No
 |No |No |Yes |
 
-| |Secure query records: link:ios/ctm-securequery[ctm.secureQuery] |No
+| |Secure query records: link:ctm-securequery[ctm.secureQuery] |No
 |No |No |Yes |This method is used during the *Self Detailing 2.0*
 meeting instead of[.apiobject]#ctm.query#.
 

@@ -16,7 +16,7 @@ for a user who configures the system. The user should have the _Modify
 All Data_ and _Modify Metadata Through Metadata API Functions_
 permissions and access to all fields and objects. ====
 
-To use link:ios/home-screen#h3__1361691321[the mobile logo], a mobile
+To use link:home-screen#h3__1361691321[the mobile logo], a mobile
 user should have access to the *Documents* folder. Please check the
 following:
 
@@ -39,7 +39,7 @@ ranges.
 * A profile can be assigned to many users, but a user can be assigned to
 a single profile at a time.
 * A user's profile should be specified on some
-link:ios/ct-mobile-control-panel[CT Mobile Control Panel] tabs to
+link:ct-mobile-control-panel[CT Mobile Control Panel] tabs to
 define the required user's permissions.
 
 
@@ -67,8 +67,8 @@ For example, access to an object has been withdrawn from the mobile
 user's profile after the last full synchronization. During the next fast
 synchronization, the[.apiobject]#INVALID_TYPE# error may
 occur because some records are no more available. We recommend enabling
-link:ios/sync-recovery[Sync Recovery] to process errors or
-link:ios/ct-mobile-replication[CT Mobile Replication] to hide these
+link:sync-recovery[Sync Recovery] to process errors or
+link:ct-mobile-replication[CT Mobile Replication] to hide these
 unavailable records and download the correct ones.
 
 ifdef::andr,win[]
@@ -84,7 +84,7 @@ For example, access to an object has been withdrawn from the mobile
 user's profile after the last full synchronization. During the next fast
 synchronization, the[.apiobject]#INVALID_TYPE# error may
 occur because some records are no more available. We recommend enabling
-link:ios/ct-mobile-replication[CT Mobile Replication] to hide these
+link:ct-mobile-replication[CT Mobile Replication] to hide these
 unavailable records and download the correct ones.
 
 

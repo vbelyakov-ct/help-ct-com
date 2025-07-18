@@ -5,13 +5,13 @@ during the mixed synchronization, download only metadata that has been
 updated. To create the metadata archive:
 
 * The user should have access to
-the link:ios/mobile-application-setup[Mobile Application Setup]. If the
+the link:mobile-application-setup[Mobile Application Setup]. If the
 user does not have this access, grant it
-by assigning link:ios/application-permission-settings#ApplicationPermissionSettings-PermissionSets[one
+by assigning link:application-permission-settings#ApplicationPermissionSettings-PermissionSets[one
 of the preconfigured CT Mobile permission sets].
 * The cloud token must be valid (refer to
-link:ios/ct-mobile-control-panel-tools#h3_2011978[CT Mobile Control
-Panel: Tools]/link:ios/ct-mobile-control-panel-tools-new#h2_2011978[CT
+link:ct-mobile-control-panel-tools#h3_2011978[CT Mobile Control
+Panel: Tools]/link:ct-mobile-control-panel-tools-new#h2_2011978[CT
 Mobile Control Panel 2.0: Tools]).
 
 :toc: :toclevels: 3
@@ -87,18 +87,18 @@ and then synchronize it.
 On the Salesforce side, the metadata checker is intended:
 
 * For tracking any changes in
-link:ios/metadata-archive#h2_1854953360[metadata components].
+link:metadata-archive#h2_1854953360[metadata components].
 * For archiving metadata components.
 * For auto-updating a value in the
 [.apiobject]#clm__MetadataLastModifiedDate__c# field of
-the link:ios/mobile-application-setup[Mobile Application Setup]
+the link:mobile-application-setup[Mobile Application Setup]
 records.
 
 
 
 To enable metadata checker:
 
-. Go to link:ios/ct-mobile-control-panel-tools[CT Mobile Control Panel:
+. Go to link:ct-mobile-control-panel-tools[CT Mobile Control Panel:
 Tools].
 . Enable *Scheduled metadata check*.
 
@@ -126,7 +126,7 @@ made to reports and dashboards that are added:​
 It is possible to modify the default schedule of the metadata checker
 launch. To schedule the metadata archive generating:
 
-. Go to the link:ios/ct-mobile-control-panel-tools[CT Mobile Control
+. Go to the link:ct-mobile-control-panel-tools[CT Mobile Control
 Panel: Tools] tab.
 . Disable *Scheduled metadata check*.
 . Go to *Setup → Custom Code → Apex Classes* and click *Schedule Apex*.
@@ -154,9 +154,9 @@ Salesforce: Apex Scheduler].
 
 To manually create the metadata archive, we recommend using the *Refresh
 metadata archive* button on
-the link:ios/ct-mobile-control-panel-tools#h4_1003786176[CT Mobile
+the link:ct-mobile-control-panel-tools#h4_1003786176[CT Mobile
 Control Panel:
-Tools]/link:ios/ct-mobile-control-panel-tools-new#h3_1003786176[CT
+Tools]/link:ct-mobile-control-panel-tools-new#h3_1003786176[CT
 Mobile Control Panel 2.0: Tools] tab.
 
 If the metadata checker is disabled or the metadata archive needs to be
@@ -172,7 +172,7 @@ app.
 * For archiving metadata components.
 * For auto-updating a value in the
 [.apiobject]#clm__MetadataLastModifiedDate__c# field of
-the link:ios/mobile-application-setup[Mobile Application Setup]
+the link:mobile-application-setup[Mobile Application Setup]
 records.
 
 

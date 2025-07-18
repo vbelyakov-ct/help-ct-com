@@ -24,7 +24,7 @@ environment.
 === Cloud Token
 
 [NOTE] ==== To use cloud token, check
-link:ios/remote-site-settings[remote site settings]. ====
+link:remote-site-settings[remote site settings]. ====
 
 Click *Show* to view the cloud token value. Click the *Refresh* button
 to update a cloud token.
@@ -42,10 +42,10 @@ the *Documents → CT CLM →* open the *cloud-token-history* document.
 
 Cloud token:
 
-Is a password, which encrypts link:ios/send-application-data-dump[a
+Is a password, which encrypts link:send-application-data-dump[a
 data dump] before sending it to support via e-mail or to Salesforce,
 depending on settings in
-link:ios/ct-mobile-control-panel-general-new[CT Mobile Control Panel
+link:ct-mobile-control-panel-general-new[CT Mobile Control Panel
 2.0: General].
 
 Is a part of the salt key that is used for encrypting administrator
@@ -53,7 +53,7 @@ credentials.
 
 ifndef::andr[]
 
-Is used to create an link:ios/metadata-archive[archive with actual
+Is used to create an link:metadata-archive[archive with actual
 metadata] of the current Salesforce organization and download this
 metadata archive to the device.
 
@@ -61,17 +61,17 @@ ifdef::ios,win,andr[]
 
 Is used when sending requests to external CT CLM services, such as:
 
-Creating and updating slides in link:ios/application-editor[the
+Creating and updating slides in link:application-editor[the
 Application Editor], including
-link:ios/creating-clm-presentation-from-powerpoint[PowerPoint] and
-link:ios/creating-clm-presentation-from-pdf[PDF] files converting.
+link:creating-clm-presentation-from-powerpoint[PowerPoint] and
+link:creating-clm-presentation-from-pdf[PDF] files converting.
 
-link:ios/plain-application-editor[The Plain Applications Editor],
+link:plain-application-editor[The Plain Applications Editor],
 including PowerPoint files converting.
 
 ifndef::andr[]
 
-The link:ios/the-remote-detailing-functionality[Remote Detailing]
+The link:the-remote-detailing-functionality[Remote Detailing]
 functionality for CT Mobile iOS and CT Mobile Windows users.
 
 [[h2_920868424]]
@@ -79,7 +79,7 @@ functionality for CT Mobile iOS and CT Mobile Windows users.
 
 In this section, you can manage the metadata archive. To work with the
 metadata archive, specify
-the link:ios/ct-mobile-control-panel-tools-new#h2_2011978[Cloud
+the link:ct-mobile-control-panel-tools-new#h2_2011978[Cloud
 token] first. Read more about the metadata
 archive https://help.customertimes.com/articles/ct-mobile-ios-en/metadata-archive[here].
 
@@ -87,7 +87,7 @@ archive https://help.customertimes.com/articles/ct-mobile-ios-en/metadata-archiv
 ==== Refresh metadata archive
 
 [NOTE] ==== Please remove
-the link:ios/ability-to-specify-metadata-components-or-the-number-of-entities-in-one-request[archive
+the link:ability-to-specify-metadata-components-or-the-number-of-entities-in-one-request[archive
 component custom metadata type] before refreshing the metadata archive.
 ====
 
@@ -107,7 +107,7 @@ Administrator]_ permission set.
 
 In this section, you can manage the metadata archive. To work with the
 metadata archive, specify
-the link:ios/ct-mobile-control-panel-tools-new#h2_2011978[Cloud
+the link:ct-mobile-control-panel-tools-new#h2_2011978[Cloud
 token] first. Read more about the metadata
 archive https://help.customertimes.com/articles/ct-mobile-ios-en/metadata-archive[here].
 

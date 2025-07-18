@@ -5,11 +5,11 @@ project making a call to the enabled API or SDK.
 
 
 
-For building link:ios/routes[routes] and displaying
-link:ios/nearby-accounts[nearby accounts] in the CT Mobile app, specify
+For building link:routes[routes] and displaying
+link:nearby-accounts[nearby accounts] in the CT Mobile app, specify
 the Google Maps API key according to your device platform on the
-link:ios/ct-mobile-control-panel-general[CT Mobile Control Panel:
-General]/link:ios/ct-mobile-control-panel-general-new[CT Mobile Control
+link:ct-mobile-control-panel-general[CT Mobile Control Panel:
+General]/link:ct-mobile-control-panel-general-new[CT Mobile Control
 Panel 2.0: General] tab. To obtain the Google Maps API key, go to
 https://console.cloud.google.com/getting-started[Google Cloud Platform
 Console]:
@@ -147,7 +147,7 @@ the list of web server IP addresses that you supply.
 * *Android apps*. Require package name and SHA-1 signing certificate
 fingerprint to restrict usage to Android applications.
 * *iOS apps*. Accept requests from the iOS applications with
-link:ios/mobile-application-bundle-id[the bundle identifier] that is
+link:mobile-application-bundle-id[the bundle identifier] that is
 supplied.
 
 [.onfluence-information-macro-information]# If you need to enforce more

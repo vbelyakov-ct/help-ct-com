@@ -5,9 +5,9 @@ environment, including critical data for CT Mobile functionalities, such
 as a cloud token and user profile IDs. If the profile IDs used do not
 match the sandbox profile IDs, the sandbox does not have the necessary
 settings, and there are no objects in the *Selected* column on the
-link:ios/ct-mobile-control-panel-offline-objects#h2_1468985423[CT
+link:ct-mobile-control-panel-offline-objects#h2_1468985423[CT
 Mobile Control Panel: Offline
-Objects]/link:ios/ct-mobile-control-panel-offline-objects-new[CT Mobile
+Objects]/link:ct-mobile-control-panel-offline-objects-new[CT Mobile
 Control Panel 2.0: Offline Objects] tab.
 
 
@@ -17,14 +17,14 @@ production environment to sandboxes.
 
 Important notes:
 
-* link:ios/ctm-settings[CTM Settings] records with the *Menu*, *Offline
+* link:ctm-settings[CTM Settings] records with the *Menu*, *Offline
 Objects*, and *Standard Related List* record types store settings for
 the menu, offline objects, and standard related lists.
-* link:ios/ct-mobile-control-panel[CT Mobile Control
-Panel]/link:ios/ct-mobile-control-panel-new[CT Mobile Control Panel
+* link:ct-mobile-control-panel[CT Mobile Control
+Panel]/link:ct-mobile-control-panel-new[CT Mobile Control Panel
 2.0] displays settings for the menu, offline objects, and standard
 related lists given the *CTM Settings* records and others
-given link:ios/custom-settings[custom settings].
+given link:custom-settings[custom settings].
 * CT Mobile app downloads settings from CTM Settings records and custom
 settings records.
 
@@ -35,7 +35,7 @@ Go to *Setup → Security → Remote Site Settings* and verify that the
 specified URL contains the instance name of the sandbox, not the
 production environment.
 
-For more information, refer to link:ios/remote-site-settings[Remote
+For more information, refer to link:remote-site-settings[Remote
 Site Settings].
 
 [[h2_204191995]]
@@ -45,10 +45,10 @@ Go to *CT Mobile Control Panel: Tools* and click *Refresh* next to
 *Cloud Token*.
 
 For more information, refer
-to link:ios/ct-mobile-control-panel-tools[CT Mobile Control Panel:
-Tools]/link:ios/ct-mobile-control-panel-tools-new[CT Mobile Control
+to link:ct-mobile-control-panel-tools[CT Mobile Control Panel:
+Tools]/link:ct-mobile-control-panel-tools-new[CT Mobile Control
 Panel 2.0:
-Tools] and link:ios/ct-mobile-managed-package-update-to-v-3-54[CT
+Tools] and link:ct-mobile-managed-package-update-to-v-3-54[CT
 Mobile Managed Package Update to v. 3.54].
 
 ifdef::ios[]
@@ -108,12 +108,12 @@ For the correct display of CLM presentations:
 . Repeat step 1 for all active CLM presentations.
 
 For more information, refer
-to link:ios/publishing-clm-presentations#h3_1098755975[Publishing CLM
+to link:publishing-clm-presentations#h3_1098755975[Publishing CLM
 presentations].
 
 [[h2__822727760]]
 === 5. Perform a Full Synchronization
 
 The setup is complete. After completing all the steps, perform a
-link:ios/full-synchronization[full synchronization] in the CT Mobile
+link:full-synchronization[full synchronization] in the CT Mobile
 app.

@@ -4,10 +4,10 @@ The *Application* module is intended to store and display CLM
 presentations and custom scenarios.
 
 You can add CLM presentations to the
-link:ios/mobile-layouts-applications[mobile layout] and manage CLM
-presentations by link:ios/clm-presentation-controls[the control
-buttons], link:ios/gestures-in-clm-presentations[gestures], or
-link:ios/js-bridge-api[JS methods and links] on the slides. For each
+link:mobile-layouts-applications[mobile layout] and manage CLM
+presentations by link:clm-presentation-controls[the control
+buttons], link:gestures-in-clm-presentations[gestures], or
+link:js-bridge-api[JS methods and links] on the slides. For each
 CLM presentation, it is possible to set up statistical data to collect.
 
 :toc: :toclevels: 3[NOTE] ==== The profile must have access to
@@ -18,12 +18,12 @@ image:62562482.png[]
 [[h2__1510760474]]
 === Add Applications to the Menu
 
-To add the *Applications* module to the link:ios/app-menu[app menu]:
+To add the *Applications* module to the link:app-menu[app menu]:
 
 [width="100%",cols="50%,50%",]
 |===
 |In CT Mobile Control Panel a|
-. Go to link:ios/ct-mobile-control-panel-app-menu[CT Mobile Control
+. Go to link:ct-mobile-control-panel-app-menu[CT Mobile Control
 Panel: App Menu] tab.
 . {blank}
 . Click the
@@ -34,7 +34,7 @@ button to open the *Add menu item* tool.
 . Click *Save*.
 
 |In CT Mobile Control Panel 2.0 a|
-. Go to link:ios/ct-mobile-control-panel-app-menu-new[CT Mobile Control
+. Go to link:ct-mobile-control-panel-app-menu-new[CT Mobile Control
 Panel 2.0: App Menu] tab.
 . Select the required profile in the *Profile* picklist. To apply
 settings to all the profiles, select *General Settings*.
@@ -70,8 +70,8 @@ launch it
 presentation, it includes all the slides of the presentation and it is
 selected as a _favorite_. It can be unselected as _favorite_, but this
 setting will be reset during the next
-link:ios/full-synchronization[full synchronization], as it is stored
-locally in the mobile app. For link:ios/clm-customscenario[custom
+link:full-synchronization[full synchronization], as it is stored
+locally in the mobile app. For link:clm-customscenario[custom
 scenarios], which can include all or only selected slides of the
 presentation, the _favorite_ setting is stored in Salesforce, so it is
 kept even after full synchronization. ====
@@ -86,14 +86,14 @@ image:The-Main-tab-Win.png[]
 ==== The Mobile Scenario Editor
 
 *Mobile Scenario Editor* is the functionality for creating and/or
-editing link:ios/custom-scenario-editor[custom CLM presentation
+editing link:custom-scenario-editor[custom CLM presentation
 scenarios] in the CT Mobile app.
 
 The *Slide reordering enabled* checkbox must be selected in the
-link:ios/clm-application[Application record type].
+link:clm-application[Application record type].
 
 Depending on[.object]#CLM presentation# settings on the
-link:ios/clm-slide[Slide] object, it provides the possibility to change
+link:clm-slide[Slide] object, it provides the possibility to change
 the order of slides, and remove or add slides to the presentation.
 
 ifdef::win[]
@@ -101,7 +101,7 @@ ifdef::win[]
 The user can select slides from different CLM presentations.
 
 Upon editing completion, the set of slides is saved as
-link:ios/clm-customscenario[Custom Scenario].
+link:clm-customscenario[Custom Scenario].
 
 If a slide added to a custom scenario is excluded from the presentation
 (deactivated or deleted), such change will also apply to the respective
@@ -143,12 +143,12 @@ To create a scenario:
 
 image:The-Mobile-Scenario-Editor-iOS.png[]
 If a slide has the red frame and cannot be untapped, it means that it
-configured as link:ios/clm-slide[Required] and cannot be excluded from
+configured as link:clm-slide[Required] and cannot be excluded from
 the custom scenario:
 image:custom-scenario-required-slides.png[]
 
 The scenario is created.
-link:ios/synchronization-launch#h3__116633872[Launch fast
+link:synchronization-launch#h3__116633872[Launch fast
 synchronization] to upload it to Salesforce.
 
 [[h2__579857087]]
@@ -160,7 +160,7 @@ synchronization] to upload it to Salesforce.
 * Automatic scenario building is only available if the *Application
 Stats* records are found on the device.
 * Automatic scenario building is not
-available link:ios/synchronization[at the first synchronization] or
+available link:synchronization[at the first synchronization] or
 after an application reset.
 
 |===
@@ -186,7 +186,7 @@ or attachment:
 the image:ctmi-share-icon-2.9.png[] button.
 . Tap a slide/attachment to select it.
 . Tap *Send Selected*.
-. Select link:ios/email-templates[an email template] if available.
+. Select link:email-templates[an email template] if available.
 . Select a user to send.
 . Click *Send*.
 image:applications-slides-tab.png[]

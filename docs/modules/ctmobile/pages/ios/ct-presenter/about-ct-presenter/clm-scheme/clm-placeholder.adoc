@@ -2,10 +2,10 @@
 
 The[.object]#Placeholder# object is intended to indicate a
 place for interactive widget content storage on
-link:ios/clm-template[the HTML template].
+link:clm-template[the HTML template].
 
 The list of widgets available for insertion varies depending on
-link:ios/creating-a-placeholder[the type of placeholder] selected.
+link:creating-a-placeholder[the type of placeholder] selected.
 
 '''''
 
@@ -22,7 +22,7 @@ enabled, the placeholder can be applied in the HTML5 markup of a slide.
 
 |Allowed Types |[.apiobject]#clm__Type__c# |Picklist
 (Multi-Select) |Select one or several types of using
-link:ios/clm-widget[widgets].
+link:clm-widget[widgets].
 
 |Application |[.apiobject]#clm__ApplicationId__c#
 |Master-Detail(Application) |The CLM presentation to which the
