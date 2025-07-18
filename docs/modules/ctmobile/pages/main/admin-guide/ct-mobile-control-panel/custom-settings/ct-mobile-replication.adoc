@@ -1,0 +1,90 @@
+= CT Mobile Replication
+
+*CT Mobile Replication* is a custom metadata type to keep data up to
+date on the device in case of modified sharing rules.
+
+
+
+During the fast or mixed synchronization, only records with the modified
+[.apiobject]#SystemModStamp# field will be downloaded. However,
+if you changed
+https://help.salesforce.com/articleView?id=security_about_sharing_rules.htm&type=5[sharing
+rules] (via organization-wide defaults or per each record), the value in
+the[.apiobject]#SystemModStamp# field is not modified. Specify
+the CT Mobile Replication setting to download the corresponding records
+and hide records, which are no longer available.
+
+
+
+The CT Mobile Replication is affected when the specified date and time
+in the[.apiobject]#clm__Date__c# field are later than
+the current date and time.
+
+[TIP] ==== Specify and refresh the value in this field manually,
+or create an Apex class to refresh the field's value with the date and
+time on the schedule. ====
+
+
+
+CT Mobile Replication helps to speed up xref:synchronization[the
+synchronization process] by uploading separate metadata components. The
+common use cases are presented
+xref:ct-mobile-replication-use-cases-and-steps[here].
+
+'''''
+
+Custom metadata type API name:
+[.apiobject]#clm__Replication__mdt#
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Affected Users |[.apiobject]#clm__UserIds__c# |Long
+Text(131072) a|
+User ID(s) who have been affected by the change of the data access
+model.
+
+* The 15- and 18-digit IDs are supported.
+* Since CT Mobile 2.3, If the affected users are not specified, the CT
+Mobile Replication setting will be applied to all users.
+
+|Components |[.apiobject]#clm__Components__c# |Long
+Text(32768) |The list of xref:metadata-archive[metadata
+components]  that were altered.
+
+|Date |[.apiobject]#clm__Date__c# |Date/Time |The date
+and time of changes are used as the major criterion when the application
+requests data.
+
+|Object Name |[.apiobject]#clm__ObjectAPIName__c#
+|Text(255) |The API name of the object with updated access rights.
+
+|Package Size |[.apiobject]#clm__PackageSize__c#
+|Double(4,0) a|
+The number of selected object's records with all fields in the SOQL
+query. The default value is 300 records of IDs.
+
+
+
+
+
+Specify the value to reduce the number of API calls considering that the
+size of the SOQL query cannot exceed 20 000 characters. For more
+information, please refer
+to https://developer.salesforce.com/docs/atlas.en-us.salesforce_app_limits_cheatsheet.meta/salesforce_app_limits_cheatsheet/salesforce_app_limits_platform_soslsoql.htm[SOQL
+and SOSL limits].
+
+|Related Objects |[.apiobject]#clm__RelatedObjects__c#
+|Long Text(32678) |The API name(s) of related objects whose records must
+be downloaded to the CT Mobile app again.
+
+|Type |[.apiobject]#clm__Type__c# |Picklist a|
+The type of setting:
+
+* Data
+* Metadata
+
+|===

@@ -1,0 +1,42 @@
+= Debug Console
+
+The CT Mobile app has a handy tool for viewing log records of the sync
+process, which helps the consultants, administrators, and support team
+to verify that the CT Mobile app is correctly working and all settings
+are being applied.
+
+ifdef::ios[]
+
+To access the *Debug Console* screen, perform the double finger rotation
+gesture on the xref:home-screen[Home screen].
+
+image:debug-console-opening.gif[]
+
+ifdef::win[]
+
+To access the *Debug Console* screen, drag the bottom on
+the xref:application-settings[Settings screen].
+
+
+
+Since CT Mobile 1.3, you can call the debug log during the sync process
+by right-clicking or long-pressing (at least 2 seconds) and then
+releasing anywhere on the screen.
+
+image:62575609.png[]
+
+
+
+xref:sync-logs[Logs] are stored as the xref:sync-log[Sync Log]
+records and can be sent to Salesforce or by email to the support team
+depending on the settings in the *Support and Logs* section of
+xref:ct-mobile-control-panel-general#h2__1687169837[CT Mobile
+Control Panel: General]/*Logs and Support* section of
+xref:ct-mobile-control-panel-general-new#h2__1687169837[CT Mobile
+Control Panel 2.0: General]. *Debug Console* allows searching the log
+records highlighting the search results.
+
+ifdef::ios[]
+image:debug-console-search.png[]
+ifdef::win[]
+image:62575611.png[]

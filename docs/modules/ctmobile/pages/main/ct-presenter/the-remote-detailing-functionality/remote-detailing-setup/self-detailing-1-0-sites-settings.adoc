@@ -1,0 +1,63 @@
+= Self Detailing 1.0: Sites Settings
+
+[NOTE] ==== For users of the CT Mobile package below v. 3.63.
+====
+
+One of the steps in
+xref:remote-detailing-setup#h2__1854710639[setting up the Self
+Detailing functionality] is to create and set up a site.
+
+[[h2_2055482869]]
+=== Create a Site
+
+Create a site to collect CLM presentation statistics via *Self
+Detailing*:
+
+. https://help.salesforce.com/articleView?id=domain_mgmt_add.htm&type=5[Add
+a domain].
+. Go to *Setup → User Interface → Sites and Domains → Sites*.
+. Click *New* and specify the parameters of the site.
+.. Fill out all required fields;
+.. Make sure that the *Active* and *Lightning Features for Guest Users*
+fields are checked;
+.. Select *Allow framing from any page (No protection)* in the
+*Clickjack Protection Level* field.
+.. Specify *Active Site Home Page*. Use the lookup field to find and
+select the Visualforce page that you developed for your site’s home
+page.
+
+[TIP] ==== You can set up any site. To create a site and active
+Visualforce page, please read
+https://help.salesforce.com/articleView?id=sites_creating_and_editing_sites.htm&type=5[Salesforce
+Help]. ====
+. Click *Save*.
+
+The site is created.
+
+[[h2__455514666]]
+=== Set Public Access to the Site
+
+Public access settings control what public users can do on the site. To
+set the public access settings for your site:
+
+. From *Setup*, enter _Sites_ in the *Quick Find* box, then select
+*Sites*.
+. Click the name of the site you want to control.
+. Click the *Public Access Settings* button to open the Profile page for
+your site profile.
+. In the *Object Settings* section, click *Applications → Edit →* check
+the *Enabled* checkbox next to *Read*, then grant read access for all
+fields and click *Save*.
+. Follow the path in step 4 for the[.object]#Custom Scenario#
+and[.object]#Slides# objects.
+. In the *Object Settings* section, click *ApplicationStats → Edit →*
+check the *Enabled* checkbox next to *Read*, *Edit*, and *Create*, then
+grant read and edit access for all fields and click *Save*.
+. In the *Apex Class Access* section, click *Edit*, add *ApexRestHelper*
+in the *Selected* box and click *Save*.
+. Go to xref:ct-mobile-control-panel-presenter[CT Mobile Control
+Panel: Presenter] and specify the site URL in the *Endpoint URL*
+field.
+[NOTE] ==== Not applied since CT Mobile package v. 3.63. ====
+
+The public access is set.

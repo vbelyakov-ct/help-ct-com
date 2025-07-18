@@ -1,0 +1,73 @@
+= Configuring Mini Layouts
+
+*Mini Layouts* are special forms with a preconfigured set of fields that
+are used to create a record in a more convenient way. A mini layout will
+appear, for example, when tapping the plus button to create a new
+*Account* record or creating a new *Activity* record on the calendar
+grid. A mini layout can be assigned per each active record type of
+xref:managing-offline-objects[the offline object].
+
+[NOTE] ==== If a mini layout for an offline object or its record
+type is not configured, the default page layout will be open when
+creating a record. ==== ifdef::ios[]
+image:66356066.png[]
+ifdef::win[]
+image:mini_layout_windows.png[]
+ifdef::andr[]
+image:66356065.png[]
+
+[[h2__684572466]]
+=== Create a Mini Layout
+
+To create a mini layout:
+
+[width="100%",cols="50%,50%",]
+|===
+|In CT Mobile Control Panel a|
+. Go to xref:ct-mobile-control-panel-mini-layouts[CT Mobile Control
+Panel: Mini Layouts].
+. Click *Create layout*.
+image:47745554.png[]
+. Enter the unique name of the mini layout.
+. Select the *Object* from the drop-down list.
+. Select the *Record Type* from the drop-down list.
+[NOTE] ==== Make sure that the target profile has the proper
+xref:application-permission-settings[permissions for the selected
+record type]. You can review the profile permissions in *Setup* →
+*Users* → *Profiles*. ====
+. Click *Add new field* and select a field from the drop-down list,
+which will be displayed on the mini layout.
+. Enable the *Required* setting to add a required field.
+. Click *Create*.
+
+|In CT Mobile Control Panel 2.0 a|
+. Go to xref:ct-mobile-control-panel-mini-layouts-new[CT Mobile
+Control Panel 2.0: Mini Layouts].
+. Select an offline object from the left list.
+. Click  *Add Settings*.
+image:ctm-control-panel-new-mini-layout-add-settings.png[]
+. Select a record type for creating a mini layout. You can create one
+mini layout for each record type.
+* Make sure that the target profile has the
+xref:application-permission-settings[proper permissions for the
+selected record type]. You can review the profile permissions in *Setup*
+→ *Users* → *Profiles*.
+* If a record has no custom record type associated with it, then the
+_Master_ record type will be used.
+. Select fields for the mini layout.
+* To add a new field, click *Add Field*.
+* Toggle *Required* option if needed.
+* Click image:ctm-control-panel-new-remove-icon.png[]
+to remove the field.
+. Click *Save*.
+
+|===
+
+
+xref:ct-mobile-control-panel-mini-layouts[]
+
+ifdef::andr,ios,win[] The mini layout is configured. Perform a
+synchronization to apply the changes. ifdef::kotlin[]
+
+The mini layout is configured. Perform the mixed synchronization to
+apply the changes.

@@ -1,0 +1,116 @@
+= Chatter Push Notifications
+
+xref:mobile-layouts-chatter-feed[Chatter feed] is a widget to
+display messages on the *Chatter* module screen or in the *Chatter* tab
+of the selected record.
+
+
+
+Enable push notifications on a mobile device to see new messages from
+Salesforce right at the moment. With the stable internet connection on a
+mobile app, a user can receive a push notification when:
+
+* a new post is published on the user's feed
+* a user was mentioned in somebody else's feed as @UserName
+* a new post is published in the group of which the user is a member
+* a new post is published for the object's record, of which the user is
+an owner.
+
+
+
+To set up push notifications:
+
+. In xref:mobile-application-setup[Mobile Application Setup], set
+the value for the xref:push-identifier[PUSH Identifier] field.
+
+For the CT Mobile app installed from the App Store, the push identifier
+is[.apiobject]#ctmobile#.
+. xref:application-prompts-for-requesting-permissions[Allow
+Notifications] for CT Mobile in the *Settings* on a mobile device.
+. Please make sure that the *Device Token* field for the current record
+of the User object is filled with a value.
+
+
+
+
+. Create the *FeedItemProcess* trigger.
+
+Go to *Setup → Feature Settings → Chatter → Triggers → FeedItemTrigger*,
+click *New*, enter the code below, and click *Save*.
+
+
+
+
+. Add the *FeedItemProces* setting.
+
+Go to *Setup → Custom Code → Custom Settings →* click *Manage* next to
+*Trigger Settings*, create a new active setting with the
+*FeedItemProcess* name, and click *Save*.
+
+
+
+image:62556804.png[]
+
+Push notifications are set up.
+
+
+
+When someone adds a post which is matched one of the criteria above, a
+push notification is sent on a mobile device.
+
+* If the CT Mobile application is closed, a user receives a push
+notification. Tap on it to open the app. Tap *OK* in the pop-up window
+to download a record. According to the record location, the *Chatter*
+tab of the record or the *Chatter* module opens.
+
+
+
+image:62557484.png[]
+
+
+* If the CT Mobile application is opened, a user receives a push
+notification to load a new post. Tap *OK* to download it. According to
+the record location, the *Chatter* tab of the record or the *Chatter*
+module opens.
+
+
+
+image:62557631.png[]
+
+
+* Synchronize the *Chatter* feed by dragging down the screen of the
+*Chatter* module with an open group and the *Chatter* tab screen of the
+selected record.
+
+[NOTE] ==== This sync process is not affected by the *Quick
+Record Sync* setting for the object on the *CT Mobile Control Panel:
+Offline Objects* tab. ====
+image:62556898.png[]
+
+ifdef::hidden[]
+
+
+1 Посмотреть какой сертификат можно у файла инсталлятора приложения.
+Делается это аналогично инструкции по установке сертификата, но без шага
+самой установки.
+2 Для пушей в принципе нужно чтобы приложение было зарегистрировано в
+Store (2 рисунок и
+статья: https://docs.microsoft.com/ru-ru/azure/notification-hubs/notification-hubs-windows-store-dotnet-get-started-wns-push-notification и
+общая
+инфа xref:https://docs.microsoft.com/ru-ru/windows/uwp/design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview[]).
+image:image-(1).png[]
+
+3 По поводу сертификата store есть небольшое уточнение (1 рисунок).
+
+image:image.png[]
+
+Т.е. сертификат может быть и не из Store, но у него должно совпадать имя
+издателя с издателем приложения в Store. Эту информацию я нашел, когда
+задался вопросом как подключить пуши к приложению, которое
+распространяется не через Store (бизнес-приложения). Правда этот момент
+я до конца не проверял, но несколько раз натыкался именно на это
+разъяснение. Наше приложение зарегистрировано в Store со следующим
+именем издателя `CN = A7C11823-0555-4F9A-A148-0963820C3F47` Его
+сертификат (3 рисунок)
+
+image:image-(2).png[]

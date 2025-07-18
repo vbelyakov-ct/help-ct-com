@@ -1,0 +1,82 @@
+= Set Up Holidays
+
+Use the standard
+https://help.salesforce.com/articleView?id=customizesupport_holidays.htm&type=5[Holidays]
+functionality in Salesforce to view holiday dates in your calendar.
+
+* The holidays are marked with red color in xref:calendar[the
+Calendar module].
+* Holidays can be set for one day or recurring.
+* Holidays can be set for users of a specific country or all users.
+
+[[h2_688970579]]
+=== State and Country / Territory Picklists
+
+By default, the following steps are required to set a country for a
+user:
+
+. Go to *Setup → Users → Users →* click *Edit* next to the required one.
+. In the *Mailing Address* section, enter the country name or code in
+the *Country* field.
+. Click *Save*.
+
+Use this country code while creating a *Holiday* record.
+
+
+
+The administrator can let users add the country code from the picklist
+with
+https://help.salesforce.com/articleView?id=admin_state_country_picklists_standard_countries.htm&type=5[values
+of predefined&#44; standardized lists], instead of entering country data
+into text fields. The country picklist offers faster and easier data
+entry. It helps to ensure cleaner data that can be harnessed for other
+uses, for example, in reports and dashboards.
+
+
+To implement the country picklist:
+
+. Go to *Setup → Data →* click *State and Country / Territory
+Picklists*.
+. Follow a step-by-step guide—refer to
+https://help.salesforce.com/articleView?id=admin_state_country_picklists_overview.htm&type=5[Let
+Users Select State and Country from Picklists].
+
+[TIP] ==== Use the predefined, standardized code for a user of a
+specific country. ====
+image:58836361.png[]
+
+
+
+The setup is complete.
+
+[[h2__211968847]]
+=== Holidays
+
+Holidays must be created per each desired country.
+
+To create a holiday:
+
+. Add[.object]#Holiday# object to
+https://help.customertimes.com/articles/ct-mobile-ios-en/ct-mobile-control-panel-offline-objects[Offline
+Objects] in CT Mobile Control Panel.
+. Go to *Setup → Company Settings → Holidays →* click *New*.
+. Enter the following:
+.. Type the Holiday name and specify the country if needed:
+* the country name or code:[.apiobject]#Value| Name for the
+holiday#.
+* the country code from the picklist:[.apiobject]#The
+predefined, standardized code| Name for the holiday#.
+
+If you do not specify the country code, the holiday will be added to the
+calendars of all users.
+.. Add *Description*.
+.. Type the Holiday date.
+.. Select and customize *Recurring Holiday* if needed.
+
+image:58836353.png[]
+. Click *Save*.
+
+The setup is complete. Launch full synchronization to view holidays in
+the *Calendar* module.
+
+image:calendar-holidays.png[]

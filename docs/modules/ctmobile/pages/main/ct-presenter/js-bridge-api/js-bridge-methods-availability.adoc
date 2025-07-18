@@ -1,0 +1,158 @@
+= JS Bridge Methods Availability
+
+Here you can find JS Bridge methods that you can use in CLM
+presentations.
+
+ifdef::ios,win[]
+
+[[h2__868831931]]
+=== Important Notes
+
+When you launch the *Remote Detailing* meeting in the CT Mobile app, CRM
+data captured by JS Bridge will be uploaded to Salesforce and not stored
+on the mobile device. A user should have permission to edit records of
+the corresponding object. For example, if you create a new record using
+[.apiobject]#ctm.create#, it will be uploaded to Salesforce, and
+you should launch xref:fast-synchronization[fast synchronization]
+to download it to a mobile device.
+
+
+
+When you open a CLM presentation in the *Application* module, from the
+carousel of CLM presentations on the Home screen or mobile layout in the
+CT Mobile app, CRM data captured by JS Bridge will be saved to the
+mobile device. In this case, the corresponding object should be
+available offline, and a user should have permission to edit its
+records. To upload data to Salesforce, perform the fast synchronization.
+
+[width="99%",cols="16%,14%,^14%,^14%,^14%,^14%,^14%",]
+|===
+|*Feature* | |*Applications (on a tablet)* | | |*Remote Detailing*
+|*Comment*
+
+| | |*iOS* |*Android* |*Windows* | |
+
+|Methods for interaction with CRM data |xref:crm-data-display[CRM
+data display] |Yes |Yes |Yes |Yes |
+
+| |xref:opening-attached-files[Opening attached files] |Yes |Yes
+|Yes |No |
+
+| |Query records: xref:ctm-query[ctm.query] |Yes |Yes |Yes |Yes
+|These methods are forbidden during the *Self Detailing* and *Self
+Detailing 2.0* meetings.
+
+| |Create records: xref:ctm-create[ctm.create] |Yes |Yes |Yes |Yes
+|
+
+| |Update records: xref:ctm-update[ctm.update] |Yes |Yes |Yes |Yes
+|
+
+| |Delete records: xref:ctm-delete[ctm.delete] |Yes |Yes |Yes |Yes
+|
+
+| |Start fast sync: xref:ctm-sync[ctm.sync] |Yes |Yes |No |No |
+
+| |Obtain the path to the file: xref:ctm-getfile[ctm.getFile] |Yes
+|No |Yes |No |
+
+| |Save attachments: xref:ctm-storefile[ctm.storeFile] |Yes |No
+|Yes |No |
+
+| |Custom data tables according to related record:
+xref:ctm-opendatatablebyparentrecord[ctm.openDataTableByParentRecord]
+|Yes |No |No |No |
+
+| |Custom data tables according to SOQL query:
+xref:ctm-opendatatablebyquery[ctm.openDataTableByQuery] |Yes |No
+|No |No |
+
+|Methods for Accessing External Functionality |Camera access:
+xref:ctm-photo[ctm.photo] |Yes |Yes |No |No |
+
+| |Open QR Code: xref:ctm-openqrscanner[ctm.openQRScanner] |Yes |No
+|No |No |
+
+| |Quiz launch: xref:ctm-openquiz[ctm.openQuiz] |Yes |No |No |No
+|
+
+| |PDF generation: xref:ctm-generatepdf[ctm.generatePDF] |Yes |No
+|No |No |
+
+| |Sound recording:
+xref:ctappstoprecordingaudio[CTAPPstopRecordingAudio] |Yes |No |No
+|No |
+
+| |Sound recording:
+xref:ctappstartrecordingaudio[CTAPPstartRecordingAudio] |Yes |No
+|No |No |
+
+| |The transition from Animation to Sales Order:
+xref:ctm-createsalesorderwithanimations[ctm.createSalesOrderWithAnimations]
+|Yes |No |No |No |
+
+| |Exit from presentation:
+xref:ctm-autoexitpresenter[ctm.autoExitPresenter] |Yes |No |Yes |No
+|
+
+|Methods for CLM presentation control |Like:
+xref:ctm-like[ctm.like] |Yes |Yes |Yes |No |
+
+| |Dislike: xref:ctm-dislike[ctm.dislike] |Yes |Yes |Yes |No |
+
+| |Disable slide scroll:
+xref:ctm-disableslidescroll[ctm.disableSlideScroll] |Yes |No |No
+|No |
+
+| |Enable slide scroll:
+xref:ctm-enableslidescroll[ctm.enableSlideScroll] |Yes |No |No |No
+|
+
+| |Activate gathering statistics of presentation:
+xref:ctm-customstats[ctm.customStats] |Yes |No |No |No |
+
+| |xref:ctm-setoptions[ctm.setOptions] |No |No |Yes |No |
+
+|Methods for CLM presentation navigation
+|xref:ctappgotoslide[CTAPPgoToSlide] |Yes |No |Yes |Yes |
+
+| |xref:ctappgotofirst[CTAPPgoToFirst] |Yes |No |Yes |Yes |
+
+| |xref:ctappgotoprevious[CTAPPgoToPrevious] |Yes |No |Yes |Yes |
+
+| |xref:ctappgotonext[CTAPPgoToNext] |Yes |No |Yes |Yes |
+
+| |xref:changing-slides[Switch between slides using the href
+attribute] |Yes |Yes |Yes |No |
+
+|Methods for Remote Detailing 2.0 |Define the meeting type:
+xref:ctm-getappenv[ctm.getAppEnv] |No |No |No |Yes |These methods
+are used during the Remote Detailing 2.0 or Self Detailing 2.0 meeting.
+
+| |Define the Id of the Activity record:
+xref:ctm-getvisitid[ctm.getVisitId] |No |No |No |Yes |
+
+| |Define the user role: xref:ctm-getusertype[ctm.getUserType] |No
+|No |No |Yes |
+
+| |Secure query records: xref:ctm-securequery[ctm.secureQuery] |No
+|No |No |Yes |This method is used during the *Self Detailing 2.0*
+meeting instead of[.apiobject]#ctm.query#.
+
+| |CTAPPturnOnAudio |No |No |No |Yes |These methods affect only the
+presenter's audio and video stream even if called by the participant.
+
+| |CTAPPturnOffAudio |No |No |No |Yes |
+
+| |CTAPPturnOnVideo |No |No |No |Yes |
+
+| |CTAPPturnOffVideo |No |No |No |Yes |
+
+|Outdated methods |skipTenPercent |Yes |No |No |No |
+
+| |playVideo |Yes |No |No |No |
+
+| |getJSValues |Yes |No |No |No |
+
+| |CTAPPNewRecord |Yes |No |No |No |
+|===

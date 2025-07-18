@@ -1,0 +1,27 @@
+= Buttons "+" and "-" for the Numeric, Currency, and Percentage Fields
+
+Add the increase ("{plus}") and decrease ("–") buttons to the fields
+with the *Number*, *Currency*, and *Percent* types. They are available
+both on the record main screen and in the custom related tab on a record
+detail screen.
+
+
+
+To enable this option, specify the following in the field description,
+xref:ct-mobile-control-panel-tools#h3_1003786176[refresh metadata
+archive] and xref:synchronization-launch#h3__1175148825[launch
+mixed synchronization].
+
+
+
+where [.apiobject]#step# is the value modification scale.
+
+
+
+image:30703703.png[]
+
+
+
+The setup is complete.
+
+image:custom-plus-minus-field.png[]

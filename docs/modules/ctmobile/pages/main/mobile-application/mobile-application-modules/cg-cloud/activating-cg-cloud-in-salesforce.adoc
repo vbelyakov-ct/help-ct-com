@@ -1,0 +1,121 @@
+= Activating CG Cloud in Salesforce
+
+In this article, learn how to enable CG Cloud features in Salesforce.
+
+:toc: :toclevels: 3
+
+
+
+After activating CG Cloud in your Salesforce org,
+xref:setting-up-retail-execution[set up retail execution].
+
+To obtain access to the CG Cloud objects, create a case in Salesforce.
+
+ifdef::ios[]
+
+To work with CG Cloud in the CT Mobile app, configure the standard Visit
+record screen with the help
+of https://help.customertimes.com/articles/ct-layouts-en/creating-a-layout-settings-record[the
+CT Layouts solution].
+
+Admins should enable CG Cloud support in the required Salesforce
+organization. Once the CG Cloud functionality is enabled for your
+Salesforce organization, perform the actions in
+the *xref:/resources/Storage/CG-Cloud/Set-up-Retail-Execution.pdf[Set
+Up Retail
+Execution]*xref:/resources/Storage/CG-Cloud/Set-up-Retail-Execution.pdf[ guide].
+
+
+
+[[h2_2022041799]]
+=== Enable Features to Your Organization
+
+There are a few features that can be enabled in your Salesforce
+organization. Some of them are required and others get you additional
+opportunities.
+
+[[h3_972922526]]
+==== Required Features
+
+. Go to the *Setup → Feature Settings*.
+. Click *Retail Execution Setting* and turn on the *Retail Execution*
+option.
+. Go to *Setup → Company Settings → Maps and Location Settings*.
+. Turn on the *Enable Maps and Location Services (powered by Google)*
+option.
+
+If needed, turn on the *Enable autocomplete on standard address fields
+(Lightning Experience, the mobile app, and Experience Cloud Aura sites
+only)* option.
+
+The setup is complete.
+
+ifdef::ios[]
+
+[[h3_972621421]]
+==== Surveys
+
+To conduct surveys with store managers and buyers, for example, to
+collect insights on their business and customer satisfaction:
+
+. Go to the *Setup → Feature Settings → Survey → Survey Settings*.
+. Turn on *the Surveys* option.
+
+The setup is complete.
+
+[[h3__905227515]]
+==== Image Recognition using Einstein Platform
+
+ifdef::ios[][TIP] ==== CG Cloud will be compatible with the
+https://help.customertimes.com/articles/ct-vision-en/about-ct-vision[CT
+Vision] solution in future releases. ====
+
+To get the advantages from the Einstein Platform, for example, for
+recognition of products on the shelves:
+
+. Go to *Setup → Einstein → Industries Cloud Einstein → Einstein Object
+Detection*.
+. Turn on the *Einstein Object Detection* option.
+
+The setup is complete.
+
+[[h3_1601836855]]
+==== Notes
+
+A field rep can take notes for an overall visit or specific work tasks.
+
+. Go to *Setup → Feature Settings → Sales → Notes Settings*.
+. Select the *Enable Notes* checkbox.
+
+The setup is complete.
+
+[cols=",",]
+|===
+|image:info.png[] |A map
+image on an address is static, but when online, a field rep can click a
+map image to open the Google Maps app.
+|===
+
+[[h2_672866607]]
+=== Assign Required Permission Sets to Admins and Mobile Users
+
+The following permission sets should be assigned to a user depending on
+their role:
+
+* For admins, *CG Analytics Admin*.
+* For mobile users, *CG Analytics User*.
+* For all users, *Action Plans* and *Industries Visit*.
+
+
+
+To assign the required permission sets to your users:
+
+. Go to *Setup → Users → Permission Sets*.
+. On the *Permission Sets* page, click the *CG Analytics Admin*
+permission set.
+. Click *Manage Assignments*.
+. Select users and click *Add Assignments*.
+. Repeat steps 2–4 and assign the *CG Analytics User*, *Action Plans*,
+and *Industries Visit* permission sets to users.
+
+The setup is complete.

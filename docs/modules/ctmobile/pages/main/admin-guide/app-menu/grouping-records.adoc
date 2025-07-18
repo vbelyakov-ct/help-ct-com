@@ -1,0 +1,62 @@
+= Grouping Records
+
+Initially, the records are grouped in alphabetical order. You can
+rearrange the records according to the selected field.
+
+To group the records:
+
+[width="100%",cols="50%,50%",]
+|===
+|In CT Mobile Control Panel a|
+. Go to xref:ct-mobile-control-panel-app-menu[CT Mobile Control
+Panel: App Menu].
+. {blank}
+. Select an object from the *Selected* list.
+. In the *Group records by* picklist, select a field for grouping.
+. Select ascending/descending records grouping order.
+. Click *Save*.
+image:47752559.png[]
+
+|In CT Mobile Control Panel 2.0 a|
+. Go to the xref:ct-mobile-control-panel-app-menu-new[CT Mobile
+Control Panel 2.0: App Menu].
+. Select the required profile in the *Profile* picklist. To apply
+settings to all the profiles, select *General Settings*.
+. Select an object from the *Selected* list.
+. In the *Group records by* picklist, select a field for grouping.
+. Select ascending/descending records grouping order.
+. Click *Save*.
+image:ctm-control-panel-new-app-menu-grouping-records.png[]
+
+|===
+
+
+
+ifdef::andr,ios,win[]
+xref:synchronization-launch#h2_538692555[Launch the full
+synchronization] on the mobile device to apply changes. Records are
+grouped according to the specified field. ifdef::kotlin[]
+
+xref:fast-synchronization[Launch fast synchronization] on the
+mobile device to apply changes. Records are grouped according to the
+specified field.
+
+ifdef::ios[]
+
+[cols="^,^",]
+|===
+|*Alphabetical Order* |*Grouping Oder*
+
+|image:47752557.png[]
+|image:47752560.png[]
+|===
+
+ifdef::win[]
+
+[cols="^,^",]
+|===
+|*Alphabetical Order* |*Grouping Oder*
+
+|image:grouping-records-win-2.png[]
+|image:grouping-records-win.png[]
+|===

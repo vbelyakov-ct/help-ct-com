@@ -1,0 +1,147 @@
+= Offline Objects
+
+ifdef::andr[][NOTE] ==== Not available. ====
+
+The *Offline Objects* record type is intended to store settings for an
+offline object, as well as permissions and available actions with
+records of the offline object for a specific profile.
+
+[TIP] ==== To create or update the settings of offline objects,
+go to xref:ct-mobile-control-panel-offline-objects[CT Mobile
+Control Panel: Offline
+Objects]/xref:ct-mobile-control-panel-offline-objects-new[CT Mobile
+Control Panel 2.0: Offline Objects]. ====
+
+'''''
+
+Record Type API name:[.apiobject]#OfflineObjects#
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Conflict Manager
+|[.apiobject]#clm__IsConflictManagerEnabled__c#
+|Checkbox a|
+ifdef::win[][NOTE] ==== Not available. ====
+
+Allows the xref:conflict-manager-control[Conflict Manager]
+functionality for records of the offline object. It is used to track the
+changes made in a single record in the mobile application and on the
+Salesforce side.
+
+|Creating Allowed
+|[.apiobject]#clm__IsCreatingAllowed__c# |Checkbox a|
+Enables the creation of records of the offline object.
+
+
+
+The permission to create a record cannot overcome the same profile
+permission.
+
+|Criteria |[.apiobject]#clm__Criteria__c# |Long Text
+Area(32768) a|
+Stores a SOQL query to filter records of the offline object to download
+in the mobile application.
+
+
+
+The criteria line should start with
+the [.apiobject]#'WHERE'# keyword.
+
+|Deleting Allowed
+|[.apiobject]#clm__IsDeletingAllowed__c# |Checkbox a|
+Enables the deletion of records of the offline object.
+
+
+
+The permission to delete a record cannot overcome the same profile
+permission.
+
+
+
+The records which have not been synchronized may always be deleted, no
+matter what access the profile is granted.
+
+|Export Allowed
+|[.apiobject]#clm__IsExportAllowed__c# |Checkbox |If
+_true_, then the xref:actions#h2_1173923582[Export to File] item is
+displayed in the *Actions* menu. Default value is _false_.
+
+|External Id |[.apiobject]#clm__ExternalId__c#
+|Text(255) |Contains the ID of the corresponding record of custom
+settings.
+
+|Fields |[.apiobject]#clm__Fields__c# |Long Text
+Area(32768) |Stores a list of fields that should be always included in
+the xref:actions#h2_1173923582[Export to File] workflow in
+the *Actions* menu. If the list is not set, then no required fields will
+be displayed.
+
+|Files Download Option
+|[.apiobject]#clm__FilesDownloadOption__c# |Checkbox
+a|
+Defines the way how a file attached to the offline object must be
+downloaded during synchronization. Available values:
+
+* _Skip_ (default): the attached file will not be downloaded.
+* _Preview_:  the attached file will be downloaded as preview. Tap on
+the preview to download the full content.
+* _Full_: the attached file will be downloaded as full content.
+
+|Files Filter |[.apiobject]#clm__FilesFilter__c#
+|Long Text Area(32768) |Filters[.apiobject]#SystemModStamp#
+attribute for related files to restrict amount of files downloaded
+during synchronization and reduce the synchronization time.
+
+|Object |[.apiobject]#clm__Object__c# |Text(255) |Stores
+an API Name of an xref:managing-offline-objects[offline object].
+
+|Online Fetching
+|[.apiobject]#clm__IsOnlineFetchingEnabled__c# |Checkbox
+a|
+ifdef::win[][NOTE] ==== Not available. ====
+
+Defines if the xref:online-records-fetching[Load more records]
+button is available in the application, in case some records of the
+offline object were not downloaded due to the criteria specified in the
+[.apiobject]#clm__Criteria__c# field.
+
+|Order |[.apiobject]#clm__Order__c# |Number(18,0)
+|Defines a sequence of offline objects' records to download.
+
+|Org ID/Profile ID |[.apiobject]#clm__OrgProfileId__c#
+|Text(255) |Stores a profile's ID. Left blank or specify an Organization
+ID to apply for all non-configured profiles.
+
+|Quick Sync |[.apiobject]#clm__IsQuickSyncEnabled__c#
+|Checkbox a|
+ifdef::win[][NOTE] ==== Not available. ====
+
+Allows xref:synchronization-launch[Quick Record Synchronization]
+for records of the offline object.
+
+|Select Export Columns
+|[.apiobject]#clm__IsAllowedSelectExportColumns__c#
+|Checkbox |If _true_, then the user can select desired fields to
+export after tapping the xref:actions#h2_1173923582[Export to
+File] item in the *Actions* menu. Default value is _false_.
+
+|Sync Recovery |[.apiobject]#clm__SyncRecovery__c#
+|Picklist a|
+ifdef::win[][NOTE] ==== Not available. ====
+
+Enables xref:sync-recovery[Sync Recovery] to deliver records that
+could not be synchronized to Salesforce anyway. If the parameter is
+filled with a specific value, it enables the work of Apex web service
+and passes the data to Salesforce through it.
+
+* An empty value means that the web service is not involved.
+* *Direct access* means the pushing of the record changes directly to an
+object via the additional web service.
+* *Proxy object* means the pushing of the record changes as a modifiable
+JSON file in the xref:sync-log[Sync Log] object attachments.
+
+|===

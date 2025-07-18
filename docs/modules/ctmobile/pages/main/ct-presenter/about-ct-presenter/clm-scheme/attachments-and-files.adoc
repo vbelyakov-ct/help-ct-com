@@ -1,0 +1,135 @@
+= Attachments and Files
+
+ifdef::ios[][NOTE] ==== Available since CT Mobile 2.5. ====
+
+https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_objects_attachment.htm[Attachment]
+is a standard Salesforce object that is used to store files of various
+types.
+
+'''''
+
+Object API Name:[.apiobject]#Attachment#
+
+'''''
+
+Salesforce provides the ability to attach content to records in two
+ways:
+
+* Attach content to an object through a[.object]#Files# object
+** Each file consists of a record of the[.object]#Content
+Document# object that represents a document uploaded to Salesforce CRM
+Content or Salesforce Files and a record of the
+[.object]#Content Version# object that represents a version of
+the uploaded document.
+** A user or their organization must have access to
+[.object]#Files#.
+** If the user has access to an object but no access to the attached
+content, all content will be in the *Notes & Attachments* section.
+* Attach content as an[.object]#Attachment# to an object with
+the enabled transfer of all records to the[.object]#Files#
+object.
+
+
+
+In Salesforce Classic, all documents are saved by default as a record of
+the[.object]#Attachment# object in the *Notes & Attachments*
+section. To save documents as[.object]#Files#:
+
+. Go to *Setup → Feature Settings → Salesforce Files → General
+Settings*.
+. Enable the *Files uploaded to the Attachments related list on records
+are uploaded as Salesforce Files, not as attachments* option.
+
+Now, documents are saved as files in the *Notes & Attachments* section.
+
+ifdef::hidden[]
+
+In Lightning Experience, all documents are saved as
+[.object]#Files# by default. To save documents as records of the
+[.object]#Attachment# object in the *Notes & Attachments*
+section, create a custom trigger that implements the desired business
+logic and saves a record of the [.object]#Content
+Version# object as an attachment.
+
+
+
+This logic may be used if you need to upload files to the CT Mobile app,
+but CT Mobile can download files only as record attachments.
+
+
+
+[.object]#Attachments# and[.object]#Files# are used to
+store:
+
+xref:attach-files-to-clm-presentation[CLM presentation sources],
+for example, images, scripts, and styles.
+
+xref:actions#h2_62618674[photos] and signatures of *Activity*
+records;
+
+attachments to the xref:chatter[Chatter feed] posts;
+
+ifndef::ios[]
+
+notes and attachments to the standard and any custom objects.
+
+ifdef::ios[]
+
+notes and attachments to
+https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_objects_attachment.htm[the
+following standard] and any custom objects.
+
+*[.object]#Account #
+*[.object]# Asset #
+*[.object]# Campaign #
+*[.object]# Case #
+*[.object]# Contact #
+*[.object]# Contract #
+*[.object]# Email Message #
+*[.object]# Email Template #
+*[.object]# Event #
+*[.object]# Lead #
+*[.object]# Opportunity #
+*[.object]# Product2 #
+*[.object]# Solution #
+*[.object]# Task #
+
+We recommend using
+the xref:ct-mobile-control-panel-general#h3__377059502[Image
+Quality] (in CT Mobile Control
+Panel)/xref:ct-mobile-control-panel-general-new#h3__377059502[Quality
+of Attached Images] (in CT Mobile Control Panel 2.0) setting to
+downscale the image size because Salesforce
+has https://help.salesforce.com/articleView?id=collab_files_attach_records.htm&type=5[limits
+for attachments].
+
+[[h2_2031634004]]
+=== Downloading Attachments
+
+During the full synchronization, CT Mobile downloads attachments by
+requesting the
+https://developer.salesforce.com/docs/atlas.en-us.228.0.object_reference.meta/object_reference/sforce_api_objects_combinedattachment.htm[CombinedAttachments]
+records for all offline objects.
+
+Each *CombinedAttachments* record contains a file link and file name.
+
+These records are stored in the *Notes & Attachments* section. When a
+user taps the[.apiobject]#CombinedAttachment# record, the
+attachment is downloaded.
+
+ifdef::win[]
+
+If a current user launches
+https://help.customertimes.com/articles/ct-mobile-win-en/synchronization-launch[one
+of the synchronization modes], the loaded attachments via online one
+record fetching will be still available on a mobile device. The record
+will be removed only after the database reset or logging out of the
+current user.
+
+Versioning is not supported for attachments.
+
+[NOTE] ==== Do not add the[.object]#CombinedAttachments
+==== object to offline objects.#
+
+To upload attachments from the CT Mobile app to Salesforce, launch the
+xref:fast-synchronization[fast synchronization].

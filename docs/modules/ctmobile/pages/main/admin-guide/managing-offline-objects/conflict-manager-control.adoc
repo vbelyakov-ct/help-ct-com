@@ -1,0 +1,53 @@
+= Conflict Manager Control
+
+Enable *Conflict Manager* to track the changes made in a single record
+in CT Mobile and on the Salesforce side based on the date of the last
+synchronization and the date in the[.apiobject]#SystemModStamp#
+attribute of a record.
+
+The record's field was changed on the Salesforce side if the date in the
+[.apiobject]#SystemModStamp# attribute was later than the last
+synchronization date. In this case, if a record's field in the mobile
+application was changed too, a user will be asked to choose the correct
+version of this field during the synchronization.
+
+If the *Conflict Manager* is disabled, the changes made in CT Mobile
+will replace the changes made on the Salesforce side.
+
+
+
+The *Conflict Manager* can be enabled for each object separately. To
+enable the Conflict Manager:
+
+[width="100%",cols="50%,50%",]
+|===
+|In CT Mobile Control Panel a|
+. Go to xref:ct-mobile-control-panel-offline-objects[CT Mobile
+Control Panel: Offline Objects].
+. Select an object from the *Selected* list.
+. Enable the *Conflict Manager* option.
+image:47747693.png[]
+
+|In CT Mobile Control Panel 2.0 a|
+. Go to xref:ct-mobile-control-panel-offline-objects-new[CT Mobile
+Control Panel 2.0: Offline Objects].
+. Select an object from the *Selected* list.
+. Enable the *Conflict Manager* option.
+ image:enable-conflict-manager-2.0.png[]
+
+|===
+
+The setup is complete.
+
+
+
+When the mobile user launches the sync process after changing the fields
+of the record in CT Mobile and on the Salesforce side, they can select a
+correct version of the fields' value to keep.
+
+* Tap to select the *Mobile record* or *Server record* and then tap
+*Done* to keep the record.
+* Tap *Sync* to keep the mobile record.
+* Tap *Cancel* to cancel the synchronization process.
+
+image:../Storage/project-ct-mobile-en/CT-mobile-rest/attachments/47747679/Conflict-Manager-Sync.PNG[../Storage/project-ct-mobile-en/CT-mobile-rest/attachments/47747679/Conflict-Manager-Sync]

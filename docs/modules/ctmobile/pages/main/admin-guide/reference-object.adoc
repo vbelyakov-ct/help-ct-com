@@ -1,0 +1,103 @@
+= Reference Object
+
+In the CT Mobile package, administrators can specify the
+[.object]#Reference# object according to the business goals.
+
+
+
+To set up the[.object]#Reference# object:
+
+[width="100%",cols="50%,50%",]
+|===
+|In CT Mobile Control Panel a|
+. Go to the xref:ct-mobile-control-panel-general#h3_494016929[CT
+Mobile Control Panel: General] tab.
+. In the *Reference Object API Name* field, select the desired object.
+. Click *Save*.
+
+|In CT Mobile Control Panel 2.0 a|
+. Go to
+the xref:ct-mobile-control-panel-general-new#h4__351797814[CT
+Mobile Control Panel 2.0: General].
+. In the *Relate Contact to Multiple Accounts by Junction
+Object,* select the desired object.
+. Click *Save*.
+
+|===
+
+
+
+The setup is complete. Launch xref:full-synchronization[full
+synchronization] to apply the setting.
+
+
+
+As the[.object]#Reference# object, use the junction object
+between the[.object]#Account# and[.object]#Contact#
+objects:
+
+* The standard [.object]#Account Contact
+Relationship# object. To use this object, users should have the
+https://help.salesforce.com/s/articleView?id=sf.shared_contacts_set_up.htm&type=5[ability
+to relate a contact to multiple records].
+* When using the CT Pharma solution as the target
+system, [.apiobject]#CTPHARMA__Reference__c# .
+* Any custom object with the lookup field to
+the [.object]#Account# and [.object]#Contact# objects.
+
+[NOTE] ==== If the incorrect object specified in the *Reference
+Object API Name* field, the field is considered empty. ====
+
+ifdef::ios[]
+
+The[.object]#Reference# object, as well as enabled or not
+xref:person-accounts[Person Accounts], affects the record display.
+
+[width="100%",cols="^16%,^12%,^12%,^12%,^12%,^12%,^12%,^12%",]
+|===
+a|
+
+
+
+
+*Reference*
+
+a|
+
+
+
+
+*Person Accounts*
+
+|*The CT Mobile app* | | | | |
+
+| | a|
+
+
+*The Accounts menu item*
+
+a|
+
+
+*The Contacts menu item*
+
+|*The Calendar module* | |*The Nearby Accounts module* |
+
+| | | | |*The Contacts tab* |*The Hierarchy View tab* |*The Accounts
+tab* |*The Contacts tab*
+
+|No |No |Accounts |Contacts |Contacts |Contacts |Accounts |Contacts
+
+|Yes |No |Accounts |References |References |References |Accounts
+|References
+
+|No |Yes |Accounts with the inactive *Is Person Account* checkbox
+|Accounts with the active *Is Person Account* checkbox |Accounts with
+the active *Is Person Account* checkbox |Accounts with the active *Is
+Person Account* checkbox |Accounts with the inactive *Is Person Account*
+checkbox |Accounts with the active *Is Person Account* checkbox
+
+|Yes |Yes |Accounts with the inactive *Is Person Account* checkbox
+|References |References |References |Accounts with the inactive *Is
+Person Account* checkbox |References
+|===

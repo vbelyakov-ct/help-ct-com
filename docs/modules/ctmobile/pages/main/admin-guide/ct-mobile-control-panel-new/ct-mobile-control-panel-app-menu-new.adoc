@@ -1,0 +1,146 @@
+= CT Mobile Control Panel 2.0: App Menu
+
+The *App Menu* tab is intended to set up menu items and their order in
+xref:app-menu[the main menu].
+
+ifdef::ios,win[]According to the selected profile, settings on this
+tab will be saved in the records of the [.object]#CTM
+Settings# object with the xref:ctm-settings-menu[Menu] record
+type.
+
+:toc: :toclevels: 2
+
+.Click to view[%collapsible] ====
+
+====
+
+[[h2__577044341]]
+=== image:ctm-control-panel-new-app-menu.png[]Menu Items List
+
+* In the *Search* box, find the object that should be added to the main
+menu.
+* Click the object name in the *Selected* list to set up options for the
+object.
+* Use
+image:ctm-control-panel-new-move-icon-left.jpg[] and
+image:ctm-control-panel-new-move-icon-right.png[] arrows
+to move items between *Available* and *Selected* lists. The *Home* item
+cannot be moved. Module items can be added and removed only by using the
+xref:ct-mobile-control-panel-app-menu-new#h3__259736469[Module
+menu].
+* Use image:ctm-control-panel-new-move-icon-up.jpg[]
+and image:ctm-control-panel-new-move-icon-down.jpg[]
+arrows to reorder items in the *Selected* list. The *Home* item cannot
+be moved and is always on top.
+
+[[h2__631783032]]
+=== Menu Items Options
+
+According to the selected menu item in the *Selected* list, the
+available options are displayed on the right:
+
+[[h3__244725665]]
+==== Home Screen
+
+* Enable the *Customizable Screen* option.
+* Click *Add Widget* to add a new widget; resize and arrange widgets.
+
+
+
+Refer to xref:home-screen[Home screen] for more details.
+
+[[h3_1468985423]]
+==== Offline Objects
+
+* xref:grouping-records[Group records] by the criterion and
+ascending or descending order of records.
+* Define fields available for filtering in
+xref:list-views#h2__380480215[mobile list view].
+
+
+
+Refer to xref:managing-offline-objects[Managing Offline
+Objects] for more details.
+
+[[h3__330756966]]
+==== LinkList
+
+Click *Add Category* to add a link list.
+
+Refer to xref:links-list[Links] for more details.
+
+[[h3_1292798904]]
+==== Calendar
+
+Configure the xref:calendar[Calendar] options:
+
+* *Activity Duration (min)*: specify the default duration in minutes for
+scheduled activities.
+* *Default View*: select xref:using-calendar#h2__1759778354[the
+default calendar view]. The available options:
+** Month
+** Week
+** Day
+* *Visible Hour Range Start*: specify the earliest hour to show on the
+calendar
+* *Visible Hour Range End*: specify the latest hour to show on the
+calendar
+* *Show "Weekends" Switch*: if enabled, mobile users can use the toggle
+to display or hide weekends on the calendar grid.
+
+
+
+Refer to xref:ct-mobile-control-panel-activities-new[CT Mobile
+Control Panel 2.0: Activities] to learn about calendar activities.
+
+[[h3_595932522]]
+==== CT Orders
+
+* *Product Object*: select an object that will be used as a product.
+* xref:grouping-records[Group records] by the criterion and
+ascending or descending order of records.
+
+[[h3__1016751028]]
+==== Salesforce Content
+
+Define the way how files uploaded to the xref:libraries[Libraries]
+module must be downloaded during synchronization. Available values:
+
+* *Download As Preview*: only preview images will be downloaded. Tap on
+the preview image to download the entire file.
+* *Full Size*: the entire file will be downloaded.
+
+
+
+Module Menu
+
+[[h3__259736469]]
+==== Add Module
+
+Click *Show Module Menu* to view the icons of the modules that can be
+added to the CT Mobile app. The modules' availability depends on the
+xref:ct-mobile-os-comparison[device platform].
+
+Hover the cursor over a module to see its short description.
+
+* Click the icon to select the module.
+* Switch between *All*, *Application Modules*, *Integration*, and
+*Custom* tabs to view appropriate modules.
+* Rearrange the menu items in the *Selected* list in the desired order.
+
+[[h3_23461854]]
+==== image:ctm-control-panel-new-app-menu-module-menu.png[]
+
+[[h4_1920822856]]
+===== Add Custom Module
+
+At a customer's request, complementary functional modules can be added
+to custom application builds. On the *Custom* tab, click the *Add New
+Custom* button to specify the significant word of the custom module.
+
+image:ctm-control-panel-new-app-menu-module-menu-add-custom.png[]
+
+[[h2_1511584348]]
+=== 
+
+

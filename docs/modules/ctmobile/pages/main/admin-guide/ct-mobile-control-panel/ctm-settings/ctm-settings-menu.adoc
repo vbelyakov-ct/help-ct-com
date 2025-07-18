@@ -1,0 +1,113 @@
+= Menu
+
+ifdef::kotlin[] ifdef::andr[][NOTE] ==== Not available.
+====
+
+The *Menu* record type is intended to store settings for the main menu
+for a specific profile, such as the order of menu items, offline
+objects, and modules, the order of modules.
+
+[TIP] ==== To create or update the main menu settings, go to
+xref:ct-mobile-control-panel-app-menu[CT Mobile Control Panel: App
+Menu]/xref:ct-mobile-control-panel-app-menu-new[CT Mobile Control
+Panel 2.0: App Menu]. ====
+
+'''''
+
+Record Type API Name:[.apiobject]#Menu#
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Component |[.apiobject]#clm__Component__c# |Text(255)
+a|
+Stores an API Name of xref:managing-offline-objects[an offline
+object], xref:mobile-application-modules[module's name], or name of
+a menu item, e.g., xref:home-screen[Home] and
+xref:application-settings[Settings], that will be available in
+xref:app-menu[the main menu].
+
+
+A record of the *Menu* record type should be created per each
+component.
+
+|External Id |[.apiobject]#clm__ExternalId__c#
+|Text(255) |Contains the ID of the corresponding record of custom
+settings.
+
+|Fields |clm__Fields__c |Long Text Area(32768) a|
+List of fields displayed in criteria setting and *Records preview*
+section while creating a new xref:list-views#h2__380480215[mobile
+list view], comma separated. If the list is not set, then all existing
+fields will be available for creating a new mobile list view.
+
+|Files Download Enabled
+|[.apiobject]#clm__IsFilesDownloadEnabled__c#
+|Checkbox a|
+[NOTE] ==== Applies if the *Component* field has _Content_
+value. ====
+
+Defines the way how xref:libraries[Library] object must be
+downloaded during synchronization, as full content or as a preview.
+Interacts with the
+xref:application-settings#h3_1768799377[Background content loading]
+parameter in the *Application Settings*.  Available values:
+
+* _true_: the attached file will be downloaded as full content:
+** *Background content loading* is enabled: the full content of the
+[.object]#Library# object will be downloaded after
+xref:synchronization[synchronization] with displaying a loader.
+** *Background content loading* is disabled: the full content of the
+Library object will be downloaded
+after xref:synchronization[synchronization].
+* _false_ (default):  the attached file will be downloaded as preview.
+Tap on the preview to download the full content:
+** *Background content loading* is enabled: tap on the preview to
+download the full content. You can tap on several objects, they will be
+downloaded in a row.
+** *Background content loading* is disabled: tap on the preview to
+download the full content. Tapping on several objects will not work,
+each object will be downloaded separately.
+
+|Grouping field |[.apiobject]#clm__GroupingField__c#
+|Text(255) a|
+Stores an API Name of a field for xref:grouping-records[grouping
+records] in xref:app-menu[the main menu].
+
+Specify only if an offline object is set in
+the [.apiobject]#clm__Component__c# field.
+
+|Order |[.apiobject]#clm__Order__c# |Number(18,0) a|
+Stores the position of a component in the main menu.
+
+
+
+The order of menu items should be specified in
+the [.apiobject]#clm__MenuSettings__c# field
+of xref:menu-settings-and-offline-objects[Menu Settings and Offline
+Objects]. А menu item should be listed in
+the [.apiobject]#clm__Component__c# field, and its
+position should be set in
+the [.apiobject]#clm__Order__c# field, for the mobile
+application on iOS devices.
+
+|Org ID/Profile ID |[.apiobject]#clm__OrgProfileId__c#
+|Text(255) a|
+Stores the profile's ID. Left blank or specify an Organization ID to
+apply for all non-configured profiles.
+
+[NOTE] ==== The[.apiobject]#SetupOwnerId ==== field is
+no longer used. #
+
+|Sorting Order |[.apiobject]#clm__SortingOrder__c#
+|Text(255) a|
+Stores an ascendant (ASC) or descendant (DESC) sorting order for menu
+item records.
+
+Specify only if an offline object is set in
+the [.apiobject]#clm__Component__c# field.
+
+|===

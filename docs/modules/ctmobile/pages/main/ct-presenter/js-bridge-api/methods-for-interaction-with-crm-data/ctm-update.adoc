@@ -1,0 +1,46 @@
+= ctm.update
+
+The method of xref:js-bridge-api[JS Bridge] functionality is
+intended to bulk edit fields of offline objects if the current user has
+permission to edit records of the appropriate object and access to
+fields of that object.
+
+[[h2__905713055]]
+=== Query Format
+
+[.apiobject]#SObject# is the JS object that indicates the API
+name of the offline object, the ID of the record to update, and a list
+of fields with values.
+
+[[h2_441581376]]
+=== Handler
+
+
+
+
+
+The result:
+
+ifdef::win[]
+
+[[h2__471282633]]
+=== Downward Compatibility for the CLM presentations in CT Mobile Windows
+
+Some CLM presentations were created prior to the implementation of the
+JS Bridge. In these CLM presentations, the
+[.apiobject]#feedback# class is in use instead of the
+[.apiobject]#ctm.update# method.
+
+In the slide markup, the API names of the object and its fields are
+specified in the[.apiobject]#feedback# class to fill out these
+fields with values obtained from the CLM presentations.
+
+
+
+For example, the
+[.apiobject]#Uncontroled_asthma_number__c# field of
+the[.apiobject]#CTPHARMA__Activity__c# object will be
+filled out with the value obtained from the CLM-presentation launched
+from the record of the
+[.apiobject]#CTPHARMA__Activity__c# object if the
+following is present in the slide markup:

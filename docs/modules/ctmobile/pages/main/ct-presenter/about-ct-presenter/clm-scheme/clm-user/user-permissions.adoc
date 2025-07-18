@@ -1,0 +1,75 @@
+= User Permissions
+
+[NOTE] ==== These permissions should be defined for all the
+fields (with[.apiobject]#clm ==== prefix) of objects from the
+tables below. #
+
+[[h2_539802811]]
+=== Representative
+
+[width="99%",cols="20%,16%,16%,16%,16%,16%",]
+|===
+|*Object* |*API Name* |*Create* |*Read* |*Edit* |*Delete*
+
+|xref:clm-application[Application]
+|[.apiobject]#clm__Application__c# | |{plus} | |
+
+|xref:clm-applicationstats[Application Stats]
+|[.apiobject]#clm__ApplicationStats__c# |{plus} |{plus}
+|{plus} |
+
+|xref:clm-customscenario[Custom Scenario]
+|[.apiobject]#clm__CustomScenario__c# |{plus} |{plus}
+|{plus} |{plus}
+
+|xref:clm-placeholder[Placeholder]
+|[.apiobject]#clm__Placeholder__c# | | | |
+
+|xref:clm-slide[Slide] |[.apiobject]#clm__Slide__c#
+| |{plus} | |
+
+|xref:sync-log[Sync Log]
+|[.apiobject]#clm__SyncLog__c# |{plus} |{plus} |{plus}
+|
+
+|xref:clm-template[Template]
+|[.apiobject]#clm__Template__c# | | | |
+
+|xref:clm-widget[Widget]
+|[.apiobject]#clm__Widget__c# | | | |
+|===
+
+[[h2_539802811]]
+=== Product Manager / Creative Agency
+
+[width="99%",cols="20%,16%,16%,16%,16%,16%",]
+|===
+|*Object* |*API Name* |*Create* |*Read* |*Edit* |*Delete*
+
+|Application |[.apiobject]#clm__Application__c# |{plus}
+|{plus} |{plus} |{plus}
+
+|Application Stats
+|[.apiobject]#clm__ApplicationStats__c# |{plus} |{plus}
+|{plus} |
+
+|Custom Scenario |[.apiobject]#clm__CustomScenario__c#
+|{plus} |{plus} |{plus} |{plus}
+
+|Placeholder |[.apiobject]#clm__Placeholder__c# |{plus}
+|{plus} |{plus} |{plus}
+
+|Slide |[.apiobject]#clm__Slide__c# |{plus} |{plus}
+|{plus} |{plus}
+
+|Sync Log |[.apiobject]#clm__SyncLog__c# |{plus} |{plus}
+|{plus} |
+
+|Template |[.apiobject]#clm__Template__c# |{plus}
+|{plus} |{plus} |{plus}
+
+|Widget |[.apiobject]#clm__Widget__c# |{plus} |{plus}
+|{plus} |{plus}
+|===
+
+

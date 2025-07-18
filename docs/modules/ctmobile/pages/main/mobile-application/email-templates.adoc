@@ -1,0 +1,95 @@
+= Email Templates
+
+ifdef::kotlin[]
+https://help.salesforce.com/articleView?id=email_templates_landing_page.htm&type=5[Email
+templates] are the standard Salesforce functionality that can be used
+for sending attachments of records. ifdef::ios[]
+
+https://help.salesforce.com/articleView?id=email_templates_landing_page.htm&type=5[Email
+templates] are the standard Salesforce functionality that can be used
+for sending files from xref:libraries[Libraries] and slides and
+attachments of xref:applications[CLM presentations].
+
+
+
+image:Email-Templates.png[]
+
+[[h2__956967707]]
+=== Using Email Templates
+
+To use email templates in the CT Mobile app, they should be active, and
+the mobile user should have access to appropriate email templates.
+
+Specify markers in the[.apiobject]#{!Object.Field}# format
+xref:crm-data-display[to display CRM data], for example,
+[.apiobject]#{!User.Name}#,
+[.apiobject]#{!User.LastName}#,
+[.apiobject]#{!User.MobilePhone}#.
+
+ifdef::ios[]
+
+Add
+https://help.salesforce.com/articleView?id=email_images.htm&type=5[images
+in templates]:
+
+* In Salesforce Classic, load images in
+https://help.salesforce.com/articleView?id=docs_def.htm&type=5[Documents]
+and select the *Externally Available Image* option;
+* In Lightning Experience, load images to
+https://help.salesforce.com/articleView?id=collab_files_overview.htm&type=5[Files].
+
+
+
+A mobile user can send an email only to contacts who have a specified
+email address in Salesforce:
+
+* fill out the standard *Email* field for the desired _Contact_ record;
+* if you use xref:person-accounts[Person Accounts], fill out the
+standard *Email* field for the desired *Person Account* record.
+
+ifdef::kotlin[]
+
+
+
+To send a letter with an attachment:
+
+. Open the *Notes & Attachments* tab of the desired record.
+. Long tap an attachment.
+. Tap the *Send* button in the upper-right corner.
+. Select an email template if needed.
+. Select a recipient.
+. Select an app, for example, Gmail, to send a letter.
+. Edit the letter if needed.
+. Tap to send the letter.
+
+The letter is sent.
+
+[[h2_1039046855]]
+=== Limitations
+
+[TIP] ==== Get familiar with
+https://help.salesforce.com/articleView?id=email_template_builder_considerations.htm&type=5[the
+considerations] and
+https://help.salesforce.com/articleView?id=email_template_builder_guidelines.htm&type=5[guidelines]
+when using Email Template Builder. ====
+
+* In the Salesforce Classic, the Visualforce email templates are not
+supported.
+* In the Lightning Experience, all email templates are supported except
+for the[.apiobject]#{{{Recipient.FirstName}}}# markers.
+
+* ifdef::ios[]
+* The attached files are not supported.
+* Images used in a template and stored in the static resources or
+documents (without the selected *Externally Available Image* option) may
+not be downloaded during xref:synchronization[the sync process].
+* You can send an email using a third-party mail client (like
+Microsoft Outlook), if it is set as default in your iOS settings. In
+this case:
+** The recipient's address will not be inserted automatically. Please
+copy and paste it manually.
+** The subject string will be duplicated in the message body.
+* It may be needed to add the sender's email to the trusted list of the
+mail service. For example, if you view the following:
+
+image:outlook-trusted-email.png[]

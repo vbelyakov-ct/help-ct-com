@@ -1,0 +1,1302 @@
+= CT Mobile iOS Release Notes
+
+Here you could find a feature, the link to the corresponding article,
+and the version of CT Mobile since which the feature is available.
+
+:toc: :toclevels: 2
+
+[[h2__487586766]]
+=== CT Mobile 3.0
+
+[[h3__1184861525]]
+==== CT Orders for CT Mobile 3.0
+
+* Increased space for the product name in the order cart: now title and
+subtitle are displayed in two lines.
+* You can now
+https://help.customertimes.com/smart/project-order-module/offline-order[pin
+delivery] in the order cart.
+* Values entered in the custom fields of the
+https://help.customertimes.com/smart/project-order-module/offline-order/a/h4__1635896381[order
+cart] without specifying the product quantity will be saved after the
+next synchronization.
+* {blank}
+
+Improved validation for outdated product pricing in the order
+draft. When reopening an order, the application now checks if the
+associated
+https://help.customertimes.com/smart/project-order-module/ct-price-book-field-reference[Price
+Book] and
+https://help.customertimes.com/smart/project-order-module/ct-price-book-line-item-field-reference[Price
+Book Line Item] are still valid. If not, the validation message is
+displayed: _This product's price is no longer actual. Please remove the
+product from cart._
+
+
+
+[[h2_211762337]]
+=== CT Mobile 2.9​
+
+See the
+xref:compatible-versions-of-ct-mobile-and-other-packages[compatibility
+list] of CT Mobile, CT Orders and CT Vision versions.
+
+* Minimum supported iOS version: iOS 15.
+* Support of the [.apiobject]#$User# component for lookup
+filters.
+* Calendar UI/UX improvements:
+** Updated outlook of the calendar events with duration of 15 minutes or
+less.
+** 3 first fields can be displayed for each record in the
+xref:calendar#h3_645629234[left menu], if they are set up in the
+object xref:compact-layout[compact layout].
+** Up to 5 events can be displayed for one day in the
+xref:using-calendar#h3_860090196[month view].
+** Customizable *All activities per day* hint added to the
+xref:home-screen#h3_1292798904[calendar widget] for the Home
+Screen.
+** User can see
+https://help.customertimes.com/articles/ct-mobile-ios-en/using-calendar/a/h3__1703324288[calendar
+agenda] while working with custom _Date/Time_ field during creating new
+_Activity_.
+* Badge on the Chatter icon in the left menu if new posts are available.
+* Records counter in a xref:list-views[list view] is now displayed
+if there are more than 500 records.
+* Files sharing workflow has been upgraded, including
+xref:attaching-files-in-the-files-section#h3__1261438429[attached
+files for offline objects], xref:sharing-clm-presentations[CLM
+presentations] in CT Presenter and
+https://help.customertimes.com/smart/project-ct-sign-en/sign-a-document-the-ct-mobile-app/a/h3__1085191960[signed
+documents] in CT Sign. Also, the contacts list is now limited to
+contacts that are related to the current _Account_ record.
+* xref:actions#h2_1173923582[Export .csv] item added to the
+*Actions* menu to allow exporting selected fields of an offline object
+to CSV file.
+* List of fields available while creating a new mobile list view can be
+now predefined in the *Fields* field of
+the xref:ctm-settings-offline-objects[Offline objects] record
+type.
+
+[[h3__1184861485]]
+==== CT Orders for CT Mobile 2.9
+
+* The product title in the left list is displayed in two lines in the
+order screen.
+* *Delivery Summary* UX improvements, including:
+** Customization of fields column size for the *Delivery Summary* popup.
+** Now user can pin selected column on the *Delivery Summary* popup.
+* *Complete* and *Save draft* buttons are replaced with icons.
+* Improved readability of blocked quantity fields in the order cart.
+* Custom input fields UI improvement in the order cart: now they are
+aligned vertically with a value in quantity fields and are visually
+higlighted that they are available for input.
+* If the *SKU Field* is on the
+https://help.customertimes.com/smart/project-order-module/object-setting-field-reference[Object
+Settings] is filled, the Active field on the
+https://help.customertimes.com/smart/project-order-module/catalog-line-item-field-reference[Catalog
+Line Item] is not used and product is not displayed in the left panel of
+the order screen.
+* Week numbers are displayed when adding a delivery in the order cart.
+* *Default Availability Type* and *Product Availability* fields on the
+[.object]#Product# object now take effect on bundle disregarding
+if it’s calculated on header or on components.
+* Formula fields are now calculated once a product is added to the order
+cart (no need to populate quantity first).
+* Mass catalog/promotion deletion from the order cart: now you can add
+and remove the whole catalog or promotion to/from the order.
+* *Order* button
+(image:order-Icon.png[])
+is displayed for all records with *Order* item in combo-menu.
+* Now you can specify currency for the order and related records
+while https://help.customertimes.com/smart/project-order-module/offline-order/a/h2_2044385779[creating
+an order] if the
+https://help.salesforce.com/s/articleView?id=sf.admin_enable_multicurrency.htm&type=5[multiple
+currency] feature is activated for your organization. The
+*CurrencyIsoCode* field can be added for the
+https://help.customertimes.com/smart/project-order-module/layout-setting-field-reference[CT
+Order layout setting] to select desired currency for the order.
+* You can
+https://help.customertimes.com/smart/project-order-module/offline-order/a/h3__408281835[export
+data] from order related objects as a CSV file and share it.
+* Bundles UI improvements:
+** Displaying the *listPrice* value
+for the _Header-Components_ bundle as a sum of *listPrice* values of the
+bundle's components.
+** New
+https://help.customertimes.com/smart/project-ct-cpg/ct-product-field-reference[Ignore
+Component Availability] field added for bundles. If it’s _true_, the
+components of bundle are always available disregarding their *Product
+Availability* status.
+** Info icons are displayed on headers of bundles with *Calculate Price
+On* = _Components_.
+** Bundles added as freebies have the same behavior as product bundles.
+** Bundles with *Set Quantity On* = _Components_ cannot be added to
+order as freebies.
+** Empty _Delivery_ records are now deleted after completing an order.
+** Discount values no more overlap each other in _Price Tags_.
+
+[[h3_1172874712]]
+==== CT Vision for CT Mobile 2.9
+
+* Upgraded data model for CT Vision Lite:[.object]#CTM
+Settings# object is now
+https://help.customertimes.com/smart/project-ct-vision-lite-en/ctm-settings-field-reference-1[Vision
+Settings].
+* Photos made in CT Vision are now stored in Salesforce in the new
+https://help.customertimes.com/smart/project-ct-vision-lite-en/vision-photo-field-reference-lite[Vision
+Photo] object instead of _Heroku_.
+* Renewed UI/UX of
+https://help.customertimes.com/smart/project-ct-vision-lite-en/working-with-ct-vision-lite-in-salesforce-2-9/a/h2_1552458132[Feedback
+Loop] page in CT Vision Lite for more productive and convenient photo
+management.
+
+[[h2__487586789]]
+=== CT Mobile 2.8
+
+Minimum supported iOS version: iOS 15.
+
+
+
+Please upgarde the CT Mobile package version to 3.85 to get access to
+the following features:
+
+* The xref:ctm-settings-offline-objects[Files Download Enabled]
+checkbox added for Offline objects. If disabled, files attached to
+offline objects will be displayed as previews and synchronization time
+will be reduced.
+* The xref:ctm-settings-offline-objects[Files Filter] field
+added for Offline objects. You can
+xref:attaching-files-in-the-files-section#h3_1720123861[specify the
+latest date of the offline object creation] that should be downloaded
+during the sync.
+
+Other features are available regardless of the CT Mobile package
+version:
+
+* Titles and subtitles of records can be displayed in three lines in
+list views.
+
+* Formed Documents, Signatures, and SyncLogs are now stored in the
+xref:attaching-files-in-the-files-section[Files] section of an
+offline object. You can add or delete files in the
+xref:attaching-files-in-the-files-section#h3__2018099316[Actions]
+menu of an offline object.
+* Adding and pinning list views for the
+xref:using-calendar#h3__632854949[Calendar].
+
+[[h3__1646834508]]
+==== Integrations
+
+* *CT Orders for CT Mobile 2.8*
+** Preventing rounding values to 2 decimal digits after the
+https://help.customertimes.com/smart/project-order-module/the-procedure-step[Procedure
+step] of the Pricing Procedure 2.0.
+** The UX/UI improvement for the
+https://help.customertimes.com/smart/project-order-module/offline-order/a/h4__1635896381[order
+cart]:
+*** {blank}
+
+https://help.customertimes.com/smart/project-order-module/offline-order/a/h4__733574480[Filtering
+products] by specified criteria.*
+*
+*** {blank}
+
+*Calculate Discount*, *Save Draft* and *Complete* buttons are blocked
+until the calculation is completed.
+*** The *Complete* button is blocked in the *Delivery Summary* window
+until all calculations are completed.
+*** The calculation status is now displayed for offline orders, as it
+was already displayed for orders calculated by the Web Service.
+*** After selecting the sorting type for delivery, the dialog window
+closes itself without the need to tap *Cancel*.
+*** Sorting bundles by quantity for each delivery.
+*** Reduced time before opening the new delivery popup for orders with a
+significant number of products in catalogs or promotions.
+*** Displaying spinner after finalization of an order.
+*** Searching for products in catalogs and promotions by several words,
+separated by blank spaces.[.NormalTextRun .SCXW220550459 .BCX0]# #
+*** Reduced time of opening the order cart after tapping *Edit Order*.
+
+[[h2__487586804]]
+=== CT Mobile 2.7
+
+Minimum supported iOS version: iOS 15.
+
+[[h3__810150278]]
+==== Synchronization
+
+* The sync process details, such as the type, status, and last start
+date, are displayed at the bottom of the *Settings* screen.
+* New design of the pop-up message, which appears while the full sync is
+in progress.
+* New text message on locked screen while the full sync is in progress.
+* https://help.salesforce.com/s/articleView?id=sf.custom_perms_overview.htm&type=5[Custom
+User Permissions] will be downloaded during the sync.
+* New text message, which appears if the sync log was successfully sent
+by email.
+
+[[h3__132349664]]
+==== [.tabletitle]#Salesforce Metadata#
+
+* https://help.salesforce.com/s/articleView?id=sf.dashboards_component_metric_data_settings.htm&type=5[Metric
+Charts] are available offline in the Dashboards module.
+* Support the ORDER BY and LIMIT operators in Workflow Steps.
+* Support the GEOLOCATION, HYPERLINK, and WEEKDAY operators in
+xref:offline-supported-operators-and-functions-in-field-with-the-formula-type[formulas].
+* The height for fields with the *Picklist* type changes depending on
+the value, and becomes scrollable when exceeding five lines.
+* Support calculation for fields with the *Formula* type if they have
+comments.
+* Support the
+https://help.salesforce.com/s/articleView?id=sf.custommetadatatypes_formula_fields.htm&type=5[$CustomMetadata]
+operator for fields with the *Formula* type.
+* The ability to apply translations for custom labels of various UI
+elements.
+* Left alignment of columns and contents in the detailed list views and
+related lists for better readability.
+* Support for the
+https://developer.salesforce.com/docs/atlas.en-us.pages.meta/pages/pages_variables_global_permission.htm[$Permission]
+value in formulas and validation rules.
+
+[[h3_2086756216]]
+==== Monitoring and Logs
+
+* CT Mobile allows sending sync logs using a third-party mail client
+(like MS Outlook).
+
+[[h3_1292798904]]
+==== Calendar
+
+* Drag-and-drop accounts or long tap the *All-Day* slot to create
+all-day activities.
+* For a better user experience, double-tap the *Legend* button in the
+https://help.customertimes.com/articles/ct-mobile-ios-en/using-calendar/a/h3__632854949[Calendar
+module] to display a pop-up with _Activities_ and their assigned colors.
+* The number of a week is displayed in the *Calendar* header.
+* The native iOS calendar is now used to set a date.
+* When
+https://help.customertimes.com/articles/ct-mobile-ios-en/using-calendar/a/h4_645322804[copying
+an activity] in Calendar, if there is a mini layout for the selected
+record type of the object, values of all fields will be copied.
+* Improved displaying of title and subtitle on a mini layout: now both
+of them are displayed, even if one of them is too long to fit one
+string.
+* Improved displaying overlapping activities: now they do not visually
+overlap with each other.
+* The mini layout is expanded to the left or right depending on Activity
+start date.
+
+[[h3__871715723]]
+==== Attachments, Chatter, and Libraries
+
+* The ability to minimize the xref:libraries[Libraries] content and
+xref:attachments-and-files[Attachments] of a record. Move the
+floating window around the screen. Tap the floating window to resume
+full mode.
+* Now you can use a third-party mail client (like MS Outlook) for mail
+templates.
+* HEIC/HEIF images are now supported for uploading to CT Mobile and for
+synchronization.
+* Displaying records of[.object]#ContentDocument# and
+[.object]#ContentVersion# objects in relates lists of *Files*
+and *Notes & Attachments*.
+
+[[h3_946326628]]
+==== Related Lists
+
+* If the tab label for related lists takes more than one line, it will
+be fully displayed on two lines.
+
+[[h3__735612696]]
+==== Routes
+
+* For user's convenience, the route will open in the default maps on
+your device when the mobile user taps the *Directions* button.
+
+[[h3__1105737820]]
+==== Integrations
+
+* *CT Vision for CT Mobile 2.7*
+** Instead of full-size images, their previews are downloaded to the
+mobile device during synchronization. This allows not to affect
+synchronization time while using CT Vision.
+** The photo interface for Vision Lite has been changed: KPI and Report
+elements are now controlled by administrator and can be removed from the
+photo interface for Vision Lite.
+** Photos from previous visits are now displayed on the Retail Store
+layout.
+** Business administrator can assign tags for photos per public group.
+* *CT Presenter for *CT Mobile 2.7**
+** xref:remote-detailing-2-0-ui-for-participants[Remote Detailing
+2.0]: all participants of the meeting will receive notifications about
+new comments.* *
+* *CT Orders for CT Mobile 2.7*
+** *Web Service*
+*** {blank}
+
+CT Mobile 2.7 provides capabilities for calculating prices and discounts
+via
+https://help.customertimes.com/smart/project-order-module/web-service[Web
+Service]. Now, administrator can select, how to perform calculations: by
+the Web Service or by the internal calculator. If the *Enable WS for
+Mobile* toggle is active in the
+https://help.customertimes.com/smart/project-order-module/connecting-to-web-service-and-price-calculation-7-0[CT
+Orders Control Panel], the mobile device will try to use Web Service to
+calculate prices. If the Web Service calculator cannot be accessed, the
+mobile application will calculate order prices without discounts. Before
+starting work, check all the required permissions
+xref:/resources/Storage/ct-orders-4-0/PDF/CT-Orders-User-Permissions-to-Access-Web-Service.pdf[here].
+*** {blank}
+
+Tap
+the image:/resources/Storage/ct-orders/ctorders-ios-update-prices-2.7.png[/resources/Storage/ct-orders/ctorders-ios-update-prices-2.7]
+button in CT Mobile to get the valid prices. The invalid prices will be
+highlighted in red color.
+*** {blank}
+
+The new advanced features — links, mixed discounts, freebie multiplier,
+and freebie values — are only available when working with the Web
+Service.
+*** Validations that a sales rep has access to all necessary fields to
+calculate discounts. Otherwise, the calculation will be carried out by
+the *List Price* field.
+*** Changed prices and freebies calculation logic for orders with at
+least one Delivery Line Item with *quantity* = 0: such orders will be
+always calculated using in-app calculator and will be never sent to Web
+Service.
+** *Mixed Discounts*
+*** {blank}
+
+https://help.customertimes.com/smart/project-order-module/calculation-type-applyconditiontype-c-field-specification[Apply
+multiple conditions] from a single _Calculation Type_.
+*** https://help.customertimes.com/smart/project-order-module/condition-advancedcriteria-c-field-specification[Advanced
+Criteria 2.0] provides more flexibility by setting multiple filters and
+a minimum number of products for different size discounts.
+** *Freebie Management*
+*** https://help.customertimes.com/smart/project-order-module/freebies-management/a/h3__316467656[Freebie
+Values] allow you to spread freebies over different levels and
+deliveries.
+*** The *Value* field added for freebies when calculating them using Web
+Service.
+** *Price tags*
+*** {blank}
+
+New
+https://help.customertimes.com/smart/project-order-module/price-tag[price
+tags] display one or more applied conditions on the discount scale with
+the current product quantity and the reached level of discounts.
+*** For Calculation Types with *Level Based On* = *Delivery Line Item*:
+the checkmark icon is displayed when several *Delivery Line Items* are
+tied to one *Order Line Item*.
+** *Other Improvements*
+*** Edit fields with the *Currency*, *Number*, *Percent*, or *Text*
+types within the
+https://help.customertimes.com/smart/project-order-module/delivery-management/a/h2__1374863314[Delivery
+Summary] pop-up while completing an order.
+*** The UX/UI improvement for Quotas:
+**** Display the current quota status in the order cart interface.
+**** For better visibility, the quota info pop-up displays the type of
+products it affects and the source catalog or promotion.
+**** If you reach the limit, the error message is displayed.
+**** The number of errors will be the same as the number of quotas for
+which you have reached the limits.
+**** Delivery Line Items with reached limits are highlighted.
+**** You can switch between error messages and see the corresponding
+Delivery Line Item.
+**** Click the *Revalidate* button to recalculate quotas.
+**** The *Finalize* button is disabled until you resolve all quotas
+errors.
+*** The UX/UI improvement for the order cart:
+**** The
+https://help.customertimes.com/smart/project-order-module/offline-order/a/h4__1635896381[promotion]
+sales and delivery dates are displayed in each promotion header. If the
+sales dates are empty, the delivery dates will be displayed instead of
+them.
+**** In the
+https://help.customertimes.com/smart/project-order-module/offline-order/a/h4__589780300[catalog
+and promotion left menu], products are arranged according to their order
+number (if given) or alphabetical order (if user has no access to the
+[.apiobject]#orders__Order__c# field).
+**** Any actions with order cart are now blocked in portrait mode.
+**** You can now collapse and expand bundles.
+**** Collapsing and expanding catalogs have been fixed.
+**** A progress bar is now displayed while adding a catalog to an order.
+You cannot add another catalog until adding the current catalog is
+finished.
+**** The tap region of the *Product Name* field has been increased.
+**** After tapping on the quantity value, it is automatically selected,
+and you can type the new value without the need of deleting the previous
+one.
+**** Now you can xref:application-settings#h3__611076828[set up the
+timer before calculating prices] after making changes to the order
+cart, from 0 to 6 seconds. Successful recalculation will be indicated.
+*** Support Salesforce validation rules when saving or finalizing an
+order.
+*** The new operator *divide* added for Calculation Type and Pricing
+Procedure.
+*** If a bundle has products, which are added to a promo and some of
+them are checked as *Exclude From Discount* in
+https://help.customertimes.com/smart/project-order-module/promotions/a/h2_333729072[Product
+Management], discount will not be applied to these products.
+*** Counting used quotas after completing an order is now more precise.
+*** Performance for orders with a lot of products (1000 and more) has
+been improved:
+**** Mass adding products to cart.
+**** Opening draft order.
+**** Finalizing order.
+*** xref:limitations-for-the-ct-orders-module[Recommended load
+values] are added to the documentation.
+*** Lookup fields are now filled in while creating a new order from an
+[.object]#Activity# object.
+***[.apiobject]#CatalogLineItemId# lookup fields are now filled
+in after adding bundles to product cart.
+*** Improved stability of working with quotas in Delivery Line Item.
+*** Standard Salesforce validation is performed when saving and
+finalizing an order.
+*** The Limit Settings search algorithm has been improved.
+** *Limitations*:
+*** https://help.customertimes.com/smart/project-order-module/managing-bundles/a/h2__1169899360[Bundles
+with Components—Components type] are not supported.
+*** Formula calculations are not applied until the product quantity is
+specified in the order cart.
+
+[[h2__487586803]]
+=== CT Mobile 2.6
+
+* CT Mobile 2.6 uses the Salesforce API v. 52.0. We recommend reading
+xref:technical-requirements-for-devices-and-network[requirements
+for devices] and installing
+xref:ct-mobile-package-release-notes[the latest CT Mobile package
+version].
+
+* CT Mobile 2.6 supports *Split View* and *Slide Over* multitasking
+types. Note the following:
+** We do not guarantee that screens adapted for landscape orientation
+will display correctly in portrait orientation. In future releases, we
+will add a warning to prevent such screens from being used in portrait
+orientation.
+** We cannot limit the minimum percentage of screen area in *Split
+View* mode and recommend using at least 75% of the screen to work with
+CT Mobile.
+* For more information, see Apple
+documentation: https://support.apple.com/en-us/HT207582[Using
+Multitasking on your iPad].
+
+[[h3_1001309540]]
+==== Integrations
+
+Click on the appropriate link to learn more about new features and
+improvements in CT Software products that can be integrated into the CT
+Mobile app.
+
+* Support for
+https://help.customertimes.com/articles/ct-orders-3-0/ct-orders-for-ct-mobile-ios-release-notes[new
+CT Orders functionality], such as product availability to prevent
+ordering out-of-stock products or announcing the launching of new
+products, quotas to control discount budgets and limited product sales,
+and limit rules to ensure achievement of desired KPIs.
+* https://help.customertimes.com/articles/project-ct-vision-en/ct-vision-for-ct-mobile-ios-release-notes[Working
+with CT Vision], specify what product information you want to see in the
+*Shelf Product List*, assign one or more providers to a group of
+[.object]#Users# or[.object]#Accounts#, send
+corrections for each product or shelf to the CT Vision server, and more.
+
+[[h3_1892651793]]
+==== New Features and Improvements
+
+[[h4__680409294]]
+===== Synchronization
+
+* CT Mobile will alert the user after an app update if a full
+synchronization is required for it to work correctly.
+* UX improvement: the notification of a successful synchronization will
+not be hidden until the user presses OK.
+
+
+
+[[h4__1603447305]]
+===== Salesforce Metadata
+
+* xref:ct-mobile-control-panel-calendar#h3_808313222[The default
+duration] will be set for the activity created in the related lists, the
+timeline view, and the *Activity* menu item.​
+* On the *Settings* screen, the version for the custom application based
+on CT Mobile is displayed in the format:
+[.apiobject]#{$custom_ver} (Core_version)#.
+
+
+
+[[h4_1468985423]]
+===== Offline Objects
+
+* Alignment with Salesforce policy: use
+https://help.salesforce.com/s/articleView?id=sf.collab_files_overview.htm&type=5[Files]
+to attach required documents, images, etc. to an offline object.
+
+
+
+Go back to xref:ct-mobile-ios-release-notes#ListOfReleases[the list
+of CT Mobile releases].
+
+[[h2__487586802]]
+=== CT Mobile 2.5
+
+CT Mobile 2.5 uses the Salesforce API v. 52.0 and requires iOS 13 or
+later. We recommend installing
+xref:ct-mobile-package-release-notes[the latest CT Mobile package
+version].
+
+[[h3__1910914881]]
+==== Integrations
+
+Click on the appropriate link to learn more about newly supported CT
+Software products or new features and improvements to those already
+supported.
+
+* https://help.customertimes.com/smart/project-ct-layouts-en/ct-layouts-for-ct-mobile-ios-release-notes[CT
+Layouts] eases the field reps’ routine through flexible screen
+customization and compatibility with other CT Software and supported
+Salesforce products, such as CG Cloud. Split the desired screens into
+configurable tabs, set colors for tabs and sections, and follow the
+preconfigured path to match your business goals—make an order, calculate
+shelf KPIs, conduct surveys, and more.
+* Support for new
+https://help.customertimes.com/articles/ct-orders-3-0/ct-orders-for-ct-mobile-ios-release-notes[CT
+Orders] functionality, such as pricing procedure steps, enhanced
+discount calculations, and more.
+* Using
+https://help.customertimes.com/articles/ct-vision-en/about-ct-vision[CT
+Vision], take photos of the large shelves, add tags, and work with the
+*Shelf Product List*.
+
+[[h3_254019950]]
+==== Work Offline with the CG Cloud
+
+* xref:activating-cg-cloud-in-salesforce[Activate CG Cloud in your
+Salesforce org] to work with retail stores
+xref:activating-cg-cloud-in-the-ct-mobile-app[in the CT Mobile
+app].
+* xref:managing-visits-to-retail-stores#h2_1751285824[Find the
+nearby stores],
+xref:managing-visits-to-retail-stores#h2__1880003381[build optimal
+routes], and
+xref:managing-visits-to-retail-stores#h2_535537278[schedule your
+visits] to the right stores at the right time.
+** Drag and drop the activity to the retail store on the *Calendar* grid
+in a day and week calendar view. Time slots are highlighted with the red
+color when out of retail store's operating hours.
+* Select the action plan
+xref:managing-visits-to-retail-stores#h2__1592083570[to generate
+tasks] for the desired activity based on it.
+* https://help.customertimes.com/smart/project-ct-layouts-en/creating-a-layout-settings-record[Customize
+screens with CT Layouts] to use a variety of data types to gather
+information on sales, effectiveness, and availability of products:
+** xref:setting-up-task-definitions-and-action-plan-templates#h2__1302650526[Monitor
+key processes] such as
+xref:managing-visits-to-retail-stores#h3_1867622910[inventory
+audits],
+xref:managing-visits-to-retail-stores#h3__696266799[promotion
+checks], and
+xref:managing-visits-to-retail-stores#h3__85077301[in-store
+surveys] with predefined templates.
+** xref:managing-visits-to-retail-stores#h3__481270469[Using
+Einstein Detection and CT Vision], audit shelves, measure share and
+shelf, manage stock and optimize product sales.
+** xref:managing-visits-to-retail-stores#h3_190353401[Using CT
+Orders], create your orders and manage deliveries.
+* Gather information
+xref:managing-visits-to-retail-stores#h3__582599340[using custom
+metrics] and
+xref:managing-visits-to-retail-stores#h3__1516408339[perform ad-hoc
+tasks].
+
+image:Planogram-Check-(en).png[]
+
+[[h3_1089262978]]
+==== New Features and Improvements
+
+[[h4__523284731]]
+===== Synchronization
+
+* The user’s device model and version of the operating system
+xref:clm-user[are saved] after each synchronization to optimize the
+work of the support team for incoming cases.
+
+
+
+[[h4_1731602824]]
+===== Salesforce Metadata
+
+* The color of the object's tab in Salesforce is now used for
+xref:coloring-menu-items-and-modules[that object icon] in the CT
+Mobile app.
+
+image:color_menu_item_ios_en.png[]
+* Use the detailed list view to see records in full screen when filling
+out xref:reference-fields#h2__1554731138[the reference field].
+* https://help.salesforce.com/s/articleView?id=sf.customviews_edit_filters.htm&type=5[The
+My filter] is supported in list views to display only records owned by
+the current mobile user.
+* The updated numeric keypad appears when tapping a field with the
+*Date/Time* or *Time* data type on layouts, mini-layouts, and custom
+related lists.
+* https://help.salesforce.com/s/articleView?id=sf.fields_using_html_editor.htm&type=5[HTML
+tags] are supported in the read-only fields with the *Text Area* and
+*Text Area Rich* type in mobile layouts.
+
+
+
+[[h4_1648197581]]
+===== Calendar
+
+* To go to the record screen, xref:using-calendar#h3__243561528[use
+the Open button] when tapping activity or double-tap activity in the
+calendar grid.
+* For better visibility, all activities less than 30 minutes occupy a
+30-minute slot in the calendar grid.
+* In the left list of records xref:home-screen#h3_1292798904[of the
+Calendar widget], the limit of 20 records has been removed, so that the
+user can view the agenda of the whole selected day.
+
+
+
+[[h4_780929262]]
+===== Routes
+
+* xref:routes#h3_1243841833[The route points] are now numbered, and
+when tapping on activity on the map, you can use the *Open* button to go
+to the record layout.
+
+
+
+[[h4__222227263]]
+===== Remote Detailing 2.0
+
+* When the presenter taps on the invite link, CT Mobile prompts her to
+start the meeting in the CT Mobile app or default browser.
+
+
+
+Go back to xref:ct-mobile-ios-release-notes#ListOfReleases[the list
+of CT Mobile releases].
+
+[[h1__487586801]]
+=== CT Mobile 2.4
+
+CT Mobile 2.4 uses the Salesforce API v. 50.0 and requires iOS 13 or
+later. We recommend installing
+xref:ct-mobile-package-release-notes#h2_62734607[the latest CT
+Mobile package version].
+
+[[h3__992243427]]
+==== Integrations
+
+The following CT Software products can be used offline along with the CT
+Mobile. Click the link to view the corresponding release notes:
+
+* https://help.customertimes.com/articles/project-ct-sign-en/ct-sign-package-release-notes[CT
+Sign] is a new product that is intended for signing documents based on
+preconfiguring templates. It has more features than the preceding *CT
+Mobile: Documents* module and provides the ability to sign documents
+with a legally binding signature.
+* https://help.customertimes.com/smart/project-ct-vision-en/ct-vision-for-ct-mobile-ios-release-notes[CT
+Vision] is an image recognition tool for sales reps or merchandisers to
+calculate shelf KPIs and gather information about the company and
+competitor products.
+* Flexible distribution of products between deliveries and multi-leveled
+product quantity management to meet the company's logistic and financial
+requirements, along with clickable price tags informing your sales reps
+about currently applied and reachable discounts for the order in the
+renewed
+https://help.customertimes.com/articles/ct-orders-2-0/ct-orders-for-ct-mobile-ios-release-notes[CT
+Orders].
+
+[[h3_919979742]]
+==== Mobile List Views
+
+The ability for field forces to create offline
+xref:list-views#h2__380480215[list views].
+
+
+
+Your browser does not support the HTML5 video element
+
+[[h3__366911420]]
+==== Work while an Activity in Progress
+
+The ability to allow users to leave
+xref:start-finish-functionality#h2_239706372[the unfinished
+activity] for working with other features.
+
+image:Unfinished-Activitty-EN.gif[]
+
+[[h3_694357220]]
+==== Various Improvements
+
+[[h4_284842084]]
+===== UI/UX
+
+* The long library name is fully displayed in
+xref:libraries[Libraries].
+* When xref:log-out[logging out] of the CT Mobile app, a
+notification appears to clarify to a user that the database will be
+erased.
+
+
+
+[[h4__800965327]]
+===== Salesforce Metadata
+
+* Security update: cloud token is now stored in the protected
+xref:api-key[API Key] custom setting.
+* https://help.salesforce.com/articleView?id=fields_using_rich_text_area.htm&type=5[Special
+characters] are supported in xref:mobile-layouts[mobile layouts],
+standard and custom xref:list-views[list views], and
+xref:chatter#h2__779708391[Chatter] posts and comments.
+
+
+
+[[h4__404083085]]
+===== Planning Calendar
+
+* Performance improvements for a large number of activities
+xref:using-calendar[in the calendar grid].
+
+
+
+[[h4_1014032374]]
+===== CT Presenter
+
+* Use xref:clm-application[new attributes of CLM presentation] to
+choose whether the CLM presentation should be available
+xref:applications[offline], used in the
+xref:remote-detailing-launch[Remote Detailing] meeting, or both.
+
+image:RN_available_offline.png[]
+
+
+
+Go back to xref:ct-mobile-ios-release-notes#ListOfReleases[the list
+of CT Mobile releases].
+
+[[h2__487586799]]
+=== CT Mobile 2.3
+
+[TIP] ==== CT Mobile 2.3 release requires iOS 13 or later. ====
+
+https://help.customertimes.com/articles/ct-orders-3-0/ct-orders-for-ct-mobile-ios-release-notes[The
+new CT Orders module] is supported. Leverage CRM flexibility with ERP
+price calculation complexity in a streamlined order-taking process with
+a user-friendly interface.
+
+[[h3_595932522]]
+==== CT Orders
+
+* Add CT Orders to the menu to work offline with orders in the CT Mobile
+app.
+* The ability to create an order on the Account, Contact, or Activity
+record via the customizable mini-layout.
+* Manage the offline order via the *Edit Cart* screen.
+** Search and select products with specific prices structured in the
+catalogs hierarchy or joined in promotions and filtered for the
+customer. Regular products, free goods, and product bundles are
+available.
+** Manage multi-address deliveries. Control the number of deliveries and
+the applicable dates.
+** Quantity rules for setting up min and max products in delivery are
+supported.
+** The ability to save, edit, reopen or discard the order draft.
+** Based on the data in the CT Mobile app, the product list, prices, and
+quantity are validated in the open and reopened draft. The incorrect
+values will be highlighted with the red color and available for editing.
+** Finalize the order to restrict any changes in the CT Mobile app and
+send the order to further processing in Salesforce.
+* Support price calculation logic offline. Advanced logic allows
+calculating each discount separately or in combinations tailored for the
+type of the order.
+* Free goods can be managed either mandatory or manually using a
+condition group to validate the available list of gifts.
+* *Order Change Manager* maintains the integrity of orders saved in
+Salesforce and processes conflicts that occur due to parallel editing of
+the same order in Salesforce and CT Mobile.
+
+[[h3__559203458]]
+==== New Features and Improvements
+
+[[h4__559203458]]
+===== Salesforce Metadata
+
+* According to value, the height of fields with the
+https://help.salesforce.com/articleView?id=choosing_a_formula_data_type.htm&type=5[Formula
+(String)],
+https://help.salesforce.com/articleView?id=custom_field_types.htm&type=5[Picklist
+(Multiselect)&#44; Text&#44; Text Area&#44; Text Area (Long)&#44; or
+Text Area (Rich) type] is dynamically changed and becomes scrollable if
+the max height of 5 lines is exceeded.
+* xref:app-menu[Assign the icon for the main tab] to help a user
+quickly find out the object he is working with when viewing the record
+screen.
+* xref:search[Searching in the left record list] now displays the
+results of the full match search.
+
+
+
+[[h4__1868937389]]
+===== Planning Calendar
+
+* When opening activity from the day or week view in
+xref:using-calendar[the Calendar module], the agenda with records
+of all activities for that day is displayed on the left side.
+
+
+
+[[h4__735612696]]
+===== Routes
+
+* In the xref:routes[Routes] module, the selected options are
+saved.
+
+
+
+[[h4_1082669359]]
+===== CT Presenter
+
+[NOTE] ==== After the CT Mobile 2.3 update, slides of some CLM
+presentations may no longer display in full-screen mode. Please revise
+the slide width and height to fit the screen size of your mobile device.
+Remember to xref:publishing-clm-presentations[re-publish these CLM
+presentations] and perform the fast sync. ====
+
+* The ability to zoom in or out a CLM presentation using
+xref:gestures-in-clm-presentations[a two-finger pinch].
+* Add https://developer.apple.com/documentation/arkit[ARKit models] in
+the[.apiobject]#sources.zip# for displaying in the CLM
+presentations.
+* Remote Detailing
+** Start the remote presentation right from the app
+xref:remote-detailing-launch-the-ct-mobile-app[with one tap].
+** Multitasking: switch between the meeting window and record details
+xref:remote-detailing-1-0-ui-for-presenter[with one tap]. Resume
+the presentation from the last checkpoint.
+
+
+
+[[h4__2072080212]]
+===== Documents Module
+
+* Specify
+https://help.customertimes.com/articles/the-documents-module/digital-signature-settings-field-reference[the
+ability to share the final PDF document] with other services such as
+messengers, e-mail, or social networks.
+
+
+
+[[h4__907134769]]
+===== DFG-152
+
+* The new architecture of
+https://help.customertimes.com/articles/project-dfg-152/about-dfg-152[the
+DFG module] is supported.
+
+
+
+xref:application-settings#h3__353973580[The option to choose]
+whether to save the attached photos locally or not is available again.
+
+
+
+Go back to xref:ct-mobile-ios-release-notes#ListOfReleases[the list
+of CT Mobile releases].
+
+[[h2_2128279152]]
+=== CT Mobile 2.2
+
+[TIP] ==== CT Mobile 2.2 release requires iOS 13 or later. ====
+
+[[h3_1642576463]]
+==== New Features and Improvements
+
+The new custom CTM Settings object will be used to store CT Mobile
+settings instead of custom settings due to
+https://help.salesforce.com/articleView?id=cs_limits.htm&type=5[their
+limitations]. We highly recommend xref:ctm-settings[referring to
+information] about how the settings migration will affect the work with
+the mobile application and *CT Mobile Control Panel*, what settings were
+automatically transferred, and what permissions should be granted.
+
+
+
+[[h4_302499989]]
+===== Synchronization
+
+* Refreshed xref:sync-recovery[Sync Recovery] functionality allows
+pushing records with any errors as a JSON file with information about
+error type and error message text from the mobile device to Salesforce.
+* The additional info message will be displayed during
+xref:synchronization-launch[the fast and full synchronization] to
+remind a user not to collapse the application and not to turn off the
+screen to avoid the interruption of synchronization. Nevertheless, if
+the user switched to another app or turned off the screen for a long
+time, the mobile application still sends an alert before synchronization
+will be interrupted.
+* The new update logic of the *Last Sync Date* field of the User record
+allows making sure that xref:synchronization[the synchronization]
+is complete.
+
+
+
+[[h4__64119727]]
+===== CT Presenter
+
+* For easy work with xref:attachments-and-files[CLM presentation
+source data] and quick source data generation, use archives that were
+automatically split into parts with a size of less than 25 MB.
+* In the interactive presentation, to open files from Attachments of a
+presentation or Libraries, specify the file name with the file extension
+in xref:clm-navigation-in-clm-presentations[the href attribute] of
+the slide layout.
+* Converting a CLM presentation from
+xref:creating-clm-presentation-from-pdf[a PDF
+file] or xref:creating-clm-presentation-from-powerpoint[PowerPoint
+presentation] in Application Editor, the black background color will be
+set and slides will be aligned to the center of the screen.
+
+
+
+[[h4_1477242707]]
+===== Modules and Menu Items
+
+* The mobile application needs access to certain data, e.g., geolocation
+or Photos. For your convenience and better clarity, we added
+xref:application-prompts-for-requesting-permissions[pop-ups] with
+functionalities that need the requested permission.
+* Labels of menu items and modules in the menu, such as *Home Screen*,
+*Routes*, or *Libraries*, xref:renaming-menu-items-and-modules[can
+be translated] using custom labels.
+* On the xref:ipad[detailed list view] screen, remove a record as
+well as create a record if permissions are granted.
+* The support of the standard *Shipping Address* and *Billing Address*
+fields as xref:mobile-application-setup[Account Geolocation Field]
+in xref:nearby-accounts[Nearby Accounts] and
+xref:routes[Routes] modules, in xref:mobile-layouts-maps[the
+Map widget], and within xref:actions[the Determine Location button]
+in the combo-menu.
+* Use list views of xref:clm-application[the Application object] to
+filter records in xref:applications[the Applications module].
+* To quickly return to xref:calendar[the Calendar] after moving on
+the details screen of the selected activity, tap once again *Calendar*
+on the menu. Also, the back and forward buttons are available to jump to
+the calendar.
+* In the
+https://help.customertimes.com/smart/project-the-documents-module/about-document-module[Documents
+module], you can
+https://help.customertimes.com/articles/the-documents-module/digital-signature-settings-field-reference[specify
+the ability to share] the final PDF document with other services such as
+messengers, e-mail, or social networks.
+* The logic of the
+https://developer.salesforce.com/docs/atlas.en-us.222.0.api.meta/api/sforce_api_objects_event.htm[IsAllDayEvent]
+of the standard[.object]#Event# object is supported.
+
+
+
+Salesforce SOS functionality is no longer supported.
+
+
+
+Go back to xref:ct-mobile-ios-release-notes#ListOfReleases[the list
+of CT Mobile releases].
+
+[[h2__487586798]]
+=== CT Mobile 2.1
+
+[TIP] ==== CT Mobile 2.1 release requires iOS 12 or later. ====
+
+[[h3__2127149456]]
+==== New Features and Improvements
+
+* A brand-new UI for intuitive user experience:
+** New icons, xref:application-theme[vivid app themes], and modern
+fonts.
+** Upgraded xref:calendar[Calendar], xref:routes[Routes], and
+xref:nearby-accounts[Nearby Accounts] modules with user-friendly
+logic.
+** xref:ipad[The collapsible main menu] provides a much wider
+working area on your iPad.
+** xref:ipad[Detailed List Views]. Look through the detailed list
+views on your iPad.
+** xref:clm-presentation-controls[Multitasking during an activity]
+on your iPad. Switch between the presentation and record details with
+one tap. Resume the presentation from the last checkpoint.
+** New UI for xref:iphone[iPhone devices].
+* The xref:logging-in[Login screen] is implemented using the
+xref:oauth-2-0[OAuth 2.0] protocol and standard Salesforce UI.
+* xref:libraries[The content module] now supports folder hierarchy.
+* xref:sync-recovery[Sync Recovery]. Recovering the records which
+could not be properly sent to Salesforce due to permissions issues.
+* Adjust the xref:columns-width-for-related-lists[width of columns]
+of the related lists and custom related lists.
+* The long-hoped-for plus button is now available in the *Calendar*. It
+is another way xref:using-calendar[to create an activity in the
+Calendar] by selecting start and end dates in a mini-layout.
+* Turn on/off the ability to synchronize a single record and its child
+records by pulling down the record details screen.
+* xref:set-up-holidays[Salesforce Holidays] are now supported and
+are highlighted in the app's calendar.
+* xref:ct-mobile-control-panel-general[Image Quality]. Set the
+amount of image compression to control the data volume sent to
+Salesforce.
+* xref:mini-layouts[Mini Layouts] can be assigned to a specific
+user profile.
+* Each user profile can have its xref:custom-color-settings[custom
+color settings] for record lists, calendar events, and the timeline
+view.
+
+[[h3__649865195]]
+==== Fixes
+
+* Fix for the *Routes* module. The map is focusing correctly on the area
+where the route is being built.
+* The[.apiobject]#Owner# operator is supported in formulas.
+* https://developer.salesforce.com/docs/atlas.en-us.soql_sosl.meta/soql_sosl/sforce_api_calls_soql_select_dateformats.htm[Time
+constants] are supported as SOQL-filter criteria for the custom related
+lists.
+
+[NOTE] ==== The list view button is removed, but don't worry.
+All functionality is available xref:ipad[by clicking the name of
+the current list view]. In a pop-up window, you can find all available
+list views for this object to switch.  ====[NOTE] ==== Now all
+attached photos are saved on a device. We are working to give you back
+the option to select, store attached photos only locally, or duplicate
+them on a device. ====
+
+
+
+Go back to xref:ct-mobile-ios-release-notes#ListOfReleases[the list
+of CT Mobile releases].
+
+[[h2__917121525]]
+=== CT Mobile 1.4 (1.9.6)
+
+The new release brings you a bunch of new features and covers more than
+100 bug fixes and other improvements.[TIP] ==== CT Mobile 1.9.6
+release requires iOS 10 or later. ====
+
+[[h3_1638892353]]
+==== New Features and Improvements
+
+[[h4__810150278]]
+===== xref:synchronization.html[Synchronization]
+
+* Synchronization data monitoring (type, date and time, status, and
+duration). The data is automatically transferred to Salesforce as the
+records of the xref:sync-log[Sync Log] object with an attachment
+containing detailing information (log file). Use
+xref:sync-logs[reports to analyze] the synchronization.
+* New synchronization algorithm with accelerated identification of the
+created and updated records.
+* xref:libraries[The Libraries module] download process can be
+moved to the background, which significantly improves the
+synchronization time.
+* xref:metadata-archive[Metadata downloading] optimization.
+* The fast and mixed synchronization processes are not interrupted in
+case of errors. The unsynchronized records containing errors can be
+synchronized after the errors are corrected.
+
+
+
+[[h4__1306378709]]
+===== xref:ct-mobile-workflow.html[CT Mobile Workflow]
+
+* Multistep CT Mobile Workflow execution time is reduced.
+* Child records can be created/updated/deleted after updating their
+parent record or after tapping the button defined in the CT Mobile
+Workflow rules.
+* Capture geolocation during the CT Mobile Workflow step (e.g. on an
+[.object]#Activity# start or a record field update).
+
+[[h4_1292798904]]
+===== xref:using-calendar.html[Calendar]
+
+* Set the date and time when cloning or moving an event in the
+*Calendar*.
+
+[[h4_951662406]]
+===== General
+
+* https://help.salesforce.com/articleView?id=fields_defining_field_dependencies.htm&type=5[Field
+dependency support] (filters that allow changing the contents of a
+picklist based on the value of another field).
+* Dashboards created via Salesforce Lightning UI are supported on the
+xref:home-screen[Home Screen].
+* Attachments multi-select. Select multiple images from the Photos app
+to add them to a record.
+* xref:ct-mobile-replication[Improved replication]. Shared records
+(previously unavailable) can be synchronized via fast synchronization.
+* The administrator credentials are no longer required to access the
+Salesforce Metadata API during the synchronization.
+* External libraries are updated to the latest versions.
+* xref:nearby-accounts[The Nearby Accounts module]. The records
+list displays only the[.object]#Accounts# with defined
+geolocation and the records which are related to such
+[.object]#Accounts#.
+* The minus key (-) is available on the In-App keyboard while editing
+the *Number*, *Percent*, and *Currency* type fields.
+* The xref:search[Search] box value lower limit is reduced from
+three symbols to one.
+
+[[h3__116462914]]
+==== Fixes
+
+[[h4__291739317]]
+===== Calendar
+
+* Activities are displayed correctly if the *Start Date* or *End Date*
+is out of the *Visible Hours Range* setting value.
+* Mass actions with[.object]#Activities#. The moved or copied
+records date is calculated correctly.
+
+[[h4__1398368348]]
+===== General
+
+* Fix for attachments folder. When adding an image to a record, the
+attachment folder orientation (portrait or landscape) corresponds to the
+current mobile application orientation.
+* Fix for attachments folder. When adding an image to a record, the
+attachment folder orientation (portrait or landscape) corresponds to the
+current mobile application orientation.
+* Fix for the *Date/Time* field values during the daylight saving time
+clock adjustment.
+* The xref:person-accounts[Person Account] record type can be
+created from a reference field.
+* *Dashboards*. Graphs with summary formulas involved are displayed
+correctly on xref:home-screen[Home Screen].
+* Inactive filter criteria are no longer applied to reference fields.
+* Fixed swipe right functionality (to open the main menu or the records
+list) in the related lists xref:iphone[on iPhone devices].
+
+
+
+Go back to xref:ct-mobile-ios-release-notes#ListOfReleases[the list
+of CT Mobile releases].
+
+[[h2__1182701537]]
+=== CT Mobile 1.1.0 (1.9.5)
+
+[[h3_154000335]]
+==== New Features and Improvements
+
+* Managing the application’s business logic. No code, no development.
+* https://help.salesforce.com/articleView?id=fields_about_roll_up_summary_fields.htm&type=5[The
+Roll-Up Summary fields support].
+* The ability to create and manage detailed records for standard objects
+*Task* and *Event*.
+* xref:application-editor[Customizable statistics gathering] on
+displaying individual screens and elements in CLM presentations.
+* xref:synchronization[Selective synchronization] in case of user
+access rules to object records is changed.
+* Now you can sort xref:related-lists[the custom and standard
+related lists] by lookup fields.
+* The *Determine Location* button is not displayed when using
+positioning xref:actions[on activity start].
+* xref:clm-presentation-controls[Presentation exit screen
+improvements].
+* The xref:managing-offline-objects[offline-objects] customization
+and loading process logic are revised.
+* Prefixes and postfixes are now considered when working with objects
+and their fields.
+* The synchronization process is optimized. The *Recently Viewed*
+standard filter (list view) is now supported.
+* Increased number of fields, which are displayed in the calendar as
+additional information about activities.
+* Now you can copy values from read-only fields.
+* Work with several types of object records within a single custom
+related list.
+* Metadata API to SOAP API migration.
+* xref:sync-logs[Application log records] are more detailed.
+* xref:person-accounts[Person Accounts] will now display in *Nearby
+Accounts* with appropriate settings.
+* The improved logic of xref:using-calendar[copying activities] in
+the calendar.
+
+[[h3__1652028519]]
+==== Fixes
+
+* The *Picklist* fields. The fields are now displaying the correct
+values dependent (field dependency) from checkbox fields.
+* Fix for users with *Partner Community* license type. Now they can add
+new posts in xref:chatter[Chatter].
+* The corrected logic of using *Open Activities* and *Activity History*
+related lists.
+* Can no longer copy text to the *Text* field that exceeds the number of
+characters allowed.
+
+
+
+Go back to xref:ct-mobile-ios-release-notes#ListOfReleases[the list
+of CT Mobile releases].
+
+[[h2__432069667]]
+=== CT Mobile 1.0.5 (1.9.3)
+
+[[h2_95930402]]
+==== New Features and Components
+
+* Updated for iOS 11.
+* xref:ical-synchronization[Two-way sync with iPad/iPhone internal
+Calendar].[.object]#Events# from the internal iPad/iPhone
+calendar can be displayed in the CT Mobile planning calendar.
+* Standard Salesforce[.object]#Orders# are now supported in the
+CT Mobile app.
+* New Salesforce SOS functionality - video calls to technical support
+with mobile device screen sharing capability.
+* Optimized xref:synchronization[synchronization] for organizations
+with an extended data model and large data volumes.
+* Customizable set of xref:search[search fields] for each object.
+* xref:reference-fields#h2__1554731138[Quick record creation in
+reference fields] (lookup) selection window.
+* Custom report types are now supported for Salesforce
+https://help.salesforce.com/articleView?id=analytics_overview.htm&type=5[reports
+and dashboards].
+* Separate settings for displaying[.object]#Event# and
+[.object]#Task# object records in *Open Activities* and
+*Activity History* related lists.
+* The xref:actions[Determine Geolocation] functionality in the
+*Accounts* combo menu now depends on the user’s access rights to the
+geolocation field.
+* xref:debug-console[Application log] search functionality added.
+* The *Time* type fields are now supported.
+* Multiple currencies functionality added.
+* xref:home-screen[Customizable Home screen] for iPhone added.
+* The xref:chatter[Chatter] functionality for iPhone was added.
+
+[[h3_118294372]]
+==== CLM-presentations
+
+* JS Bridge methods added:
+** xref:ctm-disableslidescroll[ctm.isableSlideScroll]: optional
+lock for slides scrolling using gestures.
+** xref:ctm-enableslidescroll[ctm.enableSlideScroll]: slide
+scrolling unlock option.
+** xref:ctm-storefile[ctm.storeFile]: saving a file attachment as
+an attachment to a record.
+** xref:ctm-getfile[ctm.getFile] - getting the contents of an
+attachment to a record.
+** Ability to open contents using[.apiobject]#window.open# in
+the native preview window.
+* Added capability to select rendering mode for interactive content
+(xref:mobile-application-setup[Mobile Application Setup]).
+** wk - more productive and modern, suitable for most presentations.
+Used by default on mobile devices running iOS 9 and above.
+** wks - local server for presentations display, created using MVC
+frameworks (angular, backbone, knockout, etc.), using connectable
+modules and components.
+** UI - a classic renderer for backward compatibility with previously
+created presentations.
+* Fix the list scrolling of available
+xref:applications#h3_1236408094[custom scenarios] in the
+presentation details screen.
+
+
+
+Go back to xref:ct-mobile-ios-release-notes#ListOfReleases[the list
+of CT Mobile releases].

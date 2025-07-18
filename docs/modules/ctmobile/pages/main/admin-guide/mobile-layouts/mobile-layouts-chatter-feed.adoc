@@ -1,0 +1,182 @@
+= Mobile Layouts: Chatter Feed
+
+The *Chatter* feed is a widget to display user messages on
+xref:chatter[the Chatter module] or in the *Chatter* tab of the
+selected record screen. Users can create posts and comments, and add
+attachments.
+
+[[h2__868831931]]
+=== Important Notes
+
+* Some https://help.salesforce.com/articleView?id=collab_feed_tracking_overview.htm&type=5[standard
+objects&#44; e.g.&#44; Account or Contact&#44; are tracked] regardless
+of whether feed tracking is enabled or not.
+* To display *Chatter* on the mobile layout of the custom object record,
+e.g., custom activity or custom meeting, feed tracking should be enabled
+for the corresponding custom object.
+* To use the *Chatter* widget:
+
+. Enable
+https://help.salesforce.com/articleView?id=collab_feed_tracking.htm&type=5[Chatter
+Feed tracking] to allow users to see feed updates, such as new records,
+comments on them, and likes, they follow.
+. Enable xref:chatter-push-notifications[push notifications] if
+needed.
+
+[[h2__1510760474]]
+=== Add Chatter to the Menu
+
+To add the *Chatter* module to the xref:app-menu[app menu]:
+
+[width="100%",cols="50%,50%",]
+|===
+|In CT Mobile Control Panel a|
+. Go to xref:ct-mobile-control-panel-app-menu[CT Mobile Control
+Panel: App Menu] tab.
+. Select the required profile in the *Location* picklist.
+[TIP] ==== *General Settings* will be applied to all the
+profiles without individual settings.
+====
+. Click the
+image:62562609.png[]
+button to open the *Add menu item* tool.
+. Select the *Chatter* item.
+. Click *Add* to close the *Add menu item* tool.
+. Click *Save*.
+
+|In CT Mobile Control Panel 2.0 a|
+. Go to xref:ct-mobile-control-panel-app-menu-new[CT Mobile Control
+Panel 2.0: App Menu] tab.
+. Select the required profile in the *Profile* picklist. To apply
+settings to all the profiles, select *General Settings*.
+. Click *Show Module Menu*.
+. On the *All* or *Application Modules* tab, select
+the **Chatter** item.
+
+|===
+
+The setup is complete.
+
+[[h3_96344064]]
+=== Add Chatter to the Mobile Layout
+
+To add the *Chatter* widget to the mobile layout:
+
+. Go to *Setup → Object Manager →* select the[.object]#Account#
+or[.object]#Contact# object.
+. Click *Page Layouts* and select the mobile layout.
+. Drag and drop the *Section* element to the *Account* or *Contact
+Detail* area.
+. In the *Section Properties* window, enter *CHATTER* in the *Section
+Name* field, and select the *1-Column* layout. Ensure that the *Display
+Section Header On* checkbox is enabled.
+
+[NOTE] ==== Do not translate the *CHATTER* section name. It is
+responsible for displaying *Chatter* on the mobile layout and should be
+left intact. ====
+. Click *OK*.
+. Drag and drop the *Blank Space* element below the *CHATTER* element.
+. Click *Save*.
+
+The *Chatter* widget is configured.
+
+ifdef::ios[]
+image:62560427.png[]
+ifdef::win[]
+image:layout_chatter_win_en.png[]
+ifdef::andr[]
+image:62560428.jpg[]
+
+[[h2_393538135]]
+=== Posts and Comments
+
+ifdef::ios[]
+
+By default, posts and comments for the last 6 weeks are downloaded. To
+update posts and comments, pull down the chatter screen. The records
+(text posts, link posts, and content posts), comments, and likes will be
+synchronized.
+
+
+
+Tap
+image:62560432.png[]
+and then tap *Add post* to create a new message for the record.
+
+[NOTE] ==== The user profile should have permission to edit
+records of the object to which the *Chatter* tab is added. ====
+
+* Take a photo or select a photo from the gallery.
+* Attach the audio message or select the audio from the device.
+* Attach a link.
+
+Tap
+image:62562619.png[]
+under the post to comment. Tap
+image:chatter-2020-06-17.png[]
+to view comments for the related post.
+
+* Take a photo or select a photo from the gallery.
+* Attach the audio message or select the audio from the device.
+
+Only one attachment can be added to a post or comment.
+
+Tap
+image:like_chatter.png[]
+to like a post or comment.
+
+ifdef::win[]
+
+[[h2_1617253274]]
+=== Posts and Comments
+
+You can create, edit, or delete posts and comments.
+Tap/left-click image:post_chatter_win_edit.png[]
+next to your post or comment to edit or delete it. The confirmation box
+appears when you delete the record.
+
+
+
+To update a feed, tap/left-click
+image:chatter_update.png[].
+The spinner will be shown during the synchronization. The records (text
+posts, link posts, and content posts), comments, and likes will be
+synchronized.
+
+
+
+Tap
+image:62562618.png[]
+to add a new message to the feed, group, or contact. You can edit or
+delete a post. If you cancel the post sending, the text message will be
+saved (but the attachment will not) until the logout.
+
+[NOTE] ==== The user profile should have permission to edit
+records of the object to which the *Chatter* tab is added. ====
+
+* Format text and number lists.
+* Take a photo or select a photo from the gallery.
+* Attach a file from the device.
+* Attach a link.
+
+Tap
+image:62562619.png[]
+under the post to comment.
+
+* Format text and number lists.
+* Take a photo or select a photo from the gallery.
+* Attach a file from the device.
+
+[NOTE] ==== Only one attachment can be added to a post or
+comment. ====
+
+Tap
+image:like_chatter.png[]
+to like a post or comment. Tap the record name to open its feed.
+
+ifdef::andr[]
+
+Tap image:post_chatter.png[]
+to create a new message for the record.
+
+Tap *Add comment* under the post to comment on it.

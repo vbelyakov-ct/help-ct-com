@@ -1,0 +1,30 @@
+= Clickjack Protection Settings
+
+Salesforce provides *Clickjack Protection* on
+https://help.salesforce.com/articleView?id=siteforce_overview.htm&type=5[Site.com].
+To use this option along with xref:installing-ct-mobile-package[the
+installed CT Mobile package]:
+
+. Configure *Clickjack Protection* settings. Follow the Salesforce guide
+https://help.salesforce.com/articleView?id=siteforce_clickjacking_enable.htm&type=5[here].
+. Add your domain to the trusted domains to enable CT CLM features.
+
+[[h2_482280866]]
+=== Add Domain to Trusted Domains
+
+After configuring *Clickjack Protection* functionality:
+
+. Go to *Setup → Security → Session Settings*.
+. In the *Clickjack Protection* section, check the required options.
+image:Clickjack-Protection-options.png[]
+. In the *Trusted Domains for Visualforce and Survey Inline Frames*
+section, click the *Add Domain* button.
+* In the *Domain* field, enter the Domain name.
+
+[TIP] ==== To obtain the Domain name, go to *Setup → Domains →*
+copy *Domain Name*. ====
+* In the *IFrame Type* field, select *Visuaforce pages*.
+image:Add-Trusted-Domain.png[]
+. Click *Save*.
+
+The setup is complete.

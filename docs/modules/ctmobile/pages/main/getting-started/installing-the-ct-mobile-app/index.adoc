@@ -1,0 +1,143 @@
+= Installing the CT Mobile app
+
+ifdef::ios[]
+
+The CT Mobile app is available only for iPhones and iPads. Before the CT
+Mobile app installation,
+xref:technical-requirements-for-devices-and-network#h3__118091408[read
+the requirements].
+
+[[h2__716912205]]
+=== Install CT Mobile
+
+To install the CT Mobile app, follow the direct link on the
+https://apps.apple.com/app/ct-mobile-for-salesforce/id1234947996[App
+Store].
+
+
+
+After the installation:
+
+. https://support.apple.com/en-us/HT204460[Establish trust for the CT
+Mobile app]:
+.. Go to *General → Profiles & Device Management*.
+.. Under *Enterprise App* tap *Customertimes, Corp.*
+.. Tap *Trust* *"Customertimes, Corp."*.
+. Launch CT Mobile and log in with your Salesforce credentials
+xref:installing-ct-mobile-package[to your Org].
+. *Allow* access to requested data.
+
+image:allow_access_en.png[]
+. Click *Next* in
+xref:application-prompts-for-requesting-permissions[the additional
+pop-up] with the permission and the usage description.
+
+image:anonymous_data_en.png[]
+. ​Allow or restrict sending anonymous diagnostic data and logs to
+developers.
+
+image:anonymous_data_2_en.png[]
+. Perform xref:full-synchronization[a full synchronization].
+
+CT Mobile is ready to use.
+
+[[h2_419782894]]
+=== Installation Issues
+
+If you have installation issues on a device under iOS 12, check the
+parameters below. If the installation is failed, continue to the next
+step.
+
+. Go to *Settings → General → Date & Time → Set Automatically →* turn
+*ON*.
+. Go to *Settings → General → Reset → Reset Network Settings*.
+. ​Re-enter the App Store.
+Go to *Settings → iTunes & App Store → Apple ID → Sign Out*.
+. Try to reset all settings or update the iOS to a higher version.
+
+ifdef::win[]
+
+Before the CT Mobile app installation,
+xref:technical-requirements-for-devices-and-network#h3__118091408[read
+the requirements].
+
+[[h2__1678986158]]
+=== Create a Microsoft Account
+
+Microsoft Account is used to get access to Microsoft Store and to
+download apps that are hosted there on Windows devices. To get access to
+Microsoft Store, go to http://signup.live.com/[signup.live.com] to
+create a Microsoft account or to http://login.live.com/[signin.live.com]
+to sign in.
+
+[[h2_1690856550]]
+=== Install CT Mobile
+
+To install the CT Mobile application:
+
+. Follow https://www.microsoft.com/store/r/9N4D4J5SH8TT[the link].
+. The new browser window opens on the CT Mobile page of the Microsoft
+Store.
+
+image:66357131.png[]
+
+[{plus}] Expand if you have already installed CT Mobile
+
+.[-] Hide[%collapsible] ====
+
+If you have already installed the CT Mobile application, the info bar
+above the CT Mobile description is shown. Click *Install/open* and move
+to step 3.
+
+image:66357132.png[]
+====
+
+
+
+[[expander-1147539565]]
+[[expander-content-1147539565]]
+. Click *Get*.
+. In the pop-up, click *Open Microsoft Store*.
+
+image:66357134.png[]
+. In the Microsoft Store, click *Install*.
+
+It will take some time for the CT Mobile application to install.
+
+
+image:66357135.png[]
+. After installation, click *Launch*.
+
+
+image:66357137.png[]
+
+CT Mobile opens. xref:logging-in[Logging in] to start.
+
+ifdef::andr[]
+
+Before the CT Mobile app installation,
+xref:technical-requirements-for-devices-and-network#h3__118091408[read
+the requirements]. To install the CT Mobile app:
+
+. Follow https://www.ctclm.com/apps/android/[the direct link].
+. Tap *Install*.
+
+image:Install-CT-Mobile-Android.jpg[]
+. Tap *Open*.
+
+ifdef::kotlin[]
+
+Before the CT Mobile app installation,
+xref:technical-requirements-for-devices-and-network#h3__118091408[read
+the requirements]. To install the CT Mobile app:
+
+. Contact the Customertimes team to obtain a direct link.
+. Tap *Install*.
+
+image:Install-CT-Mobile-Android.jpg[]
+. Tap the CT Mobile icon to open the CT Mobile app.
+
+
+
+After the installation, xref:logging-in[log in to the CT Mobile
+app].

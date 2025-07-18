@@ -1,0 +1,99 @@
+= Application Prompts for Requesting Permissions
+
+For the full functionality of the mobile application on iOS devices, it
+is necessary to allow CT Mobile access to certain data, e.g.,
+geolocation data or access *Photos*.
+
+* CT Mobile will show an additional pop-up with the permission and the
+usage description before asking to grant it.
+* The specified xref:application-theme[theme] is applied to
+prompts.
+
+
+
+image:66360070.png[]
+
+
+
+Examples of prompts:
+
+
+
+[cols="^,^,^",]
+|===
+|*Access to share analytics, diagnostics, and usage information*
+|*Access to geolocation* |*Access to the Camera*
+
+|image:66359792.png[]
+|image:66359791.png[]
+|image:66359790.png[]
+|===
+
+
+
+Click *Next* to view the system-provided alert.
+
+
+
+image:66368968.png[]
+
+
+
+Before the launch of the synchronization, when a mobile user
+xref:logging-in[logged in] to CT Mobile for the first time, the
+mobile application asks a mobile user to:
+
+. Enable push notifications for CT Mobile in the Settings on a mobile
+device. Notifications will be displayed when a new post was published in
+a mobile user xref:chatter-push-notifications[Chatter feed] or
+xref:event-notifications[as an alert of the upcoming visit]. Also,
+this permission is required to fill out the xref:clm-user[Device
+Token] field during the sync process.
+
+image:62556899.png[]
+
+
+. Allow access to share analytics, diagnostics, and usage information.
+
+
+
+Other requests pop-ups only when a mobile user activates the
+corresponding feature for the first time:
+
+* *Allow access to geolocation*
+
+[TIP] ==== The pop-up will be displayed if the value in the
+*Tracking Interval (in seconds)* field has not 0 value on the
+xref:ct-mobile-control-panel-general#h3__1808523151[CT Mobile
+Control Panel:
+General]/xref:ct-mobile-control-panel-general-new#h3__1808523151[CT
+Mobile Control Panel 2.0: General] for the current user's profile (even
+if the push notification is not enabled for the device).  ====
+
+When a mobile user taps xref:nearby-accounts[Nearby Accounts],
+xref:routes[Routes], xref:actions[the Determine location
+button], or calls an app for the first time.
+* *Allow access to Calendar*
+
+When a mobile user enables xref:ical-synchronization[iCal
+synchronization].
+* *Allow access to Photos*
+
+When a mobile user chooses a photo from *Photos* and attaches them to
+records or xref:chatter[Chatter posts].
+* *Allow access to Contacts*
+
+For viewing contact information in the xref:calendar[calendar] in
+case of using xref:ical-synchronization[iCal synchronization].
+* *Allow access to the microphone*
+
+When a mobile user records audio messages and attaches them to
+xref:chatter[Chatter posts].
+* *Allow access to the Camera*
+
+When a mobile user captures photos and attaches them to records or
+xref:chatter[Chatter posts].
+* *Allow access to Media*
+
+When a mobile user chooses audio files on a mobile device and attaches
+them to records or xref:chatter[Chatter posts].

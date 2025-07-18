@@ -1,0 +1,37 @@
+= Opportunities Object Model
+
+The object model consists of several standard objects.
+
+image:Opportunity-Object-Model.png[]
+
+[NOTE] ==== To work with[.object]#Opportunities ==== ,
+a mobile user should have permission to read and edit
+[.object]#Opportunity# fields and related objects.# [cols=",,",] |=== |*Object* |*API Name* |*Description* |https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_objects_opportunity.htm?search_text=oppor[Opportunity] |[.apiobject]#Opportunity# |Represents a sale or pending deal.
+
+|https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_objects_opportunitylineitem.htm?search_text=oppor[Opportunity
+Product] |[.apiobject]#OpportunityLineItem# |Represents a
+product associated with an opportunity.
+
+|https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_objects_pricebook2.htm?search_text=oppor[Price
+Book] |[.apiobject]#Pricebook2# |Represents a price book that
+contains the list of products that your org sells.
+
+|https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_objects_pricebookentry.htm?search_text=oppor[Price
+Book Entry] |[.apiobject]#PricebookEntry# |Represents a product
+in a price book. It is an association between[.object]#Price
+Book# and[.object]#Product#.
+
+|https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_objects_product2.htm?search_text=oppor[Product]
+|[.apiobject]#Product2# |Represents a product that your org
+sells.
+|===
+
+
+
+Click to view the description of the desired object fields:
+
+* https://help.salesforce.com/articleView?id=opp_fields.htm&type=0[Opportunity]
+* https://help.salesforce.com/articleView?id=opportunity_product_fields.htm&type=0[Opportunity
+Product]
+* https://help.salesforce.com/articleView?id=products_fields.htm&type=0[Price
+Book&#44; Price Book Entry&#44; Product]

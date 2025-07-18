@@ -1,0 +1,247 @@
+= Actions
+
+The *Actions* combo menu allows additional actions to be performed on a
+record details screen.
+
+:toc: :toclevels: 3
+
+ifdef::ios[]
+
+[cols=",",]
+|===
+|On the *Account* record:
+|image:account_actions_en.png[]
+
+|On the *Activity* record:
+|image:/resources/Storage/ct-mobile-ios-en/activity_actions_en.png[/resources/Storage/ct-mobile-ios-en/activity_actions_en]
+|===
+
+
+
+ifdef::kotlin[]
+
+image:Actions_Kotlin.png[]
+
+ifdef::ios,kotlin,win[]
+
+[[h2__1355154294]]
+=== Determine Location
+
+ifdef::win[]
+
+If the *Account* record has no location, click the
+image:maps_win_2_ru.png[]
+icon on the map to save the current coordinates as the address for this
+record. The mobile user should have permission to edit the geolocation
+field.
+
+ifdef::ios,kotlin,[]
+
+Tap the *Determine Location* button to determine the current device
+location data for an *Account* or *Activity* record and write them into
+the specific field.
+
+When a mobile user has permission to edit records (refer to
+xref:managing-offline-objects[Managing Offline Objects in CT Mobile
+Control Panel] or
+xref:ct-mobile-control-panel-offline-objects-new[CT Mobile Control
+Panel 2.0: Offline Objects]).
+
+When the mobile user has permission to edit the geolocation type field.
+
+ifndef::kotlin[]
+
+A geolocation type field on the[.object]#Account# object used
+to store the geolocation of the organization.
+
+A geolocation type field on the[.object]#Activity# objects used
+to store the geolocation of the activities.
+
+If xref:start-finish-functionality[the Start/Finish functionality]
+is on *Capture Geoposition* is enabled, and a mobile user has forenamed
+permissions for a record of an[.object]#Activity# object, the
+geolocation is automatically captured and the *Determine Location*
+button is hidden.
+
+
+
+ifndef::kotlin[]
+
+The *Determine Location* button is available on the records of other
+objects:
+
+* When xref:ct-mobile-control-panel-general#h2_670774632[a
+geolocation type field on the Account object] is specified (refer to
+xref:ct-mobile-control-panel-general#h3_612123135[CT Mobile Control
+Panel: General → Account Geolocation Field] or
+xref:ct-mobile-control-panel-general-new#h3_612123135[CT Mobile
+Control Panel 2.0: General → Account Geolocation Field]).
+* The API name of the geolocation type field on the required object is
+the same as the API name of the geolocation type field on the
+[.object]#Account# object.
+* The mobile user has permission to edit the geolocation type field.
+
+ifndef::ios[]
+
+When a mobile user taps the *Determine Location* button, the map with
+the geolocation is displayed. Tap the *Map Type* button to select the
+appropriate type, for example, to manually add the new address.
+
+image:capture-geolocation_kotlin.jpeg[]
+
+ifdef::ios[]
+
+[[h2_62618674]]
+=== File
+
+Add files to a record. Tap the *File* button to select one or several
+files from the device storage. View files on the *Files* tab of the
+record.
+The *File* button is available on any object—the records
+of [.object]#Accounts#, [.object]#Contacts#,
+and [.object]#Activity# objects:
+
+* When a mobile user has permission to edit records.
+* When a record is available for a mobile user according
+to https://help.salesforce.com/articleView?id=sharing_model_fields.htm&type=5[Sharing
+Settings], for example, with *Public Read/Write* access, if there
+is https://help.salesforce.com/articleView?id=security_sharing_rules_create.htm&type=5[a
+sharing rule], or if the access was
+granted https://help.salesforce.com/articleView?id=security_sharing_owd_user_manual.htm&type=5[manually].
+
+To know more about attaching and viewing files in the *Files* section,
+refer to xref:attaching-files-in-the-files-section[Attachments in
+the Files Section].
+
+[[h2_62618674]]
+=== Photo
+
+Add pictures to a record. Tap the *Photo* button to select one or
+several photos from the device gallery, or take a new one. View photos
+on the *Files* tab of the record.
+The *Photo* button is available on any object—the records of
+[.object]#Accounts#,[.object]#Contacts#, and
+[.object]#Activity# objects:
+
+* When a mobile user has permission to edit records.
+* When a record is available for a mobile user according to
+https://help.salesforce.com/articleView?id=sharing_model_fields.htm&type=5[Sharing
+Settings], for example, with *Public Read/Write* access, if there is
+https://help.salesforce.com/articleView?id=security_sharing_rules_create.htm&type=5[a
+sharing rule], or if the access was granted
+https://help.salesforce.com/articleView?id=security_sharing_owd_user_manual.htm&type=5[manually].
+
+ifdef::ios,kotlin[]
+
+
+
+If xref:start-finish-functionality[the Start/Finish functionality]
+is on and a mobile user has fore-named permissions for a record of an
+[.object]#Activity# object:
+
+* When the activity was not started, a mobile user can view photos, but
+cannot take photos or choose photos from the device gallery.
+* When the activity was started, a mobile user can take photos or choose
+photos from the device gallery.
+
+ifdef::ios,win,andr[]
+
+[[h2_785802245]]
+=== Add Post
+
+ifndef::win[]
+
+Add a post in the xref:mobile-layouts-chatter-feed[Chatter feed].
+Click *Add Post*. In the open modal window:
+
+[NOTE] ==== The user profile should have permission to edit
+records of the object to which the *Chatter* tab is added. ====
+
+* Tap
+image:58836467.png[]
+to add a link.
+* Tap
+image:58836469.png[]
+to add a photo or audio message from the device. You can also take
+another photo or audio message.
+
+ifndef::ios,andr[][NOTE] ==== The user profile should have
+permission to edit records of the object to which the *Chatter* tab is
+added. ====
+
+Click the *Plus* button to add a new post to the
+xref:mobile-layouts-chatter-feed[Chatter feed].
+
+ifdef::ios[]
+
+[[h2_785802245]]
+=== Signature
+
+Add a signature on records of the[.object]#Activity# objects.
+View the signature on the *Files* tab of the record.
+[NOTE] ==== Since CT Mobile 2.2, this action is hidden but you
+can add it by code. ====
+
+[[h2_1173923582]]
+=== Export to File
+
+Tap to export selected fields to a CSV file.
+
+* The menu item is displayed on related records, if the *Export
+Allowed* checkbox is set to _true_ (refer to
+xref:ctm-settings-offline-objects[Offline Objects → Export Allowed]
+or xref:ct-mobile-control-panel-offline-objects-new#h3_290156637[CT
+Mobile Control Panel 2.0: Offline Objects → Export to CSV]).
+* Default fields should be specified in the** Default Columns** field of
+the xref:ctm-settings-offline-objects[Offline Object] or in
+xref:ct-mobile-control-panel-offline-objects-new#h4__912917703[CT
+Mobile Control Panel 2.0: Offline Objects → Export Columns Selection].
+* Custom fields can be selected for export if
+the xref:ctm-settings-offline-objects[Select Export
+Columns] checkbox is set to _true_ or
+xref:ct-mobile-control-panel-offline-objects-new#h4__912917703[Export
+Columns Selection] is set to *User-Selected Columns* or *Predefined and
+User-Selected Columns*.
+[TIP] ==== To export selected fields to file for the main
+object, switch to xref:list-views#h2_1248088428[detailed list
+view]. ====
+
+image:ctmi-export-csv-2.9.png[]
+
+
+
+ifdef::win[]
+
+[[h2__784112042]]
+=== Order
+
+To create an order offline, follow the steps in
+https://help.customertimes.com/articles/ct-orders-4-0/adding-ct-orders-to-the-ct-mobile-app-4-0[the
+CT Orders guide].
+
+[[h2__13678918]]
+=== 
+
+ifdef::win,ios[]
+
+[[h2__13678918]]
+=== Sign document
+
+To sign a document offline, follow the steps in
+https://help.customertimes.com/smart/project-ct-sign-en/add-the-ct-sign-to-the-ct-mobile-app[the
+CT Sign guide].
+
+ifdef::hidden[]
+
+[[h2_1289864329]]
+=== Form Document
+
+Tap to generate a PDF file based on a template with data from the
+selected record and its related records. View the file on
+the *Files* tab of the record.
+
+To use this feature, install and set up
+the https://help.customertimes.com/smart/project-ct-sign-en/about-ct-sign[CT
+Sign package].
+
+

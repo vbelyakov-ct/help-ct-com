@@ -1,0 +1,22 @@
+= ctm.openQRScanner
+
+The method of xref:js-bridge-api[JS Bridge] functionality is
+intended to open xref:barcode-scanner[the CT Mobile barcode
+scanner].
+
+[[h2__905713055]]
+=== Query format
+
+
+
+[.apiobject]#autoClose# is used to close the barcode scanner if
+the value is true (by default, optional attribute);
+
+[.apiobject]#fieldName# is the API name of the field to find
+values that match values from the barcode scanner;
+
+[.apiobject]#objectName# is the API name of the object with
+records to find matches.
+
+[[h2_442663712]]
+=== Query Example

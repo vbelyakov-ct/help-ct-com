@@ -1,0 +1,56 @@
+= CT Presenter
+
+CT Presenter is a cloud app that provides Digital Sales Aid
+functionality for mobile devices, also known as CLM (Closed Loop
+Marketing). It can be used to facilitate interactions between sales
+presenters and customers (HCPs, buyers) to achieve the most engaging
+user experience.
+
+
+
+This guide is intended for UI/UX and content designers, CLM-, CRM-,
+brand managers, and technical teams, who are responsible for selecting,
+managing, and creating visual aids and CLM presentations.
+
+[[h2__741641000]]
+=== Integrated CLM and CRM
+
+CT Presenter enables client-facing interactions using CLM presentations
+via various channels.
+
+CLM presentations can include interactive product presentations,
+educative and training materials, videos, references, links to external
+websites, mini-applications for trade & retail audits, contract
+visualization, etc.
+
+
+
+As CT Presenter is tightly integrated with CT Mobile, CLM presentations
+can interact with the mobile offline database of the CT Mobile app using
+xref:js-bridge-api[read/write access to CRM data]. In CLM
+presentations, images, videos, and attached PDFs can be used from the
+existing media libraries. For example, it is possible to develop complex
+CLM presentations based on HTML5 for product presentation along with
+retail audit and order taking. It will be a visually and functionally
+advanced presentation, which can provide a full “route map” of a visit
+and support with interactive tools for the actions that are needed to
+take during the call.
+
+
+
+CLM presentations are structured within the Salesforce data model and
+store HTML5 content and related resources in the Salesforce database. CT
+Presenter provides the data model and tools for
+xref:clm-applicationstats[CLM-presentations tracking and usage
+analysis for further improvement], e.g., shown slides, duration of every
+slide shown, clicks, etc. As all the statistics of content usage are
+stored in the Salesforce database, it is easy to run reports and develop
+integrated reports on CRM {plus} CLM performance indicators of the reps.
+
+
+
+[cols=",",]
+|===
+|image:57215389.png[]
+|image:57215390.png[]
+|===

@@ -1,0 +1,23 @@
+= CT Mobile Control Panel
+
+*CT Mobile Control Panel* is a Salesforce interface for connecting the
+CT Mobile solution to the customer's target system and for specifying
+all the necessary settings to personalize the CT Mobile app.
+
+* A user configuring a CT Mobile solution must have a separate profile
+and an
+assigned _xref:application-permission-settings.html#h2__1046081510[CT
+Mobile Administrator]_ permission set.
+* All customizations for the selected profile will be saved in
+xref:custom-settings[custom settings] or as
+xref:ctm-settings[CTM Settings] records.
+* Settings for xref:ctm-settings-menu[menu],
+xref:ctm-settings-offline-objects[offline objects], and
+xref:ctm-settings-standard-related-list[standard related lists] on
+the *CT Mobile Control Panel* are displayed based on the *CTM Settings*
+records. Other settings are displayed according to the records of the
+custom settings.
+
+
+
+The *CT Mobile Control Panel* is divided into the following tabs:

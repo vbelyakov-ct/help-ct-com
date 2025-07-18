@@ -1,0 +1,28 @@
+= ctm.create
+
+The method of xref:js-bridge-api[JS Bridge] functionality is
+intended to bulk create records of offline objects:
+
+* xref:application-permission-settings[the user profile] should
+have permission to create records of the required object;
+* xref:managing-offline-objects#h2_1534686659[permission to
+create] the required offline object is allowed.
+
+[[h2__905713055]]
+=== Query Format
+
+
+
+[.apiobject]#SObject# is the JS object that indicates the API
+name of the offline object and a list of fields with values.
+
+[[h2_442663712]]
+=== Handler
+
+
+
+
+
+
+
+The result:

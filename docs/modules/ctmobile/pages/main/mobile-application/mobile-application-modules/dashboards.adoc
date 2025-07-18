@@ -1,0 +1,59 @@
+= Dashboards
+
+The *Dashboards* module allows viewing online dashboards available to
+the mobile user.
+
+* ifdef::ios[]Dashboards display in the Lightning Experience or
+Salesforce Classic mode
+according https://help.salesforce.com/articleView?id=000337767&type=1&mode=1[to
+the selected mode for the mobile user] in the Salesforce organization
+instance. To enable this option for CT Mobile versions below 2.3,
+contact the Customertimes team.
+
+* Using the *Fiscal year* criterion in filters and in reports and
+dashboards criteria is working as a *Calendar year*.
+* The availability of dashboards depends on the profile permission
+settings in Salesforce.
+* The mobile user can view the related report, as well as modify the
+report criteria.
+* Tap *Refresh* to update the dashboard.
+* Add the dashboard to the xref:mobile-layouts[mobile layout].
+
+ifdef::ios[]
+image:dashboards.png[]
+ifdef::win[]
+image:62575043.png[]
+ifdef::kotlin[]
+image:Dashboards-Kotlin.png[]
+
+[[h2__1510760474]]
+=== Adding Dashboard to the Menu
+
+To add the *Dashboards* module to the xref:app-menu[app menu]:
+
+[width="100%",cols="50%,50%",]
+|===
+|In CT Mobile Control Panel a|
+. Go to xref:ct-mobile-control-panel-app-menu[CT Mobile Control
+Panel: App Menu] tab.
+. {blank}
+. Click the
+image:62562609.png[]
+button to open the *Add menu item* tool.
+. Select the *Dashboards* item.
+. Click *Add* to close the *Add menu item* tool.
+. Click *Save*.
+
+|In CT Mobile Control Panel 2.0 a|
+. Go to xref:ct-mobile-control-panel-app-menu-new[CT Mobile Control
+Panel 2.0: App Menu] tab.
+. Select the required profile in the *Profile* picklist. To apply
+settings to all the profiles, select *General Settings*.
+. Click *Show Module Menu*.
+. On the *All* or *Application Modules* tab, select
+the *Dashboard* item.
+. Click *Save*.
+
+|===
+
+The setup is complete.

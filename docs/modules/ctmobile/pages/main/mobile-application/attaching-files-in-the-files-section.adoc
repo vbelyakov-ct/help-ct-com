@@ -1,0 +1,142 @@
+= Working with Files for Offline Objects
+
+[NOTE] ==== This feature is supported starting from CT Mobile
+2.8. ====
+
+[NOTE] ==== To use this feature in a custom CT Mobile app,
+developers should specify it in their project. ====
+
+In the *Files* section of an offline object record, you can attach
+files and photos directly to relevant records from your device, and
+instantly send files to clients directly from the mobile application.
+
+
+
+[[h3_1829810070]]
+==== Supported file formats
+
+* Microsoft Word
+([.apiobject]#.doc#, [.apiobject]#.docx#)
+* Microsoft Excel
+([.apiobject]#.xls#, [.apiobject]#.xlsx#)
+* Microsoft PowerPoint
+([.apiobject]#.ppt#, [.apiobject]#.pptx#)
+* Adobe PDF ([.apiobject]#.pdf#)
+* Plain Text ([.apiobject]#.txt#)
+* Rich Text Format ([.apiobject]#.rtf#)
+* Image Formats
+([.apiobject]#.jpeg#, [.apiobject]#.png#, [.apiobject]#.gif#, [.apiobject]#.bmp#)
+* Audio Formats ([.apiobject]#.mp3#, [.apiobject]#.wma#)
+* Video Formats ([.apiobject]#.mp4#, [.apiobject]#.mov#)
+
+[[h3_1644201065]]
+==== Prerequisites
+
+To be able to attach files to offline objects in the *Files* section,
+check the following settings:
+
+. ​Go to *Setup* →** Salesforce Files** → **General Settings **and
+click *Edit*.
+. Select the *Files uploaded to the Attachments related list on records
+are uploaded as Salesforce Files, not as attachments* checkbox and
+click *Save*.
+
+Also, check that the offline objects to which you want to attach files
+have necessary permissions:
+
+[width="100%",cols="50%,50%",]
+|===
+|In CT Mobile Control Panel a|
+. Go to xref:ct-mobile-control-panel-offline-objects[CT Mobile
+Control Panel → Offline Objects].
+. Select the offline object to which you want to attach files.
+. On the right side, enable *Create Allowed* and *Delete
+Allowed* permissions for the *Note, Attachment, Google Doc And
+File* related list.
+. Click *Save*.
+
+|In CT Mobile Control Panel 2.0 a|
+. Go to xref:ct-mobile-control-panel-offline-objects-new[CT Mobile
+Control Panel 2.0: Offline Objects].
+. Select the offline object to which you want to attach files.
+. On the *Related Lists * tab, enable *Create Allowed* and *Delete
+Allowed* permissions for the *Files* related list.
+. Click *Save*.
+
+|===
+
+[[h3__679496393]]
+==== Setting up download option for attached files: entire file or a preview
+
+Save time for online synchronization: choose between downloading the
+entire file for offline use or a quick preview:
+
+[width="100%",cols="50%,50%",]
+|===
+|In CTM Settings a|
+. Go to xref:ctm-settings[CTM Settings].
+. Select an existing xref:ctm-settings-offline-objects[Offline
+Object] record or create a new one.
+. Select the desired value for the *Files Downloading Mode* pickilist:
+* {blank}
+* *Skip Download* (default): files will not be downloaded.
+* *Download As Preview*: only preview images will be downloaded. Tap on
+the preview image to download the entire file.
+* *Full Size*: the entire file will be downloaded.
+. Click *Save*.
+
+|In CT Mobile Control Panel 2.0 a|
+. Go to xref:ct-mobile-control-panel-offline-objects-new[CT Mobile
+Control Panel 2.0: Offline Objects].
+. Select the offline object to which you want to attach files.
+. On the *Main* tab, select an option for the *Files Downloading Mode*:
+* *Skip Download* (default): files will be downloaded during the fast
+sync, and will not be downloaded during the full sync.
+* *Download As Preview*: only preview images will be downloaded. Tap on
+the preview image to download the entire file.
+* *Full Size*: the entire file will be downloaded.
+
+|===
+
+[[h3_1720123861]]
+==== Setting up date-based filtering during the upload process
+
+Save time by uploading only necessary files
+through xref:ctm-settings-offline-objects[date-based
+filtering] during the upload process:
+
+. Go to xref:ctm-settings[CTM Settings].
+. Select an existing xref:ctm-settings-offline-objects[Offline
+Object] record or create a new one.
+. In the *Files Filter* field, specify the latest date of the offline
+object creation that should be downloaded during the sync. The filter
+condition is:
+[.apiobject]#SystemModStamp > date#.
+For example, to specify the 31st August 2023 as the latest creation date
+of the downloadable offline object:[.apiobject]#SystemModStamp
+> #[.apiobject]#2023-31-08T00:00:00Z#.
+. Click *Save*.
+
+[[h3_479250607]]
+==== 
+
+[[h3__2018099316]]
+==== Attaching files to an offline object
+
+To attach a file in the *Files* section:
+
+. Open the record to which you want to attach the file(s).
+. In the *Actions* menu, tap *File*.
+image:ios-actions-file.png[]
+. Select file(s) from your device and tap *Open*.
+
+The record's main screen is open. Go to the **Files **section of the
+record and perform xref:synchronization-launch#h2__966867633[quick
+record synchronization] to update the record in Salesforce.
+
+[[h3__1261438429]]
+==== Sharing a File
+
+To share a file, select it in the *Files* section and do the following:
+
+

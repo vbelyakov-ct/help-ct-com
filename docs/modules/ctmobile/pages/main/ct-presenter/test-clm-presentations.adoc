@@ -1,0 +1,51 @@
+= Test CLM Presentations
+
+Create test CLM presentations to get familiar with how to implement the
+JS Bridge methods and media into a slide markup.
+
+[TIP] ==== Refer to xref:js-bridge-methods-availability[JS
+Bridge Methods Availability] to see which JS Bridge methods are
+available for use based on the device platform. ====
+
+
+
+To add test CLM-presentations:
+
+[width="100%",cols="50%,50%",]
+|===
+|In CT Mobile Control Panel a|
+. Go to xref:ct-mobile-control-panel-general[CT Mobile Control
+Panel: General].
+.  In the top right corner, click *Create Demo App*.
+image:Test-CLM-presentations-en.png[]
+
+|In CT Mobile Control Panel 2.0 a|
+. Go to the xref:ct-mobile-control-panel-remote-detailing-new[CT
+Mobile Control Panel 2.0: Remote Detailing].
+. On the right, click *Create Demo Presentations*.
+image:create-demo-presentations.png[]
+
+|===
+
+CLM presentations are added. Go to *Applications* to view the created
+CLM presentations.
+
+* *CT Mobile JS API*
+
+Use this CLM-presentation as an example of how to implement the
+following JS Bridge methods:
+** xref:ctm-create[ctm.create]
+** xref:ctm-update[ctm.update]
+** xref:ctm-delete[ctm.delete]
+** xref:ctm-query[ctm.query]
+** xref:ctm-opendatatablebyparentrecord[ctm.openDataTableByParentRecord]
+** xref:ctm-opendatatablebyquery[ctm.openDataTableByQuery]
+** xref:ctm-openqrscanner[ctm.openQRScanner]
+** xref:ctm-openquiz[ctm.openQuiz]
+** xref:ctm-getfile[ctm.getFile]
+** xref:ctm-storefile[ctm.storeFile]
+* *Demo Presentation*
+
+Use this CLM-presentation as an example of how to interact with the
+elements, such as video or xref:creating-a-widget[widgets], and how
+to xref:ctm-generatepdf[create a PDF] based on a slide.
