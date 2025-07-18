@@ -2,23 +2,23 @@
 
 *CT Mobile Workflow* is a custom metadata type that is intended to store
 the conditions for triggering CT Mobile Workflows (refer to
-link:ct-mobile-control-panel-workflows[CT Mobile Control Panel:
-Workflows]/link:ct-mobile-control-panel-workflows-new[CT Mobile
+xref:ct-mobile-control-panel-workflows[CT Mobile Control Panel:
+Workflows]/xref:ct-mobile-control-panel-workflows-new[CT Mobile
 Control Panel 2.0: Workflows]). Actions of CT Mobile Workflow are stored
-in the link:ct-mobile-workflow-step[CT Mobile Workflow Step]
+in the xref:ct-mobile-workflow-step[CT Mobile Workflow Step]
 object.
 
 
 
 *CT Mobile Workflows* override the logic defined by the code of the CT
 Mobile app. For example, if a CT Mobile Workflow is created on
-link:start-finish-functionality[the Start/Visit button], the
+xref:start-finish-functionality[the Start/Visit button], the
 *Capture Geoposition* and *Update Start/End Date Fields* options will no
 longer be applied even if they are enabled on the
-link:ct-mobile-control-panel-calendar[CT Mobile Control Panel:
+xref:ct-mobile-control-panel-calendar[CT Mobile Control Panel:
 Calendar] tab (*Capture Geolocation when Activity is Started* and
 *Update Start/End Date when Starting/Ending Activity* options in
-link:ct-mobile-control-panel-activities-new[CT Mobile Control Panel
+xref:ct-mobile-control-panel-activities-new[CT Mobile Control Panel
 2.0: Activities] tab).
 
 '''''
@@ -72,7 +72,7 @@ Proposed values:
 
 |Button/Action API Name
 |[.apiobject]#clm__ButtonAPIName__c# |Text(255) a|
-link:ct-mobile-workflow#h2__925686890[The button API name] to
+xref:ct-mobile-workflow#h2__925686890[The button API name] to
 trigger the CT Mobile Workflow.
 
 It is used with the On Click value in the *Trigger Context* field.
@@ -121,44 +121,44 @@ not used.
 |*API Name* |*Description*
 
 |[.apiobject]#CTM.Button.StartActivity#
-|link:start-finish-functionality[The Start button] of the
+|xref:start-finish-functionality[The Start button] of the
 [.object]#Activity# object.
 
 |[.apiobject]#CTM.Button.FinishActivity#
-|link:start-finish-functionality[The Finish button] of the
+|xref:start-finish-functionality[The Finish button] of the
 [.object]#Activity# object.
 
 |[.apiobject]#CTM.Button.TakePhoto# |Pressing the button
 displays a layout with all available photos.
 
 |[.apiobject]#CTM.Button.AddObject# |The button defines
-link:managing-offline-objects[record creation] in related lists.
+xref:managing-offline-objects[record creation] in related lists.
 
 |[.apiobject]#CTM.Button.Geoposition# |The button displays a
-link:actions[combo menu] to define Geolocation.
+xref:actions[combo menu] to define Geolocation.
 
 |[.apiobject]#CTM.Button.ActivityHistory# |The icon displays
-link:historical-activities[historical activities].
+xref:historical-activities[historical activities].
 
 |[.apiobject]#CTM.Button.Signature# |The
-link:actions[combo-menu] button displays a pop-up signature window.
+xref:actions[combo-menu] button displays a pop-up signature window.
 
 |[.apiobject]#CTM.Button.ScanBarсode# |The icon displays
-link:barcode-scanner[the EAN code scanner] on the related list.
+xref:barcode-scanner[the EAN code scanner] on the related list.
 
 |[.apiobject]#CTM.Button.Mail# |After pressing the button, the
 data are sent via Email.
 
 |[.apiobject]#CTM.Button.AddPost# |After pressing the button,
-link:actions[a new post] in the link:chatter[Chatter feed] is
+xref:actions[a new post] in the xref:chatter[Chatter feed] is
 added.
 
 |[.apiobject]#CTM.Button.ConvertLead# |Pressing the button
-link:lead-convert[converts Leads] into an
+xref:lead-convert[converts Leads] into an
 [.object]#Account# record.
 
 |[.apiobject]#CTM.Button.SortSwitch# |The switcher is to edit
-the visibility of records in link:custom-related-lists[a custom
+the visibility of records in xref:custom-related-lists[a custom
 related list].
 
 |[.apiobject]#CTM.Button.DocConstructor# |The button displays

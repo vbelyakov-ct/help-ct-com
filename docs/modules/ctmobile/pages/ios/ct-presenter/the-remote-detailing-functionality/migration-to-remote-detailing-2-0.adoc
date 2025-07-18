@@ -9,7 +9,7 @@ participants. Consider the following to use the *Remote Detailing 2.0*.
 [[h2_2023541197]]
 === If the Remote Detailing has not been yet configured in your Salesforce org
 
-Follow the steps in the link:remote-detailing-setup[Remote
+Follow the steps in the xref:remote-detailing-setup[Remote
 Detailing Setup] article.
 
 [[h2__1683593068]]
@@ -29,21 +29,21 @@ from
 https://github.com/ctsf/CLM-RemoteDetailing-Public/blob/master/source/remoteDetailing/src/triggers/ActivitySetLinkProcess.trigger[this
 source] and added to your Salesforce org. The API names of the desired
 *Activity* record types
-link:remote-detailing-apex-trigger-classes-and-quick-action#h2_249047963[should
+xref:remote-detailing-apex-trigger-classes-and-quick-action#h2_249047963[should
 be specified] within the trigger code.
-. Go to the link:ct-mobile-control-panel-presenter[CT Mobile
+. Go to the xref:ct-mobile-control-panel-presenter[CT Mobile
 Control Panel:
-Presenter]/link:ct-mobile-control-panel-remote-detailing-new[CT
+Presenter]/xref:ct-mobile-control-panel-remote-detailing-new[CT
 Mobile Control Panel 2.0: Remote Detailing] tab and check that the
 *Applications List Field* and *Link Field* are filled out with the API
 names of the corresponding fields of the[.object]#Activity#
 object.
 . Check that the *Active* and *Available for Remote Detailing*
-checkboxes are selected for desired link:clm-application[CLM
+checkboxes are selected for desired xref:clm-application[CLM
 presentations].
 . For *Self Detailing* functionality, update the list of CLM
 presentations using the
-link:ct-mobile-control-panel-presenter#h2__891805269[Refresh CLM
+xref:ct-mobile-control-panel-presenter#h2__891805269[Refresh CLM
 presentations] button.
 . Update one of the existing *Activity* records or create a new one.
 
@@ -54,15 +54,15 @@ When you create a new sandbox based on the production environment with
 the configured Remote Detailing functionality:
 
 . Refresh the cloud token (refer to
-link:ct-mobile-control-panel-tools#h3_2011978[CT Mobile Control
-Panel: Tools]/link:ct-mobile-control-panel-tools-new#h2_2011978[CT
+xref:ct-mobile-control-panel-tools#h3_2011978[CT Mobile Control
+Panel: Tools]/xref:ct-mobile-control-panel-tools-new#h2_2011978[CT
 Mobile Control Panel 2.0: Tools]).
 . Check that the records per each trigger are active in
-link:trigger-settings[Trigger Settings].
-. link:publishing-clm-presentations#h3_1098755975[Renew slides] for
+xref:trigger-settings[Trigger Settings].
+. xref:publishing-clm-presentations#h3_1098755975[Renew slides] for
 each desired CLM presentation or specify the *Organization ID* of the
 production environment on the
-link:ct-mobile-control-panel-tools#h3__964087610[CT Mobile Control
+xref:ct-mobile-control-panel-tools#h3__964087610[CT Mobile Control
 Panel: Tools]. To obtain an *Organization ID*,
 https://help.salesforce.com/articleView?id=000325251&mode=1&type=1[see
 the Salesforce Help].

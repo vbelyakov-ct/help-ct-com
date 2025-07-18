@@ -16,9 +16,9 @@ To use the CT Presenter functionality:
 
 ifdef::ios,win[]
 
-If you want to use link:migration-to-remote-detailing-2-0[Remote
+If you want to use xref:migration-to-remote-detailing-2-0[Remote
 Detailing 2.0], install the
-link:ct-mobile-package-release-notes#h2_1028401963[CT Mobile
+xref:ct-mobile-package-release-notes#h2_1028401963[CT Mobile
 package v. 3.63] or higher and make sure that the *CTCLMRD* remote site
 is active.
 . Go to *Setup → Custom Code → Custom Settings → Trigger Settings* →
@@ -28,14 +28,14 @@ make sure that the following records are created and active:
 *[.apiobject]#SlideProcess#
 *[.apiobject]#TemplateProcess#
 *[.apiobject]#WidgetProcess#
-. Go to link:ct-mobile-control-panel-tools#h3_2011978[CT Mobile
+. Go to xref:ct-mobile-control-panel-tools#h3_2011978[CT Mobile
 Control Panel:
-Tools]/link:ct-mobile-control-panel-tools-new#h2_2011978[CT Mobile
+Tools]/xref:ct-mobile-control-panel-tools-new#h2_2011978[CT Mobile
 Control Panel 2.0: Tools] and check the cloud token is specified.
-. Assign link:application-permission-settings#h3_2115044027[the
+. Assign xref:application-permission-settings#h3_2115044027[the
 preconfigured permission set] to a user according to their role.
-. Check link:user-permissions[user permissions] to CLM objects.
-. Get familiar with link:requirements-and-media-file-formats[the
+. Check xref:user-permissions[user permissions] to CLM objects.
+. Get familiar with xref:requirements-and-media-file-formats[the
 requirements for CLM presentations].
 
 [[h2__2019207216]]
@@ -44,7 +44,7 @@ requirements for CLM presentations].
 ifdef::ios[]
 
 Look through
-link:../Storage/project-ct-mobile-en/PDF/Creating-Interactive-CLM-Presentations-for-iOS-(en).pdf[our
+xref:../Storage/project-ct-mobile-en/PDF/Creating-Interactive-CLM-Presentations-for-iOS-(en).pdf[our
 guide] for creating interactive CLM Presentations to know how to add
 content, such as media and specific interactions, on slides and properly
 upload ready CLM presentations to Salesforce.
@@ -52,45 +52,45 @@ upload ready CLM presentations to Salesforce.
 ifdef::win[]
 
 Look through
-link:../Storage/project-ct-mobile-en/PDF/Creating-Interactive-CLM-Presentations-for-Windows-(en).pdf[our
+xref:../Storage/project-ct-mobile-en/PDF/Creating-Interactive-CLM-Presentations-for-Windows-(en).pdf[our
 guide] for creating interactive CLM Presentations to know how to add
 content, such as media and specific interactions, on slides and properly
 upload ready CLM presentations to Salesforce.
 
-CT Presenter provides the link:application-editor[Application
+CT Presenter provides the xref:application-editor[Application
 Editor]:
 
 * Manually create CLM presentations using one of the options:
 ** Add slides based on templates with placeholders and widgets;
 ** Add slides with the specified markup.
-* Add link:creating-clm-presentation-from-powerpoint[PowerPoint],
-link:creating-clm-presentation-from-pdf[PDF], or
-link:creating-clm-presentation-from-jpeg-jpg[JPEG/JPG] files to
+* Add xref:creating-clm-presentation-from-powerpoint[PowerPoint],
+xref:creating-clm-presentation-from-pdf[PDF], or
+xref:creating-clm-presentation-from-jpeg-jpg[JPEG/JPG] files to
 convert into a CLM presentation.
 
 
 
-CT Presenter provides the link:plain-application-editor[Plain
+CT Presenter provides the xref:plain-application-editor[Plain
 Application Editor]:
 
 * Create and edit CLM presentations
-link:creating-plain-clm-presentation[using the web interface].
-* link:creating-plain-clm-presentation-using-templates[Create your
+xref:creating-plain-clm-presentation[using the web interface].
+* xref:creating-plain-clm-presentation-using-templates[Create your
 templates], and slides with images, texts, videos, etc.
-* link:creating-plain-clm-presentation-from-powerpoint[Import
+* xref:creating-plain-clm-presentation-from-powerpoint[Import
 PowerPoint] into an existing template and convert it to a CLM
 presentation.
 
 
 
-Use link:custom-scenario-editor[the custom scenario editor] to
+Use xref:custom-scenario-editor[the custom scenario editor] to
 create, edit and delete custom scenarios.
 
 ifdef::ios,win[]
 
 In the CT Mobile app, you can
-specify link:clm-customscenario[custom scenarios] with the help of
-the link:applications#h3_1236408094[Mobile Scenario Editor] in the
+specify xref:clm-customscenario[custom scenarios] with the help of
+the xref:applications#h3_1236408094[Mobile Scenario Editor] in the
 Application module.
 
 [[h2_1250107167]]
@@ -98,21 +98,21 @@ Application module.
 
 To use a CLM presentation, it is necessary to publish it:
 
-* link:publishing-clm-presentations#h3_1098755975[Renew slides] of
+* xref:publishing-clm-presentations#h3_1098755975[Renew slides] of
 the current CLM presentation to view slides in the navigation feed
 during the display of the CLM presentation.
 * Publish a CLM presentation by selecting it
-link:publishing-clm-presentations#h2_1149854286[on the Applications
+xref:publishing-clm-presentations#h2_1149854286[on the Applications
 tab].
 * Publish a CLM presentation by using
-link:publishing-clm-presentations#h2_104022594[the Application
+xref:publishing-clm-presentations#h2_104022594[the Application
 Editor].
 
 [[h2_1781171346]]
 === Displaying and Management of CLM Presentations
 
 ifdef::ios[]It is possible
-to link:mobile-application-setup#CLMDisplayMode[specify the CLM
+to xref:mobile-application-setup#CLMDisplayMode[specify the CLM
 presentation display mode] in the case of using Аngular and other JS
 frameworks, where there are difficulties with the display of connected
 templates and parts of the HTML code.
@@ -123,34 +123,34 @@ templates and parts of the HTML code.
 During the synchronization process, CLM presentations will be downloaded
 on the mobile device and available for use:
 
-* The link:clm-application[CLM presentation] should be active and
+* The xref:clm-application[CLM presentation] should be active and
 available offline.
 [NOTE] ==== The *Available Offline* attribute is available since
 the CT Mobile managed package v. 3.54. The administrator should activate
 this checkbox for the required CLM presentations. ====
-* link:applications[The Application module] allows reviewing CLM
+* xref:applications[The Application module] allows reviewing CLM
 presentations uploaded from Salesforce.
-* You can configure link:mobile-layouts-applications[the mobile
+* You can configure xref:mobile-layouts-applications[the mobile
 layout] of the __[.object]#Activity# object to launch a CLM
 presentation from the carousel of CLM presentations on the activity
 record.
 * Also, you can launch a CLM presentation from the
-link:home-screen[Home Screen].
+xref:home-screen[Home Screen].
 
 
 
 For each CLM presentation:
 
-* Use pre-configured link:gestures-in-clm-presentations[gestures].
+* Use pre-configured xref:gestures-in-clm-presentations[gestures].
 * Double-tap the left or right side of the screen to view the
-link:clm-presentation-controls[control buttons].
+xref:clm-presentation-controls[control buttons].
 * Double-tap the bottom of the screen to display the selected scenario
-and slide in link:clm-navigation-in-clm-presentations[a branch] for
+and slide in xref:clm-navigation-in-clm-presentations[a branch] for
 rapid switching between the slides.
-* link:js-bridge-api[JS Bridge methods] are available from within
+* xref:js-bridge-api[JS Bridge methods] are available from within
 the CLM presentation if specified on the slide markup.
 * During the CLM presentation, specific user actions are captured and
-collected in the link:clm-applicationstats[Application Stats]
+collected in the xref:clm-applicationstats[Application Stats]
 record. Tracking button clicks, likes, dislikes, slide duration, and
 slide navigation are specified for each CLM presentation. The statistics
 will be linked to the activity record from which it was started. The CT
@@ -164,25 +164,25 @@ ifdef::ios,win[]
 ==== The Remote Detailing Functionality (online mode)
 
 [TIP] ==== We recommend reading
-link:remote-detailing-f-a-q[Remote Detailing: F.A.Q]. ====
+xref:remote-detailing-f-a-q[Remote Detailing: F.A.Q]. ====
 
-The link:the-remote-detailing-functionality[Remote Detailing]
+The xref:the-remote-detailing-functionality[Remote Detailing]
 functionality allows the presenter and participants to simultaneously
 view CLM presentations on their PC, tablet, or mobile phone. The *Self
 Detailing* mode is intended for the participant's remote control of the
 CLM presentation on a PC, tablet, or mobile phone without presenter
 participation.
 
-* The link:clm-application[CLM presentation] should be active and
+* The xref:clm-application[CLM presentation] should be active and
 available for *Remote Detailing*.
 * The presenter can launch a CLM presentation
-link:remote-detailing-launch-the-ct-mobile-app[for Remote Detailing
+xref:remote-detailing-launch-the-ct-mobile-app[for Remote Detailing
 on the Activity record in the CT Mobile app].
 * The presenter can launch a CLM presentation
-link:remote-detailing-launch-salesforce-side[for Remote Detailing
+xref:remote-detailing-launch-salesforce-side[for Remote Detailing
 on the Activity record or the Application record in Salesforce].
 * The presenter can launch a CLM presentation
-link:remote-detailing-launch-microsoft-teams[via Microsoft Teams].
+xref:remote-detailing-launch-microsoft-teams[via Microsoft Teams].
 * Participant(s) join the *Remote Detailing* meeting by the invite link.
 
 
@@ -191,7 +191,7 @@ For each CLM presentation:
 
 * The separates UI for the presenter and participant.
 * In the case of using on-the-slide markup,
-link:remote-detailing-f-a-q[]JS methods and links are available
+xref:remote-detailing-f-a-q[]JS methods and links are available
 from within the CLM presentation.
 * Performed on the CLM presentation, specific user actions can be
 captured and collected in the *Application Stats* record. These actions
@@ -202,5 +202,5 @@ presentation.
 browser tab, a record of the[.object]#Application Stats# object
 is created for each participant and presenter.
 ** For the *Self Detailing* mode, the statistics will be collected
-according to link:clm-settings[the Session timeout (in seconds)
+according to xref:clm-settings[the Session timeout (in seconds)
 field].

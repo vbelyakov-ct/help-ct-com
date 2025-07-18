@@ -1,11 +1,11 @@
 = CLM Settings
 
 ifdef::kotlin[] *CLM Settings* is the custom setting that stores
-preferences to display link:clm-application[CLM presentations] via
+preferences to display xref:clm-application[CLM presentations] via
 the Remote Detailing functionality.[TIP] ==== For easy setup,
-go to link:ct-mobile-control-panel-presenter[CT Mobile Control
+go to xref:ct-mobile-control-panel-presenter[CT Mobile Control
 Panel:
-Presenter]/link:ct-mobile-control-panel-remote-detailing-new[CT
+Presenter]/xref:ct-mobile-control-panel-remote-detailing-new[CT
 Mobile Control Panel 2.0: Remote Detailing]. ====
 
 '''''
@@ -22,7 +22,7 @@ Custom setting API name:
 |Application List Field
 |[.apiobject]#clm__ApplicationsListField__c# |Text(255)
 a|
-The field API name of the link:clm-activity[Activity] object for
+The field API name of the xref:clm-activity[Activity] object for
 the Application IDs storing, for example,
 [.apiobject]#ApplicationIds__c#.
 
@@ -47,7 +47,7 @@ session;
 
 |CRM Data Sharing Enabled
 |[.apiobject]#clm__IsRDJSAPIEnabled__c# |Checkbox |If
-enabled, link:js-bridge-methods-availability[certain JS Bridge
+enabled, xref:js-bridge-methods-availability[certain JS Bridge
 methods] will be available on the CLM presentation during the Remote
 Detailing or Self Detailing session.
 
@@ -63,16 +63,16 @@ active.
 
 |Detailed Stats Enabled
 |[.apiobject]#clm__IsRDDetailedStatsEnabled__c#
-|Checkbox |If enabled, link:remote-detailing-statistics[the
+|Checkbox |If enabled, xref:remote-detailing-statistics[the
 statistics] per slide will be gathered for each participant at the
 meeting.
 
 |Email Required Field
 |[.apiobject]#clm__EmailRequiredField__c# |Text(255)
-|The field API name of the *link:clm-activity[Activity]* object,
+|The field API name of the *xref:clm-activity[Activity]* object,
 for example,[.apiobject]#IsEmailRequired__c#. It indicates
 if the user is required to provide an email on
-link:remote-detailing-2-0-ui-for-participants#h2__555694282[the
+xref:remote-detailing-2-0-ui-for-participants#h2__555694282[the
 Welcome screen] to access the Remote Detailing meeting.
 
 |Endpoint URL |[.apiobject]#clm__RestServicePrefix__c#
@@ -80,12 +80,12 @@ Welcome screen] to access the Remote Detailing meeting.
 [NOTE] ==== Not applied since CT Mobile package v. 3.63. ====
 
 For the Self Detailing mode,
-link:self-detailing-1-0-sites-settings[the URL of a site] is used
+xref:self-detailing-1-0-sites-settings[the URL of a site] is used
 for collecting statistics.
 
 |Link Field |[.apiobject]#clm__LinkField__c# |Text(255)
 a|
-The field API name of the link:clm-activity[Activity] object for
+The field API name of the xref:clm-activity[Activity] object for
 the invite link storing, for example,
 [.apiobject]#RDLink__c#.
 
@@ -116,9 +116,9 @@ Salesforce.
 
 |Subdomain Name |[.apiobject]#clm_SubdomainName_c#
 |Text(255) |Stores the subdomain name, if the
-link:ct-mobile-control-panel-presenter#h3_298754890[Custom
+xref:ct-mobile-control-panel-presenter#h3_298754890[Custom
 Subdomain
-Enabled]/link:ct-mobile-control-panel-remote-detailing-new#h3_1243606343[Custom
+Enabled]/xref:ct-mobile-control-panel-remote-detailing-new#h3_1243606343[Custom
 Domain] option is enabled.
 
 |Text Chat Enabled

@@ -12,14 +12,14 @@ or more fields and returns a value of[.apiobject]#true# or
 
 
 Validation rules are retrieved by the CT Mobile app during
-synchronization as part of the link:metadata-archive[metadata
+synchronization as part of the xref:metadata-archive[metadata
 archive] and then are applied offline. There are several limitations and
 conditions for validations applied on mobile devices that consider a
 correlation between synchronized records and the validation process:
 
 * Synchronized records cannot be validated before the changes are
 introduced (on the record layout and
-link:custom-related-lists[custom related list]).
+xref:custom-related-lists[custom related list]).
 * If changes are made in an already synchronized record, this record
 becomes unsynced.
 
@@ -30,10 +30,10 @@ The following logic is applied for *Activity* records that were created
 in the *Calendar* or *Nearby Accounts* modules.
 
 ifdef::ios,andr[][NOTE] ==== The
-link:start-finish-functionality[Start/Finish functionality] and
-link:ct-mobile-control-panel-calendar#h3__1036133099[Lock/Unlock
+xref:start-finish-functionality[Start/Finish functionality] and
+xref:ct-mobile-control-panel-calendar#h3__1036133099[Lock/Unlock
 Record]
-(link:ct-mobile-control-panel-activities-new#h4_1219382202[Lock
+(xref:ct-mobile-control-panel-activities-new#h4_1219382202[Lock
 Activities for Editing after Finishing]) must be disabled. ====
 
 * After you create a record and open its layout (an unsynchronized
@@ -66,7 +66,7 @@ ifdef::win[]
 If a record is created or changed on a custom related list, the parent
 record layout will not be validated. Errors that occur on a record of
 custom related lists are displayed in a separate section on
-link:errors-screen#h2__479754125[the Errors screen].
+xref:errors-screen#h2__479754125[the Errors screen].
 
 ifdef::ios,andr[]
 
@@ -75,7 +75,7 @@ record layout will not be validated.
 
 * Validation is performed on the *Activity* record and records of custom
 related lists when you tap the *Finish* button on the *Activity* record.
-* If link:errors-screen[an error occurs] during validation, the
+* If xref:errors-screen[an error occurs] during validation, the
 system displays a warning message: __Something went wrong on the tab(s):
 (tab name). Do you want to leave the record or fix it now? __After
 confirming, the layout or the first custom related list with errors
@@ -96,7 +96,7 @@ in a custom related list.
 occurs on a custom related list.
 
 Errors that occur on a record of custom related lists are displayed in a
-separate section on link:errors-screen#h2__479754125[the Errors
+separate section on xref:errors-screen#h2__479754125[the Errors
 screen].
 
 [[h2__549128247]]

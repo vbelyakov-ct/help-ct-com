@@ -1,11 +1,11 @@
 = CT Mobile Control Panel: App Menu
 
 The *App Menu* tab is intended to set up menu items and their order in
-link:app-menu[the main menu].
+xref:app-menu[the main menu].
 
 ifdef::ios,win[] According to the selected profile, settings on this
 tab will be saved in the records of the [.object]#CTM
-Settings# object with the link:ctm-settings-menu[Menu] record
+Settings# object with the xref:ctm-settings-menu[Menu] record
 type.
 
 :toc: :toclevels: 2
@@ -57,30 +57,30 @@ significant word of the custom module.
 According to the selected menu item in the *Selected* list, the
 available options are displayed on the right:
 
-For the link:home-screen[Home screen], enable the *Customizable
+For the xref:home-screen[Home screen], enable the *Customizable
 Home screen* option. Add, size, and arrange widgets.
 
-For link:managing-offline-objects[offline objects],
-link:grouping-records[group records] by the criterion.
+For xref:managing-offline-objects[offline objects],
+xref:grouping-records[group records] by the criterion.
 
 ifndef::andr,win,kotlin[]
 
-For offline objects, enable link:online-records-fetching[online
+For offline objects, enable xref:online-records-fetching[online
 record fetching].
 
-For the link:applications[Applications] module,
-link:grouping-records[group records] by the criterion.
+For the xref:applications[Applications] module,
+xref:grouping-records[group records] by the criterion.
 
-For the link:links-list[Links] module, specify resources and web
+For the xref:links-list[Links] module, specify resources and web
 pages.
 
 ifndef::kotlin[]
 
-For the link:routes[Routes] module, specify the ascending or
+For the xref:routes[Routes] module, specify the ascending or
 descending order of records.
 
 
 
 See Also:
 
-* link:app-menu[Configuring App Menu]
+* xref:app-menu[Configuring App Menu]

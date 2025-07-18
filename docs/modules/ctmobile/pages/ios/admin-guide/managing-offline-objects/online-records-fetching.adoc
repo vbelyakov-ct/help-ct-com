@@ -1,12 +1,12 @@
 = Online Records Fetching
 
-Set up link:managing-offline-objects[SOQL filters for the
+Set up xref:managing-offline-objects[SOQL filters for the
 appropriate offline object] to speed up synchronization. Enable *Online
 Records Fetching* to allow users to load additional records via the
 *Load more records* button in the application.
 
 * Records should be available for the current user
-and link:related-list-filters[not downloaded according to SOQL
+and xref:related-list-filters[not downloaded according to SOQL
 filters].
 * This option is not available for the number
 of https://help.customertimes.com/smart/project-order-module/order-change-manager[CT
@@ -20,7 +20,7 @@ To enable the *Online Records Fetching* option:
 [width="100%",cols="50%,50%",]
 |===
 |In CT Mobile Control Panel a|
-. Go to link:ct-mobile-control-panel-app-menu[CT Mobile Control
+. Go to xref:ct-mobile-control-panel-app-menu[CT Mobile Control
 Panel: App Menu].
 . {blank}
 . Select a menu item in the *Selected* list.
@@ -30,7 +30,7 @@ Panel: App Menu].
 image:62555295.png[]
 
 |In CT Mobile Control Panel 2.0 a|
-. Go to link:ct-mobile-control-panel-offline-objects-new[CT Mobile
+. Go to xref:ct-mobile-control-panel-offline-objects-new[CT Mobile
 Control Panel 2.0: Offline Objects].
 . Select the required profile in the *Profile* picklist. To apply
 settings to all the profiles, select *General Settings*.
@@ -67,7 +67,7 @@ image:62555330.png[]
 The records are synchronized.
 
 If a current user launches
-link:synchronization-launch[synchronization], the loaded records
+xref:synchronization-launch[synchronization], the loaded records
 via *Online Records Fetching* will be still available on a mobile
 device. Records will be removed only after the
-link:log-out[database reset].
+xref:log-out[database reset].

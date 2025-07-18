@@ -3,7 +3,7 @@
 CT Mobile allows using
 https://help.salesforce.com/articleView?id=cl_about.htm&type=5[custom
 labels] to rename menu items and
-link:mobile-application-modules[modules]. If the
+xref:mobile-application-modules[modules]. If the
 [.apiobject]#label# attribute is set for a menu item or a
 module, the mobile application will use it.
 
@@ -40,16 +40,16 @@ The table of available menu items:
 |===
 |*Menu Item* |*Name*
 
-|link:errors-screen[Errors]
+|xref:errors-screen[Errors]
 |[.apiobject]#CTM_MainMenu_Tab_Errors#
 
-|link:home-screen[Home]
+|xref:home-screen[Home]
 |[.apiobject]#CTM_MainMenu_Tab_Home#
 
-|link:search[Global Search]
+|xref:search[Global Search]
 |[.apiobject]#CTM_MainMenu_Tab_GlobalSearch#
 
-|link:application-settings[Settings]
+|xref:application-settings[Settings]
 |[.apiobject]#CTM_MainMenu_Tab_Settings#
 |===
 
@@ -61,30 +61,30 @@ The table of available modules:
 |===
 |*Menu Item* |*Name*
 
-|link:calendar[Calendar]
+|xref:calendar[Calendar]
 |[.apiobject]#CTM_MainMenu_Tab_Calendar#
 
-|link:chatter[Chatter]
+|xref:chatter[Chatter]
 |[.apiobject]#CTM_MainMenu_Tab_Chatter#
 
-|link:links-list[Links List]
+|xref:links-list[Links List]
 |[.apiobject]#CTM_MainMenu_Tab_LinkList#
 
-|link:nearby-accounts[Nearby Accounts]
+|xref:nearby-accounts[Nearby Accounts]
 |[.apiobject]#CTM_MainMenu_Tab_NearbyAccounts#
 
-|link:recent-items[Recent Items]
+|xref:recent-items[Recent Items]
 |[.apiobject]#CTM_MainMenu_Tab_RecentItems#
 
-|link:routes[Routes]
+|xref:routes[Routes]
 |[.apiobject]#CTM_MainMenu_Tab_Routes#
 |===
 
 [[h2_1059364362]]
 === Rename Modules in Rename Tabs and Labels
 
-To rename link:applications[Applications],
-link:libraries[Libraries], and link:quizzes[Quizzes] modules:
+To rename xref:applications[Applications],
+xref:libraries[Libraries], and xref:quizzes[Quizzes] modules:
 
 . Go to *Setup → User Interface →*
 https://help.salesforce.com/articleView?id=customize_rename.htm&type=5[Rename

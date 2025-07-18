@@ -1,7 +1,7 @@
 = CT Mobile Control Panel 2.0: Activities
 
 The *Activities* tab is intended to configure objects, which are used in
-the link:calendar[Calendar] module of the mobile app. The tab has
+the xref:calendar[Calendar] module of the mobile app. The tab has
 the following sections:
 
 
@@ -12,11 +12,11 @@ image:ctm-control-panel-activities.png[]
 === Start/Finish Functionality
 
 If enabled, the mobile user
-can link:start-finish-functionality[start and finish an
+can xref:start-finish-functionality[start and finish an
 activity] using the additional logic that may be applied to a started
 activity.
 
-If you have a link:ct-mobile-workflow[CT Mobile Workflow] using
+If you have a xref:ct-mobile-workflow[CT Mobile Workflow] using
 the *Start* or *Finish* buttons, the additional functionality listed
 below will be disabled even if these settings are applied.
 
@@ -25,11 +25,11 @@ below will be disabled even if these settings are applied.
 
 If enabled, geolocation data on the Account and Activity objects will be
 collected in
-the link:ct-mobile-control-panel-general-new#h3_612123135[Account
+the xref:ct-mobile-control-panel-general-new#h3_612123135[Account
 Geolocation
-Field] or link:ct-mobile-control-panel-general-new#h3__1092547330[Account
+Field] or xref:ct-mobile-control-panel-general-new#h3__1092547330[Account
 Full Address Field] according to selection and in
-the link:ct-mobile-control-panel-activities-new#h4__1419137192[Geolocation
+the xref:ct-mobile-control-panel-activities-new#h4__1419137192[Geolocation
 Field] field.
 
 [[h4__457278244]]
@@ -96,7 +96,7 @@ functionality] is enabled.
 ===== Geolocation Field
 
 If
-the link:ct-mobile-control-panel-activities-new#h3__470962300[Capture
+the xref:ct-mobile-control-panel-activities-new#h3__470962300[Capture
 Geolocation when Activity is Started] option is enabled, specify the API
 name of the field with the _Geolocation_ type where the geolocation
 data of the _Activity_ record will be written.
@@ -108,7 +108,7 @@ This functionality will be available in the future releases of the CT
 Mobile Control Panel.
 
 Specify fields that should be copied while copying activities in the
-link:calendar[Calendar] module of the mobile app.
+xref:calendar[Calendar] module of the mobile app.
 
 image:ctm-control-panel-activities-copy-settings.png[]
 

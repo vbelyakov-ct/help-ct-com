@@ -29,7 +29,7 @@ the following are required:
 [.object]#Product# object. Specify in the field the number
 encoded in the barcode.
 
-[NOTE] ==== On the link:ct-mobile-control-panel-general[CT
+[NOTE] ==== On the xref:ct-mobile-control-panel-general[CT
 Mobile Control Panel: General] tab, the[.object]#Product ====
 object should be selected in the *Product Object API Name* field#.
 . On the[.object]#Activity Data# object:
@@ -39,7 +39,7 @@ object should be selected in the *Product Object API Name* field#.
 * add a field with the lookup relationship type to link the
 [.object]#Activity Data# object with the
 [.object]#Activity# object.
-. Create link:custom-related-lists[a custom related list] of the
+. Create xref:custom-related-lists[a custom related list] of the
 [.object]#Activity# object with the[.object]#Activity
 Data# object as a child object.
 * add a field with the lookup relationship type, which links the
@@ -47,7 +47,7 @@ Data# object as a child object.
 [.object]#Product# object, as a column of the list.
 . Add the[.object]#Activity#,[.object]#Activity Data,#
 and[.object]#Product# objects to
-link:ctm-settings-offline-objects[offline objects].
+xref:ctm-settings-offline-objects[offline objects].
 
 [NOTE] ==== The user's profile should have access to read and
 edit records of all the objects mentioned above. ====
@@ -65,7 +65,7 @@ A new record is created.
 
 * When rescanning previously added barcodes, duplicate records are not
 created.
-* If link:start-finish-functionality[the Start/Finish
+* If xref:start-finish-functionality[the Start/Finish
 functionality] is enabled, the barcode scanner button will be available
 after the activity is starting.
 

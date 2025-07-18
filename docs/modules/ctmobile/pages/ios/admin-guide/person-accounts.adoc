@@ -18,12 +18,12 @@ created.
 https://help.salesforce.com/articleView?id=users_profiles_record_types.htm&type=5&language=en_US[Assign
 the person account record type to user profiles].
 . Enable Person Accounts in
-link:ct-mobile-control-panel-general#h3_471160840[CT Mobile Control
+xref:ct-mobile-control-panel-general#h3_471160840[CT Mobile Control
 Panel:
-General]/link:ct-mobile-control-panel-general-new#h3_471160840[CT
+General]/xref:ct-mobile-control-panel-general-new#h3_471160840[CT
 Mobile Control Panel 2.0: General] for the appropriate user profile.
-. ​Go to link:ct-mobile-control-panel-app-menu[CT Mobile Control
-Panel: App Menu]/link:ct-mobile-control-panel-app-menu-new[CT
+. ​Go to xref:ct-mobile-control-panel-app-menu[CT Mobile Control
+Panel: App Menu]/xref:ct-mobile-control-panel-app-menu-new[CT
 Mobile Control Panel 2.0: App Menu] and add *Account* and *Contact* to
 the *Selected* list in the required order.
 
@@ -32,7 +32,7 @@ The setup is complete.
 To view only appropriate records on the *Related Accounts* tab in the CT
 Mobile app, specify the [.topBar .object]#Account Contact Relation#
 object in the
-link:ct-mobile-control-panel-general#h3_494016929[Reference Object
+xref:ct-mobile-control-panel-general#h3_494016929[Reference Object
 API Name] field.
 
 [[h2__1162752891]]
@@ -40,7 +40,7 @@ API Name] field.
 
 The *Person Accounts* records are listed in the *Contacts* menu item.
 
-* Configure and assign link:mini-layouts[a mini-layout] for the
+* Configure and assign xref:mini-layouts[a mini-layout] for the
 Person Account record type to create new records.
 * Configure list views for *Person Accounts* by including the *Is Person
 Account* field in the filter criteria.
@@ -50,8 +50,8 @@ Account* field in the filter criteria.
 ifdef::ios,andr,win[]
 
 For activity management, correct operation of the
-link:calendar[Calendar] module, the
-link:applications[Applications] module, and the CT Mobile app in
+xref:calendar[Calendar] module, the
+xref:applications[Applications] module, and the CT Mobile app in
 general, the[.object]#Activity# objects must contain the
 relationships with the[.object]#Contact# object, available to a
 user.
@@ -59,6 +59,6 @@ user.
 ifdef::kotlin[]
 
 For activity management, correct operation of the
-link:calendar[Calendar] module and the CT Mobile app in general,
+xref:calendar[Calendar] module and the CT Mobile app in general,
 the[.object]#Activity# objects must contain the relationships
 with the[.object]#Contact# object, available to a user.

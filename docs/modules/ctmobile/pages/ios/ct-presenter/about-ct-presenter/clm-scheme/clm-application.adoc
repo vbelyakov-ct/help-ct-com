@@ -26,7 +26,7 @@ label.
 
 |Application ID |[.apiobject]#clm__APPID__c# |Text(255)
 (Unique Case Insensitive) |The unique label of the CLM presentation. It
-may be used link:changing-slides[in the navigation] for switching
+may be used xref:changing-slides[in the navigation] for switching
 from the current slide to a slide in another CLM presentation.
 
 |Available for Download
@@ -69,7 +69,7 @@ demonstration of the CLM presentation.
 
 For each slide, comments will be stored in the
 [.apiobject]#clm__Description__c# field of the record of
-the link:clm-applicationstats[Application Stats] object.
+the xref:clm-applicationstats[Application Stats] object.
 
 |Forced Load Date |[.apiobject]#clm__ForcedLoadDate__c#
 |Date a|
@@ -95,17 +95,17 @@ custom Visualforce page.
 * *Application*
 
 The CLM presentation is based on HTML5 by manually creating or uploading
-link:creating-clm-presentation-from-powerpoint[PowerPoint],
-link:creating-clm-presentation-from-pdf[PDF], or
-link:creating-clm-presentation-from-jpeg-jpg[ZIP archives with the
-JPEG/JPG files] on the link:application-editor[Application Editor]
+xref:creating-clm-presentation-from-powerpoint[PowerPoint],
+xref:creating-clm-presentation-from-pdf[PDF], or
+xref:creating-clm-presentation-from-jpeg-jpg[ZIP archives with the
+JPEG/JPG files] on the xref:application-editor[Application Editor]
 tab.
 * *Plain Application*
 
-In the built-in link:plain-application-editor[Plain Application
+In the built-in xref:plain-application-editor[Plain Application
 Editor], CLM presentations can be created based on
-link:clm-template[templates],
-link:clm-placeholder[placeholders], link:clm-widget[widgets],
+xref:clm-template[templates],
+xref:clm-placeholder[placeholders], xref:clm-widget[widgets],
 PowerPoint, and other content. Markups for all slides are stored in the
 first slide. The slides' effects are available.
 
@@ -121,11 +121,11 @@ The slide ID for displaying a slide preview.
 |Slide reordering enabled
 |[.apiobject]#clm__IsSlideReorderEnabled__c# |Checkbox
 |If enabled, users can create and edit
-link:clm-customscenario[custom scenarios].
+xref:clm-customscenario[custom scenarios].
 
 |Slide Zoom Enabled |[.apiobject]#clm__IsZoomEnabled__c#
 |Checkbox |If enabled, zoom in and out slides if
-link:mobile-application-setup#h2_993073976[the display mode is
+xref:mobile-application-setup#h2_993073976[the display mode is
 *wk*].
 
 |Swipe gesture type
@@ -139,7 +139,7 @@ Per slide,
 
 * it counts taps or clicks and stores as an *Application Stats* record
 of the *Slide Stats* record type.
-* link:the-remote-detailing-functionality[For Remote Detailing]
+* xref:the-remote-detailing-functionality[For Remote Detailing]
 
 Per each slide, counting taps/clicks of the presenter and participants
 will be stored as an *Application Stats* record of the *Global Stats*

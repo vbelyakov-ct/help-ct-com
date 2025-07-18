@@ -2,7 +2,7 @@
 
 [TIP] ==== According to the selected profile, settings on this
 tab will be saved in the corresponding fields of
-the link:mobile-application-setup[Mobile Application Setup] record.
+the xref:mobile-application-setup[Mobile Application Setup] record.
 ====
 
 The *General* tab is intended to specify the main settings which are
@@ -35,7 +35,7 @@ Click *Save* to apply new settings.
 ==== Person Account
 
 Enable this attribute must be set if the client system uses the
-link:person-accounts[Person Accounts] functionality. If enabled:
+xref:person-accounts[Person Accounts] functionality. If enabled:
 
 *[.object]#Person Accounts# are displayed in the *Contacts*
 menu item and on the *Contacts* tab of the modules, except for the cases
@@ -70,10 +70,10 @@ Object].
 ==== Passcode
 
 If enabled, the first time the user launches the CT Mobile app, the app
-will ask the user link:application-pin-code[to set a personal
+will ask the user xref:application-pin-code[to set a personal
 passcode]. Then, every time the user opens the app, a password will be
 required to access the app. When you enter the wrong passcode three
-times in a row, link:log-out[the database will be reset].
+times in a row, xref:log-out[the database will be reset].
 
 [[h3__377059502]]
 ==== Quality of Attached Images
@@ -96,9 +96,9 @@ is disabled.
 [[h2_670774632]]
 === Maps
 
-Settings that may be used for link:mobile-layouts-maps[the Maps
-widget] on a record, in the link:routes[Routes] and
-link:nearby-accounts[Nearby Accounts] modules.
+Settings that may be used for xref:mobile-layouts-maps[the Maps
+widget] on a record, in the xref:routes[Routes] and
+xref:nearby-accounts[Nearby Accounts] modules.
 
 [[h3__335024009]]
 ==== 
@@ -127,7 +127,7 @@ this field in the *Account Geolocation Field* picklist.
 
 [NOTE] ==== If geolocation data is not specified, the account
 location will be retrieved from the
-link:ct-mobile-control-panel-general-new#h3__1092547330[Account
+xref:ct-mobile-control-panel-general-new#h3__1092547330[Account
 Full Address] field. ====
 
 [[h3__1092547330]]
@@ -168,7 +168,7 @@ type.
 [[h3_604215198]]
 ==== Google Maps iOS API Key
 
-Obtain and enter your link:google-maps-api-key[Google Maps API key]
+Obtain and enter your xref:google-maps-api-key[Google Maps API key]
 for using Google Maps in the CT Mobile iOS app.
 
 [[h3__1990058335]]
@@ -178,7 +178,7 @@ for using Google Maps in the CT Mobile iOS app.
 ==== Google Maps Android API Key
 
 Obtain and enter your
-https://docs.microsoft.com/en-us/bingmaps/getting-started/bing-maps-dev-center-help/getting-a-bing-maps-key[]link:google-maps-api-key[Google
+https://docs.microsoft.com/en-us/bingmaps/getting-started/bing-maps-dev-center-help/getting-a-bing-maps-key[]xref:google-maps-api-key[Google
 Maps API key] on this tab for using Google Maps in the CT Mobile Android
 apps.
 
@@ -187,9 +187,9 @@ apps.
 
 ifdef::kotlin[]
 
-Obtain and enter your link:google-maps-api-key[Google Maps
+Obtain and enter your xref:google-maps-api-key[Google Maps
 JavaScript API Key] to track the geolocation of CT Mobile iOS users in
-real-time via the link:geolocation-center[Geolocation Center] in
+real-time via the xref:geolocation-center[Geolocation Center] in
 Salesforce.
 
 [[h3__1424081301]]
@@ -235,7 +235,7 @@ overloaded. #
 [[h3_813073278]]
 ==== Send database dump to
 
-Choose where to link:send-application-data-dump[send the customer's
+Choose where to xref:send-application-data-dump[send the customer's
 database dump] of the CT Mobile app. Select an option:
 
 * http://Salesforce.com[Salesforce.com]

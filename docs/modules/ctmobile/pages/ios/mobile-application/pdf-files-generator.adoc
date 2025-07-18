@@ -4,16 +4,16 @@ The CT Mobile app allows you to generate PDF documents during the
 display of CLM presentations.
 
 ifdef::ios[]This functionality is used when a
-user link:clm-presentation-controls#h2_1347300086[sends a PDF
+user xref:clm-presentation-controls#h2_1347300086[sends a PDF
 file] from a CLM presentation or calls
-the link:ctm-generatepdf[ctm.generatePDF] method.
+the xref:ctm-generatepdf[ctm.generatePDF] method.
 
 
 
 You can attach several templates to a single CLM presentation.
 
 * templates should be added as an
-link:attachments-and-files[attachment] to the CLM presentation.
+xref:attachments-and-files[attachment] to the CLM presentation.
 ** The template *filename* should have the format as
 [.apiobject]#template.html#,
 [.apiobject]#template1.html#,

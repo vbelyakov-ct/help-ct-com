@@ -12,21 +12,21 @@ https://developer.salesforce.com/docs/atlas.en-us.api_meta.meta/api_meta/meta_mo
 settings] are required.
 
 To update the metadata archive, go to the
-link:ct-mobile-control-panel-tools#h3_1003786176[CT Mobile Control
+xref:ct-mobile-control-panel-tools#h3_1003786176[CT Mobile Control
 Panel:
-Tools]/link:ct-mobile-control-panel-tools-new#h3_1003786176[CT
+Tools]/xref:ct-mobile-control-panel-tools-new#h3_1003786176[CT
 Mobile Control Panel 2.0: Tools] tab and click the *Refresh metadata
 archive* button. ifndef::kotlin[]It is possible to set up a schedule
 to refresh metadata archive. For more information, refer
-to link:metadata-checker[Metadata Checker].
+to xref:metadata-checker[Metadata Checker].
 
 ifndef::ios,win,kotlin[]
 
 The mobile app downloads metadata using administrator credentials.
 
 * To work with the metadata archive, specify the Cloud token first
-in link:ct-mobile-control-panel-tools#h3_2011978[CT Mobile Control
-Panel: Tools]/link:ct-mobile-control-panel-tools-new#h2_2011978[CT
+in xref:ct-mobile-control-panel-tools#h3_2011978[CT Mobile Control
+Panel: Tools]/xref:ct-mobile-control-panel-tools-new#h2_2011978[CT
 Mobile Control Panel 2.0: Tools] tab.
 
 [[h2_1854953360]]
@@ -51,7 +51,7 @@ standards you specify before the user can save the record.
 
 |CustomObject/https://developer.salesforce.com/docs/atlas.en-us.api_meta.meta/api_meta/customfield.htm[CustomField]
 |Description |The description of
-link:fields-display-on-the-screen-of-the-mobile-application[optional
+xref:fields-display-on-the-screen-of-the-mobile-application[optional
 fields is displayed on the screen of the CT Mobile app (iOS)].
 
 |CustomObject/CustomField |LookupFilter

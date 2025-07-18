@@ -1,7 +1,7 @@
 = Fast Synchronization
 
 To run fast synchronization, tap the *Sync* button in the top right
-corner of the link:home-screen[Home Screen] or long tap the *Sync*
+corner of the xref:home-screen[Home Screen] or long tap the *Sync*
 button and select *Fast synchronization* from the picklist.
 
 ifdef::ios[][NOTE] ==== Due to
@@ -23,7 +23,7 @@ for work except for the *Applications* module.
 Data changes in the application, such as deletions, insertions, and
 updates, are sent to Salesforce.
 
-The changes in link:clm-user[the audit fields] of the current
+The changes in xref:clm-user[the audit fields] of the current
 user's record are sent to Salesforce.
 
 [NOTE] ==== The
@@ -34,7 +34,7 @@ been interrupted before the field sync date was updated. #
 ifdef::ios[]
 
 If enabled, records with errors will be sent using
-link:sync-recovery[the Sync Recovery functionality].
+xref:sync-recovery[the Sync Recovery functionality].
 
 ifdef::ios,win[]
 
@@ -42,12 +42,12 @@ The system compares the date of the last successful synchronization in
 the[.apiobject]#clm__LastSyncDate__c# field of the
 current user's record with the date of the last metadata change in the
 [.apiobject]#clm__MetadataLastModifiedDate__c# field of
-the link:mobile-application-setup[Mobile Application Setup] record
+the xref:mobile-application-setup[Mobile Application Setup] record
 for the current user's profile (if this record exists) or for the
 current user's Salesforce organization. To find out how to manually or
 automatically update
 the [.apiobject]#clm__MetadataLastModifiedDate__c# field,
-go to link:metadata-checker[Metadata Checker].
+go to xref:metadata-checker[Metadata Checker].
 
 * If the date of the last metadata change is a date earlier than the
 date of the last successful synchronization, the application runs *the
@@ -55,36 +55,36 @@ fast synchronization*;
 * If the date of the last metadata change is later than the date of the
 last successful synchronization or not specified, the application runs
 *the mixed synchronization* to download
-link:metadata-archive[metadata components] and update the current
+xref:metadata-archive[metadata components] and update the current
 database.
 Metadata components are downloaded from ZIP archive(s) or directly using
 administrator credentials depending
-on link:ct-mobile-managed-package-update-to-v-3-54[the CT Mobile
+on xref:ct-mobile-managed-package-update-to-v-3-54[the CT Mobile
 package version]. The cloud token should be valid to retrieve components
 from the ZIP archive(s) (refer to
-link:ct-mobile-control-panel-tools#h3_2011978[CT Mobile Control
-Panel: Tools]/link:ct-mobile-control-panel-tools-new#h2_2011978[CT
+xref:ct-mobile-control-panel-tools#h3_2011978[CT Mobile Control
+Panel: Tools]/xref:ct-mobile-control-panel-tools-new#h2_2011978[CT
 Mobile Control Panel 2.0: Tools]). The synchronization process can
 proceed without a valid cloud token or administrator credentials, and in
-that case, link:validation[validation rules], offline reports, and
+that case, xref:validation[validation rules], offline reports, and
 some operators in formulas might not operate properly.
 
-Records of link:custom-settings[the custom settings&#44; custom
-metadata types], link:managing-offline-objects[offline objects],
+Records of xref:custom-settings[the custom settings&#44; custom
+metadata types], xref:managing-offline-objects[offline objects],
 and objects, which are necessary for activated
-link:mobile-application-modules[modules], are downloaded if the
+xref:mobile-application-modules[modules], are downloaded if the
 value in the[.apiobject]#SystemModstamp# field is a date later
 than the date of the last successful synchronization and a record
-matches the conditions set in link:related-list-filters[related
+matches the conditions set in xref:related-list-filters[related
 list filters].
 
 ifdef::ios[]
 
 If configured, the records of the specified objects mentioned in the
-link:ct-mobile-replication[CT Mobile Replication] setting are
+xref:ct-mobile-replication[CT Mobile Replication] setting are
 updated.
 
-link:clm-user[The audit fields] of the current user record are
+xref:clm-user[The audit fields] of the current user record are
 updated.
 
 [NOTE] ==== The

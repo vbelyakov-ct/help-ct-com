@@ -42,9 +42,9 @@ location data for an *Account* or *Activity* record and write them into
 the specific field.
 
 When a mobile user has permission to edit records (refer to
-link:managing-offline-objects[Managing Offline Objects in CT Mobile
+xref:managing-offline-objects[Managing Offline Objects in CT Mobile
 Control Panel] or
-link:ct-mobile-control-panel-offline-objects-new[CT Mobile Control
+xref:ct-mobile-control-panel-offline-objects-new[CT Mobile Control
 Panel 2.0: Offline Objects]).
 
 When the mobile user has permission to edit the geolocation type field.
@@ -57,7 +57,7 @@ to store the geolocation of the organization.
 A geolocation type field on the[.object]#Activity# objects used
 to store the geolocation of the activities.
 
-If link:start-finish-functionality[the Start/Finish functionality]
+If xref:start-finish-functionality[the Start/Finish functionality]
 is on *Capture Geoposition* is enabled, and a mobile user has forenamed
 permissions for a record of an[.object]#Activity# object, the
 geolocation is automatically captured and the *Determine Location*
@@ -70,11 +70,11 @@ ifndef::kotlin[]
 The *Determine Location* button is available on the records of other
 objects:
 
-* When link:ct-mobile-control-panel-general#h2_670774632[a
+* When xref:ct-mobile-control-panel-general#h2_670774632[a
 geolocation type field on the Account object] is specified (refer to
-link:ct-mobile-control-panel-general#h3_612123135[CT Mobile Control
+xref:ct-mobile-control-panel-general#h3_612123135[CT Mobile Control
 Panel: General → Account Geolocation Field] or
-link:ct-mobile-control-panel-general-new#h3_612123135[CT Mobile
+xref:ct-mobile-control-panel-general-new#h3_612123135[CT Mobile
 Control Panel 2.0: General → Account Geolocation Field]).
 * The API name of the geolocation type field on the required object is
 the same as the API name of the geolocation type field on the
@@ -110,7 +110,7 @@ sharing rule], or if the access was
 granted https://help.salesforce.com/articleView?id=security_sharing_owd_user_manual.htm&type=5[manually].
 
 To know more about attaching and viewing files in the *Files* section,
-refer to link:attaching-files-in-the-files-section[Attachments in
+refer to xref:attaching-files-in-the-files-section[Attachments in
 the Files Section].
 
 [[h2_62618674]]
@@ -135,7 +135,7 @@ ifdef::ios,kotlin[]
 
 
 
-If link:start-finish-functionality[the Start/Finish functionality]
+If xref:start-finish-functionality[the Start/Finish functionality]
 is on and a mobile user has fore-named permissions for a record of an
 [.object]#Activity# object:
 
@@ -151,7 +151,7 @@ ifdef::ios,win,andr[]
 
 ifndef::win[]
 
-Add a post in the link:mobile-layouts-chatter-feed[Chatter feed].
+Add a post in the xref:mobile-layouts-chatter-feed[Chatter feed].
 Click *Add Post*. In the open modal window:
 
 [NOTE] ==== The user profile should have permission to edit
@@ -170,7 +170,7 @@ permission to edit records of the object to which the *Chatter* tab is
 added. ====
 
 Click the *Plus* button to add a new post to the
-link:mobile-layouts-chatter-feed[Chatter feed].
+xref:mobile-layouts-chatter-feed[Chatter feed].
 
 ifdef::ios[]
 
@@ -189,21 +189,21 @@ Tap to export selected fields to a CSV file.
 
 * The menu item is displayed on related records, if the *Export
 Allowed* checkbox is set to _true_ (refer to
-link:ctm-settings-offline-objects[Offline Objects → Export Allowed]
-or link:ct-mobile-control-panel-offline-objects-new#h3_290156637[CT
+xref:ctm-settings-offline-objects[Offline Objects → Export Allowed]
+or xref:ct-mobile-control-panel-offline-objects-new#h3_290156637[CT
 Mobile Control Panel 2.0: Offline Objects → Export to CSV]).
 * Default fields should be specified in the** Default Columns** field of
-the link:ctm-settings-offline-objects[Offline Object] or in
-link:ct-mobile-control-panel-offline-objects-new#h4__912917703[CT
+the xref:ctm-settings-offline-objects[Offline Object] or in
+xref:ct-mobile-control-panel-offline-objects-new#h4__912917703[CT
 Mobile Control Panel 2.0: Offline Objects → Export Columns Selection].
 * Custom fields can be selected for export if
-the link:ctm-settings-offline-objects[Select Export
+the xref:ctm-settings-offline-objects[Select Export
 Columns] checkbox is set to _true_ or
-link:ct-mobile-control-panel-offline-objects-new#h4__912917703[Export
+xref:ct-mobile-control-panel-offline-objects-new#h4__912917703[Export
 Columns Selection] is set to *User-Selected Columns* or *Predefined and
 User-Selected Columns*.
 [TIP] ==== To export selected fields to file for the main
-object, switch to link:list-views#h2_1248088428[detailed list
+object, switch to xref:list-views#h2_1248088428[detailed list
 view]. ====
 
 image:ctmi-export-csv-2.9.png[]

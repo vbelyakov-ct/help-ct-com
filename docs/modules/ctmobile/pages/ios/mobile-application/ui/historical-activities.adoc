@@ -10,7 +10,7 @@ The following rules are used as search criteria for historical data:
 
 * The same record type of *Activity* records.
 * The values of the required fields that were filled out on
-link:mobile-mini-layout-settings[the mini layout] are the same.
+xref:mobile-mini-layout-settings[the mini layout] are the same.
 * The start date of the historical activity is prior to that of the
 currently open one.
 
@@ -21,7 +21,7 @@ listed above, as well as the values in
 the [.apiobject]#WhoId# and [.apiobject]#WhatId# fields
 if they are specified. [TIP] ==== Use the
 [.apiobject]#clm__ActivityDoneAPI__c ==== attribute of
-link:mobile-application-setup[Mobile Application Setup] as a
+xref:mobile-application-setup[Mobile Application Setup] as a
 checkbox field to indicate that the activity has been completed. It can
 help with a possible cut-off of canceled or unfinished activities in the
 past.#

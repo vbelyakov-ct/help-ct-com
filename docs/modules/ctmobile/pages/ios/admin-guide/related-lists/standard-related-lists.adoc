@@ -31,11 +31,11 @@ the field will be required to fill in even if the *Required* attribute
 has not been selected.
 * Specify the columns' order;
 * Use filters. For more information, go
-to link:filters-in-related-lists[Filters in Related Lists].
+to xref:filters-in-related-lists[Filters in Related Lists].
 . Go to
-link:ct-mobile-control-panel-offline-objects#h2_946326628[CT Mobile
+xref:ct-mobile-control-panel-offline-objects#h2_946326628[CT Mobile
 Control Panel: Offline
-Objects]/link:ct-mobile-control-panel-offline-objects-new[CT Mobile
+Objects]/xref:ct-mobile-control-panel-offline-objects-new[CT Mobile
 Control Panel 2.0: Offline Objects] and add the object from step 1 to
 the *Selected* list. Click the object in the *Selected* list to manage
 permissions and related lists.
@@ -43,7 +43,7 @@ permissions and related lists.
 [TIP] ==== You can allow creating or deleting records and
 specify the SOQL filter to display all records or the required ones in
 the CT Mobile app. For more information, go to
-link:managing-offline-objects[Managing Offline Objects]. ====
+xref:managing-offline-objects[Managing Offline Objects]. ====
 . Add the object of the related list to the *Selected* list, for
 example,[.object]#Contacts# or
 [.object]#Opportunities#.
@@ -62,7 +62,7 @@ ifdef::ios[]
 
 https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_openactivity.htm?search_text=openactivity[Open
 Activity] and https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_activityhistory.htm[Activity
-History] standard related lists link:standard-related-lists[can be
+History] standard related lists xref:standard-related-lists[can be
 added to an object]. They display records of two standard
 objects, https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_objects_task.htm[Task] and https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_objects_event.htm[Event]:
 

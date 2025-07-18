@@ -4,17 +4,17 @@ The push identifier is a unique identifier to enable the push
 notification for users who are working with the following
 functionalities:
 
-link:chatter-push-notifications[Chatter]
+xref:chatter-push-notifications[Chatter]
 A user receives notifications about new posts and mentions.
 
 ifdef::ios[]
 
-link:geolocation-center[Geolocation Center]
+xref:geolocation-center[Geolocation Center]
 When the manager clicks the *Locate* button on the
-link:using-geolocation-center#h2_1635597370[Users] tab to define
+xref:using-geolocation-center#h2_1635597370[Users] tab to define
 the current user's location.
 
-link:notification-center[Notification Center]
+xref:notification-center[Notification Center]
 Send to users messages from the Notification Center tab.
 
 Custom notification
@@ -26,7 +26,7 @@ etc.
 
 To obtain the unique push identifier for the custom CT Mobile app:
 
-. Specify the link:mobile-application-bundle-id[bundle ID] of your
+. Specify the xref:mobile-application-bundle-id[bundle ID] of your
 custom CT Mobile app.
 
 For example, for the CT Mobile app in the App Store, the bundle ID is

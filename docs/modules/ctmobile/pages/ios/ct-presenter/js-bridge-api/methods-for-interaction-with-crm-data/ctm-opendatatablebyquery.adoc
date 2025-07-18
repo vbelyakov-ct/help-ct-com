@@ -1,7 +1,7 @@
 = ctm.openDataTableByQuery
 
-The method of the link:js-bridge-api[JS Bridge] functionality is
-intended to open link:custom-related-lists[a custom related list]
+The method of the xref:js-bridge-api[JS Bridge] functionality is
+intended to open xref:custom-related-lists[a custom related list]
 with records that meet the criteria. If set, records will be displayed
 in the custom related list tabs.
 
@@ -13,7 +13,7 @@ name of the offline object with the following fields:
 
 *[.apiobject]#Query# is SQL query to the database;
 *[.apiobject]#SettingName# is a list of settings names of the
-link:mobile-custom-details-settings[Mobile Custom Details
+xref:mobile-custom-details-settings[Mobile Custom Details
 Settings], such as permissions to create and/or delete a record in the
 custom related list, a list of columns to display, filter, and sort
 criteria, for the custom related list displaying;

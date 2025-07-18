@@ -13,7 +13,7 @@ ifndef::kotlin[]
 
 The list views are pulled from Salesforce and available in:
 
-link:managing-offline-objects[Offline objects], such as
+xref:managing-offline-objects[Offline objects], such as
 [.object]#Accounts#,[.object]#Contacts#,
 [.object]#Opportunities#, etc.
 
@@ -74,7 +74,7 @@ will be displayed the next time a user opens the corresponding offline
 object (including reference fields) or module.
 
 You can pin the desired list view (currently available only for the
-link:using-calendar#h3__632854949[Calendar] module).
+xref:using-calendar#h3__632854949[Calendar] module).
 
 ifdef::win[]
 
@@ -106,7 +106,7 @@ image:detailed-list-view-button.png[]
 to maximize the list view display:
 
 * create and delete records
-link:managing-offline-objects#h2_1534686659[if permission is
+xref:managing-offline-objects#h2_1534686659[if permission is
 granted];
 
 * the created or opened record will be displayed in the standard view
@@ -116,7 +116,7 @@ order regardless of the case;
 * search records;
 * the last selected list view will be saved and displayed the next time
 a user opens the corresponding offline object;
-* export columns to a CSV file if link:actions#h2_1173923582[the
+* export columns to a CSV file if xref:actions#h2_1173923582[the
 setting is enabled].
 
 image:detailed-list-view.png[]
@@ -138,7 +138,7 @@ image:Hardcoded-List-View.png[]
 The user can create list views in the CT Mobile app.
 
 * The conditions for the mobile list view will be written in the
-link:ctm-user-settings[CTM User Settings] record after the sync
+xref:ctm-user-settings[CTM User Settings] record after the sync
 process.
 * To create the mobile list view, the user should have permission to
 create the *CTM User Settings* records and edit its fields.
@@ -159,7 +159,7 @@ To create a mobile list view:
 to display the matched records.
 [NOTE] ==== You can set list of fields displayed in criteria
 setting and *Records preview* section by specifying them in the *Fields*
-field of the link:ctm-settings-menu[CTM Settings → Menu] object.
+field of the xref:ctm-settings-menu[CTM Settings → Menu] object.
 ====
 . Tap *Save*.
 
@@ -180,7 +180,7 @@ image:detailed-list-view-button-windows.png[]
 to maximize the list view display:
 
 * create and delete records
-link:managing-offline-objects#h2_1534686659[if permission is
+xref:managing-offline-objects#h2_1534686659[if permission is
 granted];
 
 * the created or opened record will be displayed in the standard view

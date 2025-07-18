@@ -16,18 +16,18 @@ app.
 record through the relationship.
 * Trigger by events, such as[.apiobject]#after create#,
 [.apiobject]#after update#,[.apiobject]#after delete#,
-or link:ct-mobile-workflow#h2__925686890[tapping the appropriate
+or xref:ct-mobile-workflow#h2__925686890[tapping the appropriate
 button].
 
 
 
 To set up a *CT Mobile Workflow* and steps, go to the
-link:ct-mobile-control-panel-workflows[CT Mobile Control Panel:
+xref:ct-mobile-control-panel-workflows[CT Mobile Control Panel:
 Workflows] tab.
 
 * *CT Mobile Workflows* are available offline, do not require the CT
 Mobile app update, and could be downloaded during
-link:synchronization-launch#h2__966867633[any synchronization
+xref:synchronization-launch#h2__966867633[any synchronization
 mode].
 * *CT Mobile Workflow* can be applied only to one record at one time. To
 perform multiple actions, specify them as steps of the same *CT Mobile
@@ -37,8 +37,8 @@ Workflow*.
 === Important Notes
 
 * Please get familiar with the full description
-of link:ct-mobile-workflow[CT Mobile
-Workflow] and link:ct-mobile-workflow-step[CT Mobile Workflow
+of xref:ct-mobile-workflow[CT Mobile
+Workflow] and xref:ct-mobile-workflow-step[CT Mobile Workflow
 Step] objects.
 * The *Lock/Unlock* record action and the[.apiobject]#before
 create#,[.apiobject]#before update#, and
@@ -60,7 +60,7 @@ will be populated on the *Activity* record with the *Planned* status.
 
 
 
-link:ct-mobile-control-panel-workflows#h2__1577295421[Create a new
+xref:ct-mobile-control-panel-workflows#h2__1577295421[Create a new
 record of CT Mobile Workflow]:
 
 * Specify the *On Click* action, the API name of the button, and
@@ -72,7 +72,7 @@ image:Workflow_This-record_en.png[]
 
 
 
-link:ct-mobile-control-panel-workflows#h2_438443077[Create a new
+xref:ct-mobile-control-panel-workflows#h2_438443077[Create a new
 record of the CT Mobile Workflow Step]:
 
 * Specify the *Update record* action and the *This record* scope.

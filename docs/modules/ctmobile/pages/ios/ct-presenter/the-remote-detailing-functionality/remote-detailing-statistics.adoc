@@ -17,9 +17,9 @@ Collect separately the presenter and participants' statistics during the
 *Remote Detailing* or *Self Detailing* meeting.
 
 * To track certain parameters, they should be enabled on
-link:application-editor#h2__213917439[the appropriate CLM
+xref:application-editor#h2__213917439[the appropriate CLM
 presentation record]. Also,
-link:remote-detailing-1-0-ui-for-presenter[the presenter should
+xref:remote-detailing-1-0-ui-for-presenter[the presenter should
 define] allow participants or not to like and dislike slides.
 * The[.object]#Application Stats# object should have the field
 with the *Lookup* type on the[.object]#Activity# object, e.g.,
@@ -27,8 +27,8 @@ the[.apiobject]#VisitId__c#, and this field should be
 specified in the *Activity Field API* field of the *Mobile Application
 Setup* record.
 * If needed, specify the
-link:ct-mobile-control-panel-presenter#h3_856955672[Detailed
-Statistics Enabled]/link:ct-mobile-control-panel-remote-detailing-new#h4_247168521[Detailed
+xref:ct-mobile-control-panel-presenter#h3_856955672[Detailed
+Statistics Enabled]/xref:ct-mobile-control-panel-remote-detailing-new#h4_247168521[Detailed
 Statistics] option.
 * Apply and process only single clicks and taps to launch interactive
 elements on the slides of CLM presentations for their correct display on
@@ -48,7 +48,7 @@ IP address will be gathered for the presenter and participants. ====
 ==== For Presenter
 
 On all *Application Stats* records, the
-link:clm-applicationstats[Guest Stats] field is populated with the
+xref:clm-applicationstats[Guest Stats] field is populated with the
 [.apiobject]#false# value.
 
 * The *Global Stats* record type

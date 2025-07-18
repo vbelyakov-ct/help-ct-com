@@ -7,32 +7,32 @@ package v. 3.54:
 during the synchronization.
 * User access to the cloud token is restricted.
 ** Now, the cloud token is written to the protected
-link:api-key[API Key] custom setting and retrieved by the web
+xref:api-key[API Key] custom setting and retrieved by the web
 service.
-** As before, link:application-permission-settings[administrators]
+** As before, xref:application-permission-settings[administrators]
 could view and refresh the cloud token value on the
-link:ct-mobile-control-panel-tools[CT Mobile Control Panel: Tools].
+xref:ct-mobile-control-panel-tools[CT Mobile Control Panel: Tools].
 
 
 
 Consider the following while working with the CT Mobile package v. 3.54
 and higher:
 
-* link:ct-mobile-control-panel-tools#h2__203730205[The
+* xref:ct-mobile-control-panel-tools#h2__203730205[The
 administrator credentials] are no more available on the CT Mobile
 Control Panel: Tools tab and are no more in use to download metadata on
 the user's device.
-* link:metadata-archive[The metadata archive] should be built. This
+* xref:metadata-archive[The metadata archive] should be built. This
 allows all the necessary metadata to be downloaded to the user's device
 for the CT Mobile app to work properly offline.
 
-[TIP] ==== Enable link:metadata-checker[Metadata Checker]
+[TIP] ==== Enable xref:metadata-checker[Metadata Checker]
 or click the
-link:ct-mobile-control-panel-tools#h3_1003786176[Refresh metadata
+xref:ct-mobile-control-panel-tools#h3_1003786176[Refresh metadata
 archive] button to build the metadata archive. Please note that the
 process will take some time.  ====
 
-* link:ct-mobile-control-panel-tools#h3_2011978[The cloud token] is
+* xref:ct-mobile-control-panel-tools#h3_2011978[The cloud token] is
 required to download the metadata archive during the synchronization on
 the user's device.
 * If the cloud token is invalid or there is no metadata archive, the CT
@@ -50,13 +50,13 @@ ifdef::kotlin[][NOTE] ==== Currently, the CT Mobile package
 v. 3.54 and higher cannot be used with the CT Mobile Android app.  ====
 ifdef::ios[][NOTE] ==== If you changed the cloud token
 value, please note to manually add
-link:ct-mobile-control-panel-tools#h3_2011978[the new value] to the
-corresponding link:mobile-application-setup[Mobile Application
+xref:ct-mobile-control-panel-tools#h3_2011978[the new value] to the
+corresponding xref:mobile-application-setup[Mobile Application
 Setup] record if you are using the CT Mobile iOS app below v. 2.4 with
 the CT Mobile package v. 3.54 and higher. ==== ifdef::win[]
 [NOTE] ==== If you changed the cloud token value, please note to
-manually add link:ct-mobile-control-panel-tools#h3_2011978[the new
-value] to the corresponding link:mobile-application-setup[Mobile
+manually add xref:ct-mobile-control-panel-tools#h3_2011978[the new
+value] to the corresponding xref:mobile-application-setup[Mobile
 Application Setup] record if you are using the CT Mobile Windows app
 below v. 1.3 with the CT Mobile package v. 3.54 and higher. ====
 

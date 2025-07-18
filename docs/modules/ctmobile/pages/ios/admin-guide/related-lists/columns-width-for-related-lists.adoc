@@ -5,8 +5,8 @@ spread evenly along the working area. Customize column width if needed.
 
 ifdef::ios[][NOTE] ==== The actual metadata is required to
 successfully apply the settings. For more information, go to
-link:metadata-archive[Metadata Archive] and
-link:metadata-checker[Metadata Checker]. ==== ifdef::kotlin[]
+xref:metadata-archive[Metadata Archive] and
+xref:metadata-checker[Metadata Checker]. ==== ifdef::kotlin[]
 [NOTE] ==== The actual metadata is required to successfully
 apply the settings. ====
 
@@ -48,7 +48,7 @@ image:column-width.png[]
 This setting is applied to fields in custom related lists. To specify
 the columns' width:
 
-. Go to link:ct-mobile-control-panel-custom-details[CT Mobile
+. Go to xref:ct-mobile-control-panel-custom-details[CT Mobile
 Control Panel: Custom details].
 . Click
 image:58832190.png[]
@@ -66,7 +66,7 @@ ifdef::ios[]This setting overrides the configured column width in
 the object field properties.
 
 The configuration is completed. Perform the
-link:synchronization[full synchronization] to apply the changes.
+xref:synchronization[full synchronization] to apply the changes.
 
 If a custom related list consists of several columns, the non-configured
 columns will be spread evenly along the rest of the working area.

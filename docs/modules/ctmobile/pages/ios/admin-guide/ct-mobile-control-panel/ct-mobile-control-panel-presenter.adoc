@@ -3,16 +3,16 @@
 ifdef::kotlin[]
 
 The *Presenter* tab is intended to configure the
-link:the-remote-detailing-functionality[Remote Detailing]
+xref:the-remote-detailing-functionality[Remote Detailing]
 functionality.
 
 According to the selected profile, several settings on this tab will be
-saved in the corresponding fields of the link:clm-settings[CLM
+saved in the corresponding fields of the xref:clm-settings[CLM
 Settings] record.
 
 :toc: :toclevels: 2
 
-*Click to view the interface*link:javascript:void(0)[]
+*Click to view the interface*xref:javascript:void(0)[]
 
 .Click to hide[%collapsible] ====
 
@@ -51,13 +51,13 @@ section of the *Activity* record.
 
 If enabled, certain JS Bridge methods will be available on the CLM
 presentation slides during the Remote Detailing meeting. Please, refer
-to link:js-bridge-methods-availability[JS Bridge Methods
+to xref:js-bridge-methods-availability[JS Bridge Methods
 Availability].
 
 [[h3_856955672]]
 ==== Detailed Statistics Enabled
 
-If enabled, link:remote-detailing-statistics[the statistics] per
+If enabled, xref:remote-detailing-statistics[the statistics] per
 each slide will be gathered not only for the presenter but also for each
 participant too.
 
@@ -65,10 +65,10 @@ participant too.
 ==== Call Repeat Allowed
 
 If enabled, the presenter
-link:remote-detailing-1-0-ui-for-presenter[can resume] the finished
+xref:remote-detailing-1-0-ui-for-presenter[can resume] the finished
 Remote Detailing session. The statistics will be collected for the
 resuming meeting too. Use
-link:remote-detailing-f-a-q#h2__106650128[the same link] to enter
+xref:remote-detailing-f-a-q#h2__106650128[the same link] to enter
 the previously finished meeting.
 
 [[h3_298754890]]
@@ -121,9 +121,9 @@ saved as a Lightning component to the corresponding *Activity* record.
 
 * The presenter should receive the participant's permission to record
 audio using the Terms of Use on the Welcome Screen (refer to
-link:ct-mobile-control-panel-presenter#h3_1019207818[CT Mobile
+xref:ct-mobile-control-panel-presenter#h3_1019207818[CT Mobile
 Control Panel:
-Presenter]/link:ct-mobile-control-panel-remote-detailing-new#h3_1019207818[CT
+Presenter]/xref:ct-mobile-control-panel-remote-detailing-new#h3_1019207818[CT
 Mobile Control Panel 2.0: Remote Detailing]).
 * If a guest did not accept, they cannot participate in the Remote
 Detailing meeting.
@@ -131,7 +131,7 @@ Detailing meeting.
 exceeds available space and cannot be saved.
 
 For more information, refer
-to link:remote-detailing-2-0-audio-recording[Remote Detailing 2.0:
+to xref:remote-detailing-2-0-audio-recording[Remote Detailing 2.0:
 Audio Recording].
 
 [[h3_1230065320]]
@@ -140,14 +140,14 @@ Audio Recording].
 If enabled, the audio of the Remote Detailing meeting will be
 automatically deleted from the *Activity* record according to the
 expiration date in the
-link:ct-mobile-control-panel-presenter#h3_1157844415[Delete After
+xref:ct-mobile-control-panel-presenter#h3_1157844415[Delete After
 (days)] field.
 
 [[h3_1157844415]]
 ==== Delete After (days)
 
 The number of days to keep an audio recording in Salesforce if the
-link:ct-mobile-control-panel-presenter#h3_1230065320[Scheduled
+xref:ct-mobile-control-panel-presenter#h3_1230065320[Scheduled
 Activity Audio Cleanup] attribute is enabled.
 
 * The default value is 30 days.
@@ -211,7 +211,7 @@ meeting are sent to Salesforce.
 [[h3__201439959]]
 ==== Applications List Field
 
-The field API name of the link:clm-activity[Activity] object for
+The field API name of the xref:clm-activity[Activity] object for
 the Application IDs storing, for example,
 [.apiobject]#ApplicationIds__c#.
 
@@ -224,7 +224,7 @@ profiles.
 [[h3__1311451422]]
 ==== Link Field
 
-The field API name of the link:clm-activity[Activity] object for
+The field API name of the xref:clm-activity[Activity] object for
 the invite link storing, for example,[.object]#RDLink__c#.
 
 * The field to store an invitation link should have the same API name on
@@ -238,7 +238,7 @@ profiles.
 
 Not applied since CT Mobile package v. 3.63.
 
-Specify link:remote-detailing-setup[the active site URL] for
+Specify xref:remote-detailing-setup[the active site URL] for
 logging in, viewing the CLM presentation, and collecting the statistics
 of the CLM presentation via the Self Detailing functionality.
 
@@ -247,10 +247,10 @@ of the CLM presentation via the Self Detailing functionality.
 
 Available since CT Mobile package v. 3.66.
 
-Enter the API name of a checkbox of the link:clm-activity[Activity]
+Enter the API name of a checkbox of the xref:clm-activity[Activity]
 object, for example,[.apiobject]#IsRequiredEmail__c#. If
 the checkbox is active, the participant should fill out an email on
-link:remote-detailing-2-0-ui-for-participants#h2__555694282[the
+xref:remote-detailing-2-0-ui-for-participants#h2__555694282[the
 Welcome screen] to access the Remote Detailing meeting.
 
 [[h3__193092178]]
@@ -292,7 +292,7 @@ Select CLM presentations to send, for example, only active CLM
 presentations or only available for the Remote Detailing session, click
 the *Send data* button, wait for the confirmation, and click *Close*.
 
-*Click to view the interface*link:javascript:void(0)[]
+*Click to view the interface*xref:javascript:void(0)[]
 
 .Click to hide[%collapsible] ====
 

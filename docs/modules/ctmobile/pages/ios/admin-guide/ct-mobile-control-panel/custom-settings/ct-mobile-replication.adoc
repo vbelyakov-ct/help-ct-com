@@ -26,10 +26,10 @@ time on the schedule. ====
 
 
 
-CT Mobile Replication helps to speed up link:synchronization[the
+CT Mobile Replication helps to speed up xref:synchronization[the
 synchronization process] by uploading separate metadata components. The
 common use cases are presented
-link:ct-mobile-replication-use-cases-and-steps[here].
+xref:ct-mobile-replication-use-cases-and-steps[here].
 
 '''''
 
@@ -52,7 +52,7 @@ model.
 Mobile Replication setting will be applied to all users.
 
 |Components |[.apiobject]#clm__Components__c# |Long
-Text(32768) |The list of link:metadata-archive[metadata
+Text(32768) |The list of xref:metadata-archive[metadata
 components]  that were altered.
 
 |Date |[.apiobject]#clm__Date__c# |Date/Time |The date

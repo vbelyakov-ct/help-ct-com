@@ -11,7 +11,7 @@ To enable the Start/Finish functionality:
 [width="100%",cols="50%,50%",]
 |===
 |In CT Mobile Control Panel a|
-. Go to link:ct-mobile-control-panel-calendar[CT Mobile Control
+. Go to xref:ct-mobile-control-panel-calendar[CT Mobile Control
 Panel: Calendar].
 . {blank}
 . Turn on the *Enable Activity Planning*.
@@ -23,7 +23,7 @@ becomes uneditable.
 * **Capture Geoposition
 **If enabled, when a mobile user taps the *Start* button, the current
 geolocation will be written in the
-link:ct-mobile-control-panel-calendar#h3__717585460[Activity
+xref:ct-mobile-control-panel-calendar#h3__717585460[Activity
 Geolocation Field API Name] field.
 ifdef::kotlin[]
 
@@ -32,11 +32,11 @@ Not applicable.
 *
 
 If enabled, when a mobile user taps the *Start* or *Finish* buttons, the
-link:ct-mobile-control-panel-calendar#h3_1674628596[Activity Start
+xref:ct-mobile-control-panel-calendar#h3_1674628596[Activity Start
 Date field] and
-link:ct-mobile-control-panel-calendar#h3_1391348303[Activity End
+xref:ct-mobile-control-panel-calendar#h3_1391348303[Activity End
 Date field] will be updated.
-[NOTE] ==== If you assign a link:ct-mobile-workflow[CT
+[NOTE] ==== If you assign a xref:ct-mobile-workflow[CT
 Mobile Workflow] to the *Start* or *Finish* buttons, the *Capture
 Geoposition* and *Update Start/End Date Fields* functionality will be
 disabled even if these settings are applied. ====
@@ -44,7 +44,7 @@ disabled even if these settings are applied. ====
 image:47752956.png[]
 
 |In CT Mobile Control Panel 2.0 a|
-. Go to link:ct-mobile-control-panel-activities-new[CT Mobile
+. Go to xref:ct-mobile-control-panel-activities-new[CT Mobile
 Control Panel 2.0: Activities].
 . Select the required profile in the *Profile* picklist. To apply
 settings to all the profiles, select *General Settings*.
@@ -54,18 +54,18 @@ section.
 .. *Capture Geolocation when Activity is Started*
 If enabled, when a mobile user taps the *Start* button, the current
 geolocation will be written in the
-link:ct-mobile-control-panel-activities-new#h4__1419137192[Geolocation
+xref:ct-mobile-control-panel-activities-new#h4__1419137192[Geolocation
 Field].
 ifdef::kotlin[]
 
 Not applicable.
 .. *Update Start/End Date when Starting/Ending Activity*
 If enabled, when a mobile user taps the *Start* or *Finish* buttons, the
-link:ct-mobile-control-panel-activities-new#h4__1766544266[Start
+xref:ct-mobile-control-panel-activities-new#h4__1766544266[Start
 Date field] and
-link:ct-mobile-control-panel-activities-new#h4_587549689[End Date
+xref:ct-mobile-control-panel-activities-new#h4_587549689[End Date
 field] will be updated.
-[NOTE] ==== If you assign a link:ct-mobile-workflow[CT
+[NOTE] ==== If you assign a xref:ct-mobile-workflow[CT
 Mobile Workflow] to the *Start* or *Finish* buttons, the **Capture
 Geolocation when Activity is Started* * and **Update Start/End Date when
 Starting/Ending Activity** functionality will be disabled even if these
@@ -98,10 +98,10 @@ ifdef::ios[]image:activity-start-button.png[]
 |In CT Mobile Control Panel a|
 The mobile user can leave the started _Activity_ record when the
 *Unfinished Activity Allowed* field is selected on the corresponding
-link:mobile-application-setup[Mobile Application Setup] record.
+xref:mobile-application-setup[Mobile Application Setup] record.
 
 * Select this option on the
-link:ct-mobile-control-panel-calendar#h3_1856075785[CT Mobile
+xref:ct-mobile-control-panel-calendar#h3_1856075785[CT Mobile
 Control Panel: Calendar].
 * The mobile user will be able to leave the started *Activity* record
 and then come back to finish the *Activity* record.
@@ -112,14 +112,14 @@ unfinished record synchronizing:
 . Create the *Started Activity* checkbox with the default
 [.apiobject]#false# value on the[.object]#Activity#
 object.
-. Create the link:ct-mobile-control-panel-workflows[CT Mobile
+. Create the xref:ct-mobile-control-panel-workflows[CT Mobile
 Workflow] on the *Start* button to change the
 [.apiobject]#false# value of the checkbox to
 [.apiobject]#true#.
 . Create the CT Mobile Workflow on the *Finish* button to change the
 [.apiobject]#true# value of the checkbox to
 [.apiobject]#false#.
-. Add link:validation[the validation rule], which will be triggered
+. Add xref:validation[the validation rule], which will be triggered
 when the *Started Activity* checkbox will have the *true* value. For
 example, _«We remind you that the activity will not sync until it is
 completed»_.
@@ -131,7 +131,7 @@ The mobile user can leave the started _Activity_ record when the
 ***Allow to Leave Unfinished Activity* **option is enabled.
 
 * Select this option on the
-link:ct-mobile-control-panel-activities-new#h4__1904984675[CT
+xref:ct-mobile-control-panel-activities-new#h4__1904984675[CT
 Mobile Control Panel: Activities].
 * The mobile user will be able to leave the started *Activity* record
 and then come back to finish the *Activity* record.
@@ -142,14 +142,14 @@ unfinished record synchronizing:
 . Create the **Started Activity **checkbox with the default
 [.apiobject]#false# value on the[.object]#Activity#
 object.
-. Create the link:ct-mobile-control-panel-workflows-new[CT Mobile
+. Create the xref:ct-mobile-control-panel-workflows-new[CT Mobile
 Workflow] on the *Start* button to change the
 [.apiobject]#false# value of the checkbox to
 [.apiobject]#true#.
 . Create the CT Mobile Workflow on the *Finish* button to change the
 [.apiobject]#true# value of the checkbox to
 [.apiobject]#false#.
-. Add link:validation[the validation rule], which will be triggered
+. Add xref:validation[the validation rule], which will be triggered
 when the *Started Activity* checkbox will have the *true* value. For
 example, _«We remind you that the activity will not sync until it is
 completed»_.

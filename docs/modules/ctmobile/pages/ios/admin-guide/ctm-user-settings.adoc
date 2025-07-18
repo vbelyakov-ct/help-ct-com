@@ -2,7 +2,7 @@
 
 ifdef::kotlin[] ifdef::andr,win[][NOTE] ==== Not
 available. ====[.object]#CTM User Settings# is an object to
-store settings for link:list-views#h2__380480215[custom list views]
+store settings for xref:list-views#h2__380480215[custom list views]
 created on the mobile device.
 
 Available record types:[.apiobject]#ListView#
@@ -31,7 +31,7 @@ Area(32768) |Columns of a custom list view. Fields are stored in the
 label of a custom list view.
 
 |Object |[.apiobject]#clm__Object__c# |Text(255) |The
-API Name of link:managing-offline-objects[an offline object] for
+API Name of xref:managing-offline-objects[an offline object] for
 which the custom list view was created.
 
 |OwnerId |[.apiobject]#OwnerId# |Text(255) |The User Id of the

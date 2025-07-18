@@ -2,11 +2,11 @@
 
 Related lists are tabular forms for displaying records related to
 another record if one object has a link to another object in
-link:reference-fields[the reference field]. In the CT Mobile app,
+xref:reference-fields[the reference field]. In the CT Mobile app,
 two types of related lists are available:
 
-* link:custom-related-lists[Custom Related Lists]
-* link:standard-related-lists[Standard Related Lists]
+* xref:custom-related-lists[Custom Related Lists]
+* xref:standard-related-lists[Standard Related Lists]
 
 [[h2_384095523]]
 === Related List Features Comparison
@@ -28,26 +28,26 @@ required object.
 * Not applicable for a custom related list.
 
 |Set up a related list on CT Mobile Control Panel |{plus} |{plus} a|
-* Go to link:ct-mobile-control-panel-offline-objects[CT Mobile
+* Go to xref:ct-mobile-control-panel-offline-objects[CT Mobile
 Control Panel: Offline
-Objects]/link:ct-mobile-control-panel-offline-objects-new[CT Mobile
+Objects]/xref:ct-mobile-control-panel-offline-objects-new[CT Mobile
 Control Panel 2.0: Offline Objects] to customize a standard related
 list;
-* Go to link:ct-mobile-control-panel-custom-details[CT Mobile
+* Go to xref:ct-mobile-control-panel-custom-details[CT Mobile
 Control Panel: Custom
-details]/link:ct-mobile-control-panel-custom-details-new[CT Mobile
+details]/xref:ct-mobile-control-panel-custom-details-new[CT Mobile
 Control Panel 2.0: Custom Details] to customize a custom related list.
 
 |Create a record |{plus} |{plus} a|
 Grant permission:
 
-* on link:ct-mobile-control-panel-offline-objects[CT Mobile Control
+* on xref:ct-mobile-control-panel-offline-objects[CT Mobile Control
 Panel: Offline
-Objects]/link:ct-mobile-control-panel-offline-objects-new[CT Mobile
+Objects]/xref:ct-mobile-control-panel-offline-objects-new[CT Mobile
 Control Panel 2.0: Offline Objects] for a standard related list;
-* on link:ct-mobile-control-panel-custom-details[CT Mobile Control
+* on xref:ct-mobile-control-panel-custom-details[CT Mobile Control
 Panel: Custom
-details]/link:ct-mobile-control-panel-custom-details-new[CT Mobile
+details]/xref:ct-mobile-control-panel-custom-details-new[CT Mobile
 Control Panel 2.0: Custom Details] for a custom related list.
 
 Object permissions restrict common access permissions defined by the
@@ -57,13 +57,13 @@ the selected offline objects.
 |Delete a record |{plus} |{plus} a|
 Grant permission:
 
-* on link:ct-mobile-control-panel-offline-objects[CT Mobile Control
+* on xref:ct-mobile-control-panel-offline-objects[CT Mobile Control
 Panel: Offline
-Objects]/link:ct-mobile-control-panel-offline-objects-new[CT Mobile
+Objects]/xref:ct-mobile-control-panel-offline-objects-new[CT Mobile
 Control Panel 2.0: Offline Objects] for a standard related list;
-* in link:ct-mobile-control-panel-custom-details[CT Mobile Control
+* in xref:ct-mobile-control-panel-custom-details[CT Mobile Control
 Panel: Custom
-details]/link:ct-mobile-control-panel-custom-details-new[CT Mobile
+details]/xref:ct-mobile-control-panel-custom-details-new[CT Mobile
 Control Panel 2.0: Custom Details] for a custom related list.
 
 Object permissions restrict common access permissions defined by the
@@ -75,21 +75,21 @@ unsynchronized records regardless of granted permission.
 
 |Edit field values |– |{plus} a|
 * Not applicable for a standard related list;
-* Go to link:custom-related-lists#h2__773495381[Custom Related
+* Go to xref:custom-related-lists#h2__773495381[Custom Related
 Lists] to add the ability for editing fields of a custom related list.
 
 |Drilldown to record details screen |{plus} |{plus} a|
 * Available by default and cannot be disabled for a standard related
 list;
 * Grant permission on
-link:ct-mobile-control-panel-custom-details[CT Mobile Control
+xref:ct-mobile-control-panel-custom-details[CT Mobile Control
 Panel: Custom
-details]/link:ct-mobile-control-panel-custom-details-new[CT Mobile
+details]/xref:ct-mobile-control-panel-custom-details-new[CT Mobile
 Control Panel 2.0: Custom Details] for custom related list.
 
 |Control columns' width |{plus} |{plus} |ifdef::ios,kotlin[] For
 more information, go to
-link:columns-width-for-related-lists[Columns' Widths for Standard
+xref:columns-width-for-related-lists[Columns' Widths for Standard
 and Custom Related Lists]. ifdef::win,andr[][NOTE] ==== Not
 in use. ====
 
@@ -101,10 +101,10 @@ ifdef::kotlin[] ifdef::win[][NOTE] ==== Not applicable
 for standard related lists. ====
 
 |Timeline view |{plus} |– |ifdef::ios[] For more information, go to
-link:timeline-view[Timeline View]. ifdef::win,andr,kotlin[]
+xref:timeline-view[Timeline View]. ifdef::win,andr,kotlin[]
 [NOTE] ==== Not in use. ====
 
 |The sort order by the specific field |{plus} |{plus} |Tap the column
 title to sort records by this field. For more information, go to
-link:filters-in-related-lists[Filters in Related Lists].
+xref:filters-in-related-lists[Filters in Related Lists].
 |===

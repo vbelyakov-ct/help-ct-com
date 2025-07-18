@@ -13,7 +13,7 @@ data captured by JS Bridge will be uploaded to Salesforce and not stored
 on the mobile device. A user should have permission to edit records of
 the corresponding object. For example, if you create a new record using
 [.apiobject]#ctm.create#, it will be uploaded to Salesforce, and
-you should launch link:fast-synchronization[fast synchronization]
+you should launch xref:fast-synchronization[fast synchronization]
 to download it to a mobile device.
 
 
@@ -32,110 +32,110 @@ records. To upload data to Salesforce, perform the fast synchronization.
 
 | | |*iOS* |*Android* |*Windows* | |
 
-|Methods for interaction with CRM data |link:crm-data-display[CRM
+|Methods for interaction with CRM data |xref:crm-data-display[CRM
 data display] |Yes |Yes |Yes |Yes |
 
-| |link:opening-attached-files[Opening attached files] |Yes |Yes
+| |xref:opening-attached-files[Opening attached files] |Yes |Yes
 |Yes |No |
 
-| |Query records: link:ctm-query[ctm.query] |Yes |Yes |Yes |Yes
+| |Query records: xref:ctm-query[ctm.query] |Yes |Yes |Yes |Yes
 |These methods are forbidden during the *Self Detailing* and *Self
 Detailing 2.0* meetings.
 
-| |Create records: link:ctm-create[ctm.create] |Yes |Yes |Yes |Yes
+| |Create records: xref:ctm-create[ctm.create] |Yes |Yes |Yes |Yes
 |
 
-| |Update records: link:ctm-update[ctm.update] |Yes |Yes |Yes |Yes
+| |Update records: xref:ctm-update[ctm.update] |Yes |Yes |Yes |Yes
 |
 
-| |Delete records: link:ctm-delete[ctm.delete] |Yes |Yes |Yes |Yes
+| |Delete records: xref:ctm-delete[ctm.delete] |Yes |Yes |Yes |Yes
 |
 
-| |Start fast sync: link:ctm-sync[ctm.sync] |Yes |Yes |No |No |
+| |Start fast sync: xref:ctm-sync[ctm.sync] |Yes |Yes |No |No |
 
-| |Obtain the path to the file: link:ctm-getfile[ctm.getFile] |Yes
+| |Obtain the path to the file: xref:ctm-getfile[ctm.getFile] |Yes
 |No |Yes |No |
 
-| |Save attachments: link:ctm-storefile[ctm.storeFile] |Yes |No
+| |Save attachments: xref:ctm-storefile[ctm.storeFile] |Yes |No
 |Yes |No |
 
 | |Custom data tables according to related record:
-link:ctm-opendatatablebyparentrecord[ctm.openDataTableByParentRecord]
+xref:ctm-opendatatablebyparentrecord[ctm.openDataTableByParentRecord]
 |Yes |No |No |No |
 
 | |Custom data tables according to SOQL query:
-link:ctm-opendatatablebyquery[ctm.openDataTableByQuery] |Yes |No
+xref:ctm-opendatatablebyquery[ctm.openDataTableByQuery] |Yes |No
 |No |No |
 
 |Methods for Accessing External Functionality |Camera access:
-link:ctm-photo[ctm.photo] |Yes |Yes |No |No |
+xref:ctm-photo[ctm.photo] |Yes |Yes |No |No |
 
-| |Open QR Code: link:ctm-openqrscanner[ctm.openQRScanner] |Yes |No
+| |Open QR Code: xref:ctm-openqrscanner[ctm.openQRScanner] |Yes |No
 |No |No |
 
-| |Quiz launch: link:ctm-openquiz[ctm.openQuiz] |Yes |No |No |No
+| |Quiz launch: xref:ctm-openquiz[ctm.openQuiz] |Yes |No |No |No
 |
 
-| |PDF generation: link:ctm-generatepdf[ctm.generatePDF] |Yes |No
+| |PDF generation: xref:ctm-generatepdf[ctm.generatePDF] |Yes |No
 |No |No |
 
 | |Sound recording:
-link:ctappstoprecordingaudio[CTAPPstopRecordingAudio] |Yes |No |No
+xref:ctappstoprecordingaudio[CTAPPstopRecordingAudio] |Yes |No |No
 |No |
 
 | |Sound recording:
-link:ctappstartrecordingaudio[CTAPPstartRecordingAudio] |Yes |No
+xref:ctappstartrecordingaudio[CTAPPstartRecordingAudio] |Yes |No
 |No |No |
 
 | |The transition from Animation to Sales Order:
-link:ctm-createsalesorderwithanimations[ctm.createSalesOrderWithAnimations]
+xref:ctm-createsalesorderwithanimations[ctm.createSalesOrderWithAnimations]
 |Yes |No |No |No |
 
 | |Exit from presentation:
-link:ctm-autoexitpresenter[ctm.autoExitPresenter] |Yes |No |Yes |No
+xref:ctm-autoexitpresenter[ctm.autoExitPresenter] |Yes |No |Yes |No
 |
 
 |Methods for CLM presentation control |Like:
-link:ctm-like[ctm.like] |Yes |Yes |Yes |No |
+xref:ctm-like[ctm.like] |Yes |Yes |Yes |No |
 
-| |Dislike: link:ctm-dislike[ctm.dislike] |Yes |Yes |Yes |No |
+| |Dislike: xref:ctm-dislike[ctm.dislike] |Yes |Yes |Yes |No |
 
 | |Disable slide scroll:
-link:ctm-disableslidescroll[ctm.disableSlideScroll] |Yes |No |No
+xref:ctm-disableslidescroll[ctm.disableSlideScroll] |Yes |No |No
 |No |
 
 | |Enable slide scroll:
-link:ctm-enableslidescroll[ctm.enableSlideScroll] |Yes |No |No |No
+xref:ctm-enableslidescroll[ctm.enableSlideScroll] |Yes |No |No |No
 |
 
 | |Activate gathering statistics of presentation:
-link:ctm-customstats[ctm.customStats] |Yes |No |No |No |
+xref:ctm-customstats[ctm.customStats] |Yes |No |No |No |
 
-| |link:ctm-setoptions[ctm.setOptions] |No |No |Yes |No |
+| |xref:ctm-setoptions[ctm.setOptions] |No |No |Yes |No |
 
 |Methods for CLM presentation navigation
-|link:ctappgotoslide[CTAPPgoToSlide] |Yes |No |Yes |Yes |
+|xref:ctappgotoslide[CTAPPgoToSlide] |Yes |No |Yes |Yes |
 
-| |link:ctappgotofirst[CTAPPgoToFirst] |Yes |No |Yes |Yes |
+| |xref:ctappgotofirst[CTAPPgoToFirst] |Yes |No |Yes |Yes |
 
-| |link:ctappgotoprevious[CTAPPgoToPrevious] |Yes |No |Yes |Yes |
+| |xref:ctappgotoprevious[CTAPPgoToPrevious] |Yes |No |Yes |Yes |
 
-| |link:ctappgotonext[CTAPPgoToNext] |Yes |No |Yes |Yes |
+| |xref:ctappgotonext[CTAPPgoToNext] |Yes |No |Yes |Yes |
 
-| |link:changing-slides[Switch between slides using the href
+| |xref:changing-slides[Switch between slides using the href
 attribute] |Yes |Yes |Yes |No |
 
 |Methods for Remote Detailing 2.0 |Define the meeting type:
-link:ctm-getappenv[ctm.getAppEnv] |No |No |No |Yes |These methods
+xref:ctm-getappenv[ctm.getAppEnv] |No |No |No |Yes |These methods
 are used during the Remote Detailing 2.0 or Self Detailing 2.0 meeting.
 
 | |Define the Id of the Activity record:
-link:ctm-getvisitid[ctm.getVisitId] |No |No |No |Yes |
+xref:ctm-getvisitid[ctm.getVisitId] |No |No |No |Yes |
 
-| |Define the user role: link:ctm-getusertype[ctm.getUserType] |No
+| |Define the user role: xref:ctm-getusertype[ctm.getUserType] |No
 |No |No |Yes |
 
-| |Secure query records: link:ctm-securequery[ctm.secureQuery] |No
+| |Secure query records: xref:ctm-securequery[ctm.secureQuery] |No
 |No |No |Yes |This method is used during the *Self Detailing 2.0*
 meeting instead of[.apiobject]#ctm.query#.
 
