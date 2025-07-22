@@ -67,7 +67,7 @@ For example, access to an object has been withdrawn from the mobile
 user's profile after the last full synchronization. During the next fast
 synchronization, the[.apiobject]#INVALID_TYPE# error may
 occur because some records are no more available. We recommend enabling
-xref:sync-recovery[Sync Recovery] to process errors or
+xref:ctmobile:main/mobile-application/synchronization/sync-recovery.adoc[Sync Recovery] to process errors or
 xref:ctmobile:main/admin-guide/ct-mobile-control-panel/custom-settings/ct-mobile-replication.adoc[CT Mobile Replication] to hide these
 unavailable records and download the correct ones.
 

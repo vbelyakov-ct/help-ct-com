@@ -83,7 +83,7 @@ profile credentials.
 . Click *Allow* in the appeared authorization window.
 [NOTE] ==== Each user with the _System Administrator_ profile
 must authorize the Heroku service before
-xref:ct-mobile-control-panel-tools#h3_1003786176[refreshing the
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc#h3_1003786176[refreshing the
 metadata archive]. ====
 * Progress bar has been added under the *Refresh metadata
 archive* button in the *CT Mobile Control Panel* → *Tools* tab.
@@ -213,7 +213,7 @@ the App Exchange]. ====
 [[h4_487563059]]
 ===== CT Mobile Control Panel
 
-* The ability to activate xref:cg-cloud[the CG Cloud support] to
+* The ability to activate xref:ctmobile:main/mobile-application/mobile-application-modules/cg-cloud/index.adoc[the CG Cloud support] to
 work with it in the CT Mobile app if the CG Cloud is configured in the
 Salesforce organization.
 
@@ -232,11 +232,11 @@ xref:ctmobile:main/ct-presenter/about-ct-presenter/clm-scheme/clm-applicationsta
 participant's agreement to the terms of use.
 
 * During the *Self Detailing* meeting.
-** The ability to use the xref:ctm-securequery[cm .secureQuery]
+** The ability to use the xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-remote-detailing-2-0/ctm-securequery.adoc[cm .secureQuery]
 method in the CLM presentations to make secure requests to Salesforce
 data.
-** Support the xref:ctm-create[ctm.create] and
-xref:ctm-update[ctm.update] methods in the CLM presentations.
+** Support the xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-interaction-with-crm-data/ctm-create.adoc[ctm.create] and
+xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-interaction-with-crm-data/ctm-update.adoc[ctm.update] methods in the CLM presentations.
 * xref:remote-detailing-launch-salesforce-side#h3_135274013[For
 user convenience]:
 ** A message will inform the user that the CLM presentations are not
@@ -259,7 +259,7 @@ during the sync process.
 
 * Only records with the record types of the CT Mobile package will be
 deleted with the
-xref:ct-mobile-control-panel-tools#h3_1658362952[Refresh CTM
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc#h3_1658362952[Refresh CTM
 Settings] button.
 
 [[h3_715488940]]
@@ -349,7 +349,7 @@ Customertimes team to get the additional information.
 ===== CT Mobile Control Panel
 
 * Fixed the ability
-xref:ct-mobile-control-panel-tools#h3_847464003[to download the
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc#h3_847464003[to download the
 metadata archive].
 
 [[h2_340549918]]
@@ -365,7 +365,7 @@ and _CT Mobile User_ permission sets.
 [[h4_904461181]]
 ===== CT Mobile Control Panel
 
-* Use the xref:ct-mobile-control-panel-tools#h3_840249901[New
+* Use the xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc#h3_840249901[New
 settings only] toggle to specify whether to store settings both in
 custom settings and as *CTM Settings* records or only as *CTM Settings*
 records.
@@ -520,7 +520,7 @@ If not, the error message will be written in logs.
 ===== CT Mobile Control Panel
 
 * For your convenience, use the
-xref:ct-mobile-control-panel-tools#h3_847464003[Download metadata
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc#h3_847464003[Download metadata
 archive] button to download the archive and send it to support in case
 of any issues.
 
@@ -553,7 +553,7 @@ __xref:attachments-and-files.html[Attachment]__which size is more than
 * Fixed an issue with a lack of user permissions to access the *Sync
 Recovery* functionality.
 * Fixed deactivation of the *Unfinished Activity Allowed* option when
-the xref:start-finish-functionality[Start/Finish functionality] is
+the xref:ctmobile:main/admin-guide/start-finish-functionality.adoc[Start/Finish functionality] is
 disabled.
 
 
@@ -597,7 +597,7 @@ objects that are not specified as offline objects.
 [[h4_801880401]]
 ===== CT Mobile Control Panel
 
-* Improved xref:sync-recovery[Sync Recovery] functionality: force
+* Improved xref:ctmobile:main/mobile-application/synchronization/sync-recovery.adoc[Sync Recovery] functionality: force
 insertion of records through the *Proxy object* option when these
 records contain errors that prevent these records from being inserted
 using the *Direct access* option.
@@ -619,7 +619,7 @@ Offline* field of the[.object]#Application# object is added.
 ===== CT Mobile Control Panel
 
 * During the installation of the package,
-xref:ct-mobile-control-panel-tools#h3_2011978[the cloud token] will
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc#h3_2011978[the cloud token] will
 be copied to the protected xref:api-key[API Key] custom setting.
 
 [[h2_62734608]]
@@ -643,7 +643,7 @@ CLM presentations that were available offline.
 
 * If the *Sync Recovery* functionality is enabled and the *Attachment*
 record has a temporary Id of the parent record in the reference field,
-the attachment will be sent as xref:sync-recovery#h3_356910769[a
+the attachment will be sent as xref:ctmobile:main/mobile-application/synchronization/sync-recovery.adoc#h3_356910769[a
 Proxy object] to Salesforce.
 
 [[h2_2026747377]]
@@ -656,16 +656,16 @@ Proxy object] to Salesforce.
 ===== CT Mobile Control Panel
 
 * Specify the ability
-xref:ct-mobile-control-panel-calendar#h3_1856075785[to leave the
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc#h3_1856075785[to leave the
 unfinished activity] for users' profiles.
 * The ability
 https://help.customertimes.com/smart/project-ct-sign-en/add-the-ct-sign-to-the-ct-mobile-app[to
 activate the CT Sign module] for the CT Mobile app.
 
 * Due to security reasons, the
-xref:ct-mobile-control-panel-tools#h3_1876917838[Scheduled
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc#h3_1876917838[Scheduled
 metadata check] toggle and the
-xref:ct-mobile-control-panel-tools#h3_1003786176[Refresh metadata
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc#h3_1003786176[Refresh metadata
 archive] button are displayed only for users with the _Modify All Data_
 and _Modify Metadata Through Metadata API Functions_ permission or with
 the assigned
@@ -717,7 +717,7 @@ and _CT Mobile Administrator_ permission sets.
 * The ability
 to xref:ct-mobile-control-panel-app-menu#h2_1511584348[specify the
 ascending or descending order] for records in the *Routes* module.
-* The xref:ct-mobile-control-panel-tools#h3_1380764274[Remove
+* The xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc#h3_1380764274[Remove
 metadata archive from server] button is added to simplify the QA
 process.
 * The ability to specify
@@ -732,7 +732,7 @@ module, in the *Nearby Accounts* module, and the *Maps* widget.
 [[h4_1865396414]]
 ===== Activity Management
 
-* Users of CT Mobile iOS with xref:start-finish-functionality[the
+* Users of CT Mobile iOS with xref:ctmobile:main/admin-guide/start-finish-functionality.adoc[the
 enabled Start/Finish functionality] may be given the ability to leave
 the unfinished *Activity* record to work with other functionalities.
 
@@ -781,11 +781,11 @@ following the Salesforce security policy.
 [[h4_45068577]]
 ===== CT Mobile Control Panel
 
-* The xref:ct-mobile-control-panel-tools#h4_1003786176[Refresh
+* The xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc#h4_1003786176[Refresh
 metadata archive] button is intended to replace the manual collecting of
 the metadata archive.
 * The ability to use reference fields in
-xref:managing-offline-objects#ManagingOfflineObjects-SOQLFilters[SOQL
+xref:ctmobile:main/admin-guide/managing-offline-objects/index.adoc#ManagingOfflineObjects-SOQLFilters[SOQL
 filters].
 
 
@@ -799,7 +799,7 @@ CT Orders module] is available for at least one profile, the description
 for the CT Orders objects will be added to the metadata archive to
 provide offline the full CT Orders functionality.
 * Metadata will be added to the metadata archive based on
-xref:ctm-settings-offline-objects[the CTM Settings records] of the
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ctm-settings/ctm-settings-offline-objects.adoc[the CTM Settings records] of the
 *Offline Object* record type to reduce the sync process time.
 
 
@@ -807,7 +807,7 @@ xref:ctm-settings-offline-objects[the CTM Settings records] of the
 [[h4_2028405529]]
 ===== Remote Detailing
 
-* xref:clm-customscenario[Custom scenarios] can be selected within
+* xref:ctmobile:main/ct-presenter/about-ct-presenter/clm-scheme/clm-customscenario.adoc[Custom scenarios] can be selected within
 the *Remote Detailing* session.
 
 [[h3_112451824]]
@@ -865,7 +865,7 @@ allows customizing the *Remote Detailing* and *Self Detailing*
 functionality in one place.
 * For the users' convenience, the objects in the picklists are now
 sorted by label instead of API Names.
-* xref:ct-mobile-control-panel-tools#h3_1658362952[The Refresh CTM
+* xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc#h3_1658362952[The Refresh CTM
 Settings button] helps to support consistency between *CTM Settings* and
 *Custom Settings* records in case of errors.
 * The ability to add the CT Orders module to the CT Mobile app on the

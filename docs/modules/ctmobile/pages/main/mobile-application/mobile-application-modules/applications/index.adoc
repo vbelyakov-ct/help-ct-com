@@ -5,8 +5,8 @@ presentations and custom scenarios.
 
 You can add CLM presentations to the
 xref:ctmobile:main/admin-guide/mobile-layouts/index.adoc-applications[mobile layout] and manage CLM
-presentations by xref:clm-presentation-controls[the control
-buttons], xref:gestures-in-clm-presentations[gestures], or
+presentations by xref:ctmobile:main/mobile-application/mobile-application-modules/applications/clm-presentation-controls.adoc[the control
+buttons], xref:ctmobile:main/mobile-application/mobile-application-modules/applications/gestures-in-clm-presentations.adoc[gestures], or
 xref:ctmobile:main/ct-presenter/js-bridge-api/index.adoc[JS methods and links] on the slides. For each
 CLM presentation, it is possible to set up statistical data to collect.
 
@@ -71,7 +71,7 @@ presentation, it includes all the slides of the presentation and it is
 selected as a _favorite_. It can be unselected as _favorite_, but this
 setting will be reset during the next
 xref:ctmobile:main/mobile-application/synchronization/full-synchronization.adoc[full synchronization], as it is stored
-locally in the mobile app. For xref:clm-customscenario[custom
+locally in the mobile app. For xref:ctmobile:main/ct-presenter/about-ct-presenter/clm-scheme/clm-customscenario.adoc[custom
 scenarios], which can include all or only selected slides of the
 presentation, the _favorite_ setting is stored in Salesforce, so it is
 kept even after full synchronization. ====
@@ -93,7 +93,7 @@ The *Slide reordering enabled* checkbox must be selected in the
 xref:ctmobile:main/ct-presenter/about-ct-presenter/clm-scheme/clm-application.adoc[Application record type].
 
 Depending on[.object]#CLM presentation# settings on the
-xref:clm-slide[Slide] object, it provides the possibility to change
+xref:ctmobile:main/ct-presenter/about-ct-presenter/clm-scheme/clm-slide.adoc[Slide] object, it provides the possibility to change
 the order of slides, and remove or add slides to the presentation.
 
 //tag::win[]
@@ -101,7 +101,7 @@ the order of slides, and remove or add slides to the presentation.
 The user can select slides from different CLM presentations.
 
 Upon editing completion, the set of slides is saved as
-xref:clm-customscenario[Custom Scenario].
+xref:ctmobile:main/ct-presenter/about-ct-presenter/clm-scheme/clm-customscenario.adoc[Custom Scenario].
 
 If a slide added to a custom scenario is excluded from the presentation
 (deactivated or deleted), such change will also apply to the respective
@@ -143,7 +143,7 @@ To create a scenario:
 
 image:The-Mobile-Scenario-Editor-iOS.png[]
 If a slide has the red frame and cannot be untapped, it means that it
-configured as xref:clm-slide[Required] and cannot be excluded from
+configured as xref:ctmobile:main/ct-presenter/about-ct-presenter/clm-scheme/clm-slide.adoc[Required] and cannot be excluded from
 the custom scenario:
 image:custom-scenario-required-slides.png[]
 
@@ -186,7 +186,7 @@ or attachment:
 the image:ctmi-share-icon-2.9.png[] button.
 . Tap a slide/attachment to select it.
 . Tap *Send Selected*.
-. Select xref:email-templates[an email template] if available.
+. Select xref:ctmobile:main/mobile-application/email-templates.adoc[an email template] if available.
 . Select a user to send.
 . Click *Send*.
 image:applications-slides-tab.png[]

@@ -39,10 +39,10 @@ field contains [.apiobject]#Part n from m#, where *n* is the
 number of an attachment and *m* is the total number of attachments.
 
 //tag::andr,ios,win[]If a mobile
-user xref:send-application-data-dump[sends an application data
+user xref:ctmobile:main/mobile-application/application-settings/send-application-data-dump.adoc[sends an application data
 dump], the field contains [.apiobject]#Part n from m#,
 where *n* is the number of an attachment and *m* is the total number of
-attachments. //tag::ios[]If the xref:sync-recovery[Sync
+attachments. //tag::ios[]If the xref:ctmobile:main/mobile-application/synchronization/sync-recovery.adoc[Sync
 Recovery] functionality is enabled with the *Proxy Object* parameter
 specified
 on xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects.adoc#h3_37043680[CT
@@ -112,7 +112,7 @@ not be captured.
 Not in use.
 
 //tag::ios[] The field is checked for a Sync Log record with a JSON
-file in the Attachments section if the xref:sync-recovery[Sync
+file in the Attachments section if the xref:ctmobile:main/mobile-application/synchronization/sync-recovery.adoc[Sync
 Recovery] functionality has the *Proxy Object* parameter specified on
 xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects.adoc[CT Mobile Control
 Panel: Offline

@@ -32,110 +32,110 @@ records. To upload data to Salesforce, perform the fast synchronization.
 
 | | |*iOS* |*Android* |*Windows* | |
 
-|Methods for interaction with CRM data |xref:crm-data-display[CRM
+|Methods for interaction with CRM data |xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-interaction-with-crm-data/crm-data-display.adoc[CRM
 data display] |Yes |Yes |Yes |Yes |
 
-| |xref:opening-attached-files[Opening attached files] |Yes |Yes
+| |xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-interaction-with-crm-data/opening-attached-files.adoc[Opening attached files] |Yes |Yes
 |Yes |No |
 
-| |Query records: xref:ctm-query[ctm.query] |Yes |Yes |Yes |Yes
+| |Query records: xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-interaction-with-crm-data/ctm-query.adoc[ctm.query] |Yes |Yes |Yes |Yes
 |These methods are forbidden during the *Self Detailing* and *Self
 Detailing 2.0* meetings.
 
-| |Create records: xref:ctm-create[ctm.create] |Yes |Yes |Yes |Yes
+| |Create records: xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-interaction-with-crm-data/ctm-create.adoc[ctm.create] |Yes |Yes |Yes |Yes
 |
 
-| |Update records: xref:ctm-update[ctm.update] |Yes |Yes |Yes |Yes
+| |Update records: xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-interaction-with-crm-data/ctm-update.adoc[ctm.update] |Yes |Yes |Yes |Yes
 |
 
-| |Delete records: xref:ctm-delete[ctm.delete] |Yes |Yes |Yes |Yes
+| |Delete records: xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-interaction-with-crm-data/ctm-delete.adoc[ctm.delete] |Yes |Yes |Yes |Yes
 |
 
 | |Start fast sync: xref:ctm-sync[ctm.sync] |Yes |Yes |No |No |
 
-| |Obtain the path to the file: xref:ctm-getfile[ctm.getFile] |Yes
+| |Obtain the path to the file: xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-interaction-with-crm-data/ctm-getfile.adoc[ctm.getFile] |Yes
 |No |Yes |No |
 
-| |Save attachments: xref:ctm-storefile[ctm.storeFile] |Yes |No
+| |Save attachments: xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-interaction-with-crm-data/ctm-storefile.adoc[ctm.storeFile] |Yes |No
 |Yes |No |
 
 | |Custom data tables according to related record:
-xref:ctm-opendatatablebyparentrecord[ctm.openDataTableByParentRecord]
+xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-interaction-with-crm-data/ctm-opendatatablebyparentrecord.adoc[ctm.openDataTableByParentRecord]
 |Yes |No |No |No |
 
 | |Custom data tables according to SOQL query:
-xref:ctm-opendatatablebyquery[ctm.openDataTableByQuery] |Yes |No
+xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-interaction-with-crm-data/ctm-opendatatablebyquery.adoc[ctm.openDataTableByQuery] |Yes |No
 |No |No |
 
 |Methods for Accessing External Functionality |Camera access:
-xref:ctm-photo[ctm.photo] |Yes |Yes |No |No |
+xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-accessing-external-functionality/ctm-photo.adoc[ctm.photo] |Yes |Yes |No |No |
 
-| |Open QR Code: xref:ctm-openqrscanner[ctm.openQRScanner] |Yes |No
+| |Open QR Code: xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-accessing-external-functionality/ctm-openqrscanner.adoc[ctm.openQRScanner] |Yes |No
 |No |No |
 
-| |Quiz launch: xref:ctm-openquiz[ctm.openQuiz] |Yes |No |No |No
+| |Quiz launch: xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-accessing-external-functionality/ctm-openquiz.adoc[ctm.openQuiz] |Yes |No |No |No
 |
 
-| |PDF generation: xref:ctm-generatepdf[ctm.generatePDF] |Yes |No
+| |PDF generation: xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-accessing-external-functionality/ctm-generatepdf.adoc[ctm.generatePDF] |Yes |No
 |No |No |
 
 | |Sound recording:
-xref:ctappstoprecordingaudio[CTAPPstopRecordingAudio] |Yes |No |No
+xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-accessing-external-functionality/ctappstoprecordingaudio.adoc[CTAPPstopRecordingAudio] |Yes |No |No
 |No |
 
 | |Sound recording:
-xref:ctappstartrecordingaudio[CTAPPstartRecordingAudio] |Yes |No
+xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-accessing-external-functionality/ctappstartrecordingaudio.adoc[CTAPPstartRecordingAudio] |Yes |No
 |No |No |
 
 | |The transition from Animation to Sales Order:
-xref:ctm-createsalesorderwithanimations[ctm.createSalesOrderWithAnimations]
+xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-accessing-external-functionality/ctm-createsalesorderwithanimations.adoc[ctm.createSalesOrderWithAnimations]
 |Yes |No |No |No |
 
 | |Exit from presentation:
-xref:ctm-autoexitpresenter[ctm.autoExitPresenter] |Yes |No |Yes |No
+xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-accessing-external-functionality/ctm-autoexitpresenter.adoc[ctm.autoExitPresenter] |Yes |No |Yes |No
 |
 
 |Methods for CLM presentation control |Like:
-xref:ctm-like[ctm.like] |Yes |Yes |Yes |No |
+xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-clm-presentation-control/ctm-like.adoc[ctm.like] |Yes |Yes |Yes |No |
 
-| |Dislike: xref:ctm-dislike[ctm.dislike] |Yes |Yes |Yes |No |
+| |Dislike: xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-clm-presentation-control/ctm-dislike.adoc[ctm.dislike] |Yes |Yes |Yes |No |
 
 | |Disable slide scroll:
-xref:ctm-disableslidescroll[ctm.disableSlideScroll] |Yes |No |No
+xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-clm-presentation-control/ctm-disableslidescroll.adoc[ctm.disableSlideScroll] |Yes |No |No
 |No |
 
 | |Enable slide scroll:
-xref:ctm-enableslidescroll[ctm.enableSlideScroll] |Yes |No |No |No
+xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-clm-presentation-control/ctm-enableslidescroll.adoc[ctm.enableSlideScroll] |Yes |No |No |No
 |
 
 | |Activate gathering statistics of presentation:
-xref:ctm-customstats[ctm.customStats] |Yes |No |No |No |
+xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-clm-presentation-control/ctm-customstats.adoc[ctm.customStats] |Yes |No |No |No |
 
-| |xref:ctm-setoptions[ctm.setOptions] |No |No |Yes |No |
+| |xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-clm-presentation-control/ctm-setoptions.adoc[ctm.setOptions] |No |No |Yes |No |
 
 |Methods for CLM presentation navigation
-|xref:ctappgotoslide[CTAPPgoToSlide] |Yes |No |Yes |Yes |
+|xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-clm-presentation-navigation/ctappgotoslide.adoc[CTAPPgoToSlide] |Yes |No |Yes |Yes |
 
-| |xref:ctappgotofirst[CTAPPgoToFirst] |Yes |No |Yes |Yes |
+| |xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-clm-presentation-navigation/ctappgotofirst.adoc[CTAPPgoToFirst] |Yes |No |Yes |Yes |
 
-| |xref:ctappgotoprevious[CTAPPgoToPrevious] |Yes |No |Yes |Yes |
+| |xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-clm-presentation-navigation/ctappgotoprevious.adoc[CTAPPgoToPrevious] |Yes |No |Yes |Yes |
 
-| |xref:ctappgotonext[CTAPPgoToNext] |Yes |No |Yes |Yes |
+| |xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-clm-presentation-navigation/ctappgotonext.adoc[CTAPPgoToNext] |Yes |No |Yes |Yes |
 
-| |xref:changing-slides[Switch between slides using the href
+| |xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-clm-presentation-navigation/changing-slides.adoc[Switch between slides using the href
 attribute] |Yes |Yes |Yes |No |
 
 |Methods for Remote Detailing 2.0 |Define the meeting type:
-xref:ctm-getappenv[ctm.getAppEnv] |No |No |No |Yes |These methods
+xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-remote-detailing-2-0/ctm-getappenv.adoc[ctm.getAppEnv] |No |No |No |Yes |These methods
 are used during the Remote Detailing 2.0 or Self Detailing 2.0 meeting.
 
 | |Define the Id of the Activity record:
-xref:ctm-getvisitid[ctm.getVisitId] |No |No |No |Yes |
+xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-remote-detailing-2-0/ctm-getvisitid.adoc[ctm.getVisitId] |No |No |No |Yes |
 
-| |Define the user role: xref:ctm-getusertype[ctm.getUserType] |No
+| |Define the user role: xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-remote-detailing-2-0/ctm-getusertype.adoc[ctm.getUserType] |No
 |No |No |Yes |
 
-| |Secure query records: xref:ctm-securequery[ctm.secureQuery] |No
+| |Secure query records: xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-remote-detailing-2-0/ctm-securequery.adoc[ctm.secureQuery] |No
 |No |No |Yes |This method is used during the *Self Detailing 2.0*
 meeting instead of[.apiobject]#ctm.query#.
 

@@ -23,7 +23,7 @@ becomes uneditable.
 * **Capture Geoposition
 **If enabled, when a mobile user taps the *Start* button, the current
 geolocation will be written in the
-xref:ct-mobile-control-panel-calendar#h3_717585460[Activity
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc#h3_717585460[Activity
 Geolocation Field API Name] field.
 //tag::kotlin[]
 
@@ -32,9 +32,9 @@ Not applicable.
 *
 
 If enabled, when a mobile user taps the *Start* or *Finish* buttons, the
-xref:ct-mobile-control-panel-calendar#h3_1674628596[Activity Start
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc#h3_1674628596[Activity Start
 Date field] and
-xref:ct-mobile-control-panel-calendar#h3_1391348303[Activity End
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc#h3_1391348303[Activity End
 Date field] will be updated.
 [NOTE] ==== If you assign a xref:ct-mobile-workflow[CT
 Mobile Workflow] to the *Start* or *Finish* buttons, the *Capture
@@ -101,7 +101,7 @@ The mobile user can leave the started _Activity_ record when the
 xref:mobile-application-setup[Mobile Application Setup] record.
 
 * Select this option on the
-xref:ct-mobile-control-panel-calendar#h3_1856075785[CT Mobile
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc#h3_1856075785[CT Mobile
 Control Panel: Calendar].
 * The mobile user will be able to leave the started *Activity* record
 and then come back to finish the *Activity* record.
@@ -119,7 +119,7 @@ Workflow] on the *Start* button to change the
 . Create the CT Mobile Workflow on the *Finish* button to change the
 [.apiobject]#true# value of the checkbox to
 [.apiobject]#false#.
-. Add xref:validation[the validation rule], which will be triggered
+. Add xref:ctmobile:main/mobile-application/synchronization/validation.adoc[the validation rule], which will be triggered
 when the *Started Activity* checkbox will have the *true* value. For
 example, _«We remind you that the activity will not sync until it is
 completed»_.
@@ -149,7 +149,7 @@ Workflow] on the *Start* button to change the
 . Create the CT Mobile Workflow on the *Finish* button to change the
 [.apiobject]#true# value of the checkbox to
 [.apiobject]#false#.
-. Add xref:validation[the validation rule], which will be triggered
+. Add xref:ctmobile:main/mobile-application/synchronization/validation.adoc[the validation rule], which will be triggered
 when the *Started Activity* checkbox will have the *true* value. For
 example, _«We remind you that the activity will not sync until it is
 completed»_.

@@ -12,7 +12,7 @@ object.
 
 *CT Mobile Workflows* override the logic defined by the code of the CT
 Mobile app. For example, if a CT Mobile Workflow is created on
-xref:start-finish-functionality[the Start/Visit button], the
+xref:ctmobile:main/admin-guide/start-finish-functionality.adoc[the Start/Visit button], the
 *Capture Geoposition* and *Update Start/End Date Fields* options will no
 longer be applied even if they are enabled on the
 xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc[CT Mobile Control Panel:
@@ -121,40 +121,40 @@ not used.
 |*API Name* |*Description*
 
 |[.apiobject]#CTM.Button.StartActivity#
-|xref:start-finish-functionality[The Start button] of the
+|xref:ctmobile:main/admin-guide/start-finish-functionality.adoc[The Start button] of the
 [.object]#Activity# object.
 
 |[.apiobject]#CTM.Button.FinishActivity#
-|xref:start-finish-functionality[The Finish button] of the
+|xref:ctmobile:main/admin-guide/start-finish-functionality.adoc[The Finish button] of the
 [.object]#Activity# object.
 
 |[.apiobject]#CTM.Button.TakePhoto# |Pressing the button
 displays a layout with all available photos.
 
 |[.apiobject]#CTM.Button.AddObject# |The button defines
-xref:managing-offline-objects[record creation] in related lists.
+xref:ctmobile:main/admin-guide/managing-offline-objects/index.adoc[record creation] in related lists.
 
 |[.apiobject]#CTM.Button.Geoposition# |The button displays a
 xref:ctmobile:main/mobile-application/ui/actions.adoc[combo menu] to define Geolocation.
 
 |[.apiobject]#CTM.Button.ActivityHistory# |The icon displays
-xref:historical-activities[historical activities].
+xref:ctmobile:main/mobile-application/ui/historical-activities.adoc[historical activities].
 
 |[.apiobject]#CTM.Button.Signature# |The
 xref:ctmobile:main/mobile-application/ui/actions.adoc[combo-menu] button displays a pop-up signature window.
 
 |[.apiobject]#CTM.Button.ScanBarсode# |The icon displays
-xref:barcode-scanner[the EAN code scanner] on the related list.
+xref:ctmobile:main/mobile-application/barcode-scanner.adoc[the EAN code scanner] on the related list.
 
 |[.apiobject]#CTM.Button.Mail# |After pressing the button, the
 data are sent via Email.
 
 |[.apiobject]#CTM.Button.AddPost# |After pressing the button,
-xref:ctmobile:main/mobile-application/ui/actions.adoc[a new post] in the xref:chatter[Chatter feed] is
+xref:ctmobile:main/mobile-application/ui/actions.adoc[a new post] in the xref:ctmobile:main/mobile-application/mobile-application-modules/chatter/index.adoc[Chatter feed] is
 added.
 
 |[.apiobject]#CTM.Button.ConvertLead# |Pressing the button
-xref:lead-convert[converts Leads] into an
+xref:ctmobile:main/mobile-application/lead-convert.adoc[converts Leads] into an
 [.object]#Account# record.
 
 |[.apiobject]#CTM.Button.SortSwitch# |The switcher is to edit

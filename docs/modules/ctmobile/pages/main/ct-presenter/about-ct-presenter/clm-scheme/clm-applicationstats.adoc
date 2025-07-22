@@ -18,7 +18,7 @@ Object API name:[.apiobject]#clm__ApplicationStats__c#
 
 [NOTE] ==== To collect certain parameters of statistics, it is
 necessary to use preconfigured
-xref:gestures-in-clm-presentations[gestures].  ====
+xref:ctmobile:main/mobile-application/mobile-application-modules/applications/gestures-in-clm-presentations.adoc[gestures].  ====
 
 [width="100%",cols="25%,25%,25%,25%",]
 |===
@@ -65,12 +65,12 @@ The total number of taps/clicks for all slides.
 |Lookup(Custom Scenario) a|
 *Slide Stats*
 
-The xref:clm-customscenario[custom scenario] record in which a
+The xref:ctmobile:main/ct-presenter/about-ct-presenter/clm-scheme/clm-customscenario.adoc[custom scenario] record in which a
 slide was shown.
 
 |Description |[.apiobject]#clm__Description__c# |Long
 Text Area(32768) |To store
-xref:clm-presentation-controls#h3_300583250[a comment] left by a
+xref:ctmobile:main/mobile-application/mobile-application-modules/applications/clm-presentation-controls.adoc#h3_300583250[a comment] left by a
 user while viewing the CLM presentation.
 
 |Dislikes |[.apiobject]#clm__Dislikes__c# |Number(18,0)
@@ -88,7 +88,7 @@ meeting.
 
 |File name |[.apiobject]#clm__FileName__c# |Text(255)
 |Stores the value obtained by
-xref:ctm-customstats[ctm.CustomStats()]
+xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-clm-presentation-control/ctm-customstats.adoc[ctm.CustomStats()]
 
 |Finished by Timeout
 |[.apiobject]#clm__IsFinishedByTimeout__c# |Checkbox a|

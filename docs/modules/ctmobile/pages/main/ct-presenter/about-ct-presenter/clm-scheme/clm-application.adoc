@@ -26,7 +26,7 @@ label.
 
 |Application ID |[.apiobject]#clm__APPID__c# |Text(255)
 (Unique Case Insensitive) |The unique label of the CLM presentation. It
-may be used xref:changing-slides[in the navigation] for switching
+may be used xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-clm-presentation-navigation/changing-slides.adoc[in the navigation] for switching
 from the current slide to a slide in another CLM presentation.
 
 |Available for Download
@@ -121,7 +121,7 @@ The slide ID for displaying a slide preview.
 |Slide reordering enabled
 |[.apiobject]#clm__IsSlideReorderEnabled__c# |Checkbox
 |If enabled, users can create and edit
-xref:clm-customscenario[custom scenarios].
+xref:ctmobile:main/ct-presenter/about-ct-presenter/clm-scheme/clm-customscenario.adoc[custom scenarios].
 
 |Slide Zoom Enabled |[.apiobject]#clm__IsZoomEnabled__c#
 |Checkbox |If enabled, zoom in and out slides if

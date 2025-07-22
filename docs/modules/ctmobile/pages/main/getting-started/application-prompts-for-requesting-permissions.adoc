@@ -6,7 +6,7 @@ geolocation data or access *Photos*.
 
 * CT Mobile will show an additional pop-up with the permission and the
 usage description before asking to grant it.
-* The specified xref:application-theme[theme] is applied to
+* The specified xref:ctmobile:main/admin-guide/application-theme.adoc[theme] is applied to
 prompts.
 
 
@@ -45,7 +45,7 @@ mobile application asks a mobile user to:
 
 . Enable push notifications for CT Mobile in the Settings on a mobile
 device. Notifications will be displayed when a new post was published in
-a mobile user xref:chatter-push-notifications[Chatter feed] or
+a mobile user xref:ctmobile:main/mobile-application/mobile-application-modules/chatter/chatter-push-notifications.adoc[Chatter feed] or
 xref:event-notifications[as an alert of the upcoming visit]. Also,
 this permission is required to fill out the xref:clm-user[Device
 Token] field during the sync process.
@@ -70,30 +70,30 @@ General]/xref:ctmobile:main/admin-guide/ct-mobile-control-panel-new/ct-mobile-co
 Mobile Control Panel 2.0: General] for the current user's profile (even
 if the push notification is not enabled for the device).  ====
 
-When a mobile user taps xref:nearby-accounts[Nearby Accounts],
-xref:routes[Routes], xref:ctmobile:main/mobile-application/ui/actions.adoc[the Determine location
+When a mobile user taps xref:ctmobile:main/mobile-application/mobile-application-modules/nearby-accounts.adoc[Nearby Accounts],
+xref:ctmobile:main/mobile-application/mobile-application-modules/routes.adoc[Routes], xref:ctmobile:main/mobile-application/ui/actions.adoc[the Determine location
 button], or calls an app for the first time.
 * *Allow access to Calendar*
 
-When a mobile user enables xref:ical-synchronization[iCal
+When a mobile user enables xref:ctmobile:main/mobile-application/application-settings/ical-synchronization.adoc[iCal
 synchronization].
 * *Allow access to Photos*
 
 When a mobile user chooses a photo from *Photos* and attaches them to
-records or xref:chatter[Chatter posts].
+records or xref:ctmobile:main/mobile-application/mobile-application-modules/chatter/index.adoc[Chatter posts].
 * *Allow access to Contacts*
 
 For viewing contact information in the xref:calendar[calendar] in
-case of using xref:ical-synchronization[iCal synchronization].
+case of using xref:ctmobile:main/mobile-application/application-settings/ical-synchronization.adoc[iCal synchronization].
 * *Allow access to the microphone*
 
 When a mobile user records audio messages and attaches them to
-xref:chatter[Chatter posts].
+xref:ctmobile:main/mobile-application/mobile-application-modules/chatter/index.adoc[Chatter posts].
 * *Allow access to the Camera*
 
 When a mobile user captures photos and attaches them to records or
-xref:chatter[Chatter posts].
+xref:ctmobile:main/mobile-application/mobile-application-modules/chatter/index.adoc[Chatter posts].
 * *Allow access to Media*
 
 When a mobile user chooses audio files on a mobile device and attaches
-them to records or xref:chatter[Chatter posts].
+them to records or xref:ctmobile:main/mobile-application/mobile-application-modules/chatter/index.adoc[Chatter posts].

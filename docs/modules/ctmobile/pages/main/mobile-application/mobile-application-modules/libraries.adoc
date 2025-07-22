@@ -28,11 +28,11 @@ Search a library, folder, or file by its name or format.
 //tag::ios[]
 
 Tap the file name to send the file by e-mail using
-xref:email-templates[email templates] if available.
+xref:ctmobile:main/mobile-application/email-templates.adoc[email templates] if available.
 
 Enable xref:ctmobile:main/mobile-application/application-settings/index.adoc#h3_1768799377[background content
 loading] to download Salesforce Content documents in background mode.
-You can also select the xref:ctm-settings-menu[Files Download
+You can also select the xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ctm-settings/ctm-settings-menu.adoc[Files Download
 Enabled] checkbox for Library to adjust the background downloading
 process.
 
@@ -59,7 +59,7 @@ image:libraries-kotlin.png[]
 
 If [.object]#ContentDocument#, [.object]#ContentVersion#,
 [.object]#ContentDocumentLink# objects are added as
-xref:managing-offline-objects[offline objects], the *Libraries*
+xref:ctmobile:main/admin-guide/managing-offline-objects/index.adoc[offline objects], the *Libraries*
 module will not work correctly.
 
 To add the *Libraries* module to the xref:ctmobile:main/admin-guide/app-menu/index.adoc[app menu]:

@@ -5,7 +5,7 @@ xref:ctmobile:main/admin-guide/app-menu/index.adoc[the main menu].
 
 //tag::ios,win[]According to the selected profile, settings on this
 tab will be saved in the records of the [.object]#CTM
-Settings# object with the xref:ctm-settings-menu[Menu] record
+Settings# object with the xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ctm-settings/ctm-settings-menu.adoc[Menu] record
 type.
 
 :toc: :toclevels: 2
@@ -52,14 +52,14 @@ Refer to xref:ctmobile:main/mobile-application/ui/home-screen/index.adoc[Home sc
 [[h3_1468985423]]
 ==== Offline Objects
 
-* xref:grouping-records[Group records] by the criterion and
+* xref:ctmobile:main/admin-guide/app-menu/grouping-records.adoc[Group records] by the criterion and
 ascending or descending order of records.
 * Define fields available for filtering in
-xref:list-views#h2_380480215[mobile list view].
+xref:ctmobile:main/mobile-application/ui/list-views.adoc#h2_380480215[mobile list view].
 
 
 
-Refer to xref:managing-offline-objects[Managing Offline
+Refer to xref:ctmobile:main/admin-guide/managing-offline-objects/index.adoc[Managing Offline
 Objects] for more details.
 
 [[h3_330756966]]
@@ -67,7 +67,7 @@ Objects] for more details.
 
 Click *Add Category* to add a link list.
 
-Refer to xref:links-list[Links] for more details.
+Refer to xref:ctmobile:main/mobile-application/mobile-application-modules/links.adoc[Links] for more details.
 
 [[h3_1292798904]]
 ==== Calendar
@@ -76,7 +76,7 @@ Configure the xref:calendar[Calendar] options:
 
 * *Activity Duration (min)*: specify the default duration in minutes for
 scheduled activities.
-* *Default View*: select xref:using-calendar#h2_1759778354[the
+* *Default View*: select xref:ctmobile:main/mobile-application/mobile-application-modules/calendar/using-calendar.adoc#h2_1759778354[the
 default calendar view]. The available options:
 ** Month
 ** Week
@@ -97,13 +97,13 @@ Control Panel 2.0: Activities] to learn about calendar activities.
 ==== CT Orders
 
 * *Product Object*: select an object that will be used as a product.
-* xref:grouping-records[Group records] by the criterion and
+* xref:ctmobile:main/admin-guide/app-menu/grouping-records.adoc[Group records] by the criterion and
 ascending or descending order of records.
 
 [[h3_1016751028]]
 ==== Salesforce Content
 
-Define the way how files uploaded to the xref:libraries[Libraries]
+Define the way how files uploaded to the xref:ctmobile:main/mobile-application/mobile-application-modules/libraries.adoc[Libraries]
 module must be downloaded during synchronization. Available values:
 
 * *Download As Preview*: only preview images will be downloaded. Tap on

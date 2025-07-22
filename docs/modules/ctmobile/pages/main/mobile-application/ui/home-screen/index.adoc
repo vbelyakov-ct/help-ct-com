@@ -119,7 +119,7 @@ not activated.
 
 ifndef::win[]
 
-If xref:start-finish-functionality[the Start/Finish functionality]
+If xref:ctmobile:main/admin-guide/start-finish-functionality.adoc[the Start/Finish functionality]
 is enabled, on activity is unfinished when the
 [.apiobject]#IsDone__c# checkbox on the _Activity_ object is
 not activated. If the user of the mobile device taps the *Finish* button
@@ -158,13 +158,13 @@ image:app_menu_android_home_calendar.png[]
 Display the standard scenario and favorite custom scenarios of CLM
 presentations.
 
-In the Applications module, xref:applications#h3_1557359819[add
+In the Applications module, xref:ctmobile:main/mobile-application/mobile-application-modules/applications/index.adoc#h3_1557359819[add
 CLM-presentation(s) or scenario(s) to favorites]. The favorite CLM
 presentations will be displayed in the carousel.
 
 Scroll the carousel and tap on the CLM presentation to open it. In the
-presentation mode, use xref:gestures-in-clm-presentations[gestures]
-and xref:clm-presentation-controls[buttons].
+presentation mode, use xref:ctmobile:main/mobile-application/mobile-application-modules/applications/gestures-in-clm-presentations.adoc[gestures]
+and xref:ctmobile:main/mobile-application/mobile-application-modules/applications/clm-presentation-controls.adoc[buttons].
 
 ifndef::win,andr[]
 
@@ -191,7 +191,7 @@ is based on an offline dashboard, the dashboard also should be located
 in a custom folder.
 * Objects used for chart building should be added to the list of the
 objects available offline (refer
-to xref:managing-offline-objects[CT Mobile Control Panel: Managing
+to xref:ctmobile:main/admin-guide/managing-offline-objects/index.adoc[CT Mobile Control Panel: Managing
 Offline
 Objects]/xref:ctmobile:main/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc[CT Mobile
 Control Panel 2.0: Offline Objects]).
@@ -340,10 +340,10 @@ xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-g
 Control Panel:
 General]/xref:ct-mobile-control-panel-user-interface-new#h3_1354766135[CT
 Mobile Control Panel 2.0: User Interface] tab and add a new logo.
-* Customize xref:application-theme[the application theme].
+* Customize xref:ctmobile:main/admin-guide/application-theme.adoc[the application theme].
 * Use the global search bar to search records which object added to the
 main menu. For more information, please refer
-to xref:search[Search].
+to xref:ctmobile:main/mobile-application/ui/home-screen/search.adoc[Search].
 * Tap the burger icon to minimize the main menu up to menu icons.
 * Specify menu items and their order in xref:ctmobile:main/admin-guide/app-menu/index.adoc[the main
 menu].

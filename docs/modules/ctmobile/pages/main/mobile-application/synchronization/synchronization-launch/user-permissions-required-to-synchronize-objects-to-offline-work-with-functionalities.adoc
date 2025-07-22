@@ -84,7 +84,7 @@ operation of the added functionalities and integrations a|
 !*Functionality/Integration* !*Object* !*Object API Name* !*User
 Permission* !*Comments*
 
-!xref:applications[Applications] !Application
+!xref:ctmobile:main/mobile-application/mobile-application-modules/applications/index.adoc[Applications] !Application
 ![.apiobject]#clm__Application__c# !Read; Edit !
 
 ! !Application Stats
@@ -95,7 +95,7 @@ Permission* !*Comments*
 
 ! !Slide ![.apiobject]#clm__Slide__c# !Read !
 
-!xref:cg-cloud[CG Cloud]
+!xref:ctmobile:main/mobile-application/mobile-application-modules/cg-cloud/index.adoc[CG Cloud]
 !xref:activating-cg-cloud-in-the-ct-mobile-app#h2_242799573[The
 list of CG Cloud objects] !— !— !
 
@@ -118,10 +118,10 @@ list of CT Orders objects] !— !— !
 
 ! !Report ![.apiobject]#Report# !Read !
 
-! !Report Type ![.apiobject]#ReportType# !Read ! !xref:lead-convert[Lead] !Lead Status ![.apiobject]#LeadStatus# !Read !If the list of offline objects
+! !Report Type ![.apiobject]#ReportType# !Read ! !xref:ctmobile:main/mobile-application/lead-convert.adoc[Lead] !Lead Status ![.apiobject]#LeadStatus# !Read !If the list of offline objects
 contains the _Lead_ object.
 
-!xref:managing-offline-objects[Offline Objects] !The list of
+!xref:ctmobile:main/admin-guide/managing-offline-objects/index.adoc[Offline Objects] !The list of
 offline objects !— !Read; Edit; Delete (depend on the object) !It is
 based on data from
 xref:related-list-filters[clm__RelatedListFillters__c],
@@ -131,7 +131,7 @@ xref:menu-settings-and-offline-objects[clm__TopLvlObjects__c]
 ! !Task Status ![.apiobject]#TaskStatus# !Read; Edit !If the
 list of offline objects contains the _Task_ object.
 
-!xref:opportunities[Opportunity] !Opportunity
+!xref:ctmobile:main/mobile-application/mobile-application-modules/opportunities/index.adoc[Opportunity] !Opportunity
 ![.apiobject]#Opportunity# !Read !If the list of offline
 objects contains the _Order_ and _Quote_ objects.
 
@@ -168,7 +168,7 @@ Permission* !*Comments*
 !xref:ctmobile:main/mobile-application/ui/home-screen/index.adoc#h3_1761919763[Dashboards] (online) !Dashboard
 ![.apiobject]#Dashboard# !Read !
 
-!xref:managing-offline-objects[Offline Objects] !The list of
+!xref:ctmobile:main/admin-guide/managing-offline-objects/index.adoc[Offline Objects] !The list of
 offline objects !— !Read; Edit; Delete (depend on the object) !It is
 based on data from
 xref:related-list-filters[clm__RelatedListFillters__c] and
@@ -177,7 +177,7 @@ xref:menu-settings-and-offline-objects[clm__TopLvlObjects__c].
 ! !Task Status ![.apiobject]#TaskStatus# !Read; Edit !If the
 list of offline objects contains the _Task_ object.
 
-!xref:opportunities[Opportunity] !Opportunity
+!xref:ctmobile:main/mobile-application/mobile-application-modules/opportunities/index.adoc[Opportunity] !Opportunity
 ![.apiobject]#Opportunity# !Read !If the list of offline
 objects contains the _Opportunity_ object.
 

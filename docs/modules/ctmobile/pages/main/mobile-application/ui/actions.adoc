@@ -42,7 +42,7 @@ location data for an *Account* or *Activity* record and write them into
 the specific field.
 
 When a mobile user has permission to edit records (refer to
-xref:managing-offline-objects[Managing Offline Objects in CT Mobile
+xref:ctmobile:main/admin-guide/managing-offline-objects/index.adoc[Managing Offline Objects in CT Mobile
 Control Panel] or
 xref:ctmobile:main/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc[CT Mobile Control
 Panel 2.0: Offline Objects]).
@@ -57,7 +57,7 @@ to store the geolocation of the organization.
 A geolocation type field on the[.object]#Activity# objects used
 to store the geolocation of the activities.
 
-If xref:start-finish-functionality[the Start/Finish functionality]
+If xref:ctmobile:main/admin-guide/start-finish-functionality.adoc[the Start/Finish functionality]
 is on *Capture Geoposition* is enabled, and a mobile user has forenamed
 permissions for a record of an[.object]#Activity# object, the
 geolocation is automatically captured and the *Determine Location*
@@ -110,7 +110,7 @@ sharing rule], or if the access was
 granted https://help.salesforce.com/articleView?id=security_sharing_owd_user_manual.htm&type=5[manually].
 
 To know more about attaching and viewing files in the *Files* section,
-refer to xref:attaching-files-in-the-files-section[Attachments in
+refer to xref:ctmobile:main/mobile-application/attaching-files-in-the-files-section.adoc[Attachments in
 the Files Section].
 
 [[h2_62618674]]
@@ -135,7 +135,7 @@ https://help.salesforce.com/articleView?id=security_sharing_owd_user_manual.htm&
 
 
 
-If xref:start-finish-functionality[the Start/Finish functionality]
+If xref:ctmobile:main/admin-guide/start-finish-functionality.adoc[the Start/Finish functionality]
 is on and a mobile user has fore-named permissions for a record of an
 [.object]#Activity# object:
 
@@ -189,21 +189,21 @@ Tap to export selected fields to a CSV file.
 
 * The menu item is displayed on related records, if the *Export
 Allowed* checkbox is set to _true_ (refer to
-xref:ctm-settings-offline-objects[Offline Objects → Export Allowed]
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ctm-settings/ctm-settings-offline-objects.adoc[Offline Objects → Export Allowed]
 or xref:ctmobile:main/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc#h3_290156637[CT
 Mobile Control Panel 2.0: Offline Objects → Export to CSV]).
 * Default fields should be specified in the** Default Columns** field of
-the xref:ctm-settings-offline-objects[Offline Object] or in
+the xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ctm-settings/ctm-settings-offline-objects.adoc[Offline Object] or in
 xref:ctmobile:main/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc#h4_912917703[CT
 Mobile Control Panel 2.0: Offline Objects → Export Columns Selection].
 * Custom fields can be selected for export if
-the xref:ctm-settings-offline-objects[Select Export
+the xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ctm-settings/ctm-settings-offline-objects.adoc[Select Export
 Columns] checkbox is set to _true_ or
 xref:ctmobile:main/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc#h4_912917703[Export
 Columns Selection] is set to *User-Selected Columns* or *Predefined and
 User-Selected Columns*.
 [TIP] ==== To export selected fields to file for the main
-object, switch to xref:list-views#h2_1248088428[detailed list
+object, switch to xref:ctmobile:main/mobile-application/ui/list-views.adoc#h2_1248088428[detailed list
 view]. ====
 
 image:ctmi-export-csv-2.9.png[]

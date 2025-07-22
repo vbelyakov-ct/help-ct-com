@@ -29,7 +29,7 @@ the following are required:
 [.object]#Product# object. Specify in the field the number
 encoded in the barcode.
 
-[NOTE] ==== On the xref:ct-mobile-control-panel-general[CT
+[NOTE] ==== On the xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc[CT
 Mobile Control Panel: General] tab, the[.object]#Product ====
 object should be selected in the *Product Object API Name* field#.
 . On the[.object]#Activity Data# object:
@@ -47,7 +47,7 @@ Data# object as a child object.
 [.object]#Product# object, as a column of the list.
 . Add the[.object]#Activity#,[.object]#Activity Data,#
 and[.object]#Product# objects to
-xref:ctm-settings-offline-objects[offline objects].
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ctm-settings/ctm-settings-offline-objects.adoc[offline objects].
 
 [NOTE] ==== The user's profile should have access to read and
 edit records of all the objects mentioned above. ====
@@ -65,7 +65,7 @@ A new record is created.
 
 * When rescanning previously added barcodes, duplicate records are not
 created.
-* If xref:start-finish-functionality[the Start/Finish
+* If xref:ctmobile:main/admin-guide/start-finish-functionality.adoc[the Start/Finish
 functionality] is enabled, the barcode scanner button will be available
 after the activity is starting.
 

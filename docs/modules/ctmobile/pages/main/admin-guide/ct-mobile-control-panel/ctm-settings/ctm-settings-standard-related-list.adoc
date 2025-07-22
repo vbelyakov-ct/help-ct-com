@@ -5,7 +5,7 @@ available. ====
 
 The *Standard Related List* record type is intended to store settings
 for a standard related list of a specific
-xref:managing-offline-objects[offline object&#44;] as well as
+xref:ctmobile:main/admin-guide/managing-offline-objects/index.adoc[offline object&#44;] as well as
 permissions and available actions with records of the standard related
 list for a specific profile.
 
@@ -72,7 +72,7 @@ The criteria line should start with the 'WHERE' keyword.
 
 |Default View |[.apiobject]#clm__View__c# |Text(255)
 |Stores the *Timeline* value to display records in
-xref:timeline-view[Timeline] view. In other cases, left blank.
+xref:ctmobile:main/admin-guide/related-lists/timeline-view.adoc[Timeline] view. In other cases, left blank.
 
 |Deleting Allowed
 |[.apiobject]#clm__IsDeletingAllowed__c# |Checkbox a|
@@ -162,7 +162,7 @@ the [.apiobject]#clm__View__c# field.
 
 |Sync Recovery |[.apiobject]#clm__SyncRecovery__c#
 |Text(255) a|
-Enable xref:sync-recovery[Sync Recovery] to deliver records that
+Enable xref:ctmobile:main/mobile-application/synchronization/sync-recovery.adoc[Sync Recovery] to deliver records that
 could not be synchronized to Salesforce anyway. Available values:
 
 * An empty value means that the web service is not involved.

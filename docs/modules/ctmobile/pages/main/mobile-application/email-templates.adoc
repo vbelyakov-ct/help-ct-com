@@ -7,8 +7,8 @@ for sending attachments of records. //tag::ios[]
 
 https://help.salesforce.com/articleView?id=email_templates_landing_page.htm&type=5[Email
 templates] are the standard Salesforce functionality that can be used
-for sending files from xref:libraries[Libraries] and slides and
-attachments of xref:applications[CLM presentations].
+for sending files from xref:ctmobile:main/mobile-application/mobile-application-modules/libraries.adoc[Libraries] and slides and
+attachments of xref:ctmobile:main/mobile-application/mobile-application-modules/applications/index.adoc[CLM presentations].
 
 
 
@@ -21,7 +21,7 @@ To use email templates in the CT Mobile app, they should be active, and
 the mobile user should have access to appropriate email templates.
 
 Specify markers in the[.apiobject]#{!Object.Field}# format
-xref:crm-data-display[to display CRM data], for example,
+xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-interaction-with-crm-data/crm-data-display.adoc[to display CRM data], for example,
 [.apiobject]#{!User.Name}#,
 [.apiobject]#{!User.LastName}#,
 [.apiobject]#{!User.MobilePhone}#.

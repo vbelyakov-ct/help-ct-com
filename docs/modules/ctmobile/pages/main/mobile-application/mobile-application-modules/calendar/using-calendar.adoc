@@ -166,11 +166,11 @@ activities for a day are displayed on the left records list.
 Important notes:
 
 * If custom colors for the activities are not set,
-xref:application-theme[the application theme] will be used to
+xref:ctmobile:main/admin-guide/application-theme.adoc[the application theme] will be used to
 display activities in the calendar grid.
 * The records, which have not been synchronized, may always be deleted
 no matter what access the profile is granted.
-* If xref:start-finish-functionality[the Start/Finish
+* If xref:ctmobile:main/admin-guide/start-finish-functionality.adoc[the Start/Finish
 functionality] is enabled, a mobile user can move and delete records if
 the[.apiobject]#clm__ActivityDoneAPI__c# attribute of
 the xref:mobile-application-setup[Mobile Application Setup] record
@@ -202,7 +202,7 @@ action on the confirmation box.
 Important notes:
 
 . If custom colors for the activities are not set,
-xref:application-theme[the application theme] will be used to
+xref:ctmobile:main/admin-guide/application-theme.adoc[the application theme] will be used to
 display activities in the calendar grid.
 . Activities cannot be moved from and to the all-day slot.
 . The records, which have not been synchronized, may always be deleted
@@ -267,9 +267,9 @@ the calendar grid opens from the date of the last created activity.
 Important notes:
 
 . If custom colors for the activities are not set,
-xref:application-theme[the application theme] will be used to
+xref:ctmobile:main/admin-guide/application-theme.adoc[the application theme] will be used to
 display activities in the calendar grid.
-. If xref:start-finish-functionality[the Start/Finish
+. If xref:ctmobile:main/admin-guide/start-finish-functionality.adoc[the Start/Finish
 functionality] is enabled:
 * if the *Lock/Unlock Record* option is enabled, the activity record may
 be edited (including adding a photo from the xref:ctmobile:main/mobile-application/ui/actions.adoc[Actions]
@@ -278,7 +278,7 @@ been finished.
 * if the *Update Start/End Date Fields* option is enabled, when a mobile
 user taps the *Start* or *Finish* buttons, the *Activity Start Date* and
 *Activity End Date* fields will be updated (refer to
-xref:ct-mobile-control-panel-calendar#h3_1391348303[CT Mobile
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc#h3_1391348303[CT Mobile
 Control Panel: Calendar] or
 xref:ctmobile:main/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-activities-new.adoc#h4_587549689[CT Mobile
 Control Panel 2.0: Activities]).

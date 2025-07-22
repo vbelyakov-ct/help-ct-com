@@ -65,7 +65,7 @@ Enable xref:ctmobile:main/admin-guide/ct-mobile-control-panel/custom-settings/ct
 territory coordinates have been altered to download all actual data on
 the mobile device.
 
-Set up xref:sync-recovery[Sync Recovery] to have the ability to
+Set up xref:ctmobile:main/mobile-application/synchronization/sync-recovery.adoc[Sync Recovery] to have the ability to
 upload records with the errors to Salesforce.
 
 For more information, go to xref:ctmobile:main/mobile-application/synchronization/fast-synchronization.adoc[Fast and
@@ -97,7 +97,7 @@ ifndef::andr,win[]
 [[h3_2018975044]]
 ==== Other Synchronization Modes
 
-* xref:other-synchronization-modes#h2_1958232390[Quick Record
+* xref:ctmobile:main/mobile-application/synchronization/other-synchronization-modes.adoc#h2_1958232390[Quick Record
 Synchronization]
 Used to update a single record and its child records by using the
 pull-to-refresh gesture on the record's layout. Requires
@@ -106,19 +106,19 @@ xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-o
 Control Panel: Offline
 objects]/xref:ctmobile:main/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc#h4_202390671[CT
 Mobile Control Panel 2.0: Offline Objects]).
-You can update xref:chatter[the Chatter feed] the same way but this
+You can update xref:ctmobile:main/mobile-application/mobile-application-modules/chatter/index.adoc[the Chatter feed] the same way but this
 functionality does not depend on permission to quick record
 synchronization.
-* xref:other-synchronization-modes#h2_740581689[Workflow
+* xref:ctmobile:main/mobile-application/synchronization/other-synchronization-modes.adoc#h2_740581689[Workflow
 Synchronization]
 This mode of synchronization is run when xref:ct-mobile-workflow[CT
 Mobile Workflow] conditions are triggered.
-* xref:other-synchronization-modes#h2_233027861[CT Presenter
+* xref:ctmobile:main/mobile-application/synchronization/other-synchronization-modes.adoc#h2_233027861[CT Presenter
 Synchronization]
 This mode of synchronization is triggered when the
 xref:ctm-sync[sync()] method of JS Bridge is requested.
 
-For more information, go to xref:other-synchronization-modes[Other
+For more information, go to xref:ctmobile:main/mobile-application/synchronization/other-synchronization-modes.adoc[Other
 Synchronization Modes].
 
 [[h2_1868373451]]
@@ -240,7 +240,7 @@ mobile user.
 [WARNING] ==== For the correct operation,
 xref:ctmobile:main/admin-guide/metadata-checker/metadata-archive/index.adoc[the metadata archive] must be collected and
 the cloud token (refer to
-xref:ct-mobile-control-panel-tools#h3_2011978[CT Mobile Control
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc#h3_2011978[CT Mobile Control
 Panel: Tools]/xref:ct-mobile-control-panel-tools-new#h2_2011978[CT
 Mobile Control Panel 2.0: Tools]) must be valid. ====
 
@@ -282,7 +282,7 @@ Steps:
 . Metadata components are downloaded from the metadata archive.
 . The current data model is created.
 . Records of xref:ctmobile:main/admin-guide/ct-mobile-control-panel/custom-settings/index.adoc[the custom settings&#44; custom
-metadata types], xref:managing-offline-objects[offline objects]
+metadata types], xref:ctmobile:main/admin-guide/managing-offline-objects/index.adoc[offline objects]
 (based on SOQL filters), and objects, which are necessary for activated
 xref:ctmobile:main/mobile-application/mobile-application-modules/index.adoc[modules], are downloaded if a
 record matches the conditions set in

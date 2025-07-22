@@ -54,7 +54,7 @@ and on the *Accounts* tab of the modules.
 //tag::kotlin[]
 
 If enabled, the first time the user launches the CT Mobile app, the app
-will ask the user xref:application-pin-code[to set a personal
+will ask the user xref:ctmobile:main/mobile-application/application-settings/application-pin-code.adoc[to set a personal
 passcode]. Then, every time the user opens the app, a password will be
 required to access the app. When you enter the wrong passcode three
 times in a row, xref:log-out[the database will be reset].
@@ -80,7 +80,7 @@ is disabled.
 [[h2_1037766202]]
 === User Interface
 
-This section is intended to xref:application-theme[personalize the
+This section is intended to xref:ctmobile:main/admin-guide/application-theme.adoc[personalize the
 CT Mobile interface].
 
 . Click *Customize* next to *Set App Color, Patterns, and Logo*.
@@ -156,8 +156,8 @@ Salesforce Classic, go to *Documents* and open the *CT CLM* folder.
 === Geolocation
 
 Geolocation data may be used for xref:ctmobile:main/admin-guide/mobile-layouts/index.adoc-maps[the Maps
-widget] on a record, in the xref:routes[Routes] and
-xref:nearby-accounts[Nearby Accounts] modules.
+widget] on a record, in the xref:ctmobile:main/mobile-application/mobile-application-modules/routes.adoc[Routes] and
+xref:ctmobile:main/mobile-application/mobile-application-modules/nearby-accounts.adoc[Nearby Accounts] modules.
 
 [[h3_335024009]]
 ==== Enable Location Tracking
@@ -168,7 +168,7 @@ xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-g
 Geolocation] or
 xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_1092547330[Account Full
 Address] field according to selection and in the
-xref:ct-mobile-control-panel-calendar#h3_717585460[Activity
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc#h3_717585460[Activity
 Geolocation Field API Name] field.
 
 [[h3_1567195273]]
@@ -232,7 +232,7 @@ following:
 [[h3_604215198]]
 ==== Google Maps iOS API Key
 
-Obtain and enter your xref:google-maps-api-key[Google Maps API key]
+Obtain and enter your xref:ctmobile:main/admin-guide/google-maps-api-key/index.adoc[Google Maps API key]
 for using Google Maps in the CT Mobile iOS app.
 
 [[h3_1990058335]]
@@ -247,7 +247,7 @@ Windows app.
 ==== Google Maps Android API Key
 
 Obtain and enter your
-https://docs.microsoft.com/en-us/bingmaps/getting-started/bing-maps-dev-center-help/getting-a-bing-maps-key[]xref:google-maps-api-key[Google
+https://docs.microsoft.com/en-us/bingmaps/getting-started/bing-maps-dev-center-help/getting-a-bing-maps-key[]xref:ctmobile:main/admin-guide/google-maps-api-key/index.adoc[Google
 Maps API key] on this tab for using Google Maps in the CT Mobile Android
 apps.
 
@@ -256,9 +256,9 @@ apps.
 
 //tag::kotlin[]
 
-Obtain and enter your xref:google-maps-api-key[Google Maps
+Obtain and enter your xref:ctmobile:main/admin-guide/google-maps-api-key/index.adoc[Google Maps
 JavaScript API Key] to track the geolocation of CT Mobile iOS users in
-real-time via the xref:geolocation-center[Geolocation Centre] in
+real-time via the xref:ctmobile:main/admin-guide/geolocation-center/index.adoc[Geolocation Centre] in
 Salesforce.
 
 [[h2_1687169837]]
@@ -287,7 +287,7 @@ overloaded. #
 [[h3_813073278]]
 ==== Send database dump to
 
-Choose where to xref:send-application-data-dump[send the customer's
+Choose where to xref:ctmobile:main/mobile-application/application-settings/send-application-data-dump.adoc[send the customer's
 database dump] of the CT Mobile app. Select an option:
 
 * http://Salesforce.com[Salesforce.com]
@@ -309,7 +309,7 @@ Select an object that will be used as a product. The *Product Object API
 Name* field of the xref:mobile-application-setup[Mobile Application
 Setup] should be correctly specified for each
 [.object]#Activity# object in the
-xref:ct-mobile-control-panel-calendar#h3_1397263211[Activity Object
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc#h3_1397263211[Activity Object
 API Name] field.
 
 [[h3_494016929]]

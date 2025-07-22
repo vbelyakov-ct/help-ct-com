@@ -51,7 +51,7 @@ less.
 xref:calendar#h3_645629234[left menu], if they are set up in the
 object xref:ctmobile:main/mobile-application/ui/compact-layout.adoc[compact layout].
 ** Up to 5 events can be displayed for one day in the
-xref:using-calendar#h3_860090196[month view].
+xref:ctmobile:main/mobile-application/mobile-application-modules/calendar/using-calendar.adoc#h3_860090196[month view].
 ** Customizable *All activities per day* hint added to the
 xref:ctmobile:main/mobile-application/ui/home-screen/index.adoc#h3_1292798904[calendar widget] for the Home
 Screen.
@@ -63,7 +63,7 @@ _Activity_.
 * Records counter in a xref:ctmobile:main/mobile-application/ui/list-views.adoc[list view] is now displayed
 if there are more than 500 records.
 * Files sharing workflow has been upgraded, including
-xref:attaching-files-in-the-files-section#h3_1261438429[attached
+xref:ctmobile:main/mobile-application/attaching-files-in-the-files-section.adoc#h3_1261438429[attached
 files for offline objects], xref:sharing-clm-presentations[CLM
 presentations] in CT Presenter and
 https://help.customertimes.com/smart/project-ct-sign-en/sign-a-document-the-ct-mobile-app/a/h3_1085191960[signed
@@ -74,7 +74,7 @@ contacts that are related to the current _Account_ record.
 to CSV file.
 * List of fields available while creating a new mobile list view can be
 now predefined in the *Fields* field of
-the xref:ctm-settings-offline-objects[Offline objects] record
+the xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ctm-settings/ctm-settings-offline-objects.adoc[Offline objects] record
 type.
 
 [[h3_1184861485]]
@@ -160,13 +160,13 @@ Minimum supported iOS version: iOS 15.
 Please upgarde the CT Mobile package version to 3.85 to get access to
 the following features:
 
-* The xref:ctm-settings-offline-objects[Files Download Enabled]
+* The xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ctm-settings/ctm-settings-offline-objects.adoc[Files Download Enabled]
 checkbox added for Offline objects. If disabled, files attached to
 offline objects will be displayed as previews and synchronization time
 will be reduced.
-* The xref:ctm-settings-offline-objects[Files Filter] field
+* The xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ctm-settings/ctm-settings-offline-objects.adoc[Files Filter] field
 added for Offline objects. You can
-xref:attaching-files-in-the-files-section#h3_1720123861[specify the
+xref:ctmobile:main/mobile-application/attaching-files-in-the-files-section.adoc#h3_1720123861[specify the
 latest date of the offline object creation] that should be downloaded
 during the sync.
 
@@ -177,12 +177,12 @@ version:
 list views.
 
 * Formed Documents, Signatures, and SyncLogs are now stored in the
-xref:attaching-files-in-the-files-section[Files] section of an
+xref:ctmobile:main/mobile-application/attaching-files-in-the-files-section.adoc[Files] section of an
 offline object. You can add or delete files in the
-xref:attaching-files-in-the-files-section#h3_2018099316[Actions]
+xref:ctmobile:main/mobile-application/attaching-files-in-the-files-section.adoc#h3_2018099316[Actions]
 menu of an offline object.
 * Adding and pinning list views for the
-xref:using-calendar#h3_632854949[Calendar].
+xref:ctmobile:main/mobile-application/mobile-application-modules/calendar/using-calendar.adoc#h3_632854949[Calendar].
 
 [[h3_1646834508]]
 ==== Integrations
@@ -242,7 +242,7 @@ by email.
 Charts] are available offline in the Dashboards module.
 * Support the ORDER BY and LIMIT operators in Workflow Steps.
 * Support the GEOLOCATION, HYPERLINK, and WEEKDAY operators in
-xref:offline-supported-operators-and-functions-in-field-with-the-formula-type[formulas].
+xref:ctmobile:main/ct-mobile-solution/recommendations-and-peculiarities/offline-supported-operators-and-functions-in-field-with-the-formula-type.adoc[formulas].
 * The height for fields with the *Picklist* type changes depending on
 the value, and becomes scrollable when exceeding five lines.
 * Support calculation for fields with the *Formula* type if they have
@@ -289,7 +289,7 @@ start date.
 [[h3_871715723]]
 ==== Attachments, Chatter, and Libraries
 
-* The ability to minimize the xref:libraries[Libraries] content and
+* The ability to minimize the xref:ctmobile:main/mobile-application/mobile-application-modules/libraries.adoc[Libraries] content and
 xref:attachments-and-files[Attachments] of a record. Move the
 floating window around the screen. Tap the floating window to resume
 full mode.
@@ -517,7 +517,7 @@ not be hidden until the user presses OK.
 [[h4_1603447305]]
 ===== Salesforce Metadata
 
-* xref:ct-mobile-control-panel-calendar#h3_808313222[The default
+* xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc#h3_808313222[The default
 duration] will be set for the activity created in the related lists, the
 timeline view, and the *Activity* menu item.​
 * On the *Settings* screen, the version for the custom application based
@@ -633,7 +633,7 @@ Mobile app.
 
 image:color_menu_item_ios_en.png[]
 * Use the detailed list view to see records in full screen when filling
-out xref:reference-fields#h2_1554731138[the reference field].
+out xref:ctmobile:main/admin-guide/managing-offline-objects/reference-fields.adoc#h2_1554731138[the reference field].
 * https://help.salesforce.com/s/articleView?id=sf.customviews_edit_filters.htm&type=5[The
 My filter] is supported in list views to display only records owned by
 the current mobile user.
@@ -649,7 +649,7 @@ tags] are supported in the read-only fields with the *Text Area* and
 [[h4_1648197581]]
 ===== Calendar
 
-* To go to the record screen, xref:using-calendar#h3_243561528[use
+* To go to the record screen, xref:ctmobile:main/mobile-application/mobile-application-modules/calendar/using-calendar.adoc#h3_243561528[use
 the Open button] when tapping activity or double-tap activity in the
 calendar grid.
 * For better visibility, all activities less than 30 minutes occupy a
@@ -663,7 +663,7 @@ user can view the agenda of the whole selected day.
 [[h4_780929262]]
 ===== Routes
 
-* xref:routes#h3_1243841833[The route points] are now numbered, and
+* xref:ctmobile:main/mobile-application/mobile-application-modules/routes.adoc#h3_1243841833[The route points] are now numbered, and
 when tapping on activity on the map, you can use the *Open* button to go
 to the record layout.
 
@@ -715,7 +715,7 @@ Orders].
 ==== Mobile List Views
 
 The ability for field forces to create offline
-xref:list-views#h2_380480215[list views].
+xref:ctmobile:main/mobile-application/ui/list-views.adoc#h2_380480215[list views].
 
 
 
@@ -725,7 +725,7 @@ Your browser does not support the HTML5 video element
 ==== Work while an Activity in Progress
 
 The ability to allow users to leave
-xref:start-finish-functionality#h2_239706372[the unfinished
+xref:ctmobile:main/admin-guide/start-finish-functionality.adoc#h2_239706372[the unfinished
 activity] for working with other features.
 
 image:Unfinished-Activitty-EN.gif[]
@@ -737,7 +737,7 @@ image:Unfinished-Activitty-EN.gif[]
 ===== UI/UX
 
 * The long library name is fully displayed in
-xref:libraries[Libraries].
+xref:ctmobile:main/mobile-application/mobile-application-modules/libraries.adoc[Libraries].
 * When xref:log-out[logging out] of the CT Mobile app, a
 notification appears to clarify to a user that the database will be
 erased.
@@ -752,7 +752,7 @@ xref:api-key[API Key] custom setting.
 * https://help.salesforce.com/articleView?id=fields_using_rich_text_area.htm&type=5[Special
 characters] are supported in xref:ctmobile:main/admin-guide/mobile-layouts/index.adoc[mobile layouts],
 standard and custom xref:ctmobile:main/mobile-application/ui/list-views.adoc[list views], and
-xref:chatter#h2_779708391[Chatter] posts and comments.
+xref:ctmobile:main/mobile-application/mobile-application-modules/chatter/index.adoc#h2_779708391[Chatter] posts and comments.
 
 
 
@@ -760,7 +760,7 @@ xref:chatter#h2_779708391[Chatter] posts and comments.
 ===== Planning Calendar
 
 * Performance improvements for a large number of activities
-xref:using-calendar[in the calendar grid].
+xref:ctmobile:main/mobile-application/mobile-application-modules/calendar/using-calendar.adoc[in the calendar grid].
 
 
 
@@ -769,7 +769,7 @@ xref:using-calendar[in the calendar grid].
 
 * Use xref:ctmobile:main/ct-presenter/about-ct-presenter/clm-scheme/clm-application.adoc[new attributes of CLM presentation] to
 choose whether the CLM presentation should be available
-xref:applications[offline], used in the
+xref:ctmobile:main/mobile-application/mobile-application-modules/applications/index.adoc[offline], used in the
 xref:remote-detailing-launch[Remote Detailing] meeting, or both.
 
 image:RN_available_offline.png[]
@@ -836,7 +836,7 @@ the max height of 5 lines is exceeded.
 * xref:ctmobile:main/admin-guide/app-menu/index.adoc[Assign the icon for the main tab] to help a user
 quickly find out the object he is working with when viewing the record
 screen.
-* xref:search[Searching in the left record list] now displays the
+* xref:ctmobile:main/mobile-application/ui/home-screen/search.adoc[Searching in the left record list] now displays the
 results of the full match search.
 
 
@@ -845,7 +845,7 @@ results of the full match search.
 ===== Planning Calendar
 
 * When opening activity from the day or week view in
-xref:using-calendar[the Calendar module], the agenda with records
+xref:ctmobile:main/mobile-application/mobile-application-modules/calendar/using-calendar.adoc[the Calendar module], the agenda with records
 of all activities for that day is displayed on the left side.
 
 
@@ -853,7 +853,7 @@ of all activities for that day is displayed on the left side.
 [[h4_735612696]]
 ===== Routes
 
-* In the xref:routes[Routes] module, the selected options are
+* In the xref:ctmobile:main/mobile-application/mobile-application-modules/routes.adoc[Routes] module, the selected options are
 saved.
 
 
@@ -868,7 +868,7 @@ Remember to xref:publishing-clm-presentations[re-publish these CLM
 presentations] and perform the fast sync. ====
 
 * The ability to zoom in or out a CLM presentation using
-xref:gestures-in-clm-presentations[a two-finger pinch].
+xref:ctmobile:main/mobile-application/mobile-application-modules/applications/gestures-in-clm-presentations.adoc[a two-finger pinch].
 * Add https://developer.apple.com/documentation/arkit[ARKit models] in
 the[.apiobject]#sources.zip# for displaying in the CLM
 presentations.
@@ -929,7 +929,7 @@ automatically transferred, and what permissions should be granted.
 [[h4_302499989]]
 ===== Synchronization
 
-* Refreshed xref:sync-recovery[Sync Recovery] functionality allows
+* Refreshed xref:ctmobile:main/mobile-application/synchronization/sync-recovery.adoc[Sync Recovery] functionality allows
 pushing records with any errors as a JSON file with information about
 error type and error message text from the mobile device to Salesforce.
 * The additional info message will be displayed during
@@ -953,7 +953,7 @@ source data] and quick source data generation, use archives that were
 automatically split into parts with a size of less than 25 MB.
 * In the interactive presentation, to open files from Attachments of a
 presentation or Libraries, specify the file name with the file extension
-in xref:clm-navigation-in-clm-presentations[the href attribute] of
+in xref:ctmobile:main/ct-presenter/clm-navigation-in-clm-presentations.adoc[the href attribute] of
 the slide layout.
 * Converting a CLM presentation from
 xref:creating-clm-presentation-from-pdf[a PDF
@@ -977,12 +977,12 @@ be translated] using custom labels.
 well as create a record if permissions are granted.
 * The support of the standard *Shipping Address* and *Billing Address*
 fields as xref:mobile-application-setup[Account Geolocation Field]
-in xref:nearby-accounts[Nearby Accounts] and
-xref:routes[Routes] modules, in xref:ctmobile:main/admin-guide/mobile-layouts/index.adoc-maps[the
+in xref:ctmobile:main/mobile-application/mobile-application-modules/nearby-accounts.adoc[Nearby Accounts] and
+xref:ctmobile:main/mobile-application/mobile-application-modules/routes.adoc[Routes] modules, in xref:ctmobile:main/admin-guide/mobile-layouts/index.adoc-maps[the
 Map widget], and within xref:ctmobile:main/mobile-application/ui/actions.adoc[the Determine Location button]
 in the combo-menu.
 * Use list views of xref:ctmobile:main/ct-presenter/about-ct-presenter/clm-scheme/clm-application.adoc[the Application object] to
-filter records in xref:applications[the Applications module].
+filter records in xref:ctmobile:main/mobile-application/mobile-application-modules/applications/index.adoc[the Applications module].
 * To quickly return to xref:calendar[the Calendar] after moving on
 the details screen of the selected activity, tap once again *Calendar*
 on the menu. Also, the back and forward buttons are available to jump to
@@ -1015,34 +1015,34 @@ of CT Mobile releases].
 ==== New Features and Improvements
 
 * A brand-new UI for intuitive user experience:
-** New icons, xref:application-theme[vivid app themes], and modern
+** New icons, xref:ctmobile:main/admin-guide/application-theme.adoc[vivid app themes], and modern
 fonts.
-** Upgraded xref:calendar[Calendar], xref:routes[Routes], and
-xref:nearby-accounts[Nearby Accounts] modules with user-friendly
+** Upgraded xref:calendar[Calendar], xref:ctmobile:main/mobile-application/mobile-application-modules/routes.adoc[Routes], and
+xref:ctmobile:main/mobile-application/mobile-application-modules/nearby-accounts.adoc[Nearby Accounts] modules with user-friendly
 logic.
 ** xref:ipad[The collapsible main menu] provides a much wider
 working area on your iPad.
 ** xref:ipad[Detailed List Views]. Look through the detailed list
 views on your iPad.
-** xref:clm-presentation-controls[Multitasking during an activity]
+** xref:ctmobile:main/mobile-application/mobile-application-modules/applications/clm-presentation-controls.adoc[Multitasking during an activity]
 on your iPad. Switch between the presentation and record details with
 one tap. Resume the presentation from the last checkpoint.
 ** New UI for xref:iphone[iPhone devices].
 * The xref:ctmobile:main/getting-started/logging-in/index.adoc[Login screen] is implemented using the
 xref:ctmobile:main/getting-started/logging-in/oauth-2-0.adoc[OAuth 2.0] protocol and standard Salesforce UI.
-* xref:libraries[The content module] now supports folder hierarchy.
-* xref:sync-recovery[Sync Recovery]. Recovering the records which
+* xref:ctmobile:main/mobile-application/mobile-application-modules/libraries.adoc[The content module] now supports folder hierarchy.
+* xref:ctmobile:main/mobile-application/synchronization/sync-recovery.adoc[Sync Recovery]. Recovering the records which
 could not be properly sent to Salesforce due to permissions issues.
-* Adjust the xref:columns-width-for-related-lists[width of columns]
+* Adjust the xref:ctmobile:main/admin-guide/related-lists/columns-width-for-related-lists.adoc[width of columns]
 of the related lists and custom related lists.
 * The long-hoped-for plus button is now available in the *Calendar*. It
-is another way xref:using-calendar[to create an activity in the
+is another way xref:ctmobile:main/mobile-application/mobile-application-modules/calendar/using-calendar.adoc[to create an activity in the
 Calendar] by selecting start and end dates in a mini-layout.
 * Turn on/off the ability to synchronize a single record and its child
 records by pulling down the record details screen.
-* xref:set-up-holidays[Salesforce Holidays] are now supported and
+* xref:ctmobile:main/mobile-application/mobile-application-modules/calendar/set-up-holidays.adoc[Salesforce Holidays] are now supported and
 are highlighted in the app's calendar.
-* xref:ct-mobile-control-panel-general[Image Quality]. Set the
+* xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc[Image Quality]. Set the
 amount of image compression to control the data volume sent to
 Salesforce.
 * xref:ctmobile:main/admin-guide/mini-layouts.adoc[Mini Layouts] can be assigned to a specific
@@ -1094,7 +1094,7 @@ containing detailing information (log file). Use
 xref:ctmobile:main/mobile-application/synchronization/synchronization-launch/sync-logs.adoc[reports to analyze] the synchronization.
 * New synchronization algorithm with accelerated identification of the
 created and updated records.
-* xref:libraries[The Libraries module] download process can be
+* xref:ctmobile:main/mobile-application/mobile-application-modules/libraries.adoc[The Libraries module] download process can be
 moved to the background, which significantly improves the
 synchronization time.
 * xref:ctmobile:main/admin-guide/metadata-checker/metadata-archive/index.adoc[Metadata downloading] optimization.
@@ -1115,7 +1115,7 @@ Workflow rules.
 [.object]#Activity# start or a record field update).
 
 [[h4_1292798904]]
-===== xref:using-calendar.html[Calendar]
+===== xref:ctmobile:main/mobile-application/mobile-application-modules/calendar/using-calendar.adoc.html[Calendar]
 
 * Set the date and time when cloning or moving an event in the
 *Calendar*.
@@ -1135,13 +1135,13 @@ to add them to a record.
 * The administrator credentials are no longer required to access the
 Salesforce Metadata API during the synchronization.
 * External libraries are updated to the latest versions.
-* xref:nearby-accounts[The Nearby Accounts module]. The records
+* xref:ctmobile:main/mobile-application/mobile-application-modules/nearby-accounts.adoc[The Nearby Accounts module]. The records
 list displays only the[.object]#Accounts# with defined
 geolocation and the records which are related to such
 [.object]#Accounts#.
 * The minus key (-) is available on the In-App keyboard while editing
 the *Number*, *Percent*, and *Currency* type fields.
-* The xref:search[Search] box value lower limit is reduced from
+* The xref:ctmobile:main/mobile-application/ui/home-screen/search.adoc[Search] box value lower limit is reduced from
 three symbols to one.
 
 [[h3_116462914]]
@@ -1198,9 +1198,9 @@ access rules to object records is changed.
 related lists] by lookup fields.
 * The *Determine Location* button is not displayed when using
 positioning xref:ctmobile:main/mobile-application/ui/actions.adoc[on activity start].
-* xref:clm-presentation-controls[Presentation exit screen
+* xref:ctmobile:main/mobile-application/mobile-application-modules/applications/clm-presentation-controls.adoc[Presentation exit screen
 improvements].
-* The xref:managing-offline-objects[offline-objects] customization
+* The xref:ctmobile:main/admin-guide/managing-offline-objects/index.adoc[offline-objects] customization
 and loading process logic are revised.
 * Prefixes and postfixes are now considered when working with objects
 and their fields.
@@ -1215,7 +1215,7 @@ related list.
 * xref:ctmobile:main/mobile-application/synchronization/synchronization-launch/sync-logs.adoc[Application log records] are more detailed.
 * xref:ctmobile:main/admin-guide/person-accounts.adoc[Person Accounts] will now display in *Nearby
 Accounts* with appropriate settings.
-* The improved logic of xref:using-calendar[copying activities] in
+* The improved logic of xref:ctmobile:main/mobile-application/mobile-application-modules/calendar/using-calendar.adoc[copying activities] in
 the calendar.
 
 [[h3_1652028519]]
@@ -1224,7 +1224,7 @@ the calendar.
 * The *Picklist* fields. The fields are now displaying the correct
 values dependent (field dependency) from checkbox fields.
 * Fix for users with *Partner Community* license type. Now they can add
-new posts in xref:chatter[Chatter].
+new posts in xref:ctmobile:main/mobile-application/mobile-application-modules/chatter/index.adoc[Chatter].
 * The corrected logic of using *Open Activities* and *Activity History*
 related lists.
 * Can no longer copy text to the *Text* field that exceeds the number of
@@ -1242,7 +1242,7 @@ of CT Mobile releases].
 ==== New Features and Components
 
 * Updated for iOS 11.
-* xref:ical-synchronization[Two-way sync with iPad/iPhone internal
+* xref:ctmobile:main/mobile-application/application-settings/ical-synchronization.adoc[Two-way sync with iPad/iPhone internal
 Calendar].[.object]#Events# from the internal iPad/iPhone
 calendar can be displayed in the CT Mobile planning calendar.
 * Standard Salesforce[.object]#Orders# are now supported in the
@@ -1251,8 +1251,8 @@ CT Mobile app.
 with mobile device screen sharing capability.
 * Optimized xref:ctmobile:main/mobile-application/synchronization/index.adoc[synchronization] for organizations
 with an extended data model and large data volumes.
-* Customizable set of xref:search[search fields] for each object.
-* xref:reference-fields#h2_1554731138[Quick record creation in
+* Customizable set of xref:ctmobile:main/mobile-application/ui/home-screen/search.adoc[search fields] for each object.
+* xref:ctmobile:main/admin-guide/managing-offline-objects/reference-fields.adoc#h2_1554731138[Quick record creation in
 reference fields] (lookup) selection window.
 * Custom report types are now supported for Salesforce
 https://help.salesforce.com/articleView?id=analytics_overview.htm&type=5[reports
@@ -1267,19 +1267,19 @@ geolocation field.
 * The *Time* type fields are now supported.
 * Multiple currencies functionality added.
 * xref:ctmobile:main/mobile-application/ui/home-screen/index.adoc[Customizable Home screen] for iPhone added.
-* The xref:chatter[Chatter] functionality for iPhone was added.
+* The xref:ctmobile:main/mobile-application/mobile-application-modules/chatter/index.adoc[Chatter] functionality for iPhone was added.
 
 [[h3_118294372]]
 ==== CLM-presentations
 
 * JS Bridge methods added:
-** xref:ctm-disableslidescroll[ctm.isableSlideScroll]: optional
+** xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-clm-presentation-control/ctm-disableslidescroll.adoc[ctm.isableSlideScroll]: optional
 lock for slides scrolling using gestures.
-** xref:ctm-enableslidescroll[ctm.enableSlideScroll]: slide
+** xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-clm-presentation-control/ctm-enableslidescroll.adoc[ctm.enableSlideScroll]: slide
 scrolling unlock option.
-** xref:ctm-storefile[ctm.storeFile]: saving a file attachment as
+** xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-interaction-with-crm-data/ctm-storefile.adoc[ctm.storeFile]: saving a file attachment as
 an attachment to a record.
-** xref:ctm-getfile[ctm.getFile] - getting the contents of an
+** xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-interaction-with-crm-data/ctm-getfile.adoc[ctm.getFile] - getting the contents of an
 attachment to a record.
 ** Ability to open contents using[.apiobject]#window.open# in
 the native preview window.
@@ -1293,7 +1293,7 @@ modules and components.
 ** UI - a classic renderer for backward compatibility with previously
 created presentations.
 * Fix the list scrolling of available
-xref:applications#h3_1236408094[custom scenarios] in the
+xref:ctmobile:main/mobile-application/mobile-application-modules/applications/index.adoc#h3_1236408094[custom scenarios] in the
 presentation details screen.
 
 

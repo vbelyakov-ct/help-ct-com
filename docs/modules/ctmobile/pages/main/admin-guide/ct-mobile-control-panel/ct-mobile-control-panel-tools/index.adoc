@@ -22,7 +22,7 @@ image:Tools_new_settings_only.png[]
 3.54. ====
 
 Specify the *Login*, *Password*, and *Token* fields. Please refer to the
-xref:security-token[Security Token] article for additional
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/security-token.adoc[Security Token] article for additional
 information.
 
 
@@ -103,7 +103,7 @@ Authorize the Heroku service before refreshing the metadata archive
 ==== Download metadata archive
 
 To work with the metadata archive, specify
-the xref:ct-mobile-control-panel-tools#h3_2011978[Cloud
+the xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc#h3_2011978[Cloud
 token] first. Read more about the metadata
 archive https://help.customertimes.com/articles/ct-mobile-ios-en/metadata-archive[here].
 
@@ -120,7 +120,7 @@ xref:ability-to-specify-metadata-components-or-the-number-of-entities-in-one-req
 component custom metadata type] before refreshing the metadata archive.
 
 To work with the metadata archive, specify
-the xref:ct-mobile-control-panel-tools#h3_2011978[Cloud
+the xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc#h3_2011978[Cloud
 token] first. Read more about the metadata
 archive https://help.customertimes.com/articles/ct-mobile-ios-en/metadata-archive[here].
 
@@ -162,7 +162,7 @@ xref:ct-mobile-package-release-notes#h2_466019125[CT Mobile Package
 version 3.89].
 
 To work with the metadata archive, specify
-the xref:ct-mobile-control-panel-tools#h3_2011978[Cloud
+the xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc#h3_2011978[Cloud
 token] first. Read more about the metadata
 archive https://help.customertimes.com/articles/ct-mobile-ios-en/metadata-archive[here].
 
@@ -248,9 +248,9 @@ the *Documents → CT CLM →* open the *cloud-token-history* document.
 
 Cloud token:
 
-Is a password, which encrypts xref:send-application-data-dump[a
+Is a password, which encrypts xref:ctmobile:main/mobile-application/application-settings/send-application-data-dump.adoc[a
 data dump] before sending it to support via e-mail or to Salesforce,
-depending on settings in xref:ct-mobile-control-panel-general[CT
+depending on settings in xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc[CT
 Mobile Control Panel: General].
 
 Is a part of the salt key that is used for encrypting administrator

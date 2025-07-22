@@ -7,14 +7,14 @@ a|
 === 
 
 [[h3_14400000]]
-==== xref:applications.html[Application]
+==== xref:ctmobile:main/mobile-application/mobile-application-modules/applications/index.adoc.html[Application]
 
 A set of HTML slides representing the logic of the CLM presentation.
 Slides are formed on templates and have a variable area for multiple use
 cases. Users can create custom scenarios based on the default scenario.
 
 [[h3_145801861]]
-==== xref:clm-slide.html[Slide]
+==== xref:ctmobile:main/ct-presenter/about-ct-presenter/clm-scheme/clm-slide.adoc.html[Slide]
 
 A CLM presentation page with a unique index number.
 
@@ -24,7 +24,7 @@ within one CLM presentation is not permitted. ====
 * The *Required* attribute prevents mobile users from displacing or
 removing the slide from the scenario.
 * The *Fixed* attribute disables slide scrolling
-xref:gestures-in-clm-presentations[using a double swipe].
+xref:ctmobile:main/mobile-application/mobile-application-modules/applications/gestures-in-clm-presentations.adoc[using a double swipe].
 
 
 The attribute use is recommended to be set to the slides that represent
@@ -85,7 +85,7 @@ All types are managed using the Application Editor, excluding the
 //tag::ios,win[]
 
 The object is intended to store the CLM presentation statistics from
-xref:applications[the Application module],
+xref:ctmobile:main/mobile-application/mobile-application-modules/applications/index.adoc[the Application module],
 xref:ctmobile:main/mobile-application/ui/home-screen/index.adoc[Home Screen],
 xref:ctmobile:main/admin-guide/mobile-layouts/index.adoc-applications[a record's mobile layout], and
 xref:ctmobile:main/ct-presenter/the-remote-detailing-functionality/index.adoc[Remote Detailing].
@@ -93,12 +93,12 @@ xref:ctmobile:main/ct-presenter/the-remote-detailing-functionality/index.adoc[Re
 //tag::andr[]
 
 The object is intended to store the CLM presentation statistics from
-xref:applications[the Application module],
+xref:ctmobile:main/mobile-application/mobile-application-modules/applications/index.adoc[the Application module],
 xref:ctmobile:main/mobile-application/ui/home-screen/index.adoc[Home Screen], and
 xref:ctmobile:main/admin-guide/mobile-layouts/index.adoc-applications[a record's mobile layout].
 
 [[h3_877574013]]
-==== xref:clm-customscenario.html[Custom Scenario]
+==== xref:ctmobile:main/ct-presenter/about-ct-presenter/clm-scheme/clm-customscenario.adoc.html[Custom Scenario]
 
 The object is intended to store user scenarios for CLM presentations.
 

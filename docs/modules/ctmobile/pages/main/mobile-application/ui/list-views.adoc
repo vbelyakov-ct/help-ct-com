@@ -13,7 +13,7 @@ ifndef::kotlin[]
 
 The list views are pulled from Salesforce and available in:
 
-xref:managing-offline-objects[Offline objects], such as
+xref:ctmobile:main/admin-guide/managing-offline-objects/index.adoc[Offline objects], such as
 [.object]#Accounts#,[.object]#Contacts#,
 [.object]#Opportunities#, etc.
 
@@ -74,7 +74,7 @@ will be displayed the next time a user opens the corresponding offline
 object (including reference fields) or module.
 
 You can pin the desired list view (currently available only for the
-xref:using-calendar#h3_632854949[Calendar] module).
+xref:ctmobile:main/mobile-application/mobile-application-modules/calendar/using-calendar.adoc#h3_632854949[Calendar] module).
 
 //tag::win[]
 
@@ -106,7 +106,7 @@ image:detailed-list-view-button.png[]
 to maximize the list view display:
 
 * create and delete records
-xref:managing-offline-objects#h2_1534686659[if permission is
+xref:ctmobile:main/admin-guide/managing-offline-objects/index.adoc#h2_1534686659[if permission is
 granted];
 
 * the created or opened record will be displayed in the standard view
@@ -159,7 +159,7 @@ To create a mobile list view:
 to display the matched records.
 [NOTE] ==== You can set list of fields displayed in criteria
 setting and *Records preview* section by specifying them in the *Fields*
-field of the xref:ctm-settings-menu[CTM Settings → Menu] object.
+field of the xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ctm-settings/ctm-settings-menu.adoc[CTM Settings → Menu] object.
 ====
 . Tap *Save*.
 
@@ -180,7 +180,7 @@ image:detailed-list-view-button-windows.png[]
 to maximize the list view display:
 
 * create and delete records
-xref:managing-offline-objects#h2_1534686659[if permission is
+xref:ctmobile:main/admin-guide/managing-offline-objects/index.adoc#h2_1534686659[if permission is
 granted];
 
 * the created or opened record will be displayed in the standard view

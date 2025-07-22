@@ -5,7 +5,7 @@ data related to the target system model and the global settings of the
 mobile application are stored.
 
 [TIP] ==== For easy setup, go to
-xref:ct-mobile-control-panel-general[CT Mobile Control Panel:
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc[CT Mobile Control Panel:
 General]/xref:ct-mobile-control-panel-general-new[CT Mobile Control
 Panel 2.0: General], xref:ctmobile:main/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-activities-new.adoc[CT
 Mobile Control Panel 2.0: Activities]. ====
@@ -38,14 +38,14 @@ Location type] or
 https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/compound_fields_address.htm[the
 Address type] on the[.object]#Account# object is used to store
 the geolocation of the organization. The value in this field is used to
-get the location in the xref:routes[Routes] and
-xref:nearby-accounts[Nearby Accounts] modules.
+get the location in the xref:ctmobile:main/mobile-application/mobile-application-modules/routes.adoc[Routes] and
+xref:ctmobile:main/mobile-application/mobile-application-modules/nearby-accounts.adoc[Nearby Accounts] modules.
 
 |Activity "IsDone" field API name
 |[.apiobject]#clm__ActivityDoneAPI__c# |Text(255) |The
 API name of the field on the[.object]#Activity# object is used
 as an additional attribute showing that the *Activity* is finished. The
-field is used when the xref:start-finish-functionality[Start/Finish
+field is used when the xref:ctmobile:main/admin-guide/start-finish-functionality.adoc[Start/Finish
 functionality] is enabled.
 
 |Activity "IsLocked" field API name
@@ -163,20 +163,20 @@ To disable the geotracking functionality, set the 0 value.
 
 |Google Maps Android API Key
 |[.apiobject]#clm__GoogleMapsAndroidAPIKey__c#
-|Text(255) |xref:google-maps-api-key[Access key to Google Maps
+|Text(255) |xref:ctmobile:main/admin-guide/google-maps-api-key/index.adoc[Access key to Google Maps
 services] allows CT Mobile Android users to work with Google Maps in the
 *Routes* and *Nearby Accounts* modules and the *Maps* widget.
 
 |Google Maps iOS API Key
 |[.apiobject]#clm__GoogleMapsAPIKey__c# |Text(255)
-|xref:google-maps-api-key[Access key to Google Maps services]
+|xref:ctmobile:main/admin-guide/google-maps-api-key/index.adoc[Access key to Google Maps services]
 allows CT Mobile iOS users to work with Google Maps in the *Routes* and
 *Nearby Accounts* modules and the *Maps* widget.
 
 |Google Maps Javascript API Key
 |[.apiobject]#clm__GoogleMapsJSKey__c# |Text(255)
 |Access key to Google Maps services allows users to work with Google
-Maps in xref:geolocation-center[the Geolocation center].
+Maps in xref:ctmobile:main/admin-guide/geolocation-center/index.adoc[the Geolocation center].
 
 |Image Quality |[.apiobject]#clm__ImageQuality__c#
 |Number(3,0) |Image compression
@@ -231,7 +231,7 @@ weekends on the calendar grid.
 
 |Start/Finish Functionality
 |[.apiobject]#clm__EnableStartFinish__c# |Checkbox
-|Enable the xref:start-finish-functionality[Start/Finish
+|Enable the xref:ctmobile:main/admin-guide/start-finish-functionality.adoc[Start/Finish
 functionality].
 
 |Support Email |[.apiobject]#clm__SupportEmail__c#
@@ -244,7 +244,7 @@ color code in the RGB color model of the application theme.
 |Unfinished Activity Allowed
 |[.apiobject]#clm__IsUnfinishedActivityAllowed__c#
 |Checkbox |If enabled along with
-the xref:start-finish-functionality[Start/Finish functionality],
+the xref:ctmobile:main/admin-guide/start-finish-functionality.adoc[Start/Finish functionality],
 mobile users can leave the started _Activity_ record to work with other
 CT Mobile app functionalities.
 
@@ -252,7 +252,7 @@ CT Mobile app functionalities.
 |[.apiobject]#clm__UpdateDateFields__c# |Checkbox
 |Refresh the current values of the start and end date at the activity
 opening/closing and when the
-xref:start-finish-functionality[Start/Finish functionality] is
+xref:ctmobile:main/admin-guide/start-finish-functionality.adoc[Start/Finish functionality] is
 enabled.
 
 |Visible Hour Range

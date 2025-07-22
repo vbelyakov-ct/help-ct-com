@@ -11,11 +11,11 @@ reference field via a lookup or master-detail relationship.
 
 For the reference field, a mobile user can:
 
-* xref:reference-fields#h2_1514470758[download additional
+* xref:ctmobile:main/admin-guide/managing-offline-objects/reference-fields.adoc#h2_1514470758[download additional
 record] if the reference field refers to the not downloaded record;
-* xref:reference-fields#h2_1554731138[search value] or create a
+* xref:ctmobile:main/admin-guide/managing-offline-objects/reference-fields.adoc#h2_1554731138[search value] or create a
 new record to add;
-* use xref:reference-fields#h2_321327715[lookup filters] to see
+* use xref:ctmobile:main/admin-guide/managing-offline-objects/reference-fields.adoc#h2_321327715[lookup filters] to see
 records that match required or optional criteria.
 
 [[h2_1514470758]]
@@ -33,7 +33,7 @@ Online one record fetching is available when:
 
 * one of the downloaded records is linked to a not downloaded record;
 * the object of the not downloaded record is
-available xref:managing-offline-objects[offline].
+available xref:ctmobile:main/admin-guide/managing-offline-objects/index.adoc[offline].
 
 
 
@@ -68,7 +68,7 @@ removed after the database is reset.
 download a record.
 * A mobile user can clear value from the reference field by tapping on a
 field with the record and then tapping the *Clear* button.
-* If xref:managing-offline-objects#h2_1534686659[a record in the
+* If xref:ctmobile:main/admin-guide/managing-offline-objects/index.adoc#h2_1534686659[a record in the
 reference field was deleted] in the CT Mobile app,
 the image:deleted.png[] icon
 next to the reference field will be shown.
@@ -76,7 +76,7 @@ next to the reference field will be shown.
 [[h2_1554731138]]
 === Online record search
 
-Enter a record in the reference field xref:search[using search].
+Enter a record in the reference field xref:ctmobile:main/mobile-application/ui/home-screen/search.adoc[using search].
 Search is carried out in the fields that are listed on
 the https://help.salesforce.com/articleView?id=search_results_setup_parent.htm&type=5[Search
 Results] search layout.
@@ -94,7 +94,7 @@ reference field.
 create and add a new record to the reference field
 using xref:ctmobile:main/admin-guide/mini-layouts.adoc[a mini layout].
 * Tap image:detailed-list-view-button.png[]
-to expand xref:list-views#h2_1248088428[the detailed list view].
+to expand xref:ctmobile:main/mobile-application/ui/list-views.adoc#h2_1248088428[the detailed list view].
 * Tap image:66359461.png[] to
 online search for a record in Salesforce. In the search results, tap a
 record and confirm to download it.
@@ -136,7 +136,7 @@ current user].
 === Online Record Search
 
 A mobile user can specify a value for the lookup or master-detail
-relationship field by xref:search[searching] or creating a
+relationship field by xref:ctmobile:main/mobile-application/ui/home-screen/search.adoc[searching] or creating a
 record. Search is carried out in the fields that are listed on
 the https://help.salesforce.com/articleView?id=search_results_setup_parent.htm&type=5[Search
 Results] search layout. To find a record:
@@ -164,7 +164,7 @@ master-detail relationship.
 === Online Record Search
 
 A mobile user can specify a value for the lookup or master-detail
-relationship field by xref:search[searching] or creating a
+relationship field by xref:ctmobile:main/mobile-application/ui/home-screen/search.adoc[searching] or creating a
 record. Search is carried out in the fields that are listed on
 the https://help.salesforce.com/articleView?id=search_results_setup_parent.htm&type=5[Search
 Results] search layout. To find a record:

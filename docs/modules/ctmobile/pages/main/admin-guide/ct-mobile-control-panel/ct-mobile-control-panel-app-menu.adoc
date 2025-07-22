@@ -5,7 +5,7 @@ xref:ctmobile:main/admin-guide/app-menu/index.adoc[the main menu].
 
 //tag::ios,win[] According to the selected profile, settings on this
 tab will be saved in the records of the [.object]#CTM
-Settings# object with the xref:ctm-settings-menu[Menu] record
+Settings# object with the xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ctm-settings/ctm-settings-menu.adoc[Menu] record
 type.
 
 :toc: :toclevels: 2
@@ -60,23 +60,23 @@ available options are displayed on the right:
 For the xref:ctmobile:main/mobile-application/ui/home-screen/index.adoc[Home screen], enable the *Customizable
 Home screen* option. Add, size, and arrange widgets.
 
-For xref:managing-offline-objects[offline objects],
-xref:grouping-records[group records] by the criterion.
+For xref:ctmobile:main/admin-guide/managing-offline-objects/index.adoc[offline objects],
+xref:ctmobile:main/admin-guide/app-menu/grouping-records.adoc[group records] by the criterion.
 
 ifndef::andr,win,kotlin[]
 
 For offline objects, enable xref:ctmobile:main/admin-guide/managing-offline-objects/online-records-fetching.adoc[online
 record fetching].
 
-For the xref:applications[Applications] module,
-xref:grouping-records[group records] by the criterion.
+For the xref:ctmobile:main/mobile-application/mobile-application-modules/applications/index.adoc[Applications] module,
+xref:ctmobile:main/admin-guide/app-menu/grouping-records.adoc[group records] by the criterion.
 
-For the xref:links-list[Links] module, specify resources and web
+For the xref:ctmobile:main/mobile-application/mobile-application-modules/links.adoc[Links] module, specify resources and web
 pages.
 
 ifndef::kotlin[]
 
-For the xref:routes[Routes] module, specify the ascending or
+For the xref:ctmobile:main/mobile-application/mobile-application-modules/routes.adoc[Routes] module, specify the ascending or
 descending order of records.
 
 

@@ -3,8 +3,8 @@
 Here are HTML code examples that can be used to navigate within CLM
 presentations in CT Mobile app along with
 xref:methods-for-clm-presentation-navigation[JS Bridge methods],
-xref:gestures-in-clm-presentations[gestures], and
-xref:clm-presentation-controls[button controls].
+xref:ctmobile:main/mobile-application/mobile-application-modules/applications/gestures-in-clm-presentations.adoc[gestures], and
+xref:ctmobile:main/mobile-application/mobile-application-modules/applications/clm-presentation-controls.adoc[button controls].
 
 
 
@@ -32,7 +32,7 @@ To open the first slide of the scenario, add a label to the
 [.apiobject]#clm__APPID__c# of the desired CLM
 presentation record, specify the scenario label in the
 [.apiobject]#clm__ScenarioName__c# of
-xref:clm-customscenario[the desired Scenario record], and add the
+xref:ctmobile:main/ct-presenter/about-ct-presenter/clm-scheme/clm-customscenario.adoc[the desired Scenario record], and add the
 following code into the current slide markup, where
 the [.apiobject]#appID# is the label to the
 [.apiobject]#clm__APPID__c# field and
@@ -42,5 +42,5 @@ the [.apiobject]#appID# is the label to the
 
 
 For more information about slide navigation, refer
-to xref:clm-navigation-in-clm-presentations[Navigation in CLM
+to xref:ctmobile:main/ct-presenter/clm-navigation-in-clm-presentations.adoc[Navigation in CLM
 Presentations].

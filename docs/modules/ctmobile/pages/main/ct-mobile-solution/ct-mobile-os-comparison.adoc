@@ -1,1052 +1,673 @@
 = CT Mobile OS Comparison
-
-:toc: :toclevels: 3
+:toc:
 
 [[h2_84720702]]
-=== Core functionality
+== Core functionality
 
 [[h3_55841322]]
-==== Authentication
+=== Authentication
 
-[width="99%",cols="16%,^14%,^14%,^14%,^14%,^14%,^14%",]
+[.highlighted-table]
+[]
 |===
-|*Feature* |*Tablet* | | | |*Phone* |*Comment*
+.2+|*Feature* 4+^|*Tablet*  |*Phone* |*Comment*
+|*iOS* |*Android* |*Android 2.0* |*Windows* |*Android* |
 
-| |*iOS* |*Android* |*Android 2.0* |*Windows* |*Android* |
+|Basic via API with xref:ctmobile:main/getting-started/logging-in/index.adoc[login, password], and xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/security-token.adoc[security token] |Yes (optionally) |Yes |Yes |Yes |Yes |
 
-|Basic via API with xref:ctmobile:main/getting-started/logging-in/index.adoc[login&#44; password], and
-xref:security-token[security token] |Yes
-(optionally) |Yes |Yes |Yes |Yes |
+|xref:ctmobile:main/getting-started/logging-in/oauth-2-0.adoc[OAuth 2.0] |Yes |Yes (optionally) |Yes |Since v.1.3 |Yes(optionally) |
 
-|xref:ctmobile:main/getting-started/logging-in/oauth-2-0.adoc[OAuth 2.0] |Yes |Yes
-(optionally) |Yes |Since v.1.3 |Yes
-(optionally) |
+|link:https://help.salesforce.com/articleView?id=sso_about.htm&type=5[Single sign-on] |Yes |Yes |No |No |Yes |
 
-|https://help.salesforce.com/articleView?id=sso_about.htm&type=5[Single
-sign-on] |Yes |Yes |No |No |Yes |
-
-|Multi-user mode |No |Yes
-(optionally) |No |Yes |Yes
-(optionally) |
+|Multi-user mode |No |Yes(optionally) |No |Yes |Yes(optionally) |
 
 |Fingerprint recognition |Yes
-(https://support.apple.com/en-us/HT201371[Touch ID]) |Yes |No |No |Yes
-|
+(https://support.apple.com/en-us/HT201371[Touch ID]) |Yes |No |No |Yes|
 
 |Face recognition |Yes
-(https://support.apple.com/en-us/HT208109[Face ID]) |Yes |No |No |Yes
-|
+(https://support.apple.com/en-us/HT208109[Face ID]) |Yes |No |No |Yes|
 
-|In-app password changing |Yes |No |No |No |No |Not available when using
-OAuth 2.0.
+|In-app password changing |Yes |No |No |No |No |Not available when using OAuth 2.0.
 
-|xref:application-pin-code[In-app PIN code] |Yes |No |No |Yes |No
-|
+|xref:ctmobile:main/mobile-application/application-settings/application-pin-code.adoc[In-app PIN code] |Yes |No |No |Yes |No|
 |===
-
-
 
 [[h3_810150278]]
-==== Synchronization
+=== Synchronization
 
-[width="99%",cols="20%,^16%,^16%,^16%,^16%,^16%",]
+[.highlighted-table]
+[]
 |===
-|*Feature* |*Tablet* | | | |*Phone*
+.2+|*Feature* 4+^|*Tablet* |*Phone*
+|*iOS* |*Android* |*Android 2.0* |*Windows* |*Android*
 
-| |*iOS* |*Android* |*Android 2.0* |*Windows* |*Android*
+|xref:ctmobile:main/mobile-application/synchronization/fast-synchronization.adoc[Fast synchronization] |Yes |Yes |Yes|Yes |Yes
 
-|xref:ctmobile:main/mobile-application/synchronization/fast-synchronization.adoc[Fast synchronization] |Yes |Yes |Yes
-|Yes |Yes
-
-|xref:ctmobile:main/mobile-application/synchronization/full-synchronization.adoc[Full synchronization] |Yes |Yes |Yes
-|Yes |Yes
+|xref:ctmobile:main/mobile-application/synchronization/full-synchronization.adoc[Full synchronization] |Yes |Yes |Yes|Yes |Yes
 
 |Mixed synchronization |Yes |No |Yes |Yes |No
 
 |Continue synchronization |Yes |No |No |Yes |No
 
-|xref:other-synchronization-modes[Quick record synchronization]
-|Yes |No |No |No |No
+|xref:ctmobile:main/mobile-application/synchronization/other-synchronization-modes.adoc#h2_1958232390[Quick record synchronization]|Yes |No |No |No |No
 
-|xref:other-synchronization-modes[Synchronization under the CT
-Mobile Workflow rule] |Yes |No |No |No |No
+|xref:ctmobile:main/mobile-application/synchronization/other-synchronization-modes.adoc#h2_740581689[Synchronization under the CT Mobile Workflow rule] |Yes |No |No |No |No
 
-|xref:sync-recovery[Sync Recovery] |Yes |No |No |No |No
+|xref:ctmobile:main/mobile-application/synchronization/sync-recovery.adoc[Sync Recovery] |Yes |No |No |No |No
 
-|xref:ctmobile:main/admin-guide/ct-mobile-control-panel/custom-settings/ct-mobile-replication.adoc[CT Mobile Replication] |Yes |No |Yes
-|No |No
+|xref:ctmobile:main/admin-guide/ct-mobile-control-panel/custom-settings/ct-mobile-replication.adoc[CT Mobile Replication] |Yes |No |Yes|No |No
 
-|xref:ctmobile:main/admin-guide/managing-offline-objects/conflict-manager-control.adoc[Conflict Manager] |Yes |No |No |No
-|No
+|xref:ctmobile:main/admin-guide/managing-offline-objects/conflict-manager-control.adoc[Conflict Manager] |Yes |No |No |No|No
 
-|xref:ctmobile:main/admin-guide/managing-offline-objects/online-records-fetching.adoc[Online records fetching] |Yes |No
-|No |No |No
+|xref:ctmobile:main/admin-guide/managing-offline-objects/online-records-fetching.adoc[Online records fetching] |Yes |No|No |No |No
 
-|xref:reference-fields#h2_1514470758[Online one record fetching]
-|Yes |No |No |Yes |No
+|xref:ctmobile:main/admin-guide/managing-offline-objects/reference-fields.adoc#h2_1514470758[Online one record fetching]|Yes |No |No |Yes |No
 
-|xref:/articles/project-ct-mobile-en[Status Indicator] |Yes |Yes |Yes
-|No |Yes
+|xref:ctmobile:main/mobile-application/ui/home-screen/index.adoc#h2_396225247[Status Indicator] |Yes |Yes |Yes|No |Yes
 
-|xref:ct-mobile-control-panel-tools#h2_203730205[Sync metadata
-using administrator credentials] |Yes |Yes |Yes |Yes |Yes
+|xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc#h2_203730205[Sync metadata using administrator credentials] |Yes |Yes |Yes |Yes |Yes
 
-|xref:ctmobile:main/admin-guide/metadata-checker/metadata-archive/index.adoc[Sync metadata using ZIP archive(s)] |Yes
-|No |Yes |Yes |No
+|xref:ctmobile:main/admin-guide/metadata-checker/metadata-archive/index.adoc[Sync metadata using ZIP archive(s)] |Yes|No |Yes |Yes |No
 
 |xref:ctmobile:main/admin-guide/metadata-checker/index.adoc[Metadata checker] |Yes |No |No |Yes |No
 |===
 
-
-
 [[h3_1650481881]]
-==== Encryption
+=== Encryption
 
-[width="99%",cols="16%,^14%,^14%,^14%,^14%,^14%,^14%",]
+[.highlighted-table]
+[]
 |===
-|*Feature* |*Tablet* | | | |*Phone* |*Comment*
-
-| |*iOS* |*Android* |*Android 2.0* |*Windows* |*Android* |
+.2+|*Feature* 4+^|*Tablet* |*Phone* |*Comment*
+|*iOS* |*Android* |*Android 2.0* |*Windows* |*Android* |
 
 |Encrypted credentials |Yes
-(https://support.apple.com/en-us/HT204085[iCloud Keychain]) a|
-Yes
 
-(https://developer.android.com/reference/java/security/KeyStore[KeyStore])
+(link:https://support.apple.com/en-us/HT204085[iCloud Keychain]) a|Yes
 
-|No |Yes
-(https://docs.microsoft.com/en-us/uwp/api/windows.security.credentials.passwordvault[PasswordVault])
-|Yes |
+(link:https://developer.android.com/reference/java/security/KeyStore[KeyStore])|No |Yes
 
-|Encrypted database |No |No |No |Since v.1.3 |No |For iOS devices,
-SQLCipher can be used as a custom encryption logic.
+(link:https://docs.microsoft.com/en-us/uwp/api/windows.security.credentials.passwordvault[PasswordVault]) |Yes |
+
+|Encrypted database |No |No |No |Since v.1.3 |No |For iOS devices, SQLCipher can be used as a custom encryption logic.
 
 |Encrypted file storage |No |No |No |Since v.1.3 |No |
 |===
 
-
-
 [[h3_559203458]]
-==== Salesforce Metadata
+=== Salesforce Metadata
 
-[width="99%",cols="20%,^16%,^16%,^16%,^16%,^16%",]
+[.highlighted-table]
+[]
 |===
-|*Feature* |*Tablet* | | | |*Phone*
+.2+|*Feature* 4+^|*Tablet* |*Phone*
+|*iOS* |*Android* |*Android 2.0* |*Windows* |*Android*
 
-| |*iOS* |*Android* |*Android 2.0* |*Windows* |*Android*
+|xref:ctmobile:main/ct-mobile-solution/application-language.adoc[Application Language Selection] |Yes|Yes |Yes |Yes |Yes
 
-|xref:application-language[Application Language Selection] |Yes
-|Yes |Yes |Yes |Yes
+|Basic field attributes (label, type, length, default field values) |Yes|Yes |Yes |Yes |Yes
 
-|Basic field attributes (label, type, length, default field values) |Yes
-|Yes |Yes |Yes |Yes
+|Customized height for multiline fields with the Text Area (Rich) and Text Area (Long) type |Yes |No |No |No |No
 
-|Customized height for multiline fields with the Text Area (Rich) and
-Text Area (Long) type |Yes |No |No |No |No
+|Customized height for multiline fields with the Formula (String), Picklist, Text, or Text Area type |Yes |No |No |No |No
 
-|Customized height for multiline fields with the Formula (String),
-Picklist, Text, or Text Area type |Yes |No |No |No |No
+|Customized height for multiline fields with the Formula type |No |Yes |No |No |Yes
 
-|Customized height for multiline fields with the Formula type |No |Yes
-|No |No |Yes
+|link:https://help.salesforce.com/s/articleView?id=sf.fields_using_rich_text_area.htm&type=5[Special characters] are supported in fields with the Text Area (Rich) type |Yes |No |No |No |No
 
-|https://help.salesforce.com/s/articleView?id=sf.fields_using_rich_text_area.htm&type=5[Special
-characters] are supported in fields with the Text Area (Rich) type |Yes
-|No |No |No |No
+|link:https://help.salesforce.com/s/articleView?id=sf.fields_using_html_editor.htm&type=5[HTML tags] are supported in Read-Only fields with the Text Area and Text Area (Rich) type on the record layout |Yes |No |No |No |No
 
-|https://help.salesforce.com/s/articleView?id=sf.fields_using_html_editor.htm&type=5[HTML
-tags] are supported in Read-Only fields with the Text Area and Text Area
-(Rich) type on the record layout |Yes |No |No |No |No
+|Emoji support in titles and subtitles, layouts, and related lists |Yes |No |No |No |No
 
-|Emoji support in titles and subtitles, layouts, and related lists |Yes
-|No |No |No |No
+|xref:ctmobile:main/admin-guide/managing-offline-objects/reference-fields.adoc#h2_321327715[Lookup filters] |Yes |Yes |Yes |Yes |Yes
 
-|xref:reference-fields#h2_321327715[Lookup filters] |Yes |Yes |Yes
-|Yes |Yes
+|xref:ctmobile:main/ct-mobile-solution/recommendations-and-peculiarities/roll-up-summary-fields.adoc[Roll-up summary fields] |Yes |Yes |Yes |Yes |Yes
 
-|xref:roll-up-summary-fields[Roll-up summary fields] |Yes |Yes |Yes
-|Yes |Yes
+|xref:ctmobile:main/ct-mobile-solution/recommendations-and-peculiarities/field-dependency-and-dependent-picklists.adoc[Field dependency and dependent picklists] |Yes |Yes |No |Yes |Yes
 
-|xref:field-dependency-and-dependent-picklists[Field dependency and
-dependent picklists] |Yes |Yes |No |Yes |Yes
+|xref:ctmobile:main/ct-mobile-solution/recommendations-and-peculiarities/offline-supported-operators-and-functions-in-field-with-the-formula-type.adoc[Offline formulas] |Yes |Yes |Yes |Yes |Yes
 
-|xref:offline-supported-operators-and-functions-in-field-with-the-formula-type[Offline
-formulas] |Yes |Yes |Yes |Yes |Yes
+|xref:ctmobile:main/mobile-application/synchronization/validation.adoc[Offline validation rules] |Yes |Yes |Yes |Yes |Yes
 
-|xref:validation[Offline validation rules] |Yes |Yes |Yes |Yes |Yes
-
-|xref:ctmobile:main/admin-guide/mobile-layouts/index.adoc-dashboards[Offline dashboards] |Yes |No |No
-|No |No
+|xref:ctmobile:main/admin-guide/mobile-layouts/mobile-layouts-dashboards.adoc[Offline dashboards] |Yes |No |No |No |No
 
 |Encrypted fields support |Yes |No |No |No |No
 
 |xref:ctmobile:main/mobile-application/ui/compact-layout.adoc[Compact layouts] |Yes |Yes |Yes |Yes |Yes
 
-|xref:search[Search layouts for each object] |Yes |No |Yes |Yes |No
+|xref:ctmobile:main/mobile-application/ui/home-screen/search.adoc[Search layouts for each object] |Yes |No |Yes |Yes |No
 
-|Page layouts and xref:ctmobile:main/admin-guide/mobile-layouts/index.adoc[mobile layouts] |Yes |Yes
-|Yes |Yes |Yes
+|Page layouts and xref:ctmobile:main/admin-guide/mobile-layouts/index.adoc[mobile layouts] |Yes |Yes |Yes |Yes |Yes
 
 |xref:ctmobile:main/mobile-application/ui/list-views.adoc[List views] |Yes |Yes |Yes |Yes |Yes
 
-|Create, edit, and delete list views in the CT Mobile app |Yes |No |No
-|No |No
+|Create, edit, and delete list views in the CT Mobile app |Yes |No |No |No |No
 
-|xref:list-views#h2_1243490689[Detailed list views] |Yes |No |No
-|Since v.1.3 |No
+|xref:ctmobile:main/mobile-application/ui/list-views.adoc#h2_1248088428[Detailed list views] |Yes |No |No |Since v.1.3 |No
 |===
-
-
 
 [[h3_196313523]]
-==== CTM Settings
+=== CTM Settings
 
-[cols=",^,^,^,^,^",]
+[.highlighted-table]
+[]
 |===
-|*Record Type* |*Tablet* | | | |*Phone*
-
-| |*iOS* |*Android* |*Android 2.0* |*Windows* |*Android*
+.2+|*Record Type* 4+^|*Tablet* |*Phone*
+|*iOS* |*Android* |*Android 2.0* |*Windows* |*Android*
 
 |Activity |No |No |No |No |No
-
 |Calendar |No |No |No |No |No
-
 |Color Settings |No |No |No |No |No
-
 |Credentials |No |No |No |No |No
-
 |Custom Related List |No |No |No |No |No
-
 |Link List |No |No |No |No |No
-
 |Main Settings |No |No |No |No |No
-
 |Mapping |No |No |No |No |No
-
-|xref:ctm-settings-menu[Menu] |Yes |No |No |Since v.1.3 |No
-
+|xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ctm-settings/ctm-settings-menu.adoc[Menu] |Yes |No |No |Since v.1.3 |No
 |Mini Layouts |No |No |No |No |No
-
-|xref:ctm-settings-offline-objects[Offline Objects] |Yes |No |No
-|Since v.1.3 |No
-
+|xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ctm-settings/ctm-settings-offline-objects.adoc[Offline Objects] |Yes |No |No |Since v.1.3 |No
 |Remote Detailing |No |No |No |No |No
-
-|xref:ctm-settings-standard-related-list[Standard Related List]
+|xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ctm-settings/ctm-settings-standard-related-list.adoc[Standard Related List]
 |Yes |No |No |Since v.1.3 |No
 |===
 
-
-
 [[h3_2086756216]]
-==== Monitoring and Logs
+=== Monitoring and Logs
 
-[width="99%",cols="16%,^14%,^14%,^14%,^14%,^14%,^14%",]
+[.highlighted-table]
+[]
 |===
-|*Feature* |*Tablet* | | | |*Phone* |*Comment*
+.2+|*Feature* 4+^|*Tablet* |*Phone* |*Comment*
+|*iOS* |*Android* |*Android 2.0* |*Windows* |*Android* |
 
-| |*iOS* |*Android* |*Android 2.0* |*Windows* |*Android* |
+|xref:ctmobile:main/mobile-application/synchronization/synchronization-launch/sync-logs.adoc[Log errors and system actions] |Yes |No |Yes |Yes|No |
 
-|xref:ctmobile:main/mobile-application/synchronization/synchronization-launch/sync-logs.adoc[Log errors and system actions] |Yes |No |Yes |Yes
-|No |
+|xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_1226274811[Debug Level]|Yes |Yes |Yes |Yes |Yes |
 
-|xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_1226274811[Debug Level]
-|Yes |Yes |Yes |Yes |Yes |
+|xref:ctmobile:main/mobile-application/synchronization/synchronization-launch/sync-logs.adoc#h2_272409891[Sending sync logs (automatic)] |Yes|No |No |Yes |No |
 
-|xref:ctmobile:main/mobile-application/synchronization/synchronization-launch/sync-logs.adoc#h2_272409891[Sending sync logs (automatic)] |Yes
-|No |No |Yes |No |
+|xref:ctmobile:main/mobile-application/application-settings/send-application-data-dump.adoc#h2_432975122[Sending sync log to Salesforce (manually)] |Yes |No |No |Yes |No |
 
-|xref:send-application-data-dump#h2_432975122[Sending sync log to
-Salesforce (manually)] |Yes |No |No |Yes |No |
+|xref:ctmobile:main/mobile-application/application-settings/send-application-data-dump.adoc[Export database dump to Salesforce] |Yes |No |No |Yes |No |
 
-|xref:send-application-data-dump[Export database dump to
-Salesforce] |Yes |No |No |Yes |No |
-
-|Export database dump to support team by email |Yes |No |Yes |Yes |No
-|CT Mobile Android 2.0 users can save the database archive on a mobile
-device.
+|Export database dump to support team by email |Yes |No |Yes |Yes |No |CT Mobile Android 2.0 users can save the database archive on a mobile device.
 
 |Import database dump |Yes |No |No |Yes |No |
 
-|Root access |Yes
-(xref:jailbreak-checker[jailbreak]) |No |No |No |No |
+|Root access |Yes (xref:ctmobile:main/mobile-application/jailbreak-checker.adoc[jailbreak]) |No |No |No |No |
 
-|xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_1567195273[Log geolocation
-in background mode] |Yes |No |No |No |No |
+|xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_1567195273[Log geolocation in background mode] |Yes |No |No |No |No |
 |===
-
-
 
 [[h3_1735794938]]
-==== Push Messaging
+=== Push Messaging
 
-[cols=",^,^,^,^,^",]
+[.highlighted-table]
+[]
 |===
-|*Feature* |*Tablet* | | | |*Phone*
+.2+|*Feature* 4+^|*Tablet* |*Phone*
+|*iOS* |*Android* |*Android 2.0* |*Windows* |*Android*
 
-| |*iOS* |*Android* |*Android 2.0* |*Windows* |*Android*
+|xref:ctmobile:main/admin-guide/notification-center.adoc[Notification Center] |Yes |No |No |Since v.1.3 |No
 
-|xref:notification-center[Notification Center] |Yes |No |No |Since
-v.1.3 |No
+|xref:ctmobile:main/admin-guide/geolocation-center/index.adoc[Geolocation Center] |Yes |No |No |Since v.1.3 |No
 
-|xref:geolocation-center[Geolocation Center] |Yes |No |No |Since
-v.1.3 |No
-
-|xref:chatter-push-notifications[Custom push notifications
-(e.g.&#44; Chatter push notification)] |Yes |No |No |Since v.1.3 |No
+|xref:ctmobile:main/mobile-application/mobile-application-modules/chatter/chatter-push-notifications.adoc[Custom push notifications (e.g., Chatter push notification)] |Yes |No |No |Since v.1.3 |No
 |===
-
-
 
 [[h3_2013990626]]
-==== CT Mobile Workflow
+=== CT Mobile Workflow
 
-[cols=",^,^,^,^,^",]
+[.highlighted-table]
+[]
 |===
-|*Feature* |*Tablet* | | | |*Phone*
+.2+|*Feature* 4+^|*Tablet* |*Phone*
+|*iOS* |*Android* |*Android 2.0* |*Windows* |*Android*
 
-| |*iOS* |*Android* |*Android 2.0* |*Windows* |*Android*
-
-|xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-workflows.adoc[Button Triggers (workflow
-on button click)] |Yes |No |No |No |No
+|xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-workflows.adoc[Button Triggers (workflow on button click)] |Yes |No |No |No |No
 
 |CRUD Triggers (workflow on CRUD functions) |Yes |No |No |No |No
 |===
 
-
-
 [[h3_2042797947]]
-==== Other Features
+=== Other Features
 
-[width="99%",cols="20%,^16%,^16%,^16%,^16%,^16%",]
+[.highlighted-table]
+[]
 |===
-|*Feature* |*Tablet* | | | |*Phone*
-
-| |*iOS* |*Android* |*Android 2.0* |*Windows* |*Android*
+.2+|*Feature* 4+^|*Tablet* |*Phone*
+|*iOS* |*Android* |*Android 2.0* |*Windows* |*Android*
 
 |xref:ctmobile:main/admin-guide/app-menu/index.adoc[Configuring the main menu] |Yes |Yes |Yes |Yes |Yes
 
 |xref:ctmobile:main/admin-guide/mini-layouts.adoc[Mini layouts] |Yes |Yes |Yes |Yes |Yes
 
-|xref:grouping-records[Grouping records] |Yes |Yes |Yes |Yes |Yes
+|xref:ctmobile:main/admin-guide/app-menu/grouping-records.adoc[Grouping records] |Yes |Yes |Yes |Yes |Yes
 
-|xref:application-theme[Application theme] |Yes |Yes |Yes |Yes |Yes
+|xref:ctmobile:main/admin-guide/application-theme.adoc[Application theme] |Yes |Yes |Yes |Yes |Yes
 
-|xref:application-theme[Title and Home patterns] |Yes |No |Yes |No
-|No
+|xref:ctmobile:main/admin-guide/application-theme.adoc[Title and Home patterns] |Yes |No |Yes |No|No
 
-|xref:ctmobile:main/admin-guide/custom-color-settings.adoc[Color settings] |Yes |Yes |Yes |Yes
-|Yes
+|xref:ctmobile:main/admin-guide/custom-color-settings.adoc[Color settings] |Yes |Yes |Yes |Yes|Yes
 
-|xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_377059502[Image Quality]
-|Yes |Yes |No |No |Yes
+|xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_377059502[Image Quality]|Yes |Yes |No |No |Yes
 
-|xref:demonstration-mode[Demonstration Mode] |Yes |No |No |No |No
+|xref:ctmobile:main/mobile-application/application-settings/demonstration-mode.adoc[Demonstration Mode] |Yes |No |No |No |No
 
-|xref:ctmobile:main/mobile-application/application-settings/index.adoc#h3_828881719[Show field hints] |Yes
-|Yes |Yes |No |Yes
+|xref:ctmobile:main/mobile-application/application-settings/index.adoc#h3_828881719[Show field hints] |Yes|Yes |Yes |No |Yes
 
-|xref:ctmobile:main/mobile-application/application-settings/index.adoc#h3_1857935580[Tutorial mode] |Yes |No
-|No |No |No
+|xref:ctmobile:main/mobile-application/application-settings/index.adoc#h3_1857935580[Tutorial mode] |Yes |No|No |No |No
 
-|xref:ctmobile:main/mobile-application/application-settings/index.adoc#h3_115565593[Send diagnostic data] |Yes
-|No |No |No |No
+|xref:ctmobile:main/mobile-application/application-settings/index.adoc#h3_115565593[Send diagnostic data] |Yes|No |No |No |No
 
-|xref:attaching-files-in-the-notes-attachments-section[On-demand
-files downloading in Notes & Attachments] |Yes |No |No |No |No
+|xref:ctmobile:main/mobile-application/attaching-files-in-the-notes-attachments-section.adoc[On-demand files downloading in Notes & Attachments] |Yes |No |No |No |No
 
-|xref:device-lock-screen-widget[Device lock screen widget] |Yes |No
-|No |No |No
+|xref:ctmobile:main/mobile-application/device-lock-screen-widget.adoc[Device lock screen widget] |Yes |No|No |No |No
 
 |xref:ctmobile:main/admin-guide/person-accounts.adoc[Person Accounts] |Yes |Yes |Yes |Yes |Yes
 
-|xref:ct-mobile-control-panel-general[Customizable reference
-object] |Yes |Yes |Yes |Yes |Yes
+|xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_494016929[Customizable reference object] |Yes |Yes |Yes |Yes |Yes
 
 |Multiple currencies support |Yes |Yes |Yes |Yes |Yes
 
-|xref:ctmobile:main/mobile-application/ui/actions.adoc#h2_1355154294[The Determine Location button] on
-[.object]#Accounts# and the[.object]#Activity# objects
-|Yes |Yes |Yes |No |Yes
+|xref:ctmobile:main/mobile-application/ui/actions.adoc#h2_1355154294[The Determine Location button] on [.object]#Accounts# and [.object]#Activity# objects |Yes |Yes |Yes |No |Yes
 
-|xref:ctmobile:main/mobile-application/ui/actions.adoc#h2_62618674[Attach photos] to
-[.object]#Accounts#,[.object]#Contacts#, and
-[.object]#Activity# objects |Yes |Yes |Yes |Yes |Yes
+|xref:ctmobile:main/mobile-application/ui/actions.adoc#h2_62618674[Attach photos] to [.object]#Accounts#, [.object]#Contacts#, and [.object]#Activity# objects |Yes |Yes |Yes |Yes |Yes
 
-|xref:attaching-files-in-the-files-section[Attach files] to
-specified offline objects
-and xref:attaching-files-in-the-files-section#h3_1720123861[Filtering files] to
-upload during synchronization by the last creation date |Yes |No
-|No |No |No
+|xref:ctmobile:main/mobile-application/attaching-files-in-the-files-section.adoc[Attach files] to specified offline objects and xref:ctmobile:main/mobile-application/attaching-files-in-the-files-section.adoc#h3_1720123861[Filtering files] to upload during synchronization by the last creation date |Yes |No |No |No |No
 
-|xref:attaching-files-in-the-files-section#h3_479250607[Downloading
-entire files or only previews] |Yes |No |No |No |No
+|xref:ctmobile:main/mobile-application/attaching-files-in-the-files-section.adoc#h3_479250607[Downloading entire files or only previews] |Yes |No |No |No |No
 
-|xref:history-buttons[Back and forward buttons] |Yes |Yes |Yes
-|Since v.1.3 |Yes
+|xref:ctmobile:main/mobile-application/ui/history-buttons.adoc[Back and forward buttons] |Yes |Yes |Yes |Since v.1.3 |Yes
 
-|xref:caller-id[Caller ID] |Yes |No |Yes |No |No
+|xref:ctmobile:main/mobile-application/email-templates.adoc[Email Templates] |Yes |No |No |No |No
 
-|xref:email-templates[Email Templates] |Yes |No |No |No |No
-
-|Ability to change the width of the menu or a record list |No |No
-|Yes |No |No
+|Ability to change the width of the menu or a record list |No |No |Yes |No |No
 |===
 
 [[h2_1468882933]]
-=== Modules
+== Modules
 
 [[h3_1868937389]]
-==== Planning Calendar
+=== Planning Calendar
 
-[width="99%",cols="20%,^16%,^16%,^16%,^16%,^16%",]
+[.highlighted-table]
+[]
 |===
-|*Feature* |*Tablet* | | | |*Phone*
+.2+|*Feature* 4+^|*Tablet* |*Phone*
+|*iOS* |*Android* |*Android 2.0* |*Windows* |*Android*
 
-| |*iOS* |*Android* |*Android 2.0* |*Windows* |*Android*
+|xref:ctmobile:main/mobile-application/mobile-application-modules/calendar/using-calendar.adoc[Multiple object support] |Yes |Yes |Yes |Yes |Yes
 
-|xref:using-calendar[Multiple object support] |Yes |Yes |Yes |Yes
-|Yes
-
-|Hierarchical view of[.object]#Accounts# with linked
-[.object]#Contacts# in the left menu |Yes |No |No |Yes |No
+|Hierarchical view of [.object]#Accounts# with linked [.object]#Contacts# in the left menu |Yes |No |No |Yes |No
 
 |The month view |Yes |Yes |Yes |Yes |Yes
-
 |The week view |Yes |Yes |Yes |Yes |Yes
-
 |The day view |Yes |Yes |Yes |Yes |Yes
-
 |Resize the calendar view |No |No |Yes |No |No
-
-|The first day of the week, the first workday, the last workday |Yes |No
-|No |Yes |No
-
+|The first day of the week, the first workday, the last workday |Yes |No|No |Yes |No
 |Hide or display weekends |Yes |No |Yes |Yes |No
-
 |Customizable visible working hours |Yes |Yes |No |Yes |Yes
-
 |Set the default activity duration |Yes |Yes |Yes |Yes |Yes
-
 |Customize activity duration |Yes |Yes |No |Yes |Yes
-
 |All-day slot |Yes |Yes |No |Yes |Yes
-
-|The *Plus* button to create an[.object]#Activity# |Yes |No
-|Yes |Yes |No
-
-|Create an[.object]#Activity# with a long tap |Yes |Yes |No
-|Yes |Yes
-
-|Drag and drop an[.object]#Activity# to the calendar greed |Yes
-|Yes |Yes |Yes |Yes
-
-|Drag and drop several records to create multiple
-[.object]#Activities# |Yes |No |No |Yes |No
+|The *Plus* button to create an [.object]#Activity# |Yes |No|Yes |Yes |No
+|Create an [.object]#Activity# with a long tap |Yes |Yes |No|Yes |Yes
+|Drag and drop an [.object]#Activity# to the calendar greed |Yes|Yes |Yes |Yes |Yes
+|Drag and drop several records to create multiple [.object]#Activities# |Yes |No |No |Yes |No
 
 |Mass Actions: Copy, Move, and Delete |Yes |Yes |No |Yes |Yes
+|The pop-up with additional information on an [.object]#Activity# |Yes |Yes |Yes |Yes |Yes
 
-|The pop-up with additional information on an
-[.object]#Activity# |Yes |Yes |Yes |Yes |Yes
-
-|Calendar agenda while working with custom Date/Time field during
-creating new Activity |Yes |No |No |No |No
+|Calendar agenda while working with custom Date/Time field during creating new Activity |Yes |No |No |No |No
 
 |The *Today* button |Yes |Yes |Yes |Yes |Yes
-
-|xref:set-up-holidays[Salesforce Holidays] |Yes |No |No |No |No
-
-|Recurring the standard[.object]#Event# object |No |No |No |No
+|xref:ctmobile:main/mobile-application/mobile-application-modules/calendar/set-up-holidays.adoc[Salesforce Holidays] |Yes |No |No |No |No |Recurring the standard [.object]#Event# object |No |No |No |No
 |No
 |===
-
-
 
 [[h3_1865396414]]
-==== Activity Management
+=== Activity Management
 
-[width="99%",cols="20%,^16%,^16%,^16%,^16%,^16%",]
+[.highlighted-table]
+[]
 |===
-|*Feature* |*Tablet* | | | |*Phone*
+.2+|*Feature* 4+^|*Tablet* |*Phone*
+|*iOS* |*Android* |*Android 2.0* |*Windows* |*Android*
 
-| |*iOS* |*Android* |*Android 2.0* |*Windows* |*Android*
+|xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc[Multiple object support] |Yes |Yes |Yes |Yes |Yes
 
-|xref:ct-mobile-control-panel-calendar#h3_1876502572[Multiple
-object support] |Yes |Yes |Yes |Yes |Yes
+|xref:ctmobile:main/admin-guide/start-finish-functionality.adoc[The Start/Finish functionality] |Yes |Yes |Yes |No |Yes
 
-|xref:start-finish-functionality[The Start/Finish functionality]
-|Yes |Yes |Yes |No |Yes
+|The Start/Finish functionality: capture geoposition |Yes |Yes |No |No|Yes
 
-|The Start/Finish functionality: capture geoposition |Yes |Yes |No |No
-|Yes
+|The Start/Finish functionality: update Start/End Date fields |Yes |Yes|Yes |No |Yes
 
-|The Start/Finish functionality: update Start/End Date fields |Yes |Yes
-|Yes |No |Yes
+|The Start/Finish functionality: lock/unlock records |Yes |Yes |Yes |No|Yes
 
-|The Start/Finish functionality: lock/unlock records |Yes |Yes |Yes |No
-|Yes
+|The ability to switch from the unfinished [.object]#Activity# to other CT Mobile screens |Yes |No |No |No |No
 
-|The ability to switch from the unfinished[.object]#Activity#
-to other CT Mobile screens |Yes |No |No |No |No
+|xref:ctmobile:main/mobile-application/ui/historical-activities.adoc[Historical activities] |Yes |No |No |No|No
 
-|xref:historical-activities[Historical activities] |Yes |No |No |No
-|No
-
-|xref:timeline-view[Timeline view] |Yes |No |No |Since v.1.3 |No
+|xref:ctmobile:main/admin-guide/related-lists/timeline-view.adoc[Timeline view] |Yes |No |No |Since v.1.3 |No
 |===
-
-
 
 [[h3_1580657987]]
-==== Custom related lists
+=== Custom related lists
 
-[cols=",^,^,^,^,^",]
+[.highlighted-table]
+[]
 |===
-|*Feature* |*Tablet* | | | |*Phone*
-
-| |*iOS* |*Android* |*Android 2.0* |*Windows* |*Android*
+.2+|*Feature* 4+^|*Tablet* |*Phone*
+|*iOS* |*Android* |*Android 2.0* |*Windows* |*Android*
 
 |Custom related tab on a record detail screen |Yes |Yes |Yes |Yes |Yes
 
-|xref:managing-offline-objects#h2_879469097[The SOQL filters switch
-to display only the filtered records] |Yes |No |No |Yes |No
+|xref:ctmobile:main/admin-guide/managing-offline-objects/index.adoc#h2_879469097[The SOQL filters switch to display only the filtered records] |Yes |No |No |Yes |No
 
-|xref:columns-width-for-related-lists[Customizable columns width]
-|Yes |No |No |No |No
+|xref:ctmobile:main/admin-guide/related-lists/columns-width-for-related-lists.adoc[Customizable columns width] |Yes |No |No |No |No
 
-|xref:barcode-scanner[Barcode scanner] |Yes |No |No |No |No
+|xref:ctmobile:main/mobile-application/barcode-scanner.adoc[Barcode scanner] |Yes |No |No |No |No
 |===
-
-
 
 [[h3_656259478]]
-==== Search
+=== Search
 
-[cols=",^,^,^,^,^",]
+[.highlighted-table]
+[]
 |===
-|*Feature* |*Tablet* | | | |*Phone*
-| |*iOS* |*Android* |*Android 2.0* |*Windows* |*Android*
-|xref:search[Global Search] |Yes |Yes |Yes |No |Yes
+.2+|*Feature* 4+^|*Tablet* |*Phone*
+|*iOS* |*Android* |*Android 2.0* |*Windows* |*Android*
+|xref:ctmobile:main/mobile-application/ui/home-screen/search.adoc[Global Search] |Yes |Yes |Yes |No |Yes
 |Search in the list of records |Yes |Yes |Yes |Yes |Yes
 |Search operators (*,?) |Yes |No |No |No |No
 |===
 
-
-
 [[h3_735612696]]
-==== Routes
+=== Routes
 
-[cols=",^,^,^,^,^",]
+[.highlighted-table]
+[]
 |===
-|*Feature* |*Tablet* | | | |*Phone*
+.2+|*Feature* 4+^|*Tablet* |*Phone*
+|*iOS* |*Android* |*Android 2.0* |*Windows* |*Android*
 
-| |*iOS* |*Android* |*Android 2.0* |*Windows* |*Android*
-
-|xref:routes[Offline routes] |Yes |No |No |No |Yes
-
+|xref:ctmobile:main/mobile-application/mobile-application-modules/routes.adoc[Offline routes] |Yes |No |No |No |Yes
 |Route optimization |Yes |Yes |Yes |Yes |Yes
-
 |Use current location |Yes |Yes |Yes |Yes |Yes
-
 |Route by car or on foot |Yes |Yes |Yes |Yes |No
-
 |Directions |Yes |Yes |Yes |Yes |Yes
-
 |Multiple map types |Yes |Yes |Yes |Yes |Yes
-
 |Traffic information |No |No |No |Yes |No
-
 |Historical routes |Yes |No |Yes |No |No
-
-|xref:google-maps-api-key[Apple Maps] |Yes |No |No |No |No
-
-|xref:google-maps-api-key[Google Maps] |Yes |Yes |Yes |No |Yes
-
-|https://docs.microsoft.com/en-us/bingmaps/getting-started/bing-maps-dev-center-help/getting-a-bing-maps-key[Bing
-Maps] |No |No |No |Yes |No
+|Apple Maps |Yes |No |No |No |No
+|xref:ctmobile:main/admin-guide/google-maps-api-key/index.adoc[Google Maps] |Yes |Yes |Yes |No |Yes
+|link:https://docs.microsoft.com/en-us/bingmaps/getting-started/bing-maps-dev-center-help/getting-a-bing-maps-key[Bing Maps] |No |No |No |Yes |No
 |===
-
-
 
 [[h3_295983841]]
-==== Nearby Accounts
+=== Nearby Accounts
 
-[cols=",^,^,^,^,^",]
+[.highlighted-table]
+[]
 |===
-|*Feature* |*Tablet* | | | |*Phone*
-
-| |*iOS* |*Android* |*Android 2.0* |*Windows* |*Android*
+.2+|*Feature* 4+^|*Tablet* |*Phone*
+|*iOS* |*Android* |*Android 2.0* |*Windows* |*Android*
 
 |Use current location |Yes |Yes |Yes |Yes |Yes
-
 |Multiple map types |Yes |Yes |Yes |Yes |Yes
-
 |Multicolor waypoints for objects |Yes |No |Yes |Yes |No
-
-|xref:nearby-accounts[Create an activity on the map] |Yes |Yes |Yes
-|Yes |Yes
-
+|xref:ctmobile:main/mobile-application/mobile-application-modules/nearby-accounts.adoc#h2_511018746[Create an activity on the map] |Yes |Yes |Yes |Yes |Yes
 |Apple Maps |Yes |No |No |No |No
-
 |Google Maps |Yes |Yes |Yes |No |Yes
-
 |Bing Maps |No |No |No |Yes |No
 |===
 
-
-
 [[h3_722835965]]
-==== Libraries
+=== Libraries
 
-[width="99%",cols="20%,^16%,^16%,^16%,^16%,^16%",]
+[.highlighted-table]
+[]
 |===
-|*Feature* |*Tablet* | | | |*Phone*
-
-| |*iOS* |*Android* |*Android 2.0* |*Windows* |*Android*
+.2+|*Feature* 4+^|*Tablet* |*Phone*
+|*iOS* |*Android* |*Android 2.0* |*Windows* |*Android*
 
 |Additional information for files |Yes |No |No |Yes |No
-
-|xref:libraries[Folders] |Yes |No |Yes |Yes |No
-
+|xref:ctmobile:main/mobile-application/mobile-application-modules/libraries.adoc[Folders] |Yes |No |Yes |Yes |No
 |Opening files |Yes |No |Yes |Yes |No
-
 |Send files via email |Yes |No |Yes |No |No
-
 |Send files using email templates |Yes |No |No |No |No
-
-|xref:ctmobile:main/mobile-application/application-settings/index.adoc#h3_1768799377[Background download] |Yes
-|No |No |No |No
+|xref:ctmobile:main/mobile-application/application-settings/index.adoc#h3_1768799377[Background download] |Yes|No |No |No |No
 |===
-
-
 
 [[h3_2060809199]]
-==== Applications (Interactive presentations, CLM)
+=== Applications (Interactive presentations, CLM)
 
-[width="99%",cols="16%,^14%,^14%,^14%,^14%,^14%,^14%",]
+[.highlighted-table]
+[]
 |===
-|*Feature* |*Tablet* | | | |*Phone* |*Comment*
+.2+|*Feature* 4+^|*Tablet* |*Phone* |*Comment*
+|*iOS* |*Android* |*Android 2.0* |*Windows* |*Android* |
 
-| |*iOS* |*Android* |*Android 2.0* |*Windows* |*Android* |
+|xref:ctmobile:main/ct-presenter/about-ct-presenter/clm-scheme/clm-customscenario.adoc[Custom Scenarios] |Yes |Yes |No |Yes|Yes |
 
-|xref:clm-customscenario[Custom Scenarios] |Yes |Yes |No |Yes
-|Yes |
+|xref:ctmobile:main/mobile-application/mobile-application-modules/applications/index.adoc#h3_1236408094[Mobile scenario editor] |Yes |No|No |Yes |No |
 
-|xref:applications#h3_1236408094[Mobile scenario editor] |Yes |No
-|No |Yes |No |
+|xref:ctmobile:main/ct-presenter/clm-navigation-in-clm-presentations.adoc#h2_21685430[Branches]|Yes |No |No |Yes |No |
 
-|xref:clm-navigation-in-clm-presentations#h2_21685430[Branches]
-|Yes |No |No |Yes |No |
-
-|xref:applications#h3_1236408094g[In-app scenario generator] based
-on slide rating |Yes |No |No |No |No |
+|xref:ctmobile:main/mobile-application/mobile-application-modules/applications/index.adoc#h3_1236408094[In-app scenario generator] based on slide rating |Yes |No |No |No |No |
 
 |Favorite CLM presentations |Yes |Yes |No |Yes |No |
-
 |Slides tab |Yes |Yes |No |Yes |No |
-
 |The *Available Offline* attribute of a xref:ctmobile:main/ct-presenter/about-ct-presenter/clm-scheme/clm-application.adoc[CLM
 presentation] |Yes |No |No |Since v.1.3 |No |
-
-|The *Fixed* attribute of a xref:clm-slide[slide] |Yes |No |No |Yes
-|No |
-
+|The *Fixed* attribute of a xref:ctmobile:main/ct-presenter/about-ct-presenter/clm-scheme/clm-slide.adoc[slide] |Yes |No |No |Yes|No |
 |The *Attachments* tab |Yes |Yes |No |Yes |No |
+|xref:ctmobile:main/mobile-application/mobile-application-modules/applications/clm-presentation-controls.adoc#h2_1807389398[Send slides via email] |Yes |Yes |No |No |No |
 
-|xref:clm-presentation-controls#h2_1807389398[Send slides via
-email] |Yes |Yes |No |No |No |
+|xref:ctmobile:main/mobile-application/email-templates.adoc[Send slides using email templates] |Yes |Yes|No |No |No |
 
-|xref:email-templates[Send slides using email templates] |Yes |Yes
-|No |No |No |
-
-|The *Statistics* screen when exiting the CLM presentation |Yes |Yes |No
-|No |No |
-
+|The *Statistics* screen when exiting the CLM presentation |Yes |Yes |No|No |No |
 |Attach statistics to an existing activity |Yes |Yes |No |Yes |No |
-
 |Attach statistics to the created activity |Yes |Yes |No |Yes |No |
-
 |The PDF generator |Yes |Yes |No |No |No |
-
-|Switch between standard and custom application scenarios |Yes |No |No
-|No |No |
-
-|Reload the current slide with the rotate gesture |Yes |No |No |No |No
-|
-
-|xref:gestures-in-clm-presentations[Likes/Dislikes gestures] |Yes
-|Yes |No |Yes |No |
-
-|Multitasking during an[.object]#Activity# |Yes |No |No |Since
-v.1.3 |No |
-
-|xref:ctmobile:main/ct-presenter/the-remote-detailing-functionality/index.adoc[The Remote Detailing
-functionality] |Yes |No |No |Yes |No |If the video is not in use, the
-presenter and participants can join the Remote Detailing meeting via
-Safari on their iPhone.
-
-|xref:the-ct-presenter-app[The CT Presenter app] |Yes |No |No |No
-|No |This application is an outdated solution. It is recommended that
-you use the Safari browser.
-
-|https://developer.apple.com/documentation/arkit[ARKit models] |Yes |No
-|No |No |No |
+|Switch between standard and custom application scenarios |Yes |No |No|No |No |
+|Reload the current slide with the rotate gesture |Yes |No |No |No |No|
+|xref:ctmobile:main/mobile-application/mobile-application-modules/applications/gestures-in-clm-presentations.adoc[Likes/Dislikes gestures] |Yes|Yes |No |Yes |No |
+|Multitasking during an [.object]#Activity# |Yes |No |No |Sincev.1.3 |No |
+|xref:ctmobile:main/ct-presenter/the-remote-detailing-functionality/index.adoc[The Remote Detailing functionality] |Yes |No |No |Yes |No |If the video is not in use, the presenter and participants can join the Remote Detailing meeting via Safari on their iPhone.
+|xref:ctmobile:main/ct-presenter/the-remote-detailing-functionality/the-ct-presenter-app/index.adoc[The CT Presenter app] |Yes |No |No |No|No |This application is an outdated solution. It is recommended that you use the Safari browser.
+|link:https://developer.apple.com/documentation/arkit[ARKit models] |Yes |No|No |No |No |
 |===
-
-
 
 [[h3_1801753150]]
-==== JS Bridge
+=== JS Bridge
 
-[width="99%",cols="16%,^14%,^14%,^14%,^14%,^14%,^14%",]
+[.highlighted-table]
+[]
 |===
-|*Feature* |*Tablet* | | | |*Phone* |*Comment*
+.2+|*Feature* 4+|*Tablet* |*Phone* |*Comment*
+|*iOS* |*Android* |*Android 2.0* |*Windows* |*Android* |
 
-| |*iOS* |*Android* |*Android 2.0* |*Windows* |*Android* |
-
-|Create records: xref:ctm-create[ctm.create] |Yes |Yes |No |Yes
-|No |
-
-|Update records: xref:ctm-update[ctm.update] |Yes |Yes |No |Yes |No
-|
-
-|Query records: xref:ctm-query[ctm.query] |Yes |Yes |No |Yes |No
-|
-
-|Delete records: xref:ctm-delete[ctm.delete] |Yes |Yes |No |Yes |No
-|
-
-|xref:changing-slides[Switch between slides using the href
-attribute] |Yes |Yes |No |Yes |No |
-
-|Start fast sync: xref:ctm-sync[ctm.sync] |Yes |Yes |No |No |No |
-
-|Camera access: xref:ctm-photo[ctm.photo] |Yes |Yes |No |No |No |
-
-|Custom data tables according to related record:
-xref:ctm-opendatatablebyparentrecord[ctm.openDataTableByParentRecord]
-|Yes |No |No |No |No |
-
-|Custom data tables according to SOQL query:
-xref:ctm-opendatatablebyquery[ctm.openDataTableByQuery] |Yes |No
-|No |No |No |
-
-|Quiz launch: xref:ctm-openquiz[ctm.openQuiz] |Yes |No |No |No
-|No |
-
-|PDF generation: xref:ctm-generatepdf[ctm.generatePDF] |Yes |No |No
-|No |No |
-
-|Open QR Code: xref:ctm-openqrscanner[ctm.openQRScanner] |Yes |No
-|No |No |No |
-
-|xref:crm-data-display[Markup labels] |Yes |Yes |No |Yes |No |
-
-|xref:opening-attached-files[Opening attached files] |Yes |Yes |No
-|Yes |No |
-
-|Like / Dislike: xref:ctm-like[ctm.like] /
-xref:ctm-dislike[ctm.dislike] |Yes |Yes |No |Yes |No |
-
-|Exit from the CLM-presentation:
-xref:ctm-autoexitpresenter[ctm.autoExitPresenter] |Yes |No |No |Yes
-|No |
-
-|Disable slide scroll:
-xref:ctm-disableslidescroll[ctm.disableSlideScroll] |Yes |No |No
-|No |No |
-
-|Enable slide scroll:
-xref:ctm-enableslidescroll[ctm.enableSlideScroll] |Yes |No |No |No
-|No |
-
-|Obtain the path to the file: xref:ctm-getfile[ctm.getFile] |Yes
-|No |No |Yes |No |
-
-|Save attachments: xref:ctm-storefile[ctm.storeFile] |Yes |No |No
-|Yes |No |
-
-|The transition from the CLM presentation display to Sales Order:
-xref:ctm-createsalesorderwithanimations[ctm.createSalesOrderWithAnimations]
-|Yes |No |No |No |No |
-
-|Activate gathering statistics of the CLM presentation:
-xref:ctm-customstats[ctm.customStats] |Yes |No |No |No |No |
-
-|xref:activating-js-bridge#h2_1136353801[skipTenPercent] |Yes |No
-|No |No |No |
-
-|xref:activating-js-bridge#h2_1136353801[playVideo] |Yes |No |No
-|No |No |
-
-|xref:activating-js-bridge#h2_1136353801[getJSValues] |Yes |No |No
-|No |No |
-
-|xref:ctm-setoptions[ctm.setOptions] |No |No |No |Yes |No |
-
-|xref:ctappgotoslide[CTAPPgoToSlide] |Yes |No |No |Yes |No |
-
-|xref:ctappgotofirst[CTAPPgoToFirst] |Yes |No |No |Yes |No |
-
-|xref:ctappgotonext[CTAPPgoToNext] |Yes |No |No |Yes |No |
-
-|xref:ctappgotoprevious[CTAPPgoToPrevious] |Yes |No |No |Yes |No
-|
-
-|Sound recording:
-xref:ctappstoprecordingaudio[CTAPPstopRecordingAudio] |Yes |No |No
-|No |No |
-
-|Sound recording:
-xref:ctappstartrecordingaudio[CTAPPstartRecordingAudio] |Yes |No
-|No |No |No |
-
-|xref:activating-js-bridge#h2_1136353801[CTAPPNewRecord] |Yes |No
-|No |No |No |
-
-|CTAPPturnOnAudio |No |No |No |No |No |The Remote Detailing and Self
-Detailing functionality.
-
+|Create records: xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-interaction-with-crm-data/ctm-create.adoc[ctm.create] |Yes |Yes |No |Yes|No |
+|Update records: xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-interaction-with-crm-data/ctm-update.adoc[ctm.update] |Yes |Yes |No |Yes |No|
+|Query records: xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-interaction-with-crm-data/ctm-query.adoc[ctm.query] |Yes |Yes |No |Yes |No|
+|Delete records: xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-interaction-with-crm-data/ctm-delete.adoc[ctm.delete] |Yes |Yes |No |Yes |No|
+|xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-clm-presentation-navigation/changing-slides.adoc[Switch between slides using the href attribute] |Yes |Yes |No |Yes |No |
+|Start fast sync: xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-interaction-with-crm-data/ctm-sync.adoc[ctm.sync] |Yes |Yes |No |No |No |
+|Camera access: xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-accessing-external-functionality/ctm-photo.adoc[ctm.photo] |Yes |Yes |No |No |No |
+|Custom data tables according to related record: xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-interaction-with-crm-data/ctm-opendatatablebyparentrecord.adoc[ctm.openDataTableByParentRecord]|Yes |No |No |No |No |
+|Custom data tables according to SOQL query: xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-interaction-with-crm-data/ctm-opendatatablebyquery.adoc[ctm.openDataTableByQuery] |Yes |No|No |No |No |
+|Quiz launch: xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-accessing-external-functionality/ctm-openquiz.adoc[ctm.openQuiz] |Yes |No |No |No|No |
+|PDF generation: xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-accessing-external-functionality/ctm-generatepdf.adoc[ctm.generatePDF] |Yes |No |No|No |No |
+|Open QR Code: xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-accessing-external-functionality/ctm-openqrscanner.adoc[ctm.openQRScanner] |Yes |No|No |No |No |
+|xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-interaction-with-crm-data/crm-data-display.adoc[Markup labels] |Yes |Yes |No |Yes |No |
+|xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-interaction-with-crm-data/opening-attached-files.adoc[Opening attached files] |Yes |Yes |No|Yes |No |
+|Like / Dislike: xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-clm-presentation-control/ctm-like.adoc[ctm.like] / xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-clm-presentation-control/ctm-dislike.adoc[ctm.dislike] |Yes |Yes |No |Yes |No |
+|Exit from the CLM-presentation: xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-accessing-external-functionality/ctm-autoexitpresenter.adoc[ctm.autoExitPresenter] |Yes |No |No |Yes|No |
+|Disable slide scroll: xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-clm-presentation-control/ctm-disableslidescroll.adoc[ctm.disableSlideScroll] |Yes |No |No |No |No |
+|Enable slide scroll: xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-clm-presentation-control/ctm-enableslidescroll.adoc[ctm.enableSlideScroll] |Yes |No |No |No |No |
+|Obtain the path to the file: xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-interaction-with-crm-data/ctm-getfile.adoc[ctm.getFile] |Yes|No |No |Yes |No |
+|Save attachments: xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-interaction-with-crm-data/ctm-storefile.adoc[ctm.storeFile] |Yes |No |No|Yes |No |
+|The transition from the CLM presentation display to Sales Order: xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-accessing-external-functionality/ctm-createsalesorderwithanimations.adoc[ctm.createSalesOrderWithAnimations] |Yes |No |No |No |No |
+|Activate gathering statistics of the CLM presentation: xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-clm-presentation-control/ctm-customstats.adoc[ctm.customStats] |Yes |No |No |No |No |
+|xref:ctmobile:main/ct-presenter/js-bridge-api/activating-js-bridge.adoc#h2_1136353801[skipTenPercent] |Yes |No|No |No |No |
+|xref:ctmobile:main/ct-presenter/js-bridge-api/activating-js-bridge.adoc#h2_1136353801[playVideo] |Yes |No |No|No |No |
+|xref:ctmobile:main/ct-presenter/js-bridge-api/activating-js-bridge.adoc#h2_1136353801[getJSValues] |Yes |No |No|No |No |
+|xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-clm-presentation-control/ctm-setoptions.adoc[ctm.setOptions] |No |No |No |Yes |No |
+|xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-clm-presentation-navigation/ctappgotoslide.adoc[CTAPPgoToSlide] |Yes |No |No |Yes |No |
+|xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-clm-presentation-navigation/ctappgotofirst.adoc[CTAPPgoToFirst] |Yes |No |No |Yes |No |
+|xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-clm-presentation-navigation/ctappgotonext.adoc[CTAPPgoToNext] |Yes |No |No |Yes |No |
+|xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-clm-presentation-navigation/ctappgotoprevious.adoc[CTAPPgoToPrevious] |Yes |No |No |Yes |No|
+|Sound recording: xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-accessing-external-functionality/ctappstoprecordingaudio.adoc[CTAPPstopRecordingAudio] |Yes |No |No|No |No |
+|Sound recording: xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-accessing-external-functionality/ctappstartrecordingaudio.adoc[CTAPPstartRecordingAudio] |Yes |No|No |No |No |
+|xref:ctmobile:main/ct-presenter/js-bridge-api/activating-js-bridge.adoc#h2_1136353801[CTAPPNewRecord] |Yes |No|No |No |No |
+|CTAPPturnOnAudio |No |No |No |No |No |The Remote Detailing and Self Detailing functionality.
 |CTAPPturnOffAudio |No |No |No |No |No |
-
 |CTAPPturnOnVideo |No |No |No |No |No |
-
 |CTAPPturnOffVideo |No |No |No |No |No |
-
-|Secure query records: xref:ctm-securequery[ctm.secureQuery] |No
-|No |No |No |No |
-
-|Define the meeting type: xref:ctm-getappenv[ctm.getAppEnv] |No |No
-|No |No |No |
-
-|Define the user role: xref:ctm-getusertype[ctm.getUserType] |No
-|No |No |No |No |
-
-|Define the Id of the Activity record:
-xref:ctm-getvisitid[ctm.getVisitId] |No |No |No |No |No |
+|Secure query records: xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-remote-detailing-2-0/ctm-securequery.adoc[ctm.secureQuery] |No|No |No |No |No |
+|Define the meeting type: xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-remote-detailing-2-0/ctm-getappenv.adoc[ctm.getAppEnv] |No |No|No |No |No |
+|Define the user role: xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-remote-detailing-2-0/ctm-getusertype.adoc[ctm.getUserType] |No|No |No |No |No |
+|Define the Id of the Activity record: xref:ctmobile:main/ct-presenter/js-bridge-api/methods-for-remote-detailing-2-0/ctm-getvisitid.adoc[ctm.getVisitId] |No |No |No |No |No |
 |===
-
-
 
 [[h3_1044166797]]
-==== Chatter
+=== Chatter
 
-[width="99%",cols="16%,^14%,^14%,^14%,^14%,^14%,^14%",]
+[.highlighted-table]
+[]
 |===
-|*Feature* |*Tablet* | | | |*Phone* |*Comment*
+.2+|*Feature* 4+^|*Tablet* |*Phone* |*Comment*
+|*iOS* |*Android* |*Android 2.0* |*Windows* |*Android* |
 
-| |*iOS* |*Android* |*Android 2.0* |*Windows* |*Android* |
-
-|xref:chatter[Group feeds] |Yes |Yes |No |Yes |Yes |
-
+|xref:ctmobile:main/mobile-application/mobile-application-modules/chatter/index.adoc#h3_28836937[Group feeds] |Yes |Yes |No |Yes |Yes |
 |Record feeds |Yes |Yes |No |Yes |Yes |
-
 |Posts and comments |Yes |Yes |No |Yes |Yes |
-
 |Likes |Yes |Yes |No |Yes |Yes |
-
 |Attachments |Yes |Yes |No |Yes |Yes |
-
 |Avatars |Yes |Yes |No |Yes |Yes |
-
 |Instant post sending |Yes |No |No |Yes |No |
-
-|xref:chatter-push-notifications[Push notifications] |Yes |Yes |No
-|Since v.1.3 |Yes |
-
+|xref:ctmobile:main/mobile-application/mobile-application-modules/chatter/chatter-push-notifications.adoc[Push notifications] |Yes |Yes |No|Since v.1.3 |Yes |
 |On-demand attachments downloading to posts |Yes |Yes |No |Yes |Yes |
-
-|Polls |No |No |No |No |No |The SOAP API limitation is applied to iOS
-devices.
-
-|@mention |No |No |No |Since v.1.3 |No |The SOAP API limitation is
-applied to iOS devices.
+|Polls |No |No |No |No |No |The SOAP API limitation is applied to iOS devices.
+|@mention |No |No |No |Since v.1.3 |No |The SOAP API limitation is applied to iOS devices.
 |===
-
-
 
 [[h3_1518939859]]
-==== Customizable Home Screen
+=== Customizable Home Screen
 
-[width="99%",cols="20%,^16%,^16%,^16%,^16%,^16%",]
+[.highlighted-table]
+[]
 |===
-|*Feature* |*Tablet* | | | |*Phone*
+.2+|*Feature* 4+^|*Tablet* |*Phone*
+|*iOS* |*Android* |*Android 2.0* |*Windows* |*Android*
 
-| |*iOS* |*Android* |*Android 2.0* |*Windows* |*Android*
-
-|xref:ctmobile:main/mobile-application/ui/home-screen/index.adoc[Offline charts based on Reports] |Yes |No |No |No
-|No
-
+|xref:ctmobile:main/mobile-application/ui/home-screen/index.adoc[Offline charts based on Reports] |Yes |No |No |No|No
 |Offline charts based on Dashboards |Yes |No |No |No |No
-
 |Calendar carousel widget |Yes |Yes |No |Yes |Yes
-
-|Customizable *All activities per day* hint on the calendar widget
-|Yes |No |No |No |No
-
+|Customizable *All activities per day* hint on the calendar widget|Yes |No |No |No |No
 |Carousel of CLM presentations |Yes |Yes |No |Yes |No
-
 |Logo |Yes |Yes |Yes |Yes |Yes
-
 |4 tapes to refresh Home Screen |Yes |No |No |No |No
 |===
 
-
-
 [[h3_839939660]]
-==== Other modules availability
+=== Other modules availability
 
-[width="99%",cols="16%,^14%,^14%,^14%,^14%,^14%,^14%",]
+[.highlighted-table]
+[]
 |===
-|*Feature* |*Tablet* | | | |*Phone* |*Comment*
+.2+|*Feature* 4+^|*Tablet* |*Phone* |*Comment*
+|*iOS* |*Android* |*Android 2.0* |*Windows* |*Android* |
 
-| |*iOS* |*Android* |*Android 2.0* |*Windows* |*Android* |
-
-|xref:cg-cloud[CG Cloud] |Yes |No |No |Since v.1.3 |No |
-
-|xref:lead-convert[Lead Convert (online)] |Yes |No |No |No |No |The
-REST API limitation is applied to Windows devices.
-
-|xref:opportunities[Opportunity management] |Yes |Yes |Yes |No |Yes
-|Support multiple currencies and price books.
-
+|xref:ctmobile:main/mobile-application/mobile-application-modules/cg-cloud/index.adoc[CG Cloud] |Yes |No |No |Since v.1.3 |No |
+|xref:ctmobile:main/mobile-application/lead-convert.adoc[Lead Convert (online)] |Yes |No |No |No |No |The REST API limitation is applied to Windows devices.
+|xref:ctmobile:main/mobile-application/mobile-application-modules/opportunities/index.adoc[Opportunity management] |Yes |Yes |Yes |No |Yes|Support multiple currencies and price books.
 |Quote management |No |No |No |No |No |
-
-|xref:recent-items[Recent Items] |Yes |Yes |No |No |No |
-
-|xref:dashboards[Dashboards (online)] |Yes |No |Yes |Yes |No |
-
-|xref:quizzes[Quizzes] |Yes |No |No |No |No |
-
-|xref:links-list[Links] |Yes |No |No |Yes |No |
+|xref:ctmobile:main/mobile-application/mobile-application-modules/recent-items.adoc[Recent Items] |Yes |Yes |No |No |No |
+|xref:ctmobile:main/mobile-application/mobile-application-modules/dashboards.adoc[Dashboards (online)] |Yes |No |Yes |Yes |No |
+|xref:ctmobile:main/mobile-application/mobile-application-modules/quizzes.adoc[Quizzes] |Yes |No |No |No |No |
+|xref:ctmobile:main/mobile-application/mobile-application-modules/links.adoc[Links] |Yes |No |No |Yes |No |
 |===
 
 [[h2_1840437629]]
-=== Customization
+== Customization
 
 [[h3_1833068094]]
-==== Fields customization
+=== Fields customization
 
-[cols=",^,^,^,^,^",]
+[.highlighted-table]
+[]
 |===
-|*Feature* |*Tablet* | | | |*Phone*
+.2+|*Feature* 4+^|*Tablet* |*Phone*
+|*iOS* |*Android* |*Android 2.0* |*Windows* |*Android*
 
-| |*iOS* |*Android* |*Android 2.0* |*Windows* |*Android*
-
-|xref:extending-field-values-to-the-entire-layout-width-without-label[Extending
-field without a label] |Yes |No |No |No |No
-
-|xref:slider-for-the-numeric-currency-and-percentage-fields[Slider
-for a field with currency&#44; percentage&#44; and numeric type] |Yes
-|No |No |No |No
-
-|xref:buttons-for-the-numeric-currency-percentage-fields["{plus}/-"
-controls for a field with currency&#44; percentage&#44; and numeric
-type] |Yes |No |No |No |No
-
-|xref:date-field-limits[Limitation of Date/DateTime fields] |Yes
-|No |No |No |No
-
-|xref:combobox[Combobox for custom fields] |Yes |No |No |No |No
-
-|xref:columns-width-for-related-lists[Columns width for standard
-and custom related lists] |Yes |No |No |No |No
+|xref:ctmobile:main/mobile-application/ui/mobile-application-field-types/extending-field-values-to-the-entire-layout-width-without-label.adoc[Extending field without a label] |Yes |No |No |No |No
+|xref:ctmobile:main/mobile-application/ui/mobile-application-field-types/slider-for-the-numeric-currency-and-percentage-fields.adoc[Slider for a field with currency, percentage, and numeric type] |Yes|No |No |No |No
+|xref:ctmobile:main/mobile-application/ui/mobile-application-field-types/buttons-for-the-numeric-currency-percentage-fields.adoc["{plus}/-" controls for a field with currency, percentage, and numeric type] |Yes |No |No |No |No
+|xref:ctmobile:main/mobile-application/ui/mobile-application-field-types/date-field-limits.adoc[Limitation of Date/DateTime fields] |Yes|No |No |No |No
+|xref:ctmobile:main/mobile-application/ui/mobile-application-field-types/combobox.adoc[Combobox for custom fields] |Yes |No |No |No |No
+|xref:ctmobile:main/admin-guide/related-lists/columns-width-for-related-lists.adoc[Columns width for standard and custom related lists] |Yes |No |No |No |No
 |===
-
-
 
 [[h3_1310621620]]
-==== Layouts widgets
+=== Layouts widgets
 
-[cols=",^,^,^,^,^",]
+[.highlighted-table]
+[]
 |===
-|*Feature* |*Tablet* | | | |*Phone*
+.2+|*Feature* 4+^|*Tablet* |*Phone*
+|*iOS* |*Android* |*Android 2.0* |*Windows* |*Android*
 
-| |*iOS* |*Android* |*Android 2.0* |*Windows* |*Android*
-
-|xref:ctmobile:main/admin-guide/mobile-layouts/index.adoc-maps[Maps] |Yes |Yes |Yes |Yes |Yes
-
-|xref:ctmobile:main/admin-guide/mobile-layouts/index.adoc-dashboards[Dashboards] |Yes |No |No |No |No
-
-|xref:ctmobile:main/admin-guide/mobile-layouts/index.adoc-applications[Applications] |Yes |Yes |No |Yes
-|Yes
-
-|xref:ctmobile:main/admin-guide/mobile-layouts/index.adoc-chatter-feed[Chatter feed] |Yes |Yes |No |Yes
-|Yes
-
-|xref:ctmobile:main/admin-guide/mobile-layouts/index.adoc-qr-code[QR code] |Yes |Yes |No |No |Yes
-
-|Interactive presentation embedded into record layout |No |No |No |No
-|No
+|xref:ctmobile:main/admin-guide/mobile-layouts/mobile-layouts-maps.adoc[Maps] |Yes |Yes |Yes |Yes |Yes
+|xref:ctmobile:main/admin-guide/mobile-layouts/mobile-layouts-dashboards.adoc[Dashboards] |Yes |No |No |No |No
+|xref:ctmobile:main/admin-guide/mobile-layouts/mobile-layouts-applications.adoc[Applications] |Yes |Yes |No |Yes|Yes
+|xref:ctmobile:main/admin-guide/mobile-layouts/mobile-layouts-chatter-feed.adoc[Chatter feed] |Yes |Yes |No |Yes|Yes
+|xref:ctmobile:main/admin-guide/mobile-layouts/mobile-layouts-qr-code.adoc[QR code] |Yes |Yes |No |No |Yes
+|Interactive presentation embedded into record layout |No |No |No |No|No
 |===
 
 [[h2_303479492]]
-=== Integration
+== Integration
 
-[width="99%",cols="16%,^14%,^14%,^14%,^14%,^14%,^14%",]
+[.highlighted-table]
+[]
 |===
-|*Feature* |*Tablet* | | | |*Phone* |*Comment*
+.2+|*Feature* 4+^|*Tablet* |*Phone* |*Comment*
+|*iOS* |*Android* |*Android 2.0* |*Windows* |*Android* |
 
-| |*iOS* |*Android* |*Android 2.0* |*Windows* |*Android* |
+|xref:ctorders:admin-guide/workshops/workshop-4-0-working-with-offline-orders/adding-ct-orders-to-the-ct-mobile-app-4-0.adoc[CT Orders] |Yes |No |No |Since v.1.3 |No |A streamlined order-taking process via a user-friendly interface is enhanced with the complexity of ERP price calculation and CRM flexibility.
 
-|https://help.customertimes.com/smart/project-order-module/adding-ct-orders-to-the-ct-mobile-app-4-0[CT
-Orders] |Yes |No |No |Since v.1.3 |No |A streamlined order-taking
-process via a user-friendly interface is enhanced with the complexity of
-ERP price calculation and CRM flexibility.
+|xref:ctsign:/about-ct-sign/index.adoc[CT Sign] |Yes |No |No |Since v.1.3 |No |Create and sign documents offline and online with a handwritten or legally binding signature.
 
-|https://help.customertimes.com/smart/project-ct-sign-en/about-ct-sign[CT
-Sign] |Yes |No |No |Since v.1.3 |No |Create and sign documents offline
-and online with a handwritten or legally binding signature.
+|xref:ctvision:index.adoc[CT Vision IR] |Yes |No |No |No |No |An image recognition tool is used to calculate shelf KPIs, gather information about the company and competitor products.
 
-|https://help.customertimes.com/smart/project-ct-vision-en/about-ct-vision[CT
-Vision IR] |Yes |No |No |No |No |An image recognition tool is used to
-calculate shelf KPIs, gather information about the company and
-competitor products.
-
-|https://help.customertimes.com/smart/project-ct-vision-lite-en/about-ct-vision-lite[CT
-Vision Lite ] |Yes |No |No |No |No |A comprehensive solution
-to process photos. Includes the server application responsible for
-storing photos without recognition, managing them by tags and shelves,
-planning the number of photos to take for the shelf.
+|xref:ctvision-lite:index.adoc[CT Vision Lite ] |Yes |No |No |No |No |A comprehensive solution to process photos. Includes the server application responsible for storing photos without recognition, managing them by tags and shelves, planning the number of photos to take for the shelf.
 
 |In-app browser |Yes |Yes |Yes |Yes |Yes |
 
-|xref:ical-synchronization[Device calendar] |Yes
-(iCal) |No |No |No |No |
+|xref:ctmobile:main/mobile-application/application-settings/ical-synchronization.adoc[Device calendar] |Yes (iCal) |No |No |No |No |
 
-|xref:ctmobile:main/mobile-application/application-settings/index.adoc#h3_353973580[Store photos in the device
-gallery] |Yes |No |Yes |No |No |
+|xref:ctmobile:main/mobile-application/application-settings/index.adoc#h3_353973580[Store photos in the device gallery] |Yes |No |Yes |No |No |
 
-|xref:attaching-files-in-the-notes-attachments-section[Attach files
-from device to Salesforce records] |Yes |Yes |Yes |No |No |
+|xref:ctmobile:main/mobile-application/attaching-files-in-the-notes-attachments-section.adoc[Attach files from device to Salesforce records] |Yes |Yes |Yes |No |No |
 
-|Attach a photo (from the device gallery or take a photo) |Yes |Yes |Yes
-|Yes |Yes |
+|Attach a photo (from the device gallery or take a photo) |Yes |Yes |Yes |Yes |Yes |
 
 |Multitasking |Yes |No |No |No |No a|
-//tag::ios[]
 
-Since CT Mobile 2.6, the app supports Split View and Slide Over
-multitasking types. Note the following:
+Since CT Mobile for iOS 2.6, the app supports Split View and Slide Over multitasking types. Note the following:
 
-* We do not guarantee that screens adapted for landscape orientation
-will display correctly in portrait orientation. In future releases, we
-will add a warning to prevent such screens from being used in portrait
-orientation.
-* We cannot limit the minimum percentage of screen area in Split View
-mode and recommend using at least 75% of the screen to work with CT
-Mobile.
+* We do not guarantee that screens adapted for landscape orientation will display correctly in portrait orientation. In future releases, we will add a warning to prevent such screens from being used in portrait orientation.
+* We cannot limit the minimum percentage of screen area in Split View mode and recommend using at least 75% of the screen to work with CT Mobile.
 
-|https://help.salesforce.com/articleView?id=sf.salesforce_maps_intro.htm&type=5[Salesforce
-Maps] |Yes |No |No |No |No |
+|link:https://help.salesforce.com/articleView?id=sf.salesforce_maps_intro.htm&type=5[Salesforce Maps] |Yes |No |No |No |No |
 
-|https://help.salesforce.com/articleView?id=sos_intro.htm&type=0[Salesforce
-SOS] |No |No |No |No |No |
+|link:https://help.salesforce.com/articleView?id=sos_intro.htm&type=0[Salesforce SOS] |No |No |No |No |No |
 |===
 
-
-
-//tag::hidden[]
+////
 
 Not-in-use:
 
@@ -1062,4 +683,4 @@ solution to ensure Salesforce compliance with the requirements on the
 processing and localization of personal data.
 |===
 
-
+////

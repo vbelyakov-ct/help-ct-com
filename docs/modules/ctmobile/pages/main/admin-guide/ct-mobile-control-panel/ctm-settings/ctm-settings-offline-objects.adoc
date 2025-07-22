@@ -97,7 +97,7 @@ attribute for related files to restrict amount of files downloaded
 during synchronization and reduce the synchronization time.
 
 |Object |[.apiobject]#clm__Object__c# |Text(255) |Stores
-an API Name of an xref:managing-offline-objects[offline object].
+an API Name of an xref:ctmobile:main/admin-guide/managing-offline-objects/index.adoc[offline object].
 
 |Online Fetching
 |[.apiobject]#clm__IsOnlineFetchingEnabled__c# |Checkbox
@@ -133,7 +133,7 @@ File] item in the *Actions* menu. Default value is _false_.
 |Picklist a|
 //tag::win[][NOTE] ==== Not available. ====
 
-Enables xref:sync-recovery[Sync Recovery] to deliver records that
+Enables xref:ctmobile:main/mobile-application/synchronization/sync-recovery.adoc[Sync Recovery] to deliver records that
 could not be synchronized to Salesforce anyway. If the parameter is
 filled with a specific value, it enables the work of Apex web service
 and passes the data to Salesforce through it.

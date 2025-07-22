@@ -28,7 +28,7 @@ make sure that the following records are created and active:
 *[.apiobject]#SlideProcess#
 *[.apiobject]#TemplateProcess#
 *[.apiobject]#WidgetProcess#
-. Go to xref:ct-mobile-control-panel-tools#h3_2011978[CT Mobile
+. Go to xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc#h3_2011978[CT Mobile
 Control Panel:
 Tools]/xref:ct-mobile-control-panel-tools-new#h2_2011978[CT Mobile
 Control Panel 2.0: Tools] and check the cloud token is specified.
@@ -89,8 +89,8 @@ create, edit and delete custom scenarios.
 //tag::ios,win[]
 
 In the CT Mobile app, you can
-specify xref:clm-customscenario[custom scenarios] with the help of
-the xref:applications#h3_1236408094[Mobile Scenario Editor] in the
+specify xref:ctmobile:main/ct-presenter/about-ct-presenter/clm-scheme/clm-customscenario.adoc[custom scenarios] with the help of
+the xref:ctmobile:main/mobile-application/mobile-application-modules/applications/index.adoc#h3_1236408094[Mobile Scenario Editor] in the
 Application module.
 
 [[h2_1250107167]]
@@ -128,7 +128,7 @@ available offline.
 [NOTE] ==== The *Available Offline* attribute is available since
 the CT Mobile managed package v. 3.54. The administrator should activate
 this checkbox for the required CLM presentations. ====
-* xref:applications[The Application module] allows reviewing CLM
+* xref:ctmobile:main/mobile-application/mobile-application-modules/applications/index.adoc[The Application module] allows reviewing CLM
 presentations uploaded from Salesforce.
 * You can configure xref:ctmobile:main/admin-guide/mobile-layouts/index.adoc-applications[the mobile
 layout] of the __[.object]#Activity# object to launch a CLM
@@ -141,11 +141,11 @@ xref:ctmobile:main/mobile-application/ui/home-screen/index.adoc[Home Screen].
 
 For each CLM presentation:
 
-* Use pre-configured xref:gestures-in-clm-presentations[gestures].
+* Use pre-configured xref:ctmobile:main/mobile-application/mobile-application-modules/applications/gestures-in-clm-presentations.adoc[gestures].
 * Double-tap the left or right side of the screen to view the
-xref:clm-presentation-controls[control buttons].
+xref:ctmobile:main/mobile-application/mobile-application-modules/applications/clm-presentation-controls.adoc[control buttons].
 * Double-tap the bottom of the screen to display the selected scenario
-and slide in xref:clm-navigation-in-clm-presentations[a branch] for
+and slide in xref:ctmobile:main/ct-presenter/clm-navigation-in-clm-presentations.adoc[a branch] for
 rapid switching between the slides.
 * xref:ctmobile:main/ct-presenter/js-bridge-api/index.adoc[JS Bridge methods] are available from within
 the CLM presentation if specified on the slide markup.

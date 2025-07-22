@@ -36,22 +36,22 @@ archive(s) or directly using administrator credentials depending
 on xref:ct-mobile-managed-package-update-to-v-3-54[the CT Mobile
 package version]. The cloud token should be valid to retrieve components
 from the ZIP archive(s) (refer
-to xref:ct-mobile-control-panel-tools#h3_2011978[CT Mobile Control
+to xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc#h3_2011978[CT Mobile Control
 Panel: Tools]/xref:ct-mobile-control-panel-tools-new#h2_2011978[CT
 Mobile Control Panel 2.0: Tools]). The synchronization process can
 proceed without a valid cloud token or administrator credentials, and in
-that case, xref:validation[validation rules], offline reports, and
+that case, xref:ctmobile:main/mobile-application/synchronization/validation.adoc[validation rules], offline reports, and
 some operators in formulas might not operate properly.
 //tag::andr[]Metadata components are downloaded using valid
 administrator credentials. The synchronization process can proceed
 without valid administrator credentials,
-but xref:validation[validation rules] offline reports, and some
+but xref:ctmobile:main/mobile-application/synchronization/validation.adoc[validation rules] offline reports, and some
 operators in formulas might not operate properly.
 . The current data model:
 * is created in case of *the first full synchronization*.
 * is replaced by the newly updated in case of *full synchronization*.
 . Records of xref:ctmobile:main/admin-guide/ct-mobile-control-panel/custom-settings/index.adoc[the custom settings&#44; custom
-metadata types], xref:managing-offline-objects[offline objects],
+metadata types], xref:ctmobile:main/admin-guide/managing-offline-objects/index.adoc[offline objects],
 and objects, which are necessary for activated
 xref:ctmobile:main/mobile-application/mobile-application-modules/index.adoc[modules], are downloaded if a
 record matches the conditions set in

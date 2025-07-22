@@ -5,7 +5,7 @@ filters applied to the corresponding
 https://help.salesforce.com/articleView?id=customizing_related_lists.htm&type=5[related
 lists] of records while displaying them in the mobile application. This
 parameter is also responsible for selection criteria that are used for
-xref:managing-offline-objects[offline object] data upload.
+xref:ctmobile:main/admin-guide/managing-offline-objects/index.adoc[offline object] data upload.
 
 [TIP] ==== For easy setup, go to
 xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects.adoc[CT Mobile Control
@@ -140,13 +140,13 @@ the list].
 |Sort Tree by Field
 |[.apiobject]#clm__SortTreeByFieldName__c# |Text(255)
 |The API name of a field with the date or date/time type to display the
-related list records in the xref:timeline-view[timeline view] if
+related list records in the xref:ctmobile:main/admin-guide/related-lists/timeline-view.adoc[timeline view] if
 the API Name of the related list's object is set in the
 [.apiobject]#clm_sObjectRelated__c# field.
 
 |Sync Recovery |[.apiobject]#clm__SyncRecovery__c#
 |Text(255) a|
-Enable xref:sync-recovery[Sync Recovery] to deliver records that
+Enable xref:ctmobile:main/mobile-application/synchronization/sync-recovery.adoc[Sync Recovery] to deliver records that
 could not be synchronized to Salesforce anyway. Available values:
 
 * An empty value means that the web service is not involved.

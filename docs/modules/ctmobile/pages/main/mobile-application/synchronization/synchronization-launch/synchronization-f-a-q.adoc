@@ -81,7 +81,7 @@ ifndef::win,andr[]
 The sync process may include xref:ctmobile:main/admin-guide/ct-mobile-control-panel/custom-settings/ct-mobile-replication.adoc[CT Mobile
 Replication];
 
-The sync process may include the xref:sync-recovery[Sync Recovery]
+The sync process may include the xref:ctmobile:main/mobile-application/synchronization/sync-recovery.adoc[Sync Recovery]
 functionality.
 
 
@@ -159,7 +159,7 @@ ifndef::win,andr[]
 The sync process may include xref:ctmobile:main/admin-guide/ct-mobile-control-panel/custom-settings/ct-mobile-replication.adoc[CT Mobile
 Replication];
 
-The sync process may include the xref:sync-recovery[Sync Recovery]
+The sync process may include the xref:ctmobile:main/mobile-application/synchronization/sync-recovery.adoc[Sync Recovery]
 functionality;
 
 To refresh metadata in the ZIP archive
@@ -202,7 +202,7 @@ the sync logs and, hence, from the reports.
 
 
 
-For more information, read xref:sync-recovery[the Sync Recovery
+For more information, read xref:ctmobile:main/mobile-application/synchronization/sync-recovery.adoc[the Sync Recovery
 article]. Error types are listed in
 https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_calls_concepts_core_data_objects.htm[the
 Salesforce Developer Guide article].
@@ -318,7 +318,7 @@ the[.apiobject]#SyncSingle.log# file with all operations for
 the first, full, fast, mixed, and quick record synchronization.
 
 the[.apiobject]#sync.log# file for the
-xref:send-application-data-dump#SendApplicationDataDump-SpecifyDatatoSend[Sync
+xref:ctmobile:main/mobile-application/application-settings/send-application-data-dump.adoc#SendApplicationDataDump-SpecifyDatatoSend[Sync
 Log History] operation.
 
 the[.apiobject]#Documents.zip# for the Export Data operation;
@@ -395,11 +395,11 @@ Go back to xref:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 ==== Why were not the up-to-date metadata components downloaded during the full or mixed synchronization?
 
 The metadata archive has not been created or updated. Some functionality
-may incorrectly work, for example, xref:validation[offline
+may incorrectly work, for example, xref:ctmobile:main/mobile-application/synchronization/validation.adoc[offline
 validation rules].
 
-. Check xref:ct-mobile-control-panel-tools#h3_2011978[the cloud
-token] (refer to xref:ct-mobile-control-panel-tools#h3_2011978[CT
+. Check xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc#h3_2011978[the cloud
+token] (refer to xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc#h3_2011978[CT
 Mobile Control Panel:
 Tools]/xref:ct-mobile-control-panel-tools-new#h2_2011978[CT Mobile
 Control Panel 2.0: Tools]) is valid.
@@ -429,7 +429,7 @@ metadata checker]. Also, it is possible
 xref:ctmobile:main/admin-guide/metadata-checker/index.adoc#h3_1645525423[to set a schedule] for a
 metadata checker or xref:ctmobile:main/admin-guide/metadata-checker/index.adoc#h2_1657467916[manually
 create/update] the metadata archive.
-* Also, check the xref:application-language[Application Language]
+* Also, check the xref:ctmobile:main/ct-mobile-solution/application-language.adoc[Application Language]
 article.
 
 
@@ -486,7 +486,7 @@ Go back to xref:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 [[h3_1178930529]]
 ==== How to send the application data dump?
 
-Go to the xref:send-application-data-dump[Send Application Data
+Go to the xref:ctmobile:main/mobile-application/application-settings/send-application-data-dump.adoc[Send Application Data
 Dump] article.
 
 
@@ -522,7 +522,7 @@ The duration of the sync process depends on:
 xref:ctmobile:main/ct-mobile-solution/technical-requirements-for-devices-and-network.adoc#h2_1498128754[the
 requirements for the connection].
 * amount of data. To avoid the synchronization of the large data,
-xref:managing-offline-objects[customize the criteria] to download
+xref:ctmobile:main/admin-guide/managing-offline-objects/index.adoc[customize the criteria] to download
 desired records of offline objects.
 
 * amount of modified components (objects, fields, layouts) or changes
@@ -576,7 +576,7 @@ Go back to xref:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
 The[.apiobject]#MALFORMED_QUERY# error occurs when the SOQL
 filter is incorrectly specified for the offline object. Check the
-xref:managing-offline-objects[SOQL query] in the error message.
+xref:ctmobile:main/admin-guide/managing-offline-objects/index.adoc[SOQL query] in the error message.
 
 
 
@@ -587,7 +587,7 @@ Go back to xref:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
 The[.apiobject]#INVALID_FILTER_QUERY_OPERATOR:
 invalid ID field# error is due to a temporary mobile record ID being
-inserted into xref:reference-fields[the reference field] when the
+inserted into xref:ctmobile:main/admin-guide/managing-offline-objects/reference-fields.adoc[the reference field] when the
 query is formed. Check the custom logic that inserts the temporary ID ​in
 the field.
 
@@ -725,10 +725,10 @@ downloading these files:
 * Enable the xref:ctmobile:main/mobile-application/application-settings/index.adoc#h3_1768799377[Background
 content loading] option. The files in *Libraries* will be downloaded in
 the background mode after the full synchronization is complete.
-* Disable the xref:ctm-settings-offline-objects[Files Download
+* Disable the xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ctm-settings/ctm-settings-offline-objects.adoc[Files Download
 Enabled] option for offline objects. The files attached to offline
 objects will be downloaded as previews.
-* Set up the xref:ctm-settings-offline-objects[Files Filter] option
+* Set up the xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ctm-settings/ctm-settings-offline-objects.adoc[Files Filter] option
 to set up the last date of files to download.
 
 [[h2_466216120]]
