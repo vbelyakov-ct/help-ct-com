@@ -1,6 +1,6 @@
 = Synchronization Launch
 
-ifdef::ios,win,andr[]
+//tag::ios,win,andr[]
 
 Synchronization involves several stages of aligning CT Mobile with
 Salesforce, during which updated records are sent from CT Mobile to
@@ -8,20 +8,20 @@ Salesforce and vice versa.
 
 :toc: :toclevels: 3
 
-[[h2__966867633]]
+[[h2_966867633]]
 === Synchronization Modes
 
 For information about settings for tracking and gathering the
-synchronization statistics, refer to xref:sync-logs[Sync Logs].
+synchronization statistics, refer to xref:ctmobile:main/mobile-application/synchronization/synchronization-launch/sync-logs.adoc[Sync Logs].
 
-[[h3__21591833]]
+[[h3_21591833]]
 ==== First Full Synchronization
 
 The entire database of the CT Mobile app,
-xref:metadata-archive[metadata components], and app settings will
+xref:ctmobile:main/admin-guide/metadata-checker/metadata-archive/index.adoc[metadata components], and app settings will
 be downloaded from Salesforce to the mobile device.
 
-This synchronization should be used after xref:logging-in[the
+This synchronization should be used after xref:ctmobile:main/getting-started/logging-in/index.adoc[the
 authorization] of the current user.
 
 The first full synchronization may take a lot of time according to the
@@ -32,10 +32,10 @@ ifndef::andr,kotlin,ios[]
 The CT Mobile app is locked during the first full synchronization, and
 the sync process will be interrupted in case of any errors.
 
-For more information, go to xref:full-synchronization[First Full
+For more information, go to xref:ctmobile:main/mobile-application/synchronization/full-synchronization.adoc[First Full
 and Full Synchronization].
 
-[[h3__1369866827]]
+[[h3_1369866827]]
 ==== Full Synchronization
 
 The entire database of the CT Mobile app, metadata components, and app
@@ -45,10 +45,10 @@ Salesforce.
 Full synchronization may take a lot of time according to the database
 size.
 
-For more information, go to xref:full-synchronization[First Full
+For more information, go to xref:ctmobile:main/mobile-application/synchronization/full-synchronization.adoc[First Full
 and Full Synchronization].
 
-[[h3__116633872]]
+[[h3_116633872]]
 ==== Fast Synchronization
 
 Data changes, such as deletions, insertions, and updates of records,
@@ -61,19 +61,19 @@ The CT Mobile app will not be locked during the fast synchronization.
 
 ifndef::andr,win[]
 
-Enable xref:ct-mobile-replication[CT Mobile Replication] if
+Enable xref:ctmobile:main/admin-guide/ct-mobile-control-panel/custom-settings/ct-mobile-replication.adoc[CT Mobile Replication] if
 territory coordinates have been altered to download all actual data on
 the mobile device.
 
 Set up xref:sync-recovery[Sync Recovery] to have the ability to
 upload records with the errors to Salesforce.
 
-For more information, go to xref:fast-synchronization[Fast and
+For more information, go to xref:ctmobile:main/mobile-application/synchronization/fast-synchronization.adoc[Fast and
 Mixed Synchronization].
 
 ifndef::andr[]
 
-[[h3__1175148825]]
+[[h3_1175148825]]
 ==== Mixed Synchronization
 
 This type is intended to upload the data differential since the specific
@@ -84,27 +84,27 @@ setting and all metadata to avoid the full synchronization performing,
 reduce synchronization time, and use the CT Mobile app during the
 synchronization.
 
-[TIP] ==== Enable xref:metadata-checker[Metadata Checker]
+[TIP] ==== Enable xref:ctmobile:main/admin-guide/metadata-checker/index.adoc[Metadata Checker]
 to automatically update the date in the
 [.apiobject]#clm__MetadataLastModifiedDate__c ==== field
 if the metadata was changed in Salesforce.#
 
-For more information, go to xref:fast-synchronization[Fast and
+For more information, go to xref:ctmobile:main/mobile-application/synchronization/fast-synchronization.adoc[Fast and
 Mixed Synchronization].
 
 ifndef::andr,win[]
 
-[[h3__2018975044]]
+[[h3_2018975044]]
 ==== Other Synchronization Modes
 
-* xref:other-synchronization-modes#h2__1958232390[Quick Record
+* xref:other-synchronization-modes#h2_1958232390[Quick Record
 Synchronization]
 Used to update a single record and its child records by using the
 pull-to-refresh gesture on the record's layout. Requires
 permission (refer to
-xref:ct-mobile-control-panel-offline-objects#h3_202390671[CT Mobile
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects.adoc#h3_202390671[CT Mobile
 Control Panel: Offline
-objects]/xref:ct-mobile-control-panel-offline-objects-new#h4_202390671[CT
+objects]/xref:ctmobile:main/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc#h4_202390671[CT
 Mobile Control Panel 2.0: Offline Objects]).
 You can update xref:chatter[the Chatter feed] the same way but this
 functionality does not depend on permission to quick record
@@ -131,7 +131,7 @@ turn off the screen during the full or fast synchronization.  ====
 
 To launch the synchronization:
 
-. Open the xref:home-screen[Home screen].
+. Open the xref:ctmobile:main/mobile-application/ui/home-screen/index.adoc[Home screen].
 . Tap and hold the *Sync* button.
 . In the pop-up, select the synchronization mode.
 image:sync-launch-select-mode.png[]
@@ -147,7 +147,7 @@ image:full-sync-in-progress.png[]
 
 
 
-[[h3__1285937829]]
+[[h3_1285937829]]
 ==== Launch Quick Record Synchronization
 
 To launch the quick record synchronization:
@@ -186,7 +186,7 @@ image:/resources/Storage/project-ct-mobile-en//CT-mobile-rest/attachments/663587
 
 ifndef::andr,win[]
 
-[[h2__263178653]]
+[[h2_263178653]]
 === Resume Synchronization
 
 If the sync process has been interrupted due to connection loss, tap
@@ -223,7 +223,7 @@ stage.
 
 image:continue_sync_win_en.png[]
 
-ifdef::kotlin[]
+//tag::kotlin[]
 
 Synchronization involves several stages of aligning CT Mobile with
 Salesforce, during which data and metadata are sent from CT Mobile to
@@ -231,20 +231,20 @@ Salesforce and vice versa.
 
 :toc: :toclevels: 4
 
-[[h2__966867633]]
+[[h2_966867633]]
 === Synchronization Modes and Steps
 
 CT Mobile provides several synchronization modes that can be run by the
 mobile user.
 
 [WARNING] ==== For the correct operation,
-xref:metadata-archive[the metadata archive] must be collected and
+xref:ctmobile:main/admin-guide/metadata-checker/metadata-archive/index.adoc[the metadata archive] must be collected and
 the cloud token (refer to
 xref:ct-mobile-control-panel-tools#h3_2011978[CT Mobile Control
 Panel: Tools]/xref:ct-mobile-control-panel-tools-new#h2_2011978[CT
 Mobile Control Panel 2.0: Tools]) must be valid. ====
 
-[[h3__868873179]]
+[[h3_868873179]]
 ==== Important notes
 
 * During any synchronization, CT Mobile sends updates for the following
@@ -254,7 +254,7 @@ audit fields of the current *User* record.
 ** *Mobile MAC*
 ** *Mobile Version*
 ** *Operation System*
-* The xref:sync-logs[Sync Log] records store the information of
+* The xref:ctmobile:main/mobile-application/synchronization/synchronization-launch/sync-logs.adoc[Sync Log] records store the information of
 each synchronization.
 
 [[h3_1173330258]]
@@ -264,10 +264,10 @@ each synchronization.
 |===
 |First Full Synchronization a|
 The first full synchronization must be launched after
-xref:logging-in[the authorization] of the current user.
+xref:ctmobile:main/getting-started/logging-in/index.adoc[the authorization] of the current user.
 
 The first full synchronization is intended to download the entire
-database of the CT Mobile app, xref:metadata-archive[metadata
+database of the CT Mobile app, xref:ctmobile:main/admin-guide/metadata-checker/metadata-archive/index.adoc[metadata
 components],
 xref:user-permissions-required-to-synchronize-objects-to-offline-work-with-functionalities[required
 objects], and app settings from Salesforce to the mobile device.
@@ -281,10 +281,10 @@ Steps:
 
 . Metadata components are downloaded from the metadata archive.
 . The current data model is created.
-. Records of xref:custom-settings[the custom settings&#44; custom
+. Records of xref:ctmobile:main/admin-guide/ct-mobile-control-panel/custom-settings/index.adoc[the custom settings&#44; custom
 metadata types], xref:managing-offline-objects[offline objects]
 (based on SOQL filters), and objects, which are necessary for activated
-xref:mobile-application-modules[modules], are downloaded if a
+xref:ctmobile:main/mobile-application/mobile-application-modules/index.adoc[modules], are downloaded if a
 record matches the conditions set in
 xref:related-list-filters[Related List Filters].
 . The audit fields of the current *User* record are updated.
@@ -304,7 +304,7 @@ information.
 
 * Data changes, such as deletions, insertions, and updates of records,
 will be sent from CT Mobile to Salesforce and vice versa.
-* Enable xref:ct-mobile-replication[CT Mobile Replication] if
+* Enable xref:ctmobile:main/admin-guide/ct-mobile-control-panel/custom-settings/ct-mobile-replication.adoc[CT Mobile Replication] if
 territory coordinates have been altered to download all actual data on
 the mobile device.
 
@@ -312,7 +312,7 @@ the mobile device.
 
 Steps:
 
-. Records of xref:custom-settings[the custom settings and custom
+. Records of xref:ctmobile:main/admin-guide/ct-mobile-control-panel/custom-settings/index.adoc[the custom settings and custom
 metadata types] are downloaded if the value in the
 [.apiobject]#SystemModstamp# field is a date later than the date
 of the last successful synchronization.
@@ -326,7 +326,7 @@ activated https://help.customertimes.com/articles/ct-mobile-ios-en/mobile-applic
 downloaded from Salesforce to the mobile device since the date of the
 last successful synchronization.
 .* If configured, the records of the specified objects mentioned in
-the xref:ct-mobile-replication[CT Mobile Replication] setting are
+the xref:ctmobile:main/admin-guide/ct-mobile-control-panel/custom-settings/ct-mobile-replication.adoc[CT Mobile Replication] setting are
 updated.
 
 
@@ -371,7 +371,7 @@ activated https://help.customertimes.com/articles/ct-mobile-ios-en/mobile-applic
 downloaded from Salesforce to the mobile device since the date of the
 last successful synchronization.
 .* If configured, the records of the specified objects mentioned in
-the xref:ct-mobile-replication[CT Mobile Replication] setting are
+the xref:ctmobile:main/admin-guide/ct-mobile-control-panel/custom-settings/ct-mobile-replication.adoc[CT Mobile Replication] setting are
 updated.
 
 
@@ -415,7 +415,7 @@ previously performed the first full synchronization.
 
 |===
 
-[[h2__396225247]]
+[[h2_396225247]]
 === Status Indicator
 
 When the mobile user launched any synchronization mode, the current
@@ -457,7 +457,7 @@ downloading page layouts.
 
 In case of errors related to the records, the sync process continues.
 When the synchronization is complete, go
-to xref:android-2-0-sync#h3__479754125[the Errors screen] and tap a
+to xref:android-2-0-sync#h3_479754125[the Errors screen] and tap a
 record to correct the error. Then run a fast synchronization.
 
 If the sync process was interrupted, tap the
@@ -468,7 +468,7 @@ synchronization.
 
 image:Continue-Sync-2.png[]
 
-ifdef::hidden[]
+//tag::hidden[]
 
 
 
@@ -493,7 +493,7 @@ displayed on the *Errors* screen.
 
 image:Sync-with-Validation-Errors.png[]
 
-[[h2__479754125]]
+[[h2_479754125]]
 === Errors Screen
 
 The CT Mobile app has two menu items with errors.

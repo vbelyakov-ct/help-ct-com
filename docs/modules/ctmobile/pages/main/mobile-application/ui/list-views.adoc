@@ -8,7 +8,7 @@ ifndef::kotlin[]
 
 :toc: :toclevels: 3
 
-[[h2__1312699748]]
+[[h2_1312699748]]
 === List Views
 
 The list views are pulled from Salesforce and available in:
@@ -46,7 +46,7 @@ in the CT Mobile app, the value in the *Last Viewed Date* field of this
 record is also changed, but this change will not be sent into
 Salesforce.
 
-ifdef::ios,win[]
+//tag::ios,win[]
 
 My{Object Name}
 
@@ -58,7 +58,7 @@ This week
 
 Today
 
-ifdef::ios[]If the object has no standard *Name* field, the column
+//tag::ios[]If the object has no standard *Name* field, the column
 of the field with the [.apiobject]#nameField = true# attribute
 will be displayed. In other cases, the [.apiobject]#ID# column
 will be displayed.
@@ -67,16 +67,16 @@ will be displayed.
 
 List views are displayed above records in the left menu.
 
-ifdef::ios[]
+//tag::ios[]
 
 The last selected list view of one of the offline objects or modules
 will be displayed the next time a user opens the corresponding offline
 object (including reference fields) or module.
 
 You can pin the desired list view (currently available only for the
-xref:using-calendar#h3__632854949[Calendar] module).
+xref:using-calendar#h3_632854949[Calendar] module).
 
-ifdef::win[]
+//tag::win[]
 
 The last selected list view of one of the offline objects or modules
 will be displayed the next time a user opens the corresponding offline
@@ -95,7 +95,7 @@ of records next to the list view name is only displayed if there are
 fewer than 500 records per an object downloaded on the device.
 Otherwise, the counter is not shown. ====
 
-ifdef::ios[]
+//tag::ios[]
 image:List-View-Menu.png[]
 
 [[h2_1248088428]]
@@ -116,7 +116,7 @@ order regardless of the case;
 * search records;
 * the last selected list view will be saved and displayed the next time
 a user opens the corresponding offline object;
-* export columns to a CSV file if xref:actions#h2_1173923582[the
+* export columns to a CSV file if xref:ctmobile:main/mobile-application/ui/actions.adoc#h2_1173923582[the
 setting is enabled].
 
 image:detailed-list-view.png[]
@@ -132,7 +132,7 @@ In other cases, the [.apiobject]#ID# column will be displayed.
 
 image:Hardcoded-List-View.png[]
 
-[[h2__380480215]]
+[[h2_380480215]]
 === Mobile List Views
 
 The user can create list views in the CT Mobile app.
@@ -168,11 +168,11 @@ user can or not edit the mobile list view.
 
 Your browser does not support the HTML5 video element
 
-ifdef::win[]
+//tag::win[]
 
 image:List-View-Menu-Windows.png[]
 
-[[h2__1243490689]]
+[[h2_1243490689]]
 === Detailed List View
 
 Tap
@@ -198,6 +198,6 @@ image:Detailed_List_View_win_en.png[]
 
 
 
-ifdef::kotlin[]
+//tag::kotlin[]
 
 image:List-Views-Kotlin.png[]

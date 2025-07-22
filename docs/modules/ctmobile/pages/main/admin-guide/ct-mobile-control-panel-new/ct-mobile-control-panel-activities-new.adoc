@@ -8,7 +8,7 @@ the following sections:
 
 image:ctm-control-panel-activities.png[]
 
-[[h2__1301025041]]
+[[h2_1301025041]]
 === Start/Finish Functionality
 
 If enabled, the mobile user
@@ -20,19 +20,19 @@ If you have a xref:ct-mobile-workflow[CT Mobile Workflow] using
 the *Start* or *Finish* buttons, the additional functionality listed
 below will be disabled even if these settings are applied.
 
-[[h4__470962300]]
+[[h4_470962300]]
 ===== Capture Geolocation when Activity is Started
 
 If enabled, geolocation data on the Account and Activity objects will be
 collected in
-the xref:ct-mobile-control-panel-general-new#h3_612123135[Account
+the xref:ctmobile:main/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-general-new.adoc#h3_612123135[Account
 Geolocation
-Field] or xref:ct-mobile-control-panel-general-new#h3__1092547330[Account
+Field] or xref:ctmobile:main/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-general-new.adoc#h3_1092547330[Account
 Full Address Field] according to selection and in
-the xref:ct-mobile-control-panel-activities-new#h4__1419137192[Geolocation
+the xref:ctmobile:main/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-activities-new.adoc#h4_1419137192[Geolocation
 Field] field.
 
-[[h4__457278244]]
+[[h4_457278244]]
 ===== Update Start/End Date When Starting/Ending Activity
 
 If enabled:
@@ -42,7 +42,7 @@ Date* field of the _Activity_ record.
 * Tapping the *Finish* button will update the value in the *End
 Date* field of the _Activity_ record.
 
-[[h4__1904984675]]
+[[h4_1904984675]]
 ===== Allow to Leave Unfinished Activity
 
 If enabled, the mobile user will be able to leave the
@@ -68,10 +68,10 @@ and custom [.object]#Activity# objects.
 * Click image:ctm-control-panel-new-remove-icon-small.png[] to
 remove the required [.object]#Activity# object and its settings.
 
-[[h3__1738741379]]
+[[h3_1738741379]]
 ==== Fields Mapping
 
-[[h4__1766544266]]
+[[h4_1766544266]]
 ===== Start Date Field
 
 Specify the API name of the field with the _Date_ or _Date/Time_ type
@@ -92,16 +92,16 @@ is used when
 the https://help.customertimes.com/articles/ct-mobile-ios-en/start-finish-functionality[Start/Finish
 functionality] is enabled.
 
-[[h4__1419137192]]
+[[h4_1419137192]]
 ===== Geolocation Field
 
 If
-the xref:ct-mobile-control-panel-activities-new#h3__470962300[Capture
+the xref:ctmobile:main/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-activities-new.adoc#h3_470962300[Capture
 Geolocation when Activity is Started] option is enabled, specify the API
 name of the field with the _Geolocation_ type where the geolocation
 data of the _Activity_ record will be written.
 
-[[h3__1877182756]]
+[[h3_1877182756]]
 ==== Activity Copying
 
 This functionality will be available in the future releases of the CT

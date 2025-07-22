@@ -13,15 +13,15 @@ To jump from the current slide to the slide by its branch number in the
 in the[.apiobject]#clm__Order__c# field, add the
 following code into the current slide markup:
 
-ifdef::ios,win[][TIP] ==== Available with the
-xref:the-remote-detailing-functionality[Remote Detailing]
+//tag::ios,win[][TIP] ==== Available with the
+xref:ctmobile:main/ct-presenter/the-remote-detailing-functionality/index.adoc[Remote Detailing]
 functionality. ====
 
 
 
 To switch from the current slide to a slide in another CLM presentation,
 add a label to the[.apiobject]#clm__APPID__c# of
-xref:clm-application[the desired CLM presentation record] and add
+xref:ctmobile:main/ct-presenter/about-ct-presenter/clm-scheme/clm-application.adoc[the desired CLM presentation record] and add
 the following code into the current slide markup, where
 [.apiobject]#appID# is the label to the
 [.apiobject]#clm__APPID__c# field:

@@ -8,7 +8,7 @@ the records of the [.object]#CTM Settings# object with
 the xref:ctm-settings-offline-objects[Offline
 Objects] and xref:ctm-settings-standard-related-list[Standard
 Related List] record type.
-ifdef::ios,win[] :toc: :toclevels: 3
+//tag::ios,win[] :toc: :toclevels: 3
 
 *Click to view the interface*xref:javascript:void(0)[]
 
@@ -52,12 +52,12 @@ Discount ]
 
 If turned on, the synchronization will result in an error.
 
-ifdef::kotlin[]
+//tag::kotlin[]
 
 [[h3_1442227750]]
 ==== Enable Conflict Manager
 
-If enabled, the xref:conflict-manager-control[Conflict Manager]
+If enabled, the xref:ctmobile:main/admin-guide/managing-offline-objects/conflict-manager-control.adoc[Conflict Manager]
 will track changes made to the same record in CT Mobile and Salesforce.
 In the event of a conflict, the mobile user can choose which change to
 save.
@@ -66,7 +66,7 @@ save.
 ==== Quick Record Sync
 
 If enabled, a mobile user with the corresponding profile can
-xref:other-synchronization-modes#h2__1958232390[sync a single
+xref:other-synchronization-modes#h2_1958232390[sync a single
 record] and its child records by applying the pull-to-refresh gesture on
 the record's layout.
 
@@ -87,7 +87,7 @@ can apply the custom logic for JSON files.
 
 For more information, refer to xref:sync-recovery[Sync Recovery].
 
-[[h2__263612775]]
+[[h2_263612775]]
 === Object Permissions
 
 Restrict the profile permissions to create or delete records of the

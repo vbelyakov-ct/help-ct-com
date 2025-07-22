@@ -16,7 +16,7 @@ Console]:
 
 :toc: :toclevels: 3
 
-[[h2__1247614733]]
+[[h2_1247614733]]
 === Create a Billing Account
 
 Before you start using the Google Maps Platform APIs and SDKs:
@@ -52,7 +52,7 @@ It is
 possible https://cloud.google.com/billing/docs/how-to/modify-project[to
 assign or remove a billing account for the existing project].
 
-[[h2__131855740]]
+[[h2_131855740]]
 === Enable APIs and SDKs
 
 To use Google Maps Platform, the APIs or SDKs you plan to use with your
@@ -69,7 +69,7 @@ https://www.youtube.com/watch?v=n1UorU1PALk&t=41s[How to enable Google
 Maps Platform APIs and SDKs], or follow the instructions
 https://cloud.google.com/service-usage/docs/enable-disable[here].
 
-ifdef::ios[]
+//tag::ios[]
 
 The following are required for using Google Maps on iOS devices:
 
@@ -87,14 +87,14 @@ JavaScript API]
 * Directions API
 * Geocoding API
 
-ifdef::andr,kotlin[]
+//tag::andr,kotlin[]
 
 The following are required for using Google Maps on Android devices:
 
 * Maps SDK for Android
 * Places SDK for Android
 
-[[h3__1529349083]]
+[[h3_1529349083]]
 ==== Waypoint Limits
 
 * Maximum allowed number of
@@ -111,7 +111,7 @@ only.
 https://developers.google.com/maps/documentation/javascript/directions[client-side]
 and server-side queries.
 
-[[h2__1263049274]]
+[[h2_1263049274]]
 === Get an API Key
 
 For using APIs and SDKs, it is necessary to obtain a Google Maps API
@@ -131,7 +131,7 @@ Google recommends restricting the API key. Restrictions provide added
 security and help ensure only authorized requests are made with your API
 key.
 
-ifdef::ios[][TIP] ==== Since Google changed the restriction
+//tag::ios[][TIP] ==== Since Google changed the restriction
 settings, and now users cannot restrict Directions API by using the
 bundle identifier, we kindly ask you _not to set any restrictions_ in
 order to be able to build routes in the CT Mobile app. ====
@@ -164,7 +164,7 @@ build routes and find nearby accounts in the CT Mobile app.
 
 
 
-ifdef::ios[]
+//tag::ios[]
 
 Here is an example for iOS devices:
 

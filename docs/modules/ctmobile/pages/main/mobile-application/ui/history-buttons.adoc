@@ -8,11 +8,11 @@ Long tap the *Forward* button to view the list of the next screens.
 
 Tap on a record in a list to move to the corresponding screen.
 
-ifdef::win[]
+//tag::win[]
 
 Use buttons to navigate between the last 5 open screens.
 
-ifdef::ios[][NOTE] ==== The screens' history will be
+//tag::ios[][NOTE] ==== The screens' history will be
 restored only after xref:log-out[logging out]. The sync processes
 do not affect the screens' history. ====
 
@@ -28,7 +28,7 @@ etc.
 * Files and folders on the *Libraries* module.
 * Feeds, groups, and people in the *Chatter* module.
 
-ifdef::ios[]
+//tag::ios[]
 image:back-button.png[]
-ifdef::win[]
+//tag::win[]
 image:history-buttons-win.png[]

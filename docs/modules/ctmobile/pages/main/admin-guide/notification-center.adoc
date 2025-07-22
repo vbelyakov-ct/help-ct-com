@@ -2,25 +2,25 @@
 
 Send push notifications from Salesforce to mobile users.
 
-ifdef::win[]
+//tag::win[]
 
 * CT Mobile app should be signed by the Windows Store certificate;
 * CT Mobile app should have permission to
 https://support.microsoft.com/en-us/windows/windows-10-background-apps-and-your-privacy-83f2de44-d2d9-2b29-4649-2afe0913360a[run
 in the background] on the user's device.
 
-ifdef::ios[]
+//tag::ios[]
 
-[[h2__1626426167]]
+[[h2_1626426167]]
 === Set up Notification Center
 
 To send notifications from Salesforce to users:
 
 . In xref:mobile-application-setup[Mobile Application Setup], set
 the value for the xref:push-identifier[PUSH Identifier] field. For
-the CT Mobile app xref:installing-the-ct-mobile-app[installed from
+the CT Mobile app xref:ctmobile:main/getting-started/installing-the-ct-mobile-app/index.adoc[installed from
 the App Store], the push identifier is [.apiobject]#ctmobile#.
-. xref:application-prompts-for-requesting-permissions[Allow
+. xref:ctmobile:main/getting-started/application-prompts-for-requesting-permissions.adoc[Allow
 notifications] for CT Mobile in the Settings on a mobile device.
 
 image:66370686.png[]
@@ -33,7 +33,7 @@ empty *Device Token* field cannot be selected for sending notifications.
 The setup is complete. Users who have a device token are active and can
 receive push notifications from Salesforce.
 
-[[h2__1236466092]]
+[[h2_1236466092]]
 === Sending Messages from Notification Center
 
 To send a notification to a mobile user:
@@ -47,7 +47,7 @@ To send a notification to a mobile user:
 *Selected users* list and click *Remove* selected.
 . Enter a message in the *Message* box and click *Send*.
 
-ifdef::ios[]
+//tag::ios[]
 [.confluence-information-macro .confluence-information-macro-note]# The
 max length of a push notification depends on the iOS version on a mobile
 device.#
@@ -68,6 +68,6 @@ the mobile user's device.
 
 
 
-ifdef::ios[]
+//tag::ios[]
 
 image:66370736.png[]

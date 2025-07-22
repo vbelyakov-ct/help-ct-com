@@ -1,8 +1,8 @@
 = Other Synchronization Modes
 
-ifdef::ios[]
+//tag::ios[]
 
-[[h2__1958232390]]
+[[h2_1958232390]]
 === Quick Record Synchronization
 
 This type of synchronization is triggered when you pull down the
@@ -35,7 +35,7 @@ master-detail relationship, are sent to Salesforce.
 === Launch synchronization within CLM-presentation
 
 This type of synchronization is triggered when
-the [.apiobject]#sync()# method of xref:js-bridge-api[JS
+the [.apiobject]#sync()# method of xref:ctmobile:main/ct-presenter/js-bridge-api/index.adoc[JS
 Bridge] is requested.
 
 

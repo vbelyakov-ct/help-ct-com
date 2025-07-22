@@ -3,12 +3,12 @@
 The *Calendar* module allows you to create and manage multiple activity
 objects, viz.[.object]#Activity#,[.object]#Task#, and
 [.object]#Event#. Configure the *Calendar* view and apply
-xref:custom-color-settings[custom color settings] to different
+xref:ctmobile:main/admin-guide/custom-color-settings.adoc[custom color settings] to different
 activity types.
 
 :toc: :toclevels: 3
 
-[[h2__88456521]]
+[[h2_88456521]]
 === Calendar Interface
 
 To learn how to work with the Calendar module, go to the
@@ -19,30 +19,30 @@ The calendar includes two main sections.
 [[h3_645629234]]
 ==== Left menu
 
-ifdef::ios,andr,win[] Select the appropriate list view with
+//tag::ios,andr,win[] Select the appropriate list view with
 accounts, contacts/references, or the hierarchical view.
-ifdef::kotlin[] Select the appropriate list view with accounts or
+//tag::kotlin[] Select the appropriate list view with accounts or
 contacts/references.
 
 * If the[.object]#Reference# object is not selected in the
-xref:ct-mobile-control-panel-general#h3_494016929[Reference Object
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_494016929[Reference Object
 API Name] field, records of the [.object]#Contact# object will
 be displayed in the *Calendar* left menu. Otherwise, records of the
 [.object]#Reference# object are displayed.
 
-ifdef::ios[]
+//tag::ios[]
 
 * Tap *Calendar* in the menu to quickly return to the starting
 *Calendar* screen if you moved to the record details screen of the
 activity and further by lookup fields or related lists.
 
-[[h3__194347409]]
+[[h3_194347409]]
 ==== Main screen
 
-ifdef::ios,andr,win[] Drag-and-drop one or several records
+//tag::ios,andr,win[] Drag-and-drop one or several records
 simultaneously from the left menu to plan new activities.
 
-ifdef::kotlin[] Drag-and-drop a record from the left menu to plan
+//tag::kotlin[] Drag-and-drop a record from the left menu to plan
 new activities, or tap the Plus button.
 
 If configured (in xref:ct-mobile-control-panel-mini-layouts[CT
@@ -52,30 +52,30 @@ Control Panel 2.0: Mini Layouts]), fill in the required fields in the
 mini layout.
 
 The title of the activity in the calendar grid is the value of the first
-field in xref:compact-layout[the compact layout], and the subtitle
+field in xref:ctmobile:main/mobile-application/ui/compact-layout.adoc[the compact layout], and the subtitle
 is the value of the second field in the compact layout.
 
-ifdef::ios[]
+//tag::ios[]
 
 If necessary, xref:set-up-holidays[set up Salesforce Holidays] to
 see them on the calendar grid.
 
-ifdef::ios[]
+//tag::ios[]
 
 image:calendar.png[]
 
-ifdef::win[]
+//tag::win[]
 
 image:66366683.png[]
 
-ifdef::andr[]
+//tag::andr[]
 
 image:62562443.png[]
 
-[[h2__447958262]]
+[[h2_447958262]]
 === Adding Calendar to the Menu
 
-To add the *Calendar* module to the xref:app-menu[app menu]:
+To add the *Calendar* module to the xref:ctmobile:main/admin-guide/app-menu/index.adoc[app menu]:
 
 [width="100%",cols="50%,50%",]
 |===
@@ -115,7 +115,7 @@ To configure Calendar:
 [width="100%",cols="50%,50%",]
 |===
 |In CT Mobile Control Panel a|
-. Go to xref:ct-mobile-control-panel-calendar[CT Mobile Control
+. Go to xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc[CT Mobile Control
 Panel: Calendar] tab.
 . Select the required profile in the *Location* picklist.
 [TIP] ==== *General Settings* will be applied to all the
@@ -127,11 +127,11 @@ objects.
 . Click *Save*.
 
 |In CT Mobile Control Panel 2.0 a|
-. Go to xref:ct-mobile-control-panel-activities-new[CT Mobile
+. Go to xref:ctmobile:main/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-activities-new.adoc[CT Mobile
 Control Panel 2.0: Activities] tab.
 . Select the required profile in the *Profile* picklist. To apply
 settings to all the profiles, select *General Settings*.
-. xref:ct-mobile-control-panel-activities-new#h2_2014841429[Specify
+. xref:ctmobile:main/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-activities-new.adoc#h2_2014841429[Specify
 Activity objects].
 . Go to xref:ct-mobile-control-panel-app-menu-new[CT Mobile Control
 Panel 2.0: App Menu] tab.
@@ -143,9 +143,9 @@ Panel 2.0: App Menu] tab.
 
 The setup is complete.
 
-ifdef::ios,win[]
+//tag::ios,win[]
 
-[[h2__430669426]]
+[[h2_430669426]]
 ==== Algorithm for Filling Out the Lookup Field on Activity
 
 During the *Activity* record creation by drag-and-drop an *Activity*

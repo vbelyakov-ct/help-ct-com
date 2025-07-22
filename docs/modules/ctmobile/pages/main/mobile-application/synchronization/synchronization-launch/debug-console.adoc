@@ -5,17 +5,17 @@ process, which helps the consultants, administrators, and support team
 to verify that the CT Mobile app is correctly working and all settings
 are being applied.
 
-ifdef::ios[]
+//tag::ios[]
 
 To access the *Debug Console* screen, perform the double finger rotation
-gesture on the xref:home-screen[Home screen].
+gesture on the xref:ctmobile:main/mobile-application/ui/home-screen/index.adoc[Home screen].
 
 image:debug-console-opening.gif[]
 
-ifdef::win[]
+//tag::win[]
 
 To access the *Debug Console* screen, drag the bottom on
-the xref:application-settings[Settings screen].
+the xref:ctmobile:main/mobile-application/application-settings/index.adoc[Settings screen].
 
 
 
@@ -27,16 +27,16 @@ image:62575609.png[]
 
 
 
-xref:sync-logs[Logs] are stored as the xref:sync-log[Sync Log]
+xref:ctmobile:main/mobile-application/synchronization/synchronization-launch/sync-logs.adoc[Logs] are stored as the xref:sync-log[Sync Log]
 records and can be sent to Salesforce or by email to the support team
 depending on the settings in the *Support and Logs* section of
-xref:ct-mobile-control-panel-general#h2__1687169837[CT Mobile
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h2_1687169837[CT Mobile
 Control Panel: General]/*Logs and Support* section of
-xref:ct-mobile-control-panel-general-new#h2__1687169837[CT Mobile
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-general-new.adoc#h2_1687169837[CT Mobile
 Control Panel 2.0: General]. *Debug Console* allows searching the log
 records highlighting the search results.
 
-ifdef::ios[]
+//tag::ios[]
 image:debug-console-search.png[]
-ifdef::win[]
+//tag::win[]
 image:62575611.png[]

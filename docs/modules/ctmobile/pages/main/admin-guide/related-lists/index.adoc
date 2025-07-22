@@ -5,7 +5,7 @@ another record if one object has a link to another object in
 xref:reference-fields[the reference field]. In the CT Mobile app,
 two types of related lists are available:
 
-* xref:custom-related-lists[Custom Related Lists]
+* xref:ctmobile:main/admin-guide/related-lists/custom-related-lists.adoc[Custom Related Lists]
 * xref:standard-related-lists[Standard Related Lists]
 
 [[h2_384095523]]
@@ -28,9 +28,9 @@ required object.
 * Not applicable for a custom related list.
 
 |Set up a related list on CT Mobile Control Panel |{plus} |{plus} a|
-* Go to xref:ct-mobile-control-panel-offline-objects[CT Mobile
+* Go to xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects.adoc[CT Mobile
 Control Panel: Offline
-Objects]/xref:ct-mobile-control-panel-offline-objects-new[CT Mobile
+Objects]/xref:ctmobile:main/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc[CT Mobile
 Control Panel 2.0: Offline Objects] to customize a standard related
 list;
 * Go to xref:ct-mobile-control-panel-custom-details[CT Mobile
@@ -41,9 +41,9 @@ Control Panel 2.0: Custom Details] to customize a custom related list.
 |Create a record |{plus} |{plus} a|
 Grant permission:
 
-* on xref:ct-mobile-control-panel-offline-objects[CT Mobile Control
+* on xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects.adoc[CT Mobile Control
 Panel: Offline
-Objects]/xref:ct-mobile-control-panel-offline-objects-new[CT Mobile
+Objects]/xref:ctmobile:main/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc[CT Mobile
 Control Panel 2.0: Offline Objects] for a standard related list;
 * on xref:ct-mobile-control-panel-custom-details[CT Mobile Control
 Panel: Custom
@@ -57,9 +57,9 @@ the selected offline objects.
 |Delete a record |{plus} |{plus} a|
 Grant permission:
 
-* on xref:ct-mobile-control-panel-offline-objects[CT Mobile Control
+* on xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects.adoc[CT Mobile Control
 Panel: Offline
-Objects]/xref:ct-mobile-control-panel-offline-objects-new[CT Mobile
+Objects]/xref:ctmobile:main/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc[CT Mobile
 Control Panel 2.0: Offline Objects] for a standard related list;
 * in xref:ct-mobile-control-panel-custom-details[CT Mobile Control
 Panel: Custom
@@ -70,12 +70,12 @@ Object permissions restrict common access permissions defined by the
 user profile. The current user profile should have permission to delete
 the selected offline objects.
 
-ifdef::ios[] ifdef::win[]The mobile user can delete
+//tag::ios[] //tag::win[]The mobile user can delete
 unsynchronized records regardless of granted permission.
 
 |Edit field values |– |{plus} a|
 * Not applicable for a standard related list;
-* Go to xref:custom-related-lists#h2__773495381[Custom Related
+* Go to xref:custom-related-lists#h2_773495381[Custom Related
 Lists] to add the ability for editing fields of a custom related list.
 
 |Drilldown to record details screen |{plus} |{plus} a|
@@ -87,21 +87,21 @@ Panel: Custom
 details]/xref:ct-mobile-control-panel-custom-details-new[CT Mobile
 Control Panel 2.0: Custom Details] for custom related list.
 
-|Control columns' width |{plus} |{plus} |ifdef::ios,kotlin[] For
+|Control columns' width |{plus} |{plus} |//tag::ios,kotlin[] For
 more information, go to
 xref:columns-width-for-related-lists[Columns' Widths for Standard
-and Custom Related Lists]. ifdef::win,andr[][NOTE] ==== Not
+and Custom Related Lists]. //tag::win,andr[][NOTE] ==== Not
 in use. ====
 
 |Filter records by using a SOQL query |{plus} |{plus} a|
 In the CT Mobile app, switch between the display of all records or only
 records that match filter criteria.
 
-ifdef::kotlin[] ifdef::win[][NOTE] ==== Not applicable
+//tag::kotlin[] //tag::win[][NOTE] ==== Not applicable
 for standard related lists. ====
 
-|Timeline view |{plus} |– |ifdef::ios[] For more information, go to
-xref:timeline-view[Timeline View]. ifdef::win,andr,kotlin[]
+|Timeline view |{plus} |– |//tag::ios[] For more information, go to
+xref:timeline-view[Timeline View]. //tag::win,andr,kotlin[]
 [NOTE] ==== Not in use. ====
 
 |The sort order by the specific field |{plus} |{plus} |Tap the column

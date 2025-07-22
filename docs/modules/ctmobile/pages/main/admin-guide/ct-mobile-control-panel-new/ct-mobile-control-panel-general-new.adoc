@@ -28,14 +28,14 @@ profile.
 
 Click *Save* to apply new settings.
 
-[[h2__389408561]]
+[[h2_389408561]]
 === Object Model Parameters
 
 [[h3_471160840]]
 ==== Person Account
 
 Enable this attribute must be set if the client system uses the
-xref:person-accounts[Person Accounts] functionality. If enabled:
+xref:ctmobile:main/admin-guide/person-accounts.adoc[Person Accounts] functionality. If enabled:
 
 *[.object]#Person Accounts# are displayed in the *Contacts*
 menu item and on the *Contacts* tab of the modules, except for the cases
@@ -44,10 +44,10 @@ Accounts by Junction Object* list.
 *[.object]#Accounts# are displayed in the *Accounts* menu item
 and on the *Accounts* tab of the modules.
 
-[[h4__972420861]]
+[[h4_972420861]]
 ===== 
 
-[[h3__351797814]]
+[[h3_351797814]]
 ==== Relate Contact to Multiple Accounts by Junction Object
 
 Records of the selected object will be displayed on the *Contacts* menu
@@ -75,7 +75,7 @@ passcode]. Then, every time the user opens the app, a password will be
 required to access the app. When you enter the wrong passcode three
 times in a row, xref:log-out[the database will be reset].
 
-[[h3__377059502]]
+[[h3_377059502]]
 ==== Quality of Attached Images
 
 The ability to compress images used in the CT Mobile app.
@@ -96,11 +96,11 @@ is disabled.
 [[h2_670774632]]
 === Maps
 
-Settings that may be used for xref:mobile-layouts-maps[the Maps
+Settings that may be used for xref:ctmobile:main/admin-guide/mobile-layouts/index.adoc-maps[the Maps
 widget] on a record, in the xref:routes[Routes] and
 xref:nearby-accounts[Nearby Accounts] modules.
 
-[[h3__335024009]]
+[[h3_335024009]]
 ==== 
 
 [[h3_1567195273]]
@@ -109,7 +109,7 @@ xref:nearby-accounts[Nearby Accounts] modules.
 [[h3_612123135]]
 ==== Account Geolocation Field
 
-ifdef::ios[]
+//tag::ios[]
 
 To use geolocation, create a field with the
 [.apiobject]#Geolocation__c# API name and with the
@@ -118,7 +118,7 @@ To use geolocation, create a field with the
 integration. Then select this field in the *Account Geolocation Field*
 picklist.
 
-ifdef::andr,kotlin,win[]
+//tag::andr,kotlin,win[]
 
 To use geolocation, create a field with the
 [.apiobject]#Geolocation__c# API name and with the
@@ -127,13 +127,13 @@ this field in the *Account Geolocation Field* picklist.
 
 [NOTE] ==== If geolocation data is not specified, the account
 location will be retrieved from the
-xref:ct-mobile-control-panel-general-new#h3__1092547330[Account
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-general-new.adoc#h3_1092547330[Account
 Full Address] field. ====
 
-[[h3__1092547330]]
+[[h3_1092547330]]
 ==== Account Full Address Field
 
-ifdef::kotlin[]
+//tag::kotlin[]
 
 Specify a field with the formula type to view the full address of the
 *Account* record. Create a new field with the *Formula(Text)* type on
@@ -152,7 +152,7 @@ following:
 
 
 
-[[h3__1293801021]]
+[[h3_1293801021]]
 ==== Maps Type
 
 Select one of the maps type to use:
@@ -171,7 +171,7 @@ type.
 Obtain and enter your xref:google-maps-api-key[Google Maps API key]
 for using Google Maps in the CT Mobile iOS app.
 
-[[h3__1990058335]]
+[[h3_1990058335]]
 ==== 
 
 [[h3_375370096]]
@@ -185,14 +185,14 @@ apps.
 [[h3_1631921024]]
 ==== Google Maps JavaScript API Key
 
-ifdef::kotlin[]
+//tag::kotlin[]
 
 Obtain and enter your xref:google-maps-api-key[Google Maps
 JavaScript API Key] to track the geolocation of CT Mobile iOS users in
 real-time via the xref:geolocation-center[Geolocation Center] in
 Salesforce.
 
-[[h3__1424081301]]
+[[h3_1424081301]]
 ==== Bing Maps Windows API Key
 
 Obtain and enter your
@@ -206,17 +206,17 @@ Windows app.
 If enabled, geolocation data continues to collect even if the CT Mobile
 app runs in background mode.
 
-[[h3__1808523151]]
+[[h3_1808523151]]
 ==== Tracking Interval (in seconds)
 
 Set up the tracking interval of the geolocation data in seconds. If set
 to 0, the user's current location will not be captured. Default value is
 60.
 
-[[h2__1687169837]]
+[[h2_1687169837]]
 === Logs and Support
 
-[[h3__272409891]]
+[[h3_272409891]]
 ==== 
 
 [[h3_1226274811]]

@@ -11,7 +11,7 @@ ifndef::ios[]
 
 images: [.apiobject]#.jpg#, [.apiobject]#.bmp#, [.apiobject]#.png#
 
-ifdef::ios[]
+//tag::ios[]
 
 images: [.apiobject]#.jpg#, [.apiobject]#.bmp#, [.apiobject]#.png# , [.apiobject]#.heic# .
 Images in .heic format will be automatically converted to .jpg
@@ -59,5 +59,5 @@ image:sharing-file-to-ct-mobile.png[]
 
 The record's main screen is open. Go to the *Notes & Attachment* section
 of the record and perform
-xref:synchronization-launch#h2__966867633[quick record
+xref:synchronization-launch#h2_966867633[quick record
 synchronization] to update the record in Salesforce.

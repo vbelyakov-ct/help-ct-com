@@ -9,12 +9,12 @@ following topics are covered:
 === Main Menu
 
 Main Menu is the list of objects and modules that are available for the
-current user. The set of items in the list xref:app-menu[can be
+current user. The set of items in the list xref:ctmobile:main/admin-guide/app-menu/index.adoc[can be
 configured] in CT Mobile Control Panel.
 
 * Tap a menu item to display the information on the main screen. Tapping
 an object or module without the records list (e.g.,
-xref:home-screen[Home] or xref:application-settings[Settings])
+xref:ctmobile:main/mobile-application/ui/home-screen/index.adoc[Home] or xref:ctmobile:main/mobile-application/application-settings/index.adoc[Settings])
 will keep the main menu intact. Tapping an object or module with a
 records list replaces the main menu with the records list.
 * Display or hide the information by tapping the
@@ -30,7 +30,7 @@ object, click whether an icon or a tooltip.
 
 image:ui-basics-account.gif[]
 
-[[h2__80851391]]
+[[h2_80851391]]
 === Global Search
 
 Global Search allows finding any available for the current user record
@@ -46,7 +46,7 @@ to expand the records list of an object.
 
 image:global_search.png[]
 
-[[h2__529726152]]
+[[h2_529726152]]
 === Records List
 
 Records List contains all the selected object's records that are
@@ -55,7 +55,7 @@ uploaded to a device and matched by the selected filter.
 * Depending on the selected object, the records can be grouped by their
 field (e.g., name, date, etc.). You can
 xref:grouping-records[customize the grouping] of the records.
-* Records can be marked with xref:custom-color-settings[custom
+* Records can be marked with xref:ctmobile:main/admin-guide/custom-color-settings.adoc[custom
 colors].
 * Use Search to find a record in the current list.
 * Select a list view with
@@ -66,17 +66,17 @@ tap the current list view name to open the filter.
 * Tap
 image:58835659.png[]
 to create a new record, if the current user has
-xref:application-permission-settings[permission to create records].
+xref:ctmobile:main/getting-started/application-permission-settings.adoc[permission to create records].
 * If there is xref:related-list-filters[a setting in CT Mobile],
 tap *Load more records* to open the online records loading screen.
 * Tap
 image:58835652.png[]
-to open the xref:ipad#h2__1243490689[detailed list view] with
+to open the xref:ipad#h2_1243490689[detailed list view] with
 records in a tabular representation.
 
 image:ui-basics-records-list.png[]
 
-[[h2__1243490689]]
+[[h2_1243490689]]
 === Detailed List View
 
 A detailed list view is the representation of the records as the
@@ -92,25 +92,25 @@ tap the current list view name to open the filter.
 * Tap
 image:58835659.png[]
 to create a new record, if the current user has
-xref:application-permission-settings[permission to create records].
+xref:ctmobile:main/getting-started/application-permission-settings.adoc[permission to create records].
 
 Currently, the configured mini-layout is required for correctly creating
 a record in the detailed list view.
 * Swipe a record to the left to delete it, if the current user has
-xref:application-permission-settings[permission to delete records].
+xref:ctmobile:main/getting-started/application-permission-settings.adoc[permission to delete records].
 * Use *Search* to find a record.
 * Tap *Cancel* to go back to the left menu with the records list.
 * Tap a record to open the record details screen.
 
 image:66364327.png[]
 
-[[h2__1733999053]]
+[[h2_1733999053]]
 === Record Details
 
 The record details screen displays the complete information of the
 selected record. It consists of fields of different types, switches,
 widgets, and related lists. The information can be organized and
-separated xref:mobile-layouts[into tabs and sections].
+separated xref:ctmobile:main/admin-guide/mobile-layouts/index.adoc[into tabs and sections].
 
 * All user changes will be saved and uploaded to Salesforce via
 synchronization.
@@ -127,11 +127,11 @@ to open the Back/Forward screens timeline and select a screen from the
 list.
 * Tap
 image:58835655.png[]
-to open the xref:actions[Actions] modal window.
+to open the xref:ctmobile:main/mobile-application/ui/actions.adoc[Actions] modal window.
 * If a help text added for the field, tap
 theimage:/resources/Storage/ct-mobile-ios-en/CT-mobile-rest/attachments/66358782/66358781.png[/resources/Storage/ct-mobile-ios-en/CT-mobile-rest/attachments/66358782/66358781] icon
 next to this field to see the help text.
-* If the xref:reference-fields#h2__1514470758[Online One Record
+* If the xref:reference-fields#h2_1514470758[Online One Record
 Fetching] is enabled for a reference field,
 tapimage:62573543.png[] next
 to this field to load its value.

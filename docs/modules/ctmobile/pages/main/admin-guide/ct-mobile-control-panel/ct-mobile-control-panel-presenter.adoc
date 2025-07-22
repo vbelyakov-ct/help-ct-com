@@ -1,9 +1,9 @@
 = CT Mobile Control Panel: Presenter
 
-ifdef::kotlin[]
+//tag::kotlin[]
 
 The *Presenter* tab is intended to configure the
-xref:the-remote-detailing-functionality[Remote Detailing]
+xref:ctmobile:main/ct-presenter/the-remote-detailing-functionality/index.adoc[Remote Detailing]
 functionality.
 
 According to the selected profile, several settings on this tab will be
@@ -32,14 +32,14 @@ available options.
 If enabled, the participants are allowed to stream video and audio
 during the Remote Detailing meeting.
 
-[[h3__1970573228]]
+[[h3_1970573228]]
 ==== Text Chat Enabled
 
 If enabled, the participants are allowed to communicate with each other
 on the *Chat* tab (for Remote Detailing 1.0) or *Comments* tab (for
 Remote Detailing 2.0) during the Remote Detailing meeting.
 
-[[h3__743522332]]
+[[h3_743522332]]
 ==== Text Chat History Enabled
 
 If enabled, the chat history of the Remote Detailing meeting will be
@@ -68,7 +68,7 @@ If enabled, the presenter
 xref:remote-detailing-1-0-ui-for-presenter[can resume] the finished
 Remote Detailing session. The statistics will be collected for the
 resuming meeting too. Use
-xref:remote-detailing-f-a-q#h2__106650128[the same link] to enter
+xref:remote-detailing-f-a-q#h2_106650128[the same link] to enter
 the previously finished meeting.
 
 [[h3_298754890]]
@@ -180,7 +180,7 @@ By default, there is a draft agreement in English.
 
 
 
-[[h4__826226552]]
+[[h4_826226552]]
 ===== Language of Terms of Use
 
 Add another language and text to the agreement, if necessary.
@@ -194,7 +194,7 @@ language.
 image:Terms-of-Use_en.png[]
 ====
 
-[[h3__1123335710]]
+[[h3_1123335710]]
 ==== Session Timeout (in seconds)
 
 For the *Remote Detailing* meeting, the session timeout is the time
@@ -208,7 +208,7 @@ timeout is reached, the inactive participant session expires, a
 participant is automatically logged out, and their statistics at the
 meeting are sent to Salesforce.
 
-[[h3__201439959]]
+[[h3_201439959]]
 ==== Applications List Field
 
 The field API name of the xref:clm-activity[Activity] object for
@@ -221,7 +221,7 @@ Detailing session.
 * The same field will be automatically entered for all available
 profiles.
 
-[[h3__1311451422]]
+[[h3_1311451422]]
 ==== Link Field
 
 The field API name of the xref:clm-activity[Activity] object for
@@ -233,7 +233,7 @@ Detailing session.
 * The same field will be automatically entered for all available
 profiles.
 
-[[h3__608996078]]
+[[h3_608996078]]
 ==== Endpoint URL
 
 Not applied since CT Mobile package v. 3.63.
@@ -242,7 +242,7 @@ Specify xref:remote-detailing-setup[the active site URL] for
 logging in, viewing the CLM presentation, and collecting the statistics
 of the CLM presentation via the Self Detailing functionality.
 
-[[h3__868233337]]
+[[h3_868233337]]
 ==== Email Required Field
 
 Available since CT Mobile package v. 3.66.
@@ -250,10 +250,10 @@ Available since CT Mobile package v. 3.66.
 Enter the API name of a checkbox of the xref:clm-activity[Activity]
 object, for example,[.apiobject]#IsRequiredEmail__c#. If
 the checkbox is active, the participant should fill out an email on
-xref:remote-detailing-2-0-ui-for-participants#h2__555694282[the
+xref:remote-detailing-2-0-ui-for-participants#h2_555694282[the
 Welcome screen] to access the Remote Detailing meeting.
 
-[[h3__193092178]]
+[[h3_193092178]]
 ==== Login URL
 
 In the *Available* section, there are domains, for example, the instance
@@ -262,7 +262,7 @@ Detailing* session. If several URLs are added in the *Selected* section,
 the presenter should select the appropriate URL to launch the Remote
 Detailing session.
 
-[[h3__53846510]]
+[[h3_53846510]]
 ==== Self-Detailed User
 
 Available since CT Mobile package v. 3.63.
@@ -277,7 +277,7 @@ the integration user].
 All statistics for participants of the Self-Detailing meeting will now
 be collected for the connected integration user.
 
-[[h2__891805269]]
+[[h2_891805269]]
 === Refresh CLM-presentations
 
 For the Self Detailing mode, click the *Refresh CLM-presentations*

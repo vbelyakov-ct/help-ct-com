@@ -10,7 +10,7 @@ the participant's *Waiting...* screen.
 === Remote Detailing
 
 Follow the steps to configure
-xref:the-remote-detailing-functionality#h2_1279002041[the Remote
+xref:ctmobile:main/ct-presenter/the-remote-detailing-functionality/index.adoc#h2_1279002041[the Remote
 Detailing functionality]:
 
 [width="100%",cols="50%,50%",]
@@ -18,16 +18,16 @@ Detailing functionality]:
 |In CT Mobile Control Panel a|
 . Check that the presenter profile should have access to
 the [.apiobject]#clm.Rest_OnlinePresenter# class, to
-the xref:clm-application[Application], xref:clm-applicationstats[Application
+the xref:ctmobile:main/ct-presenter/about-ct-presenter/clm-scheme/clm-application.adoc[Application], xref:ctmobile:main/ct-presenter/about-ct-presenter/clm-scheme/clm-applicationstats.adoc[Application
 Stats], xref:clm-slide[Slide],
 and xref:clm-customscenario[Custom Scenario] objects. To obtain
 access,
-assign xref:application-permission-settings#ApplicationPermissionSettings-PermissionSets[one
+assign xref:ctmobile:main/getting-started/application-permission-settings.adoc#ApplicationPermissionSettings-PermissionSets[one
 of the pre-configured permission sets].
 . Check xref:ct-mobile-control-panel-tools#CloudToken[the cloud
 token] is specified and valid.
 . Check that the records per each trigger are active in
-xref:trigger-settings[Trigger Settings].
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel/custom-settings/trigger-settings.adoc[Trigger Settings].
 . Specify access to the CLM presentation(s) for Remote Detailing users.
 . On the *CT Mobile Control Panel: Calendar* tab, specify
 xref:ct-mobile-control-panel-calendar#h3_1397263211[the API name of
@@ -52,21 +52,21 @@ Remote Detailing meeting] in Salesforce and the CT Mobile app.
 |In CT Mobile Control Panel 2.0 a|
 . Check that the presenter profile should have access to
 the [.apiobject]#clm.Rest_OnlinePresenter# class, to
-the xref:clm-application[Application], xref:clm-applicationstats[Application
+the xref:ctmobile:main/ct-presenter/about-ct-presenter/clm-scheme/clm-application.adoc[Application], xref:ctmobile:main/ct-presenter/about-ct-presenter/clm-scheme/clm-applicationstats.adoc[Application
 Stats], xref:clm-slide[Slide],
 and xref:clm-customscenario[Custom Scenario] objects. To obtain
 access,
-assign xref:application-permission-settings#ApplicationPermissionSettings-PermissionSets[one
+assign xref:ctmobile:main/getting-started/application-permission-settings.adoc#ApplicationPermissionSettings-PermissionSets[one
 of the pre-configured permission sets].
 . Check xref:ct-mobile-control-panel-tools-new#h2_2011978[the cloud
 token] is specified and valid.
 . Check that the records per each trigger are active in
-xref:trigger-settings[Trigger Settings].
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel/custom-settings/trigger-settings.adoc[Trigger Settings].
 . Specify access to the CLM presentation(s) for Remote Detailing users.
 . On the *CT Mobile Control Panel: Activities* tab, specify
-the xref:ct-mobile-control-panel-activities-new#h2_2014841429[Activity
+the xref:ctmobile:main/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-activities-new.adoc#h2_2014841429[Activity
 object] and
-its xref:ct-mobile-control-panel-activities-new#h4__1766544266[Start
+its xref:ctmobile:main/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-activities-new.adoc#h4_1766544266[Start
 Date field].
 . xref:remote-detailing-apex-trigger-classes-and-quick-action#h2_249047963[Add
 the Apex trigger and classes] to provide statistics collecting and
@@ -85,11 +85,11 @@ Remote Detailing meeting] in Salesforce and the CT Mobile app.
 
 |===
 
-[[h2__1854710639]]
+[[h2_1854710639]]
 === Self Detailing
 
 Follow the steps to configure
-xref:the-remote-detailing-functionality#h2__1854710639[the Self
+xref:ctmobile:main/ct-presenter/the-remote-detailing-functionality/index.adoc#h2_1854710639[the Self
 Detailing functionality]:
 
 [width="100%",cols="50%,50%",]
@@ -98,7 +98,7 @@ Detailing functionality]:
 . Check xref:ct-mobile-control-panel-tools#CloudToken[the cloud
 token] is specified and valid.
 . Check that the records per each trigger are active in
-xref:trigger-settings[Trigger Settings].
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel/custom-settings/trigger-settings.adoc[Trigger Settings].
 . Specify access to the CLM presentation(s) for Self Detailing users.
 . On the *CT Mobile Control Panel: Calendar* tab, specify
 xref:ct-mobile-control-panel-calendar#h3_1397263211[the API name of
@@ -124,7 +124,7 @@ higher*
 . On the *CT Mobile Control Panel: Presenter* tab,
 xref:ct-mobile-control-panel-presenter#h2_985373192[enable the
 Remote Detailing functionality], specify options, and
-xref:ct-mobile-control-panel-presenter#h2__891805269[refresh CLM
+xref:ct-mobile-control-panel-presenter#h2_891805269[refresh CLM
 presentations].
 . xref:remote-detailing-apex-trigger-classes-and-quick-action#h3_848494787[Set
 up a quick action] to create the CLM presentation set for an
@@ -140,12 +140,12 @@ by SMS, e-mail, etc.
 . Check xref:ct-mobile-control-panel-tools-new#h2_2011978[the cloud
 token] is specified and valid.
 . Check that the records per each trigger are active in
-xref:trigger-settings[Trigger Settings].
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel/custom-settings/trigger-settings.adoc[Trigger Settings].
 . Specify access to the CLM presentation(s) for Self Detailing users.
 . On the *CT Mobile Control Panel: Activities* tab, specify
-the xref:ct-mobile-control-panel-activities-new#h2_2014841429[Activity
+the xref:ctmobile:main/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-activities-new.adoc#h2_2014841429[Activity
 object] and
-its xref:ct-mobile-control-panel-activities-new#h4__1766544266[Start
+its xref:ctmobile:main/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-activities-new.adoc#h4_1766544266[Start
 Date field].
 . xref:remote-detailing-apex-trigger-classes-and-quick-action#h2_249047963[Add
 the Apex trigger and classes] to provide statistics collecting and
@@ -178,7 +178,7 @@ To specify the logo on the *Waiting...* screen:
 . {blank}
 . In the *User Interface* section, click *Customize*.
 . Click *Choose file* and upload the logo to use for the
-xref:home-screen[Home screen].
+xref:ctmobile:main/mobile-application/ui/home-screen/index.adoc[Home screen].
 . Click *Save*.
 
 The logo is added.
@@ -189,7 +189,7 @@ Control Panel 2.0: User Interface] tab.
 . Select the required profile in the *Profile* picklist. To apply
 settings to all the profiles, select *General Settings*.
 . In the *Homepage Logo* section, click *Upload Files* and upload the
-logo to use for the xref:home-screen[Home screen].
+logo to use for the xref:ctmobile:main/mobile-application/ui/home-screen/index.adoc[Home screen].
 . Click *Save*.
 
 The logo is added.

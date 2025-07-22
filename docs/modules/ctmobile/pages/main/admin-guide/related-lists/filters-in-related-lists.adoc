@@ -5,20 +5,20 @@ up a SOQL filter] for the related lists. The toggle in the CT Mobile
 allows a user to display all downloaded records or only records that
 matched the filter criteria.
 
-[[h2__1316422583]]
+[[h2_1316422583]]
 === Standard Related Lists
 
-ifdef::ios[]
+//tag::ios[]
 
 [[h3_215298378]]
 ==== For users of CT Mobile iOS version 2.1 and earlier
 
-ifdef::win[]
+//tag::win[]
 
-[[h3__42470750]]
+[[h3_42470750]]
 ==== For users of CT Mobile Windows 1.2 and earlier
 
-ifdef::ios,win,andr[]
+//tag::ios,win,andr[]
 
 The sorting order for
 https://help.salesforce.com/articleView?id=customizing_related_lists.htm&type=5[a
@@ -47,17 +47,17 @@ be performed in ascending order;
 be performed in descending order;
 . In other cases, the sorting is carried out by the first column.
 
-ifdef::ios[]
+//tag::ios[]
 
-[[h3__1827010273]]
+[[h3_1827010273]]
 ==== For users of CT Mobile iOS version 2.2 and later
 
-ifdef::win[]
+//tag::win[]
 
-[[h3__1827010273]]
+[[h3_1827010273]]
 ==== For users of CT Mobile Windows 1.3 and later
 
-ifdef::ios,win[]
+//tag::ios,win[]
 
 The sorting order for
 https://help.salesforce.com/articleView?id=customizing_related_lists.htm&type=5[a
@@ -88,24 +88,24 @@ will be performed in ascending order;
 will be performed in descending order;
 . In other cases, the sorting is carried out by the first column.
 
-ifdef::kotlin[]
+//tag::kotlin[]
 
 The sorting order for
 https://help.salesforce.com/articleView?id=customizing_related_lists.htm&type=5[a
 standard related list] is stored in the
 xref:ctm-settings-standard-related-list[Standard Related List]
-record type of the xref:ctm-settings[CTM Settings] object.
+record type of the xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ctm-settings/index.adoc[CTM Settings] object.
 
 
 
 In the CT Mobile app, record sorting is carried out by the first column.
 
-[[h2__1047667523]]
+[[h2_1047667523]]
 === Custom Related Lists
 
-ifdef::ios,andr[]
+//tag::ios,andr[]
 
-The sorting order for xref:custom-related-lists[a custom related
+The sorting order for xref:ctmobile:main/admin-guide/related-lists/custom-related-lists.adoc[a custom related
 list] is stored in xref:mobile-custom-details-settings[Mobile
 Custom Details Settings].
 
@@ -135,9 +135,9 @@ will be performed in ascending order;
 will be performed in descending order;
 . In other cases, the sorting is carried out by the first column.
 
-ifdef::win[]
+//tag::win[]
 
-The sorting order for xref:custom-related-lists[a custom related
+The sorting order for xref:ctmobile:main/admin-guide/related-lists/custom-related-lists.adoc[a custom related
 list] is stored in xref:mobile-custom-details-settings[Mobile
 Custom Details Settings].
 
@@ -161,9 +161,9 @@ will be performed according to the value in the
 are sorted in ascending order.
 . In other cases, the sorting is carried out by the first column.
 
-ifdef::kotlin[]
+//tag::kotlin[]
 
-The sorting order for xref:custom-related-lists[a custom related
+The sorting order for xref:ctmobile:main/admin-guide/related-lists/custom-related-lists.adoc[a custom related
 list] is stored in xref:mobile-custom-details-settings[Mobile
 Custom Details Settings].
 

@@ -2,7 +2,7 @@
 
 To use features of Geolocation Center:
 
-. Make sure xref:remote-site-settings[the required remote site
+. Make sure xref:ctmobile:main/admin-guide/remote-site-settings.adoc[the required remote site
 settings] are specified and active.
 . xref:google-maps-api-key[Get a Google Maps API Key(s)] and enable
 the following APIs:
@@ -24,7 +24,7 @@ Panel 2.0:
 |===
 |CT Mobile Control Panel a|
 .. Go to the *Geolocation* section on
-xref:ct-mobile-control-panel-general#h2_670774632[CT Mobile Control
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h2_670774632[CT Mobile Control
 Panel: General]:
 * Enable *Location Tracking*.
 * Enable *Background Location Tracking*.
@@ -45,7 +45,7 @@ in the *Account Geolocation* and *Account Full Address* fields.
 * Specify *Google Maps Javascript API Key*.
 * Click *Save*.
 .. Go to the *Activity Setting* section on the
-xref:ct-mobile-control-panel-calendar[CT Mobile Control Panel:
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc[CT Mobile Control Panel:
 Calendar] tab:
 * Specify the[.object]#Activity# object.
 On the [.object]#Activity# object, there should be a field with
@@ -63,7 +63,7 @@ the *Activity Geolocation* field.
 
 |CT Mobile Control Panel 2.0 a|
 .. Go to the *Maps* section on
-xref:ct-mobile-control-panel-general-new#h2_670774632[CT Mobile
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-general-new.adoc#h2_670774632[CT Mobile
 Control Panel 2.0: General]:
 * Enable *Background Location Tracking*.
 * Specify the interval of tracking a user location in seconds.
@@ -82,7 +82,7 @@ in the *Account Geolocation* *Field* and *Account Full Address* *Field*.
 * Specify *Google Maps iOS API Key*.
 * ​Specify *Google Maps Javascript API Key*.
 * Click *Save*.
-..  Go to the xref:ct-mobile-control-panel-activities-new[CT Mobile
+..  Go to the xref:ctmobile:main/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-activities-new.adoc[CT Mobile
 Control Panel 2.0: Activities] tab:
 * In the *Calendar Activities* section, specify the
 [.object]#Activity# object.
@@ -99,7 +99,7 @@ the** Geolocation** *Field*.
 * Click *Save*.
 
 |===
-. xref:application-permission-settings[Assign permission] to read,
+. xref:ctmobile:main/getting-started/application-permission-settings.adoc[Assign permission] to read,
 create, and edit the following fields of the xref:sync-log[Sync
 Log] object to users.
 *[.apiobject]#clm__Date__c#

@@ -3,7 +3,7 @@
 The *Dashboards* module allows viewing online dashboards available to
 the mobile user.
 
-* ifdef::ios[]Dashboards display in the Lightning Experience or
+* //tag::ios[]Dashboards display in the Lightning Experience or
 Salesforce Classic mode
 according https://help.salesforce.com/articleView?id=000337767&type=1&mode=1[to
 the selected mode for the mobile user] in the Salesforce organization
@@ -17,19 +17,19 @@ settings in Salesforce.
 * The mobile user can view the related report, as well as modify the
 report criteria.
 * Tap *Refresh* to update the dashboard.
-* Add the dashboard to the xref:mobile-layouts[mobile layout].
+* Add the dashboard to the xref:ctmobile:main/admin-guide/mobile-layouts/index.adoc[mobile layout].
 
-ifdef::ios[]
+//tag::ios[]
 image:dashboards.png[]
-ifdef::win[]
+//tag::win[]
 image:62575043.png[]
-ifdef::kotlin[]
+//tag::kotlin[]
 image:Dashboards-Kotlin.png[]
 
-[[h2__1510760474]]
+[[h2_1510760474]]
 === Adding Dashboard to the Menu
 
-To add the *Dashboards* module to the xref:app-menu[app menu]:
+To add the *Dashboards* module to the xref:ctmobile:main/admin-guide/app-menu/index.adoc[app menu]:
 
 [width="100%",cols="50%,50%",]
 |===

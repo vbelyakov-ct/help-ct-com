@@ -16,10 +16,10 @@ click the *Create Demo Presentations* button.
 
 To store viewing statistics of CLM presentations:
 
-. On the xref:clm-applicationstats[Application Stats] object,
+. On the xref:ctmobile:main/ct-presenter/about-ct-presenter/clm-scheme/clm-applicationstats.adoc[Application Stats] object,
 create lookup fields to every [.object]#Activity#
 object configured on the
-xref:ct-mobile-control-panel-activities-new#h2_2014841429[Activities]
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-activities-new.adoc#h2_2014841429[Activities]
 tab.
 . In the xref:mobile-application-setup[Mobile Application Setup],
 specify API names of the created lookup fields on
@@ -32,15 +32,15 @@ they correspond to, specified in the field
 
 Remote Detailing settings are divided into the following sections:
 
-[[h2__389408561]]
+[[h2_389408561]]
 === Global
 
 image:ctm-control-panel-remote-detailing-global.png[]
 
-[[h3__756893933]]
+[[h3_756893933]]
 ==== Main
 
-[[h4__201439959]]
+[[h4_201439959]]
 ===== Applications List Field
 
 The field API name of
@@ -54,7 +54,7 @@ Detailing session.
 * The same field will be automatically entered for all available
 profiles.
 
-[[h4__1311451422]]
+[[h4_1311451422]]
 ===== Link Field
 
 The field API name of
@@ -84,7 +84,7 @@ enabled, https://help.customertimes.com/articles/ct-mobile-ios-en/remote-detaili
 statistics] per each slide will be gathered not only for the presenter
 but also for each participant too.
 
-[[h4__1123335710]]
+[[h4_1123335710]]
 ===== Session Timeout (in seconds)
 
 * For the *Remote Detailing* meeting, the session timeout is the time
@@ -97,7 +97,7 @@ timeout is reached, the inactive participant session expires, a
 participant is automatically logged out, and their statistics at the
 meeting are sent to Salesforce.
 
-[[h4__193092178]]
+[[h4_193092178]]
 ===== Login URL
 
 A domain, for example, the instance or community URL, that can be used
@@ -106,23 +106,23 @@ to connect with the *Remote Detailing* session.
 [[h3_650556118]]
 ==== Meeting Room
 
-[[h4__1182643139]]
+[[h4_1182643139]]
 ===== Video Streaming
 
 If enabled, the participants are allowed to stream video and audio
 during the Remote Detailing meeting.
 
-[[h4__1185385739]]
+[[h4_1185385739]]
 ===== Call Repeat
 
 If enabled, the
 presenter https://help.customertimes.com/articles/ct-mobile-ios-en/remote-detailing-1-0-ui-for-presenter[can
 resume] the finished Remote Detailing session. The statistics will be
 collected for the resuming meeting too.
-Use https://help.customertimes.com/articles/ct-mobile-ios-en/remote-detailing-f-a-q/a/h2__106650128[the
+Use https://help.customertimes.com/articles/ct-mobile-ios-en/remote-detailing-f-a-q/a/h2_106650128[the
 same link] to enter the previously finished meeting.
 
-[[h4__689237757]]
+[[h4_689237757]]
 ===== Text Chat
 
 If enabled, the participants are allowed to communicate with each other
@@ -136,7 +136,7 @@ If enabled, the chat history of the Remote Detailing meeting will be
 saved as the [.apiobject]#.html# file in
 the *Attachment* section of the _Activity_ record.
 
-[[h4__1165812577]]
+[[h4_1165812577]]
 ===== Audio Recording
 
 If enabled, audio of the Remote Detailing meeting may be recorded and
@@ -162,7 +162,7 @@ The API name of a checkbox of
 the https://help.customertimes.com/articles/ct-mobile-ios-en/clm-activity[Activity] object,
 for example, [.apiobject]#IsRequiredEmail__c#. If the
 checkbox is active, the participant should fill out an email
-on https://help.customertimes.com/articles/ct-mobile-ios-en/remote-detailing-2-0-ui-for-participants/a/h2__555694282[the
+on https://help.customertimes.com/articles/ct-mobile-ios-en/remote-detailing-2-0-ui-for-participants/a/h2_555694282[the
 Welcome screen] to access the Remote Detailing meeting.
 
 [[h3_1019207818]]
@@ -174,7 +174,7 @@ the *Welcome* screen. If a user does not accept the terms of use,
 they will not be able to participate in the Remote Detailing or
 Self-Detailing meeting.
 
-[[h4__826226552]]
+[[h4_826226552]]
 ===== Language of Terms of Use
 
 Add another language and text to the agreement, if necessary.
@@ -208,7 +208,7 @@ subdomain is created.
 If you do not need this subdomain anymore, click *Delete Subdomain*
 button.
 
-[[h3__1851583290]]
+[[h3_1851583290]]
 ==== Self-Detailing
 
 To access the Self Detailing functionality:

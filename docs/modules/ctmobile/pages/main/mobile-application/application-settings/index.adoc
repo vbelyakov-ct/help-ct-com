@@ -3,7 +3,7 @@
 The *Settings* screen allows you to manage additional functions and
 control individual options.
 
-ifdef::ios[]
+//tag::ios[]
 
 * The application version, the date, type, and result of the last
 synchronization, and the current database volume are displayed at the
@@ -11,10 +11,10 @@ bottom of the screen.
 
 image:ctmobile-settings.png[]
 
-[[h2__1981203353]]
+[[h2_1981203353]]
 === Authorization
 
-[[h3__305267236]]
+[[h3_305267236]]
 ==== Authorization Settings
 
 Tap to view the current user's authorization details, such as full name
@@ -25,16 +25,16 @@ authorize using https://help.salesforce.com/articleView?id=sso_about.htm&type=5[
 Sign-On], the *Change Password* option is not available.
 * Tap *Cancel* to close the pop-up.
 
-[[h2__1371499116]]
+[[h2_1371499116]]
 === Demonstration Mode
 
-[[h3__424681661]]
+[[h3_424681661]]
 ==== Show touch indicator
 
 If enabled, xref:demonstration-mode[the demonstration mode] allows
 displaying touches and gestures performed by the user on the screen.
 
-[[h2__1872639157]]
+[[h2_1872639157]]
 === Maps
 
 [[h3_7419121]]
@@ -52,21 +52,21 @@ Using Google Maps.
 [[h2_1980854273]]
 === Additional Options
 
-[[h3__828881719]]
+[[h3_828881719]]
 ==== Show field hints
 
 If enabled,
 theimage:66358781.png[]
 icon is displayed next to a field. Tap the icon to see a help text.
 
-[[h3__353973580]]
+[[h3_353973580]]
 ==== Save photos locally
 
 If enabled, the photos taken in the CT Mobile app will be saved in the
-device gallery. The new photos in xref:actions[the CT Mobile
+device gallery. The new photos in xref:ctmobile:main/mobile-application/ui/actions.adoc[the CT Mobile
 gallery] will have a dotted border.
 
-[[h3__731651659]]
+[[h3_731651659]]
 ==== Enable iCal sync
 
 If enabled, the CT Mobile calendar can be
@@ -80,7 +80,7 @@ Select a calendar to save the activities from the CT Mobile Calendar.
 
 Select calendars to show their activities in the CT Mobile Calendar.
 
-[[h3__559798070]]
+[[h3_559798070]]
 ==== Event notifications
 
 If enabled, the current user will receive
@@ -88,7 +88,7 @@ xref:event-notifications[a notification of upcoming events]. The
 available options are 15 mins, 30 mins, 1 hour, or 2 hours before the
 event.
 
-[[h3__67901066]]
+[[h3_67901066]]
 ==== Warn about nearby accounts
 
 If enabled, the current user will receive
@@ -114,7 +114,7 @@ apps, the background content loading will not be resumed.
 loading, iOS will stop the sync process after a while and resume it when
 the CT Mobile app is opened again.
 
-[[h3__115565593]]
+[[h3_115565593]]
 ==== Send diagnostic data
 
 If enabled, the CT Mobile app anonymously sends diagnostic data to
@@ -122,13 +122,13 @@ developers, such as application crash, current username, time, iOS
 version, and characteristics of a mobile device, as well as methods that
 caused the crash.
 
-[[h3__611076828]]
+[[h3_611076828]]
 ==== Time before calculations start
 
 Time before calculating prices after making changes to the order cart,
 in seconds. Default value is 2 seconds. Applies only if:
 
-* Order module application is added to the xref:app-menu[App menu].
+* Order module application is added to the xref:ctmobile:main/admin-guide/app-menu/index.adoc[App menu].
 * The
 https://help.customertimes.com/smart/project-order-module/web-service[Web
 Service] is not enabled.
@@ -136,16 +136,16 @@ Service] is not enabled.
 [[h2_534139124]]
 === General Options
 
-[[h3__748267454]]
+[[h3_748267454]]
 ==== Change Passcode
 
 Change xref:application-pin-code[the passcode]. The option is
 visible when the passcode is enabled
 in xref:ct-mobile-control-panel-general[CT Mobile Control Panel:
-General]/xref:ct-mobile-control-panel-general-new#h3_643998525[CT
+General]/xref:ctmobile:main/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-general-new.adoc#h3_643998525[CT
 Mobile Control Panel 2.0: General].
 
-[[h3__1321398704]]
+[[h3_1321398704]]
 ==== Log out
 
 Logging out xref:log-out[to reset all application data].
@@ -153,14 +153,14 @@ Logging out xref:log-out[to reset all application data].
 CT Mobile asks the confirmation. After logging out, all the current
 user's data from the mobile device will be removed.
 
-[[h3__1008940466]]
+[[h3_1008940466]]
 ==== Send application data
 
 CT Mobile allows xref:send-application-data-dump[sending a dump]
 with the current user's data from the mobile device to the Salesforce or
 support service.
 
-[[h3__1857935580]]
+[[h3_1857935580]]
 ==== Enable tutorial mode
 
 CT Mobile always shows tips if a mobile user logged for the first time.
@@ -168,13 +168,13 @@ If enabled, the tips will be displayed once more, for example, when the
 mobile user opens the[.object]#Account#, *Calendar*, or
 *Routes*.
 
-ifdef::win[]
+//tag::win[]
 
 * The application version is displayed at the bottom of the screen.
 
 image:application-settings-win.png[]
 
-[[h2__1008940466]]
+[[h2_1008940466]]
 === Send application data
 
 CT Mobile allows xref:send-application-data-dump[sending a dump]
@@ -189,7 +189,7 @@ support service. Available options:
 [[h2_1819839796]]
 === Credential Settings
 
-[[h3__1967210642]]
+[[h3_1967210642]]
 ==== Validate credentials
 
 Click to check credentials are valid.
@@ -200,16 +200,16 @@ Click to check credentials are valid.
 Click to change the password in the CT Mobile app. The new password will
 be used to log in to Salesforce.
 
-[[h2__397515857]]
+[[h2_397515857]]
 === Change User
 
-CT Mobile allows xref:logging-in[multiple user access]. Changing
+CT Mobile allows xref:ctmobile:main/getting-started/logging-in/index.adoc[multiple user access]. Changing
 the current user, the database of the previous user remains on the
 mobile device as well as the previous user will still be authorized.
-xref:logging-in[To change the current user], select the *User*
+xref:ctmobile:main/getting-started/logging-in/index.adoc[To change the current user], select the *User*
 record or tap the plus button to add a new one.
 
-[[h2__1321398704]]
+[[h2_1321398704]]
 === Log out
 
 Logging out xref:log-out[to reset all application data].
@@ -217,7 +217,7 @@ Logging out xref:log-out[to reset all application data].
 CT Mobile asks you for confirmation. After logging out, all the current
 user's data from the mobile device will be removed.
 
-ifdef::andr[]
+//tag::andr[]
 
 * The application version is displayed at the bottom of the screen.
 
@@ -229,12 +229,12 @@ image:66358778.png[]
 The current user's authorization details. View full name, username, and
 password.
 
-[[h2__78694508]]
+[[h2_78694508]]
 === User interface language
 
 Select a language from the picklist.
 
-[[h2__1427255445]]
+[[h2_1427255445]]
 === Show Log
 
 Tap to view and send logs via share options of a device such as an
@@ -248,7 +248,7 @@ Logging out xref:log-out[to reset all application data].
 CT Mobile asks you for confirmation. After logging out, all the current
 user's data from the mobile device will be removed.
 
-ifdef::kotlin[]
+//tag::kotlin[]
 
 * The full name and username are displayed at the top of the screen
 * The application version is displayed at the bottom of the screen.

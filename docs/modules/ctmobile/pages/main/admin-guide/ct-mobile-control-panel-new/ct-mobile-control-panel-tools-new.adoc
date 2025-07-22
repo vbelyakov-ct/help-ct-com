@@ -17,14 +17,14 @@ environment.
 
 ====
 
-[[h3__1301326295]]
+[[h3_1301326295]]
 ==== 
 
 [[h2_2011978]]
 === Cloud Token
 
 [NOTE] ==== To use cloud token, check
-xref:remote-site-settings[remote site settings]. ====
+xref:ctmobile:main/admin-guide/remote-site-settings.adoc[remote site settings]. ====
 
 Click *Show* to view the cloud token value. Click the *Refresh* button
 to update a cloud token.
@@ -53,11 +53,11 @@ credentials.
 
 ifndef::andr[]
 
-Is used to create an xref:metadata-archive[archive with actual
+Is used to create an xref:ctmobile:main/admin-guide/metadata-checker/metadata-archive/index.adoc[archive with actual
 metadata] of the current Salesforce organization and download this
 metadata archive to the device.
 
-ifdef::ios,win,andr[]
+//tag::ios,win,andr[]
 
 Is used when sending requests to external CT CLM services, such as:
 
@@ -66,12 +66,12 @@ Application Editor], including
 xref:creating-clm-presentation-from-powerpoint[PowerPoint] and
 xref:creating-clm-presentation-from-pdf[PDF] files converting.
 
-xref:plain-application-editor[The Plain Applications Editor],
+xref:ctmobile:main/ct-presenter/creating-clm-presentation/creating-clm-presentation-with-the-plain-application-record-type/index.adoc[The Plain Applications Editor],
 including PowerPoint files converting.
 
 ifndef::andr[]
 
-The xref:the-remote-detailing-functionality[Remote Detailing]
+The xref:ctmobile:main/ct-presenter/the-remote-detailing-functionality/index.adoc[Remote Detailing]
 functionality for CT Mobile iOS and CT Mobile Windows users.
 
 [[h2_920868424]]
@@ -96,13 +96,13 @@ archive instead of the manual metadata archive collecting.
 
 This button is displayed only for users with the _Modify All_ permission
 or who have been assigned the
-_xref:application-permission-settings.html#h2__1046081510[CT Mobile
+_xref:ctmobile:main/getting-started/application-permission-settings.adoc#h2_1046081510[CT Mobile
 Administrator]_ permission set.
 
-[[h3__190319629]]
+[[h3_190319629]]
 ==== Download metadata archive
 
-[[h3__1070273172]]
+[[h3_1070273172]]
 ==== Use the *Download metadata archive* button to download the metadata archive to the device. It can be useful for QA support in case of any issues with CT Mobile.
 
 In this section, you can manage the metadata archive. To work with the

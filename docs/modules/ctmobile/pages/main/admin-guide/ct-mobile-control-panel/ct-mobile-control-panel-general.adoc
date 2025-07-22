@@ -18,7 +18,7 @@ the xref:mobile-application-setup[Mobile Application Setup] record.
 image:control_panel_general.png[]
 ====
 
-[[h3__1877182756]]
+[[h3_1877182756]]
 ==== Copy Settings
 
 You can copy all profile settings to another profile:
@@ -31,19 +31,19 @@ button next to the *Location* field.
 
 The main settings are copied.
 
-[[h2__389408561]]
+[[h2_389408561]]
 === Global
 
 [[h3_471160840]]
 ==== Person Accounts Enabled
 
 This attribute must be set if the client system uses the
-xref:person-accounts[Person Accounts] functionality. If enabled:
+xref:ctmobile:main/admin-guide/person-accounts.adoc[Person Accounts] functionality. If enabled:
 
 *[.object]#Person Accounts# are displayed in the *Contacts*
 menu item and on the *Contacts* tab of the modules, except for the cases
 if the _Reference_ object is selected in
-the xref:ct-mobile-control-panel-general#h3_494016929[Reference
+the xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_494016929[Reference
 Object API Name] field.
 *[.object]#Accounts# are displayed in the *Accounts* menu item
 and on the *Accounts* tab of the modules.
@@ -51,7 +51,7 @@ and on the *Accounts* tab of the modules.
 [[h3_643998525]]
 ==== Passcode Enabled
 
-ifdef::kotlin[]
+//tag::kotlin[]
 
 If enabled, the first time the user launches the CT Mobile app, the app
 will ask the user xref:application-pin-code[to set a personal
@@ -59,7 +59,7 @@ passcode]. Then, every time the user opens the app, a password will be
 required to access the app. When you enter the wrong passcode three
 times in a row, xref:log-out[the database will be reset].
 
-[[h3__377059502]]
+[[h3_377059502]]
 ==== Image Quality
 
 The ability to compress images used in the CT Mobile app.
@@ -77,7 +77,7 @@ minimum image size.
 is disabled.
 * The default value is 50%.
 
-[[h2__1037766202]]
+[[h2_1037766202]]
 === User Interface
 
 This section is intended to xref:application-theme[personalize the
@@ -101,7 +101,7 @@ image:app_interface.png[]
 [[h3_1718046162]]
 ==== Title Pattern
 
-ifdef::kotlin,ios[]
+//tag::kotlin,ios[]
 
 Manage the title pattern of the application screen. Select one of the
 configured patterns or upload your pattern by selecting the _Own_ value
@@ -115,7 +115,7 @@ from the picklist.
 [[h3_1108618695]]
 ==== Home Pattern
 
-ifdef::kotlin,ios[]
+//tag::kotlin,ios[]
 
 Manage the home pattern for the application screen background. Select
 one of the configured patterns or upload your pattern by selecting the
@@ -126,7 +126,7 @@ _Own_ value from the picklist.
 * Image dimensions must be in the range from 1024 х 768 to 2732 х 2048.
 * To remove any pattern, select _None_.
 
-[[h3__1461860777]]
+[[h3_1461860777]]
 ==== Device Background Color
 
 Select the background color for the CT Mobile screens. Click on the
@@ -137,7 +137,7 @@ code.
 ==== Homepage Logo
 
 Select the homepage logo to display when
-xref:home-screen#h3__1361691321[the Logo widget] is added on the
+xref:ctmobile:main/mobile-application/ui/home-screen/index.adoc#h3_1361691321[the Logo widget] is added on the
 *Home Screen*. Click *Choose file* to add a new logo.
 
 * The logo file size limit is 4 MB.
@@ -155,20 +155,20 @@ Salesforce Classic, go to *Documents* and open the *CT CLM* folder.
 [[h2_670774632]]
 === Geolocation
 
-Geolocation data may be used for xref:mobile-layouts-maps[the Maps
+Geolocation data may be used for xref:ctmobile:main/admin-guide/mobile-layouts/index.adoc-maps[the Maps
 widget] on a record, in the xref:routes[Routes] and
 xref:nearby-accounts[Nearby Accounts] modules.
 
-[[h3__335024009]]
+[[h3_335024009]]
 ==== Enable Location Tracking
 
 If enabled, geolocation data on the[.object]#Account# and
 [.object]#Activity# objects will be collected in the
-xref:ct-mobile-control-panel-general#h3_612123135[Account
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_612123135[Account
 Geolocation] or
-xref:ct-mobile-control-panel-general#h3__1092547330[Account Full
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_1092547330[Account Full
 Address] field according to selection and in the
-xref:ct-mobile-control-panel-calendar#h3__717585460[Activity
+xref:ct-mobile-control-panel-calendar#h3_717585460[Activity
 Geolocation Field API Name] field.
 
 [[h3_1567195273]]
@@ -177,7 +177,7 @@ Geolocation Field API Name] field.
 If enabled, geolocation data continues to collect even if the CT Mobile
 app runs in background mode.
 
-[[h3__1808523151]]
+[[h3_1808523151]]
 ==== Tracking Interval (in seconds)
 
 Set up the tracking interval of the geolocation data in seconds. If set
@@ -186,7 +186,7 @@ to 0, the user's current location will not be captured.
 [[h3_612123135]]
 ==== Account Geolocation Field
 
-ifdef::ios[]
+//tag::ios[]
 
 To use geolocation, create a field with the
 [.apiobject]#Geolocation__c# API name and with the
@@ -195,7 +195,7 @@ To use geolocation, create a field with the
 integration. Then select this field in the *Account Geolocation Field*
 picklist.
 
-ifdef::andr,kotlin,win[]
+//tag::andr,kotlin,win[]
 
 To use geolocation, create a field with the
 [.apiobject]#Geolocation__c# API name and with the
@@ -204,13 +204,13 @@ this field in the *Account Geolocation Field* picklist.
 
 [NOTE] ==== If geolocation data is not specified, the account
 location will be retrieved from the
-xref:ct-mobile-control-panel-general#h3__1092547330[Account Full
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_1092547330[Account Full
 Address] field. ====
 
-[[h3__1092547330]]
+[[h3_1092547330]]
 ==== Account Full Address Field
 
-ifdef::kotlin[]
+//tag::kotlin[]
 
 Specify a field with the formula type to view the full address of the
 *Account* record. Create a new field with the *Formula(Text)* type on
@@ -235,7 +235,7 @@ following:
 Obtain and enter your xref:google-maps-api-key[Google Maps API key]
 for using Google Maps in the CT Mobile iOS app.
 
-[[h3__1990058335]]
+[[h3_1990058335]]
 ==== Bing Maps Windows API Key
 
 Obtain and enter your
@@ -254,20 +254,20 @@ apps.
 [[h3_1631921024]]
 ==== Google Maps JavaScript API Key
 
-ifdef::kotlin[]
+//tag::kotlin[]
 
 Obtain and enter your xref:google-maps-api-key[Google Maps
 JavaScript API Key] to track the geolocation of CT Mobile iOS users in
 real-time via the xref:geolocation-center[Geolocation Centre] in
 Salesforce.
 
-[[h2__1687169837]]
+[[h2_1687169837]]
 === Support and logs
 
-[[h3__272409891]]
+[[h3_272409891]]
 ==== Enable Sync Logs
 
-If enabled, the xref:sync-logs[Sync Log] records will be created
+If enabled, the xref:ctmobile:main/mobile-application/synchronization/synchronization-launch/sync-logs.adoc[Sync Log] records will be created
 during the sync process on the mobile device.
 
 [[h3_1226274811]]
@@ -302,7 +302,7 @@ and screenshots of synchronization errors.
 [[h2_479934482]]
 === Object mappings
 
-[[h3__2141706831]]
+[[h3_2141706831]]
 ==== Product Object API Name
 
 Select an object that will be used as a product. The *Product Object API
@@ -319,7 +319,7 @@ Records of the selected object will be displayed on the *Contacts* menu
 item, on the *Contacts* tab in the Nearby Accounts module, and on the
 *Contacts* and *Hierarchy View* tabs in the Calendar module.
 
-ifdef::andr,win,kotlin[]
+//tag::andr,win,kotlin[]
 
 As the[.object]#Reference# object, use the junction object
 between the[.object]#Account# and[.object]#Contact#

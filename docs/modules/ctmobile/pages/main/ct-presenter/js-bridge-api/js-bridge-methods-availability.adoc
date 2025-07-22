@@ -3,9 +3,9 @@
 Here you can find JS Bridge methods that you can use in CLM
 presentations.
 
-ifdef::ios,win[]
+//tag::ios,win[]
 
-[[h2__868831931]]
+[[h2_868831931]]
 === Important Notes
 
 When you launch the *Remote Detailing* meeting in the CT Mobile app, CRM
@@ -13,7 +13,7 @@ data captured by JS Bridge will be uploaded to Salesforce and not stored
 on the mobile device. A user should have permission to edit records of
 the corresponding object. For example, if you create a new record using
 [.apiobject]#ctm.create#, it will be uploaded to Salesforce, and
-you should launch xref:fast-synchronization[fast synchronization]
+you should launch xref:ctmobile:main/mobile-application/synchronization/fast-synchronization.adoc[fast synchronization]
 to download it to a mobile device.
 
 

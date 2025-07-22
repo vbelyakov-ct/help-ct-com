@@ -3,18 +3,18 @@
 By default, the columns' widths of standard and custom related lists are
 spread evenly along the working area. Customize column width if needed.
 
-ifdef::ios[][NOTE] ==== The actual metadata is required to
+//tag::ios[][NOTE] ==== The actual metadata is required to
 successfully apply the settings. For more information, go to
-xref:metadata-archive[Metadata Archive] and
-xref:metadata-checker[Metadata Checker]. ==== ifdef::kotlin[]
+xref:ctmobile:main/admin-guide/metadata-checker/metadata-archive/index.adoc[Metadata Archive] and
+xref:ctmobile:main/admin-guide/metadata-checker/index.adoc[Metadata Checker]. ==== //tag::kotlin[]
 [NOTE] ==== The actual metadata is required to successfully
 apply the settings. ====
 
 [[h2_1558356468]]
 === Configuring Column Width in Field Properties
 
-ifdef::ios[] This setting is applied to fields in standard and
-custom related lists. To specify the columns' width: ifdef::kotlin[]
+//tag::ios[] This setting is applied to fields in standard and
+custom related lists. To specify the columns' width: //tag::kotlin[]
 This setting is applied to fields in standard related lists. To specify
 the columns' width:
 
@@ -36,13 +36,13 @@ apply the changes.
 If a related list consists of several columns, the non-configured
 columns will be spread evenly along the rest of the working area.
 
-ifdef::ios[]
+//tag::ios[]
 
 Here is a standard related list tab screen as an example:
 
 image:column-width.png[]
 
-[[h2__947661563]]
+[[h2_947661563]]
 === Configuring Column Widths on the CT Mobile Control Panel
 
 This setting is applied to fields in custom related lists. To specify
@@ -62,22 +62,22 @@ setting.
 . Define the widths of columns.
 . Click *Save*.
 
-ifdef::ios[]This setting overrides the configured column width in
+//tag::ios[]This setting overrides the configured column width in
 the object field properties.
 
 The configuration is completed. Perform the
-xref:synchronization[full synchronization] to apply the changes.
+xref:ctmobile:main/mobile-application/synchronization/index.adoc[full synchronization] to apply the changes.
 
 If a custom related list consists of several columns, the non-configured
 columns will be spread evenly along the rest of the working area.
 
-ifdef::ios[]
+//tag::ios[]
 
 Here is a custom related list tab screen as an example:
 
 image:column-width2.png[]
 
-[[h2__868831931]]
+[[h2_868831931]]
 === Important Notes
 
 Please read the best practices for the Sync Recovery setting.

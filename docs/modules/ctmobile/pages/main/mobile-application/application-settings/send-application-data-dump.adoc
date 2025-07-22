@@ -79,8 +79,8 @@ The setup is complete.
 
 To send a data dump from the CT Mobile app:
 
-. Go to xref:application-settings[Settings] from
-xref:app-menu[the main menu].
+. Go to xref:ctmobile:main/mobile-application/application-settings/index.adoc[Settings] from
+xref:ctmobile:main/admin-guide/app-menu/index.adoc[the main menu].
 . Tap *Send application data*.
 . In the open window, select which data you want to send.
 * Send sync logs
@@ -93,17 +93,17 @@ logs will be sent in a text format.
 increases the duration of sending. ====
 * Include non-synchronized photos
 
-ifdef::ios[]
+//tag::ios[]
 image:send-app-data.png[]
-ifdef::win[]
+//tag::win[]
 image:send-app-data-win.png[]
 
 The data has been sent.
 
-[[h2__2052130687]]
+[[h2_2052130687]]
 === A Sync Log Record with Data Dump
 
-[[h3__919032680]]
+[[h3_919032680]]
 ==== Sync Logs
 
 When sending sync logs in Salesforce, the _Sync Log_ record with an
@@ -139,7 +139,7 @@ Parameters of an _Attachment_ record:
 |Description |[.apiobject]#Part 1 from 1#
 |===
 
-[[h3__2033790185]]
+[[h3_2033790185]]
 ==== Data Dump without Photos
 
 When sending a data dump without photos in Salesforce, the _Sync Log_

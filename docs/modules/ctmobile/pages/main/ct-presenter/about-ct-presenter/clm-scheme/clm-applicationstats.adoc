@@ -30,9 +30,9 @@ Text for the standard[.object]#Task# and
 [.object]#Event# objects a|
 A field with the lookup type for the[.object]#Activity# object
 will be automatically created for each[.object]#Activity#
-object specified on xref:ct-mobile-control-panel-calendar[CT Mobile
+object specified on xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc[CT Mobile
 Control Panel:
-Calendar]/xref:ct-mobile-control-panel-activities-new[CT Mobile
+Calendar]/xref:ctmobile:main/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-activities-new.adoc[CT Mobile
 Control Panel 2.0: Activities], for example,
 [.apiobject]#ActivityId__c# or
 [.apiobject]#TaskId__c#.
@@ -42,7 +42,7 @@ The field will be filled out with the _Activity_ record ID:
 * When you link the CLM presentation to the activity record in the
 *Applications* module.
 * If you launch the CLM presentation or the
-xref:the-remote-detailing-functionality[Remote Detailing] meeting
+xref:ctmobile:main/ct-presenter/the-remote-detailing-functionality/index.adoc[Remote Detailing] meeting
 from the record's layout.
 
 |Application |[.apiobject]#clm__ApplicationId__c#

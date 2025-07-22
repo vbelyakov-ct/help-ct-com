@@ -17,7 +17,7 @@ Collect separately the presenter and participants' statistics during the
 *Remote Detailing* or *Self Detailing* meeting.
 
 * To track certain parameters, they should be enabled on
-xref:application-editor#h2__213917439[the appropriate CLM
+xref:application-editor#h2_213917439[the appropriate CLM
 presentation record]. Also,
 xref:remote-detailing-1-0-ui-for-presenter[the presenter should
 define] allow participants or not to like and dislike slides.
@@ -48,7 +48,7 @@ IP address will be gathered for the presenter and participants. ====
 ==== For Presenter
 
 On all *Application Stats* records, the
-xref:clm-applicationstats[Guest Stats] field is populated with the
+xref:ctmobile:main/ct-presenter/about-ct-presenter/clm-scheme/clm-applicationstats.adoc[Guest Stats] field is populated with the
 [.apiobject]#false# value.
 
 * The *Global Stats* record type
@@ -60,7 +60,7 @@ performed, the navigation path, and the overall viewing time.
 For each slide, the record stores the number of clicks/taps, likes,
 dislikes, the start date and time, and viewing time.
 
-[[h3__1636611486]]
+[[h3_1636611486]]
 ==== For Participant
 
 On all *Application Stats* records, the *Guest Stats* field is populated
@@ -90,7 +90,7 @@ username and e-mail, which were populated on the *Hello* page, a total
 number of clicks/taps, likes, dislikes, the start date and time when a
 participant joined the remote CLM presentation, and the navigation path.
 
-[[h2__1854710639]]
+[[h2_1854710639]]
 === Self Detailing
 
 On all *Application Stats* records, the *Guest Stats* field is populated

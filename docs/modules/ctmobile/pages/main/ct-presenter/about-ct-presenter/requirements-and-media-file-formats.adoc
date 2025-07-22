@@ -8,7 +8,7 @@ presentations
 [[h2_1563031520]]
 === Common Recommendations
 
-ifdef::ios,win[]
+//tag::ios,win[]
 
 Consider the quantity and image quality of the media assets to ensure
 the CT Mobile app responds quickly, and the user does not wait long
@@ -20,23 +20,23 @@ meetings.
 compatibility across device versions as well as cross-browser
 compatibility. For more information, read
 xref:remote-detailing-f-a-q[Remote Detailing F.A.Q].  ====
-ifdef::andr[]
+//tag::andr[]
 
 Consider the quantity and image quality of the media assets to ensure
 the CT Mobile app responds quickly, and the user does not wait
-long xref:synchronization[during the synchronization].
+long xref:ctmobile:main/mobile-application/synchronization/index.adoc[during the synchronization].
 
 The CLM presentation aspect ratio should depend on the screens of the
 mobile device to display, mostly it is 16:9 or 4:3.
 
-ifdef::ios[]
+//tag::ios[]
 
 Media is displayed full screen with a resolution 2048x1536 px for iPad
 Retina (non-PRO version) and 1024×768 px for non-retina iPad.
 
 ARKit models are supported.
 
-ifdef::andr,win[]
+//tag::andr,win[]
 
 Use media according to the resolution of the target device.
 
@@ -76,7 +76,7 @@ navigation bar or the standard action menu.
 markup, the[.apiobject]#classname.to# will be interpreted as
 the link.
 
-[[h3__682202319]]
+[[h3_682202319]]
 ==== Recommended Media Formats
 
 [width="100%",cols="20%,20%,20%,20%,20%",]
@@ -103,7 +103,7 @@ like[.apiobject]#/css/styles.css# rather than
 xref:gestures-in-clm-presentations[Default gestures] to switch and
 interact with slides are supported.
 
-ifdef::ios[]
+//tag::ios[]
 
 Overriding the two-finger swipe and double-tap gesture is not supported.
 
@@ -118,7 +118,7 @@ Overriding the two-finger swipe and double-tap gesture is not supported.
 * Small video can be scaled to the full screen
 
 a|
-ifdef::ios[]
+//tag::ios[]
 
 Videos must be playable in the iPad video player or the video player of
 the target device.
@@ -164,7 +164,7 @@ presentation will not be loaded.
 
 ifndef::andr[]
 
-For presentations in xref:the-remote-detailing-functionality[Remote
+For presentations in xref:ctmobile:main/ct-presenter/the-remote-detailing-functionality/index.adoc[Remote
 Detailing], we recommend using HTML5 or images instead of PDF.
 
 |PPT a|

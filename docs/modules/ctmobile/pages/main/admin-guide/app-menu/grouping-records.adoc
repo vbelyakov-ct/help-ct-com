@@ -32,16 +32,16 @@ image:ctm-control-panel-new-app-menu-grouping-records.png[]
 
 
 
-ifdef::andr,ios,win[]
+//tag::andr,ios,win[]
 xref:synchronization-launch#h2_538692555[Launch the full
 synchronization] on the mobile device to apply changes. Records are
-grouped according to the specified field. ifdef::kotlin[]
+grouped according to the specified field. //tag::kotlin[]
 
-xref:fast-synchronization[Launch fast synchronization] on the
+xref:ctmobile:main/mobile-application/synchronization/fast-synchronization.adoc[Launch fast synchronization] on the
 mobile device to apply changes. Records are grouped according to the
 specified field.
 
-ifdef::ios[]
+//tag::ios[]
 
 [cols="^,^",]
 |===
@@ -51,7 +51,7 @@ ifdef::ios[]
 |image:47752560.png[]
 |===
 
-ifdef::win[]
+//tag::win[]
 
 [cols="^,^",]
 |===

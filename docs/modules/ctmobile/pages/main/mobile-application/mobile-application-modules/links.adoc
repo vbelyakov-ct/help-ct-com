@@ -8,7 +8,7 @@ the CT Mobile app.
 [[h2_572404523]]
 === Adding Links to the Menu
 
-To add the *Links* module to the xref:app-menu[app menu]:
+To add the *Links* module to the xref:ctmobile:main/admin-guide/app-menu/index.adoc[app menu]:
 
 [width="100%",cols="50%,50%",]
 |===
@@ -87,7 +87,7 @@ If a link leads to http://salesforce.com[salesforce.com], CT Mobile
 attempts to send the session code in order to avoid repeated
 authorization in Salesforce.
 
-[[h2__450857999]]
+[[h2_450857999]]
 === Using Links
 
 All links are sorted alphabetically in the main menu. Tap a link in the
@@ -100,17 +100,17 @@ enabled
 
 share the link
 
-ifdef::ios[]
+//tag::ios[]
 
 open the link in Safari.
 
-ifdef::ios[]
+//tag::ios[]
 
 image:links_module.png[]
 
-ifdef::win[]
+//tag::win[]
 image:links_win_en.png[]
-ifdef::ios[]
+//tag::ios[]
 
 [[h2_301401784]]
 === Salesforce Maps

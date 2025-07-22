@@ -7,7 +7,7 @@ screen. The carousel becomes scrollable if it contains more than two
 screenshots.
 
 The *Applications* widget is also available on
-the xref:home-screen[Home screen].
+the xref:ctmobile:main/mobile-application/ui/home-screen/index.adoc[Home screen].
 
 
 
@@ -16,10 +16,10 @@ to xref:gestures-in-clm-presentations[Gestures in CLM
 presentations] and xref:clm-presentation-controls[CLM presentation
 Controls].
 
-[[h2__1510760474]]
+[[h2_1510760474]]
 === Add Applications to the Menu
 
-To add the *Applications* module to the xref:app-menu[app menu]:
+To add the *Applications* module to the xref:ctmobile:main/admin-guide/app-menu/index.adoc[app menu]:
 
 [width="100%",cols="50%,50%",]
 |===
@@ -77,21 +77,21 @@ All standard scenarios and favorite custom scenarios are displayed.
 The statistics will be collected and automatically linked to the
 *Activity* record from which the CLM presentation was started.
 
-ifdef::ios,andr[]
+//tag::ios,andr[]
 
 If xref:start-finish-functionality[Start/Finish functionality] with
 the *Lock/Unlock Record* option is applied, any CLM presentation from
 the carousel on the record details screen can be launched only after the
 start of the activity.
 
-ifdef::ios[]
+//tag::ios[]
 
 image:47747778.png[]
 
-ifdef::win[]
+//tag::win[]
 
 image:62561752.png[]
 
-ifdef::andr[]
+//tag::andr[]
 
 image:62561751.jpg[]

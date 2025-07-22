@@ -2,11 +2,11 @@
 
 The[.object]#Sync Log# object is intended to store the details
 of the sync process and operations performed in the course of the
-xref:synchronization[synchronization] depending on the value in the
+xref:ctmobile:main/mobile-application/synchronization/index.adoc[synchronization] depending on the value in the
 *Debug Level* option on the
-xref:ct-mobile-control-panel-general#h3_1226274811[CT Mobile
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_1226274811[CT Mobile
 Control Panel:
-General]/xref:ct-mobile-control-panel-general-new#h3_1226274811[CT
+General]/xref:ctmobile:main/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-general-new.adoc#h3_1226274811[CT
 Mobile Control Panel 2.0: General] tab.
 
 [WARNING] ==== The *Debug Level* option should be specified for
@@ -34,20 +34,20 @@ Description of the operation.
 * for sending logs, data dump, and all/unsynchronized/no photos:
 [.apiobject]#Part n from m#.
 
-ifdef::kotlin[]If a mobile user sends an application data dump, the
+//tag::kotlin[]If a mobile user sends an application data dump, the
 field contains [.apiobject]#Part n from m#, where *n* is the
 number of an attachment and *m* is the total number of attachments.
 
-ifdef::andr,ios,win[]If a mobile
+//tag::andr,ios,win[]If a mobile
 user xref:send-application-data-dump[sends an application data
 dump], the field contains [.apiobject]#Part n from m#,
 where *n* is the number of an attachment and *m* is the total number of
-attachments. ifdef::ios[]If the xref:sync-recovery[Sync
+attachments. //tag::ios[]If the xref:sync-recovery[Sync
 Recovery] functionality is enabled with the *Proxy Object* parameter
 specified
-on xref:ct-mobile-control-panel-offline-objects#h3_37043680[CT
+on xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects.adoc#h3_37043680[CT
 Mobile Control Panel: Offline
-Objects]/xref:ct-mobile-control-panel-offline-objects-new#h4_37043680[CT
+Objects]/xref:ctmobile:main/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc#h4_37043680[CT
 Mobile Control Panel 2.0: Offline
 Objects], the [.apiobject]#JSON created by web service# value is
 set for a Sync Log record with a JSON file in the *Files* section.
@@ -97,26 +97,26 @@ previous location.
 
 
 
-If xref:ct-mobile-control-panel-general#h3__1808523151[the tracking
+If xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_1808523151[the tracking
 interval] (refer to
-xref:ct-mobile-control-panel-general#h3__1808523151[CT Mobile
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_1808523151[CT Mobile
 Control Panel:
-General]/xref:ct-mobile-control-panel-general-new#h3__1808523151[CT
+General]/xref:ctmobile:main/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-general-new.adoc#h3_1808523151[CT
 Mobile Control Panel 2.0: General]) is 0, the user's coordinates will
 not be captured.
 
 |Has Recovery Data
 |[.apiobject]#clm__HasRecoveryData__c# |Checkbox a|
-ifdef::andr,kotlin,win[]
+//tag::andr,kotlin,win[]
 
 Not in use.
 
-ifdef::ios[] The field is checked for a Sync Log record with a JSON
+//tag::ios[] The field is checked for a Sync Log record with a JSON
 file in the Attachments section if the xref:sync-recovery[Sync
 Recovery] functionality has the *Proxy Object* parameter specified on
-xref:ct-mobile-control-panel-offline-objects[CT Mobile Control
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects.adoc[CT Mobile Control
 Panel: Offline
-Objects]/xref:ct-mobile-control-panel-offline-objects-new#h4_37043680[CT
+Objects]/xref:ctmobile:main/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc#h4_37043680[CT
 Mobile Control Panel 2.0: Offline Objects].
 
 |Object name |[.apiobject]#clm__ObjectName__c#
@@ -126,7 +126,7 @@ Mobile Control Panel 2.0: Offline Objects].
 
 |Operation |[.apiobject]#clm__Operation__c# |Text(255)
 a|
-ifdef::ios, andr, win[]
+//tag::ios, andr, win[]
 
 The type of synchronization:
 
@@ -150,7 +150,7 @@ Or the type of operation:
 * Sync Log History (for sending only send logs to Salesforce)
 * Export Data (for sending data from the CT Mobile app)
 
-ifdef::kotlin[]
+//tag::kotlin[]
 
 The type of synchronization:
 

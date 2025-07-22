@@ -2,11 +2,11 @@
 
 Available since CT Mobile package v. 3.63 up to version 3.82.
 
-xref:metadata-checker[]
+xref:ctmobile:main/admin-guide/metadata-checker/index.adoc[]
 
-ifdef::ios[]
+//tag::ios[]
 
-xref:metadata-checker[The metadata checker] tracks changes in
+xref:ctmobile:main/admin-guide/metadata-checker/index.adoc[The metadata checker] tracks changes in
 metadata components and then requests those components that have changes
 to create a new metadata archive.
 
@@ -101,11 +101,11 @@ verify if the desired component(s) have been added. If the component(s)
 have been added, you see the corresponding folder in the metadata
 archive.
 
-ifdef::ios[][TIP] ==== To find out more, refer to
+//tag::ios[][TIP] ==== To find out more, refer to
 https://developer.salesforce.com/docs/atlas.en-us.api_meta.meta/api_meta/file_based_zip_file.htm[Salesforce
 Developer: Deploying and Retrieving Metadata with the Zip File]. ====
 
-[[h2__152061858]]
+[[h2_152061858]]
 === Limits
 
 Salesforce doesn't allow making more than 101 callouts. If this case

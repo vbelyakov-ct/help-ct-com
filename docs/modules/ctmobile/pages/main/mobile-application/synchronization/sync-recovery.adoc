@@ -25,7 +25,7 @@ profile has access:
 [width="100%",cols="50%,50%",]
 |===
 |In CT Mobile Control Panel a|
-. Go to xref:ct-mobile-control-panel-offline-objects[CT Mobile
+. Go to xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects.adoc[CT Mobile
 Control Panel: Offline Objects].
 . {blank}
 .  Drag and drop the required object from the *Available* list to the
@@ -35,7 +35,7 @@ Control Panel: Offline Objects].
 .  Click *Save*.
 
 |In CT Mobile Control Panel 2.0 a|
-. Go to xref:ct-mobile-control-panel-offline-objects-new[CT Mobile
+. Go to xref:ctmobile:main/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc[CT Mobile
 Control Panel 2.0: Offline Objects].
 . Select the required profile in the *Profile* picklist. To apply
 settings to all the profiles, select *General Settings*.
@@ -75,7 +75,7 @@ Recovery* is about 4.2 MB (including attachments, files, etc.) due to
 https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_rest_intro.htm[APEX
 limits].
 
-[[h3__576874370]]
+[[h3_576874370]]
 ==== Empty value
 
 This option is set by default. Any occurred errors will not be processed
@@ -105,7 +105,7 @@ to a lack of permissions.
 * The information about using the web service will be written in the
 *Sync Log* record.
 
-[[h2__2109026354]]
+[[h2_2109026354]]
 === Web Service Errors
 
 If errors occur during the sending of records via web service due to a
@@ -120,7 +120,7 @@ access* option nor the *Proxy object* option is set for the object. For
 example, if the *Sync Recovery* functionality was turned off on the
 Salesforce side after the last successful synchronization.
 
-[[h2__1386371957]]
+[[h2_1386371957]]
 === Error Processing
 
 All types of errors trigger the *Sync Recovery* functionality.

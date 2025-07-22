@@ -5,9 +5,9 @@ to store details of users’ field activities, such as visits, events, and
 meetings.
 
 It is possible to work with several[.object]#Activity# objects
-that must be set in xref:ct-mobile-control-panel-calendar[CT Mobile
+that must be set in xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc[CT Mobile
 Control Panel:
-Calendar]/xref:ct-mobile-control-panel-activities-new[CT Mobile
+Calendar]/xref:ctmobile:main/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-activities-new.adoc[CT Mobile
 Control Panel 2.0: Activities].
 
 '''''
@@ -52,7 +52,7 @@ autocomplete this field with values from the pre-configured picklist.
 (opening) activity
 
 |Identifier |[.apiobject]#MobileId__c# |Text(255) a|
-Create a field to store xref:system-label[the system label] in a
+Create a field to store xref:ctmobile:main/admin-guide/system-label.adoc[the system label] in a
 case where the record was created/edited in the CT Mobile app.
 
 The use of another API name is not possible.
@@ -69,7 +69,7 @@ any [.object]#Activity# object for the Remote Detailing session.
 |Email Required |[.apiobject]#IsEmailRequired__c# |Checkbox
 a|
 If enabled, the user is required to provide an email on
-xref:remote-detailing-2-0-ui-for-participants#h2__555694282[the
+xref:remote-detailing-2-0-ui-for-participants#h2_555694282[the
 Welcome screen] to access the *Remote Detailing* meeting.
 
 [NOTE] ==== Available since the CT Mobile package v.3.65. ====

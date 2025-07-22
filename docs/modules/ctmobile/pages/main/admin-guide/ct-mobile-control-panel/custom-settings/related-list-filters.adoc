@@ -8,9 +8,9 @@ parameter is also responsible for selection criteria that are used for
 xref:managing-offline-objects[offline object] data upload.
 
 [TIP] ==== For easy setup, go to
-xref:ct-mobile-control-panel-offline-objects[CT Mobile Control
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects.adoc[CT Mobile Control
 Panel: Offline
-Objects]/xref:ct-mobile-control-panel-offline-objects-new[CT Mobile
+Objects]/xref:ctmobile:main/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc[CT Mobile
 Control Panel 2.0: Offline Objects]. ====
 
 The following system variables can be used as criteria:
@@ -37,7 +37,7 @@ Custom setting API Name:
 
 |Conflict Manager
 |[.apiobject]#clm__isConflictManagerEnabled__c#
-|Checkbox |The xref:conflict-manager-control[Conflict Manager] is
+|Checkbox |The xref:ctmobile:main/admin-guide/managing-offline-objects/conflict-manager-control.adoc[Conflict Manager] is
 used to track the changes made in a single record in the mobile
 application and on the Salesforce side.
 
@@ -77,7 +77,7 @@ grouped in the lists.
 |Online Fetching
 |[.apiobject]#clm__isOnlineFetchingEnabled__c#
 |Checkbox |The setting defines if the
-xref:online-records-fetching[Load more records] button is available
+xref:ctmobile:main/admin-guide/managing-offline-objects/online-records-fetching.adoc[Load more records] button is available
 in the application.
 
 |Order |[.apiobject]#clm__Order__c# |Number(18, 0) |The

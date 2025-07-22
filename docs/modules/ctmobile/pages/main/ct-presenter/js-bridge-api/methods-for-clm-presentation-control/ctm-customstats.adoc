@@ -1,10 +1,10 @@
 = ctm.customStats
 
-The method of xref:js-bridge-api[JS Bridge] functionality is
+The method of xref:ctmobile:main/ct-presenter/js-bridge-api/index.adoc[JS Bridge] functionality is
 intended to collect slide statistics after actions in native windows on
 a slide on various devices and CLM presentation components.
 
-[[h2__905713055]]
+[[h2_905713055]]
 === Query Format
 
 
@@ -18,7 +18,7 @@ time, likes, displays, etc. until[.apiobject]#ctm.customStats#
 with a different[.apiobject]#slideName# is requested or the CLM
 presentation display mode is closed.
 * The[.apiobject]#slideName# value will be stored
-xref:clm-applicationstats[in the File Name field].
+xref:ctmobile:main/ct-presenter/about-ct-presenter/clm-scheme/clm-applicationstats.adoc[in the File Name field].
 * If the method with the same[.apiobject]#slideName# is called
 again, CT Mobile must append the previously created *Application Stats*
 record.

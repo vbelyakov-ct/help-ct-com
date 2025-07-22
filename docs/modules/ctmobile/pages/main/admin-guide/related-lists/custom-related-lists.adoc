@@ -3,14 +3,14 @@
 Create and manage several tabular forms to display data in the CT Mobile
 app.
 
-:toc: :toclevels: 3 ifdef::ios[]
+:toc: :toclevels: 3 //tag::ios[]
 image:custom-related-lists-1.png[]
-ifdef::win[]
+//tag::win[]
 image:details_windows.png[]
-ifdef::andr[]
+//tag::andr[]
 image:66355395.png[]
 
-[[h2__993780705]]
+[[h2_993780705]]
 === Create a Custom Related List
 
 The objects and their record types should be previously configured. The
@@ -28,7 +28,7 @@ Control Panel: Custom details].
 . Click *Create*.
 . Type in *the tab name* in the header of the form. This name will be
 used as a tab name. Also, you
-can xref:custom-related-lists#h3__1591488796[set a custom
+can xref:custom-related-lists#h3_1591488796[set a custom
 label] for the related list tab.
 . {blank}
 . Select an object in the *Parent Object* field.
@@ -49,11 +49,11 @@ delete records on the custom related list tab.
 * *Drilldown*. Enable the setting to add the option of opening the
 record details screen.
 * *Adjust Width*. Enable the option and specify the column width in the
-percentages for each field.ifdef::andr,kotlin,win[][NOTE]
+percentages for each field.//tag::andr,kotlin,win[][NOTE]
 ==== Not applicable. ====
 * *SOQL Filter*. An additional switch will be added to the tab if the
 filter is used. Toggle the switch to display only the filtered records
-or the full list of records on the tab.ifdef::kotlin[]
+or the full list of records on the tab.//tag::kotlin[]
 [NOTE] ==== Not applicable. ====
 . Click *Add a new field* to form a column.
 * Select a field from the drop-down list.
@@ -68,10 +68,10 @@ has not been selected.
 image:50791937.png[]
 . Click *Save*.
 
-ifdef::andr,ios,win[] The custom related list is configured. Perform
+//tag::andr,ios,win[] The custom related list is configured. Perform
 a synchronization to apply the changes.
 
-ifdef::kotlin[] The custom related list is configured. Perform the
+//tag::kotlin[] The custom related list is configured. Perform the
 mixed synchronization to apply the changes.
 
 Click
@@ -131,8 +131,8 @@ image:ctm-control-panel-new-custom-related-lists-filters.png[]
 *
 . Click *Save*.
 
-ifdef::andr,ios,win[] The custom related list is configured. Perform
-a synchronization to apply the changes. ifdef::kotlin[] The custom
+//tag::andr,ios,win[] The custom related list is configured. Perform
+a synchronization to apply the changes. //tag::kotlin[] The custom
 related list is configured. Perform the mixed synchronization to apply
 the changes.
 
@@ -151,22 +151,22 @@ the same as custom related lists.
 
 xref:ct-mobile-control-panel-custom-details[]
 
-ifdef::ios[]
+//tag::ios[]
 
 image:custom-related-lists-2.png[]
 
-ifdef::win[]
+//tag::win[]
 
 image:custom_related_list_win_en.png[]
 
 [[h2_498492199]]
 === Edit a Custom Related List
 
-ifdef::ios[] To set up the columns' widths of a custom related list,
-go to xref:columns-width-for-related-lists#h2__947661563[Columns'
-Widths for Standard and Custom Related Lists]. ifdef::ios,win,andr[]
+//tag::ios[] To set up the columns' widths of a custom related list,
+go to xref:columns-width-for-related-lists#h2_947661563[Columns'
+Widths for Standard and Custom Related Lists]. //tag::ios,win,andr[]
 
-[[h3__1591488796]]
+[[h3_1591488796]]
 ==== Change Tab Name
 
 To change tab name:
@@ -198,13 +198,13 @@ To change the tabs order:
 
 The setup is complete.
 
-[[h2__773495381]]
+[[h2_773495381]]
 === Edit Fields of the Custom Related List in the CT Mobile app
 
 To edit fields in the CT Mobile app:
 
 . For the current user profile, specif
-xref:application-permission-settings[permission to edit] an object,
+xref:ctmobile:main/getting-started/application-permission-settings.adoc[permission to edit] an object,
 which records are displayed in the custom related list.
 . Specify xref:managing-offline-objects#h2_1534686659[permission to
 edit] the custom related list.

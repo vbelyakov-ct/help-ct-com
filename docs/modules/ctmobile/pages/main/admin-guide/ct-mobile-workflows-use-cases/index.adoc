@@ -16,24 +16,24 @@ app.
 record through the relationship.
 * Trigger by events, such as[.apiobject]#after create#,
 [.apiobject]#after update#,[.apiobject]#after delete#,
-or xref:ct-mobile-workflow#h2__925686890[tapping the appropriate
+or xref:ct-mobile-workflow#h2_925686890[tapping the appropriate
 button].
 
 
 
 To set up a *CT Mobile Workflow* and steps, go to the
-xref:ct-mobile-control-panel-workflows[CT Mobile Control Panel:
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-workflows.adoc[CT Mobile Control Panel:
 Workflows] tab.
 
 * *CT Mobile Workflows* are available offline, do not require the CT
 Mobile app update, and could be downloaded during
-xref:synchronization-launch#h2__966867633[any synchronization
+xref:synchronization-launch#h2_966867633[any synchronization
 mode].
 * *CT Mobile Workflow* can be applied only to one record at one time. To
 perform multiple actions, specify them as steps of the same *CT Mobile
 Workflow*.
 
-[[h2__868831931]]
+[[h2_868831931]]
 === Important Notes
 
 * Please get familiar with the full description
@@ -52,7 +52,7 @@ message is created.
 [[h2_330595051]]
 === Simple Scenarios
 
-[[h3__1330609875]]
+[[h3_1330609875]]
 ==== Update a Record
 
 Every time the mobile user taps the *Finish* button, specific fields
@@ -60,7 +60,7 @@ will be populated on the *Activity* record with the *Planned* status.
 
 
 
-xref:ct-mobile-control-panel-workflows#h2__1577295421[Create a new
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-workflows.adoc#h2_1577295421[Create a new
 record of CT Mobile Workflow]:
 
 * Specify the *On Click* action, the API name of the button, and
@@ -72,7 +72,7 @@ image:Workflow_This-record_en.png[]
 
 
 
-xref:ct-mobile-control-panel-workflows#h2_438443077[Create a new
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-workflows.adoc#h2_438443077[Create a new
 record of the CT Mobile Workflow Step]:
 
 * Specify the *Update record* action and the *This record* scope.
@@ -139,7 +139,7 @@ specific values.
 
 image:Workflow_Step_Related-record_en.png[]
 
-[[h3__563452840]]
+[[h3_563452840]]
 ==== Update a Parent Record
 
 According to the criteria, update a parent *Account* record every time a
@@ -172,7 +172,7 @@ specific values.
 
 image:Workflow_Step_Parent-record_en.png[]
 
-[[h2__1952479188]]
+[[h2_1952479188]]
 === Advanced Scenario
 
 Create several sequential actions within the same *CT Mobile Workflow*.
@@ -187,7 +187,7 @@ actions every time a mobile user taps the *Start* button on the
 
 image:Workflow_Advanced_en.png[]
 
-[[h3__1286220519]]
+[[h3_1286220519]]
 ==== Step 1: Update the status on a record
 
 Create a new record of *CT Mobile Workflow Step* to set the *In
@@ -195,7 +195,7 @@ Progress* status for the *Activity* record.
 
 image:Workflow_Step_1_Advanced_en.png[]
 
-[[h3__882935992]]
+[[h3_882935992]]
 ==== Step 2: Link a record to the active marketing cycle
 
 Create a new record of *CT Mobile Workflow Step* to link the active
@@ -213,7 +213,7 @@ be populated with appropriate values.
 
 image:Workflow_Step_3_Advanced_en.png[]
 
-[[h3__2045735406]]
+[[h3_2045735406]]
 ==== Step 4: Update related records
 
 Create a new record of *CT Mobile Workflow Step* to update the *Price*
@@ -237,7 +237,7 @@ field on the *Account* record.
 
 image:Workflow_Step_6_Advanced_en.png[]
 
-[[h3__479651465]]
+[[h3_479651465]]
 ==== Step 7: Delete related records
 
 Create a new record of *CT Mobile Workflow Step* to delete the *Activity

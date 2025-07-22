@@ -1,7 +1,7 @@
 = CLM Settings
 
-ifdef::kotlin[] *CLM Settings* is the custom setting that stores
-preferences to display xref:clm-application[CLM presentations] via
+//tag::kotlin[] *CLM Settings* is the custom setting that stores
+preferences to display xref:ctmobile:main/ct-presenter/about-ct-presenter/clm-scheme/clm-application.adoc[CLM presentations] via
 the Remote Detailing functionality.[TIP] ==== For easy setup,
 go to xref:ct-mobile-control-panel-presenter[CT Mobile Control
 Panel:
@@ -72,7 +72,7 @@ meeting.
 |The field API name of the *xref:clm-activity[Activity]* object,
 for example,[.apiobject]#IsEmailRequired__c#. It indicates
 if the user is required to provide an email on
-xref:remote-detailing-2-0-ui-for-participants#h2__555694282[the
+xref:remote-detailing-2-0-ui-for-participants#h2_555694282[the
 Welcome screen] to access the Remote Detailing meeting.
 
 |Endpoint URL |[.apiobject]#clm__RestServicePrefix__c#

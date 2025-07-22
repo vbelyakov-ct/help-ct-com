@@ -27,11 +27,11 @@ record displays the text of the error.
 
 
 
-ifdef::ios[]
+//tag::ios[]
 
 image:errors-screen.png[]
 
-ifdef::win[]
+//tag::win[]
 
 Tap
 image:Errors_win.png[]
@@ -62,7 +62,7 @@ All the changes made by the user are canceled. The previously synced
 records will be rollbacked to the state after the last successful
 synchronization. Unsynchronized records will be deleted.
 
-ifdef::ios[]
+//tag::ios[]
 
 
 
@@ -90,6 +90,6 @@ errors:
 
 * xref:sync-recovery[Sync Recovery]: to send records as usual or as
 the JSON file for post-processing by the administrator.
-* xref:ct-mobile-replication[CT Mobile Replication]: to download
+* xref:ctmobile:main/admin-guide/ct-mobile-control-panel/custom-settings/ct-mobile-replication.adoc[CT Mobile Replication]: to download
 related records and hide the no more available ones on the current
 user's device due to changes in sharing rules.

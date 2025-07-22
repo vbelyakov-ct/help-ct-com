@@ -25,7 +25,7 @@ used.[.apiobject]#
 [[h2_1111809725]]
 === CT Mobile package v. 4.5
 
-* xref:ct-mobile-control-panel-new[CT Mobile Control Panel
+* xref:ctmobile:main/admin-guide/ct-mobile-control-panel-new/index.adoc[CT Mobile Control Panel
 2.0]: redesigned with a modern interface and enhanced usability to
 provide a smoother, more intuitive user experience. This version
 includes improved navigation, faster performance, and new features that
@@ -59,7 +59,7 @@ component custom metadata type] before upgrading to this version.
 [[h3_1844278829]]
 ==== Fixes
 
-* Fixed displaying xref:mini-layouts[Mini Layouts] editing window.
+* Fixed displaying xref:ctmobile:main/admin-guide/mini-layouts.adoc[Mini Layouts] editing window.
 * Fixed displaying fields in the
 xref:ct-mobile-control-panel-custom-details[Custom Details] editing
 window.
@@ -77,7 +77,7 @@ of the *CT Mobile Control Panel*. After installing the CT Mobile package
 v. 3.89:
 . Login to your Salesforce organization with the _System Administrator_
 profile credentials.
-. Go to xref:ct-mobile-control-panel-tools[CT Mobile Control Panel
+. Go to xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc[CT Mobile Control Panel
 → Tools].
 . Click *Authorize* button next to *Authorize Heroku Service*.
 . Click *Allow* in the appeared authorization window.
@@ -93,7 +93,7 @@ removed from the *CT Mobile Control Panel* → *Tools* tab.
 [[h2_466019130]]
 === CT Mobile package v. 3.82
 
-[[h3__574533443]]
+[[h3_574533443]]
 ==== Fixes
 
 * Fixed creation multiple identical _CTM Settings_ records for offline
@@ -102,10 +102,10 @@ objects with xref:related-list-filters[related list filters].
 [[h2_466019133]]
 === CT Mobile package v. 3.81
 
-[[h3__1234198259]]
+[[h3_1234198259]]
 ==== Fixes
 
-[[h4__1542142448]]
+[[h4_1542142448]]
 ===== CT Presenter
 
 * Fixed editing xref:custom-scenario-editor[custom scenarios].
@@ -116,7 +116,7 @@ objects with xref:related-list-filters[related list filters].
 [[h3_996290104]]
 ==== New Features and Improvements
 
-[[h4__1348682521]]
+[[h4_1348682521]]
 ===== Remote Detailing 2.0
 
 * Now you can specify a
@@ -128,7 +128,7 @@ form]. If selected, the presentation can be
 xref:self-detailing-2-0-ui[downloaded as PDF] during the Self
 Detailing.
 * Updated
-xref:application-permission-settings#h3_2115044027[required
+xref:ctmobile:main/getting-started/application-permission-settings.adoc#h3_2115044027[required
 permissions sets] for CT Mobile users, who need to work with CLM
 presentations:
 ** CT Mobile User (edited);
@@ -138,7 +138,7 @@ presentations:
 [[h3_1617666980]]
 ==== Fixes
 
-[[h4__668712022]]
+[[h4_668712022]]
 ===== Remote Detailing 2.0
 
 * Fixed "Error 404" in *Remote Detailing* room for sandbox environments
@@ -149,7 +149,7 @@ Enhanced Domain].
 [[h2_1225534020]]
 === CT Mobile package v. 3.71
 
-[[h3__1836748666]]
+[[h3_1836748666]]
 ==== New Features and Improvements
 
 [[h4_1434818080]]
@@ -159,20 +159,20 @@ Enhanced Domain].
 [NOTE] ==== This option is available only in the CT Mobile
 package v. 3.71. ====
 
-[[h3__135984606]]
+[[h3_135984606]]
 ==== Fixes
 
-[[h4__712316612]]
+[[h4_712316612]]
 ===== Salesforce Metadata
 
 * Fixed adding components to the metadata archive (also when using
 _xref:ability-to-specify-metadata-components-or-the-number-of-entities-in-one-request.html[Archive
 Components]_ custom metadata type).
 
-[[h2__340549929]]
+[[h2_340549929]]
 === CT Mobile package v. 3.69
 
-[[h3__1836748666]]
+[[h3_1836748666]]
 ==== New Features and Improvements
 
 [[h4_1434818080]]
@@ -184,12 +184,12 @@ on the corresponding *Activity* record.
 [[h3_473996418]]
 ==== Fixes
 
-[[h4__739492627]]
+[[h4_739492627]]
 ===== Geolocation Center
 
 * Fixed display of tracked user's path on the map.
 
-[[h2__340549930]]
+[[h2_340549930]]
 === CT Mobile package v. 3.68
 
 [TIP] ==== Download the package
@@ -199,18 +199,18 @@ the App Exchange]. ====
 [[h3_176171128]]
 ==== Fixes
 
-[[h4__1926915344]]
+[[h4_1926915344]]
 ===== Geolocation Center
 
 * UI fixes.
 
-[[h2__506446746]]
+[[h2_506446746]]
 === CT Mobile package v. 3.67
 
 [[h3_1527280195]]
 ==== New Features and Improvements
 
-[[h4__487563059]]
+[[h4_487563059]]
 ===== CT Mobile Control Panel
 
 * The ability to activate xref:cg-cloud[the CG Cloud support] to
@@ -225,10 +225,10 @@ Salesforce organization.
 * A warning about the paid *Remote Detailing* feature is displayed for
 the first logging in.
 * During the[.object]#Activity# creation,
-xref:remote-detailing-launch-salesforce-side#h3__135274013[users
+xref:remote-detailing-launch-salesforce-side#h3_135274013[users
 will be notified] if CLM presentations are not found on a server.
 * The *Terms Accepted* attribute in the
-xref:clm-applicationstats[application statistics] stores a
+xref:ctmobile:main/ct-presenter/about-ct-presenter/clm-scheme/clm-applicationstats.adoc[application statistics] stores a
 participant's agreement to the terms of use.
 
 * During the *Self Detailing* meeting.
@@ -237,7 +237,7 @@ method in the CLM presentations to make secure requests to Salesforce
 data.
 ** Support the xref:ctm-create[ctm.create] and
 xref:ctm-update[ctm.update] methods in the CLM presentations.
-* xref:remote-detailing-launch-salesforce-side#h3__135274013[For
+* xref:remote-detailing-launch-salesforce-side#h3_135274013[For
 user convenience]:
 ** A message will inform the user that the CLM presentations are not
 added to the server.
@@ -249,7 +249,7 @@ added to the server.
 
 * Only a maximum of 9999 of the most recently modified dashboards and a
 maximum of 1000 of the last most recently modified reports
-xref:metadata-archive[will be downloaded] in the CT Mobile app
+xref:ctmobile:main/admin-guide/metadata-checker/metadata-archive/index.adoc[will be downloaded] in the CT Mobile app
 during the sync process.
 
 
@@ -259,13 +259,13 @@ during the sync process.
 
 * Only records with the record types of the CT Mobile package will be
 deleted with the
-xref:ct-mobile-control-panel-tools#h3__1658362952[Refresh CTM
+xref:ct-mobile-control-panel-tools#h3_1658362952[Refresh CTM
 Settings] button.
 
 [[h3_715488940]]
 ==== Fixes
 
-[[h4__1111363625]]
+[[h4_1111363625]]
 ===== Remote Detailing 2.0
 
 * Fixed checking the profile permission to launch a *Remote Detailing*
@@ -276,7 +276,7 @@ Detailing* meeting was started.
 
 
 
-[[h4__160214840]]
+[[h4_160214840]]
 ===== Salesforce Metadata
 
 * Fixed adding custom labels to the metadata archive.
@@ -289,23 +289,23 @@ Detailing* meeting was started.
 
 
 
-[[h4__71558689]]
+[[h4_71558689]]
 ===== Geolocation Center
 
 * UI fixes.
 
-[[h2__340549920]]
+[[h2_340549920]]
 === CT Mobile package v. 3.66
 
-[[h3__1623093173]]
+[[h3_1623093173]]
 ==== New Features and Improvements
 
-[[h4__2040784478]]
+[[h4_2040784478]]
 ===== CT Mobile Control Panel
 
 * The ability to select or manually add the value in the fields with the
 *Date* and *Date/Time* data type
-xref:ct-mobile-control-panel-offline-objects[during creating a SOQL
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects.adoc[during creating a SOQL
 filter].
 * xref:ct-mobile-control-panel-presenter#h3_1019207818[New options]
 to specify and add terms of use on the *Welcome* screen during the
@@ -326,7 +326,7 @@ participants.
 
 
 
-[[h4__682164092]]
+[[h4_682164092]]
 ===== CT Presenter
 
 * The ability to create a CLM presentation based on a ZIP archive with
@@ -342,24 +342,24 @@ JPG format].
 entities in one request to build the metadata archive. Contact our
 Customertimes team to get the additional information.
 
-[[h3__301138596]]
+[[h3_301138596]]
 ==== Fixes
 
-[[h4__311591702]]
+[[h4_311591702]]
 ===== CT Mobile Control Panel
 
 * Fixed the ability
 xref:ct-mobile-control-panel-tools#h3_847464003[to download the
 metadata archive].
 
-[[h2__340549918]]
+[[h2_340549918]]
 === CT Mobile package v. 3.65
 
 The list of permissions has been updated with the
 xref:clm-user[User audit fields] for the _CT Mobile Administrator_
 and _CT Mobile User_ permission sets.
 
-[[h3__1552158643]]
+[[h3_1552158643]]
 ==== New Features and Improvements
 
 [[h4_904461181]]
@@ -372,14 +372,14 @@ records.
 
 
 
-[[h4__222227263]]
+[[h4_222227263]]
 ===== Remote Detailing 2.0
 
 * The ability to specify whether xref:clm-settings[the participant
 is required] to add the email to access the *Remote Detailing* meeting.
 * xref:clm-settings[The new parameter] for future audio recording
 storage is added.
-* xref:remote-detailing-launch-salesforce-side#h3__135274013[For
+* xref:remote-detailing-launch-salesforce-side#h3_135274013[For
 user convenience]:
 ** A message will inform the user of the reason CLM presentations are
 not available for a *Remote Detailing* meeting.
@@ -395,7 +395,7 @@ launch a *Remote Detailing* meeting.
 user's device model for better customer support. The logic will be
 implemented in the next releases of CT Mobile apps.
 
-[[h2__340549917]]
+[[h2_340549917]]
 === CT Mobile package v. 3.64
 
 [[h3_1343580356]]
@@ -409,7 +409,7 @@ remote sites] are not activated, an error message will be displayed when
 a user tries to save a CLM presentation in
 xref:application-editor[Application Editor].
 * If CLM presentations are not set for the[.object]#Activity#
-record, all xref:clm-application[active and available for Remote
+record, all xref:ctmobile:main/ct-presenter/about-ct-presenter/clm-scheme/clm-application.adoc[active and available for Remote
 Detailing meetings] CLM presentations will be available during the
 *Remote Detailing* session.
 
@@ -419,14 +419,14 @@ Detailing meetings] CLM presentations will be available during the
 ===== Salesforce Metadata
 
 * To reduce sync time and use fast sync instead of mixed one,
-xref:metadata-checker[the metadata checker] now only tracks reports
+xref:ctmobile:main/admin-guide/metadata-checker/index.adoc[the metadata checker] now only tracks reports
 and dashboards that have been added to the Home screen of the CT Mobile
 app or specified in a custom folder that starts with the CLM keyword.
 
-[[h3__1255333094]]
+[[h3_1255333094]]
 ==== Fixes
 
-[[h4__1988879136]]
+[[h4_1988879136]]
 ===== Remote Detailing 2.0
 
 * Fixed the availability of CLM presentations and slides: inactive CLM
@@ -436,7 +436,7 @@ Detailing* meeting.
 [[h2_1028401963]]
 === CT Mobile package v. 3.63
 
-[[h3__831164937]]
+[[h3_831164937]]
 ==== New Features and Improvements
 
 [[h4_1849100256]]
@@ -450,14 +450,14 @@ Detailing 2.0] article to set up the Remote Detailing 2.0 functionality.
 
 
 
-[[h4__1876451588]]
+[[h4_1876451588]]
 ===== Salesforce Metadata
 
 * The ability to add desired components in the metadata archive by
 specifying them using the corresponding custom metadata type. Contact
 our Customertimes team to get the additional information.
 
-[[h3__1916726505]]
+[[h3_1916726505]]
 ==== Fixes
 
 [[h4_774245335]]
@@ -469,30 +469,30 @@ many custom settings records.
 [[h2_62734598]]
 === CT Mobile package v. 3.62
 
-[[h3__342117008]]
+[[h3_342117008]]
 ==== New Features and Improvements
 
 [[h4_55753581]]
 ===== Salesforce Metadata
 
 * Performance improvement: Reducing the number of objects in
-xref:metadata-archive[the metadata archive].
+xref:ctmobile:main/admin-guide/metadata-checker/metadata-archive/index.adoc[the metadata archive].
 
-[[h2__340549921]]
+[[h2_340549921]]
 === CT Mobile package v. 3.61
 
-[[h3__1514381386]]
+[[h3_1514381386]]
 ==== New Features and Improvements
 
 [[h4_1241289621]]
 ===== Remote Detailing 2.0
 
-* xref:remote-site-settings[The new RD endpoint] should be
+* xref:ctmobile:main/admin-guide/remote-site-settings.adoc[The new RD endpoint] should be
 activated when installing or updating the CT Mobile package.
 * xref:remote-detailing-ui-basics[Enhanced UI] for the presenter
 and participants.
 
-[[h2__340549922]]
+[[h2_340549922]]
 === CT Mobile package v. 3.60
 
 The list of permissions has been updated for the _CT Mobile
@@ -505,10 +505,10 @@ Administrator_ and _CT Mobile User_ permission sets.
 ===== Remote Detailing 2.0
 
 * Security Update:
-xref:ct-mobile-control-panel-presenter#h3__53846510[specify the
+xref:ct-mobile-control-panel-presenter#h3_53846510[specify the
 integration user] to connect to the *Self Detailing* meeting and collect
 statistics.
-* xref:remote-detailing-f-a-q#h2__106650128[New direct links] to
+* xref:remote-detailing-f-a-q#h2_106650128[New direct links] to
 access *Remote Detailing* and *Self Detailing* meetings.
 * The *ActivityProcessHandler* class will check if only active and valid
 CLM presentations are specified for[.object]#Activity# objects.
@@ -516,7 +516,7 @@ If not, the error message will be written in logs.
 
 
 
-[[h4__450444530]]
+[[h4_450444530]]
 ===== CT Mobile Control Panel
 
 * For your convenience, use the
@@ -537,7 +537,7 @@ manage audio and video on the presenter device.
 
 
 
-[[h4__1836290107]]
+[[h4_1836290107]]
 ===== Salesforce Metadata
 
 * The error message will be displayed when a user loads an
@@ -562,7 +562,7 @@ disabled.
 ===== CT Presenter
 
 * Fixed the trigger operation: add and activate the required trigger in
-the xref:trigger-settings[Trigger Settings].
+the xref:ctmobile:main/admin-guide/ct-mobile-control-panel/custom-settings/trigger-settings.adoc[Trigger Settings].
 * Fixed xref:download-clm-presentations-as-pdf[saving CLM
 presentation as PDF] when the CLM presentation name contains invalid
 characters.
@@ -574,14 +574,14 @@ characters.
 
 * Fixed the *ActivityProcessHandler* class errors when there are no
 actual values in the
-xref:ct-mobile-control-panel-presenter#h3__1311451422[Link Field]
+xref:ct-mobile-control-panel-presenter#h3_1311451422[Link Field]
 and
-xref:ct-mobile-control-panel-presenter#h3__201439959[Application
+xref:ct-mobile-control-panel-presenter#h3_201439959[Application
 List Field].
 
 
 
-[[h4__484441276]]
+[[h4_484441276]]
 ===== Salesforce Metadata
 
 * Fixed compilation of metadata archive in case of larger data size.
@@ -591,10 +591,10 @@ objects that are not specified as offline objects.
 [[h2_300400937]]
 === CT Mobile package v. 3.59
 
-[[h3__882286790]]
+[[h3_882286790]]
 ==== New Features and Improvements
 
-[[h4__801880401]]
+[[h4_801880401]]
 ===== CT Mobile Control Panel
 
 * Improved xref:sync-recovery[Sync Recovery] functionality: force
@@ -612,7 +612,7 @@ xref:mobile-application-setup[Mobile Application Setup] is added.
 * The corresponding access to the *Slide Zoom Enabled* and *Available
 Offline* field of the[.object]#Application# object is added.
 
-[[h3__2063884776]]
+[[h3_2063884776]]
 ==== New Features and Improvements
 
 [[h4_1905996708]]
@@ -625,7 +625,7 @@ be copied to the protected xref:api-key[API Key] custom setting.
 [[h2_62734608]]
 === CT Mobile package v. 3.57
 
-[[h3__311035062]]
+[[h3_311035062]]
 ==== New Features and Improvements
 
 [[h4_1037895822]]
@@ -638,7 +638,7 @@ CLM presentations that were available offline.
 [[h3_1657955487]]
 ==== Fixes
 
-[[h4__376114735]]
+[[h4_376114735]]
 ===== CT Mobile Control Panel
 
 * If the *Sync Recovery* functionality is enabled and the *Attachment*
@@ -646,10 +646,10 @@ record has a temporary Id of the parent record in the reference field,
 the attachment will be sent as xref:sync-recovery#h3_356910769[a
 Proxy object] to Salesforce.
 
-[[h2__2026747377]]
+[[h2_2026747377]]
 === CT Mobile package v. 3.56
 
-[[h3__2063884776]]
+[[h3_2063884776]]
 ==== New Features and Improvements
 
 [[h4_1905996708]]
@@ -663,13 +663,13 @@ https://help.customertimes.com/smart/project-ct-sign-en/add-the-ct-sign-to-the-c
 activate the CT Sign module] for the CT Mobile app.
 
 * Due to security reasons, the
-xref:ct-mobile-control-panel-tools#h3__1876917838[Scheduled
+xref:ct-mobile-control-panel-tools#h3_1876917838[Scheduled
 metadata check] toggle and the
 xref:ct-mobile-control-panel-tools#h3_1003786176[Refresh metadata
 archive] button are displayed only for users with the _Modify All Data_
 and _Modify Metadata Through Metadata API Functions_ permission or with
 the assigned
-xref:application-permission-settings#h2__1046081510[_CT Mobile
+xref:ctmobile:main/getting-started/application-permission-settings.adoc#h2_1046081510[_CT Mobile
 Administrator_] permission set.
 
 [[h3_453966740]]
@@ -679,8 +679,8 @@ Administrator_] permission set.
 ===== CT Mobile Control Panel
 
 * The *Create* button will be inactive if there is no field added when
-xref:mini-layouts#h2__684572466[creating a mini layout].
-* Fixes for xref:custom-related-lists#h2__993780705[the creation of
+xref:ctmobile:main/admin-guide/mini-layouts.adoc#h2_684572466[creating a mini layout].
+* Fixes for xref:custom-related-lists#h2_993780705[the creation of
 custom related lists].
 * Fixed the display of the settings on the *CT Mobile Control Panel*
 tabs for Safari users.
@@ -698,7 +698,7 @@ there is only one slide in the CLM presentation.
 * Fixed xref:attach-files-to-clm-presentation[attaching files to
 CLM presentations] in Lightning Experience.
 
-[[h2__907547183]]
+[[h2_907547183]]
 === CT Mobile package v. 3.55
 
 [[h3_248816688]]
@@ -721,9 +721,9 @@ ascending or descending order] for records in the *Routes* module.
 metadata archive from server] button is added to simplify the QA
 process.
 * The ability to specify
-xref:ct-mobile-control-panel-general#h3__1990058335[Bing Maps API
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_1990058335[Bing Maps API
 Key] for CT Mobile Windows and
-xref:ct-mobile-control-panel-general#h3_375370096[Google Maps API
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_375370096[Google Maps API
 Key] for CT Mobile Android to select Bing or Google Maps in the *Routes*
 module, in the *Nearby Accounts* module, and the *Maps* widget.
 
@@ -743,7 +743,7 @@ the unfinished *Activity* record to work with other functionalities.
 
 * Display an error when renewing slides using the invalid cloud token.
 
-[[h3__1327364214]]
+[[h3_1327364214]]
 ==== Fixes
 
 [[h4_1786088387]]
@@ -790,7 +790,7 @@ filters].
 
 
 
-[[h4__1036043893]]
+[[h4_1036043893]]
 ===== Salesforce Metadata
 
 * If
@@ -804,13 +804,13 @@ xref:ctm-settings-offline-objects[the CTM Settings records] of the
 
 
 
-[[h4__2028405529]]
+[[h4_2028405529]]
 ===== Remote Detailing
 
 * xref:clm-customscenario[Custom scenarios] can be selected within
 the *Remote Detailing* session.
 
-[[h3__112451824]]
+[[h3_112451824]]
 ==== Fixes
 
 [[h4_45068577]]
@@ -835,12 +835,12 @@ are created based on the Production environment.
 [[h4_45068577]]
 ===== CT Mobile Control Panel
 
-* The *Show* button xref:ct-mobile-control-panel-tools[to view the
+* The *Show* button xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc[to view the
 cloud token value].
 
 
 
-[[h4__2028405529]]
+[[h4_2028405529]]
 ===== Remote Detailing
 
 * The xref:ct-mobile-control-panel-presenter#h3_341694305[Call
@@ -857,7 +857,7 @@ visibility].
 [[h3_1642576463]]
 ==== New Features and Improvements
 
-[[h4__82973874]]
+[[h4_82973874]]
 ===== CT Mobile Control Panel
 
 * xref:ct-mobile-control-panel-presenter[The corresponding tab]
@@ -865,7 +865,7 @@ allows customizing the *Remote Detailing* and *Self Detailing*
 functionality in one place.
 * For the users' convenience, the objects in the picklists are now
 sorted by label instead of API Names.
-* xref:ct-mobile-control-panel-tools#h3__1658362952[The Refresh CTM
+* xref:ct-mobile-control-panel-tools#h3_1658362952[The Refresh CTM
 Settings button] helps to support consistency between *CTM Settings* and
 *Custom Settings* records in case of errors.
 * The ability to add the CT Orders module to the CT Mobile app on the
@@ -873,7 +873,7 @@ Settings button] helps to support consistency between *CTM Settings* and
 
 
 
-[[h4__1592714635]]
+[[h4_1592714635]]
 ===== Applications
 
 * In Lightning Experience, add
@@ -885,7 +885,7 @@ xref:application-editor[Application Editor].
 
 
 
-[[h4__1401231549]]
+[[h4_1401231549]]
 ===== Remote Detailing
 
 * The enhanced xref:remote-detailing-setup[setup process] for the
@@ -899,10 +899,10 @@ Details] screen, the username field is now required for filling out.
 * In the Salesforce Classic, the *Remote Detailing* and *Self Detailing*
 buttons are no more supported.
 
-[[h3__649865195]]
+[[h3_649865195]]
 ==== Fixes
 
-[[h4__559203458]]
+[[h4_559203458]]
 ===== Salesforce Metadata
 
 * To correctly apply lookup filters in the reference fields of the

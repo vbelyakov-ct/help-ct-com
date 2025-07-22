@@ -1,18 +1,18 @@
 = CT Mobile Replication: Use Cases and Steps
 
-xref:ct-mobile-replication[CT Mobile Replication] is intended to
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel/custom-settings/ct-mobile-replication.adoc[CT Mobile Replication] is intended to
 save the consistency of the records available for the current user. With
 the configured and enabled *CT Mobile Replication*, the fast
 synchronization will take longer.
 
 :toc: :toclevels: 3
 
-[[h2__478288222]]
+[[h2_478288222]]
 === The CT Mobile Replication Example
 
 For example, 100 records of the[.object]#Account# object with
 related[.object]#Contacts# and[.object]#Activities#
-were downloaded via xref:synchronization-launch#h2__966867633[full
+were downloaded via xref:synchronization-launch#h2_966867633[full
 synchronization]. Then, sharing rules for[.object]#Accounts#
 were modified on the Salesforce side, and some records became
 inaccessible, but some other records are now available for the current
@@ -24,7 +24,7 @@ available records will not be downloaded on the device.
 
 Create a *CT Mobile Replication* setting to update
 [.object]#Account# and[.object]#Contact# records for
-the corresponding user during xref:fast-synchronization[the fast or
+the corresponding user during xref:ctmobile:main/mobile-application/synchronization/fast-synchronization.adoc[the fast or
 mixed synchronization]. After performing the CT Mobile Replication
 setting, the appropriate records will be downloaded, and no longer
 available records will be hidden.
@@ -86,7 +86,7 @@ a comma, without blank spaces).
 separate *CT Mobile Replication* settings, and fill in the
 [.apiobject]#clm__ObjectAPIName__c# field with the API
 name of the required object.
-. Run xref:synchronization[the fast synchronization].
+. Run xref:ctmobile:main/mobile-application/synchronization/index.adoc[the fast synchronization].
 . The CT Mobile app requests the ID of all records of the object
 specified in the[.apiobject]#clm__ObjectAPIName__c#
 field from Salesforce given the conditions in

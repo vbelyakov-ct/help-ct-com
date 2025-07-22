@@ -2,8 +2,8 @@
 
 *CT Mobile Workflow* is a custom metadata type that is intended to store
 the conditions for triggering CT Mobile Workflows (refer to
-xref:ct-mobile-control-panel-workflows[CT Mobile Control Panel:
-Workflows]/xref:ct-mobile-control-panel-workflows-new[CT Mobile
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-workflows.adoc[CT Mobile Control Panel:
+Workflows]/xref:ctmobile:main/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-workflows-new.adoc[CT Mobile
 Control Panel 2.0: Workflows]). Actions of CT Mobile Workflow are stored
 in the xref:ct-mobile-workflow-step[CT Mobile Workflow Step]
 object.
@@ -15,10 +15,10 @@ Mobile app. For example, if a CT Mobile Workflow is created on
 xref:start-finish-functionality[the Start/Visit button], the
 *Capture Geoposition* and *Update Start/End Date Fields* options will no
 longer be applied even if they are enabled on the
-xref:ct-mobile-control-panel-calendar[CT Mobile Control Panel:
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc[CT Mobile Control Panel:
 Calendar] tab (*Capture Geolocation when Activity is Started* and
 *Update Start/End Date when Starting/Ending Activity* options in
-xref:ct-mobile-control-panel-activities-new[CT Mobile Control Panel
+xref:ctmobile:main/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-activities-new.adoc[CT Mobile Control Panel
 2.0: Activities] tab).
 
 '''''
@@ -72,7 +72,7 @@ Proposed values:
 
 |Button/Action API Name
 |[.apiobject]#clm__ButtonAPIName__c# |Text(255) a|
-xref:ct-mobile-workflow#h2__925686890[The button API name] to
+xref:ct-mobile-workflow#h2_925686890[The button API name] to
 trigger the CT Mobile Workflow.
 
 It is used with the On Click value in the *Trigger Context* field.
@@ -113,7 +113,7 @@ not used.
 
 |===
 
-[[h2__925686890]]
+[[h2_925686890]]
 === API-names of available buttons
 
 [width="100%",cols="50%,50%",]
@@ -135,13 +135,13 @@ displays a layout with all available photos.
 xref:managing-offline-objects[record creation] in related lists.
 
 |[.apiobject]#CTM.Button.Geoposition# |The button displays a
-xref:actions[combo menu] to define Geolocation.
+xref:ctmobile:main/mobile-application/ui/actions.adoc[combo menu] to define Geolocation.
 
 |[.apiobject]#CTM.Button.ActivityHistory# |The icon displays
 xref:historical-activities[historical activities].
 
 |[.apiobject]#CTM.Button.Signature# |The
-xref:actions[combo-menu] button displays a pop-up signature window.
+xref:ctmobile:main/mobile-application/ui/actions.adoc[combo-menu] button displays a pop-up signature window.
 
 |[.apiobject]#CTM.Button.ScanBarсode# |The icon displays
 xref:barcode-scanner[the EAN code scanner] on the related list.
@@ -150,7 +150,7 @@ xref:barcode-scanner[the EAN code scanner] on the related list.
 data are sent via Email.
 
 |[.apiobject]#CTM.Button.AddPost# |After pressing the button,
-xref:actions[a new post] in the xref:chatter[Chatter feed] is
+xref:ctmobile:main/mobile-application/ui/actions.adoc[a new post] in the xref:chatter[Chatter feed] is
 added.
 
 |[.apiobject]#CTM.Button.ConvertLead# |Pressing the button
@@ -158,7 +158,7 @@ xref:lead-convert[converts Leads] into an
 [.object]#Account# record.
 
 |[.apiobject]#CTM.Button.SortSwitch# |The switcher is to edit
-the visibility of records in xref:custom-related-lists[a custom
+the visibility of records in xref:ctmobile:main/admin-guide/related-lists/custom-related-lists.adoc[a custom
 related list].
 
 |[.apiobject]#CTM.Button.DocConstructor# |The button displays

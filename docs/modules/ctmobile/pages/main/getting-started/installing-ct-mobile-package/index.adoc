@@ -66,29 +66,29 @@ To view and manage the installed package:
 
 After the CT Mobile package installation:
 
-. Please set up xref:remote-site-settings[the required remote
+. Please set up xref:ctmobile:main/admin-guide/remote-site-settings.adoc[the required remote
 sites].
 . Assign xref:managing-ct-mobile-licenses[CT Mobile license] to
 users.
-. Specify xref:application-permission-settings[permissions to
+. Specify xref:ctmobile:main/getting-started/application-permission-settings.adoc[permissions to
 users]:
 .. Check that the user's profile has permission to read or edit
 necessary objects and fields.
-.. xref:application-permission-settings#h3_2115044027[Assign
+.. xref:ctmobile:main/getting-started/application-permission-settings.adoc#h3_2115044027[Assign
 required permission sets] to users according to their roles.
 . ​Ensure that all required objects
 xref:managing-offline-objects#h2_1551357854[are available offline]
 and xref:managing-offline-objects#h2_1814060569[use SOQL filters]
 to reduce the synchronization time and the amount of data to download.
-. xref:installing-the-ct-mobile-app[Download the CT Mobile app].
-. xref:logging-in[Log in] to the CT Mobile app using your
+. xref:ctmobile:main/getting-started/installing-the-ct-mobile-app/index.adoc[Download the CT Mobile app].
+. xref:ctmobile:main/getting-started/logging-in/index.adoc[Log in] to the CT Mobile app using your
 Salesforce credentials.
 . Perform xref:synchronization-launch[the first full
 synchronization].
 
 
 
-ifdef::ios[] In case of using
+//tag::ios[] In case of using
 https://help.salesforce.com/articleView?id=siteforce_clickjacking_enable.htm&type=5[clickjack
 protection], follow the instructions
 xref:clickjack-protection-settings[here].

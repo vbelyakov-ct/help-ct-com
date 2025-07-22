@@ -1,7 +1,7 @@
 = Remote Detailing Launch: Salesforce Side
 
 In Salesforce, launch a CLM presentation on the
-xref:clm-application[Application] or
+xref:ctmobile:main/ct-presenter/about-ct-presenter/clm-scheme/clm-application.adoc[Application] or
 xref:clm-activity[Activity] record.
 
 :toc: :toclevels: 3
@@ -20,7 +20,7 @@ Classic are no longer supported.
 *Application* record to create a new *Activity* record with an
 invitation link.
 
-[[h3__1371461765]]
+[[h3_1371461765]]
 ==== Add the Remote Detailing button
 
 To add the button to generate an invitation link on the *Application*
@@ -95,9 +95,9 @@ To add a custom field on the *Activity* page layout:
 [.apiobject]#RDLink__c#.
 
 [TIP] ==== Specify the API name of the field in the *Link Field*
-on the xref:ct-mobile-control-panel-presenter#h3__1311451422[CT
+on the xref:ct-mobile-control-panel-presenter#h3_1311451422[CT
 Mobile Control Panel:
-Presenter]/xref:ct-mobile-control-panel-remote-detailing-new#h4__1311451422[CT
+Presenter]/xref:ct-mobile-control-panel-remote-detailing-new#h4_1311451422[CT
 Mobile Control Panel 2.0: Remote Detailing] tab. ====
 . Click *Save*.
 . Go to the *Page Layout* section.
@@ -107,14 +107,14 @@ Mobile Control Panel 2.0: Remote Detailing] tab. ====
 
 The field is created.
 
-[[h3__69490032]]
+[[h3_69490032]]
 ==== Launch the Remote Detailing session
 
 To launch the *Remote Detailing* meeting:
 
 . Create a new *Activity* record.
 . Click the
-xref:remote-detailing-apex-trigger-classes-and-quick-action#h3__2024838382[Applications]
+xref:remote-detailing-apex-trigger-classes-and-quick-action#h3_2024838382[Applications]
 button.
 . In the *Applications* window, select the available CLM presentations
 for the *Remote Detailing* meetings.
@@ -142,7 +142,7 @@ and click *Join* to enter as a participant.
 For the *Self Detailing* meeting, copy the invite link and send it to
 the participant.
 
-[[h3__135274013]]
+[[h3_135274013]]
 ==== Error Handling
 
 Errors may occur during creating an *Activity* record for a *Remote

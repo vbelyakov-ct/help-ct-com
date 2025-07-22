@@ -1,9 +1,9 @@
 = CT Mobile Control Panel: App Menu
 
 The *App Menu* tab is intended to set up menu items and their order in
-xref:app-menu[the main menu].
+xref:ctmobile:main/admin-guide/app-menu/index.adoc[the main menu].
 
-ifdef::ios,win[] According to the selected profile, settings on this
+//tag::ios,win[] According to the selected profile, settings on this
 tab will be saved in the records of the [.object]#CTM
 Settings# object with the xref:ctm-settings-menu[Menu] record
 type.
@@ -18,7 +18,7 @@ image:ctm_control_panel_appmenu.png[]
 
 ====
 
-[[h2__738493971]]
+[[h2_738493971]]
 === Application Menu
 
 In the *Search* box, find the object that should be added to the main
@@ -29,7 +29,7 @@ menu.
 * Click the object name in the *Selected* list to set up options for the
 object.
 
-[[h3__259736469]]
+[[h3_259736469]]
 ==== Add menu item
 
 Click
@@ -57,7 +57,7 @@ significant word of the custom module.
 According to the selected menu item in the *Selected* list, the
 available options are displayed on the right:
 
-For the xref:home-screen[Home screen], enable the *Customizable
+For the xref:ctmobile:main/mobile-application/ui/home-screen/index.adoc[Home screen], enable the *Customizable
 Home screen* option. Add, size, and arrange widgets.
 
 For xref:managing-offline-objects[offline objects],
@@ -65,7 +65,7 @@ xref:grouping-records[group records] by the criterion.
 
 ifndef::andr,win,kotlin[]
 
-For offline objects, enable xref:online-records-fetching[online
+For offline objects, enable xref:ctmobile:main/admin-guide/managing-offline-objects/online-records-fetching.adoc[online
 record fetching].
 
 For the xref:applications[Applications] module,
@@ -83,4 +83,4 @@ descending order of records.
 
 See Also:
 
-* xref:app-menu[Configuring App Menu]
+* xref:ctmobile:main/admin-guide/app-menu/index.adoc[Configuring App Menu]
