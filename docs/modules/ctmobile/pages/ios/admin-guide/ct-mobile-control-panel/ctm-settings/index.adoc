@@ -43,19 +43,19 @@ For devices with installed CT Mobile below 2.2, all settings for the CT Mobile a
 
 The table below contains all _CTM Settings_ record types, corresponding custom settings to them, the *CT Mobile Control Panel* tabs for setup, and the CT Mobile version, since which the logic of working with the [.object]#CTM Settings# object is supported. All _CTM Settings_ record types have already been added to the CT Mobile package.
 
-The table below is incomplete and is filled out based on the supported _CTM Settings_ record types.
+NOTE: The table below is incomplete and is filled out based on the supported _CTM Settings_ record types.
 
 [.hightlighted-table]
 [width="100%",cols="^~,^~,^~,^~,^~,^~,^~,^~"]
 |===
 .2+|*CTM Settings Record Type* .2+|*Custom Setting* .2+|*CT Mobile Control Panel Tab* 5+^.^|*CT Mobile Release* |*CT Mobile Package* |*CT Mobile iOS* |*CT Mobile Windows* |*CT Mobile Android* |*CT Mobile Android 2.0*
-|Activity  |Mobile Application Setup |Calendar  | |  |  .12+|No|Future
-|Calendar |Mobile Application Setup |Calendar |  |  |  |
-|Color Settings |Mobile Customization |Color Settings |  |  |  |
-|Credentials |API Key / Mobile Credential Data |Tools |  |  |  |
-|Link List |Mobile Link Lists |App Menu |  |  |  |
-|Main Settings |Mobile Application Setup |General |  |  |  |
-|Mapping |Mobile Application Setup |General |  |  |  |
+|Activity  |Mobile Application Setup |Calendar  | |  |  .12+|No .7+|Future
+|Calendar |Mobile Application Setup |Calendar |  |  |
+|Color Settings |Mobile Customization |Color Settings |  |  |
+|Credentials |API Key / Mobile Credential Data |Tools |  |  |
+|Link List |Mobile Link Lists |App Menu |  |  |
+|Main Settings |Mobile Application Setup |General |  |  |
+|Mapping |Mobile Application Setup |General |  |  |
 |Menu |Menu Settings and Offline Objects |App Menu |Since 3.34.7 |Since 2.2 |Since 1.3  |No
 |Mini Layouts |Mobile Mini Layout Settings |Mini Layouts |  |  |   |Future
 |Offline Objects |Menu Settings and Offline Objects |Offline Objects |Since 3.34.7 |No |Since 1.3  |No
