@@ -70,9 +70,9 @@ records may appear on the Salesforce side.
 
 
 
-When there is the[.apiobject]#MobileId__c# field and a
+When there is the [.apiobject]#MobileId__c# field and a
 mobile user launches the synchronization again, the CT Mobile app checks
 the records on the Salesforce side and if there are records with the
-same value in the[.apiobject]#MobileId__c# field, these
+same value in the [.apiobject]#MobileId__c# field, these
 records are excluded and only those that have not yet been sent to
 Salesforce are sent.

@@ -39,7 +39,7 @@ Store. While you can transfer access to another Mac computer, we
 recommend following these steps on the actual machine you will use to
 submit apps. ====
 
-To get the[.apiobject]#.cer# file:
+To get the [.apiobject]#.cer# file:
 
 . On your Mac, go to *Applications → Utilities → Keychain Access*.
 . In *Keychain Access*, go to *Certificate Assistant → Request a
@@ -67,27 +67,27 @@ debugging.
 Apple Developer Enterprise Program. ====
 . In the *Create a New Certificate*, click *Choose File*, add the *CSR*
 from step 3, and click *Continue*.
-. Click *Download* to load the[.apiobject]#.cer# file. The
-certificate has the[.apiobject]#iPhone Distribution
+. Click *Download* to load the [.apiobject]#.cer# file. The
+certificate has the [.apiobject]#iPhone Distribution
 <firstname><lastname># name and will expire one year
 from today's date.
 . Click the file from step 8 and click *Add* to add it to *Keychain
 Access*.
 
-The certificate in the[.apiobject]#.cer# format is created.
+The certificate in the [.apiobject]#.cer# format is created.
 
 
 
 In case of need to share the certificate with other developers, convert
-it into the[.apiobject]#.p12# file.
+it into the [.apiobject]#.p12# file.
 
 . Go to *Keychain Access → My certificates →* right-click on the desired
 certificate and click *Export*.
-. Save the certificate in the[.apiobject]#.p12# format.
+. Save the certificate in the [.apiobject]#.p12# format.
 . When asked for a password, leave it blank and click *OK*.
 . When asked for the Mac password, enter it and click *OK*.
 
-The certificate in the[.apiobject]#.p12# format is saved.
+The certificate in the [.apiobject]#.p12# format is saved.
 
 [[h2_55755830]]
 === 2. Specify Bundle ID
@@ -195,7 +195,7 @@ Apps: 1 year
 The distribution certificate is tied to a specific Mac. |no limitations
 |Expires after a year
 
-|*In-house* |In-house lets you build the[.apiobject]#.ipa# file
+|*In-house* |In-house lets you build the [.apiobject]#.ipa# file
 and host it on the Customertimes server for distribution by a link or
 using an MDM solution. a|
 * must be a member of the Apple Developer Enterprise Program

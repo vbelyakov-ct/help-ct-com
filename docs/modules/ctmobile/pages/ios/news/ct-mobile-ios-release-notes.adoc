@@ -830,7 +830,7 @@ the same order in Salesforce and CT Mobile.
 https://help.salesforce.com/articleView?id=choosing_a_formula_data_type.htm&type=5[Formula
 (String)],
 https://help.salesforce.com/articleView?id=custom_field_types.htm&type=5[Picklist
-(Multiselect)&#44; Text&#44; Text Area&#44; Text Area (Long)&#44; or
+(Multiselect), Text, Text Area, Text Area (Long), or
 Text Area (Rich) type] is dynamically changed and becomes scrollable if
 the max height of 5 lines is exceeded.
 * xref:ios/admin-guide/app-menu/index.adoc[Assign the icon for the main tab] to help a user
@@ -870,7 +870,7 @@ presentations] and perform the fast sync. ====
 * The ability to zoom in or out a CLM presentation using
 xref:ios/mobile-application/mobile-application-modules/applications/gestures-in-clm-presentations.adoc[a two-finger pinch].
 * Add https://developer.apple.com/documentation/arkit[ARKit models] in
-the[.apiobject]#sources.zip# for displaying in the CLM
+the [.apiobject]#sources.zip# for displaying in the CLM
 presentations.
 * Remote Detailing
 ** Start the remote presentation right from the app
@@ -1056,7 +1056,7 @@ view.
 
 * Fix for the *Routes* module. The map is focusing correctly on the area
 where the route is being built.
-* The[.apiobject]#Owner# operator is supported in formulas.
+* The [.apiobject]#Owner# operator is supported in formulas.
 * https://developer.salesforce.com/docs/atlas.en-us.soql_sosl.meta/soql_sosl/sforce_api_calls_soql_select_dateformats.htm[Time
 constants] are supported as SOQL-filter criteria for the custom related
 lists.
@@ -1089,7 +1089,7 @@ release requires iOS 10 or later. ====
 
 * Synchronization data monitoring (type, date and time, status, and
 duration). The data is automatically transferred to Salesforce as the
-records of the xref:sync-log[Sync Log] object with an attachment
+records of the xref:ios/mobile-application/synchronization/synchronization-launch/sync-log.adoc[Sync Log] object with an attachment
 containing detailing information (log file). Use
 xref:ios/mobile-application/synchronization/synchronization-launch/sync-logs.adoc[reports to analyze] the synchronization.
 * New synchronization algorithm with accelerated identification of the
@@ -1136,7 +1136,7 @@ to add them to a record.
 Salesforce Metadata API during the synchronization.
 * External libraries are updated to the latest versions.
 * xref:ios/mobile-application/mobile-application-modules/nearby-accounts.adoc[The Nearby Accounts module]. The records
-list displays only the[.object]#Accounts# with defined
+list displays only the [.object]#Accounts# with defined
 geolocation and the records which are related to such
 [.object]#Accounts#.
 * The minus key (-) is available on the In-App keyboard while editing

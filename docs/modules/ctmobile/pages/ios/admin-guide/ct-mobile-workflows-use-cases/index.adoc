@@ -40,12 +40,12 @@ Workflow*.
 of xref:ct-mobile-workflow[CT Mobile
 Workflow] and xref:ct-mobile-workflow-step[CT Mobile Workflow
 Step] objects.
-* The *Lock/Unlock* record action and the[.apiobject]#before
+* The *Lock/Unlock* record action and the [.apiobject]#before
 create#,[.apiobject]#before update#, and
 [.apiobject]#before delete# events are not supported yet.
-* Currently, the[.apiobject]#after create# and
+* Currently, the [.apiobject]#after create# and
 [.apiobject]#after delete# events are not supported.
-* The[.apiobject]#after update# event should only trigger after
+* The [.apiobject]#after update# event should only trigger after
 a record has been edited. Currently, this action also triggers when a
 message is created.
 
@@ -112,7 +112,7 @@ the status of the *Activity* record has changed to the *Finished* value.
 
 Create a new record of *CT Mobile Workflow*:
 
-* Specify the[.apiobject]#after update# event and evaluation
+* Specify the [.apiobject]#after update# event and evaluation
 criteria.
 * Specify the trigger criteria and API name of the object that runs the
 *CT Mobile Workflows*.
@@ -131,7 +131,7 @@ parent.
 ** the API name of the lookup field that is responsible for the
 relationship between the parent and related objects.
 * Specify the SOQL filter for records to update:
-** the API name of the[.object]#Product# object as a SOQL
+** the API name of the [.object]#Product# object as a SOQL
 object.
 ** the SOQL query for the *Product* records.
 * Specify API names of the fields of the related object to populate with

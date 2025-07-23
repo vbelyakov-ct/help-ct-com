@@ -281,12 +281,12 @@ Steps:
 
 . Metadata components are downloaded from the metadata archive.
 . The current data model is created.
-. Records of xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/index.adoc[the custom settings&#44; custom
+. Records of xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/index.adoc[the custom settings, custom
 metadata types], xref:ios/admin-guide/managing-offline-objects/index.adoc[offline objects]
 (based on SOQL filters), and objects, which are necessary for activated
 xref:ios/mobile-application/mobile-application-modules/index.adoc[modules], are downloaded if a
 record matches the conditions set in
-xref:related-list-filters[Related List Filters].
+xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/related-list-filters.adoc[Related List Filters].
 . The audit fields of the current *User* record are updated.
 
 
@@ -351,12 +351,12 @@ Steps:
 . Metadata components are downloaded from the metadata archive.
 . The structure (if it has been changed) and records of
 https://help.customertimes.com/articles/ct-mobile-ios-en/custom-settings[custom
-settings&#44; custom metadata types],
+settings, custom metadata types],
 https://help.customertimes.com/articles/ct-mobile-ios-en/managing-offline-objects[offline
 objects] (based on SOQL filters), and objects, which are necessary for
 activated
 https://help.customertimes.com/articles/ct-mobile-ios-en/mobile-application-modules[modules],
-are downloaded if the value in the[.apiobject]#SystemModstamp#
+are downloaded if the value in the [.apiobject]#SystemModstamp#
 field is a date later than the date of the last successful
 synchronization and a record matches the conditions in the
 https://help.customertimes.com/articles/ct-mobile-ios-en/related-list-filters[Related

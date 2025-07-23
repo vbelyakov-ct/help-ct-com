@@ -97,7 +97,7 @@ removed from the *CT Mobile Control Panel* → *Tools* tab.
 ==== Fixes
 
 * Fixed creation multiple identical _CTM Settings_ records for offline
-objects with xref:related-list-filters[related list filters].
+objects with xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/related-list-filters.adoc[related list filters].
 
 [[h2_466019133]]
 === CT Mobile package v. 3.81
@@ -224,7 +224,7 @@ Salesforce organization.
 
 * A warning about the paid *Remote Detailing* feature is displayed for
 the first logging in.
-* During the[.object]#Activity# creation,
+* During the [.object]#Activity# creation,
 xref:remote-detailing-launch-salesforce-side#h3_135274013[users
 will be notified] if CLM presentations are not found on a server.
 * The *Terms Accepted* attribute in the
@@ -408,7 +408,7 @@ implemented in the next releases of CT Mobile apps.
 remote sites] are not activated, an error message will be displayed when
 a user tries to save a CLM presentation in
 xref:ios/ct-presenter/creating-clm-presentation/creating-clm-presentation-with-the-application-record-type/index.adoc[Application Editor].
-* If CLM presentations are not set for the[.object]#Activity#
+* If CLM presentations are not set for the [.object]#Activity#
 record, all xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-application.adoc[active and available for Remote
 Detailing meetings] CLM presentations will be available during the
 *Remote Detailing* session.
@@ -610,7 +610,7 @@ In the _CT Mobile User_ and _CT Mobile Administrator_ permission sets:
 * The corresponding access to the *Unfinished Activity Allowed* field of
 xref:mobile-application-setup[Mobile Application Setup] is added.
 * The corresponding access to the *Slide Zoom Enabled* and *Available
-Offline* field of the[.object]#Application# object is added.
+Offline* field of the [.object]#Application# object is added.
 
 [[h3_2063884776]]
 ==== New Features and Improvements
@@ -632,7 +632,7 @@ be copied to the protected xref:api-key[API Key] custom setting.
 ===== CT Presenter
 
 * During the package installation, the *Available Offline* attribute of
-the[.object]#Application# object will be set as true for those
+the [.object]#Application# object will be set as true for those
 CLM presentations that were available offline.
 
 [[h3_1657955487]]
@@ -906,6 +906,6 @@ buttons are no more supported.
 ===== Salesforce Metadata
 
 * To correctly apply lookup filters in the reference fields of the
-*Event* and *Task* records, the[.apiobject]#fullNames =
-Activity# request is included in the[.apiobject]#CustomObject#
+*Event* and *Task* records, the [.apiobject]#fullNames =
+Activity# request is included in the [.apiobject]#CustomObject#
 request used for metadata archive creation.

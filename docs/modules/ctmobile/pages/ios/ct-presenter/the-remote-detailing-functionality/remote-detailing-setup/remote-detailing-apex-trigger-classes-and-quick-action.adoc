@@ -25,7 +25,7 @@ https://github.com/ctsf/CLM-RemoteDetailing-Public/blob/master/source/remoteDeta
 to generate invite links on the *Activity* record for *Remote Detailing*
 or *Self Detailing* meetings.
 * Check that the object selected for the Apex trigger is specified as
-the[.object]#Activity# object on
+the [.object]#Activity# object on
 xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc#h2_70500171[CT Mobile Control
 Panel: Calendar]/xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-activities-new.adoc[CT
 Mobile Control Panel 2.0: Activities].
@@ -41,7 +41,7 @@ names in the code if needed:
 |*API Name in the Code* |*Description*
 
 |[.apiobject]#Event# a|
-Depending on the[.object]#Activity# object, specify its API
+Depending on the [.object]#Activity# object, specify its API
 Name instead of [.underline]#*Event*# in this line:
 [.apiobject]#trigger EventSetLinkProcess on
 [.underline]#*Event*# (after insert, after update){#
@@ -61,14 +61,14 @@ insert#, [.apiobject]#after update#). In the trigger code, you
 can specify other events to generate an invitation link.
 
 |[.apiobject]#Timeoff# a|
-Specify the API name of a record type of the[.object]#Activity#
+Specify the API name of a record type of the [.object]#Activity#
 object to generate an invitation link for *Self Detailing*.
 
 The same record type cannot be simultaneously used for *Self
 Detailing* and *Remote Detailing*.
 
 |[.apiobject]#Visit# a|
-Specify the API name of a record type of the[.object]#Activity#
+Specify the API name of a record type of the [.object]#Activity#
 object to generate an invitation link for *Remote Detailing*.
 
 The same record type cannot be simultaneously used for *Self
@@ -132,7 +132,7 @@ name of an[.object]#Activity# object, for which an invitation
 link will be created.
 
 |[.apiobject]#ApplicationIds__c# a|
-Specify the API name of the field on the[.object]#Activity#
+Specify the API name of the field on the [.object]#Activity#
 object that stores CLM presentations IDs: a field with the *Text* type
 to store a few IDs (separated by a comma, without blank space).
 
@@ -160,7 +160,7 @@ name of an[.object]#Activity# object, for which an invitation
 link will be created.
 
 |[.apiobject]#ApplicationIds__c# a|
-Specify the API name of the field on the[.object]#Activity#
+Specify the API name of the field on the [.object]#Activity#
 object that stores CLM presentations IDs: a field with the *Text* type
 to store a few IDs (separated by a comma, without blank space).
 
@@ -172,7 +172,7 @@ Fields with the *Lookup* type are not supported.
 . Click *src* and then *quickActions*.
 . Rename the file for the appropriate *Activity* object.
 
-For example, for the[.apiobject]#CustomActivity__c# write
+For example, for the [.apiobject]#CustomActivity__c# write
 *CustomActivity__c.Applications.quickAction*.
 . Zip the *src* folder. The ZIP archive can have any name.
 . Log in as the administrator on

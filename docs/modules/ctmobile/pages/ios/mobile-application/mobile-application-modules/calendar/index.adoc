@@ -24,7 +24,7 @@ accounts, contacts/references, or the hierarchical view.
 //tag::kotlin[] Select the appropriate list view with accounts or
 contacts/references.
 
-* If the[.object]#Reference# object is not selected in the
+* If the [.object]#Reference# object is not selected in the
 xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_494016929[Reference Object
 API Name] field, records of the [.object]#Contact# object will
 be displayed in the *Calendar* left menu. Otherwise, records of the
@@ -153,12 +153,12 @@ record to the calendar grid, the CT Mobile app fills out the
 corresponding lookup field to the related object according to the
 algorithm:
 
-. If there is only one lookup field on the[.object]#Activity#
+. If there is only one lookup field on the [.object]#Activity#
 object to the related object, the lookup field will be filled out with
 the record of the related object.
 . If there are two and more lookup fields on the
 [.object]#Activity# object to the related object, and the lookup
-field has the[.apiobject]#Account#,
+field has the [.apiobject]#Account#,
 [.apiobject]#Contact#, or[.apiobject]#Reference#
 keyword in the API name, for example,
 [.apiobject]#AccountId__c#, the lookup field will be filled
@@ -174,7 +174,7 @@ will be filled out.
 
 
 
-For the[.object]#Event# and[.object]#Task# objects,
+For the [.object]#Event# and[.object]#Task# objects,
 the filling of the *Name* ([.apiobject]#WhoId#) and *Related To*
 ([.apiobject]#WhatId#) fields is applied.
 

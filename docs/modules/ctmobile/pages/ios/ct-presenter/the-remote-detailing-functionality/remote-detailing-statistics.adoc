@@ -21,9 +21,9 @@ xref:ios/ct-presenter/creating-clm-presentation/creating-clm-presentation-with-t
 presentation record]. Also,
 xref:remote-detailing-1-0-ui-for-presenter[the presenter should
 define] allow participants or not to like and dislike slides.
-* The[.object]#Application Stats# object should have the field
-with the *Lookup* type on the[.object]#Activity# object, e.g.,
-the[.apiobject]#VisitId__c#, and this field should be
+* The [.object]#Application Stats# object should have the field
+with the *Lookup* type on the [.object]#Activity# object, e.g.,
+the [.apiobject]#VisitId__c#, and this field should be
 specified in the *Activity Field API* field of the *Mobile Application
 Setup* record.
 * If needed, specify the
@@ -64,7 +64,7 @@ dislikes, the start date and time, and viewing time.
 ==== For Participant
 
 On all *Application Stats* records, the *Guest Stats* field is populated
-with the[.apiobject]#true# value.
+with the [.apiobject]#true# value.
 
 
 
@@ -94,7 +94,7 @@ participant joined the remote CLM presentation, and the navigation path.
 === Self Detailing
 
 On all *Application Stats* records, the *Guest Stats* field is populated
-with the[.apiobject]#true# value.
+with the [.apiobject]#true# value.
 
 
 

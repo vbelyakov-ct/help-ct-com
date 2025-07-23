@@ -16,7 +16,7 @@ Salesforce provides the ability to attach content to records in two
 ways:
 
 * Attach content to an object through a[.object]#Files# object
-** Each file consists of a record of the[.object]#Content
+** Each file consists of a record of the [.object]#Content
 Document# object that represents a document uploaded to Salesforce CRM
 Content or Salesforce Files and a record of the
 [.object]#Content Version# object that represents a version of
@@ -26,13 +26,13 @@ the uploaded document.
 ** If the user has access to an object but no access to the attached
 content, all content will be in the *Notes & Attachments* section.
 * Attach content as an[.object]#Attachment# to an object with
-the enabled transfer of all records to the[.object]#Files#
+the enabled transfer of all records to the [.object]#Files#
 object.
 
 
 
 In Salesforce Classic, all documents are saved by default as a record of
-the[.object]#Attachment# object in the *Notes & Attachments*
+the [.object]#Attachment# object in the *Notes & Attachments*
 section. To save documents as[.object]#Files#:
 
 . Go to *Setup → Feature Settings → Salesforce Files → General
@@ -114,7 +114,7 @@ records for all offline objects.
 Each *CombinedAttachments* record contains a file link and file name.
 
 These records are stored in the *Notes & Attachments* section. When a
-user taps the[.apiobject]#CombinedAttachment# record, the
+user taps the [.apiobject]#CombinedAttachment# record, the
 attachment is downloaded.
 
 //tag::win[]
@@ -128,7 +128,7 @@ current user.
 
 Versioning is not supported for attachments.
 
-[NOTE] ==== Do not add the[.object]#CombinedAttachments
+[NOTE] ==== Do not add the [.object]#CombinedAttachments
 ==== object to offline objects.#
 
 To upload attachments from the CT Mobile app to Salesforce, launch the

@@ -10,14 +10,14 @@ During the fast or mixed synchronization, only records with the modified
 if you changed
 https://help.salesforce.com/articleView?id=security_about_sharing_rules.htm&type=5[sharing
 rules] (via organization-wide defaults or per each record), the value in
-the[.apiobject]#SystemModStamp# field is not modified. Specify
+the [.apiobject]#SystemModStamp# field is not modified. Specify
 the CT Mobile Replication setting to download the corresponding records
 and hide records, which are no longer available.
 
 
 
 The CT Mobile Replication is affected when the specified date and time
-in the[.apiobject]#clm__Date__c# field are later than
+in the [.apiobject]#clm__Date__c# field are later than
 the current date and time.
 
 [TIP] ==== Specify and refresh the value in this field manually,
@@ -38,7 +38,7 @@ Custom metadata type API name:
 
 '''''
 
-[width="100%",cols="25%,25%,25%,25%",]
+[width="100%",cols="~,~,~,~",]
 |===
 |*Field* |*API Name* |*Type* |*Description*
 

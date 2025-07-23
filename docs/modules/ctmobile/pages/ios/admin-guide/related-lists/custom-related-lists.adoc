@@ -58,10 +58,10 @@ or the full list of records on the tab.//tag::kotlin[]
 . Click *Add a new field* to form a column.
 * Select a field from the drop-down list.
 * Define the *Read Only* and the *Required* options for the fields.
-** If the[.apiobject]#updateable# attribute has a *false*
+** If the [.apiobject]#updateable# attribute has a *false*
 value, this field will be read-only even if the *Read Only* attribute
 has not been selected.
-** If the[.apiobject]#nillable# attribute has a *false* value,
+** If the [.apiobject]#nillable# attribute has a *false* value,
 this field will be required to fill in even if the *Required* attribute
 has not been selected.
 . Click *Create*.

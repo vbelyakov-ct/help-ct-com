@@ -15,7 +15,7 @@ Custom setting API name:
 
 '''''
 
-[width="100%",cols="25%,25%,25%,25%",]
+[width="100%",cols="~,~,~,~",]
 |===
 |*Field* |*API-name* |*Type* |*Description*
 
@@ -34,7 +34,7 @@ Detailing session.
 |[.apiobject]#clm__IsAudioRecordEnabled__c# |Checkbox
 |If enabled, the audio of the Remote Detailing session will be recorded
 and saved as the _Attachment_ record with the audio file and linked to
-the[.object]#Activity# object.
+the [.object]#Activity# object.
 
 |Call Repeat Allowed
 |[.apiobject]#clm__IsCallRepeatAllowed__c# |Checkbox a|
@@ -129,7 +129,7 @@ in the chat on the CLM-presentation screen.
 |Text Chat History Enabled
 |[.apiobject]#clm__IsRDChatLogEnabled__c# |Checkbox |If
 enabled, the chat history will be saved as the *Attachment* record with
-the[.apiobject]#.html# file and linked to the selected
+the [.apiobject]#.html# file and linked to the selected
 *Activity* record.
 
 |Video Streaming

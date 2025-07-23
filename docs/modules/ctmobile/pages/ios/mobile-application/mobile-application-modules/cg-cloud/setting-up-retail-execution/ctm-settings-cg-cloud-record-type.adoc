@@ -1,6 +1,6 @@
 = CTM Settings: CG Cloud Record Type
 
-The *CG Cloud* record type of the[.object]#CTM Settings# object
+The *CG Cloud* record type of the [.object]#CTM Settings# object
 is intended to store the settings to display the related CG Cloud
 records on the record of the appropriate offline object in the CT Mobile
 app.
@@ -10,12 +10,12 @@ app.
 The mobile user can work with the related *CG Cloud* records and fill
 out the available fields with the actual values obtained during the
 visit to the retail store. The appropriate setting is defined by a
-combination of the[.apiobject]#clm__Object__c#,
+combination of the [.apiobject]#clm__Object__c#,
 [.apiobject]#clm__ObjectRecordType__c#, and
 [.apiobject]#clm__OrgProfileId__c# fields.
 
 * If there is only one appropriate setting, a tab with the name
-specified in the[.apiobject]#clm__Label__c# field will
+specified in the [.apiobject]#clm__Label__c# field will
 be displayed.
 * In the case of several appropriate settings, the *Detailing* tab with
 sections named according to the
@@ -30,7 +30,7 @@ Record Type API name:[.apiobject]#CGCloud#
 
 '''''
 
-[width="100%",cols="25%,25%,25%,25%",]
+[width="100%",cols="~,~,~,~",]
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
@@ -42,7 +42,7 @@ Available values:
 
 *[.apiobject]#$Photo# is the header for the product photo
 column.
-* The[.apiobject]#Name# of the *Assessment Indicator
+* The [.apiobject]#Name# of the *Assessment Indicator
 Definition* record, for example,[.apiobject]#$Out of stock#
 * The API name of the related object field, for example,
 [.apiobject]#ProductId#
@@ -89,7 +89,7 @@ Available values:
 *[.apiobject]#$Photo# is used to display a photo of the
 product.
 
-[NOTE] ==== The[.apiobject]#DisplayUrl ==== field of
+[NOTE] ==== The [.apiobject]#DisplayUrl ==== field of
 the *Salesforce Product* record must contain the URL address of the
 photo. #
 * The API name of the *Retail Visit KPI* record field to write the
@@ -129,7 +129,7 @@ profiles.
 |[.apiobject]#clm__ReadOnlyAttributes__c# |Text(255) a|
 List of[.apiobject]#true# and[.apiobject]#false#
 values (separated by a comma, without blank space) for every field
-specified in the[.apiobject]#clm__Fields__c# field.
+specified in the [.apiobject]#clm__Fields__c# field.
 
 If[.apiobject]#true#, the field is read-only.
 
@@ -152,7 +152,7 @@ If[.apiobject]#true#, the field is read-only.
 |[.apiobject]#clm__RequiredAttributes__c# |Text(255) a|
 List of[.apiobject]#true# and[.apiobject]#false#
 values (separated by a comma, without blank space) for every field
-specified in the[.apiobject]#clm__Fields__c# field.
+specified in the [.apiobject]#clm__Fields__c# field.
 
 If[.apiobject]#true#, the field should be filled out.
 

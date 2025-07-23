@@ -11,7 +11,7 @@ Control Panel:
 General]/xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-general-new.adoc#h3_1808523151[CT
 Mobile Control Panel 2.0: General]), CT Mobile monitors the user's
 coordinates. If the user has changed their location, the coordinates
-will be saved in the[.apiobject]#clm__GeoTracing__c#
+will be saved in the [.apiobject]#clm__GeoTracing__c#
 field, and the time will be saved in the
 [.apiobject]#clm__GeoTiming__c# field. If the user has
 not changed their location, the fields will not be updated.
@@ -33,12 +33,12 @@ image:Geo-Tracing-Sync-Log.png[]
 
 
 
-The following fields of the[.object]#Sync Log# object will be
+The following fields of the [.object]#Sync Log# object will be
 filled out:
 
 
 
-[width="100%",cols="25%,25%,25%,25%",]
+[width="100%",cols="~,~,~,~",]
 |===
 |*Field* |*API Name* |*Type* |*Description*
 

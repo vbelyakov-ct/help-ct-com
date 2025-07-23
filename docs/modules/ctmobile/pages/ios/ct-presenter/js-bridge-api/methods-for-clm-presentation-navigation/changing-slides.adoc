@@ -10,7 +10,7 @@ xref:ios/mobile-application/mobile-application-modules/applications/clm-presenta
 
 To jump from the current slide to the slide by its branch number in the
 [.apiobject]#clm__Branch__c# field and the order number
-in the[.apiobject]#clm__Order__c# field, add the
+in the [.apiobject]#clm__Order__c# field, add the
 following code into the current slide markup:
 
 //tag::ios,win[][TIP] ==== Available with the
@@ -20,7 +20,7 @@ functionality. ====
 
 
 To switch from the current slide to a slide in another CLM presentation,
-add a label to the[.apiobject]#clm__APPID__c# of
+add a label to the [.apiobject]#clm__APPID__c# of
 xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-application.adoc[the desired CLM presentation record] and add
 the following code into the current slide markup, where
 [.apiobject]#appID# is the label to the

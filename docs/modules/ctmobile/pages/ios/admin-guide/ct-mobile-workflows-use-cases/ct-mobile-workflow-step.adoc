@@ -18,7 +18,7 @@ API-name in Salesforce:
 
 '''''
 
-[width="100%",cols="25%,25%,25%,25%",]
+[width="100%",cols="~,~,~,~",]
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
@@ -139,7 +139,7 @@ corresponding *CT Mobile Workflow* record.
 |Relationship Name
 |[.apiobject]#clm__RelationshipName__c# |Text(255) a|
 The API name of the field with the *Lookup* type that connects the
-objects of the[.apiobject]#clm__ParentObjectAPIName__c#
+objects of the [.apiobject]#clm__ParentObjectAPIName__c#
 and[.apiobject]#clm__sObjectRelated__c# fields.
 
 * It is used with the *Related Records* or *Parent Record* value in
@@ -179,7 +179,7 @@ in use.
 |SOQL Object API Name
 |[.apiobject]#clm__SOQLObjectAPIname__c# |Text(255) |The
 API name of an object that is used as filter for generating new records
-of an object in the[.apiobject]#clm__sObjectRelated__c#
+of an object in the [.apiobject]#clm__sObjectRelated__c#
 or[.apiobject]#clm__ParentObjectAPIName__c# field.
 
 |SOQL Query |[.apiobject]#clm__SOQLQuery__c# |Text(255)

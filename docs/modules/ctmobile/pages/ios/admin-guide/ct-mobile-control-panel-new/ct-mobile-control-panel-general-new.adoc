@@ -113,7 +113,7 @@ xref:ios/mobile-application/mobile-application-modules/nearby-accounts.adoc[Near
 
 To use geolocation, create a field with the
 [.apiobject]#Geolocation__c# API name and with the
-*Geolocation* type on the[.object]#Account# object or
+*Geolocation* type on the [.object]#Account# object or
 [.object]#Retail Store# object in case of the *CG Cloud*
 integration. Then select this field in the *Account Geolocation Field*
 picklist.
@@ -122,7 +122,7 @@ picklist.
 
 To use geolocation, create a field with the
 [.apiobject]#Geolocation__c# API name and with the
-*Geolocation* type on the[.object]#Account# object. Then select
+*Geolocation* type on the [.object]#Account# object. Then select
 this field in the *Account Geolocation Field* picklist.
 
 [NOTE] ==== If geolocation data is not specified, the account
@@ -137,7 +137,7 @@ Full Address] field. ====
 
 Specify a field with the formula type to view the full address of the
 *Account* record. Create a new field with the *Formula(Text)* type on
-the[.object]#Account# object to contain *City*, *Street*, and
+the [.object]#Account# object to contain *City*, *Street*, and
 other address info in one line. This field will be used to track
 geolocation data and build routes.
 

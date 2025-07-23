@@ -10,7 +10,7 @@ synchronization will take longer.
 [[h2_478288222]]
 === The CT Mobile Replication Example
 
-For example, 100 records of the[.object]#Account# object with
+For example, 100 records of the [.object]#Account# object with
 related[.object]#Contacts# and[.object]#Activities#
 were downloaded via xref:ios/mobile-application/synchronization/synchronization-launch/index.adoc#h2_966867633[full
 synchronization]. Then, sharing rules for[.object]#Accounts#
@@ -88,9 +88,9 @@ separate *CT Mobile Replication* settings, and fill in the
 name of the required object.
 . Run xref:ios/mobile-application/synchronization/index.adoc[the fast synchronization].
 . The CT Mobile app requests the ID of all records of the object
-specified in the[.apiobject]#clm__ObjectAPIName__c#
+specified in the [.apiobject]#clm__ObjectAPIName__c#
 field from Salesforce given the conditions in
-xref:related-list-filters[Related List Filters].
+xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/related-list-filters.adoc[Related List Filters].
 . The CT Mobile app compares the requested records with the records on
 the mobile device by ID.
 . The records of the parent object:

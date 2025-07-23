@@ -17,17 +17,17 @@ Custom setting API name:
 
 '''''
 
-[width="100%",cols="25%,25%,25%,25%",]
+[width="100%",cols="~,~,~,~",]
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
 |Account Full Address Field
 |[.apiobject]#clm__AccountFullAddressAPIField__c#
-|Text(255) |The API name of the field on the[.object]#Account#
+|Text(255) |The API name of the field on the [.object]#Account#
 object is used to store the address of the organization, e.g., country,
 city, building. etc. The value in this field is used in
 xref:ios/admin-guide/mobile-layouts/index.adoc-maps[the Maps widget] if the value is not set
-in the[.apiobject]#clm__AccountGeolocationAPIField__c#
+in the [.apiobject]#clm__AccountGeolocationAPIField__c#
 field or this field is absent.
 
 |Account Geolocation Field
@@ -36,14 +36,14 @@ field or this field is absent.
 https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/compound_fields_geolocation.htm[the
 Location type] or
 https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/compound_fields_address.htm[the
-Address type] on the[.object]#Account# object is used to store
+Address type] on the [.object]#Account# object is used to store
 the geolocation of the organization. The value in this field is used to
 get the location in the xref:ios/mobile-application/mobile-application-modules/routes.adoc[Routes] and
 xref:ios/mobile-application/mobile-application-modules/nearby-accounts.adoc[Nearby Accounts] modules.
 
 |Activity "IsDone" field API name
 |[.apiobject]#clm__ActivityDoneAPI__c# |Text(255) |The
-API name of the field on the[.object]#Activity# object is used
+API name of the field on the [.object]#Activity# object is used
 as an additional attribute showing that the *Activity* is finished. The
 field is used when the xref:ios/admin-guide/start-finish-functionality.adoc[Start/Finish
 functionality] is enabled.
@@ -57,12 +57,12 @@ both *Start/Finish* and *Lock/Unlock* functionalities are enabled.
 
 |Activity Description field API Name
 |[.apiobject]#clm__ActivityDescriptionAPI__c# |Text(255)
-|The API name of the field on the[.object]#Activity# object is
+|The API name of the field on the [.object]#Activity# object is
 used to store the description of the activity.
 
 |Activity End Date field API name
 |[.apiobject]#clm__ActivityEndDateAPI__c# |Text(255)
-|The API name of the field on the[.object]#Activity# object is
+|The API name of the field on the [.object]#Activity# object is
 used to store the end date of the activity.
 
 |Activity Geolocation field API name
@@ -78,16 +78,16 @@ xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-applicationstats.adoc[th
 
 |Activity Object API Name
 |[.apiobject]#clm__ActivityObjectAPIName__c# |Text(255)
-|API-name of the[.object]#Activity# object.
+|API-name of the [.object]#Activity# object.
 
 |Activity Start Date API name
 |[.apiobject]#clm__ActivityDateAPI__c# |Text(255) |The
-API name of the field on the[.object]#Activity# object used to
+API name of the field on the [.object]#Activity# object used to
 store the start date of the activity.
 
 |Activity Status field API name
 |[.apiobject]#clm__ActivityStatusAPI__c# |Text(255) |The
-API name of the field on the[.object]#Activity# object with the
+API name of the field on the [.object]#Activity# object with the
 picklist type displays the activity status.
 
 |Allow Web Sharing
@@ -214,7 +214,7 @@ xref:clm-product[Product] object.
 
 |Product Object API Name
 |[.apiobject]#clm__ProductObjectAPIName__c# |Text(255)
-|The API name of the[.object]#Product# object.
+|The API name of the [.object]#Product# object.
 
 |PUSH Identifier |[.apiobject]#clm__PUSHHUBName__c#
 |Text(255) |Push notifications identifier.
@@ -285,7 +285,7 @@ templates and parts of the HTML code.
 
 
 
-[width="100%",cols="25%,25%,25%,25%",]
+[width="100%",cols="~,~,~,~",]
 |===
 |*Field* |*API Name* |*Type* |*Description*
 

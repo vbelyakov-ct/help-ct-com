@@ -23,15 +23,15 @@ and customize a standard related list] on the page layout of the
 required object.
 * Select fields to display on the related list;
 * Set up user permissions to fields:
-** If the[.apiobject]#Updateable# attribute has a *false*
+** If the [.apiobject]#Updateable# attribute has a *false*
 value, the field will be read-only even if the *Read Only* attribute has
 not been selected.
-** If the[.apiobject]#Nillable# attribute has a *false* value,
+** If the [.apiobject]#Nillable# attribute has a *false* value,
 the field will be required to fill in even if the *Required* attribute
 has not been selected.
 * Specify the columns' order;
 * Use filters. For more information, go
-to xref:filters-in-related-lists[Filters in Related Lists].
+to xref:ios/admin-guide/related-lists/filters-in-related-lists.adoc[Filters in Related Lists].
 . Go to
 xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects.adoc#h2_946326628[CT Mobile
 Control Panel: Offline

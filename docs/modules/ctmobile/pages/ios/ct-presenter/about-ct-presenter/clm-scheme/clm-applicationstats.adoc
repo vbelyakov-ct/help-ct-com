@@ -1,6 +1,6 @@
 = Application Stats
 
-The[.object]#Application Stats# object is intended to store
+The [.object]#Application Stats# object is intended to store
 statistics of every time the CLM presentation is viewed whether the
 current preview is attached to the _Activity_ record or not.
 
@@ -20,15 +20,15 @@ Object API name:[.apiobject]#clm__ApplicationStats__c#
 necessary to use preconfigured
 xref:ios/mobile-application/mobile-application-modules/applications/gestures-in-clm-presentations.adoc[gestures].  ====
 
-[width="100%",cols="25%,25%,25%,25%",]
+[width="100%",cols="~,~,~,~",]
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Activity |depends on the[.object]#Activity# object
+|Activity |depends on the [.object]#Activity# object
 |Lookup(Activity) for the custom[.object]#Activity# object /
 Text for the standard[.object]#Task# and
 [.object]#Event# objects a|
-A field with the lookup type for the[.object]#Activity# object
+A field with the lookup type for the [.object]#Activity# object
 will be automatically created for each[.object]#Activity#
 object specified on xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc[CT Mobile
 Control Panel:
@@ -96,7 +96,7 @@ For the *Self-Detailing* meeting.
 
 * If enabled, the statistics will be pulled into Salesforce after a
 certain time (timeout of the participant's session), and the field
-switches to the[.apiobject]#true# value.
+switches to the [.apiobject]#true# value.
 
 |Guest Stats |[.apiobject]#clm__IsGuestStats__c#
 |Checkbox a|

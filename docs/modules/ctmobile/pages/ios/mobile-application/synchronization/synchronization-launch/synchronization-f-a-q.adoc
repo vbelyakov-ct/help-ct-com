@@ -219,7 +219,7 @@ During the fast synchronization, only records with the modified
 if you changed
 https://help.salesforce.com/articleView?id=security_about_sharing_rules.htm&type=5[sharing
 rules] (via organization-wide defaults or per each record), the value in
-the[.apiobject]#SystemModStamp# field is not modified. In this
+the [.apiobject]#SystemModStamp# field is not modified. In this
 case, xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/ct-mobile-replication.adoc[create a CT Mobile Replication
 setting] to keep data up to date on the device. The corresponding
 records will be downloaded and records, which are no longer available,
@@ -264,7 +264,7 @@ Go back to xref:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 Depending on the selected debug level, the sync log record with the
 corresponding status will be saved for synchronization and all performed
 operations, except for Geo Tracing and Geolocation. For more
-information, read xref:sync-log[the Sync Log article].
+information, read xref:ios/mobile-application/synchronization/synchronization-launch/sync-log.adoc[the Sync Log article].
 
 
 
@@ -304,7 +304,7 @@ Go back to xref:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 [[h3_1530730493]]
 ==== Where are the synchronization statistics stored?
 
-The xref:sync-log[Sync Log] object is intended to store logs for
+The xref:ios/mobile-application/synchronization/synchronization-launch/sync-log.adoc[Sync Log] object is intended to store logs for
 each performed synchronization.
 
 * the main Sync log record with the type of synchronization;
@@ -314,14 +314,14 @@ each performed synchronization.
 
 The Sync Log record may include attachments:
 
-the[.apiobject]#SyncSingle.log# file with all operations for
+the [.apiobject]#SyncSingle.log# file with all operations for
 the first, full, fast, mixed, and quick record synchronization.
 
-the[.apiobject]#sync.log# file for the
+the [.apiobject]#sync.log# file for the
 xref:ios/mobile-application/application-settings/send-application-data-dump.adoc#SendApplicationDataDump-SpecifyDatatoSend[Sync
 Log History] operation.
 
-the[.apiobject]#Documents.zip# for the Export Data operation;
+the [.apiobject]#Documents.zip# for the Export Data operation;
 
 ifndef::andr,win[]
 
@@ -538,7 +538,7 @@ Go back to xref:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 [[h3_381741377]]
 ==== What to do if the INVALID_TYPE error occurs?
 
-The[.apiobject]#INVALID_TYPE# error occurs if you haven't
+The [.apiobject]#INVALID_TYPE# error occurs if you haven't
 access to a field because of revoked access in Salesforce. When you
 perform fast synchronization, the system cannot retrieve records of
 objects because the current user has no access to several object fields.
@@ -560,7 +560,7 @@ Go back to xref:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 [[h3_1079670190]]
 ==== What to do if the UNKNOWN_EXCEPTION error occurs?
 
-The[.apiobject]#UNKNOWN_EXCEPTION# error occurs due to
+The [.apiobject]#UNKNOWN_EXCEPTION# error occurs due to
 either an incorrect setting or a Salesforce error.
 
 * Identify the query where the error occurs during synchronization, and
@@ -574,7 +574,7 @@ Go back to xref:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 [[h3_1189028288]]
 ==== What to do if the MALFORMED_QUERY error occurs?
 
-The[.apiobject]#MALFORMED_QUERY# error occurs when the SOQL
+The [.apiobject]#MALFORMED_QUERY# error occurs when the SOQL
 filter is incorrectly specified for the offline object. Check the
 xref:ios/admin-guide/managing-offline-objects/index.adoc[SOQL query] in the error message.
 
@@ -585,7 +585,7 @@ Go back to xref:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 [[h3_1710675976]]
 ==== What to do if the INVALID_FILTER_QUERY_OPERATOR: invalid ID field occurs?
 
-The[.apiobject]#INVALID_FILTER_QUERY_OPERATOR:
+The [.apiobject]#INVALID_FILTER_QUERY_OPERATOR:
 invalid ID field# error is due to a temporary mobile record ID being
 inserted into xref:ios/admin-guide/managing-offline-objects/reference-fields.adoc[the reference field] when the
 query is formed. Check the custom logic that inserts the temporary ID ​in
@@ -757,7 +757,7 @@ xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.ado
 Control Panel:
 General]/xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-general-new.adoc#h2_1687169837[CT
 Mobile Control Panel 2.0: General] tab to collect statistics in the
-[.object]#Sync Log# object. The xref:sync-log[Sync Log]
+[.object]#Sync Log# object. The xref:ios/mobile-application/synchronization/synchronization-launch/sync-log.adoc[Sync Log]
 record for the selected synchronization type keeps:
 
 * Operation. Currently, there are two available types:

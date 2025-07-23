@@ -39,7 +39,7 @@ xref:ios/mobile-application/synchronization/sync-recovery.adoc[the Sync Recovery
 //tag::ios,win[]
 
 The system compares the date of the last successful synchronization in
-the[.apiobject]#clm__LastSyncDate__c# field of the
+the [.apiobject]#clm__LastSyncDate__c# field of the
 current user's record with the date of the last metadata change in the
 [.apiobject]#clm__MetadataLastModifiedDate__c# field of
 the xref:mobile-application-setup[Mobile Application Setup] record
@@ -69,13 +69,13 @@ proceed without a valid cloud token or administrator credentials, and in
 that case, xref:ios/mobile-application/synchronization/validation.adoc[validation rules], offline reports, and
 some operators in formulas might not operate properly.
 
-Records of xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/index.adoc[the custom settings&#44; custom
+Records of xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/index.adoc[the custom settings, custom
 metadata types], xref:ios/admin-guide/managing-offline-objects/index.adoc[offline objects],
 and objects, which are necessary for activated
 xref:ios/mobile-application/mobile-application-modules/index.adoc[modules], are downloaded if the
-value in the[.apiobject]#SystemModstamp# field is a date later
+value in the [.apiobject]#SystemModstamp# field is a date later
 than the date of the last successful synchronization and a record
-matches the conditions set in xref:related-list-filters[related
+matches the conditions set in xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/related-list-filters.adoc[related
 list filters].
 
 //tag::ios[]

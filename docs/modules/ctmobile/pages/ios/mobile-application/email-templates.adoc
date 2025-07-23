@@ -20,7 +20,7 @@ image:Email-Templates.png[]
 To use email templates in the CT Mobile app, they should be active, and
 the mobile user should have access to appropriate email templates.
 
-Specify markers in the[.apiobject]#{!Object.Field}# format
+Specify markers in the [.apiobject]#{!Object.Field}# format
 xref:ios/ct-presenter/js-bridge-api/methods-for-interaction-with-crm-data/crm-data-display.adoc[to display CRM data], for example,
 [.apiobject]#{!User.Name}#,
 [.apiobject]#{!User.LastName}#,
@@ -76,7 +76,7 @@ when using Email Template Builder. ====
 * In the Salesforce Classic, the Visualforce email templates are not
 supported.
 * In the Lightning Experience, all email templates are supported except
-for the[.apiobject]#{{{Recipient.FirstName}}}# markers.
+for the [.apiobject]#{{{Recipient.FirstName}}}# markers.
 
 * //tag::ios[]
 * The attached files are not supported.
