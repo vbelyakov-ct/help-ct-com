@@ -11,7 +11,7 @@ Panel: App Menu].
 . Drag and drop desired objects from the *Available* list to the
 *Selected* list.
 * The *Available* list contains all
-xref:ct-mobile-control-panel-offline-objects[offline objects]. You
+xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects.adoc[offline objects]. You
 can drag and drop objects between the lists. All objects in the
 *Selected* list will be available in the main menu in the same order.
 * Make sure that the current profile has at least _View_ permissions for
@@ -22,7 +22,7 @@ in the label or API name of the desired object.
 . Click the
 image:47745273.png[]
 button to open the *Add menu item* tool and select
-xref:mobile-application-modules[the desired additional modules].
+xref:ios/mobile-application/mobile-application-modules/index.adoc[the desired additional modules].
 image:47745270.png[]
 . Arrange menu items in the *Selected* section.
 . Click *Save*.
@@ -36,7 +36,7 @@ Panel 2.0: App Menu].
 settings to all the profiles, select *General Settings*.
 . Move desired objects from the *Available* list to the *Selected* list.
 * The *Available* list contains all
-xref:ct-mobile-control-panel-offline-objects[offline objects]. You
+xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects.adoc[offline objects]. You
 can move objects between the lists. All objects in the *Selected* list
 will be available in the main menu in the same order.
 * Make sure that the current profile has at least _View_ permissions for
@@ -45,7 +45,7 @@ the selected objects. You can review the profile’s permissions in *Setup
 * Use the search to find the objects in the *Available* list by typing
 in the label of the desired object.
 . Click the *Show Module Menu* button to open the module menu and select
-xref:mobile-application-modules[the desired additional modules].
+xref:ios/mobile-application/mobile-application-modules/index.adoc[the desired additional modules].
 . Arrange menu items in the *Selected* section.
 [NOTE] ==== The *Home* item cannot be moved and always remains
 on top.
@@ -59,11 +59,11 @@ image:ctm-control-panel-new-app-menu-items.png[]
 
 The setup is complete.
 
-ifdef::ios[]
+//tag::ios[]
 
 image:ctm-ios-homescreen-app-menu.png[]
 
-[[h2__312093935]]
+[[h2_312093935]]
 === Specify an Icon for the Offline Object
 
 To specify a custom icon for the offline object:
@@ -78,20 +78,20 @@ and load the icon in the[.apiobject]#.pdf# format.
 . Click *OK*.
 . Click *Save*.
 
-The icon is set. Launch xref:full-synchronization[full
+The icon is set. Launch xref:ios/mobile-application/synchronization/full-synchronization.adoc[full
 synchronization].
 
 The selected icon will also be displayed on the main tab of the open
 record of the offline object.
 
-ifdef::win[]
+//tag::win[]
 
 image:65471055.png[]
 
-ifdef::andr[]
+//tag::andr[]
 
 image:65471053.png[]
 
-ifdef::kotlin[][TIP] ==== If a mobile user is using CT
+//tag::kotlin[][TIP] ==== If a mobile user is using CT
 Mobile on their smartphone, they can collapse or expand the main menu by
 swiping left or right. ====

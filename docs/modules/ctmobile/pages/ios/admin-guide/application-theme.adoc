@@ -10,7 +10,7 @@ To configure the application theme:
 [width="100%",cols="50%,50%",]
 |===
 |In CT Mobile Control Panel a|
-. Go to xref:ct-mobile-control-panel-general[CT Mobile Control
+. Go to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc[CT Mobile Control
 Panel: General].
 . {blank}
 . Click *Customize* in the *User Interface* section.
@@ -34,7 +34,7 @@ settings to all the profiles, select *General Settings*.
 
 The setup is complete.
 
-[[h2__1497250322]]
+[[h2_1497250322]]
 === Available settings
 
 The information below is applicable for *CT Mobile Control Panel*. If
@@ -46,7 +46,7 @@ In the *App Customization* window, the settings are located on the left
 side, and the tablet view with applied settings is on the right side.
 
 image:62560562.png[]
-ifdef::ios[]
+//tag::ios[]
 
 [[h3_1718046162]]
 ==== Title Pattern
@@ -66,7 +66,7 @@ pattern, select *Own* in the picklist and click *Upload*.
 
 The changes will be represented on the tablet view.
 
-[[h3__1461860777]]
+[[h3_1461860777]]
 ==== Device Background Color
 
 Click on the field to select a color from the drop-down palette, or
@@ -75,16 +75,16 @@ enter the color code.
 [[h3_1354766135]]
 ==== Homepage Logo
 
-The logo is represented on the xref:home-screen[Home screen] if the
+The logo is represented on the xref:ios/mobile-application/ui/home-screen/index.adoc[Home screen] if the
 *Logo* widget is added. Click *Choose file* to add a new logo.
 
 You can configure your *Home screen* to relocate the logo or change its
-size. After that, launch the xref:fast-synchronization[fast
+size. After that, launch the xref:ios/mobile-application/synchronization/fast-synchronization.adoc[fast
 synchronization].
 
-ifdef::andr,win[]
+//tag::andr,win[]
 
-[[h3__1461860777]]
+[[h3_1461860777]]
 ==== Device Background Color
 
 Click on the field to select a color from the drop-down palette, or
@@ -93,14 +93,14 @@ enter the color code.
 [[h3_1354766135]]
 ==== Homepage Logo
 
-The logo is represented on the xref:home-screen[Home screen] if the
+The logo is represented on the xref:ios/mobile-application/ui/home-screen/index.adoc[Home screen] if the
 *Logo* widget is added. Click *Choose file* to add a new logo.
 
 You can configure your *Home screen* to relocate the logo or change its
-size. After that, launch the xref:fast-synchronization[fast
+size. After that, launch the xref:ios/mobile-application/synchronization/fast-synchronization.adoc[fast
 synchronization].
 
-ifdef::kotlin[]
+//tag::kotlin[]
 
 [[h3_1718046162]]
 ==== Title Pattern
@@ -120,7 +120,7 @@ pattern, select *Own* in the picklist and click *Upload*.
 
 The changes will be represented on the tablet view.
 
-[[h3__1461860777]]
+[[h3_1461860777]]
 ==== Device Background Color
 
 Click on the field to select a color from the drop-down palette, or
@@ -129,5 +129,5 @@ enter the color code.
 [[h3_1354766135]]
 ==== Homepage Logo
 
-The logo is represented on the xref:home-screen[Home screen]. Click
+The logo is represented on the xref:ios/mobile-application/ui/home-screen/index.adoc[Home screen]. Click
 *Choose file* to add a new logo.

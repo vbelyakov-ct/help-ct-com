@@ -9,30 +9,30 @@ during the synchronization.
 ** Now, the cloud token is written to the protected
 xref:api-key[API Key] custom setting and retrieved by the web
 service.
-** As before, xref:application-permission-settings[administrators]
+** As before, xref:ios/getting-started/application-permission-settings.adoc[administrators]
 could view and refresh the cloud token value on the
-xref:ct-mobile-control-panel-tools[CT Mobile Control Panel: Tools].
+xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc[CT Mobile Control Panel: Tools].
 
 
 
 Consider the following while working with the CT Mobile package v. 3.54
 and higher:
 
-* xref:ct-mobile-control-panel-tools#h2__203730205[The
+* xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc#h2_203730205[The
 administrator credentials] are no more available on the CT Mobile
 Control Panel: Tools tab and are no more in use to download metadata on
 the user's device.
-* xref:metadata-archive[The metadata archive] should be built. This
+* xref:ios/admin-guide/metadata-checker/metadata-archive/index.adoc[The metadata archive] should be built. This
 allows all the necessary metadata to be downloaded to the user's device
 for the CT Mobile app to work properly offline.
 
-[TIP] ==== Enable xref:metadata-checker[Metadata Checker]
+[TIP] ==== Enable xref:ios/admin-guide/metadata-checker/index.adoc[Metadata Checker]
 or click the
-xref:ct-mobile-control-panel-tools#h3_1003786176[Refresh metadata
+xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc#h3_1003786176[Refresh metadata
 archive] button to build the metadata archive. Please note that the
 process will take some time.  ====
 
-* xref:ct-mobile-control-panel-tools#h3_2011978[The cloud token] is
+* xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc#h3_2011978[The cloud token] is
 required to download the metadata archive during the synchronization on
 the user's device.
 * If the cloud token is invalid or there is no metadata archive, the CT
@@ -46,16 +46,16 @@ Please get familiar with the comparison table of functionalities
 available for users according to their devices platforms and versions of
 the CT Mobile package and app.
 
-ifdef::kotlin[][NOTE] ==== Currently, the CT Mobile package
+//tag::kotlin[][NOTE] ==== Currently, the CT Mobile package
 v. 3.54 and higher cannot be used with the CT Mobile Android app.  ====
-ifdef::ios[][NOTE] ==== If you changed the cloud token
+//tag::ios[][NOTE] ==== If you changed the cloud token
 value, please note to manually add
-xref:ct-mobile-control-panel-tools#h3_2011978[the new value] to the
+xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc#h3_2011978[the new value] to the
 corresponding xref:mobile-application-setup[Mobile Application
 Setup] record if you are using the CT Mobile iOS app below v. 2.4 with
-the CT Mobile package v. 3.54 and higher. ==== ifdef::win[]
+the CT Mobile package v. 3.54 and higher. ==== //tag::win[]
 [NOTE] ==== If you changed the cloud token value, please note to
-manually add xref:ct-mobile-control-panel-tools#h3_2011978[the new
+manually add xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc#h3_2011978[the new
 value] to the corresponding xref:mobile-application-setup[Mobile
 Application Setup] record if you are using the CT Mobile Windows app
 below v. 1.3 with the CT Mobile package v. 3.54 and higher. ====

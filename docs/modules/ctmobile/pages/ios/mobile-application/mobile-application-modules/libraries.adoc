@@ -12,11 +12,11 @@ Upload documents to
 https://help.salesforce.com/articleView?id=collab_salesforce_files_parent.htm&type=5[Files]
 and grant user access to documents. Documents can be stored by folder.
 
-ifdef::win[]
+//tag::win[]
 
 Tap the file name to send the file by e-mail.
 
-ifdef::kotlin[]
+//tag::kotlin[]
 
 Tap a file or folder to open it. Tap the *Back* button to close the
 file.
@@ -25,14 +25,14 @@ Tap the file name to send the file by e-mail.
 
 Search a library, folder, or file by its name or format.
 
-ifdef::ios[]
+//tag::ios[]
 
 Tap the file name to send the file by e-mail using
-xref:email-templates[email templates] if available.
+xref:ios/mobile-application/email-templates.adoc[email templates] if available.
 
-Enable xref:application-settings#h3_1768799377[background content
+Enable xref:ios/mobile-application/application-settings/index.adoc#h3_1768799377[background content
 loading] to download Salesforce Content documents in background mode.
-You can also select the xref:ctm-settings-menu[Files Download
+You can also select the xref:ios/admin-guide/ct-mobile-control-panel/ctm-settings/ctm-settings-menu.adoc[Files Download
 Enabled] checkbox for Library to adjust the background downloading
 process.
 
@@ -47,22 +47,22 @@ in the Libraries module. For more information, refer to
 https://help.salesforce.com/s/articleView?id=admin_sessions.htm&type=5&language=en_US[Salesforce
 Help: Modify Session Security Settings].
 
-ifdef::ios[]
+//tag::ios[]
 image:Libraries.png[]
-ifdef::win[]
+//tag::win[]
 image:65470770.png[]
-ifdef::kotlin[]
+//tag::kotlin[]
 image:libraries-kotlin.png[]
 
-[[h2__480837523]]
+[[h2_480837523]]
 === Adding Libraries to the Menu
 
 If [.object]#ContentDocument#, [.object]#ContentVersion#,
 [.object]#ContentDocumentLink# objects are added as
-xref:managing-offline-objects[offline objects], the *Libraries*
+xref:ios/admin-guide/managing-offline-objects/index.adoc[offline objects], the *Libraries*
 module will not work correctly.
 
-To add the *Libraries* module to the xref:app-menu[app menu]:
+To add the *Libraries* module to the xref:ios/admin-guide/app-menu/index.adoc[app menu]:
 
 [width="100%",cols="50%,50%",]
 |===
@@ -126,7 +126,7 @@ Other file formats.
 
 Supported files:
 
-ifdef::ios[]
+//tag::ios[]
 
 * documents:[.apiobject]#.xls#,[.apiobject]#.doc#,
 [.apiobject]#.pdf#,[.apiobject]#.txt#
@@ -134,7 +134,7 @@ ifdef::ios[]
 [.apiobject]#.ppt#,[.apiobject]#.png#,
 [.apiobject]#.mp4#
 
-ifdef::win,kotlin[]
+//tag::win,kotlin[]
 
 * documents:[.apiobject]#.xls[x]#,
 [.apiobject]#.doc[x]#,[.apiobject]#.pdf#,

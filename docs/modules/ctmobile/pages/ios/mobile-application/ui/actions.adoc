@@ -5,7 +5,7 @@ record details screen.
 
 :toc: :toclevels: 3
 
-ifdef::ios[]
+//tag::ios[]
 
 [cols=",",]
 |===
@@ -18,16 +18,16 @@ ifdef::ios[]
 
 
 
-ifdef::kotlin[]
+//tag::kotlin[]
 
 image:Actions_Kotlin.png[]
 
-ifdef::ios,kotlin,win[]
+//tag::ios,kotlin,win[]
 
-[[h2__1355154294]]
+[[h2_1355154294]]
 === Determine Location
 
-ifdef::win[]
+//tag::win[]
 
 If the *Account* record has no location, click the
 image:maps_win_2_ru.png[]
@@ -35,16 +35,16 @@ icon on the map to save the current coordinates as the address for this
 record. The mobile user should have permission to edit the geolocation
 field.
 
-ifdef::ios,kotlin,[]
+//tag::ios,kotlin,[]
 
 Tap the *Determine Location* button to determine the current device
 location data for an *Account* or *Activity* record and write them into
 the specific field.
 
 When a mobile user has permission to edit records (refer to
-xref:managing-offline-objects[Managing Offline Objects in CT Mobile
+xref:ios/admin-guide/managing-offline-objects/index.adoc[Managing Offline Objects in CT Mobile
 Control Panel] or
-xref:ct-mobile-control-panel-offline-objects-new[CT Mobile Control
+xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc[CT Mobile Control
 Panel 2.0: Offline Objects]).
 
 When the mobile user has permission to edit the geolocation type field.
@@ -57,7 +57,7 @@ to store the geolocation of the organization.
 A geolocation type field on the[.object]#Activity# objects used
 to store the geolocation of the activities.
 
-If xref:start-finish-functionality[the Start/Finish functionality]
+If xref:ios/admin-guide/start-finish-functionality.adoc[the Start/Finish functionality]
 is on *Capture Geoposition* is enabled, and a mobile user has forenamed
 permissions for a record of an[.object]#Activity# object, the
 geolocation is automatically captured and the *Determine Location*
@@ -70,11 +70,11 @@ ifndef::kotlin[]
 The *Determine Location* button is available on the records of other
 objects:
 
-* When xref:ct-mobile-control-panel-general#h2_670774632[a
+* When xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h2_670774632[a
 geolocation type field on the Account object] is specified (refer to
-xref:ct-mobile-control-panel-general#h3_612123135[CT Mobile Control
+xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_612123135[CT Mobile Control
 Panel: General → Account Geolocation Field] or
-xref:ct-mobile-control-panel-general-new#h3_612123135[CT Mobile
+xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-general-new.adoc#h3_612123135[CT Mobile
 Control Panel 2.0: General → Account Geolocation Field]).
 * The API name of the geolocation type field on the required object is
 the same as the API name of the geolocation type field on the
@@ -89,7 +89,7 @@ appropriate type, for example, to manually add the new address.
 
 image:capture-geolocation_kotlin.jpeg[]
 
-ifdef::ios[]
+//tag::ios[]
 
 [[h2_62618674]]
 === File
@@ -110,7 +110,7 @@ sharing rule], or if the access was
 granted https://help.salesforce.com/articleView?id=security_sharing_owd_user_manual.htm&type=5[manually].
 
 To know more about attaching and viewing files in the *Files* section,
-refer to xref:attaching-files-in-the-files-section[Attachments in
+refer to xref:ios/mobile-application/attaching-files-in-the-files-section.adoc[Attachments in
 the Files Section].
 
 [[h2_62618674]]
@@ -131,11 +131,11 @@ https://help.salesforce.com/articleView?id=security_sharing_rules_create.htm&typ
 sharing rule], or if the access was granted
 https://help.salesforce.com/articleView?id=security_sharing_owd_user_manual.htm&type=5[manually].
 
-ifdef::ios,kotlin[]
+//tag::ios,kotlin[]
 
 
 
-If xref:start-finish-functionality[the Start/Finish functionality]
+If xref:ios/admin-guide/start-finish-functionality.adoc[the Start/Finish functionality]
 is on and a mobile user has fore-named permissions for a record of an
 [.object]#Activity# object:
 
@@ -144,14 +144,14 @@ cannot take photos or choose photos from the device gallery.
 * When the activity was started, a mobile user can take photos or choose
 photos from the device gallery.
 
-ifdef::ios,win,andr[]
+//tag::ios,win,andr[]
 
 [[h2_785802245]]
 === Add Post
 
 ifndef::win[]
 
-Add a post in the xref:mobile-layouts-chatter-feed[Chatter feed].
+Add a post in the xref:ios/admin-guide/mobile-layouts/index.adoc-chatter-feed[Chatter feed].
 Click *Add Post*. In the open modal window:
 
 [NOTE] ==== The user profile should have permission to edit
@@ -170,9 +170,9 @@ permission to edit records of the object to which the *Chatter* tab is
 added. ====
 
 Click the *Plus* button to add a new post to the
-xref:mobile-layouts-chatter-feed[Chatter feed].
+xref:ios/admin-guide/mobile-layouts/index.adoc-chatter-feed[Chatter feed].
 
-ifdef::ios[]
+//tag::ios[]
 
 [[h2_785802245]]
 === Signature
@@ -189,49 +189,49 @@ Tap to export selected fields to a CSV file.
 
 * The menu item is displayed on related records, if the *Export
 Allowed* checkbox is set to _true_ (refer to
-xref:ctm-settings-offline-objects[Offline Objects → Export Allowed]
-or xref:ct-mobile-control-panel-offline-objects-new#h3_290156637[CT
+xref:ios/admin-guide/ct-mobile-control-panel/ctm-settings/ctm-settings-offline-objects.adoc[Offline Objects → Export Allowed]
+or xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc#h3_290156637[CT
 Mobile Control Panel 2.0: Offline Objects → Export to CSV]).
 * Default fields should be specified in the** Default Columns** field of
-the xref:ctm-settings-offline-objects[Offline Object] or in
-xref:ct-mobile-control-panel-offline-objects-new#h4__912917703[CT
+the xref:ios/admin-guide/ct-mobile-control-panel/ctm-settings/ctm-settings-offline-objects.adoc[Offline Object] or in
+xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc#h4_912917703[CT
 Mobile Control Panel 2.0: Offline Objects → Export Columns Selection].
 * Custom fields can be selected for export if
-the xref:ctm-settings-offline-objects[Select Export
+the xref:ios/admin-guide/ct-mobile-control-panel/ctm-settings/ctm-settings-offline-objects.adoc[Select Export
 Columns] checkbox is set to _true_ or
-xref:ct-mobile-control-panel-offline-objects-new#h4__912917703[Export
+xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc#h4_912917703[Export
 Columns Selection] is set to *User-Selected Columns* or *Predefined and
 User-Selected Columns*.
 [TIP] ==== To export selected fields to file for the main
-object, switch to xref:list-views#h2_1248088428[detailed list
+object, switch to xref:ios/mobile-application/ui/list-views.adoc#h2_1248088428[detailed list
 view]. ====
 
 image:ctmi-export-csv-2.9.png[]
 
 
 
-ifdef::win[]
+//tag::win[]
 
-[[h2__784112042]]
+[[h2_784112042]]
 === Order
 
 To create an order offline, follow the steps in
 https://help.customertimes.com/articles/ct-orders-4-0/adding-ct-orders-to-the-ct-mobile-app-4-0[the
 CT Orders guide].
 
-[[h2__13678918]]
+[[h2_13678918]]
 === 
 
-ifdef::win,ios[]
+//tag::win,ios[]
 
-[[h2__13678918]]
+[[h2_13678918]]
 === Sign document
 
 To sign a document offline, follow the steps in
 https://help.customertimes.com/smart/project-ct-sign-en/add-the-ct-sign-to-the-ct-mobile-app[the
 CT Sign guide].
 
-ifdef::hidden[]
+//tag::hidden[]
 
 [[h2_1289864329]]
 === Form Document

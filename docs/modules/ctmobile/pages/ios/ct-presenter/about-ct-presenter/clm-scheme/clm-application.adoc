@@ -26,7 +26,7 @@ label.
 
 |Application ID |[.apiobject]#clm__APPID__c# |Text(255)
 (Unique Case Insensitive) |The unique label of the CLM presentation. It
-may be used xref:changing-slides[in the navigation] for switching
+may be used xref:ios/ct-presenter/js-bridge-api/methods-for-clm-presentation-navigation/changing-slides.adoc[in the navigation] for switching
 from the current slide to a slide in another CLM presentation.
 
 |Available for Download
@@ -69,7 +69,7 @@ demonstration of the CLM presentation.
 
 For each slide, comments will be stored in the
 [.apiobject]#clm__Description__c# field of the record of
-the xref:clm-applicationstats[Application Stats] object.
+the xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-applicationstats.adoc[Application Stats] object.
 
 |Forced Load Date |[.apiobject]#clm__ForcedLoadDate__c#
 |Date a|
@@ -102,7 +102,7 @@ JPEG/JPG files] on the xref:application-editor[Application Editor]
 tab.
 * *Plain Application*
 
-In the built-in xref:plain-application-editor[Plain Application
+In the built-in xref:ios/ct-presenter/creating-clm-presentation/creating-clm-presentation-with-the-plain-application-record-type/index.adoc[Plain Application
 Editor], CLM presentations can be created based on
 xref:clm-template[templates],
 xref:clm-placeholder[placeholders], xref:clm-widget[widgets],
@@ -121,7 +121,7 @@ The slide ID for displaying a slide preview.
 |Slide reordering enabled
 |[.apiobject]#clm__IsSlideReorderEnabled__c# |Checkbox
 |If enabled, users can create and edit
-xref:clm-customscenario[custom scenarios].
+xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-customscenario.adoc[custom scenarios].
 
 |Slide Zoom Enabled |[.apiobject]#clm__IsZoomEnabled__c#
 |Checkbox |If enabled, zoom in and out slides if
@@ -139,7 +139,7 @@ Per slide,
 
 * it counts taps or clicks and stores as an *Application Stats* record
 of the *Slide Stats* record type.
-* xref:the-remote-detailing-functionality[For Remote Detailing]
+* xref:ios/ct-presenter/the-remote-detailing-functionality/index.adoc[For Remote Detailing]
 
 Per each slide, counting taps/clicks of the presenter and participants
 will be stored as an *Application Stats* record of the *Global Stats*

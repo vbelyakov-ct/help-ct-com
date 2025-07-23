@@ -1,34 +1,34 @@
 = Quick Start Guide
 
 . To start working with the CT Mobile solution:
-.. xref:installing-ct-mobile-package[Install the CT Mobile
+.. xref:ios/getting-started/installing-ct-mobile-package/index.adoc[Install the CT Mobile
 Package].
-.. xref:installing-the-ct-mobile-app[Install the CT Mobile
-application], xref:logging-in[log in] and launch the first
+.. xref:ios/getting-started/installing-the-ct-mobile-app/index.adoc[Install the CT Mobile
+application], xref:ios/getting-started/logging-in/index.adoc[log in] and launch the first
 synchronization.
 .. Configure Offline Objects (in
-xref:ct-mobile-control-panel-offline-objects[CT Mobile Control
+xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects.adoc[CT Mobile Control
 Panel: Offline Objects] or
-xref:ct-mobile-control-panel-offline-objects-new[CT Mobile Control
+xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc[CT Mobile Control
 Panel 2.0: Offline Objects]).
 .. Configure xref:ct-mobile-control-panel-app-menu[App Menu] (in
 xref:ct-mobile-control-panel-app-menu[CT Mobile Control Panel: App
 Menu] or xref:ct-mobile-control-panel-app-menu-new[CT Mobile
 Control Panel 2.0: App Menu]) items and additional modules, such as:
-* xref:ct-mobile-control-panel-calendar[Calendar] (in CT Mobile
+* xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc[Calendar] (in CT Mobile
 Control Panel) or
-xref:ct-mobile-control-panel-activities-new[Activities] (in CT
+xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-activities-new.adoc[Activities] (in CT
 Mobile Control Panel 2.0)
-* xref:routes[Routes]
-* xref:nearby-accounts[Nearby Accounts]
+* xref:ios/mobile-application/mobile-application-modules/routes.adoc[Routes]
+* xref:ios/mobile-application/mobile-application-modules/nearby-accounts.adoc[Nearby Accounts]
 [NOTE] ==== To use Google Maps, Routes and Nearby Accounts,
-xref:google-maps-api-key[get the Google Maps API Key] and specify
+xref:ios/admin-guide/google-maps-api-key/index.adoc[get the Google Maps API Key] and specify
 it in the
 https://help.customertimes.com/articles/ct-mobile-ios-en/ct-mobile-control-panel-general[CT
 Mobile Control Panel:
 General]/xref:ct-mobile-control-panel-general-new[CT Mobile Control
 Panel 2.0: General] section. ====
-.. (Recommended) configure xref:mobile-layouts[Mobile layouts] to
+.. (Recommended) configure xref:ios/admin-guide/mobile-layouts/index.adoc[Mobile layouts] to
 improve usability of CT Mobile.
 .. (Optional) configure other settings of CT Mobile Control Panel/CT
 Mobile Control Panel 2.0:
@@ -36,9 +36,9 @@ Mobile Control Panel 2.0:
 CT Mobile Control Panel) or
 xref:ct-mobile-control-panel-colors-new[Colors] (in CT Mobile
 Control Panel 2.0)
-* Workflows (in xref:ct-mobile-control-panel-workflows[CT Mobile
+* Workflows (in xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-workflows.adoc[CT Mobile
 Control Panel: Workflows] or
-xref:ct-mobile-control-panel-workflows-new[CT Mobile Control Panel
+xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-workflows-new.adoc[CT Mobile Control Panel
 2.0: Workflows])
 * xref:ct-mobile-control-panel-presenter[Presenter] (in CT Mobile
 Control Panel) or
@@ -59,12 +59,12 @@ Sign Administrator Guide]
 *Important notes*:
 
 * After making changes in CT Mobile and other packages configuration,
-xref:synchronization-launch#h3__1369866827[launch full
+xref:synchronization-launch#h3_1369866827[launch full
 synchronization] to apply them.
 * If you are facing issues with collecting
-the xref:metadata-archive[Metadata Archive], any issues
+the xref:ios/admin-guide/metadata-checker/metadata-archive/index.adoc[Metadata Archive], any issues
 with xref:ct-presenter[CT Presenter], issues with authorization to
-CT Vision, go to the xref:ct-mobile-control-panel-tools[CT Mobile
+CT Vision, go to the xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc[CT Mobile
 Control Panel: Tools]/xref:ct-mobile-control-panel-tools-new[CT
 Mobile Control Panel 2.0: Tools] and click *Refresh* near the *Cloud
 Token* field.

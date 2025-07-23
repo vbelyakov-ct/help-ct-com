@@ -1,17 +1,17 @@
 = ctm.createSalesOrderWithAnimations
 
-The method of xref:js-bridge-api[JS Bridge] functionality is
+The method of xref:ios/ct-presenter/js-bridge-api/index.adoc[JS Bridge] functionality is
 intended to provide a transition from CLM presentation to the Sales
 Order.
 
-[[h2__905713055]]
+[[h2_905713055]]
 === Query format
 
 [[h2_442663712]]
 === Handler
 
 *[.apiobject]#obj.products# contains a list of products where
-the key is xref:barcode-scanner[EAN product code], and the value is
+the key is xref:ios/mobile-application/barcode-scanner.adoc[EAN product code], and the value is
 product quantity.
 *[.apiobject]#obj.animation# contains information about the
 animation, where the key is a unique animation code, and the value is

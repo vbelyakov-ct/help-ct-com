@@ -1,9 +1,9 @@
 = Gestures in CLM Presentations
 
 Use gestures on slides of the launched CLM presentation in the
-xref:applications[Application] module, on
-xref:mobile-layouts-applications[the mobile layout], and
-xref:home-screen[Home Screen].
+xref:ios/mobile-application/mobile-application-modules/applications/index.adoc[Application] module, on
+xref:ios/admin-guide/mobile-layouts/index.adoc-applications[the mobile layout], and
+xref:ios/mobile-application/ui/home-screen/index.adoc[Home Screen].
 
 [width="100%",cols="50%,^50%",]
 |===
@@ -12,7 +12,7 @@ a|
 
 The default gesture is to switch slides. You can use one-finger swiping
 by specifying it in the *Swipe gesture type* attribute for a
-xref:clm-application[CLM presentation] record.
+xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-application.adoc[CLM presentation] record.
 
 [NOTE] ==== A one-finger swipe for slides may interfere with
 embedded interactions in the slides. ====
@@ -22,7 +22,7 @@ embedded interactions in the slides. ====
 Like or dislike the current slide. This gesture will not affect the
 display of the slide.
 
-ifdef::ios[]
+//tag::ios[]
 
 *Double-finger rotation*
 
@@ -30,13 +30,13 @@ Use to restart the current interactive slide.
 
 *Double-tap the right or left side of the screen*
 
-Display xref:clm-presentation-controls[the action menu] with
+Display xref:ios/mobile-application/mobile-application-modules/applications/clm-presentation-controls.adoc[the action menu] with
 available options.
 
 To hide the action menu, double tap on it.
 
 [TIP] ==== For design considerations: the bottom navigation bar
-has a 120 px width. ==== ifdef::ios[]
+has a 120 px width. ==== //tag::ios[]
 image:58830176.png[]
 
 *Double-tap at the bottom of the screen*
@@ -53,14 +53,14 @@ Display the navigation bar for rapid switching between the slides.
 
 image:57215473.png[]
 
-ifdef::ios[]
+//tag::ios[]
 
 *Two-finger pinch*
 
 Zoom in and zoom out slides converted from PowerPoint or PDF.
 
-|ifdef::ios[]
+|//tag::ios[]
 image:gestures_ios_en.png[]
-ifdef::andr,win[]
+//tag::andr,win[]
 image:gestures_win_en.png[]
 |===

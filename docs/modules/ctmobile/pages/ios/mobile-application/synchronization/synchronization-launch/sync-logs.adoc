@@ -7,10 +7,10 @@ more.
 
 :toc: :toclevels: 3
 
-[[h2__1487877011]]
+[[h2_1487877011]]
 === Sync Log Records
 
-ifdef::ios,win,andr[]
+//tag::ios,win,andr[]
 
 The *Sync Log* record is created for each synchronization and each
 operation, such as login, create, etc., after the synchronization
@@ -52,7 +52,7 @@ file with the sync logs:
 record.
 * ​The *Sync Log* record with the update operation of the *User* record.
 
-ifdef::kotlin[]
+//tag::kotlin[]
 
 The *Sync Log* record is created for each synchronization after its
 completion or interruption due to sync errors.
@@ -78,7 +78,7 @@ is not yet synchronized.
 
 image:Sync-Logs-Android.png[]
 
-[[h2__272409891]]
+[[h2_272409891]]
 === Enable Sync Logs
 
 To enable and configure Sync Logs:
@@ -86,7 +86,7 @@ To enable and configure Sync Logs:
 [width="100%",cols="50%,50%",]
 |===
 |In CT Mobile Control Panel a|
-. Go to xref:ct-mobile-control-panel-general[CT Mobile Control
+. Go to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc[CT Mobile Control
 Panel: General].
 . {blank}
 . In the *Support and logs* section, activate the *Enable Sync logs*
@@ -129,9 +129,9 @@ image:debug-level-2.0.png[]
 The sync log functionality is enabled.
 
 
-ifdef::andr,ios,win[]
+//tag::andr,ios,win[]
 
-[[h2__1454825892]]
+[[h2_1454825892]]
 === Sync Log Reports
 
 CT Mobile package is preconfigured with reports _Average Synchronization

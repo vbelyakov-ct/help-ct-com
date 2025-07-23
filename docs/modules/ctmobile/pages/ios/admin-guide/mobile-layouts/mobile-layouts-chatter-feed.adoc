@@ -1,11 +1,11 @@
 = Mobile Layouts: Chatter Feed
 
 The *Chatter* feed is a widget to display user messages on
-xref:chatter[the Chatter module] or in the *Chatter* tab of the
+xref:ios/mobile-application/mobile-application-modules/chatter/index.adoc[the Chatter module] or in the *Chatter* tab of the
 selected record screen. Users can create posts and comments, and add
 attachments.
 
-[[h2__868831931]]
+[[h2_868831931]]
 === Important Notes
 
 * Some https://help.salesforce.com/articleView?id=collab_feed_tracking_overview.htm&type=5[standard
@@ -20,13 +20,13 @@ for the corresponding custom object.
 https://help.salesforce.com/articleView?id=collab_feed_tracking.htm&type=5[Chatter
 Feed tracking] to allow users to see feed updates, such as new records,
 comments on them, and likes, they follow.
-. Enable xref:chatter-push-notifications[push notifications] if
+. Enable xref:ios/mobile-application/mobile-application-modules/chatter/chatter-push-notifications.adoc[push notifications] if
 needed.
 
-[[h2__1510760474]]
+[[h2_1510760474]]
 === Add Chatter to the Menu
 
-To add the *Chatter* module to the xref:app-menu[app menu]:
+To add the *Chatter* module to the xref:ios/admin-guide/app-menu/index.adoc[app menu]:
 
 [width="100%",cols="50%,50%",]
 |===
@@ -80,17 +80,17 @@ left intact. ====
 
 The *Chatter* widget is configured.
 
-ifdef::ios[]
+//tag::ios[]
 image:62560427.png[]
-ifdef::win[]
+//tag::win[]
 image:layout_chatter_win_en.png[]
-ifdef::andr[]
+//tag::andr[]
 image:62560428.jpg[]
 
 [[h2_393538135]]
 === Posts and Comments
 
-ifdef::ios[]
+//tag::ios[]
 
 By default, posts and comments for the last 6 weeks are downloaded. To
 update posts and comments, pull down the chatter screen. The records
@@ -125,7 +125,7 @@ Tap
 image:like_chatter.png[]
 to like a post or comment.
 
-ifdef::win[]
+//tag::win[]
 
 [[h2_1617253274]]
 === Posts and Comments
@@ -174,7 +174,7 @@ Tap
 image:like_chatter.png[]
 to like a post or comment. Tap the record name to open its feed.
 
-ifdef::andr[]
+//tag::andr[]
 
 Tap image:post_chatter.png[]
 to create a new message for the record.

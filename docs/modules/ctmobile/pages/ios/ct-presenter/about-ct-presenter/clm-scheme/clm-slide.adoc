@@ -64,16 +64,16 @@ following formula to enable the preview:
 
 |Required |[.apiobject]#clm__isRequired__c# |Checkbox
 a|
-ifdef::andr[]
+//tag::andr[]
 
 Not in use.
 
-ifdef::ios[]
+//tag::ios[]
 
 The slide cannot be excluded from the
-xref:clm-customscenario[custom scenario].
+xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-customscenario.adoc[custom scenario].
 
-ifdef::win[]
+//tag::win[]
 
 The slide label will be highlighted in red color.
 

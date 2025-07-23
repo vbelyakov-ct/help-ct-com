@@ -11,18 +11,18 @@ with the CG Cloud objects in the CT Mobile app.
 Mobile users can work with the *Relate Store* and *Visit* records in the
 same way as with records of any other offline objects.
 
-use xref:mini-layouts[mini-layouts] to create new records;
+use xref:ios/admin-guide/mini-layouts.adoc[mini-layouts] to create new records;
 
-ifdef::ios[]
+//tag::ios[]
 
-add xref:custom-related-lists[custom related lists] to track
+add xref:ios/admin-guide/related-lists/custom-related-lists.adoc[custom related lists] to track
 related records;
 
-using xref:home-screen#h3__1761919763[the Reports and Dashboards
+using xref:ios/mobile-application/ui/home-screen/index.adoc#h3_1761919763[the Reports and Dashboards
 widget], display the store- and account-related analytics, for example,
 the visit reports filtered by the status field on the Home screen;
 
-using xref:home-screen#h3_1292798904[the Calendar widget], track
+using xref:ios/mobile-application/ui/home-screen/index.adoc#h3_1292798904[the Calendar widget], track
 the upcoming visits in your schedule for a day;
 
 working with _Retail Stores_ and _Visits_ objects in the Calendar,
@@ -37,7 +37,7 @@ button to minimize the Visit record screen;
 
 and more.
 
-ifdef::win[]
+//tag::win[]
 
 working with[.object]#Retail Stores# and
 [.object]#Visits# objects in the Nearby Accounts and Routes
@@ -46,10 +46,10 @@ modules:
 * retail stores are present in the *Retail Stores* tab;
 * manage retail stores using list views and list view filters.
 
-[[h2__1592083570]]
+[[h2_1592083570]]
 === Creating Required Records to Complete Tasks
 
-ifdef::ios[]
+//tag::ios[]
 
 To work with CG cloud tasks, administrators should prepare the *Visit*
 record screen in the CT Mobile app by splitting the *Visit* record
@@ -98,10 +98,10 @@ When configured, mobile users can create a visit:
 records.
 
 The *Visit* record is created.
-xref:managing-visits-to-retail-stores#h2__1374718576[Follow the
+xref:managing-visits-to-retail-stores#h2_1374718576[Follow the
 visit path] on the tabs to complete tasks.
 
-ifdef::win[]
+//tag::win[]
 
 To work with CG cloud tasks, administrators should configure the process
 of creating an _Action Plan_ record with the _Visit Execution_ action
@@ -133,10 +133,10 @@ image:Link-Action-Plan-to-Visit.png[]
 
 The _Action Plan_ record is linked to the current _Visit_ record. Tap
 the *Detailing* tab
-xref:managing-visits-to-retail-stores#h2__1374718576[to work with
+xref:managing-visits-to-retail-stores#h2_1374718576[to work with
 CG Cloud tasks].
 
-ifdef::ios[]
+//tag::ios[]
 
 [[h2_535537278]]
 === Managing Visits in the Calendar Module
@@ -180,14 +180,14 @@ help of the *Nearby Accounts* module.
 * The *Retail Stores* tab is available in the left menu.
 * To view retail stores on the map, the *Account Geolocation Field*
 should be specified on
-the xref:ct-mobile-control-panel-general#h3_612123135[CT Mobile
+the xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_612123135[CT Mobile
 Control Panel:
-General]/xref:ct-mobile-control-panel-general-new#h3_612123135[CT
+General]/xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-general-new.adoc#h3_612123135[CT
 Mobile Control Panel 2.0: General] tab. Alternatively, add the *Account
 Full Address Field* (refer to
-xref:ct-mobile-control-panel-general#h3__1092547330[CT Mobile
+xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_1092547330[CT Mobile
 Control Panel:
-General]/xref:ct-mobile-control-panel-general-new#h3__1092547330[CT
+General]/xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-general-new.adoc#h3_1092547330[CT
 Mobile Control Panel 2.0: General]).
 * Retail stores are presented with a square icon on the map. The color
 for the retail store icon can be customized on the
@@ -196,30 +196,30 @@ Panel: Color Settings]/xref:ct-mobile-control-panel-colors-new[CT
 Mobile Control Panel 2.0: Colors] tab.
 * To create a new visit, tap the mark.
 
-[[h2__1880003381]]
+[[h2_1880003381]]
 === Build Routes to Retail Stores in the Routes Module
 
-In the xref:routes[Routes] module, mobile users can work with
+In the xref:ios/mobile-application/mobile-application-modules/routes.adoc[Routes] module, mobile users can work with
 retail stores the same way as with accounts.
 
 * To view retail stores on the map, the Account geolocation field should
 be specified on the *CT Mobile Control Panel: General* tab.
 Alternatively, add the *Account Full Address Field* (refer to
-xref:ct-mobile-control-panel-general#h3__1092547330[CT Mobile
+xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_1092547330[CT Mobile
 Control Panel:
-General]/xref:ct-mobile-control-panel-general-new#h3__1092547330[CT
+General]/xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-general-new.adoc#h3_1092547330[CT
 Mobile Control Panel 2.0: General]).
 * The visits to the retail stores are displayed on the map.
 * Routes to retail stores can be built both on Apple or Google maps.
 
-[[h2__1374718576]]
+[[h2_1374718576]]
 === Performing Tasks during the Visit
 
 We recommend learning more about
 https://help.salesforce.com/s/articleView?id=sf.retail_concept_user_prereq_inv_check.htm&type=5[prerequisites
-for creating an assessment task definition]. ifdef::ios[]
+for creating an assessment task definition]. //tag::ios[]
 
-[[h3__85077301]]
+[[h3_85077301]]
 ==== In-Store Survey
 
 To perform an assessment task with the *In-Store Survey* type, for
@@ -255,7 +255,7 @@ to *Completed*.
 
 image:Inventory-Check-Task-(en).png[]
 
-[[h3__582599340]]
+[[h3_582599340]]
 ==== Other
 
 To perform an assessment task with the _Other_ type, for example, to
@@ -270,7 +270,7 @@ _Assessment Task_ record has the *Not Started* value that will be
 changed to *In Progress* and then, when all actual values are specified,
 to *Completed*.
 
-[[h3__481270469]]
+[[h3_481270469]]
 ==== Planogram Check
 
 To perform an assessment task with the _Planogram Check_ type, for
@@ -352,7 +352,7 @@ the sync process]. ====
 
 |===
 
-[[h3__696266799]]
+[[h3_696266799]]
 ==== Promotion Check
 
 To perform an assessment task with the _Promotion Check_ type, for
@@ -367,7 +367,7 @@ When a mobile user adds actual values, the *Status* field of the related
 changed to *In Progress* and then, when all actual values are specified,
 to *Completed*.
 
-[[h3__1516408339]]
+[[h3_1516408339]]
 ==== Task
 
 To perform an assessment task with the _Task_ type,
@@ -385,14 +385,14 @@ _Assessment Task_ record has the *Not Started* value.
 set as[.apiobject]#true#, the *Status* field of the related
 _Assessment Task_ record has the *Completed* value.
 
-ifdef::win[]
+//tag::win[]
 
 Work with CG Cloud records the same way as with the custom related
 lists:
 
 image:CG-Cloud-Detailing-Windows-en.png[]
 
-[[h3__1444693483]]
+[[h3_1444693483]]
 ==== Inventory Check
 
 To perform an assessment task with the _Inventory Check_ type, for
@@ -409,7 +409,7 @@ _Assessment Task_ record has the *Not Started* value that will be
 changed to *In Progress* and then, when all actual values are specified,
 to *Completed*.
 
-[[h3__663667742]]
+[[h3_663667742]]
 ==== Planogram Check
 
 To perform an assessment task with the _Planogram Check_ type, for

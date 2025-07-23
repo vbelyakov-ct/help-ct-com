@@ -5,7 +5,7 @@ screen with the launched CLM presentation. Tap the appropriate button to
 apply the action.
 
 To get familiar with the available gestures, refer to
-xref:gestures-in-clm-presentations[Gestures in CLM presentations].
+xref:ios/mobile-application/mobile-application-modules/applications/gestures-in-clm-presentations.adoc[Gestures in CLM presentations].
 
 [[h2_395765007]]
 === Exit from CLM presentation
@@ -17,13 +17,13 @@ to exit the CLM presentation.
 
 
 A CLM presentation launched from the carousel of presentations on
-xref:mobile-layouts-applications[a mobile layout of a record] will
+xref:ios/admin-guide/mobile-layouts/index.adoc-applications[a mobile layout of a record] will
 be closed. When a user taps to close a CLM presentation launched from
-the xref:clm-application[Application] menu or
-xref:home-screen[Home] screen, the pop-up window appears with
+the xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-application.adoc[Application] menu or
+xref:ios/mobile-application/ui/home-screen/index.adoc[Home] screen, the pop-up window appears with
 options:
 
-ifdef::ios[]
+//tag::ios[]
 
 Tap
 image:58835865.png[]
@@ -32,7 +32,7 @@ Tap one or more activities and then click the *Selected (n)* button,
 where *(n)* is the number of selected activities. The record details
 screen will appear.
 
-ifdef::win[]
+//tag::win[]
 
 Tap
 image:58835865.png[]
@@ -43,9 +43,9 @@ Tap
 image:58835864.png[]
 to exit from the CLM presentation.
 
-ifdef::ios[]
+//tag::ios[]
 
-[[h2__1946356876]]
+[[h2_1946356876]]
 === Select Scenario
 
 Tap
@@ -71,16 +71,16 @@ to open the attachments screen:
 * The *Attachments* tab is a list of attachments of the current CLM
 presentation.
 * The *Salesforce Content* tab is a list of
-xref:libraries[downloaded documents].
+xref:ios/mobile-application/mobile-application-modules/libraries.adoc[downloaded documents].
 
 
 
 Tap an attachment to open it in fullscreen mode. Tap *Send* and follow
 the 3–5 steps of the
-xref:clm-presentation-controls#h2__1807389398[Send Slides] section
+xref:ios/mobile-application/mobile-application-modules/applications/clm-presentation-controls.adoc#h2_1807389398[Send Slides] section
 to send attachments by email.
 
-[[h2__1807389398]]
+[[h2_1807389398]]
 === Send Slides
 
 Tap
@@ -89,7 +89,7 @@ to open the list of slides.
 
 . Tap slides to select for sharing.
 * Only the slides which are available to share are displayed. Select the
-*Share Allowed* checkbox xref:clm-slide[on a Slide record] to have
+*Share Allowed* checkbox xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-slide.adoc[on a Slide record] to have
 the ability to send one or several slides as a PDF file by email.
 * If you want to see all the slides, tap *Cancel*. Tap *Send* and select
 the slides to share.
@@ -100,7 +100,7 @@ the slides to share.
 * The configured email opens.
 * You can also add recipients manually.
 [TIP] ==== For more information, go to
-xref:email-templates[Email Templates]. ====
+xref:ios/mobile-application/email-templates.adoc[Email Templates]. ====
 . Tap *Send*.
 
 Slides have been sent.
@@ -179,5 +179,5 @@ synchronization, the system alerts you to close the floating window.
 
 
 Close the floating window to
-xref:clm-presentation-controls#h2_395765007[exit the CLM
+xref:ios/mobile-application/mobile-application-modules/applications/clm-presentation-controls.adoc#h2_395765007[exit the CLM
 presentation].

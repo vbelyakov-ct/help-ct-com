@@ -4,7 +4,7 @@ iCal synchronization is intended to synchronize activities between your
 device and xref:calendar[CT Mobile] calendars.
 
 [NOTE] ==== iCal synchronization settings are saved until the
-current user xref:log-out[logs out]. xref:synchronization[The
+current user xref:log-out[logs out]. xref:ios/mobile-application/synchronization/index.adoc[The
 sync process], the CT Mobile update and running in the background mode
 do not affect iCal settings. ====
 
@@ -26,14 +26,14 @@ up multiple calendars on iPhone]
 
 To use iCal synchronization:
 
-. xref:ical-synchronization[Enable iCal synchronization].
+. xref:ios/mobile-application/application-settings/ical-synchronization.adoc[Enable iCal synchronization].
 . Select one or both available options:
-* xref:ical-synchronization[Sync Activities from CT Mobile Calendar
+* xref:ios/mobile-application/application-settings/ical-synchronization.adoc[Sync Activities from CT Mobile Calendar
 to Device Calendar].
 
 Select a device calendar to synchronize activities from the CT Mobile
 calendar.
-* xref:ical-synchronization[Show Device Calendars Activities in CT
+* xref:ios/mobile-application/application-settings/ical-synchronization.adoc[Show Device Calendars Activities in CT
 Mobile Calendar].
 
 Select device calendars to show their activities in the CT Mobile
@@ -45,7 +45,7 @@ calendar.
 To enable iCal synchronization:
 
 . On a mobile device, open the *CT Mobile* app.
-. Tap xref:application-settings[Settings] on xref:app-menu[the
+. Tap xref:ios/mobile-application/application-settings/index.adoc[Settings] on xref:ios/admin-guide/app-menu/index.adoc[the
 main menu].
 . In the *Additional options* section, enable *iCal sync*.
 
@@ -55,7 +55,7 @@ image:ical_settings_en.png[]
 
 
 
-[[h2__1645467578]]
+[[h2_1645467578]]
 === Sync Activities from CT Mobile Calendar to Device Calendar
 
 To synchronize activities from the CT Mobile calendar to the device
@@ -70,9 +70,9 @@ edit, and delete records only in the CT Mobile calendar. ====
 For custom and standard activities:
 
 * the title of a record is the same as the title of
-xref:compact-layout[a compact layout];
+xref:ios/mobile-application/ui/compact-layout.adoc[a compact layout];
 * the *Notes* section displays the subtitle of
-xref:compact-layout[a compact layout].
+xref:ios/mobile-application/ui/compact-layout.adoc[a compact layout].
 
 [width="100%",cols="^50%,^50%",]
 |===

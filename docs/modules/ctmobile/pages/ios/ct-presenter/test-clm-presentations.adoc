@@ -14,7 +14,7 @@ To add test CLM-presentations:
 [width="100%",cols="50%,50%",]
 |===
 |In CT Mobile Control Panel a|
-. Go to xref:ct-mobile-control-panel-general[CT Mobile Control
+. Go to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc[CT Mobile Control
 Panel: General].
 .  In the top right corner, click *Create Demo App*.
 image:Test-CLM-presentations-en.png[]
@@ -34,18 +34,18 @@ CLM presentations.
 
 Use this CLM-presentation as an example of how to implement the
 following JS Bridge methods:
-** xref:ctm-create[ctm.create]
-** xref:ctm-update[ctm.update]
-** xref:ctm-delete[ctm.delete]
-** xref:ctm-query[ctm.query]
-** xref:ctm-opendatatablebyparentrecord[ctm.openDataTableByParentRecord]
-** xref:ctm-opendatatablebyquery[ctm.openDataTableByQuery]
-** xref:ctm-openqrscanner[ctm.openQRScanner]
-** xref:ctm-openquiz[ctm.openQuiz]
-** xref:ctm-getfile[ctm.getFile]
-** xref:ctm-storefile[ctm.storeFile]
+** xref:ios/ct-presenter/js-bridge-api/methods-for-interaction-with-crm-data/ctm-create.adoc[ctm.create]
+** xref:ios/ct-presenter/js-bridge-api/methods-for-interaction-with-crm-data/ctm-update.adoc[ctm.update]
+** xref:ios/ct-presenter/js-bridge-api/methods-for-interaction-with-crm-data/ctm-delete.adoc[ctm.delete]
+** xref:ios/ct-presenter/js-bridge-api/methods-for-interaction-with-crm-data/ctm-query.adoc[ctm.query]
+** xref:ios/ct-presenter/js-bridge-api/methods-for-interaction-with-crm-data/ctm-opendatatablebyparentrecord.adoc[ctm.openDataTableByParentRecord]
+** xref:ios/ct-presenter/js-bridge-api/methods-for-interaction-with-crm-data/ctm-opendatatablebyquery.adoc[ctm.openDataTableByQuery]
+** xref:ios/ct-presenter/js-bridge-api/methods-for-accessing-external-functionality/ctm-openqrscanner.adoc[ctm.openQRScanner]
+** xref:ios/ct-presenter/js-bridge-api/methods-for-accessing-external-functionality/ctm-openquiz.adoc[ctm.openQuiz]
+** xref:ios/ct-presenter/js-bridge-api/methods-for-interaction-with-crm-data/ctm-getfile.adoc[ctm.getFile]
+** xref:ios/ct-presenter/js-bridge-api/methods-for-interaction-with-crm-data/ctm-storefile.adoc[ctm.storeFile]
 * *Demo Presentation*
 
 Use this CLM-presentation as an example of how to interact with the
 elements, such as video or xref:creating-a-widget[widgets], and how
-to xref:ctm-generatepdf[create a PDF] based on a slide.
+to xref:ios/ct-presenter/js-bridge-api/methods-for-accessing-external-functionality/ctm-generatepdf.adoc[create a PDF] based on a slide.

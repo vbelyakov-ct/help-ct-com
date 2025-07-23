@@ -6,23 +6,23 @@ Here is a list of frequently asked questions:
 
 ifndef::kotlin[]
 
-[[h2__1632467576]]
+[[h2_1632467576]]
 === Synchronization Modes
 
-[[h3__2097853915]]
+[[h3_2097853915]]
 ==== When to launch the full synchronization?
 
 The full synchronization should be launched:
 
 * to download the current user database (data, metadata, app settings):
 ** when a mobile user launches the first synchronization after
-xref:logging-in[logging in];
+xref:ios/getting-started/logging-in/index.adoc[logging in];
 ** when the new version of the CT Mobile app is installed.
 * to send data changes (deletions, insertions, and updates of records)
 from the CT Mobile app to Salesforce and ​completely replace the current
 user database (data, metadata, app settings) if changes were made on
-the xref:ct-mobile-control-panel[CT Mobile Control
-Panel]/xref:ct-mobile-control-panel-new[CT Mobile Control Panel
+the xref:ios/admin-guide/ct-mobile-control-panel/index.adoc[CT Mobile Control
+Panel]/xref:ios/admin-guide/ct-mobile-control-panel-new/index.adoc[CT Mobile Control Panel
 2.0].
 
 
@@ -37,14 +37,14 @@ size.
 
 
 
-For more information, read xref:full-synchronization[the Full
+For more information, read xref:ios/mobile-application/synchronization/full-synchronization.adoc[the Full
 Synchronization article].
 
 
 
 Go back to xref:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
-[[h3__965238074]]
+[[h3_965238074]]
 ==== When to launch the fast synchronization?
 
 The fast synchronization is intended to:
@@ -62,7 +62,7 @@ previously saved. If any discrepancies are found, slides and
 attachments, which were updated after the last synchronization, will be
 loaded.
 ** In case of the future date in the *Forced Load Date* field
-xref:clm-application[on the CLM presentation record], the CT mobile
+xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-application.adoc[on the CLM presentation record], the CT mobile
 app asks the current user to download the CLM presentation or not.
 ** In the case of the past date or an empty value in the *Forced Load
 Date* field, the CLM presentation will be downloaded.
@@ -78,22 +78,22 @@ The CT Mobile app is not locked during the fast synchronization.
 
 ifndef::win,andr[]
 
-The sync process may include xref:ct-mobile-replication[CT Mobile
+The sync process may include xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/ct-mobile-replication.adoc[CT Mobile
 Replication];
 
-The sync process may include the xref:sync-recovery[Sync Recovery]
+The sync process may include the xref:ios/mobile-application/synchronization/sync-recovery.adoc[Sync Recovery]
 functionality.
 
 
 
-For more information, read xref:fast-synchronization[the Fast
+For more information, read xref:ios/mobile-application/synchronization/fast-synchronization.adoc[the Fast
 Synchronization article].
 
 
 
 Go back to xref:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
-[[h3__1232469734]]
+[[h3_1232469734]]
 ==== When does the mixed synchronization automatically launch instead of the fast synchronization?
 
 The mixed synchronization launches when:
@@ -115,7 +115,7 @@ The mixed synchronization is intended to:
 
 * download settings and records without re-load of previously downloaded
 records, which helps to reduce the sync time.
-* download xref:metadata-archive[metadata] changes in ZIP
+* download xref:ios/admin-guide/metadata-checker/metadata-archive/index.adoc[metadata] changes in ZIP
 archive(s) and via API according to the current user profile;
 * send data changes (deletions, insertions, and updates of records) from
 the CT Mobile app to Salesforce;
@@ -128,7 +128,7 @@ previously saved. If any discrepancies are found, slides and
 attachments, which were updated after the last synchronization, will be
 loaded.
 ** In case of the future date in the *Forced Load Date* field
-xref:clm-application[on the CLM presentation record], the CT mobile
+xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-application.adoc[on the CLM presentation record], the CT mobile
 app asks the current user to download the CLM presentation or not.
 ** In the case of the past date or an empty value in the *Forced Load
 Date* field, the CLM presentation will be downloaded.
@@ -138,8 +138,8 @@ Date* field, the CLM presentation will be downloaded.
 Important notes:
 
 The date of the last metadata change will be updated each time you make
-a change on xref:ct-mobile-control-panel[CT Mobile Control
-Panel]/xref:ct-mobile-control-panel-new[CT Mobile Control Panel
+a change on xref:ios/admin-guide/ct-mobile-control-panel/index.adoc[CT Mobile Control
+Panel]/xref:ios/admin-guide/ct-mobile-control-panel-new/index.adoc[CT Mobile Control Panel
 2.0].
 
 You can manually update the date for the corresponding profile by
@@ -156,31 +156,31 @@ The CT Mobile app is not locked during the mixed synchronization;
 
 ifndef::win,andr[]
 
-The sync process may include xref:ct-mobile-replication[CT Mobile
+The sync process may include xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/ct-mobile-replication.adoc[CT Mobile
 Replication];
 
-The sync process may include the xref:sync-recovery[Sync Recovery]
+The sync process may include the xref:ios/mobile-application/synchronization/sync-recovery.adoc[Sync Recovery]
 functionality;
 
 To refresh metadata in the ZIP archive
 
-* xref:metadata-checker#h2__682427009[Manually create the metadata
+* xref:ios/admin-guide/metadata-checker/index.adoc#h2_682427009[Manually create the metadata
 archive].
-* xref:metadata-checker#h2__1244689107[Enable Metadata Checker] to
+* xref:ios/admin-guide/metadata-checker/index.adoc#h2_1244689107[Enable Metadata Checker] to
 refresh metadata.
 
 
 
-For more information, read xref:fast-synchronization[the Fast
+For more information, read xref:ios/mobile-application/synchronization/fast-synchronization.adoc[the Fast
 Synchronization article].
 
 
 
 Go back to xref:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
-ifdef::ios[]
+//tag::ios[]
 
-[[h3__115254474]]
+[[h3_115254474]]
 ==== When to use the quick record synchronization?
 
 The common use case is to download changes for a particular record. For
@@ -192,7 +192,7 @@ record related lists.
 
 Go back to xref:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
-[[h3__371527703]]
+[[h3_371527703]]
 ==== When to use the Sync Recovery functionality?
 
 The Sync Recovery functionality allows sending records with any errors
@@ -202,7 +202,7 @@ the sync logs and, hence, from the reports.
 
 
 
-For more information, read xref:sync-recovery[the Sync Recovery
+For more information, read xref:ios/mobile-application/synchronization/sync-recovery.adoc[the Sync Recovery
 article]. Error types are listed in
 https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_calls_concepts_core_data_objects.htm[the
 Salesforce Developer Guide article].
@@ -220,7 +220,7 @@ if you changed
 https://help.salesforce.com/articleView?id=security_about_sharing_rules.htm&type=5[sharing
 rules] (via organization-wide defaults or per each record), the value in
 the[.apiobject]#SystemModStamp# field is not modified. In this
-case, xref:ct-mobile-replication[create a CT Mobile Replication
+case, xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/ct-mobile-replication.adoc[create a CT Mobile Replication
 setting] to keep data up to date on the device. The corresponding
 records will be downloaded and records, which are no longer available,
 will be hidden.
@@ -228,15 +228,15 @@ will be hidden.
 
 
 The CT Mobile Replication example is available
-xref:ct-mobile-replication-use-cases-and-steps[here].
+xref:ios/admin-guide/ct-mobile-replication-use-cases-and-steps.adoc[here].
 
 
 
 Go back to xref:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
-ifdef::ios,win[]
+//tag::ios,win[]
 
-[[h3__2143775923]]
+[[h3_2143775923]]
 ==== How to know that the synchronization is successful?
 
 If the synchronization was successful, the notification
@@ -248,17 +248,17 @@ ifndef::win[]
 
 To find out the time and date of the last successful synchronization,
 and to see the number of records waiting to be sent to Salesforce, tap
-on xref:home-screen#h2__396225247[the status indicator] at the
+on xref:ios/mobile-application/ui/home-screen/index.adoc#h2_396225247[the status indicator] at the
 bottom of the screen.
 
 
 
 Go back to xref:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
-[[h2__490564468]]
+[[h2_490564468]]
 === Synchronization Details
 
-[[h3__11590014]]
+[[h3_11590014]]
 ==== What are the synchronization statuses?
 
 Depending on the selected debug level, the sync log record with the
@@ -318,7 +318,7 @@ the[.apiobject]#SyncSingle.log# file with all operations for
 the first, full, fast, mixed, and quick record synchronization.
 
 the[.apiobject]#sync.log# file for the
-xref:send-application-data-dump#SendApplicationDataDump-SpecifyDatatoSend[Sync
+xref:ios/mobile-application/application-settings/send-application-data-dump.adoc#SendApplicationDataDump-SpecifyDatatoSend[Sync
 Log History] operation.
 
 the[.apiobject]#Documents.zip# for the Export Data operation;
@@ -331,13 +331,13 @@ the create, update, or insert operation along with the JSON file.
 
 
 
-For more information, read xref:sync-logs[the Sync Logs article].
+For more information, read xref:ios/mobile-application/synchronization/synchronization-launch/sync-logs.adoc[the Sync Logs article].
 
 
 
 Go back to xref:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
-ifdef::ios[]
+//tag::ios[]
 
 [[h3_666651666]]
 ==== How many API requests are used within the first full synchronization?
@@ -359,18 +359,18 @@ Requests, Last 24 Hours* field.
 
 Go back to xref:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
-[[h2__2101954030]]
+[[h2_2101954030]]
 === Metadata Components and Related Error Handling
 
 [[h3_831436350]]
 ==== What components are included in the metadata archive?
 
 The list of components is available
-xref:metadata-archive#h2_1854953360[here]. Also, the metadata
+xref:ios/admin-guide/metadata-checker/metadata-archive/index.adoc#h2_1854953360[here]. Also, the metadata
 archive includes all offline objects that were specified on the
-xref:ct-mobile-control-panel-offline-objects[CT Mobile Control
+xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects.adoc[CT Mobile Control
 Panel: Offline
-Objects]/xref:ct-mobile-control-panel-offline-objects-new[CT Mobile
+Objects]/xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc[CT Mobile
 Control Panel 2.0: Offline Objects].
 
 
@@ -380,8 +380,8 @@ Go back to xref:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 [[h3_317222557]]
 ==== How often should you rebuild the metadata archive?
 
-We recommend enabling xref:metadata-checker[a metadata checker] and
-xref:metadata-checker#h3_1645525423[setting a schedule] for a
+We recommend enabling xref:ios/admin-guide/metadata-checker/index.adoc[a metadata checker] and
+xref:ios/admin-guide/metadata-checker/index.adoc#h3_1645525423[setting a schedule] for a
 metadata checker according to your business processes, such as the
 frequency of updating settings on the CT Mobile Control Panel tabs,
 changing lookup filters, creating custom labels, managing validation
@@ -391,23 +391,23 @@ rules, etc.
 
 Go back to xref:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
-[[h3__335611687]]
+[[h3_335611687]]
 ==== Why were not the up-to-date metadata components downloaded during the full or mixed synchronization?
 
 The metadata archive has not been created or updated. Some functionality
-may incorrectly work, for example, xref:validation[offline
+may incorrectly work, for example, xref:ios/mobile-application/synchronization/validation.adoc[offline
 validation rules].
 
-. Check xref:ct-mobile-control-panel-tools#h3_2011978[the cloud
-token] (refer to xref:ct-mobile-control-panel-tools#h3_2011978[CT
+. Check xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc#h3_2011978[the cloud
+token] (refer to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc#h3_2011978[CT
 Mobile Control Panel:
 Tools]/xref:ct-mobile-control-panel-tools-new#h2_2011978[CT Mobile
 Control Panel 2.0: Tools]) is valid.
 . Create a ZIP archive or refresh metadata in the ZIP archive. We
-recommend enabling xref:metadata-checker[a metadata checker]. Also,
-it is possible xref:metadata-checker#h3_1645525423[to set a
+recommend enabling xref:ios/admin-guide/metadata-checker/index.adoc[a metadata checker]. Also,
+it is possible xref:ios/admin-guide/metadata-checker/index.adoc#h3_1645525423[to set a
 schedule] for a metadata checker or
-xref:metadata-checker#h2__1657467916[manually create/update] the
+xref:ios/admin-guide/metadata-checker/index.adoc#h2_1657467916[manually create/update] the
 metadata archive.
 
 
@@ -424,34 +424,34 @@ related lists, etc.
 
 * If the translation is absent, the label will be displayed.
 * If the translation has been added, check the metadata archive is
-created or updated. We recommend enabling xref:metadata-checker[a
+created or updated. We recommend enabling xref:ios/admin-guide/metadata-checker/index.adoc[a
 metadata checker]. Also, it is possible
-xref:metadata-checker#h3_1645525423[to set a schedule] for a
-metadata checker or xref:metadata-checker#h2__1657467916[manually
+xref:ios/admin-guide/metadata-checker/index.adoc#h3_1645525423[to set a schedule] for a
+metadata checker or xref:ios/admin-guide/metadata-checker/index.adoc#h2_1657467916[manually
 create/update] the metadata archive.
-* Also, check the xref:application-language[Application Language]
+* Also, check the xref:ios/ct-mobile-solution/application-language.adoc[Application Language]
 article.
 
 
 
 Go back to xref:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
-[[h3__1646090375]]
+[[h3_1646090375]]
 ==== The lookup filter has been changed. Why has not it been downloaded to the device?
 
 The lookup filters are the components of the metadata archive. If you
 created or changed the lookup filter, it is necessary to rebuild
-xref:metadata-archive[a metadata archive]. We recommend enabling
-xref:metadata-checker[a metadata checker]. Also, it is possible
-xref:metadata-checker#h3_1645525423[to set a schedule] for a
-metadata checker or xref:metadata-checker#h2__1657467916[manually
+xref:ios/admin-guide/metadata-checker/metadata-archive/index.adoc[a metadata archive]. We recommend enabling
+xref:ios/admin-guide/metadata-checker/index.adoc[a metadata checker]. Also, it is possible
+xref:ios/admin-guide/metadata-checker/index.adoc#h3_1645525423[to set a schedule] for a
+metadata checker or xref:ios/admin-guide/metadata-checker/index.adoc#h2_1657467916[manually
 create/update] the metadata archive.
 
 
 
 Go back to xref:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
-[[h3__98900833]]
+[[h3_98900833]]
 ==== The metadata checker has been enabled. Why are not the up-to-date metadata components downloaded to the device?
 
 Please note that the creation of the metadata archive may take some
@@ -480,20 +480,20 @@ class status will change to *Completed*.
 
 Go back to xref:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
-[[h2__1094723947]]
+[[h2_1094723947]]
 === Synchronization Error Handling
 
-[[h3__1178930529]]
+[[h3_1178930529]]
 ==== How to send the application data dump?
 
-Go to the xref:send-application-data-dump[Send Application Data
+Go to the xref:ios/mobile-application/application-settings/send-application-data-dump.adoc[Send Application Data
 Dump] article.
 
 
 
 Go back to xref:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
-[[h3__2090909248]]
+[[h3_2090909248]]
 ==== What to do if the sync process has stopped due to missing the CT Mobile license?
 
 To use the CT Mobile app, assign the CT Mobile license to the mobile
@@ -503,7 +503,7 @@ users.
 
 Go back to xref:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
-[[h3__755626042]]
+[[h3_755626042]]
 ==== What to do if the sync process has stopped due to an inactive organization error?
 
 This error occurs when the Salesforce organization is no longer active.
@@ -519,15 +519,15 @@ Go back to xref:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 The duration of the sync process depends on:
 
 * the internet connection. Check
-xref:technical-requirements-for-devices-and-network#h2_1498128754[the
+xref:ios/ct-mobile-solution/technical-requirements-for-devices-and-network.adoc#h2_1498128754[the
 requirements for the connection].
 * amount of data. To avoid the synchronization of the large data,
-xref:managing-offline-objects[customize the criteria] to download
+xref:ios/admin-guide/managing-offline-objects/index.adoc[customize the criteria] to download
 desired records of offline objects.
 
 * amount of modified components (objects, fields, layouts) or changes
-provided on the xref:ct-mobile-control-panel[CT Mobile Control
-Panel]/xref:ct-mobile-control-panel-new[CT Mobile Control Panel
+provided on the xref:ios/admin-guide/ct-mobile-control-panel/index.adoc[CT Mobile Control
+Panel]/xref:ios/admin-guide/ct-mobile-control-panel-new/index.adoc[CT Mobile Control Panel
 2.0]. In this case, mixed synchronization is in progress instead of fast
 synchronization, and the sync process takes more time.
 
@@ -576,7 +576,7 @@ Go back to xref:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
 The[.apiobject]#MALFORMED_QUERY# error occurs when the SOQL
 filter is incorrectly specified for the offline object. Check the
-xref:managing-offline-objects[SOQL query] in the error message.
+xref:ios/admin-guide/managing-offline-objects/index.adoc[SOQL query] in the error message.
 
 
 
@@ -587,7 +587,7 @@ Go back to xref:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
 The[.apiobject]#INVALID_FILTER_QUERY_OPERATOR:
 invalid ID field# error is due to a temporary mobile record ID being
-inserted into xref:reference-fields[the reference field] when the
+inserted into xref:ios/admin-guide/managing-offline-objects/reference-fields.adoc[the reference field] when the
 query is formed. Check the custom logic that inserts the temporary ID ​in
 the field.
 
@@ -608,9 +608,9 @@ https://status.salesforce.com/incidents/6406.
 
 Go back to xref:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
-ifdef::win[]
+//tag::win[]
 
-[[h3__1995855573]]
+[[h3_1995855573]]
 ==== What to do if the synchronization does not work when VPN is enabled?
 
 We recommend granting permissions to the following sites in your VPN
@@ -628,12 +628,12 @@ settings:
 
 Go back to xref:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
-ifdef::kotlin[]
+//tag::kotlin[]
 
 [[h2_1173330258]]
 === Synchronization Modes
 
-[[h3__2097853915]]
+[[h3_2097853915]]
 ==== When to launch the full synchronization?
 
 The first full synchronization must be launched after
@@ -643,7 +643,7 @@ database (data, metadata, app settings).
 
 The sync process may take a lot of time, depending on the database size.
 
-[[h3__965238074]]
+[[h3_965238074]]
 ==== When to launch the fast synchronization?
 
 Fast synchronization is the preferred type for daily work with the CT
@@ -651,17 +651,17 @@ Mobile app. We recommend doing a fast synchronization once a day at the
 beginning or end of the work day to maintain data consistency in the CT
 Mobile app and Salesforce.
 
-The sync process may include xref:ct-mobile-replication[CT Mobile
+The sync process may include xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/ct-mobile-replication.adoc[CT Mobile
 Replication].
 
-[[h3__1232469734]]
+[[h3_1232469734]]
 ==== When to launch the mixed synchronization?
 
 The mixed synchronization is intended to align the records' main
 information and update metadata since the date of the last successful
 synchronization.
 
-The sync process may include xref:ct-mobile-replication[CT Mobile
+The sync process may include xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/ct-mobile-replication.adoc[CT Mobile
 Replication].
 
 
@@ -680,7 +680,7 @@ for example:
 We recommend using CT Mobile Replication when you changed
 https://help.salesforce.com/articleView?id=security_about_sharing_rules.htm&type=5[sharing
 rules] (via organization-wide defaults or per each record). In this
-case, xref:ct-mobile-replication[create a CT Mobile Replication
+case, xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/ct-mobile-replication.adoc[create a CT Mobile Replication
 setting] to keep data up to date on the device. The corresponding
 records will be downloaded and records, which are no longer available,
 will be hidden.
@@ -705,7 +705,7 @@ operation of the CT Mobile app. ====
 
 CT Mobile is ready to use.
 
-[[h2__2143775923]]
+[[h2_2143775923]]
 ==== How to know that the synchronization is successful?
 
 If the synchronization was successful, the notification appears. Also,
@@ -716,19 +716,19 @@ successful synchronization.
 
 Go back to xref:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 
-[[h3__577265032]]
+[[h3_577265032]]
 ==== How to reduce the synchronization time?
 
 If you have a lot of objects with attached files, you can adjust
 downloading these files:
 
-* Enable the xref:application-settings#h3_1768799377[Background
+* Enable the xref:ios/mobile-application/application-settings/index.adoc#h3_1768799377[Background
 content loading] option. The files in *Libraries* will be downloaded in
 the background mode after the full synchronization is complete.
-* Disable the xref:ctm-settings-offline-objects[Files Download
+* Disable the xref:ios/admin-guide/ct-mobile-control-panel/ctm-settings/ctm-settings-offline-objects.adoc[Files Download
 Enabled] option for offline objects. The files attached to offline
 objects will be downloaded as previews.
-* Set up the xref:ctm-settings-offline-objects[Files Filter] option
+* Set up the xref:ios/admin-guide/ct-mobile-control-panel/ctm-settings/ctm-settings-offline-objects.adoc[Files Filter] option
 to set up the last date of files to download.
 
 [[h2_466216120]]
@@ -742,7 +742,7 @@ first, and then their child records are synchronized. To learn more
 about the steps for each synchronization mode, refer to
 xref:synchronization-launch[Synchronization Launch].
 
-[[h2__2110567442]]
+[[h2_2110567442]]
 ==== Does the application lock during the sync process?
 
 The mobile application is available to work during any synchronization
@@ -753,9 +753,9 @@ up when the synchronization is complete.
 ==== Where are the synchronization statistics stored?
 
 Enable logs on the
-xref:ct-mobile-control-panel-general#h3__272409891[CT Mobile
+xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_272409891[CT Mobile
 Control Panel:
-General]/xref:ct-mobile-control-panel-general-new#h2__1687169837[CT
+General]/xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-general-new.adoc#h2_1687169837[CT
 Mobile Control Panel 2.0: General] tab to collect statistics in the
 [.object]#Sync Log# object. The xref:sync-log[Sync Log]
 record for the selected synchronization type keeps:
@@ -784,11 +784,11 @@ Go back to xref:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 ==== What components are included in the metadata archive?
 
 The list of components is available
-xref:metadata-archive#h2_1854953360[here]. Also, the metadata
+xref:ios/admin-guide/metadata-checker/metadata-archive/index.adoc#h2_1854953360[here]. Also, the metadata
 archive includes all offline objects that were specified on the
-xref:ct-mobile-control-panel-offline-objects[CT Mobile Control
+xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects.adoc[CT Mobile Control
 Panel: Offline
-Objects]/xref:ct-mobile-control-panel-offline-objects-new[CT Mobile
+Objects]/xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc[CT Mobile
 Control Panel 2.0: Offline Objects].
 
 [[h3_317222557]]
@@ -798,7 +798,7 @@ The frequency depends on the frequency of updating settings on the *CT
 Mobile Control Panel*/*CT Mobile Control Panel 2.0* tabs, changing
 lookup filters, creating custom labels, managing validation rules, etc.
 
-[[h3__335611687]]
+[[h3_335611687]]
 ==== Why were not the up-to-date metadata components downloaded?
 
 The metadata archive has not been updated. Go to the
@@ -815,7 +815,7 @@ Go back to xref:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 [[h2_778518628]]
 === Synchronization Error Handling
 
-[[h3__1178930529]]
+[[h3_1178930529]]
 ==== How to send the application data dump?
 
 Go to the *Settings* screen and tap the *Send database* button to create

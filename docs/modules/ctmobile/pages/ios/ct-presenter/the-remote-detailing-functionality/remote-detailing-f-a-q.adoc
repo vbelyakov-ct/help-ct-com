@@ -58,7 +58,7 @@ camera/microphone* |*Video call* |*Call* |*Chatting*
 
 
 
-[[h4__17894843]]
+[[h4_17894843]]
 ===== iPhone
 
 
@@ -79,7 +79,7 @@ camera/microphone* |*Video call* |*Call* |*Chatting*
 
 
 
-[[h4__642431983]]
+[[h4_642431983]]
 ===== CT Mobile iOS In-App Browser
 
 
@@ -109,7 +109,7 @@ camera/microphone* |*Videocall* |*Call* |*Chatting*
 Go back to xref:remote-detailing-f-a-q#GoBacktoMiniTOC[the F.A.Q.
 list].
 
-[[h2__334077530]]
+[[h2_334077530]]
 === How to start the Remote Detailing meeting as the presenter?
 
 The Remote Detailing UI and path for the presenter are available
@@ -131,7 +131,7 @@ user session in the browser.
 If you click the *Join* button for login, click the *Log out* button and
 re-enter as the presenter on the next screen.
 
-[[h3__746921417]]
+[[h3_746921417]]
 ==== The CT Mobile App
 
 As the presenter, you do not need to enter your credentials or tap any
@@ -144,7 +144,7 @@ and the remote CLM presentation starts.
 Go back to xref:remote-detailing-f-a-q#GoBacktoMiniTOC[the F.A.Q.
 list].
 
-[[h2__106650128]]
+[[h2_106650128]]
 === What types of invitation links are available?
 
 The number of invitation links is unlimited. Links are not expired until
@@ -216,14 +216,14 @@ API name of the[.object]#Activity# object.
 . On xref:mobile-application-setup[the Mobile Application Setup
 record] assigned for the current user's profile, the
 [.object]#Activity# object or the *Start Date* field is not
-specified. Go to the xref:ct-mobile-control-panel-calendar[CT
+specified. Go to the xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc[CT
 Mobile Control Panel:
-Calendar]/xref:ct-mobile-control-panel-activities-new[CT Mobile
+Calendar]/xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-activities-new.adoc[CT Mobile
 Control Panel 2.0: Activities] tab and set up *Activity* settings for
 the current user's profile.
 . xref:clm-activity[The current Activity record] has no assigned
 CLM presentations and custom scenarios.
-xref:remote-detailing-apex-trigger-classes-and-quick-action#h3__2024838382[Click
+xref:remote-detailing-apex-trigger-classes-and-quick-action#h3_2024838382[Click
 the Applications button] to specify the CLM presentations set.
 . xref:clm-settings[The incorrect record of CLM Settings] for the
 current user's profile. The Remote Detailing should be enabled in
@@ -236,7 +236,7 @@ Mobile Control Panel 2.0: Remote Detailing].
 Go back to xref:remote-detailing-f-a-q#GoBacktoMiniTOC[the F.A.Q.
 list].
 
-[[h2__1265822888]]
+[[h2_1265822888]]
 === What to do in case of connection errors?
 
 Please contact your administrator to check the UDP/10000 port
@@ -248,7 +248,7 @@ antivirus solution, or corporate firewall.
 Go back to xref:remote-detailing-f-a-q#GoBacktoMiniTOC[the F.A.Q.
 list].
 
-[[h2__2127819924]]
+[[h2_2127819924]]
 === What to do if «TypeError: Cannot read properties of undefined (reading “init”)» is displayed on the Welcome screen?
 
 Administrators must configure the firewall to allow access to *Remote
@@ -306,7 +306,7 @@ participants for the medium bandwidth and connection is 10.
 Go back to xref:remote-detailing-f-a-q#GoBacktoMiniTOC[the F.A.Q.
 list].
 
-[[h2__230890246]]
+[[h2_230890246]]
 === What to do in case of sound and video issues during the Remote Detailing meeting?
 
 Due to Apple's limitations, the device's microphone and camera do not
@@ -403,7 +403,7 @@ The same xref:ct-presenter[CLM presentations] and custom scenarios
 as for the *Application* module in the CT Mobile app can be used for
 *Remote Detailing*.
 
-* xref:clm-application[CLM presentation] should be active and
+* xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-application.adoc[CLM presentation] should be active and
 available for *Remote Detailing*. For *Remote Detailing 2.0*, If CLM
 presentations are not set for the *Activity* record, all active and
 available for *Remote Detailing* meetings CLM presentations will be
@@ -429,7 +429,7 @@ session. Specify CLM presentations manually in Salesforce Classic or
 xref:remote-detailing-apex-trigger-classes-and-quick-action[add and
 use the Applications button on the Activity record in Lightning
 Experience].
-** For *Remote Detailing 2.0*, you can xref:changing-slides[switch
+** For *Remote Detailing 2.0*, you can xref:ios/ct-presenter/js-bridge-api/methods-for-clm-presentation-navigation/changing-slides.adoc[switch
 the scenario] in the open CLM presentation.
 ** During the *Self Detailing* session, only one remote CLM presentation
 can be displayed.
@@ -437,7 +437,7 @@ can be displayed.
 details with one tap, for example, creating an order during the remote
 CLM presentation. Resume the CLM presentation from the last checkpoint.
 * Click the *Web Share* button on the
-xref:clm-application[Application] record to copy and insert the
+xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-application.adoc[Application] record to copy and insert the
 code of the CLM presentation for displaying on your website.
 * The independent zoom for the presenter and each participant helps to
 display CLM presentations with good quality. Pinch with two fingers to

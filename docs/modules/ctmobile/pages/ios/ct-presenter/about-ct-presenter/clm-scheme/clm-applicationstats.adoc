@@ -18,7 +18,7 @@ Object API name:[.apiobject]#clm__ApplicationStats__c#
 
 [NOTE] ==== To collect certain parameters of statistics, it is
 necessary to use preconfigured
-xref:gestures-in-clm-presentations[gestures].  ====
+xref:ios/mobile-application/mobile-application-modules/applications/gestures-in-clm-presentations.adoc[gestures].  ====
 
 [width="100%",cols="25%,25%,25%,25%",]
 |===
@@ -30,9 +30,9 @@ Text for the standard[.object]#Task# and
 [.object]#Event# objects a|
 A field with the lookup type for the[.object]#Activity# object
 will be automatically created for each[.object]#Activity#
-object specified on xref:ct-mobile-control-panel-calendar[CT Mobile
+object specified on xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc[CT Mobile
 Control Panel:
-Calendar]/xref:ct-mobile-control-panel-activities-new[CT Mobile
+Calendar]/xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-activities-new.adoc[CT Mobile
 Control Panel 2.0: Activities], for example,
 [.apiobject]#ActivityId__c# or
 [.apiobject]#TaskId__c#.
@@ -42,7 +42,7 @@ The field will be filled out with the _Activity_ record ID:
 * When you link the CLM presentation to the activity record in the
 *Applications* module.
 * If you launch the CLM presentation or the
-xref:the-remote-detailing-functionality[Remote Detailing] meeting
+xref:ios/ct-presenter/the-remote-detailing-functionality/index.adoc[Remote Detailing] meeting
 from the record's layout.
 
 |Application |[.apiobject]#clm__ApplicationId__c#
@@ -65,12 +65,12 @@ The total number of taps/clicks for all slides.
 |Lookup(Custom Scenario) a|
 *Slide Stats*
 
-The xref:clm-customscenario[custom scenario] record in which a
+The xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-customscenario.adoc[custom scenario] record in which a
 slide was shown.
 
 |Description |[.apiobject]#clm__Description__c# |Long
 Text Area(32768) |To store
-xref:clm-presentation-controls#h3_300583250[a comment] left by a
+xref:ios/mobile-application/mobile-application-modules/applications/clm-presentation-controls.adoc#h3_300583250[a comment] left by a
 user while viewing the CLM presentation.
 
 |Dislikes |[.apiobject]#clm__Dislikes__c# |Number(18,0)
@@ -88,7 +88,7 @@ meeting.
 
 |File name |[.apiobject]#clm__FileName__c# |Text(255)
 |Stores the value obtained by
-xref:ctm-customstats[ctm.CustomStats()]
+xref:ios/ct-presenter/js-bridge-api/methods-for-clm-presentation-control/ctm-customstats.adoc[ctm.CustomStats()]
 
 |Finished by Timeout
 |[.apiobject]#clm__IsFinishedByTimeout__c# |Checkbox a|

@@ -15,19 +15,19 @@ environment.
 image:Tools_new_settings_only.png[]
 ====
 
-[[h2__203730205]]
+[[h2_203730205]]
 === Administrator Credentials
 
 [WARNING] ==== For users of CT Mobile package version below
 3.54. ====
 
 Specify the *Login*, *Password*, and *Token* fields. Please refer to the
-xref:security-token[Security Token] article for additional
+xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/security-token.adoc[Security Token] article for additional
 information.
 
 
 
-CT Mobile receives xref:metadata-archive#h2_1854953360[metadata
+CT Mobile receives xref:ios/admin-guide/metadata-checker/metadata-archive/index.adoc#h2_1854953360[metadata
 components] within a ZIP archive. Administrator credentials should be
 valid to retrieve metadata components from ZIP-archive.
 
@@ -41,7 +41,7 @@ functionality, for example, validation rules, will not operate properly.
 
 The Administrator profile must have the _Modify All_ and _Modify
 Metadata Through Metadata API Functions_ permission, the assigned
-_xref:application-permission-settings.html#ApplicationPermissionSettings-PermissionSets[CT
+_xref:ctmobile:main/getting-started/application-permission-settings.adoc#ApplicationPermissionSettings-PermissionSets[CT
 Mobile Administrator]_ permission set, and access to all fields and
 objects.
 
@@ -56,7 +56,7 @@ required profile *→ Administrative Permissions →* set a flag next to
 
 
 Administrator credentials are stored encrypted in Salesforce. The
-downloading of metadata during xref:synchronization[the
+downloading of metadata during xref:ios/mobile-application/synchronization/index.adoc[the
 synchronization process] includes the following steps:
 
 . User authorization, uploading the general settings.
@@ -81,12 +81,12 @@ current user.
 ==== Reset the CT Mobile Settings to default
 
 Settings can be reset to those configured when
-xref:installing-ct-mobile-package[the CT Mobile package was
+xref:ios/getting-started/installing-ct-mobile-package/index.adoc[the CT Mobile package was
 installed] for the first time.
 
 This action is irreversible.
 
-[[h3__886497060]]
+[[h3_886497060]]
 ==== Authorize Heroku Service
 
 [NOTE] ==== This feature is available since the
@@ -103,7 +103,7 @@ Authorize the Heroku service before refreshing the metadata archive
 ==== Download metadata archive
 
 To work with the metadata archive, specify
-the xref:ct-mobile-control-panel-tools#h3_2011978[Cloud
+the xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc#h3_2011978[Cloud
 token] first. Read more about the metadata
 archive https://help.customertimes.com/articles/ct-mobile-ios-en/metadata-archive[here].
 
@@ -120,7 +120,7 @@ xref:ability-to-specify-metadata-components-or-the-number-of-entities-in-one-req
 component custom metadata type] before refreshing the metadata archive.
 
 To work with the metadata archive, specify
-the xref:ct-mobile-control-panel-tools#h3_2011978[Cloud
+the xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc#h3_2011978[Cloud
 token] first. Read more about the metadata
 archive https://help.customertimes.com/articles/ct-mobile-ios-en/metadata-archive[here].
 
@@ -131,10 +131,10 @@ archive instead of the manual metadata archive collecting.
 
 This button is displayed only for users with the _Modify All_ permission
 or who have been assigned the
-_xref:application-permission-settings.html#h2__1046081510[CT Mobile
+_xref:ctmobile:main/getting-started/application-permission-settings.adoc#h2_1046081510[CT Mobile
 Administrator]_ permission set.
 
-[[h3__1658362952]]
+[[h3_1658362952]]
 ==== Refresh CTM Settings
 
 [NOTE] ==== This feature is available until the  ====
@@ -142,10 +142,10 @@ xref:ct-mobile-package-release-notes#h2_466019125[CT Mobile Package
 version 3.89].
 
 Use the *Refresh CTM Settings* button to correct consistency errors
-between CTM Settings and xref:custom-settings[Custom Settings]. All
-records of xref:ctm-settings[CTM Settings] will be deleted and
+between CTM Settings and xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/index.adoc[Custom Settings]. All
+records of xref:ios/admin-guide/ct-mobile-control-panel/ctm-settings/index.adoc[CTM Settings] will be deleted and
 re-created according to the corresponding records of
-xref:custom-settings[custom settings].
+xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/index.adoc[custom settings].
 
 
 
@@ -162,18 +162,18 @@ xref:ct-mobile-package-release-notes#h2_466019125[CT Mobile Package
 version 3.89].
 
 To work with the metadata archive, specify
-the xref:ct-mobile-control-panel-tools#h3_2011978[Cloud
+the xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc#h3_2011978[Cloud
 token] first. Read more about the metadata
 archive https://help.customertimes.com/articles/ct-mobile-ios-en/metadata-archive[here].
 
-ifdef::kotlin[]
+//tag::kotlin[]
 
 Use the *Remove metadata archive from the server* button to remove the
 metadata archive from the server. This option is useful for QA purposes.
 Click four times on the *Administrator Credentials* inscription to
 display the hidden setting.
 
-[[h2__682569336]]
+[[h2_682569336]]
 === Additional Settings
 
 [[h3_840249901]]
@@ -182,7 +182,7 @@ display the hidden setting.
 [WARNING] ==== Not in use for CT Mobile Android 2.0 app. Please
 do not activate this setting for the CT Mobile Android 2.0 app,
 otherwise it can break the synchronization functionality.  ====
-ifdef::kotlin[]
+//tag::kotlin[]
 
 When enabling the setting:
 
@@ -209,12 +209,12 @@ corresponding custom parameter records.
 * The *Refresh CTM Settings* button will be available after refreshing
 the page.
 
-[[h3__1876917838]]
+[[h3_1876917838]]
 ==== Scheduled metadata check
 
-ifdef::kotlin[]
+//tag::kotlin[]
 
-xref:metadata-checker[Metadata Checker] is intended to track any
+xref:ios/admin-guide/metadata-checker/index.adoc[Metadata Checker] is intended to track any
 changes in the metadata components used in the CT Mobile app. This
 option helps maintain metadata consistency by rebuilding the metadata
 archive to reduce sync times and API calls.
@@ -223,14 +223,14 @@ archive to reduce sync times and API calls.
 
 This toggle is displayed only for users with the _Modify All_ permission
 or who have been assigned the
-_xref:application-permission-settings.html#h2__1046081510[CT Mobile
+_xref:ctmobile:main/getting-started/application-permission-settings.adoc#h2_1046081510[CT Mobile
 Administrator]_ permission set.
 
 [[h3_2011978]]
 ==== Cloud Token
 
 [NOTE] ==== To use cloud token, check
-xref:remote-site-settings[remote site settings]. ====
+xref:ios/admin-guide/remote-site-settings.adoc[remote site settings]. ====
 
 Click *Show* to view the cloud token value. Click the *Refresh* button
 to update a cloud token.
@@ -248,9 +248,9 @@ the *Documents → CT CLM →* open the *cloud-token-history* document.
 
 Cloud token:
 
-Is a password, which encrypts xref:send-application-data-dump[a
+Is a password, which encrypts xref:ios/mobile-application/application-settings/send-application-data-dump.adoc[a
 data dump] before sending it to support via e-mail or to Salesforce,
-depending on settings in xref:ct-mobile-control-panel-general[CT
+depending on settings in xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc[CT
 Mobile Control Panel: General].
 
 Is a part of the salt key that is used for encrypting administrator
@@ -258,11 +258,11 @@ credentials.
 
 ifndef::andr[]
 
-Is used to create an xref:metadata-archive[archive with actual
+Is used to create an xref:ios/admin-guide/metadata-checker/metadata-archive/index.adoc[archive with actual
 metadata] of the current Salesforce organization and download this
 metadata archive to the device.
 
-ifdef::ios,win,andr[]
+//tag::ios,win,andr[]
 
 Is used when sending requests to external CT CLM services, such as:
 
@@ -271,21 +271,21 @@ Application Editor], including
 xref:creating-clm-presentation-from-powerpoint[PowerPoint] and
 xref:creating-clm-presentation-from-pdf[PDF] files converting.
 
-xref:plain-application-editor[The Plain Applications Editor],
+xref:ios/ct-presenter/creating-clm-presentation/creating-clm-presentation-with-the-plain-application-record-type/index.adoc[The Plain Applications Editor],
 including PowerPoint files converting.
 
 ifndef::andr[]
 
-The xref:the-remote-detailing-functionality[Remote Detailing]
+The xref:ios/ct-presenter/the-remote-detailing-functionality/index.adoc[Remote Detailing]
 functionality for CT Mobile iOS and CT Mobile Windows users.
 
-[[h2__682665167]]
+[[h2_682665167]]
 === Content Restore
 
-ifdef::kotlin[][NOTE] ==== Available only in the Sandbox
+//tag::kotlin[][NOTE] ==== Available only in the Sandbox
 environments. ====
 
-[[h3__964087610]]
+[[h3_964087610]]
 ==== Production ID
 
 This option helps you keep data consistent and make CLM presentations on
@@ -297,13 +297,13 @@ in the folder named the Org ID of this Production org.
 
 When you created the Sandbox, enter the *Org ID* of the Production org
 and click *Copy* to copy all sources of all
-xref:clm-application[active CLM presentations] from this folder to
+xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-application.adoc[active CLM presentations] from this folder to
 the folder named the Org ID of the Sandbox environment.
 
 CLM presentations will be available for the Remote Detailing and Self
 Detailing meetings launched from the Sandbox environment.
 
-ifdef::ios[]
+//tag::ios[]
 
 During synchronization, CT Mobile will download screenshots for each
 slide.

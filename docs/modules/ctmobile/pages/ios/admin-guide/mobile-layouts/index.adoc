@@ -3,10 +3,10 @@
 *Mobile Layout* is a special type of layout dedicated to mobile device
 usage. To apply a mobile layout, follow the steps:
 
-. Create xref:mobile-layouts#h2__959581907[an inactive mobile
+. Create xref:ios/admin-guide/mobile-layouts/index.adoc#h2_959581907[an inactive mobile
 record type].
-. Create xref:mobile-layouts#h2__1436774974[a mobile layout].
-. xref:mobile-layouts#h2_1961857618[Assign the mobile layout] to a
+. Create xref:ios/admin-guide/mobile-layouts/index.adoc#h2_1436774974[a mobile layout].
+. xref:ios/admin-guide/mobile-layouts/index.adoc#h2_1961857618[Assign the mobile layout] to a
 record type for a specific profile.
 
 If there is no configured mobile layout, the standard assigned page
@@ -14,13 +14,13 @@ layout will be used.
 
 A mobile layout can have several widgets:
 
-ifdef::ios[]
+//tag::ios[]
 
-* xref:mobile-layouts-chatter-feed[Chatter Feed]
-* xref:mobile-layouts-maps[Maps]
-* xref:mobile-layouts-applications[Carousel of CLM Presentations]
-* xref:mobile-layouts-dashboards[Dashboards]
-* xref:mobile-layouts-qr-code[QR code]
+* xref:ios/admin-guide/mobile-layouts/index.adoc-chatter-feed[Chatter Feed]
+* xref:ios/admin-guide/mobile-layouts/index.adoc-maps[Maps]
+* xref:ios/admin-guide/mobile-layouts/index.adoc-applications[Carousel of CLM Presentations]
+* xref:ios/admin-guide/mobile-layouts/index.adoc-dashboards[Dashboards]
+* xref:ios/admin-guide/mobile-layouts/index.adoc-qr-code[QR code]
 
 [width="100%",cols="50%,50%",]
 |===
@@ -36,11 +36,11 @@ image:47749460.png[]
 
 |===
 
-ifdef::win[]
+//tag::win[]
 
-* xref:mobile-layouts-chatter-feed[Chatter Feed]
-* xref:mobile-layouts-maps[Maps]
-* xref:mobile-layouts-applications[Carousel of CLM Presentations]
+* xref:ios/admin-guide/mobile-layouts/index.adoc-chatter-feed[Chatter Feed]
+* xref:ios/admin-guide/mobile-layouts/index.adoc-maps[Maps]
+* xref:ios/admin-guide/mobile-layouts/index.adoc-applications[Carousel of CLM Presentations]
 
 [cols=",",]
 |===
@@ -52,21 +52,21 @@ ifdef::win[]
 |===
 
 
-ifdef::andr[][TIP] ==== In the case where the mobile layout
+//tag::andr[][TIP] ==== In the case where the mobile layout
 and the record types on the object are absent, the mobile application
 displays the record in the currently assigned layout, converting it into
 a single-column view on devices. ====
 
-* xref:mobile-layouts-chatter-feed[Chatter Feed]
-* xref:mobile-layouts-maps[Maps]
-* xref:mobile-layouts-applications[Carousel of CLM Presentations]
-* xref:mobile-layouts-qr-code[QR code]
+* xref:ios/admin-guide/mobile-layouts/index.adoc-chatter-feed[Chatter Feed]
+* xref:ios/admin-guide/mobile-layouts/index.adoc-maps[Maps]
+* xref:ios/admin-guide/mobile-layouts/index.adoc-applications[Carousel of CLM Presentations]
+* xref:ios/admin-guide/mobile-layouts/index.adoc-qr-code[QR code]
 
-ifdef::kotlin[]
+//tag::kotlin[]
 
-* xref:mobile-layouts-maps[Maps]
+* xref:ios/admin-guide/mobile-layouts/index.adoc-maps[Maps]
 
-[[h2__959581907]]
+[[h2_959581907]]
 === Creating the Mobile Record Type
 
 In order to use the mobile layout in the CT Mobile app, it is necessary
@@ -100,7 +100,7 @@ record type, create an inactive record type with the
 
 The mobile record type is ready.
 
-[[h2__1436774974]]
+[[h2_1436774974]]
 === Creating the Mobile Layout
 
 To create a mobile layout:

@@ -6,51 +6,51 @@ activities.
 [[h2_1037365166]]
 === Requirements
 
-Add the *Routes* module to xref:app-menu[the app menu].
+Add the *Routes* module to xref:ios/admin-guide/app-menu/index.adoc[the app menu].
 
-ifdef::ios,andr,kotlin[]
+//tag::ios,andr,kotlin[]
 
-To use Google Maps, specify the xref:google-maps-api-key[Google
+To use Google Maps, specify the xref:ios/admin-guide/google-maps-api-key/index.adoc[Google
 Maps API key] on the
-xref:ct-mobile-control-panel-general#h3_604215198[CT Mobile Control
+xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_604215198[CT Mobile Control
 Panel:
-General]/xref:ct-mobile-control-panel-general-new#h3__1293801021[CT
+General]/xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-general-new.adoc#h3_1293801021[CT
 Mobile Control Panel 2.0: General] tab.
 
-ifdef::win[]
+//tag::win[]
 
 To use maps, specify the
 https://docs.microsoft.com/en-us/bingmaps/getting-started/bing-maps-dev-center-help/getting-a-bing-maps-key[Bing
 Maps API key] on the
-xref:ct-mobile-control-panel-general#h3__1990058335[CT Mobile
+xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_1990058335[CT Mobile
 Control Panel:
-General]/xref:ct-mobile-control-panel-general-new#h3__1424081301[CT
+General]/xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-general-new.adoc#h3_1424081301[CT
 Mobile Control Panel 2.0: General] tab.
 
-ifdef::win,andr,kotlin[]
+//tag::win,andr,kotlin[]
 
 * A field to store an address for the[.object]#Account# object
 should be specified on the *CT Mobile Control Panel: General* tab.
 * The[.object]#Activity# object should be specified on
-xref:ct-mobile-control-panel-calendar#h3_1397263211[CT Mobile
+xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc#h3_1397263211[CT Mobile
 Control Panel:
-Calendar]/xref:ct-mobile-control-panel-activities-new#h2_2014841429[CT
+Calendar]/xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-activities-new.adoc#h2_2014841429[CT
 Mobile Control Panel 2.0: Activities] tab. Add a field with the *Lookup*
 type from the[.object]#Activity# object to the
 [.object]#Account# object.
 
-ifdef::ios[]
+//tag::ios[]
 
 image:routes1.png[]
 
-ifdef::win[]
+//tag::win[]
 
 image:62562557.png[]
 
-[[h2__724838406]]
+[[h2_724838406]]
 === Adding Routes to the Menu
 
-To add the *Routes* module to the xref:app-menu[app menu]:
+To add the *Routes* module to the xref:ios/admin-guide/app-menu/index.adoc[app menu]:
 
 [width="100%",cols="50%,50%",]
 |===
@@ -81,9 +81,9 @@ The setup is complete.
 [[h2_70068769]]
 === Working with Routes
 
-ifdef::ios[] ifdef::win[]
+//tag::ios[] //tag::win[]
 
-[[h3__356890148]]
+[[h3_356890148]]
 ==== Offline Maps
 
 If a mobile user has no access to the Internet, she still can continue
@@ -99,16 +99,16 @@ available.
 [[h3_908267922]]
 ==== Left Menu
 
-ifdef::ios,win[]
+//tag::ios,win[]
 
 Sections are sorted in ascending or descending order according to the
 day.
 
 [NOTE] ==== The mobile user should have access to the *Start
 Date field* (refer to
-xref:ct-mobile-control-panel-calendar#h3_1674628596[CT Mobile
+xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc#h3_1674628596[CT Mobile
 Control Panel: Calendar] or
-xref:ct-mobile-control-panel-activities-new#h4__1766544266[CT
+xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-activities-new.adoc#h4_1766544266[CT
 Mobile Control Panel 2.0: Activities]). Otherwise, if this field is
 blank, records will be randomly grouped in the section without a title.
 ====
@@ -133,7 +133,7 @@ without custom list views, e.g., _All Events_.
 
 The last selected list view will be displayed in the Routes module.
 
-ifdef::andr,kotlin[]
+//tag::andr,kotlin[]
 
 Records are grouped in alphabetical order.
 
@@ -146,7 +146,7 @@ The available list views:
 * All {plus} name of the[.object]#Activity# object for objects
 without custom list views, e.g., _All Events_.
 
-[[h3__449942769]]
+[[h3_449942769]]
 ==== Main Screen
 
 Based or not on the current location, view the location of the selected
@@ -171,12 +171,12 @@ Specify whether to get directions on foot or by car.
 
 Select the activities from the list.
 
-ifdef::ios,win[]
+//tag::ios,win[]
 
 The maximum number of activities for a
-route xref:google-maps-api-key#h3__1529349083[is limited].
+route xref:ios/admin-guide/google-maps-api-key/index.adoc#h3_1529349083[is limited].
 
-ifdef::ios[]
+//tag::ios[]
 
 The route points are numbered. When tapping on activity on the map, you
 can use the *Open* button to go to the record layout.
@@ -185,12 +185,12 @@ For long-distance activities, a route cannot be built.
 
 A route cannot be built for the activities in the exact location, and
 the points will not be displayed.
-ifdef::ios[]
+//tag::ios[]
 image:routes-points.png[]
 
 The route is built.
 
-ifdef::ios[]
+//tag::ios[]
 
 The selected options are saved until the current user logs out.
 
@@ -201,7 +201,7 @@ image:62563218.png[]
 and then tap *Directions* to open the navigation app, which is used by
 default on the mobile device, with a route.
 
-ifdef::win[]
+//tag::win[]
 
 
 
@@ -209,7 +209,7 @@ Tap
 image:directions_win.png[]
 to view the navigation screen.
 image:routes_win_2_en.png[]
-ifdef::kotlin[]
+//tag::kotlin[]
 
 * Tap a waypoint on the route to view the activity details.
 * Tap the *Historical Activities* button to view previous routes.

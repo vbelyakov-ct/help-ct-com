@@ -5,10 +5,10 @@ standard related lists.
 
 According to the selected profile, settings on this tab will be saved in
 the records of the [.object]#CTM Settings# object with
-the xref:ctm-settings-offline-objects[Offline
-Objects] and xref:ctm-settings-standard-related-list[Standard
+the xref:ios/admin-guide/ct-mobile-control-panel/ctm-settings/ctm-settings-offline-objects.adoc[Offline
+Objects] and xref:ios/admin-guide/ct-mobile-control-panel/ctm-settings/ctm-settings-standard-related-list.adoc[Standard
 Related List] record type.
-ifdef::ios,win[] :toc: :toclevels: 3
+//tag::ios,win[] :toc: :toclevels: 3
 
 *Click to view the interface*xref:javascript:void(0)[]
 
@@ -52,12 +52,12 @@ Discount ]
 
 If turned on, the synchronization will result in an error.
 
-ifdef::kotlin[]
+//tag::kotlin[]
 
 [[h3_1442227750]]
 ==== Enable Conflict Manager
 
-If enabled, the xref:conflict-manager-control[Conflict Manager]
+If enabled, the xref:ios/admin-guide/managing-offline-objects/conflict-manager-control.adoc[Conflict Manager]
 will track changes made to the same record in CT Mobile and Salesforce.
 In the event of a conflict, the mobile user can choose which change to
 save.
@@ -66,7 +66,7 @@ save.
 ==== Quick Record Sync
 
 If enabled, a mobile user with the corresponding profile can
-xref:other-synchronization-modes#h2__1958232390[sync a single
+xref:ios/mobile-application/synchronization/other-synchronization-modes.adoc#h2_1958232390[sync a single
 record] and its child records by applying the pull-to-refresh gesture on
 the record's layout.
 
@@ -85,9 +85,9 @@ can apply the custom logic for JSON files.
 
 
 
-For more information, refer to xref:sync-recovery[Sync Recovery].
+For more information, refer to xref:ios/mobile-application/synchronization/sync-recovery.adoc[Sync Recovery].
 
-[[h2__263612775]]
+[[h2_263612775]]
 === Object Permissions
 
 Restrict the profile permissions to create or delete records of the
@@ -97,7 +97,7 @@ required records.
 
 
 For more information, refer to
-xref:managing-offline-objects[Managing Offline Objects].
+xref:ios/admin-guide/managing-offline-objects/index.adoc[Managing Offline Objects].
 
 [[h2_946326628]]
 === Related Lists
@@ -106,14 +106,14 @@ Restrict the profile permissions to create or delete records of the
 standard related lists that are added to the page layout of an offline
 object and available for the selected record type. Set up SOQL filters
 for using a toggle in the CT Mobile app to display all records or only
-records that match the criteria. Enable xref:timeline-view[the
+records that match the criteria. Enable xref:ios/admin-guide/related-lists/timeline-view.adoc[the
 timeline view] instead of the standard view of standard related lists if
 needed.
 
 
 
 For more information, refer to
-xref:managing-offline-objects[Managing Offline Objects]. Also, get
+xref:ios/admin-guide/managing-offline-objects/index.adoc[Managing Offline Objects]. Also, get
 familiar with the information in the
 xref:standard-related-lists[Standard Related Lists] article.
 
@@ -125,4 +125,4 @@ Panel: Custom details].
 
 See also:
 
-* xref:managing-offline-objects[Managing Offline Objects]
+* xref:ios/admin-guide/managing-offline-objects/index.adoc[Managing Offline Objects]

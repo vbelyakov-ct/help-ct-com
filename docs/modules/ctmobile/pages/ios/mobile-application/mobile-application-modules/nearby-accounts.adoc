@@ -3,12 +3,12 @@
 The *Nearby Accounts* module allows you to observe the nearest accounts
 on the map.
 
-ifdef::ios[]
+//tag::ios[]
 
 You can view the contacts or references and activities related to an
 account, and create activities.
 
-ifdef::win,andr,kotlin[]
+//tag::win,andr,kotlin[]
 
 ​You can view the contacts and activities related to an account, and
 create activities.
@@ -19,59 +19,59 @@ You can select the appropriate list view.
 [[h2_1037365166]]
 === Requirements
 
-Add the *Nearby Accounts* module to xref:app-menu[the app menu].
+Add the *Nearby Accounts* module to xref:ios/admin-guide/app-menu/index.adoc[the app menu].
 
-ifdef::ios,andr,kotlin[]
+//tag::ios,andr,kotlin[]
 
-To use Google Maps, specify the xref:google-maps-api-key[Google
+To use Google Maps, specify the xref:ios/admin-guide/google-maps-api-key/index.adoc[Google
 Maps API key] on the
-xref:ct-mobile-control-panel-general#h3_604215198[CT Mobile Control
+xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_604215198[CT Mobile Control
 Panel:
-General]/xref:ct-mobile-control-panel-general-new#h3_604215198[CT
+General]/xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-general-new.adoc#h3_604215198[CT
 Mobile Control Panel 2.0: General] tab.
 
-ifdef::win[]
+//tag::win[]
 
 To use maps, specify the
 https://docs.microsoft.com/en-us/bingmaps/getting-started/bing-maps-dev-center-help/getting-a-bing-maps-key[Bing
 Maps API key] on the
-xref:ct-mobile-control-panel-general#h3__1990058335[CT Mobile
+xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_1990058335[CT Mobile
 Control Panel:
-General]/xref:ct-mobile-control-panel-general-new#h3__1424081301[CT
+General]/xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-general-new.adoc#h3_1424081301[CT
 Mobile Control Panel 2.0: General] tab.
 
-ifdef::win,andr,kotlin[]
+//tag::win,andr,kotlin[]
 
 * A field to store an address for the[.object]#Account# object
 should be specified on the *CT Mobile Control Panel: General* tab.
 * An[.object]#Activity# object should be specified on
-xref:ct-mobile-control-panel-calendar#h3_1397263211[CT Mobile
+xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc#h3_1397263211[CT Mobile
 Control Panel:
-Calendar]/xref:ct-mobile-control-panel-activities-new#h2_2014841429[CT
+Calendar]/xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-activities-new.adoc#h2_2014841429[CT
 Mobile Control Panel 2.0: Activities] tab. Create a field with the
 *Lookup* type from the[.object]#Activity# object to the
 [.object]#Account# object.
 
-ifdef::ios[]
+//tag::ios[]
 
 image:nearby-accounts1.png[]
 
-ifdef::win[]
+//tag::win[]
 
 image:62562527.png[]
 
-ifdef::andr[]
+//tag::andr[]
 
 image:62562526.png[]
 
-ifdef::kotlin[]
+//tag::kotlin[]
 
 image:Nearby-Accounts-Kotlin.png[]
 
 [[h2_163800537]]
 === Adding Nearby Accounts to the Menu
 
-To add the *Nearby Accounts* module to the xref:app-menu[app menu]:
+To add the *Nearby Accounts* module to the xref:ios/admin-guide/app-menu/index.adoc[app menu]:
 
 [width="100%",cols="50%,50%",]
 |===
@@ -103,9 +103,9 @@ The setup is complete.
 [[h2_511018746]]
 === Working with Nearby Accounts
 
-ifdef::ios[] ifdef::win[]
+//tag::ios[] //tag::win[]
 
-[[h3__356890148]]
+[[h3_356890148]]
 ==== Offline Maps
 
 If a mobile user has no access to the Internet, she still can continue
@@ -118,16 +118,16 @@ Support].
 [[h3_908267922]]
 ==== Left Menu
 
-ifdef::ios[]
+//tag::ios[]
 
 The left menu consists of tabs with a list of accounts, contacts or
 references, or activity records with the specified geolocation.
 
 * Records will be randomly grouped in the section without a title if the
 current user profile has no access to the start date field (refer to
-xref:ct-mobile-control-panel-calendar#h3_1674628596[CT Mobile
+xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc#h3_1674628596[CT Mobile
 Control Panel: Calendar] or
-xref:ct-mobile-control-panel-activities-new#h4__1766544266[CT
+xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-activities-new.adoc#h4_1766544266[CT
 Mobile Control Panel 2.0: Activities]) or this field is blank.
 * Records will be grouped by day according to the
 [.object]#Activity# object with a title that contains the day,
@@ -146,15 +146,15 @@ sorted in ascending or descending order according to the start date
 To view related contacts or references, specify the API name of the
 required object on the *CT Mobile Control Panel: General* tab and add
 this object to offline objects (refer to
-xref:ct-mobile-control-panel-offline-objects[CT Mobile Control
+xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects.adoc[CT Mobile Control
 Panel: Offline objects] or
-xref:ct-mobile-control-panel-offline-objects-new[CT Mobile Control
+xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc[CT Mobile Control
 Panel 2.0: Offline Objects]). There should be a field with
 the *Lookup* type on
 the [.object]#Contact# or [.object]#Reference# object to
 link them with the [.object]#Account# object.
 
-ifdef::win,andr,kotlin[]
+//tag::win,andr,kotlin[]
 
 List of *Accounts*, *Contacts*, or *Activity* records with the specified
 geolocation. By default, records are grouped by the start date in
@@ -165,24 +165,24 @@ decreasing order. You can select the appropriate list view.
 To view related contacts, specify the API name of the required object on
 the *CT Mobile Control Panel: General* tab and add this object
 to offline objects (refer to
-xref:ct-mobile-control-panel-offline-objects[CT Mobile Control
+xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects.adoc[CT Mobile Control
 Panel: Offline objects] or
-xref:ct-mobile-control-panel-offline-objects-new[CT Mobile Control
+xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc[CT Mobile Control
 Panel 2.0: Offline Objects]). There should be a field with
 the *Lookup* type from the specified [.object]#Contact# object
 to the [.object]#Account# object.
 
-[[h3__449942769]]
+[[h3_449942769]]
 ==== Main Screen
 
 Based or not on the current location, view the location of the selected
 record on the map.
 
-ifdef::win[] Only the nearest marks are displayed depending on the
+//tag::win[] Only the nearest marks are displayed depending on the
 selected mark and scale. A mark can contain an unlimited number of
 records depending on the geolocation of records and scale. The
 https://docs.microsoft.com/en-us/bingmaps/articles/bing-maps-tile-system[Bing
-Maps Tile System] is used. ifdef::kotlin,ios[] Only marks that are
+Maps Tile System] is used. //tag::kotlin,ios[] Only marks that are
 within the 10 km radius of the selected records are displayed. A mark
 can contain an unlimited number of records depending on the geolocation
 of records and scale.
@@ -193,7 +193,7 @@ of records and scale.
 * Tap *Nearby Accounts* in the main menu to open a map centered on your
 current location (if enabled in the device settings).
 
-ifdef::ios[]
+//tag::ios[]
 image:nearby-accounts-u-r-here.png[]
 
 
@@ -223,5 +223,5 @@ specified geolocation.
 image:62562530.png[]
 to create an activity.
 
-ifdef::ios[]
+//tag::ios[]
 image:nearby-accounts-create-activity.png[]

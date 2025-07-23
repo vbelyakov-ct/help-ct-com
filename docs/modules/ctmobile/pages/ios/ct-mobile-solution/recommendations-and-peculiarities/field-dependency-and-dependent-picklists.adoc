@@ -1,4 +1,57 @@
-include::ctmobile:main/ct-mobile-solution/recommendations-and-peculiarities/field-dependency-and-dependent-picklists.adoc[tags=main;ios;]
+// tag::main[]
+= Field Dependency and Dependent Picklists
+
+A dependent picklist is a custom or multi-select picklist for which the  valid values depend on the value of another field, called the controlling field. Controlling fields can be any picklist (with at least one and fewer than 300 values) or checkbox field on the same record.
+
+To create a dependent picklist, refer to link:https://help.salesforce.com/articleView?id=sf.fields_about_dependent_fields.htm&type=5[Salesforce Help].
+// end::main[]
+
+// tag::ios[]
+// tag::win[]
+
+In the CT Mobile app on the layout, mini-layout, pseudo layout, and custom related lists:
+
+* A dependent field is *Read-Only* until the value is selected in the controlling field. If the value for the controlling field is set and there are proper values for the dependent field, the dependent field will be editable.
+** When the dependent field is *Read-Only* according to the Salesforce settings, it will be *Read-Only* even when the value is selected in the controlling field.
+** When the dependent field is *Required* according to the Salesforce settings, it will be *Required* when the value is selected in the controlling field. Otherwise, the dependent field is *Read-Only*.
+** If the value for the dependent field is set by default, this value is not substituted into the dependent field on the mobile device.
+** When the value in the controlling field has been changed, the value in the dependent field remains the same if it meets the criteria or changes to *None*.
+* When the desired value is selected in the control field, only the values specified to the selected are available in the dependent field.
+
+On the layout, mini-layout, pseudo layout, and custom related list, the default value for the dependent picklist will be taken according to the specific record type of the record if at least one record type of the object is available for the user's profile. Otherwise, the value will be set according to the properties of the field itself.
+
+// end::win[]
+// end::ios[]
 
 
+// tag::andr[]
 
+The dependent fields are not supported in the CT Mobile Android and Android 2.0 apps.
+
+// end::andr[]
+
+// tag::main[]
+
+[[h2_1106274213]]
+== Conditions to Display the None Value in the Picklists
+
+On the layout, mini-layout, and custom related list:
+
+* the field with the *Picklist* type has no value by default and this field is *Required*: when a user creates a record, the field with the *Picklist* type has the *None* value and the record cannot be saved due to the validation rule. Set up a value to save the record.
+* the field with the *Picklist* type has a value by default and this field is not *Required*: when a user creates a record, the default value is set in the field with the *Picklist* type. The user can select the *None* value.
+* the field with the *Picklist* type has no value by default and this field is not *Required*: when a user creates a record, the field with the *Picklist* type has the *None* value. The record will be saved whether the user remains the *None* value or selects another one.
+* the field with the *Picklist* type has a value by default and this field is *Required*: when a user creates a record, the default value is set in the field with the *Picklist* type.
+// end::main[]
+
+// tag::andr[]
+// tag::win[]
+The *None* value is absent.
+
+// end::win[]
+// end::andr[]
+
+// tag::win[]
+
+The field with the *Picklist (Multi-Select)* type always has the *None* value to select in case of the need to erase all selected values.
+
+// end::win[]

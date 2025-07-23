@@ -1,19 +1,19 @@
 = Standard Related List
 
-ifdef::kotlin[] ifdef::andr,win[][NOTE] ==== Not
+//tag::kotlin[] //tag::andr,win[][NOTE] ==== Not
 available. ====
 
 The *Standard Related List* record type is intended to store settings
 for a standard related list of a specific
-xref:managing-offline-objects[offline object&#44;] as well as
+xref:ios/admin-guide/managing-offline-objects/index.adoc[offline object&#44;] as well as
 permissions and available actions with records of the standard related
 list for a specific profile.
 
 [TIP] ==== To create or update the settings for the standard
 related lists, go to
-xref:ct-mobile-control-panel-offline-objects[CT Mobile Control
+xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects.adoc[CT Mobile Control
 Panel: Offline
-Objects]/xref:ct-mobile-control-panel-offline-objects-new[CT Mobile
+Objects]/xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc[CT Mobile
 Control Panel 2.0: Offline Objects]. ====
 
 The following system variables can be used as a criterion:
@@ -42,7 +42,7 @@ Record Type API name:[.apiobject]#StandardRelatedList#
 
 |Conflict Manager
 |[.apiobject]#clm__IsConflictManagerEnabled__c#
-|Checkbox |The xref:conflict-manager-control[Conflict Manager] is
+|Checkbox |The xref:ios/admin-guide/managing-offline-objects/conflict-manager-control.adoc[Conflict Manager] is
 used to track the changes made in a single record in the mobile
 application and on the Salesforce side.
 
@@ -72,7 +72,7 @@ The criteria line should start with the 'WHERE' keyword.
 
 |Default View |[.apiobject]#clm__View__c# |Text(255)
 |Stores the *Timeline* value to display records in
-xref:timeline-view[Timeline] view. In other cases, left blank.
+xref:ios/admin-guide/related-lists/timeline-view.adoc[Timeline] view. In other cases, left blank.
 
 |Deleting Allowed
 |[.apiobject]#clm__IsDeletingAllowed__c# |Checkbox a|
@@ -111,7 +111,7 @@ specified in the[.apiobject]#clm__Object__c# field.
 |Online Fetching
 |[.apiobject]#clm__IsOnlineFetchingEnabled__c#
 |Checkbox |The setting defines if
-the xref:online-records-fetching[Load more records] button is
+the xref:ios/admin-guide/managing-offline-objects/online-records-fetching.adoc[Load more records] button is
 available in the application.
 
 |Order |[.apiobject]#clm__Order__c# |Number(18, 0) |The
@@ -120,7 +120,7 @@ synchronization.
 
 |Org ID/Profile ID |[.apiobject]#clm__OrgProfileId__c#
 |Text(255) a|
-xref:application-permission-settings[Organization ID/Profile ID] to
+xref:ios/getting-started/application-permission-settings.adoc[Organization ID/Profile ID] to
 which this setting is applicable:
 
 * if Profile ID is set, the setting is applied only to the profile;
@@ -162,7 +162,7 @@ the [.apiobject]#clm__View__c# field.
 
 |Sync Recovery |[.apiobject]#clm__SyncRecovery__c#
 |Text(255) a|
-Enable xref:sync-recovery[Sync Recovery] to deliver records that
+Enable xref:ios/mobile-application/synchronization/sync-recovery.adoc[Sync Recovery] to deliver records that
 could not be synchronized to Salesforce anyway. Available values:
 
 * An empty value means that the web service is not involved.

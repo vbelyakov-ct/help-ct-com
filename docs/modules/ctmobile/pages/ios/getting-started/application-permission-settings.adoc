@@ -8,7 +8,7 @@ access exceptions.
 
 :toc: :toclevels: 3
 
-[[h2__104944228]]
+[[h2_104944228]]
 === Profiles
 
 [WARNING] ==== We kindly ask you to set up a separate profile
@@ -16,7 +16,7 @@ for a user who configures the system. The user should have the _Modify
 All Data_ and _Modify Metadata Through Metadata API Functions_
 permissions and access to all fields and objects. ====
 
-To use xref:home-screen#h3__1361691321[the mobile logo], a mobile
+To use xref:ios/mobile-application/ui/home-screen/index.adoc#h3_1361691321[the mobile logo], a mobile
 user should have access to the *Documents* folder. Please check the
 following:
 
@@ -39,7 +39,7 @@ ranges.
 * A profile can be assigned to many users, but a user can be assigned to
 a single profile at a time.
 * A user's profile should be specified on some
-xref:ct-mobile-control-panel[CT Mobile Control Panel] tabs to
+xref:ios/admin-guide/ct-mobile-control-panel/index.adoc[CT Mobile Control Panel] tabs to
 define the required user's permissions.
 
 
@@ -51,7 +51,7 @@ deleted.
 * *Custom profiles* are user-defined profiles. These profiles can be
 deleted if no users are assigned to them.
 
-[[h3__1485360783]]
+[[h3_1485360783]]
 ==== Set Up a New Profile
 
 Define profiles by the user’s function. You can create and assign a new
@@ -61,30 +61,30 @@ and errors during the synchronization.
 
 
 
-ifdef::ios[]
+//tag::ios[]
 
 For example, access to an object has been withdrawn from the mobile
 user's profile after the last full synchronization. During the next fast
 synchronization, the[.apiobject]#INVALID_TYPE# error may
 occur because some records are no more available. We recommend enabling
-xref:sync-recovery[Sync Recovery] to process errors or
-xref:ct-mobile-replication[CT Mobile Replication] to hide these
+xref:ios/mobile-application/synchronization/sync-recovery.adoc[Sync Recovery] to process errors or
+xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/ct-mobile-replication.adoc[CT Mobile Replication] to hide these
 unavailable records and download the correct ones.
 
-ifdef::andr,win[]
+//tag::andr,win[]
 
 For example, access to an object has been withdrawn from the mobile
 user's profile after the last full synchronization. During the next fast
 synchronization, the[.apiobject]#INVALID_TYPE# error may
 occur because some records are no more available.
 
-ifdef::kotlin[]
+//tag::kotlin[]
 
 For example, access to an object has been withdrawn from the mobile
 user's profile after the last full synchronization. During the next fast
 synchronization, the[.apiobject]#INVALID_TYPE# error may
 occur because some records are no more available. We recommend enabling
-xref:ct-mobile-replication[CT Mobile Replication] to hide these
+xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/ct-mobile-replication.adoc[CT Mobile Replication] to hide these
 unavailable records and download the correct ones.
 
 
@@ -150,7 +150,7 @@ object).
 * _CT Mobile Presenter_ should be assigned to those who need to work
 with CLM presentations.
 
-[[h2__1133416231]]
+[[h2_1133416231]]
 === Sharing Rules
 
 https://help.salesforce.com/articleView?id=sf.managing_the_sharing_model.htm&type=5[Sharing

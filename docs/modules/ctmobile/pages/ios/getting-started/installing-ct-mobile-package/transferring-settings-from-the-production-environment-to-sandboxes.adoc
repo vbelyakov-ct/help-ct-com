@@ -5,9 +5,9 @@ environment, including critical data for CT Mobile functionalities, such
 as a cloud token and user profile IDs. If the profile IDs used do not
 match the sandbox profile IDs, the sandbox does not have the necessary
 settings, and there are no objects in the *Selected* column on the
-xref:ct-mobile-control-panel-offline-objects#h2_1468985423[CT
+xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects.adoc#h2_1468985423[CT
 Mobile Control Panel: Offline
-Objects]/xref:ct-mobile-control-panel-offline-objects-new[CT Mobile
+Objects]/xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc[CT Mobile
 Control Panel 2.0: Offline Objects] tab.
 
 
@@ -17,25 +17,25 @@ production environment to sandboxes.
 
 Important notes:
 
-* xref:ctm-settings[CTM Settings] records with the *Menu*, *Offline
+* xref:ios/admin-guide/ct-mobile-control-panel/ctm-settings/index.adoc[CTM Settings] records with the *Menu*, *Offline
 Objects*, and *Standard Related List* record types store settings for
 the menu, offline objects, and standard related lists.
-* xref:ct-mobile-control-panel[CT Mobile Control
-Panel]/xref:ct-mobile-control-panel-new[CT Mobile Control Panel
+* xref:ios/admin-guide/ct-mobile-control-panel/index.adoc[CT Mobile Control
+Panel]/xref:ios/admin-guide/ct-mobile-control-panel-new/index.adoc[CT Mobile Control Panel
 2.0] displays settings for the menu, offline objects, and standard
 related lists given the *CTM Settings* records and others
-given xref:custom-settings[custom settings].
+given xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/index.adoc[custom settings].
 * CT Mobile app downloads settings from CTM Settings records and custom
 settings records.
 
-[[h2__1090338631]]
+[[h2_1090338631]]
 === 1. Verify Remote Site Settings
 
 Go to *Setup → Security → Remote Site Settings* and verify that the
 specified URL contains the instance name of the sandbox, not the
 production environment.
 
-For more information, refer to xref:remote-site-settings[Remote
+For more information, refer to xref:ios/admin-guide/remote-site-settings.adoc[Remote
 Site Settings].
 
 [[h2_204191995]]
@@ -45,19 +45,19 @@ Go to *CT Mobile Control Panel: Tools* and click *Refresh* next to
 *Cloud Token*.
 
 For more information, refer
-to xref:ct-mobile-control-panel-tools[CT Mobile Control Panel:
+to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc[CT Mobile Control Panel:
 Tools]/xref:ct-mobile-control-panel-tools-new[CT Mobile Control
 Panel 2.0:
 Tools] and xref:ct-mobile-managed-package-update-to-v-3-54[CT
 Mobile Managed Package Update to v. 3.54].
 
-ifdef::ios[]
+//tag::ios[]
 
 If you use CT Mobile package v. 3.54 and higher with the CT Mobile app
 below v. 2.4, contact the Customertimes team to perform the required
 actions.
 
-ifdef::win[]
+//tag::win[]
 
 If you use CT Mobile package v. 3.54 and higher with the CT Mobile app
 below v. 1.3, contact the Customertimes team to perform the required
@@ -111,9 +111,9 @@ For more information, refer
 to xref:publishing-clm-presentations#h3_1098755975[Publishing CLM
 presentations].
 
-[[h2__822727760]]
+[[h2_822727760]]
 === 5. Perform a Full Synchronization
 
 The setup is complete. After completing all the steps, perform a
-xref:full-synchronization[full synchronization] in the CT Mobile
+xref:ios/mobile-application/synchronization/full-synchronization.adoc[full synchronization] in the CT Mobile
 app.

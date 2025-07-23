@@ -12,14 +12,14 @@ or more fields and returns a value of[.apiobject]#true# or
 
 
 Validation rules are retrieved by the CT Mobile app during
-synchronization as part of the xref:metadata-archive[metadata
+synchronization as part of the xref:ios/admin-guide/metadata-checker/metadata-archive/index.adoc[metadata
 archive] and then are applied offline. There are several limitations and
 conditions for validations applied on mobile devices that consider a
 correlation between synchronized records and the validation process:
 
 * Synchronized records cannot be validated before the changes are
 introduced (on the record layout and
-xref:custom-related-lists[custom related list]).
+xref:ios/admin-guide/related-lists/custom-related-lists.adoc[custom related list]).
 * If changes are made in an already synchronized record, this record
 becomes unsynced.
 
@@ -29,11 +29,11 @@ becomes unsynced.
 The following logic is applied for *Activity* records that were created
 in the *Calendar* or *Nearby Accounts* modules.
 
-ifdef::ios,andr[][NOTE] ==== The
-xref:start-finish-functionality[Start/Finish functionality] and
-xref:ct-mobile-control-panel-calendar#h3__1036133099[Lock/Unlock
+//tag::ios,andr[][NOTE] ==== The
+xref:ios/admin-guide/start-finish-functionality.adoc[Start/Finish functionality] and
+xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc#h3_1036133099[Lock/Unlock
 Record]
-(xref:ct-mobile-control-panel-activities-new#h4_1219382202[Lock
+(xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-activities-new.adoc#h4_1219382202[Lock
 Activities for Editing after Finishing]) must be disabled. ====
 
 * After you create a record and open its layout (an unsynchronized
@@ -43,7 +43,7 @@ related lists.
 of the field values, all tabs will be validated, but records of custom
 related lists are not affected.
 
-ifdef::ios,andr[]
+//tag::ios,andr[]
 
 
 
@@ -61,14 +61,14 @@ _Activity_ record is started, even if the record is not synchronized.
 [[h2_383652875]]
 === Validation Logic for Custom Related Lists
 
-ifdef::win[]
+//tag::win[]
 
 If a record is created or changed on a custom related list, the parent
 record layout will not be validated. Errors that occur on a record of
 custom related lists are displayed in a separate section on
-xref:errors-screen#h2__479754125[the Errors screen].
+xref:errors-screen#h2_479754125[the Errors screen].
 
-ifdef::ios,andr[]
+//tag::ios,andr[]
 
 If a record is created or changed on a custom related list, the parent
 record layout will not be validated.
@@ -96,10 +96,10 @@ in a custom related list.
 occurs on a custom related list.
 
 Errors that occur on a record of custom related lists are displayed in a
-separate section on xref:errors-screen#h2__479754125[the Errors
+separate section on xref:errors-screen#h2_479754125[the Errors
 screen].
 
-[[h2__549128247]]
+[[h2_549128247]]
 === User Permissions
 
 The mobile user should have the following permissions:

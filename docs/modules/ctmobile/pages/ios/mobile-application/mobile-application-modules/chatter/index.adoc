@@ -1,12 +1,12 @@
 = Chatter
 
-ifdef::win,andr[] The *Chatter* module displays users' messages.
+//tag::win,andr[] The *Chatter* module displays users' messages.
 Users can create posts and comments and add attachments. You can add
-Chatter to the xref:mobile-layouts-chatter-feed[mobile layout].
-ifdef::ios[] The *Chatter* module displays users' messages. Users
+Chatter to the xref:ios/admin-guide/mobile-layouts/index.adoc-chatter-feed[mobile layout].
+//tag::ios[] The *Chatter* module displays users' messages. Users
 can create posts and comments, add attachments, and receive
-xref:chatter-push-notifications[push notifications]. You can add
-Chatter to the xref:mobile-layouts-chatter-feed[mobile layout].
+xref:ios/mobile-application/mobile-application-modules/chatter/chatter-push-notifications.adoc[push notifications]. You can add
+Chatter to the xref:ios/admin-guide/mobile-layouts/index.adoc-chatter-feed[mobile layout].
 
 The red dot on the *Chatter* item in the left menu means that new
 application records have been downloaded since the last synchronization:
@@ -14,15 +14,15 @@ application records have been downloaded since the last synchronization:
 image:chatter-menu-new-posts.png[]
 
 image:chatter.png[]
-ifdef::win[]
+//tag::win[]
 image:chatter_win_en.png[]
-ifdef::andr[]
+//tag::andr[]
 image:62562625.png[]
 
 [[h2_1295891821]]
 === Adding Chatter to the Menu
 
-To add the *Chatter* module to the xref:app-menu[app menu]:
+To add the *Chatter* module to the xref:ios/admin-guide/app-menu/index.adoc[app menu]:
 
 [width="100%",cols="50%,50%",]
 |===
@@ -52,10 +52,10 @@ The setup is complete.
 
 ifndef::andr[]
 
-[[h2__299223618]]
+[[h2_299223618]]
 === Chatter Menu
 
-ifdef::ios[]
+//tag::ios[]
 
 In the Chatter menu, the feeds, groups, and people sections are
 available. Tap a group, a contact, or select a feed to view the related
@@ -63,7 +63,7 @@ posts and comments.
 
 Due to SOAP limitations, polls and @mention are not supported.
 
-ifdef::win[]
+//tag::win[]
 
 In the Chatter menu, the feeds, groups, and people sections are
 available. Tap a group, a contact, or select a feed to view the related
@@ -108,7 +108,7 @@ comments. Create a new Chatter group in Salesforce, perform mixed
 synchronization, and track the group posts and comments in the mobile
 app.
 
-ifdef::ios[]
+//tag::ios[]
 
 
 
@@ -116,7 +116,7 @@ To update posts and comments in a group, pull down the chatter screen.
 The records (text posts, link posts, and content posts), comments, and
 likes will be synchronized.
 
-[[h3__1434067361]]
+[[h3_1434067361]]
 ==== People
 
 Tap the *Recently viewed* tab to view the recently opened contacts,
@@ -125,13 +125,13 @@ their feeds, posts, and comments.
 Tap the *All People* tab to view all company contacts, their feeds,
 posts, and comments.
 
-[[h2__779708391]]
+[[h2_779708391]]
 === Chatter Posts and Comments
 
-ifdef::ios[] By default, posts, and comments for the last 6 weeks.
+//tag::ios[] By default, posts, and comments for the last 6 weeks.
 To update posts and comments, pull down the chatter screen. The records
 (text posts, link posts, and content posts), comments, and likes will be
-synchronized. ifdef::win[] You can create, edit, or delete posts and
+synchronized. //tag::win[] You can create, edit, or delete posts and
 comments.
 Tap/left-click image:chatter-ru-2020-07-08-1.png[]
 next to your post or comment to edit or delete it. The confirmation
@@ -148,7 +148,7 @@ Attach the audio message or select the audio from the device.
 
 Attach a link.
 
-ifdef::win[]
+//tag::win[]
 
 Use @ to mention a user.
 
@@ -162,7 +162,7 @@ Take a photo or select a photo from the gallery;
 
 Attach the audio message or select the audio from the device.
 
-ifdef::win[]
+//tag::win[]
 
 Use @ to mention a user.
 
@@ -173,7 +173,7 @@ Tap
 image:like_chatter.png[]
 to like a post or comment. Tap the record name to open its feed.
 
-ifdef::andr[]
+//tag::andr[]
 
 * The following
 https://help.salesforce.com/articleView?id=collab_feed_filters.htm&type=5[Chatter

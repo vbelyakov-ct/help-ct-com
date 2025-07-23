@@ -1,6 +1,6 @@
 = Chatter Push Notifications
 
-xref:mobile-layouts-chatter-feed[Chatter feed] is a widget to
+xref:ios/admin-guide/mobile-layouts/index.adoc-chatter-feed[Chatter feed] is a widget to
 display messages on the *Chatter* module screen or in the *Chatter* tab
 of the selected record.
 
@@ -25,7 +25,7 @@ the value for the xref:push-identifier[PUSH Identifier] field.
 
 For the CT Mobile app installed from the App Store, the push identifier
 is[.apiobject]#ctmobile#.
-. xref:application-prompts-for-requesting-permissions[Allow
+. xref:ios/getting-started/application-prompts-for-requesting-permissions.adoc[Allow
 Notifications] for CT Mobile in the *Settings* on a mobile device.
 . Please make sure that the *Device Token* field for the current record
 of the User object is filled with a value.
@@ -87,7 +87,7 @@ Record Sync* setting for the object on the *CT Mobile Control Panel:
 Offline Objects* tab. ====
 image:62556898.png[]
 
-ifdef::hidden[]
+//tag::hidden[]
 
 
 1 Посмотреть какой сертификат можно у файла инсталлятора приложения.

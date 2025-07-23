@@ -12,7 +12,7 @@ This guide is intended for UI/UX and content designers, CLM-, CRM-,
 brand managers, and technical teams, who are responsible for selecting,
 managing, and creating visual aids and CLM presentations.
 
-[[h2__741641000]]
+[[h2_741641000]]
 === Integrated CLM and CRM
 
 CT Presenter enables client-facing interactions using CLM presentations
@@ -27,7 +27,7 @@ visualization, etc.
 
 As CT Presenter is tightly integrated with CT Mobile, CLM presentations
 can interact with the mobile offline database of the CT Mobile app using
-xref:js-bridge-api[read/write access to CRM data]. In CLM
+xref:ios/ct-presenter/js-bridge-api/index.adoc[read/write access to CRM data]. In CLM
 presentations, images, videos, and attached PDFs can be used from the
 existing media libraries. For example, it is possible to develop complex
 CLM presentations based on HTML5 for product presentation along with
@@ -41,7 +41,7 @@ take during the call.
 CLM presentations are structured within the Salesforce data model and
 store HTML5 content and related resources in the Salesforce database. CT
 Presenter provides the data model and tools for
-xref:clm-applicationstats[CLM-presentations tracking and usage
+xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-applicationstats.adoc[CLM-presentations tracking and usage
 analysis for further improvement], e.g., shown slides, duration of every
 slide shown, clicks, etc. As all the statistics of content usage are
 stored in the Salesforce database, it is easy to run reports and develop

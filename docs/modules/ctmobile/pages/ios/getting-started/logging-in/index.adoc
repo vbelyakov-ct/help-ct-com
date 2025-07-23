@@ -1,9 +1,9 @@
 = Logging In
 
-ifdef::ios[]
+//tag::ios[]
 
 The first step of using the CT Mobile app, logging in with your
-Salesforce credentials xref:installing-ct-mobile-package[to your
+Salesforce credentials xref:ios/getting-started/installing-ct-mobile-package/index.adoc[to your
 Org].
 
 
@@ -29,15 +29,15 @@ further use.
 
 image:58826301.png[]
 
-You are logged in to CT Mobile. The xref:home-screen[Home Screen]
+You are logged in to CT Mobile. The xref:ios/mobile-application/ui/home-screen/index.adoc[Home Screen]
 displays. Perform xref:synchronization-launch#h2_538692555[the
 first/full synchronization of the application] in order to begin your
 work.
 
-ifdef::win[]
+//tag::win[]
 
 The first step of using the CT Mobile app, logging in with your
-Salesforce credentials xref:installing-ct-mobile-package[to your
+Salesforce credentials xref:ios/getting-started/installing-ct-mobile-package/index.adoc[to your
 Org].
 
 .Click to view[%collapsible] ==== *Click to view the* *Login
@@ -62,7 +62,7 @@ Address*. ====
 
 image:logging-in-win.png[]
 
-You are logged in to CT Mobile. The xref:home-screen[Home Screen]
+You are logged in to CT Mobile. The xref:ios/mobile-application/ui/home-screen/index.adoc[Home Screen]
 displays.
 
 * Perform xref:synchronization-launch#h2_538692555[the first/full
@@ -78,7 +78,7 @@ screen for users of CT Mobile v. 1.3 or higher* ==== .Click to hide
 [%collapsible] ====
 
 Since CT Mobile1.3, the *Login* screen is implemented with
-xref:oauth-2-0[the OAuth 2.0 protocol] and standard Salesforce
+xref:ios/getting-started/logging-in/oauth-2-0.adoc[the OAuth 2.0 protocol] and standard Salesforce
 UI.
 
 To log in to the CT Mobile application:
@@ -102,7 +102,7 @@ password. Select the *Remember me* checkbox to save the entered
 credentials for further use.
 . In the in-app browser window, allow access to requested data.
 
-xref:synchronization-launch#h2__1266946854[The first
+xref:synchronization-launch#h2_1266946854[The first
 synchronization] started. After the synchronization, the CT Mobile is
 ready to use.
 
@@ -112,10 +112,10 @@ button to add a new user if needed.
 
 ====
 
-ifdef::andr[]
+//tag::andr[]
 
 The first step of using the CT Mobile app, logging in with your
-Salesforce credentials xref:installing-ct-mobile-package[to your
+Salesforce credentials xref:ios/getting-started/installing-ct-mobile-package/index.adoc[to your
 Org].
 
 . Run the CT Mobile app.
@@ -126,15 +126,15 @@ Org].
 image:logging_in_android_old.png[]
 . Allow or restrict access to requested data.
 
-The CT Mobile app is ready to use, and the xref:home-screen[Home
+The CT Mobile app is ready to use, and the xref:ios/mobile-application/ui/home-screen/index.adoc[Home
 Screen] displays. Perform
 xref:synchronization-launch#h2_538692555[the first/full
 synchronization] in order to begin your work.
 
-ifdef::kotlin[]
+//tag::kotlin[]
 
 The first step of using the CT Mobile app, logging in with your
-Salesforce credentials xref:installing-ct-mobile-package[to your
+Salesforce credentials xref:ios/getting-started/installing-ct-mobile-package/index.adoc[to your
 Org].
 
 

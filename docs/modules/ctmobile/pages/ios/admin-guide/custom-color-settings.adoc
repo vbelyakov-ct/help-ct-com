@@ -1,10 +1,10 @@
 = Custom Color Settings
 
 Use color settings to distinguish records of
-xref:managing-offline-objects[an offline object] by the specific
+xref:ios/admin-guide/managing-offline-objects/index.adoc[an offline object] by the specific
 criterion, for example, records in the left menu, activities in the
 xref:calendar[Calendar] module, and records in the
-xref:nearby-accounts[Nearby Accounts] module. Each offline object
+xref:ios/mobile-application/mobile-application-modules/nearby-accounts.adoc[Nearby Accounts] module. Each offline object
 can have only one coloring criterion.
 
 [[h2_686863387]]
@@ -68,14 +68,14 @@ image:ctm-control-panel-new-custom-colors-example.png[]
 
 |===
 
-ifdef::andr,ios,win[] The setup is complete.
+//tag::andr,ios,win[] The setup is complete.
 xref:synchronization-launch[Launch synchronization] to apply the
-changes. ifdef::kotlin[] The setup is complete.
+changes. //tag::kotlin[] The setup is complete.
 xref:synchronization-launch[Launch mixed synchronization] to apply
 the changes.
-ifdef::ios[]
+//tag::ios[]
 image:62561517.png[]
-ifdef::win[]
+//tag::win[]
 image:62561519.png[]
-ifdef::andr[]
+//tag::andr[]
 image:62561518.png[]

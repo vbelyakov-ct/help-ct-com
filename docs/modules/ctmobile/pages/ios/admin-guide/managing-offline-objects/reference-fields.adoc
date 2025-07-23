@@ -1,6 +1,6 @@
 = Reference Fields
 
-ifdef::ios,win[]
+//tag::ios,win[]
 
 https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/field_types.htm#stq=lookup&stp=1[A
 reference field] contains an ID value that points to a unique record on
@@ -11,21 +11,21 @@ reference field via a lookup or master-detail relationship.
 
 For the reference field, a mobile user can:
 
-* xref:reference-fields#h2__1514470758[download additional
+* xref:ios/admin-guide/managing-offline-objects/reference-fields.adoc#h2_1514470758[download additional
 record] if the reference field refers to the not downloaded record;
-* xref:reference-fields#h2__1554731138[search value] or create a
+* xref:ios/admin-guide/managing-offline-objects/reference-fields.adoc#h2_1554731138[search value] or create a
 new record to add;
-* use xref:reference-fields#h2__321327715[lookup filters] to see
+* use xref:ios/admin-guide/managing-offline-objects/reference-fields.adoc#h2_321327715[lookup filters] to see
 records that match required or optional criteria.
 
-[[h2__1514470758]]
+[[h2_1514470758]]
 === Online One Record Fetching
 
-Along with xref:online-records-fetching[online records fetching], a
+Along with xref:ios/admin-guide/managing-offline-objects/online-records-fetching.adoc[online records fetching], a
 mobile user can download one additional record
 tappingimage:62573543.png[]next
 to the field, which refers to the not downloaded
-record, on xref:mobile-layouts[the mobile layout] of the linked
+record, on xref:ios/admin-guide/mobile-layouts/index.adoc[the mobile layout] of the linked
 record.
 
 
@@ -33,7 +33,7 @@ Online one record fetching is available when:
 
 * one of the downloaded records is linked to a not downloaded record;
 * the object of the not downloaded record is
-available xref:managing-offline-objects[offline].
+available xref:ios/admin-guide/managing-offline-objects/index.adoc[offline].
 
 
 
@@ -47,7 +47,7 @@ Filters]. When a mobile user opens the _Activity_ record, they can open
 the available related _Contact_ record and download
 the related _Account_ record to the mobile device.
 
-ifdef::ios[]
+//tag::ios[]
 
 image:online-one-record-fetching.png[]
 To download a record:
@@ -68,15 +68,15 @@ removed after the database is reset.
 download a record.
 * A mobile user can clear value from the reference field by tapping on a
 field with the record and then tapping the *Clear* button.
-* If xref:managing-offline-objects#h2_1534686659[a record in the
+* If xref:ios/admin-guide/managing-offline-objects/index.adoc#h2_1534686659[a record in the
 reference field was deleted] in the CT Mobile app,
 the image:deleted.png[] icon
 next to the reference field will be shown.
 
-[[h2__1554731138]]
+[[h2_1554731138]]
 === Online record search
 
-Enter a record in the reference field xref:search[using search].
+Enter a record in the reference field xref:ios/mobile-application/ui/home-screen/search.adoc[using search].
 Search is carried out in the fields that are listed on
 the https://help.salesforce.com/articleView?id=search_results_setup_parent.htm&type=5[Search
 Results] search layout.
@@ -92,9 +92,9 @@ search results, tap a record you want to specify in the
 reference field.
 * Tap image:66361426.png[] to
 create and add a new record to the reference field
-using xref:mini-layouts[a mini layout].
+using xref:ios/admin-guide/mini-layouts.adoc[a mini layout].
 * Tap image:detailed-list-view-button.png[]
-to expand xref:list-views#h2_1248088428[the detailed list view].
+to expand xref:ios/mobile-application/ui/list-views.adoc#h2_1248088428[the detailed list view].
 * Tap image:66359461.png[] to
 online search for a record in Salesforce. In the search results, tap a
 record and confirm to download it.
@@ -109,7 +109,7 @@ image:online-record-search.png[]
 
 
 
-ifdef::win[]
+//tag::win[]
 
 image:reference_field_windows_en.png[]
 
@@ -132,11 +132,11 @@ will be still available on a mobile device. The record will be removed
 only after xref:log-out[the reset database or log out of the
 current user].
 
-[[h2__1554731138]]
+[[h2_1554731138]]
 === Online Record Search
 
 A mobile user can specify a value for the lookup or master-detail
-relationship field by xref:search[searching] or creating a
+relationship field by xref:ios/mobile-application/ui/home-screen/search.adoc[searching] or creating a
 record. Search is carried out in the fields that are listed on
 the https://help.salesforce.com/articleView?id=search_results_setup_parent.htm&type=5[Search
 Results] search layout. To find a record:
@@ -148,12 +148,12 @@ filters image:66368059.png[] to
 select another list view.
 * Tap image:66362246.png[]  to
 create and add a new record to the reference field by
-using xref:mini-layouts[a mini layout].
+using xref:ios/admin-guide/mini-layouts.adoc[a mini layout].
 * Tap the *Clear* button to clear the value from the reference field. If
 a reference field is empty, the *Clear* button is not displayed.
 image:66368056.png[]
 
-ifdef::kotlin[]
+//tag::kotlin[]
 
 https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/field_types.htm#stq=lookup&stp=1[A
 reference field] contains an Id value that points to a unique record on
@@ -164,7 +164,7 @@ master-detail relationship.
 === Online Record Search
 
 A mobile user can specify a value for the lookup or master-detail
-relationship field by xref:search[searching] or creating a
+relationship field by xref:ios/mobile-application/ui/home-screen/search.adoc[searching] or creating a
 record. Search is carried out in the fields that are listed on
 the https://help.salesforce.com/articleView?id=search_results_setup_parent.htm&type=5[Search
 Results] search layout. To find a record:
@@ -174,13 +174,13 @@ search results, tap a record you want to specify in the
 reference field.
 * Tap the list view name to select another list view.
 * Tap the *Plus* button to create and add a new record to the reference
-field by using xref:mini-layouts[a mini layout].
+field by using xref:ios/admin-guide/mini-layouts.adoc[a mini layout].
 * Tap the *Clear* button to clear the value from the reference field. If
 a reference field is empty, the *Clear* button is not displayed.
 
 image:Reference-Field-Kotlin.png[]
 
-[[h2__321327715]]
+[[h2_321327715]]
 === Lookup Filters
 
 Lookup filters restrict the valid values and lookup dialog results
@@ -188,11 +188,11 @@ for the reference field. To create a lookup filter, refer
 to https://help.salesforce.com/articleView?id=sf.fields_lookup_filters_defining.htm&type=5[Salesforce
 Help].
 
-ifdef::ios,win[]
+//tag::ios,win[]
 
 If you created or changed the lookup filter, it is necessary to
-rebuild xref:metadata-archive[a metadata
-archive] using xref:metadata-checker[one of the available
+rebuild xref:ios/admin-guide/metadata-checker/metadata-archive/index.adoc[a metadata
+archive] using xref:ios/admin-guide/metadata-checker/index.adoc[one of the available
 options] to download the proper lookup filters via synchronization.
 
 Lookup filter can be required or optional:
@@ -203,42 +203,42 @@ Lookup filter can be required or optional:
 Only the records that match the lookup filter criteria are available
 when a user fills out the reference field.
 
-ifdef::ios[]
+//tag::ios[]
 
 image:required-lookup-filter.png[]
 
-ifdef::win[]
+//tag::win[]
 
 image:66368057.png[]
 
 
 
-ifdef::ios[]
+//tag::ios[]
 
 If the created record doesn't match the filter criteria, the lookup
 field will be empty and the corresponding message will be displayed:
 
 image:record-doesnot-match-filter-criteria.png[]
 
-[[h3__532834476]]
+[[h3_532834476]]
 ==== 
 
-[[h3__532834476]]
+[[h3_532834476]]
 ==== Optional filter
 
 All object records are available when a user fills out the reference
 field. Records that do not match the lookup filter criteria are
 highlighted in red color.
 
-ifdef::ios[]
+//tag::ios[]
 
 image:optional-lookup-filter.png[]
 
-ifdef::win[]
+//tag::win[]
 
 image:66368058.png[]
 
-[[h3__1126072765]]
+[[h3_1126072765]]
 ==== Limitations on Lookup Filters
 
 * Filter logic with subconditions is not supported. For example, such

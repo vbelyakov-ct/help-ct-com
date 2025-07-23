@@ -11,7 +11,7 @@ Objects] and https://help.customertimes.com/articles/ct-mobile-ios-en/ctm-settin
 Related List] record type.
 
 To add a[.object]#Custom Metadata Type# object, create a record
-in the xref:ctm-settings[CTM Settings] with the _Offline Object_
+in the xref:ios/admin-guide/ct-mobile-control-panel/ctm-settings/index.adoc[CTM Settings] with the _Offline Object_
 record type.
 
 In the left part:
@@ -32,10 +32,10 @@ The tab has the following sections:
 
 
 
-[[h3__1877182756]]
+[[h3_1877182756]]
 ==== 
 
-[[h2__389408561]]
+[[h2_389408561]]
 === Main
 
 For each object, you can enable creating and deleting records by
@@ -43,7 +43,7 @@ selecting the corresponding checkboxes in the *Allowed to* section.
 
 image:ctm-control-panel-offline-objects-new.png[]
 
-[[h3__887090501]]
+[[h3_887090501]]
 ==== Advanced Settings
 
 [[h4_1689689349]]
@@ -70,7 +70,7 @@ Discount] objects.
 ===== Quick Record Sync
 
 If enabled, a mobile user with the corresponding profile
-can https://help.customertimes.com/articles/ct-mobile-ios-en/other-synchronization-modes/a/h2__1958232390[sync
+can https://help.customertimes.com/articles/ct-mobile-ios-en/other-synchronization-modes/a/h2_1958232390[sync
 a single record] and its child records by applying the pull-to-refresh
 gesture on the record's layout.
 
@@ -85,7 +85,7 @@ Line Item] and
 https://help.customertimes.com/smart/project-order-module/calculated-discount-field-reference[Calculated
 Discount] objects.
 
-[[h4__770309507]]
+[[h4_770309507]]
 ===== Online Records Fetching
 
 If enabled, a user can load additional records via the *Load more
@@ -105,7 +105,7 @@ Line Item] and
 https://help.customertimes.com/smart/project-order-module/calculated-discount-field-reference[Calculated
 Discount] objects.
 
-[[h4__1912901784]]
+[[h4_1912901784]]
 ===== Files Downloading Mode
 
 Defines the way how files attached to the offline object must
@@ -151,7 +151,7 @@ If enabled, then
 the https://help.customertimes.com/articles/ct-mobile-ios-en/actions/a/h2_1173923582[Export
 to File] item is displayed in the *Actions* menu of the offline object.
 
-[[h4__912917703]]
+[[h4_912917703]]
 ===== Export Columns Selection
 
 Defines the list of fields that user can select in the *Export to File*
@@ -176,7 +176,7 @@ record type.
 Mobile app to display all records or only records that match the
 criteria.
 * ​Toggle the *Display as Timeline* to enable the
-xref:timeline-view[timeline view]. If enabled, select a field
+xref:ios/admin-guide/related-lists/timeline-view.adoc[timeline view]. If enabled, select a field
 from the *Ordered by Selected Field* list.
 
 
@@ -190,14 +190,14 @@ Click image:ctm-control-panel-new-expand-icon.png[] to
 view settings of the desired related list. Click *Expand All* to view
 settings of all related lists.
 
-If the record type has a xref:mobile-layouts[mobile layout],
+If the record type has a xref:ios/admin-guide/mobile-layouts/index.adoc[mobile layout],
 related lists added to this layout will be displayed. Otherwise, related
 lists of general layout will be displayed, according to the record
 type.
 
 image:ctm-control-panel-new-managing-offline-objects-related-lists.png[]
 
-[[h2__1623789156]]
+[[h2_1623789156]]
 === Filter
 
 Click *Add Filter* to set up a SOQL filter for the offline object. The

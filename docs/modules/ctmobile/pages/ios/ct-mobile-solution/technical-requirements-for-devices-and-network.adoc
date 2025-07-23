@@ -1,1 +1,145 @@
-include::ctmobile:main/ct-mobile-solution/technical-requirements-for-devices-and-network.adoc[tags=main;ios]
+//tag::main[]
+= Technical Requirements for Devices and Network
+
+NOTE: We strongly recommend upgrading the CT Mobile app at least once every 12  months to prevent incompatibility with the cumulated OS or core CT Mobile changes.
+
+//end::main[]
+
+//tag::ios[]
+
+[[h2_326998836]]
+== iOS Devices
+
+CT Mobile is available for iPad. The three latest CT Mobile iOS releases are supported. The latest version of CT Mobile iOS is 2.9 (refer to its xref:ios/news/ct-mobile-ios-release-notes.adoc#h2_211762337[release notes] to know more).
+
+NOTE: Since iOS 18 was released on September 16th, 2024, the supported iOS versions for CT Mobile have changed to 16, 17, and 18.
+
+Technical requirements for currently *supported* versions:
+
+[width=70%, cols="^.^~,~,^.^~,^.^~"]
+|===
+|*CT Mobile Release* ^|*Devices* |*Minimum iOS version* |*Minimum API version*
+
+|*2.9*
+
+a|
+While using high-load environment (for example, CT Orders module, and/or complex CLM presentations with HTML5 and a large amount of slides), we recommend to use iOS devices starting from:
+
+* iPad (9th generation)
+* iPad Air (4th generation)
+* iPad mini (6th generation)
+* iPad Pro (11-inch 3rd generation)
+
+.3+|16 .3+|52
+
+|*2.8* .2+a|Starting from:
+
+* iPad Air 2
+* iPad mini (4th generation)
+* iPad 5th generation (9.7–inch)
+* iPad Pro (10.5–inch)
+
+|*2.7*
+|===
+
+Technical requirements for *unsupported* versions:
+
+[width=70%,cols="^.^~,~,^.^~,^.^~"]
+|===
+|*CT Mobile Release* ^|*Devices* |*Minimum iOS version* |*Minimum API version*
+
+|*2.6* a|
+Starting from:
+
+* iPad Air 2
+* iPad mini (4th generation)
+* iPad 5th generation (9.7–inch)
+* iPad Pro (10.5–inch).
+
+.2+|14 .2+|52
+
+|*2.5* .6+a|
+Starting from:
+
+* iPad (5th generation)
+* iPad mini (5th generation)
+* iPad Pro (10.5–inch).
+
+|*2.4*  .2+^|12 |50
+
+|*2.3*  .4+^|N/A
+
+|*2.2*  ^|11
+
+|*2.1*  .2+^|10
+
+|*1.9.6*
+|===
+
+[[h3_1039046855]]
+=== Limitations
+
+* We do not guarantee the correct operation of the CT Mobile app on macOS devices with the Apple M1 system on a chip. However, you can install CT Mobile on these devices. In the App Store, you will see the following message: _Designed for iPad. Not verified for macOS_.
+* We do not guarantee the correct operation of the CT Mobile app on iPhone.
+* We do not guarantee the correct operation with physical keyboards, mice, or other devices in the CT Mobile app.
+* Currently, link:https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/dark-mode/[Dark Mode] is not supported.
+* CT Mobile on older hardware may have a slower response.
+* Since version 2.6, CT Mobile supports *Split View* and *Slide Over* multitasking types. Note the following:
+** We do not guarantee that screens adapted for landscape orientation will display correctly in portrait orientation. In future releases, we will add a warning to prevent such screens from being used in portrait orientation.
+** We cannot limit the minimum percentage of screen area in *Split View* mode and recommend using at least 75% of the screen to work with CT Mobile.
+//end::ios[]
+
+//tag::win[]
+
+[[h2_118091408]]
+== Windows Devices
+
+=== CT Mobile is available for Windows PC and tablets:
+
+* Windows 10 Version 1903
+* Windows 11 Version 21H2
+* x86, x64
+* 16 GB RAM
+* The recommended size for downloaded images, for example, in _Attachments_ or the *Libraries* module, should not exceed 1500 x 1500. The recommended format of images is [.apiobject]#.png#.
+
+TIP: Read more about the Windows lifecycle link:https://support.microsoft.com/en-us/help/13853/windows-lifecycle-fact-sheet[here].
+//end::win[]
+
+//tag::andr[]
+
+[[h2_289410970]]
+== Android Devices
+
+=== CT Mobile is currently available for Android tablets:
+
+* Android 7.0 or higher
+* 2 GB RAM
+* 1 GB free disk space.
+
+Due to the variability of Android devices from various vendors, we do not guarantee the flawless operation of CT Mobile on different device models. CT Mobile must be tested on every targeted device family and generation.
+//end::andr[]
+
+//tag::kotlin[]
+== Android Devices
+
+=== CT Mobile is currently available for Android tablets:
+
+* Android 7.0 or higher
+* Pre-installed Google Mobile Services
+* Display size at least 10"
+* 3 GB RAM
+* 10 GB free disk space
+* at least 8x ARM Cortex-A53, 1,6 GHz.
+
+Due to the variability of Android devices from various vendors, we do not guarantee the flawless operation of CT Mobile on different device models. CT Mobile must be tested on every targeted device family and generation.
+//end::kotlin[]
+
+//tag::main[]
+
+[[h2_1498128754]]
+== Requirements for Internet Connection
+
+* Synchronization is possible on very slow lines (9,600kbs) but takes more time. The communication line must not have interruptions of high packet loss as it may result in timeouts of Salesforce API.
+
+* More content increases the synchronization time and responsiveness of the application. We recommend limiting the number of offline records to 30,000 records on devices.
+//end::main[]

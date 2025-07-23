@@ -6,7 +6,7 @@ Cloud features and objects in the CT Mobile app.
 
 :toc: :toclevels: 3
 
-[[h2__1079380618]]
+[[h2_1079380618]]
 === Activating CG Cloud in the CT Mobile app
 
 To activate CG Cloud features in the CT Mobile app:
@@ -42,25 +42,25 @@ available offline and assign permissions to users:
 [width="100%",cols="50%,50%",]
 |===
 |CT Mobile Control Panel a|
-. Go to xref:ct-mobile-control-panel-offline-objects[CT Mobile
+. Go to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects.adoc[CT Mobile
 Control Panel: Offline Objects].
 . Select the required profile in the *Location* picklist. To apply
 settings to all the profiles, select *General Settings*.
 . Drag and drop[.object]#Retail Store# and
 [.object]#Visit# from the *Available* list to the *Selected*
 list.
-. xref:managing-offline-objects#h2__1747811907[Set up user
+. xref:ios/admin-guide/managing-offline-objects/index.adoc#h2_1747811907[Set up user
 permissions].
 . Click *Save*.
 
 |CT Mobile Control Panel 2.0 a|
-. Go to xref:ct-mobile-control-panel-offline-objects-new[CT Mobile
+. Go to xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc[CT Mobile
 Control Panel 2.0: Offline Objects].
 . Select the required profile in the *Profile* picklist. To apply
 settings to all the profiles, select *General Settings*.
 . Move[.object]#Retail Store# and[.object]#Visit# from
 the *Available* list to the *Selected* list.
-. xref:managing-offline-objects#h2__1747811907[Set up user
+. xref:ios/admin-guide/managing-offline-objects/index.adoc#h2_1747811907[Set up user
 permissions].
 . Click *Save*.
 
@@ -70,16 +70,16 @@ After performing the synchronization, mobile users can create, edit, or
 delete *Retail Store* and *Visit* records depending on the user
 permissions.
 
-ifdef::win[]
+//tag::win[]
 
-[[h2__1912229978]]
+[[h2_1912229978]]
 === Creating CTM Settings Records
 
 This setting is responsible for displaying related *CG Cloud* records in
 the same way as the regular custom related lists. So, on the *Detailing*
 tab, there can be sections with the related CG Cloud records and
 sections with the custom related list records
-xref:custom-related-lists[if configured].
+xref:ios/admin-guide/related-lists/custom-related-lists.adoc[if configured].
 
 
 
@@ -113,7 +113,7 @@ for the CG Cloud objects listed below and required for proper operation
 of the CG Cloud features. Perform full synchronization to load all
 objects from the table to the mobile device.
 
-ifdef::ios[]
+//tag::ios[]
 
 Take into consideration
 https://help.customertimes.com/smart/project-order-module/offline-order/a/h2_1850278800[user

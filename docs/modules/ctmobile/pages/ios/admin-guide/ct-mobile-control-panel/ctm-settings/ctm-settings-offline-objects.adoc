@@ -1,15 +1,15 @@
 = Offline Objects
 
-ifdef::andr[][NOTE] ==== Not available. ====
+//tag::andr[][NOTE] ==== Not available. ====
 
 The *Offline Objects* record type is intended to store settings for an
 offline object, as well as permissions and available actions with
 records of the offline object for a specific profile.
 
 [TIP] ==== To create or update the settings of offline objects,
-go to xref:ct-mobile-control-panel-offline-objects[CT Mobile
+go to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects.adoc[CT Mobile
 Control Panel: Offline
-Objects]/xref:ct-mobile-control-panel-offline-objects-new[CT Mobile
+Objects]/xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc[CT Mobile
 Control Panel 2.0: Offline Objects]. ====
 
 '''''
@@ -25,9 +25,9 @@ Record Type API name:[.apiobject]#OfflineObjects#
 |Conflict Manager
 |[.apiobject]#clm__IsConflictManagerEnabled__c#
 |Checkbox a|
-ifdef::win[][NOTE] ==== Not available. ====
+//tag::win[][NOTE] ==== Not available. ====
 
-Allows the xref:conflict-manager-control[Conflict Manager]
+Allows the xref:ios/admin-guide/managing-offline-objects/conflict-manager-control.adoc[Conflict Manager]
 functionality for records of the offline object. It is used to track the
 changes made in a single record in the mobile application and on the
 Salesforce side.
@@ -67,7 +67,7 @@ matter what access the profile is granted.
 
 |Export Allowed
 |[.apiobject]#clm__IsExportAllowed__c# |Checkbox |If
-_true_, then the xref:actions#h2_1173923582[Export to File] item is
+_true_, then the xref:ios/mobile-application/ui/actions.adoc#h2_1173923582[Export to File] item is
 displayed in the *Actions* menu. Default value is _false_.
 
 |External Id |[.apiobject]#clm__ExternalId__c#
@@ -76,7 +76,7 @@ settings.
 
 |Fields |[.apiobject]#clm__Fields__c# |Long Text
 Area(32768) |Stores a list of fields that should be always included in
-the xref:actions#h2_1173923582[Export to File] workflow in
+the xref:ios/mobile-application/ui/actions.adoc#h2_1173923582[Export to File] workflow in
 the *Actions* menu. If the list is not set, then no required fields will
 be displayed.
 
@@ -97,14 +97,14 @@ attribute for related files to restrict amount of files downloaded
 during synchronization and reduce the synchronization time.
 
 |Object |[.apiobject]#clm__Object__c# |Text(255) |Stores
-an API Name of an xref:managing-offline-objects[offline object].
+an API Name of an xref:ios/admin-guide/managing-offline-objects/index.adoc[offline object].
 
 |Online Fetching
 |[.apiobject]#clm__IsOnlineFetchingEnabled__c# |Checkbox
 a|
-ifdef::win[][NOTE] ==== Not available. ====
+//tag::win[][NOTE] ==== Not available. ====
 
-Defines if the xref:online-records-fetching[Load more records]
+Defines if the xref:ios/admin-guide/managing-offline-objects/online-records-fetching.adoc[Load more records]
 button is available in the application, in case some records of the
 offline object were not downloaded due to the criteria specified in the
 [.apiobject]#clm__Criteria__c# field.
@@ -118,7 +118,7 @@ ID to apply for all non-configured profiles.
 
 |Quick Sync |[.apiobject]#clm__IsQuickSyncEnabled__c#
 |Checkbox a|
-ifdef::win[][NOTE] ==== Not available. ====
+//tag::win[][NOTE] ==== Not available. ====
 
 Allows xref:synchronization-launch[Quick Record Synchronization]
 for records of the offline object.
@@ -126,14 +126,14 @@ for records of the offline object.
 |Select Export Columns
 |[.apiobject]#clm__IsAllowedSelectExportColumns__c#
 |Checkbox |If _true_, then the user can select desired fields to
-export after tapping the xref:actions#h2_1173923582[Export to
+export after tapping the xref:ios/mobile-application/ui/actions.adoc#h2_1173923582[Export to
 File] item in the *Actions* menu. Default value is _false_.
 
 |Sync Recovery |[.apiobject]#clm__SyncRecovery__c#
 |Picklist a|
-ifdef::win[][NOTE] ==== Not available. ====
+//tag::win[][NOTE] ==== Not available. ====
 
-Enables xref:sync-recovery[Sync Recovery] to deliver records that
+Enables xref:ios/mobile-application/synchronization/sync-recovery.adoc[Sync Recovery] to deliver records that
 could not be synchronized to Salesforce anyway. If the parameter is
 filled with a specific value, it enables the work of Apex web service
 and passes the data to Salesforce through it.

@@ -1,40 +1,40 @@
 = Using Calendar
 
 xref:calendar[Add the Calendar module] to the CT Mobile main menu,
-configure the calendar in xref:ct-mobile-control-panel-calendar[CT
+configure the calendar in xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc[CT
 Mobile Control Panel:
-Calendar]/xref:ct-mobile-control-panel-activities-new[CT Mobile
+Calendar]/xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-activities-new.adoc[CT Mobile
 Control Panel 2.0: Activities], and optionally set up
-xref:custom-color-settings[custom color settings] to display
+xref:ios/admin-guide/custom-color-settings.adoc[custom color settings] to display
 activities on the calendar grid.
 
 :toc: :toclevels: 4
 
-[[h2__1375710402]]
+[[h2_1375710402]]
 === Permissions
 
 The mobile user can create, update, and delete records if the
 permissions are granted.
 
 [NOTE] ==== The object's permissions specified on the
-xref:ct-mobile-control-panel-offline-objects[CT Mobile Control
+xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects.adoc[CT Mobile Control
 Panel: Offline
-Objects]/xref:ct-mobile-control-panel-offline-objects-new[CT Mobile
+Objects]/xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc[CT Mobile
 Control Panel 2.0: Offline Objects] cannot be over
 https://help.salesforce.com/articleView?id=sf.users_profiles_object_perms.htm&type=5[the
 profile's permissions for objects]. ====
 
-ifdef::ios[]
+//tag::ios[]
 
-[[h2__932150745]]
+[[h2_932150745]]
 === Calendar Views
 
-[[h3__1542564012]]
+[[h3_1542564012]]
 ==== The day view
 
 image:calendar-day-view.png[]
 
-[[h3__243561528]]
+[[h3_243561528]]
 ==== The week view
 
 {empty}[.confluence-information-macro-information]# Use either the
@@ -46,7 +46,7 @@ image:calendar-week-view.png[]
 
 image:calendar-month-view.png[]
 
-[[h3__632854949]]
+[[h3_632854949]]
 ==== List Views
 
 * Tap the current list view to select another list view.
@@ -70,7 +70,7 @@ to select columns to display in the records list.
 image:ios-calendar-filter-form.jpg[]
 ** Tap *Save* to create a list view.
 
-[[h3__632854949]]
+[[h3_632854949]]
 ==== Calendar Legend
 
 Since CT Mobile 2.7, use a calendar legend with a list of colors for the
@@ -80,7 +80,7 @@ case of a large number of records in the calendar grid, the legend can
 help you identify the status or type of each record.
 
 * To set up color settings for the Activity objects, go to
-xref:custom-color-settings[CT Mobile Control Panel: Color
+xref:ios/admin-guide/custom-color-settings.adoc[CT Mobile Control Panel: Color
 Settings]/xref:ct-mobile-control-panel-colors-new[CT Mobile Control
 Panel 2.0: Colors].
 * To show the calendar legend, tap the *Legend* button in the upper-left
@@ -88,17 +88,17 @@ corner of the screen.
 * You can move the calendar legend by drag-and-drop it on the screen.
 
 image:calendar-legend.png[]
-ifdef::win[]
+//tag::win[]
 
-[[h2__1663941150]]
+[[h2_1663941150]]
 === Calendar Views
 
-[[h3__1542564012]]
+[[h3_1542564012]]
 ==== The day view
 
 image:ui_calendar_win_3_en.png[]
 
-[[h3__243561528]]
+[[h3_243561528]]
 ==== The week view
 
 image:ui_calendar_win_2_en.png[]
@@ -107,9 +107,9 @@ image:ui_calendar_win_2_en.png[]
 ==== The month view
 
 image:ui_calendar_win_en.png[]
-ifdef::kotlin[]
+//tag::kotlin[]
 
-[[h2__1993934378]]
+[[h2_1993934378]]
 === Calendar Views
 
 The Calendar has three different views: day, week, and month.
@@ -128,20 +128,20 @@ image:Calendar_Interface_Kotlin.png[]
 [[h2_1865396414]]
 === Activity Management
 
-ifdef::ios[]
+//tag::ios[]
 
 The calendar can be scrolled back one year and one year forward,
 starting from the current date.
 
-[[h3__1494438992]]
+[[h3_1494438992]]
 ==== Actions with Activities
 
 Manage activities using the following gestures and taps:
 
-ifdef::ios[]
+//tag::ios[]
 
 . Create an activity. If applied, select the record type and fill in
-xref:mini-layouts[a mini-layout]:
+xref:ios/admin-guide/mini-layouts.adoc[a mini-layout]:
 * long tap the empty calendar area. In the month view, long tap any area
 on the calendar grid to create an activity. To create an all-day
 activity, long tap the *All day* section.
@@ -166,20 +166,20 @@ activities for a day are displayed on the left records list.
 Important notes:
 
 * If custom colors for the activities are not set,
-xref:application-theme[the application theme] will be used to
+xref:ios/admin-guide/application-theme.adoc[the application theme] will be used to
 display activities in the calendar grid.
 * The records, which have not been synchronized, may always be deleted
 no matter what access the profile is granted.
-* If xref:start-finish-functionality[the Start/Finish
+* If xref:ios/admin-guide/start-finish-functionality.adoc[the Start/Finish
 functionality] is enabled, a mobile user can move and delete records if
 the[.apiobject]#clm__ActivityDoneAPI__c# attribute of
 the xref:mobile-application-setup[Mobile Application Setup] record
 is false.
 
-ifdef::win[]
+//tag::win[]
 
 . Create an activity. If applied, select the record type and fill in
-xref:mini-layouts[a mini-layout]:
+xref:ios/admin-guide/mini-layouts.adoc[a mini-layout]:
 * long tap/right-click the calendar area;
 * drag-and-drop/left-click one or several records from the list view on
 the calendar area. The activities will be created in the same order as
@@ -192,7 +192,7 @@ the calendar area.
 . Pull the right bottom corner of the activity to change its duration.
 The functionality is available on the day and week view.
 . Tap an activity to view the additional information in
-xref:compact-layout[the compact layout]:
+xref:ios/mobile-application/ui/compact-layout.adoc[the compact layout]:
 * Tap/left-click the *Open* button to view the record details screen.
 * Tap/left-click the *Delete* button to remove the activity. Confirm the
 action on the confirmation box.
@@ -202,13 +202,13 @@ action on the confirmation box.
 Important notes:
 
 . If custom colors for the activities are not set,
-xref:application-theme[the application theme] will be used to
+xref:ios/admin-guide/application-theme.adoc[the application theme] will be used to
 display activities in the calendar grid.
 . Activities cannot be moved from and to the all-day slot.
 . The records, which have not been synchronized, may always be deleted
 no matter what access the profile is granted.
 
-ifdef::andr[]
+//tag::andr[]
 
 [[h3_174620098]]
 ==== Long tap on the calendar area
@@ -226,12 +226,12 @@ can also open the activity's layout or delete it.
 
 Navigation between days, weeks, or months depending on the current view.
 
-[[h3__2129492906]]
+[[h3_2129492906]]
 ==== Double-tap an activity on the calendar grid
 
 Open the activity record.
 
-[[h3__1292043657]]
+[[h3_1292043657]]
 ==== Double-tap a day in the monthly view
 
 Switching to the daily view of the activities planned for the selected
@@ -242,10 +242,10 @@ date.
 
 Switching to a daily view on the selected day.
 
-ifdef::kotlin[]
+//tag::kotlin[]
 
 . Create an activity. If applied, select the record type and fill in
-xref:mini-layouts[a mini-layout]:
+xref:ios/admin-guide/mini-layouts.adoc[a mini-layout]:
 * drag-and-drop a record from the left list of records
 * tap the calendar area in a day or week view. If enabled, a mini-layout
 with the filled-out *Start Date* and *End Date* fields according to
@@ -267,27 +267,27 @@ the calendar grid opens from the date of the last created activity.
 Important notes:
 
 . If custom colors for the activities are not set,
-xref:application-theme[the application theme] will be used to
+xref:ios/admin-guide/application-theme.adoc[the application theme] will be used to
 display activities in the calendar grid.
-. If xref:start-finish-functionality[the Start/Finish
+. If xref:ios/admin-guide/start-finish-functionality.adoc[the Start/Finish
 functionality] is enabled:
 * if the *Lock/Unlock Record* option is enabled, the activity record may
-be edited (including adding a photo from the xref:actions[Actions]
+be edited (including adding a photo from the xref:ios/mobile-application/ui/actions.adoc[Actions]
 menu, if available), moved, or deleted only when an activity has not
 been finished.
 * if the *Update Start/End Date Fields* option is enabled, when a mobile
 user taps the *Start* or *Finish* buttons, the *Activity Start Date* and
 *Activity End Date* fields will be updated (refer to
-xref:ct-mobile-control-panel-calendar#h3_1391348303[CT Mobile
+xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc#h3_1391348303[CT Mobile
 Control Panel: Calendar] or
-xref:ct-mobile-control-panel-activities-new#h4_587549689[CT Mobile
+xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-activities-new.adoc#h4_587549689[CT Mobile
 Control Panel 2.0: Activities]).
 
 image:Start-Finish-Kotlin.png[]
 image:Start-Finish-Kotlin_2.png[]
-ifdef::ios[]
+//tag::ios[]
 
-[[h3__1703324288]]
+[[h3_1703324288]]
 ==== Mass Actions with Activities
 
 The user can not only copy, move, or delete a single activity in the
@@ -307,7 +307,7 @@ image:calendar-mass-actions.png[]
 * All activities, which are available for the mobile user's profile, can
 be copied if the mobile user has permission to create records.
 * Fields will be copied according to the
-xref:ct-mobile-control-panel-activities-new#h4_1834463667[Fields to
+xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-activities-new.adoc#h4_1834463667[Fields to
 Copy] settings of the activity. If copied fields have default values,
 they will be applied after copying. For example, if the *Status* field
 has default value _Planned_, after copying a *Status* field with values
@@ -317,7 +317,7 @@ copies all activities of the selected week.
 
 
 
-[[h4__1810560264]]
+[[h4_1810560264]]
 ===== Move Activities
 
 * Activities with updatable *Start Date* and *End Date* fields and the
@@ -329,22 +329,22 @@ reschedules all activities of the selected week.
 
 
 
-[[h4__753240742]]
+[[h4_753240742]]
 ===== Delete Activities
 
 * Activities, which have not been synchronized, may always be deleted no
 matter what access the profile is granted.
 * Activities may be deleted when the mobile user's profile has
 permission to delete records, permission to delete records specified on
-the xref:ct-mobile-control-panel-offline-objects[CT Mobile Control
+the xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects.adoc[CT Mobile Control
 Panel: Offline
-Objects]/xref:ct-mobile-control-panel-offline-objects-new[CT Mobile
+Objects]/xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc[CT Mobile
 Control Panel 2.0: Offline Objects] tab and the _Activity_ record has
 the false value in the *Is Done* field.
 
-ifdef::win[]
+//tag::win[]
 
-[[h3__2046027297]]
+[[h3_2046027297]]
 ==== Mass Actions with Activities
 
 Mass actions are available for all record types of objects that are
@@ -358,7 +358,7 @@ image:66366285.png[]
 
 
 
-[[h4__576532615]]
+[[h4_576532615]]
 ===== Copy Activities
 
 * All activities, which are available for the profile of the mobile
@@ -380,7 +380,7 @@ copies all activities of the selected week.
 
 
 
-[[h4__1302234357]]
+[[h4_1302234357]]
 ===== Move Activities
 
 * Activities with updatable *Start Date* and *End Date* fields are
@@ -393,7 +393,7 @@ reschedules all activities of the selected week.
 
 
 
-[[h4__1102520743]]
+[[h4_1102520743]]
 ===== Delete Activities
 
 * The records, which have not been synchronized, may always be deleted
@@ -401,7 +401,7 @@ no matter what access the profile is granted.
 
 
 
-ifdef::ios[]
+//tag::ios[]
 
 [[h3_1317929912]]
 ==== Datepicker and Calendar Agenda

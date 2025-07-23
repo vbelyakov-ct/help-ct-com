@@ -2,11 +2,11 @@
 
 Specify objects that should be available offline, customize user
 permissions, and add and configure standard related lists. To configure
-a custom related list, refer to xref:custom-related-lists[Custom
+a custom related list, refer to xref:ios/admin-guide/related-lists/custom-related-lists.adoc[Custom
 Related Lists].
 
 Before specifying objects,
-configure xref:remote-site-settings[remote site settings].
+configure xref:ios/admin-guide/remote-site-settings.adoc[remote site settings].
 
 :toc: :toclevels: 3
 
@@ -18,7 +18,7 @@ To add an object to work with it in the CT Mobile app:
 [width="100%",cols="50%,50%",]
 |===
 |In CT Mobile Control Panel a|
-. Go to xref:ct-mobile-control-panel-offline-objects[CT Mobile
+. Go to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects.adoc[CT Mobile
 Control Panel: Offline Objects].
 . {blank}
 . Drag and drop desired objects from the *Available* list to the
@@ -39,7 +39,7 @@ re-order them in the *Selected* list.
 image:62556079.png[]
 
 |In CT Mobile Control Panel 2.0 a|
-. Go to xref:ct-mobile-control-panel-offline-objects-new[CT Mobile
+. Go to xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc[CT Mobile
 Control Panel 2.0: Offline Objects].
 . Select the required profile in the *Profile* picklist. To apply
 settings to all the profiles, select *General Settings*.
@@ -63,7 +63,7 @@ image:ctm-control-panel-new-emanaging-offline-objects-add-offline-objects.png[]
 
 The setup is complete.
 
-[[h2__1747811907]]
+[[h2_1747811907]]
 === Set up Permissions to Offline Objects and Standard Related Lists
 
 [NOTE] ==== These settings cannot overcome the user's profile
@@ -123,22 +123,22 @@ image:ctm-control-panel-new-managing-offline-objects-related-lists.png[]
 
 The permissions are set.
 
-ifdef::ios[]
+//tag::ios[]
 
 You can also specify the icon for an offline object to display on
 the *Main* tab
 via https://help.salesforce.com/articleView?id=creating_custom_object_tabs.htm&type=5[the
 standard Salesforce procedure].
 
-ifdef::ios[]
+//tag::ios[]
 
 image:permissions-offline-objects-related-lists.png[]
 
-ifdef::win[]
+//tag::win[]
 
 image:permisson_settings_win_en.png[]
 
-ifdef::kotlin[]
+//tag::kotlin[]
 
 image:Objects-and-Related-Lists-Permissions-Kotlin.png[]
 
@@ -175,7 +175,7 @@ Use SOQL filters to sort the records of selected offline objects, and
 download only those records that meet the criteria to your mobile
 device.
 
-ifdef::ios[]
+//tag::ios[]
 
 Add the Load more records button to allow users to load one or more
 records that do not meet the filter conditions.
@@ -210,14 +210,14 @@ records display limit.
 The SOQL filter is configured. Here is an example with the SOQL
 subquery.
 
-[[h3__264512811]]
+[[h3_264512811]]
 ==== Standard Related Lists
 
 Set up SOQL filters and use the toggle in the CT Mobile app to switch
 the display between all downloaded records of a standard related list
 and only those that meet the criteria.
 
-ifdef::win, kotlin[][NOTE] ==== Currently, SOQL filters are
+//tag::win, kotlin[][NOTE] ==== Currently, SOQL filters are
 not applied to standard related lists.
 ====
 
@@ -237,7 +237,7 @@ criteria.
 . Click *Add new filter criteria* to add a new line if required.
 . Enable the *Filter logic* and define the criteria logic, e.g.,
 [.apiobject]#1 and 2 or 3#.
-. In the *Display Settings* tab, enable xref:timeline-view[the
+. In the *Display Settings* tab, enable xref:ios/admin-guide/related-lists/timeline-view.adoc[the
 timeline view] if needed.
 . Click *Save*.
 
@@ -256,5 +256,5 @@ records display limit.
 The SOQL filter is configured. Here are some examples:
 
 
-ifdef::ios[]
+//tag::ios[]
 image:../Storage/project-ct-mobile-en/Related-Lists-SOQL-ios.PNG[../Storage/project-ct-mobile-en/Related-Lists-SOQL-ios]

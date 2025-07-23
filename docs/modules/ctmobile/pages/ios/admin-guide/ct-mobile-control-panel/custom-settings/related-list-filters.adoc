@@ -5,12 +5,12 @@ filters applied to the corresponding
 https://help.salesforce.com/articleView?id=customizing_related_lists.htm&type=5[related
 lists] of records while displaying them in the mobile application. This
 parameter is also responsible for selection criteria that are used for
-xref:managing-offline-objects[offline object] data upload.
+xref:ios/admin-guide/managing-offline-objects/index.adoc[offline object] data upload.
 
 [TIP] ==== For easy setup, go to
-xref:ct-mobile-control-panel-offline-objects[CT Mobile Control
+xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects.adoc[CT Mobile Control
 Panel: Offline
-Objects]/xref:ct-mobile-control-panel-offline-objects-new[CT Mobile
+Objects]/xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc[CT Mobile
 Control Panel 2.0: Offline Objects]. ====
 
 The following system variables can be used as criteria:
@@ -37,7 +37,7 @@ Custom setting API Name:
 
 |Conflict Manager
 |[.apiobject]#clm__isConflictManagerEnabled__c#
-|Checkbox |The xref:conflict-manager-control[Conflict Manager] is
+|Checkbox |The xref:ios/admin-guide/managing-offline-objects/conflict-manager-control.adoc[Conflict Manager] is
 used to track the changes made in a single record in the mobile
 application and on the Salesforce side.
 
@@ -77,7 +77,7 @@ grouped in the lists.
 |Online Fetching
 |[.apiobject]#clm__isOnlineFetchingEnabled__c#
 |Checkbox |The setting defines if the
-xref:online-records-fetching[Load more records] button is available
+xref:ios/admin-guide/managing-offline-objects/online-records-fetching.adoc[Load more records] button is available
 in the application.
 
 |Order |[.apiobject]#clm__Order__c# |Number(18, 0) |The
@@ -140,13 +140,13 @@ the list].
 |Sort Tree by Field
 |[.apiobject]#clm__SortTreeByFieldName__c# |Text(255)
 |The API name of a field with the date or date/time type to display the
-related list records in the xref:timeline-view[timeline view] if
+related list records in the xref:ios/admin-guide/related-lists/timeline-view.adoc[timeline view] if
 the API Name of the related list's object is set in the
 [.apiobject]#clm_sObjectRelated__c# field.
 
 |Sync Recovery |[.apiobject]#clm__SyncRecovery__c#
 |Text(255) a|
-Enable xref:sync-recovery[Sync Recovery] to deliver records that
+Enable xref:ios/mobile-application/synchronization/sync-recovery.adoc[Sync Recovery] to deliver records that
 could not be synchronized to Salesforce anyway. Available values:
 
 * An empty value means that the web service is not involved.

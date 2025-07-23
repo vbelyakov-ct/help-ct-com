@@ -4,21 +4,21 @@ The *Application* module is intended to store and display CLM
 presentations and custom scenarios.
 
 You can add CLM presentations to the
-xref:mobile-layouts-applications[mobile layout] and manage CLM
-presentations by xref:clm-presentation-controls[the control
-buttons], xref:gestures-in-clm-presentations[gestures], or
-xref:js-bridge-api[JS methods and links] on the slides. For each
+xref:ios/admin-guide/mobile-layouts/index.adoc-applications[mobile layout] and manage CLM
+presentations by xref:ios/mobile-application/mobile-application-modules/applications/clm-presentation-controls.adoc[the control
+buttons], xref:ios/mobile-application/mobile-application-modules/applications/gestures-in-clm-presentations.adoc[gestures], or
+xref:ios/ct-presenter/js-bridge-api/index.adoc[JS methods and links] on the slides. For each
 CLM presentation, it is possible to set up statistical data to collect.
 
 :toc: :toclevels: 3[NOTE] ==== The profile must have access to
 [.object]#Application ==== , [.object]#Slide#,[.object]#Custom Scenario#, and[.object]#Application
-Stats# objects for the correct functioning. # ifdef::andr[]
+Stats# objects for the correct functioning. # //tag::andr[]
 image:62562482.png[]
 
-[[h2__1510760474]]
+[[h2_1510760474]]
 === Add Applications to the Menu
 
-To add the *Applications* module to the xref:app-menu[app menu]:
+To add the *Applications* module to the xref:ios/admin-guide/app-menu/index.adoc[app menu]:
 
 [width="100%",cols="50%,50%",]
 |===
@@ -55,7 +55,7 @@ ifndef::andr[]
 [[h2_1504705898]]
 === Working with Applications
 
-[[h3__1557359819]]
+[[h3_1557359819]]
 ==== The Main tab
 
 On the *Main* tab:
@@ -70,16 +70,16 @@ launch it
 presentation, it includes all the slides of the presentation and it is
 selected as a _favorite_. It can be unselected as _favorite_, but this
 setting will be reset during the next
-xref:full-synchronization[full synchronization], as it is stored
-locally in the mobile app. For xref:clm-customscenario[custom
+xref:ios/mobile-application/synchronization/full-synchronization.adoc[full synchronization], as it is stored
+locally in the mobile app. For xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-customscenario.adoc[custom
 scenarios], which can include all or only selected slides of the
 presentation, the _favorite_ setting is stored in Salesforce, so it is
 kept even after full synchronization. ====
 * switch to the *Slides* or *Attachments* tab.
 
-ifdef::ios[]
+//tag::ios[]
 image:applications-main-tab.png[]
-ifdef::win[]
+//tag::win[]
 image:The-Main-tab-Win.png[]
 
 [[h3_1236408094]]
@@ -90,24 +90,24 @@ editing xref:custom-scenario-editor[custom CLM presentation
 scenarios] in the CT Mobile app.
 
 The *Slide reordering enabled* checkbox must be selected in the
-xref:clm-application[Application record type].
+xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-application.adoc[Application record type].
 
 Depending on[.object]#CLM presentation# settings on the
-xref:clm-slide[Slide] object, it provides the possibility to change
+xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-slide.adoc[Slide] object, it provides the possibility to change
 the order of slides, and remove or add slides to the presentation.
 
-ifdef::win[]
+//tag::win[]
 
 The user can select slides from different CLM presentations.
 
 Upon editing completion, the set of slides is saved as
-xref:clm-customscenario[Custom Scenario].
+xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-customscenario.adoc[Custom Scenario].
 
 If a slide added to a custom scenario is excluded from the presentation
 (deactivated or deleted), such change will also apply to the respective
 custom scenarios.
 
-ifdef::ios[]
+//tag::ios[]
 
 If a slide is required, it cannot be excluded from the custom scenario.
 
@@ -117,7 +117,7 @@ details screen.
 
 
 
-ifdef::win[]
+//tag::win[]
 
 To create a scenario:
 
@@ -130,7 +130,7 @@ all* button.
 
 image:The-Mobile-Scenario-Editor-Win.png[]
 
-ifdef::ios[]
+//tag::ios[]
 
 To create a scenario:
 
@@ -143,15 +143,15 @@ To create a scenario:
 
 image:The-Mobile-Scenario-Editor-iOS.png[]
 If a slide has the red frame and cannot be untapped, it means that it
-configured as xref:clm-slide[Required] and cannot be excluded from
+configured as xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-slide.adoc[Required] and cannot be excluded from
 the custom scenario:
 image:custom-scenario-required-slides.png[]
 
 The scenario is created.
-xref:synchronization-launch#h3__116633872[Launch fast
+xref:synchronization-launch#h3_116633872[Launch fast
 synchronization] to upload it to Salesforce.
 
-[[h2__579857087]]
+[[h2_579857087]]
 === Automatic Scenario Building
 
 [width="100%",cols="50%,50%",]
@@ -160,7 +160,7 @@ synchronization] to upload it to Salesforce.
 * Automatic scenario building is only available if the *Application
 Stats* records are found on the device.
 * Automatic scenario building is not
-available xref:synchronization[at the first synchronization] or
+available xref:ios/mobile-application/synchronization/index.adoc[at the first synchronization] or
 after an application reset.
 
 |===
@@ -175,7 +175,7 @@ Scenario building criteria:
 * Number of slide views
 * Number of likes
 
-[[h3__1706766297]]
+[[h3_1706766297]]
 ==== The Slides/Attachments tab
 
 It is possible to send slides and attachments by e-mail. To send a slide
@@ -186,7 +186,7 @@ or attachment:
 the image:ctmi-share-icon-2.9.png[] button.
 . Tap a slide/attachment to select it.
 . Tap *Send Selected*.
-. Select xref:email-templates[an email template] if available.
+. Select xref:ios/mobile-application/email-templates.adoc[an email template] if available.
 . Select a user to send.
 . Click *Send*.
 image:applications-slides-tab.png[]

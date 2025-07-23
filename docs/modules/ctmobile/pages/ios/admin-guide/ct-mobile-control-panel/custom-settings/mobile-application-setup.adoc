@@ -5,9 +5,9 @@ data related to the target system model and the global settings of the
 mobile application are stored.
 
 [TIP] ==== For easy setup, go to
-xref:ct-mobile-control-panel-general[CT Mobile Control Panel:
+xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc[CT Mobile Control Panel:
 General]/xref:ct-mobile-control-panel-general-new[CT Mobile Control
-Panel 2.0: General], xref:ct-mobile-control-panel-activities-new[CT
+Panel 2.0: General], xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-activities-new.adoc[CT
 Mobile Control Panel 2.0: Activities]. ====
 
 '''''
@@ -26,7 +26,7 @@ Custom setting API name:
 |Text(255) |The API name of the field on the[.object]#Account#
 object is used to store the address of the organization, e.g., country,
 city, building. etc. The value in this field is used in
-xref:mobile-layouts-maps[the Maps widget] if the value is not set
+xref:ios/admin-guide/mobile-layouts/index.adoc-maps[the Maps widget] if the value is not set
 in the[.apiobject]#clm__AccountGeolocationAPIField__c#
 field or this field is absent.
 
@@ -38,14 +38,14 @@ Location type] or
 https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/compound_fields_address.htm[the
 Address type] on the[.object]#Account# object is used to store
 the geolocation of the organization. The value in this field is used to
-get the location in the xref:routes[Routes] and
-xref:nearby-accounts[Nearby Accounts] modules.
+get the location in the xref:ios/mobile-application/mobile-application-modules/routes.adoc[Routes] and
+xref:ios/mobile-application/mobile-application-modules/nearby-accounts.adoc[Nearby Accounts] modules.
 
 |Activity "IsDone" field API name
 |[.apiobject]#clm__ActivityDoneAPI__c# |Text(255) |The
 API name of the field on the[.object]#Activity# object is used
 as an additional attribute showing that the *Activity* is finished. The
-field is used when the xref:start-finish-functionality[Start/Finish
+field is used when the xref:ios/admin-guide/start-finish-functionality.adoc[Start/Finish
 functionality] is enabled.
 
 |Activity "IsLocked" field API name
@@ -73,7 +73,7 @@ used to store the end date of the activity.
 |Activity Lookup Field API name
 |[.apiobject]#clm__ActivityFieldAPI__c# |Text(255) |The
 API name of the field with the lookup type from
-xref:clm-applicationstats[the Application Stats object] to the
+xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-applicationstats.adoc[the Application Stats object] to the
 [.object]#Activity# object.
 
 |Activity Object API Name
@@ -100,7 +100,7 @@ height and width of the CLM presentation window, and click *Generate*.
 Copy and paste the code into the website page markup. Use the arrows to
 navigate on the slide carousel.
 
-[NOTE] ==== xref:js-bridge-api[JS Bridge as well as
+[NOTE] ==== xref:ios/ct-presenter/js-bridge-api/index.adoc[JS Bridge as well as
 CTAPPGoTo functionality] are not available.  ====
 
 |App Install URL |[.apiobject]#clm__AppInstallURL__c#
@@ -138,7 +138,7 @@ in the xref:api-key[API Key] custom setting.
 
 |Debug Level |[.apiobject]#clm__DebugLevel__c#
 |Text(255) a|
-Defines xref:sync-logs[sync logs] must be stored Available values:
+Defines xref:ios/mobile-application/synchronization/synchronization-launch/sync-logs.adoc[sync logs] must be stored Available values:
 
 * *None*. Logging is disabled.
 * *Error*. The *Sync Log* record is created when an error occurred.
@@ -163,26 +163,26 @@ To disable the geotracking functionality, set the 0 value.
 
 |Google Maps Android API Key
 |[.apiobject]#clm__GoogleMapsAndroidAPIKey__c#
-|Text(255) |xref:google-maps-api-key[Access key to Google Maps
+|Text(255) |xref:ios/admin-guide/google-maps-api-key/index.adoc[Access key to Google Maps
 services] allows CT Mobile Android users to work with Google Maps in the
 *Routes* and *Nearby Accounts* modules and the *Maps* widget.
 
 |Google Maps iOS API Key
 |[.apiobject]#clm__GoogleMapsAPIKey__c# |Text(255)
-|xref:google-maps-api-key[Access key to Google Maps services]
+|xref:ios/admin-guide/google-maps-api-key/index.adoc[Access key to Google Maps services]
 allows CT Mobile iOS users to work with Google Maps in the *Routes* and
 *Nearby Accounts* modules and the *Maps* widget.
 
 |Google Maps Javascript API Key
 |[.apiobject]#clm__GoogleMapsJSKey__c# |Text(255)
 |Access key to Google Maps services allows users to work with Google
-Maps in xref:geolocation-center[the Geolocation center].
+Maps in xref:ios/admin-guide/geolocation-center/index.adoc[the Geolocation center].
 
 |Image Quality |[.apiobject]#clm__ImageQuality__c#
 |Number(3,0) |Image compression
-functionality (xref:ct-mobile-control-panel-general#h3__377059502[CT
+functionality (xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_377059502[CT
 Mobile Control Panel:
-General]/xref:ct-mobile-control-panel-general-new#h3__377059502[CT
+General]/xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-general-new.adoc#h3_377059502[CT
 Mobile Control Panel 2.0: General]). The attached images and taken
 photos may be compressed to reduce the amount of data.
 
@@ -203,13 +203,13 @@ enabled, the PIN code is required to access the CT Mobile app.
 
 |Person Account Enabled
 |[.apiobject]#clm__IsPersonAccountsEnabled__c# |Checkbox
-|If enabled, xref:person-accounts[Person Accounts] are used in the
+|If enabled, xref:ios/admin-guide/person-accounts.adoc[Person Accounts] are used in the
 CT Mobile app.
 
 |Product lookup field API name
 |[.apiobject]#clm__ProductFieldAPI__c# |Text(255) |The
 API name of the field with the lookup type from the
-xref:clm-application[Application] object to the
+xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-application.adoc[Application] object to the
 xref:clm-product[Product] object.
 
 |Product Object API Name
@@ -231,7 +231,7 @@ weekends on the calendar grid.
 
 |Start/Finish Functionality
 |[.apiobject]#clm__EnableStartFinish__c# |Checkbox
-|Enable the xref:start-finish-functionality[Start/Finish
+|Enable the xref:ios/admin-guide/start-finish-functionality.adoc[Start/Finish
 functionality].
 
 |Support Email |[.apiobject]#clm__SupportEmail__c#
@@ -244,7 +244,7 @@ color code in the RGB color model of the application theme.
 |Unfinished Activity Allowed
 |[.apiobject]#clm__IsUnfinishedActivityAllowed__c#
 |Checkbox |If enabled along with
-the xref:start-finish-functionality[Start/Finish functionality],
+the xref:ios/admin-guide/start-finish-functionality.adoc[Start/Finish functionality],
 mobile users can leave the started _Activity_ record to work with other
 CT Mobile app functionalities.
 
@@ -252,7 +252,7 @@ CT Mobile app functionalities.
 |[.apiobject]#clm__UpdateDateFields__c# |Checkbox
 |Refresh the current values of the start and end date at the activity
 opening/closing and when the
-xref:start-finish-functionality[Start/Finish functionality] is
+xref:ios/admin-guide/start-finish-functionality.adoc[Start/Finish functionality] is
 enabled.
 
 |Visible Hour Range
@@ -266,7 +266,7 @@ last working day in the two lowercase letters format, e.g.,
 [.apiobject]#mo,tu,fr#.
 |===
 
-ifdef::ios[]
+//tag::ios[]
 
 [[h2_993073976]]
 === CLM Presentations Display Mode

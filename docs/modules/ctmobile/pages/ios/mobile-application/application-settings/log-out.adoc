@@ -4,8 +4,8 @@ Log out may be required in the following cases:
 
 * Log in as another user.
 
-ifdef::win[][TIP] ==== Tap the
-xref:application-settings#h2__397515857[Change user] button to
+//tag::win[][TIP] ==== Tap the
+xref:ios/mobile-application/application-settings/index.adoc#h2_397515857[Change user] button to
 switch to another user. The current user will not be logged out and
 their database will not be erased.  ====
 * Log in to another organization.
@@ -18,7 +18,7 @@ database will remain in Salesforce to upload again.
 
 
 
-ifdef::ios,win,andr[]
+//tag::ios,win,andr[]
 
 To log out:
 
@@ -29,12 +29,12 @@ To log out:
 ifndef::ios,andr[]
 image:log-out-win.png[]
 
-ifdef::kotlin[]
+//tag::kotlin[]
 
 To log out:
 
 . Tap *Settings* in the application main menu.
 . Tap *Log out and Erase*.
 
-The current user logged out, and xref:logging-in[the login screen]
+The current user logged out, and xref:ios/getting-started/logging-in/index.adoc[the login screen]
 opens.

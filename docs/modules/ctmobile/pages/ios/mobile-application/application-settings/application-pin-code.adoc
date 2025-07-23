@@ -1,6 +1,6 @@
 = Application PIN Code
 
-ifdef::ios[]
+//tag::ios[]
 
 Use a passcode to log in to the CT Mobile app and to call the
 application if it was collapsed or closed.
@@ -22,7 +22,7 @@ To enable a passcode:
 [width="100%",cols="50%,50%",]
 |===
 |In CT Mobile Control Panel a|
-. Go to xref:ct-mobile-control-panel-general#h3_643998525[CT Mobile
+. Go to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_643998525[CT Mobile
 Control Panel: General].
 . Set a flag next to *Passcode Enabled*.
 . Click *Save*.
@@ -30,7 +30,7 @@ Control Panel: General].
 the mobile device to apply the settings.
 
 |In CT Mobile Control Panel 2.0 a|
-. Go to xref:ct-mobile-control-panel-general-new#h3_643998525[CT
+. Go to xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-general-new.adoc#h3_643998525[CT
 Mobile Control Panel: General].
 . Enable the *Passcode* toggle.
 . Click *Save*.
@@ -46,7 +46,7 @@ The setup is complete.
 
 
 When you run CT Mobile on the mobile device, the application asks you to
-set a passcode after xref:logging-in[logging in] and allowing
+set a passcode after xref:ios/getting-started/logging-in/index.adoc[logging in] and allowing
 access to the requested parameters.
 
 . Enter a new passcode.
@@ -68,7 +68,7 @@ database will be reset.
 To change the passcode:
 
 . On a mobile device, open the CT Mobile app.
-. Tap xref:application-settings[Settings] on xref:app-menu[the
+. Tap xref:ios/mobile-application/application-settings/index.adoc[Settings] on xref:ios/admin-guide/app-menu/index.adoc[the
 main menu].
 . Tap *Change Passcode*. The confirmation pop-up will be open.
 
@@ -91,7 +91,7 @@ https://support.apple.com/en-us/HT208109[Face ID].  ====
 
 endif::[]
 
-ifdef::win[]
+//tag::win[]
 
 Use
 https://developer.salesforce.com/blogs/developer-relations/2014/04/adding-salesforce-pin-security-to-native-and-hybrid-mobile-apps.html[PIN
@@ -118,7 +118,7 @@ protection]:
 set PIN length;
 * In the CT Mobile app, set up an app-specific PIN code.
 
-[[h2__47224469]]
+[[h2_47224469]]
 === Configuring PIN Protection in Salesforce
 
 To configure the PIN security for the CT Mobile Windows application:
