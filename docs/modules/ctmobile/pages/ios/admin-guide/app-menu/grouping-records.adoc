@@ -1,47 +1,40 @@
 = Grouping Records
 
-Initially, the records are grouped in alphabetical order. You can
-rearrange the records according to the selected field.
+Initially, the records are grouped in alphabetical order. You can rearrange the records according to the selected field.
 
 To group the records:
 
-[width="100%",cols="50%,50%",]
-|===
-|In CT Mobile Control Panel a|
-. Go to xref:ct-mobile-control-panel-app-menu[CT Mobile Control
-Panel: App Menu].
+[tabs]
+====
+In CT Mobile Control Panel::
++
+--
+. Go to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-app-menu.adoc[CT Mobile Control Panel: App Menu].
 . {blank}
+include::partial$settings-location.adoc[]
 . Select an object from the *Selected* list.
 . In the *Group records by* picklist, select a field for grouping.
 . Select ascending/descending records grouping order.
 . Click *Save*.
++
 image:47752559.png[]
-
-|In CT Mobile Control Panel 2.0 a|
-. Go to the xref:ct-mobile-control-panel-app-menu-new[CT Mobile
-Control Panel 2.0: App Menu].
-. Select the required profile in the *Profile* picklist. To apply
-settings to all the profiles, select *General Settings*.
+--
+In CT Mobile Control Panel 2.0::
++
+--
+. Go to the xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-app-menu-new.adoc[CT Mobile Control Panel 2.0: App Menu].
+. {blank}
+include::partial$settings-profile.adoc[]
 . Select an object from the *Selected* list.
 . In the *Group records by* picklist, select a field for grouping.
 . Select ascending/descending records grouping order.
 . Click *Save*.
++
 image:ctm-control-panel-new-app-menu-grouping-records.png[]
+--
+====
 
-|===
-
-
-
-//tag::andr,ios,win[]
-xref:synchronization-launch#h2_538692555[Launch the full
-synchronization] on the mobile device to apply changes. Records are
-grouped according to the specified field. //tag::kotlin[]
-
-xref:ios/mobile-application/synchronization/fast-synchronization.adoc[Launch fast synchronization] on the
-mobile device to apply changes. Records are grouped according to the
-specified field.
-
-//tag::ios[]
+xref:ios/mobile-application/synchronization/synchronization-launch/index.adoc#h3_1369866827[Launch the full synchronization] on the mobile device to apply changes. Records are grouped according to the specified field.
 
 [cols="^,^",]
 |===
@@ -51,12 +44,3 @@ specified field.
 |image:47752560.png[]
 |===
 
-//tag::win[]
-
-[cols="^,^",]
-|===
-|*Alphabetical Order* |*Grouping Oder*
-
-|image:grouping-records-win-2.png[]
-|image:grouping-records-win.png[]
-|===
