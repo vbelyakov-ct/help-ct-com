@@ -37,8 +37,8 @@ Workflow*.
 === Important Notes
 
 * Please get familiar with the full description
-of xref:ct-mobile-workflow[CT Mobile
-Workflow] and xref:ct-mobile-workflow-step[CT Mobile Workflow
+of xref:ios/admin-guide/ct-mobile-workflows-use-cases/ct-mobile-workflow.adoc[CT Mobile
+Workflow] and xref:ios/admin-guide/ct-mobile-workflows-use-cases/ct-mobile-workflow-step.adoc[CT Mobile Workflow
 Step] objects.
 * The *Lock/Unlock* record action and the [.apiobject]#before
 create#,[.apiobject]#before update#, and
@@ -56,7 +56,7 @@ message is created.
 ==== Update a Record
 
 Every time the mobile user taps the *Finish* button, specific fields
-will be populated on the *Activity* record with the *Planned* status.
+will be populated on the _Activity_ record with the *Planned* status.
 
 
 
@@ -85,7 +85,7 @@ image:Workflow_Step_This-record_en.png[]
 
 
 Also, you can use reference fields in SOQL query, for example, to fill
-out the *Website* field on the custom *Activity* record with the value
+out the *Website* field on the custom _Activity_ record with the value
 from the *Website* field of the related _Account_ record.
 
 .Click to view[%collapsible] ==== *Click to view the example*
@@ -106,7 +106,7 @@ image:Workflow_Step_Related_Record_SOQL_Reference_Field_en.png[]
 ==== Update Related Records
 
 Add the quantity for a corresponding *POS Material* record every time
-the status of the *Activity* record has changed to the *Finished* value.
+the status of the _Activity_ record has changed to the *Finished* value.
 
 
 
@@ -143,7 +143,7 @@ image:Workflow_Step_Related-record_en.png[]
 ==== Update a Parent Record
 
 According to the criteria, update a parent *Account* record every time a
-user taps the *Start* button on the *Activity* record.
+user taps the *Start* button on the _Activity_ record.
 
 
 
@@ -183,7 +183,7 @@ field.
 
 Create a new record of *CT Mobile Workflow* to launch the serial of
 actions every time a mobile user taps the *Start* button on the
-*Activity* record with the *Planned* status.
+_Activity_ record with the *Planned* status.
 
 image:Workflow_Advanced_en.png[]
 
@@ -191,7 +191,7 @@ image:Workflow_Advanced_en.png[]
 ==== Step 1: Update the status on a record
 
 Create a new record of *CT Mobile Workflow Step* to set the *In
-Progress* status for the *Activity* record.
+Progress* status for the _Activity_ record.
 
 image:Workflow_Step_1_Advanced_en.png[]
 
@@ -199,7 +199,7 @@ image:Workflow_Step_1_Advanced_en.png[]
 ==== Step 2: Link a record to the active marketing cycle
 
 Create a new record of *CT Mobile Workflow Step* to link the active
-marketing cycle to the *Activity* record.
+marketing cycle to the _Activity_ record.
 
 image:Workflow_Step_2_Advanced_en.png[]
 

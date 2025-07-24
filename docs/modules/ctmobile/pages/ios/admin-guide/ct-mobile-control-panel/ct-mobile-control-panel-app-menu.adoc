@@ -1,86 +1,61 @@
 = CT Mobile Control Panel: App Menu
+:toc:
+:toclevels: 1
 
-The *App Menu* tab is intended to set up menu items and their order in
-xref:ios/admin-guide/app-menu/index.adoc[the main menu].
+The *App Menu* tab is intended to set up menu items and their order in xref:ios/admin-guide/app-menu/index.adoc[the main menu].
 
-//tag::ios,win[] According to the selected profile, settings on this
-tab will be saved in the records of the [.object]#CTM
-Settings# object with the xref:ios/admin-guide/ct-mobile-control-panel/ctm-settings/ctm-settings-menu.adoc[Menu] record
-type.
+According to the selected profile, settings on this tab will be saved in the records of the [.object]#CTM Settings# object with the xref:ios/admin-guide/ct-mobile-control-panel/ctm-settings/ctm-settings-menu.adoc[Menu] record type.
 
-:toc: :toclevels: 2
-
-*Click to view the interface*
-
-.Click to hide[%collapsible] ====
-
-image:ctm_control_panel_appmenu.png[]
-
+.*Click to view the interface*
+[%collapsible]
 ====
+image:ctm_control_panel_appmenu.png[]
+====
+include::partial$control-panel-location.adoc[]
 
 [[h2_738493971]]
-=== Application Menu
+== Application Menu
 
-In the *Search* box, find the object that should be added to the main
-menu.
+In the *Search* box, find the object that should be added to the main menu.
 
-* Use the *Advanced List* option to display all available objects in the
-*Available* list.
-* Click the object name in the *Selected* list to set up options for the
-object.
+* Use the *Advanced List* option to display all available objects in the *Available* list.
+* Click the object name in the *Selected* list to set up options for the object.
 
 [[h3_259736469]]
-==== Add menu item
+=== Add menu item
 
-Click
-image:65471061.png[]
-to view the icons of the modules that can be added to the CT Mobile
-app. The modules' availability depends on the device platform.
+Click image:65471061.png[] to view the icons of the modules that can be added to the CT Mobile app. The modules' availability depends on the device platform.
 
 Hover the cursor over a module to see its short description.
 
 * Click the icon to select the module and click *Add*.
 * Rearrange the menu items in the *Selected* list in the desired order.
 
-image:add_module_en.png[]
+image::add_module_en.png[align="center"]
 
 [[h3_1872780512]]
-==== Add Custom
+=== Add Custom
 
-At a customer's request, complementary functional modules can be added
-to custom application builds. Click the *Add Custom* form to specify the
-significant word of the custom module.
+At a customer's request, complementary functional modules can be added to custom application builds. Click the *Add Custom* form to specify the significant word of the custom module.
 
 [[h2_1511584348]]
-=== Options
+== Options
 
-According to the selected menu item in the *Selected* list, the
-available options are displayed on the right:
+According to the selected menu item in the *Selected* list, the available options are displayed on the right:
 
-For the xref:ios/mobile-application/ui/home-screen/index.adoc[Home screen], enable the *Customizable
-Home screen* option. Add, size, and arrange widgets.
+* For the xref:ios/mobile-application/ui/home-screen/index.adoc[Home screen], enable the *Customizable Home screen* option. Add, size, and arrange widgets.
 
-For xref:ios/admin-guide/managing-offline-objects/index.adoc[offline objects],
+* For xref:ios/admin-guide/managing-offline-objects/index.adoc[offline objects],
 xref:ios/admin-guide/app-menu/grouping-records.adoc[group records] by the criterion.
 
-ifndef::andr,win,kotlin[]
+* For offline objects, enable xref:ios/admin-guide/managing-offline-objects/online-records-fetching.adoc[online record fetching].
 
-For offline objects, enable xref:ios/admin-guide/managing-offline-objects/online-records-fetching.adoc[online
-record fetching].
+* For the xref:ios/mobile-application/mobile-application-modules/applications/index.adoc[Applications] module, xref:ios/admin-guide/app-menu/grouping-records.adoc[group records] by the criterion.
 
-For the xref:ios/mobile-application/mobile-application-modules/applications/index.adoc[Applications] module,
-xref:ios/admin-guide/app-menu/grouping-records.adoc[group records] by the criterion.
+* For the xref:ios/mobile-application/mobile-application-modules/links.adoc[Links] module, specify resources and web pages.
 
-For the xref:ios/mobile-application/mobile-application-modules/links.adoc[Links] module, specify resources and web
-pages.
-
-ifndef::kotlin[]
-
-For the xref:ios/mobile-application/mobile-application-modules/routes.adoc[Routes] module, specify the ascending or
-descending order of records.
-
-
+* For the xref:ios/mobile-application/mobile-application-modules/routes.adoc[Routes] module, specify the ascending or descending order of records.
 
 See Also:
 
-* xref:ios/admin-guide/app-menu/index.adoc[Configuring App Menu]
+* xref:ios/admin-guide/app-menu/index.adoc[]

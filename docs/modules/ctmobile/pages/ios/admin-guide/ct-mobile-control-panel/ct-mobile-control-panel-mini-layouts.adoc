@@ -1,42 +1,29 @@
 = CT Mobile Control Panel: Mini Layouts
+:toc:
 
-The *Mini Layouts* tab is intended to configure and manage special forms
-that simplify the creation of a new record in the CT Mobile app.
+The *Mini Layouts* tab is intended to configure and manage special forms  that simplify the creation of a new record in the CT Mobile app.
 
-According to the selected profile, settings on this tab will be saved in
-the corresponding fields of
-the xref:mobile-mini-layout-settings[Mobile Mini Layout
-Settings] record.
+According to the selected profile, settings on this tab will be saved in the corresponding fields of the xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/mobile-mini-layout-settings.adoc[Mobile Mini Layout Settings] record.
 
-:toc: :toclevels: 2
-
-*Click to view the interface*
-
-.Click to hide[%collapsible] ====
-
-image:ctm_control_panel_mini_layouts.png[]
-
+.*Click to view the interface*
+[%collapsible]
 ====
+image:ctm_control_panel_mini_layouts.png[]
+====
+
+include::partial$control-panel-location.adoc[]
 
 [[h2_632328267]]
 === Mini Layout Options
 
 Click the *Create layout* button to add a new mini layout.
 
-* Follow the steps xref:ios/admin-guide/mini-layouts.adoc[here] to configure a mini
-layout for xref:ios/admin-guide/managing-offline-objects/index.adoc[the desired offline
+* Follow the steps xref:ios/admin-guide/mini-layouts.adoc[here] to configure a mini layout for xref:ios/admin-guide/managing-offline-objects/index.adoc[the desired offline
 object].
-* Mini layouts are grouped into categories according to the offline
-object.
-* Click
-image:66356101.png[]
-next to the desired mini layout to edit it.
-* Click
-image:66356102.png[]
-next to the desired mini layout to delete it.
-
-
+* Mini layouts are grouped into categories according to the offline object.
+* Click image:66356101.png[] next to the desired mini layout to edit it.
+* Click image:66356102.png[] next to the desired mini layout to delete it.
 
 See also:
 
-* xref:ios/admin-guide/mini-layouts.adoc[Configuring Mini Layouts]
+* xref:ios/admin-guide/mini-layouts.adoc[]

@@ -9,7 +9,7 @@ participants. Consider the following to use the *Remote Detailing 2.0*.
 [[h2_2023541197]]
 === If the Remote Detailing has not been yet configured in your Salesforce org
 
-Follow the steps in the xref:remote-detailing-setup[Remote
+Follow the steps in the xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-setup/index.adoc[Remote
 Detailing Setup] article.
 
 [[h2_1683593068]]
@@ -28,12 +28,12 @@ Token Policy* select *Refresh token is valid until revoked*.
 from
 https://github.com/ctsf/CLM-RemoteDetailing-Public/blob/master/source/remoteDetailing/src/triggers/ActivitySetLinkProcess.trigger[this
 source] and added to your Salesforce org. The API names of the desired
-*Activity* record types
+_Activity_ record types
 xref:remote-detailing-apex-trigger-classes-and-quick-action#h2_249047963[should
 be specified] within the trigger code.
-. Go to the xref:ct-mobile-control-panel-presenter[CT Mobile
+. Go to the xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-presenter.adoc[CT Mobile
 Control Panel:
-Presenter]/xref:ct-mobile-control-panel-remote-detailing-new[CT
+Presenter]/xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-remote-detailing-new.adoc[CT
 Mobile Control Panel 2.0: Remote Detailing] tab and check that the
 *Applications List Field* and *Link Field* are filled out with the API
 names of the corresponding fields of the [.object]#Activity#
@@ -43,9 +43,9 @@ checkboxes are selected for desired xref:ios/ct-presenter/about-ct-presenter/clm
 presentations].
 . For *Self Detailing* functionality, update the list of CLM
 presentations using the
-xref:ct-mobile-control-panel-presenter#h2_891805269[Refresh CLM
+xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-presenter.adoc#h2_891805269[Refresh CLM
 presentations] button.
-. Update one of the existing *Activity* records or create a new one.
+. Update one of the existing _Activity_ records or create a new one.
 
 [[h2_589224069]]
 === If the sandbox has been created based on the production environment with the configured Remote Detailing functionality

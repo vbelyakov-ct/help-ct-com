@@ -36,7 +36,7 @@ xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.ad
 Date field] and
 xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc#h3_1391348303[Activity End
 Date field] will be updated.
-[NOTE] ==== If you assign a xref:ct-mobile-workflow[CT
+[NOTE] ==== If you assign a xref:ios/admin-guide/ct-mobile-workflows-use-cases/ct-mobile-workflow.adoc[CT
 Mobile Workflow] to the *Start* or *Finish* buttons, the *Capture
 Geoposition* and *Update Start/End Date Fields* functionality will be
 disabled even if these settings are applied. ====
@@ -65,7 +65,7 @@ xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-activit
 Date field] and
 xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-activities-new.adoc#h4_587549689[End Date
 field] will be updated.
-[NOTE] ==== If you assign a xref:ct-mobile-workflow[CT
+[NOTE] ==== If you assign a xref:ios/admin-guide/ct-mobile-workflows-use-cases/ct-mobile-workflow.adoc[CT
 Mobile Workflow] to the *Start* or *Finish* buttons, the **Capture
 Geolocation when Activity is Started* * and **Update Start/End Date when
 Starting/Ending Activity** functionality will be disabled even if these
@@ -85,7 +85,7 @@ image:ctm-control-panel-new-move-start-finish-functionality.png[]
 
 
 
-Now, the *Start* and *Finish* buttons are added to the *Activity* record
+Now, the *Start* and *Finish* buttons are added to the _Activity_ record
 screen.
 
 //tag::ios[]image:activity-start-button.png[]
@@ -98,15 +98,15 @@ screen.
 |In CT Mobile Control Panel a|
 The mobile user can leave the started _Activity_ record when the
 *Unfinished Activity Allowed* field is selected on the corresponding
-xref:mobile-application-setup[Mobile Application Setup] record.
+xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/mobile-application-setup.adoc[Mobile Application Setup] record.
 
 * Select this option on the
 xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc#h3_1856075785[CT Mobile
 Control Panel: Calendar].
-* The mobile user will be able to leave the started *Activity* record
-and then come back to finish the *Activity* record.
+* The mobile user will be able to leave the started _Activity_ record
+and then come back to finish the _Activity_ record.
 
-The unfinished *Activity* records will be synchronized. To restrict the
+The unfinished _Activity_ records will be synchronized. To restrict the
 unfinished record synchronizing:
 
 . Create the *Started Activity* checkbox with the default
@@ -133,10 +133,10 @@ The mobile user can leave the started _Activity_ record when the
 * Select this option on the
 xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-activities-new.adoc#h4_1904984675[CT
 Mobile Control Panel: Activities].
-* The mobile user will be able to leave the started *Activity* record
-and then come back to finish the *Activity* record.
+* The mobile user will be able to leave the started _Activity_ record
+and then come back to finish the _Activity_ record.
 
-The unfinished *Activity* records will be synchronized. To restrict the
+The unfinished _Activity_ records will be synchronized. To restrict the
 unfinished record synchronizing:
 
 . Create the **Started Activity **checkbox with the default

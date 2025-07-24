@@ -19,7 +19,7 @@ Collect separately the presenter and participants' statistics during the
 * To track certain parameters, they should be enabled on
 xref:ios/ct-presenter/creating-clm-presentation/creating-clm-presentation-with-the-application-record-type/index.adoc#h2_213917439[the appropriate CLM
 presentation record]. Also,
-xref:remote-detailing-1-0-ui-for-presenter[the presenter should
+xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-ui-basics/remote-detailing-1-0-ui-for-presenter.adoc[the presenter should
 define] allow participants or not to like and dislike slides.
 * The [.object]#Application Stats# object should have the field
 with the *Lookup* type on the [.object]#Activity# object, e.g.,
@@ -27,8 +27,8 @@ the [.apiobject]#VisitId__c#, and this field should be
 specified in the *Activity Field API* field of the *Mobile Application
 Setup* record.
 * If needed, specify the
-xref:ct-mobile-control-panel-presenter#h3_856955672[Detailed
-Statistics Enabled]/xref:ct-mobile-control-panel-remote-detailing-new#h4_247168521[Detailed
+xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-presenter.adoc#h3_856955672[Detailed
+Statistics Enabled]/xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-remote-detailing-new.adoc#h4_247168521[Detailed
 Statistics] option.
 * Apply and process only single clicks and taps to launch interactive
 elements on the slides of CLM presentations for their correct display on

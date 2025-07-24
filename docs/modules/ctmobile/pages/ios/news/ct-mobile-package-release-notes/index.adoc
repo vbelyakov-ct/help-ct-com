@@ -61,7 +61,7 @@ component custom metadata type] before upgrading to this version.
 
 * Fixed displaying xref:ios/admin-guide/mini-layouts.adoc[Mini Layouts] editing window.
 * Fixed displaying fields in the
-xref:ct-mobile-control-panel-custom-details[Custom Details] editing
+xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-custom-details.adoc[Custom Details] editing
 window.
 
 [[h2_466019125]]
@@ -120,7 +120,7 @@ objects with xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/relate
 ===== Remote Detailing 2.0
 
 * Now you can specify a
-xref:ct-mobile-control-panel-presenter#h3_298754890[custom domain
+xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-presenter.adoc#h3_298754890[custom domain
 name for your meeting URL].
 * The *Available for Download* checkbox is added to the
 xref:creating-application-record#h2_1960465655[application creation
@@ -178,8 +178,8 @@ Components]_ custom metadata type).
 [[h4_1434818080]]
 ===== Remote Detailing 2.0
 
-* xref:remote-detailing-2-0-audio-recording[Saving audio recording]
-on the corresponding *Activity* record.
+* xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-setup/remote-detailing-2-0-audio-recording.adoc[Saving audio recording]
+on the corresponding _Activity_ record.
 
 [[h3_473996418]]
 ==== Fixes
@@ -271,7 +271,7 @@ Settings] button.
 * Fixed checking the profile permission to launch a *Remote Detailing*
 meeting.
 * Fixed populating the reference field on the corresponding *Application
-Stats* record with the *Activity* record from which the *Remote
+Stats* record with the _Activity_ record from which the *Remote
 Detailing* meeting was started.
 
 
@@ -307,7 +307,7 @@ Detailing* meeting was started.
 *Date* and *Date/Time* data type
 xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects.adoc[during creating a SOQL
 filter].
-* xref:ct-mobile-control-panel-presenter#h3_1019207818[New options]
+* xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-presenter.adoc#h3_1019207818[New options]
 to specify and add terms of use on the *Welcome* screen during the
 *Remote Detailing* or *Self Detailing* meeting. Currently, not in use.
 
@@ -320,7 +320,7 @@ to specify and add terms of use on the *Welcome* screen during the
 remote sites] are not activated, an error message will be displayed when
 a user tries to
 xref:publishing-clm-presentations#h3_1098755975[renew slides].
-* xref:remote-detailing-statistics[The browser name and IP address]
+* xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-statistics.adoc[The browser name and IP address]
 will be stored in the statistics record for the presenter and
 participants.
 
@@ -375,9 +375,9 @@ records.
 [[h4_222227263]]
 ===== Remote Detailing 2.0
 
-* The ability to specify whether xref:clm-settings[the participant
+* The ability to specify whether xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/clm-settings.adoc[the participant
 is required] to add the email to access the *Remote Detailing* meeting.
-* xref:clm-settings[The new parameter] for future audio recording
+* xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/clm-settings.adoc[The new parameter] for future audio recording
 storage is added.
 * xref:remote-detailing-launch-salesforce-side#h3_135274013[For
 user convenience]:
@@ -505,10 +505,10 @@ Administrator_ and _CT Mobile User_ permission sets.
 ===== Remote Detailing 2.0
 
 * Security Update:
-xref:ct-mobile-control-panel-presenter#h3_53846510[specify the
+xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-presenter.adoc#h3_53846510[specify the
 integration user] to connect to the *Self Detailing* meeting and collect
 statistics.
-* xref:remote-detailing-f-a-q#h2_106650128[New direct links] to
+* xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-f-a-q.adoc#h2_106650128[New direct links] to
 access *Remote Detailing* and *Self Detailing* meetings.
 * The *ActivityProcessHandler* class will check if only active and valid
 CLM presentations are specified for[.object]#Activity# objects.
@@ -532,7 +532,7 @@ of any issues.
 * The maximum size of the .pdf and ppt(x) file for
 xref:ios/ct-presenter/creating-clm-presentation/creating-clm-presentation-with-the-application-record-type/index.adoc[converting to CLM presentation] has been
 enlarged up to 75 MB.
-* xref:js-bridge-methods-availability[New JS Bridge methods] to
+* xref:ios/ct-presenter/js-bridge-api/js-bridge-methods-availability.adoc[New JS Bridge methods] to
 manage audio and video on the presenter device.
 
 
@@ -574,9 +574,9 @@ characters.
 
 * Fixed the *ActivityProcessHandler* class errors when there are no
 actual values in the
-xref:ct-mobile-control-panel-presenter#h3_1311451422[Link Field]
+xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-presenter.adoc#h3_1311451422[Link Field]
 and
-xref:ct-mobile-control-panel-presenter#h3_201439959[Application
+xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-presenter.adoc#h3_201439959[Application
 List Field].
 
 
@@ -608,7 +608,7 @@ using the *Direct access* option.
 In the _CT Mobile User_ and _CT Mobile Administrator_ permission sets:
 
 * The corresponding access to the *Unfinished Activity Allowed* field of
-xref:mobile-application-setup[Mobile Application Setup] is added.
+xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/mobile-application-setup.adoc[Mobile Application Setup] is added.
 * The corresponding access to the *Slide Zoom Enabled* and *Available
 Offline* field of the [.object]#Application# object is added.
 
@@ -734,7 +734,7 @@ module, in the *Nearby Accounts* module, and the *Maps* widget.
 
 * Users of CT Mobile iOS with xref:ios/admin-guide/start-finish-functionality.adoc[the
 enabled Start/Finish functionality] may be given the ability to leave
-the unfinished *Activity* record to work with other functionalities.
+the unfinished _Activity_ record to work with other functionalities.
 
 
 
@@ -843,12 +843,12 @@ cloud token value].
 [[h4_2028405529]]
 ===== Remote Detailing
 
-* The xref:ct-mobile-control-panel-presenter#h3_341694305[Call
+* The xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-presenter.adoc#h3_341694305[Call
 Repeat Allowed] option allows resuming the finished meeting. Statistics
 will be collected too.
 * The indicator of the enabled attendee's remote control is highlighted
 in red color
-xref:remote-detailing-1-0-ui-for-presenter#h2_561326567[for better
+xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-ui-basics/remote-detailing-1-0-ui-for-presenter.adoc#h2_561326567[for better
 visibility].
 
 [[h2_62734605]]
@@ -860,7 +860,7 @@ visibility].
 [[h4_82973874]]
 ===== CT Mobile Control Panel
 
-* xref:ct-mobile-control-panel-presenter[The corresponding tab]
+* xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-presenter.adoc[The corresponding tab]
 allows customizing the *Remote Detailing* and *Self Detailing*
 functionality in one place.
 * For the users' convenience, the objects in the picklists are now
@@ -888,7 +888,7 @@ xref:ios/ct-presenter/creating-clm-presentation/creating-clm-presentation-with-t
 [[h4_1401231549]]
 ===== Remote Detailing
 
-* The enhanced xref:remote-detailing-setup[setup process] for the
+* The enhanced xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-setup/index.adoc[setup process] for the
 *Remote Detailing* and *Self Detailing* functionality.
 * In Lightning Experience, add
 xref:remote-detailing-launch-salesforce-side#h2_1396626265[the

@@ -26,7 +26,7 @@ becomes unsynced.
 [[h2_1260268493]]
 === Validation Logic for Records
 
-The following logic is applied for *Activity* records that were created
+The following logic is applied for _Activity_ records that were created
 in the *Calendar* or *Nearby Accounts* modules.
 
 //tag::ios,andr[][NOTE] ==== The
@@ -73,8 +73,8 @@ xref:errors-screen#h2_479754125[the Errors screen].
 If a record is created or changed on a custom related list, the parent
 record layout will not be validated.
 
-* Validation is performed on the *Activity* record and records of custom
-related lists when you tap the *Finish* button on the *Activity* record.
+* Validation is performed on the _Activity_ record and records of custom
+related lists when you tap the *Finish* button on the _Activity_ record.
 * If xref:errors-screen[an error occurs] during validation, the
 system displays a warning message: __Something went wrong on the tab(s):
 (tab name). Do you want to leave the record or fix it now? __After
@@ -83,7 +83,7 @@ opens.
 
 
 
-If you tap the *Finish* button on the *Activity* record, the system
+If you tap the *Finish* button on the _Activity_ record, the system
 validates the activity and its custom related list. The following
 principles are applied:
 

@@ -102,12 +102,12 @@ The mixed synchronization launches when:
 xref:clm-user[current user's record] is earlier than the date of
 the last metadata change in the
 [.apiobject]#clm__MetadataLastModifiedDate__c# field of
-the xref:mobile-application-setup[Mobile Application Setup] record
+the xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/mobile-application-setup.adoc[Mobile Application Setup] record
 for the current user's profile (if this record exists) or for the
 current user's Salesforce organization;
 * the date of the last metadata change is not set in the
 [.apiobject]#clm__MetadataLastModifiedDate__c# field of
-the xref:mobile-application-setup[Mobile Application Setup] record.
+the xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/mobile-application-setup.adoc[Mobile Application Setup] record.
 
 
 
@@ -145,7 +145,7 @@ Panel]/xref:ios/admin-guide/ct-mobile-control-panel-new/index.adoc[CT Mobile Con
 You can manually update the date for the corresponding profile by
 editing the
 [.apiobject]#clm__MetadataLastModifiedDate__c# field of
-the xref:mobile-application-setup[Mobile Application Setup] record
+the xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/mobile-application-setup.adoc[Mobile Application Setup] record
 for the current user's profile (if this record exists) or for the
 current user's Salesforce organization.
 
@@ -842,10 +842,10 @@ When the sync process is complete, CT Mobile is ready to work.
 ==== What to do if the INSUFFICIENT ACCESS error occurs?
 
 The error occurs when access to the records has been revoked. For
-example, a mobile user created an *Activity* record for an *Account*
+example, a mobile user created an _Activity_ record for an *Account*
 record, and the manager in Salesforce revoked the user's access to that
 *Account*. When the mobile user runs a fast synchronization to submit
-the created *Activity* record, they will receive an *Insufficient
+the created _Activity_ record, they will receive an *Insufficient
 Access* error.
 
 

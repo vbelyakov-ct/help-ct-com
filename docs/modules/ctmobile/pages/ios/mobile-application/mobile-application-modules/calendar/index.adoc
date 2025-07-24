@@ -148,7 +148,7 @@ The setup is complete.
 [[h2_430669426]]
 ==== Algorithm for Filling Out the Lookup Field on Activity
 
-During the *Activity* record creation by drag-and-drop an *Activity*
+During the _Activity_ record creation by drag-and-drop an *Activity*
 record to the calendar grid, the CT Mobile app fills out the
 corresponding lookup field to the related object according to the
 algorithm:
@@ -185,30 +185,30 @@ Additional logic to fill out lookup fields:
 * when a user drag-and-drops a *Contact* record to the calendar grid, CT
 Mobile will also fill out the lookup field to the
 [.object]#Account# object (if the field exists) during the
-*Activity* record creation.
+_Activity_ record creation.
 * when a user drag-and-drops a *Reference* record to the calendar grid,
 CT Mobile will also fill out the lookup field to the
 [.object]#Account# and *Contact* objects (if the field exists)
-during the *Activity* record creation.
+during the _Activity_ record creation.
 
 [[h3_1748247974]]
 ==== Conditions to Show Activity on the Calendar Grid
 
-The *Activity* record is displayed in the calendar grid according to the
+The _Activity_ record is displayed in the calendar grid according to the
 presence of the *Start Date* and *End Date* fields on the *Activity*
 object and the values in these fields:
 
 . If both fields are present on the _Activity_ object:​
-.. When both fields are filled out, the *Activity* record is displayed
+.. When both fields are filled out, the _Activity_ record is displayed
 in the *Day* and *Week* views.
 .. When the value in one or both fields exceeds the specified visible
 hour range (refer to
 xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc#h3_256846269[CT Mobile
 Control Panel:
 Calendar]/xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-app-menu-new.adoc#h2_1511584348[CT
-Mobile Control Panel 2.0: App Menu]), the *Activity* record is displayed
+Mobile Control Panel 2.0: App Menu]), the _Activity_ record is displayed
 in the *All-Day* slot in the *Day* and *Week* views.
-.. When only one of the fields is filled out, the *Activity* record is
+.. When only one of the fields is filled out, the _Activity_ record is
 only displayed in the *Month* view.
 . If there is only the *Start Date* field is present on the _Activity_
 object and when this field is filled out, the Activity record is

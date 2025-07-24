@@ -112,7 +112,7 @@ Editor].
 === Displaying and Management of CLM Presentations
 
 //tag::ios[]It is possible
-to xref:mobile-application-setup#CLMDisplayMode[specify the CLM
+to xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/mobile-application-setup.adoc#CLMDisplayMode[specify the CLM
 presentation display mode] in the case of using Аngular and other JS
 frameworks, where there are difficulties with the display of connected
 templates and parts of the HTML code.
@@ -164,7 +164,7 @@ screen.
 ==== The Remote Detailing Functionality (online mode)
 
 [TIP] ==== We recommend reading
-xref:remote-detailing-f-a-q[Remote Detailing: F.A.Q]. ====
+xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-f-a-q.adoc[Remote Detailing: F.A.Q]. ====
 
 The xref:ios/ct-presenter/the-remote-detailing-functionality/index.adoc[Remote Detailing]
 functionality allows the presenter and participants to simultaneously
@@ -191,7 +191,7 @@ For each CLM presentation:
 
 * The separates UI for the presenter and participant.
 * In the case of using on-the-slide markup,
-xref:remote-detailing-f-a-q[]JS methods and links are available
+xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-f-a-q.adoc[]JS methods and links are available
 from within the CLM presentation.
 * Performed on the CLM presentation, specific user actions can be
 captured and collected in the *Application Stats* record. These actions
@@ -202,5 +202,5 @@ presentation.
 browser tab, a record of the [.object]#Application Stats# object
 is created for each participant and presenter.
 ** For the *Self Detailing* mode, the statistics will be collected
-according to xref:clm-settings[the Session timeout (in seconds)
+according to xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/clm-settings.adoc[the Session timeout (in seconds)
 field].

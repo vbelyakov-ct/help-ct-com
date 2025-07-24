@@ -42,7 +42,7 @@ The system compares the date of the last successful synchronization in
 the [.apiobject]#clm__LastSyncDate__c# field of the
 current user's record with the date of the last metadata change in the
 [.apiobject]#clm__MetadataLastModifiedDate__c# field of
-the xref:mobile-application-setup[Mobile Application Setup] record
+the xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/mobile-application-setup.adoc[Mobile Application Setup] record
 for the current user's profile (if this record exists) or for the
 current user's Salesforce organization. To find out how to manually or
 automatically update

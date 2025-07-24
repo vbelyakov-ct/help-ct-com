@@ -327,7 +327,7 @@ photo interface for Vision Lite.
 layout.
 ** Business administrator can assign tags for photos per public group.
 * *CT Presenter for *CT Mobile 2.7**
-** xref:remote-detailing-2-0-ui-for-participants[Remote Detailing
+** xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-ui-basics/remote-detailing-2-0-ui-for-participants.adoc[Remote Detailing
 2.0]: all participants of the meeting will receive notifications about
 new comments.* *
 * *CT Orders for CT Mobile 2.7*
@@ -738,7 +738,7 @@ image:Unfinished-Activitty-EN.gif[]
 
 * The long library name is fully displayed in
 xref:ios/mobile-application/mobile-application-modules/libraries.adoc[Libraries].
-* When xref:log-out[logging out] of the CT Mobile app, a
+* When xref:ios/mobile-application/application-settings/log-out.adoc[logging out] of the CT Mobile app, a
 notification appears to clarify to a user that the database will be
 erased.
 
@@ -876,7 +876,7 @@ presentations.
 ** Start the remote presentation right from the app
 xref:remote-detailing-launch-the-ct-mobile-app[with one tap].
 ** Multitasking: switch between the meeting window and record details
-xref:remote-detailing-1-0-ui-for-presenter[with one tap]. Resume
+xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-ui-basics/remote-detailing-1-0-ui-for-presenter.adoc[with one tap]. Resume
 the presentation from the last checkpoint.
 
 
@@ -976,7 +976,7 @@ be translated] using custom labels.
 * On the xref:ipad[detailed list view] screen, remove a record as
 well as create a record if permissions are granted.
 * The support of the standard *Shipping Address* and *Billing Address*
-fields as xref:mobile-application-setup[Account Geolocation Field]
+fields as xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/mobile-application-setup.adoc[Account Geolocation Field]
 in xref:ios/mobile-application/mobile-application-modules/nearby-accounts.adoc[Nearby Accounts] and
 xref:ios/mobile-application/mobile-application-modules/routes.adoc[Routes] modules, in xref:ios/admin-guide/mobile-layouts/index.adoc-maps[the
 Map widget], and within xref:ios/mobile-application/ui/actions.adoc[the Determine Location button]
@@ -1284,7 +1284,7 @@ attachment to a record.
 ** Ability to open contents using[.apiobject]#window.open# in
 the native preview window.
 * Added capability to select rendering mode for interactive content
-(xref:mobile-application-setup[Mobile Application Setup]).
+(xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/mobile-application-setup.adoc[Mobile Application Setup]).
 ** wk - more productive and modern, suitable for most presentations.
 Used by default on mobile devices running iOS 9 and above.
 ** wks - local server for presentations display, created using MVC

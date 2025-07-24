@@ -106,7 +106,7 @@ camera/microphone* |*Videocall* |*Call* |*Chatting*
 
 
 
-Go back to xref:remote-detailing-f-a-q#GoBacktoMiniTOC[the F.A.Q.
+Go back to xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-f-a-q.adoc#GoBacktoMiniTOC[the F.A.Q.
 list].
 
 [[h2_334077530]]
@@ -141,7 +141,7 @@ and the remote CLM presentation starts.
 
 
 
-Go back to xref:remote-detailing-f-a-q#GoBacktoMiniTOC[the F.A.Q.
+Go back to xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-f-a-q.adoc#GoBacktoMiniTOC[the F.A.Q.
 list].
 
 [[h2_106650128]]
@@ -163,7 +163,7 @@ If you try to open this link, you will see the *Meeting is over* screen.
 * Use this link to join the meeting:
 https://www.ctclm.com/*present*/123-4567-890.
 
-If the xref:ct-mobile-control-panel-presenter#h3_341694305[Call
+If the xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-presenter.adoc#h3_341694305[Call
 Repeat Allowed] option is enabled, this type of link should be used to
 resume the meeting.
 
@@ -191,18 +191,18 @@ you like. |
 
 
 
-Go back to xref:remote-detailing-f-a-q#GoBacktoMiniTOC[the F.A.Q.
+Go back to xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-f-a-q.adoc#GoBacktoMiniTOC[the F.A.Q.
 list].
 
 [[h2_1306483813]]
 === What to do if the invitation link does not appear on the activity record?
 
 In Salesforce, the invite link is generated when you create a new
-*Activity* record or update the existing one. If the invitation link did
-not appear on the *Activity* record page, refresh the page.
+_Activity_ record or update the existing one. If the invitation link did
+not appear on the _Activity_ record page, refresh the page.
 
 In the CT Mobile app, pull the record's screen to download the invite
-link to the *Activity* record created in the app.
+link to the _Activity_ record created in the app.
 
 
 
@@ -213,7 +213,7 @@ Mobile app:
 xref:remote-detailing-apex-trigger-classes-and-quick-action[Apex
 Classes and Trigger are created]. It is necessary to specify the correct
 API name of the [.object]#Activity# object.
-. On xref:mobile-application-setup[the Mobile Application Setup
+. On xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/mobile-application-setup.adoc[the Mobile Application Setup
 record] assigned for the current user's profile, the
 [.object]#Activity# object or the *Start Date* field is not
 specified. Go to the xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc[CT
@@ -221,19 +221,19 @@ Mobile Control Panel:
 Calendar]/xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-activities-new.adoc[CT Mobile
 Control Panel 2.0: Activities] tab and set up *Activity* settings for
 the current user's profile.
-. xref:clm-activity[The current Activity record] has no assigned
+. xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-activity.adoc[The current Activity record] has no assigned
 CLM presentations and custom scenarios.
 xref:remote-detailing-apex-trigger-classes-and-quick-action#h3_2024838382[Click
 the Applications button] to specify the CLM presentations set.
-. xref:clm-settings[The incorrect record of CLM Settings] for the
+. xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/clm-settings.adoc[The incorrect record of CLM Settings] for the
 current user's profile. The Remote Detailing should be enabled in
-xref:ct-mobile-control-panel-presenter[CT Mobile Control Panel:
-Presenter]/xref:ct-mobile-control-panel-remote-detailing-new[CT
+xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-presenter.adoc[CT Mobile Control Panel:
+Presenter]/xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-remote-detailing-new.adoc[CT
 Mobile Control Panel 2.0: Remote Detailing].
 
 
 
-Go back to xref:remote-detailing-f-a-q#GoBacktoMiniTOC[the F.A.Q.
+Go back to xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-f-a-q.adoc#GoBacktoMiniTOC[the F.A.Q.
 list].
 
 [[h2_1265822888]]
@@ -245,7 +245,7 @@ antivirus solution, or corporate firewall.
 
 
 
-Go back to xref:remote-detailing-f-a-q#GoBacktoMiniTOC[the F.A.Q.
+Go back to xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-f-a-q.adoc#GoBacktoMiniTOC[the F.A.Q.
 list].
 
 [[h2_2127819924]]
@@ -263,7 +263,7 @@ http://meet.rd.ctclm.com/[meet.rd.ctclm.com] domain
 
 
 
-Go back to xref:remote-detailing-f-a-q#GoBacktoMiniTOC[the F.A.Q.
+Go back to xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-f-a-q.adoc#GoBacktoMiniTOC[the F.A.Q.
 list].
 
 [[h2_879338084]]
@@ -289,7 +289,7 @@ participant.
 
 
 
-Go back to xref:remote-detailing-f-a-q#GoBacktoMiniTOC[the F.A.Q.
+Go back to xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-f-a-q.adoc#GoBacktoMiniTOC[the F.A.Q.
 list].
 
 [[h2_1340692219]]
@@ -297,13 +297,13 @@ list].
 
 The remote CLM presentation can be streamed simultaneously to up to 35
 participants. The number of participants depends on
-xref:remote-detailing-f-a-q#h2_250361472[the bandwidth and
+xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-f-a-q.adoc#h2_250361472[the bandwidth and
 connection] of each participant's device. The optimal number of
 participants for the medium bandwidth and connection is 10.
 
 
 
-Go back to xref:remote-detailing-f-a-q#GoBacktoMiniTOC[the F.A.Q.
+Go back to xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-f-a-q.adoc#GoBacktoMiniTOC[the F.A.Q.
 list].
 
 [[h2_230890246]]
@@ -311,7 +311,7 @@ list].
 
 Due to Apple's limitations, the device's microphone and camera do not
 work in web view and may also not work correctly in
-xref:remote-detailing-f-a-q#h3_1979411778[mobile browsers] due to
+xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-f-a-q.adoc#h3_1979411778[mobile browsers] due to
 their limitations.
 
 
@@ -320,7 +320,7 @@ The sound and video issues can be related to the device's camera and
 microphone settings:
 
 . Previously, check
-xref:remote-detailing-f-a-q#SupportedBrowsers[the supported
+xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-f-a-q.adoc#SupportedBrowsers[the supported
 browsers on devices].
 . Check camera and microphone permissions on your device:
 * *Windows 10*
@@ -361,7 +361,7 @@ Go to *Settings* → *Safari* → enable *Camera & Microphone Access*.
 
 
 
-Go back to xref:remote-detailing-f-a-q#GoBacktoMiniTOC[the F.A.Q.
+Go back to xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-f-a-q.adoc#GoBacktoMiniTOC[the F.A.Q.
 list].
 
 [[h2_250361472]]
@@ -393,7 +393,7 @@ speed* |*Recommended Download / Upload Speed*
 
 
 
-Go back to xref:remote-detailing-f-a-q#GoBacktoMiniTOC[the F.A.Q.
+Go back to xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-f-a-q.adoc#GoBacktoMiniTOC[the F.A.Q.
 list].
 
 [[h2_1873295839]]
@@ -405,7 +405,7 @@ as for the *Application* module in the CT Mobile app can be used for
 
 * xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-application.adoc[CLM presentation] should be active and
 available for *Remote Detailing*. For *Remote Detailing 2.0*, If CLM
-presentations are not set for the *Activity* record, all active and
+presentations are not set for the _Activity_ record, all active and
 available for *Remote Detailing* meetings CLM presentations will be
 available during the *Remote Detailing* meeting.
 
@@ -413,15 +413,15 @@ available during the *Remote Detailing* meeting.
 media file formats] for CLM presentations.
 ** Use simple clicks in CLM presentations, which will be shared during
 the *Remote Detailing* meeting in a browser. Double clicks and long
-clicks cannot be tracked for xref:remote-detailing-statistics[the
+clicks cannot be tracked for xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-statistics.adoc[the
 statistics].
 ** Add processing the tap event along with the click event into the
 slide markup to display the presenter tap or click movement for
 participants.
 * Specify the
-xref:ct-mobile-control-panel-presenter#h3_949497961[CRM Data
+xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-presenter.adoc#h3_949497961[CRM Data
 Streaming Enabled]/
-xref:ct-mobile-control-panel-remote-detailing-new#h4_1433734342[CRM
+xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-remote-detailing-new.adoc#h4_1433734342[CRM
 Data Sharing] attribute to use the available JS Bridge methods
 implemented on the slide markup.
 * ​Several CLM presentations and custom scenarios can be presented in one
@@ -450,7 +450,7 @@ store the slide order.
 
 
 
-Go back to xref:remote-detailing-f-a-q#GoBacktoMiniTOC[the F.A.Q.
+Go back to xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-f-a-q.adoc#GoBacktoMiniTOC[the F.A.Q.
 list].
 
 [[h2_1142420759]]
@@ -460,11 +460,11 @@ JS Bridge methods used in CLM presentations launched from the
 *Application* module, the record mobile layout, or from the Carousel of
 CLM presentations from the CT Mobile app may not be available for CLM
 presentations launched during the *Remote Detailing* meeting. Get
-familiar with xref:js-bridge-methods-availability[the list of the
+familiar with xref:ios/ct-presenter/js-bridge-api/js-bridge-methods-availability.adoc[the list of the
 available JS Bridge methods] during the *Remote Detailing*
 functionality.
 
 
 
-Go back to xref:remote-detailing-f-a-q#GoBacktoMiniTOC[the F.A.Q.
+Go back to xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-f-a-q.adoc#GoBacktoMiniTOC[the F.A.Q.
 list].

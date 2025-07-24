@@ -1,23 +1,23 @@
 = CT Mobile Control Panel
 
-*CT Mobile Control Panel* is a Salesforce interface for connecting the
-CT Mobile solution to the customer's target system and for specifying
-all the necessary settings to personalize the CT Mobile app.
+*CT Mobile Control Panel* is a Salesforce interface for connecting the  CT Mobile solution to the customer's target system and for specifying all the necessary settings to personalize the CT Mobile app.
 
-* A user configuring a CT Mobile solution must have a separate profile
-and an
-assigned _xref:ctmobile:main/getting-started/application-permission-settings.adoc#h2_1046081510[CT
-Mobile Administrator]_ permission set.
-* All customizations for the selected profile will be saved in
-xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/index.adoc[custom settings] or as
-xref:ios/admin-guide/ct-mobile-control-panel/ctm-settings/index.adoc[CTM Settings] records.
-* Settings for xref:ios/admin-guide/ct-mobile-control-panel/ctm-settings/ctm-settings-menu.adoc[menu],
-xref:ios/admin-guide/ct-mobile-control-panel/ctm-settings/ctm-settings-offline-objects.adoc[offline objects], and
-xref:ios/admin-guide/ct-mobile-control-panel/ctm-settings/ctm-settings-standard-related-list.adoc[standard related lists] on
-the *CT Mobile Control Panel* are displayed based on the *CTM Settings*
-records. Other settings are displayed according to the records of the
-custom settings.
-
-
+* A user configuring a CT Mobile solution must have a separate profile and an assigned xref:ctmobile:ios/getting-started/application-permission-settings.adoc[CT Mobile Administrator] permission set.
+* All customizations for the selected profile will be saved in xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/index.adoc[custom settings] or as xref:ios/admin-guide/ct-mobile-control-panel/ctm-settings/index.adoc[CTM Settings] records.
+* Settings for xref:ios/admin-guide/ct-mobile-control-panel/ctm-settings/ctm-settings-menu.adoc[menu], xref:ios/admin-guide/ct-mobile-control-panel/ctm-settings/ctm-settings-offline-objects.adoc[offline objects], and xref:ios/admin-guide/ct-mobile-control-panel/ctm-settings/ctm-settings-standard-related-list.adoc[standard related lists] on the *CT Mobile Control Panel* are displayed based on the _CTM Settings_ records. Other settings are displayed according to the records of the custom settings.
 
 The *CT Mobile Control Panel* is divided into the following tabs:
+
+* xref:./ct-mobile-control-panel-general.adoc[]
+* xref:./ct-mobile-control-panel-offline-objects.adoc[]
+* xref:./ct-mobile-control-panel-app-menu.adoc[]
+* xref:./ct-mobile-control-panel-calendar.adoc[]
+* xref:./ct-mobile-control-panel-mini-layouts.adoc[]
+* xref:./ct-mobile-control-panel-color-settings.adoc[]
+* xref:./ct-mobile-control-panel-custom-details.adoc[]
+* xref:./ct-mobile-control-panel-workflows.adoc[]
+* xref:./ct-mobile-control-panel-tools/index.adoc[]
+* xref:./ct-mobile-control-panel-presenter.adoc[]
+* xref:./ct-mobile-control-panel-custom-tab.adoc[]
+* xref:./custom-settings/index.adoc[]
+* xref:./ctm-settings/index.adoc[]

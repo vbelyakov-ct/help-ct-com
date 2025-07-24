@@ -22,7 +22,7 @@ separately the afore Apex classes.
 object.​
 . In the *Triggers* section, click *New* and add
 https://github.com/ctsf/CLM-RemoteDetailing-Public/blob/master/source/remoteDetailing/src/triggers/ActivitySetLinkProcess.trigger[ActivitySetLinkProcess.trigger]
-to generate invite links on the *Activity* record for *Remote Detailing*
+to generate invite links on the _Activity_ record for *Remote Detailing*
 or *Self Detailing* meetings.
 * Check that the object selected for the Apex trigger is specified as
 the [.object]#Activity# object on
@@ -93,7 +93,7 @@ IDs in the specific field on the [.object]#Activity# object
 (separated by a comma, without blank space),
 e.g., [.apiobject]#ApplicationIds__c#.
 . Select available CLM presentations for the *Remote Detailing* meeting
-on the appropriate *Activity* record. The custom scenario available for
+on the appropriate _Activity_ record. The custom scenario available for
 users will also be added to the set.
 
 To add a CLM presentation to the set, the CLM presentation should be
@@ -195,10 +195,10 @@ The *Applications* button is added to the *Activities* tab.
 ==== Create the CLM Presentation Set for the Remote Detailing Meeting
 
 To form the CLM presentation set for the *Remote Detailing* meeting on
-the appropriate *Activity* record:
+the appropriate _Activity_ record:
 
 . Click the *Activities* tab.
-. Select the appropriate *Activity* record.
+. Select the appropriate _Activity_ record.
 . Click the *Applications* button.
 . In the *Applications* window, select the available CLM presentations
 for the *Remote Detailing* meetings.

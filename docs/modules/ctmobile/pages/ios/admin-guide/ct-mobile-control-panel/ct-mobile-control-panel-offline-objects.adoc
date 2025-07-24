@@ -1,69 +1,45 @@
 = CT Mobile Control Panel: Offline Objects
+:toc:
 
-The *Offline Objects* tab is intended for managing offline objects and
-standard related lists.
+The *Offline Objects* tab is intended for managing offline objects and standard related lists.
 
-According to the selected profile, settings on this tab will be saved in
-the records of the [.object]#CTM Settings# object with
-the xref:ios/admin-guide/ct-mobile-control-panel/ctm-settings/ctm-settings-offline-objects.adoc[Offline
-Objects] and xref:ios/admin-guide/ct-mobile-control-panel/ctm-settings/ctm-settings-standard-related-list.adoc[Standard
-Related List] record type.
-//tag::ios,win[] :toc: :toclevels: 3
+According to the selected profile, settings on this tab will be saved in the records of the [.object]#CTM Settings# object with the xref:ios/admin-guide/ct-mobile-control-panel/ctm-settings/ctm-settings-offline-objects.adoc[Offline Objects] and xref:ios/admin-guide/ct-mobile-control-panel/ctm-settings/ctm-settings-standard-related-list.adoc[Standard Related List] record type.
 
-*Click to view the interface*xref:javascript:void(0)[]
-
-.Click to hide[%collapsible] ====
-
+.*Click to view the interface*
+[%collapsible]
+====
 image:cmcp_offline_obj.png[]
-
 ====
 
+include::partial$control-panel-location.adoc[]
+
 [[h2_1468985423]]
-=== Offline Objects
+== Offline Objects
 
-Enter the object label or API name in the *Search* box to find it in the
-*Available* list and add it to the *Selected* list if this object should
-be available offline.
+* Use the *Advanced List* option to display all objects in the *Available* list regardless of whether the object has a page layout.
 
-If an object is added to the *Selected* list, it will be available in
-the *Selected* list on the xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-app-menu.adoc[CT
-Mobile Control Panel: App Menu] tab.
-
-* Use the *Advanced List* option to display all objects in the
-*Available* list regardless of whether the object has a page layout.
-
-* Click the object name in the *Selected* list to set up the user's
-permissions to work with this object and standard related lists.
+* Click the object name in the *Selected* list to set up the user's permissions to work with this object and standard related lists.
 
 [[h2_70757812]]
-=== Options
+== Options
 
-The options described below are not available for the number of CT
-Orders objects:
+The options described below are not available for the number of CT Orders objects:
 
-* https://help.customertimes.com/smart/project-order-module/ct-order-field-reference[Order]
-* https://help.customertimes.com/smart/project-order-module/delivery-field-reference[Delivery]
-* https://help.customertimes.com/smart/project-order-module/order-line-item-field-reference[Order
-Line Item]
-* https://help.customertimes.com/smart/project-order-module/delivery-line-item-field-reference[Delivery
-Line Item]
-* https://help.customertimes.com/smart/project-order-module/calculated-discount-field-reference[Calculated
-Discount ]
+* xref:ctorders:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/ct-order-field-reference.adoc[Order]
+* xref:ctorders:admin-guide/managing-ct-orders/delivery-management/delivery-field-reference.adoc[Delivery]
+* xref:ctorders:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/order-line-item-field-reference.adoc[Order Line Item]
+* xref:ctorders:admin-guide/managing-ct-orders/delivery-management/delivery-line-item-field-reference.adoc[Delivery Line Item]
+* xref:ctorders:admin-guide/managing-ct-orders/discount-management/discount-data-model/calculated-discount-field-reference.adoc[Calculated Discount]
 
 If turned on, the synchronization will result in an error.
 
-//tag::kotlin[]
-
 [[h3_1442227750]]
-==== Enable Conflict Manager
+=== Enable Conflict Manager
 
-If enabled, the xref:ios/admin-guide/managing-offline-objects/conflict-manager-control.adoc[Conflict Manager]
-will track changes made to the same record in CT Mobile and Salesforce.
-In the event of a conflict, the mobile user can choose which change to
-save.
+If enabled, the xref:ios/admin-guide/managing-offline-objects/conflict-manager-control.adoc[Conflict Manager] will track changes made to the same record in CT Mobile and Salesforce. In the event of a conflict, the mobile user can choose which change to save.
 
 [[h3_202390671]]
-==== Quick Record Sync
+=== Quick Record Sync
 
 If enabled, a mobile user with the corresponding profile can
 xref:ios/mobile-application/synchronization/other-synchronization-modes.adoc#h2_1958232390[sync a single
@@ -71,58 +47,34 @@ record] and its child records by applying the pull-to-refresh gesture on
 the record's layout.
 
 [[h3_37043680]]
-==== Sync Recovery
+=== Sync Recovery
 
-If enabled, records with errors will still be sent to Salesforce.
-Available values:
+If enabled, records with errors will still be sent to Salesforce. Available values:
 
 * *Empty value* is set by default—Sync Recovery is disabled.
-* Use *Direct access* for pushing the changes directly to an object via
-the additional web service.
-* Use *Proxy object* for pushing the changes as a JSON file attached to
-the *Sync Log* record via the additional web service. In Salesforce, you
-can apply the custom logic for JSON files.
-
-
+* Use *Direct access* for pushing the changes directly to an object via the additional web service.
+* Use *Proxy object* for pushing the changes as a JSON file attached to the *Sync Log* record via the additional web service. In Salesforce, you can apply the custom logic for JSON files.
 
 For more information, refer to xref:ios/mobile-application/synchronization/sync-recovery.adoc[Sync Recovery].
 
 [[h2_263612775]]
-=== Object Permissions
+== Object Permissions
 
-Restrict the profile permissions to create or delete records of the
-desired offline object. Set up SOQL filters to download only the
-required records.
-
-
+Restrict the profile permissions to create or delete records of the desired offline object. Set up SOQL filters to download only the required records.
 
 For more information, refer to
 xref:ios/admin-guide/managing-offline-objects/index.adoc[Managing Offline Objects].
 
 [[h2_946326628]]
-=== Related Lists
+== Related Lists
 
-Restrict the profile permissions to create or delete records of the
-standard related lists that are added to the page layout of an offline
-object and available for the selected record type. Set up SOQL filters
-for using a toggle in the CT Mobile app to display all records or only
-records that match the criteria. Enable xref:ios/admin-guide/related-lists/timeline-view.adoc[the
-timeline view] instead of the standard view of standard related lists if
-needed.
+Restrict the profile permissions to create or delete records of the standard related lists that are added to the page layout of an offline object and available for the selected record type. Set up SOQL filters for using a toggle in the CT Mobile app to display all records or only records that match the criteria. Enable xref:ios/admin-guide/related-lists/timeline-view.adoc[the timeline view] instead of the standard view of standard related lists if needed.
 
+For more information, refer to xref:ios/admin-guide/managing-offline-objects/index.adoc[Managing Offline Objects]. Also, get familiar with the information in the
+xref:ios/admin-guide/related-lists/standard-related-lists.adoc[Standard Related Lists] article.
 
-
-For more information, refer to
-xref:ios/admin-guide/managing-offline-objects/index.adoc[Managing Offline Objects]. Also, get
-familiar with the information in the
-xref:standard-related-lists[Standard Related Lists] article.
-
-To set up custom related lists of an offline object, go
-to xref:ct-mobile-control-panel-custom-details[CT Mobile Control
-Panel: Custom details].
-
-
+To set up custom related lists of an offline object, go to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-custom-details.adoc[CT Mobile Control Panel: Custom details].
 
 See also:
 
-* xref:ios/admin-guide/managing-offline-objects/index.adoc[Managing Offline Objects]
+* xref:ios/admin-guide/managing-offline-objects/index.adoc[]

@@ -3,9 +3,9 @@
 //tag::kotlin[] *CLM Settings* is the custom setting that stores
 preferences to display xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-application.adoc[CLM presentations] via
 the Remote Detailing functionality.[TIP] ==== For easy setup,
-go to xref:ct-mobile-control-panel-presenter[CT Mobile Control
+go to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-presenter.adoc[CT Mobile Control
 Panel:
-Presenter]/xref:ct-mobile-control-panel-remote-detailing-new[CT
+Presenter]/xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-remote-detailing-new.adoc[CT
 Mobile Control Panel 2.0: Remote Detailing]. ====
 
 '''''
@@ -22,7 +22,7 @@ Custom setting API name:
 |Application List Field
 |[.apiobject]#clm__ApplicationsListField__c# |Text(255)
 a|
-The field API name of the xref:clm-activity[Activity] object for
+The field API name of the xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-activity.adoc[Activity] object for
 the Application IDs storing, for example,
 [.apiobject]#ApplicationIds__c#.
 
@@ -47,14 +47,14 @@ session;
 
 |CRM Data Sharing Enabled
 |[.apiobject]#clm__IsRDJSAPIEnabled__c# |Checkbox |If
-enabled, xref:js-bridge-methods-availability[certain JS Bridge
+enabled, xref:ios/ct-presenter/js-bridge-api/js-bridge-methods-availability.adoc[certain JS Bridge
 methods] will be available on the CLM presentation during the Remote
 Detailing or Self Detailing session.
 
 |Delete After (days)
 |[.apiobject]#clm_AudioCleanupAfter__c# |Number a|
 The expiration date, after which the audio record should be deleted from
-the *Activity* record.
+the _Activity_ record.
 
 * It is used when the
 [.apiobject]#clm__IsAudioRecordEnabled__c# checkbox is
@@ -63,16 +63,16 @@ active.
 
 |Detailed Stats Enabled
 |[.apiobject]#clm__IsRDDetailedStatsEnabled__c#
-|Checkbox |If enabled, xref:remote-detailing-statistics[the
+|Checkbox |If enabled, xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-statistics.adoc[the
 statistics] per slide will be gathered for each participant at the
 meeting.
 
 |Email Required Field
 |[.apiobject]#clm__EmailRequiredField__c# |Text(255)
-|The field API name of the *xref:clm-activity[Activity]* object,
+|The field API name of the *xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-activity.adoc[Activity]* object,
 for example,[.apiobject]#IsEmailRequired__c#. It indicates
 if the user is required to provide an email on
-xref:remote-detailing-2-0-ui-for-participants#h2_555694282[the
+xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-ui-basics/remote-detailing-2-0-ui-for-participants.adoc#h2_555694282[the
 Welcome screen] to access the Remote Detailing meeting.
 
 |Endpoint URL |[.apiobject]#clm__RestServicePrefix__c#
@@ -85,7 +85,7 @@ for collecting statistics.
 
 |Link Field |[.apiobject]#clm__LinkField__c# |Text(255)
 a|
-The field API name of the xref:clm-activity[Activity] object for
+The field API name of the xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-activity.adoc[Activity] object for
 the invite link storing, for example,
 [.apiobject]#RDLink__c#.
 
@@ -105,7 +105,7 @@ URL(s) for a community], e.g.,
 |Remote Detailing Enabled
 |[.apiobject]#clm__IsRDEnabled__c# |Checkbox |If
 enabled, the Remote Detailing functionality is allowed, and an
-invitation link will be generated on the *Activity* record.
+invitation link will be generated on the _Activity_ record.
 
 |Session timeout (in seconds)
 |[.apiobject]#clm__SessionTimeout__c# |Number(18, 0)
@@ -116,9 +116,9 @@ Salesforce.
 
 |Subdomain Name |[.apiobject]#clm_SubdomainName_c#
 |Text(255) |Stores the subdomain name, if the
-xref:ct-mobile-control-panel-presenter#h3_298754890[Custom
+xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-presenter.adoc#h3_298754890[Custom
 Subdomain
-Enabled]/xref:ct-mobile-control-panel-remote-detailing-new#h3_1243606343[Custom
+Enabled]/xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-remote-detailing-new.adoc#h3_1243606343[Custom
 Domain] option is enabled.
 
 |Text Chat Enabled
@@ -130,7 +130,7 @@ in the chat on the CLM-presentation screen.
 |[.apiobject]#clm__IsRDChatLogEnabled__c# |Checkbox |If
 enabled, the chat history will be saved as the *Attachment* record with
 the [.apiobject]#.html# file and linked to the selected
-*Activity* record.
+_Activity_ record.
 
 |Video Streaming
 |[.apiobject]#clm__IsRDVideoStreamingEnabled__c#

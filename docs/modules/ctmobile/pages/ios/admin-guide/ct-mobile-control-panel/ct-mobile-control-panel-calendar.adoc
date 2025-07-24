@@ -1,174 +1,129 @@
 = CT Mobile Control Panel: Calendar
+:toc:
+:toclevels: 1
 
-The *Calendar* tab is intended to enable planning activities, manage
-[.object]#Activity# objects, and specify the view of the
-xref:ios/mobile-application/mobile-application-modules/calendar/index.adoc[Calendar] module.
+The *Calendar* tab is intended to enable planning activities, manage [.object]#Activity# objects, and specify the view of the xref:ios/mobile-application/mobile-application-modules/calendar/index.adoc[Calendar] module.
 
-According to the selected profile, settings on this tab will be saved in
-the corresponding fields of
-the xref:mobile-application-setup[Mobile Application
-Setup] record.
+According to the selected profile, settings on this tab will be saved in the corresponding fields of the xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/mobile-application-setup.adoc[Mobile Application Setup] record.
 
-:toc: :toclevels: 2
-
-*Click to view the interface*
-
-.Click to hide[%collapsible] ====
-
+.*Click to view the interface*
+[%collapsible]
+====
 image:ctm_control-panel_calendar.png[]
-
 ====
 
-[[h2_751776964]]
-=== Activity Planning
+include::partial$control-panel-location.adoc[]
 
-If enabled, a user can create and manage activities in the *Calendar*,
-*Nearby Accounts*, and *Routes* modules.
+[[h2_751776964]]
+== Activity Planning
+
+If enabled, a user can create and manage activities in the *Calendar*, *Nearby Accounts*, and *Routes* modules.
 
 [[h2_81679169]]
-=== Calendar Settings
+== Calendar Settings
 
 Specify the view of the Calendar module.
 
 [[h3_1974887345]]
-==== Calendar View
+=== Calendar View
 
 From the *Calendar View* picklist, select
-xref:ios/mobile-application/mobile-application-modules/calendar/using-calendar.adoc#h2_1759778354[the default calendar view]. The
-available options:
+xref:ios/mobile-application/mobile-application-modules/calendar/using-calendar.adoc#h2_932150745[the default calendar view]. The available options:
 
 * Month
 * Week
 * Day
 
 [[h3_808313222]]
-==== Event Duration (minutes)
+=== Event Duration (minutes)
 
-Use the slider to specify the default duration in minutes for scheduled
-activities. Hover over the slider to see the value:
+Use the slider to specify the default duration in minutes for scheduled activities. Hover over the slider to see the value:
 
 * 5 minutes: the leftmost position, the minimum default duration.
 * 1 hour: the rightmost position, the maximum default duration.
 
 [[h3_2140284324]]
-==== Show Week Type Switch
+=== Show Week Type Switch
 
-If enabled, mobile users can use the toggle to display or hide weekends
-on the calendar grid.
+If enabled, mobile users can use the toggle to display or hide weekends on the calendar grid.
 
 [[h3_256846269]]
-==== Visible Hour Range
+=== Visible Hour Range
 
-Use the slider to customize visible working hours. Hover over the slider
-to see the default visible hour range in the following format
-[.apiobject]#8:20#, where 8 is the earliest hour to show and 20
-is the latest hour to show on the calendar grid.
+Use the slider to customize visible working hours. Hover over the slider to see the default visible hour range in the following format [.apiobject]#8:20#, where 8 is the earliest hour to show and 20 is the latest hour to show on the calendar grid.
 
 * 0 hour: the leftmost position.
 * 24 hours: the rightmost position.
 
 [[h2_1397981345]]
-=== Additional Activity Settings
-
-//tag::andr,win[]Not available.
+== Additional Activity Settings
 
 [[h3_1301025041]]
-==== Start/Finish Functionality
+=== Start/Finish Functionality
 
-If enabled, the mobile user can
-xref:ios/admin-guide/start-finish-functionality.adoc[start and finish an activity] using
-the additional logic that may be applied to a started activity.
+If enabled, the mobile user can xref:ios/admin-guide/start-finish-functionality.adoc[start and finish an activity] using the additional logic that may be applied to a started activity.
 
-//tag::ios[]
-
-[NOTE] ==== If you have a xref:ct-mobile-workflow[CT Mobile
-Workflow] using the *Start* or *Finish* buttons, the additional
-functionality listed below will be disabled even if these settings are
-applied. ====
+NOTE: If you have a xref:ios/admin-guide/ct-mobile-workflows-use-cases/ct-mobile-workflow.adoc[CT Mobile Workflow] using the *Start* or *Finish* buttons, the additional functionality listed below will be disabled even if these settings are applied.
 
 [[h3_1036133099]]
-==== Lock/Unlock Record
+=== Lock/Unlock Record
 
-If enabled, a record of the _Activity_ object will be available for
-editing only after tapping the *Start* button. Tapping the *Finish*
-button will lock the record for any modifications.
+If enabled, a record of the _Activity_ object will be available for editing only after tapping the *Start* button. Tapping the *Finish* button will lock the record for any modifications.
 
 [[h3_684502934]]
-==== Capture Geoposition
+=== Capture Geoposition
 
-//tag::kotlin[]
-
-If enabled, tapping the *Start* button will record the current
-geolocation of the *Activity* record in the
-xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc#h3_717585460[Activity
-Geolocation Field API Name] field.
+If enabled, tapping the *Start* button will record the current geolocation of the _Activity_ record in the xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc#h3_717585460[Activity Geolocation Field API Name] field.
 
 [[h3_276361556]]
-==== Update Start/End Date Fields
+=== Update Start/End Date Fields
 
 If enabled:
 
-* Tapping the *Start* button will update the value in the *Start Date*
-field of the *Activity* record.
-* Tapping the *Finish* button will update the value in the *End Date*
-field of the *Activity* record.
+* Tapping the *Start* button will update the value in the *Start Date* field of the _Activity_ record.
+* Tapping the *Finish* button will update the value in the *End Date* field of the _Activity_ record.
 
 [[h3_1856075785]]
-==== Enable Unfinished Activity
-
-//tag::kotlin[]
+=== Enable Unfinished Activity
 
 xref:ios/admin-guide/start-finish-functionality.adoc#h2_239706372[Enable this option],
-and the mobile user will be able to leave the started *Activity* record
-and then come back to finish the *Activity* record.
+and the mobile user will be able to leave the started _Activity_ record and then come back to finish the _Activity_ record.
 
 [[h2_70500171]]
-=== Activity Settings
+== Activity Settings
 
-Specify one or more[.object]#Activity# objects.
+Specify one or more [.object]#Activity# objects.
 
-* Click the *Add new Activity object* button to add and customize the
-required[.object]#Activity# object, such as
-[.object]#Activity#,[.object]#Task#,
-[.object]#Event#, and custom[.object]#Activity#
-objects. Each object has a title in the [.apiobject]#Activity
-Settings Number# format, where the [.apiobject]#Number# is the
-order number of the added[.object]#Activity# objects.
-* Click the *Delete activity object* button to remove the required
-[.object]#Activity# object and its settings.
+* Click the *Add new Activity object* button to add and customize the required [.object]#Activity# object, such as [.object]#Activity#, [.object]#Task#,
+[.object]#Event#, and custom [.object]#Activity# objects. Each object has a title in the [.apiobject]#Activity Settings Number# format, where the [.apiobject]#Number# is the order number of the added [.object]#Activity# objects.
+* Click the *Delete activity object* button to remove the required [.object]#Activity# object and its settings.
 
 [[h3_1397263211]]
-==== Activity Object API Name
+=== Activity Object API Name
 
-Specify the API name of the required[.object]#Activity# object.
+Specify the API name of the required [.object]#Activity# object.
 
 [[h3_1674628596]]
-==== Activity Start Date Field API Name
+=== Activity Start Date Field API Name
 
-Specify the API name of the field with the *Date/Time* type that
-contains information on the start date of the *Activity* record.
+Specify the API name of the field with the *Date/Time* type that contains information on the start date of the _Activity_ record.
 
 [[h3_1391348303]]
-==== Activity End Date Field API Name
+=== Activity End Date Field API Name
 
-Specify the API name of the field with the *Date/Time* type that
-contains information on the end date of the *Activity* record.
+Specify the API name of the field with the *Date/Time* type that contains information on the end date of the _Activity_ record.
 
 [[h3_1535211802]]
-==== Activity Status Field API Name
+=== Activity Status Field API Name
 
-Specify the API name of the field with the *Picklist* type that is
-responsible for the status of the *Activity* record.
+Specify the API name of the field with the *Picklist* type that is responsible for the status of the _Activity_ record.
 
 [[h3_1370849692]]
-==== Activity Description Field API Name
+=== Activity Description Field API Name
 
-Specify the API name of the field with the *Text* type that will be used
-to store the description of the *Activity* record.
+Specify the API name of the field with the *Text* type that will be used to store the description of the _Activity_ record.
 
 [[h3_717585460]]
-==== Activity Geolocation Field API Name
+=== Activity Geolocation Field API Name
 
-Specify the API name of the field with the *Geolocation* type where
-xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc[the geolocation data] of the
-*Activity* record will be written.
+Specify the API name of the field with the *Geolocation* type where xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc[the geolocation data] of the _Activity_ record will be written.
