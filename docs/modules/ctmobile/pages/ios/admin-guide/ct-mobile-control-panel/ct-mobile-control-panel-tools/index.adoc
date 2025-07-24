@@ -1,13 +1,18 @@
 = CT Mobile Control Panel: Tools
 :toc:
+:toclevels: 1
 
 The *Tools* tab is intended to set up the security parameters for the  proper operation of the CT Mobile app.
 
 include::partial$3-54-update.adoc[]
 
-image:Tools_new_settings_only.png[]
-
+.*Click to view the interface*
+[%collapsible]
+====
 NOTE: The interface may vary according to the CT Mobile package version and environments. The current interface is related to the production environment.
+
+image:Tools_new_settings_only.png[]
+====
 
 [[h2_203730205]]
 == Administrator Credentials
@@ -58,7 +63,7 @@ Authorize the Heroku service before refreshing the metadata archive (System Admi
 [[h3_847464003]]
 === Download metadata archive
 
-To work with the metadata archive, specify the xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc#h3_2011978[Cloud token] first. Read more about the metadata archive xref:ios/admin-guide/metadata-checker/metadata-archive/index.adoc[here].
+To work with the metadata archive, specify the <<Cloud Token>> first. Read more about the metadata archive xref:ios/admin-guide/metadata-checker/metadata-archive/index.adoc[here].
 
 Use the *Download metadata archive* button to download the metadata archive to the device. It can be useful for QA support in case of any issues with CT Mobile.
 
@@ -68,7 +73,7 @@ Use the *Download metadata archive* button to download the metadata archive to t
 NOTE: Since the version xref:ios/news/ct-mobile-package-release-notes/index.adoc#h2_466019125[3.89 of CT Mobile package], please remove the
 xref:ios/admin-guide/metadata-checker/metadata-archive/ability-to-specify-metadata-components-or-the-number-of-entities-in-one-request.adoc[archive component custom metadata type] before refreshing the metadata archive.
 
-To work with the metadata archive, specify the xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc#h3_2011978[Cloud token] first. Read more about the metadata archive xref:ios/admin-guide/metadata-checker/metadata-archive/index.adoc[here].
+To work with the metadata archive, specify the <<Cloud Token>> first. Read more about the metadata archive xref:ios/admin-guide/metadata-checker/metadata-archive/index.adoc[here].
 
 Use the *Refresh metadata archive* button to refresh the metadata archive instead of the manual metadata archive collecting.
 

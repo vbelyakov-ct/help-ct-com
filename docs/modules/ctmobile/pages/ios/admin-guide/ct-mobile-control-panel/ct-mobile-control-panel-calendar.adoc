@@ -9,7 +9,7 @@ According to the selected profile, settings on this tab will be saved in the cor
 .*Click to view the interface*
 [%collapsible]
 ====
-image:ctm_control-panel_calendar.png[]
+image::ctm_control-panel_calendar.png[align="center"]
 ====
 
 include::partial$control-panel-location.adoc[]
@@ -73,7 +73,7 @@ If enabled, a record of the _Activity_ object will be available for editing only
 [[h3_684502934]]
 === Capture Geoposition
 
-If enabled, tapping the *Start* button will record the current geolocation of the _Activity_ record in the xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc#h3_717585460[Activity Geolocation Field API Name] field.
+If enabled, tapping the *Start* button will record the current geolocation of the _Activity_ record in the <<Activity Geolocation Field API Name>> field.
 
 [[h3_276361556]]
 === Update Start/End Date Fields
@@ -86,16 +86,14 @@ If enabled:
 [[h3_1856075785]]
 === Enable Unfinished Activity
 
-xref:ios/admin-guide/start-finish-functionality.adoc#h2_239706372[Enable this option],
-and the mobile user will be able to leave the started _Activity_ record and then come back to finish the _Activity_ record.
+xref:ios/admin-guide/start-finish-functionality.adoc#h2_239706372[Enable this option], and the mobile user will be able to leave the started _Activity_ record and then come back to finish the _Activity_ record.
 
 [[h2_70500171]]
 == Activity Settings
 
 Specify one or more [.object]#Activity# objects.
 
-* Click the *Add new Activity object* button to add and customize the required [.object]#Activity# object, such as [.object]#Activity#, [.object]#Task#,
-[.object]#Event#, and custom [.object]#Activity# objects. Each object has a title in the [.apiobject]#Activity Settings Number# format, where the [.apiobject]#Number# is the order number of the added [.object]#Activity# objects.
+* Click the *Add new Activity object* button to add and customize the required [.object]#Activity# object, such as [.object]#Activity#, [.object]#Task#, [.object]#Event#, and custom [.object]#Activity# objects. Each object has a title in the [.apiobject]#Activity Settings Number# format, where the [.apiobject]#Number# is the order number of the added [.object]#Activity# objects.
 * Click the *Delete activity object* button to remove the required [.object]#Activity# object and its settings.
 
 [[h3_1397263211]]

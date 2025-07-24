@@ -10,7 +10,7 @@ According to the selected profile, several settings on this tab will be saved in
 .*Click to view the interface*
 [%collapsible]
 ====
-image:CTM_Panel_Presenter_new_en.png[]
+image::CTM_Panel_Presenter_new_en.png[align="center"]
 ====
 
 include::partial$control-panel-location.adoc[]
@@ -94,7 +94,7 @@ image:ctpresenter-custom-domain-deletion-request.png[]
 
 If enabled, audio of the Remote Detailing meeting may be recorded and saved as a Lightning component to the corresponding _Activity_ record.
 
-* The presenter should receive the participant's permission to record audio using the Terms of Use on the Welcome Screen (refer to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-presenter.adoc#h3_1019207818[CT Mobile Control Panel: Presenter] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-remote-detailing-new.adoc#h3_1019207818[CT Mobile Control Panel 2.0: Remote Detailing]).
+* The presenter should receive the participant's permission to record audio using the Terms of Use on the Welcome Screen (refer to <<Terms of Use on the Welcome Screen, CT Mobile Control Panel: Presenter>> / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-remote-detailing-new.adoc#h3_1019207818[CT Mobile Control Panel 2.0: Remote Detailing]).
 * If a guest did not accept, they cannot participate in the Remote Detailing meeting.
 * A notification will be sent to the administrator when the audio record exceeds available space and cannot be saved.
 
@@ -103,12 +103,12 @@ For more information, refer to xref:ios/ct-presenter/the-remote-detailing-functi
 [[h3_1230065320]]
 === Scheduled Activity Audio Cleanup
 
-If enabled, the audio of the Remote Detailing meeting will be automatically deleted from the _Activity_ record according to the expiration date in the xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-presenter.adoc#h3_1157844415[Delete After (days)] field.
+If enabled, the audio of the Remote Detailing meeting will be automatically deleted from the _Activity_ record according to the expiration date in the <<Delete After (days)>> field.
 
 [[h3_1157844415]]
 === Delete After (days)
 
-The number of days to keep an audio recording in Salesforce if the xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-presenter.adoc#h3_1230065320[Scheduled Activity Audio Cleanup] attribute is enabled.
+The number of days to keep an audio recording in Salesforce if the <<Scheduled Activity Audio Cleanup>> attribute is enabled.
 
 * The default value is 30 days.
 * After the expiration date, the audio recording is deleted from the _Activity_ record.
@@ -209,7 +209,7 @@ Select CLM presentations to send, for example, only active CLM presentations or 
 .*Click to view the interface*
 [%collapsible]
 ====
-image:Refresh_CLM_RD_en.png[]
+image::Refresh_CLM_RD_en.png[align="center"]
 
-image:Refresh_CLM_RD_2_en.png[]
+image::Refresh_CLM_RD_2_en.png[align="center"]
 ====
