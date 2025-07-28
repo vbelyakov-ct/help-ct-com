@@ -58,7 +58,7 @@ The API name of the relationship field through which child records are related t
 For standard [.object]#Event# or [.object]#Task# objects, the lookup field cannot be created due to Salesforce limitations. In this case, create and specify an [.apiobject]#EventId__c# field with the text type to store the Event Id on the object that stands for the [.object]#Event Data# object.
 
 |Org ID/Profile ID |[.apiobject]#clm\__OrgProfileId__c#
-|Text(255) |
+|Text(255) a|include::partial$org-id-profile-id.adoc[]
 
 |Parent Object |[.apiobject]#clm\__ParentObject__c#
 |Text(255) |The object on which the *Detailing* tab will be displayed.
