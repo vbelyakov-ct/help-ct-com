@@ -1,12 +1,18 @@
 = Custom Settings
 
-Parameters defined in the CT Mobile Control Panel are stored by the
-system in the following custom settings:
+Parameters defined in the CT Mobile Control Panel are stored by the system in the following custom settings:
 
-//tag::ios,win[][NOTE] ==== Due to
-https://help.salesforce.com/articleView?id=cs_limits.htm&type=5[the
-limitations of custom settings], a new custom xref:ios/admin-guide/ct-mobile-control-panel/ctm-settings/index.adoc[CTM
-Settings] object will be used to store settings defined in the
-xref:ios/admin-guide/ct-mobile-control-panel/index.adoc[CT Mobile Control Panel]. Until
-transferring for new logic is complete, settings will be stored both in
-custom settings and in the [.object]#CTM Settings ==== object. #
+* xref:./api-key.adoc[]
+* xref:./clm-settings.adoc[]
+* xref:./menu-settings-and-offline-objects.adoc[]
+* xref:./mobile-application-setup.adoc[]
+* xref:./mobile-credential-data.adoc[]
+* xref:./mobile-custom-details-settings.adoc[]
+* xref:./mobile-customization.adoc[]
+* xref:./mobile-link-lists.adoc[]
+* xref:./mobile-mini-layout-settings.adoc[]
+* xref:./related-list-filters.adoc[]
+* xref:./trigger-settings.adoc[]
+* xref:./ct-mobile-replication.adoc[]
+
+NOTE: Due to link:https://help.salesforce.com/articleView?id=cs_limits.htm&type=5[the limitations of custom settings], a new custom xref:ios/admin-guide/ct-mobile-control-panel/ctm-settings/index.adoc[CTM Settings] object will be used to store settings defined in the xref:ios/admin-guide/ct-mobile-control-panel/index.adoc[CT Mobile Control Panel]. Until transferring for new logic is complete, settings will be stored both in custom settings and in the [.object]#CTM Settings# object.

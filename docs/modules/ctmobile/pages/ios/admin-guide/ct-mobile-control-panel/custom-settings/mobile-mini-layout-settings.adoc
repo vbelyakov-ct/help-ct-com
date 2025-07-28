@@ -1,18 +1,12 @@
 = Mobile Mini Layout Settings
 
-*Mobile Mini Layout Settings* is a custom setting that is used to set up
-xref:ios/admin-guide/mini-layouts.adoc[a mini-layout] to create a new record in the CT
-Mobile app.
+*Mobile Mini Layout Settings* is a custom setting that is used to set up xref:ios/admin-guide/mini-layouts.adoc[a mini-layout] to create a new record in the CT Mobile app.
 
-[TIP] ==== For easy setup, go to
-xref:ct-mobile-control-panel-mini-layouts[CT Mobile Control Panel:
-Mini Layouts]/xref:ct-mobile-control-panel-mini-layouts-new[CT
-Mobile Control Panel 2.0: Mini Layouts]. ====
+TIP: For easy setup, go to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-mini-layouts.adoc[CT Mobile Control Panel: Mini Layouts] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-mini-layouts-new.adoc[CT Mobile Control Panel 2.0: Mini Layouts].
 
 '''''
 
-Custom setting API name:
-[.apiobject]#clm__MobileLayoutSettings__c#
+Custom setting API name: [.apiobject]#clm\__MobileLayoutSettings__c#
 
 '''''
 
@@ -20,43 +14,30 @@ Custom setting API name:
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Action |[.apiobject]#clm__Action__c# |Text(255) |System
-Event ID: New
+|Action |[.apiobject]#clm\__Action__c# |Text(255) |System Event ID: New
 
-|Fields |[.apiobject]#clm__Fields__c# |Text(255) |List
-of API names (separated by a comma, without blank space) of object
-fields to be displayed in the record creation window.
+|Fields |[.apiobject]#clm\__Fields__c# |Text(255) |List of API names (separated by a comma, without blank space) of object fields to be displayed in the record creation window.
 
-|Read Only |[.apiobject]#clm__ReadAttribute__c#
-|Text(255) a|
-The attribute defines whether a field must be read-only. Specify a list
-of[.apiobject]#true# and[.apiobject]#false# values
-(separated by a comma, without blank space) for every field specified in
-[.apiobject]#clm__Fields__c#.
+|Read Only |[.apiobject]#clm\__ReadAttribute__c#
+|Text(255) a| The attribute defines whether a field must be read-only. Specify a list of [.apiobject]#true# and [.apiobject]#false# values (separated by a comma, without blank space) for every field specified in [.apiobject]#clm\__Fields__c#.
 
-[NOTE] ==== The attribute is not in use. ====
+NOTE: The attribute is not in use.
 
 |Recordtype Developer Name
-|[.apiobject]#clm__RecordTypeDeveloperName__c#
-|Text(255) |API-name of the object record type to which this parameter
-will be applied.
+|[.apiobject]#clm\__RecordTypeDeveloperName__c#
+|Text(255) |API-name of the object record type to which this parameter will be applied.
 
-|Required |[.apiobject]#clm__RequiredAttribute__c#
-|Text(255) |The attribute defines whether a field must be filled out.
-Specify a list of[.apiobject]#true# and
-[.apiobject]#false# values (separated by a comma, without blank
-space) for every field specified in
-[.apiobject]#clm__Fields__c#.
+|Required |[.apiobject]#clm\__RequiredAttribute__c#
+|Text(255) |The attribute defines whether a field must be filled out. Specify a list of [.apiobject]#true# and [.apiobject]#false# values (separated by a comma, without blank space) for every field specified in [.apiobject]#clm\__Fields__c#.
 
-|SObject |[.apiobject]#clm__SObject__c# |Text(255)
-|API-name of the object on which a record is being created
+|SObject |[.apiobject]#clm\__SObject__c# |Text(255)
+|API-name of the object on which a record is being created.
 
-|Sort |[.apiobject]#clm__Sort__c# |Text(255) a|
+|Sort |[.apiobject]#clm\__Sort__c# |Text(255) a|
 SOQL-criteria of sorting records.
 
-[.confluence-information-macro-information]# The Attribute is not
-applied anymore. #
+NOTE:  The Attribute is not applied anymore.
 
-|Org ID/Profile ID |[.apiobject]#clm__OrgProfileId__c#
-|Text(255) |
+|Org ID/Profile ID |[.apiobject]#clm\__OrgProfileId__c#
+|Text(255) a|include::partial$org-id-profile-id.adoc[]
 |===

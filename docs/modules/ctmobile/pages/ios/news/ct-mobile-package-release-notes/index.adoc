@@ -17,7 +17,7 @@ Please note that the links are provided to update your production
 Salesforce environment. To update the safe environment, replace the
 path [.apiobject]#https://login.salesforce.com/... #in the link
 with [.apiobject]#https://test.salesforce.com/...#
-* Since xref:ct-mobile-managed-package-update-to-v-3-54[CT Mobile
+* Since xref:ios/getting-started/installing-ct-mobile-package/ct-mobile-managed-package-update-to-v-3-54.adoc[CT Mobile
 package version 3.54], the administrator credentials are not
 used.[.apiobject]#
 #
@@ -620,7 +620,7 @@ Offline* field of the [.object]#Application# object is added.
 
 * During the installation of the package,
 xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc#h3_2011978[the cloud token] will
-be copied to the protected xref:api-key[API Key] custom setting.
+be copied to the protected xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/api-key.adoc[API Key] custom setting.
 
 [[h2_62734608]]
 === CT Mobile package v. 3.57
@@ -772,7 +772,7 @@ corresponding CLM-presentation record opens instead of the Home page.
 [[h3_248816688]]
 ==== New Features and Improvements
 
-xref:api-key[The new private API key custom setting] is used to
+xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/api-key.adoc[The new private API key custom setting] is used to
 store the cloud token and restrict user access to the cloud token
 following the Salesforce security policy.
 

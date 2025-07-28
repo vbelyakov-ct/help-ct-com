@@ -1,13 +1,12 @@
 = Trigger Settings
 
-*Trigger Settings* is a custom setting that is used to switch off the
-triggers of the CT Mobile package. By default, the *Trigger Settings*
-records are active for each trigger.
+*Trigger Settings* is a custom setting that is used to switch off the triggers of the CT Mobile package. By default, the *Trigger Settings* records are active for each trigger.
+
+include::partial$func-availability.adoc[]
 
 '''''
 
-Custom setting API name:
-[.apiobject]#clm__TriggerSettings__c#
+Custom setting API name: [.apiobject]#clm\__TriggerSettings__c#
 
 '''''
 
@@ -15,63 +14,51 @@ Custom setting API name:
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Active |[.apiobject]#clm__IsActive__c# |Checkbox |If
-disabled, the corresponding trigger is inactive.
+|Active |[.apiobject]#clm\__IsActive__c# |Checkbox |If disabled, the corresponding trigger is inactive.
 
-|Comments |[.apiobject]#clm__Comments__c# |Text
-Area(255) |Description.
+|Comments |[.apiobject]#clm\__Comments__c# |Text Area(255) |Description.
 |===
 
 [[h2_588925148]]
-=== The List of CT Mobile Triggers
+== The List of CT Mobile Triggers
 
-[width="100%",cols="34%,33%,33%",]
+[width="100%",cols="~,~,~"]
 |===
 |*Trigger API Name* |*Trigger Context* |*Description*
 
-|[.apiobject]#ApplicationProcess# |[.apiobject]#before
-delete# |The trigger sends the IDs of the deleting CLM presentations to
-the Customertimes server.
+|[.apiobject]#ApplicationProcess# |[.apiobject]#before delete# |The trigger sends the IDs of the deleting CLM presentations to the Customertimes server.
 
 |[.apiobject]#AttachmentProcess# a|
-*[.apiobject]#after insert#
-*[.apiobject]#after update#
+* [.apiobject]#after insert#
+* [.apiobject]#after update#
 
-a|
-The trigger checks the attachment is related to the slide or CLM
-presentation, sends the slide or CLM presentation attachment to the
-Customertimes server, and updates the parent record of the attachment if
-applied.
+a| The trigger checks the attachment is related to the slide or CLM presentation, sends the slide or CLM presentation attachment to the Customertimes server, and updates the parent record of the attachment if applied.
 
-The *Attachment* record label must contain
-the [.apiobject]#.ppt# or [.apiobject]#.html# value.
+The *Attachment* record label must contain the [.apiobject]#.ppt# or [.apiobject]#.html# value.
 
 |[.apiobject]#SlideProcess# a|
-*[.apiobject]#after insert#
-*[.apiobject]#after update#
-*[.apiobject]#before delete#
-*[.apiobject]#before insert#
-*[.apiobject]#before update#
+* [.apiobject]#after insert#
+* [.apiobject]#after update#
+* [.apiobject]#before delete#
+* [.apiobject]#before insert#
+* [.apiobject]#before update#
 
-|The trigger checks whether it is necessary to send CLM presentation
-slides to the Customertimes server to update their order or delete
-irrelevant ones.
+|The trigger checks whether it is necessary to send CLM presentation slides to the Customertimes server to update their order or delete irrelevant ones.
 
 |[.apiobject]#TemplateProcess# a|
-*[.apiobject]#after insert#
-*[.apiobject]#after update#
-*[.apiobject]#before insert#
-*[.apiobject]#before update#
+* [.apiobject]#after insert#
+* [.apiobject]#after update#
+* [.apiobject]#before insert#
+* [.apiobject]#before update#
 
-|The trigger generates or updates CLM presentation slides according to
-the selected template.
+|The trigger generates or updates CLM presentation slides according to the selected template.
 
 |[.apiobject]#WidgetProcess# a|
-*[.apiobject]#after insert#
-*[.apiobject]#after update#
-*[.apiobject]#before delete#
-*[.apiobject]#before insert#
-*[.apiobject]#before update#
+* [.apiobject]#after insert#
+* [.apiobject]#after update#
+* [.apiobject]#before delete#
+* [.apiobject]#before insert#
+* [.apiobject]#before update#
 
 |The trigger generates or updates CLM presentation slides.
 |===
