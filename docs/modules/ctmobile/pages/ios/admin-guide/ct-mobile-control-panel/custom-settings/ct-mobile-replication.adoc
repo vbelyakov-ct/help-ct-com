@@ -35,6 +35,11 @@ Custom metadata type API name: [.apiobject]#clm\__Replication__mdt#
 |Package Size |[.apiobject]#clm\__PackageSize__c#
 |Double (4,0) a| The number of selected object's records with all fields in the SOQL query. The default value is 300 records of IDs.
 
+[source,apex]
+----
+SELECT field_names FROM table_name WHERE id IN ('18-digit_id','',..)
+----
+
 Specify the value to reduce the number of API calls considering that the size of the SOQL query cannot exceed 20 000 characters. For more information, please refer to link:https://developer.salesforce.com/docs/atlas.en-us.salesforce_app_limits_cheatsheet.meta/salesforce_app_limits_cheatsheet/salesforce_app_limits_platform_soslsoql.htm[SOQL and SOSL limits].
 
 |Related Objects |[.apiobject]#clm\__RelatedObjects__c# |Long Text (32678) |The API name(s) of related objects whose records must be downloaded to the CT Mobile app again.

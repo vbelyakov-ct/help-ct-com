@@ -24,7 +24,7 @@ Custom setting API name: [.apiobject]#clm\__MobileCustomization__c#
 |API-name of an object to which the settings are applied
 
 |Org ID/Profile ID |[.apiobject]#clm\__OrgProfileId__c#
-|Text(255) |
+|Text(255) a|include::partial$org-id-profile-id.adoc[]
 
 |Values |[.apiobject]#clm\__Values__c# |Text(255) |The list of picklist values of the criteria field.
 |===
