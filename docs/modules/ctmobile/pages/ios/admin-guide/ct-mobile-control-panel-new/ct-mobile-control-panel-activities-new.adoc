@@ -1,6 +1,5 @@
 = CT Mobile Control Panel 2.0: Activities
 :toc:
-:toclevels: 1
 
 The *Activities* tab is intended to configure objects, which are used in  the xref:ios/mobile-application/mobile-application-modules/calendar/index.adoc[Calendar] module of the mobile app. The tab has the following sections:
 
@@ -11,7 +10,7 @@ image::ctm-control-panel-activities.png[align="center"]
 
 If enabled, the mobile user can xref:ios/admin-guide/start-finish-functionality.adoc[start and finish an activity] using the additional logic that may be applied to a started activity.
 
-If you have a xref:ios/admin-guide/ct-mobile-workflows-use-cases/ct-mobile-workflow.adoc[CT Mobile Workflow] using the *Start* or *Finish* buttons, the additional functionality listed below will be disabled even if these settings are applied.
+NOTE: If you have a xref:ios/admin-guide/ct-mobile-workflows-use-cases/ct-mobile-workflow.adoc[CT Mobile Workflow] using the *Start* or *Finish* buttons, the additional functionality listed below will be disabled even if these settings are applied.
 
 [[h4_470962300]]
 === Capture Geolocation when Activity is Started
@@ -74,7 +73,7 @@ NOTE: This functionality will be available in the future releases of the CT Mobi
 
 Specify fields that should be copied while copying activities in the xref:ios/mobile-application/mobile-application-modules/calendar/index.adoc[Calendar] module of the mobile app.
 
-image:ctm-control-panel-activities-copy-settings.png[]
+image::ctm-control-panel-activities-copy-settings.png[]
 
 [[h4_1834463667]]
 ==== Fields to Copy
