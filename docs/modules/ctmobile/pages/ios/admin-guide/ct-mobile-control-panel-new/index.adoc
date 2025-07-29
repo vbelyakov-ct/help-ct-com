@@ -1,50 +1,38 @@
 = CT Mobile Control Panel 2.0
 
-*CT Mobile Control Panel* is a Salesforce interface for connecting the
-CT Mobile solution to the customer's target system and for specifying
-all the necessary settings to personalize the CT Mobile app.
+*CT Mobile Control Panel* is a Salesforce interface for connecting the CT Mobile solution to the customer's target system and for specifying all the necessary settings to personalize the CT Mobile app.
 
-* A user configuring a CT Mobile solution must have a separate profile
-and an
-assigned _xref:ctmobile:ios/getting-started/application-permission-settings.adoc#h2_1046081510[CT
-Mobile Administrator]_ permission set.
-* Settings for xref:ios/admin-guide/ct-mobile-control-panel/ctm-settings/ctm-settings-menu.adoc[menu],
-xref:ios/admin-guide/ct-mobile-control-panel/ctm-settings/ctm-settings-offline-objects.adoc[offline objects], and
-xref:ios/admin-guide/ct-mobile-control-panel/ctm-settings/ctm-settings-standard-related-list.adoc[standard related lists] on
-the *CT Mobile Control Panel* are displayed based on the
-xref:ios/admin-guide/ct-mobile-control-panel/ctm-settings/index.adoc[CTM Settings] records. Other settings are
-displayed according to the records of the
-xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/index.adoc[custom settings].
-
-
+* A user configuring a CT Mobile solution must have a separate profile and an  assigned xref:ctmobile:ios/getting-started/application-permission-settings.adoc[CT Mobile Administrator] permission set.
+* Settings for xref:ios/admin-guide/ct-mobile-control-panel/ctm-settings/ctm-settings-menu.adoc[menu], xref:ios/admin-guide/ct-mobile-control-panel/ctm-settings/ctm-settings-offline-objects.adoc[offline objects], and xref:ios/admin-guide/ct-mobile-control-panel/ctm-settings/ctm-settings-standard-related-list.adoc[standard related lists] on the *CT Mobile Control Panel* are displayed based on the xref:ios/admin-guide/ct-mobile-control-panel/ctm-settings/index.adoc[CTM Settings] records. Other settings are displayed according to the records of the xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/index.adoc[custom settings].
 
 The *CT Mobile Control Panel* is divided into the following tabs:
 
+* xref:./ct-mobile-control-panel-general-new.adoc[]
+* xref:./ct-mobile-control-panel-user-interface-new.adoc[]
+* xref:./ct-mobile-control-panel-offline-objects-new.adoc[]
+* xref:./ct-mobile-control-panel-app-menu-new.adoc[]
+* xref:./ct-mobile-control-panel-activities-new.adoc[]
+* xref:./ct-mobile-control-panel-mini-layouts-new.adoc[]
+* xref:./ct-mobile-control-panel-colors-new.adoc[]
+* xref:./ct-mobile-control-panel-custom-details-new.adoc[]
+* xref:./ct-mobile-control-panel-workflows-new.adoc[]
+* xref:./ct-mobile-control-panel-tools-new.adoc[]
+* xref:./ct-mobile-control-panel-remote-detailing-new.adoc[]
 
+Before configuring settings, select user profile on the xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-general-new.adoc[General] tab in the *Set up profile* list. After that, you will be able to configure settings for this profile on the *General* tab and all other tabs. To configure settings for all users, select _General settings_ profile. Click *Save* to apply new settings.
 
+While opening the *CT Mobile Control Panel* for the first time, you need to authorize:
 
+NOTE: Pop-up windows in your web browser should be allowed.
 
-Before configuring settings, select user profile on the
-xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-general-new.adoc[General] tab in the *Set
-up profile* list. After that, you will be able to configure settings for
-this profile on the *General* tab and all other tabs. To configure
-settings for all users, select _General
-settings_ profile. Click *Save* to apply new settings.
-
-
-
-While opening the *CT Mobile Control Panel* for the first time, you need
-to authorize:
-[NOTE] ==== Pop-up windows in your web browser should be
-allowed.  ====
-image:ctm-control-panel-new-authorize.png[]
+image::ctm-control-panel-new-authorize.png[]
 
 . Click *Authorize*.
-[NOTE] ==== _clm.Allow Management Of Self API_ custom permission
-must be enabled for the profile of the user with maximum access rights
-(otherwise, the *Authorize* button will be disabled). ====
++
+NOTE: _clm.Allow Management Of Self API_ custom permission must be enabled for the profile of the user with maximum access rights (otherwise, the *Authorize* button will be disabled).
 . In the pop-up window, click *Allow*.
-image:ctm-control-panel-new-authorize-allow.png[]
+
+image::ctm-control-panel-new-authorize-allow.png[]
 
 
 
