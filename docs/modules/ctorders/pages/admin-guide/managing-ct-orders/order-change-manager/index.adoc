@@ -37,7 +37,7 @@ Discount#
 .. Each _Order_ record is presented as a JSON file (flat list) in package(s).
 +
 TIP: To learn more about JSON keys and view examples, refer to xref:./order-change-manager-json-examples-and-keys.adoc[Order Change Manager: JSON Examples and Keys].
-. During the synchronization, REST API sends package(s) with changes to the records of the following CT Orders objects to a designated endpoint: [.apiobject]#{{Salesforce_instance_url}}/services/apexrest/ChangeManager#. The standard CT Mobile functionality for iOS users, such as link:https://help.customertimes.com/articles/ct-mobile-ios-en/sync-recovery[Sync Recovery], link:https://help.customertimes.com/articles/ct-mobile-ios-en/conflict-manager-control[Conflict Manager],
+. During the synchronization, REST API sends package(s) with changes to the records of the following CT Orders objects to a designated endpoint: [.apiobject]#{{Salesforce_instance_url}}/services/apexrest/ChangeManager#. The standard CT Mobile functionality for iOS users, such as link:xref:ios/mobile-application/synchronization/sync-recovery.adoc[Sync Recovery], link:https://help.customertimes.com/articles/ct-mobile-ios-en/conflict-manager-control[Conflict Manager],
 and link:https://help.customertimes.com/articles/ct-mobile-ios-en/online-records-fetching[Online Records Fetching], does not apply to those CT Orders objects.
 . On the Salesforce side, the system creates an _Order Change Manager_ record for the particular [.object]#Order# and fills it out with the received JSONs. If a previous _Order Change Manager_ record is found, it will be deleted. For more information, refer
 to xref:./order-change-manager-field-reference.adoc[Order Change Manager Field Reference].

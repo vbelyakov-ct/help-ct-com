@@ -147,12 +147,12 @@ When a user has signed a document in the CT Mobile app, the status of the _Sign 
 [[h3_1634586017]]
 === Handle Errors
 
-If any errors occur on the records described above, the sync process will include link:https://help.customertimes.com/articles/ct-mobile-ios-en/sync-recovery[the Sync Recovery functionality].
+If any errors occur on the records described above, the sync process will include link:xref:ios/mobile-application/synchronization/sync-recovery.adoc[the Sync Recovery functionality].
 
-. If an error occurs while sending the _Sign Document_ record (or any of the records that it refers to via reference fields), then the _Sign Document_ record will be sent with the help of the link:https://help.customertimes.com/articles/ct-mobile-ios-en/sync-recovery/a/h3_459631233[Direct access] option.
+. If an error occurs while sending the _Sign Document_ record (or any of the records that it refers to via reference fields), then the _Sign Document_ record will be sent with the help of the link:xref:ios/mobile-application/synchronization/sync-recovery.adoc/a/h3_459631233[Direct access] option.
 . The related _ContentVersion_ record will be sent as usual via synchronization.
 . The _ContentDocumentLink_ record, which is linked to the _Sign Document_ record, will be sent with the help of the *Direct access* option.
-. If records in steps 1 or 3 could not be sent via the *Direct access* option, the CT Mobile app tries to send them using the link:https://help.customertimes.com/articles/ct-mobile-ios-en/sync-recovery/a/h3_356910769[Proxy object] option. If unsuccessful, a corresponding error will be listed on the link:https://help.customertimes.com/articles/ct-mobile-ios-en/errors-screen[Errors] screen.
+. If records in steps 1 or 3 could not be sent via the *Direct access* option, the CT Mobile app tries to send them using the link:xref:ios/mobile-application/synchronization/sync-recovery.adoc/a/h3_356910769[Proxy object] option. If unsuccessful, a corresponding error will be listed on the link:https://help.customertimes.com/articles/ct-mobile-ios-en/errors-screen[Errors] screen.
 
 [[h2_1032724594]]
 == Document Storage
