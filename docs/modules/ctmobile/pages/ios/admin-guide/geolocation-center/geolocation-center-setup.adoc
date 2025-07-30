@@ -2,123 +2,83 @@
 
 To use features of Geolocation Center:
 
-. Make sure xref:ios/admin-guide/remote-site-settings.adoc[the required remote site
-settings] are specified and active.
-. xref:ios/admin-guide/google-maps-api-key/index.adoc[Get a Google Maps API Key(s)] and enable
-the following APIs:
-* https://developers.google.com/maps/documentation/directions/start[Directions
-API]
-* https://developers.google.com/maps/documentation/geocoding/start[Geocoding
-API]
-* https://developers.google.com/maps/documentation/ios-sdk/get-api-key[Maps
-SDK for iOS] and
-https://developers.google.com/maps/documentation/javascript/tutorial[Maps
-JavaScript API];
-
-[.confluence-information-macro-information]#Google recommends adding a
-separate API key with the required restriction.#
+. Make sure xref:ios/admin-guide/remote-site-settings.adoc[the required remote site settings] are specified and active.
+. xref:ios/admin-guide/google-maps-api-key/index.adoc[Get a Google Maps API Key(s)] and enable the following APIs:
+* link:https://developers.google.com/maps/documentation/directions/start[Directions API]
+* link:https://developers.google.com/maps/documentation/geocoding/start[Geocoding API]
+* link:https://developers.google.com/maps/documentation/ios-sdk/get-api-key[Maps SDK for iOS] and link:https://developers.google.com/maps/documentation/javascript/tutorial[Maps JavaScript API];
++
+NOTE: Google recommends adding a separate API key with the required restriction.
 . Configure settings in the CT Mobile Control Panel/CT Mobile Control
 Panel 2.0:
-
-[width="100%",cols="50%,50%",]
-|===
-|CT Mobile Control Panel a|
-.. Go to the *Geolocation* section on
-xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h2_670774632[CT Mobile Control
-Panel: General]:
++
+[tabs]
+====
+CT Mobile Control Panel::
++
+--
+.. Go to the *Geolocation* section on xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h2_670774632[CT Mobile Control Panel: General]:
 * Enable *Location Tracking*.
 * Enable *Background Location Tracking*.
 * Specify the frequency of tracking a user location in seconds.
-[.confluence-information-macro-information .confluence-information-macro-note]#Tracking
-can reduce the battery life of the mobile device. The more often the
-location is tracked, the faster the battery will drain.#
-* Select the *Account Geolocation* and **Account Full Address **fields.
-The account geolocation settings are required to display
-xref:using-geolocation-center#h2_1758655018[account marks] on the
-map in Geolocation Center.
-** If at least one of these fields
-is blank, xref:using-geolocation-center#h2_1475553155[activities] will
-be available in the Geolocation Center but not displayed on the map.
-** The user should have permission to read and edit the field selected
-in the *Account Geolocation* and *Account Full Address* fields.
++
+NOTE: Tracking can reduce the battery life of the mobile device. The more often the location is tracked, the faster the battery will drain.
+* Select the *Account Geolocation* and *Account Full Address* fields. The account geolocation settings are required to display xref:./using-geolocation-center.adoc#h2_1758655018[account marks] on the map in Geolocation Center.
+** If at least one of these fields is blank, xref:./using-geolocation-center.adoc#h2_1475553155[activities] will be available in the Geolocation Center but not displayed on the map.
+** The user should have permission to read and edit the field selected in the *Account Geolocation* and *Account Full Address* fields.
 * Specify *Google Maps iOS API Key*.
 * Specify *Google Maps Javascript API Key*.
 * Click *Save*.
-.. Go to the *Activity Setting* section on the
-xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc[CT Mobile Control Panel:
-Calendar] tab:
+.. Go to the *Activity Setting* section on the xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc[CT Mobile Control Panel: Calendar] tab:
 * Specify the [.object]#Activity# object.
-On the [.object]#Activity# object, there should be a field with
-the lookup relationship type to link
-the [.object]#Account# object.
-* Specify *Activity Start Date field API name* and *Activity End Date
-field API name*.
-* Specify *Activity Geolocation Field API Name*. The activity
-geolocation settings are required to display
-xref:using-geolocation-center#h2_1475553155[activity marks] on the
-map in Geolocation Center.
-The user should have permission to read and edit the field selected in
-the *Activity Geolocation* field.
++
+On the [.object]#Activity# object, there should be a field with the lookup relationship type to link the [.object]#Account# object.
+* Specify *Activity Start Date field API name* and *Activity End Date field API name*.
+* Specify *Activity Geolocation Field API Name*. The activity geolocation settings are required to display xref:./using-geolocation-center.adoc#h2_1475553155[activity marks] on the map in Geolocation Center.
++
+The user should have permission to read and edit the field selected in the *Activity Geolocation* field.
 * Click *Save*.
-
-|CT Mobile Control Panel 2.0 a|
+--
+CT Mobile Control Panel 2.0::
++
+--
 .. Go to the *Maps* section on
-xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-general-new.adoc#h2_670774632[CT Mobile
-Control Panel 2.0: General]:
+xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-general-new.adoc#h2_670774632[CT Mobile Control Panel 2.0: General]:
 * Enable *Background Location Tracking*.
 * Specify the interval of tracking a user location in seconds.
-[.confluence-information-macro-information .confluence-information-macro-note]#Tracking
-can reduce the battery life of the mobile device. The more often the
-location is tracked, the faster the battery will drain.#
-* Select the *Account Geolocation* and *Account Full Address Field*
-fields. The account geolocation settings are required to display
-xref:using-geolocation-center#h2_1758655018[account marks] on the
-map in Geolocation Center.
-** If at least one of these fields
-is blank, xref:using-geolocation-center#h2_1475553155[activities] will
-be available in the Geolocation Center but not displayed on the map.
-** The user should have permission to read and edit the field selected
-in the *Account Geolocation* *Field* and *Account Full Address* *Field*.
++
+NOTE: Tracking can reduce the battery life of the mobile device. The more often the location is tracked, the faster the battery will drain.
+* Select the *Account Geolocation* and *Account Full Address Field* fields. The account geolocation settings are required to display xref:./using-geolocation-center.adoc#h2_1758655018[account marks] on the map in Geolocation Center.
+** If at least one of these fields is blank, xref:./using-geolocation-center.adoc#h2_1475553155[activities] will be available in the Geolocation Center but not displayed on the map.
+** The user should have permission to read and edit the field selected in the *Account Geolocation* *Field* and *Account Full Address* *Field*.
 * Specify *Google Maps iOS API Key*.
-* ​Specify *Google Maps Javascript API Key*.
+* Specify *Google Maps Javascript API Key*.
 * Click *Save*.
-..  Go to the xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-activities-new.adoc[CT Mobile
-Control Panel 2.0: Activities] tab:
-* In the *Calendar Activities* section, specify the
-[.object]#Activity# object.
-On the [.object]#Activity# object, there should be a field with
-the lookup relationship type to link
-the [.object]#Account# object.
+..  Go to the xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-activities-new.adoc[CT Mobile Control Panel 2.0: Activities] tab:
+* In the *Calendar Activities* section, specify the [.object]#Activity# object.
++
+On the [.object]#Activity# object, there should be a field with the lookup relationship type to link the [.object]#Account# object.
 * Specify *Start Date Field* and *End Date Field*.
-* Specify *Geolocation Field*. The activity geolocation settings are
-required to display
-xref:using-geolocation-center#h2_1475553155[activity marks] on the
-map in Geolocation Center.
-The user should have permission to read and edit the field selected in
-the** Geolocation** *Field*.
+* Specify *Geolocation Field*. The activity geolocation settings are required to display xref:./using-geolocation-center.adoc#h2_1475553155[activity marks] on the map in Geolocation Center.
++
+The user should have permission to read and edit the field selected in the *Geolocation Field*.
 * Click *Save*.
+--
+====
 
-|===
-. xref:ios/getting-started/application-permission-settings.adoc[Assign permission] to read,
-create, and edit the following fields of the xref:ios/mobile-application/synchronization/synchronization-launch/sync-log.adoc[Sync
-Log] object to users.
-*[.apiobject]#clm__Date__c#
-*[.apiobject]#clm__Description__c#
-*[.apiobject]#clm__GeoTiming__c#
-*[.apiobject]#clm__GeoTracing__c#.
-. xref:push-identifier[Obtain the push identifier] and enable push
+. xref:ios/getting-started/application-permission-settings.adoc[Assign permission] to read, create, and edit the following fields of the xref:ios/mobile-application/synchronization/synchronization-launch/sync-log.adoc[Sync Log] object to users:
+* [.apiobject]#clm\__Date__c#
+* [.apiobject]#clm\__Description__c#
+* [.apiobject]#clm\__GeoTiming__c#
+* [.apiobject]#clm\__GeoTracing__c#.
+. xref:ios/admin-guide/push-identifier.adoc[Obtain the push identifier] and enable push
 notifications.
-. Enable location tracking for the CT Mobile app in *Settings* on a
-mobile device.
+. Enable location tracking for the CT Mobile app in *Settings* on a mobile device.
 
-* The current location of the user will be logged when the CT Mobile app
-is active or collapsed. Logging does not occur when the CT Mobile app is
-unloaded from the memory.
+* The current location of the user will be logged when the CT Mobile app is active or collapsed. Logging does not occur when the CT Mobile app is unloaded from the memory.
 
-* To determine the approximate location, the iOS geolocation services
-are using GPS and Bluetooth (where available), as well as available
-Wi-Fi access points and cell towers.
+* To determine the approximate location, the iOS geolocation services are using GPS and Bluetooth (where available), as well as available Wi-Fi access points and cell towers.
 
-image:Device_Location_en.png[]
+image::Device_Location_en.png[]
 
 The setup is complete.
