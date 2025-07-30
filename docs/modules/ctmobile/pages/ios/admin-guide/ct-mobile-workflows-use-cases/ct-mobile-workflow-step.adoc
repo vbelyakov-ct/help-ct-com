@@ -58,13 +58,11 @@ The value is the specific value in the field of the record found according to [.
 
 The Salesforce operators, for example, PRIORVALUE, are not supported.
 
-|Order |[.apiobject]#clm\__Order__c# |Number(18, 0) |A number of the *CT Mobile Workflow Step* in case of several steps in the
-*CT Mobile Workflow*.
+|Order |[.apiobject]#clm\__Order__c# |Number(18, 0) |A number of the *CT Mobile Workflow Step* in case of several steps in the *CT Mobile Workflow*.
 
 |Parent Object (deprecated) |[.apiobject]#clm\__ParentObject__c# |Text(255) |Not in use.
 
-|Parent Object API Name |[.apiobject]#clm\__ParentObjectAPIName__c# |Text(255) a| If the *Parent Record* value in the
-[.apiobject]#clm\__Scope__c# field:
+|Parent Object API Name |[.apiobject]#clm\__ParentObjectAPIName__c# |Text(255) a| If the *Parent Record* value in the [.apiobject]#clm\__Scope__c# field:
 
 * the API name of the parent object for the object in the [.apiobject]#clm\__ObjectAPIName__c# field of the corresponding _CT Mobile Workflow_ record.
 

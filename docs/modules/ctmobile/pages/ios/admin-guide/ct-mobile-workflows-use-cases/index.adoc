@@ -20,7 +20,7 @@ To set up a *CT Mobile Workflow* and steps, go to the xref:ios/admin-guide/ct-mo
 == Important Notes
 
 * Please get familiar with the full description of xref:ios/admin-guide/ct-mobile-workflows-use-cases/ct-mobile-workflow.adoc[CT Mobile Workflow] and xref:ios/admin-guide/ct-mobile-workflows-use-cases/ct-mobile-workflow-step.adoc[CT Mobile Workflow Step] objects.
-* The *Lock/Unlock* record action and the [.apiobject]#before create#,[.apiobject]#before update#, and [.apiobject]#before delete# events are not supported yet.
+* The *Lock/Unlock* record action and the [.apiobject]#before create#, [.apiobject]#before update#, and [.apiobject]#before delete# events are not supported yet.
 * Currently, the [.apiobject]#after create# and [.apiobject]#after delete# events are not supported.
 * The [.apiobject]#after update# event should only trigger after a record has been edited. Currently, this action also triggers when a message is created.
 

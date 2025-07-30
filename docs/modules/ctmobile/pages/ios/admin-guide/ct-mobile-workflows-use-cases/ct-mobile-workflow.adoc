@@ -1,7 +1,7 @@
 = CT Mobile Workflow Field Reference
 
 *CT Mobile Workflow* is a custom metadata type that is intended to store the conditions for triggering CT Mobile Workflows (refer to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-workflows.adoc[CT Mobile Control Panel:
-Workflows]/xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-workflows-new.adoc[CT Mobile Control Panel 2.0: Workflows]). Actions of CT Mobile Workflow are stored in the xref:ios/admin-guide/ct-mobile-workflows-use-cases/ct-mobile-workflow-step.adoc[CT Mobile Workflow Step] object.
+Workflows] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-workflows-new.adoc[CT Mobile Control Panel 2.0: Workflows]). Actions of CT Mobile Workflow are stored in the xref:ios/admin-guide/ct-mobile-workflows-use-cases/ct-mobile-workflow-step.adoc[CT Mobile Workflow Step] object.
 
 *CT Mobile Workflows* override the logic defined by the code of the CT Mobile app. For example, if a CT Mobile Workflow is created on xref:ios/admin-guide/start-finish-functionality.adoc[the Start/Visit button], the *Capture Geoposition* and *Update Start/End Date Fields* options will no longer be applied even if they are enabled on the xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc[CT Mobile Control Panel: Calendar] tab (*Capture Geolocation when Activity is Started* and *Update Start/End Date when Starting/Ending Activity* options in xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-activities-new.adoc[CT Mobile Control Panel 2.0: Activities] tab).
 
