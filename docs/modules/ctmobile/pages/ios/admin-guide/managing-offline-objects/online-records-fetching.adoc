@@ -1,73 +1,56 @@
 = Online Records Fetching
 
-Set up xref:ios/admin-guide/managing-offline-objects/index.adoc[SOQL filters for the
-appropriate offline object] to speed up synchronization. Enable *Online
-Records Fetching* to allow users to load additional records via the
-*Load more records* button in the application.
+Set up xref:ios/admin-guide/managing-offline-objects/index.adoc[SOQL filters for the appropriate offline object] to speed up synchronization. Enable *Online Records Fetching* to allow users to load additional records via the *Load more records* button in the application.
 
-* Records should be available for the current user
-and xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/related-list-filters.adoc[not downloaded according to SOQL
-filters].
-* This option is not available for the number
-of https://help.customertimes.com/smart/project-order-module/order-change-manager[CT
-Orders objects]. If turned on, the synchronization will result in an
-error.
-
-
+* Records should be available for the current user and xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/related-list-filters.adoc[not downloaded according to SOQL filters].
+* This option is not available for the number of xref:ctorders:admin-guide/managing-ct-orders/order-change-manager/index.adoc[CT Orders objects]. If turned on, the synchronization will result in an error.
 
 To enable the *Online Records Fetching* option:
 
-[width="100%",cols="50%,50%",]
-|===
-|In CT Mobile Control Panel a|
+[tabs]
+====
+In CT Mobile Control Panel::
++
+--
 . Go to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-app-menu.adoc[CT Mobile Control
 Panel: App Menu].
 . {blank}
+include::partial$settings-location.adoc[]
 . Select a menu item in the *Selected* list.
 . Enable the *Online Records Fetching* option.
 . Click *Save*.
-
-image:62555295.png[]
-
-|In CT Mobile Control Panel 2.0 a|
++
+image::62555295.png[]
+--
+In CT Mobile Control Panel 2.0::
++
+--
 . Go to xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc[CT Mobile
 Control Panel 2.0: Offline Objects].
-. Select the required profile in the *Profile* picklist. To apply
-settings to all the profiles, select *General Settings*.
+. {blank}
+include::partial$settings-profile.adoc[]
 . Select an offline object in the *Selected* list.
 . Enable the *Online Records Fetching* option.
 . Click *Save*.
-
-image:ctm-control-panel-new-online-records-fetching.png[]
-
-|===
++
+image::ctm-control-panel-new-online-records-fetching.png[]
+--
+====
 
 The setup is complete.
 
-
-
 In the CT Mobile app:
 
-. Select the menu item and tap *Load more records* to open list views
-with records.
+. Select the menu item and tap *Load more records* to open list views with records.
++
+image::62555325.png[]
 
-image:62555325.png[]
-
-
-. Select the list view to display available records of the selected list
-view, which are matched its SOQL filters and not downloaded on a mobile
-device.
+. Select the list view to display available records of the selected list view, which are matched its SOQL filters and not downloaded on a mobile device.
 . Tap a record to select it.
 . Tap *Load selected*.
-
-image:62555330.png[]
-
-
++
+image::62555330.png[]
 
 The records are synchronized.
 
-If a current user launches
-xref:ios/mobile-application/synchronization/synchronization-launch/index.adoc[synchronization], the loaded records
-via *Online Records Fetching* will be still available on a mobile
-device. Records will be removed only after the
-xref:ios/mobile-application/application-settings/log-out.adoc[database reset].
+If a current user launches xref:ios/mobile-application/synchronization/synchronization-launch/index.adoc[synchronization], the loaded records via *Online Records Fetching* will be still available on a mobile device. Records will be removed only after the xref:ios/mobile-application/application-settings/log-out.adoc[database reset].
