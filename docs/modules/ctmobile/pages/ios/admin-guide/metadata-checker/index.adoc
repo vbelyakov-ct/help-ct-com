@@ -57,7 +57,7 @@ The metadata checker is enabled.
 
 The system launches Apex class once per hour to track changes in the metadata components.
 
-* If any metadata component has changed since the previous Apex class launch, the process of the ZIP archive creation will be initialized, and the value in the [.apiobject]#clm\__MetadataLastModifiedDate__c# field of the *Mobile Application Setup* record will be updated.
+* If any metadata component has changed since the previous Apex class launch, the process of the ZIP archive creation will be initialized, and the value in the [.apiobject]#clm\__MetadataLastModifiedDate__c# field of the _Mobile Application Setup_ record will be updated.
 * The metadata checker will also be triggered if the changes have been made to reports and dashboards that are added:
 ** To the *Home* screen of the CT Mobile app.
 ** If created, in a custom folder that starts with the [.apiobject]#CLM# keyword.

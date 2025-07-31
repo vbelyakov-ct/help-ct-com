@@ -1,97 +1,63 @@
 = Mobile Layouts: Applications
+:toc:
 
-The *Applications* widget allows you to display a carousel with favorite
-xref:ct-presenter-introduction[CLM presentations] and
-xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-customscenario.adoc[custom scenarios] on the record details
-screen. The carousel becomes scrollable if it contains more than two
-screenshots.
+The *Applications* widget allows you to display a carousel with favorite xref:ios/ct-presenter/about-ct-presenter/index.adoc[CLM presentations] and xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-customscenario.adoc[custom scenarios] on the record details screen. The carousel becomes scrollable if it contains more than two screenshots.
 
-The *Applications* widget is also available on
-the xref:ios/mobile-application/ui/home-screen/index.adoc[Home screen].
-
-
+The *Applications* widget is also available on the xref:ios/mobile-application/ui/home-screen/index.adoc[Home screen].
 
 To learn more about CLM presentation controls, refer
-to xref:ios/mobile-application/mobile-application-modules/applications/gestures-in-clm-presentations.adoc[Gestures in CLM
-presentations] and xref:ios/mobile-application/mobile-application-modules/applications/clm-presentation-controls.adoc[CLM presentation
-Controls].
+to xref:ios/mobile-application/mobile-application-modules/applications/gestures-in-clm-presentations.adoc[Gestures in CLM presentations] and xref:ios/mobile-application/mobile-application-modules/applications/clm-presentation-controls.adoc[CLM presentation Controls].
 
 [[h2_1510760474]]
-=== Add Applications to the Menu
+== Add Applications to the Menu
 
 To add the *Applications* module to the xref:ios/admin-guide/app-menu/index.adoc[app menu]:
 
-[width="100%",cols="50%,50%",]
-|===
-|In CT Mobile Control Panel a|
-. Go to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-app-menu.adoc[CT Mobile Control
-Panel: App Menu] tab.
-. Select the required profile in the *Location* picklist.
-[TIP] ==== *General Settings* will be applied to all the
-profiles without individual settings.
+[tabs]
 ====
-. Click the
-image:62562609.png[]
-button to open the *Add menu item* tool.
+In CT Mobile Control Panel::
++
+--
+. Go to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-app-menu.adoc[CT Mobile Control Panel: App Menu] tab.
+. {blank}
+include::partial$settings-location.adoc[]
+. Click the image:62562609.png[] button to open the *Add menu item* tool.
 .  Select the *Applications* item.
 . Click *Add* to close the *Add menu item* tool.
 . Click *Save*.
-
-|In CT Mobile Control Panel 2.0 a|
-. Go to xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-app-menu-new.adoc[CT Mobile Control
-Panel 2.0: App Menu] tab.
-. Select the required profile in the *Profile* picklist. To apply
-settings to all the profiles, select *General Settings*.
+--
+In CT Mobile Control Panel 2.0::
++
+--
+. Go to xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-app-menu-new.adoc[CT Mobile Control Panel 2.0: App Menu] tab.
+. {blank}
+include::partial$settings-profile.adoc[]
 . Click *Show Module Menu*.
-. On the *All* or *Integrations* tab, select
-the ***Applications* **item.
-
-|===
+. On the *All* or *Integrations* tab, select the *Applications* item.
+--
+====
 
 The setup is complete.
 
 [[h2_1217193222]]
-=== Add Applications to the Mobile Layout
+== Add Applications to the Mobile Layout
 
 To add the *Applications* widget to the mobile layout:
 
 . Go to *Setup → Object Manager →* select an object.
 . Click *Page Layouts* and select the mobile layout.
-. Drag and drop the *Section* element to the area below the existing tab
-on which you want to display the carousel.
-. In the *Section Properties* window, enter *APPS* in the *Section Name*
-field, and select the *1-Column* layout. Ensure that the *Display
-Section Header On* checkbox is enabled.
-
-[NOTE] ==== Do not translate the *APPS* section name. It is
-responsible for displaying *Applications* on the mobile layout and
-should be left intact. ====
+. Drag and drop the *Section* element to the area below the existing tab on which you want to display the carousel.
+. In the *Section Properties* window, enter *APPS* in the *Section Name* field, and select the *1-Column* layout. Ensure that the *Display Section Header On* checkbox is enabled.
++
+NOTE: Do not translate the *APPS* section name. It is responsible for displaying *Applications* on the mobile layout and should be left intact.
 . Click *OK*.
 . Drag and drop the *Blank Space* element below the *APPS* element.
 . Click *Save*.
 
 The *Applications* widget is configured.
 
-All standard scenarios and favorite custom scenarios are displayed.
+* All standard scenarios and favorite custom scenarios are displayed.
+* The statistics will be collected and automatically linked to the _Activity_ record from which the CLM presentation was started.
+* If xref:ios/admin-guide/start-finish-functionality.adoc[Start/Finish functionality] with the *Lock/Unlock Record* option is applied, any CLM presentation from the carousel on the record details screen can be launched only after the start of the activity.
 
-The statistics will be collected and automatically linked to the
-_Activity_ record from which the CLM presentation was started.
-
-//tag::ios,andr[]
-
-If xref:ios/admin-guide/start-finish-functionality.adoc[Start/Finish functionality] with
-the *Lock/Unlock Record* option is applied, any CLM presentation from
-the carousel on the record details screen can be launched only after the
-start of the activity.
-
-//tag::ios[]
-
-image:47747778.png[]
-
-//tag::win[]
-
-image:62561752.png[]
-
-//tag::andr[]
-
-image:62561751.jpg[]
+image::47747778.png[]
