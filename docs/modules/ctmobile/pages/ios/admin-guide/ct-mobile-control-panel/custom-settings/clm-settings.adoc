@@ -64,7 +64,7 @@ The field to store an invitation link should have the same API name on any [.obj
 |The time interval during which a participant does not perform any action. When the time interval is reached, the session expires. The participant will be logged out, and their statistics will be sent to Salesforce.
 
 |Subdomain Name |[.apiobject]#clm_SubdomainName_c# |Text(255) |Stores the subdomain name, if the xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-presenter.adoc#h3_298754890[Custom Subdomain
-Enabled]/xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-remote-detailing-new.adoc#h3_1243606343[Custom Domain] option is enabled.
+Enabled] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-remote-detailing-new.adoc#h3_1243606343[Custom Domain] option is enabled.
 
 |Text Chat Enabled |[.apiobject]#clm\__IsRDChatEnabled__c# |Checkbox |If enabled, the participants of the Remote Detailing session can interact in the chat on the CLM-presentation screen.
 
