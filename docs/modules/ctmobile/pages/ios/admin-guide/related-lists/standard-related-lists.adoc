@@ -1,6 +1,6 @@
 = Standard Related Lists
 
-Add link:https://help.salesforce.com/s/articleView?id=sf.basics_understanding_related_lists_lex.htm&type=5[standard Salesforce related lists], for example,[.object]#Contacts# or [.object]#Opportunities#, to the offline object to work with them in the CT Mobile app.
+Add link:https://help.salesforce.com/s/articleView?id=sf.basics_understanding_related_lists_lex.htm&type=5[standard Salesforce related lists], for example, [.object]#Contacts# or [.object]#Opportunities#, to the offline object to work with them in the CT Mobile app.
 
 image::standard-related-list.png[]
 
@@ -25,7 +25,7 @@ The setup is complete.
 [[h3_1346237366]]
 == Open Activity and Activity History Standard Related Lists
 
-link:https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_openactivity.htm?search_text=openactivity[Open Activity] and https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_activityhistory.htm[Activity History] standard related lists xref:ios/admin-guide/related-lists/standard-related-lists.adoc[can be added to an object]. They display records of two standard objects, link:https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_objects_task.htm[Task] and link:https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_objects_event.htm[Event]:
+link:https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_openactivity.htm?search_text=openactivity[Open Activity] and https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_activityhistory.htm[Activity History] standard related lists can be added to an object. They display records of two standard objects, link:https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_objects_task.htm[Task] and link:https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_objects_event.htm[Event]:
 
 * Open Activity related list displays uncompleted tasks (when *IsClosed* is _false_) and events with *StartDateTime* value greater or equal to the current date.
 * Activity History related list displays completed tasks (when *IsClosed* is _true_) and events with *StartDateTime* value in the past.
