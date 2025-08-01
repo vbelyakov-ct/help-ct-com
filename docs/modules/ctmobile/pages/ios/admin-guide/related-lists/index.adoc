@@ -1,110 +1,56 @@
 = Related Lists
 
-Related lists are tabular forms for displaying records related to
-another record if one object has a link to another object in
-xref:ios/admin-guide/managing-offline-objects/reference-fields.adoc[the reference field]. In the CT Mobile app,
-two types of related lists are available:
+Related lists are tabular forms for displaying records related to another record if one object has a link to another object in xref:ios/admin-guide/managing-offline-objects/reference-fields.adoc[the reference field]. In the CT Mobile app, two types of related lists are available:
 
 * xref:ios/admin-guide/related-lists/custom-related-lists.adoc[Custom Related Lists]
 * xref:ios/admin-guide/related-lists/standard-related-lists.adoc[Standard Related Lists]
 
 [[h2_384095523]]
-=== Related List Features Comparison
+== Related List Features Comparison
 
-Here is a table to help you understand the difference between standard
-and custom related lists: how to set up related lists in Salesforce and
-what features could be available in the CT Mobile app.
+Here is a table to help you understand the difference between standard and custom related lists: how to set up related lists in Salesforce and what features could be available in the CT Mobile app.
 
-
-
-[width="100%",cols="~,~,~,~",]
+[width="100%",cols="~,^~,^~,~",]
 |===
-|*Feature* |*Standard Related List* |*Custom Related List* |*Notes*
+^|*Feature* |*Standard Related List* |*Custom Related List* ^|*Notes*
 
 |Set up a related list with the page layout editor |{plus} |– a|
-* https://help.salesforce.com/articleView?id=customizing_related_lists.htm&type=5[Add
-and customize a standard related list] on the page layout of the
-required object.
+* https://help.salesforce.com/articleView?id=customizing_related_lists.htm&type=5[Add and customize a standard related list] on the page layout of the required object.
 * Not applicable for a custom related list.
 
 |Set up a related list on CT Mobile Control Panel |{plus} |{plus} a|
-* Go to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects.adoc[CT Mobile
-Control Panel: Offline
-Objects] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc[CT Mobile
-Control Panel 2.0: Offline Objects] to customize a standard related
-list;
-* Go to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-custom-details.adoc[CT Mobile
-Control Panel: Custom
-details] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-custom-details-new.adoc[CT Mobile
-Control Panel 2.0: Custom Details] to customize a custom related list.
+* Go to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects.adoc[CT Mobile Control Panel: Offline Objects] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc[CT Mobile Control Panel 2.0: Offline Objects] to customize a standard related list;
+* Go to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-custom-details.adoc[CT Mobile Control Panel: Custom details] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-custom-details-new.adoc[CT Mobile Control Panel 2.0: Custom Details] to customize a custom related list.
 
-|Create a record |{plus} |{plus} a|
-Grant permission:
+|Create a record |{plus} |{plus} a|Grant permission:
 
-* on xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects.adoc[CT Mobile Control
-Panel: Offline
-Objects] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc[CT Mobile
-Control Panel 2.0: Offline Objects] for a standard related list;
-* on xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-custom-details.adoc[CT Mobile Control
-Panel: Custom
-details] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-custom-details-new.adoc[CT Mobile
-Control Panel 2.0: Custom Details] for a custom related list.
+* on xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects.adoc[CT Mobile Control Panel: Offline Objects] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc[CT Mobile Control Panel 2.0: Offline Objects] for a standard related list;
+* on xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-custom-details.adoc[CT Mobile Control Panel: Custom details] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-custom-details-new.adoc[CT Mobile Control Panel 2.0: Custom Details] for a custom related list.
 
-Object permissions restrict common access permissions defined by the
-user profile. The current user profile should have permission to edit
-the selected offline objects.
+Object permissions restrict common access permissions defined by the user profile. The current user profile should have permission to edit the selected offline objects.
 
-|Delete a record |{plus} |{plus} a|
-Grant permission:
+|Delete a record |{plus} |{plus} a| Grant permission:
 
-* on xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects.adoc[CT Mobile Control
-Panel: Offline
-Objects] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc[CT Mobile
-Control Panel 2.0: Offline Objects] for a standard related list;
-* in xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-custom-details.adoc[CT Mobile Control
-Panel: Custom
-details] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-custom-details-new.adoc[CT Mobile
-Control Panel 2.0: Custom Details] for a custom related list.
+* on xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects.adoc[CT Mobile Control Panel: Offline Objects] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc[CT Mobile Control Panel 2.0: Offline Objects] for a standard related list;
+* in xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-custom-details.adoc[CT Mobile Control Panel: Custom details] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-custom-details-new.adoc[CT Mobile Control Panel 2.0: Custom Details] for a custom related list.
 
-Object permissions restrict common access permissions defined by the
-user profile. The current user profile should have permission to delete
-the selected offline objects.
+Object permissions restrict common access permissions defined by the user profile. The current user profile should have permission to delete the selected offline objects.
 
-//tag::ios[] //tag::win[]The mobile user can delete
-unsynchronized records regardless of granted permission.
+include::partial$unsynchronized-records.adoc[]
 
 |Edit field values |– |{plus} a|
 * Not applicable for a standard related list;
-* Go to xref:custom-related-lists#h2_773495381[Custom Related
-Lists] to add the ability for editing fields of a custom related list.
+* Go to xref:./custom-related-lists.adoc#h2_773495381[Custom Related Lists] to add the ability for editing fields of a custom related list.
 
 |Drilldown to record details screen |{plus} |{plus} a|
-* Available by default and cannot be disabled for a standard related
-list;
-* Grant permission on
-xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-custom-details.adoc[CT Mobile Control
-Panel: Custom
-details] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-custom-details-new.adoc[CT Mobile
-Control Panel 2.0: Custom Details] for custom related list.
+* Available by default and cannot be disabled for a standard related list;
+* Grant permission on xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-custom-details.adoc[CT Mobile Control Panel: Custom details] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-custom-details-new.adoc[CT Mobile Control Panel 2.0: Custom Details] for custom related list.
 
-|Control columns' width |{plus} |{plus} |//tag::ios,kotlin[] For
-more information, go to
-xref:ios/admin-guide/related-lists/columns-width-for-related-lists.adoc[Columns' Widths for Standard
-and Custom Related Lists]. //tag::win,andr[][NOTE] ==== Not
-in use. ====
+|Control columns' width |{plus} |{plus} | For more information, go to xref:ios/admin-guide/related-lists/columns-width-for-related-lists.adoc[Columns' Widths for Standard and Custom Related Lists].
 
 |Filter records by using a SOQL query |{plus} |{plus} a|
-In the CT Mobile app, switch between the display of all records or only
-records that match filter criteria.
+In the CT Mobile app, switch between the display of all records or only records that match filter criteria.
 
-//tag::kotlin[] //tag::win[][NOTE] ==== Not applicable
-for standard related lists. ====
-
-|Timeline view |{plus} |– |//tag::ios[] For more information, go to
-xref:ios/admin-guide/related-lists/timeline-view.adoc[Timeline View]. //tag::win,andr,kotlin[]
-[NOTE] ==== Not in use. ====
-
-|The sort order by the specific field |{plus} |{plus} |Tap the column
-title to sort records by this field. For more information, go to
-xref:ios/admin-guide/related-lists/filters-in-related-lists.adoc[Filters in Related Lists].
+|Timeline view |{plus} |– |For more information, go to xref:ios/admin-guide/related-lists/timeline-view.adoc[Timeline View].
+|The sort order by the specific field |{plus} |{plus} |Tap the column title to sort records by this field. For more information, go to xref:ios/admin-guide/related-lists/filters-in-related-lists.adoc[Filters in Related Lists].
 |===

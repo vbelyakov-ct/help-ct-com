@@ -1,74 +1,31 @@
 = Standard Related Lists
 
-Add
-https://help.salesforce.com/s/articleView?id=sf.basics_understanding_related_lists_lex.htm&type=5[standard
-Salesforce related lists], for example,[.object]#Contacts# or
-[.object]#Opportunities#, to the offline object to work with
-them in the CT Mobile app.
-//tag::ios[]
-image:standard-related-list.png[]
-//tag::win[]
-image:SRL_win_en.png[]
-//tag::andr[]
-image:SRL_andr_en.png[]
-//tag::kotlin[]
-image:SRL-Kotlin.png[]
+Add link:https://help.salesforce.com/s/articleView?id=sf.basics_understanding_related_lists_lex.htm&type=5[standard Salesforce related lists], for example,[.object]#Contacts# or [.object]#Opportunities#, to the offline object to work with them in the CT Mobile app.
 
-
+image::standard-related-list.png[]
 
 To view a standard related list in the CT Mobile app:
 
-. https://help.salesforce.com/articleView?id=customizing_related_lists.htm&type=5[Add
-and customize a standard related list] on the page layout of the
-required object.
+. link:https://help.salesforce.com/articleView?id=customizing_related_lists.htm&type=5[Add and customize a standard related list] on the page layout of the required object.
 * Select fields to display on the related list;
 * Set up user permissions to fields:
-** If the [.apiobject]#Updateable# attribute has a *false*
-value, the field will be read-only even if the *Read Only* attribute has
-not been selected.
-** If the [.apiobject]#Nillable# attribute has a *false* value,
-the field will be required to fill in even if the *Required* attribute
-has not been selected.
+** If the [.apiobject]#Updateable# attribute has a *false* value, the field will be read-only even if the *Read Only* attribute has not been selected.
+** If the [.apiobject]#Nillable# attribute has a *false* value, the field will be required to fill in even if the *Required* attribute has not been selected.
 * Specify the columns' order;
-* Use filters. For more information, go
-to xref:ios/admin-guide/related-lists/filters-in-related-lists.adoc[Filters in Related Lists].
-. Go to
-xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects.adoc#h2_946326628[CT Mobile
-Control Panel: Offline
-Objects] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc[CT Mobile
-Control Panel 2.0: Offline Objects] and add the object from step 1 to
-the *Selected* list. Click the object in the *Selected* list to manage
-permissions and related lists.
-
-[TIP] ==== You can allow creating or deleting records and
-specify the SOQL filter to display all records or the required ones in
-the CT Mobile app. For more information, go to
-xref:ios/admin-guide/managing-offline-objects/index.adoc[Managing Offline Objects]. ====
-. Add the object of the related list to the *Selected* list, for
-example,[.object]#Contacts# or
-[.object]#Opportunities#.
-. Check that the current user profile has permission to read the object
-from steps 1 and 3.
-. Check that the current user profile has permission to read the
-reference field that links the offline object and the related list
-object.
+* Use filters. For more information, go to xref:ios/admin-guide/related-lists/filters-in-related-lists.adoc[Filters in Related Lists].
+. Go to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects.adoc#h2_946326628[CT Mobile Control Panel: Offline Objects] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc[CT Mobile Control Panel 2.0: Offline Objects] and add the object from step 1 to the *Selected* list. Click the object in the *Selected* list to manage permissions and related lists.
++
+TIP: You can allow creating or deleting records and specify the SOQL filter to display all records or the required ones in the CT Mobile app. For more information, go to xref:ios/admin-guide/managing-offline-objects/index.adoc[Managing Offline Objects].
+. Add the object of the related list to the *Selected* list, for example,[.object]#Contacts# or [.object]#Opportunities#.
+. Check that the current user profile has permission to read the object from steps 1 and 3.
+. Check that the current user profile has permission to read the reference field that links the offline object and the related list object.
 
 The setup is complete.
 
-//tag::ios[]
-
 [[h3_1346237366]]
-==== Open Activity and Activity History Standard Related Lists
+== Open Activity and Activity History Standard Related Lists
 
-https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_openactivity.htm?search_text=openactivity[Open
-Activity] and https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_activityhistory.htm[Activity
-History] standard related lists xref:ios/admin-guide/related-lists/standard-related-lists.adoc[can be
-added to an object]. They display records of two standard
-objects, https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_objects_task.htm[Task] and https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_objects_event.htm[Event]:
+link:https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_openactivity.htm?search_text=openactivity[Open Activity] and https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_activityhistory.htm[Activity History] standard related lists xref:ios/admin-guide/related-lists/standard-related-lists.adoc[can be added to an object]. They display records of two standard objects, link:https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_objects_task.htm[Task] and link:https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_objects_event.htm[Event]:
 
-* Open Activity related list displays uncompleted tasks
-(when *IsClosed* is _false_) and events with *StartDateTime* value
-greater or equal to the current date.
-* Activity History related list displays completed tasks
-(when *IsClosed* is _true_) and events with *StartDateTime* value in the
-past.
+* Open Activity related list displays uncompleted tasks (when *IsClosed* is _false_) and events with *StartDateTime* value greater or equal to the current date.
+* Activity History related list displays completed tasks (when *IsClosed* is _true_) and events with *StartDateTime* value in the past.

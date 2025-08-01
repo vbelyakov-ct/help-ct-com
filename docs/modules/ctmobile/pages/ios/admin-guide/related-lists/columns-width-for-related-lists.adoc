@@ -1,98 +1,60 @@
 = Columns' Widths for Standard and Custom Related Lists
+:toc:
 
-By default, the columns' widths of standard and custom related lists are
-spread evenly along the working area. Customize column width if needed.
+By default, the columns' widths of standard and custom related lists are spread evenly along the working area. Customize column width if needed.
 
-//tag::ios[][NOTE] ==== The actual metadata is required to
-successfully apply the settings. For more information, go to
-xref:ios/admin-guide/metadata-checker/metadata-archive/index.adoc[Metadata Archive] and
-xref:ios/admin-guide/metadata-checker/index.adoc[Metadata Checker]. ==== //tag::kotlin[]
-[NOTE] ==== The actual metadata is required to successfully
-apply the settings. ====
+NOTE: The actual metadata is required to successfully apply the settings. For more information, go to xref:ios/admin-guide/metadata-checker/metadata-archive/index.adoc[Metadata Archive] and xref:ios/admin-guide/metadata-checker/index.adoc[Metadata Checker].
 
 [[h2_1558356468]]
-=== Configuring Column Width in Field Properties
+== Configuring Column Width in Field Properties
 
-//tag::ios[] This setting is applied to fields in standard and
-custom related lists. To specify the columns' width: //tag::kotlin[]
-This setting is applied to fields in standard related lists. To specify
-the columns' width:
+This setting is applied to fields in standard and custom related lists. To specify the columns' width:
 
 . Go to *Setup → Object Manager* and select the object.
 . In *Fields & Relationships*, click a field and then click *Edit*.
-. In *Description*, type in the value:
-[.apiobject]#ctmobile.columnWidth(X)# where
-[.apiobject]#X# is an integer between 0 and 100 %.
+. In *Description*, type in the value: [.apiobject]#ctmobile.columnWidth(X)# where [.apiobject]#X# is an integer between 0 and 100 %.
 . Click *Save*.
 
-image:66357952.png[]
+image::66357952.png[]
 
+The configuration is completed. Perform the full synchronization to apply the changes.
 
+* If a related list consists of several columns, the non-configured columns will be spread evenly along the rest of the working area.
+* Here is a standard related list tab screen as an example:
 
-
-The configuration is completed. Perform the full synchronization to
-apply the changes.
-
-If a related list consists of several columns, the non-configured
-columns will be spread evenly along the rest of the working area.
-
-//tag::ios[]
-
-Here is a standard related list tab screen as an example:
-
-image:column-width.png[]
+image::column-width.png[]
 
 [[h2_947661563]]
-=== Configuring Column Widths on the CT Mobile Control Panel
+== Configuring Column Widths on the CT Mobile Control Panel
 
-This setting is applied to fields in custom related lists. To specify
-the columns' width:
+This setting is applied to fields in custom related lists. To specify the columns' width:
 
-. Go to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-custom-details.adoc[CT Mobile
-Control Panel: Custom details].
-. Click
-image:58832190.png[]
-next to the custom related list to open its settings.
-. Select the required profile in the *Location* picklist.
-
-[TIP] ==== *General Settings* will be applied to all the
-profiles without individual settings. ====
-. Enable the *Adjust Width* switch to reveal the columns' widths
-setting.
+. Go to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-custom-details.adoc[CT Mobile Control Panel: Custom details].
+. Click image:58832190.png[] next to the custom related list to open its settings.
+. {blank}
+include::partial$settings-location.adoc[]
+. Enable the *Adjust Width* switch to reveal the columns' widths setting.
 . Define the widths of columns.
 . Click *Save*.
 
-//tag::ios[]This setting overrides the configured column width in
-the object field properties.
+This setting overrides the configured column width in the object field properties.
 
-The configuration is completed. Perform the
-xref:ios/mobile-application/synchronization/index.adoc[full synchronization] to apply the changes.
+The configuration is completed. Perform the xref:ios/mobile-application/synchronization/index.adoc[full synchronization] to apply the changes.
 
-If a custom related list consists of several columns, the non-configured
-columns will be spread evenly along the rest of the working area.
+* If a custom related list consists of several columns, the non-configured columns will be spread evenly along the rest of the working area.
 
-//tag::ios[]
-
-Here is a custom related list tab screen as an example:
+* Here is a custom related list tab screen as an example:
 
 image:column-width2.png[]
 
 [[h2_868831931]]
-=== Important Notes
+== Important Notes
 
 Please read the best practices for the Sync Recovery setting.
 
-* The 0 value means that the column is not affected by width setting,
-i.e., it will occupy the rest of the working area.
-* The 100 value means that the column will squeeze out all the other
-columns from the working area.
-* If the total sum of values is greater than 100, then the columns'
-widths setting is not applied to the related list.
-* If the total sum of values is less than 100, the rest percentages are
-divided into the number of columns and added to the width value of each
-column.
-* If the setting is applied only to some columns, and the total sum of
-values is less than 100, the rest percentages are spread evenly among
-the non-configured columns.
-* The setting can take a value of an integer between 0 and 100. If this
-requirement is not met, the setting is not applied.
+* The 0 value means that the column is not affected by width setting, i.e., it will occupy the rest of the working area.
+* The 100 value means that the column will squeeze out all the other columns from the working area.
+* If the total sum of values is greater than 100, then the columns' widths setting is not applied to the related list.
+* If the total sum of values is less than 100, the rest percentages are divided into the number of columns and added to the width value of each column.
+* If the setting is applied only to some columns, and the total sum of values is less than 100, the rest percentages are spread evenly among the non-configured columns.
+* The setting can take a value of an integer between 0 and 100. If this requirement is not met, the setting is not applied.

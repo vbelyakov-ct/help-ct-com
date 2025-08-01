@@ -1,193 +1,119 @@
 = Custom Related Lists
+:toc:
 
-Create and manage several tabular forms to display data in the CT Mobile
-app.
+Create and manage several tabular forms to display data in the CT Mobile app.
 
-:toc: :toclevels: 3 //tag::ios[]
-image:custom-related-lists-1.png[]
-//tag::win[]
-image:details_windows.png[]
-//tag::andr[]
-image:66355395.png[]
+image::custom-related-lists-1.png[]
 
 [[h2_993780705]]
-=== Create a Custom Related List
+== Create a Custom Related List
 
-The objects and their record types should be previously configured. The
-mobile user should have permission to read the related list object.
-
-
+The objects and their record types should be previously configured. The mobile user should have permission to read the related list object.
 
 To create a custom related list:
 
-[width="100%",cols="50%,50%",]
-|===
-|In CT Mobile Control Panel a|
-. Go to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-custom-details.adoc[CT Mobile
-Control Panel: Custom details].
+[tabs]
+====
+In CT Mobile Control Panel::
++
+--
+. Go to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-custom-details.adoc[CT Mobile Control Panel: Custom details].
 . Click *Create*.
-. Type in *the tab name* in the header of the form. This name will be
-used as a tab name. Also, you
-can xref:custom-related-lists#h3_1591488796[set a custom
-label] for the related list tab.
+. Type in *the tab name* in the header of the form. This name will be used as a tab name. Also, you can <<Change Tab Name, set a custom label>> for the related list tab.
 . {blank}
+include::partial$settings-location.adoc[]
 . Select an object in the *Parent Object* field.
-. Select a record type of the object of step 5 in the *Parent Object
-Record Type* field.
-. Select a related object of the object of step 5 in the *Data Object
-Name* field.
-Some *Data Objects* can have several lookup fields. In this case,
-the *Lookup* drop-down list will appear, allowing you to select one of
-the fields.
-. (Optional) select the record type of the linked object of step 7 in
-the *Data Record Type* field. If you leave this field blank, you will be
-offered to select a record type, when creating a new record in the
-custom related list.
+. Select a record type of the object of step 5 in the *Parent Object Record Type* field.
+. Select a related object of the object of step 5 in the *Data Object Name* field. Some *Data Objects* can have several lookup fields. In this case, the *Lookup* drop-down list will appear, allowing you to select one of the fields.
+. (Optional) select the record type of the linked object of step 7 in the *Data Record Type* field. If you leave this field blank, you will be offered to select a record type, when creating a new record in the custom related list.
 . Define the following:
-* *Create/Delete* permissions. Influence the ability to create and/or
-delete records on the custom related list tab.
-* *Drilldown*. Enable the setting to add the option of opening the
-record details screen.
-* *Adjust Width*. Enable the option and specify the column width in the
-percentages for each field.//tag::andr,kotlin,win[][NOTE]
-==== Not applicable. ====
-* *SOQL Filter*. An additional switch will be added to the tab if the
-filter is used. Toggle the switch to display only the filtered records
-or the full list of records on the tab.//tag::kotlin[]
-[NOTE] ==== Not applicable. ====
+* *Create/Delete* permissions. Influence the ability to create and/or delete records on the custom related list tab.
+* *Drilldown*. Enable the setting to add the option of opening the record details screen.
+* *Adjust Width*. Enable the option and specify the column width in the percentages for each field.
+* *SOQL Filter*. An additional switch will be added to the tab if the filter is used. Toggle the switch to display only the filtered records or the full list of records on the tab.
 . Click *Add a new field* to form a column.
 * Select a field from the drop-down list.
 * Define the *Read Only* and the *Required* options for the fields.
-** If the [.apiobject]#updateable# attribute has a *false*
-value, this field will be read-only even if the *Read Only* attribute
-has not been selected.
-** If the [.apiobject]#nillable# attribute has a *false* value,
-this field will be required to fill in even if the *Required* attribute
-has not been selected.
+** If the [.apiobject]#updateable# attribute has a *false* value, this field will be read-only even if the *Read Only* attribute has not been selected.
+** If the [.apiobject]#nillable# attribute has a *false* value, this field will be required to fill in even if the *Required* attribute has not been selected.
 . Click *Create*.
-image:50791937.png[]
++
+image::50791937.png[]
 . Click *Save*.
 
-//tag::andr,ios,win[] The custom related list is configured. Perform
-a synchronization to apply the changes.
+The custom related list is configured. Perform a synchronization to apply the changes.
 
-//tag::kotlin[] The custom related list is configured. Perform the
-mixed synchronization to apply the changes.
+* Click image:66355692.png[] next to the required custom related list to edit it.
+* Click image:66355693.png[] next to the required custom related list to remove it.
 
-Click
-image:66355692.png[]
-next to the required custom related list to edit it.
-
-Click
-image:66355693.png[]
-next to the required custom related list to remove it.
-
-If there is only one custom related list, the tab and the subtab on it
-will be named the same as the list. If there are two and more custom
-related lists, the tab will have the *Detailing* name with subtabs named
-the same as custom related lists.
-
-|In CT Mobile Control Panel 2.0 a|
-. Go to xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-custom-details-new.adoc[CT Mobile
-Control Panel 2.0: Custom Details].
-. Select the required profile in the *Profile* picklist. To apply
-settings to all the profiles, select *General Settings*.
-. On the left list, select an object. Toggle *Show Objects with
-Settings* if needed.
+* If there is only one custom related list, the tab and the subtab on it will be named the same as the list. If there are two and more custom related lists, the tab will have the *Detailing* name with subtabs named the same as custom related lists.
+--
+In CT Mobile Control Panel 2.0::
++
+--
+. Go to xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-custom-details-new.adoc[CT Mobile Control Panel 2.0: Custom Details].
+. Select the required profile in the *Profile* picklist. To apply settings to all the profiles, select *General Settings*.
+. On the left list, select an object. Toggle *Show Objects with Settings* if needed.
 . Click *Add Settings*.
-. Enter a name for related list and
-click image:ctm-control-panel-workflows-new-creating-workflow-confirm-icon.png[].
+. Enter a name for related list and click image:ctm-control-panel-workflows-new-creating-workflow-confirm-icon.png[25,25].
 . Select a record type.
 . On the *Main* tab, select values from the picklists:
 * *Related Object*
 * *Lookup Field*
 * *Related Object Record Type*
 . Define the following:
-* *Create/Delete* permissions. Influence the ability to create and/or
-delete records on the custom related list tab.
-* *Drilldown*. Enable the setting to add the option of opening the
-record details screen.
+* *Create/Delete* permissions. Influence the ability to create and/or delete records on the custom related list tab.
+* *Drilldown*. Enable the setting to add the option of opening the record details screen.
 . In the *Columns* section, define fields for the related list:
 * Select a field from the drop-down list.
 * Click A**dd Field** to add a new field.
 * Define the *Read Only* and the *Required* options for the fields.
-** If the [.apiobject]#updateable# attribute has
-a *false* value, this field will be read-only even if the *Read
-Only* attribute has not been selected.
-** If the [.apiobject]#nillable# attribute has a *false* value,
-this field will be required to fill in even if the *Required* attribute
-has not been selected.
+** If the [.apiobject]#updateable# attribute has a *false* value, this field will be read-only even if the *Read Only* attribute has not been selected.
+** If the [.apiobject]#nillable# attribute has a *false* value, this field will be required to fill in even if the *Required* attribute has not been selected.
++
 image:ctm-control-panel-new-custom-related-lists.png[]
-. On the *Filter* tab, set up SOQL filters for using a toggle in the CT
-Mobile app to display all records or only records that match the
-criteria:
+. On the *Filter* tab, set up SOQL filters for using a toggle in the CT Mobile app to display all records or only records that match the criteria:
 * Use *Add Filter* and *Add Group* buttons to build the filter criteria.
-* Click *Add Sorting and Limit* button to specify sorting options for
-the filter results, configuring the fields:
+* Click *Add Sorting and Limit* button to specify sorting options for the filter results, configuring the fields:
 ** *Sort Results By*
 ** *Sort Order*
-** *Max Records
+** *Max Records*
++
 image:ctm-control-panel-new-custom-related-lists-filters.png[]
-*
+
 . Click *Save*.
 
-//tag::andr,ios,win[] The custom related list is configured. Perform
-a synchronization to apply the changes. //tag::kotlin[] The custom
-related list is configured. Perform the mixed synchronization to apply
-the changes.
+The custom related list is configured. Perform a synchronization to apply the changes.
 
-Click image:ctm-control-panel-new-expand-icon.png[]
-next to the required custom related list to edit it.
+* Click image:ctm-control-panel-new-expand-icon.png[] next to the required custom related list to edit it.
+* Click image:ctm-control-panel-new-remove-icon.png[] next to the required custom related list to remove it.
+* If there is only one custom related list, the tab and the subtab on it will be named the same as the list. If there are two and more custom related lists, the tab will have the *Detailing* name with subtabs named the same as custom related lists.
+--
+====
 
-Click image:ctm-control-panel-new-remove-icon.png[]
-next to the required custom related list to remove it.
+image::custom-related-lists-2.png[]
 
-If there is only one custom related list, the tab and the subtab on it
-will be named the same as the list. If there are two and more custom
-related lists, the tab will have the *Detailing* name with subtabs named
-the same as custom related lists.
-
-|===
-
-xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-custom-details.adoc[]
-
-//tag::ios[]
-
-image:custom-related-lists-2.png[]
-
-//tag::win[]
-
-image:custom_related_list_win_en.png[]
 
 [[h2_498492199]]
-=== Edit a Custom Related List
+== Edit a Custom Related List
 
-//tag::ios[] To set up the columns' widths of a custom related list,
-go to xref:ios/admin-guide/related-lists/columns-width-for-related-lists.adoc#h2_947661563[Columns'
-Widths for Standard and Custom Related Lists]. //tag::ios,win,andr[]
+To set up the columns' widths of a custom related list, go to xref:ios/admin-guide/related-lists/columns-width-for-related-lists.adoc#h2_947661563[Columns' Widths for Standard and Custom Related Lists].
 
 [[h3_1591488796]]
-==== Change Tab Name
+=== Change Tab Name
 
 To change tab name:
 
-. https://help.salesforce.com/articleView?id=sf.cl_edit.htm&type=5[Create
-a custom label] for the related list tab and
-https://help.salesforce.com/articleView?id=sf.cl_translate_edit.htm&type=5[translate
-it] if required.
+. link:https://help.salesforce.com/articleView?id=sf.cl_edit.htm&type=5[Create a custom label] for the related list tab and link:https://help.salesforce.com/articleView?id=sf.cl_translate_edit.htm&type=5[translate it] if required.
 . Click *Setup → Custom Code → Custom Settings*.
-. Click *Manage* next to xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/mobile-custom-details-settings.adoc[Mobile
-Custom Details Settings].
-. In the *Tab Label* field, specify
-[.apiobject]#$Label.label_name#, where
-[.apiobject]#label_name# is the name of the required Custom
-Label.
+. Click *Manage* next to xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/mobile-custom-details-settings.adoc[Mobile Custom Details Settings].
+. In the *Tab Label* field, specify [.apiobject]#$Label.label_name#, where [.apiobject]#label_name# is the name of the required Custom Label.
 . Click *Save*.
 
 The setup is complete.
 
 [[h3_1261826499]]
-==== Change Tab Order
+=== Change Tab Order
 
 To change the tabs order:
 
@@ -199,17 +125,12 @@ To change the tabs order:
 The setup is complete.
 
 [[h2_773495381]]
-=== Edit Fields of the Custom Related List in the CT Mobile app
+== Edit Fields of the Custom Related List in the CT Mobile app
 
 To edit fields in the CT Mobile app:
 
-. For the current user profile, specif
-xref:ios/getting-started/application-permission-settings.adoc[permission to edit] an object,
-which records are displayed in the custom related list.
-. Specify xref:ios/admin-guide/managing-offline-objects/index.adoc#h2_1534686659[permission to
-edit] the custom related list.
-. Specify
-https://help.salesforce.com/articleView?id=users_fields_fls.htm&type=5[permission
-to edit] for the required field.
+. For the current user profile, specify xref:ios/getting-started/application-permission-settings.adoc[permission to edit] an object, which records are displayed in the custom related list.
+. Specify xref:ios/admin-guide/managing-offline-objects/index.adoc#h2_1747811907[permission to edit] the custom related list.
+. Specify link:https://help.salesforce.com/articleView?id=users_fields_fls.htm&type=5[permission to edit] for the required field.
 
 The setup is complete.

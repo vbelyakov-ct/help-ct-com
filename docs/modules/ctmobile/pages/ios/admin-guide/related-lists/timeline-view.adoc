@@ -1,93 +1,64 @@
 = Timeline View
 
-The timeline view is the alternative way to display records of the
-xref:ios/admin-guide/related-lists/standard-related-lists.adoc[standard related lists] as a tree of
-records in chronological order according to the criterion.
+The timeline view is the alternative way to display records of the xref:ios/admin-guide/related-lists/standard-related-lists.adoc[standard related lists] as a tree of records in chronological order according to the criterion.
 
-[.confluence-information-macro .confluence-information-macro-note]# The
-timeline view does not apply to xref:ios/admin-guide/related-lists/custom-related-lists.adoc[custom
-related lists]. #
+NOTE: The timeline view does not apply to xref:ios/admin-guide/related-lists/custom-related-lists.adoc[custom related lists].
 
-The timeline view may be used for multiple standard related lists on the
-same layout.
+The timeline view may be used for multiple standard related lists on the same layout.
 
-* The standard related lists will be merged into a single timeline named
-*Activities*.
-* It will contain the records of all the standard related lists for
-which timeline view is enabled, for example, records of the
-[.object]#Event# and[.object]#Case# objects.
+* The standard related lists will be merged into a single timeline named *Activities*.
+* It will contain the records of all the standard related lists for which timeline view is enabled, for example, records of the [.object]#Event# and [.object]#Case# objects.
 
 [[h2_1277565707]]
-=== Timeline View Setup
+== Timeline View Setup
 
 To display the timeline view:
 
-[width="100%",cols="50%,50%",]
-|===
-|In CT Mobile Control Panel a|
-. Go to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects.adoc[CT Mobile
-Control Panel: Offline Objects].
+[tabs]
+====
+In CT Mobile Control Panel ::
++
+--
+. Go to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects.adoc[CT Mobile Control Panel: Offline Objects].
 . Select an object from the *Selected* list.
 . Select the required record type from the drop-down list.
-. Click
-image:66369454.png[]
-next to the required related list. The related list settings window
-opens.
+. Click image:66369454.png[] next to the required related list. The related list settings window opens.
 . Switch to the *Display Settings* tab.
 . Enable the *Display as a timeline by* setting.
-. Select the date or the date/time type field from the drop-down list to
-sort the records in the timeline.
+. Select the date or the date/time type field from the drop-down list to sort the records in the timeline.
 . Click *Save* in the related list settings window.
 . Click *Save* on the *CT Mobile Control Panel* tab.
-image:47750389.png[]
 
-|In CT Mobile Control Panel 2.0 a|
-. Go to xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc[CT Mobile
-Control Panel 2.0: Offline Objects].
+image::47750389.png[]
+--
+In CT Mobile Control Panel 2.0::
++
+--
+. Go to xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc[CT Mobile Control Panel 2.0: Offline Objects].
 . Select an object from the *Selected* list.
 . Click the *Related Lists* tab.
-. Click image:ctm-control-panel-new-expand-icon.png[]
-to expand desired related list.
+. Click image:ctm-control-panel-new-expand-icon.png[] to expand desired related list.
 . In the *Display as Timeline* section:
 .. Switch the *Enabled* toggle.
-.. In the Ordered by Selected Field, picklist select the date or the
-date/time type field.
+.. In the Ordered by Selected Field, picklist select the date or the date/time type field.
 . Click *Save*.
+--
+====
 
-|===
+== Using Timeline View
 
+Go to the record and open the standard related list configured in the timeline view.
 
-
-Using Timeline View
-
-Go to the record and open the standard related list configured in the
-timeline view.
-
-* On the left, activities are displayed as icons of the relevant type in
-chronological order. Observe the icons to quickly identify the activity
-type.
-* On the right, the details about the earliest future activity are
-displayed.
-* Tap an activity to display its details on the right part of the
-screen.
+* On the left, activities are displayed as icons of the relevant type in chronological order. Observe the icons to quickly identify the activity type.
+* On the right, the details about the earliest future activity are displayed.
+* Tap an activity to display its details on the right part of the screen.
 * Double-tap an activity to open it.
-* If needed, xref:ios/admin-guide/custom-color-settings.adoc[set the colors] for each
-activity type.
-* xref:ios/admin-guide/managing-offline-objects/index.adoc[If enabled], it is possible to
-create activity records.
+* If needed, xref:ios/admin-guide/custom-color-settings.adoc[set the colors] for each activity type.
+* xref:ios/admin-guide/managing-offline-objects/index.adoc[If enabled], it is possible to create activity records.
 
-//tag::ios[]
-image:timeline.png[]
+image::timeline.png[]
 
+Tap the icon next to the future activity xref:ios/mobile-application/application-settings/event-notifications.adoc[to set a reminder].
 
+image::timeline-reminder.png[]
 
-Tap the icon next to the future activity
-xref:event-notifications[to set a reminder].
-
-
-
-image:timeline-reminder.png[]
-
-//tag::win[]
-
-image:Timeline_Win.png[]
