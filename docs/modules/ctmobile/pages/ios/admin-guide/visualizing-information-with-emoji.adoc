@@ -1,34 +1,32 @@
 = Visualizing Information with Emoji
 
-CT Mobile allows you to use emoji in titles, subtitles, and layouts to
-visualize record information. You can use emoji for better reading of
-essential information. Divide records by any parameter you need—divide
-_Leads_ by territories, calculate the rep's KPI, and more—and illustrate
-it.
+CT Mobile allows you to use emoji in titles, subtitles, and layouts to visualize record information. You can use emoji for better reading of essential information. Divide records by any parameter you need—divide _Leads_ by territories, calculate the rep's KPI, and more—and illustrate it.
 
+Add emoji code in a field with the *Formula* type to display it with the calculated value.
 
+* use [.apiobject]#IF# or [.apiobject]#CASE# operator
+* calculate either based on a specified value or using a complex formula based on several fields. You can use a single formula to illustrate the rep's KPI and, e.g., [.object]#Account# rating.
 
-Add emoji code in a field with the *Formula* type to display it with the
-calculated value.
+For example, see the customized *Contact Priority* formula from link:https://help.salesforce.com/s/articleView?id=sf.useful_advanced_formulas_contact_mgmt.htm&type=5[Sample Contact Management Formulas]:
 
-* use[.apiobject]#IF# or[.apiobject]#CASE# operator
-* calculate either based on a specified value or using a complex formula
-based on several fields. You can use a single formula to illustrate the
-rep's KPI and, e.g.,[.object]#Account# rating.
+[source]
+----
+IF(OR(ISPICKVAL(Account.Rating, "Hot"), CONTAINS(Title, "Executive")), "P1,U+1F60E",
 
+IF(OR(ISPICKVAL(Account.Rating, "Warm"), CONTAINS(Title, "VP")), "P2,U+1F642",
 
+IF(ISPICKVAL(Account.Rating, "Cold"), "P3,U+1F641",
 
-For example, see the customized *Contact Priority* formula from
-https://help.salesforce.com/s/articleView?id=sf.useful_advanced_formulas_contact_mgmt.htm&type=5[Sample
-Contact Management Formulas]:
-
-
+"P3,U+1F641")
+)
+)
+----
 
 Or simply add emoji based on a value in the specified field:
 
+[source]
+----
+CASE(Account.Rating, "Hot", "Hot,U+1F7E2", "Warm", "Warm,U+1F7E1", "Cold", "Cold,U+1F534", "Not Rated,U+26AA")
+----
 
-
-
-
-The full list of emoji codes is
-available https://unicode.org/emoji/charts/full-emoji-list.html[here].
+The full list of emoji codes is available link:https://unicode.org/emoji/charts/full-emoji-list.html[here].

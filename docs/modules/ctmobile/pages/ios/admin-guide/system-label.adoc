@@ -1,24 +1,14 @@
 = System Label
+:toc:
 
-A system label is a unique identifier of a record created on a mobile
-device.
+A system label is a unique identifier of a record created on a mobile device.
 
-//tag::ios[]
-
-It helps to avoid duplicate records, or may be used as a criterion to
-run additional client logic.
-
-:toc: :toclevels: 3
+It helps to avoid duplicate records, or may be used as a criterion to run additional client logic.
 
 [[h2_395000743]]
-=== System Label
+== System Label
 
-To write a unique identifier when a user creates or edits a record in
-the CT Mobile app, create a custom[.apiobject]#MobileId__c#
-field for the desired xref:ios/admin-guide/managing-offline-objects/index.adoc[offline
-objects].
-
-
+To write a unique identifier when a user creates or edits a record in the CT Mobile app, create a custom [.apiobject]#MobileId__c# field for the desired xref:ios/admin-guide/managing-offline-objects/index.adoc[offline objects].
 
 The operation name:
 
@@ -27,52 +17,32 @@ The operation name:
 
 The identifier name:
 
-//tag::ios[]
-
-*uniqID*: a unique internal identifier of a record that remains
-unchanged regardless of how many devices the record has been modified
-on.
-
-//tag::win[]
-
-*ObjectType-UUID*: a unique internal identifier of a record that remains
-unchanged regardless of how many devices the record has been modified
-on.
-
-
+*uniqID*: a unique internal identifier of a record that remains unchanged regardless of how many devices the record has been modified on.
 
 //tag::ios[]
 
-[cols="^,^",]
-|===
-|*CT Mobile Release* |*Value*
-|*2.1 and higher* |
-|*Below 2.1* |
-|===
+[separator=!,cols="~,~",]
+!===
+!*CT Mobile Release* !*Value*
 
-//tag::win[]
-
-The format:
-
-
-
-//tag::ios[]
+!*2.1 and higher*
+a!
+[source]
+----
+operation_name|date/time|uniqID
+create|2018-03-22/13:51:41|39F9C16B-08D2-4B64-AFE5-F91508E53922
+----
+!*Below 2.1* a!
+[source]
+----
+uniqID
+39F9C16B-08D2-4B64-AFE5-F91508E53922
+----
+!===
 
 [[h2_1445214913]]
-=== Deduplication
+== Deduplication
 
-Duplicate records may be created during the sync process. When the
-internet connection is lost, the response may not receive on the mobile
-device whether records were inserted into Salesforce. Therefore, when a
-mobile user launches the synchronization again, the CT Mobile app sends
-records for which no response has been received, and the duplicate
-records may appear on the Salesforce side.
+Duplicate records may be created during the sync process. When the internet connection is lost, the response may not receive on the mobile device whether records were inserted into Salesforce. Therefore, when a mobile user launches the synchronization again, the CT Mobile app sends records for which no response has been received, and the duplicate records may appear on the Salesforce side.
 
-
-
-When there is the [.apiobject]#MobileId__c# field and a
-mobile user launches the synchronization again, the CT Mobile app checks
-the records on the Salesforce side and if there are records with the
-same value in the [.apiobject]#MobileId__c# field, these
-records are excluded and only those that have not yet been sent to
-Salesforce are sent.
+When there is the [.apiobject]#MobileId\__c# field and a mobile user launches the synchronization again, the CT Mobile app checks the records on the Salesforce side and if there are records with the same value in the [.apiobject]#MobileId__c# field, these records are excluded and only those that have not yet been sent to Salesforce are sent.

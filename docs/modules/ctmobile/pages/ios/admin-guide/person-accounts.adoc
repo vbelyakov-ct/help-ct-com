@@ -1,64 +1,29 @@
 = Person Accounts
 
-CT Mobile app allows working with
-https://help.salesforce.com/articleView?id=account_person.htm&r=https%3A%2F%2Fwww.google.com%2F&type=5[Person
-Accounts]. *Person Accounts* store information about individual people
-by combining certain[.object]#Account# and
-[.object]#Contact# fields into a single record.
+CT Mobile app allows working with link:https://help.salesforce.com/articleView?id=account_person.htm&r=https%3A%2F%2Fwww.google.com%2F&type=5[Person Accounts]. *Person Accounts* store information about individual people by combining certain [.object]#Account# and [.object]#Contact# fields into a single record.
 
 [[h2_693098374]]
-=== Enable Person Accounts
+== Enable Person Accounts
 
 To enable *Person Accounts* functionality:
 
-. https://help.salesforce.com/articleView?id=account_person_enable.htm&type=5[Enable
-Person Accounts] for the Salesforce org.​
-After Person Accounts are enabled, a *Person Account* record type is
-created.
-https://help.salesforce.com/articleView?id=users_profiles_record_types.htm&type=5&language=en_US[Assign
-the person account record type to user profiles].
-. Enable Person Accounts in
-xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_471160840[CT Mobile Control
-Panel:
-General] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-general-new.adoc#h3_471160840[CT
-Mobile Control Panel 2.0: General] for the appropriate user profile.
-. ​Go to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-app-menu.adoc[CT Mobile Control
-Panel: App Menu] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-app-menu-new.adoc[CT
-Mobile Control Panel 2.0: App Menu] and add *Account* and *Contact* to
-the *Selected* list in the required order.
+. link:https://help.salesforce.com/articleView?id=account_person_enable.htm&type=5[Enable Person Accounts] for the Salesforce org.
++
+After Person Accounts are enabled, a *Person Account* record type is created. link:https://help.salesforce.com/articleView?id=users_profiles_record_types.htm&type=5&language=en_US[Assign the person account record type to user profiles].
+. Enable Person Accounts in xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_471160840[CT Mobile Control Panel: General] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-general-new.adoc#h3_471160840[CT Mobile Control Panel 2.0: General] for the appropriate user profile.
+. Go to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-app-menu.adoc[CT Mobile Control Panel: App Menu] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-app-menu-new.adoc[CT Mobile Control Panel 2.0: App Menu] and add *Account* and *Contact* to the *Selected* list in the required order.
 
 The setup is complete.
 
-To view only appropriate records on the *Related Accounts* tab in the CT
-Mobile app, specify the [.topBar .object]#Account Contact Relation#
-object in the
-xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_494016929[Reference Object
-API Name] field.
+NOTE: To view only appropriate records on the *Related Accounts* tab in the CT Mobile app, specify the [.object]#Account Contact Relation# object in the xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_494016929[Reference Object API Name] field.
 
 [[h2_1162752891]]
-=== Using Person Accounts in the CT Mobile app
+== Using Person Accounts in the CT Mobile app
 
 The *Person Accounts* records are listed in the *Contacts* menu item.
 
-* Configure and assign xref:ios/admin-guide/mini-layouts.adoc[a mini-layout] for the
-Person Account record type to create new records.
-* Configure list views for *Person Accounts* by including the *Is Person
-Account* field in the filter criteria.
+* Configure and assign xref:ios/admin-guide/mini-layouts.adoc[a mini-layout] for the _Person Account_ record type to create new records.
+* Configure list views for *Person Accounts* by including the *Is Person Account* field in the filter criteria.
 
+For activity management, correct operation of the xref:ios/mobile-application/mobile-application-modules/calendar/index.adoc[Calendar] module, the xref:ios/mobile-application/mobile-application-modules/applications/index.adoc[Applications] module, and the CT Mobile app in general, the [.object]#Activity# objects must contain the relationships with the [.object]#Contact# object, available to a user.
 
-
-//tag::ios,andr,win[]
-
-For activity management, correct operation of the
-xref:ios/mobile-application/mobile-application-modules/calendar/index.adoc[Calendar] module, the
-xref:ios/mobile-application/mobile-application-modules/applications/index.adoc[Applications] module, and the CT Mobile app in
-general, the [.object]#Activity# objects must contain the
-relationships with the [.object]#Contact# object, available to a
-user.
-
-//tag::kotlin[]
-
-For activity management, correct operation of the
-xref:ios/mobile-application/mobile-application-modules/calendar/index.adoc[Calendar] module and the CT Mobile app in general,
-the [.object]#Activity# objects must contain the relationships
-with the [.object]#Contact# object, available to a user.

@@ -1,81 +1,55 @@
 = Custom Color Settings
 
-Use color settings to distinguish records of
-xref:ios/admin-guide/managing-offline-objects/index.adoc[an offline object] by the specific
-criterion, for example, records in the left menu, activities in the
-xref:ios/mobile-application/mobile-application-modules/calendar/index.adoc[Calendar] module, and records in the
-xref:ios/mobile-application/mobile-application-modules/nearby-accounts.adoc[Nearby Accounts] module. Each offline object
-can have only one coloring criterion.
+Use color settings to distinguish records of xref:ios/admin-guide/managing-offline-objects/index.adoc[an offline object] by the specific
+criterion, for example, records in the left menu, activities in the xref:ios/mobile-application/mobile-application-modules/calendar/index.adoc[Calendar] module, and records in the xref:ios/mobile-application/mobile-application-modules/nearby-accounts.adoc[Nearby Accounts] module. Each offline object can have only one coloring criterion.
 
 [[h2_686863387]]
-=== Set up a Color for an Offline Object
+== Set up a Color for an Offline Object
 
 To set up colors for the records:
 
-[width="100%",cols="50%,50%",]
-|===
-|In CT Mobile Control Panel a|
+[tabs]
+====
+In CT Mobile Control Panel::
++
+--
 . Go to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-color-settings.adoc[CT Mobile
 Control Panel: Color Settings].
 . {blank}
+include::partial$settings-location.adoc[]
 . Click *Create*.
 . Select an offline object in the *SObject* drop-down list.
-. Select a criterion in the *Field* drop-down list. Only fields with
-the *Picklist* type or record types of the selected offline object can
-be used as the criterion.
+. Select a criterion in the *Field* drop-down list. Only fields with the *Picklist* type or record types of the selected offline object can be used as the criterion.
 . Click the field in the *Color* column to open the color picker.
 . Select the colors for each record type or type in the color code.
-image:47747428.png[]
++
+image::47747428.png[]
 . Click *Create*.
-image:66369390.png[]
++
+image::66369390.png[]
 
-* Click
-image:66356250.png[]
-next to an offline object to edit color settings.
-* Click
-image:66356251.png[]
-next to an offline object to remove color settings for the offline
-object.
-
-|In CT Mobile Control Panel 2.0 a|
-. Go to xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-colors-new.adoc[CT Mobile Control
-Panel 2.0: Colors].
+* Click image:66356250.png[] next to an offline object to edit color settings.
+* Click image:66356251.png[] next to an offline object to remove color settings for the offline object.
+--
+In CT Mobile Control Panel 2.0::
++
+--
+. Go to xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-colors-new.adoc[CT Mobile Control Panel 2.0: Colors].
 . {blank}
-
-Select the required profile in the *Profile* picklist. To apply settings
-to all the profiles, select *General Settings*.
-. {blank}
-
-Select an offline object from the left list.
-. {blank}
-
-Click *Add Settings*.
-. {blank}
-
-Select a criterion from the list. Only fields with the _Picklist_ type
+include::partial$settings-profile.adoc[]
+. Select an offline object from the left list.
+. Click *Add Settings*.
+. Select a criterion from the list. Only fields with the _Picklist_ type
 of the selected offline object can be used as the criterion.
-. {blank}
+. Click the picklist on the field to open the color picker.
+. Select the colors for each record type or type in the color code.
+. Click *Save*.
++
+image::ctm-control-panel-new-custom-colors-example.png[]
+--
+====
+The setup is complete.
+xref:ios/mobile-application/synchronization/synchronization-launch/index.adoc[Launch synchronization] to apply the changes.
 
-Click the picklist on the field to open the color picker.
-. {blank}
+image::62561517.png[]
 
-Select the colors for each record type or type in the color code.
-. {blank}
-
-Click *Save*.
-
-image:ctm-control-panel-new-custom-colors-example.png[]
-
-|===
-
-//tag::andr,ios,win[] The setup is complete.
-xref:ios/mobile-application/synchronization/synchronization-launch/index.adoc[Launch synchronization] to apply the
-changes. //tag::kotlin[] The setup is complete.
-xref:ios/mobile-application/synchronization/synchronization-launch/index.adoc[Launch mixed synchronization] to apply
-the changes.
-//tag::ios[]
-image:62561517.png[]
-//tag::win[]
-image:62561519.png[]
-//tag::andr[]
-image:62561518.png[]
