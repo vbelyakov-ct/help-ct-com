@@ -17,22 +17,22 @@ The operation name:
 
 The identifier name:
 
-*uniqID*: a unique internal identifier of a record that remains unchanged regardless of how many devices the record has been modified on.
+* *uniqID*: a unique internal identifier of a record that remains unchanged regardless of how many devices the record has been modified on.
 
 //tag::ios[]
 
 [separator=!,cols="~,~",]
 !===
-!*CT Mobile Release* !*Value*
+^!*CT Mobile Release* ^!*Value*
 
-!*2.1 and higher*
+^!*2.1 and higher*
 a!
 [source]
 ----
 operation_name|date/time|uniqID
 create|2018-03-22/13:51:41|39F9C16B-08D2-4B64-AFE5-F91508E53922
 ----
-!*Below 2.1* a!
+^!*Below 2.1* a!
 [source]
 ----
 uniqID
