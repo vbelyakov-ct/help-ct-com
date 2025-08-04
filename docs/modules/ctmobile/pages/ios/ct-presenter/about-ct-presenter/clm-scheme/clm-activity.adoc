@@ -2,7 +2,9 @@
 
 The [.object]#Activity# object of the target system is intended to store details of users’ field activities, such as visits, events, and  meetings.
 
-It is possible to work with several [.object]#Activity# objects that must be set in xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc[CT Mobile Control Panel: Calendar] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-activities-new.adoc[CT Mobile Control Panel 2.0: Activities].
+TIP: It is possible to work with several [.object]#Activity# objects that must be set in xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc[CT Mobile Control Panel: Calendar] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-activities-new.adoc[CT Mobile Control Panel 2.0: Activities].
+
+include::partial$func-availability.adoc[]
 
 '''''
 
@@ -44,6 +46,6 @@ The field to store an invitation link should have the same API name on any [.obj
 |Email Required |[.apiobject]#IsEmailRequired__c# |Checkbox
 a| If enabled, the user is required to provide an email on xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-ui-basics/remote-detailing-2-0-ui-for-participants.adoc#h2_555694282[the Welcome screen] to access the *Remote Detailing* meeting.
 
-NOTE: Available since the CT Mobile package v.3.65.
+NOTE: Available since the CT Mobile package v.3.65
 
 |===
