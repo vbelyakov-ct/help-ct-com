@@ -1,74 +1,71 @@
 = User Permissions
 
-[NOTE] ==== These permissions should be defined for all the
-fields (with[.apiobject]#clm ==== prefix) of objects from the
-tables below. #
+NOTE: These permissions should be defined for all the fields (with [.apiobject]#clm# prefix) of objects from the tables below.
 
 [[h2_539802811]]
-=== Representative
+== Representative
 
-[width="99%",cols="20%,16%,16%,16%,16%,16%",]
+[width="99%",cols="~,~,^~,^~,^~,^~"]
 |===
-|*Object* |*API Name* |*Create* |*Read* |*Edit* |*Delete*
+^|*Object* ^|*API Name* |*Create* |*Read* |*Edit* |*Delete*
 
 |xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-application.adoc[Application]
-|[.apiobject]#clm__Application__c# | |{plus} | |
+|[.apiobject]#clm\__Application__c# | |{plus} | |
 
 |xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-applicationstats.adoc[Application Stats]
-|[.apiobject]#clm__ApplicationStats__c# |{plus} |{plus}
+|[.apiobject]#clm\__ApplicationStats__c# |{plus} |{plus}
 |{plus} |
 
 |xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-customscenario.adoc[Custom Scenario]
-|[.apiobject]#clm__CustomScenario__c# |{plus} |{plus}
+|[.apiobject]#clm\__CustomScenario__c# |{plus} |{plus}
 |{plus} |{plus}
 
-|xref:clm-placeholder[Placeholder]
-|[.apiobject]#clm__Placeholder__c# | | | |
+|xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-placeholder.adoc[Placeholder]
+|[.apiobject]#clm\__Placeholder__c# | | | |
 
-|xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-slide.adoc[Slide] |[.apiobject]#clm__Slide__c#
+|xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-slide.adoc[Slide] |[.apiobject]#clm\__Slide__c#
 | |{plus} | |
 
 |xref:ios/mobile-application/synchronization/synchronization-launch/sync-log.adoc[Sync Log]
-|[.apiobject]#clm__SyncLog__c# |{plus} |{plus} |{plus}
+|[.apiobject]#clm\__SyncLog__c# |{plus} |{plus} |{plus}
 |
 
-|xref:clm-template[Template]
-|[.apiobject]#clm__Template__c# | | | |
+|xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-template.adoc[Template]
+|[.apiobject]#clm\__Template__c# | | | |
 
-|xref:clm-widget[Widget]
-|[.apiobject]#clm__Widget__c# | | | |
+|xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-widget.adoc[Widget]
+|[.apiobject]#clm\__Widget__c# | | | |
 |===
 
-[[h2_539802811]]
-=== Product Manager / Creative Agency
+== Product Manager / Creative Agency
 
-[width="99%",cols="20%,16%,16%,16%,16%,16%",]
+[width="99%",cols="~,~,^~,^~,^~,^~"]
 |===
-|*Object* |*API Name* |*Create* |*Read* |*Edit* |*Delete*
+^|*Object* ^|*API Name* |*Create* |*Read* |*Edit* |*Delete*
 
-|Application |[.apiobject]#clm__Application__c# |{plus}
+|Application |[.apiobject]#clm\__Application__c# |{plus}
 |{plus} |{plus} |{plus}
 
 |Application Stats
-|[.apiobject]#clm__ApplicationStats__c# |{plus} |{plus}
+|[.apiobject]#clm\__ApplicationStats__c# |{plus} |{plus}
 |{plus} |
 
-|Custom Scenario |[.apiobject]#clm__CustomScenario__c#
+|Custom Scenario |[.apiobject]#clm\__CustomScenario__c#
 |{plus} |{plus} |{plus} |{plus}
 
-|Placeholder |[.apiobject]#clm__Placeholder__c# |{plus}
+|Placeholder |[.apiobject]#clm\__Placeholder__c# |{plus}
 |{plus} |{plus} |{plus}
 
-|Slide |[.apiobject]#clm__Slide__c# |{plus} |{plus}
+|Slide |[.apiobject]#clm\__Slide__c# |{plus} |{plus}
 |{plus} |{plus}
 
-|Sync Log |[.apiobject]#clm__SyncLog__c# |{plus} |{plus}
+|Sync Log |[.apiobject]#clm\__SyncLog__c# |{plus} |{plus}
 |{plus} |
 
-|Template |[.apiobject]#clm__Template__c# |{plus}
+|Template |[.apiobject]#clm\__Template__c# |{plus}
 |{plus} |{plus} |{plus}
 
-|Widget |[.apiobject]#clm__Widget__c# |{plus} |{plus}
+|Widget |[.apiobject]#clm\__Widget__c# |{plus} |{plus}
 |{plus} |{plus}
 |===
 

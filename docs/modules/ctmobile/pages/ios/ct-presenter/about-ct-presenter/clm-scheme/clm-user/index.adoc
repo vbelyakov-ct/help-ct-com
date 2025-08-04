@@ -4,43 +4,34 @@ The [.object]#User# object is a standard Salesforce object.
 
 '''''
 
-Object API name:[.apiobject]#User#
+Object API name: [.apiobject]#User#
 
 '''''
 
-* The changes in the following fields of the current user's record are
-sent to Salesforce and to the mobile device during each
-xref:ios/mobile-application/synchronization/synchronization-launch/index.adoc[synchronization].
-* The current user's profile should have permission to edit the fields
-in the table below.
+* The changes in the following fields of the current user's record are sent to Salesforce and to the mobile device during each xref:ios/mobile-application/synchronization/synchronization-launch/index.adoc[synchronization].
+* The current user's profile should have permission to edit the fields in the table below.
 
 [width="100%",cols="~,~,~,~",]
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Device Model |[.apiobject]#clm__DeviceModel__c#
-|Text(255) a|
-[NOTE] ==== Available since CT Mobile package v. 3.65. ====
-//tag::ios[]
+|Device Model |[.apiobject]#clm\__DeviceModel__c#
+|Text(255) a| NOTE: Available since CT Mobile package v. 3.65.
 
 The version of the device model.
 
-//tag::andr,win[] Not in use.
-
-|Device Token |[.apiobject]#clm__DeviceToken__c#
+|Device Token |[.apiobject]#clm\__DeviceToken__c#
 |Text(255) |The unique identifier of the current user's mobile device.
 
-|Last Sync Date |[.apiobject]#clm__LastSyncDate__c#
+|Last Sync Date |[.apiobject]#clm\__LastSyncDate__c#
 |Date/time |The date and time of any last successful synchronization.
 
-|Mobile MAC |[.apiobject]#clm__MobileMAC__c# |Text(255)
-|//tag::ios[]https://en.wikipedia.org/wiki/MAC_address[MAC Address].
-//tag::andr,win[]Not in use.
+|Mobile MAC |[.apiobject]#clm\__MobileMAC__c# |Text(255)
+|https://en.wikipedia.org/wiki/MAC_address[MAC Address].
 
-|Mobile Version |[.apiobject]#clm__MobileVersion__c#
-|Text(255) |The version of the CT Mobile app on the current user's
-mobile device.
+|Mobile Version |[.apiobject]#clm\__MobileVersion__c#
+|Text(255) |The version of the CT Mobile app on the current user's mobile device.
 
-|Operation System |[.apiobject]#clm__DeviceOSVersion__c#
+|Operation System |[.apiobject]#clm\__DeviceOSVersion__c#
 |Text(255) |The version of the OS of the current user's mobile device.
 |===

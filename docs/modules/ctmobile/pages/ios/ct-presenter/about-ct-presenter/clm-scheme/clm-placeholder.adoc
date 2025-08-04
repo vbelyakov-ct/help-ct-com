@@ -1,50 +1,37 @@
 = Placeholder
 
-The [.object]#Placeholder# object is intended to indicate a
-place for interactive widget content storage on
-xref:clm-template[the HTML template].
+The [.object]#Placeholder# object is intended to indicate a place for interactive widget content storage on xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-template.adoc[the HTML template].
 
-The list of widgets available for insertion varies depending on
-xref:creating-a-placeholder[the type of placeholder] selected.
+NOTE: The list of widgets available for insertion varies depending on xref:ios/ct-presenter/creating-clm-presentation/creating-clm-presentation-with-the-application-record-type/creating-a-placeholder.adoc[the type of placeholder] selected.
 
 '''''
 
-Object API Name:[.apiobject]#clm__Placeholder__c#
+Object API Name: [.apiobject]#clm\__Placeholder__c#
 
 '''''
 
-[cols=",,,",]
+[cols="~,~,~,~"]
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Active |[.apiobject]#clm__isActive__c# |Checkbox |If
-enabled, the placeholder can be applied in the HTML5 markup of a slide.
+|Active |[.apiobject]#clm\__isActive__c# |Checkbox |If enabled, the placeholder can be applied in the HTML5 markup of a slide.
 
-|Allowed Types |[.apiobject]#clm__Type__c# |Picklist
-(Multi-Select) |Select one or several types of using
-xref:clm-widget[widgets].
+|Allowed Types |[.apiobject]#clm\__Type__c# |Picklist (Multi-Select) |Select one or several types of using xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-widget.adoc[widgets].
 
-|Application |[.apiobject]#clm__ApplicationId__c#
-|Master-Detail(Application) |The CLM presentation to which the
-placeholder is related.
+|Application |[.apiobject]#clm\__ApplicationId__c#
+|Master-Detail(Application) |The CLM presentation to which the placeholder is related.
 
-|Description |[.apiobject]#clm__Description__c# |Long
-Text(32768) |The placeholder description.
+|Description |[.apiobject]#clm\__Description__c# |Long Text(32768) |The placeholder description.
 
-|Height |[.apiobject]#clm__Height__c# |Number(18,0) |The
-height of the placeholders (pixels).
+|Height |[.apiobject]#clm\__Height__c# |Number(18,0) |The height of the placeholders (pixels).
 
-|Name |[.apiobject]#Name# |Text(80) |The label of the
-placeholder.
+|Name |[.apiobject]#Name# |Text(80) |The label of the placeholder.
 
-|Position |[.apiobject]#clm__Position__c# |Number(18,0)
-|The placeholder order number is on a slide. Placeholders are marked as
-[.apiobject]#{!POSITION_n}#, where
-[.apiobject]#n# is an ordinal integer.
+|Position |[.apiobject]#clm\__Position__c# |Number(18,0)
+|The placeholder order number is on a slide. Placeholders are marked as [.apiobject]#{!POSITION_n}#, where [.apiobject]#n# is an ordinal integer.
 
-|Template |[.apiobject]#clm__TemplateId__c#
+|Template |[.apiobject]#clm\__TemplateId__c#
 |Lookup(Template) |The template with the placeholder.
 
-|Width |[.apiobject]#clm__Width__c# |Number(18,0) |The
-width of the placeholders (pixels).
+|Width |[.apiobject]#clm\__Width__c# |Number(18,0) |The width of the placeholders (pixels).
 |===
