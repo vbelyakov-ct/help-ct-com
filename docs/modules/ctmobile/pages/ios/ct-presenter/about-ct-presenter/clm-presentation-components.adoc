@@ -3,16 +3,14 @@
 [width="100%",cols="50%,50%",frame="none",grid="none"]
 |===
 a|
-[[h2_582050190]]
-=== 
 
 [[h3_14400000]]
-== xref:ctmobile:ios/mobile-application/mobile-application-modules/applications/index.adoc.html[Application]
+== xref:ios/mobile-application/mobile-application-modules/applications/index.adoc[Application]
 
 A set of HTML slides representing the logic of the CLM presentation. Slides are formed on templates and have a variable area for multiple use cases. Users can create custom scenarios based on the default scenario.
 
 [[h3_145801861]]
-== xref:ctmobile:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-slide.adoc.html[Slide]
+== xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-slide.adoc[Slide]
 
 A CLM presentation page with a unique index number.
 
@@ -24,17 +22,17 @@ NOTE: The existence of two slides with equal index numbers within one CLM presen
 The attribute use is recommended to be set to the slides that represent the menu.
 
 [[h3_261292728]]
-== xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-template.adoc.html[Template]
+== xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-template.adoc[Template]
 
 An HTML layout with placeholders. Templates support an unlimited number of placeholders. Multiple slides of the same CLM presentation can use the same template.
 
 [[h3_1019358273]]
-== xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-placeholder.adoc.html[Placeholder]
+== xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-placeholder.adoc[Placeholder]
 
 An HTML layout field that indicates a place for interactive widget content storage. It is possible to set up the type of supported widgets in the placeholder. The placeholder position number is a required parameter. Placeholders are marked as [.apiobject]#{!POSITION_n}#, where [.apiobject]#n# is an ordinal integer.
 
 [[h3_306512626]]
-== xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-widget.adoc.html[Widget]
+== xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-widget.adoc[Widget]
 
 A separate editable template element. The following types of widgets are currently supported:
 
@@ -62,12 +60,12 @@ All types are managed using the Application Editor, excluding the *Video* type.
 == Additional objects
 
 [[h3_1467219969]]
-=== xref:ctmobile:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-applicationstats.adoc.html[Application Stats]
+=== xref:ctmobile:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-applicationstats.adoc[Application Stats]
 
 The object is intended to store the CLM presentation statistics from xref:ios/mobile-application/mobile-application-modules/applications/index.adoc[the Application module], xref:ios/mobile-application/ui/home-screen/index.adoc[Home Screen], xref:ios/admin-guide/mobile-layouts/mobile-layouts-applications.adoc[a record's mobile layout], and xref:ios/ct-presenter/the-remote-detailing-functionality/index.adoc[Remote Detailing].
 
 [[h3_877574013]]
-=== xref:ctmobile:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-customscenario.adoc.html[Custom Scenario]
+=== xref:ctmobile:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-customscenario.adoc[Custom Scenario]
 
 The object is intended to store user scenarios for CLM presentations.
 

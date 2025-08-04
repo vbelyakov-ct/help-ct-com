@@ -69,7 +69,7 @@ a|
 
 | |The minimum resolution is 1024x768 for landscape view |
 
-|PDF a|
+|PDF ^a|
 [.apiobject]#.pdf#
 
 a|
@@ -89,7 +89,7 @@ a|
 * Do not use the *&* symbol in the PDF file name, otherwise the presentation will not be loaded.
 * For presentations in xref:ios/ct-presenter/the-remote-detailing-functionality/index.adoc[Remote Detailing], we recommend using HTML5 or images instead of PDF.
 
-|PPT a|
+|PPT ^a|
 [.apiobject]#.ppt/.ppt(x)#
 
 a|not more than 75 MB
@@ -100,7 +100,7 @@ a|not more than 75 MB
 * Slides animation from converted [.apiobject]#.ppt# files is not supported.
 * Violation of converted slides' proportion is possible when other than iPad format slides are used in the source document.
 
-|ZIP |.zip a|
+|ZIP ^|[.apiobject]#.zip# a|
 * not more than 73 MB
 * not more than 200 slides
 
@@ -143,9 +143,9 @@ The slide size for the [.apiobject]#.ppt(x)# format was tested and is recommende
 == Video in CLM presentations
 
 * The link should have the following format link:https://www.youtube.com/embed/GhpE_7cBu44[**https://**www.youtube.com**/embed/**GhpE_7cBu44].
-* We suggest you upload videos to YouTube by selecting the *Unlisted* value in the *Visibility* option link:https://support.google.com/youtube/answer/157177[to avoid public dissemination].
+* We suggest you upload videos to YouTube by selecting the *Unlisted* value in the *Visibility* option link:https://support.google.com/youtube/answer/157177?hl=en[https://support.google.com/youtube/answer/157177][to avoid public dissemination].
 * During synchronization, the CT Mobile app downloads the video into its local repository for offline access. The code for correct video insertion in slide markup:
-
++
 [source,html]
 ----
 <iframe class="youtube-player" type="text/html" width="643" height="402" src="https://www.youtube.com/embed/GhpE_7cBu44?autohide=1&autoplay=1" frameborder="0" id="player">

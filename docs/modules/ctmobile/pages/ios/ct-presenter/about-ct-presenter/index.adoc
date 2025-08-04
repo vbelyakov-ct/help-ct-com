@@ -95,7 +95,7 @@ The xref:ios/ct-presenter/the-remote-detailing-functionality/index.adoc[Remote D
 For each CLM presentation:
 
 * The separates UI for the presenter and participant.
-* In the case of using on-the-slide markup, xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-f-a-q.adoc[]JS methods and links are available from within the CLM presentation.
+* In the case of using on-the-slide markup, JS methods and links are available from within the CLM presentation.
 * Performed on the CLM presentation, specific user actions can be captured and collected in the _Application Stats_ record. These actions can include capturing button clicks, certain gestures (clickstream data), or generic data and should be specified for each CLM presentation.
 ** When the presenter clicks the *Finish session* button or closes the browser tab, a record of the [.object]#Application Stats# object is created for each participant and presenter.
 ** For the *Self Detailing* mode, the statistics will be collected according to xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/clm-settings.adoc[the Session timeout (in seconds) field].
