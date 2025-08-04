@@ -56,7 +56,7 @@ attributes;
 from Salesforce to the device, including changes in the field
 attributes;
 * update CLM presentations in case of
-xref:publishing-clm-presentations[republishing]. The CT Mobile app
+xref:ios/ct-presenter/publishing-clm-presentations.adoc[republishing]. The CT Mobile app
 compares the current version of the CLM presentation with the one
 previously saved. If any discrepancies are found, slides and
 attachments, which were updated after the last synchronization, will be
@@ -99,7 +99,7 @@ Go back to xref:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 The mixed synchronization launches when:
 
 * the date of the last successful synchronization on the
-xref:clm-user[current user's record] is earlier than the date of
+xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-user/index.adoc[current user's record] is earlier than the date of
 the last metadata change in the
 [.apiobject]#clm__MetadataLastModifiedDate__c# field of
 the xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/mobile-application-setup.adoc[Mobile Application Setup] record
@@ -122,7 +122,7 @@ the CT Mobile app to Salesforce;
 * download data changes (deletions, insertions, and updates of records)
 from Salesforce to the device;
 * update CLM presentations in case of
-xref:publishing-clm-presentations[republishing]. The CT Mobile app
+xref:ios/ct-presenter/publishing-clm-presentations.adoc[republishing]. The CT Mobile app
 compares the current version of the CLM presentation with the one
 previously saved. If any discrepancies are found, slides and
 attachments, which were updated after the last synchronization, will be
@@ -184,7 +184,7 @@ Go back to xref:synchronization-f-a-q#F.A.Q.list[the F.A.Q. list].
 ==== When to use the quick record synchronization?
 
 The common use case is to download changes for a particular record. For
-example, xref:remote-detailing-launch-the-ct-mobile-app[to download
+example, xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-launch/remote-detailing-launch-the-ct-mobile-app.adoc[to download
 the invite link] for the Remote Detailing functionality or update the
 record related lists.
 

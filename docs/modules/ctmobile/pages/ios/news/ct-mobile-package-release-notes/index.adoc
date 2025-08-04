@@ -108,7 +108,7 @@ objects with xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/relate
 [[h4_1542142448]]
 ===== CT Presenter
 
-* Fixed editing xref:custom-scenario-editor[custom scenarios].
+* Fixed editing xref:ios/ct-presenter/custom-scenario-editor.adoc[custom scenarios].
 
 [[h2_1225534012]]
 === CT Mobile package v. 3.79
@@ -225,7 +225,7 @@ Salesforce organization.
 * A warning about the paid *Remote Detailing* feature is displayed for
 the first logging in.
 * During the [.object]#Activity# creation,
-xref:remote-detailing-launch-salesforce-side#h3_135274013[users
+xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-launch/remote-detailing-launch-salesforce-side.adoc#h3_135274013[users
 will be notified] if CLM presentations are not found on a server.
 * The *Terms Accepted* attribute in the
 xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-applicationstats.adoc[application statistics] stores a
@@ -237,7 +237,7 @@ method in the CLM presentations to make secure requests to Salesforce
 data.
 ** Support the xref:ios/ct-presenter/js-bridge-api/methods-for-interaction-with-crm-data/ctm-create.adoc[ctm.create] and
 xref:ios/ct-presenter/js-bridge-api/methods-for-interaction-with-crm-data/ctm-update.adoc[ctm.update] methods in the CLM presentations.
-* xref:remote-detailing-launch-salesforce-side#h3_135274013[For
+* xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-launch/remote-detailing-launch-salesforce-side.adoc#h3_135274013[For
 user convenience]:
 ** A message will inform the user that the CLM presentations are not
 added to the server.
@@ -319,7 +319,7 @@ to specify and add terms of use on the *Welcome* screen during the
 * If xref:ios/ct-presenter/about-ct-presenter/index.adoc#h2_1251281241[the required
 remote sites] are not activated, an error message will be displayed when
 a user tries to
-xref:publishing-clm-presentations#h3_1098755975[renew slides].
+xref:ios/ct-presenter/publishing-clm-presentations.adoc#h3_1098755975[renew slides].
 * xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-statistics.adoc[The browser name and IP address]
 will be stored in the statistics record for the presenter and
 participants.
@@ -356,7 +356,7 @@ metadata archive].
 === CT Mobile package v. 3.65
 
 The list of permissions has been updated with the
-xref:clm-user[User audit fields] for the _CT Mobile Administrator_
+xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-user/index.adoc[User audit fields] for the _CT Mobile Administrator_
 and _CT Mobile User_ permission sets.
 
 [[h3_1552158643]]
@@ -379,7 +379,7 @@ records.
 is required] to add the email to access the *Remote Detailing* meeting.
 * xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/clm-settings.adoc[The new parameter] for future audio recording
 storage is added.
-* xref:remote-detailing-launch-salesforce-side#h3_135274013[For
+* xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-launch/remote-detailing-launch-salesforce-side.adoc#h3_135274013[For
 user convenience]:
 ** A message will inform the user of the reason CLM presentations are
 not available for a *Remote Detailing* meeting.
@@ -391,7 +391,7 @@ launch a *Remote Detailing* meeting.
 [[h4_1156290882]]
 ===== Salesforce Metadata
 
-* xref:clm-user[The new audit field] is intended to store the
+* xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-user/index.adoc[The new audit field] is intended to store the
 user's device model for better customer support. The logic will be
 implemented in the next releases of CT Mobile apps.
 
@@ -443,7 +443,7 @@ Detailing* meeting.
 ===== Remote Detailing 2.0
 
 We kindly ask you to refer to the
-xref:migration-to-remote-detailing-2-0[Migration to Remote
+xref:ios/ct-presenter/the-remote-detailing-functionality/migration-to-remote-detailing-2-0.adoc[Migration to Remote
 Detailing 2.0] article to set up the Remote Detailing 2.0 functionality.
 
 * New CT Presenter connected app.
@@ -690,10 +690,10 @@ tabs for Safari users.
 [[h4_639945830]]
 ===== CT Presenter
 
-* The ability to work with the xref:custom-scenario-editor[Custom
+* The ability to work with the xref:ios/ct-presenter/custom-scenario-editor.adoc[Custom
 Scenario Editor] in Lightning Experience.
 * Fixed the process of
-xref:publishing-clm-presentations#h3_1098755975[renewing slides] if
+xref:ios/ct-presenter/publishing-clm-presentations.adoc#h3_1098755975[renewing slides] if
 there is only one slide in the CLM presentation.
 * Fixed xref:ios/ct-presenter/attach-files-to-clm-presentation.adoc[attaching files to
 CLM presentations] in Lightning Experience.
@@ -891,7 +891,7 @@ xref:ios/ct-presenter/creating-clm-presentation/creating-clm-presentation-with-t
 * The enhanced xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-setup/index.adoc[setup process] for the
 *Remote Detailing* and *Self Detailing* functionality.
 * In Lightning Experience, add
-xref:remote-detailing-launch-salesforce-side#h2_1396626265[the
+xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-launch/remote-detailing-launch-salesforce-side.adoc#h2_1396626265[the
 Remote Detailing button] on the *Application* record to launch the
 *Remote Detailing* meeting.
 * On the xref:remote-detailing-1-0-ui-for-participants[Attendee
