@@ -1,16 +1,35 @@
 = ctm.disableSlideScroll
 
-The method of the xref:ios/ct-presenter/js-bridge-api/index.adoc[JS Bridge] functionality is
-intended to prevent switching slides.
+The method of the xref:ios/ct-presenter/js-bridge-api/index.adoc[JS Bridge] functionality is intended to prevent switching slides.
 
 [[h2_905713055]]
-=== Query Format
+== Query Format
+
+[source,javascript]
+----
+ctm.disableSlideScroll()
+----
 
 [[h2_442663712]]
-=== Handler
+== Handler
 
+[source,javascript]
+----
+ctm.disableSlideScroll()
+----
 
-
-
+[source,javascript]
+----
+ctm.disableSlideScroll( function(response){
+    console.log('Result', response);
+})
+----
 
 The results:
+
+[source,javascript]
+----
+[
+    "success": true"
+]
+----

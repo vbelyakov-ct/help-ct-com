@@ -1,17 +1,35 @@
 = ctm.dislike
 
-The method of the xref:ios/ct-presenter/js-bridge-api/index.adoc[JS Bridge] functionality is
-intended to add a dislike to the current slide. Likes are stored in the
-record of the xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-applicationstats.adoc[Application Stats] object.
+The method of the xref:ios/ct-presenter/js-bridge-api/index.adoc[JS Bridge] functionality is intended to add a dislike to the current slide. Likes are stored in the record of the xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-applicationstats.adoc[Application Stats] object.
 
 [[h2_905713055]]
-=== Query Format
+== Query Format
+
+[source,javascript]
+----
+ctm.dislike()
+----
 
 [[h2_442663712]]
-=== Handler
+== Handler
 
+[source,javascript]
+----
+ctm.dislike()
+----
 
-
-
+[source,javascript]
+----
+ctm.dislike( function(response){
+    console.log('Result', response);
+})
+----
 
 The results:
+
+[source,javascript]
+----
+{
+    "success": true"
+}
+----
