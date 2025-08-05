@@ -1,17 +1,35 @@
 = ctm.autoExitPresenter
 
-The method of xref:ios/ct-presenter/js-bridge-api/index.adoc[JS Bridge] functionality is
-intended to exit from the CLM presentation without confirmation.
-Available in the Sales CT Orders.
+The method of xref:ios/ct-presenter/js-bridge-api/index.adoc[JS Bridge] functionality is intended to exit from the CLM presentation without confirmation. Available in the Sales CT Orders.
 
 [[h2_905713055]]
-=== Query Format
+== Query Format
+
+[source,javascript]
+----
+ctm.autoExitPresenter(handler)
+----
 
 [[h2_442663712]]
-=== Handler
+== Handler
 
+[source,javascript]
+----
+ctm.autoExitPresenter(handler)
+----
 
-
-
+[source,javascript]
+----
+ctm.autoExitPresenter(function(response){
+    console.log('Exiting', response);
+})
+----
 
 The results:
+
+[source,javascript]
+----
+{
+    "success": true,
+}
+----

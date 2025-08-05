@@ -1,25 +1,58 @@
 = ctm.createSalesOrderWithAnimations
 
-The method of xref:ios/ct-presenter/js-bridge-api/index.adoc[JS Bridge] functionality is
-intended to provide a transition from CLM presentation to the Sales
-Order.
+The method of xref:ios/ct-presenter/js-bridge-api/index.adoc[JS Bridge] functionality is intended to provide a transition from CLM presentation to the Sales Order.
 
 [[h2_905713055]]
-=== Query format
+== Query format
+
+[source,javascript]
+----
+ctm.createSalesOrderWithAnimations(data, handler)
+----
 
 [[h2_442663712]]
-=== Handler
+== Handler
 
-*[.apiobject]#obj.products# contains a list of products where
-the key is xref:ios/mobile-application/barcode-scanner.adoc[EAN product code], and the value is
-product quantity.
-*[.apiobject]#obj.animation# contains information about the
-animation, where the key is a unique animation code, and the value is
-animation status.
+* [.apiobject]#obj.products# contains a list of products where the key is xref:ios/mobile-application/barcode-scanner.adoc[EAN product code], and the value is product quantity.
+* [.apiobject]#obj.animation# contains information about the animation, where the key is a unique animation code, and the value is animation status.
++
+NOTE: If the transition occurs from a CLM presentation, leave [.apiobject]#obj.animation empty.
 
-[NOTE] ==== If the transition occurs from a CLM presentation,
-leave[.apiobject]#obj.animation ==== empty. #
+[source,javascript]
+----
+var dataStr;
+var obj = {};
+obj.products = {};
+obj.animation = {};
 
 
+var productEAN = '1234567890',
+productQuantity = 10;
+
+
+obj.products[productEAN] = productQuantity;
+
+
+var animationCode = '12345',
+isAnimationActive = true;
+
+
+obj.animation[animationCode] = isAnimationActive;
+
+
+dataStr = JSON.stringify(obj);
+
+ctm.createSalesOrderWithAnimations(dataStr, function(response){
+console.log('Result:', response);
+})
+----
 
 The results:
+
+[source,javascript]
+----
+{
+    "success": true,
+}
+----
+

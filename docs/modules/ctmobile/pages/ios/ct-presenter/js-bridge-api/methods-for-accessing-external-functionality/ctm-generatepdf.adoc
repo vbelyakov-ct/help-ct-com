@@ -1,22 +1,37 @@
 = ctm.generatePDF
 
-The method of JS Bridge functionality is intended to generate PDF
-documents based on templates. It is similar to
-xref:ios/mobile-application/mobile-application-modules/applications/clm-presentation-controls.adoc[the PDF button] from the CLM
-presentation sidebar.
+The method of JS Bridge functionality is intended to generate PDF documents based on templates. It is similar to xref:ios/mobile-application/mobile-application-modules/applications/clm-presentation-controls.adoc[the PDF button] from the CLM presentation sidebar.
 
-[NOTE] ==== This method is only available when
-xref:pdf-files-generator[templates of PDF documents] are uploaded
-to the CLM presentation. ====
+NOTE: This method is only available when xref:ios/mobile-application/pdf-files-generator.adoc[templates of PDF documents] are uploaded to the CLM presentation.
 
 [[h2_905713055]]
-=== Query Format
+== Query Format
+
+[source,javascript]
+----
+ctm.generatePDF(handler)
+----
 
 [[h2_442663712]]
-=== Handler
+== Handler
 
+[source,javascript]
+----
+ctm.generatePDF(handler)
+----
 
-
-
+[source,javascript]
+----
+ctm.generatePDF( function(response){
+console.log('Result', response);
+})
+----
 
 The results:
+
+[source,javascript]
+----
+{
+    "success": true,
+}
+----

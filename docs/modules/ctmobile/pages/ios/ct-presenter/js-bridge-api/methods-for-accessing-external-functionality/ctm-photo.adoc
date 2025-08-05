@@ -1,17 +1,35 @@
 = ctm.photo
 
-The method of xref:ios/ct-presenter/js-bridge-api/index.adoc[JS Bridge] functionality is
-intended to enable the device camera. Use the
-xref:ios/ct-presenter/js-bridge-api/methods-for-interaction-with-crm-data/ctm-getfile.adoc[ctm.getFile] method to attach a photo to a record.
+The method of xref:ios/ct-presenter/js-bridge-api/index.adoc[JS Bridge] functionality is intended to enable the device camera. Use the xref:ios/ct-presenter/js-bridge-api/methods-for-interaction-with-crm-data/ctm-getfile.adoc[ctm.getFile] method to attach a photo to a record.
 
 [[h2_905713055]]
-=== Query format
+== Query format
+
+[source,javascript]
+----
+ctm.photo(handler)
+----
 
 [[h2_442663712]]
-=== Handler
+== Handler
 
+[source,javascript]
+----
+ctm.photo(handler)
+----
 
-
-
+[source,javascript]
+----
+ctm.photo( function(response){
+    console.log('Result', response);
+})
+----
 
 The result:
+
+[source,javascript]
+----
+{
+    "response": "/private/var/mobile/Containers/Data/Application/6404F6A1-0A03-434A-A1C9-CB189141BC45/tmp/photo (Monday, 15 July 2019 at 15:11:55 Moscow Standard Time).png"
+}
+----
