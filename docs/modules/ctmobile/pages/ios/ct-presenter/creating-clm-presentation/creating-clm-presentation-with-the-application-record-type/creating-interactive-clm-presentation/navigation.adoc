@@ -22,7 +22,7 @@ To switch a slide:
 *** [.apiobject]#start_slide# is a name of a file that represents a slide
 +
 NOTE: This markup works only for web browsers.
-* Use the [.apiobject]#CTAPPgoTo…# methods or a library to process a default gesture, for example,[.apiobject]#hammer.js#, to switch the last or fixed slide.
+* Use the [.apiobject]#CTAPPgoTo…# methods or a library to process a default gesture, for example, [.apiobject]#hammer.js#, to switch the last or fixed slide.
 
 [[h3_1578877299]]
 == CTAPPgoTo… Methods
@@ -33,15 +33,15 @@ Use these methods in a slide markup to switch among slides and branches, includi
 |===
 |*Method* |*Action*
 
-|[.apiobject]#CTAPPgoToSlide(slideNum)# |Jump to a specific slide.
-|[.apiobject]#CTAPPgoToPrevious()# |Jump to the previousslide.
-|[.apiobject]#CTAPPgoToNext()# |Jump to the next slide.
-|[.apiobject]#CTAPPgoToFirst()# |Jump to the first slide.
+|[.apiobject]#CTAPPgoToSlide(slideNum)# | Jump to a specific slide.
+|[.apiobject]#CTAPPgoToPrevious()# | Jump to the previousslide.
+|[.apiobject]#CTAPPgoToNext()# | Jump to the next slide.
+|[.apiobject]#CTAPPgoToFirst()# | Jump to the first slide.
 |===
 
 To use [.apiobject]#CTAPPgoTo…# methods:
 
-. Create a[.apiobject]#slide-name.html# with the following markup and upload it to Salesforce:
+. Create a [.apiobject]#slide-name.html# with the following markup and upload it to Salesforce:
 +
 [source,html]
 ----
