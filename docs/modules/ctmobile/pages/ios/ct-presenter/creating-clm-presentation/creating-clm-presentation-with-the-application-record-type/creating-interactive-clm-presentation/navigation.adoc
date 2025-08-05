@@ -1,76 +1,112 @@
 = Navigation
+:toc:
 
-Do not use navigation frameworks to avoid overlap with CT Presenter
-navigation methods.
+NOTE: Do not use navigation frameworks to avoid overlap with CT Presenter navigation methods.
 
+Branches are sets of CLM presentation slides, single scenarios that run depending on the user's choice. To navigate among scenarios, restrict default gestures on slides:
 
-
-Branches are sets of CLM presentation slides, single scenarios that run
-depending on the user's choice. To navigate among scenarios, restrict
-default gestures on slides:
-
-* Activate the Fixed attribute of a Slide object to disable a default
-gesture to swipe a slide to the next one. 
+* Activate the Fixed attribute of a Slide object to disable a default gesture to swipe a slide to the next one.
 * Default gestures are not in use to switch the last slide in a branch.
 
 [[h3_1793408620]]
-==== Switching Slides
+== Switching Slides
 
 To switch a slide:
 
 * Use default gestures for switching slides within a branch
-* Add in a slide markup one of the following methods to start a branch
-and switching among branches:
-**[.apiobject]#<a
-href="#slide[k]">Text</a>#, where
-[.apiobject]#[k]# is a slide order.
-**[.apiobject]#<a
-href="[n][k]_start_slide.html">Home</a>#,
-where:
-***[.apiobject]#[n]# is the number of a branch
-***[.apiobject]#[k]# is the number of a slide in the
-appropriate branch
-***[.apiobject]#start_slide# is a name of a file that
-represents a slide.
-[NOTE] ==== This markup works only for web browsers. ====
-* Use the [.apiobject]#CTAPPgoTo…# methods or a library to
-process a default gesture, for example,[.apiobject]#hammer.js#,
-to switch the last or fixed slide.
+* Add in a slide markup one of the following methods to start a branch and switching among branches:
+** [.apiobject]#<a href="#slide[k]">Text</a>#, where [.apiobject]#[k]# is a slide order.
+** [.apiobject]#<a href="[n][k]_start_slide.html">Home</a>#, where:
+*** [.apiobject]#[n]# is the number of a branch
+*** [.apiobject]#[k]# is the number of a slide in the appropriate branch
+*** [.apiobject]#start_slide# is a name of a file that represents a slide
++
+NOTE: This markup works only for web browsers.
+* Use the [.apiobject]#CTAPPgoTo…# methods or a library to process a default gesture, for example,[.apiobject]#hammer.js#, to switch the last or fixed slide.
 
 [[h3_1578877299]]
-==== CTAPPgoTo… Methods
+== CTAPPgoTo… Methods
 
-Use these methods in a slide markup to switch among slides and branches,
-including the fixed and last slides:
+Use these methods in a slide markup to switch among slides and branches, including the fixed and last slides:
 
-[width="100%",cols="50%,50%",options="header",]
+[cols="~,~"]
 |===
 |*Method* |*Action*
-|[.apiobject]#CTAPPgoToSlide(slideNum)# |Jump to a specific
-slide.
 
-|[.apiobject]#CTAPPgoToPrevious()# |Jump to the previous
-slide.
-
+|[.apiobject]#CTAPPgoToSlide(slideNum)# |Jump to a specific slide.
+|[.apiobject]#CTAPPgoToPrevious()# |Jump to the previousslide.
 |[.apiobject]#CTAPPgoToNext()# |Jump to the next slide.
-
 |[.apiobject]#CTAPPgoToFirst()# |Jump to the first slide.
 |===
 
+To use [.apiobject]#CTAPPgoTo…# methods:
 
+. Create a[.apiobject]#slide-name.html# with the following markup and upload it to Salesforce:
++
+[source,html]
+----
+<!DOCTYPE html> 
+<html> 
+  <head> 
+ 
+      <script type="text/javascript" src="../JSLibrary/js/app.js"></script> <!—the required JS library for each slide --> 
+ 
+  </head> 
+   </div> 
+           <!-- content --> 
+           <div class="brand_catalog"> 
+   
+              <div class="brand_catalog__item" data-brand=“category_A”> 
+                     Lorem ipsum dolor sit amet             
+              </div> 
+              <div class="brand_catalog__item" data-brand=“ category_B”> 
+                     Lorem ipsum dolor sit amet             
+              </div> 
+              <div class="brand_catalog__item" data-brand=“ category_C”> 
+                     Lorem ipsum dolor sit amet             
+              </div> 
+              <div class="brand_catalog__item" data-brand=“ category_D”> 
+                   Lorem ipsum dolor sit ame 
+              </div> 
+ 
+         </div> 
+ 
+   </body> 
+</html> 
+ 
+----
 
-To use CTAPPgoTo… methods:
+. Create a script with the [.apiobject]#CTAPPgoTo…# methods:
++
+[source,javascript]
+----
+<script> 
+ 
+$(document).ready(function () { 
+              
+         //  brands 
+$(“. brand_catalog__item”).on("click", function(e){ 
+ 
+         var brandName = this.getAttribute("data-brand"); 
+ 
+         switch (brandName) { 
+                case "category_A": 
+                          CTAPPgoToSlide('11'); 
+                           break; 
+                case "category_C": 
+                          CTAPPgoToSlide('31'); 
+                          break; 
+                default: 
+                       CTAPPgoToNext(); 
+            }; 
+}); 
+  
+</script> 
 
-. Create a[.apiobject]#slide-name.html# with the following
-markup and upload it to Salesforce:
-
-. {blank}
-
-Create a script with the [.apiobject]#CTAPPgoTo…# methods:
-
+ 
+----
 
 [[h3_702407821]]
-==== Example of Transitions between Slides
+== Example of Transitions between Slides
 
-[[h3_1124899109]]
-==== image:ctpresenter-transition-between-slides-example.png[]
+image::ctpresenter-transition-between-slides-example.png[]

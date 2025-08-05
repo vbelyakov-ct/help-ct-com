@@ -7,28 +7,16 @@ Each CLM presentation has sources—a variety of content and assets:
 * styles and fonts
 * JSONs and JS methods.
 
-Content and associated CLM presentation assets must be packed in ZIP
-archive(s) in order to load them to Salesforce.
+Content and associated CLM presentation assets must be packed in ZIP archive(s) in order to load them to Salesforce.
 
-* The size of a ZIP archive cannot exceed 25 MB. Otherwise, it must be
-split into several ZIP archives.
+* The size of a ZIP archive cannot exceed 25 MB. Otherwise, it must be split into several ZIP archives.
 * The file extension must be .zip.
-* The available formats:[.apiobject]#sources[n].zip#,
-where [.apiobject]#[n]# is the number of the archive
-part, starting from 1.
-* You can use the 7-Zip utility to create and divide ZIP archives into
-parts less than 25 MB. In this case, the output format will be
-[.apiobject]#sources.zip.00[n]#,
-where [.apiobject]#[n]# is the number of the archive
-part, starting from 1. Select the ZIP format when creating an archive.
-* {blank}
-
-The ZIP archive may contain folders and subfolders.
-
-[WARNING] ==== Do not create a ZIP archive with the
-[.apiobject]#Sources ==== folder that include folders with
-images, video, etc. The [.apiobject]#sources/images/image-1.jpg# path will not be handled.#
+* The available formats: [.apiobject]#sources[n].zip#, where [.apiobject]#[n]# is the number of the archive part, starting from 1.
+* You can use the 7-Zip utility to create and divide ZIP archives into parts less than 25 MB. In this case, the output format will be [.apiobject]#sources.zip.00[n]#, where [.apiobject]#[n]# is the number of the archive part, starting from 1. Select the ZIP format when creating an archive.
+* The ZIP archive may contain folders and subfolders.
++
+WARNING: Do not create a ZIP archive with the [.apiobject]#Sources# folder that include folders with images, video, etc. The [.apiobject]#sources/images/image-1.jpg# path will not be handled.
 
 The [.apiobject]#sources.zip# structure:
 
-image:ctpresenter-sources-structure.png[]
+image::ctpresenter-sources-structure.png[]

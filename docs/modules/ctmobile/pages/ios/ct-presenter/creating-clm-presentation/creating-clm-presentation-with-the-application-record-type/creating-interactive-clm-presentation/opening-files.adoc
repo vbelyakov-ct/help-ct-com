@@ -1,58 +1,68 @@
 = Opening Files
-
-
+:toc:
 
 [[h3_102315547]]
-==== Opening Files in Interactive CLM Presentations
+== Opening Files in Interactive CLM Presentations
 
-To open files within CLM presentations, add one of the following in a
-slide markup:
+To open files within CLM presentations, add one of the following in a slide markup:
 
-* to open a _Name.pdf_ file added to the *Notes & Attachments section*
-of the CLM presentation:
-[.apiobject]#<a href="Name.pdf">Open a
-file</a>#
+* to open a _Name.pdf_ file added to the *Notes & Attachments section* of the CLM presentation:
++
+[.apiobject]#<a href="Name.pdf">Open a file</a>#
++
 Also, you can open files added to the *Libraries* module.
 
 * to open a _Name.pdf_ file added to _sources.zip_:
++
 [.apiobject]#window.open("[path]/Name.pdf")#
 
 * to open dynamically loaded files:
-
-<a href="Name.pdf----AhrefLink">Open a file</a>
++
+[.apiobject]#<a href="Name.pdf----AhrefLink">Open a file</a>#
 
 * to open external links (when online):
-[.apiobject]#<a href="https://...">Open a
-file</a>#
++
+[.apiobject]#<a href="https://...">Open a file</a>#
 
 [[h3_437403350]]
-==== Open Video Files
+== Open Video Files
 
-To play a video, the file may be uploaded to _sources.zip_. The video
-cannot exceed 25 MB.
+To play a video, the file may be uploaded to _sources.zip_. The video cannot exceed 25 MB.
 
+[source,html]
+----
+<video>
+  <source src=“video.mp4”>
+</video>
+----
 
+To play a YouTube video or a video from the *Libraries* module within CLM presentation:
 
-To play a YouTube video or a video from the *Libraries* module within
-CLM presentation:
-
-* We suggest you upload videos on YouTube selecting the *Unlisted* value
-in the **Visibility **option to avoid
-https://support.google.com/youtube/answer/157177[public dissemination]. 
+* We suggest you upload videos on YouTube selecting the *Unlisted* value in the *Visibility* option to avoid link:https://support.google.com/youtube/answer/157177[public dissemination].
 * The size of a video can exceed 25 MB.
-* During synchronization, the CT Mobile app downloads the video into its
-local repository for offline access.
+* During synchronization, the CT Mobile app downloads the video into its local repository for offline access.
 * To add a video on a slide markup, use the *Video* widget.
-
-To add a widget, use templates and placeholders. Placeholders must
-be marked as [.apiobject]#{!POSITION_n}#,
-where [.apiobject]#n# is a position number. An associated widget
-has the corresponding position number
-in [.apiobject]#{!POSITION_n} #will be added to the
-slide.
++
+NOTE: To add a widget, use templates and placeholders. Placeholders must be marked as [.apiobject]#{!POSITION_n}#, where [.apiobject]#n# is a position number. An associated widget has the corresponding position number in [.apiobject]#{!POSITION_n}# will be added to the slide.
 
 To add a YouTube video:
 
-
+[source,html]
+----
+<iframe class="youtube-player" type="text/html" width="643" height="402"      src="https://www.youtube.com/embed/GhpE_7cBu44?autohide=1&autoplay=1" frameborder="0" id="player">
+</iframe>
+----
 
 To add a video from the Libraries module:
+
+[source,html]
+----
+<script type="text/css" src="{!$Resource.video_js_css}"></script>
+<script type="text/javascript" src="{!$Resource.video_js}"></script>
+<video class=“content-player video-js-vjs-defult-skin” width="1024" height="768"
+
+Data-setup==‘{“controls”:true, “autoplay”:1, “preload”:auto}’>
+  <sorce src=“Video_ID_from_Libraries” type=‘video/mp4’ />
+</video>
+----
+

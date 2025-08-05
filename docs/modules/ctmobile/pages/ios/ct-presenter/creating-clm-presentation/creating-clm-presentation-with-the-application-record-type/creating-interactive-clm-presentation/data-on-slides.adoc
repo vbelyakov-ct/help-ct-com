@@ -1,40 +1,42 @@
 = Data on Slides
-
-
+:toc:
 
 [[h3_1494338972]]
-==== Display CRM Data
+== Display CRM Data
 
-CT Presenter allows displaying CRM data from the related records of
-offline objects on a slide.
+CT Presenter allows displaying CRM data from the related records of offline objects on a slide.
 
-Use the following format in a slide markup:
-[.apiobject]#{!$ObjectName.FieldAPIName}#. In case of blank
-value of the displayed field, marker is set to space.
-
-
+Use the following format in a slide markup: [.apiobject]#{!$ObjectName.FieldAPIName}#. In case of blank value of the displayed field, marker is set to space.
 
 For example:
 
-*{!$Contact.FirstName}{!$Contact.LastName}
-*{!$Account.Name} 
+* [.apiobject]#{!$Contact.FirstName}{!$Contact.LastName}#
+* [.apiobject]#{!$Account.Name}#
 
 [[h3_1783207205]]
-==== Data Storage
+== Data Storage
 
-CT Presenter allows recording and passing different information to
-Salesforce during the CLM presentation demonstration.
+CT Presenter allows recording and passing different information to Salesforce during the CLM presentation demonstration.
 
-Users can fill out a form or add some information to placeholders on a
-slide. But when a user switches to other slides, data will be erased. To
-avoid this, in the slide markup, specify a place to store the entered
-information: 
+Users can fill out a form or add some information to placeholders on a slide. But when a user switches to other slides, data will be erased. To avoid this, in the slide markup, specify a place to store the entered information:
 
-*[.apiobject]#localStorage# for storing data locally on the
-user's device
-*[.apiobject]#sessionStorage# for keeping data for the current
-CLM presentation demonstration
+* [.apiobject]#localStorage# for storing data locally on the user's device
+* [.apiobject]#sessionStorage# for keeping data for the current CLM presentation demonstration
 
 Example:
+
+[source,javascript]
+----
+var statsData = JSON.parse(localStorage.getItem('storage_statsData'));
+      function slTime(){
+        var start = new Date();
+        var oldtime = statsData[2].time;
+        setInterval( function(){
+          var mlsec = (new Date() - start);
+          statsData[2].time = oldtime + mlsec;
+          localStorage.setItem('storage_statsData', JSON.stringify(statsData));
+        } , 3000);
+      };
+----
 
 
