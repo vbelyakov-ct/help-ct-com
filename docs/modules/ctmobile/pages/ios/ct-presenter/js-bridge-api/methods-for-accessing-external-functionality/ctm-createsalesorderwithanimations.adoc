@@ -13,6 +13,8 @@ ctm.createSalesOrderWithAnimations(data, handler)
 [[h2_442663712]]
 == Handler
 
+include::partial$ctm-methods-handler.adoc[]
+
 * [.apiobject]#obj.products# contains a list of products where the key is xref:ios/mobile-application/barcode-scanner.adoc[EAN product code], and the value is product quantity.
 * [.apiobject]#obj.animation# contains information about the animation, where the key is a unique animation code, and the value is animation status.
 +

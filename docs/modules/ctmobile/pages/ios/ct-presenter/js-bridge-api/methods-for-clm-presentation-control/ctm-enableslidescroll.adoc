@@ -1,6 +1,6 @@
 = ctm.enableSlideScroll
 
-The method of the xref:ios/ct-presenter/js-bridge-api/index.adoc[JS Bridge] functionality is intended to enable slide switching even if the [.apiobject]#clm\__IsFixed__c# attribute of the xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-slide.adoc[Slide] object is[.apiobject]#true#.
+The method of the xref:ios/ct-presenter/js-bridge-api/index.adoc[JS Bridge] functionality is intended to enable slide switching even if the [.apiobject]#clm\__IsFixed__c# attribute of the xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-slide.adoc[Slide] object is [.apiobject]#true#.
 
 [[h2_905713055]]
 == Query Format
@@ -12,6 +12,8 @@ ctm.disableSlideScroll()
 
 [[h2_442663712]]
 == Handler
+
+include::partial$ctm-methods-handler.adoc[]
 
 [source,javascript]
 ----
