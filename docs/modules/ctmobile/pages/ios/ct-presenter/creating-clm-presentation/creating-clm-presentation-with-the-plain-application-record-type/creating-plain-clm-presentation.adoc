@@ -1,93 +1,74 @@
 = Creating Plain CLM Presentation
+:toc:
 
 Use the built-in *Plain Application Editor* to create CLM presentations.
 
-:toc: :toclevels: 3
-
 [[h2_1040598226]]
-=== Create a CLM Presentation
+== Create a CLM Presentation
 
 To create the new CLM presentation:
 
 . Go to *Application Editor*.
-. Click *New* to create a new CLM presentation with the *Plain
-Application* record type or click *Clone* to add a new CLM presentation
-identical to the selected one.
+. Click *New* to create a new CLM presentation with the _Plain Application_ record type or click *Clone* to add a new CLM presentation identical to the selected one.
 . In the *Plain Application Editor* window, click *Create new*.
-
-image:Plain-Editor-Types.png[]
-
++
+image::Plain-Editor-Types.png[]
 
 . Use the *Plain Application Editor* tools to create slides.
-
-image:PlainPPTcreate.png[]
-
++
+image::PlainPPTcreate.png[]
 
 . In the *CT Mobile* menu, click *Save*.
 
 The CLM presentation is created.
 
-
+include::partial$activating-clm-presentation.adoc[]
 
 [[h2_589443929]]
-=== The Plain Application Editor Menu
+== The Plain Application Editor Menu
 
-During the CLM presentation editing, click *CT Mobile*. The *Plain
-Application Editor* menu is shown.
+During the CLM presentation editing, click *CT Mobile*. The *Plain Application Editor* menu is shown.
 
-[width="100%",cols="50%,50%",]
+[width="100%",cols="50%,50%",frame="none",grid="none"]
 |===
 a|
 The menu options:
 
-* Click
-xref:ios/ct-presenter/creating-clm-presentation/creating-clm-presentation-with-the-plain-application-record-type/creating-plain-clm-presentation-using-templates.adoc[Templates] for
-selecting a template for a CLM presentation.
-* Click xref:ios/ct-presenter/creating-clm-presentation/creating-clm-presentation-with-the-plain-application-record-type/creating-plain-clm-presentation-from-powerpoint.adoc[Import
-PPT] for creating a CLM presentation from uploaded PowerPoint.
+* Click xref:ios/ct-presenter/creating-clm-presentation/creating-clm-presentation-with-the-plain-application-record-type/creating-plain-clm-presentation-using-templates.adoc[Templates] for selecting a template for a CLM presentation.
+* Click xref:ios/ct-presenter/creating-clm-presentation/creating-clm-presentation-with-the-plain-application-record-type/creating-plain-clm-presentation-from-powerpoint.adoc[Import PPT] for creating a CLM presentation from uploaded PowerPoint.
 * Click *Save* to save changes.
-* Click *Convert* to edit the plain CLM presentation as
-xref:ios/ct-presenter/creating-clm-presentation/index.adoc[the usual one]. This action is
-irreversible.
+* Click *Convert* to edit the plain CLM presentation as xref:ios/ct-presenter/creating-clm-presentation/index.adoc[the usual one]. This action is irreversible.
 * Click *Undo/Redo* to cancel/repeat the previous action.
-* Use the standard actions by clicking *Cut*, *Copy*, *Paste*, or
-*Delete*.
+* Use the standard actions by clicking *Cut*, *Copy*, *Paste*, or *Delete*.
 
 |image:PlainEditorMenu.png[]
 |===
 
 [[h2_1603679187]]
-=== The Plain Application Editor Tools
+== The Plain Application Editor Tools
 
 [[h3_975431466]]
-==== Insert Text
+=== Insert Text
 
 Click the *Text* button to add, design, and edit text.
 
-
-
-image:PlainAddText.png[]
+image::PlainAddText.png[]
 
 [[h3_1553991866]]
-==== Insert Image
+=== Insert Image
 
 To add an image:
 
 . Click the *Image* button.
-. In the open window, click *Browse* and select an image or
-drop-and-drop an image.
+. In the open window, click *Browse* and select an image or drop-and-drop an image.
 . Click *Insert Image*.
 
 The image is added.
 
-
-
-image:PlainImageEdit.png[]
-
-
+image::PlainImageEdit.png[]
 
 [[h3_1671076548]]
-==== Insert Video
+=== Insert Video
 
 To add a video:
 
@@ -97,12 +78,10 @@ To add a video:
 
 The video is added.
 
-image:PlainAddVideo.png[]
-
-
+image::PlainAddVideo.png[]
 
 [[h3_790840930]]
-==== Insert Website
+=== Insert Website
 
 To add a website:
 
@@ -112,12 +91,10 @@ To add a website:
 
 The website is added.
 
-image:PlainWebsiteEdit.png[]
-
-
+image::PlainWebsiteEdit.png[]
 
 [[h3_1191029450]]
-==== Insert Shape
+=== Insert Shape
 
 To insert a shape:
 
@@ -126,12 +103,10 @@ To insert a shape:
 
 The shape is added.
 
-image:PlainAddShapeEdit.png[]
-
-
+image::PlainAddShapeEdit.png[]
 
 [[h3_935070099]]
-==== Insert Widget
+=== Insert Widget
 
 To insert a widget:
 
@@ -140,21 +115,13 @@ To insert a widget:
 
 The widget is added.
 
-[TIP] ==== For each widget type, specify properties. The full
-description of widget attributes is available
-xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-widget.adoc[here]. ====
+TIP: For each widget type, specify properties. The full description of widget attributes is available xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-widget.adoc[here].
 
-image:PlainAddWidgetEdit.png[]
-
-
+image::PlainAddWidgetEdit.png[]
 
 [[h3_1951582057]]
-==== Slide Background and Surface
+=== Slide Background and Surface
 
-Click the *Background* or *Surface* button to add an image or specify a
-color for the slide background and surface. You can apply the settings
-for all slides or the selected one.
+Click the *Background* or *Surface* button to add an image or specify a color for the slide background and surface. You can apply the settings for all slides or the selected one.
 
-
-
-image:PlainBackSurfEdit.png[]
+image::PlainBackSurfEdit.png[]
