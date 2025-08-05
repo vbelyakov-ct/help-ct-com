@@ -1,33 +1,21 @@
 = Creating CLM Presentation from PPT/PDF/ZIP file
 
-Before uploading a file,
-read https://help.customertimes.com/articles/ct-mobile-ios-en/requirements-and-media-file-formats[Requirements
-and Media File
-Formats] and https://help.customertimes.com/articles/ct-mobile-ios-en/remote-site-settings[set
-up remote sites].
+NOTE: Before uploading a file, read xref:ios/ct-presenter/about-ct-presenter/requirements-and-media-file-formats.adoc[Requirements and Media File Formats] and xref:ios/admin-guide/remote-site-settings.adoc[set up remote sites].
 
 [[h3_810248466]]
-==== To add Slides to the CLM Presentation by *Uploading a PPT/PDF/ZIP* file:
+== To add Slides to the CLM Presentation by *Uploading a PPT/PDF/ZIP* file:
 
 . Go to *Application Editor*.
-. Select a CLM presentation from the picklist in the upper left corner,
-or *xref:creating-clm-presentation[create new CLM presentation]*.
-. Click
-the *[.ui-provider .uz .b .c .d .e .f .g .h .i .j .k .l .m .n .o .p .q .r .s .t .u .v .w .x .y .z .ab .ac .ae .af .ag .ah .ai .aj .ak]#Upload
-PPT/PDF/ZIP#* button.
+. Select a CLM presentation from the picklist in the upper left corner, or xref:ios/ct-presenter/creating-clm-presentation/index.adoc[create new CLM presentation].
+. Click the *Upload PPT/PDF/ZIP* button.
 . Select the desired file.
-
-Select the *Replace existing slide* button if you want to replace
-existing slides in the CLM presentation with slides from the file which
-is being uploaded.
++
+Select the *Replace existing slide* button if you want to replace existing slides in the CLM presentation with slides from the file which is being uploaded.
 . Click *OK*.
 
-Consider special conditions for interactive CLM presentations while
-uploading slides.
+NOTE: Consider special conditions for interactive CLM presentations while uploading slides.
 
 Once slides are uploaded, make the CLM presentation ready:
-
-[.ui-provider .up .b .c .d .e .f .g .h .i .j .k .l .m .n .o .p .q .r .s .t .u .v .w .x .y .z .ab .ac .ae .af .ag .ah .ai .aj .ak]##
 
 . Select *Active*.
 . Configure slides:
@@ -35,25 +23,17 @@ Once slides are uploaded, make the CLM presentation ready:
 * Click *Save* to save changes.
 * Click *Cancel* to roll back all unsaved changes.
 * Click *Delete* next to a slide to remove a slide.
-* Click the **xref:creating-a-slide[Slide] **name to edit a slide.
-* Click the **xref:creating-a-template[Template] **name to edit a
-template.
-* Specify whether the slide is active and can be used in CLM
-presentation or not.
+* Click the xref:ios/ct-presenter/creating-clm-presentation/creating-clm-presentation-with-the-application-record-type/creating-a-slide.adoc[Slide] name to edit a slide.
+* Click the xref:ios/ct-presenter/creating-clm-presentation/creating-clm-presentation-with-the-application-record-type/creating-a-template.adoc[Template] name to edit a template.
+* Specify whether the slide is active and can be used in CLM presentation or not.
 * Specify the *Required* attribute and a category, if needed.
-* Specify slides
-in xref:ios/ct-presenter/clm-navigation-in-clm-presentations.adoc[branches].
-. Click xref:ios/ct-presenter/publishing-clm-presentations.adoc[the Publish application
-button].
+* Specify slides in xref:ios/ct-presenter/clm-navigation-in-clm-presentations.adoc[branches].
+. Click xref:ios/ct-presenter/publishing-clm-presentations.adoc[the Publish application button].
 
-image:/resources/Storage/project-snippets-drafts/create-clm-presentation-2023-02-14.png[/resources/Storage/project-snippets-drafts/create-clm-presentation-2023-02-14]
+image::create-clm-presentation-2023-02-14.png[]
 
-xref:ios/mobile-application/synchronization/synchronization-launch/index.adoc[Perform fast or mixed synchronization]
-on the mobile device to download the CLM presentation.
-
-
+xref:ios/mobile-application/synchronization/synchronization-launch/index.adoc[Perform fast or mixed synchronization] on the mobile device to download the CLM presentation.
 
 See also:
 
-* xref:creating-interactive-clm-presentation[Creating Interactive
-CLM Presentation]
+* xref:ios/ct-presenter/creating-clm-presentation/creating-clm-presentation-with-the-application-record-type/creating-interactive-clm-presentation/index.adoc[]

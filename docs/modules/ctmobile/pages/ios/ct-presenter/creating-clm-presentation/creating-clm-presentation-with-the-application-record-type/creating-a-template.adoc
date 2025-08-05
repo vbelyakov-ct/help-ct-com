@@ -2,33 +2,23 @@
 
 CT Presenter allows creating several slides based on one template.
 
-* You can use xref:ios/ct-presenter/creating-clm-presentation/creating-clm-presentation-with-the-application-record-type/creating-a-widget.adoc[widgets] to make slides look
-and feel different. To use widgets, it is needed to add
-xref:ios/ct-presenter/creating-clm-presentation/creating-clm-presentation-with-the-application-record-type/creating-a-placeholder.adoc[placeholders] where they would be
-located.
+* You can use xref:ios/ct-presenter/creating-clm-presentation/creating-clm-presentation-with-the-application-record-type/creating-a-widget.adoc[widgets] to make slides look and feel different. To use widgets, it is needed to add xref:ios/ct-presenter/creating-clm-presentation/creating-clm-presentation-with-the-application-record-type/creating-a-placeholder.adoc[placeholders] where they would be located.
 * Templates support an unlimited number of placeholders.
-
-
 
 To create a template:
 
 . Go to *Applications* and select a CLM presentation.
 . Click *New* in the *Templates* section.
++
+image::CreateTemplate.png[]
 
-image:CreateTemplate.png[]
+. Fill in the required fields and enter the HTML code in the *Markup* field.
++
+TIP: The full description of template attributes is available xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-template.adoc[here].
 
-
-. Fill in the required fields and enter the HTML code in the *Markup*
-field.
-
-[TIP] ==== The full description of template attributes is
-available xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-template.adoc[here]. ====
-* To activate JS Bridge in the HTML code,
-xref:ios/ct-presenter/js-bridge-api/activating-js-bridge.adoc[enable the JS Bridge library].
-* The *template name* should include the CLM presentation name, e.g.,
-_e-Detailing2: Test Template_, where _e-Detailing2_ is the name of the
-CLM presentation.
-
+* To activate JS Bridge in the HTML code, xref:ios/ct-presenter/js-bridge-api/activating-js-bridge.adoc[enable the JS Bridge library].
+* The *template name* should include the CLM presentation name, e.g., _e-Detailing2: Test Template_, where _e-Detailing2_ is the name of the CLM presentation.
++
 image:NewTemplate.png[]
 . Click *Save* or *Save & New* to create another slide.
 

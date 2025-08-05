@@ -1,29 +1,24 @@
 = Creating a Widget
 
-The [.object]#Widget# is a separate editable element of the
-template. Widgets are inserted in
-xref:ios/ct-presenter/creating-clm-presentation/creating-clm-presentation-with-the-application-record-type/creating-a-placeholder.adoc[placeholders] that are specified on the
-template. The following types of widgets are currently supported:
+The [.object]#Widget# is a separate editable element of the template. Widgets are inserted in xref:ios/ct-presenter/creating-clm-presentation/creating-clm-presentation-with-the-application-record-type/creating-a-placeholder.adoc[placeholders] that are specified on the template. The following types of widgets are currently supported:
 
 * *Rich Text*
-
++
 For changes to the HTML layout, text blocks places and images.
 * *Slider*
-
++
 An interactive customizable widget that can aggregate numerical values.
 * *Chart*
-
++
 An interactive diagram widget.
 * *Sortable*
-
++
 An interactive sorting widget.
 * *Video*
-
++
 A widget for inserting a video into a slide.
 
-[.confluence-information-macro-information]# YouTube video is currently
-supported. The video is downloaded to the iPad, and it is available in
-offline mode. #
+NOTE: YouTube video is currently supported. The video is downloaded to the iPad, and it is available in offline mode.
 
 To create a new widget:
 
@@ -31,15 +26,12 @@ To create a new widget:
 . In the *Slides* section, click the slide name.
 . Go to the *Related* tab.
 . In the *Widgets* section, click *New*.
++
+image::SlideRelated.png[]
 
-image:SlideRelated.png[]
-
-
-. Fill out the necessary fields. The full description of widget
-attributes is available xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-widget.adoc[here].
-
-image:NewWidget.png[]
-
+. Fill out the necessary fields. The full description of widget attributes is available xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-widget.adoc[here].
++
+image::NewWidget.png[]
 
 . Click *Save* or *Save & New* to create another widget.
 
