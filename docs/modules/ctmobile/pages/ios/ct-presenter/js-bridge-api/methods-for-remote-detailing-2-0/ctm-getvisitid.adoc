@@ -1,20 +1,31 @@
 = ctm.getVisitId
 
-The method of xref:ios/ct-presenter/js-bridge-api/index.adoc[JS Bridge] functionality is
-intended to return the Id of the _Activity_ record, from which the
-*Remote Detailing* or *Self Detailing* meeting was launched.
+The method of xref:ios/ct-presenter/js-bridge-api/index.adoc[JS Bridge] functionality is intended to return the Id of the _Activity_ record, from which the *Remote Detailing* or *Self Detailing* meeting was launched.
 
 [[h2_905745855]]
-=== Query Format
+== Query Format
 
+[source,javascript]
+----
+ctm.getVisitId(visitId)
+----
 
-
-[.apiobject]#visitId# is the Id of the corresponding *Activity*
-record.
+[.apiobject]#visitId# is the Id of the corresponding _Activity_ record.
 
 [[h2_908049738]]
-=== Handler
+== Handler
 
+include::partial$ctm-methods-handler.adoc[]
 
+[source,javascript]
+----
+ctm.getVisitId((visitId) => console.log('id of visit', visitId));
+----
 
 The result:
+
+[source,javascript]
+----
+response a031t00000zmm8IAAQ
+id of visit a031t00000zmm8IAAQ
+----

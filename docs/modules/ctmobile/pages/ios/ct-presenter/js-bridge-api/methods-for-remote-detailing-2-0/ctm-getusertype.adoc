@@ -1,23 +1,34 @@
 = ctm.getUserType
 
-The method of xref:ios/ct-presenter/js-bridge-api/index.adoc[JS Bridge] functionality is
-intended to return to the user role, who launched the *Remote Detailing*
-or *Self Detailing* meeting.
+The method of xref:ios/ct-presenter/js-bridge-api/index.adoc[JS Bridge] functionality is intended to return to the user role, who launched the *Remote Detailing* or *Self Detailing* meeting.
 
 [[h2_905745855]]
-=== Query Format
+== Query Format
 
+[source,javascript]
+----
+ctm.getUserType(userType)
+----
 
+[.apiobject]#userType# is the user role in the *Remote Detailing* or *Self Detailing* meeting. Available responses:
 
-[.apiobject]#userType# is the user role in the *Remote
-Detailing* or *Self Detailing* meeting. Available responses:
-
-*[.apiobject]#presenter# if the current user is the presenter.
-*[.apiobject]#guest# if the current user is the guest.
+* [.apiobject]#presenter# if the current user is the presenter.
+* [.apiobject]#guest# if the current user is the guest.
 
 [[h2_908049738]]
-=== Handler
+== Handler
 
+include::partial$ctm-methods-handler.adoc[]
 
+[source,javascript]
+----
+ctm.getUserType((userType) => ('type of user', userType);
+----
 
 The result:
+
+[source,javascript]
+----
+response presenter
+type of of user presenter
+----

@@ -1,26 +1,37 @@
 = ctm.secureQuery
 
-The method of xref:ios/ct-presenter/js-bridge-api/index.adoc[JS Bridge] functionality is
-intended to make secure requests to data tables and receive records by
-criteria during the *Self Detailing* meetings.
+The method of xref:ios/ct-presenter/js-bridge-api/index.adoc[JS Bridge] functionality is intended to make secure requests to data tables and receive records by criteria during the *Self Detailing* meetings.
 
-xref:self-detailing-2-0-using-secure-js-bridge-method[The
-corresponding CTM Setting record] of the *Remote Detailing Request* type
-is required.
+NOTE: xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-setup/self-detailing-2-0-using-secure-js-bridge-method.adoc[The corresponding CTM Setting record] of the *Remote Detailing Request* type is required.
 
 [[h2_905713055]]
-=== Query Format
+== Query Format
 
+[source,javascript]
+----
+ctm.secureQuery({alias:'alias', param:'param'}, handler)
+----
 
-
-[.apiobject]#alias# is an alias for the query that is stored on
-the Salesforce side.
-
-[.apiobject]#param# is the condition for the query (optionally).
+* [.apiobject]#alias# is an alias for the query that is stored on the Salesforce side.
+* [.apiobject]#param# is the condition for the query (optionally).
 
 [[h2_442663712]]
-=== Handler
+== Handler
 
+include::partial$ctm-methods-handler.adoc[]
 
+[source,javascript]
+----
+ctm.secureQuery({ alias: 'retrieve_account' , params: { name: 'test%' }}, function(res) {
+  console.log('Response: ', res);
+});
+----
 
 The result:
+
+[source,javascript]
+----
+ctm.secureQuery({ alias: 'retrieve_account' , params: { name: 'Name from input parameter' }}, function(res) {
+  console.log('Response: ', res);
+});
+----

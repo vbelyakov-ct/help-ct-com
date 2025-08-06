@@ -1,29 +1,36 @@
 = ctm.getAppEnv
 
-The method of the xref:ios/ct-presenter/js-bridge-api/index.adoc[JS Bridge] functionality is
-intended to determine the started meeting type, such as Remote Detailing
-or Self Detailing.
+The method of the xref:ios/ct-presenter/js-bridge-api/index.adoc[JS Bridge] functionality is intended to determine the started meeting type, such as Remote Detailing or Self Detailing.
 
-[TIP] ==== According to the meeting type, certain JS Bridge
-methods will be available. For more information, refer to
-xref:ios/ct-presenter/js-bridge-api/js-bridge-methods-availability.adoc[JS Bridge Methods
-Availability]. ====
+TIP: According to the meeting type, certain JS Bridge methods will be available. For more information, refer to xref:ios/ct-presenter/js-bridge-api/js-bridge-methods-availability.adoc[JS Bridge Methods Availability].
 
 [[h2_905745855]]
-=== Query Format
+== Query Format
 
-
+[source,javascript]
+----
+ctm.getAppEnv(env)
+----
 
 [.apiobject]#env# is the meeting type. The available responses:
 
-*[.apiobject]#rd# for the Remote Detailing meeting
-*[.apiobject]#sd# for the Self Detailing meeting
+* [.apiobject]#rd# for the Remote Detailing meeting
+* [.apiobject]#sd# for the Self Detailing meeting
 
 [[h2_908049738]]
-=== Handler
+== Handler
 
+include::partial$ctm-methods-handler.adoc[]
 
+[source,javascript]
+----
+ctm.getAppEnv((env) => console.log('current app env', env));
+----
 
 The result:
 
-
+[source,javascript]
+----
+response rd
+current app env rd
+----
