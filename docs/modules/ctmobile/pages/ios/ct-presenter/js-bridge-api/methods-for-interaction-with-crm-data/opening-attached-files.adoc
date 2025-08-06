@@ -1,38 +1,44 @@
 = Opening Attached Files
 
-The CT Mobile app allows opening the attached files in a native window.
-The opened files may be sent to an email address.
+The CT Mobile app allows opening the attached files in a native window. The opened files may be sent to an email address.
 
+To open the PDF file, for example,[.apiobject]#filename.pdf# from attachments of the CLM presentation:
 
+[source,html]
+----
+<a href="filename.pdf">Link to file</a>
+----
 
-To open the PDF file, for example,[.apiobject]#filename.pdf#
-from attachments of the CLM presentation:
+To open a file from the [.apiobject]#sources.zip# with the *filename* name:
 
+[source,html]
+----
+window.open(filename)
+----
 
+This method also works via the xref:ios/ct-presenter/the-remote-detailing-functionality/index.adoc[Remote Detailing] session.
 
-To open a file from the [.apiobject]#sources.zip# with the
-*filename* name:
+To open any file from the [.apiobject]#sources.zip#, use the following according to the path:
 
-This method also works via
-the xref:ios/ct-presenter/the-remote-detailing-functionality/index.adoc[Remote
-Detailing] session.
+[source,html]
+----
+src="file.pdf"
 
+src="folder/image.png"
+----
 
+Also, it is possible to launch the script from the [.apiobject]#sources.zip# using the path to it:
 
-To open any file from the [.apiobject]#sources.zip#, use the
-following according to the path:
+[source,html]
+----
+<script src="js/hammer.js"></script>
+----
 
+It is possible to open files that are locally stored in xref:ios/mobile-application/mobile-application-modules/libraries.adoc[the Libraries module]. The file name should be written without spaces.
 
+Opens the file from the Libraries module with the [.apiobject]#15Mb.mp4# file name:
 
-Also, it is possible to launch the script from the
-[.apiobject]#sources.zip# using the path to it:
-
-
-
-//tag::ios[]
-
-It is possible to open files that are locally stored in
-xref:ios/mobile-application/mobile-application-modules/libraries.adoc[the Libraries module]. The file name should be
-written without spaces.
-
-Opens the file from the Libraries module with the *15Mb.mp4* file name:
+[source,html]
+----
+<a href="15Mb.mp4">Open file from Libraries</a>
+----

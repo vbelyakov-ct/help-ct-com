@@ -1,35 +1,28 @@
 = CRM Data Display
 
-If the CLM presentation is launched on the _Activity_ record, it is
-possible to display values from the records related to the *Activity*
-record. You can create, insert, update, or delete CRM data.
-
-
+If the CLM presentation is launched on the _Activity_ record, it is possible to display values from the records related to the _Activity_ record. You can create, insert, update, or delete CRM data.
 
 The common use cases:
 
 * CLM presentation personalization.
-* ​Create[.object]#Activity Data# for[.object]#Order
-Taking# or[.object]#Stock-Taking#.
+* Create [.object]#Activity Data# for [.object]#Order Taking# or [.object]#Stock-Taking#.
 * Create contacts on a slide.
-* Displaying of required data using markers in the
-[.apiobject]#{!Object.Field}# format.
+* Displaying of required data using markers in the [.apiobject]#{!Object.Field}# format.
 
+The label markups should be in the [.apiobject]#{!CTPHARMA\__Activity__c.Id}# format.
 
+TIP: The following label must be placed in the slide markup, and the JavaScript file connected to the slide had to refer to that variable.
 
-The label markups should be in the
-[.apiobject]#{!CTPHARMA__Activity__c.Id}# format.
+For example, use the xref:ios/ct-presenter/js-bridge-api/methods-for-interaction-with-crm-data/ctm-query.adoc[ctm.query] method on the slide markup to display the record of the parent object:
 
-The following label must be placed in the slide markup, and the
-JavaScript file connected to the slide had to refer to that variable.
-
-
-
-For example, use the xref:ios/ct-presenter/js-bridge-api/methods-for-interaction-with-crm-data/ctm-query.adoc[ctm.query] method on the slide
-markup to display the record of the parent object:
-
-
+[source,javascript]
+----
+ctm.query("SELECT id FROM Account WHERE id IN (SELECT AccountId__c FROM Activity__c WHERE id = '{!Activity__c.Id}'")
+----
 
 Or you can display child records of the _Activity_ record:
 
-
+[source,javascript]
+----
+ctm.query("SELECT id FROM CTPHARMA__ActivityData__c WHERE CTPHARMA__ActivityId__c = '{!CTPHARMA__Activity__c.Id}'")
+----

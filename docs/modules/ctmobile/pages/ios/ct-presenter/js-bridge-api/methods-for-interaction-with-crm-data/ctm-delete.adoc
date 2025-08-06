@@ -1,26 +1,51 @@
 = ctm.delete
 
-The method of the xref:ios/ct-presenter/js-bridge-api/index.adoc[JS Bridge] functionality is
-intended to bulk delete fields of records of offline objects:
+The method of the xref:ios/ct-presenter/js-bridge-api/index.adoc[JS Bridge] functionality is intended to bulk delete fields of records of offline objects:
 
-* xref:ios/getting-started/application-permission-settings.adoc[the user profile] should
-have permission to delete records of the required object.
-* xref:ios/admin-guide/managing-offline-objects/index.adoc#h2_1534686659[permission to delete]
-the required offline object is allowed.
+* xref:ios/getting-started/application-permission-settings.adoc[the user profile] should have permission to delete records of the required object.
+* xref:ios/admin-guide/managing-offline-objects/index.adoc#h2_1747811907[permission to delete] the required offline object is allowed.
 
 [[h2_905713055]]
-=== Query Format
+== Query Format
 
+[source,javascript]
+----
+ctm.delete([SObject], handler)
+----
 
-
-[.apiobject]#SObject# is the JS object that indicates the API
-name of the offline object and the ID of the record to delete.
+[.apiobject]#SObject# is the JS object that indicates the API name of the offline object and the ID of the record to delete.
 
 [[h2_442663712]]
-=== Handler
+== Handler
 
+include::partial$ctm-methods-handler.adoc[]
 
+[source,javascript]
+----
+ctm.delete([{"SObject": "Account", "Id":"a0y1w000000Ck4x"}])
+----
 
+[source,javascript]
+----
+var deleteString = '[{"SObject":"Account", "Id": "DSFS-2342-TYRE-ADSFBA374Q8RQ8"}]';
 
+var deleteObject = JSON.parse(deleteString);
+
+ctm.delete(deleteObject, function(response){
+    console.log('Delete result', response);
+})
+----
 
 The result:
+
+[source,javascript]
+----
+{
+    "result": [
+        {
+            "Id": "a0y1w000000Ck4x"
+        }
+    ],
+    "success": true,
+}
+----

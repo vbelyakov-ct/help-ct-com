@@ -1,28 +1,46 @@
 = ctm.storeFile
 
-The method of xref:ios/ct-presenter/js-bridge-api/index.adoc[JS Bridge] functionality is
-intended to save the file attachment as the
-[.object]#Attachment# object.
+The method of xref:ios/ct-presenter/js-bridge-api/index.adoc[JS Bridge] functionality is intended to save the file attachment as the [.object]#Attachment# object.
 
 [[h2_905713055]]
-=== Query format
+== Query format
 
+[source,javascript]
+----
+ctm.storeFile([Name, ParentId, File_url], handler)
+----
 
-
-[.apiobject]#Name# is the name and extension that will be
-assigned to the file attachment;
-
-[.apiobject]#ParentId# is the ID of the record that stores the
-file attachment;
-
-[.apiobject]#File_url# is a local path that can be obtained
-with the xref:ios/ct-presenter/js-bridge-api/methods-for-interaction-with-crm-data/ctm-getfile.adoc[ctm.getFile] method.
+* [.apiobject]#Name# is the name and extension that will be assigned to the file attachment;
+* [.apiobject]#ParentId# is the ID of the record that stores the file attachment;
+* [.apiobject]#File_url# is a local path that can be obtained with the xref:ios/ct-presenter/js-bridge-api/methods-for-interaction-with-crm-data/ctm-getfile.adoc[ctm.getFile] method.
 
 [[h2_442663712]]
-=== Handler
+== Handler
 
+include::partial$ctm-methods-handler.adoc[]
 
+[source,javascript]
+----
+ctm.storeFile({"Name": "product_photo.png", "ParentId":"0011w00000HUnzr", "File_url": "/private/var/mobile/Containers/Data/Application/6404F6A1-0A03-434A-A1C9-CB189141BC45/tmp/photo (Monday, 15 July 2019 at 15:11:55 Moscow Standard Time).png"})
+----
 
+[source,javascript]
+----
+var storeString = '{"name":"test.png", "parentId": "DSFS-2342-TYRE-ADSFBA374Q8RQ8", "file_url": "/var/mobile/containers/Data/{PATH_TO_PHOTO}"}';
 
+var storeObject = JSON.parse(storeString);
+
+ctm.storeFile(storeObject, function(response){
+console.log('Create file result', response);
+})
+----
 
 The result:
+
+[source,javascript]
+----
+{
+   "success":true,
+   "id":"00P-EDCEEA4B-A8D6-4E9A-ADFB-DE81FF6C5551"
+}
+----

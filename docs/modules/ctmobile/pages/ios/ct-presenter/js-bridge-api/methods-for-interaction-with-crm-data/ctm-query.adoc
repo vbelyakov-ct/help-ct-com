@@ -1,21 +1,46 @@
 = ctm.query
 
-The method of xref:ios/ct-presenter/js-bridge-api/index.adoc[JS Bridge] functionality is
-intended to make requests to data tables and receive records by
-criteria.
+The method of xref:ios/ct-presenter/js-bridge-api/index.adoc[JS Bridge] functionality is intended to make requests to data tables and receive records by criteria.
 
 [[h2_905713055]]
-=== Query Format
+== Query Format
 
-
+[source,javascript]
+----
+ctm.query(string,handler)
+----
 
 The [.apiobject]#string# is the required SOQL query.
 
 [[h2_442663712]]
-=== Handler
+== Handler
 
+include::partial$ctm-methods-handler.adoc[]
 
+[source,javascript]
+----
+ctm.query('SELECT Id, Name FROM Account WHERE Name = "Google, Inc"')
+----
 
-
+[source,javascript]
+----
+ctm.query(query, function(response){
+    console.log('Query result', response);
+})
+----
 
 The result:
+
+[source,javascript]
+----
+{
+    "result": [
+        {
+            "Id": "2233445566",
+            "Name": "Sample Account"
+        },
+    ],
+    "success": true,
+    "rows": 1
+}
+----

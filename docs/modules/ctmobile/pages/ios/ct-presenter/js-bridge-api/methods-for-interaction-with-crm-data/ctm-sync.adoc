@@ -1,17 +1,37 @@
 = ctm.sync
 
-The method of xref:ios/ct-presenter/js-bridge-api/index.adoc[JS Bridge] functionality is
-intended to launch the fast or mixed synchronization without the CLM
-presentation interruption.
+The method of xref:ios/ct-presenter/js-bridge-api/index.adoc[JS Bridge] functionality is intended to launch the fast or mixed synchronization without the CLM presentation interruption.
 
 [[h2_905713055]]
-=== Query Format
+== Query Format
+
+[source,javascript]
+----
+ctm.sync(handler)
+----
 
 [[h2_442663712]]
-=== Handler
+== Handler
 
+include::partial$ctm-methods-handler.adoc[]
 
+[source,javascript]
+----
+ctm.sync(handler)
+----
 
-
+[source,javascript]
+----
+ctm.sync( function(response){
+    console.log('Result', response);
+})
+----
 
 The result:
+
+[source,javascript]
+----
+{
+    "success": true,
+}
+----

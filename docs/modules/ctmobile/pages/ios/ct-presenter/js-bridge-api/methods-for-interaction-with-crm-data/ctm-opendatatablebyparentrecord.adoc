@@ -1,27 +1,25 @@
 = ctm.openDataTableByParentRecord
 
-The method of the xref:ios/ct-presenter/js-bridge-api/index.adoc[JS Bridge] functionality is
-intended to open xref:ios/admin-guide/related-lists/custom-related-lists.adoc[a custom related list]
-with child records.
+The method of the xref:ios/ct-presenter/js-bridge-api/index.adoc[JS Bridge] functionality is intended to open xref:ios/admin-guide/related-lists/custom-related-lists.adoc[a custom related list] with child records.
 
 [[h2_905713055]]
-=== Query Format
+== Query Format
 
+[source,javascript]
+----
+ctm.openDataTableByParentRecord([ParentId, SettingName, Reload])
+----
 
+[.apiobject]#SObject# is the JS object that indicates the API name of the offline object with the following fields:
 
-[.apiobject]#SObject# is the JS object that indicates the API
-name of the offline object with the following fields:
-
-*[.apiobject]#ParentId# is the ID of the parent record. In the
-list will be stored child records that have a reference to that object;
-*[.apiobject]#SettingName# is a list of settings names of the
-xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/mobile-custom-details-settings.adoc[Mobile Custom Details
-Settings], such as permissions to create and/or delete a record in the
-custom related list, a list of columns to display, filter and sort
-criteria, for the custom related list displaying;
-*[.apiobject]#Reload# is responsible for the necessity of
-reloading the current slide when closing the native window with the
-records of the custom related list (optional attribute).
+* [.apiobject]#ParentId# is the ID of the parent record. In the list will be stored child records that have a reference to that object;
+* [.apiobject]#SettingName# is a list of settings names of the xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/mobile-custom-details-settings.adoc[Mobile Custom Details Settings], such as permissions to create and/or delete a record in the custom related list, a list of columns to display, filter and sort criteria, for the custom related list displaying;
+* [.apiobject]#Reload# is responsible for the necessity of reloading the current slide when closing the native window with the records of the custom related list (optional attribute).
 
 [[h2_442663712]]
-=== Query Example
+== Query Example
+
+[source,javascript]
+----
+ctm.openDataTableByParentRecord({"ParentId": "{!Activity__c.Id}", "SettingName": "CompanyProducts;POSMaterials", "reload":true})
+----

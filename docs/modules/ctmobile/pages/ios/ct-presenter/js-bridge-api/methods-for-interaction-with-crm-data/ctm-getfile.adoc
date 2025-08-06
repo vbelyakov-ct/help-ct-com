@@ -1,23 +1,40 @@
 = ctm.getFile
 
-The method of xref:ios/ct-presenter/js-bridge-api/index.adoc[JS Bridge] functionality is
-intended to obtain a local path to the file attachment of the
-[.object]#Attachment# or[.object]#ContentVersion#
-objects by using their ID.
+The method of xref:ios/ct-presenter/js-bridge-api/index.adoc[JS Bridge] functionality is intended to obtain a local path to the file attachment of the [.object]#Attachment# or [.object]#ContentVersion# objects by using their ID.
 
 [[h2_905713055]]
-=== Query format
+== Query format
 
-[.apiobject]#Id# is the ID of the *Attachment* record that
-should start from[.apiobject]#00P# or the ID of the
-*ContentVersion* record that should start with
-[.apiobject]#068#.
+[source,javascript]
+----
+ctm.getFile(Id)
+----
+
+[.apiobject]#Id# is the ID of the _Attachment_ record that should start from [.apiobject]#00P# or the ID of the _ContentVersion_ record that should start with [.apiobject]#068#.
 
 [[h2_442663712]]
-=== Handler
+== Handler
 
+include::partial$ctm-methods-handler.adoc[]
 
+[source,javascript]
+----
+ctm.getFile(“0681w000000GkoIAAS”)
+----
 
-
+[source,javascript]
+----
+ctm.getFile(Id, function(response){
+console.log('Result', response);
+})
+----
 
 The result:
+
+[source,javascript]
+----
+{
+    "response": "/private/var/mobile/Containers/Data/Application/6404F6A1-0A03-434A-A1C9-CB189141BC45/tmp/library1.png"
+}
+
+----
