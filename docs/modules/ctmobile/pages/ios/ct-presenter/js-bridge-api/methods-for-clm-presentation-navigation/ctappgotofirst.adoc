@@ -1,13 +1,24 @@
 = CTAPPgoToFirst
 
-The method is intended to jump to the first slide of the selected
-branch. The slide number is specified xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-slide.adoc[in the Order
-field] of the *Slide* record.
+The method is intended to jump to the first slide of the selected branch. The slide number is specified xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-slide.adoc[in the Order field] of the _Slide_ record.
 
 [[h2_905713055]]
-=== Query Format
+== Query Format
+
+[source,javascript]
+----
+CTAPPgoToFirst()
+----
 
 [[h2_442663712]]
-=== Query Example
+== Query Example
 
+[source,javascript]
+----
+CTAPPgoToFirst()
+----
 
+[source,html]
+----
+<a href="#" onclick="CTAPPgoToFirst();">The link to the first slide in the branch</a>
+----

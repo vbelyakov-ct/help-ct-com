@@ -1,46 +1,28 @@
 = Changing Slides
 
-Here are HTML code examples that can be used to navigate within CLM
-presentations in CT Mobile app along with
-xref:methods-for-clm-presentation-navigation[JS Bridge methods],
-xref:ios/mobile-application/mobile-application-modules/applications/gestures-in-clm-presentations.adoc[gestures], and
-xref:ios/mobile-application/mobile-application-modules/applications/clm-presentation-controls.adoc[button controls].
+Here are HTML code examples that can be used to navigate within CLM presentations in CT Mobile app along with xref:ios/ct-presenter/js-bridge-api/methods-for-clm-presentation-navigation/index.adoc[JS Bridge methods], xref:ios/mobile-application/mobile-application-modules/applications/gestures-in-clm-presentations.adoc[gestures], and xref:ios/mobile-application/mobile-application-modules/applications/clm-presentation-controls.adoc[button controls].
 
+To jump from the current slide to the slide by its branch number in the [.apiobject]#clm\__Branch__c# field and the order number in the [.apiobject]#clm\__Order__c# field, add the following code into the current slide markup:
 
+TIP: Available with the xref:ios/ct-presenter/the-remote-detailing-functionality/index.adoc[Remote Detailing] functionality.
 
-To jump from the current slide to the slide by its branch number in the
-[.apiobject]#clm__Branch__c# field and the order number
-in the [.apiobject]#clm__Order__c# field, add the
-following code into the current slide markup:
+[source,html]
+----
+<a href="#slide23">The slide's link №23</a>  
+----
 
-//tag::ios,win[][TIP] ==== Available with the
-xref:ios/ct-presenter/the-remote-detailing-functionality/index.adoc[Remote Detailing]
-functionality. ====
+To switch from the current slide to a slide in another CLM presentation, add a label to the [.apiobject]#clm\__APPID__c# of xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-application.adoc[the desired CLM presentation record] and add the following code into the current slide markup, where [.apiobject]#appID# is the label to the [.apiobject]#clm\__APPID__c# field:
 
+[source,html]
+----
+<a href="#app:appID">The link to the CLM presentation</a>
+----
 
+To open the first slide of the scenario, add a label to the [.apiobject]#clm\__APPID__c# of the desired CLM presentation record, specify the scenario label in the [.apiobject]#clm\__ScenarioName__c# of xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-customscenario.adoc[the desired Scenario record], and add the following code into the current slide markup, where the [.apiobject]#appID# is the label to the [.apiobject]#clm\__APPID__c# field and [.apiobject]#scenario_name# is the label from the [.apiobject]#clm\__ScenarioName__c# field:
 
-To switch from the current slide to a slide in another CLM presentation,
-add a label to the [.apiobject]#clm__APPID__c# of
-xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-application.adoc[the desired CLM presentation record] and add
-the following code into the current slide markup, where
-[.apiobject]#appID# is the label to the
-[.apiobject]#clm__APPID__c# field:
+[source,html]
+----
+<a href="#app:appID:scenario_name">The link to the scenario of the CLM presentation</a>
+----
 
-
-
-To open the first slide of the scenario, add a label to the
-[.apiobject]#clm__APPID__c# of the desired CLM
-presentation record, specify the scenario label in the
-[.apiobject]#clm__ScenarioName__c# of
-xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-customscenario.adoc[the desired Scenario record], and add the
-following code into the current slide markup, where
-the [.apiobject]#appID# is the label to the
-[.apiobject]#clm__APPID__c# field and
-[.apiobject]#scenario_name# is the label from the
-[.apiobject]#clm__ScenarioName__c# field:
-
-
-
-For more information about slide navigation, refer
-to xref:ios/ct-presenter/clm-navigation-in-clm-presentations.adoc[Navigation in CLM
-Presentations].
+For more information about slide navigation, refer to xref:ios/ct-presenter/clm-navigation-in-clm-presentations.adoc[Navigation in CLM Presentations].
