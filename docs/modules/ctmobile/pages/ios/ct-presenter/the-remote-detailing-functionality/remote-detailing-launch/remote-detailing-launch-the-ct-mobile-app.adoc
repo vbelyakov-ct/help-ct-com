@@ -1,32 +1,22 @@
 = Remote Detailing Launch: the CT Mobile app
 
-A presenter can start a remote CLM presentation for participants by
-tapping the invite link that is stored in the specified field on the
-xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-activity.adoc[Activity] record screen in the CT Mobile app.
+A presenter can start a remote CLM presentation for participants by tapping the invite link that is stored in the specified field on the xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-activity.adoc[Activity] record screen in the CT Mobile app.
 
-* The invite link for *Remote Detailing* can be created for PC, tablets,
-and mobile phones.
-* The invite link for *Self Detailing* can be created for tablets and
-mobile phones.
+* The invite link for *Remote Detailing* can be created for PC, tablets, and mobile phones.
+* The invite link for *Self Detailing* can be created for tablets and mobile phones.
 
-Optionally, specify a Salesforce workflow to send an email/SMS/etc. to
-the [.object]#Contact# of the _Activity_ record after generating
-an invitation link for this record.
+Optionally, specify a Salesforce workflow to send an email/SMS/etc. to the [.object]#Contact# of the _Activity_ record after generating an invitation link for this record.
 
 [[h3_2144641458]]
-==== Add the custom field for the invite link
+== Add the custom field for the invite link
 
 To add a custom field on the Activity page layout:
 
-. Go to *Setup → Object Manager →* click an[.object]#Activity#
-object *→ Fields & Relationships*.
+. Go to *Setup → Object Manager →* click an [.object]#Activity# object *→ Fields & Relationships*.
 . Click *New*.
-. Create a field with the *URL* type. The API name can be, e.g.,
-[.apiobject]#RDLink__c#.
-
-[NOTE] ==== The field to store an invitation link should have
-the same API name on any[.object]#Activity ==== object for the
-*Remote Detailing* meeting.#
+. Create a field with the *URL* type. The API name can be, e.g., [.apiobject]#RDLink__c#.
++
+NOTE: The field to store an invitation link should have the same API name on any [.object]#Activity# object for the *Remote Detailing* meeting.
 . Click *Save*.
 . Go to the *Page Layout* section.
 . Open the appropriate page or mobile layout.
@@ -36,20 +26,13 @@ the same API name on any[.object]#Activity ==== object for the
 The field is created.
 
 [[h3_1411649707]]
-==== Launch the Remote Detailing session
+== Launch the Remote Detailing session
 
-If the activity was created on the mobile device and has not been
-synchronized yet, the presenter should perform quick record
-synchronization or fast synchronization.
+If the activity was created on the mobile device and has not been synchronized yet, the presenter should perform quick record synchronization or fast synchronization.
 
-For the *Remote Detailing* meeting, click the invite link in the
-specific field:
+For the *Remote Detailing* meeting, click the invite link in the specific field:
 
-* As the presenter, the CLM presentation window opens and the remote CLM
-presentation starts with no need to enter credentials.
-* To join as a participant, tap the invite link. In the CLM presentation
-window, tap the *Log out* button. On the *Welcome* screen, enter your
-username and an e-mail (optionally) and tap *Join* to enter the meeting.
+* As the presenter, the CLM presentation window opens and the remote CLM presentation starts with no need to enter credentials.
+* To join as a participant, tap the invite link. In the CLM presentation window, tap the *Log out* button. On the *Welcome* screen, enter your username and an e-mail (optionally) and tap *Join* to enter the meeting.
 
-For the *Self Detailing* meeting, copy the invite link and send it to
-the participant.
+For the *Self Detailing* meeting, copy the invite link and send it to the participant.

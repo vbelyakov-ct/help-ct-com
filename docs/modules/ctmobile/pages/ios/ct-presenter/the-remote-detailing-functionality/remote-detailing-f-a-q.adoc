@@ -210,7 +210,7 @@ If the invitation link appeared neither in Salesforce nor in the CT
 Mobile app:
 
 . Check
-xref:remote-detailing-apex-trigger-classes-and-quick-action[Apex
+xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-setup/remote-detailing-apex-trigger-classes-and-quick-action.adoc[Apex
 Classes and Trigger are created]. It is necessary to specify the correct
 API name of the [.object]#Activity# object.
 . On xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/mobile-application-setup.adoc[the Mobile Application Setup
@@ -223,7 +223,7 @@ Control Panel 2.0: Activities] tab and set up *Activity* settings for
 the current user's profile.
 . xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-activity.adoc[The current Activity record] has no assigned
 CLM presentations and custom scenarios.
-xref:remote-detailing-apex-trigger-classes-and-quick-action#h3_2024838382[Click
+xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-setup/remote-detailing-apex-trigger-classes-and-quick-action.adoc#h3_2024838382[Click
 the Applications button] to specify the CLM presentations set.
 . xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/clm-settings.adoc[The incorrect record of CLM Settings] for the
 current user's profile. The Remote Detailing should be enabled in
@@ -426,7 +426,7 @@ Data Sharing] attribute to use the available JS Bridge methods
 implemented on the slide markup.
 * ​Several CLM presentations and custom scenarios can be presented in one
 session. Specify CLM presentations manually in Salesforce Classic or
-xref:remote-detailing-apex-trigger-classes-and-quick-action[add and
+xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-setup/remote-detailing-apex-trigger-classes-and-quick-action.adoc[add and
 use the Applications button on the Activity record in Lightning
 Experience].
 ** For *Remote Detailing 2.0*, you can xref:ios/ct-presenter/js-bridge-api/methods-for-clm-presentation-navigation/changing-slides.adoc[switch

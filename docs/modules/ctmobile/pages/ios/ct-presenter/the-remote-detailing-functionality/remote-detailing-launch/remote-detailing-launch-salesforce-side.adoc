@@ -1,104 +1,72 @@
 = Remote Detailing Launch: Salesforce Side
+:toc:
 
-In Salesforce, launch a CLM presentation on the
-xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-application.adoc[Application] or
-xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-activity.adoc[Activity] record.
-
-:toc: :toclevels: 3
+In Salesforce, launch a CLM presentation on the xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-application.adoc[Application] or xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-activity.adoc[Activity] record.
 
 [[h2_1396626265]]
-=== On Application Record
+== On Application Record
 
-A presenter can invite participants by sending the invitation link from
-Salesforce.
+A presenter can invite participants by sending the invitation link from Salesforce.
 
-* Only the *Remote Detailing* meeting can be started from
-the *Application* record.
-* The *Remote Detailing* and *Self Detailing* buttons in Salesforce
-Classic are no longer supported.
-* In the Lightning Experience, tap the *Remote Detailing* button on an
-*Application* record to create a new _Activity_ record with an
-invitation link.
+* Only the *Remote Detailing* meeting can be started from the _Application_ record.
+* The *Remote Detailing* and *Self Detailing* buttons in Salesforce Classic are no longer supported.
+* In the Lightning Experience, tap the *Remote Detailing* button on an _Application_ record to create a new _Activity_ record with an invitation link.
 
 [[h3_1371461765]]
-==== Add the Remote Detailing button
+=== Add the Remote Detailing button
 
-To add the button to generate an invitation link on the *Application*
-object page layout:
+To add the button to generate an invitation link on the *Application* object page layout:
 
-. Go to *Setup → Object Manager → Application→ Page Layouts.*
+. Go to *Setup → Object Manager → Application→ Page Layouts*.
 . Open the appropriate page layout.
 . Go to the *Mobile & Lightning Actions* section.
 . Drag and drop the *Remote Detailing* button on the page layout.
-
-image:RD-button_en.png[]
++
+image::RD-button_en.png[]
 . Click *Save*.
 
 The *Remote Detailing* button is added.
 
 [[h3_1411649707]]
-==== Launch the Remote Detailing session
+=== Launch the Remote Detailing session
 
 To launch the *Remote Detailing* meeting:
 
 . Click the *Remote Detailing* button on the Application record page.
-. On the *Preparing* stage, create a new _Activity_ record by selecting
-the [.object]#Activity# object, selecting a record type, and
-clicking *Next*.
-* The *Activity Type* field contains only[.object]#Activity#
-objects available for the current user;
-* The *Record Type* field contains record types for the selected
-[.object]#Activity# object if these record types are available
-for the current user.
-
-image:RD_launch_en.png[]
+. On the *Preparing* stage, create a new _Activity_ record by selecting the [.object]#Activity# object, selecting a record type, and clicking *Next*.
+* The *Activity Type* field contains only [.object]#Activity# objects available for the current user;
+* The *Record Type* field contains record types for the selected [.object]#Activity# object if these record types are available for the current user.
++
+image::RD_launch_en.png[]
 . In the next stages:
-* *Activity Creation*: the new _Activity_ record of the selected record
-type will be created.
+* *Activity Creation*: the new _Activity_ record of the selected record type will be created.
 * *Requesting RD Session*: the invite link generation.
 * *Starting RD Session*: launch of the *Remote Detailing* meeting.
-
-In case of any errors, the error message will be displayed at the
-appropriate stage.
++
+In case of any errors, the error message will be displayed at the appropriate stage.
 
 After all stages, the *Remote Detailing* meeting opens in the new tab.
 
-* Click the *Presenter Login* button to join as a presenter. If you
-logged in as a guest, click the *Log out* button.
-* Enter your username and an e-mail (optionally) and click *Join* to
-enter as a participant.
+* Click the *Presenter Login* button to join as a presenter. If you logged in as a guest, click the *Log out* button.
+* Enter your username and an e-mail (optionally) and click *Join* to enter as a participant.
 
 [[h2_1956969773]]
-=== On Activity Record
+== On Activity Record
 
-A presenter can invite participants by sending the invite link that is
-stored in the specified custom field on the _Activity_ record in
-Salesforce.
+A presenter can invite participants by sending the invite link that is stored in the specified custom field on the _Activity_ record in Salesforce.
 
-Specify the desired record type of
-the [.object]#Activity# object in
-the xref:remote-detailing-apex-trigger-classes-and-quick-action#h2_249047963[Apex
-trigger] to launch the *Remote Detailing* or *Self Detailing* meeting.
-Optionally, specify a Salesforce workflow to send an email/SMS/etc. to
-the contact of the _Activity_ record after generating an invitation link
-for this record.
+Specify the desired record type of the [.object]#Activity# object in the xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-setup/remote-detailing-apex-trigger-classes-and-quick-action.adoc#h2_249047963[Apex trigger] to launch the *Remote Detailing* or *Self Detailing* meeting. Optionally, specify a Salesforce workflow to send an email/SMS/etc. to the contact of the _Activity_ record after generating an invitation link for this record.
 
 [[h3_2144641458]]
-==== Add the custom field for the invite link
+=== Add the custom field for the invite link
 
 To add a custom field on the *Activity* page layout:
 
-. Go to *Setup → Object Manager →* click an *Activity* object *→ Fields
-& Relationships*.
+. Go to *Setup → Object Manager →* click an *Activity* object *→ Fields & Relationships*.
 . Click *New*.
-. Create a field with the *URL* data type. The API name can be, e.g.,
-[.apiobject]#RDLink__c#.
-
-[TIP] ==== Specify the API name of the field in the *Link Field*
-on the xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-presenter.adoc#h3_1311451422[CT
-Mobile Control Panel:
-Presenter] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-remote-detailing-new.adoc#h4_1311451422[CT
-Mobile Control Panel 2.0: Remote Detailing] tab. ====
+. Create a field with the *URL* data type. The API name can be, e.g., [.apiobject]#RDLink__c#.
++
+TIP: Specify the API name of the field in the *Link Field* on the xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-presenter.adoc#h3_1311451422[CT Mobile Control Panel: Presenter] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-remote-detailing-new.adoc#h4_1311451422[CT Mobile Control Panel 2.0: Remote Detailing] tab.
 . Click *Save*.
 . Go to the *Page Layout* section.
 . Open the appropriate page or mobile layout.
@@ -108,73 +76,52 @@ Mobile Control Panel 2.0: Remote Detailing] tab. ====
 The field is created.
 
 [[h3_69490032]]
-==== Launch the Remote Detailing session
+=== Launch the Remote Detailing session
 
 To launch the *Remote Detailing* meeting:
 
 . Create a new _Activity_ record.
-. Click the
-xref:remote-detailing-apex-trigger-classes-and-quick-action#h3_2024838382[Applications]
-button.
-. In the *Applications* window, select the available CLM presentations
-for the *Remote Detailing* meetings.
-
-[TIP] ==== You can specify the IDs of CLM presentation(s) as a
-default value for the ApplicationIds__c field, or create your custom
-process to populate the [.apiobject]#ApplicationIds__c ====
-field.#
-. After a while,
-xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-launch/remote-detailing-launch-salesforce-side.adoc#h3_2144641458[the
-specific field] will be populated with the invite link, for the *Remote
-Detailing* or *Self Detailing* meeting, according to
+. Click the xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-setup/remote-detailing-apex-trigger-classes-and-quick-action.adoc#h3_2024838382[Applications] button.
+. In the *Applications* window, select the available CLM presentations for the *Remote Detailing* meetings.
++
+TIP: You can specify the IDs of CLM presentation(s) as a default value for the [.apiobject]#ApplicationIds\__c# field, or create your custom process to populate the [.apiobject]#ApplicationIds__c# field.
+. After a while, xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-launch/remote-detailing-launch-salesforce-side.adoc#h3_2144641458[the specific field] will be populated with the invite link, for the *Remote Detailing* or *Self Detailing* meeting, according to
 xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-setup/index.adoc[Remote Detailing Setup].
 
+For the *Remote Detailing* meeting, click the invite link in the specific field:
 
+* Click the *Presenter Login* button to join as a presenter. If you logged in as a guest, click the *Log out* button.
+* Click the invite link. Enter your username and an e-mail (optionally) and click *Join* to enter as a participant.
 
-For the *Remote Detailing* meeting, click the invite link in the
-specific field:
-
-* Click the *Presenter Login* button to join as a presenter. If you
-logged in as a guest, click the *Log out* button.
-* Click the invite link. Enter your username and an e-mail (optionally)
-and click *Join* to enter as a participant.
-
-For the *Self Detailing* meeting, copy the invite link and send it to
-the participant.
+For the *Self Detailing* meeting, copy the invite link and send it to the participant.
 
 [[h3_135274013]]
-==== Error Handling
+=== Error Handling
 
-Errors may occur during creating an _Activity_ record for a *Remote
-Detailing* meeting.
+Errors may occur during creating an _Activity_ record for a *Remote Detailing* meeting.
 
-
-
-When a user adds CLM presentations to the _Activity_ record, an error
-occurs if:
+When a user adds CLM presentations to the _Activity_ record, an error occurs if:
 
 * at least one CLM presentation is not found on a server
 * at least one CLM presentation is not active
 * at least one CLM presentation is not available for remote detailing
 
-In this case, the *Oops! Renew slides for the applications you selected
-and recreate the activity* message will be displayed. The user will
-receive an email in the following format:
+In this case, the *Oops! Renew slides for the applications you selected and recreate the activity* message will be displayed. The user will receive an email in the following format:
 
+[source]
+----
+REMOTE DETAILING NOTIFICATION
 
+Failed to create RD link for the Activity: <link to activity>
+
+Renew slides for the application(s) and recreate the activity:
+
+<links to applications>
+----
 
 When a user launches the *Remote Detailing* meeting, an error occurs if:
 
-* The user does not have permission to do so. The *RD is not enabled for
-this profile* message will be displayed.
-* The user has no permission to read the following CLM presentations.
-During the *Remote Detailing* meeting, the user will see allowed CLM
-presentations, and *Remote Detailing* notifies the user of the list of
-hidden CLM presentations.
-* CLM presentations for this meeting are no more available for *Remote
-Detailing*. During the *Remote Detailing* meeting, the user will see CLM
-presentations available for *Remote Detailing*, and *Remote Detailing*
-notifies the user of the list of hidden CLM presentations.
-* CLM presentations are no more active. During the *Remote Detailing*
-meeting, the user will see only active CLM presentations, and *Remote
-Detailing* notifies the user of the list of hidden CLM presentations.
+* The user does not have permission to do so. The *RD is not enabled for this profile* message will be displayed.
+* The user has no permission to read the following CLM presentations. During the *Remote Detailing* meeting, the user will see allowed CLM presentations, and *Remote Detailing* notifies the user of the list of hidden CLM presentations.
+* CLM presentations for this meeting are no more available for *Remote Detailing*. During the *Remote Detailing* meeting, the user will see CLM presentations available for *Remote Detailing*, and *Remote Detailing* notifies the user of the list of hidden CLM presentations.
+* CLM presentations are no more active. During the *Remote Detailing* meeting, the user will see only active CLM presentations, and *Remote Detailing* notifies the user of the list of hidden CLM presentations.
