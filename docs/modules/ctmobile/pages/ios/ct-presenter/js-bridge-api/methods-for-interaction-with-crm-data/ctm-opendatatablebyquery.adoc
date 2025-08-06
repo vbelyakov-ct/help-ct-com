@@ -7,7 +7,7 @@ The method of the xref:ios/ct-presenter/js-bridge-api/index.adoc[JS Bridge] func
 
 [source,javascript]
 ----
-ctm.openDataTableByParentRecord([ParentId, SettingName, Reload])
+ctm.openDataTableByQuery([Query, Settingname, Reload])
 ----
 
 [.apiobject]#SObject# is the JS object that indicates the API name of the offline object with the following fields:
@@ -21,5 +21,12 @@ ctm.openDataTableByParentRecord([ParentId, SettingName, Reload])
 
 [source,javascript]
 ----
-ctm.openDataTableByParentRecord({"ParentId": "{!Activity__c.Id}", "SettingName": "CompanyProducts;POSMaterials", "reload":true})
+ctm.openDataTableByQuery({"query": "select id, Firstname, Lastname, Company from Lead where IsConverted=false", "SettingName": null, reload:false})
+----
+
+[source,javascript]
+----
+ctm.openDataTableByQuery([query, Settingname, reload], function(response){
+console.log('Result', response);
+})
 ----
