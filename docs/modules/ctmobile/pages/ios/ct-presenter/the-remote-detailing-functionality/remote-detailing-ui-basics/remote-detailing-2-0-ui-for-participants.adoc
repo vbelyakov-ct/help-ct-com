@@ -1,176 +1,102 @@
 = Remote Detailing 2.0: UI for Participants
+:toc:
 
-[NOTE] ==== Available since CT Mobile package 3.63. ====
+NOTE: Available since CT Mobile package 3.63.
 
-Participants can view the remote CLM presentations on their PC, tablet,
-or mobile phone. The supported browser list is
-available xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-f-a-q.adoc[here].
-
-:toc: :toclevels: 3
+Participants can view the remote CLM presentations on their PC, tablet, or mobile phone. The supported browser list is available xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-f-a-q.adoc[here].
 
 [[h2_555694282]]
-=== Join the Remote Detailing session
+== Join the Remote Detailing session
 
 To join the meeting:
 
-. Click xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-f-a-q.adoc#h2_106650128[the invite link]
-to join the CLM presentation.
+. Click xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-f-a-q.adoc#h2_106650128[the invite link] to join the CLM presentation.
 . Enter your username and e-mail and click *Join*.
-* If specified, a participant should agree with
-xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-presenter.adoc#h3_1019207818[the Terms of
-Use].
-* An email address
-xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-presenter.adoc#h3_868233337[may be
-required].
+* If specified, a participant should agree with xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-presenter.adoc#h3_1019207818[the Terms of Use].
+* An email address xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-presenter.adoc#h3_868233337[may be required].
++
+image::RD-Participant-mode_5.png[]
 
-image:RD-Participant-mode_5.png[]
+* If a participant has ever joined the meeting in this browser, they can join the meeting with no need to enter details.
++
+image::RD-Participant-mode_3.png[]
 
+. If xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-ui-basics/remote-detailing-1-0-ui-for-presenter.adoc[the presenter did not start] the *Remote Detailing* meeting, the *Waiting...* screen is displayed.
++
+image::waiting_screen.png[]
 
-* If a participant has ever joined the meeting in this browser, they can
-join the meeting with no need to enter details.
-
-image:RD-Participant-mode_3.png[]
-
-
-. If xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-ui-basics/remote-detailing-1-0-ui-for-presenter.adoc[the presenter did
-not start] the *Remote Detailing* meeting, the *Waiting...* screen is
-displayed.
-
-image:waiting_screen.png[]
-
-
-
-When the presenter joined, participants will be redirected to the
-*Remote Detailing* meeting.
+When the presenter joined, participants will be redirected to the *Remote Detailing* meeting.
 
 [[h2_1176220873]]
-=== Participate in the Remote Detailing session
+== Participate in the Remote Detailing session
 
 [[h3_449942769]]
-==== Main Screen
+=== Main Screen
 
 When the meeting starts:
 
-* Zoom in or out a slide for a comfortable view or with the pinch
-gesture on tablets.
+* Zoom in or out a slide for a comfortable view or with the pinch gesture on tablets.
 * Enter full-screen mode.
 * Collapse the sidebar with the participants or maximize it.
 * Like or dislike slide.
-
-[TIP] ==== The *Track slide likes/dislikes* option should be
-enabled on xref:ios/ct-presenter/creating-clm-presentation/creating-clm-presentation-with-the-application-record-type/index.adoc#h2_213917439[the CLM
-presentation record] and the presenter should allow like/dislike for
-participants. ====
-* If the presenter allowed the remote control for the participant, the
-participant can xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-f-a-q.adoc[interact with slides
-and use JS Bridge methods].
++
+TIP: The *Track slide likes/dislikes* option should be enabled on xref:ios/ct-presenter/creating-clm-presentation/creating-clm-presentation-with-the-application-record-type/index.adoc[the CLM presentation record] and the presenter should allow like/dislike for participants.
+* If the presenter allowed the remote control for the participant, the participant can xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-f-a-q.adoc[interact with slides and use JS Bridge methods].
 ** The participant pointer is displayed for all participants.
-** The slide navigation bar and the ability to select a CLM presentation
-are disabled for participants.
-
-image:RD-Participant-mode_1.png[]
+** The slide navigation bar and the ability to select a CLM presentation are disabled for participants.
++
+image::RD-Participant-mode_1.png[]
 
 [[h3_111154998]]
-==== Sidebar
+=== Sidebar
 
-[width="100%",cols="50%,50%",]
+[width="100%",cols="50%,50%",frame="none",grid="none"]
 |===
 a|
-The sidebar has the *Conference* tab to view participants and available
-actions.
+The sidebar has the *Conference* tab to view participants and available actions.
 
-* Click *Meeting ID* in the bottom right corner to copy the Meeting ID
-and share it if needed.
-* When participants join or leave a meeting or a new comment appears,
-the corresponding pop-up will be shown in the lower-right corner.
+* Click *Meeting ID* in the bottom right corner to copy the Meeting ID and share it if needed.
+* When participants join or leave a meeting or a new comment appears, the corresponding pop-up will be shown in the lower-right corner.
 
-
-
-If specified in
-the xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-presenter.adoc#h2_985373192[CT Mobile
-Control Panel:
-Presenter] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-remote-detailing-new.adoc#h3_650556118[CT
-Mobile Control Panel 2.0: Remote Detailing], the *Comments* tab will be
-displayed and all users can leave a comment. The red dot indicated the
-unread messages.
-
-
+If specified in the xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-presenter.adoc#h2_985373192[CT Mobile Control Panel:
+Presenter] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-remote-detailing-new.adoc#h3_650556118[CT Mobile Control Panel 2.0: Remote Detailing], the *Comments* tab will be displayed and all users can leave a comment. The red dot indicated the unread messages.
 
 If audio is recording, the warning is displayed.
 
-
-
 [[h4_1551924251]]
-===== Audio/Video On/Off
+*Audio/Video On/Off*
 
-* Click to enable the microphone and camera if video streaming is
-allowed in
-the xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-presenter.adoc#h3_172954036[CT Mobile
-Control Panel:
-Presenter] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-remote-detailing-new.adoc#h4_1182643139[CT
-Mobile Control Panel 2.0: Remote Detailing] tab. The browser asks
-permission if it has not been granted yet.
-* Click the arrow next to the microphone or camera button to select the
-desired device if applied.
-
-
+* Click to enable the microphone and camera if video streaming is allowed in the xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-presenter.adoc#h3_172954036[CT Mobile Control Panel: Presenter] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-remote-detailing-new.adoc#h4_1182643139[CT Mobile Control Panel 2.0: Remote Detailing] tab. The browser asks permission if it has not been granted yet.
+* Click the arrow next to the microphone or camera button to select the desired device if applied.
 
 [[h4_1837856184]]
-===== Screen Share On/Off
+*Screen Share On/Off*
 
-* Click to start sharing the screen and select what to share. By
-default, the screen will be shared in the sidebar next to the
-participant instead of a video if the video is turned on.
-* If the presenter clicks the *Video out of focus* button next to a
-participant in the sidebar, the participant's screen or video will be
-shared on the main screen instead of the current CLM presentation slide.
-The CLM presentation will continue to broadcast next to the presenter in
-the *Conference* tab.
-* Click the video/screen sharing window to zoom it out in the
-*Conference* tab.
-
-
+* Click to start sharing the screen and select what to share. By default, the screen will be shared in the sidebar next to the participant instead of a video if the video is turned on.
+* If the presenter clicks the *Video out of focus* button next to a participant in the sidebar, the participant's screen or video will be shared on the main screen instead of the current CLM presentation slide. The CLM presentation will continue to broadcast next to the presenter in the *Conference* tab.
+* Click the video/screen sharing window to zoom it out in the *Conference* tab.
 
 [[h4_816803511]]
-===== End Call
+*End Call*
 
-Click to leave the meeting. If call repeat is allowed in
-the xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-presenter.adoc#h3_341694305[CT Mobile
-Control Panel:
-Presenter] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-remote-detailing-new.adoc#h4_1185385739[CT
-Mobile Control Panel 2.0: Remote Detailing] tab, you can join it again.
-
-
+Click to leave the meeting. If call repeat is allowed in the xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-presenter.adoc#h3_341694305[CT Mobile Control Panel: Presenter] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-remote-detailing-new.adoc#h4_1185385739[CT Mobile Control Panel 2.0: Remote Detailing] tab, you can join it again.
 
 |image:RD-Participant-mode_2.png[]
 |===
 
 [[h2_888286157]]
-=== Leave the Remote Detailing session
+== Leave the Remote Detailing session
 
-Click *End call* to leave the meeting. If the meeting is still on, you
-can rejoin it.
+Click *End call* to leave the meeting. If the meeting is still on, you can rejoin it.
 
-[.confluence-information-macro-information]# When the *Session Timeout*
-option is set up in the
-xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-presenter.adoc#h3_1123335710[CT Mobile
-Control Panel:
-Presenter] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-remote-detailing-new.adoc#h4_1123335710[CT
-Mobile Control Panel 2.0: Remote Detailing] tab and the Presenter is out
-of the meeting for more than the specified time, participants will be
-automatically logged out. #
-image:RD-Participant-mode_4.png[]
+NOTE:  When the *Session Timeout* option is set up in the xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-presenter.adoc#h3_1123335710[CT Mobile Control Panel: Presenter] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-remote-detailing-new.adoc#h4_1123335710[CT Mobile Control Panel 2.0: Remote Detailing] tab and the Presenter is out of the meeting for more than the specified time, participants will be automatically logged out.
 
+image::RD-Participant-mode_4.png[]
 
+If the Presenter finishes the meeting, participants will be automatically logged out.
 
-If the Presenter finishes the meeting, participants will be
-automatically logged out.
+image::RD-Participant-mode_6.png[]
 
-image:RD-Participant-mode_6.png[]
+You can enter the Meeting ID and join as a participant in another *Remote Detailing* meeting.
 
-
-
-You can enter the Meeting ID and join as a participant in another
-*Remote Detailing* meeting.
-
-image:RD-Participant-mode_7.png[]
+image::RD-Participant-mode_7.png[]
