@@ -1,29 +1,20 @@
 = Self Detailing 2.0: Using Secure JS Bridge Method
 
-The JS Bridge methods for exchanging data with Salesforce are disabled
-for *Self Detailing* meetings because an anonymous user can access data.
-
-
+The JS Bridge methods for exchanging data with Salesforce are disabled for *Self Detailing* meetings because an anonymous user can access data.
 
 In this case:
 
-. Use the secure xref:ios/ct-presenter/js-bridge-api/methods-for-remote-detailing-2-0/ctm-securequery.adoc[ctm.secureQuery] method
-instead of[.apiobject]#ctm.query#.
-. Create the xref:ios/admin-guide/ct-mobile-control-panel/ctm-settings/index.adoc[CTM Settings] record with the
-*Remote Detailing Request* record type.
+. Use the secure xref:ios/ct-presenter/js-bridge-api/methods-for-remote-detailing-2-0/ctm-securequery.adoc[ctm.secureQuery] method instead of [.apiobject]#ctm.query#.
+. Create the xref:ios/admin-guide/ct-mobile-control-panel/ctm-settings/index.adoc[CTM Settings] record with the _Remote Detailing Request_ record type.
 
-
-
-To create a *CTM Settings* record:
+To create a _CTM Settings_ record:
 
 . Go to the *CTM Settings* tab and click *New*.
 . Select the *Remote Detailing Request* record type.
 . Specify the following:
-* In the *Criteria* field, add the SOQL query, for example,
-[.apiobject]#SELECT Id FROM Account WHERE Name like{!Name}
+* In the *Criteria* field, add the SOQL query, for example, [.apiobject]#SELECT Id FROM Account WHERE Name like{!Name}
 and Type ={!Type}#
-* In the Label field, specify the label of the record, for example,
-[.apiobject]#Retrieve_Account#.
+* In the *Label* field, specify the label of the record, for example, [.apiobject]#Retrieve_Account#.
 . Click *Save*.
 
 The setup is complete.
