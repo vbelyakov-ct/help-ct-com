@@ -2,70 +2,35 @@
 
 There is a list of management tools to control CLM presentations:
 
-The xref:ios/mobile-application/mobile-application-modules/applications/index.adoc[Application] module, Carousel of CLM
-presentations xref:ios/admin-guide/mobile-layouts/index.adoc-applications[on the mobile
-layout] and xref:ios/mobile-application/ui/home-screen/index.adoc[Home Screen].
-
-xref:ios/mobile-application/mobile-application-modules/applications/gestures-in-clm-presentations.adoc[Gestures]
-
-xref:ios/mobile-application/mobile-application-modules/applications/clm-presentation-controls.adoc[Button controls]
-
-xref:ios/ct-presenter/js-bridge-api/methods-for-interaction-with-crm-data/opening-attached-files.adoc[Opening Attached files]
-
-xref:ios/ct-presenter/js-bridge-api/methods-for-clm-presentation-navigation/changing-slides.adoc[Changing Slides]
-
-ifndef::andr[]
-
-xref:ios/ct-presenter/js-bridge-api/methods-for-clm-presentation-navigation/index.adoc[JS Bridge methods]
-
-ifndef::andr[]
-
-The xref:ios/ct-presenter/the-remote-detailing-functionality/index.adoc[Remote Detailing]
+. The xref:ios/mobile-application/mobile-application-modules/applications/index.adoc[Application] module, Carousel of CLM presentations xref:ios/admin-guide/mobile-layouts/mobile-layouts-applications.adoc[on the mobile layout] and xref:ios/mobile-application/ui/home-screen/index.adoc[Home Screen].
+* xref:ios/mobile-application/mobile-application-modules/applications/gestures-in-clm-presentations.adoc[Gestures]
+* xref:ios/mobile-application/mobile-application-modules/applications/clm-presentation-controls.adoc[Button controls]
+* xref:ios/ct-presenter/js-bridge-api/methods-for-interaction-with-crm-data/opening-attached-files.adoc[Opening Attached files]
+* xref:ios/ct-presenter/js-bridge-api/methods-for-clm-presentation-navigation/changing-slides.adoc[Changing Slides]
+* xref:ios/ct-presenter/js-bridge-api/methods-for-clm-presentation-navigation/index.adoc[JS Bridge methods]
+. The xref:ios/ct-presenter/the-remote-detailing-functionality/index.adoc[Remote Detailing]
 functionality.
-
-The UI of the Remote Detailing functionality is adapted for the
-co-browsing session. The presenter UI is intended to show slides and
-enable remote controls for participants, such as, like/dislike slides,
-stream video, calls, etc. The participant's UI is adapted according to
-the presenter's choice. Additionally, the following is available:
++
+The UI of the Remote Detailing functionality is adapted for the co-browsing session. The presenter UI is intended to show slides and enable remote controls for participants, such as, like/dislike slides, stream video, calls, etc. The participant's UI is adapted according to the presenter's choice. Additionally, the following is available:
 
 * xref:ios/ct-presenter/js-bridge-api/methods-for-clm-presentation-navigation/index.adoc[JS Bridge methods]
 * xref:ios/ct-presenter/js-bridge-api/methods-for-clm-presentation-navigation/changing-slides.adoc[Changing Slides]
 
 [[h2_21685430]]
-=== Branches
+== Branches
 
-Slides from one or several CLM presentation(s) may be organized in the
-branches, and each branch will be launched depending on the choice of
-the user.
+Slides from one or several CLM presentation(s) may be organized in the branches, and each branch will be launched depending on the choice of the user.
 
-[TIP] ==== Double tap at the bottom of the screen to display
-slides in a branch for rapid switching between the slides. To jump to
-another branch, use one of
-xref:ios/ct-presenter/js-bridge-api/methods-for-clm-presentation-navigation/index.adoc[the JS Bridge methods
-for navigation]. ====
+TIP: Double tap at the bottom of the screen to display slides in a branch for rapid switching between the slides. To jump to another branch, use one of xref:ios/ct-presenter/js-bridge-api/methods-for-clm-presentation-navigation/index.adoc[the JS Bridge methods for navigation].
 
-For example, the presentation may include a home page that contains
-buttons for navigating through the presentation. On this slide, a user
-can choose what path of the presentation to take by tapping one of the
-headers.
+For example, the presentation may include a home page that contains buttons for navigating through the presentation. On this slide, a user can choose what path of the presentation to take by tapping one of the headers.
 
-image:Branch.png[]
-
-
+image::Branch.png[]
 
 Each slide should have a unique order number.
 
+image::57218546.png[]
 
+It is recommended to number branches as 0, 1, 2, etc., and number slides as 01, 02, …, 11, 12, etc., where a first number is a branch number, and a second is an order slide number in this branch.
 
-image:57218546.png[]
-
-
-
-It is recommended to number branches as 0, 1, 2, etc., and number slides
-as 01, 02, …, 11, 12, etc., where a first number is a branch number, and
-a second is an order slide number in this branch.
-
-
-
-image:Branches.png[]
+image::Branches.png[]
