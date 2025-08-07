@@ -10,7 +10,7 @@ Attachment requirements for ZIP archives:
 * The file size should be no more than 25 MB. If the attachment is larger than 25 MB, it should be split into several ZIP archives.
 * The file extension for ZIP archives should be .zip with the source's name. The available formats:
 ** the [.apiobject]#sources[n].zip# format, where [.apiobject]#[n]# is the number of the archive part, starting from 1.
-** for convenience of use, it is possible to use the 7-Zip utility program to create and automatically divide archives into parts of less than 25 MB in the [.apiobject]#sources.zip.00[n]# format, where[.apiobject]#[n]# is the number of the archive part, starting from 1.
+** for convenience of use, it is possible to use the 7-Zip utility program to create and automatically divide archives into parts of less than 25 MB in the [.apiobject]#sources.zip.00[n]# format, where [.apiobject]#[n]# is the number of the archive part, starting from 1.
 +
 NOTE: Even if the attachment limit is extended by Salesforce support, there is no way to overcome the file size limit of 25 MB.
 
