@@ -1,68 +1,33 @@
 = Migration to Remote Detailing 2.0
 
-[NOTE] ==== For users of CT Mobile package v. 3.66 or higher.
-====
+NOTE: For users of CT Mobile package v. 3.66 or higher.
 
-The new remote detailing UI is available both for the presenter and
-participants. Consider the following to use the *Remote Detailing 2.0*.
+The new remote detailing UI is available both for the presenter and participants. Consider the following to use the *Remote Detailing 2.0*.
 
 [[h2_2023541197]]
-=== If the Remote Detailing has not been yet configured in your Salesforce org
+== If the Remote Detailing has not been yet configured in your Salesforce org
 
-Follow the steps in the xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-setup/index.adoc[Remote
-Detailing Setup] article.
+Follow the steps in the xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-setup/index.adoc[Remote Detailing Setup] article.
 
 [[h2_1683593068]]
-=== If the *Remote Detailing* has been configured and updated to 2.0
+== If the *Remote Detailing* has been configured and updated to 2.0
 
-If the Remote Detailing functionality is already in use in your sandbox
-and/or production environment, do the following:
+If the Remote Detailing functionality is already in use in your sandbox and/or production environment, do the following:
 
-. The CT Mobile package v. 3.63 or higher is installed in your
-Salesforce org.
-. Go to *Setup → Platform Tools → Apps → Connected Apps → Manage
-Connected Apps →* click *Edit* next to *CT Presenter* → for *Refresh
-Token Policy* select *Refresh token is valid until revoked*.
-. Go to *Setup → Custom Code → Apex Triggers →* make sure that the
-[.apiobject]#>ActivitySetLinkProcess# trigger is obtained
-from
-https://github.com/ctsf/CLM-RemoteDetailing-Public/blob/master/source/remoteDetailing/src/triggers/ActivitySetLinkProcess.trigger[this
-source] and added to your Salesforce org. The API names of the desired
-_Activity_ record types
-xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-setup/remote-detailing-apex-trigger-classes-and-quick-action.adoc#h2_249047963[should
-be specified] within the trigger code.
-. Go to the xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-presenter.adoc[CT Mobile
-Control Panel:
-Presenter] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-remote-detailing-new.adoc[CT
-Mobile Control Panel 2.0: Remote Detailing] tab and check that the
-*Applications List Field* and *Link Field* are filled out with the API
-names of the corresponding fields of the [.object]#Activity#
-object.
-. Check that the *Active* and *Available for Remote Detailing*
-checkboxes are selected for desired xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-application.adoc[CLM
-presentations].
-. For *Self Detailing* functionality, update the list of CLM
-presentations using the
-xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-presenter.adoc#h2_891805269[Refresh CLM
-presentations] button.
+. The CT Mobile package v. 3.63 or higher is installed in your Salesforce org.
+. Go to *Setup → Platform Tools → Apps → Connected Apps → Manage Connected Apps →* click *Edit* next to *CT Presenter* → for *Refresh Token Policy* select *Refresh token is valid until revoked*.
+. Go to *Setup → Custom Code → Apex Triggers →* make sure that the [.apiobject]#>ActivitySetLinkProcess# trigger is obtained from link:https://github.com/ctsf/CLM-RemoteDetailing-Public/blob/master/source/remoteDetailing/src/triggers/ActivitySetLinkProcess.trigger[this source] and added to your Salesforce org. The API names of the desired _Activity_ record types xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-setup/remote-detailing-apex-trigger-classes-and-quick-action.adoc#h2_249047963[should be specified] within the trigger code.
+. Go to the xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-presenter.adoc[CT Mobile Control Panel: Presenter] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-remote-detailing-new.adoc[CT Mobile Control Panel 2.0: Remote Detailing] tab and check that the *Applications List Field* and *Link Field* are filled out with the API names of the corresponding fields of the [.object]#Activity# object.
+. Check that the *Active* and *Available for Remote Detailing* checkboxes are selected for desired xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-application.adoc[CLM presentations].
+. For *Self Detailing* functionality, update the list of CLM presentations using the xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-presenter.adoc#h2_891805269[Refresh CLM presentations] button.
 . Update one of the existing _Activity_ records or create a new one.
 
 [[h2_589224069]]
-=== If the sandbox has been created based on the production environment with the configured Remote Detailing functionality
+== If the sandbox has been created based on the production environment with the configured Remote Detailing functionality
 
-When you create a new sandbox based on the production environment with
-the configured Remote Detailing functionality:
+When you create a new sandbox based on the production environment with the configured Remote Detailing functionality:
 
-. Refresh the cloud token (refer to
-xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc#h3_2011978[CT Mobile Control
-Panel: Tools] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-tools-new.adoc#h2_2011978[CT
-Mobile Control Panel 2.0: Tools]).
-. Check that the records per each trigger are active in
-xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/trigger-settings.adoc[Trigger Settings].
-. xref:ios/ct-presenter/publishing-clm-presentations.adoc#h3_1098755975[Renew slides] for
-each desired CLM presentation or specify the *Organization ID* of the
-production environment on the
-xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc#h3_964087610[CT Mobile Control
-Panel: Tools]. To obtain an *Organization ID*,
-https://help.salesforce.com/articleView?id=000325251&mode=1&type=1[see
-the Salesforce Help].
+. Refresh the cloud token (refer to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc#h3_2011978[CT Mobile Control
+Panel: Tools] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-tools-new.adoc#h2_2011978[CT Mobile Control Panel 2.0: Tools]).
+. Check that the records per each trigger are active in xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/trigger-settings.adoc[Trigger Settings].
+. xref:ios/ct-presenter/publishing-clm-presentations.adoc#h3_1098755975[Renew slides] for each desired CLM presentation or specify the *Organization ID* of the production environment on the xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc#h3_964087610[CT Mobile Control Panel: Tools]. To obtain an *Organization ID*, link:https://help.salesforce.com/articleView?id=000325251&mode=1&type=1[see the Salesforce Help].

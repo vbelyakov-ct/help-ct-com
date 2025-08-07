@@ -1,54 +1,22 @@
 = The Remote Detailing Functionality
 
-The *Remote Detailing* functionality allows the presenter and
-participants to simultaneously view CLM presentations on their PC,
-tablet, or mobile phone.
+The *Remote Detailing* functionality allows the presenter and participants to simultaneously view CLM presentations on their PC, tablet, or mobile phone.
 
-* To customize the *Remote Detailing* functionality, please refer to
-xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-setup/index.adoc[Remote Detailing Setup].
-* To create invite links, please refer to
-xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-launch/index.adoc[Remote Detailing Launch].
+* To customize the *Remote Detailing* functionality, please refer to xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-setup/index.adoc[Remote Detailing Setup].
+* To create invite links, please refer to xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-launch/index.adoc[Remote Detailing Launch].
 
-Since CT Mobile package v. 3.63, the new UI for *Remote Detailing*
-meetings is available. For more information, please refer to
-xref:ios/ct-presenter/the-remote-detailing-functionality/migration-to-remote-detailing-2-0.adoc[Migration to Remote
-Detailing 2.0] and xref:remote-detailing-ui-basics[Remote Detailing
-UI Basics].
+TIP: Since CT Mobile package v. 3.63, the new UI for *Remote Detailing* meetings is available. For more information, please refer to xref:ios/ct-presenter/the-remote-detailing-functionality/migration-to-remote-detailing-2-0.adoc[Migration to Remote Detailing 2.0] and xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-ui-basics/index.adoc[Remote Detailing UI Basics].
 
 [[h2_1279002041]]
-=== Remote Detailing
+== Remote Detailing
 
-The *Remote Detailing* functionality allows participants with an
-invitation link remote access for CLM presentations on PC, tablet, or
-mobile phone. The tool enables the presenter and participants to
-interact on slides. The presenter UI is adapted to ensure the visibility
-of the control desk all along with the session. The presenter can also
-grant dynamic access for participants to remote control, stream the
-video, like/dislike slides, answer the questions on a slide, or use
-other xref:ios/ct-presenter/js-bridge-api/js-bridge-methods-availability.adoc[JS Bridge methods]
-implemented in the slide HTML code.
+The *Remote Detailing* functionality allows participants with an invitation link remote access for CLM presentations on PC, tablet, or mobile phone. The tool enables the presenter and participants to interact on slides. The presenter UI is adapted to ensure the visibility of the control desk all along with the session. The presenter can also grant dynamic access for participants to remote control, stream the video, like/dislike slides, answer the questions on a slide, or use other xref:ios/ct-presenter/js-bridge-api/js-bridge-methods-availability.adoc[JS Bridge methods] implemented in the slide HTML code.
 
-
-
-This functionality records statistics of a session the same way as for
-the CLM presentation in the CT Mobile application. When the presenter
-clicks the *End Call* button or closes the browser tab, a record of
-xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-applicationstats.adoc[the Application Stats object] is created
-for the presenter and each participant. Statistics can be collected for
-all participants in one record or for each separately.
+This functionality records statistics of a session the same way as for the CLM presentation in the CT Mobile application. When the presenter clicks the *End Call* button or closes the browser tab, a record of xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-applicationstats.adoc[the Application Stats object] is created for the presenter and each participant. Statistics can be collected for all participants in one record or for each separately.
 
 [[h2_1854710639]]
-=== Self Detailing
+== Self Detailing
 
-The *Self Detailing* functionality provides the remote control of the
-CLM presentation on a PC, tablet, or mobile phone for a participant
-without presenter participation. The participant opens the
-invitation link and browses through the slides. A record of
-xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-applicationstats.adoc[the Application Stats object] per slide
-is created for each participant's virtual visit.
+The *Self Detailing* functionality provides the remote control of the CLM presentation on a PC, tablet, or mobile phone for a participant without presenter participation. The participant opens the invitation link and browses through the slides. A record of xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-applicationstats.adoc[the Application Stats object] per slide is created for each participant's virtual visit.
 
-
-
-It is also possible to create a Salesforce workflow to send an
-invitation link to a participant any way you like, for example, by
-email, SMS, or Viber.
+It is also possible to create a Salesforce workflow to send an invitation link to a participant any way you like, for example, by email, SMS, or Viber.
