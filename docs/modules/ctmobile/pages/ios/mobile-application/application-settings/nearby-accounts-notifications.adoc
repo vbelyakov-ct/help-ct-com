@@ -1,53 +1,29 @@
 = Nearby Accounts Notifications
 
-CT Mobile can notify the users when they are
-xref:ios/mobile-application/mobile-application-modules/nearby-accounts.adoc[near an account from the database] depending
-on the user's current geolocation (refer to
-xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_612123135[CT Mobile Control
-Panel:
-General] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-general-new.adoc#h3_612123135[CT
-Mobile Control Panel 2.0: General]). This functionality is implemented
-based on standard iOS platform features, which allows requesting the
-user's current geolocation every 10 minutes.
+CT Mobile can notify the users when they are xref:ios/mobile-application/mobile-application-modules/nearby-accounts.adoc[near an account from the database] depending on the user's current geolocation (refer to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_612123135[CT Mobile Control Panel: General] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-general-new.adoc#h3_612123135[CT Mobile Control Panel 2.0: General]). This functionality is implemented based on standard iOS platform features, which allows requesting the user's current geolocation every 10 minutes.
 
-
-
-If the user has changed their geolocation to more than 1 km during a
-given period, a mobile device sends geolocation data to the CT Mobile
-app. The application calculates the distance to the nearest accounts. If
-within a 500 m radius at least one account is detected, a notification
-will appear.
-
-
+If the user has changed their geolocation to more than 1 km during a given period, a mobile device sends geolocation data to the CT Mobile app. The application calculates the distance to the nearest accounts. If within a 500 m radius at least one account is detected, a notification will appear.
 
 To receive a push notification:
 
-. In device settings, allow CT Mobile to access location and send
-notifications.
-[NOTE] ==== Select *Always* type of geolocation access
-permission. ====
+. In device settings, allow CT Mobile to access location and send notifications.
++
+NOTE: Select *Always* type of geolocation access permission.
 . Enable Wi-Fi.
-
-[.confluence-information-macro-information]# With LTE on select iPad
-models, install SIM to obtain device geoposition via Wi-Fi {plus} LTE. #
++
+TIP: With LTE on select iPad models, install SIM to obtain device geoposition via Wi-Fi {plus} LTE.
 . Enable notifications for nearby accounts.
 
 The setup is complete.
 
-
-
 To enable nearby accounts notifications:
 
 . On a mobile device, open the CT Mobile app.
-. Tap xref:ios/mobile-application/application-settings/index.adoc[Settings] on xref:ios/admin-guide/app-menu/index.adoc[the
-main menu].
-. In the *Additional options* section, enable *Warn about nearby
-accounts*.
+. Tap xref:ios/mobile-application/application-settings/index.adoc[Settings] on xref:ios/admin-guide/app-menu/index.adoc[the main menu].
+. In the *Additional options* section, enable *Warn about nearby accounts*.
 
 The setup is complete.
 
-
-
 The current user will receive a notification about nearby accounts.
 
-image:30703797.png[]
+image::30703797.png[]

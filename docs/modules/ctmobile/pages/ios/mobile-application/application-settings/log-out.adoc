@@ -3,22 +3,11 @@
 Log out may be required in the following cases:
 
 * Log in as another user.
-
-//tag::win[][TIP] ==== Tap the
-xref:ios/mobile-application/application-settings/index.adoc#h2_397515857[Change user] button to
-switch to another user. The current user will not be logged out and
-their database will not be erased.  ====
 * Log in to another organization.
-* If you have updated some records, but do not want to send these
-updates to Salesforce.
+* If you have updated some records, but do not want to send these updates to Salesforce.
 * xref:ios/mobile-application/synchronization/synchronization-launch/index.adoc[Full synchronization] malfunction.
 
-The current user's database will be erased from a mobile device. The
-database will remain in Salesforce to upload again.
-
-
-
-//tag::ios,win,andr[]
+The current user's database will be erased from a mobile device. The database will remain in Salesforce to upload again.
 
 To log out:
 
@@ -26,15 +15,4 @@ To log out:
 . Tap *Log out*.
 . Tap *Yes* to confirm the action in the notification pop-up.
 
-ifndef::ios,andr[]
-image:log-out-win.png[]
-
-//tag::kotlin[]
-
-To log out:
-
-. Tap *Settings* in the application main menu.
-. Tap *Log out and Erase*.
-
-The current user logged out, and xref:ios/getting-started/logging-in/index.adoc[the login screen]
-opens.
+The current user logged out, and xref:ios/getting-started/logging-in/index.adoc[the login screen] opens.
