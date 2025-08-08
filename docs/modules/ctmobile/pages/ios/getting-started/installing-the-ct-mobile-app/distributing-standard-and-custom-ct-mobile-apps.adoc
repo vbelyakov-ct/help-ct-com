@@ -1,49 +1,31 @@
 = Distributing Standard and Custom CT Mobile apps
-
-Check this article to know the methods of CT Mobile distribution. We
-first walk you through how to distribute standard CT Mobile apps. Next,
-we'll give you tips on which Apple membership to choose to distribute
-custom CT Mobile apps based on the preferred method.
-
 :toc: :toclevels: 3
 
+Check this article to know the methods of CT Mobile distribution. We first walk you through how to distribute standard CT Mobile apps. Next,  we'll give you tips on which Apple membership to choose to distribute custom CT Mobile apps based on the preferred method.
+
 [[h2_1830377932]]
-=== Standard CT Mobile Apps
+== Standard CT Mobile Apps
 
-The latest core version of CT Mobile is available on the
-https://apps.apple.com/app/ct-mobile-for-salesforce/id1234947996[App
-Store].
+The latest core version of CT Mobile is available on the link:https://apps.apple.com/app/ct-mobile-for-salesforce/id1234947996[App Store].
 
-* The standard CT Mobile app is signed with the Customertimes
-certificate.
-* Before publishing, Apple reviews CT Mobile, and when the new CT Mobile
-is in the store, users will be automatically notified about it.
+* The standard CT Mobile app is signed with the Customertimes certificate.
+* Before publishing, Apple reviews CT Mobile, and when the new CT Mobile is in the store, users will be automatically notified about it.
 
 [[h2_1003374438]]
-=== Custom CT Mobile Apps
+== Custom CT Mobile Apps
 
-To distribute custom CT Mobile on its own, a customer should be a member
-of one of the Apple Programs and have an Apple Developer account to sign
-the custom CT Mobile app. The custom CT Mobile app must be signed by the
-customer certificate, and a customer should obtain the appropriate
-provisioning profile. Custom CT Mobile builds must be distributed within
-the customer organization, excluding App Store distribution.
+To distribute custom CT Mobile on its own, a customer should be a member of one of the Apple Programs and have an Apple Developer account to sign the custom CT Mobile app. The custom CT Mobile app must be signed by the customer certificate, and a customer should obtain the appropriate provisioning profile. Custom CT Mobile builds must be distributed within the customer organization, excluding App Store distribution.
 
-For more details, please refer
-to xref:signing-and-publishing-custom-ct-mobile-apps[Signing and
-Publishing Custom CT Mobile apps].
+For more details, please refer to xref:./signing-and-publishing-custom-ct-mobile-apps.adoc[Signing and Publishing Custom CT Mobile apps].
 
 [[h3_1209912114]]
-==== Apple Membership
+=== Apple Membership
 
+[.highlighted-table]
 [cols=",^,^",]
 |===
-|*CT Mobile Distribution Method* |*Apple Membership* |
 
-| |*https://developer.apple.com/programs/enroll/[Apple Developer
-Program]* *(99 USD per year)*
-|*https://developer.apple.com/programs/enterprise/[Apple Developer
-Enterprise Program]* *(299 USD per year)*
+.2+^|*CT Mobile Distribution Method* 2+|*Apple Membership*  |*https://developer.apple.com/programs/enroll/[Apple Developer Program]* *(99 USD per year)* |*https://developer.apple.com/programs/enterprise/[Apple Developer Enterprise Program]* *(299 USD per year)*
 
 |*App Store: Public and Private Distribution* |{plus} |{plus}
 
@@ -52,59 +34,31 @@ Enterprise Program]* *(299 USD per year)*
 |*MDM Solution* |– |{plus}
 |===
 
-
-
-For more information, refer to Apple Developer
-Support: https://developer.apple.com/support/compare-memberships/[Choosing
-a Membership].
+For more information, refer to Apple Developer Support: link:https://developer.apple.com/support/compare-memberships/[Choosing a Membership].
 
 [[h3_1747173445]]
-==== App Store: Public and Private Distribution
+=== App Store: Public and Private Distribution
 
-Use any name different from CT Mobile and then publish your custom app
-via https://appstoreconnect.apple.com/login[App Store Connect]. Custom
-CT Mobile app must be signed with the customer certificate and re-signed
-once a year. Before publishing, Apple reviews your app.
-
-
+Use any name different from CT Mobile and then publish your custom app via link:https://appstoreconnect.apple.com/login[App Store Connect]. Custom CT Mobile app must be signed with the customer certificate and re-signed once a year. Before publishing, Apple reviews your app.
 
 Available methods:
 
-* The *Public* option in App Store Connect: your custom CT Mobile app
-will be available publicly on the App Store in the
-https://help.apple.com/app-store-connect/#/devcdda55918[territories you
-selected] and anyone for volume purchase through Apple Business Manager
-or Apple School Manager.
-* The *Private* option in App Store Connect: your custom CT Mobile app
-will be available only to specific businesses and organizations you
-specify in App Store Connect through Apple Business Manager or Apple
-School Manager.
+* The *Public* option in App Store Connect: your custom CT Mobile app will be available publicly on the App Store in the link:https://help.apple.com/app-store-connect/#/devcdda55918[territories you selected] and anyone for volume purchase through Apple Business Manager or Apple School Manager.
+* The *Private* option in App Store Connect: your custom CT Mobile app will be available only to specific businesses and organizations you specify in App Store Connect through Apple Business Manager or Apple School Manager.
 
 Once your app is approved, the distribution method cannot be changed.
 
-For more information, refer to App Store Connect
-Help: https://help.apple.com/app-store-connect/#/dev275598f16[Set your
-app's distribution methods].
+For more information, refer to App Store Connect Help: link:https://help.apple.com/app-store-connect/#/dev275598f16[Set your app's distribution methods].
 
 [[h3_560867421]]
-==== Ad Hoc Distribution
+=== Ad Hoc Distribution
 
-Custom CT Mobile is available for download via a link from the
-Customertimes Corp. server. It must be signed with the customer
-certificate.
+Custom CT Mobile is available for download via a link from the Customertimes Corp. server. It must be signed with the customer certificate.
 
 [[h3_628264449]]
-==== Using MDM Solution
+=== Using MDM Solution
 
-Use any MDM solution you like, for example,
-https://www.vmware.com/ru/products/workspace-one.html[Workspace One] or
-https://support.apple.com/guide/apple-business-manager/add-mdm-servers-asm1c1be359d/web[Apple
-Server]. In this case, Customertimes builds the custom CT Mobile app as
-the [.apiobject]#.ipa#  file that must be signed with the
-customer certificate.
+Use any MDM solution you like, for example, link:https://www.vmware.com/ru/products/workspace-one.html[Workspace One] or link:https://support.apple.com/guide/apple-business-manager/add-mdm-servers-asm1c1be359d/web[Apple Server]. In this case, Customertimes builds the custom CT Mobile app as
+the [.apiobject]#.ipa#  file that must be signed with the customer certificate.
 
-
-
-For more information, refer to the official Mobile Device Management
-Settings: https://support.apple.com/en-gb/guide/mdm/mdmbf9e668/web[MDM
-overview for Apple devices].
+For more information, refer to the official Mobile Device Management Settings: link:https://support.apple.com/en-gb/guide/mdm/mdmbf9e668/web[MDM overview for Apple devices].
