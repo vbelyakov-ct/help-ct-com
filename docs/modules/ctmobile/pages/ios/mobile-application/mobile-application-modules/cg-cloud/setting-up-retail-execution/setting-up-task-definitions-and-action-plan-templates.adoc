@@ -1,163 +1,74 @@
 = Setting up Task Definitions and Action Plan Templates
+:toc:
 
-Managers need to identify the broad task types that reps perform at
-retail stores and set up metrics to measure store performance.
+Managers need to identify the broad task types that reps perform at retail stores and set up metrics to measure store performance.
 
-When a field rep visits a store, they perform certain activities related
-to the different aspects of visit execution. The metrics are defined as
-records of[.object]#Assessment Indicator Definitions#, and
-targets are in place with *Retail Store KPIs*.
-
-:toc: :toclevels: 3
+When a field rep visits a store, they perform certain activities related to the different aspects of visit execution. The metrics are defined as records of [.object]#Assessment Indicator Definitions#, and targets are in place with *Retail Store KPIs*.
 
 [[h2_547005288]]
-=== Object Model
+== Object Model
 
 Have a look at the action plan data model.
 
-
-
-image:assessment-task-definition-and-action-plan-template-data-model.png[]
-
-
+image::assessment-task-definition-and-action-plan-template-data-model.png[]
 
 [[h2_1302650526]]
-=== Create Assessment Task Definitions
+== Create Assessment Task Definitions
 
-The [.object]#Assessment Task Definition# object defines the
-task type.
+The [.object]#Assessment Task Definition# object defines the task type.
 
-//tag::ios[]
-
-[width="100%",cols="^34%,^33%,^33%",]
+[width="100%",cols="34%,33%,33%",]
 |===
-|*Assessment Task Definition Type* |*Description* |*Possible
-Assessment Indicator Definitions*
+^|*Assessment Task Definition Type* ^|*Description* ^|*Possible Assessment Indicator Definitions*
 
-|In-Store Survey |This type is responsible for conducting surveys and
-capturing real-time feedback from store managers and buyers during a
-visit. |[NOTE] ==== Not applicable. ====
+|In-Store Survey |This type is responsible for conducting surveys and capturing real-time feedback from store managers and buyers during a visit. a|NOTE: Not applicable.
 
-|Inventory Check |This type is responsible for audits, such as capturing
-metrics around the count of products at specific in-store locations or
-availability of a particular product category and particular brand in an
-aisle, and more. a|
+|Inventory Check |This type is responsible for audits, such as capturing metrics around the count of products at specific in-store locations or availability of a particular product category and particular brand in an aisle, and more. a|
 * Inventory count of a product category (Number)
 * Display the price of a product (Decimal)
 
-|Other/Task |These types are responsible for flexibility to perform
-various tasks, for example, performing asset checks for refrigerator
-displays and shelves. |Condition of assets placed in stores compliant
-(Boolean)
+|Other/Task |These types are responsible for flexibility to perform various tasks, for example, performing asset checks for refrigerator displays and shelves. |Condition of assets placed in stores compliant (Boolean)
 
-a|
-Planogram Check
+a|Planogram Check
 
-[TIP] ==== It is used in conjunction with CT Vision. ====
+TIP: It is used in conjunction with CT Vision.
 
-|With the help of the Einstein Platform, this type is responsible for
-optimizing product display on shelves and capturing key metrics such as
-product facings on a shelf, counting of products at the eye level, and
-sharing of shelf for popular products. a|
+|With the help of the Einstein Platform, this type is responsible for optimizing product display on shelves and capturing key metrics such as product facings on a shelf, counting of products at the eye level, and sharing of shelf for popular products. a|
 * Facings (Number)
 * Share of a shelf (Decimal)
 * Competitor facings (Number)
 * Voids (Number)
 * Out-of-stock (Boolean)
 
-a|
-Place Order
+a|Place Order
 
-[TIP] ==== It is used in conjunction with CT Orders.
-====
+TIP: It is used in conjunction with CT Orders.
 
-|This type is responsible for ordering products depending on multiple
-factors. Field reps capture orders for products when they visit retail
-stores so that the right products are always available on the right
-shelves. |[NOTE] ==== Not applicable. ====
+|This type is responsible for ordering products depending on multiple factors. Field reps capture orders for products when they visit retail stores so that the right products are always available on the right shelves. a|NOTE: Not applicable.
 
-|Promotion Check |This type is responsible for assessing the impact of
-your promotions at retail stores on overall sales figures and customer
-satisfaction scores. Promo can run for a product, product category, or
-without the context of a product at a store, store group, or even at the
-account level. a|
+|Promotion Check |This type is responsible for assessing the impact of your promotions at retail stores on overall sales figures and customer satisfaction scores. Promo can run for a product, product category, or without the context of a product at a store, store group, or even at the account level. a|
 * Product display units (Number)
 * Locational compliance (Boolean)
 * Overall promotion Compliance (Boolean)
 * Customer reaction to new promotional offers (Text)
 
 |===
-
-//tag::win[]
-
-[width="100%",cols="^34%,^33%,^33%",]
-|===
-|*Assessment Task Definition Type* |*Description* |*Possible
-Assessment Indicator Definitions*
-
-|Inventory Check |This type is responsible for audits, such as capturing
-metrics around the count of products at specific in-store locations or
-availability of a particular product category and particular brand in an
-aisle, and more. a|
-* Inventory count of a product category (Number)
-* Display the price of a product (Decimal)
-
-|Other |These types are responsible for flexibility to perform various
-tasks, for example, performing asset checks for refrigerator displays
-and shelves. |Condition of assets placed in stores compliant? (Boolean)
-
-|Planogram Check |With the help of the Einstein Platform, this type is
-responsible for optimizing product display on shelves and capturing key
-metrics such as product facings on a shelf, counting of products at the
-eye level, and sharing of shelf for popular products. a|
-* Facings (Number)
-* Share of a shelf (Decimal)
-* Competitor facings (Number)
-* Voids (Number)
-* Out-of-stock (Boolean)
-
-|Promotion Check |This type is responsible for assessing the impact of
-your promotions at retail stores on overall sales figures and customer
-satisfaction scores. Promo can run for a product, product category, or
-without the context of a product at a store, store group, or even at the
-account level. a|
-* Product display units (Number)
-* Locational compliance (Boolean)
-* Overall promotion Compliance (Boolean)
-* Customer reaction to new promotional offers (Text)
-
-|===
-
-
 
 Follow Salesforce guides to set up appropriate records:
 
-* https://help.salesforce.com/s/articleView?id=sf.retail_task_admin_create_aid.htm&type=5[Create
-an Assessment Indicator Definition]
-* https://help.salesforce.com/s/articleView?id=sf.retail_task_admin_storekpi.htm&type=5[Create
-a Retail Store KPI]
-* https://help.salesforce.com/s/articleView?id=sf.retail_task_admin_create_ataskd.htm&type=5[Create
-an Assessment Task Definition]
+* link:https://help.salesforce.com/s/articleView?id=sf.retail_task_admin_create_aid.htm&type=5[Create an Assessment Indicator Definition]
+* link:https://help.salesforce.com/s/articleView?id=sf.retail_task_admin_storekpi.htm&type=5[Create a Retail Store KPI]
+* link:https://help.salesforce.com/s/articleView?id=sf.retail_task_admin_create_ataskd.htm&type=5[Create an Assessment Task Definition]
 
 [[h2_1624807995]]
-=== Create Action Plan Templates
+== Create Action Plan Templates
 
-An action plan template provides a framework to reuse tasks across
-stores and visits. Each item in the action plan template refers to a
-task definition. Each action plan template can have a different set of
-required or not tasks.
+An action plan template provides a framework to reuse tasks across stores and visits. Each item in the action plan template refers to a task definition. Each action plan template can have a different set of required or not tasks.
 
-An action plan template is a primary list of items. For Consumer Goods
-Cloud, an action plan template can have more than one item with the same
-assessment task definition.
-
-
+An action plan template is a primary list of items. For Consumer Goods Cloud, an action plan template can have more than one item with the same assessment task definition.
 
 Follow Salesforce guides to set up appropriate records:
 
-* https://help.salesforce.com/s/articleView?id=retail_task_admin_createactionplan_template.htm&type=5&language=en_US[Create
-an Action Plan Template]
-* https://help.salesforce.com/s/articleView?id=sf.retail_task_admin_add_atd_apt.htm&type=5[Associate
-an Assessment Task Definition to an Action Plan Template]
-* https://help.salesforce.com/s/articleView?id=sf.retail_concept_admin_add_task_flows_apt.htm&type=5[Add
-Tasks and Flows to Action Plan Template]
+* link:https://help.salesforce.com/s/articleView?id=retail_task_admin_createactionplan_template.htm&type=5&language=en_US[Create an Action Plan Template]
+* link:https://help.salesforce.com/s/articleView?id=sf.retail_task_admin_add_atd_apt.htm&type=5[Associate an Assessment Task Definition to an Action Plan Template]
+* link:https://help.salesforce.com/s/articleView?id=sf.retail_concept_admin_add_task_flows_apt.htm&type=5[Add Tasks and Flows to Action Plan Template]

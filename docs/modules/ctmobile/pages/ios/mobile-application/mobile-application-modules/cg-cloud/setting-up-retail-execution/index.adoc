@@ -1,69 +1,31 @@
 = Setting Up Retail Execution
 
-Follow the path to set up retail execution in your Salesforce org and
-get sales reps to perform visits and tasks offline with the help of the
-CT Mobile app.
+Follow the path to set up retail execution in your Salesforce org and get sales reps to perform visits and tasks offline with the help of the  CT Mobile app.
 
-. https://help.salesforce.com/s/articleView?id=sf.retail_concept_admin_locations.htm&type=5[Create]
-[.object]#https://help.salesforce.com/s/articleView?id=sf.retail_concept_admin_locations.htm&type=5[Locations]#—addresses
+. link:https://help.salesforce.com/s/articleView?id=sf.retail_concept_admin_locations.htm&type=5[Create Locations]—addresses
 where your stores operate.
-. https://help.salesforce.com/s/articleView?id=sf.retail_task_admin_retailstore.htm&type=5[Add]
-[.object]#https://help.salesforce.com/s/articleView?id=sf.retail_task_admin_retailstore.htm&type=5[Retail
-Stores]#
-https://help.salesforce.com/s/articleView?id=sf.retail_task_admin_retailstore.htm&type=5[]
-that operate according to *Operating Hours* and have one or more
-*https://help.salesforce.com/s/articleView?id=sf.retail_task_admin_in-store_create.htm&type=5[In-Store
-Locations]* to place products:
-.. https://help.salesforce.com/s/articleView?id=sf.retail_task_admin_retailstore.htm&type=5[Create
-a Retail Store]
-.. https://help.salesforce.com/s/articleView?id=sf.retail_task_admin_in-store_create.htm&type=5[Create
-an In-Store Location]
-. Add and associate[.object]#Salesforce Products# to retail
-stores. Set up *Product Categories* and *Assortments* if needed:
-.. https://help.salesforce.com/s/articleView?id=sf.retail_task_admin_prod_create.htm&type=5[Create
-a Product]
-.. https://help.salesforce.com/s/articleView?id=sf.retail_task_admin_prodcat_create.htm&type=5[Create
-a Product Category]
-.. https://help.salesforce.com/s/articleView?id=sf.retail_task_admin_assortments.htm&type=5[Create
-an Assortment]
-.. https://help.salesforce.com/s/articleView?id=sf.retail_task_admin_prod_store.htm&type=5[Associate
-a Product with a Store]
-. Set up[.object]#Assessment Indicator Definitions# to measure
-store performance and define *Retail Store KPIs* that must be captured
-for a store group:
-.. https://help.salesforce.com/s/articleView?id=sf.retail_task_admin_create_aid.htm&type=5[Create
-an Assessment Indicator Definition]
-.. https://help.salesforce.com/s/articleView?id=sf.retail_task_admin_storekpi.htm&type=5[Create
-a Retail Store KPI]
-. https://help.salesforce.com/s/articleView?id=sf.retail_task_admin_create_ataskd.htm&type=5[Define]
-[.object]#https://help.salesforce.com/s/articleView?id=sf.retail_task_admin_create_ataskd.htm&type=5[Assessment
-Task Definitions]#, which are certain activities related to the
-different aspects of retail execution.
-. Create[.object]#Action Plan Templates# and fill them out with
-tasks to define a set of activities that should be performed during the
-visit to the retail store. Templates are reusable and editable:
-.. xref:setting-up-task-definitions-and-action-plan-templates[Setting
-up Task Definitions and Action Plan Templates]
-.. https://help.salesforce.com/s/articleView?id=retail_task_admin_createactionplan_template.htm&type=5&language=en_US[Create
-an Action Plan Template]
-.. https://help.salesforce.com/s/articleView?id=sf.retail_task_admin_add_atd_apt.htm&type=5[Associate
-an Assessment Task Definition to an Action Plan Template]
-. Create[.object]#Visits# and associate the desired action plan
-template to each of them:
-.. https://help.salesforce.com/s/articleView?id=sf.retail_concept_admin_manual_creation_visit.htm&type=5[Create
-Visits]
-.. https://help.salesforce.com/s/articleView?id=sf.retail_task_admin_assoc_apt_visit.htm&type=5[Associate
-an Action Plan Template to a Visit]
-
-[TIP] ==== We recommend
-https://help.salesforce.com/s/articleView?id=sf.retail_task_admin_assoc_apt_visitpage.htm&type=5[changing
-the Visit page layout] to add the *Action Plans* list. Also, you can add
-https://help.salesforce.com/s/articleView?id=sf.retail_concept_admin_standard_comp.htm&type=5[other
-CG Cloud components] to desired pages. ====
-. Activate CG Cloud in the CT Mobile app to get your mobile users the
-ability to create visits to the appropriate stores, associate action
-plan templates to visits, and perform mandatory or not visit tasks:
-.. xref:activating-cg-cloud-in-the-ct-mobile-app[Activating CG
-Cloud in the CT Mobile app]
-.. xref:managing-visits-to-retail-stores[Managing Visits to Retail
-Stores]
+. link:https://help.salesforce.com/s/articleView?id=sf.retail_task_admin_retailstore.htm&type=5[Add Retail Stores] that operate according to *Operating Hours* and have one or more link:https://help.salesforce.com/s/articleView?id=sf.retail_task_admin_in-store_create.htm&type=5[In-Store
+Locations] to place products:
+.. link:https://help.salesforce.com/s/articleView?id=sf.retail_task_admin_retailstore.htm&type=5[Create a Retail Store]
+.. link:https://help.salesforce.com/s/articleView?id=sf.retail_task_admin_in-store_create.htm&type=5[Create an In-Store Location]
+. Add and associate [.object]#Salesforce Products# to retail stores. Set up *Product Categories* and *Assortments* if needed:
+.. link:https://help.salesforce.com/s/articleView?id=sf.retail_task_admin_prod_create.htm&type=5[Create a Product]
+.. link:https://help.salesforce.com/s/articleView?id=sf.retail_task_admin_prodcat_create.htm&type=5[Create a Product Category]
+.. link:https://help.salesforce.com/s/articleView?id=sf.retail_task_admin_assortments.htm&type=5[Create an Assortment]
+.. link:https://help.salesforce.com/s/articleView?id=sf.retail_task_admin_prod_store.htm&type=5[Associate a Product with a Store]
+. Set up [.object]#Assessment Indicator Definitions# to measure store performance and define *Retail Store KPIs* that must be captured for a store group:
+.. link:https://help.salesforce.com/s/articleView?id=sf.retail_task_admin_create_aid.htm&type=5[Create an Assessment Indicator Definition]
+.. link:https://help.salesforce.com/s/articleView?id=sf.retail_task_admin_storekpi.htm&type=5[Create a Retail Store KPI]
+. link:https://help.salesforce.com/s/articleView?id=sf.retail_task_admin_create_ataskd.htm&type=5[Define] link:https://help.salesforce.com/s/articleView?id=sf.retail_task_admin_create_ataskd.htm&type=5[Assessment Task Definitions]#, which are certain activities related to the different aspects of retail execution.
+. Create [.object]#Action Plan Templates# and fill them out with tasks to define a set of activities that should be performed during the visit to the retail store. Templates are reusable and editable:
+.. xref:./setting-up-task-definitions-and-action-plan-templates.adoc[Setting up Task Definitions and Action Plan Templates]
+.. link:https://help.salesforce.com/s/articleView?id=retail_task_admin_createactionplan_template.htm&type=5&language=en_US[Create an Action Plan Template]
+.. link:https://help.salesforce.com/s/articleView?id=sf.retail_task_admin_add_atd_apt.htm&type=5[Associate an Assessment Task Definition to an Action Plan Template]
+. Create [.object]#Visits# and associate the desired action plan template to each of them:
+.. link:https://help.salesforce.com/s/articleView?id=sf.retail_concept_admin_manual_creation_visit.htm&type=5[Create Visits]
+.. link:https://help.salesforce.com/s/articleView?id=sf.retail_task_admin_assoc_apt_visit.htm&type=5[Associate an Action Plan Template to a Visit]
++
+TIP: We recommend link:https://help.salesforce.com/s/articleView?id=sf.retail_task_admin_assoc_apt_visitpage.htm&type=5[changing the Visit page layout] to add the *Action Plans* list. Also, you can add link:https://help.salesforce.com/s/articleView?id=sf.retail_concept_admin_standard_comp.htm&type=5[other CG Cloud components] to desired pages.
+. Activate CG Cloud in the CT Mobile app to get your mobile users the ability to create visits to the appropriate stores, associate action plan templates to visits, and perform mandatory or not visit tasks:
+.. xref:./activating-cg-cloud-in-the-ct-mobile-app.adoc[Activating CG Cloud in the CT Mobile app]
+.. xref:ios/mobile-application/mobile-application-modules/cg-cloud/managing-visits-to-retail-stores.adoc[Managing Visits to Retail Stores]
