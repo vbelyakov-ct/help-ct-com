@@ -55,12 +55,16 @@ The minimum and maximum quantities on bundle components are *Editable*.
 
 |Yes
 
-|Components |Components |The multiplier will not be applied. |The Price Tag icon is displayed next to each child's product in the bundle.
-|The bundle structure will be fully expanded. a| The bundle price will be calculated per component by multiplying the *List Price* by the *Quantity* of the product component.
+// comment: this bundle type is not supported since 25 R1
+// |Components |Components |The multiplier will not be applied. |The Price Tag icon is displayed next to each child's product in the bundle.
+//|The bundle structure will be fully expanded. a| The bundle price will be calculated per component by multiplying the *List Price* by the *Quantity* of the product component.
 
-The minimum and maximum quantities are *Editable* on bundle components and *Read-Only* on the parent product.
+//The minimum and maximum quantities are *Editable* on bundle components and *Read-Only* on the parent product.
 
-|No
+//|No
+
+|Components |Components 5+^a|include::partial$bundle-not-supported.adoc[]
+
 |===
 
 [[h2_1846399569]]

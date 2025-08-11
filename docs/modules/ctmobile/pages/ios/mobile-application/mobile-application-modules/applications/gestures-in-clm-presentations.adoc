@@ -1,66 +1,53 @@
 = Gestures in CLM Presentations
 
-Use gestures on slides of the launched CLM presentation in the
-xref:ios/mobile-application/mobile-application-modules/applications/index.adoc[Application] module, on
-xref:ios/admin-guide/mobile-layouts/index.adoc-applications[the mobile layout], and
-xref:ios/mobile-application/ui/home-screen/index.adoc[Home Screen].
+Use gestures on slides of the launched CLM presentation in the xref:ios/mobile-application/mobile-application-modules/applications/index.adoc[Application] module, on xref:ios/admin-guide/mobile-layouts/mobile-layouts-applications.adoc[the mobile layout], and xref:ios/mobile-application/ui/home-screen/index.adoc[Home Screen].
 
-[width="100%",cols="50%,^50%",]
+[width="100%",cols="50%,^50%",frame="none",grid="none"]
 |===
 a|
-*Double-finger swipe left and right*
+* *Double-finger swipe left and right*
++
+The default gesture is to switch slides. You can use one-finger swiping by specifying it in the *Swipe gesture type* attribute for a xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-application.adoc[CLM presentation] record.
++
+NOTE: A one-finger swipe for slides may interfere with embedded interactions in the slides.
 
-The default gesture is to switch slides. You can use one-finger swiping
-by specifying it in the *Swipe gesture type* attribute for a
-xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-application.adoc[CLM presentation] record.
+* *Double-finger swipe up and down*
++
+Like or dislike the current slide. This gesture will not affect the display of the slide.
 
-[NOTE] ==== A one-finger swipe for slides may interfere with
-embedded interactions in the slides. ====
-
-*Double-finger swipe up and down*
-
-Like or dislike the current slide. This gesture will not affect the
-display of the slide.
-
-//tag::ios[]
-
-*Double-finger rotation*
-
+* *Double-finger rotation*
++
 Use to restart the current interactive slide.
 
-*Double-tap the right or left side of the screen*
-
-Display xref:ios/mobile-application/mobile-application-modules/applications/clm-presentation-controls.adoc[the action menu] with
-available options.
-
+* *Double-tap the right or left side of the screen*
++
+Display xref:ios/mobile-application/mobile-application-modules/applications/clm-presentation-controls.adoc[the action menu] with available options.
++
 To hide the action menu, double tap on it.
-
-[TIP] ==== For design considerations: the bottom navigation bar
-has a 120 px width. ==== //tag::ios[]
++
+TIP: For design considerations: the bottom navigation bar has a 120 px width.
++
 image:58830176.png[]
 
-*Double-tap at the bottom of the screen*
-
+* *Double-tap at the bottom of the screen*
++
 Display the navigation bar for rapid switching between the slides.
 
-* Tap a slide to open it.
-* To hide the navigation bar, double tap on it.
-
-[width="100%",cols="50%,50%",]
-!===
-!image:info.png[] !
-!===
-
+** Tap a slide to open it.
+** To hide the navigation bar, double tap on it.
++
+[NOTE]
+====
+* If there are several branches in the CLM presentation, only slides of the selected branch are displayed.
+* The bottom navigation bar has a 120 px height. It is possible to preview the slides in it with resolutions 100×75 px.
+====
++
 image:57215473.png[]
 
-//tag::ios[]
-
-*Two-finger pinch*
-
+* *Two-finger pinch*
++
 Zoom in and zoom out slides converted from PowerPoint or PDF.
 
-|//tag::ios[]
+|
 image:gestures_ios_en.png[]
-//tag::andr,win[]
-image:gestures_win_en.png[]
 |===

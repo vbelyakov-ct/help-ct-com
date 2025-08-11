@@ -144,24 +144,27 @@ Product 3
 
 |Parent Bundle
 
-|Components |Components |Header |Header a|
-Parent Bundle
+// comment: this bundle type is not supported since 25 R1
+|Components |Components |Header |Header 3+^a|include::partial$bundle-not-supported.adoc[]
 
-Product 1
 
-Child Bundle
+//Parent Bundle
 
-a|
-Parent Bundle
+//Product 1
 
-Product 2
+//Child Bundle
 
-Product 3
+//a|
+//Parent Bundle
 
-a|
-Product 1
+//Product 2
 
-Child Bundle
+//Product 3
+
+//a|
+//Product 1
+
+//Child Bundle
 
 |Header |Header |Components |Header |Parent Bundle a|
 Product 1
@@ -198,75 +201,74 @@ Parent Bundle
 NOTE: If at least one component of any bundle is unavailable, all cells are
 zeroed and blocked.
 
-|Components |Components |Components |Header a|
-Parent Bundle
+// comment: this bundle type is not supported since 25 R1
+|Components |Components |Components |Header 3.4+^.^a|include::partial$bundle-not-supported.adoc[]
+//Parent Bundle
 
-Product 1
+//Product 1
 
-Product 2
+//Product 2
 
-Product 3
+//Product 3
 
-a|
-Parent Bundle
+//a|Parent Bundle
 
-Product 2
+//Product 2
 
-Product 3
+//Product 3
 
-a|
-* If a product in the parent bundle is unavailable:
-** Product 1
-* If a product in the child bundle is unavailable:
-** Child Bundle
-** Product 2
-** Product 3
+//a|* If a product in the parent bundle is unavailable:
+//** Product 1
+//* If a product in the child bundle is unavailable:
+//** Child Bundle
+//** Product 2
+//** Product 3
 
-|Header |Header |Components |Components |Parent Bundle a|
-Product 1
+|Header |Header |Components |Components
 
-Child Bundle
+//|Parent Bundle
+//Product 1
 
-Product 2
+//Child Bundle
 
-Product 3
+//Product 2
 
-|Parent Bundle
+//Product 3
 
-|Components |Header |Components |Components a|
-Parent Bundle
+//|Parent Bundle
 
-Product 1
+|Components |Header |Components |Components
+//a| Parent Bundle
 
-a|
-Product 1
+//Product 1
 
-Child Bundle
+//a|Product 1
 
-Product 2
+//Child Bundle
 
-Product 3
+//Product 2
 
-a|
-Parent Bundle
+//Product 3
 
-Product 1
+//a|
+//Parent Bundle
 
-|Components |Components |Components |Components a|
-Parent Bundle
+//Product 1
 
-Product 1
+|Components |Components |Components |Components
+//a|Parent Bundle
 
-Product 2
+//Product 1
 
-Product 3
+//Product 2
 
-a|
-Parent Bundle
+//Product 3
 
-Child Bundle
+//a|Parent Bundle
 
-|The only component that is unavailable
+//Child Bundle
+
+//|The only component that is unavailable
 |===
 
 [[h2_813222365]]
