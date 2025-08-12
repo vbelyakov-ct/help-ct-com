@@ -1,135 +1,112 @@
 = Links
+:toc:
 
-The *Links* module allows a mobile user to work with external links from
-the CT Mobile app.
-
-:toc: :toclevels: 3
+The *Links* module allows a mobile user to work with external links from the CT Mobile app.
 
 [[h2_572404523]]
-=== Adding Links to the Menu
+== Adding Links to the Menu
 
 To add the *Links* module to the xref:ios/admin-guide/app-menu/index.adoc[app menu]:
 
-[width="100%",cols="50%,50%",]
-|===
-|In CT Mobile Control Panel a|
-. Go to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-app-menu.adoc[CT Mobile Control
-Panel: App Menu] tab.
+[tabs]
+====
+In CT Mobile Control Panel::
++
+--
+. Go to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-app-menu.adoc[CT Mobile Control Panel: App Menu] tab.
 . {blank}
-. Click the
-image:62562609.png[]
-button to open the *Add menu item* tool.
+include::partial$settings-location.adoc[]
+. Click the image:62562609.png[] button to open the *Add menu item* tool.
 . Select the *LinkList* item.
 . Click *Add* to close the *Add menu item* tool.
 . Click *Save*.
-
-|In CT Mobile Control Panel 2.0 a|
-. Go to xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-app-menu-new.adoc[CT Mobile Control
-Panel 2.0: App Menu] tab.
-. Select the required profile in the *Profile* picklist. To apply
-settings to all the profiles, select *General Settings*.
+--
+In CT Mobile Control Panel 2.0::
++
+--
+. Go to xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-app-menu-new.adoc[CT Mobile Control Panel 2.0: App Menu] tab.
+. {blank}
+include::partial$settings-profile.adoc[]
 . Click *Show Module Menu*.
 . On the *All* or *Application Modules* tab, select the *LinkList* item.
 . Click *Save*.
-
-|===
+--
+====
 
 The setup is complete.
 
 [[h2_1089872434]]
-=== Add a Link
+== Add a Link
 
 To add a new link to the Links module:
 
-[width="100%",cols="50%,50%",]
-|===
-|In CT Mobile Control Panel a|
-. Go to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-app-menu.adoc[CT Mobile Control
-Panel: App Menu] tab.
+[tabs]
+====
+In CT Mobile Control Panel::
++
+--
+. Go to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-app-menu.adoc[CT Mobile Control Panel: App Menu] tab.
 . {blank}
+include::partial$settings-location.adoc[]
 . Select the *LinkList* item.
-
++
 On the right sigh of the screen, the links settings appear.
-
-image:Links_settings.png[]
++
+image::Links_settings.png[]
 . Click the *Create new category* button to open the link editor.
 * Enter *Link Name*, *Description*, *URL*.
-* Enable *Navigation* to navigate a site within the mobile
-application.
-[.confluence-information-macro-information]#The number of links within a
-category is unlimited.#
-image:62562674.png[]
+* Enable *Navigation* to navigate a site within the mobile application.
++
+TIP: The number of links within a category is unlimited.
++
+image::62562674.png[]
 . Click *Save*.
-
-|In CT Mobile Control Panel 2.0 a|
-. Go to xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-app-menu-new.adoc[CT Mobile Control
-Panel 2.0: App Menu] tab.
-. Select the required profile in the *Profile* picklist. To apply
-settings to all the profiles, select *General Settings*.
+--
+In CT Mobile Control Panel 2.0::
++
+--
+. Go to xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-app-menu-new.adoc[CT Mobile Control Panel 2.0: App Menu] tab.
+. {blank}
+include::partial$settings-profile.adoc[]
 . Select the *Link List* item in the *Selected* column.
 . Click *Add Category*.
-. Enter category name and
-click image:ctm-control-panel-workflows-new-creating-workflow-confirm-icon.png[]
-to confirm.
+. Enter category name and click image:ctm-control-panel-workflows-new-creating-workflow-confirm-icon.png[25,25] to confirm.
 . Fill In *Name*, *URL*, and *Description* fields.
 . Enable *Navigation* to navigate a site within the mobile application.
-. Click *Add Link* to add another link. The number of links within a
-category is unlimited.
+. Click *Add Link* to add another link. The number of links within a category is unlimited.
 .  Click *Save*.
-image:ctm-control-panel-new-linklist.png[]
++
+image::ctm-control-panel-new-linklist.png[]
+--
+====
 
-|===
+The link is added and will be available in the *Links* module of the mobile application. You can configure links.
 
-The link is added and will be available in the *Links* module of the
-mobile application. You can configure links.
-
-If a link leads to http://salesforce.com[salesforce.com], CT Mobile
-attempts to send the session code in order to avoid repeated
-authorization in Salesforce.
+If a link leads to link:http://salesforce.com[salesforce.com], CT Mobile attempts to send the session code in order to avoid repeated authorization in Salesforce.
 
 [[h2_450857999]]
-=== Using Links
+== Using Links
 
-All links are sorted alphabetically in the main menu. Tap a link in the
-left menu to view the link page:
+All links are sorted alphabetically in the main menu. Tap a link in the left menu to view the link page:
 
-refresh the page
+* refresh the page
+* use the history buttons to go to the previous page or the next one if enabled
+* share the link
+* open the link in Safari.
 
-use the history buttons to go to the previous page or the next one if
-enabled
-
-share the link
-
-//tag::ios[]
-
-open the link in Safari.
-
-//tag::ios[]
-
-image:links_module.png[]
-
-//tag::win[]
-image:links_win_en.png[]
-//tag::ios[]
+image::links_module.png[]
 
 [[h2_301401784]]
-=== Salesforce Maps
+== Salesforce Maps
 
-Customers who have a Salesforce Maps license can integrate this product
-with the CT Mobile app.
-https://help.salesforce.com/articleView?id=sf.salesforce_maps_setup_maps.htm&type=5[Follow
-the link] to find out more about the functionality.
+Customers who have a Salesforce Maps license can integrate this product with the CT Mobile app. link:https://help.salesforce.com/articleView?id=sf.salesforce_maps_setup_maps.htm&type=5[Follow the link] to find out more about the functionality.
 
-
-
-Add the direct link to the Link module and use Salesforce Maps features
-on a mobile device:
+Add the direct link to the Link module and use Salesforce Maps features on a mobile device:
 
 * visualizing data helps to interact with and change data as needed
-* using territory planning, determine how many field forces are needed
-in a specific territory and exactly where they need to be to maximize
+* using territory planning, determine how many field forces are needed in a specific territory and exactly where they need to be to maximize
 sales resource capacity
 * tracking live location
 * optimizing routes and schedules.
 
-image:../Storage/project-ct-mobile-en/Salesforce-Maps.PNG[../Storage/project-ct-mobile-en/Salesforce-Maps]
+image::Salesforce-Maps.PNG[]

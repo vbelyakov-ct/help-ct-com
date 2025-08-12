@@ -20,7 +20,7 @@ To create an *Opportunity* record, a user should have permission xref:ios/admin-
 [[h3_1187857038]]
 === Multi-Currency Support
 
-In the case of xref:ios/admin-guide/manage-currencies.adoc[multi-currency support], allobje cts will have the *Currency ISO Code* field to select the required currency.
+In the case of xref:ios/admin-guide/manage-currencies.adoc[multi-currency support], all objects will have the *Currency ISO Code* field to select the required currency.
 
 * If a user changes the currency for [.object]#Opportunity#, all added [.object]#Opportunity Products# will be removed.
 * The user works only with those price books and products that have the same currency.

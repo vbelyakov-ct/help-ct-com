@@ -1,0 +1,15 @@
+[[h2__430669426]]
+=== Algorithm for Finding the Lookup Field on Activity
+
+To view an _Activity_ record on the map, it should have a lookup field to the _Account_ record for which the geolocation data is collected or the full address is specified.
+
+* the [.object]#Activity# object should be specified on the xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc#h3_1397263211[CT Mobile Control Panel: Calendar] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-activities-new.adoc#h2_2014841429[CT Mobile Control Panel 2.0: Activities] tab.
+* the *Account Geolocation Field* should be specified on xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_612123135[CT Mobile Control Panel: General] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-activities-new.adoc#h4_1419137192[CT Mobile Control Panel 2.0: Activities] tab. Alternatively, add the *Account Full Address Field* (refer to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_1092547330[CT Mobile Control Panel: General] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-general-new.adoc#h3_1092547330[CT Mobile Control Panel 2.0: General]).
+
+CT Mobile app finds the corresponding lookup field according to the algorithm:
+
+. If there is only one lookup field on the [.object]#Activity# object to the [.object]#Account# object, this field is in use.
+. If there are two and more lookup fields on the [.object]#Activity# object to the [.object]#Account# object, the lookup field with the *Account* keyword in the API name is in use, for example, [.apiobject]#AccountId__c#. If several lookup fields have the [.apiobject]#Account# keyword in the API name, any of them can be in use.
+. If there are two and more lookup fields on the [.object]#Activity# object to the [.object]#Account# object, and none of them has the lookup field with the *Account* keyword in the API name, any of them can be in use.
+
+For the [.object]#Event# and [.object]#Task# objects, the filling of the *Name* ([.apiobject]#Whatid#) fields is applied.

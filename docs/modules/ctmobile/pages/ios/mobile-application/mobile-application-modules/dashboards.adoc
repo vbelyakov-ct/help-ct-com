@@ -1,59 +1,44 @@
 = Dashboards
 
-The *Dashboards* module allows viewing online dashboards available to
-the mobile user.
+The *Dashboards* module allows viewing online dashboards available to the mobile user.
 
-* //tag::ios[]Dashboards display in the Lightning Experience or
-Salesforce Classic mode
-according https://help.salesforce.com/articleView?id=000337767&type=1&mode=1[to
-the selected mode for the mobile user] in the Salesforce organization
-instance. To enable this option for CT Mobile versions below 2.3,
-contact the Customertimes team.
-
-* Using the *Fiscal year* criterion in filters and in reports and
-dashboards criteria is working as a *Calendar year*.
-* The availability of dashboards depends on the profile permission
-settings in Salesforce.
-* The mobile user can view the related report, as well as modify the
-report criteria.
+* Dashboards display in the Lightning Experience or Salesforce Classic mode according link:https://help.salesforce.com/articleView?id=000337767&type=1&mode=1[to the selected mode for the mobile user] in the Salesforce organization instance. To enable this option for CT Mobile versions below 2.3, contact the Customertimes team.
+* Using the *Fiscal year* criterion in filters and in reports and dashboards criteria is working as a *Calendar year*.
+* The availability of dashboards depends on the profile permission settings in Salesforce.
+* The mobile user can view the related report, as well as modify the report criteria.
 * Tap *Refresh* to update the dashboard.
 * Add the dashboard to the xref:ios/admin-guide/mobile-layouts/index.adoc[mobile layout].
 
-//tag::ios[]
-image:dashboards.png[]
-//tag::win[]
-image:62575043.png[]
-//tag::kotlin[]
-image:Dashboards-Kotlin.png[]
+image::dashboards.png[]
 
 [[h2_1510760474]]
-=== Adding Dashboard to the Menu
+== Adding Dashboard to the Menu
 
 To add the *Dashboards* module to the xref:ios/admin-guide/app-menu/index.adoc[app menu]:
 
-[width="100%",cols="50%,50%",]
-|===
-|In CT Mobile Control Panel a|
-. Go to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-app-menu.adoc[CT Mobile Control
-Panel: App Menu] tab.
+[tabs]
+====
+In CT Mobile Control Panel::
++
+--
+. Go to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-app-menu.adoc[CT Mobile Control Panel: App Menu] tab.
 . {blank}
-. Click the
-image:62562609.png[]
-button to open the *Add menu item* tool.
+include::partial$settings-location.adoc[]
+. Click the image:62562609.png[] button to open the *Add menu item* tool.
 . Select the *Dashboards* item.
 . Click *Add* to close the *Add menu item* tool.
 . Click *Save*.
-
-|In CT Mobile Control Panel 2.0 a|
-. Go to xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-app-menu-new.adoc[CT Mobile Control
-Panel 2.0: App Menu] tab.
-. Select the required profile in the *Profile* picklist. To apply
-settings to all the profiles, select *General Settings*.
+--
+In CT Mobile Control Panel 2.0::
++
+--
+. Go to xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-app-menu-new.adoc[CT Mobile Control Panel 2.0: App Menu] tab.
+. {blank}
+include::partial$settings-profile.adoc[]
 . Click *Show Module Menu*.
-. On the *All* or *Application Modules* tab, select
-the *Dashboard* item.
+. On the *All* or *Application Modules* tab, select the *Dashboard* item.
 . Click *Save*.
-
-|===
+--
+====
 
 The setup is complete.
