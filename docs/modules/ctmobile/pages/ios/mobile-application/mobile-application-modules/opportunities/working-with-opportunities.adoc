@@ -1,111 +1,65 @@
 = Working with Opportunities
+:toc:
 
-Available options depend on the settings for the *Opportunity* module.
-In this article, we share with you the best practices and specific
-features.
-
-:toc: :toclevels: 4
+Available options depend on the settings for the *Opportunity* module. In this article, we share with you the best practices and specific features.
 
 [[h2_1058527485]]
-=== Best Practice
+== Best Practice
 
 We recommend:
 
-* xref:custom-related-lists#h2_993780705[Create the custom related
-list] and customize its columns to display[.object]#Opportunity
-Products# with all required information in the *Opportunity* module.
-* xref:ios/admin-guide/mini-layouts.adoc[Customize mini layouts] with desired fields to
-create[.object]#Opportunity Products# more conveniently.
-* Add the *Currency ISO Code* field on the *Opportunity* page layout
-when using
-xref:working-with-opportunities#h3_1187857038[multi-currencies].
+* xref:ios/admin-guide/related-lists/custom-related-lists.adoc#h2_993780705[Create the custom related list] and customize its columns to display [.object]#Opportunity Products# with all required information in the *Opportunity* module.
+* xref:ios/admin-guide/mini-layouts.adoc[Customize mini layouts] with desired fields to create [.object]#Opportunity Products# more conveniently.
+* Add the *Currency ISO Code* field on the *Opportunity* page layout when using <<Multi-Currency Support, multi-currencies>>.
 
-
-
-To create an *Opportunity* record, a user should have permission
-xref:ios/admin-guide/managing-offline-objects/index.adoc#h2_1534686659[to create records].
+To create an *Opportunity* record, a user should have permission xref:ios/admin-guide/managing-offline-objects/index.adoc[to create records].
 
 [[h2_1745858670]]
-=== Working with Opportunities in the CT Mobile app
+== Working with Opportunities in the CT Mobile app
 
 [[h3_1187857038]]
-==== Multi-Currency Support
+=== Multi-Currency Support
 
-In the case of xref:manage-currencies[multi-currency support], all
-objects will have the *Currency ISO Code* field to select the required
-currency.
+In the case of xref:ios/admin-guide/manage-currencies.adoc[multi-currency support], allobje cts will have the *Currency ISO Code* field to select the required currency.
 
-* If a user changes the currency for[.object]#Opportunity#, all
-added[.object]#Opportunity Products# will be removed.
-* The user works only with those price books and products that have the
-same currency.
+* If a user changes the currency for [.object]#Opportunity#, all added [.object]#Opportunity Products# will be removed.
+* The user works only with those price books and products that have the same currency.
 
 [[h3_1490877833]]
-==== Forecast Category and Probability
+=== Forecast Category and Probability
 
-Business purposes
-xref:adding-opportunities-to-the-ct-mobile-app#h3_404689442[divide
-the opportunity flow into several stages] with a given *Forecast
-Category* and *Probability* for each stage.
+Business purposes xref:./adding-opportunities-to-the-ct-mobile-app.adoc#h3_404689442[divide the opportunity flow into several stages] with a given *Forecast Category* and *Probability* for each stage.
 
-* When a user changes the *Stage* for[.object]#Opportunity#,
-the appropriate values of *Forecast Category* and *Probability* are set.
+* When a user changes the *Stage* for [.object]#Opportunity#, the appropriate values of *Forecast Category* and *Probability* are set.
 * The user can manually fill out the *Probability* field from 0 to 100.
 
 [[h3_1947985277]]
-==== Create an Opportunity and add Opportunity Products
+=== Create an Opportunity and add Opportunity Products
 
-To create an[.object]#Opportunity# and add
-[.object]#Opportunity Products#:
+To create an [.object]#Opportunity# and add [.object]#Opportunity Products#:
 
-. Tap the *Opportunities* menu item and tap the desired *Opportunity*
-record or create a new one
-xref:ios/admin-guide/managing-offline-objects/index.adoc#h2_1534686659[if enabled].
-. Go to the tab with the custom related list of
-[.object]#Opportunity Products# and perform one of the
-following:
+. Tap the *Opportunities* menu item and tap the desired *Opportunity* record or create a new one xref:ios/admin-guide/managing-offline-objects/index.adoc[if enabled].
+. Go to the tab with the custom related list of [.object]#Opportunity Products# and perform one of the following:
 * Tap the *Plus* button and manually add the desired products.
-[TIP] ==== A price book will be automatically filled out when a
-user adds a product. ====
-* Tap the *Plus* button and, if configured, select the desired price
-book to it using a mini layout. Then, add a product from the selected
-price book.
++
+TIP: A price book will be automatically filled out when a user adds a product.
+* Tap the *Plus* button and, if configured, select the desired price book to it using a mini layout. Then, add a product from the selected price book.
 . Repeat step 3 to add other products.
 
 The products are added.
 
-
-
 [[h4_868831931]]
-===== Important Notes
+==== Important Notes
 
-* A user can select only products available to
-[.object]#Opportunity# and with the same currency as for it.
-* When a user selects the price book for[.object]#Opportunity#,
-all products may be added only from the selected price book.
-* To change the price book, delete all added products and then add new
-ones from the desired price book.
-* When a product has been added, the *Sales Price* field of the
-*Opportunity Product* record is automatically filled out but the mobile
-user can edit it.
-* When the *Opportunity Product* records have been synchronized, they
-cannot be edited despite the user and object permissions.
-
-[[h3_1108315328]]
-==== 
+* A user can select only products available to [.object]#Opportunity# and with the same currency as for it.
+* When a user selects the price book for [.object]#Opportunity#, all products may be added only from the selected price book.
+* To change the price book, delete all added products and then add new ones from the desired price book.
+* When a product has been added, the *Sales Price* field of the _Opportunity Product_ record is automatically filled out but the mobile user can edit it.
+* When the _Opportunity Product_ records have been synchronized, they cannot be edited despite the user and object permissions.
 
 [[h3_284876274]]
-==== ​Calculate Amount and Expected Revenue
+=== Calculate Amount and Expected Revenue
 
-The *Amount* field of[.object]#Opportunity# may be edited when
-there are no related *Opportunity Products* records. Otherwise, its
-value will be the sum of the values from the *Total Price* field of the
-*Opportunity Products* records. Also, the value will be recalculated
-each time a user creates, edits, or removes the
-[.object]#Opportunity Products# records.
+The *Amount* field of [.object]#Opportunity# may be edited when there are no related _Opportunity Product_ records. Otherwise, its value will be the sum of the values from the *Total Price* field of the _Opportunity Product_ records. Also, the value will be recalculated each time a user creates, edits, or removes the _Opportunity Products_ records.
 
-
-
-The *Expected Revenue* field has the formula type and will be
-recalculated each time when a value is changed in the *Amount* or
-*Probability* field.
+The *Expected Revenue* field has the formula type and will be recalculated each time when a value is changed in the *Amount* or *Probability* field.
