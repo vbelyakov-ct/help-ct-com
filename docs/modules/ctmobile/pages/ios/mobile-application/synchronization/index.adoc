@@ -1,38 +1,17 @@
 = Synchronization
 
-Synchronization is the process of aligning the CT Mobile data with
-Salesforce data. The process is divided into several stages and saved on
-each stage. The interrupted synchronization can be resumed from the last
-successful stage. The following articles help you to get familiar with
-the synchronization processes:
+Synchronization is the process of aligning the CT Mobile data with Salesforce data. The process is divided into several stages and saved on  each stage. The interrupted synchronization can be resumed from the last successful stage. The following articles help you to get familiar with the synchronization processes:
 
-
+* xref:./synchronization-launch/index.adoc[]
+* xref:./synchronization-launch/synchronization-f-a-q.adoc[]
+* xref:./synchronization-launch/debug-console.adoc[]
+* xref:./synchronization-launch/sync-logs.adoc[]
+* xref:./synchronization-launch/sync-log.adoc[]
 
 See also:
 
-xref:ios/mobile-application/synchronization/synchronization-launch/index.adoc[Synchronization Launch]
-
-ifndef::andr[]
-
-xref:synchronization-f-a-q[Synchronization F.A.Q.]
-
-xref:debug-console[Debug Console]
-
-xref:ios/mobile-application/synchronization/synchronization-launch/sync-logs.adoc[Sync Logs]
-
-xref:ios/mobile-application/synchronization/synchronization-launch/sync-log.adoc[Sync Log]
-
-ifndef::andr[]
-
-xref:ios/admin-guide/metadata-checker/index.adoc[Metadata Checker]
-
-xref:ios/admin-guide/metadata-checker/metadata-archive/index.adoc[Metadata Archive]
-
-ifndef::andr,win[]
-
-xref:ios/mobile-application/ui/home-screen/index.adoc#h2_396225247[Status Indicator]
-
-xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/ct-mobile-replication.adoc[CT Mobile Replication]
-
-xref:ios/admin-guide/ct-mobile-replication-use-cases-and-steps.adoc[CT Mobile
-Replication: Use Cases and Steps]
+* xref:ios/admin-guide/metadata-checker/index.adoc[]
+* xref:ios/admin-guide/metadata-checker/metadata-archive/index.adoc[]
+* xref:ios/mobile-application/ui/home-screen/index.adoc#h2_396225247[]
+* xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/ct-mobile-replication.adoc[]
+* xref:ios/admin-guide/ct-mobile-replication-use-cases-and-steps.adoc[]

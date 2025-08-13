@@ -1,106 +1,30 @@
 = Fast Synchronization
 
-To run fast synchronization, tap the *Sync* button in the top right
-corner of the xref:ios/mobile-application/ui/home-screen/index.adoc[Home Screen] or long tap the *Sync*
-button and select *Fast synchronization* from the picklist.
+To run fast synchronization, tap the *Sync* button in the top right corner of the xref:ios/mobile-application/ui/home-screen/index.adoc[Home Screen] or long tap the *Sync* button and select *Fast synchronization* from the picklist.
 
-//tag::ios[][NOTE] ==== Due to
-https://developer.apple.com/documentation/uikit/app_and_environment/scenes/preparing_your_ui_to_run_in_the_background[the
-iOS platform limitations], do not collapse the application and do not
-turn off the screen during fast or mixed synchronization. ====
+NOTE: Due to link:https://developer.apple.com/documentation/uikit/app_and_environment/scenes/preparing_your_ui_to_run_in_the_background[the iOS platform limitations], do not collapse the application and do not turn off the screen during fast or mixed synchronization.
 
-* The mixed synchronization will be launched if certain conditions are
-met.
-* The fast and mixed synchronization processes are not interrupted in
-case of errors with records. The unsynchronized records containing
-errors can be synchronized after the errors are corrected.
-* During the fast or mixed synchronization, the application is available
-for work except for the *Applications* module.
+* The mixed synchronization will be launched if certain conditions are met.
+* The fast and mixed synchronization processes are not interrupted in case of errors with records. The unsynchronized records containing errors can be synchronized after the errors are corrected.
+* During the fast or mixed synchronization, the application is available for work except for the *Applications* module.
 
 [[h2_266746590]]
-=== Sync Steps
+== Sync Steps
 
-Data changes in the application, such as deletions, insertions, and
-updates, are sent to Salesforce.
+. Data changes in the application, such as deletions, insertions, and updates, are sent to Salesforce.
+. The changes in xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-user/index.adoc[the audit fields] of the current user's record are sent to Salesforce.
++
+NOTE: The [.apiobject]#clm\__LastSyncDate__c# field will be updated only if the previous synchronization was successful, but has been interrupted before the field sync date was updated.
+. If enabled, records with errors will be sent using xref:ios/mobile-application/synchronization/sync-recovery.adoc[the Sync Recovery functionality].
+. The system compares the date of the last successful synchronization in the [.apiobject]#clm\__LastSyncDate__c# field of the current user's record with the date of the last metadata change in the [.apiobject]#clm\__MetadataLastModifiedDate__c# field of the xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/mobile-application-setup.adoc[Mobile Application Setup] record for the current user's profile (if this record exists) or for the current user's Salesforce organization. To find out how to manually or automatically update the [.apiobject]#clm\__MetadataLastModifiedDate__c# field, go to xref:ios/admin-guide/metadata-checker/index.adoc[Metadata Checker].
+* If the date of the last metadata change is a date earlier than the date of the last successful synchronization, the application runs *the fast synchronization*;
+* If the date of the last metadata change is later than the date of the last successful synchronization or not specified, the application runs *the mixed synchronization* to download xref:ios/admin-guide/metadata-checker/metadata-archive/index.adoc[metadata components] and update the current database.
++
+Metadata components are downloaded from ZIP archive(s) or directly using administrator credentials depending on xref:ios/getting-started/installing-ct-mobile-package/ct-mobile-managed-package-update-to-v-3-54.adoc[the CT Mobile package version]. The cloud token should be valid to retrieve components from the ZIP archive(s) (refer to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc#h3_2011978[CT Mobile Control Panel: Tools] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-tools-new.adoc#h2_2011978[CT Mobile Control Panel 2.0: Tools]). The synchronization process can proceed without a valid cloud token or administrator credentials, and in that case, xref:ios/mobile-application/synchronization/validation.adoc[validation rules], offline reports, and some operators in formulas might not operate properly.
+. Records of xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/index.adoc[the custom settings, custom metadata types], xref:ios/admin-guide/managing-offline-objects/index.adoc[offline objects], and objects, which are necessary for activated xref:ios/mobile-application/mobile-application-modules/index.adoc[modules], are downloaded if the value in the [.apiobject]#SystemModstamp# field is a date later than the date of the last successful synchronization and a record matches the conditions set in xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/related-list-filters.adoc[related list filters].
+. If configured, the records of the specified objects mentioned in the xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/ct-mobile-replication.adoc[CT Mobile Replication] setting are updated.
+. xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-user/index.adoc[The audit fields] of the current user record are updated.
++
+NOTE: The [.apiobject]#clm\__LastSyncDate__c# field will be updated only if fast/mixed synchronization was successful or partially successful. This field shows that the actual information is downloaded on the device.
 
-The changes in xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-user/index.adoc[the audit fields] of the current
-user's record are sent to Salesforce.
-
-[NOTE] ==== The
-[.apiobject]#clm__LastSyncDate__c ==== field will be
-updated only if the previous synchronization was successful, but has
-been interrupted before the field sync date was updated. #
-
-//tag::ios[]
-
-If enabled, records with errors will be sent using
-xref:ios/mobile-application/synchronization/sync-recovery.adoc[the Sync Recovery functionality].
-
-//tag::ios,win[]
-
-The system compares the date of the last successful synchronization in
-the [.apiobject]#clm__LastSyncDate__c# field of the
-current user's record with the date of the last metadata change in the
-[.apiobject]#clm__MetadataLastModifiedDate__c# field of
-the xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/mobile-application-setup.adoc[Mobile Application Setup] record
-for the current user's profile (if this record exists) or for the
-current user's Salesforce organization. To find out how to manually or
-automatically update
-the [.apiobject]#clm__MetadataLastModifiedDate__c# field,
-go to xref:ios/admin-guide/metadata-checker/index.adoc[Metadata Checker].
-
-* If the date of the last metadata change is a date earlier than the
-date of the last successful synchronization, the application runs *the
-fast synchronization*;
-* If the date of the last metadata change is later than the date of the
-last successful synchronization or not specified, the application runs
-*the mixed synchronization* to download
-xref:ios/admin-guide/metadata-checker/metadata-archive/index.adoc[metadata components] and update the current
-database.
-Metadata components are downloaded from ZIP archive(s) or directly using
-administrator credentials depending
-on xref:ios/getting-started/installing-ct-mobile-package/ct-mobile-managed-package-update-to-v-3-54.adoc[the CT Mobile
-package version]. The cloud token should be valid to retrieve components
-from the ZIP archive(s) (refer to
-xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc#h3_2011978[CT Mobile Control
-Panel: Tools] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-tools-new.adoc#h2_2011978[CT
-Mobile Control Panel 2.0: Tools]). The synchronization process can
-proceed without a valid cloud token or administrator credentials, and in
-that case, xref:ios/mobile-application/synchronization/validation.adoc[validation rules], offline reports, and
-some operators in formulas might not operate properly.
-
-Records of xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/index.adoc[the custom settings, custom
-metadata types], xref:ios/admin-guide/managing-offline-objects/index.adoc[offline objects],
-and objects, which are necessary for activated
-xref:ios/mobile-application/mobile-application-modules/index.adoc[modules], are downloaded if the
-value in the [.apiobject]#SystemModstamp# field is a date later
-than the date of the last successful synchronization and a record
-matches the conditions set in xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/related-list-filters.adoc[related
-list filters].
-
-//tag::ios[]
-
-If configured, the records of the specified objects mentioned in the
-xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/ct-mobile-replication.adoc[CT Mobile Replication] setting are
-updated.
-
-xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-user/index.adoc[The audit fields] of the current user record are
-updated.
-
-[NOTE] ==== The
-[.apiobject]#clm__LastSyncDate__c ==== field will be
-updated only if fast/mixed synchronization was successful or partially
-successful. This field shows that the actual information is downloaded
-on the device. #
-
-//tag::ios[]
-
-image:synchronization-30703765-2020-04-01.png[]
-
-//tag::win[]
-
-image:fastmixsync_andrwin.png[]
-
-//tag::andr[]
-
-image:fastmixsync_andr.png[]
+image::synchronization-30703765-2020-04-01.png[]

@@ -1,68 +1,31 @@
 = Full Synchronization
 
-To run full synchronization, long tap the *Sync* button in the top right
-corner of the xref:ios/mobile-application/ui/home-screen/index.adoc[Home Screen] and select *Full
-synchronization* from the picklist.
+To run full synchronization, long tap the *Sync* button in the top right corner of the xref:ios/mobile-application/ui/home-screen/index.adoc[Home Screen] and select *Full synchronization* from the picklist.
 
-//tag::ios[][NOTE] ==== Due to the
-https://developer.apple.com/documentation/uikit/app_and_environment/scenes/preparing_your_ui_to_run_in_the_background[iOS
-platform limitations], do not collapse the application and do not turn
-off the screen during the first or full synchronization.  ====
+NOTE: Due to the link:https://developer.apple.com/documentation/uikit/app_and_environment/scenes/preparing_your_ui_to_run_in_the_background[iOS platform limitations], do not collapse the application and do not turn off the screen during the first or full synchronization.
 
-* The full synchronization is triggered when you run your first
-synchronization.
-* During the full synchronization except for the first full
-synchronization, the application is locked.
-* The full synchronization process will be interrupted in case of
-errors.
+* The full synchronization is triggered when you run your first synchronization.
+* During the full synchronization except for the first full synchronization, the application is locked.
+* The full synchronization process will be interrupted in case of errors.
 
 [[h2_266746590]]
-=== Sync Steps
+== Sync Steps
 
-. Data changes in the application such as deletions, insertions, and
-updates are sent to Salesforce.
-The step is skipped during the first full synchronization because the
-database is empty.
-. The changes in xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-user/index.adoc[the audit fields] of the current
-user record are sent to Salesforce.
-
-[NOTE] ==== The change of the
-[.apiobject]#clm__LastSyncDate__c ==== field will be
-updated only if the previous synchronization was successful, but has
-been interrupted before the field sync date was updated. #
+. Data changes in the application such as deletions, insertions, and updates are sent to Salesforce.
++
+The step is skipped during the first full synchronization because the database is empty.
+. The changes in xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-user/index.adoc[the audit fields] of the current user record are sent to Salesforce.
++
+NOTE: The change of the [.apiobject]#clm\__LastSyncDate__c# field will be updated only if the previous synchronization was successful, but has been interrupted before the field sync date was updated.
 . xref:ios/admin-guide/metadata-checker/metadata-archive/index.adoc[Metadata components] are downloaded.
-//tag::ios,win[]Metadata components are downloaded from ZIP
-archive(s) or directly using administrator credentials depending
-on xref:ios/getting-started/installing-ct-mobile-package/ct-mobile-managed-package-update-to-v-3-54.adoc[the CT Mobile
-package version]. The cloud token should be valid to retrieve components
-from the ZIP archive(s) (refer
-to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc#h3_2011978[CT Mobile Control
-Panel: Tools] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-tools-new.adoc#h2_2011978[CT
-Mobile Control Panel 2.0: Tools]). The synchronization process can
-proceed without a valid cloud token or administrator credentials, and in
-that case, xref:ios/mobile-application/synchronization/validation.adoc[validation rules], offline reports, and
-some operators in formulas might not operate properly.
-//tag::andr[]Metadata components are downloaded using valid
-administrator credentials. The synchronization process can proceed
-without valid administrator credentials,
-but xref:ios/mobile-application/synchronization/validation.adoc[validation rules] offline reports, and some
-operators in formulas might not operate properly.
++
+Metadata components are downloaded from ZIP archive(s) or directly using administrator credentials depending on xref:ios/getting-started/installing-ct-mobile-package/ct-mobile-managed-package-update-to-v-3-54.adoc[the CT Mobile package version]. The cloud token should be valid to retrieve components from the ZIP archive(s) (refer to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc#h3_2011978[CT Mobile Control Panel: Tools] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-tools-new.adoc#h2_2011978[CT Mobile Control Panel 2.0: Tools]). The synchronization process can proceed without a valid cloud token or administrator credentials, and in that case, xref:ios/mobile-application/synchronization/validation.adoc[validation rules], offline reports, and some operators in formulas might not operate properly.
 . The current data model:
 * is created in case of *the first full synchronization*.
 * is replaced by the newly updated in case of *full synchronization*.
-. Records of xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/index.adoc[the custom settings, custom
-metadata types], xref:ios/admin-guide/managing-offline-objects/index.adoc[offline objects],
-and objects, which are necessary for activated
-xref:ios/mobile-application/mobile-application-modules/index.adoc[modules], are downloaded if a
-record matches the conditions set in
-xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/related-list-filters.adoc[related list filters].
-. xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-user/index.adoc[The audit fields] of the current user record are
-updated:
+. Records of xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/index.adoc[the custom settings, custom metadata types], xref:ios/admin-guide/managing-offline-objects/index.adoc[offline objects], and objects, which are necessary for activated xref:ios/mobile-application/mobile-application-modules/index.adoc[modules], are downloaded if a record matches the conditions set in xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/related-list-filters.adoc[related list filters].
+. xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-user/index.adoc[The audit fields] of the current user record are updated:
++
+NOTE: The [.apiobject]#clm\__LastSyncDate__c# field will be updated only if the first full or full synchronization was successful. This field shows that the actual information is downloaded on the device.
 
-[NOTE] ==== The
-[.apiobject]#clm__LastSyncDate__c ==== field will be
-updated only if the first full or full synchronization was successful.
-This field shows that the actual information is downloaded on the
-device. #
-
-image:synchronization-30703765-2020-04-01-1.png[]
+image::synchronization-30703765-2020-04-01-1.png[]
