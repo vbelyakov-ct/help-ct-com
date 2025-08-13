@@ -46,7 +46,7 @@ For more information, go to xref:ios/mobile-application/synchronization/fast-syn
 This type is intended to upload the data differential since the specific date mentioned in the [.apiobject]#clm\__MetadataLastModifiedDate__c# field of
 the xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/mobile-application-setup.adoc[Mobile Application Setup] custom setting and all metadata to avoid the full synchronization performing, reduce synchronization time, and use the CT Mobile app during the synchronization.
 
-TIP: Enable xref:ios/admin-guide/metadata-checker/index.adoc[Metadata Checker] to automatically update the date in the [.apiobject]#clm\__MetadataLastModifiedDate__c field if the metadata was changed in Salesforce.
+TIP: Enable xref:ios/admin-guide/metadata-checker/index.adoc[Metadata Checker] to automatically update the date in the [.apiobject]#clm\__MetadataLastModifiedDate__c# field if the metadata was changed in Salesforce.
 
 For more information, go to xref:ios/mobile-application/synchronization/fast-synchronization.adoc[Fast and Mixed Synchronization].
 
