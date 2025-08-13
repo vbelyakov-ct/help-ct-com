@@ -1,42 +1,12 @@
 = Debug Console
 
-The CT Mobile app has a handy tool for viewing log records of the sync
-process, which helps the consultants, administrators, and support team
-to verify that the CT Mobile app is correctly working and all settings
-are being applied.
+The CT Mobile app has a handy tool for viewing log records of the sync process, which helps the consultants, administrators, and support team  to verify that the CT Mobile app is correctly working and all settings are being applied.
 
-//tag::ios[]
+To access the *Debug Console* screen, perform the double finger rotation gesture on the xref:ios/mobile-application/ui/home-screen/index.adoc[Home screen].
 
-To access the *Debug Console* screen, perform the double finger rotation
-gesture on the xref:ios/mobile-application/ui/home-screen/index.adoc[Home screen].
+image::debug-console-opening.gif[]
 
-image:debug-console-opening.gif[]
+xref:ios/mobile-application/synchronization/synchronization-launch/sync-logs.adoc[Logs] are stored as the xref:ios/mobile-application/synchronization/synchronization-launch/sync-log.adoc[Sync Log] records and can be sent to Salesforce or by email to the support team depending on the settings in the *Support and Logs* section of xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h2_1687169837[CT Mobile Control Panel: General]/*Logs and Support* section of xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-general-new.adoc#h2_1687169837[CT Mobile Control Panel 2.0: General]. *Debug Console* allows searching the log records highlighting the search results.
 
-//tag::win[]
+image::debug-console-search.png[]
 
-To access the *Debug Console* screen, drag the bottom on
-the xref:ios/mobile-application/application-settings/index.adoc[Settings screen].
-
-
-
-Since CT Mobile 1.3, you can call the debug log during the sync process
-by right-clicking or long-pressing (at least 2 seconds) and then
-releasing anywhere on the screen.
-
-image:62575609.png[]
-
-
-
-xref:ios/mobile-application/synchronization/synchronization-launch/sync-logs.adoc[Logs] are stored as the xref:ios/mobile-application/synchronization/synchronization-launch/sync-log.adoc[Sync Log]
-records and can be sent to Salesforce or by email to the support team
-depending on the settings in the *Support and Logs* section of
-xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h2_1687169837[CT Mobile
-Control Panel: General]/*Logs and Support* section of
-xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-general-new.adoc#h2_1687169837[CT Mobile
-Control Panel 2.0: General]. *Debug Console* allows searching the log
-records highlighting the search results.
-
-//tag::ios[]
-image:debug-console-search.png[]
-//tag::win[]
-image:62575611.png[]

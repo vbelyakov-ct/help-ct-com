@@ -1,263 +1,84 @@
 = User Permissions Required to Synchronize Objects to Offline Work with Functionalities
 
-[TIP] ==== Launch xref:ios/mobile-application/synchronization/full-synchronization.adoc[the full
-synchronization] to download these objects to the mobile device. ====
+TIP: Launch xref:ios/mobile-application/synchronization/full-synchronization.adoc[the full synchronization] to download these objects to the mobile device.
 
 Tap the header to open the corresponding table.
 
-[width="100%",cols="50%,50%",]
-|===
-|User permissions for objects that are always downloaded during
-synchronization a|
-//tag::ios[]
-
-[width="100%",cols="^25%,^25%,^25%,^25%",]
+[tabs]
+====
+User permissions for objects that are always downloaded during synchronization::
++
+--
+[width="100%",cols="~,~,~,~",separator=!]
 !===
-!*Object* !*Object API Name* !*User Permission* !*Comments*
+^!*Object* ^!*Object API Name* ^!*User Permission* ^!*Comments*
 
 !Account ![.apiobject]#Account# !Read !
-
 !Assignment Rule ![.apiobject]#AssignmentRule# !Read !If active.
-
-!CTM Settings ![.apiobject]#clm__CTMSettings__c# !Read
-!
-
-!Document ![.apiobject]#Document# !Read !It is required to
-display the CT Mobile logo (refer to
-xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_1354766135[CT Mobile
-Control Panel: General] or
-xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-user-interface-new.adoc#h3_1354766135[CT
-Mobile Control Panel 2.0: User Interface]).
-
+!CTM Settings ![.apiobject]#clm\__CTMSettings__c# !Read!
+!Document ![.apiobject]#Document# !Read !It is required to display the CT Mobile logo (refer to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_1354766135[CT Mobile Control Panel: General] or xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-user-interface-new.adoc#h3_1354766135[CT Mobile Control Panel 2.0: User Interface]).
 !Email Template ![.apiobject]#EmailTemplate# !Read !If active.
-
-!Folder ![.apiobject]#Folder# !Read !To display
-correctly, [.apiobject]#Dashboard# and [.apiobject]#EmailTemplate# are
-required.
-
+!Folder ![.apiobject]#Folder# !Read !To display correctly, [.apiobject]#Dashboard# and [.apiobject]#EmailTemplate# are required.
 !Group ![.apiobject]#Group# !Read !
-
 !Record Type ![.apiobject]#RecordType# !Read !
-
-!Sync Log ![.apiobject]#clm__SyncLog__c# !Read; Edit !
-
+!Sync Log ![.apiobject]#clm\__SyncLog__c# !Read; Edit !
 !User ![.apiobject]#User# !Read !If active.
-
-!User Permission Access ![.apiobject]#UserPermissionAccess#
-!Read !
-
+!User Permission Access ![.apiobject]#UserPermissionAccess#!Read !
 !User Role ![.apiobject]#UserRole# !Read !
 !===
 
-//tag::kotlin[]
-
-[width="100%",cols="^25%,^25%,^25%,^25%",]
+--
+User permissions for objects that are required for the correct offline operation of the added functionalities and integrations::
++
+--
+[width="100%",cols="~,~,~,~,~",separator=!]
 !===
-!*Object* !*Object API Name* !*User Permission* !*Comments*
+^!*Functionality/Integration* ^!*Object* ^!*Object API Name* ^!*User Permission* ^!*Comments*
 
-!Account ![.apiobject]#Account# !Read !
-
-!Document ![.apiobject]#Document# !Read !
-
-!Email Template ![.apiobject]#EmailTemplate# !Read !
-
-!Folder ![.apiobject]#Folder# !Read !
-
-!Group ![.apiobject]#Group# !Read !
-
-!Record Type ![.apiobject]#RecordType# !Read !
-
-!Sync Log ![.apiobject]#clm__SyncLog__c# !Read; Edit !
-
-!User ![.apiobject]#User# !Read !If active.
-
-!User Permission Access ![.apiobject]#UserPermissionAccess#
-!Read !
-!===
-
-|User permissions for objects that are required for the correct offline
-operation of the added functionalities and integrations a|
-//tag::ios[]
-
-[width="100%",cols="^20%,^20%,^20%,^20%,^20%",]
-!===
-!*Functionality/Integration* !*Object* !*Object API Name* !*User
-Permission* !*Comments*
-
-!xref:ios/mobile-application/mobile-application-modules/applications/index.adoc[Applications] !Application
-![.apiobject]#clm__Application__c# !Read; Edit !
-
-! !Application Stats
-![.apiobject]#clm__ApplicationStats__c# !Read !
-
-! !Custom Scenario ![.apiobject]#clm__CustomScenario__c#
-!Read; Edit !
-
-! !Slide ![.apiobject]#clm__Slide__c# !Read !
-
+.4+!xref:ios/mobile-application/mobile-application-modules/applications/index.adoc[Applications] !Application ![.apiobject]#clm\__Application__c# !Read; Edit !
+!Application Stats ![.apiobject]#clm\__ApplicationStats__c# !Read !
+!Custom Scenario ![.apiobject]#clm\__CustomScenario__c#!Read; Edit !
+!Slide ![.apiobject]#clm\__Slide__c# !Read !
 !xref:ios/mobile-application/mobile-application-modules/cg-cloud/index.adoc[CG Cloud]
-!xref:activating-cg-cloud-in-the-ct-mobile-app#h2_242799573[The
-list of CG Cloud objects] !— !— !
+!xref:ios/mobile-application/mobile-application-modules/cg-cloud/setting-up-retail-execution/activating-cg-cloud-in-the-ct-mobile-app.adoc#h2_242799573[The list of CG Cloud objects] !— !— !
+.2+!xref:ctsign:admin-guide/sign-a-document-the-ct-mobile-app/add-the-ct-sign-to-the-ct-mobile-app.adoc[CT Sign]
+!Sign Document![.apiobject]#ctsign\__SignDocument__c# !Read !
+!Sign Settings ![.apiobject]#ctsign\__SignSettings__c#!Read; Edit !
+.2+!xref:ctorders:admin-guide/workshops/workshop-4-0-working-with-offline-orders/adding-ct-orders-to-the-ct-mobile-app-4-0.adoc[CT Orders] !Group ![.apiobject]#Group# !Read !
+!xref:ctorders:admin-guide/managing-ct-orders/order-management/offline-order.adoc#h2_1850278800[The list of CT Orders objects] !— !— !
+.3+!xref:ios/mobile-application/ui/home-screen/index.adoc#h3_1761919763[Dashboards] (online) !Dashboard ![.apiobject]#Dashboard# !Read !
+!Report ![.apiobject]#Report# !Read !
+!Report Type ![.apiobject]#ReportType# !Read ! !xref:ios/mobile-application/lead-convert.adoc[Lead] !Lead Status ![.apiobject]#LeadStatus# !Read !If the list of offline objects contains the _Lead_ object.
+.2+!xref:ios/admin-guide/managing-offline-objects/index.adoc[Offline Objects] !The list of offline objects !— !Read; Edit; Delete (depend on the object) !It is based on data from xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/related-list-filters.adoc[clm\__RelatedListFillters__c], xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/menu-settings-and-offline-objects.adoc[clm\__TopLvlObjects__c] (will be deprecated in future), or xref:ios/admin-guide/ct-mobile-control-panel/ctm-settings/index.adoc[CTM Settings].
+!Task Status ![.apiobject]#TaskStatus# !Read; Edit !If the list of offline objects contains the [.object]#Task# object.
+.2+!xref:ios/mobile-application/mobile-application-modules/opportunities/index.adoc[Opportunity] !Opportunity ![.apiobject]#Opportunity# !Read !If the list of offline objects contains the [.object]#Order# and [.object]#Quote# objects.
 
-!https://help.customertimes.com/smart/project-ct-sign-en/add-the-ct-sign-to-the-ct-mobile-app[CT
-Sign] !Sign Document
-![.apiobject]#ctsign__SignDocument__c# !Read !
-
-! !Sign Settings ![.apiobject]#ctsign__SignSettings__c#
-!Read; Edit !
-
-!https://help.customertimes.com/articles/ct-orders-4-0/adding-ct-orders-to-the-ct-mobile-app-4-0[CT
-Orders] !Group ![.apiobject]#Group# !Read !
-
-!
-!https://help.customertimes.com/articles/ct-orders-4-0/offline-order/a/h2_1850278800[The
-list of CT Orders objects] !— !— !
-
-!xref:ios/mobile-application/ui/home-screen/index.adoc#h3_1761919763[Dashboards] (online) !Dashboard
-![.apiobject]#Dashboard# !Read !
-
-! !Report ![.apiobject]#Report# !Read !
-
-! !Report Type ![.apiobject]#ReportType# !Read ! !xref:ios/mobile-application/lead-convert.adoc[Lead] !Lead Status ![.apiobject]#LeadStatus# !Read !If the list of offline objects
-contains the _Lead_ object.
-
-!xref:ios/admin-guide/managing-offline-objects/index.adoc[Offline Objects] !The list of
-offline objects !— !Read; Edit; Delete (depend on the object) !It is
-based on data from
-xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/related-list-filters.adoc[clm__RelatedListFillters__c],
-xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/menu-settings-and-offline-objects.adoc[clm__TopLvlObjects__c]
-(will be deprecated in future), or xref:ios/admin-guide/ct-mobile-control-panel/ctm-settings/index.adoc[CTM Settings].
-
-! !Task Status ![.apiobject]#TaskStatus# !Read; Edit !If the
-list of offline objects contains the _Task_ object.
-
-!xref:ios/mobile-application/mobile-application-modules/opportunities/index.adoc[Opportunity] !Opportunity
-![.apiobject]#Opportunity# !Read !If the list of offline
-objects contains the _Order_ and _Quote_ objects.
-
-! !Opportunity Product ![.apiobject]#OpportunityLineItem# !Read
-!If the list of offline objects contains the _Opportunity_ object.
-
-!https://help.customertimes.com/smart/project-order-module/order-management[Order]
-!Order Product ![.apiobject]#OrderItem# !Read !If the list of
-offline objects contains the _Order_ object.
-
-! !Price Book ![.apiobject]#Pricebook2# !Read !If the list of
-offline objects contains the _Order_ and _Opportunity_ objects.
-
-! !Price Book Entry ![.apiobject]#PricebookEntry# !Read !If the
-list of offline objects contains the _Order_ and _Opportunity_ objects.
-
-! !Salesforce Product ![.apiobject]#Product2# !Read !If the list
-of offline objects contains the _Order_ and _Opportunity_ objects.
-
-!Quote !Quote ![.apiobject]#Quote# !Read !If the list of
-offline objects contains the _Quote_ object.
-
-! !Quote Line Item ![.apiobject]#QuoteLineItem# !Read !If the
-list of offline objects contains the _Quote_ object.
+!Opportunity Product ![.apiobject]#OpportunityLineItem# !Read !If the list of offline objects contains the [.object]#Opportunity# object.
+.4+!xref:ctorders:admin-guide/managing-ct-orders/order-management/index.adoc[Order]
+!Order Product ![.apiobject]#OrderItem# !Read !If the list of offline objects contains the [.object]#Order# object.
+!Price Book ![.apiobject]#Pricebook2# !Read !If the list of offline objects contains the [.object]#Order# and [.object]#Opportunity# objects.
+!Price Book Entry ![.apiobject]#PricebookEntry# !Read !If the list of offline objects contains the [.object]#Order# and [.object]#Opportunity# objects.
+!Salesforce Product ![.apiobject]#Product2# !Read !If the list of offline objects contains the [.object]#Order# and [.object]#Opportunity# objects.
+.2+!Quote !Quote ![.apiobject]#Quote# !Read !If the list of offline objects contains the [.object]#Quote# object.
+!Quote Line Item ![.apiobject]#QuoteLineItem# !Read !If the list of offline objects contains the [.object]#Quote# object.
 !===
-
-//tag::kotlin[]
-
-[width="100%",cols="^20%,^20%,^20%,^20%,^20%",]
+--
+User permissions to download custom settings and custom metadata types::
++
+--
+[cols="~,~,~",separator=!]
 !===
-!*Functionality/Integration* !*Object* !*Object API Name* !*User
-Permission* !*Comments*
+^!*Custom Setting or Custom Metadata Type* ^!*API Name* ^!*User Permission*
 
-!xref:ios/mobile-application/ui/home-screen/index.adoc#h3_1761919763[Dashboards] (online) !Dashboard
-![.apiobject]#Dashboard# !Read !
-
-!xref:ios/admin-guide/managing-offline-objects/index.adoc[Offline Objects] !The list of
-offline objects !— !Read; Edit; Delete (depend on the object) !It is
-based on data from
-xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/related-list-filters.adoc[clm__RelatedListFillters__c] and
-xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/menu-settings-and-offline-objects.adoc[clm__TopLvlObjects__c].
-
-! !Task Status ![.apiobject]#TaskStatus# !Read; Edit !If the
-list of offline objects contains the _Task_ object.
-
-!xref:ios/mobile-application/mobile-application-modules/opportunities/index.adoc[Opportunity] !Opportunity
-![.apiobject]#Opportunity# !Read !If the list of offline
-objects contains the _Opportunity_ object.
-
-! !Opportunity Product ![.apiobject]#OpportunityLineItem# !Read
-!If the list of offline objects contains the _Opportunity_ object.
-
-! !Price Book ![.apiobject]#Pricebook2# !Read !If the list of
-offline objects contains the _Opportunity_ object.
-
-! !Price Book Entry ![.apiobject]#PricebookEntry# !Read !If the
-list of offline objects contains the _Opportunity_ object.
-
-! !Salesforce Product ![.apiobject]#Product2# !Read !If the list
-of offline objects contains the _Opportunity_ object.
+!Menu Settings and Offline Objects![.apiobject]#clm\__TopLvlObjects__c# !Read
+!Mobile Application Setup![.apiobject]#clm\__ApplicationSetup__c# !Read
+!Mobile Custom Detail Settings![.apiobject]#clm\__MobileActivityDataCustomization__c#!Read
+!Mobile Customization![.apiobject]#clm\__MobileCustomization__c# !Read
+!Mobile Mini Layout Settings![.apiobject]#clm\__MobileLayoutSettings__c# !Read
+!Related List Filters![.apiobject]#clm\__MobileRelatedListFilters__c# !Read
+!CT Mobile Replication![.apiobject]#clm\__Replication__mdt# !Read
+!CT Mobile Workflow ![.apiobject]#clm\__Workflow__mdt#!Read
+!CT Mobile Workflow Step![.apiobject]#clm\__WorkflowStep__mdt# !Read
 !===
-
-|User permissions to download custom settings and custom metadata types
-a|
-//tag::ios[]
-
-[cols="^,^,^",]
-!===
-!*Custom Setting or Custom Metadata Type* !*API Name* !*User Permission*
-
-!Menu Settings and Offline Objects
-![.apiobject]#clm__TopLvlObjects__c# !Read
-
-!Mobile Application Setup
-![.apiobject]#clm__ApplicationSetup__c# !Read
-
-!Mobile Custom Detail Settings
-![.apiobject]#clm__MobileActivityDataCustomization__c#
-!Read
-
-!Mobile Customization
-![.apiobject]#clm__MobileCustomization__c# !Read
-
-!Mobile Mini Layout Settings
-![.apiobject]#clm__MobileLayoutSettings__c# !Read
-
-!Related List Filters
-![.apiobject]#clm__MobileRelatedListFilters__c# !Read
-
-!CT Mobile Replication
-![.apiobject]#clm__Replication__mdt# !Read
-
-!CT Mobile Workflow ![.apiobject]#clm__Workflow__mdt#
-!Read
-
-!CT Mobile Workflow Step
-![.apiobject]#clm__WorkflowStep__mdt# !Read
-!===
-
-//tag::kotlin[]
-
-[cols="^,^,^",]
-!===
-!*Custom Setting or Custom Metadata Type* !*API Name* !*User Permission*
-
-!Menu Settings and Offline Objects
-![.apiobject]#clm__TopLvlObjects__c# !Read
-
-!Mobile Application Setup
-![.apiobject]#clm__ApplicationSetup__c# !Read
-
-!Mobile Custom Detail Settings
-![.apiobject]#clm__MobileActivityDataCustomization__c#
-!Read
-
-!Mobile Customization
-![.apiobject]#clm__MobileCustomization__c# !Read
-
-!Mobile Mini Layout Settings
-![.apiobject]#clm__MobileLayoutSettings__c# !Read
-
-!Related List Filters
-![.apiobject]#clm__MobileRelatedListFilters__c# !Read
-
-!CT Mobile Replication
-![.apiobject]#clm__Replication__mdt# !Read
-!===
-
-|===
+--
+====
