@@ -1,33 +1,15 @@
 = Slider for the Numeric, Currency and Percentage Fields
 
-Add the interactive control in the form of a slider to the fields with
-the *Number*, *Currency*, and *Percent* types.
+Add the interactive control in the form of a slider to the fields with the *Number*, *Currency*, and *Percent* types.
 
+To enable this option, specify the following in the field description, refresh metadata archive (refer to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc#h3_1003786176[CT Mobile Control Panel: Tools] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-tools-new.adoc#h3_1003786176[CT Mobile Control Panel 2.0: Tools]) and xref:ios/mobile-application/synchronization/synchronization-launch/index.adoc#h3_1175148825[launch mixed synchronization]:
 
+* [.apiobject]#min_value# is the minimum available value for the field.
+* [.apiobject]#max_value# is the maximum available value for the field.
+* [.apiobject]#step# is the modification scale.
 
-To enable this option, specify the following in the field description,
-refresh metadata archive (refer
-to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc#h3_1003786176[CT Mobile
-Control Panel:
-Tools] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-tools-new.adoc#h3_1003786176[CT
-Mobile Control Panel 2.0: Tools]) and
-xref:ios/mobile-application/synchronization/synchronization-launch/index.adoc#h3_1175148825[launch mixed
-synchronization]:
-
-*[.apiobject]#min_value# is the minimum available value for
-the field.
-*[.apiobject]#max_value# is the maximum available value for
-the field.
-*[.apiobject]#step# is the modification scale.
-
-
-
-
-
-image:custom-field-slider.png[]
-
-
+image::custom-field-slider.png[]
 
 The setup is complete.
 
-image:custom-field-slider-app.png[]
+image::custom-field-slider-app.png[]
