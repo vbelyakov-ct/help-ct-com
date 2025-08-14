@@ -1,359 +1,132 @@
 = Home Screen
+:toc:
 
-//tag::ios,win,andr[]
+The Home Screen is the customizable starting page. By default, the customization is turned off and the Home Screen contains the logo, the  carousel of CLM presentations if available due to proper permission settings, and the calendar widget. You can add, remove, and resize the elements on the Home Screen for each profile separately.
 
-The Home Screen is the customizable starting page. By default, the
-customization is turned off and the Home Screen contains the logo, the
-carousel of CLM presentations if available due to proper permission
-settings, and the calendar widget. You can add, remove, and resize the
-elements on the Home Screen for each profile separately.
+TIP: Since CT Mobile 2.7, if there is no data for the added widget (e.g., CLM-presentations on the device or data for the reports), the widget icon is shown.
 
-:toc: :toclevels: 3
-
-//tag::ios[]
-
-Since CT Mobile 2.7, if there is no data for the added widget (e.g.,
-CLM-presentations on the device or data for the reports), the widget
-icon is shown.
-
-image:home-screen.png[]
-
-//tag::win[]
-
-image:65471158.png[]
-
-//tag::andr[]
-
-image:65471156.png[]
-
-//tag::ios,win,andr[]
+image::home-screen.png[]
 
 [[h2_281191636]]
-=== Customize Home Screen
+== Customize Home Screen
 
 To customize the Home Screen:
 
-[width="100%",cols="50%,50%",]
-|===
-|In CT Mobile Control Panel a|
-. Go to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-app-menu.adoc[CT Mobile Control
-Panel: App Menu].
+[tabs]
+====
+In CT Mobile Control Panel::
++
+--
+. Go to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-app-menu.adoc[CT Mobile Control Panel: App Menu].
 . {blank}
+include::partial$settings-location.adoc[]
 . Click the *Home* item in the *SELECTED* list.
 . Enable the *Customizable home screen* setting.
 . Click *Add Element*.
 . Select the element type from the drop-down list.
 . Resize the element and define its position.
 . Click *Save*.
-
-image:customize_home_screen.png[]
-
-|In CT Mobile Control Panel 2.0 a|
-. Go to xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-app-menu-new.adoc[CT Mobile Control
-Panel 2.0: App Menu] tab.
-. Select the required profile in the *Profile* picklist. To apply
-settings to all the profiles, select *General Settings*.
++
+image::customize_home_screen.png[]
+--
+In CT Mobile Control Panel 2.0::
++
+--
+. Go to xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-app-menu-new.adoc[CT Mobile Control Panel 2.0: App Menu] tab.
+. {blank}
+include::partial$settings-profile.adoc[]
 . Click the *Home* item in the *Selected* list.
 . Enable the *Customizable Screen* setting.
 . Click *Add Widget*.
 . Select the element type from the drop-down list.
 . Resize the element and define its position.
 . Click *Save*.
-
-image:ctm-control-panel-new-app-menu-home.png[]
-
-
-
-|===
++
+image::ctm-control-panel-new-app-menu-home.png[]
+--
+====
 
 The Home Screen customization is completed.
 
-* The new record of *CT Mobile Homepage Settings* will be created. To
-view the file in Salesforce, switch Lightning Experience to Salesforce
-Classic, go to *Documents* and open the *CT CLM* folder.
-* If some changes were made to the customizable Home Screen, a mobile
-user can quickly update it by four times tapping. During the update of
-the Home Screen, the
-https://help.customertimes.com/articles/ct-mobile-ios-en/synchronization-launch[SYNC
-button] is locked.
+* The new record of *CT Mobile Homepage Settings* will be created. To view the file in Salesforce, switch Lightning Experience to Salesforce Classic, go to *Documents* and open the *CT CLM* folder.
+* If some changes were made to the customizable Home Screen, a mobile user can quickly update it by four times tapping. During the update of the Home Screen, the xref:ios/mobile-application/synchronization/synchronization-launch/index.adoc[SYNC button] is locked.
 
 [[h2_617918582]]
-=== Widgets on the Home Screen
+== Widgets on the Home Screen
 
 [[h3_1361691321]]
-==== Logo
+=== Logo
 
-A logo can be specified per profile. Select a profile on
-xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_1354766135[CT Mobile
-Control Panel:
-General] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-user-interface-new.adoc#h3_1354766135[CT
-Mobile Control Panel 2.0: User Interface] and add a new logo.
+A logo can be specified per profile. Select a profile on xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_1354766135[CT Mobile Control Panel: General] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-user-interface-new.adoc#h3_1354766135[CT Mobile Control Panel 2.0: User Interface] and add a new logo.
 
 [[h3_1292798904]]
-==== Calendar
+=== Calendar
 
-Starting from today, the widget shows activities of the two last and two
-next weeks.
+Starting from today, the widget shows activities of the two last and two next weeks.
 
-When a user taps a day, all _Activity_ records started on the selected
-day will be displayed in the left record list.
+* When a user taps a day, all _Activity_ records started on the selected day will be displayed in the left record list.
+** Tap the filter icon to select the [.object]#Activity# object and display its records.
+** Use arrows to view the _Activity_ records of the previous or next day.
+** In the left records list of all activities of the selected day, the maximum number of records is 20.
++
+TIP: In CT Mobile 2.5 the restriction has been removed.
 
-Tap the filter icon to select the _Activity_ object and display its
-records.
+** If xref:ios/admin-guide/start-finish-functionality.adoc[the Start/Finish functionality] is enabled, on activity is unfinished when the [.apiobject]#IsDone\__c# checkbox on the [.object]#Activity# object is not activated. If the user of the mobile device taps the *Finish* button
+on the activity screen, the [.apiobject]#IsDone__c# checkbox will automatically be selected.
++
+NOTE: The API names of the checkboxes on the [.object]#Activity# objects, for example, the [.apiobject]#IsDone\__c# field, should be specified (separated by a comma, without blank space) in the [.apiobject]#clm__ActivityDoneAPI__c# field on the xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/mobile-application-setup.adoc[Mobile Application Setup].
 
-ifndef::win,andr[]
-
-Use arrows to view the _Activity_ records of the previous or next day.
-
-In the left records list of all activities of the selected day, the
-maximum number of records is 20.
-[TIP] ==== In CT Mobile 2.5 the restriction has been removed.
-====
-
-ifndef::ios,andr[]
-
-Аn icon with unfinished activities is shown in the upper right corner of
-that day icon. An activity is unfinished when the
-[.apiobject]#IsDone__c# checkbox on the _Activity_ object is
-not activated.
-
-ifndef::win[]
-
-If xref:ios/admin-guide/start-finish-functionality.adoc[the Start/Finish functionality]
-is enabled, on activity is unfinished when the
-[.apiobject]#IsDone__c# checkbox on the _Activity_ object is
-not activated. If the user of the mobile device taps the *Finish* button
-on the activity screen, the [.apiobject]#IsDone__c# checkbox
-will automatically be selected.
-[NOTE] ==== The API names of the checkboxes on the _Activity_
-objects, for example, the [.apiobject]#IsDone__c ==== field,
-should be specified (separated by a comma, without blank space) in the
-[.apiobject]#clm__ActivityDoneAPI__c# field on the xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/mobile-application-setup.adoc[Mobile Application Setup].#
-
-Tap the icon to view and manage all activities of that day if
-xref:ios/getting-started/application-permission-settings.adoc[permission to create and
+* Tap the icon to view and manage all activities of that day if xref:ios/getting-started/application-permission-settings.adoc[permission to create and
 delete records is granted].
+* To modify the *All activities per day* hint, create the _CalendarWidget_ link:https://help.salesforce.com/s/articleView?id=sf.cl_edit.htm&type=5[custom label] with desired text label.
 
-To modify the *All activities per day* hint, create the _CalendarWidget_
-https://help.salesforce.com/s/articleView?id=sf.cl_edit.htm&type=5[custom
-label] with desired text label.
-
-//tag::ios[]
-
-image:home-screen-calendar-widget.png[]
-
-//tag::win[]
-
-image:app_menu_win_home_calendar.png[]
-
-//tag::andr[]
-
-image:app_menu_android_home_calendar.png[]
-
-//tag::ios,win,andr[]
+image::home-screen-calendar-widget.png[]
 
 [[h3_1523913535]]
-==== Carousel of CLM-presentations
+=== Carousel of CLM-presentations
 
-Display the standard scenario and favorite custom scenarios of CLM
-presentations.
+Display the standard scenario and favorite custom scenarios of CLM presentations.
 
-In the Applications module, xref:ios/mobile-application/mobile-application-modules/applications/index.adoc#h3_1557359819[add
-CLM-presentation(s) or scenario(s) to favorites]. The favorite CLM
-presentations will be displayed in the carousel.
-
-Scroll the carousel and tap on the CLM presentation to open it. In the
-presentation mode, use xref:ios/mobile-application/mobile-application-modules/applications/gestures-in-clm-presentations.adoc[gestures]
-and xref:ios/mobile-application/mobile-application-modules/applications/clm-presentation-controls.adoc[buttons].
-
-ifndef::win,andr[]
-
-If the CLM presentation was republished, the red dot will appear next to
-its screenshot in the carousel and next to the _Applications_ label on
-the menu. Review the CLM presentation on your device.
-
-//tag::ios[]
+* In the Applications module, xref:ios/mobile-application/mobile-application-modules/applications/index.adoc#h3_1557359819[add CLM-presentation(s) or scenario(s) to favorites]. The favorite CLM presentations will be displayed in the carousel.
+* Scroll the carousel and tap on the CLM presentation to open it. In the presentation mode, use xref:ios/mobile-application/mobile-application-modules/applications/gestures-in-clm-presentations.adoc[gestures] and xref:ios/mobile-application/mobile-application-modules/applications/clm-presentation-controls.adoc[buttons].
+* If the CLM presentation was republished, the red dot will appear next to its screenshot in the carousel and next to the _Applications_ label on the menu. Review the CLM presentation on your device.
 
 [[h3_1761919763]]
-==== Reports and Dashboards
+=== Reports and Dashboards
 
-After creating or editing a dashboard or
-report, xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-tools-new.adoc#h3_1003786176[refresh
-the metadata archive] to ensure that reports and dashboards have been
-included correctly.
+NOTE: After creating or editing a dashboard or report, xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-tools-new.adoc#h3_1003786176[refresh the metadata archive] to ensure that reports and dashboards have been included correctly.
 
 A mobile user can view dynamic report charts and dashboards:
 
 * The charts and dashboards should be available for the mobile user.
-* Reports, which are used for creating offline dashboards, should be
-located in custom folders, not in default package folders. If a report
-is based on an offline dashboard, the dashboard also should be located
-in a custom folder.
-* Objects used for chart building should be added to the list of the
-objects available offline (refer
-to xref:ios/admin-guide/managing-offline-objects/index.adoc[CT Mobile Control Panel: Managing
-Offline
-Objects] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc[CT Mobile
-Control Panel 2.0: Offline Objects]).
-On the Home screen, as well as on
-xref:ios/admin-guide/mobile-layouts/index.adoc-dashboards[the mobile layout], only offline
-reports and dashboards are available. When a dashboard collects data
-that is not stored in the mobile application, for example,
-xref:ios/mobile-application/synchronization/synchronization-launch/sync-logs.adoc[Sync Logs reports] or
-xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-applicationstats.adoc[CLM-presentation statistics], the message
-«_No data to display_» will be shown on the Dashboard widget. A mobile
-user can view these dashboards online in xref:dashboards[the
-Dashboards module] if the module was added to the main menu.
-* To view or update dashboards and reports, launch a full
-synchronization. A valid cloud token is required.
-* Using the *Fiscal year* criterion in filters and in reports and
-dashboards criteria is working as the *Calendar year*.
+* Reports, which are used for creating offline dashboards, should be located in custom folders, not in default package folders. If a report is based on an offline dashboard, the dashboard also should be located in a custom folder.
+* Objects used for chart building should be added to the list of the objects available offline (refer to xref:ios/admin-guide/managing-offline-objects/index.adoc[CT Mobile Control Panel: Managing Offline Objects] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc[CT Mobile Control Panel 2.0: Offline Objects]).
++
+On the Home screen, as well as on xref:ios/admin-guide/mobile-layouts/mobile-layouts-dashboards.adoc[the mobile layout], only offline reports and dashboards are available. When a dashboard collects data that is not stored in the mobile application, for example, xref:ios/mobile-application/synchronization/synchronization-launch/sync-logs.adoc[Sync Logs reports] or xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-applicationstats.adoc[CLM-presentation statistics], the message «_No data to display_» will be shown on the Dashboard widget. A mobile user can view these dashboards online in xref:ios/mobile-application/mobile-application-modules/dashboards.adoc[the Dashboards module] if the module was added to the main menu.
+* To view or update dashboards and reports, launch a full synchronization. A valid cloud token is required.
+* Using the *Fiscal year* criterion in filters and in reports and dashboards criteria is working as the *Calendar year*.
 
 [[h2_396225247]]
-=== Status Indicator
+== Status Indicator
 
-The Status Indicator in the lower part of the home screen informs you
-about the data relevancy and if xref:ios/mobile-application/synchronization/index.adoc[the
-synchronization] is required. The Indicator begins to blink if you have
-updated some records or haven't performed the synchronization for a long
-time.
+The Status Indicator in the lower part of the home screen informs you about the data relevancy and if xref:ios/mobile-application/synchronization/index.adoc[the synchronization] is required. The Indicator begins to blink if you have updated some records or haven't performed the synchronization for a long time.
 
-* Tap the Indicator to see the number of such records and the
-synchronization age.
-* The Indicator has several statuses, which depend on the number of
-unsynchronized records and the date of the last synchronization.
-* Attachments also influence the Status Indicator. Each attachment
-counts for 25 records.
+* Tap the Indicator to see the number of such records and the synchronization age.
+* The Indicator has several statuses, which depend on the number of unsynchronized records and the date of the last synchronization.
+* Attachments also influence the Status Indicator. Each attachment counts for 25 records.
 
-image:65471178.jpeg[]
-
-
+image::65471178.jpeg[]
 
 The statuses and their conditions are listed in the following table:
 
-[width="100%",cols="^34%,^33%,^33%",]
+[cols="^.^~,^.^~,^.^~",]
 |===
 |*Status* |*Number of Records* |*Synchronization Age, days*
 
-|image:65471164.png[]
-a|
-
-
-
-
-
-
-0
-
-a|
-
-
-
-
-
-
-0–2
-
-|image:65471165.gif[]
-a|
-
-
-
-
-
-
-1
-
-a|
-
-
-
-
-
-
-3
-
-|image:65471166.gif[]
-a|
-
-
-
-
-
-
-2–150
-
-a|
-
-
-
-
-
-
-4
-
-|image:65471167.gif[]
-a|
-
-
-
-
-
-
-151–300
-
-a|
-
-
-
-
-
-
-5
-
-|image:62572645.gif[]
-a|
-
-
-
-
-
-
-301 and more
-
-a|
-
-
-
-
-
-
-6 and more
-
+|image:65471164.png[] |0 |0–2
+|image:65471165.gif[] |1 |3
+|image:65471166.gif[] |2–150 |4
+|image:65471167.gif[] |151–300 |5
+|image:62572645.gif[] |301 and more |6 and more
 |===
 
-//tag::kotlin[] The *Home Screen* is the starting page of the CT
-Mobile app.
-
-* Specify a logo per profile. Select a profile on the
-xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_1354766135[CT Mobile
-Control Panel:
-General] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-user-interface-new.adoc#h3_1354766135[CT
-Mobile Control Panel 2.0: User Interface] tab and add a new logo.
-* Customize xref:ios/admin-guide/application-theme.adoc[the application theme].
-* Use the global search bar to search records which object added to the
-main menu. For more information, please refer
-to xref:ios/mobile-application/ui/home-screen/search.adoc[Search].
-* Tap the burger icon to minimize the main menu up to menu icons.
-* Specify menu items and their order in xref:ios/admin-guide/app-menu/index.adoc[the main
-menu].
-** Add menu items to the *Favorites* section. Long tap the menu item and
-drag-and-drop it above the line.
-** Tap the arrow to collapse the main menu to display only favorite
-items.
-* The Status Indicator displays the date of the last successful
-synchronization. Tap the icon to start the fast sync. For more
-information, go to xref:ios/mobile-application/synchronization/synchronization-launch/index.adoc[Synchronization
-Launch].
-
-image:Home-Screen-Kotlin.png[]
