@@ -2,17 +2,13 @@
 
 The *Jailbreak Checker* functionality is available in CT Mobile.
 
-* If a mobile device uses jailbreak, he receives a pop-up warning when
-launching the CT Mobile app.
-* If the user continues to use the CT Mobile app from the hacked device,
-a record of the xref:ios/mobile-application/synchronization/synchronization-launch/sync-log.adoc[Sync Log] object with the following
-information will be sent during each sync process:
+* If a mobile device uses jailbreak, he receives a pop-up warning when launching the CT Mobile app.
+* If the user continues to use the CT Mobile app from the hacked device, a record of the xref:ios/mobile-application/synchronization/synchronization-launch/sync-log.adoc[Sync Log] object with the following information will be sent during each sync process:
 
-
-
-[cols=",",]
+[cols="~,~"]
 |===
 |*Field on the Sync Log Record* |*Value*
+
 |Operation |Jailbreak
 |Description |The user is using a jailbroken device.
 |===

@@ -1,63 +1,34 @@
 = Attaching Files in the Notes & Attachments Section
 
-[NOTE] ==== To use this feature in a custom CT Mobile app,
-developers should specify it in their project. ====
+NOTE: To use this feature in a custom CT Mobile app, developers should specify it in their project.
 
 Supported file formats:
 
-video: [.apiobject]#.avi#, [.apiobject]#.wmf#, [.apiobject]#.3gp#, [.apiobject]#.mp4#
+* video: [.apiobject]#.avi#, [.apiobject]#.wmf#, [.apiobject]#.3gp#, [.apiobject]#.mp4#
+* images: [.apiobject]#.jpg#, [.apiobject]#.bmp#, [.apiobject]#.png# , [.apiobject]#.heic#. Images in [.apiobject]#.heic# format will be automatically converted to [.apiobject]#.jpg#
+* documents: [.apiobject]#.txt#, [.apiobject]#.doc#, [.apiobject]#.rtf#, [.apiobject]#.docx#, [.apiobject]#.pdf#
+* audio: [.apiobject]#.mp3#, [.apiobject]#.wma#, [.apiobject]#.wav#
+* other: [.apiobject]#.rar#, [.apiobject]#.zip#, [.apiobject]#.apk#
 
-ifndef::ios[]
+Use the standard image:load-button-apple.png[25,25] button to attach any files to the records of offline objects.
 
-images: [.apiobject]#.jpg#, [.apiobject]#.bmp#, [.apiobject]#.png#
-
-//tag::ios[]
-
-images: [.apiobject]#.jpg#, [.apiobject]#.bmp#, [.apiobject]#.png# , [.apiobject]#.heic# .
-Images in .heic format will be automatically converted to .jpg
-
-documents: [.apiobject]#.txt#, [.apiobject]#.doc#, [.apiobject]#.rtf#, [.apiobject]#.docx#, [.apiobject]#.pdf#
-
-audio: [.apiobject]#.mp3#, [.apiobject]#.wma#, [.apiobject]#.wav#
-
-other: [.apiobject]#.rar#, [.apiobject]#.zip#, [.apiobject]#.apk#
-
-Use the
-standard image:load-button-apple.png[] button
-to attach any files to the records of offline objects.
-
-* By default,
-the [.object]#Accounts#, [.object]#Contacts#,
-and [.object]#Activity# objects are available.
-* To attach a file, the *Notes & Attachments* section for the
-appropriate offline object should be available in the CT Mobile app.
+* By default, the [.object]#Accounts#, [.object]#Contacts#, and [.object]#Activity# objects are available.
+* To attach a file, the *Notes & Attachments* section for the appropriate offline object should be available in the CT Mobile app.
 * The file size must not exceed 20 MB.
-
-
 
 To attach a file in the *Notes & Attachment* Section:
 
 . Open the appropriate file.
-. Tap the
-image:load-button-apple.png[]
-button.
+. Tap the image:load-button-apple.png[25,25] button.
 . Tap *Copy to CT Mobile*.
-
-image:attach_file_to_offline.png[]
-
-
++
+image::attach_file_to_offline.png[]
 . In the pop-up, select an object and then a record to attach the file.
-
-{empty}[.confluence-information-macro-information]#When you tap an
-object without the *Notes & Attachment* section, the _«There are no
-records to which you can attach the file»_ info message will be
-displayed.#
-image:sharing-file-to-ct-mobile.png[]
-
-
++
+TIP: When you tap an object without the *Notes & Attachment* section, the _«There are no records to which you can attach the file»_ info message will be
+displayed.
++
+image::sharing-file-to-ct-mobile.png[]
 . Click *Save*.
 
-The record's main screen is open. Go to the *Notes & Attachment* section
-of the record and perform
-xref:ios/mobile-application/synchronization/synchronization-launch/index.adoc#h2_966867633[quick record
-synchronization] to update the record in Salesforce.
+The record's main screen is open. Go to the *Notes & Attachment* section of the record and perform xref:ios/mobile-application/synchronization/synchronization-launch/index.adoc#h2_966867633[quick record synchronization] to update the record in Salesforce.

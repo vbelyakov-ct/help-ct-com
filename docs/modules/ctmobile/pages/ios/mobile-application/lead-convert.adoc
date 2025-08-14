@@ -1,24 +1,21 @@
 = Lead Convert
 
-Convert a *Lead* record into an *Account*, *Contact*, or *Opportunity*
-record since fields and assignment rules mapping is provided by
-Salesforce.
+Convert a _Lead_ record into an _Account_, _Contact_, or _Opportunity_ record since fields and assignment rules mapping is provided by  Salesforce.
 
 [NOTE] ==== CT Mobile must have Internet access.
 [.object]#Leads ==== must be added
 xref:ios/admin-guide/managing-offline-objects/index.adoc#h2_1551357854[to the offline
 objects].#
 
-To convert a *Lead* record:
+To convert a _Lead_ record:
 
 . Tap to the *Leads* menu item and open the desired record.
 . Tap the *Actions* menu → *Convert*.
-image:actions-convert.png[]
++
+image::actions-convert.png[]
 . Specify required fields.
 . Tap *Convert*.
-image:convert-lead.png[]
++
+image::convert-lead.png[]
 
-
-
-The fast synchronization is automatically launched, and after the
-process, the new record details screen opens.
+The fast synchronization is automatically launched, and after the process, the new record details screen opens.
