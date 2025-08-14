@@ -1,36 +1,27 @@
 = Historical Activities
 
-If the previous activities are related to the current one, view
-information on previous activities accessing it from the current
-_Activity_ record screen.
-
-
+If the previous activities are related to the current one, view information on previous activities accessing it from the current _Activity_ record screen.
 
 The following rules are used as search criteria for historical data:
 
 * The same record type of _Activity_ records.
-* The values of the required fields that were filled out on
-xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/mobile-mini-layout-settings.adoc[the mini layout] are the same.
-* The start date of the historical activity is prior to that of the
-currently open one.
+* The values of the required fields that were filled out on xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/mobile-mini-layout-settings.adoc[the mini layout] are the same.
+* The start date of the historical activity is prior to that of the currently open one.
 
-For the
-standard [.object]#Event# and [.object]#Task# objects,
-the historical activity will be searched following all the criteria
-listed above, as well as the values in
-the [.apiobject]#WhoId# and [.apiobject]#WhatId# fields
-if they are specified. [TIP] ==== Use the
-[.apiobject]#clm__ActivityDoneAPI__c ==== attribute of
-xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/mobile-application-setup.adoc[Mobile Application Setup] as a
-checkbox field to indicate that the activity has been completed. It can
-help with a possible cut-off of canceled or unfinished activities in the
-past.#
+For the standard [.object]#Event# and [.object]#Task# objects, the historical activity will be searched following all the criteria listed above, as well as the values in the [.apiobject]#WhoId# and [.apiobject]#WhatId# fields if they are specified.
 
-[cols=",",]
-|===
-|The Record screen
-|image:historical-activity.png[]
+TIP: Use the [.apiobject]#clm\__ActivityDoneAPI__c# attribute of xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/mobile-application-setup.adoc[Mobile Application Setup] as a checkbox field to indicate that the activity has been completed. It can help with a possible cut-off of canceled or unfinished activities in the past.
 
-|The Detailing tab
-|image:historical-activity-detailing.png[]
-|===
+[tabs]
+====
+The Record screen::
++
+--
+image::historical-activity.png[]
+--
+The Detailing tab::
++
+--
+image::historical-activity-detailing.png[]
+--
+====

@@ -1,139 +1,75 @@
 = UI Basics
+:toc:
 
-Get familiar with the UI basic elements of the iPad app version. The
-following topics are covered:
-
-:toc: :toclevels: 3
+Get familiar with the UI basic elements of the iPad app version. The following topics are covered:
 
 [[h2_781750174]]
-=== Main Menu
+== Main Menu
 
-Main Menu is the list of objects and modules that are available for the
-current user. The set of items in the list xref:ios/admin-guide/app-menu/index.adoc[can be
-configured] in CT Mobile Control Panel.
+Main Menu is the list of objects and modules that are available for the current user. The set of items in the list xref:ios/admin-guide/app-menu/index.adoc[can be configured] in CT Mobile Control Panel.
 
-* Tap a menu item to display the information on the main screen. Tapping
-an object or module without the records list (e.g.,
-xref:ios/mobile-application/ui/home-screen/index.adoc[Home] or xref:ios/mobile-application/application-settings/index.adoc[Settings])
-will keep the main menu intact. Tapping an object or module with a
-records list replaces the main menu with the records list.
-* Display or hide the information by tapping the
-image:58835667.png[]
-icon.
+* Tap a menu item to display the information on the main screen. Tapping an object or module without the records list (e.g., xref:ios/mobile-application/ui/home-screen/index.adoc[Home] or xref:ios/mobile-application/application-settings/index.adoc[Settings])will keep the main menu intact. Tapping an object or module with a records list replaces the main menu with the records list.
+* Display or hide the information by tapping the image:58835667.png[25,25] icon.
++
+If a module has only the main menu tooltips, the hamburger opens and hides them. If an object has a list of records, tapping the hamburger covers it with main menu tooltips.
+* On a screen with an opened list of records, swipe the main menu icons to the right to display the main menu tooltips. To go to the module or object, click whether an icon or a tooltip.
 
-If a module has only the main menu tooltips, the hamburger opens and
-hides them. If an object has a list of records, tapping the hamburger
-covers it with main menu tooltips.
-* On a screen with an opened list of records, swipe the main menu icons
-to the right to display the main menu tooltips. To go to the module or
-object, click whether an icon or a tooltip.
-
-image:ui-basics-account.gif[]
+image::ui-basics-account.gif[]
 
 [[h2_80851391]]
-=== Global Search
+== Global Search
 
-Global Search allows finding any available for the current user record
-loaded to the device.
+Global Search allows finding any available for the current user record loaded to the device.
 
-* Tap the Global search field or
-image:58835665.png[]:
-type in some symbols as search criteria and tap Search.
+* Tap the Global search field or image:58835665.png[25,25]:
+type in some symbols as search criteria and tap *Search*.
 * xref:ios/mobile-application/ui/home-screen/search.adoc[The search results] are grouped by objects.
-* Tap
-image:58835664.png[]
-to expand the records list of an object.
+* Tap image:58835664.png[25,25] to expand the records list of an object.
 
-image:global_search.png[]
+image::global_search.png[]
 
 [[h2_529726152]]
-=== Records List
+== Records List
 
-Records List contains all the selected object's records that are
-uploaded to a device and matched by the selected filter.
+Records List contains all the selected object's records that are uploaded to a device and matched by the selected filter.
 
-* Depending on the selected object, the records can be grouped by their
-field (e.g., name, date, etc.). You can
-xref:ios/admin-guide/app-menu/grouping-records.adoc[customize the grouping] of the records.
-* Records can be marked with xref:ios/admin-guide/custom-color-settings.adoc[custom
-colors].
+* Depending on the selected object, the records can be grouped by their field (e.g., name, date, etc.). You can xref:ios/admin-guide/app-menu/grouping-records.adoc[customize the grouping] of the records.
+* Records can be marked with xref:ios/admin-guide/custom-color-settings.adoc[custom colors].
 * Use Search to find a record in the current list.
-* Select a list view with
-image:58835661.png[]
-and
-image:58835660.png[]or
-tap the current list view name to open the filter.
-* Tap
-image:58835659.png[]
-to create a new record, if the current user has
-xref:ios/getting-started/application-permission-settings.adoc[permission to create records].
-* If there is xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/related-list-filters.adoc[a setting in CT Mobile],
-tap *Load more records* to open the online records loading screen.
-* Tap
-image:58835652.png[]
-to open the xref:ipad#h2_1243490689[detailed list view] with
-records in a tabular representation.
+* Select a list view with image:58835661.png[] and image:58835660.png[] or tap the current list view name to open the filter.
+* Tap image:58835659.png[25,25] to create a new record, if the current user has xref:ios/getting-started/application-permission-settings.adoc[permission to create records].
+* If there is xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/related-list-filters.adoc[a setting in CT Mobile], tap *Load more records* to open the online records loading screen.
+* Tap image:58835652.png[25,25] to open the <<Detailed List View>> with records in a tabular representation.
 
 image:ui-basics-records-list.png[]
 
 [[h2_1243490689]]
-=== Detailed List View
+== Detailed List View
 
-A detailed list view is the representation of the records as the
-Salesforce table in the mobile application. Tap
-image:58835652.png[]
-to open it.
+A detailed list view is the representation of the records as the Salesforce table in the mobile application. Tap image:58835652.png[25,25] to open it.
 
-* Select a list view with
-image:58835661.png[]
-and
-image:58835660.png[]or
-tap the current list view name to open the filter.
-* Tap
-image:58835659.png[]
-to create a new record, if the current user has
-xref:ios/getting-started/application-permission-settings.adoc[permission to create records].
-
-Currently, the configured mini-layout is required for correctly creating
-a record in the detailed list view.
-* Swipe a record to the left to delete it, if the current user has
-xref:ios/getting-started/application-permission-settings.adoc[permission to delete records].
+* Select a list view with image:58835661.png[] and image:58835660.png[] or tap the current list view name to open the filter.
+* Tap image:58835659.png[25,25] to create a new record, if the current user has xref:ios/getting-started/application-permission-settings.adoc[permission to create records].
++
+Currently, the configured mini-layout is required for correctly creating a record in the detailed list view.
+* Swipe a record to the left to delete it, if the current user has xref:ios/getting-started/application-permission-settings.adoc[permission to delete records].
 * Use *Search* to find a record.
 * Tap *Cancel* to go back to the left menu with the records list.
 * Tap a record to open the record details screen.
 
-image:66364327.png[]
+image::66364327.png[]
 
 [[h2_1733999053]]
-=== Record Details
+== Record Details
 
-The record details screen displays the complete information of the
-selected record. It consists of fields of different types, switches,
-widgets, and related lists. The information can be organized and
-separated xref:ios/admin-guide/mobile-layouts/index.adoc[into tabs and sections].
+The record details screen displays the complete information of the selected record. It consists of fields of different types, switches, widgets, and related lists. The information can be organized and separated xref:ios/admin-guide/mobile-layouts/index.adoc[into tabs and sections].
 
-* All user changes will be saved and uploaded to Salesforce via
-synchronization.
-* Tap
-image:58835650.png[]
-or
-image:58835649.png[]
-to navigate the screens back and forward.
-* Tap and hold
-image:58835650.png[]
-or
-image:58835649.png[]
-to open the Back/Forward screens timeline and select a screen from the
-list.
-* Tap
-image:58835655.png[]
-to open the xref:ios/mobile-application/ui/actions.adoc[Actions] modal window.
-* If a help text added for the field, tap
-theimage:/resources/Storage/ct-mobile-ios-en/CT-mobile-rest/attachments/66358782/66358781.png[/resources/Storage/ct-mobile-ios-en/CT-mobile-rest/attachments/66358782/66358781] icon
-next to this field to see the help text.
-* If the xref:ios/admin-guide/managing-offline-objects/reference-fields.adoc#h2_1514470758[Online One Record
-Fetching] is enabled for a reference field,
-tapimage:62573543.png[] next
-to this field to load its value.
+* All user changes will be saved and uploaded to Salesforce via synchronization.
+* Tap image:58835650.png[25,25] or image:58835649.png[25,25] to navigate the screens back and forward.
+* Tap and hold image:58835650.png[25,25] or image:58835649.png[25,25] to open the *Back* / *Forward* screens timeline and select a screen from the list.
+* Tap image:58835655.png[25,25] to open the xref:ios/mobile-application/ui/actions.adoc[Actions] modal window.
+* If a help text added for the field, tap the image:66358781.png[25,25] icon next to this field to see the help text.
+* If the xref:ios/admin-guide/managing-offline-objects/reference-fields.adoc#h2_1514470758[Online One Record Fetching] is enabled for a reference field,
+tapimage:62573543.png[25,25] next to this field to load its value.
 
-image:record_details.png[]
+image::record_details.png[]
