@@ -8,6 +8,11 @@ To enable this option, specify the following in the field description, refresh m
 * [.apiobject]#max_value# is the maximum available value for the field.
 * [.apiobject]#step# is the modification scale.
 
+[source]
+----
+ctmobile.slider(min_value,max_value,step)
+----
+
 image::custom-field-slider.png[]
 
 The setup is complete.
