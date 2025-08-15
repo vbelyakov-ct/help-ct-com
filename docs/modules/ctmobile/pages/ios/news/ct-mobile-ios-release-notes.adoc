@@ -1,5 +1,6 @@
 = CT Mobile iOS Release Notes
 :toc:
+:toclevels:
 
 Here you could find a feature, the link to the corresponding article, and the version of CT Mobile since which the feature is available.
 ////
@@ -45,13 +46,13 @@ NOTE: See the xref:ios/ct-mobile-solution/compatible-versions-of-ct-mobile-and-o
 * *Complete* and *Save draft* buttons are replaced with icons.
 * Improved readability of blocked quantity fields in the order cart.
 * Custom input fields UI improvement in the order cart: now they are aligned vertically with a value in quantity fields and are visually higlighted that they are available for input.
-* If the *SKU Field* is on the xref:ctorders:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/object-setting-field-reference.adoc[Object Settings] is filled, the Active field on the https://help.customertimes.com/smart/project-order-module/catalog-line-item-field-reference[Catalog Line Item] is not used and product is not displayed in the left panel of the order screen.
+* If the *SKU Field* is on the xref:ctorders:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/object-setting-field-reference.adoc[Object Settings] is filled, the Active field on the xref:ctorders:admin-guide/managing-ct-orders/catalog-management/catalog-data-model/catalog-line-item-field-reference.adoc[Catalog Line Item] is not used and product is not displayed in the left panel of the order screen.
 * Week numbers are displayed when adding a delivery in the order cart.
 * *Default Availability Type* and *Product Availability* fields on the [.object]#Product# object now take effect on bundle disregarding if it’s calculated on header or on components.
 * Formula fields are now calculated once a product is added to the order cart (no need to populate quantity first).
 * Mass catalog/promotion deletion from the order cart: now you can add and remove the whole catalog or promotion to/from the order.
 * *Order* button (image:order-Icon.png[]) is displayed for all records with *Order* item in combo-menu.
-* Now you can specify currency for the order and related records while xref:ctorders:admin-guide/managing-ct-orders/order-management/offline-order.adoc#h2_2044385779[creating an order] if the https://help.salesforce.com/s/articleView?id=sf.admin_enable_multicurrency.htm&type=5[multiple currency] feature is activated for your organization. The *CurrencyIsoCode* field can be added for the https://help.customertimes.com/smart/project-order-module/layout-setting-field-reference[CT Order layout setting] to select desired currency for the order.
+* Now you can specify currency for the order and related records while xref:ctorders:admin-guide/managing-ct-orders/order-management/offline-order.adoc#h2_2044385779[creating an order] if the https://help.salesforce.com/s/articleView?id=sf.admin_enable_multicurrency.htm&type=5[multiple currency] feature is activated for your organization. The *CurrencyIsoCode* field can be added for the xref:ctorders:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/layout-setting-field-reference.adoc[CT Order layout setting] to select desired currency for the order.
 * You can xref:ctorders:admin-guide/managing-ct-orders/order-management/offline-order.adoc#h3_408281835[export data] from order related objects as a CSV file and share it.
 * Bundles UI improvements:
 ** Displaying the *listPrice* value for the _Header-Components_ bundle as a sum of *listPrice* values of the bundle's components.
@@ -226,7 +227,7 @@ Minimum supported iOS version: iOS 15.
 *** Standard Salesforce validation is performed when saving and finalizing an order.
 *** The Limit Settings search algorithm has been improved.
 ** *Limitations*:
-*** https://help.customertimes.com/smart/project-order-module/managing-bundles/a/h2_1169899360[Bundles with Components—Components type] are not supported.
+*** xref:ctorders:admin-guide/managing-ct-orders/product-management/managing-bundles.adoc#h2_1169899360[Bundles with Components—Components type] are not supported.
 *** Formula calculations are not applied until the product quantity is specified in the order cart.
 
 [[h2_487586803]]
@@ -452,7 +453,7 @@ presentations] and perform the fast sync.
 [[h4_2072080212]]
 ==== Documents Module
 
-* Specify https://help.customertimes.com/articles/the-documents-module/digital-signature-settings-field-reference[the ability to share the final PDF document] with other services such as messengers, e-mail, or social networks.
+* Specify the ability to share the final PDF document with other services such as messengers, e-mail, or social networks.
 
 [[h4_907134769]]
 ==== DFG-152
