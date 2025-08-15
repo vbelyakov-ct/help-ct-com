@@ -168,7 +168,7 @@ TIP: Download the package https://appexchange.salesforce.com/appxListingDetail?l
 * The *Terms Accepted* attribute in the xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-applicationstats.adoc[application statistics] stores a participant's agreement to the terms of use.
 
 * During the *Self Detailing* meeting.
-** The ability to use the xref:ios/ct-presenter/js-bridge-api/methods-for-remote-detailing-2-0/ctm-securequery.adoc[cm .secureQuery] method in the CLM presentations to make secure requests to Salesforce data.
+** The ability to use the xref:ios/ct-presenter/js-bridge-api/methods-for-remote-detailing-2-0/ctm-securequery.adoc[ctm.secureQuery] method in the CLM presentations to make secure requests to Salesforce data.
 ** Support the xref:ios/ct-presenter/js-bridge-api/methods-for-interaction-with-crm-data/ctm-create.adoc[ctm.create] and xref:ios/ct-presenter/js-bridge-api/methods-for-interaction-with-crm-data/ctm-update.adoc[ctm.update] methods in the CLM presentations.
 * xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-launch/remote-detailing-launch-salesforce-side.adoc#h3_135274013[For user convenience]:
 ** A message will inform the user that the CLM presentations are not added to the server.
@@ -604,4 +604,4 @@ xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/api-key.adoc[The ne
 [[h4_559203458]]
 ==== Salesforce Metadata
 
-* To correctly apply lookup filters in the reference fields of the _Event_ and _Task_ records, the [.apiobject]#fullNames Activity# request is included in the [.apiobject]#CustomObject# request used for metadata archive creation.
+* To correctly apply lookup filters in the reference fields of the _Event_ and _Task_ records, the [.apiobject]#fullNames = Activity# request is included in the [.apiobject]#CustomObject# request used for metadata archive creation.
