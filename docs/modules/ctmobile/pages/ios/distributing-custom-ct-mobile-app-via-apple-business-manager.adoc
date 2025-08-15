@@ -1,42 +1,21 @@
 = Distributing Custom CT Mobile App via Apple Business Manager
 
-Previously, we used Apple Developer Enterprise Program (ADEP) to
-distribute CT Mobile custom builds. However, this program has been
-discontinued by Apple and was replaced by Apple Business Manager.  Apple
-Business Manager is a simple, web-based portal that can be integrated
-with a third-party MDM (Mobile device management) solution:
+Previously, we used Apple Developer Enterprise Program (ADEP) to distribute CT Mobile custom builds. However, this program has been discontinued by Apple and was replaced by Apple Business Manager. Apple Business Manager is a simple, web-based portal that can be integrated with a third-party MDM (Mobile device management) solution:
 
-image:ctmobile-ios-apple-business-manager-mdm-scheme.png[]
+image::ctmobile-ios-apple-business-manager-mdm-scheme.png[]
 
-In this article, you will know how to publish and distribute custom CT
-Mobile app in your organization using Apple Business Manager and an MDM
-solution.
+In this article, you will know how to publish and distribute custom CT Mobile app in your organization using Apple Business Manager and an MDM solution.
 
-
-
-. Sign up to Apple Business Manager as described
-https://support.apple.com/guide/apple-business-manager/axm402206497/web[here].
-If you have a DEP or VPP Account, you will need to
-https://support.apple.com/en-us/HT209617[upgrade it for free into an
-Apple Business Manager Account].
-If you already have Apple Business Manager account, go
-to *Settings* → *Enrollment Information* and make sure that following
-data is correct:
+. Sign up to Apple Business Manager as described https://support.apple.com/guide/apple-business-manager/axm402206497/web[here]. If you have a DEP or VPP Account, you will need to https://support.apple.com/en-us/HT209617[upgrade it for free into an Apple Business Manager Account]. If you already have Apple Business Manager account, go to *Settings* → *Enrollment Information* and make sure that following data is correct:
 * Organization Name
 * Organization ID
 * Tax Information
 . Publish CT Mobile app in Apple Business Manager:
-
-.. In Apple Business Manager, go to *Settings* → *Enrollment
-Information*.
+.. In Apple Business Manager, go to *Settings* → *Enrollment Information*.
 .. Set *Custom Apps* to *Enabled*.
-.. When Customertimes will publish CT Mobile app into your Apple
-Business Manager Account, the app will be displayed in *Custom Apps*.
-.. Assign desired number of licenses according to number of CT Mobile
-users in your company.
+.. When Customertimes will publish CT Mobile app into your Apple Business Manager Account, the app will be displayed in *Custom Apps*.
+.. Assign desired number of licenses according to number of CT Mobile users in your company.
 . Connect MDM solution with Apple Business Manager:
-
-.. In Apple Business Manager, go to *Settings* → *Apps and Books* and
-download your server token.
+.. In Apple Business Manager, go to *Settings* → *Apps and Books* and download your server token.
 .. Use this token to connect your MDM with Apple Business Manager.
 . Distribute CT Mobile App via your MDM.
