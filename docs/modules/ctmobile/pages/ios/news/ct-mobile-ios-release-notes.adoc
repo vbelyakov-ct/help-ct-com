@@ -173,11 +173,11 @@ Minimum supported iOS version: iOS 15.
 ** The photo interface for Vision Lite has been changed: KPI and Report elements are now controlled by administrator and can be removed from the photo interface for Vision Lite.
 ** Photos from previous visits are now displayed on the Retail Store layout.
 ** Business administrator can assign tags for photos per public group.
-* *CT Presenter for *CT Mobile 2.7**
+* *CT Presenter for CT Mobile 2.7*
 ** xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-ui-basics/remote-detailing-2-0-ui-for-participants.adoc[Remote Detailing 2.0]: all participants of the meeting will receive notifications about new comments.
 * *CT Orders for CT Mobile 2.7*
 ** *Web Service*
-*** CT Mobile 2.7 provides capabilities for calculating prices and discounts via xref:ctorders:admin-guide/managing-ct-orders/web-service/index.adoc[Web Service]. Now, administrator can select, how to perform calculations: by the Web Service or by the internal calculator. If the *Enable WS for Mobile* toggle is active in the xref:ctorders:admin-guide/workshops/workshop-7-0-calculating-discounts-with-web-service/connecting-to-web-service-and-price-calculation-7-0.adoc[CT Orders Control Panel], the mobile device will try to use Web Service to calculate prices. If the Web Service calculator cannot be accessed, the mobile application will calculate order prices without discounts. Before starting work, check all the required permissions xref:/resources/Storage/ct-orders-4-0/PDF/CT-Orders-User-Permissions-to-Access-Web-Service.pdf[here].
+*** CT Mobile 2.7 provides capabilities for calculating prices and discounts via xref:ctorders:admin-guide/managing-ct-orders/web-service/index.adoc[Web Service]. Now, administrator can select, how to perform calculations: by the Web Service or by the internal calculator. If the *Enable WS for Mobile* toggle is active in the xref:ctorders:admin-guide/workshops/workshop-7-0-calculating-discounts-with-web-service/connecting-to-web-service-and-price-calculation-7-0.adoc[CT Orders Control Panel], the mobile device will try to use Web Service to calculate prices. If the Web Service calculator cannot be accessed, the mobile application will calculate order prices without discounts. Before starting work, check all the required permissions xref:ctorders:attachment$CT-Orders-User-Permissions-to-Access-Web-Service.pdf[here].
 *** Tap the image:ctorders-ios-update-prices-2.7.png[] button in CT Mobile to get the valid prices. The invalid prices will be highlighted in red color.
 *** The new advanced features — links, mixed discounts, freebie multiplier, and freebie values — are only available when working with the Web Service.
 *** Validations that a sales rep has access to all necessary fields to calculate discounts. Otherwise, the calculation will be carried out by the *List Price* field.
@@ -559,14 +559,14 @@ TIP: CT Mobile 1.9.6 release requires iOS 10 or later.
 * The fast and mixed synchronization processes are not interrupted in case of errors. The unsynchronized records containing errors can be synchronized after the errors are corrected.
 
 [[h4_1306378709]]
-==== xref:ct-mobile-workflow.html[CT Mobile Workflow]
+==== CT Mobile Workflow
 
 * Multistep CT Mobile Workflow execution time is reduced.
 * Child records can be created/updated/deleted after updating their parent record or after tapping the button defined in the CT Mobile Workflow rules.
 * Capture geolocation during the CT Mobile Workflow step (e.g. on an [.object]#Activity# start or a record field update).
 
 [[h4_1292798904]]
-==== xref:ctmobile:ios/mobile-application/mobile-application-modules/calendar/using-calendar.adoc.html[Calendar]
+==== Calendar
 
 * Set the date and time when cloning or moving an event in the *Calendar*.
 
