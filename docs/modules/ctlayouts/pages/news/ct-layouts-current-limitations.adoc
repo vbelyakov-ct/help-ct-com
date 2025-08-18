@@ -3,23 +3,7 @@
 There is a list of current limitations:
 
 * Layout JSON:
-** The alwaysHiddenActions and alwaysDisplayedActions keys of
-xref:json-specifications-and-examples.html#h2_1948275861[Tab Settings]
-are not supported.
-** The showCondition key of
-xref:json-specifications-and-examples.html#h3_1652615080[Action Keys] is
-not supported for tabs.
-** Labels cannot be set as a value from a specific field. The format:
-!Value.Object.FieldName.
+** The [.apiobject]#alwaysHiddenActions# and [.apiobject]#alwaysDisplayedActions# keys of xref:ref-guide/json-specifications-and-examples/index.adoc#h2_1948275861[Tab Settings] are not supported.
+** The [.apiobject]#showCondition# key of xref:ref-guide/json-specifications-and-examples/index.adoc#h3_1652615080[Action Keys] is not supported for tabs.
+** Labels cannot be set as a value from a specific field. The format: [.apiobject]#!Value.Object.FieldName#.
 * Templates are not supported.
-
-
-
-ifdef::hidden[]
-
-не могу перетаскивать секции
-
-не могу оставлять пустые строки
-
-не могу изменить длину секции, потянув за нижний правый угол или нижний
-край

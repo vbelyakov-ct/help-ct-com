@@ -1,84 +1,42 @@
 = CT Layouts Package Release Notes
+:toc:
 
-Here you find a feature, the link to the corresponding article, and the
-CT Layouts package version since the feature is available.
+Here you find a feature, the link to the corresponding article, and the CT Layouts package version since the feature is available.
 
-We recommend that you learn about
-xref:ct-layouts-current-limitations.html[the current limitations] when
-using the CT Layouts solution.
+NOTE: We recommend that you learn about xref:./ct-layouts-current-limitations.adoc[the current limitations] when using the CT Layouts solution.
 
-:toc: :toclevels: 2
+== CT Layouts Winter '22
 
-ifdef::hidden[]
-
-[[h2_715887182]]
-=== CT Layouts 2.0
-
-https://jira.customertimes.com/browse/CTLS-57[epic]
-
-[[h2_1370824602]]
-=== CT Layouts Winter '22
-
-Download the package
-https://login.salesforce.com/packaging/installPackage.apexp?p0=04t4G000000kmDLQAY[here].
+Download the package https://login.salesforce.com/packaging/installPackage.apexp?p0=04t4G000000kmDLQAY[here].
 
 [[h3_1107256643]]
-==== General Settings
+== General Settings
 
-* The xref:layout-settings-field-reference.html[Layout Settings] object
-is used to store the screen settings of the selected object's record.
-* xref:user-permissions.html#h2_2115044027[The CT Layouts Administrator
-and CT Layouts User permission sets] help you give all the necessary
-permissions to users depending on their role.
+* The xref:ref-guide/layout-settings-field-reference.adoc[Layout Settings] object is used to store the screen settings of the selected object's record.
+* xref:admin-guide/user-permissions.adoc#h2_2115044027[The CT Layouts Administrator and CT Layouts User permission sets] help you give all the necessary permissions to users depending on their role.
 
 [[h3_1253965885]]
-==== CT Layouts Editor
+== CT Layouts Editor
 
-A comprehensive tool with an easy-to-use interface for setting up the
-recording screen.
+A comprehensive tool with an easy-to-use interface for setting up the recording screen.
 
-* xref:ct-layouts-editor-customize-tabs.html#h2_290649163[Select the
-mode] to work with data on the record screen.
-* xref:ct-layouts-editor-customize-tabs.html#h3_449942769[Add tabs] and
-xref:ct-layouts-editor-customize-tabs.html#h3_1068114486[provide basic
-customization], such as specifying color, icon, and available actions on
-the tab.
-* In the *Path* mode,
-xref:ct-layouts-editor-customize-tabs.html#h3_349797985[create the visit
-path] using navigation buttons and define actions on each tab.
-** xref:ct-layouts-editor-customize-tabs.html#h3_1068114486[Use
-statuses] to separate completed and upcoming tasks.
-** xref:ct-layouts-editor-customize-tabs.html#h4_921250684[Specify
-conditions] to show buttons.
-** xref:ct-layouts-editor-customize-tabs.html#h4_1406331569[Set up
-global actions] when a mobile user taps the button.
-** For your convenience, the buttons have
-xref:action-type-key-reference.html#h2_333717541[predefined actions]
-that you can change during setup.
-* xref:ct-layouts-editor-add-sections-and-fields.html#h2_1529323632[Fill
-out tabs with the sections] of the following types:
-** xref:ct-layouts-editor-add-sections-and-fields.html#h3_1171954608[Current
-Record]
-** xref:ct-layouts-editor-add-sections-and-fields.html#h3_1970634347[Parent
-Record]
-** xref:ct-layouts-editor-add-sections-and-fields.html#h3_1996080511[Record
-List]
+* xref:admin-guide/ct-layouts-editor-customize-tabs.adoc#h2_290649163[Select the mode] to work with data on the record screen.
+* xref:admin-guide/ct-layouts-editor-customize-tabs.adoc#h3_449942769[Add tabs] and xref:admin-guide/ct-layouts-editor-customize-tabs.adoc#h3_1068114486[provide basic customization], such as specifying color, icon, and available actions on the tab.
+* In the *Path* mode, xref:admin-guide/ct-layouts-editor-customize-tabs.adoc#h3_349797985[create the visit path] using navigation buttons and define actions on each tab.
+** xref:admin-guide/ct-layouts-editor-customize-tabs.adoc#h3_1068114486[Use statuses] to separate completed and upcoming tasks.
+** xref:admin-guide/ct-layouts-editor-customize-tabs.adoc#h4_921250684[Specify conditions] to show buttons.
+** xref:admin-guide/ct-layouts-editor-customize-tabs.adoc#h4_1406331569[Set up global actions] when a mobile user taps the button.
+** For your convenience, the buttons have xref:ref-guide/json-specifications-and-examples/action-type-key-reference.adoc#h2_333717541[predefined actions] that you can change during setup.
+* xref:admin-guide/ct-layouts-editor-add-sections-and-fields.adoc#h2_1529323632[Fill out tabs with the sections] of the following types:
+** xref:admin-guide/ct-layouts-editor-add-sections-and-fields.adoc#h3_1171954608[Current Record]
+** xref:admin-guide/ct-layouts-editor-add-sections-and-fields.adoc#h3_1970634347[Parent Record]
+** xref:admin-guide/ct-layouts-editor-add-sections-and-fields.adoc#h3_1996080511[Record List]
 * Customize section
-xref:ct-layouts-editor-add-sections-and-fields.html#h3_1163797110[color]
-and
-xref:ct-layouts-editor-add-sections-and-fields.html#h3_1150885058[add
-icons].
-* xref:ct-layouts-editor-add-sections-and-fields.html#h3_1652605430[Add
-fields] to work with them in the CT Mobile app.
-* In the case of the integration with CG Cloud,
-xref:ct-layouts-templates.html[use the CG Cloud template].
+xref:admin-guide/ct-layouts-editor-add-sections-and-fields.adoc#h3_1163797110[color] and xref:admin-guide/ct-layouts-editor-add-sections-and-fields.adoc#h3_1150885058[add icons].
+* xref:admin-guide/ct-layouts-editor-add-sections-and-fields.adoc#h3_1652605430[Add fields] to work with them in the CT Mobile app.
+* In the case of the integration with CG Cloud, xref:ref-guide/ct-layouts-templates.adoc[use the CG Cloud template].
 
 [[h3_626922086]]
-==== Layout JSON
+== Layout JSON
 
-All screen settings specified in the CT Layouts Editor are validated and
-saved in a JSON format that is stored in the corresponding *Layout
-Settings* record. To learn more about available JSON keys and formats,
-and how the settings in the CT Layouts Editor correspond to JSON keys,
-refer to the xref:json-specifications-and-examples.html[JSON
-Specifications and Examples] article.
+All screen settings specified in the CT Layouts Editor are validated and saved in a JSON format that is stored in the corresponding *Layout Settings* record. To learn more about available JSON keys and formats, and how the settings in the CT Layouts Editor correspond to JSON keys, refer to the xref:ref-guide/json-specifications-and-examples/index.adoc[JSON Specifications and Examples] article.

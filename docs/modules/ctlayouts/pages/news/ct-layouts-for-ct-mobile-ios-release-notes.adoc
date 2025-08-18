@@ -1,67 +1,46 @@
 = CT Layouts for CT Mobile iOS Release Notes
+:toc:
 
-Here you find a feature, the link to the corresponding article, and the
-version of CT Mobile since which the feature is available.
-
-:toc: :toclevels: 2
+Here you find a feature, the link to the corresponding article, and the version of CT Mobile since which the feature is available.
 
 [[h2_1653376065]]
-=== CT Layouts for CT Mobile 2.5
+== CT Layouts for CT Mobile 2.5
 
 [[h3_2077060874]]
-==== Activation
+=== Activation
 
-* The administrator should create
-the xref:creating-a-layout-settings-record.html[Layout Settings] record
-and customize record screen in the CT Layouts Editor.
-* A mobile user should have xref:user-permissions.html[required
-permissions].
+* The administrator should create the xref:admin-guide/creating-a-layout-settings-record.adoc[Layout Settings] record and customize record screen in the CT Layouts Editor.
+* A mobile user should have xref:admin-guide/user-permissions.adoc[required permissions].
 
 [[h3_1154789513]]
-==== General Features
+=== General Features
 
 * The customized screen is displayed in a separate CT Layouts pop-up.
-* Multitasking: switch between the CT Layouts pop-up and other screens
-with one tap. Tap the minimized CT Layouts pop-up to return.
+* Multitasking: switch between the CT Layouts pop-up and other screens with one tap. Tap the minimized CT Layouts pop-up to return.
 
 [[h3_1333535527]]
-==== Record Screen
+=== Record Screen
 
-The record screen may be displayed in two separate modes depending on
-the CT Layouts settings.
-
-
+The record screen may be displayed in two separate modes depending on the CT Layouts settings.
 
 [[h4_683376448]]
-===== Tab Mode
+==== Tab Mode
 
 A mobile user can navigate through the tabs in any sequence.
 
-
-
 [[h4_127289700]]
-===== Path Mode
+==== Path Mode
 
 A mobile user should follow the tab path defined by the administrator.
 
-* The tabs are highlighted in colors with different transparency so that
-the mobile user can easily identify which steps have been completed.
-* Administrators can control the user's navigation through the tabs by
-setting conditions for displaying or hiding the necessary buttons.
-* If allowed, the mobile user can open tabs in any order to view
-information. The *Return* button is used to return to the current tab
-and does not cause the open tab status to change so as not to violate
-the set path.
-* If allowed, a mobile user can create new records, for example, add
-products to order, delete synced or unsynced records in the *Record
-List* section.
+* The tabs are highlighted in colors with different transparency so that the mobile user can easily identify which steps have been completed.
+* Administrators can control the user's navigation through the tabs by setting conditions for displaying or hiding the necessary buttons.
+* If allowed, the mobile user can open tabs in any order to view information. The *Return* button is used to return to the current tab and does not cause the open tab status to change so as not to violate the set path.
+* If allowed, a mobile user can create new records, for example, add products to order, delete synced or unsynced records in the *Record List* section.
 
 [[h3_1379605186]]
-==== CG Cloud Support
+=== CG Cloud Support
 
-To learn more about CG Cloud, refer to
-https://help.customertimes.com/articles/ct-mobile-ios-en/cg-cloud[CG
-Cloud].
+To learn more about CG Cloud, refer to xref:ctmobile:ios/mobile-application/mobile-application-modules/cg-cloud/index.adoc[CG Cloud].
 
-Perform CG CLoud tasks if the administrator has customized the record
-screen using xref:ct-layouts-templates.html[the preconfigured template].
+Perform CG CLoud tasks if the administrator has customized the record screen using xref:ref-guide/ct-layouts-templates.adoc[the preconfigured template].
