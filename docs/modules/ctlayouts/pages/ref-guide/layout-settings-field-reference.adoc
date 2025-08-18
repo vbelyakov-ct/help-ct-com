@@ -5,12 +5,12 @@ basic display settings for the selected object's record screen.
 
 The record screen display can be configured for an object, object with
 the desired record type, user profile, and their combinations. For
-example, you can configure the display of the _Activity_ object with the
+example, you can configure the display of the _Activity_ object with the
 *Visit* record type for a sales rep's profile.
 
 '''''
 
-API name in Salesforce: ctlayout__LayoutSettings__c
+API name in Salesforce: ctlayout__LayoutSettings__c
 
 '''''
 
@@ -23,10 +23,10 @@ API name in Salesforce: ctlayout__LayoutSettings__c
 migration, for example, via Data Loader or integration with ERP system.
 
 |Layout JSON |ctlayouts__Layout__c |Long Text Area(131072)
-|link:json-specifications-and-examples.html[A formed JSON file] that
+|xref:json-specifications-and-examples.html[A formed JSON file] that
 stores settings specified in the
-link:ct-layouts-editor-customize-tabs.html[CT Layouts Editor] for
-the ctlayouts__Object__c.
+xref:ct-layouts-editor-customize-tabs.html[CT Layouts Editor] for
+the ctlayouts__Object__c.
 
 |Layout Settings Label |ctlayouts__Label__c |Text(255) |The
 label is to display in the CT Mobile app. Available values:
@@ -38,7 +38,7 @@ record.
 API name of the object to customize its screens.
 
 |Record Type |ctlayouts__RecordType__c |Text(255) a|
-The record type of ctlayouts__Object__c for which the settings
+The record type of ctlayouts__Object__c for which the settings
 will be applied. Available values:
 
 * --Master-- is used when there is no custom record types or custom
@@ -48,8 +48,8 @@ record types are not available for the desired user profile
 |Unique Id |ctlayouts__UniqueId__c |Text(255) External Id)
 (Unique Case Insensetive) a|
 Automatically completion by concatenation of values
-from ctlayouts__Object__c,
-ctlayouts__RecordType__c, and ctlayouts__Profile__c.
+from ctlayouts__Object__c,
+ctlayouts__RecordType__c, and ctlayouts__Profile__c.
 
 The value must be unique within the ctlayouts__LayoutSettings__c
 records.

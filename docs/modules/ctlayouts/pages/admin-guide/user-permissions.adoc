@@ -1,32 +1,19 @@
 = User Permissions
 
-A mobile user should have the following permissions to use the
-preconfigured screens for the selected object in the CT Mobile app.
+A mobile user should have the following permissions to use the preconfigured screens for the selected object in the CT Mobile app.
 
-. A mobile user should have access to the
-_link:layout-settings-field-reference.html[Layout Settings]_ object.
-. A mobile user should have access to all objects and fields that are
-specified in the *Layout Settings* record.
-. A mobile user should have permission to edit all objects and fields
-that should be edited in the CT Mobile app, for example, to fill in a
-required field within the section on the tab.
-. A mobile user should have permission to edit a *Status* field of the
-object specified in the *Object* field of the corresponding *Layout
-Settings* record.
-.. link:json-specifications-and-examples.html#h3_1619757451[In the
-JSON], this field is used as statusField, for example, the *Status*
-field of the _Pharma Activity_ object.
+. A mobile user should have access to the xref:ref-guide/layout-settings-field-reference.adoc[Layout Settings] object.
+. A mobile user should have access to all objects and fields that are specified in the _Layout Settings_ record.
+. A mobile user should have permission to edit all objects and fields that should be edited in the CT Mobile app, for example, to fill in a required field within the section on the tab.
+. A mobile user should have permission to edit a *Status* field of the object specified in the *Object* field of the corresponding _Layout Settings_ record.
+.. xref:ref-guide/json-specifications-and-examples/index.adoc#h3_1619757451[In the JSON], this field is used as statusField, for example, the *Status* field of the _Pharma Activity_ object.
 
 [[h2_2115044027]]
-=== Required Permission Sets
+== Required Permission Sets
 
-[WARNING] ==== We kindly ask you to assign the preconfigured
-permission sets to all users in your system according to their roles.
-====
+WARNING: We kindly ask you to assign the preconfigured permission sets to all users in your system according to their roles.
 
-For your convenience, we create two permission sets that include
-configured access to all required objects and fields depending on the
-user type.
+For your convenience, we create two permission sets that include configured access to all required objects and fields depending on the user type.
 
 * _CT Layouts Administrator_ should be assigned to administrators.
 * _CT Layouts User_ should be assigned to users.

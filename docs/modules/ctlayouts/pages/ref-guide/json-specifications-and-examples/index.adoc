@@ -1,6 +1,6 @@
 = JSON Specifications and Examples
 
-When creating a link:layout-settings-field-reference.html[Layout
+When creating a xref:layout-settings-field-reference.html[Layout
 Settings] record, the administrator leaves the *Layout JSON* field blank
 or fills it with the preconfigured JSON.
 
@@ -8,8 +8,8 @@ or fills it with the preconfigured JSON.
 fields within the record screen in the CT Mobile app.
 * The *Layout JSON* field will be automatically populated with the
 generated JSON after the administrator specifies
-link:ct-layouts-editor-customize-tabs.html[tab] and
-link:ct-layouts-editor-add-sections-and-fields.html[section] settings in
+xref:ct-layouts-editor-customize-tabs.html[tab] and
+xref:ct-layouts-editor-add-sections-and-fields.html[section] settings in
 the CT Layouts Editor.
 * The *Layout JSON* field is automatically updated after the
 administrator makes and saves changes for tabs and sections in the CT
@@ -36,15 +36,15 @@ In this article, we describe allowed JSON keys and values.
 
 :toc: :toclevels: 3
 
-[[h2__864423552]]
+[[h2_864423552]]
 === The Global Setup for Displaying Tab or Path Mode
 
 [[h3_1857678454]]
 ==== Keys
 
 Using the
-link:ct-layouts-editor-customize-tabs.html#h3__1068114486[Settings] and
-link:ct-layouts-editor-customize-tabs.html#h3_349797985[Navigation]
+xref:ct-layouts-editor-customize-tabs.html#h3_1068114486[Settings] and
+xref:ct-layouts-editor-customize-tabs.html#h3_349797985[Navigation]
 buttons, the administrator defines high-level settings, such as
 displayed tab mode and allowed tab customization.
 
@@ -54,33 +54,33 @@ displayed tab mode and allowed tab customization.
 |===
 |*Key* |*Type* |*Required* |*Comment*
 |globalActions |An array of
-link:json-specifications-and-examples.html#h2__1835390962[Global
+xref:json-specifications-and-examples.html#h2_1835390962[Global
 Actions] |Yes |An array of one or more global actions that are specified
 for one or more navigation buttons.
 
 |hasCustomColors |Boolean |No |true
-if link:ct-layouts-editor-customize-tabs.html#h3__1068114486[the *Custom
-Color Scheme* checkbox is active] to set up a color scheme.
+if xref:ct-layouts-editor-customize-tabs.html#h3_1068114486[the *Custom
+Color Scheme* checkbox is active] to set up a color scheme.
 
 |hasCustomIcons |Boolean |No |true
-if link:ct-layouts-editor-customize-tabs.html#h3_633900184[the *Add
-icons for steps* checkbox is active] to specify icons
-from https://www.lightningdesignsystem.com/icons/#utility[the standard
-Salesforce set] for each tab.
+if xref:ct-layouts-editor-customize-tabs.html#h3_633900184[the *Add
+icons for steps* checkbox is active] to specify icons
+from https://www.lightningdesignsystem.com/icons/#utility[the standard
+Salesforce set] for each tab.
 
 |isCloseInProgressStepsAllowed |Boolean |Yes |true
-if link:ct-layouts-editor-customize-tabs.html#h3__1068114486[the *Allow
-close the steps in Progress* checkbox is active] to allow mobile users
-to close CT Layouts tabs in the *In Progress* status. 
+if xref:ct-layouts-editor-customize-tabs.html#h3_1068114486[the *Allow
+close the steps in Progress* checkbox is active] to allow mobile users
+to close CT Layouts tabs in the *In Progress* status.
 
 |stepSettings
-|link:json-specifications-and-examples.html#h3_1890880071[Step Settings]
+|xref:json-specifications-and-examples.html#h3_1890880071[Step Settings]
 |No |true if
-link:ct-layouts-editor-customize-tabs.html#h3__1068114486[the *Path*
+xref:ct-layouts-editor-customize-tabs.html#h3_1068114486[the *Path*
 mode is set] and the *Status* field is selected.
 
 |tabs |An array of
-link:json-specifications-and-examples.html#h2_1948275861[Tabs] |Yes
+xref:json-specifications-and-examples.html#h2_1948275861[Tabs] |Yes
 |List of tabs to display on a record screen.
 
 |version |Number |Yes a|
@@ -92,16 +92,16 @@ The JSON version. Allowed values:
 
 
 
-Go back to link:json-specifications-and-examples.html#TOC[the table of
+Go back to xref:json-specifications-and-examples.html#TOC[the table of
 content].
 
 [[h3_1890880071]]
 ==== Step Settings
 
 Using the
-*link:ct-layouts-editor-customize-tabs.html#h3__1068114486[Settings]*
+*xref:ct-layouts-editor-customize-tabs.html#h3_1068114486[Settings]*
 button, the administrator distributes the status filed values of
-link:layout-settings-field-reference.html[the selected object] in gropus
+xref:layout-settings-field-reference.html[the selected object] in gropus
 according to the tab status in the *Path* mode.
 
 
@@ -110,28 +110,28 @@ according to the tab status in the *Path* mode.
 |===
 |*Key* |*Type* |*Required* |*Comment*
 |completedTab
-|link:json-specifications-and-examples.html#h3_1619757451[Path Tab
+|xref:json-specifications-and-examples.html#h3_1619757451[Path Tab
 Settings] |Yes |The status field values that are added in
-the *Completed* group of the tab statuses.
+the *Completed* group of the tab statuses.
 
 |isChangeDisplayedTabAllowed |Boolean |Yes |true if
-link:ct-layouts-editor-customize-tabs.html#h3__1068114486[the *Allow
+xref:ct-layouts-editor-customize-tabs.html#h3_1068114486[the *Allow
 change the displayed tab* checkbox is active] to allow mobile users to
 change the displayed tab.
 
 |inProgressTab |Path Tab Settings |Yes |The status field values that are
-added in the *In Progress* group of the tab statuses.
+added in the *In Progress* group of the tab statuses.
 
 |newTab |Path Tab Settings |Yes |The status field values that are added
-in the *New* group of the tab statuses.
+in the *New* group of the tab statuses.
 
-|statusField |String |Yes |The API name of the *Status* field of the
+|statusField |String |Yes |The API name of the *Status* field of the
 selected object.
 |===
 
 
 
-Go back to link:json-specifications-and-examples.html#TOC[the table of
+Go back to xref:json-specifications-and-examples.html#TOC[the table of
 content].
 
 [[h3_1619757451]]
@@ -146,12 +146,12 @@ group of tab statuses.
 |===
 |*Key* |*Type* |*Required* |*Comment*
 |statuses |An array of String |Yes |The API names
-of link:json-specifications-and-examples.html#h3_1890880071[stepSettings.statusField]
+of xref:json-specifications-and-examples.html#h3_1890880071[stepSettings.statusField]
 values.
 
 |updatable |Enum |Yes a|
-link:ct-layouts-editor-customize-tabs.html#h3__1068114486[User
-permission on the tab] for the *Path* mode. Available values:
+xref:ct-layouts-editor-customize-tabs.html#h3_1068114486[User
+permission on the tab] for the *Path* mode. Available values:
 
 * *readOnly*
 * *currentTab*
@@ -163,21 +163,21 @@ permission on the tab] for the *Path* mode. Available values:
 
 
 
-Go back to link:json-specifications-and-examples.html#TOC[the table of
+Go back to xref:json-specifications-and-examples.html#TOC[the table of
 content].
 
-[[h2__1835390962]]
+[[h2_1835390962]]
 === Global Actions for Buttons in the Path Mode
 
 [[h3_1652615080]]
 ==== Action Keys
 
-link:ct-layouts-editor-customize-tabs.html#h4_951662406[On the General
+xref:ct-layouts-editor-customize-tabs.html#h4_951662406[On the General
 tab of the Navigation button], the administrator sets high-level
 settings for the selected navigation button, such as
-link:ct-layouts-editor-customize-tabs.html#h4__921250684[conditions for
+xref:ct-layouts-editor-customize-tabs.html#h4_921250684[conditions for
 displaying the button] on the tab,
-link:ct-layouts-editor-customize-tabs.html#h4_1406331569[actions] when a
+xref:ct-layouts-editor-customize-tabs.html#h4_1406331569[actions] when a
 mobile user taps the button, and if there are several actions, the
 sequence of these actions.
 
@@ -187,28 +187,28 @@ sequence of these actions.
 |===
 |*Key* |*Type* |*Required* |*Comment*
 |confirmationMessage |String |No |If
-set, link:ct-layouts-editor-customize-tabs.html#h4_1406331569[a
+set, xref:ct-layouts-editor-customize-tabs.html#h4_1406331569[a
 confirmation message] will be shown when the mobile user taps the
 button. Available values:
 
 |showCondition
-|link:json-specifications-and-examples.html#h3__1377913479[Action
+|xref:json-specifications-and-examples.html#h3_1377913479[Action
 Condition] |No a|
 By default, a button is displayed on every tab. To hide a button:
 
-* use the displayCondition to set criteria to display a button on the
+* use the displayCondition to set criteria to display a button on the
 tab
-* use the hideCondition. 
+* use the hideCondition.
 
-The values in the alwaysDisplayedActions and alwaysHiddenActions keys of
-link:json-specifications-and-examples.html#h2_1948275861[Tab Settings]
+The values in the alwaysDisplayedActions and alwaysHiddenActions keys of
+xref:json-specifications-and-examples.html#h2_1948275861[Tab Settings]
 have priority over these conditions.
 
 |hideCondition | | |
 
 |icon |Enum |No a|
 Icon name from https://www.lightningdesignsystem.com/icons/#utility[the
-standard Salesforce set] to display the selected icon on the button. The
+standard Salesforce set] to display the selected icon on the button. The
 list of default values:
 
 * *chevronleft*
@@ -217,29 +217,29 @@ list of default values:
 |iconPosition |Enum |No a|
 Icon position on the button. Available positions:
 
-* *Leading* (by default) — display the icon on the left side of the
+* *Leading* (by default) — display the icon on the left side of the
 button.
-* *Trailing* — display the icon on the right side of the button.
+* *Trailing* — display the icon on the right side of the button.
 
 |label |String |Yes a|
 Any button label to show it in the CT Mobile app. The list of default
 values:
 
-* *Previous* — go to the previous tab.
-* *Next *— go to the next tab.
-* *Return* — return to the current tab from the displayed tab that the
-mobile user previously opened by tapping its header. 
+* *Previous* — go to the previous tab.
+* *Next *— go to the next tab.
+* *Return* — return to the current tab from the displayed tab that the
+mobile user previously opened by tapping its header.
 [NOTE] ==== When a mobile user jumps to another tab by tapping
-its header (if enabled), only the *Return* button will be available on
+its header (if enabled), only the *Return* button will be available on
 the opened tab. So, a mobile user can browse tabs but cannot violate the
 preconfigured tab navigation. ====
-* *Start* — start the action.
-* *Finish* — finish the action.
-* *Cancel *— cancel the action.
-* *Create Record* — to create a record for a certain object.
+* *Start* — start the action.
+* *Finish* — finish the action.
+* *Cancel *— cancel the action.
+* *Create Record* — to create a record for a certain object.
 * *Generate CG Cloud
-tasks* — https://help.customertimes.com/articles/ct-mobile-ios-en/managing-visits-to-retail-stores/a/h2__1592083570[generate
-assessment tasks] and visit KPIs.
+tasks* — https://help.customertimes.com/articles/ct-mobile-ios-en/managing-visits-to-retail-stores/a/h2_1592083570[generate
+assessment tasks] and visit KPIs.
 
 
 
@@ -260,30 +260,30 @@ Names cannot be changed.
 * *CGCloudTasks*
 
 |onClickActions |An array of
-link:json-specifications-and-examples.html#h3__2124187468[Click Actions]
+xref:json-specifications-and-examples.html#h3_2124187468[Click Actions]
 |Yes a|
 Actions to perform when a mobile user taps the button.
 
 [TIP] ==== For more information, refer to the
-link:action-type-key-reference.html[Action Type Field Reference]
+xref:action-type-key-reference.html[Action Type Field Reference]
 article. ====
 
 |===
 
 
 
-Go back to link:json-specifications-and-examples.html#TOC[the table of
+Go back to xref:json-specifications-and-examples.html#TOC[the table of
 content].
 
-[[h3__2124187468]]
+[[h3_2124187468]]
 ==== Click Action Keys
 
-link:ct-layouts-editor-customize-tabs.html#h4_1406331569[On the Actions
+xref:ct-layouts-editor-customize-tabs.html#h4_1406331569[On the Actions
 tab of the Navigation button], the administrator specifies action that
 triggered by a mobolie user's tap on the button.
 
 [NOTE] ==== Some
-link:action-type-key-reference.html#h2_333717541[actions are set for
+xref:action-type-key-reference.html#h2_333717541[actions are set for
 buttons by default] but can be changed. ====
 
 [width="100%",cols="25%,25%,25%,25%",options="header",]
@@ -297,22 +297,22 @@ Required when "type": "execute".
 |destination |String |Yes a|
 The required destination, for example, the previous or next tab.
 
-Required when "type": "navigate".
+Required when "type": "navigate".
 
 |field |String |Yes a|
 The API name of the current field.
 
-Required when "type": "setValue".
+Required when "type": "setValue".
 
 |object |String |Yes a|
 The API name of the object to create a record of.
 
-Required when "type": "createRecord".
+Required when "type": "createRecord".
 
 |recordType |String |Yes a|
 The record type for the object to create a record of.
 
-Required when "type": "createRecord".
+Required when "type": "createRecord".
 
 |type |Enum |Yes a|
 Available action types:
@@ -326,14 +326,14 @@ Available action types:
 |useMinilayout |Boolean |Yes a|
 If set,
 https://help.customertimes.com/articles/ct-mobile-ios-en/mini-layouts[the
-mini layout] is used to create the record. 
+mini layout] is used to create the record.
 
-Required when "type": "createRecord".
+Required when "type": "createRecord".
 
 |value |Boolean |Yes a|
-The value for the "field". 
+The value for the "field".
 
-Required when "type": "setValue".
+Required when "type": "setValue".
 
 | |Number | |
 
@@ -342,13 +342,13 @@ Required when "type": "setValue".
 
 
 
-Go back to link:json-specifications-and-examples.html#TOC[the table of
+Go back to xref:json-specifications-and-examples.html#TOC[the table of
 content].
 
-[[h3__1377913479]]
+[[h3_1377913479]]
 ==== Action Condition
 
-link:ct-layouts-editor-customize-tabs.html#h4__921250684[On the
+xref:ct-layouts-editor-customize-tabs.html#h4_921250684[On the
 Conditions tab of the Navigation button&#44;] the administrator
 specifies conditions to show or hide a button on the tab.
 
@@ -369,26 +369,26 @@ Conditions can be set at different levels and combined into groups.
 |operator |Enum |Yes a|
 Available values:
 
-* AND means that all conditions of the level must be matched.
+* AND means that all conditions of the level must be matched.
 * OR means that at least one condition of the level must be matched.
 
 |items |Array |Yes a|
 Each Item is a:
 
-* Child condition level (parentheses in a logical expression).
-* link:json-specifications-and-examples.html#h4__472370536[Field comparison
+* Child condition level (parentheses in a logical expression).
+* xref:json-specifications-and-examples.html#h4_472370536[Field comparison
 expression].
 
 |===
 
 
 
-Go back to link:json-specifications-and-examples.html#TOC[the table of
+Go back to xref:json-specifications-and-examples.html#TOC[the table of
 content].
 
 
 
-[[h4__472370536]]
+[[h4_472370536]]
 ===== Condition Level Item
 
 
@@ -402,17 +402,17 @@ and notIn.
 |===
 |*Key* |*Type* |*Required* |*Comment*
 |field |String |Yes |The API name of the current object field to check
-value or link:context-key-reference.html[perform the specific context].
+value or xref:context-key-reference.html[perform the specific context].
 
 |operator |Enum |Yes
-|link:json-specifications-and-examples.html#h4__748327130[Available
+|xref:json-specifications-and-examples.html#h4_748327130[Available
 operators] depending on the field data type.
 
 |value |Boolean |Yes |Target values for fields with the *Boolean* data
 type.
 
 | |Number | a|
-Target values for fields with the *Currency* and *Number* data type.
+Target values for fields with the *Currency* and *Number* data type.
 
 * *Currency*
 * *Number*
@@ -438,12 +438,12 @@ Target values for fields with the *Text* data type.
 
 
 
-Go back to link:json-specifications-and-examples.html#TOC[the table of
+Go back to xref:json-specifications-and-examples.html#TOC[the table of
 content].
 
 
 
-[[h4__748327130]]
+[[h4_748327130]]
 ===== Condition Operators
 
 
@@ -476,15 +476,15 @@ Yes
 
 
 
-Go back to link:json-specifications-and-examples.html#TOC[the table of
+Go back to xref:json-specifications-and-examples.html#TOC[the table of
 content].
 
 [[h2_1948275861]]
 === Tab Settings
 
 Settings for
-each link:ct-layouts-editor-customize-tabs.html#h3__449942769[displayed
-tab] of the *Tab* and *Path* mode on the record screen.
+each xref:ct-layouts-editor-customize-tabs.html#h3_449942769[displayed
+tab] of the *Tab* and *Path* mode on the record screen.
 
 
 
@@ -493,38 +493,38 @@ tab] of the *Tab* and *Path* mode on the record screen.
 |*Key* |*Type* |*Required* |*Comment*
 |alwaysDisplayedActions |An array of String |No a|
 An array of the values for the name key of
-link:json-specifications-and-examples.html#h3_1652615080[the global
-actions] to always display or hide the specified button on the tab. 
+xref:json-specifications-and-examples.html#h3_1652615080[the global
+actions] to always display or hide the specified button on the tab.
 
 These conditions have priority over the values in the displayCondition
 and hideCondition keys of
-link:json-specifications-and-examples.html#h3_1652615080[Action Keys].
+xref:json-specifications-and-examples.html#h3_1652615080[Action Keys].
 
 |alwaysHiddenActions | | |
 
 |color |String |Yes a|
-The custom color of the tab. The format (case insensitive): HSL(11, 100,
+The custom color of the tab. The format (case insensitive): HSL(11, 100,
 50).
 
-Required when "hasCustomColor": true 
-link:json-specifications-and-examples.html#h3_1857678454[for the tab].
+Required when "hasCustomColor": true
+xref:json-specifications-and-examples.html#h3_1857678454[for the tab].
 
 |icon |Enum |Yes a|
 The tab
-icon from https://www.lightningdesignsystem.com/icons/#utility[the
+icon from https://www.lightningdesignsystem.com/icons/#utility[the
 standard Salesforce set].
 
-[NOTE] ==== Required when "hasCustomIcons": true  ====
- link:json-specifications-and-examples.html#h3_1857678454[for the tab].
+[NOTE] ==== Required when "hasCustomIcons": true  ====
+ xref:json-specifications-and-examples.html#h3_1857678454[for the tab].
 
 |label |String |Yes |The label of the tab. Available values:
 
 |sections |Array of
-link:json-specifications-and-examples.html#h2__903347826[Sections]
-|Yes |The list of sections on the tab. 
+xref:json-specifications-and-examples.html#h2_903347826[Sections]
+|Yes |The list of sections on the tab.
 
 |showSoqlCondition |String |No a|
-The SOQL filter to display tab only when the criteria are met. 
+The SOQL filter to display tab only when the criteria are met.
 
 
 
@@ -532,23 +532,23 @@ For example:
 
 |statusValue |String |Yes a|
 The API name
-of link:json-specifications-and-examples.html#h3_1890880071[stepSettings.statusField] value.
+of xref:json-specifications-and-examples.html#h3_1890880071[stepSettings.statusField] value.
 
 Required when
-link:json-specifications-and-examples.html#h3_1890880071[Step Settings]
+xref:json-specifications-and-examples.html#h3_1890880071[Step Settings]
 are defined.
 
 |===
 
 
 
-Go back to link:json-specifications-and-examples.html#TOC[the table of
+Go back to xref:json-specifications-and-examples.html#TOC[the table of
 content].
 
-[[h2__903347826]]
+[[h2_903347826]]
 === Section Settings
 
-link:ct-layouts-editor-add-sections-and-fields.html[In the CT Layouts
+xref:ct-layouts-editor-add-sections-and-fields.html[In the CT Layouts
 Editor], the administrator adds sections one after the other, starting
 from the leftmost top corner of the grid. Sections cannot overlap each
 other on the tab.
@@ -564,34 +564,34 @@ The general settings of the selected section.
 |===
 |*Key* |*Type* |*Required* |*Comment*
 |color |String |Yes a|
-link:ct-layouts-editor-add-sections-and-fields.html#h3_1163797110[The
+xref:ct-layouts-editor-add-sections-and-fields.html#h3_1163797110[The
 custom color] of the section.
 
 * By default, a random color from the default color scheme is used.
-* The format (case insensitive): HSL(11, 100, 50).
+* The format (case insensitive): HSL(11, 100, 50).
 
-|extension |N/A |No |[NOTE] ==== Reserved.  ====
+|extension |N/A |No |[NOTE] ==== Reserved.  ====
 
 |icon |Enum |Yes a|
-link:ct-layouts-editor-add-sections-and-fields.html#h3_1150885058[The
-section icon] from the standard Salesforce set. 
+xref:ct-layouts-editor-add-sections-and-fields.html#h3_1150885058[The
+section icon] from the standard Salesforce set.
 
 * By default, a random icon is used.
 
 |label |String |Yes |The label of the section. Available values:
 
 |position
-|link:json-specifications-and-examples.html#h3__1500637436[Section
+|xref:json-specifications-and-examples.html#h3_1500637436[Section
 Position] |Yes |Location of the section on the tab.
 
 |properties |Object |Yes a|
 Properties for each object depend on the value in the type key.
 
-* link:json-specifications-and-examples.html#h3__2137120289[Current
+* xref:json-specifications-and-examples.html#h3_2137120289[Current
 Record: Properties]
-* link:json-specifications-and-examples.html#h3__187296624[Parent
+* xref:json-specifications-and-examples.html#h3_187296624[Parent
 Record: Properties]
-* link:json-specifications-and-examples.html#h3_674627754[Record List:
+* xref:json-specifications-and-examples.html#h3_674627754[Record List:
 Properties]
 
 |type |Enum |Yes a|
@@ -606,14 +606,14 @@ presented in it. Available types:
 
 
 
-Go back to link:json-specifications-and-examples.html#TOC[the table of
+Go back to xref:json-specifications-and-examples.html#TOC[the table of
 content].
 
-[[h3__1500637436]]
+[[h3_1500637436]]
 ==== Section Position Keys
 
-link:ct-layouts-editor-add-sections-and-fields.html[Indicated in grid
-units], location of the section on the tab.  
+xref:ct-layouts-editor-add-sections-and-fields.html[Indicated in grid
+units], location of the section on the tab.
 
 
 
@@ -625,22 +625,22 @@ units], location of the section on the tab.  
 |width |Number |Yes |The section width in the grid units.
 
 |x |Number |Yes |The X coordinate of the upper-left corner of the
-section. 
+section.
 
 |y |Number |Yes |The Y coordinate of the upper-left corner of the
-section. 
+section.
 |===
 
 
 
-Go back to link:json-specifications-and-examples.html#TOC[the table of
+Go back to xref:json-specifications-and-examples.html#TOC[the table of
 content].
 
-[[h3__2137120289]]
+[[h3_2137120289]]
 ==== Current Record: Properties
 
 Specific properties are available for the
-link:ct-layouts-editor-add-sections-and-fields.html#h3__1171954608[Current
+xref:ct-layouts-editor-add-sections-and-fields.html#h3_1171954608[Current
 Record] section type.
 
 
@@ -649,21 +649,21 @@ Record] section type.
 |===
 |*Key* |*Type* |*Required* |*Comment*
 |fields |An array of
-link:json-specifications-and-examples.html#h2__1352679225[Fields
+xref:json-specifications-and-examples.html#h2_1352679225[Fields
 Settings] |Yes |Fields to display.
 |===
 
 
 
-Go back to link:json-specifications-and-examples.html#TOC[the table of
+Go back to xref:json-specifications-and-examples.html#TOC[the table of
 content].
 
-[[h3__187296624]]
+[[h3_187296624]]
 ==== Parent Record: Properties
 
 Specific properties are available for
-the link:ct-layouts-editor-add-sections-and-fields.html#h3__1970634347[Parent
-Record] section type.
+the xref:ct-layouts-editor-add-sections-and-fields.html#h3_1970634347[Parent
+Record] section type.
 
 
 
@@ -671,27 +671,27 @@ Record] section type.
 |===
 |*Key* |*Type* |*Required* |*Comment*
 |fields |An array of
-link:json-specifications-and-examples.html#h2__1352679225[Field
+xref:json-specifications-and-examples.html#h2_1352679225[Field
 Settings] |Yes |Fields to display.
 
 |parentObject |String |Yes |The API name of the parent object.
 
 |parentReference |String |Yes |The API name of the field with the
-*Lookup* or *Master-Detail* type on the object specified in the *Layout
+*Lookup* or *Master-Detail* type on the object specified in the *Layout
 Settings* record.
 |===
 
 
 
-Go back to link:json-specifications-and-examples.html#TOC[the table of
+Go back to xref:json-specifications-and-examples.html#TOC[the table of
 content].
 
 [[h3_674627754]]
 ==== Record List: Properties
 
 Specific properties are available for
-the link:ct-layouts-editor-add-sections-and-fields.html#h3_1996080511[Record
-List] section type.
+the xref:ct-layouts-editor-add-sections-and-fields.html#h3_1996080511[Record
+List] section type.
 
 
 
@@ -699,11 +699,11 @@ List] section type.
 |===
 |*Key* |*Type* |*Required* |*Comment*
 |fields |An array of
-link:json-specifications-and-examples.html#h2__1352679225[Field
+xref:json-specifications-and-examples.html#h2_1352679225[Field
 Settings] |Yes |Fields to display.
 
 |object |String |Yes |The API name of any related object that has a
-filed with the *Lookup* or *Master-Detail* type to the object in the
+filed with the *Lookup* or *Master-Detail* type to the object in the
 *Layout Settings* record.
 
 |objectCondition |String |Yes |The SOQL filter is used to define
@@ -711,30 +711,30 @@ records of the related object to display within the section. Otherwise,
 all records will be displayed.
 
 |permission
-|link:json-specifications-and-examples.html#h3__1706694265[Record
+|xref:json-specifications-and-examples.html#h3_1706694265[Record
 Permission Settings] |Yes |User permissions to work with fields in
 the section.
 |===
 
 
 
-Go back to link:json-specifications-and-examples.html#TOC[the table of
+Go back to xref:json-specifications-and-examples.html#TOC[the table of
 content].
 
-[[h3__1706694265]]
+[[h3_1706694265]]
 ==== Record Permission Settings
 
 User permission to each displayed field within the section.
 
-The https://help.salesforce.com/s/articleView?id=sf.users_fields_fls.htm&type=5[Field-Level
-Security] settings for the field are higher than the field settings in
+The https://help.salesforce.com/s/articleView?id=sf.users_fields_fls.htm&type=5[Field-Level
+Security] settings for the field are higher than the field settings in
 the CT Layouts.
 
 * If the field is hidden from the mobile user, then the field will not
 be presented in the section for the mobile user.
-* If the field is *readOnly* for the mobile user, then the field should
+* If the field is *readOnly* for the mobile user, then the field should
 not be editable in the section for the mobile user.
-* If the field is *required* for the mobile user, then the field will be
+* If the field is *required* for the mobile user, then the field will be
 required in the section for the mobile user.
 
 [width="100%",cols="25%,25%,25%,25%",options="header",]
@@ -751,17 +751,17 @@ synchronized records.
 
 
 
-Go back to link:json-specifications-and-examples.html#TOC[the table of
+Go back to xref:json-specifications-and-examples.html#TOC[the table of
 content].
 
-[[h2__1352679225]]
+[[h2_1352679225]]
 === Field Settings
 
-[[h3__1865140130]]
+[[h3_1865140130]]
 ==== Field Keys
 
 The data and user permissions
-link:ct-layouts-editor-add-sections-and-fields.html#h3_1652605430[for
+xref:ct-layouts-editor-add-sections-and-fields.html#h3_1652605430[for
 each displayed field] in the sections.
 
 
@@ -774,7 +774,7 @@ it use:
 
 |name |String |Yes |The API name of the field.
 
-|readOnly |Boolean |Yes |true if the field should be read-only. 
+|readOnly |Boolean |Yes |true if the field should be read-only.
 
 |required |Boolean |Yes |true if the field should be required to
 fill in.
@@ -794,12 +794,12 @@ the width of each column.
 widths is less than 100, the lack is evenly distributed among the unset
 columns.
 
-[NOTE] ==== Available when the section has "type": "RecordList"
-==== . 
+[NOTE] ==== Available when the section has "type": "RecordList"
+==== .
 
 |===
 
 
 
-Go back to link:json-specifications-and-examples.html#TOC[the table of
+Go back to xref:json-specifications-and-examples.html#TOC[the table of
 content].

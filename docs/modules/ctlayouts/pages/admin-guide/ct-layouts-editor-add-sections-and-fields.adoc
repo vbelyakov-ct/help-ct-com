@@ -1,80 +1,49 @@
 = CT Layouts Editor: Add Sections and Fields
+:toc:
 
-In this article, take a look at the layout editor and the available
-settings for sections and fields on the tabs:
+In this article, take a look at the layout editor and the available settings for sections and fields on the tabs:
 
-All settings in the CT Layouts Editor will be saved in the *Layout
-JSON* field of the
-current link:layout-settings-field-reference.html[Layout
-Settings] record. Learn more in
-the link:json-specifications-and-examples.html[JSON
-Specifications] article.
+[TIP]
+====
+* All settings in the CT Layouts Editor will be saved in the *Layout JSON* field of the current xref:ref-guide/layout-settings-field-reference.adoc[Layout Settings] record. Learn more in the xref:ref-guide/json-specifications-and-examples/index.adoc[JSON Specifications] article.
+* To set up tabs, refer to xref:./ct-layouts-editor-customize-tabs.adoc[CT Layouts Editor Overview: Tabs].
 
-To set up tabs, refer to link:ct-layouts-editor-customize-tabs.html[CT
-Layouts Editor Overview: Tabs].
-
-:toc: :toclevels: 3
+====
 
 [[h2_1529323632]]
-=== Editor Overview: Sections
+== Editor Overview: Sections
 
-When tabs are added, the administrator fills them with the desired
-sections.
+When tabs are added, the administrator fills them with the desired sections.
 
-
-
-Each tab may have several sections, which are located on the *grid* and
-occupy a number of grid *units*.
+Each tab may have several sections, which are located on the *grid* and occupy a number of grid *units*.
 
 * The layout grid cannot be more than 6 units in width.
 * The layout grid height may be enlarged.
 
-
-
 Sections obey the following rules:
 
-* To add a section, click the
-image:The-Plus-Button.png[] button next
-to one of the available section types.
-* When added, the section has a minimum size of 2 units wide and 1 unit
-high.
-* Sections are added one after the other, starting from the leftmost top
-corner of the grid.
+* To add a section, click the image:The-Plus-Button.png[25,25] button next to one of the available section types.
+* When added, the section has a minimum size of 2 units wide and 1 unit high.
+* Sections are added one after the other, starting from the leftmost top corner of the grid.
 * Sections cannot overlap each other.
-image:ct-layouts-grid-and-units.png[]
++
+image::ct-layouts-grid-and-units.png[]
 
-
-
-[width="100%",cols="50%,50%",]
+[width="100%",cols="70%,30%",frame="none",grid="none"]
 |===
 a|
 Each section has the following structure on the grid:
 
 * The label.
 * The icon of the predefined color.
-* Click
-the image:The-Bin-Button.png[]
-button to delete a section.
-* Click
-the image:The-Gear-icon.png[]
-icon or the section to open the section settings on the right side of
-the screen. Otherwise, the current tab settings are displayed.
-* Click and hold
-the image:The-Move-icon.png[]
-icon to move the section.
-* Click and pull the bottom right corner of the section to change its
-size.
+* Click the image:The-Bin-Button.png[25,25] button to delete a section.
+* Click the image:The-Gear-icon.png[25,25] icon or the section to open the section settings on the right side of the screen. Otherwise, the current tab settings are displayed.
+* Click and hold the image:The-Move-icon.png[25,15] icon to move the section.
+* Click and pull the bottom right corner of the section to change its size.
 
-a|
-
-
-
-
-image:the-section-on-the-grid.png[]
+a|image:the-section-on-the-grid.png[]
 
 |===
-
-
 
 There are three section types:
 
@@ -82,236 +51,155 @@ There are three section types:
 * *Parent Record*
 * *Record List*
 
-[[h3__1171954608]]
-==== Current Record
+[[h3_1171954608]]
+=== Current Record
 
-[width="100%",cols="50%,50%",]
+[width="100%",cols="70%,30%",frame="none",grid="none"]
 |===
-a|
-Use this section to display and manage data of the specified object in
-the *Layout Settings* record.
+a|Use this section to display and manage data of the specified object in the _Layout Settings_ record.
 
-
-
-On the left side, click
-the image:The-Plus-Button.png[] button
-next to the *Current Record* section and then click the added section on
-the grid.
+On the left side, click the image:The-Plus-Button.png[25,25] button next to the *Current Record* section and then click the added section on the grid.
 
 * Specify the section *Label*.
 * Set up the *Width* and *Height* of the section.
-* link:ct-layouts-editor-customize-tabs.html#h3_1163797110[Select the
-color of the section].
-* link:ct-layouts-editor-customize-tabs.html#h3_1150885058[Select the
-icon] to display on the section header.
-* link:ct-layouts-editor-customize-tabs.html#h3_1652605430[Click the
-*Add Field* button] to add fields of the current record inside the
-section.
+* xref:./ct-layouts-editor-customize-tabs.adoc#h3_449942769[Select the color of the section].
+* xref:./ct-layouts-editor-customize-tabs.adoc#h4_951662406[Select the icon] to display on the section header.
+* xref:./ct-layouts-editor-customize-tabs.adoc[Click the *Add Field* button] to add fields of the current record inside the section.
 
-a|
-image:Current-Record-Settings.png[]
+a| image:Current-Record-Settings.png[]
 
 |===
 
-[[h3__1970634347]]
-==== Parent Record
+[[h3_1970634347]]
+=== Parent Record
 
-[width="100%",cols="50%,^50%",]
+[width="100%",cols="70%,30%",frame="none",grid="none"]
 |===
-a|
-Use this section to display and manage data of the parent object of the
-specified object in the *Layout Settings* record.
+a| Use this section to display and manage data of the parent object of the specified object in the _Layout Settings_ record.
 
-
-
-On the left side, click
-the image:The-Plus-Button.png[] button
-next to the *Parent Record* section and then click the added section on
-the grid.
+On the left side, click the image:The-Plus-Button.png[25,25] button next to the *Parent Record* section and then click the added section on the grid.
 
 * Specify the section *Label*.
 * Set up the *Width* and *Height* of the section.
-* link:ct-layouts-editor-customize-tabs.html#h3_1163797110[Select the
-color of the section].
-* link:ct-layouts-editor-customize-tabs.html#h3_1150885058[Select the
-icon] to display on the section header.
-* In the *Parent Object* picklist, select the parent object of the
-specified object in the *Layout Settings* record.
-[TIP] ==== In the picklist, the API name of the object is
-additionally specified in brackets.  ====
-* In the *Parent Object Lookup* picklist, select the field with
-the *Lookup* or *Master-Detail* type that links the parent object with
-the current object.
-[TIP] ==== In the picklist, the API name of the field is
-additionally specified in brackets. Also, if there is only one suitable
-field, it will be automatically specified.  ====
-* link:ct-layouts-editor-customize-tabs.html#h3_1652605430[Click the
-*Add Field* button] to add fields of the parent record inside the
-section. [NOTE] ==== The button is available depending on the
-selected parent object. ====
+* xref:./ct-layouts-editor-customize-tabs.adoc#h3_449942769[Select the color of the section].
+* xref:./ct-layouts-editor-customize-tabs.adoc#h4_951662406[Select the icon] to display on the section header.
+* In the *Parent Object* picklist, select the parent object of the specified object in the _Layout Settings_ record.
++
+TIP: In the picklist, the API name of the object is additionally specified in brackets.
+* In the *Parent Object Lookup* picklist, select the field with the *Lookup* or *Master-Detail* type that links the parent object with the current object.
++
+TIP: In the picklist, the API name of the field is additionally specified in brackets. Also, if there is only one suitable field, it will be automatically specified.
+* xref:./ct-layouts-editor-customize-tabs.adoc[Click the *Add Field* button] to add fields of the parent record inside the section.
++
+NOTE: The button is available depending on the selected parent object.
 
 |image:Parent-Record-Settings.png[]
 |===
 
 [[h3_1996080511]]
-==== Record List
+=== Record List
 
-[width="100%",cols="50%,^50%",]
+[width="100%",cols="70%,30%",frame="none",grid="none"]
 |===
-a|
-Use this section to display and manage data of the related objects of
-the specified object in the *Layout Settings* record.
+a| Use this section to display and manage data of the related objects of the specified object in the _Layout Settings_ record.
 
-
-
-On the left slide, click
-the image:The-Plus-Button.png[]
-button to the *Record List* section and then click the added section on
-the grid.
+On the left slide, click the image:The-Plus-Button.png[25,25] button to the *Record List* section and then click the added section on the grid.
 
 * Specify the section *Label*.
 * Set up the *Width* and *Height* of the section.
-* link:ct-layouts-editor-customize-tabs.html#h3_1163797110[Select the
-color of the section].
-* link:ct-layouts-editor-customize-tabs.html#h3_1150885058[Select the
-icon] to display on the section header.
-* In the *Object* picklist, select the related object of the specified
-object in the *Layout Settings* record.
-[TIP] ==== In the picklist, the API name of the object is
-additionally specified in brackets. ====
+* xref:./ct-layouts-editor-customize-tabs.adoc#h3_449942769[Select the color of the section].
+* xref:./ct-layouts-editor-customize-tabs.adoc#h4_951662406[Select the icon] to display on the section header.
+* In the *Object* picklist, select the related object of the specified object in the _Layout Settings_ record.
++
+TIP: In the picklist, the API name of the object is additionally specified in brackets.
 * If necessary:
 ** Create a SOQL filter to define which fields should be shown.
-[TIP] ==== For filter creation,
-link:ct-layouts-editor-customize-tabs.html#h4__921250684[the same UI] as
-for setup conditions to hide or display buttons is in use. Also, it is
-possible to use the{!object.field} ====  format as a criterion.
++
+TIP: For filter creation, xref:./ct-layouts-editor-customize-tabs.adoc#h4_921250684[the same UI] as for setup conditions to hide or display buttons is in use. Also, it is possible to use the [.apiobject]#{!object.field}# format as a criterion.
 ** Allow creating new records.
 ** Allow deleting records from the mobile device.
 ** Allow deleting the synchronized records.
-* link:ct-layouts-editor-customize-tabs.html#h3_1652605430[Click the
-*Add Field* button] to add fields of the related records inside the
-section.
-[TIP] ==== Optionally, the administrator can
-link:json-specifications-and-examples.html#h3__1865140130[specify the
-desired column width] for selected fields. ====
+* xref:./ct-layouts-editor-customize-tabs.adoc[Click the *Add Field* button] to add fields of the related records inside the section.
++
+TIP: Optionally, the administrator can xref:ref-guide/json-specifications-and-examples/index.adoc#h3_1865140130[specify the desired column width] for selected fields.
 
 |image:Record-List-Settings.png[]
 |===
 
 [[h3_1163797110]]
-==== Section Color
+=== Section Color
 
-In the section settings, specify the section color that highlights the
-section header in the CT Mobile app.
+In the section settings, specify the section color that highlights the section header in the CT Mobile app.
 
 * By default, the section color is a random color.
-* Choose a color either from a predefined set or by specifying the hue,
-saturation, and lightness of custom color.
-[NOTE] ==== Lightness cannot be more than 80%. ====
+* Choose a color either from a predefined set or by specifying the hue, saturation, and lightness of custom color.
++
+NOTE: Lightness cannot be more than 80%.
 * Click *Done* to save changes.
 * Click *Cancel* to cancel the color adjustment.
 
-
-
 [width="100%",cols="50%,50%",]
 |===
-a|
-*Default Color Scheme*
+a| *Default Color Scheme* a|*Custom Color Scheme*
 
-a|
-*Custom Color Scheme*
-
-a|
-image:Section-Default-Color-Scheme-.png[]
+a|image:Section-Default-Color-Scheme-.png[]
 
 |image:Section-Custom-Color-Scheme.png[]
 |===
 
 [[h3_1150885058]]
-==== Section Icon
+=== Section Icon
 
-In the section settings, specify the section icon that appears in the
-section header in the CT Mobile app.
+In the section settings, specify the section icon that appears in the section header in the CT Mobile app.
 
 * By default, the section icon is a random icon.
-
-* Use the numbers that will be assigned to the section according to its
-ordinal number.
-* Select the icon to display from
-https://www.lightningdesignsystem.com/icons/#utility[the list of
-available icons].
+* Use the numbers that will be assigned to the section according to its ordinal number.
+* Select the icon to display from https://www.lightningdesignsystem.com/icons/#utility[the list of available icons].
 * Use the *Search* box to find an icon by its name.
-
-* Click *Done* to save changes.
-
-
+* Click *Done* to save changes.
 
 [width="100%",cols="^50%,50%",]
 |===
-|*Numbers* a|
-*Icons*
+|*Numbers* a|*Icons*
 
 |image:Icons-Use-Numbers.png[]
 |image:Icons-Default-Set.png[]
 |===
 
 [[h3_1652605430]]
-==== Section Fields
+=== Section Fields
 
-In the section settings, click the *Add Field* button (if available). In
-the window:
+In the section settings, click the *Add Field* button (if available). In the window:
 
-* In the *Field* picklist, select the fields to display inside the
-section.
-[NOTE] ==== For the *Record List* section, only the fields that
-match the criteria will be displayed for selection if a filter is set.
-Also, it is possible to add fields of the parent object in the
-ParentObject.Field ==== format.[TIP] ==== In the picklist, the
-API name of the field is additionally specified in brackets. ====
+* In the *Field* picklist, select the fields to display inside the section.
++
+NOTE: For the *Record List* section, only the fields that match the criteria will be displayed for selection if a filter is set. Also, it is possible to add fields of the parent object in the [.apiobject]#ParentObject.Field# format.
++
+TIP: In the picklist, the API name of the field is additionally specified in brackets.
 * Add *Label*.
-* If necessary, specify whether the field should be read-only or
-required to fill in.
+* If necessary, specify whether the field should be read-only or required to fill in.
++
+[NOTE]
+====
+The *Field-Level Security* settings for the field are higher than the field settings in the CT Layouts.
 
-The *Field-Level Security* settings for the field are higher than the
-field settings in the CT Layouts.
-
-** If the field is hidden from the mobile user, then the field will not
-be presented in the section for the mobile user.
-** If the field is *readOnly* for the mobile user, then the field should
-not be editable in the section for the mobile user.
-** If the field is *required* for the mobile user, then the field will
-be required in the section for the mobile user.
+** If the field is hidden from the mobile user, then the field will not be presented in the section for the mobile user.
+** If the field is *readOnly* for the mobile user, then the field should not be editable in the section for the mobile user.
+** If the field is *required* for the mobile user, then the field will be required in the section for the mobile user.
+====
 * Click *Done* to save changes.
-
-
 
 The list of added fields is displayed under the section settings.
 
-* Click
-the image:The-Gear-icon.png[]
-icon to open field settings and make any changes.
-* Click and hold
-the image:The-Move-icon.png[] icon
-to change the field order.
-
-
+* Click the image:The-Gear-icon.png[25,25] icon to open field settings and make any changes.
+* Click and hold the image:The-Move-icon.png[] icon to change the field order.
 
 [width="100%",cols="50%,50%",]
 |===
-a|
-*The Add Field Window*
+a|*The Add Field Window* a|*Added Fields*
 
-a|
-*Added Fields*
+a|image:Section-Add-Field.png[]
 
-a|
-image:Section-Add-Field.png[]
-
-a|
-
-
-
-
-image:Section-Added-Fields.png[]
+a|image:Section-Added-Fields.png[]
 
 |===

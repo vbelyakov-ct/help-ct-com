@@ -3,19 +3,19 @@
 Here is a list of action types that can be triggered on the button.
 
 Get familiar with
-link:ct-layouts-editor-customize-tabs.html#h3_349797985[the CT Layouts
+xref:ct-layouts-editor-customize-tabs.html#h3_349797985[the CT Layouts
 Editor UI] and the settings in the *Navigation* button.
 
-To learn more about the $Class, $System, and $Tabs contexts, refer to
-the link:context-key-reference.html[CT Layouts contexts] article.
+To learn more about the $Class, $System, and $Tabs contexts, refer to
+the xref:context-key-reference.html[CT Layouts contexts] article.
 
 :toc: :toclevels: 3
 
-[[h2__567919743]]
+[[h2_567919743]]
 === Set Value
 
 This action type is used to automatically set a predefined value for any
-field of the desired link:layout-settings-field-reference.html[Object]
+field of the desired xref:layout-settings-field-reference.html[Object]
 record.
 
 
@@ -53,7 +53,7 @@ Table of value data type and field data type correspondence.
 |Boolean |Checkbox
 |===
 
-[[h2__724984229]]
+[[h2_724984229]]
 === Navigate
 
 This action type is used to navigate the user to another tab. Only one
@@ -67,7 +67,7 @@ image:navigate-Example.png[]
 
 An example of the action type in the JSON format:
 
-[[h2__2094931641]]
+[[h2_2094931641]]
 === Execute
 
 This action type is used to trigger another action defined in the $Tabs
@@ -86,10 +86,10 @@ An example of the action type in the JSON format:
 
 This action type is used to create a record of a certain object.
 
-. Enter the API name of the desired *object* that meets the criteria:
+. Enter the API name of the desired *object* that meets the criteria:
 .. the object is not a custom settings object
 .. the object is not a custom metadata type object
-.. the object has the attribute: isLayoutable = false 
+.. the object has the attribute: isLayoutable = false
 . Enter the API name of *the object record type*. Otherwise, enter
 --Master-- for the Master record type.
 . Activate the *Use Mini Layout* checkbox when the record creation
@@ -121,25 +121,25 @@ conditions for performing the action. The administrator can change these
 actions for the buttons, with the exception of the *Return* button, if
 necessary.
 
-[[h3__682686074]]
+[[h3_682686074]]
 ==== previousTab
 
-[[h3__944368850]]
+[[h3_944368850]]
 ==== nextTab
 
-[[h3__2126648261]]
+[[h3_2126648261]]
 ==== returnToCurrentTab
 
 No other action and no condition are applicable. The button can be
 removed but not changed.
 
-[[h3__1436242094]]
+[[h3_1436242094]]
 ==== start
 
-[[h3__1361958433]]
+[[h3_1361958433]]
 ==== finish
 
-[[h3__1936609852]]
+[[h3_1936609852]]
 ==== cancel
 
 [[h3_179482725]]
