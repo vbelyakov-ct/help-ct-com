@@ -1,0 +1,262 @@
+= CT Layouts Editor: Customize Tabs
+
+The *CT Layouts Editor* opens when the administrator clicks the
+*Builder* button on link:creating-a-layout-settings-record.html[the
+desired Layout Settings record] and is used to set up tabs on the screen
+for the specified object.
+
+
+
+In this article, take a look at the layout editor and the available
+settings for tabs:
+
+All settings in the CT Layouts Editor will be saved in the *Layout
+JSON* field of the current
+link:layout-settings-field-reference.html[Layout Settings] record. Learn
+more in the link:json-specifications-and-examples.html[JSON
+Specifications] article.
+
+To set up sections, refer
+to link:ct-layouts-editor-add-sections-and-fields.html[CT Layouts Editor
+Overview: Sections and Fields].
+
+:toc: :toclevels: 4
+
+[[h2__290649163]]
+=== Tab and Path Modes
+
+The record screen may be presented in the *Tab* or *Path* mode.
+
+[[h3_683376448]]
+==== Tab Mode
+
+The *Tab* mode is suitable for a more advanced presentation of
+information separated and distributed to individual tabs.
+
+* The mobile user navigates through the tabs on the record screen in any
+order to review data and fill in the required information.
+* The administrator cannot customize the color and icon of the tab
+header, set statuses for each tab, or use global tab actions.
+
+[[h3_127289700]]
+==== Path Mode
+
+The *Path* mode is suitable for running scenarios.
+
+* The mobile user sequentially navigates through tabs on the record
+screen and works with the presented records.
+* The administrator can set the color and icon of the tab header, add
+buttons with a set of actions, and set statuses that will change during
+the scenario.
+* The administrator can allow users to switch between tabs outside the
+specified sequence. So, the user can navigate among tabs and return to
+the current one in the scenario by tapping the *Return* button without
+changing the visited tab status.
+
+[[h2_763264000]]
+=== Editor Overview: Tabs
+
+The first step is to select the *Tab* or *Path* mode, specify the
+required number of tabs, and set up general settings for each tab.
+
+[[h3__449942769]]
+==== Main Screen
+
+* In the header, the *Name* of the current object record type is
+displayed, for example, Visit Steps.
+** link:ct-layouts-editor-customize-tabs.html#h3__1068114486[Click
+the *Settings* button] to set the *Tab* or *Path* mode and specify
+additional high-level options for the selected mode.
+** link:ct-layouts-editor-customize-tabs.html#h3_349797985[Click the
+*Navigation* button] to set the actions of the buttons for each tab in
+*Path* mode. 
+** Click *Save* to save the setup.
+*** All settings will be validated. In case of errors, the alert with
+the error will be shown.
+*** All made settings or changes will be saved for the current *Layout
+Settings* record.
+** Click *Cancel* to exit from the Editor without saving the settings.
+* Click the *New Tab* header to display the grid.
+* On the right side:
+
+[width="100%",cols="50%,50%",]
+|===
+|Tab Mode a|
+** Specify the name for the first tab in the *Label* field.
+** Click *Add Step* to add a new tab.
+** Drag-and-drop the tab header to change the tab order.
+** ​Click *Delete Tab* when the required tab is open to remove it.
+
+|Path Mode a|
+** Specify the name for the first tab in the *Label* field.
+** Select the *Status* option.
+** If enabled in the *Settings* button:
+*** link:ct-layouts-editor-add-sections-and-fields.html#h3_1163797110[Set up
+a color scheme] for each tab in the *Color* field.
+*** link:ct-layouts-editor-add-sections-and-fields.html#h3_1150885058[Specify icons
+for each tab] in the *Icons* field.
+** Click *Add Step* to add a new tab.
+** Drag-and-drop the tab header to change the tab order.
+** ​Click *Delete Tab* when the required tab is open to remove it.
+
+|===
+* On the left side:
+** Click
+the image:The-Plus-Button.png[] button
+to add the desired section to the grid.
+
+[width="100%",cols="50%,50%",]
+|===
+|Tab Mode
+|image:Editor-Overview-Tab-Mode.png[]
+
+|Path Mode
+|image:Editor-Overview-Path-Mode.png[]
+|===
+
+[[h3__1068114486]]
+==== The Settings Button
+
+[width="100%",cols="50%,50%",]
+|===
+|Tab Mode a|
+The *Tab* mode is set by default. If needed, click the *Settings* button
+to activate the *Allow close the steps in Progress* checkbox to allow
+mobile users to close the modal window when the step still has *In
+Progress* status.
+
+* Click *Done* to save the setup.
+* Click *Cancel* to return to the Editor page without saving the
+settings if they were edited.
+
+image:Tab-Mode-Type-of-Steps.png[]
+
+|Path Mode a|
+[width="100%",cols="50%,50%",]
+!===
+!
+!image:Path-Mode-Type-of-Steps.png[]
+!===
+
+|===
+
+[[h3_349797985]]
+==== The Navigation Button
+
+Click the *Navigation* button to set up the actions button for *Path*
+mode. By default, such buttons are available:
+
+* *Previous* — go to the previous tab.
+* *Next* — go to the next tab.
+* *Return* — return to the current tab from the displayed tab that the
+mobile user previously opened by tapping its header.
+* *Start* — start the action.
+* *Finish* — finish the action.
+* *Cancel* — cancel the action.
+* *Create Record* —to create a record for a certain object.
+* *Generate CG Cloud tasks* —
+https://help.customertimes.com/articles/ct-mobile-ios-en/managing-visits-to-retail-stores/a/h2__1592083570[generate
+assessment tasks] and visit KPIs.
+[TIP] ==== We recommend adding the condition to hide the button
+if related assessment tasks were already created. This will prevent the
+creation of duplicates. ====
+
+
+
+Click the button for setup, perform customization and then click *Save*
+to apply the settings.
+
+
+
+[[h4_951662406]]
+===== General
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+For each button on the *General* tab:
+
+* The *Name* field is filled out and cannot be changed.
+* The *Label* is set but the administrator can specify another one.
+* The *Icon name* field is predefined but the administrator can specify
+another icon name.
+[TIP] ==== The list of available icons and the icon names are
+available https://www.lightningdesignsystem.com/icons/#utility[here].
+====
+* Specify the *Icon position*:
+** *Leading* (by default) — display the icon on the left side of the
+button.
+** *​Trailing* — display the icon on the right side of the button.
+
+a|
+image:Navigation-Button-General.png[]
+
+|===
+
+[[h4_1406331569]]
+===== Actions
+
+[width="100%",cols="50%,^50%",]
+|===
+a|
+For each button on the *Actions* tab, set the scope of the actions
+triggered when the mobile user taps the button.
+
+* There is a set of predefined actions. Click
+the image:The-Bin-Button.png[]
+icon to delete the action.
+* Click *New action* to add an action.
+[TIP] ==== For more information, refer
+link:json-specifications-and-examples.html#h3__2124187468[to the Click
+Action table] and link:action-type-key-reference.html[Action Type Field
+Reference]. ====
+. Select the action.
+. ​Specify action details.
+* If needed, select the *Confirmation Required* checkbox and add the
+text to display to a mobile user when he taps the button.
+
+|image:Navigation-Button-Actions.png[]
+|===
+
+[[h4__921250684]]
+===== Conditions
+
+[width="100%",cols="50%,^50%",]
+|===
+a|
+Specify conditions to hide or display the selected button.
+
+For more information, refer to the
+link:json-specifications-and-examples.html#h3__1377913479[Action
+Condition] tables.
+
+* If both *Hiding* and *Displaying* conditions are set, the *Hiding*
+condition will be applied.
+[NOTE] ==== When a mobile user jumps to another tab by tapping
+its header (if enabled), only the *Return* button will be available on
+the opened tab. So, a mobile user can browse tabs but cannot violate the
+preconfigured tab navigation. ====
+* The administrator can create a group of conditions using the OR or AND
+operators. In addition, the group may have a child group, and the child
+groups may also include child groups. 
+** To select the operator, click the OR or AND under the condition name.
+** To add a new condition, click
+the image:The-Plus-Button.png[]
+button.
+** ​To add a group, click the *Add Group* button under a condition or
+another group.
+** To remove the condition, click
+the image:The-Bin-Button.png[]
+button.
+** To remove the group, click the *Remove Group* button under a
+condition or another group.
+** ​Click
+the image:The-Validate-Format-button.png[]
+button to disable validation for the format of the input data.
+For example, if you want to specify a non-specific date, click the
+button opposite the calendar field to make it a text field and specify
+in it the API name of the *Date/Time* field type, from where the system
+will get the date.  
+
+|image:Navigation-Button-Conditions.png[]
+|===

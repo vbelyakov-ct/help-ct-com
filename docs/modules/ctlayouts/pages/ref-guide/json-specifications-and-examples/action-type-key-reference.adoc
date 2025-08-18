@@ -1,0 +1,149 @@
+= Action Type Key Reference
+
+Here is a list of action types that can be triggered on the button.
+
+Get familiar with
+link:ct-layouts-editor-customize-tabs.html#h3_349797985[the CT Layouts
+Editor UI] and the settings in the *Navigation* button.
+
+To learn more about the $Class, $System, and $Tabs contexts, refer to
+the link:context-key-reference.html[CT Layouts contexts] article.
+
+:toc: :toclevels: 3
+
+[[h2__567919743]]
+=== Set Value
+
+This action type is used to automatically set a predefined value for any
+field of the desired link:layout-settings-field-reference.html[Object]
+record.
+
+
+
+image:setValue-Example.png[]
+
+
+
+An example of the action type in the JSON format:
+
+
+
+Table of value data type and field data type correspondence.
+
+[width="100%",cols="50%,50%",]
+|===
+|*Value Data Type* |*Field Data Type*
+|String |Lookup Relationship
+| |Master-Detail Relationship
+| |External Lookup Relationship
+| |Email
+| |Picklist
+| |Multi-Select Picklist
+| |Text
+| |Text Area
+| |Text Area (Rich)
+| |Text Area (Long)
+| |URL
+|Date (String in the Date format) |Date
+|DateTime (String in the DateTime format) |Date/Time
+|Geolocation |Geolocation
+|Number |Currency
+| |Number
+| |Percent
+|Boolean |Checkbox
+|===
+
+[[h2__724984229]]
+=== Navigate
+
+This action type is used to navigate the user to another tab. Only one
+action can be performed.
+
+
+
+image:navigate-Example.png[]
+
+
+
+An example of the action type in the JSON format:
+
+[[h2__2094931641]]
+=== Execute
+
+This action type is used to trigger another action defined in the $Tabs
+context. Only one action can be performed.
+
+
+
+image:execute-Example.png[]
+
+
+
+An example of the action type in the JSON format:
+
+[[h2_697936617]]
+=== Create Record
+
+This action type is used to create a record of a certain object.
+
+. Enter the API name of the desired *object* that meets the criteria:
+.. the object is not a custom settings object
+.. the object is not a custom metadata type object
+.. the object has the attribute: isLayoutable = false 
+. Enter the API name of *the object record type*. Otherwise, enter
+--Master-- for the Master record type.
+. Activate the *Use Mini Layout* checkbox when the record creation
+should be performed in the mini layout.
+
+image:createRecord-Example.png[]
+
+
+
+An example of the action type in the JSON format:
+
+[[h2_1562162896]]
+=== Wait Workflow
+
+This action type is used to wait for all CT Mobile workflows triggered
+by previous changes will be finished. No other action should be defined.
+
+image:waitWorkflows-Example.png[]
+
+
+
+An example of the action type in the JSON format:
+
+[[h2_333717541]]
+=== Predefined Actions for Buttons
+
+Here is a list of JSONs with predefined actions for buttons and, if set,
+conditions for performing the action. The administrator can change these
+actions for the buttons, with the exception of the *Return* button, if
+necessary.
+
+[[h3__682686074]]
+==== previousTab
+
+[[h3__944368850]]
+==== nextTab
+
+[[h3__2126648261]]
+==== returnToCurrentTab
+
+No other action and no condition are applicable. The button can be
+removed but not changed.
+
+[[h3__1436242094]]
+==== start
+
+[[h3__1361958433]]
+==== finish
+
+[[h3__1936609852]]
+==== cancel
+
+[[h3_179482725]]
+==== createRecord
+
+[[h3_446628674]]
+==== generateCGCloudTasks

@@ -1,0 +1,84 @@
+= CT Layouts Package Release Notes
+
+Here you find a feature, the link to the corresponding article, and the
+CT Layouts package version since the feature is available.
+
+We recommend that you learn about
+link:ct-layouts-current-limitations.html[the current limitations] when
+using the CT Layouts solution.
+
+:toc: :toclevels: 2
+
+ifdef::hidden[]
+
+[[h2__715887182]]
+=== CT Layouts 2.0
+
+https://jira.customertimes.com/browse/CTLS-57[epic]
+
+[[h2_1370824602]]
+=== CT Layouts Winter '22
+
+Download the package
+https://login.salesforce.com/packaging/installPackage.apexp?p0=04t4G000000kmDLQAY[here].
+
+[[h3_1107256643]]
+==== General Settings
+
+* The link:layout-settings-field-reference.html[Layout Settings] object
+is used to store the screen settings of the selected object's record.
+* link:user-permissions.html#h2_2115044027[The CT Layouts Administrator
+and CT Layouts User permission sets] help you give all the necessary
+permissions to users depending on their role.
+
+[[h3__1253965885]]
+==== CT Layouts Editor
+
+A comprehensive tool with an easy-to-use interface for setting up the
+recording screen.
+
+* link:ct-layouts-editor-customize-tabs.html#h2__290649163[Select the
+mode] to work with data on the record screen.
+* link:ct-layouts-editor-customize-tabs.html#h3__449942769[Add tabs] and
+link:ct-layouts-editor-customize-tabs.html#h3__1068114486[provide basic
+customization], such as specifying color, icon, and available actions on
+the tab.
+* In the *Path* mode,
+link:ct-layouts-editor-customize-tabs.html#h3_349797985[create the visit
+path] using navigation buttons and define actions on each tab.
+** link:ct-layouts-editor-customize-tabs.html#h3__1068114486[Use
+statuses] to separate completed and upcoming tasks.
+** link:ct-layouts-editor-customize-tabs.html#h4__921250684[Specify
+conditions] to show buttons.
+** link:ct-layouts-editor-customize-tabs.html#h4_1406331569[Set up
+global actions] when a mobile user taps the button.
+** For your convenience, the buttons have
+link:action-type-key-reference.html#h2_333717541[predefined actions]
+that you can change during setup.
+* link:ct-layouts-editor-add-sections-and-fields.html#h2_1529323632[Fill
+out tabs with the sections] of the following types:
+** link:ct-layouts-editor-add-sections-and-fields.html#h3__1171954608[Current
+Record]
+** link:ct-layouts-editor-add-sections-and-fields.html#h3__1970634347[Parent
+Record]
+** link:ct-layouts-editor-add-sections-and-fields.html#h3_1996080511[Record
+List]
+* Customize section
+link:ct-layouts-editor-add-sections-and-fields.html#h3_1163797110[color]
+and
+link:ct-layouts-editor-add-sections-and-fields.html#h3_1150885058[add
+icons].
+* link:ct-layouts-editor-add-sections-and-fields.html#h3_1652605430[Add
+fields] to work with them in the CT Mobile app.
+* In the case of the integration with CG Cloud,
+link:ct-layouts-templates.html[use the CG Cloud template].
+
+[[h3__626922086]]
+==== Layout JSON
+
+All screen settings specified in the CT Layouts Editor are validated and
+saved in a JSON format that is stored in the corresponding *Layout
+Settings* record. To learn more about available JSON keys and formats,
+and how the settings in the CT Layouts Editor correspond to JSON keys,
+refer to the link:json-specifications-and-examples.html[JSON
+Specifications and Examples] article.

@@ -1,0 +1,196 @@
+= Context Key Reference
+
+Here are descriptions of how to use variables with a context type to
+perform an action when the mobile user taps a certain button.
+
+To learn more about action types and predefined actions for buttons,
+refer to link:action-type-key-reference.html[Action Type Field
+Reference].
+
+Some actions are applied to the displayed tab. Learn more about
+link:displayed-tabs-on-the-record-screen-examples.html[how to define the
+displayed tab].
+
+:toc: :toclevels: 3
+
+[[h2__723298531]]
+=== Action Type Context
+
+Here is a list of context types that are used for the action key.
+
+
+
+An example of the action type in the JSON format:
+
+[[h3_1755686338]]
+==== $Class
+
+This context type is applied in the case of integration with the CG
+Cloud solution.
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Variable* |*Versions* |*Data Type* |*Description*
+
+|$Class.generateCGCloudTasks |v1 |– a|
+To generate records from the current *Visit* record using the CG Cloud
+features.
+
+[TIP] ==== For more information, go to
+https://help.customertimes.com/articles/ct-mobile-ios-en/cg-cloud[CG
+Cloud]. ====
+
+|===
+
+[[h3_2038133146]]
+==== $System
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Variable* |*Versions* |*Data Type* |*Description*
+
+|$System.recordSync.run |v1 |– |To run
+https://help.customertimes.com/articles/ct-mobile-ios-en/other-synchronization-modes/a/h2__1958232390[the
+quick record synchronization].
+|===
+
+[[h3_230960611]]
+==== $Tabs
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Variable* |*Versions* |*Data Type* |*Description*
+
+|$Tabs.update |v1 |– |Update tabs to display based on the conditions.
+For example, the next tab appearance depends on the entered value in the
+specific field on the current tab.
+
+|$Tabs.close |v1 |– |Close the CT Layouts if all the validations
+are being passed.
+|===
+
+[[h2_561143871]]
+=== Data Type Context
+
+Here is a list of context types that are used for the value key. The
+field key contains the API name of the field to fill out with the value.
+
+
+
+An example of the action type in the JSON format:
+
+[[h3_1611028289]]
+==== $System
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Variable* |*Versions* |*Data Type* |*Description*
+
+|$System.geoCoordinates |v1 |Geolocation |To write the current user
+geolocation in the specified field in the field key.
+
+|$System.date |v1 |Date |To write the current date in the
+specified field in the field key.
+
+|$System.dateTime |v1 |Date/Time |To write the current date and
+time in the specified field in the field key.
+|===
+
+[[h3__1503285923]]
+==== $Tabs
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Variable* |*Versions* |*Data Type* |*Description*
+
+|$Tabs.current.isFirst |v1 |Boolean |Return true if the current tab is
+the first of the displayed tabs.
+
+|$Tabs.current.isLast |v1 |Boolean |Return true if the current tab
+is the last of the displayed tabs.
+
+|$Tabs.first.statusValue |v1 |String |The value
+of statusValue attribute
+link:json-specifications-and-examples.html#h2_1948275861[of the first
+tab of displayed tabs].
+
+|$Tabs.last.statusValue |v1 |String |The value
+of statusValue attribute of the last tab of displayed tabs.
+
+|$Tabs.next.statusValue |v1 |String a|
+The value of statusValue attribute of the next tab of displayed tabs or
+of the current tab if current tab the last shown tab.
+
+
+
+If the displayed tabs are changed (for example, the action
+$Tabs.update has been performed) and the current tab is removed from the
+list of displayed tabs, then define the absolute position of the current
+tab from the list of tabs (JSON.tabs):
+
+* If at least one of the next tabs (in absolute position
+from JSON.tabs ) is displayed then the value of the statusValue
+attribute of the closest one.
+* If none of the next tabs (in absolute position from JSON.tabs )
+are displayed then the value of the statusValue attribute of the last
+displayed tab.
+
+|$Tabs.previous.statusValue |v1 |String a|
+The value of statusValue attribute of the previous tab of displayed tabs
+or of the current tab if current tab the first shown tab.
+
+
+
+If the displayed tabs are changed (for example, the
+action $Tabs.update has been performed) and the current tab is removed
+from the list of displayed tabs, then define the absolute position of
+the current tab from the list of tabs (JSON.tabs):
+
+* If at least one of the previous tabs (in absolute position
+from JSON.tabs ) is displayed then the value of
+the statusValue attribute of the closest one.
+* If none of the previous tabs (in absolute position from JSON.tabs )
+are displayed then the value of the statusValue attribute of the last
+displayed tab.
+
+|$Tabs.current.statusCategory |v1 |String |Return
+link:json-specifications-and-examples.html#h3_1890880071[the status
+group] of the status assigned
+link:json-specifications-and-examples.html#h3_1619757451[to the current
+tab].
+
+|$Tabs.next.statusCategory |v1 |String
+|Return link:json-specifications-and-examples.html#h3_1890880071[the
+status group] of the status
+assigned link:json-specifications-and-examples.html#h3_1619757451[to the
+tab next to the current tab].
+|===
+
+[[h2_1632748308]]
+=== Navigate Type Context
+
+Here is a list of context types that are used for the destination key.
+
+
+
+An example of the action type in the JSON format:
+
+[[h3__1886158830]]
+==== $Tabs
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Variable* |*Versions* |*Data Type* |*Description*
+
+|$Tabs.first |v1 |– |Navigate a mobile user to the first tab of the
+displayed tabs.
+
+|$Tabs.last |v1 |– |Navigate a mobile user to the last tab of the
+displayed tabs.
+
+|$Tabs.next |v1 |– |Navigate a mobile user to the next tab of the
+displayed tabs.
+
+|$Tabs.previous |v1 |– |Navigate a mobile user to the previous tab
+of the displayed tabs.
+|===

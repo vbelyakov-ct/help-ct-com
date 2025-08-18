@@ -1,0 +1,32 @@
+= Displayed Tabs on the Record Screen: Examples
+
+The displayed tabs are determined once:
+
+* the link:json-specifications-and-examples.html#h3_1890880071[Step
+Settings] have been created.
+
+* In the case of the *Path* mode,
+the link:context-key-reference.html#h2__723298531[$Tabs.update] action
+has been performed.
+
+[[h2_683376448]]
+=== Tab Mode
+
+An example of the *Tab* mode tabs in the JSON format:
+
+
+
+An example of the *Tab* mode tabs with the condition in the JSON format:
+
+[[h2_127289700]]
+=== Path Mode
+
+In the *Path* mode, the displayed and the current tab may differ. The
+current tab is the tab that is opened by default or the last tab opened
+using the navigation buttons. The current tab remains the same if the
+user opens another tab by tapping on the tab header.
+
+The list of displayed tabs can be changed when switching from one tab to
+another.
+
+An example of the *Path* mode tabs in the JSON format:

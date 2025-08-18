@@ -1,0 +1,40 @@
+= Creating a Layout Settings record
+
+The first step of customization is to create a *Layout Settings* record
+for the desired object.
+
+
+
+To create a *Layout Settings* record:
+
+. Go to *Layout Settings* and click *New*.
+. Fill out the following fields:
+[TIP] ==== Read the description of each field
+link:layout-settings-field-reference.html[here]. ====
+* Enter *Name* and *Label*
+* Specify the desired *Object API Name* and the required *Record Type*
+* Add *User Profile*
+
+image:Create-Layout-Settings.png[]
+. Click *Save*.
+
+ifdef::hidden[]
+
+The setup is complete. Next, specify layouts in the desired mode:
+
+* link:creating-layouts-for-the-tab-mode.html[Creating Layouts for the
+Tab Mode]
+* link:creating-layouts-for-the-path-mode.html[Creating Layouts for the
+Path Mode]
+
+The setup is complete.
+
+* Next, select the desired *Layout Settings* record and click the
+*Builder* button to open the CT Layouts Editor.
+* In the CT Layouts Editor,
+link:ct-layouts-editor-customize-tabs.html[select the mode of display
+tabs on the record screen and set navigation] if necessary. Next,
+alink:ct-layouts-editor-add-sections-and-fields.html[dd sections] to
+work with the current record or records related to the current record.
+
+image:The-Builder-button.png[]
