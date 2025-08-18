@@ -112,7 +112,38 @@ image::Tab-Mode-Type-of-Steps.png[]
 Path Mode::
 +
 --
-image::Path-Mode-Type-of-Steps.png[]
+[cols="70%,30%",frame="none",grid="none"]
+|===
+a|Click the *Settings* button and select the *Path* type. Every tab in the *Path* mode should have its own status.
+
+* In the *Status* field, select the field of the *Object* specified in the current _Layout Settings_ record that is responsible for the status, for example, [.apiobject]#CTPHARMA\__Type__c#, [.apiobject]#Status__c#.
+* Allocate the values of the selected picklist to the following status groups:
+** *New*
++
+TIP: By default, all values are added to this field.
+** *In Progress*
+** *Completed*
++
+NOTE: The statuses of neighboring tabs can be placed only in the following sequence: *New → In Progress* (several tabs with this status may be specified) *→ Completed*.
+* Under the corresponding status, specify user permission on the tab with this status:
+** *readOnly* — all tabs are read-only
+** *currentTab* — only the current tab can be edited
+** *currentStatus* — only tabs with the current status can be edited
+** *groupStatuses* — only tabs in the same group can be edited
+** *allStatuses* — only tabs in the same status group can be edited
+* If needed:
+** Enable the *Custom Color Scheme* checkbox to set up a color scheme.
+** Enable the *Add icons for steps* checkbox to specify icons for each tab.
+** Allow the ability *to change the displayed tab*.
++
+NOTE: The current tab is the tab that is opened by default or the last tab opened using the navigation buttons. The current tab is not changed if it was opened by tapping on the tab name. So, _the displayed and the current tab may differ_.
+** Activate the *Allow close the steps in Progress* checkbox to allow mobile users to close the modal window when the step still has *In Progress* status.
+
+* Click *Done* to save the setup.
+* Click *Cancel* to return to the Editor page without saving the settings if they were edited.
+
+a| image::Path-Mode-Type-of-Steps.png[]
+|===
 --
 ====
 
@@ -188,7 +219,7 @@ NOTE: Not available for the *Return* button.
 |===
 a|Specify conditions to hide or display the selected button.
 
-For more information, refer to the xref:ref-guide/json-specifications-and-examples/index.adoc#h3_1377913479[Action Condition] tables.
+TIP: For more information, refer to the xref:ref-guide/json-specifications-and-examples/index.adoc#h3_1377913479[Action Condition] tables.
 
 * If both *Hiding* and *Displaying* conditions are set, the *Hiding* condition will be applied.
 +
