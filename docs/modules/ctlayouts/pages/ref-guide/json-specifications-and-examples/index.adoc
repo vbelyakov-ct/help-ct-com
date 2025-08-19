@@ -668,13 +668,7 @@ xref:admin-guide/ct-layouts-editor-customize-tabs.adoc#h4_951662406[On the Gener
 
 |[.apiobject]#confirmationMessage# |String |No a|If set, xref:admin-guide/ct-layouts-editor-customize-tabs.adoc#h4_1406331569[a confirmation message] will be shown when the mobile user taps the button. Available values:
 
-* Any text
-* [.apiobject]#$Label.LabelName# – https://help.salesforce.com/s/articleView?id=sf.cl_about.htm&language=en_US&release=234.6.0&type=5[custom label]
-* [.apiobject]#!Value.Object.FieldName# – value from the specified field.
-+
-NOTE: Currently, not in use.
-
-TIP: A label may be empty. Custom label and object value may be translated if defined.
+include::partial$label-format.adoc[]
 
 |[.apiobject]#showCondition# .2+|<<Action Condition>> .2+|No .2+a| By default, a button is displayed on every tab. To hide a button:
 
@@ -714,13 +708,7 @@ NOTE: When a mobile user jumps to another tab by tapping its header (if enabled)
 
 The default value may be changed. Available custom values:
 
-* Any text
-* [.apiobject]#$Label.LabelName# – https://help.salesforce.com/s/articleView?id=sf.cl_about.htm&language=en_US&release=234.6.0&type=5[custom label]
-* [.apiobject]#!Value.Object.FieldName# – value from the specified field.
-+
-NOTE: Currently, not in use.
-
-TIP: A label may be empty. Custom label and object value may be translated if defined.
+include::partial$label-format.adoc[]
 
 |[.apiobject]#name# |String |Yes a|The button name. Available values:
 
@@ -909,13 +897,7 @@ NOTE: Required when [.apiobject]#"hasCustomIcons": true# <<h3_1857678454,for the
 
 |[.apiobject]#label# |String |Yes a|The label of the tab. Available values:
 
-* Any text
-* [.apiobject]#$Label.LabelName# – https://help.salesforce.com/s/articleView?id=sf.cl_about.htm&language=en_US&release=234.6.0&type=5[custom label]
-* [.apiobject]#!Value.Object.FieldName# – value from the specified field.
-+
-NOTE: Currently, not in use.
-
-TIP: A label may be empty. Custom label and object value may be translated if defined.
+include::partial$label-format.adoc[]
 
 |[.apiobject]#sections# |Array of <<h2_903347826,Sections>> |Yes a|The list of sections on the tab.
 
@@ -971,13 +953,7 @@ The general settings of the selected section.
 
 |[.apiobject]#label# |String |Yes a|The label of the section. Available values:
 
-* Any text
-* [.apiobject]#$Label.LabelName# – https://help.salesforce.com/s/articleView?id=sf.cl_about.htm&language=en_US&release=234.6.0&type=5[custom label]
-* [.apiobject]#!Value.Object.FieldName# – value from the specified field.
-+
-NOTE: Currently, not in use.
-
-TIP: A label may be empty. Custom label and object value may be translated if defined.
+include::partial$label-format.adoc[]
 
 |[.apiobject]#position# |<<h3_1500637436,Section Position>> |Yes |Location of the section on the tab.
 
@@ -1104,13 +1080,7 @@ The data and user permissions xref:admin-guide/ct-layouts-editor-add-sections-an
 
 |[.apiobject]#label# |String |Yes a|By default, the standard field label. To override it use:
 
-* Any text
-* [.apiobject]#$Label.LabelName# – https://help.salesforce.com/s/articleView?id=sf.cl_about.htm&language=en_US&release=234.6.0&type=5[custom label]
-* [.apiobject]#!Value.Object.FieldName# – value from the specified field.
-+
-NOTE: Currently, not in use.
-
-TIP: A label may be empty. Custom label and object value may be translated if defined.
+include::partial$label-format.adoc[]
 
 |[.apiobject]#name# |String |Yes |The API name of the field
 |[.apiobject]#readOnly# |Boolean |Yes |[.apiobject]#true# if the field should be read-only.

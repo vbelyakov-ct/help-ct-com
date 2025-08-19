@@ -1,64 +1,42 @@
 = Layout Settings Field Reference
 
-The *Layout Settings* object is a custom object for storing all the
-basic display settings for the selected object's record screen.
+The *Layout Settings* object is a custom object for storing all the basic display settings for the selected object's record screen.
 
-The record screen display can be configured for an object, object with
-the desired record type, user profile, and their combinations. For
-example, you can configure the display of the _Activity_ object with the
-*Visit* record type for a sales rep's profile.
+TIP: The record screen display can be configured for an object, object with the desired record type, user profile, and their combinations. For example, you can configure the display of the [.object]#Activity# object with the _Visit_ record type for a sales rep's profile.
 
 '''''
 
-API name in Salesforce: ctlayout__LayoutSettings__c
+API name in Salesforce: [.apiobject]#ctlayout\__LayoutSettings__c#
 
 '''''
 
-[width="100%",cols="25%,25%,25%,25%",]
+[width="100%",cols="~,~,~,~",]
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|External Id |ctlayouts__ExternalId__c |Text(255) (External Id)
-(Unique Case Insensetive) |Automatically completion case of mass record
-migration, for example, via Data Loader or integration with ERP system.
+|External Id |[.apiobject]#ctlayouts\__ExternalId__c# |Text(255) (External Id) (Unique Case Insensetive) |Automatically completion case of mass record migration, for example, via Data Loader or integration with ERP system.
 
-|Layout JSON |ctlayouts__Layout__c |Long Text Area(131072)
-|xref:ref-guide/json-specifications-and-examples/index.adoc[A formed JSON file] that
-stores settings specified in the
-xref:admin-guide/ct-layouts-editor-customize-tabs.adoc[CT Layouts Editor] for
-the ctlayouts__Object__c.
+|Layout JSON |[.apiobject]#ctlayouts\__Layout__c# |Long Text Area(131072) |xref:ref-guide/json-specifications-and-examples/index.adoc[A formed JSON file] that stores settings specified in the xref:admin-guide/ct-layouts-editor-customize-tabs.adoc[CT Layouts Editor] for the [.apiobject]#ctlayouts\__Object__c#.
 
-|Layout Settings Label |ctlayouts__Label__c |Text(255) |The
-label is to display in the CT Mobile app. Available values:
+|Layout Settings Label |[.apiobject]#ctlayouts\__Label__c# |Text(255) a|The label is to display in the CT Mobile app. Available values:
 
-|Layout Settings Name |Name |Text(80) |Name for the corresponding
-record.
+include::partial$label-format.adoc[]
 
-|Object API Name |ctlayouts__Object__c |Text(255) |Specify the
-API name of the object to customize its screens.
+|Layout Settings Name |[.apiobject]#Name# |Text(80) |Name for the corresponding record.
 
-|Record Type |ctlayouts__RecordType__c |Text(255) a|
-The record type of ctlayouts__Object__c for which the settings
-will be applied. Available values:
+|Object API Name |[.apiobject]#ctlayouts\__Object__c# |Text(255) |Specify the API name of the object to customize its screens.
 
-* --Master-- is used when there is no custom record types or custom
-record types are not available for the desired user profile
+|Record Type |[.apiobject]#ctlayouts\__RecordType__c# |Text(255) a| The record type of [.apiobject]#ctlayouts\__Object__c# for which the settings will be applied. Available values:
+
+* [.apiobject]#--Master--# is used when there is no custom record types or custom record types are not available for the desired user profile
 * any custom record type name
 
-|Unique Id |ctlayouts__UniqueId__c |Text(255) External Id)
-(Unique Case Insensetive) a|
-Automatically completion by concatenation of values
-from ctlayouts__Object__c,
-ctlayouts__RecordType__c, and ctlayouts__Profile__c.
+|Unique Id |[.apiobject]#ctlayouts\__UniqueId__c# |Text(255) External Id) (Unique Case Insensetive) a| Automatically completion by concatenation of values from [.apiobject]#ctlayouts\__Object__c#, [.apiobject]#ctlayouts\__RecordType__c#, and [.apiobject]#ctlayouts\__Profile__c#.
 
-The value must be unique within the ctlayouts__LayoutSettings__c
-records.
+NOTE: The value must be unique within the [.apiobject]#ctlayouts\__LayoutSettings__c# records.
 
-|User Profile |ctlayouts__Profile__c |Text(255) a|
-The profile name of the user profile.
+|User Profile |[.apiobject]#ctlayouts\__Profile__c# |Text(255) a| The profile name of the user profile.
 
-If you update a profile name, the setting will be disabled. Please do
-not use standard profiles to avoid setting disabling due to the
-translation of the profile name into the user's language.
+NOTE: If you update a profile name, the setting will be disabled. Please do not use standard profiles to avoid setting disabling due to the translation of the profile name into the user's language.
 
 |===

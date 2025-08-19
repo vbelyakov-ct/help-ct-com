@@ -1,32 +1,420 @@
 = CT Layouts Templates
 
-In future CT Layouts releases, pre-configured templates will be
-available for making customization in the CT Layouts Editor.
-[NOTE] ==== In the first release, only the CG Cloud template is
-available. ====
+In future CT Layouts releases, pre-configured templates will be available for making customization in the CT Layouts Editor.
 
-* Each template is a group of tabs and sections that is stored in the
-JSON format.
+NOTE: In the first release, only the CG Cloud template is available.
+
+* Each template is a group of tabs and sections that is stored in the JSON format.
 * Administrators can use the template to create other templates.
 
+Create the _Layout Settings_ record for the standard [.object]#Visit# object and specify the CG Cloud template in the *Layout JSON* field to allow mobile users to work with the CG Cloud objects.
 
-
-Create the *Layout Settings* record for the standard _Visit_ object and
-specify the CG Cloud template in the *Layout JSON* field to allow mobile
-users to work with the CG Cloud objects.
-
-* This template allows mobile users to perform tasks during visits to
-the retail store.
+* This template allows mobile users to perform tasks during visits to the retail store.
 ** Conduct Survey
 ** Inventory Check
 ** Custom Tasks
 ** Order
 ** Planogram Check
 ** Promotion Check
-* You can edit this layout xref:admin-guide/ct-layouts-editor-customize-tabs.adoc[in
-the CT Layouts Editor].
+* You can edit this layout xref:admin-guide/ct-layouts-editor-customize-tabs.adoc[in the CT Layouts Editor].
 
-
-
-.Click to view[%collapsible] ==== *Click to view the CG Cloud
-template* ==== .Click to hide[%collapsible] ==== ====
+.*Click to view the CG Cloud template*
+[%collapsible]
+====
+--
+[source,json]
+----
+[
+  {
+    "label": "Conduct Survey",
+    "showSoqlCondition": "FROM AssessmentTask WHERE ParentId = '{!Visit.Id}' AND TaskType = 'ConductInStoreSurveys'",
+    "statusValue": "In Progress",
+    "sections": [
+      {
+        "label": "Surveys",
+        "position": {
+          "x": 0,
+          "y": 20,
+          "width": 6,
+          "height": 20
+        },
+        "type": "RecordList",
+        "properties": {
+          "object": "SurveySubject",
+          "objectCondition": "WHERE SubjectId = '{!Visit.Id}'",
+          "permission": {
+            "isCreatable": false,
+            "isLocalDeletable": false,
+            "isSyncedDeletable": false
+          },
+          "fields": [
+            {
+              "name": "Name",
+              "readOnly": true,
+              "required": false
+            },
+            {
+              "name": "SurveyInvitation.InvitationLink",
+              "readOnly": true,
+              "required": false
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "label": "Inventory Check",
+    "showSoqlCondition": "FROM RetailVisitKpi WHERE VisitId = '{!Visit.Id}' AND AssessmentTask.TaskType = 'InventoryCheck'",
+    "statusValue": "In Progress",
+    "sections": [
+      {
+        "label": "Inventory Check",
+        "position": {
+          "x": 0,
+          "y": 20,
+          "width": 6,
+          "height": 20
+        },
+        "type": "RecordList",
+        "properties": {
+          "object": "RetailVisitKpi",
+          "objectCondition": "WHERE VisitId = '{!Visit.Id}' AND AssessmentTask.TaskType = 'InventoryCheck'",
+          "permission": {
+            "isCreatable": false,
+            "isLocalDeletable": false,
+            "isSyncedDeletable": false
+          },
+          "fields": [
+            {
+              "name": "AssessmentIndDefinition.Name",
+              "readOnly": true,
+              "required": false
+            },
+            {
+              "name": "InStoreLocationId",
+              "readOnly": false,
+              "required": true
+            },
+            {
+              "name": "ProductId",
+              "readOnly": true,
+              "required": false
+            },
+            {
+              "name": "ProductCategoryId",
+              "readOnly": true,
+              "required": false
+            },
+            {
+              "name": "CTLayouts__TargetValue",
+              "label": "Target Value",
+              "readOnly": true,
+              "required": false
+            },
+            {
+              "name": "CTLayouts__ActualValue",
+              "label": "Actual Value",
+              "readOnly": false,
+              "required": true
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "label": "Custom Tasks",
+    "showSoqlCondition": "FROM RetailVisitKpi WHERE VisitId = '{!Visit.Id}' AND AssessmentTask.TaskType = 'Other'",
+    "statusValue": "In Progress",
+    "sections": [
+      {
+        "label": "Custom Task",
+        "position": {
+          "x": 0,
+          "y": 20,
+          "width": 6,
+          "height": 20
+        },
+        "type": "RecordList",
+        "properties": {
+          "object": "RetailVisitKpi",
+          "objectCondition": "WHERE VisitId = '{!Visit.Id}' AND AssessmentTask.TaskType = 'Other'",
+          "permission": {
+            "isCreatable": false,
+            "isLocalDeletable": false,
+            "isSyncedDeletable": false
+          },
+          "fields": [
+            {
+              "name": "AssessmentIndDefinition.Name",
+              "readOnly": true,
+              "required": false
+            },
+            {
+              "name": "CustomContextId",
+              "readOnly": true,
+              "required": false
+            },
+            {
+              "name": "InStoreLocationId",
+              "readOnly": false,
+              "required": true
+            },
+            {
+              "name": "ProductId",
+              "readOnly": true,
+              "required": false
+            },
+            {
+              "name": "ProductCategoryId",
+              "readOnly": true,
+              "required": false
+            },
+            {
+              "name": "CTLayouts__TargetValue",
+              "label": "Target Value",
+              "readOnly": true,
+              "required": false
+            },
+            {
+              "name": "CTLayouts__ActualValue",
+              "label": "Actual Value",
+              "readOnly": false,
+              "required": true
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "label": "Order",
+    "showSoqlCondition": "FROM RetailVisitKpi WHERE VisitId = '{!Visit.Id}' AND AssessmentTask.TaskType = 'PlaceOrder'",
+    "statusValue": "In Progress",
+    "sections": [
+      {
+        "label": "Order",
+        "position": {
+          "x": 0,
+          "y": 20,
+          "width": 6,
+          "height": 20
+        },
+        "type": "RecordList",
+        "properties": {
+          "object": "ctorders__Order__c",
+          "objectCondition": "WHERE ctorders__AccountId__c = '{!Visit.AccountId}'",
+          "permission": {
+            "isCreatable": false,
+            "isLocalDeletable": false,
+            "isSyncedDeletable": false
+          },
+          "fields": [
+            {
+              "name": "orders__PriceBookId__c",
+              "readOnly": true,
+              "required": false
+            },
+            {
+              "name": "orders__Stage__c",
+              "readOnly": true,
+              "required": false
+            },
+            {
+              "name": "orders__TotalDiscount__c",
+              "readOnly": true,
+              "required": false
+            },
+            {
+              "name": "orders__TotalPrice__c",
+              "readOnly": true,
+              "required": false
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "label": "Planogram Check",
+    "showSoqlCondition": "FROM RetailVisitKpi WHERE VisitId = '{!Visit.Id}' AND AssessmentTask.TaskType = 'PlanogramCheck'",
+    "statusValue": "In Progress",
+    "sections": [
+      {
+        "label": "Planogram Check",
+        "position": {
+          "x": 0,
+          "y": 20,
+          "width": 6,
+          "height": 20
+        },
+        "type": "RecordList",
+        "properties": {
+          "object": "RetailVisitKpi",
+          "objectCondition": "WHERE VisitId = '{!Visit.Id}' AND AssessmentTask.TaskType = 'PlanogramCheck'",
+          "permission": {
+            "isCreatable": false,
+            "isLocalDeletable": false,
+            "isSyncedDeletable": false
+          },
+          "fields": [
+            {
+              "name": "AssessmentIndDefinition.Name",
+              "readOnly": true,
+              "required": false
+            },
+            {
+              "name": "InStoreLocationId",
+              "readOnly": false,
+              "required": true
+            },
+            {
+              "name": "PlanogramId",
+              "readOnly": false,
+              "required": true
+            },
+            {
+              "name": "ProductId",
+              "readOnly": true,
+              "required": false
+            },
+            {
+              "name": "ProductCategoryId",
+              "readOnly": true,
+              "required": false
+            },
+            {
+              "name": "CTLayouts__TargetValue",
+              "label": "Target Value",
+              "readOnly": true,
+              "required": false
+            },
+            {
+              "name": "CTLayouts__ActualValue",
+              "label": "Actual Value",
+              "readOnly": false,
+              "required": true
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "label": "Promotion Check",
+    "showSoqlCondition": "FROM RetailVisitKpi WHERE VisitId = '{!Visit.Id}' AND AssessmentTask.TaskType = 'PromotionCheck'",
+    "statusValue": "In Progress",
+    "sections": [
+      {
+        "label": "Promotion Check",
+        "position": {
+          "x": 0,
+          "y": 20,
+          "width": 6,
+          "height": 20
+        },
+        "type": "RecordList",
+        "properties": {
+          "object": "RetailVisitKpi",
+          "objectCondition": "WHERE VisitId = '{!Visit.Id}' AND AssessmentTask.TaskType = 'PromotionCheck'",
+          "permission": {
+            "isCreatable": false,
+            "isLocalDeletable": false,
+            "isSyncedDeletable": false
+          },
+          "fields": [
+            {
+              "name": "AssessmentIndDefinition.Name",
+              "readOnly": true,
+              "required": false
+            },
+            {
+              "name": "PromotionId",
+              "readOnly": false,
+              "required": true
+            },
+            {
+              "name": "InStoreLocationId",
+              "readOnly": false,
+              "required": true
+            },
+            {
+              "name": "ProductId",
+              "readOnly": true,
+              "required": false
+            },
+            {
+              "name": "ProductCategoryId",
+              "readOnly": true,
+              "required": false
+            },
+            {
+              "name": "CTLayouts__TargetValue",
+              "label": "Target Value",
+              "readOnly": true,
+              "required": false
+            },
+            {
+              "name": "CTLayouts__ActualValue",
+              "label": "Actual Value",
+              "readOnly": false,
+              "required": true
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "label": "Complete Tasks",
+    "showSoqlCondition": "FROM AssessmentTask WHERE ParentId = '{!Visit.Id}' AND TaskType = 'Task'",
+    "statusValue": "In Progress",
+    "sections": [
+      {
+        "label": "Tasks",
+        "position": {
+          "x": 0,
+          "y": 20,
+          "width": 6,
+          "height": 20
+        },
+        "type": "RecordList",
+        "properties": {
+          "object": "Task",
+          "objectCondition": "WHERE WhatId = '{!Visit.Id}'",
+          "permission": {
+            "isCreatable": false,
+            "isLocalDeletable": false,
+            "isSyncedDeletable": false
+          },
+          "fields": [
+            {
+              "name": "ActivityDate",
+              "readOnly": true,
+              "required": false
+            },
+            {
+              "name": "Priority",
+              "readOnly": true,
+              "required": false
+            },
+            {
+              "name": "Subject",
+              "readOnly": true,
+              "required": false
+            },
+            {
+              "name": "Status",
+              "readOnly": false,
+              "required": false
+            }
+          ]
+        }
+      }
+    ]
+  }
+]
+----
+--
+====
