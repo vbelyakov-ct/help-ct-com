@@ -585,7 +585,7 @@ Using the xref:admin-guide/ct-layouts-editor-customize-tabs.adoc#h3_1068114486[S
 |===
 |*Key* |*Type* |*Required* |*Comment*
 
-a|[.apiobject]#globalActions# |An array of xref:ref-guide/json-specifications-and-examples/index.adoc#h2_1835390962[Global Actions] |Yes a|An array of one or more global actions that are specified for one or more navigation buttons.
+a|[.apiobject]#globalActions# |An array of <<h2_1835390962,Global Actions>> |Yes a|An array of one or more global actions that are specified for one or more navigation buttons.
 
 NOTE: Available when the *Path* mode is selected.
 
@@ -599,9 +599,9 @@ NOTE: Available when the *Path* mode is selected.
 
 a|[.apiobject]#isCloseInProgressStepsAllowed# |Boolean |Yes |[.apiobject]#true# if xref:admin-guide/ct-layouts-editor-customize-tabs.adoc#h3_1068114486[the *Allow close the steps in Progress* checkbox is active] to allow mobile users to close CT Layouts tabs in the *In Progress* status.
 
-a|[.apiobject]#stepSettings# |xref:ref-guide/json-specifications-and-examples/index.adoc#h3_1890880071[Step Settings] |No a|[.apiobject]#true# if xref:admin-guide/ct-layouts-editor-customize-tabs.adoc#h3_1068114486[the *Path* mode is set] and the *Status* field is selected.
+a|[.apiobject]#stepSettings# |<<Step Settings>> |No a|[.apiobject]#true# if xref:admin-guide/ct-layouts-editor-customize-tabs.adoc#h3_1068114486[the *Path* mode is set] and the *Status* field is selected.
 
-a|[.apiobject]#tabs# |An array of xref:ref-guide/json-specifications-and-examples/index.adoc#h2_1948275861[Tabs] |Yes a|List of tabs to display on a record screen.
+a|[.apiobject]#tabs# |An array of <<h2_1948275861,Tabs>> |Yes a|List of tabs to display on a record screen.
 
 NOTE: At least one item is required.
 
@@ -620,7 +620,7 @@ Using the *xref:admin-guide/ct-layouts-editor-customize-tabs.adoc#h3_1068114486[
 |===
 |*Key* |*Type* |*Required* |*Comment*
 
-|[.apiobject]#completedTab# |xref:ref-guide/json-specifications-and-examples/index.adoc#h3_1619757451[Path Tab Settings] |Yes |The status field values that are added in the *Completed* group of the tab statuses.
+|[.apiobject]#completedTab# |<<Path Tab Settings>> |Yes |The status field values that are added in the *Completed* group of the tab statuses.
 
 |[.apiobject]#isChangeDisplayedTabAllowed# |Boolean |Yes |[.apiobject]#true# if xref:admin-guide/ct-layouts-editor-customize-tabs.adoc#h3_1068114486[the *Allow change the displayed tab* checkbox is active] to allow mobile users to change the displayed tab.
 
@@ -640,7 +640,7 @@ The administrator specifies user permissions for each tab, status, or group of t
 |===
 |*Key* |*Type* |*Required* |*Comment*
 
-|[.apiobject]#statuses# |An array of String |Yes a|The API names of xref:ref-guide/json-specifications-and-examples/index.adoc#h3_1890880071[stepSettings.statusField] values.
+|[.apiobject]#statuses# |An array of String |Yes a|The API names of <<h3_1890880071,stepSettings.statusField>> values.
 
 NOTE: At least one item is required.
 
@@ -676,14 +676,14 @@ NOTE: Currently, not in use.
 
 TIP: A label may be empty. Custom label and object value may be translated if defined.
 
-|[.apiobject]#showCondition# .2+|xref:ref-guide/json-specifications-and-examples/index.adoc#h3_1377913479[Action Condition] .2+|No .2+a| By default, a button is displayed on every tab. To hide a button:
+|[.apiobject]#showCondition# .2+|<<Action Condition>> .2+|No .2+a| By default, a button is displayed on every tab. To hide a button:
 
 * use the [.apiobject]#displayCondition# to set criteria to display a button on the tab
 * use the [.apiobject]#hideCondition#.
 
 [NOTE]
 ====
-* The values in the [.apiobject]#alwaysDisplayedActions# and [.apiobject]#alwaysHiddenActions# keys of xref:ref-guide/json-specifications-and-examples/index.adoc#h2_1948275861[Tab Settings] have priority over these conditions.
+* The values in the [.apiobject]#alwaysDisplayedActions# and [.apiobject]#alwaysHiddenActions# keys of <<Tab Settings>> have priority over these conditions.
 * Not available for the *Return* button.
 ====
 
@@ -735,7 +735,7 @@ NOTE: Names cannot be changed.
 * *createRecord*
 * *CGCloudTasks*
 
-|[.apiobject]#onClickActions# |An array of xref:ref-guide/json-specifications-and-examples/index.adoc#h3_2124187468[Click Actions] |Yes a| Actions to perform when a mobile user taps the button.
+|[.apiobject]#onClickActions# |An array of <<h3_2124187468,Click Actions>> |Yes a| Actions to perform when a mobile user taps the button.
 
 TIP: For more information, refer to the xref:./action-type-key-reference.adoc[Action Type Field Reference] article.
 
@@ -817,7 +817,7 @@ Conditions can be set at different levels and combined into groups.
 |[.apiobject]#items# |Array |Yes a| Each Item is a:
 
 * Child condition level (parentheses in a logical expression).
-* xref:ref-guide/json-specifications-and-examples/index.adoc#h4_472370536[Field comparison expression].
+* <<h4_472370536,Field comparison expression>>.
 
 NOTE: At least one item is required.
 
@@ -836,7 +836,7 @@ NOTE: The [.apiobject]#value# and [.apiobject]#values# keys are used when the op
 
 |[.apiobject]#field# |String |Yes |The API name of the current object field to check value or xref:./context-key-reference.adoc[perform the specific context].
 
-|[.apiobject]#operator# |Enum |Yes |xref:ref-guide/json-specifications-and-examples/index.adoc#h4_748327130[Available operators] depending on the field data type.
+|[.apiobject]#operator# |Enum |Yes |<<h4_748327130,Available operators>> depending on the field data type.
 
 .3+|[.apiobject]#value# |Boolean .3+|Yes |Target values for fields with the *Boolean* data type.
 
@@ -893,20 +893,19 @@ Settings for each xref:admin-guide/ct-layouts-editor-customize-tabs.adoc#h3_4499
 |===
 |*Key* |*Type* |*Required* |*Comment*
 
-|[.apiobject]#alwaysDisplayedActions# .2+|An array of String .2+|No .2+a| An array of the values for the name key of xref:ref-guide/json-specifications-and-examples/index.adoc#h3_1652615080[the global actions] to always display or hide the specified button on the tab.
+|[.apiobject]#alwaysDisplayedActions# .2+|An array of String .2+|No .2+a| An array of the values for the name key of <<h3_1652615080,the global actions>> to always display or hide the specified button on the tab.
 
-NOTE: These conditions have priority over the values in the [.apiobject]#displayCondition# and [.apiobject]#hideCondition# keys of xref:ref-guide/json-specifications-and-examples/index.adoc#h3_1652615080[Action Keys].
+NOTE: These conditions have priority over the values in the [.apiobject]#displayCondition# and [.apiobject]#hideCondition# keys of <<Action Keys>>.
 
 |[.apiobject]#alwaysHiddenActions#
 
 |[.apiobject]#color# |String |Yes a|The custom color of the tab. The format (case insensitive): HSL(11, 100, 50).
 
-NOTE: Required when "hasCustomColor": true xref:ref-guide/json-specifications-and-examples/index.adoc#h3_1857678454[for the tab].
+NOTE: Required when [.apiobject]#"hasCustomColor": true# <<h3_1857678454,for the tab>>.
 
 |[.apiobject]#icon# |Enum |Yes a|The tab icon from https://www.lightningdesignsystem.com/icons/#utility[the standard Salesforce set].
 
-NOTE: Required when "hasCustomIcons": true
- xref:ref-guide/json-specifications-and-examples/index.adoc#h3_1857678454[for the tab].
+NOTE: Required when [.apiobject]#"hasCustomIcons": true# <<h3_1857678454,for the tab>>.
 
 |[.apiobject]#label# |String |Yes a|The label of the tab. Available values:
 
@@ -918,7 +917,7 @@ NOTE: Currently, not in use.
 
 TIP: A label may be empty. Custom label and object value may be translated if defined.
 
-|[.apiobject]#sections# |Array of xref:ref-guide/json-specifications-and-examples/index.adoc#h2_903347826[Sections] |Yes a|The list of sections on the tab.
+|[.apiobject]#sections# |Array of <<h2_903347826,Sections>> |Yes a|The list of sections on the tab.
 
 NOTE: At least one item is required.
 
@@ -939,9 +938,9 @@ For example:
 "showSoqlCondition": "FROM RetailVisitKpi WHERE VisitId = '{!Visit.Id}' AND AssessmentTaskId.TaskType = 'InventoryCheck'"
 ----
 
-|[.apiobject]#statusValue# |String |Yes a| The API name of xref:ref-guide/json-specifications-and-examples/index.adoc#h3_1890880071[stepSettings.statusField] value.
+|[.apiobject]#statusValue# |String |Yes a| The API name of <<h3_1890880071,stepSettings.statusField>> value.
 
-NOTE: Required when xref:ref-guide/json-specifications-and-examples/index.adoc#h3_1890880071[Step Settings] are defined.
+NOTE: Required when <<h3_1890880071,Step Settings>> are defined.
 
 |===
 
@@ -980,13 +979,13 @@ NOTE: Currently, not in use.
 
 TIP: A label may be empty. Custom label and object value may be translated if defined.
 
-|[.apiobject]#position# |xref:ref-guide/json-specifications-and-examples/index.adoc#h3_1500637436[Section Position] |Yes |Location of the section on the tab.
+|[.apiobject]#position# |<<h3_1500637436,Section Position>> |Yes |Location of the section on the tab.
 
 |[.apiobject]#properties# |Object |Yes a| Properties for each object depend on the value in the type key.
 
-* xref:ref-guide/json-specifications-and-examples/index.adoc#h3_2137120289[Current Record: Properties]
-* xref:ref-guide/json-specifications-and-examples/index.adoc#h3_187296624[Parent Record: Properties]
-* xref:ref-guide/json-specifications-and-examples/index.adoc#h3_674627754[Record List: Properties]
+* <<Current Record: Properties>>
+* <<Parent Record: Properties>>
+* <<Record List: Properties>>
 
 |[.apiobject]#type# |Enum |Yes a| Type of section, which determines records of which object will be presented in it. Available types:
 
@@ -1020,7 +1019,7 @@ Specific properties are available for the xref:admin-guide/ct-layouts-editor-add
 |===
 |*Key* |*Type* |*Required* |*Comment*
 
-|[.apiobject]#fields# |An array of xref:ref-guide/json-specifications-and-examples/index.adoc#h2_1352679225[Fields Settings] |Yes a|Fields to display.
+|[.apiobject]#fields# |An array of <<h2_1352679225,Field Settings>> |Yes a|Fields to display.
 
 NOTE: At least one item is required.
 |===
@@ -1034,7 +1033,7 @@ Specific properties are available for the xref:admin-guide/ct-layouts-editor-add
 |===
 |*Key* |*Type* |*Required* |*Comment*
 
-|[.apiobject]#fields# |An array of xref:ref-guide/json-specifications-and-examples/index.adoc#h2_1352679225[Field Settings] |Yes a|Fields to display.
+|[.apiobject]#fields# |An array of <<h2_1352679225,Field Settings>>|Yes a|Fields to display.
 
 NOTE: At least one item is required.
 |[.apiobject]#parentObject# |String |Yes |The API name of the parent object.
@@ -1050,7 +1049,7 @@ Specific properties are available for the xref:admin-guide/ct-layouts-editor-add
 |===
 |*Key* |*Type* |*Required* |*Comment*
 
-|[.apiobject]#fields# |An array of xref:ref-guide/json-specifications-and-examples/index.adoc#h2_1352679225[Field Settings] |Yes a|Fields to display.
+|[.apiobject]#fields# |An array of <<h2_1352679225,Field Settings>>|Yes a|Fields to display.
 
 NOTE: At least one item is required.
 |[.apiobject]#object# |String |Yes |The API name of any related object that has a filed with the *Lookup* or *Master-Detail* type to the object in the _Layout Settings_ record.
@@ -1065,7 +1064,7 @@ NOTE: At least one item is required.
 ** The number of condition nesting levels cannot exceed three.
 * Fields in the conditions should relate to the *Object* in the _Layout Settings_ record. The maximum nesting of reference levels is 5.
 
-|[.apiobject]#permission# |xref:ref-guide/json-specifications-and-examples/index.adoc#h3_1706694265[Record Permission Settings] |Yes |User permissions to work with fields in the section.
+|[.apiobject]#permission# |<<Record Permission Settings>> |Yes |User permissions to work with fields in the section.
 |===
 
 [[h3_1706694265]]
