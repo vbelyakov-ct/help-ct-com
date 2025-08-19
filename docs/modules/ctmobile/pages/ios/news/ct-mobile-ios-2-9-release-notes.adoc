@@ -3,34 +3,28 @@
 [[h2_487586789]]
 == CT Mobile 2.9
 
-* Support of the [.apiobject]#$User# component for lookup
-filters.
-* Updated outlook of the calendar events with duration of 15 minutes or
-less:
-image:ctmi-short-calendar-events.png[]
+* Support of the [.apiobject]#$User# component for lookup filters.
+* Updated outlook of the calendar events with duration of 15 minutes or less:
+
+image::ctmi-short-calendar-events.png[]
 
 [[h3_1184861485]]
 === CT Orders for CT Mobile 2.9
 
-**
-
-* The product title in the left list is displayed in two lines in the
-order cart:
+* The product title in the left list is displayed in two lines in the order cart:
++
 image:ctmi-product-title-subtitle.png[]
-* https://help.customertimes.com/smart/project-order-module/delivery-management/a/h2_1374863314[Delivery
-Summary] UX improvements:
-** Added row separators and different background color for odd/even
-lines.
-** Input fields are displayed more distinctly as opposed to
-automatically calculated fields.
-** All Number date type fields are aligned by the right side of the
-input field.
-** https://help.customertimes.com/smart/project-ct-layouts-en/layout-settings-field-reference[Customization
-of fields column size].
+* xref:ctorders:admin-guide/managing-ct-orders/delivery-management/index.adoc#h2_1374863314[Delivery Summary] UX improvements:
+** Added row separators and different background color for odd/even lines.
+** Input fields are displayed more distinctly as opposed to automatically calculated fields.
+** All Number date type fields are aligned by the right side of the input field.
+** xref:ctlayouts:ref-guide/layout-settings-field-reference.adoc[Customization of fields column size].
 
-image:/resources/Storage/ct-orders/delivery-summary-ios-2.9.png[/resources/Storage/ct-orders/delivery-summary-ios-2.9]
+image::ctorders:delivery-summary-ios-2.9.png[delivery-summary-ios-2.9]
 
 * *Complete* and *Save draft* buttons are replaced with icons:
-image:/resources/Storage/ct-orders/ctorders-order-cart-ios-2.9-rn.png[/resources/Storage/ct-orders/ctorders-order-cart-ios-2.9-rn]
+
+image::ctorders:ctorders-order-cart-ios-2.9-rn.png[ctorders-order-cart-ios-2.9-rn]
 * Improved readability of blocked quantity fields in the order cart:
-image:/resources/Storage/ct-orders/ctmi-locked-fields.png[/resources/Storage/ct-orders/ctmi-locked-fields]
+
+image::ctorders:ctmi-locked-fields.png[ctmi-locked-fields]

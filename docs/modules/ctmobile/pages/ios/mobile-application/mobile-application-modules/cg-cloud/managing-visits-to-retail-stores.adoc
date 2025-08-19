@@ -22,14 +22,14 @@ Mobile users can work with the _Retail Store_ and _Visit_ records in the same wa
 [[h2_1592083570]]
 == Creating Required Records to Complete Tasks
 
-To work with CG cloud tasks, administrators should prepare the _Visit_ record screen in the CT Mobile app by splitting the _Visit_ record layout into several tabs using CT Layouts. Administrators can use https://help.customertimes.com/articles/ct-layouts-en/ct-layouts-templates[the preconfigured template] or create a new one based on it. For more information about CT Layouts, refer link:to https://help.customertimes.com/articles/ct-layouts-en/about-ct-layouts[CT Layouts Solution].
+To work with CG cloud tasks, administrators should prepare the _Visit_ record screen in the CT Mobile app by splitting the _Visit_ record layout into several tabs using CT Layouts. Administrators can use xref:ctlayouts:ref-guide/ct-layouts-templates.adoc[the preconfigured template] or create a new one based on it. For more information about CT Layouts, refer to xref:ctlayouts:/about-ct-layouts.adoc[CT Layouts Solution].
 
 NOTE: If the CT Layouts is not in use, the mobile user will see the image:Link-Action-Plan-Template.png[] button on the _Visit_ record. Tapping the button triggers the mini-layout to create the _Action Plan_ record. In this case, mobile users cannot work with the CG Cloud tasks, but admins can check that all required records of [.object]#Action Plan#, [.object]#Retail Visit KPIs#, and various [.object]#Tasks# are generated.
 
 The administrator should configure the process of creating an _Action Plan_ record with the *Visit Execution* action plan type based on the selected template. Assessment tasks should be linked to the _Action Plan_ and current _Visit_ records, and the related _Retail Visit KPI_ records should be created for the *Inventory Check*, *Planogaram Check*, *Promotion Check*, and *Other* task types to store the actual values achieved as a result of the retail execution. One of the following should be set up:
 
 * specify a workflow to create the _Action Plan_ and all related records.
-* add a button with the link:https://help.customertimes.com/articles/ct-layouts-en/ct-layouts-editor-customize-tabs/a/h3_349797985[Create Record] action type to create an _Action Plan_ record and add a button with the link:https://help.customertimes.com/articles/ct-layouts-en/context-key-reference[$Class.generateCGCloudTasks] context to generate all required records to the first tab of the _Visit_ record.
+* add a button with the xref:ctlayouts:admin-guide/ct-layouts-editor-customize-tabs.adoc#h3_349797985[Create Record] action type to create an _Action Plan_ record and add a button with the xref:ctlayouts:ref-guide/json-specifications-and-examples/context-key-reference.adoc[$Class.generateCGCloudTasks] context to generate all required records to the first tab of the _Visit_ record.
 
 When configured, mobile users can create a visit:
 
@@ -84,7 +84,7 @@ We recommend learning more about link:https://help.salesforce.com/s/articleView?
 [[h3_85077301]]
 === In-Store Survey
 
-To perform an assessment task with the *In-Store Survey* type, for example, to capture feedback from buyers, the link:https://help.customertimes.com/articles/ct-layouts-en/ct-layouts-editor-add-sections-and-fields/a/h3_1996080511[Record List] section with the _Survey Subject_ records should be added to the tab of the _Visit_ record.
+To perform an assessment task with the *In-Store Survey* type, for example, to capture feedback from buyers, the xref:ctlayouts:admin-guide/ct-layouts-editor-add-sections-and-fields.adoc#h3_1996080511[Record List] section with the _Survey Subject_ records should be added to the tab of the _Visit_ record.
 
 When a mobile user taps an invitation link in the *Invitation Link* field, the survey opens in a pop-up. The *Status* field of the related _Assessment Task_ record has the *Not Started* value that will be changed to *In Progress* and then, when all answers are captured, to *Completed*.
 
@@ -95,7 +95,7 @@ image::Conduct-Survey-(en).png[]
 [[h3_1867622910]]
 === Inventory Check
 
-To perform an assessment task with the *Inventory Check* type, for example, to count inventories of a product category, the link:https://help.customertimes.com/articles/ct-layouts-en/ct-layouts-editor-add-sections-and-fields/a/h3_1996080511[Record List] section with the _Retail Visit KPI_ records and the specific *Target Value* and *Actual Value* fields should be added to the tab of the _Visit_ record.
+To perform an assessment task with the *Inventory Check* type, for example, to count inventories of a product category, the xref:ctlayouts:admin-guide/ct-layouts-editor-add-sections-and-fields.adoc#h3_1996080511[Record List] section with the _Retail Visit KPI_ records and the specific *Target Value* and *Actual Value* fields should be added to the tab of the _Visit_ record.
 
 When a mobile user adds actual values, the *Status* field of the related _Assessment Task_ record has the *Not Started* value that will be changed to *In Progress* and then, when all actual values are specified, to *Completed*.
 
@@ -104,7 +104,7 @@ image::Inventory-Check-Task-(en).png[]
 [[h3_582599340]]
 === Other
 
-To perform an assessment task with the _Other_ type, for example, to perform asset checks for refrigerator displays and shelves, the https://help.customertimes.com/articles/ct-layouts-en/ct-layouts-editor-add-sections-and-fields/a/h3_1996080511[Record List] section with the _Retail Visit KPI_ records and the specific *Target Value* and *Actual Value* fields should be added to the tab of the _Visit_ record.
+To perform an assessment task with the _Other_ type, for example, to perform asset checks for refrigerator displays and shelves, the xref:ctlayouts:admin-guide/ct-layouts-editor-add-sections-and-fields.adoc#h3_1996080511[Record List] section with the _Retail Visit KPI_ records and the specific *Target Value* and *Actual Value* fields should be added to the tab of the _Visit_ record.
 
 When a mobile user adds actual values, the *Status* field of the related _Assessment Task_ record has the *Not Started* value that will be changed to *In Progress* and then, when all actual values are specified, to *Completed*.
 
@@ -114,7 +114,7 @@ When a mobile user adds actual values, the *Status* field of the related _Assess
 To perform an assessment task with the _Planogram Check_ type, for example, to check share of shelf:
 
 . The CT Vision module is activated and the CG Cloud Einstein provider is set up. To activate the CT Vision module, refer to the xref:ctvision:2.8/admin-guide/getting-started/configuring-ct-mobile-for-work-with-ct-vision.adoc[Adding CT Vision to the CT Mobile App] article.
-. The link:https://help.customertimes.com/articles/ct-layouts-en/ct-layouts-editor-add-sections-and-fields/a/h3_1996080511[Record List] section with the image:ct-vision_layouts.png[25,25] button should be added to the tab of the _Visit_ record.
+. The xref:ctlayouts:admin-guide/ct-layouts-editor-add-sections-and-fields.adoc#h3_1996080511[Record List] section with the image:ct-vision_layouts.png[25,25] button should be added to the tab of the _Visit_ record.
 
 When a mobile user taps the image:ct-vision_layouts.png[25,25] button she goes to the CT Vision module screen and sends the desired photos for recognition. The _Visit_ record tab will be minimized.
 
@@ -128,7 +128,7 @@ image::Planogram-Check-(en).png[]
 To perform an assessment task with the _Place Order_ type to capture orders:
 
 . The CT Orders module is configured. To integrate CG Cloud with CT Orders, refer to the xref:ctorders:admin-guide/managing-ct-orders/cg-cloud-support/index.adoc[CG Cloud Support] article.
-. The link:https://help.customertimes.com/articles/ct-layouts-en/ct-layouts-editor-add-sections-and-fields/a/h3_1996080511[Record List] section with the _Order_ records should be added to the tab of the _Visit_ record.
+. The xref:ctlayouts:admin-guide/ct-layouts-editor-add-sections-and-fields.adoc#h3_1996080511[Record List] section with the _Order_ records should be added to the tab of the _Visit_ record.
 
 To create an order, a mobile user taps the *Plus* button, fills out the mini layout, and taps the *Create* button. The *Order Cart* screen is open. The _Visit_ record tab will be minimized.
 
@@ -149,14 +149,14 @@ NOTE: The *Completed* stage is received only xref:ctorders:admin-guide/managing-
 [[h3_696266799]]
 === Promotion Check
 
-To perform an assessment task with the _Promotion Check_ type, for example, to track customer reaction to new promotional offers, the link:https://help.customertimes.com/articles/ct-layouts-en/ct-layouts-editor-add-sections-and-fields/a/h3_1996080511[Record List] section with the _Retail Visit KPI_ records and the specific *Target Value* and *Actual Value* fields should be added to the tab of the _Visit_ record.
+To perform an assessment task with the _Promotion Check_ type, for example, to track customer reaction to new promotional offers, the xref:ctlayouts:admin-guide/ct-layouts-editor-add-sections-and-fields.adoc#h3_1996080511[Record List] section with the _Retail Visit KPI_ records and the specific *Target Value* and *Actual Value* fields should be added to the tab of the _Visit_ record.
 
 When a mobile user adds actual values, the *Status* field of the related _Assessment Task_ record has the *Not Started* value that will be changed to *In Progress* and then, when all actual values are specified, to *Completed*.
 
 [[h3_1516408339]]
 === Task
 
-To perform an assessment task with the _Task_ type, the link:https://help.customertimes.com/articles/ct-layouts-en/ct-layouts-editor-add-sections-and-fields/a/h3_1996080511[Record List] section with the _Task_ records and their *Status* field should be added to the tab of the _Visit_ record.
+To perform an assessment task with the _Task_ type, the xref:ctlayouts:admin-guide/ct-layouts-editor-add-sections-and-fields.adoc#h3_1996080511[Record List] section with the _Task_ records and their *Status* field should be added to the tab of the _Visit_ record.
 
 The *Status* field of the related _Assessment Task_ record depends on the value in the *Status* field of the _Task_ record.
 
