@@ -1,0 +1,102 @@
+= 3 Display Type: Field Transformation
+
+This extension allows transforming fields to an image, barcode, or PDF.
+
+[[h2__496679911]]
+=== Dialog Section Settings Detail
+
+[[h3__2101430728]]
+==== Information 
+
+[width="100%",cols="34%,33%,33%",]
+|===
+|*Field* |*Description* |*Comments*
+
+|Label |Label of the Dialog Section Extension setting. |
+
+|Dialog Section Extension Settings Name |API name of the Dialog Section
+Extension setting. |
+
+|Dialog Section |The label of the Dialog Section setting that the Dialog
+Section extension is related to. |
+
+|Display Type |The display type to define the format of the Dialog
+Section extension. |*Field Transformation* in the example below.
+
+|Height Value | |
+|===
+
+[[h3__458530145]]
+==== Extension Object Attributes
+
+[cols=",,",]
+|===
+|*Field* |*Description* |*Comments*
+
+|Field Layout |The API names of the fields (columns) that must be
+displayed. |
+|===
+
+[[h3__1731979116]]
+==== Field Transformation Settings
+
+The *Image Transformation* functionality that works with Salesforce
+library. The steps are:
+
+. The object has a field with the Text type that contains the name of
+the file.
+. The custom CT Mobile app transforms the field into the Image. 
+* If the image file is not found or the library is unavailable, the CT
+Mobile will show the special icon instead of the image. This icon should
+be stored in the custom CT Mobile app
+
+PDF Transformation also works with SalesForce Library.
+
+[width="100%",cols="34%,33%,33%",]
+|===
+|*Field* |*Description* |*Comments*
+
+|Field Transformation Type |The type of the transformation. a|
+Available values:
+
+* Image
+* Barcode
+* PDF
+
+|Barcode Type a|
+The Barcode type, which will be used to transform the field.
+
+* The following types of barcodes are
+supported: https://en.wikipedia.org/wiki/International_Article_Number[EAN-13], https://en.wikipedia.org/wiki/EAN-8[EAN-8],https://en.wikipedia.org/wiki/Universal_Product_Code#UPC-E[ UPC-E], https://en.wikipedia.org/wiki/Code_39[Code-39], https://en.wikipedia.org/wiki/Code_128[Code-128], https://en.wikipedia.org/wiki/PDF417[PDF417], https://en.wikipedia.org/wiki/QR_code[QR
+Code], https://en.wikipedia.org/wiki/Aztec_Code[Aztec
+Code], https://en.wikipedia.org/wiki/Data_Matrix[Data Matrix].
+* The following types of barcodes can be supported if
+needed: https://en.wikipedia.org/wiki/Code_39#Code_39_mod_43[Code-39 mod
+43], https://en.wikipedia.org/wiki/Code_93[Code-93], https://en.wikipedia.org/wiki/ITF-14[ITF-14], https://en.wikipedia.org/wiki/Interleaved_2_of_5[Interleaved
+2 of 5].
+
+|This field is used if the Barcode should be on the section.
+
+|Pass To PDF |If selected, the Barcode has to have proceeded to PDF.
+|[NOTE] ==== Not in use. ====
+
+|Barcode Transformation Field |When a field must be transformed into a
+barcode. |This field is used when *List View Screen* is selected
+as the *Display Type*.
+
+|Image Transformation Field |When a field must be transformed into an
+image. |This field is used when *List View Screen* is selected
+as the *Display Type*.
+
+|PDF Transformation Field |When a field must be transformed to PDF on
+the layout. |Very specific case.
+|===
+
+[[h2_559000933]]
+=== Dialog Section Extension Settings Example
+
+image:82317987.png[]
+
+
+
+image:82317988.png[]

@@ -1,0 +1,69 @@
+= 1 Display Type: Hierarchy View
+
+[[h2_260112306]]
+=== Dialog Section Extension Settings Detail
+
+[[h3__2101430728]]
+==== Information
+
+[width="100%",cols="34%,33%,33%",]
+|===
+|*Field* |*Description* |*Comments*
+
+|Label |Label of the Dialog Section Extension setting. |
+
+|Dialog Section Extension Settings Name |API name of the Dialog Section
+Extension setting. |
+
+|Dialog Section |The label of the Dialog Section setting that the Dialog
+Section extension is related to. |
+
+|Display Type |The display type to define the format of the Dialog
+Section extension. |*Hierarchy View* in the example below.  
+|===
+
+[[h3__757279859]]
+==== Extension Object Settings
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*Description* |*Comments* |*Comments*
+
+|Extension Object |API name of the object to display in *the hierarchy
+view*.  | |
+
+|Lookup from Extension to Current Object |The API name of the field with
+the *Lookup* type is to associate the current object and the *Extension
+Object*. | |
+|===
+
+[[h3__458530145]]
+==== Extension Object Attributes
+
+[NOTE] ==== Permissions cannot overcome the User Profile
+settings. Restrictions can become only tougher.  ====
+
+[width="100%",cols="34%,33%,33%",]
+|===
+|*Field* |*Description* |*Comments*
+
+|Field Layout |The API names of the fields (columns) that must be
+displayed. |Comma-separated, without blank spaces.
+
+|Required Attribute |If selected, the field (a column) is required.
+|Comma-separated, without blank spaces, in the same order as in
+the *Fields Layout* field.
+
+|Read Only Attribute |If selected, the field (a column) is read-only.
+|Comma-separated, without blank spaces, in the same order as in
+the *Fields Layout* field.
+
+|Column Width | |
+
+|Group By Field API Name | |
+|===
+
+[[h2_559000933]]
+=== Dialog Section Extension Settings Example
+
+image:82317976.png[]

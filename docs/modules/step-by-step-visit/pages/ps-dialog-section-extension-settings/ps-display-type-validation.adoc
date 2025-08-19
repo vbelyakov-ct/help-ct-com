@@ -1,0 +1,121 @@
+= 6 Display Type: Validation
+
+[[h2__496679911]]
+=== Dialog Section Settings Detail
+
+[[h3__2101430728]]
+==== Information
+
+[width="100%",cols="34%,33%,33%",]
+|===
+|*Field* |*Description* |*Comments*
+
+|Label |Label of the Dialog Section Extension setting. |
+
+|Dialog Section Extension Settings Name |API name of the Dialog Section
+Extension setting. |
+
+|Dialog Section |The label of the Dialog Section setting that the Dialog
+Section extension is related to. |
+
+|Display Type |The display type to define the format of the Dialog
+Section extension. |*Validation* in the example below.
+|===
+
+[[h3__757279859]]
+==== Extension Object Settings
+
+[[h3__458530145]]
+==== Extension Object Attributes
+
+[cols=",,",]
+|===
+|*Field* |*Description* |*Comments*
+
+|Record Condition |The condition, which is checked by validation. |The
+condition is set when *Validation* is specified as *Display Format*.
+|===
+
+[[h3_11951697]]
+==== Extension Permissions
+
+[[h3_163172503]]
+==== Helper Screen Settings
+
+Use these settings to navigate to other objects when the condition
+should be checked for other objects rather than the Extention Object.
+
+
+
+[width="100%",cols="34%,33%,33%",]
+|===
+|*Field* |*Description* |*Comments*
+
+|Parent Object |The parent object for the current object. |
+
+|Related Object a|
+Consider the following:
+
+* If the *Parent Object* field is empty, define an object that is
+related to the current one.
+* If the *Parent Object* is specified, define an object that is related
+to the parent one.
+
+|
+
+|Object to Search |The object that we can reach from the current object
+|
+
+|Lookup from Current to Parent Object |The API name of the field with
+the *Lookup* type to relate parent and current objects. |
+
+|Lookup from Related to Parent Object |The API name of the field with
+the *Lookup* type to relate parent and related objects. |
+
+|Lookup From Extension to Search Object |The API name of the field
+with the *Lookup* type to relate current object and *Object to
+Search*. |That field duplicates the *Lookup from Extension to Query
+Object* field of the *Extension Object Settings* record. It is better to
+fill in both fields.
+|===
+
+[[h3_2076452535]]
+==== Validation
+
+[width="99%",cols="20%,16%,16%,16%,16%,16%",]
+|===
+|*Field* |*Description* |*Comments* |*Field* |*Description* |*Comments*
+
+|Validation Type |The type of validation that defines if the work of
+snippet is blocked or not. a|
+Available values: 
+
+* Block Next Step
+* Block Action
+* Alert User Without Block
+
+| | |
+
+|Validation Error Field |The field to display the error. | | |
+|
+
+|Error Location |The picklist to define where the error message will
+be displayed. |[NOTE] ==== Currently not working. The error is
+displayed as a pop-up alert. ==== | | |
+
+|Error Label |The error message. |The custom label can be used in
+multilanguage projects. | | |
+|===
+
+[[h2_559000933]]
+=== Dialog Section Extension Settings Example
+
+image:82317998.png[]
+
+
+
+image:82317999.png[]
+
+
+
+image:82318001.png[]

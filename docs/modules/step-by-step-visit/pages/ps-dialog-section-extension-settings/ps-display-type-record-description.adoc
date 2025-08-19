@@ -1,0 +1,103 @@
+= 4 Display Type: Record Description
+
+[[h2__496679911]]
+=== Dialog Section Settings Detail
+
+[[h3__2101430728]]
+==== Information
+
+[width="100%",cols="34%,33%,33%",]
+|===
+|*Field* |*Description* |*Comments*
+
+|Label |Label of the Dialog Section Extension setting. |
+
+|Dialog Section Extension Settings Name |API name of the Dialog Section
+Extension setting. |
+
+|Dialog Section |The label of the Dialog Section setting that the Dialog
+Section extension is related to. |
+
+|Display Type |The display type to define the format of the Dialog
+Section extension. |*Record Description* in the example below.
+
+|Height Value | |
+|===
+
+[[h3__458530145]]
+==== Extension Object Attributes
+
+These fields are used for record description when *Record Description*
+is set as *Display Format*.
+
+
+
+[cols=",,",]
+|===
+|*Field* |*Description* |*Comments*
+
+|Field Layout |The API names of the fields (columns) that must be
+displayed. |Comma-separated, without blank spaces. The number of fields
+is unlimited.
+|===
+
+[[h3_163172503]]
+==== Helper Screen Settings
+
+It defines the object to display (the navigation between the objects).
+The start point for navigation is the current object to which the dialog
+section is related. 
+
+
+
+[width="100%",cols="34%,33%,33%",]
+|===
+|*Field* |*Description* |*Comments*
+
+|Parent Object |The parent object for the current object. |
+
+|Related Object a|
+Consider the following:
+
+* If the *Parent Object* field is empty, define an object that is
+related to the current one.
+* If the *Parent Object* is specified, define an object that is related
+to the parent one.
+
+|
+
+|Object to Search |The object that we can reach from the current object
+|
+
+|Lookup from Current to Parent Object |The API name of the field with
+the *Lookup* type to relate parent and current objects. |
+
+|Lookup from Related to Parent Object |The API name of the field with
+the *Lookup* type to relate parent and related objects. |
+
+|Lookup From Extension to Search Object |The API name of the field
+with the *Lookup* type to relate current object and *Object to
+Search*. |That field duplicates the *Lookup from Extension to Query
+Object* field of the *Extension Object Settings* record. It is better to
+fill in both fields.
+|===
+
+[[h3__864474385]]
+==== Record Description
+
+[width="100%",cols="34%,33%,33%",]
+|===
+|*Field* |*Description* |*Comments*
+
+|Record Description Field |The field where the Extension will be
+displayed. |
+|===
+
+[[h2__1133284461]]
+=== Display Section Extension Settings Example
+
+image:82317983.png[]
+
+
+
+image:82317985.png[]
