@@ -64,7 +64,7 @@ TIP: For more information, go to xref:ctmobile:ios/mobile-application/mobile-app
 [[h2_561143871]]
 == Data Type Context
 
-Here is a list of context types that are used for the value key. The field key contains the API name of the field to fill out with the value.
+Here is a list of context types that are used for the [.apiobject]#value# key. The [.apiobject]#field# key contains the API name of the field to fill out with the value.
 
 An example of the action type in the JSON format:
 
@@ -84,11 +84,11 @@ An example of the action type in the JSON format:
 |===
 |*Variable* |*Versions* |*Data Type* |*Description*
 
-|[.apiobject]#$System.geoCoordinates# |v1 |Geolocation |To write the current user geolocation in the specified field in the field key.
+|[.apiobject]#$System.geoCoordinates# |v1 |Geolocation |To write the current user geolocation in the specified field in the [.apiobject]#field# key.
 
-|[.apiobject]#$System.date# |v1 |Date |To write the current date in the specified field in the field key.
+|[.apiobject]#$System.date# |v1 |Date |To write the current date in the specified field in the [.apiobject]#field# key.
 
-|[.apiobject]#$System.dateTime# |v1 |Date/Time |To write the current date and time in the specified field in the field key.
+|[.apiobject]#$System.dateTime# |v1 |Date/Time |To write the current date and time in the specified field in the [.apiobject]#field# key.
 |===
 
 [[h3_1503285923]]
