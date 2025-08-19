@@ -2,31 +2,128 @@
 
 The displayed tabs are determined once:
 
-* the xref:json-specifications-and-examples.html#h3_1890880071[Step
-Settings] have been created.
-
-* In the case of the *Path* mode,
-the xref:context-key-reference.html#h2_723298531[$Tabs.update] action
-has been performed.
+* the xref:ref-guide/json-specifications-and-examples/index.adoc#h3_1890880071[Step Settings] have been created.
+* In the case of the *Path* mode, the xref:./context-key-reference.adoc#h2_723298531[$Tabs.update] action has been performed.
 
 [[h2_683376448]]
-=== Tab Mode
+== Tab Mode
 
 An example of the *Tab* mode tabs in the JSON format:
 
-
+[source,json]
+----
+{
+    "version": 1,
+    "tabs": [
+        {
+            "label": "General",
+            "sections": []
+        },
+        {
+            "label": "Participants",
+            "sections": []
+        },
+        {
+            "label": "Expenses",
+            "sections": []
+        },
+        {
+            "label": "Application",
+            "sections": []
+        },
+        {
+            "label": "Final",
+            "sections": []
+        }
+    ]
+}
+----
 
 An example of the *Tab* mode tabs with the condition in the JSON format:
 
+[source,json]
+----
+{
+    "version": 1,
+    "tabs": [
+        {
+            "label": "General",
+            "sections": []
+        },
+        {
+            "label": "Participants",
+            "sections": []
+        },
+        {
+            "label": "Hided tab",
+            "showSoqlCondition": "FROM RetailVisitKpi WHERE VisitId = '{!Visit.Id}' AND AssessmentTaskId.TaskType = 'Wrong Type'",
+            "sections": []
+        },
+        {
+            "label": "Expenses",
+            "showSoqlCondition": "FROM RetailVisitKpi WHERE VisitId = '{!Visit.Id}' AND AssessmentTaskId.TaskType = 'Expenses'",
+            "sections": []
+        },
+        {
+            "label": "Application",
+            "sections": []
+        },
+        {
+            "label": "Final",
+            "sections": []
+        }
+    ]
+}
+----
+
 [[h2_127289700]]
-=== Path Mode
+== Path Mode
 
-In the *Path* mode, the displayed and the current tab may differ. The
-current tab is the tab that is opened by default or the last tab opened
-using the navigation buttons. The current tab remains the same if the
-user opens another tab by tapping on the tab header.
-
-The list of displayed tabs can be changed when switching from one tab to
-another.
+[NOTE]
+====
+* In the *Path* mode, the displayed and the current tab may differ. The current tab is the tab that is opened by default or the last tab opened using the navigation buttons. The current tab remains the same if the user opens another tab by tapping on the tab header.
+* The list of displayed tabs can be changed when switching from one tab to another.
+====
 
 An example of the *Path* mode tabs in the JSON format:
+
+[source,json]
+----
+{
+    "version": 1,
+    "controlledBy": {
+        "statusField": "Status__c",
+        "newStatuses": [],
+        "completedStatuses": [
+            "Completed"
+        ]
+    },
+    "tabs": [
+        {
+            "label": "General",
+            "statusValue": "New",
+            "sections": []
+        },
+        {
+            "label": "Participants",
+            "statusValue": "In Progress",
+            "sections": []
+        },
+        {
+            "label": "Expenses",
+            "statusValue": "In Progress",
+            "sections": []
+        },
+        {
+            "label": "Application",
+            "statusValue": "In Progress",
+            "sections": []
+        },
+        {
+            "label": "Final",
+            "statusValue": "Completed",
+            "sections": []
+        }
+    ]
+}
+----

@@ -1,149 +1,342 @@
 = Action Type Key Reference
+:toc:
 
 Here is a list of action types that can be triggered on the button.
 
-Get familiar with
-xref:ct-layouts-editor-customize-tabs.html#h3_349797985[the CT Layouts
-Editor UI] and the settings in the *Navigation* button.
-
-To learn more about the $Class, $System, and $Tabs contexts, refer to
-the xref:context-key-reference.html[CT Layouts contexts] article.
-
-:toc: :toclevels: 3
+[TIP]
+====
+* Get familiar with xref:admin-guide/ct-layouts-editor-customize-tabs.adoc#h3_349797985[the CT Layouts Editor UI] and the settings in the *Navigation* button.
+* To learn more about the [.apiobject]#$Class#, [.apiobject]#$System#, and [.apiobject]#$Tabs# contexts, refer to the xref:./context-key-reference.adoc[CT Layouts contexts] article.
+====
 
 [[h2_567919743]]
-=== Set Value
+== Set Value
 
-This action type is used to automatically set a predefined value for any
-field of the desired xref:layout-settings-field-reference.html[Object]
-record.
+This action type is used to automatically set a predefined value for any field of the desired xref:ref-guide/layout-settings-field-reference.adoc[Object] record.
 
-
-
-image:setValue-Example.png[]
-
-
+image::setValue-Example.png[]
 
 An example of the action type in the JSON format:
+
+[source,json]
+----
+"onClickActions": [
+    {
+        "type": "setValue",
+        "field": "Status",
+        "value": "$Tabs.next.statusValue"
+    }
+]
+----
 
 
 
 Table of value data type and field data type correspondence.
 
-[width="100%",cols="50%,50%",]
+[cols="~,~"]
 |===
 |*Value Data Type* |*Field Data Type*
-|String |Lookup Relationship
-| |Master-Detail Relationship
-| |External Lookup Relationship
-| |Email
-| |Picklist
-| |Multi-Select Picklist
-| |Text
-| |Text Area
-| |Text Area (Rich)
-| |Text Area (Long)
-| |URL
+
+.11+|String |Lookup Relationship
+|Master-Detail Relationship
+|External Lookup Relationship
+|Email
+|Picklist
+|Multi-Select Picklist
+|Text
+|Text Area
+|Text Area (Rich)
+|Text Area (Long)
+|URL
 |Date (String in the Date format) |Date
 |DateTime (String in the DateTime format) |Date/Time
 |Geolocation |Geolocation
-|Number |Currency
-| |Number
-| |Percent
+.3+|Number |Currency
+|Number
+|Percent
 |Boolean |Checkbox
 |===
 
 [[h2_724984229]]
-=== Navigate
+== Navigate
 
-This action type is used to navigate the user to another tab. Only one
-action can be performed.
+This action type is used to navigate the user to another tab. Only one action can be performed.
 
-
-
-image:navigate-Example.png[]
-
-
+image::navigate-Example.png[]
 
 An example of the action type in the JSON format:
+
+[source,json]
+----
+"onClickActions": [
+      {
+        "type": "navigate",
+        "destination": "$Tabs.next"
+       }]
+----
 
 [[h2_2094931641]]
-=== Execute
+== Execute
 
-This action type is used to trigger another action defined in the $Tabs
-context. Only one action can be performed.
+This action type is used to trigger another action defined in the [.apiobject]#$Tabs# context. Only one action can be performed.
 
-
-
-image:execute-Example.png[]
-
-
+image::execute-Example.png[]
 
 An example of the action type in the JSON format:
 
+[source,json]
+----
+"onClickActions": [
+      {
+        "type": "execute",
+        "action": "$Tabs.update"
+       }]
+----
+
 [[h2_697936617]]
-=== Create Record
+== Create Record
 
 This action type is used to create a record of a certain object.
 
 . Enter the API name of the desired *object* that meets the criteria:
 .. the object is not a custom settings object
 .. the object is not a custom metadata type object
-.. the object has the attribute: isLayoutable = false
-. Enter the API name of *the object record type*. Otherwise, enter
---Master-- for the Master record type.
-. Activate the *Use Mini Layout* checkbox when the record creation
-should be performed in the mini layout.
+.. the object has the attribute: [.apiobject]#isLayoutable = false#
+. Enter the API name of *the object record type*. Otherwise, enter [.apiobject]#--Master--# for the _Master_ record type.
+. Activate the *Use Mini Layout* checkbox when the record creation should be performed in the mini layout.
 
-image:createRecord-Example.png[]
-
-
+image::createRecord-Example.png[]
 
 An example of the action type in the JSON format:
+
+[source,json]
+----
+{
+    "onClickActions": [
+        {
+            "type": "createRecord",
+            "object": "Account",
+            "recordType": "farm",
+            "useMinilayout": true
+        }
+    ]
+}
+----
 
 [[h2_1562162896]]
-=== Wait Workflow
+== Wait Workflow
 
-This action type is used to wait for all CT Mobile workflows triggered
-by previous changes will be finished. No other action should be defined.
+This action type is used to wait for all CT Mobile workflows triggered by previous changes will be finished. No other action should be defined.
 
-image:waitWorkflows-Example.png[]
-
-
+image::waitWorkflows-Example.png[]
 
 An example of the action type in the JSON format:
 
-[[h2_333717541]]
-=== Predefined Actions for Buttons
+[source,json]
+----
+"onClickActions": [
+      {
+        "type": "waitWorkflows"
+      }]
+----
 
-Here is a list of JSONs with predefined actions for buttons and, if set,
-conditions for performing the action. The administrator can change these
-actions for the buttons, with the exception of the *Return* button, if
-necessary.
+[[h2_333717541]]
+== Predefined Actions for Buttons
+
+Here is a list of JSONs with predefined actions for buttons and, if set, conditions for performing the action. The administrator can change these actions for the buttons, with the exception of the *Return* button, if necessary.
 
 [[h3_682686074]]
-==== previousTab
+=== previousTab
+
+[source,json]
+----
+{
+    "name": "previousTab",
+    "label": "$Label.ctlayouts__PreviousStepButton",
+    "icon": "chevronleft",
+    "iconPosition": "leading",
+    "onClickActions": [
+        {
+            "type": "navigate",
+            "destination": "$Tabs.previous"
+        }
+    ],
+    "hideCondition": {
+        "operator": "AND",
+        "items": [
+            {
+                "field": "$Tabs.current.isFirst",
+                "operator": "equal",
+                "value": true
+            }
+        ]
+    }
+}
+----
 
 [[h3_944368850]]
-==== nextTab
+=== nextTab
+
+[source,json]
+----
+{
+    "name": "nextTab",
+    "label": "$Label.ctlayouts__NextStepButton",
+    "icon": "chevronright",
+    "iconPosition": "trailing",
+    "onClickActions": [
+        {
+            "type": "setValue",
+            "field": "Status",
+            "value": "$Tabs.next.statusValue"
+        },
+        {
+            "type": "navigate",
+            "destination": "$Tabs.next"
+        }
+    ],
+    "hideCondition": {
+        "operator": "AND",
+        "items": [
+            {
+                "field": "$Tabs.current.isLast",
+                "operator": "equal",
+                "value": true
+            }
+        ]
+    }
+}
+----
 
 [[h3_2126648261]]
-==== returnToCurrentTab
+=== returnToCurrentTab
 
-No other action and no condition are applicable. The button can be
-removed but not changed.
+NOTE: No other action and no condition are applicable. The button can be removed but not changed.
+
+[source,json]
+----
+{
+    "name": "returnToCurrentTab",
+    "label": "$Label.ctlayouts__ReturnStepButton"
+    "onClickActions": []
+}
+----
 
 [[h3_1436242094]]
-==== start
+=== start
+
+[source,json]
+----
+{
+    "name": "start",
+    "label": "$Label.ctlayouts__StartButton",   //need to be defined
+    "onClickActions": [
+        {
+            "type": "setValue",
+            "field": "Status",
+            "value": "$Tabs.next.statusValue"
+        },
+        {
+            "type": "navigate",
+            "destination": "$Tabs.next"
+        }
+    ],
+    "showCondition": {
+        "operator": "AND",
+        "items": [
+            {
+                "field": "$Tabs.next.statusCategory",   //need to be defined in the contexts
+                "operator": "equal",
+                "value": inProgressTab
+            },
+            {
+                "field": "$Tabs.current.statusCategory",
+                "operator": "equal",
+                "value": newTab
+            }
+        ]
+    }
+}
+----
 
 [[h3_1361958433]]
-==== finish
+=== finish
+
+[source,json]
+----
+{
+    "name": "finish",
+    "label": "$Label.ctlayouts__FinaliseButton",    //need to be defined
+    "onClickActions": [
+        {
+            "type": "execute",
+            "action": "$Tabs.close" //need to be defined in the contexts
+        }
+    ],
+    "showCondition": {
+        "operator": "AND",
+        "items": [
+            {
+                "field": "$Tabs.current.statusCategory",    //need to be defined in the contexts
+                "operator": "equal",
+                "value": completedTab
+            }
+        ]
+    }
+}
+----
 
 [[h3_1936609852]]
-==== cancel
+=== cancel
+
+[source,json]
+----
+{
+    "name": "cancel",
+    "label": "$Label.ctlayouts__CancelButton",  //need to be defined
+    "onClickActions": [
+        {
+            "type": "execute",
+            "action": "$Tabs.close" //need to be defined in the contexts
+        }
+    ],
+    "showCondition": {
+        "operator": "AND",
+        "items": [
+            {
+                "field": "$Tabs.current.statusCategory",    //need to be defined in the contexts
+                "operator": "equal",
+                "value": newTab
+            }
+        ]
+    }
+}
+----
 
 [[h3_179482725]]
-==== createRecord
+=== createRecord
+
+[source,json]
+----
+{
+    "name": "createRecord",
+    "label": "Create"
+}
+----
 
 [[h3_446628674]]
-==== generateCGCloudTasks
+=== generateCGCloudTasks
+
+[source,json]
+----
+{
+    "name": "CGCloudTasks",
+    "label": "Generate CGCloud task",
+    "onClickActions": [
+        {
+        "type": "execute",
+        "action": "$Class.generateCGCloudTasks"
+        }
+    ]
+}
+----

@@ -1,157 +1,650 @@
 = JSON Specifications and Examples
+:toc:
 
-When creating a xref:layout-settings-field-reference.html[Layout
-Settings] record, the administrator leaves the *Layout JSON* field blank
-or fills it with the preconfigured JSON.
+When creating a xref:ref-guide/layout-settings-field-reference.adoc[Layout Settings] record, the administrator leaves the *Layout JSON* field blank  or fills it with the preconfigured JSON.
 
-* The JSON contains all settings for displayed tabs, sections, and
-fields within the record screen in the CT Mobile app.
-* The *Layout JSON* field will be automatically populated with the
-generated JSON after the administrator specifies
-xref:ct-layouts-editor-customize-tabs.html[tab] and
-xref:ct-layouts-editor-add-sections-and-fields.html[section] settings in
-the CT Layouts Editor.
-* The *Layout JSON* field is automatically updated after the
-administrator makes and saves changes for tabs and sections in the CT
-Layouts Editor.
+* The JSON contains all settings for displayed tabs, sections, and fields within the record screen in the CT Mobile app.
+* The *Layout JSON* field will be automatically populated with the generated JSON after the administrator specifies xref:admin-guide/ct-layouts-editor-customize-tabs.adoc[tab] and xref:admin-guide/ct-layouts-editor-add-sections-and-fields.adoc[section] settings in the CT Layouts Editor.
+* The *Layout JSON* field is automatically updated after the administrator makes and saves changes for tabs and sections in the CT Layouts Editor.
 * Before saving, the settings in the JSON format will be validated.
 
-
-
-Click to expand the JSON example for the *Tab* mode
-
-.Click to hide[%collapsible] ==== ====
-
-Click to expand the JSON example of the *Path* mode
-
-.Click to hide[%collapsible] ====
-
-
-
+.Click to expand the JSON example for the *Tab* mode
+[%collapsible]
+====
+--
+[source,json]
+----
+{
+    "version": 1,
+    "isCloseInProgressStepsAllowed": true,
+    "tabs": [
+        {
+            "label": "Visit Detail",
+            "sections": [
+                {
+                    "label": "Visit",
+                    "color": "hsl(11, 100, 50)",
+                    "position": {
+                        "x": 0,
+                        "y": 0,
+                        "width": 6,
+                        "height": 20
+                    },
+                    "type": "Record",
+                    "properties": {
+                        "fields": [
+                            {
+                                "name": "AccountId__c",
+                                "readOnly": true,
+                                "required": false
+                            },
+                            {
+                                "name": "ContactId__c",
+                                "readOnly": true,
+                                "required": false
+                            },
+                            {
+                                "name": "Status__c",
+                                "readOnly": true,
+                                "required": false
+                            },
+                            {
+                                "name": "StartDate__c",
+                                "label": "Planned Start",
+                                "readOnly": true,
+                                "required": false
+                            }
+                        ]
+                    }
+                },
+                {
+                    "label": "$Label.CustomerTitle",
+                    "color": "hsl(11, 100, 50)",
+                    "position": {
+                        "x": 0,
+                        "y": 20,
+                        "width": 6,
+                        "height": 20
+                    },
+                    "type": "ParentRecord",
+                    "properties": {
+                        "parentObject": "Contact",
+                        "parentReference": "ContactId__c",
+                        "fields": [
+                            {
+                                "name": "LastName",
+                                "readOnly": true,
+                                "required": false
+                            },
+                            {
+                                "name": "FirstName",
+                                "readOnly": true,
+                                "required": false
+                            },
+                            {
+                                "name": "Title",
+                                "readOnly": false,
+                                "required": true
+                            },
+                            {
+                                "name": "Email",
+                                "readOnly": false,
+                                "required": false
+                            },
+                            {
+                                "name": "MobilePhone",
+                                "readOnly": false,
+                                "required": false
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "label": "$Label.CustomerTitle",
+            "sections": [
+                {
+                    "label": "KPI Report",
+                    "color": "hsl(11, 100, 50)",
+                    "position": {
+                        "x": 0,
+                        "y": 20,
+                        "width": 6,
+                        "height": 20
+                    },
+                    "type": "RecordList",
+                    "properties": {
+                        "object": "ActivityData__c",
+                        "objectCondition": "WHERE ActivityId__c = '{!Activity__c.ID}' AND RecordType.DeveloperName = 'KPI'",
+                        "permission": {
+                            "isCreatable": true,
+                            "isLocalDeletable": true,
+                            "isSyncedDeletable": false
+                        },
+                        "fields": [
+                            {
+                                "name": "KpiId__c",
+                                "readOnly": true,
+                                "required": false
+                            },
+                            {
+                                "name": "Target__c",
+                                "readOnly": true,
+                                "required": false
+                            },
+                            {
+                                "name": "Result__c",
+                                "readOnly": false,
+                                "required": true
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}
+----
+--
 ====
 
 
+.Click to expand the JSON example of the *Path* mode
+[%collapsible]
+====
+--
+[source,json]
+----
+{
+    "version": 1,
+    "isCloseInProgressStepsAllowed": false,
+    "stepSettings": {
+        "statusField": "Status",
+        "isChangeDisplayedTabAllowed": true,
+        "newTab": {
+            "statuses": [
+                "New"
+            ],
+            "updatable": "currentTab"
+        },
+        "inProgressTab": {
+            "statuses": [
+                "In Progress"
+            ],
+            "updatable": "currentStatus"
+        },
+        "completedTab": {
+            "statuses": [
+                "Completed",
+                "Canceled"
+            ],
+            "updatable": "readOnly"
+        }
+    },
+    "globalActions": [
+        {
+            "name": "previousTab",
+            "label": "Previous",
+            "icon": "chevronleft",
+            "iconPosition": "leading",
+            "onClickActions": [
+                {
+                    "type": "navigate",
+                    "destination": "$Tabs.previous"
+                }
+            ]
+        },
+        {
+            "name": "nextTab",
+            "label": "Next",
+            "icon": "chevronright",
+            "iconPosition": "trailing",
+            "onClickActions": [
+                {
+                    "type": "setValue",
+                    "field": "Status",
+                    "value": "$Tabs.next.statusValue"
+                },
+                {
+                    "type": "navigate",
+                    "destination": "$Tabs.next"
+                }
+            ],
+            "hideCondition": {
+                "operator": "AND",
+                "items": [
+                    {
+                        "field": "Status",
+                        "operator": "in",
+                        "values": [
+                            "New",
+                            "In Progress"
+                        ]
+                    },
+                    {
+                        "field": "$Tabs.current.isLast",
+                        "operator": "equal",
+                        "value": true
+                    }
+                ]
+            }
+        },
+        {
+            "name": "start",
+            "label": "Start visit",
+            "icon": "chevronright",
+            "iconPosition": "trailing",
+            "confirmationMessage": "Are you shure?",
+            "onClickActions": [
+                {
+                    "type": "execute",
+                    "action": "$Class.generateCGCloudTasks"
+                },
+                {
+                    "type": "setValue",
+                    "field": "ActualStartGeolocation__c",
+                    "value": "$System.GeoCoordinates"
+                },
+                {
+                    "type": "setValue",
+                    "field": "ActualVisitStartTime",
+                    "value": "$System.DateTime"
+                },
+                {
+                    "type": "setValue",
+                    "field": "Status",
+                    "value": "In Progress"
+                },
+                {
+                    "type": "waitWorkflows"
+                },
+                {
+                    "type": "execute",
+                    "action": "$Tabs.update"
+                },
+                {
+                    "type": "navigate",
+                    "destination": "$Tabs.next"
+                }
+            ],
+            "showCondition": {
+                "operator": "AND",
+                "items": [
+                    {
+                        "field": "Status",
+                        "operator": "equal",
+                        "value": "New"
+                    },
+                    {
+                        "field": "$Tabs.current.isLast",
+                        "operator": "equal",
+                        "value": true
+                    }
+                ]
+            }
+        },
+        {
+            "name": "finish",
+            "label": "Finish visit",
+            "onClickActions": [
+                {
+                    "type": "setValue",
+                    "field": "ActualEndGeolocation__c",
+                    "value": "$System.GeoCoordinates"
+                },
+                {
+                    "type": "setValue",
+                    "field": "ActualVisitEndTime",
+                    "value": "$System.DateTime"
+                },
+                {
+                    "type": "setValue",
+                    "field": "Status",
+                    "value": "Completed"
+                },
+                {
+                    "type": "navigate",
+                    "destination": "$Tabs.next"
+                }
+            ],
+            "showCondition": {
+                "operator": "AND",
+                "items": [
+                    {
+                        "field": "Status",
+                        "operator": "equal",
+                        "value": "In Progress"
+                    },
+                    {
+                        "field": "$Tabs.current.isLast",
+                        "operator": "equal",
+                        "value": true
+                    }
+                ]
+            }
+        },
+        {
+            "name": "cancel",
+            "label": "Cancel visit",
+            "onClickActions": [
+                {
+                    "type": "setValue",
+                    "field": "ActualCancelGeolocation__c",
+                    "value": "$System.GeoCoordinates"
+                },
+                {
+                    "type": "setValue",
+                    "field": "ActualVisitCancelTime__c",
+                    "value": "$System.DateTime"
+                },
+                {
+                    "type": "setValue",
+                    "field": "Status",
+                    "value": "Canceled"
+                }
+            ],
+            "hideCondition": {
+                "operator": "AND",
+                "items": [
+                    {
+                        "field": "Status",
+                        "operator": "in",
+                        "values": [
+                            "Completed",
+                            "Canceled"
+                        ]
+                    }
+                ]
+            }
+        }
+    ],
+    "tabs": [
+        {
+            "label": "Retail Store",
+            "statusValue": "New",
+            "alwaysDisplayedActions": [
+                "nextTab"
+            ],
+            "alwaysHiddenActions": [
+                "cancel"
+            ],
+            "sections": [
+                {
+                    "label": "Visit",
+                    "position": {
+                        "x": 0,
+                        "y": 0,
+                        "width": 6,
+                        "height": 20
+                    },
+                    "type": "ParentRecord",
+                    "properties": {
+                        "parentObject": "Account",
+                        "parentReference": "PlaceId",
+                        "fields": [
+                            {
+                                "name": "AccountId",
+                                "readOnly": true,
+                                "required": false
+                            },
+                            {
+                                "name": "Address",
+                                "readOnly": true,
+                                "required": false
+                            },
+                            {
+                                "name": "DeliveryMethod",
+                                "readOnly": true,
+                                "required": false
+                            },
+                            {
+                                "name": "Description",
+                                "readOnly": false,
+                                "required": false
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "label": "Visit Detail",
+            "statusValue": "New",
+            "sections": [
+                {
+                    "label": "Visit",
+                    "position": {
+                        "x": 0,
+                        "y": 0,
+                        "width": 6,
+                        "height": 20
+                    },
+                    "type": "Record",
+                    "properties": {
+                        "fields": [
+                            {
+                                "name": "AccountId",
+                                "readOnly": true,
+                                "required": false
+                            },
+                            {
+                                "name": "PlaceId",
+                                "readOnly": true,
+                                "required": false
+                            },
+                            {
+                                "name": "PlannedVisitStartTime",
+                                "label": "Planned Start",
+                                "readOnly": true,
+                                "required": false
+                            },
+                            {
+                                "name": "Status",
+                                "readOnly": true,
+                                "required": false
+                            },
+                            {
+                                "name": "StatusRemarks",
+                                "readOnly": false,
+                                "required": false
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "label": "Inventory Check",
+            "showSoqlCondition": "FROM RetailVisitKpi WHERE VisitId = '{!Visit.Id}' AND AssessmentTaskId.TaskType = 'InventoryCheck'",
+            "statusValue": "In Progress",
+            "sections": [
+                {
+                    "label": "Inventory Check",
+                    "position": {
+                        "x": 0,
+                        "y": 20,
+                        "width": 6,
+                        "height": 20
+                    },
+                    "type": "RecordList",
+                    "properties": {
+                        "object": "RetailVisitKpi",
+                        "objectCondition": "WHERE VisitId = '{!Visit.Id}' AND AssessmentTaskId.TaskType = 'InventoryCheck'",
+                        "permission": {
+                            "isCreatable": false,
+                            "isLocalDeletable": false,
+                            "isSyncedDeletable": false
+                        },
+                        "fields": [
+                            {
+                                "name": "ProductCategoryId",
+                                "readOnly": true,
+                                "required": false
+                            },
+                            {
+                                "name": "ProductId",
+                                "readOnly": true,
+                                "required": false
+                            },
+                            {
+                                "name": "Type",
+                                "readOnly": true,
+                                "required": false
+                            },
+                            {
+                                "name": "UnitOfMeasure",
+                                "readOnly": true,
+                                "required": false
+                            },
+                            {
+                                "name": "CTLayouts__TargetValue",
+                                "label": "Target Value",
+                                "readOnly": true,
+                                "required": false
+                            },
+                            {
+                                "name": "CTLayouts__ActualValue",
+                                "label": "Actual Value",
+                                "readOnly": false,
+                                "required": true
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "label": "Promotion Check",
+            "showSoqlCondition": "FROM RetailVisitKpi WHERE VisitId = '{!Visit.Id}' AND AssessmentTaskId.TaskType = 'PromotionCheck'",
+            "statusValue": "In Progress",
+            "sections": [
+                {
+                    "label": "Promotion Check",
+                    "position": {
+                        "x": 0,
+                        "y": 20,
+                        "width": 6,
+                        "height": 20
+                    },
+                    "type": "RecordList",
+                    "properties": {
+                        "object": "RetailVisitKpi",
+                        "objectCondition": "WHERE VisitId = '{!Visit.Id}' AND AssessmentTaskId.TaskType = 'PromotionCheck'",
+                        "permission": {
+                            "isCreatable": false,
+                            "isLocalDeletable": false,
+                            "isSyncedDeletable": false
+                        },
+                        "fields": [
+                            {
+                                "name": "PromotionId",
+                                "readOnly": true,
+                                "required": false
+                            },
+                            {
+                                "name": "UnitOfMeasure",
+                                "readOnly": true,
+                                "required": false
+                            },
+                            {
+                                "name": "CTLayouts__TargetValue",
+                                "label": "Target Value",
+                                "readOnly": true,
+                                "required": false
+                            },
+                            {
+                                "name": "CTLayouts__ActualValue",
+                                "label": "Actual Value",
+                                "readOnly": false,
+                                "required": true
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}
+
+----
+--
+====
 
 In this article, we describe allowed JSON keys and values.
 
-:toc: :toclevels: 3
-
 [[h2_864423552]]
-=== The Global Setup for Displaying Tab or Path Mode
+== The Global Setup for Displaying Tab or Path Mode
 
 [[h3_1857678454]]
-==== Keys
+=== Keys
 
-Using the
-xref:ct-layouts-editor-customize-tabs.html#h3_1068114486[Settings] and
-xref:ct-layouts-editor-customize-tabs.html#h3_349797985[Navigation]
-buttons, the administrator defines high-level settings, such as
-displayed tab mode and allowed tab customization.
+Using the xref:admin-guide/ct-layouts-editor-customize-tabs.adoc#h3_1068114486[Settings] and xref:admin-guide/ct-layouts-editor-customize-tabs.adoc#h3_349797985[Navigation] buttons, the administrator defines high-level settings, such as displayed tab mode and allowed tab customization.
 
-
-
-[width="100%",cols="25%,25%,25%,25%",options="header",]
+[width="100%",cols="~,~,~,~"]
 |===
 |*Key* |*Type* |*Required* |*Comment*
-|globalActions |An array of
-xref:json-specifications-and-examples.html#h2_1835390962[Global
-Actions] |Yes |An array of one or more global actions that are specified
-for one or more navigation buttons.
 
-|hasCustomColors |Boolean |No |true
-if xref:ct-layouts-editor-customize-tabs.html#h3_1068114486[the *Custom
-Color Scheme* checkbox is active] to set up a color scheme.
+a|[.apiobject]#globalActions# |An array of xref:ref-guide/json-specifications-and-examples/index.adoc#h2_1835390962[Global Actions] |Yes a|An array of one or more global actions that are specified for one or more navigation buttons.
 
-|hasCustomIcons |Boolean |No |true
-if xref:ct-layouts-editor-customize-tabs.html#h3_633900184[the *Add
-icons for steps* checkbox is active] to specify icons
-from https://www.lightningdesignsystem.com/icons/#utility[the standard
-Salesforce set] for each tab.
+NOTE: Available when the *Path* mode is selected.
 
-|isCloseInProgressStepsAllowed |Boolean |Yes |true
-if xref:ct-layouts-editor-customize-tabs.html#h3_1068114486[the *Allow
-close the steps in Progress* checkbox is active] to allow mobile users
-to close CT Layouts tabs in the *In Progress* status.
+a|[.apiobject]#hasCustomColors# |Boolean |No a|[.apiobject]#true# if xref:admin-guide/ct-layouts-editor-customize-tabs.adoc#h3_1068114486[the *Custom Color Scheme* checkbox is active] to set up a color scheme.
 
-|stepSettings
-|xref:json-specifications-and-examples.html#h3_1890880071[Step Settings]
-|No |true if
-xref:ct-layouts-editor-customize-tabs.html#h3_1068114486[the *Path*
-mode is set] and the *Status* field is selected.
+NOTE: Available when the *Path* mode is selected.
 
-|tabs |An array of
-xref:json-specifications-and-examples.html#h2_1948275861[Tabs] |Yes
-|List of tabs to display on a record screen.
+a|[.apiobject]#hasCustomIcons# |Boolean |No a|[.apiobject]#true# if xref:admin-guide/ct-layouts-editor-customize-tabs.adoc#h3_1068114486[the *Add icons for steps* checkbox is active] to specify icons from https://www.lightningdesignsystem.com/icons/#utility[the standard Salesforce set] for each tab.
 
-|version |Number |Yes a|
-The JSON version. Allowed values:
+NOTE: Available when the *Path* mode is selected.
+
+a|[.apiobject]#isCloseInProgressStepsAllowed# |Boolean |Yes |[.apiobject]#true# if xref:admin-guide/ct-layouts-editor-customize-tabs.adoc#h3_1068114486[the *Allow close the steps in Progress* checkbox is active] to allow mobile users to close CT Layouts tabs in the *In Progress* status.
+
+a|[.apiobject]#stepSettings# |xref:ref-guide/json-specifications-and-examples/index.adoc#h3_1890880071[Step Settings] |No a|[.apiobject]#true# if xref:admin-guide/ct-layouts-editor-customize-tabs.adoc#h3_1068114486[the *Path* mode is set] and the *Status* field is selected.
+
+a|[.apiobject]#tabs# |An array of xref:ref-guide/json-specifications-and-examples/index.adoc#h2_1948275861[Tabs] |Yes a|List of tabs to display on a record screen.
+
+NOTE: At least one item is required.
+
+a|[.apiobject]#version# |Number |Yes a| The JSON version. Allowed values:
 
 * 1
 
 |===
 
-
-
-Go back to xref:json-specifications-and-examples.html#TOC[the table of
-content].
-
 [[h3_1890880071]]
-==== Step Settings
+=== Step Settings
 
-Using the
-*xref:ct-layouts-editor-customize-tabs.html#h3_1068114486[Settings]*
-button, the administrator distributes the status filed values of
-xref:layout-settings-field-reference.html[the selected object] in gropus
-according to the tab status in the *Path* mode.
+Using the *xref:admin-guide/ct-layouts-editor-customize-tabs.adoc#h3_1068114486[Settings]* button, the administrator distributes the status filed values of xref:ref-guide/layout-settings-field-reference.adoc[the selected object] in groups according to the tab status in the *Path* mode.
 
-
-
-[width="100%",cols="25%,25%,25%,25%",options="header",]
+[width="100%",cols="~,~,~,~"]
 |===
 |*Key* |*Type* |*Required* |*Comment*
-|completedTab
-|xref:json-specifications-and-examples.html#h3_1619757451[Path Tab
-Settings] |Yes |The status field values that are added in
-the *Completed* group of the tab statuses.
 
-|isChangeDisplayedTabAllowed |Boolean |Yes |true if
-xref:ct-layouts-editor-customize-tabs.html#h3_1068114486[the *Allow
-change the displayed tab* checkbox is active] to allow mobile users to
-change the displayed tab.
+|[.apiobject]#completedTab# |xref:ref-guide/json-specifications-and-examples/index.adoc#h3_1619757451[Path Tab Settings] |Yes |The status field values that are added in the *Completed* group of the tab statuses.
 
-|inProgressTab |Path Tab Settings |Yes |The status field values that are
-added in the *In Progress* group of the tab statuses.
+|[.apiobject]#isChangeDisplayedTabAllowed# |Boolean |Yes |[.apiobject]#true# if xref:admin-guide/ct-layouts-editor-customize-tabs.adoc#h3_1068114486[the *Allow change the displayed tab* checkbox is active] to allow mobile users to change the displayed tab.
 
-|newTab |Path Tab Settings |Yes |The status field values that are added
-in the *New* group of the tab statuses.
+|[.apiobject]#inProgressTab# |Path Tab Settings |Yes |The status field values that are added in the *In Progress* group of the tab statuses.
 
-|statusField |String |Yes |The API name of the *Status* field of the
-selected object.
+|[.apiobject]#newTab# |Path Tab Settings |Yes |The status field values that are added in the *New* group of the tab statuses.
+
+|[.apiobject]#statusField# |String |Yes |The API name of the *Status* field of the selected object.
 |===
-
-
-
-Go back to xref:json-specifications-and-examples.html#TOC[the table of
-content].
 
 [[h3_1619757451]]
-==== Path Tab Settings
+=== Path Tab Settings
 
-The administrator specifies user permissions for each tab, status, or
-group of tab statuses.
+The administrator specifies user permissions for each tab, status, or group of tab statuses.
 
-
-
-[width="100%",cols="25%,25%,25%,25%",options="header",]
+[width="100%",cols="~,~,~,~"]
 |===
 |*Key* |*Type* |*Required* |*Comment*
-|statuses |An array of String |Yes |The API names
-of xref:json-specifications-and-examples.html#h3_1890880071[stepSettings.statusField]
-values.
 
-|updatable |Enum |Yes a|
-xref:ct-layouts-editor-customize-tabs.html#h3_1068114486[User
-permission on the tab] for the *Path* mode. Available values:
+|[.apiobject]#statuses# |An array of String |Yes a|The API names of xref:ref-guide/json-specifications-and-examples/index.adoc#h3_1890880071[stepSettings.statusField] values.
+
+NOTE: At least one item is required.
+
+|[.apiobject]#updatable# |Enum |Yes a| xref:admin-guide/ct-layouts-editor-customize-tabs.adoc#h3_1068114486[User permission on the tab] for the *Path* mode. Available values:
 
 * *readOnly*
 * *currentTab*
@@ -161,94 +654,77 @@ permission on the tab] for the *Path* mode. Available values:
 
 |===
 
-
-
-Go back to xref:json-specifications-and-examples.html#TOC[the table of
-content].
-
 [[h2_1835390962]]
-=== Global Actions for Buttons in the Path Mode
+== Global Actions for Buttons in the Path Mode
 
 [[h3_1652615080]]
-==== Action Keys
+=== Action Keys
 
-xref:ct-layouts-editor-customize-tabs.html#h4_951662406[On the General
-tab of the Navigation button], the administrator sets high-level
-settings for the selected navigation button, such as
-xref:ct-layouts-editor-customize-tabs.html#h4_921250684[conditions for
-displaying the button] on the tab,
-xref:ct-layouts-editor-customize-tabs.html#h4_1406331569[actions] when a
-mobile user taps the button, and if there are several actions, the
-sequence of these actions.
+xref:admin-guide/ct-layouts-editor-customize-tabs.adoc#h4_951662406[On the General tab of the Navigation button], the administrator sets high-level settings for the selected navigation button, such as xref:admin-guide/ct-layouts-editor-customize-tabs.adoc#h4_921250684[conditions for displaying the button] on the tab, xref:admin-guide/ct-layouts-editor-customize-tabs.adoc#h4_1406331569[actions] when a mobile user taps the button, and if there are several actions, the sequence of these actions.
 
-
-
-[width="100%",cols="25%,25%,25%,25%",options="header",]
+[width="100%",cols="~,~,~,~"]
 |===
 |*Key* |*Type* |*Required* |*Comment*
-|confirmationMessage |String |No |If
-set, xref:ct-layouts-editor-customize-tabs.html#h4_1406331569[a
-confirmation message] will be shown when the mobile user taps the
-button. Available values:
 
-|showCondition
-|xref:json-specifications-and-examples.html#h3_1377913479[Action
-Condition] |No a|
-By default, a button is displayed on every tab. To hide a button:
+|[.apiobject]#confirmationMessage# |String |No a|If set, xref:admin-guide/ct-layouts-editor-customize-tabs.adoc#h4_1406331569[a confirmation message] will be shown when the mobile user taps the button. Available values:
 
-* use the displayCondition to set criteria to display a button on the
-tab
-* use the hideCondition.
+* Any text
+* [.apiobject]#$Label.LabelName# – https://help.salesforce.com/s/articleView?id=sf.cl_about.htm&language=en_US&release=234.6.0&type=5[custom label]
+* [.apiobject]#!Value.Object.FieldName# – value from the specified field.
++
+NOTE: Currently, not in use.
 
-The values in the alwaysDisplayedActions and alwaysHiddenActions keys of
-xref:json-specifications-and-examples.html#h2_1948275861[Tab Settings]
-have priority over these conditions.
+TIP: A label may be empty. Custom label and object value may be translated if defined.
 
-|hideCondition | | |
+|[.apiobject]#showCondition# .2+|xref:ref-guide/json-specifications-and-examples/index.adoc#h3_1377913479[Action Condition] .2+|No .2+a| By default, a button is displayed on every tab. To hide a button:
 
-|icon |Enum |No a|
-Icon name from https://www.lightningdesignsystem.com/icons/#utility[the
-standard Salesforce set] to display the selected icon on the button. The
-list of default values:
+* use the [.apiobject]#displayCondition# to set criteria to display a button on the tab
+* use the [.apiobject]#hideCondition#.
+
+[NOTE]
+====
+* The values in the [.apiobject]#alwaysDisplayedActions# and [.apiobject]#alwaysHiddenActions# keys of xref:ref-guide/json-specifications-and-examples/index.adoc#h2_1948275861[Tab Settings] have priority over these conditions.
+* Not available for the *Return* button.
+====
+
+|[.apiobject]#hideCondition#
+
+|[.apiobject]#icon# |Enum |No a| Icon name from https://www.lightningdesignsystem.com/icons/#utility[the standard Salesforce set] to display the selected icon on the button. The list of default values:
 
 * *chevronleft*
 * *chevronright*
 
-|iconPosition |Enum |No a|
-Icon position on the button. Available positions:
+|[.apiobject]#iconPosition# |Enum |No a| Icon position on the button. Available positions:
 
-* *Leading* (by default) — display the icon on the left side of the
-button.
+* *Leading* (by default) — display the icon on the left side of the button.
 * *Trailing* — display the icon on the right side of the button.
 
-|label |String |Yes a|
-Any button label to show it in the CT Mobile app. The list of default
-values:
+|[.apiobject]#label# |String |Yes a| Any button label to show it in the CT Mobile app. The list of default values:
 
 * *Previous* — go to the previous tab.
-* *Next *— go to the next tab.
-* *Return* — return to the current tab from the displayed tab that the
-mobile user previously opened by tapping its header.
-[NOTE] ==== When a mobile user jumps to another tab by tapping
-its header (if enabled), only the *Return* button will be available on
-the opened tab. So, a mobile user can browse tabs but cannot violate the
-preconfigured tab navigation. ====
+* *Next* — go to the next tab.
+* *Return* — return to the current tab from the displayed tab that the mobile user previously opened by tapping its header.
++
+NOTE: When a mobile user jumps to another tab by tapping its header (if enabled), only the *Return* button will be available on the opened tab. So, a mobile user can browse tabs but cannot violate the preconfigured tab navigation.
 * *Start* — start the action.
 * *Finish* — finish the action.
-* *Cancel *— cancel the action.
+* *Cancel* — cancel the action.
 * *Create Record* — to create a record for a certain object.
-* *Generate CG Cloud
-tasks* — https://help.customertimes.com/articles/ct-mobile-ios-en/managing-visits-to-retail-stores/a/h2_1592083570[generate
-assessment tasks] and visit KPIs.
-
-
+* *Generate CG Cloud tasks* — xref:ctmobile:ios/mobile-application/mobile-application-modules/cg-cloud/managing-visits-to-retail-stores.adoc#h2_1592083570[generate assessment tasks] and visit KPIs.
 
 The default value may be changed. Available custom values:
 
-|name |String |Yes a|
-The button name. Available values:
+* Any text
+* [.apiobject]#$Label.LabelName# – https://help.salesforce.com/s/articleView?id=sf.cl_about.htm&language=en_US&release=234.6.0&type=5[custom label]
+* [.apiobject]#!Value.Object.FieldName# – value from the specified field.
++
+NOTE: Currently, not in use.
 
-Names cannot be changed.
+TIP: A label may be empty. Custom label and object value may be translated if defined.
+
+|[.apiobject]#name# |String |Yes a|The button name. Available values:
+
+NOTE: Names cannot be changed.
 
 * *previousTab*
 * *nextTab*
@@ -259,63 +735,46 @@ Names cannot be changed.
 * *createRecord*
 * *CGCloudTasks*
 
-|onClickActions |An array of
-xref:json-specifications-and-examples.html#h3_2124187468[Click Actions]
-|Yes a|
-Actions to perform when a mobile user taps the button.
+|[.apiobject]#onClickActions# |An array of xref:ref-guide/json-specifications-and-examples/index.adoc#h3_2124187468[Click Actions] |Yes a| Actions to perform when a mobile user taps the button.
 
-[TIP] ==== For more information, refer to the
-xref:action-type-key-reference.html[Action Type Field Reference]
-article. ====
+TIP: For more information, refer to the xref:./action-type-key-reference.adoc[Action Type Field Reference] article.
+
+NOTE: At least one item is required.
 
 |===
-
-
-
-Go back to xref:json-specifications-and-examples.html#TOC[the table of
-content].
 
 [[h3_2124187468]]
-==== Click Action Keys
+=== Click Action Keys
 
-xref:ct-layouts-editor-customize-tabs.html#h4_1406331569[On the Actions
-tab of the Navigation button], the administrator specifies action that
-triggered by a mobolie user's tap on the button.
+xref:admin-guide/ct-layouts-editor-customize-tabs.adoc#h4_1406331569[On the Actions tab of the Navigation button], the administrator specifies action that triggered by a mobolie user's tap on the button.
 
-[NOTE] ==== Some
-xref:action-type-key-reference.html#h2_333717541[actions are set for
-buttons by default] but can be changed. ====
+NOTE: Some xref:./action-type-key-reference.adoc#h2_333717541[actions are set for buttons by default] but can be changed.
 
-[width="100%",cols="25%,25%,25%,25%",options="header",]
+[width="100%",cols="~,~,~,~"]
 |===
 |*Key* |*Type* |*Required* |*Comment*
-|action |String |Yes a|
-The action name.
 
-Required when "type": "execute".
+|[.apiobject]#action# |String |Yes a| The action name.
 
-|destination |String |Yes a|
-The required destination, for example, the previous or next tab.
+NOTE: Required when [.apiobject]#"type": "execute"#.
 
-Required when "type": "navigate".
+|[.apiobject]#destination# |String |Yes a|The required destination, for example, the previous or next tab.
 
-|field |String |Yes a|
-The API name of the current field.
+NOTE: Required when [.apiobject]#"type": "navigate"#.
 
-Required when "type": "setValue".
+|[.apiobject]#field# |String |Yes a|The API name of the current field.
 
-|object |String |Yes a|
-The API name of the object to create a record of.
+NOTE: Required when [.apiobject]#"type": "setValue"#.
 
-Required when "type": "createRecord".
+|[.apiobject]#object# |String |Yes a|The API name of the object to create a record of.
 
-|recordType |String |Yes a|
-The record type for the object to create a record of.
+NOTE: Required when [.apiobject]#"type": "createRecord"#.
 
-Required when "type": "createRecord".
+|[.apiobject]#recordType# |String |Yes a|The record type for the object to create a record of.
 
-|type |Enum |Yes a|
-Available action types:
+NOTE: Required when [.apiobject]#"type": "createRecord"#.
+
+|[.apiobject]#type# |Enum |Yes a|Available action types:
 
 * *setValue*
 * *navigate*
@@ -323,103 +782,71 @@ Available action types:
 * *createRecord*
 * *waitWorkflow*
 
-|useMinilayout |Boolean |Yes a|
-If set,
-https://help.customertimes.com/articles/ct-mobile-ios-en/mini-layouts[the
-mini layout] is used to create the record.
+|[.apiobject]#useMinilayout# |Boolean |Yes a|If set, xref:ctmobile:ios/admin-guide/mini-layouts.adoc[the mini layout] is used to create the record.
 
-Required when "type": "createRecord".
+NOTE: Required when [.apiobject]#"type": "createRecord"#.
 
-|value |Boolean |Yes a|
-The value for the "field".
+.3+|[.apiobject]#value# |Boolean .3+|Yes .3+a| The value for the [.apiobject]#"field"#.
 
-Required when "type": "setValue".
+NOTE: Required when [.apiobject]#"type": "setValue"#.
 
-| |Number | |
+|Number
 
-| |String | |
+|String
 |===
 
-
-
-Go back to xref:json-specifications-and-examples.html#TOC[the table of
-content].
-
 [[h3_1377913479]]
-==== Action Condition
+=== Action Condition
 
-xref:ct-layouts-editor-customize-tabs.html#h4_921250684[On the
-Conditions tab of the Navigation button&#44;] the administrator
-specifies conditions to show or hide a button on the tab.
-
-
+xref:admin-guide/ct-layouts-editor-customize-tabs.adoc#h4_921250684[On the Conditions tab of the Navigation button&#44;] the administrator specifies conditions to show or hide a button on the tab.
 
 [[h4_74625817]]
-===== Condition Level
-
-
+==== Condition Level
 
 Conditions can be set at different levels and combined into groups.
 
-
-
-[width="100%",cols="25%,25%,25%,25%",options="header",]
+[width="100%",cols="~,~,~,~"]
 |===
 |*Key* |*Type* |*Required* |*Comment*
-|operator |Enum |Yes a|
-Available values:
 
-* AND means that all conditions of the level must be matched.
-* OR means that at least one condition of the level must be matched.
+|[.apiobject]#operator# |Enum |Yes a|Available values:
 
-|items |Array |Yes a|
-Each Item is a:
+* [.apiobject]#AND# means that all conditions of the level must be matched.
+* [.apiobject]#OR# means that at least one condition of the level must be matched.
+
+|[.apiobject]#items# |Array |Yes a| Each Item is a:
 
 * Child condition level (parentheses in a logical expression).
-* xref:json-specifications-and-examples.html#h4_472370536[Field comparison
-expression].
+* xref:ref-guide/json-specifications-and-examples/index.adoc#h4_472370536[Field comparison expression].
+
+NOTE: At least one item is required.
 
 |===
 
-
-
-Go back to xref:json-specifications-and-examples.html#TOC[the table of
-content].
-
-
-
 [[h4_472370536]]
-===== Condition Level Item
-
-
+==== Condition Level Item
 
 The specific condition for the level or group.
 
-The value and values keys are used when the operator is not equal to in
-and notIn.
+NOTE: The [.apiobject]#value# and [.apiobject]#values# keys are used when the operator is not equal to [.apiobject]#in# and [.apiobject]#notIn#.
 
-[width="100%",cols="25%,25%,25%,25%",options="header",]
+[width="100%",cols="~,~,~,~"]
 |===
 |*Key* |*Type* |*Required* |*Comment*
-|field |String |Yes |The API name of the current object field to check
-value or xref:context-key-reference.html[perform the specific context].
 
-|operator |Enum |Yes
-|xref:json-specifications-and-examples.html#h4_748327130[Available
-operators] depending on the field data type.
+|[.apiobject]#field# |String |Yes |The API name of the current object field to check value or xref:./context-key-reference.adoc[perform the specific context].
 
-|value |Boolean |Yes |Target values for fields with the *Boolean* data
-type.
+|[.apiobject]#operator# |Enum |Yes |xref:ref-guide/json-specifications-and-examples/index.adoc#h4_748327130[Available operators] depending on the field data type.
 
-| |Number | a|
-Target values for fields with the *Currency* and *Number* data type.
+.3+|[.apiobject]#value# |Boolean .3+|Yes |Target values for fields with the *Boolean* data type.
+
+|Number a| Target values for fields with the *Currency* and *Number* data type.
 
 * *Currency*
 * *Number*
 * *Percent*
 
-| |String | a|
-Target values for fields with the *Text* data type.
+|String a|Target values for fields with the *Text* data type.
 
 * *Lookup Relationship*
 * *Master-Detail Relationship*
@@ -433,373 +860,274 @@ Target values for fields with the *Text* data type.
 * *Text Area (Long)*
 * *URL*
 
-|values |Array |Yes |The specific values in the *Text* data type.
+|[.apiobject]#values# |Array |Yes a|The specific values in the *Text* data type.
+
+NOTE: At least one item is required.
 |===
 
-
-
-Go back to xref:json-specifications-and-examples.html#TOC[the table of
-content].
-
-
-
 [[h4_748327130]]
-===== Condition Operators
-
-
+==== Condition Operators
 
 Check which operators can be used with the available field data types.
 
-
-
-[width="100%",cols="^10%,^9%,^9%,^9%,^9%,^9%,^9%,^9%,^9%,^9%,^9%",]
+[.highlighted-table]
+[width="100%",cols="^10%,^9%,^9%,^9%,^9%,^9%,^9%,^9%,^9%,^9%,^9%"]
 |===
-|*Field Data Type* |*Operator* | | | | | | | | |
+.2+|*Field Data Type* 10+|*Operator* |*contain* |*notContain* |*in* |*notIn* |*equal* |*notEquel*|*greater* |*greaterOrEqual* |*less* |*lessOrEqual*|
 
-| |*contain* |*notContain* |*in* |*notIn* |*equal* |*notEquel*
-|*greater* |*greaterOrEqual* |*less* a|
-*lessOrEqual*
+*Currency* |No |No |No |No |Yes |Yes |Yes |Yes |Yes a|Yes
 
-|*Currency* |No |No |No |No |Yes |Yes |Yes |Yes |Yes
-a|
-Yes
+|*Number* |No |No |No |No |Yes |Yes |Yes |Yes |Yes a|Yes
 
-|*Number* |No |No |No |No |Yes |Yes |Yes |Yes |Yes
-a|
-Yes
-
-|*Text* a|
-Yes
+|*Text* a|Yes
 
 |Yes |Yes |Yes |Yes |Yes |No |No |No |No
 |===
 
-
-
-Go back to xref:json-specifications-and-examples.html#TOC[the table of
-content].
-
 [[h2_1948275861]]
-=== Tab Settings
+== Tab Settings
 
-Settings for
-each xref:ct-layouts-editor-customize-tabs.html#h3_449942769[displayed
-tab] of the *Tab* and *Path* mode on the record screen.
+Settings for each xref:admin-guide/ct-layouts-editor-customize-tabs.adoc#h3_449942769[displayed tab] of the *Tab* and *Path* mode on the record screen.
 
-
-
-[width="100%",cols="25%,25%,25%,25%",options="header",]
+[width="100%",cols="~,~,~,~"]
 |===
 |*Key* |*Type* |*Required* |*Comment*
-|alwaysDisplayedActions |An array of String |No a|
-An array of the values for the name key of
-xref:json-specifications-and-examples.html#h3_1652615080[the global
-actions] to always display or hide the specified button on the tab.
 
-These conditions have priority over the values in the displayCondition
-and hideCondition keys of
-xref:json-specifications-and-examples.html#h3_1652615080[Action Keys].
+|[.apiobject]#alwaysDisplayedActions# .2+|An array of String .2+|No .2+a| An array of the values for the name key of xref:ref-guide/json-specifications-and-examples/index.adoc#h3_1652615080[the global actions] to always display or hide the specified button on the tab.
 
-|alwaysHiddenActions | | |
+NOTE: These conditions have priority over the values in the [.apiobject]#displayCondition# and [.apiobject]#hideCondition# keys of xref:ref-guide/json-specifications-and-examples/index.adoc#h3_1652615080[Action Keys].
 
-|color |String |Yes a|
-The custom color of the tab. The format (case insensitive): HSL(11, 100,
-50).
+|[.apiobject]#alwaysHiddenActions#
 
-Required when "hasCustomColor": true
-xref:json-specifications-and-examples.html#h3_1857678454[for the tab].
+|[.apiobject]#color# |String |Yes a|The custom color of the tab. The format (case insensitive): HSL(11, 100, 50).
 
-|icon |Enum |Yes a|
-The tab
-icon from https://www.lightningdesignsystem.com/icons/#utility[the
-standard Salesforce set].
+NOTE: Required when "hasCustomColor": true xref:ref-guide/json-specifications-and-examples/index.adoc#h3_1857678454[for the tab].
 
-[NOTE] ==== Required when "hasCustomIcons": true  ====
- xref:json-specifications-and-examples.html#h3_1857678454[for the tab].
+|[.apiobject]#icon# |Enum |Yes a|The tab icon from https://www.lightningdesignsystem.com/icons/#utility[the standard Salesforce set].
 
-|label |String |Yes |The label of the tab. Available values:
+NOTE: Required when "hasCustomIcons": true
+ xref:ref-guide/json-specifications-and-examples/index.adoc#h3_1857678454[for the tab].
 
-|sections |Array of
-xref:json-specifications-and-examples.html#h2_903347826[Sections]
-|Yes |The list of sections on the tab.
+|[.apiobject]#label# |String |Yes a|The label of the tab. Available values:
 
-|showSoqlCondition |String |No a|
-The SOQL filter to display tab only when the criteria are met.
+* Any text
+* [.apiobject]#$Label.LabelName# – https://help.salesforce.com/s/articleView?id=sf.cl_about.htm&language=en_US&release=234.6.0&type=5[custom label]
+* [.apiobject]#!Value.Object.FieldName# – value from the specified field.
++
+NOTE: Currently, not in use.
 
+TIP: A label may be empty. Custom label and object value may be translated if defined.
 
+|[.apiobject]#sections# |Array of xref:ref-guide/json-specifications-and-examples/index.adoc#h2_903347826[Sections] |Yes a|The list of sections on the tab.
+
+NOTE: At least one item is required.
+
+|[.apiobject]#showSoqlCondition# |String |No a| The SOQL filter to display tab only when the criteria are met.
+
+* The filter should start with the [.apiobject]#WHERE# keyword and use the [.apiobject]#AND# and [.apiobject]#OR# logical operators.
+* The operator selected in the condition should correspond to the selected field type.
+* Conditions on the same level should be applied with the same logical operator.
+** Nested groups of the same group should use the parent group operator.
+** The group of conditions under another should have a different logical operator.
+** The number of condition nesting levels cannot exceed three.
+* Fields in the conditions should relate to the *Object* in the _Layout Settings_ record. The maximum nesting of reference levels is 5.
 
 For example:
 
-|statusValue |String |Yes a|
-The API name
-of xref:json-specifications-and-examples.html#h3_1890880071[stepSettings.statusField] value.
+[source]
+----
+"showSoqlCondition": "FROM RetailVisitKpi WHERE VisitId = '{!Visit.Id}' AND AssessmentTaskId.TaskType = 'InventoryCheck'"
+----
 
-Required when
-xref:json-specifications-and-examples.html#h3_1890880071[Step Settings]
-are defined.
+|[.apiobject]#statusValue# |String |Yes a| The API name of xref:ref-guide/json-specifications-and-examples/index.adoc#h3_1890880071[stepSettings.statusField] value.
+
+NOTE: Required when xref:ref-guide/json-specifications-and-examples/index.adoc#h3_1890880071[Step Settings] are defined.
 
 |===
 
-
-
-Go back to xref:json-specifications-and-examples.html#TOC[the table of
-content].
-
 [[h2_903347826]]
-=== Section Settings
+== Section Settings
 
-xref:ct-layouts-editor-add-sections-and-fields.html[In the CT Layouts
-Editor], the administrator adds sections one after the other, starting
-from the leftmost top corner of the grid. Sections cannot overlap each
-other on the tab.
+xref:admin-guide/ct-layouts-editor-add-sections-and-fields.adoc[In the CT Layouts Editor], the administrator adds sections one after the other, starting from the leftmost top corner of the grid. Sections cannot overlap each other on the tab.
 
 [[h3_1386155937]]
-==== Section Keys
+=== Section Keys
 
 The general settings of the selected section.
 
-
-
-[width="100%",cols="25%,25%,25%,25%",options="header",]
+[width="100%",cols="~,~,~,~"]
 |===
 |*Key* |*Type* |*Required* |*Comment*
-|color |String |Yes a|
-xref:ct-layouts-editor-add-sections-and-fields.html#h3_1163797110[The
-custom color] of the section.
+
+|[.apiobject]#color# |String |Yes a| xref:admin-guide/ct-layouts-editor-add-sections-and-fields.adoc#h3_1163797110[The custom color] of the section.
 
 * By default, a random color from the default color scheme is used.
 * The format (case insensitive): HSL(11, 100, 50).
 
-|extension |N/A |No |[NOTE] ==== Reserved.  ====
+|[.apiobject]#extension# |N/A |No a|NOTE: Reserved.
 
-|icon |Enum |Yes a|
-xref:ct-layouts-editor-add-sections-and-fields.html#h3_1150885058[The
-section icon] from the standard Salesforce set.
+|[.apiobject]#icon# |Enum |Yes a| xref:admin-guide/ct-layouts-editor-add-sections-and-fields.adoc#h3_1150885058[The section icon] from the standard Salesforce set.
 
 * By default, a random icon is used.
 
-|label |String |Yes |The label of the section. Available values:
+|[.apiobject]#label# |String |Yes a|The label of the section. Available values:
 
-|position
-|xref:json-specifications-and-examples.html#h3_1500637436[Section
-Position] |Yes |Location of the section on the tab.
+* Any text
+* [.apiobject]#$Label.LabelName# – https://help.salesforce.com/s/articleView?id=sf.cl_about.htm&language=en_US&release=234.6.0&type=5[custom label]
+* [.apiobject]#!Value.Object.FieldName# – value from the specified field.
++
+NOTE: Currently, not in use.
 
-|properties |Object |Yes a|
-Properties for each object depend on the value in the type key.
+TIP: A label may be empty. Custom label and object value may be translated if defined.
 
-* xref:json-specifications-and-examples.html#h3_2137120289[Current
-Record: Properties]
-* xref:json-specifications-and-examples.html#h3_187296624[Parent
-Record: Properties]
-* xref:json-specifications-and-examples.html#h3_674627754[Record List:
-Properties]
+|[.apiobject]#position# |xref:ref-guide/json-specifications-and-examples/index.adoc#h3_1500637436[Section Position] |Yes |Location of the section on the tab.
 
-|type |Enum |Yes a|
-Type of section, which determines records of which object will be
-presented in it. Available types:
+|[.apiobject]#properties# |Object |Yes a| Properties for each object depend on the value in the type key.
 
-* Record
-* ParentRecord
-* RecordList
+* xref:ref-guide/json-specifications-and-examples/index.adoc#h3_2137120289[Current Record: Properties]
+* xref:ref-guide/json-specifications-and-examples/index.adoc#h3_187296624[Parent Record: Properties]
+* xref:ref-guide/json-specifications-and-examples/index.adoc#h3_674627754[Record List: Properties]
+
+|[.apiobject]#type# |Enum |Yes a| Type of section, which determines records of which object will be presented in it. Available types:
+
+* [.apiobject]#Record#
+* [.apiobject]#ParentRecord#
+* [.apiobject]#RecordList#
 
 |===
-
-
-
-Go back to xref:json-specifications-and-examples.html#TOC[the table of
-content].
 
 [[h3_1500637436]]
-==== Section Position Keys
+=== Section Position Keys
 
-xref:ct-layouts-editor-add-sections-and-fields.html[Indicated in grid
-units], location of the section on the tab.
+xref:admin-guide/ct-layouts-editor-add-sections-and-fields.adoc[Indicated in grid units], location of the section on the tab.
 
-
-
-[width="100%",cols="25%,25%,25%,25%",options="header",]
+[width="100%",cols="~,~,~,~"]
 |===
 |*Key* |*Type* |*Required* |*Comment*
-|height |Number |Yes |The section height in the grid units.
 
-|width |Number |Yes |The section width in the grid units.
-
-|x |Number |Yes |The X coordinate of the upper-left corner of the
-section.
-
-|y |Number |Yes |The Y coordinate of the upper-left corner of the
-section.
+|[.apiobject]#height# |Number |Yes |The section height in the grid units.
+|[.apiobject]#width# |Number |Yes |The section width in the grid units.
+|[.apiobject]#x# |Number |Yes |The X coordinate of the upper-left corner of the section.
+|[.apiobject]#y# |Number |Yes |The Y coordinate of the upper-left corner of the section.
 |===
-
-
-
-Go back to xref:json-specifications-and-examples.html#TOC[the table of
-content].
 
 [[h3_2137120289]]
-==== Current Record: Properties
+=== Current Record: Properties
 
-Specific properties are available for the
-xref:ct-layouts-editor-add-sections-and-fields.html#h3_1171954608[Current
-Record] section type.
+Specific properties are available for the xref:admin-guide/ct-layouts-editor-add-sections-and-fields.adoc#h3_1171954608[Current Record] section type.
 
-
-
-[cols=",,,",options="header",]
+[cols="~,~,~,~"]
 |===
 |*Key* |*Type* |*Required* |*Comment*
-|fields |An array of
-xref:json-specifications-and-examples.html#h2_1352679225[Fields
-Settings] |Yes |Fields to display.
+
+|[.apiobject]#fields# |An array of xref:ref-guide/json-specifications-and-examples/index.adoc#h2_1352679225[Fields Settings] |Yes a|Fields to display.
+
+NOTE: At least one item is required.
 |===
-
-
-
-Go back to xref:json-specifications-and-examples.html#TOC[the table of
-content].
 
 [[h3_187296624]]
-==== Parent Record: Properties
+=== Parent Record: Properties
 
-Specific properties are available for
-the xref:ct-layouts-editor-add-sections-and-fields.html#h3_1970634347[Parent
-Record] section type.
+Specific properties are available for the xref:admin-guide/ct-layouts-editor-add-sections-and-fields.adoc#h3_1970634347[Parent Record] section type.
 
-
-
-[width="100%",cols="25%,25%,25%,25%",options="header",]
+[width="100%",cols="~,~,~,~"]
 |===
 |*Key* |*Type* |*Required* |*Comment*
-|fields |An array of
-xref:json-specifications-and-examples.html#h2_1352679225[Field
-Settings] |Yes |Fields to display.
 
-|parentObject |String |Yes |The API name of the parent object.
+|[.apiobject]#fields# |An array of xref:ref-guide/json-specifications-and-examples/index.adoc#h2_1352679225[Field Settings] |Yes a|Fields to display.
 
-|parentReference |String |Yes |The API name of the field with the
-*Lookup* or *Master-Detail* type on the object specified in the *Layout
-Settings* record.
+NOTE: At least one item is required.
+|[.apiobject]#parentObject# |String |Yes |The API name of the parent object.
+|[.apiobject]#parentReference# |String |Yes |The API name of the field with the *Lookup* or *Master-Detail* type on the object specified in the _Layout Settings_ record.
 |===
-
-
-
-Go back to xref:json-specifications-and-examples.html#TOC[the table of
-content].
 
 [[h3_674627754]]
-==== Record List: Properties
+=== Record List: Properties
 
-Specific properties are available for
-the xref:ct-layouts-editor-add-sections-and-fields.html#h3_1996080511[Record
-List] section type.
+Specific properties are available for the xref:admin-guide/ct-layouts-editor-add-sections-and-fields.adoc#h3_1996080511[Record List] section type.
 
-
-
-[width="100%",cols="25%,25%,25%,25%",options="header",]
+[width="100%",cols="~,~,~,~"]
 |===
 |*Key* |*Type* |*Required* |*Comment*
-|fields |An array of
-xref:json-specifications-and-examples.html#h2_1352679225[Field
-Settings] |Yes |Fields to display.
 
-|object |String |Yes |The API name of any related object that has a
-filed with the *Lookup* or *Master-Detail* type to the object in the
-*Layout Settings* record.
+|[.apiobject]#fields# |An array of xref:ref-guide/json-specifications-and-examples/index.adoc#h2_1352679225[Field Settings] |Yes a|Fields to display.
 
-|objectCondition |String |Yes |The SOQL filter is used to define
-records of the related object to display within the section. Otherwise,
-all records will be displayed.
+NOTE: At least one item is required.
+|[.apiobject]#object# |String |Yes |The API name of any related object that has a filed with the *Lookup* or *Master-Detail* type to the object in the _Layout Settings_ record.
 
-|permission
-|xref:json-specifications-and-examples.html#h3_1706694265[Record
-Permission Settings] |Yes |User permissions to work with fields in
-the section.
+|[.apiobject]#objectCondition# |String |Yes a|The SOQL filter is used to define records of the related object to display within the section. Otherwise, all records will be displayed.
+
+* The filter should start with the [.apiobject]#WHERE# keyword and use the [.apiobject]#AND# and [.apiobject]#OR# logical operators.
+* The operator selected in the condition should correspond to the selected field type.
+* Conditions on the same level should be applied with the same logical operator.
+** Nested groups of the same group should use the parent group operator.
+** The group of conditions under another should have a different logical operator.
+** The number of condition nesting levels cannot exceed three.
+* Fields in the conditions should relate to the *Object* in the _Layout Settings_ record. The maximum nesting of reference levels is 5.
+
+|[.apiobject]#permission# |xref:ref-guide/json-specifications-and-examples/index.adoc#h3_1706694265[Record Permission Settings] |Yes |User permissions to work with fields in the section.
 |===
 
-
-
-Go back to xref:json-specifications-and-examples.html#TOC[the table of
-content].
-
 [[h3_1706694265]]
-==== Record Permission Settings
+=== Record Permission Settings
 
 User permission to each displayed field within the section.
 
-The https://help.salesforce.com/s/articleView?id=sf.users_fields_fls.htm&type=5[Field-Level
-Security] settings for the field are higher than the field settings in
-the CT Layouts.
+[NOTE]
+====
+The https://help.salesforce.com/s/articleView?id=sf.users_fields_fls.htm&type=5[Field-Level Security] settings for the field are higher than the field settings in the CT Layouts.
 
-* If the field is hidden from the mobile user, then the field will not
-be presented in the section for the mobile user.
-* If the field is *readOnly* for the mobile user, then the field should
-not be editable in the section for the mobile user.
-* If the field is *required* for the mobile user, then the field will be
-required in the section for the mobile user.
+* If the field is hidden from the mobile user, then the field will not be presented in the section for the mobile user.
+* If the field is *readOnly* for the mobile user, then the field should not be editable in the section for the mobile user.
+* If the field is *required* for the mobile user, then the field will be required in the section for the mobile user.
+====
 
-[width="100%",cols="25%,25%,25%,25%",options="header",]
+[width="100%",cols="~,~,~,~"]
 |===
 |*Key* |*Type* |*Required* |*Comment*
-|isCreatable |Boolean |Yes |Permission to create related records.
 
-|isLocalDatabase |Boolean |Yes |Permission to delete unsynchronized
-records from the mobile device.
-
-|isSyncedDeletable |Boolean |Yes |Permission to delete
-synchronized records.
+|[.apiobject]#isCreatable# |Boolean |Yes |Permission to create related records.
+|[.apiobject]#isLocalDatabase# |Boolean |Yes |Permission to delete unsynchronized records from the mobile device.
+|[.apiobject]#isSyncedDeletable# |Boolean |Yes |Permission to delete synchronized records.
 |===
-
-
-
-Go back to xref:json-specifications-and-examples.html#TOC[the table of
-content].
 
 [[h2_1352679225]]
-=== Field Settings
+== Field Settings
 
 [[h3_1865140130]]
-==== Field Keys
+=== Field Keys
 
-The data and user permissions
-xref:ct-layouts-editor-add-sections-and-fields.html#h3_1652605430[for
-each displayed field] in the sections.
+The data and user permissions xref:admin-guide/ct-layouts-editor-add-sections-and-fields.adoc#h3_1652605430[for each displayed field] in the sections.
 
-
-
-[width="100%",cols="25%,25%,25%,25%",options="header",]
+[width="100%",cols="~,~,~,~"]
 |===
 |*Key* |*Type* |*Required* |*Comment*
-|label |String |Yes |By default, the standard field label. To override
-it use:
 
-|name |String |Yes |The API name of the field.
+|[.apiobject]#label# |String |Yes a|By default, the standard field label. To override it use:
 
-|readOnly |Boolean |Yes |true if the field should be read-only.
+* Any text
+* [.apiobject]#$Label.LabelName# – https://help.salesforce.com/s/articleView?id=sf.cl_about.htm&language=en_US&release=234.6.0&type=5[custom label]
+* [.apiobject]#!Value.Object.FieldName# – value from the specified field.
++
+NOTE: Currently, not in use.
 
-|required |Boolean |Yes |true if the field should be required to
-fill in.
+TIP: A label may be empty. Custom label and object value may be translated if defined.
 
-|width |int(1...100) |Yes a|
-By default, the width of each column is the same. The administrator can
-change the width of each column.
+|[.apiobject]#name# |String |Yes |The API name of the field
+|[.apiobject]#readOnly# |Boolean |Yes |[.apiobject]#true# if the field should be read-only.
+|[.apiobject]#required# |Boolean |Yes |[.apiobject]#true# if the field should be required to fill in.
+
+|[.apiobject]#width# |int(1...100) |Yes a| By default, the width of each column is the same. The administrator can change the width of each column.
 
 * The non-configured columns will be spread evenly across the section.
-* If the total sum of the column widths is greater than 100, the surplus
-is divided by the number of columns, and the resulting value is
-subtracted from the width of each column.
-* If the total sum of the column widths is less than 100, the lack is
-divided by the number of columns, and the resulting value is added to
-the width of each column.
-* If the width is not set for all columns, and the total sum of column
-widths is less than 100, the lack is evenly distributed among the unset
-columns.
+* If the total sum of the column widths is greater than 100, the surplus is divided by the number of columns, and the resulting value is subtracted from the width of each column.
+* If the total sum of the column widths is less than 100, the lack is divided by the number of columns, and the resulting value is added to the width of each column.
+* If the width is not set for all columns, and the total sum of column widths is less than 100, the lack is evenly distributed among the unset columns.
 
-[NOTE] ==== Available when the section has "type": "RecordList"
-==== .
+NOTE: Available when the section has [.apiobject]#"type": "RecordList"# .
 
 |===
 
 
 
-Go back to xref:json-specifications-and-examples.html#TOC[the table of
-content].
+
