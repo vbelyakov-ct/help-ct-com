@@ -1,15 +1,14 @@
 = 5 Display Type: Field Value Update
 
-This Display Type is used to update fields of the current object with
-values from fields of other objects that are not directly associated
-with the current object. For example, update the fields of the _Order_
-object with the values from Visit.
+include::partial$header-warning.adoc[]
+
+This Display Type is used to update fields of the current object with values from fields of other objects that are not directly associated  with the current object. For example, update the fields of the _Order_ object with the values from Visit.
 
 [[h2__496679911]]
-=== Dialog Section Settings Detail
+== Dialog Section Settings Detail
 
 [[h3__2101430728]]
-==== Information 
+=== Information
 
 [width="100%",cols="34%,33%,33%",]
 |===
@@ -17,24 +16,17 @@ object with the values from Visit.
 
 |Label |Label of the Dialog Section Extension setting. |
 
-|Dialog Section Extension Settings Name |API name of the Dialog Section
-Extension setting. |
+|Dialog Section Extension Settings Name |API name of the Dialog Section Extension setting. |
 
-|Dialog Section |The label of the Dialog Section setting that the Dialog
-Section extension is related to. |
+|Dialog Section |The label of the Dialog Section setting that the Dialog Section extension is related to. |
 
-|Display Type |The display type to define the format of the Dialog
-Section extension. |*Field Value Update* in the example below.
+|Display Type |The display type to define the format of the Dialog Section extension. |*Field Value Update* in the example below.
 |===
 
 [[h3_163172503]]
-==== Helper Screen Settings
+=== Helper Screen Settings
 
-It defines the object to display (the navigation between the objects).
-The start point for navigation is the current object to which the dialog
-section is related. 
-
-
+It defines the object to display (the navigation between the objects). The start point for navigation is the current object to which the dialog section is related.
 
 [width="100%",cols="34%,33%,33%",]
 |===
@@ -44,32 +36,26 @@ section is related. 
 
 |Related Object |The object that is related to the parent one. |
 
-|Lookup from Current to Parent Object |The API name of the field with
-the *Lookup* type to relate parent and current objects. |
+|Lookup from Current to Parent Object |The API name of the field with the *Lookup* type to relate parent and current objects. |
 
-|Lookup from Related to Parent Object |The API name of the field with
-the *Lookup* type to relate parent and related objects. |
+|Lookup from Related to Parent Object |The API name of the field with the *Lookup* type to relate parent and related objects. |
 |===
 
 [[h3_492323169]]
-==== Field Value Update Settings
+=== Field Value Update Settings
 
 [width="100%",cols="34%,33%,33%",]
 |===
 |*Field* |*Description* |*Comments*
 
-|Target Fields on Extension Object |The fields to update on the
-*Extension Object*. |Comma-separated, without blank spaces.
+|Target Fields on Extension Object |The fields to update on the *Extension Object*. |Comma-separated, without blank spaces.
 
-|Field values from Query object |The fields on the other object whose
-values will be used. |Comma-separated, without blank spaces. 
+|Field values from Query object |The fields on the other object whose values will be used. |Comma-separated, without blank spaces.
 |===
 
 [[h2_559000933]]
-=== Dialog Section Extension Settings Example
+== Dialog Section Extension Settings Example
 
-image:82318003.png[]
+image::82318003.png[]
 
-
-
-image:82318005.png[]
+image::82318005.png[]

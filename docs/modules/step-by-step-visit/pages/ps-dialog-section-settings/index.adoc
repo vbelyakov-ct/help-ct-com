@@ -4,16 +4,16 @@
 === Dialog Sections Settings Detail
 
 [[h3__2101430728]]
-==== Information 
+==== Information
 
 [width="99%",cols="20%,16%,16%,16%,16%,16%",]
 |===
-|*Field* |*Description* |*Comments* |*Field * |*Description* |*Comments*
+|*Field* |*Description* |*Comments* |*Field * |*Description* |*Comments*
 
 |Label |Label of the Dialog Section setting. | |Dialog Tab |The label
-of the Dialog Tab setting that the tab is related to. |
+of the Dialog Tab setting that the tab is related to. |
 
-|Dialog Section Settings Name |API name of the Dialog Section setting.
+|Dialog Section Settings Name |API name of the Dialog Section setting.
 | |Protected Component | |
 
 |Content Workspace Name |API name of
@@ -26,7 +26,7 @@ content library] that should be displayed. | |Namespace Prefix | |
 Comma-separated.
 
 * The standard width is 1. To make a column wider, use the bigger
-values, e.g., 1.5.
+values, e.g., 1.5.
 * The columns are the same width and the sum of the widths is 1. For
 example, if there are 3 columns on the screen, the standard column is
 1/3 of the screen.
@@ -52,20 +52,20 @@ The position of the section in the tab.
 
 [width="99%",cols="20%,16%,16%,16%,16%,16%",]
 |===
-|*Field* |*Description* |*Comments* |*Field * |*Description* |*Comments*
+|*Field* |*Description* |*Comments* |*Field * |*Description* |*Comments*
 
-|Section Label |Label of the Dialog Section setting that is displayed in
-the header of the section. 
+|Section Label |Label of the Dialog Section setting that is displayed in
+the header of the section.
 |https://help.salesforce.com/articleView?id=cl_about.htm&type=5[Custom
-labels] can be used for multilanguage projects.   |Display Format |The
+labels] can be used for multilanguage projects.   |Display Format |The
 format of the section. |
 
-|Column Number |The column number to place a section.  |The horizontal
+|Column Number |The column number to place a section.  |The horizontal
 positioning of the section. |Section Order |The order number of the row
-to place a section. |The vertical positioning of the section.
+to place a section. |The vertical positioning of the section.
 
-|Is Vertical Orientation |If selected, the fields will be oriented in a
-vertical position. | |TabUpdate |If selected, the tab will be updated
+|Is Vertical Orientation |If selected, the fields will be oriented in a
+vertical position. | |TabUpdate |If selected, the tab will be updated
 in case of changes in the section. |Update of the entire Dialog Tab.
 |===
 
@@ -74,7 +74,7 @@ in case of changes in the section. |Update of the entire Dialog Tab.
 
 [width="99%",cols="20%,16%,16%,16%,16%,16%",]
 |===
-|*Field* |*Description* |*Comments* |*Field * |*Description* |*Comments*
+|*Field* |*Description* |*Comments* |*Field * |*Description* |*Comments*
 
 |Is Create Allowed |The checkbox that allows the record creation. |
 |Record Clone Allowed |The checkbox that allows the record сloning. |
@@ -88,20 +88,20 @@ very rarely.
 [[h3__1324167382]]
 ==== Component Settings
 
-It defines the object to display information (the navigation between the
+It defines the object to display information (the navigation between the
 objects). The start point for navigation is the current object to which
-the dialog layout is related. 
+the dialog layout is related.
 
 [NOTE] ==== All the relationships described in these fields are
 used during the record creation from the section. ====
 
 [width="99%",cols="20%,16%,16%,16%,16%,16%",]
 |===
-|*Field* |*Description* |*Comments* |*Field * |*Description* |*Comments*
+|*Field* |*Description* |*Comments* |*Field * |*Description* |*Comments*
 
-|Parent Object |The parent object for the current object. |If we need
+|Parent Object |The parent object for the current object. |If we need
 the information from the current object this field is empty |Activity
-Lookup API Name |The API name of the field with the *Lookup* type to
+Lookup API Name |The API name of the field with the *Lookup* type to
 relate parent and current objects. |If we need the information from the
 current object this field is empty.
 
@@ -113,22 +113,22 @@ related to the current one.
 * If the *Parent Object* is specified, define an object that is related
 to the parent one.
 
-| |Lookup API Name to Parent Object |The API name of the field with
-the *Lookup* type to relate parent and related objects. |
+| |Lookup API Name to Parent Object |The API name of the field with
+the *Lookup* type to relate parent and related objects. |
 
-|Record Condition |The SOQL query to define records to display.  | |
+|Record Condition |The SOQL query to define records to display.  | |
 | |
 
-|Related Object Record Type |Specify the record type for created records
-if needed. |For example, when the created records don't meet the
+|Related Object Record Type |Specify the record type for created records
+if needed. |For example, when the created records don't meet the
 criteria of the *Record Criteria* field. | | |
 |===
 
 [[h3_1803397877]]
 ==== Component Layout
 
-[NOTE] ==== Permissions cannot overcome the User Profile
-settings. Restrictions can become only tougher.  ====
+[NOTE] ==== Permissions cannot overcome the User Profile
+settings. Restrictions can become only tougher.  ====
 
 [cols=",,",]
 |===
@@ -142,8 +142,8 @@ displayed. |Comma-separated, without blank spaces.
 *Fields Layout* field.
 
 |Read Only Attribute |If selected, the field (a column) is read-only.
-|Comma-separated, without blank spaces, in the same order as in
-the *Fields Layout* field.
+|Comma-separated, without blank spaces, in the same order as in
+the *Fields Layout* field.
 |===
 
 [[h3_1403382482]]
@@ -152,7 +152,7 @@ the *Fields Layout* field.
 Not in use.
 
 [[h3_271449867]]
-==== Filters 
+==== Filters
 
 [width="100%",cols="34%,33%,33%",]
 |===
@@ -161,9 +161,9 @@ Not in use.
 |Filter Allowed |If selected, the filter is allowed in the list view.
 |
 
-|Filter Fields |The list of fields that can be filtered.
-|Comma-separated, without blank spaces. Fields may not be the same
-fields as in the *Fields Layout* field. 
+|Filter Fields |The list of fields that can be filtered.
+|Comma-separated, without blank spaces. Fields may not be the same
+fields as in the *Fields Layout* field.
 |===
 
 [[h3__1011738087]]
@@ -176,7 +176,7 @@ fields as in the *Fields Layout* field. 
 |Dashboard Folder |The folder where to store a dashboard. | |Dashboard
 |API name of the dashboard.
 
-|Dashboard Chart |API name of the dashboard chart. | | |
+|Dashboard Chart |API name of the dashboard chart. | | |
 |===
 
 [[h2_773938116]]

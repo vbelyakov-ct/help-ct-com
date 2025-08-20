@@ -4,7 +4,7 @@
 === Dialog Tabs Settings Detail
 
 [[h3__2101430728]]
-==== Information 
+==== Information
 
 [width="100%",cols="20%,20%,20%,20%,20%",]
 |===
@@ -13,11 +13,11 @@
 |Label |Label of the Dialog Tab setting. | |Dialog Layout |The label
 of the Dialog Layout setting that the tab is related to.
 
-|Dialog Tabs Settings Name |API name of the Dialog Tab setting.  |
+|Dialog Tabs Settings Name |API name of the Dialog Tab setting.  |
 |Protected Component |
 
-|Tab Template |The label of a template. The template defines how the
-components should be placed in the tab. a|
+|Tab Template |The label of a template. The template defines how the
+components should be placed in the tab. a|
 The most used templates are:
 
 * One column view
@@ -33,14 +33,14 @@ The most used templates are:
 |===
 |*Field* |*Description* |*Comments* |*Field* |*Description*
 
-|Tab Label |Label of the Dialog Tab setting that is displayed in the
-header of the tab. 
+|Tab Label |Label of the Dialog Tab setting that is displayed in the
+header of the tab.
 |https://help.salesforce.com/articleView?id=cl_about.htm&type=5[Custom
-labels] can be used for multilanguage projects.  |Display Type
+labels] can be used for multilanguage projects.  |Display Type
 |[NOTE] ==== Not in use. ====
 
-|Tab Order |The order number of the tab in the Dialog Layout. The order
-number is also displayed in the header of the Tab.  | |Current Status
+|Tab Order |The order number of the tab in the Dialog Layout. The order
+number is also displayed in the header of the Tab.  | |Current Status
 |The status that is associated with the current visit step.
 
 | | | |Content Workspace Name
@@ -48,7 +48,7 @@ number is also displayed in the header of the Tab.  | |Current Status
 |===
 
 [[h3__1375710402]]
-==== Permissions 
+==== Permissions
 
 [cols=",",]
 |===
@@ -56,9 +56,9 @@ number is also displayed in the header of the Tab.  | |Current Status
 
 |Image Recognition Allowed |If selected, the *Image Recognition*
 *button* will be added to the tab and allows the Image Recognition
-feature. 
+feature.
 
-|Photo Allowed |If selected, the *Photo* button will be added to the tab
+|Photo Allowed |If selected, the *Photo* button will be added to the tab
 and allows a user to take a photo.
 
 |Action Plan Recalculation |[NOTE] ==== Practically not used
@@ -72,9 +72,9 @@ anymore (the outdated snippet). ====
 |===
 |*Field* |*Description* |*Field* |*Description*
 
-|Generate PDF Button |If selected, the *Generate PDF* button will be
+|Generate PDF Button |If selected, the *Generate PDF* button will be
 added to the tab. |PDF Button Label |[NOTE] ==== The field is
-outdated as the PDF icon is used. ====
+outdated as the PDF icon is used. ====
 
 |PDF Parent Object |API name of the object to attach PDF file. |Document
 Template API Name |API name of the template that is used to generate PDF
@@ -93,5 +93,5 @@ Each tab can contain different sections.
 
 * Each section is defined in the separate *Dialog Section* record.
 * The requirements and the settings for each format of the sections are
-described in the link:ps-dialog-section-settings[Dialog Section:
-Settings] chapter.
+described in the link:ps-dialog-section-settings[Dialog Section:
+Settings] chapter.

@@ -1,6 +1,6 @@
 = 9 Display Format: KPI
 
-The fields with the *Formula* type represent KPIs and must be created
+The fields with the *Formula* type represent KPIs and must be created
 before using in this section. The section does not calculate any values
 by itself.
 
@@ -16,10 +16,10 @@ by itself.
 
 |Label |Label of the Dialog Section setting. |
 
-|Dialog Section Settings Name |API name of the Dialog Section setting.
+|Dialog Section Settings Name |API name of the Dialog Section setting.
 |
 
-|Dialog Tab |The label of the Dialog Tab setting that the tab is related
+|Dialog Tab |The label of the Dialog Tab setting that the tab is related
 to. |
 |===
 
@@ -30,28 +30,28 @@ to. |
 |===
 |*Field* |*Description* |*Comments*
 
-|Section Label |Label of the Dialog Section setting that is displayed in
-the header of the section. 
+|Section Label |Label of the Dialog Section setting that is displayed in
+the header of the section.
 |https://help.salesforce.com/articleView?id=cl_about.htm&type=5[Custom
-labels] can be used for multilanguage projects.  
+labels] can be used for multilanguage projects.
 
-|Display Format |The format of the section. |*KPI* in the example
+|Display Format |The format of the section. |*KPI* in the example
 below.
 
-|Column Number |The column number to place a section.  |The horizontal
+|Column Number |The column number to place a section.  |The horizontal
 positioning of the section.
 
-|Section Order |The order number of the row to place a section.
-|The vertical positioning of the section.
+|Section Order |The order number of the row to place a section.
+|The vertical positioning of the section.
 
-|Is Vertical Orientation |If selected, the fields will be oriented in
+|Is Vertical Orientation |If selected, the fields will be oriented in
 a vertical position. |
 |===
 
 [[h3__1324167382]]
 ==== Component Settings
 
-The fields are shown from the current object or from the parent object. 
+The fields are shown from the current object or from the parent object.
 
 [width="100%",cols="34%,33%,33%",]
 |===
@@ -60,8 +60,8 @@ The fields are shown from the current object or from the parent object. 
 |Parent Object |The parent object for the current object. |If we need
 the information from the current object this field is empty
 
-|Activity Lookup API Name |The API name of the field with
-the *Lookup* type to relate parent and current objects.  |If we need the
+|Activity Lookup API Name |The API name of the field with
+the *Lookup* type to relate parent and current objects.  |If we need the
 information from the current object this field is empty.
 
 |Related Object | |This field is empty as the related objects have
