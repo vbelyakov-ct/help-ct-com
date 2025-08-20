@@ -6,7 +6,7 @@ Go to the *CT Vision* app and open the *CT Vision Setup* tab.
 
 [NOTE]
 ====
-Before the first entry to the *CT Vision Setup* tab, go to link:https://help.customertimes.com/articles/ct-mobile-ios-en/ct-mobile-control-panel-tools/a/h3_2011978[CT Mobile Control Panel: Tools] / link:https://help.customertimes.com/smart/project-ct-mobile-en/ct-mobile-control-panel-tools-new/a/h2_2011978[CT Mobile Control Panel 2.0: Tools] tab and check that the cloud token is added. Currently, the cloud token may be stored in two custom settings, and the CT Vision Lite retrieves it based on the combination of the CT Mobile package version and the used CT Mobile app version. For more information, refer to the https://help.customertimes.com/articles/ct-mobile-ios-en/ct-mobile-managed-package-update-to-v-3-54[CT Mobile Managed Package Update to v. 3.54] description.
+Before the first entry to the *CT Vision Setup* tab, go to xref:ctmobile:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc#h3_2011978[CT Mobile Control Panel: Tools] / xref:ctmobile:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-tools-new.adoc#h2_2011978[CT Mobile Control Panel 2.0: Tools] tab and check that the cloud token is added. Currently, the cloud token may be stored in two custom settings, and the CT Vision Lite retrieves it based on the combination of the CT Mobile package version and the used CT Mobile app version. For more information, refer to the xref:ctmobile:ios/getting-started/installing-ct-mobile-package/ct-mobile-managed-package-update-to-v-3-54.adoc[CT Mobile Managed Package Update to v. 3.54] description.
 ====
 
 [[h2_1981203353]]
@@ -16,7 +16,7 @@ If the Salesforce org was not yet registered on the CT Vision service side, clic
 
 In case of any errors, contact the Customertimes team.
 
-image:fields-mapping-on-product-and-product-image-objects-2021-09-29-2.png[]
+image::fields-mapping-on-product-and-product-image-objects-2021-09-29-2.png[]
 
 [[h2_1362989108]]
 == Product Object Setting
@@ -34,7 +34,7 @@ Use any suitable field that contains a unique product identifier, such as [.apio
 ====
 . Click *Save*.
 +
-image:ctvision:General-Configuration-Product-Object-2.9.png[]
+image::ctvision:General-Configuration-Product-Object-2.9.png[]
 
 . Allow Salesforce to create a field with the *Lookup* type when prompted for the specified [.object]#Product# object.
 
@@ -45,7 +45,7 @@ The setup is complete. The field with the *Lookup* type will be automatically cr
 
 For the correct working of the CT Vision Lite, specify the _Vision light_ as the image recognition engine:
 
-image:ctvision:vision-light-provider.png[]
+image::ctvision:vision-light-provider.png[]
 
 . Go to the CT Vision app and open the *CT Vision Setup* tab.
 . In the *Recognition engine* list, select _Vision light_.

@@ -7,17 +7,17 @@ object.
 [[h2_335662800]]
 == CT Mobile Customization 
 
-Check that the [.object]#Activity# object is specified on the link:https://help.customertimes.com/articles/ct-mobile-ios-en/ct-mobile-control-panel-calendar/a/h3_1397263211[CT Mobile Control Panel: Calendar] tab.
+Check that the [.object]#Activity# object is specified on the xref:ctmobile:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc#h3_1397263211[CT Mobile Control Panel: Calendar] tab.
 
 [[h3_395000743]]
 === System Label
 
-Create the  [.apiobject]#MobileId\__c# field on the desired object, for example, [.apiobject]#CustomMeeting__c#, in order to identify whether a record has been created on a mobile device or in Salesforce. The photo taken on a mobile device will be attached only to the records with the specified Mobile Id. For more information, go to the link:https://help.customertimes.com/articles/ct-mobile-ios-en/system-label[System Label] article.
+Create the  [.apiobject]#MobileId\__c# field on the desired object, for example, [.apiobject]#CustomMeeting__c#, in order to identify whether a record has been created on a mobile device or in Salesforce. The photo taken on a mobile device will be attached only to the records with the specified Mobile Id. For more information, go to the xref:ctmobile:ios/admin-guide/system-label.adoc[System Label] article.
 
 [[h3_601076877]]
 === Activity Lookup
 
-Create a field with the *Lookup* type, for example, [.apiobject]#ActivityId\__c#, on the [.apiobject]#CustomMeeting__c# object to link it with the __Activity__ specified on the https://help.customertimes.com/articles/ct-mobile-ios-en/ct-mobile-control-panel-calendar/a/h3_1397263211[CT Mobile Control Panel: Calendar] tab.
+Create a field with the *Lookup* type, for example, [.apiobject]#ActivityId\__c#, on the [.apiobject]#CustomMeeting__c# object to link it with the _Activity_ specified on the xref:ctmobile:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc#h3_1397263211[CT Mobile Control Panel: Calendar] tab.
 
 [[h2_1769605814]]
 == CT Vision Setup

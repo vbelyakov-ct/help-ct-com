@@ -3,8 +3,7 @@
 
 CT Orders is designed to create and manage orders via different channels. Using the CT Mobile app on iOS and Windows platforms, create orders on the spot in offline or online mode and send them to Salesforce during the synchronization.
 
-* link:https://help.customertimes.com/articles/ct-mobile-ios-en/ct-mobile-description-and-deployment[Integrate the CT Mobile solution] with the target system, such as CT CPG, CT
-Pharma, or CG Cloud.
+* xref:ctmobile:ios/ct-mobile-solution/ct-mobile-description-and-deployment.adoc[Integrate the CT Mobile solution] with the target system, such as CT CPG, CT Pharma, or CG Cloud.
 * xref:admin-guide/getting-started/setting-up-an-instance/index.adoc[Map the CT Orders objects] with the target system for applying the overall logic.
 * xref:admin-guide/workshops/workshop-4-0-working-with-offline-orders/adding-ct-orders-to-the-ct-mobile-app-4-0.adoc[Follow the guide] to enable work with CT Orders in the CT Mobile app.
 * xref:admin-guide/workshops/workshop-4-0-working-with-offline-orders/index.adoc[Take a workshop] on how to create an offline order in the CT Mobile app.
@@ -75,14 +74,14 @@ TIP: The *Expand* icon is displayed only when the promotion or catalog has produ
 
 ** Products are arranged according to their order number (if given) or in alphabetical order.
 ** There can be products and bundles in promotions and catalogs, as well as catalogs can have sub-catalogs. When the catalog has sub-catalogs, products and bundles are available only in the sub-catalogs.
-** Product details are displayed according to link:https://help.customertimes.com/smart/project-ct-mobile-en/compact-layout[the compact layout].
+** Product details are displayed according to xref:ctmobile:ios/mobile-application/ui/compact-layout.adoc[the compact layout].
 ** Only active products with the active assigned _Price Book_ and the specified _List Price_ are available.
 
 * Tap the image:order-cart-right-arrow.png[] icon to add a promotion or catalog. Tap the image:order-cart-left-arrow.png[] icon to remove the added catalog or promotion.
 * Use the *Search* box to find the record.
 ** The search is performed among products in catalogs, promotions, and products that are already added to the cart.
 ** You can search by several words separated by blank spaces.
-** Search is carried out in the fields that are listed on the link:https://help.salesforce.com/articleView?id=search_results_setup_parent.htm&type=5[Search Results] search layout and in the fields specified as the title and subtitle on the link:https://help.customertimes.com/articles/ct-mobile-ios-en/compact-layout[compact layout].
+** Search is carried out in the fields that are listed on the link:https://help.salesforce.com/articleView?id=search_results_setup_parent.htm&type=5[Search Results] search layout and in the fields specified as the title and subtitle on the xref:ctmobile:ios/mobile-application/ui/compact-layout.adoc[compact layout].
 ** Search results are saved when the mobile user switches the *Promotions* tab to the *Catalogs* tab.
 |===
 
@@ -160,7 +159,7 @@ Add more products to the cart.
 * Set quantity of each product for each delivery using the plus and minus buttons.
 ** The quantity will change proportionally based on the xref:admin-guide/managing-ct-orders/order-management/multiplicator.adoc[multiplicator] value for each product.
 ** More details about the product and bundle calculation are available xref:admin-guide/managing-ct-orders/product-management/index.adoc#h2_1138962735[here].
-** After making changes to the order cart, new prices will be calculated automatically on the link:https://help.customertimes.com/smart/project-ct-mobile-en/application-settings/a/h3_611076828[timer], if the xref:admin-guide/managing-ct-orders/web-service/index.adoc[Web Service] is disabled.
+** After making changes to the order cart, new prices will be calculated automatically on the xref:ctmobile:ios/mobile-application/application-settings/index.adoc#h3_611076828[timer], if the xref:admin-guide/managing-ct-orders/web-service/index.adoc[Web Service] is disabled.
 * Organize products in cart by *max* or *min quantity* for the selected delivery.
 * *Pin delivery* as the first one in the order cart.
 * *Delete delivery* if needed.

@@ -11,27 +11,27 @@ To add the CT Sign to the CT Mobile application:
 [[h2_1079380618]]
 == 1. Add CT Sign to the Menu
 
-To add the CT Sign module to the link:https://help.customertimes.com/articles/ct-mobile-ios-en/app-menu[app menu]:
+To add the CT Sign module to the xref:ctmobile:ios/admin-guide/app-menu/index.adoc[app menu]:
 
 [tabs]
 ====
 In CT Mobile Control Panel::
 +
 --
-. Go to https://help.customertimes.com/articles/ct-mobile-ios-en/ct-mobile-control-panel-app-menu[CT Mobile Control Panel: App Menu] tab.
+. Go to xref:ctmobile:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-app-menu.adoc[CT Mobile Control Panel: App Menu] tab.
 . Select the required profile in the *Location* picklist.
 . Click the image:62562483.png[] button to open the *Add menu item* tool.
 . Select the *Sign* item.
 . Click *Add* to close the *Add menu item* tool.
 . Specify the position of the CT Sign module in the app menu by dragging the items in the list.
 . Click *Save*.
-. link:https://help.customertimes.com/smart/project-ct-mobile-en/synchronization-launch[Launch synchronization] in the CT Mobile app.
-. The CT Sign module is now available in the CT Mobile app. The *Sign Documents* menu item with available for the mobile user records is added to link:https://help.customertimes.com/articles/ct-mobile-ios-en/app-menu[the app menu].
+. xref:ctmobile:ios/mobile-application/synchronization/synchronization-launch/index.adoc[Launch synchronization] in the CT Mobile app.
+. The CT Sign module is now available in the CT Mobile app. The *Sign Documents* menu item with available for the mobile user records is added to xref:ctmobile:ios/admin-guide/app-menu/index.adoc[the app menu].
 --
 In CT Mobile Control Panel 2.0::
 +
 --
-. Go to link:https://help.customertimes.com/articles/project-ct-mobile-en/ct-mobile-control-panel-app-menu-new[CT Mobile Control Panel 2.0: App Menu] tab.
+. Go to xref:ctmobile:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-app-menu-new.adoc[CT Mobile Control Panel 2.0: App Menu] tab.
 . Select the required profile in the *Profile* picklist. To apply settings to all the profiles, select *General Settings*.
 . Click *Show Module Menu*.
 . On the *All* or *Integrations* tab, select the *Sign* item.
@@ -39,12 +39,12 @@ In CT Mobile Control Panel 2.0::
 --
 ====
 
-The CT Sign module is now available in the CT Mobile app. The *Sign Documents* menu item with available for the mobile user records is added to link:https://help.customertimes.com/articles/ct-mobile-ios-en/app-menu[the app menu].
+The CT Sign module is now available in the CT Mobile app. The *Sign Documents* menu item with available for the mobile user records is added to xref:ctmobile:ios/admin-guide/app-menu/index.adoc[the app menu].
 
 [[h1_1946616521]]
 == 2. Add the Sign Document button in the Actions Menu
 
-To display the *Sign Document* button in the link:https://help.customertimes.com/articles/ct-mobile-ios-en/actions[Actions] combo menu on the object record screen:
+To display the *Sign Document* button in the xref:ctmobile:ios/mobile-application/ui/actions.adoc[Actions] combo menu on the object record screen:
 
 . There should be a xref:ref-guide/ct-sign-custom-settings-and-objects/sign-settings-field-reference/object-setting-field-reference.adoc[Sign Settings] record with the _Object Setting_ record type for the required offline object.
 . There should be xref:admin-guide/create-a-new-template.adoc[templates]:
@@ -52,7 +52,7 @@ To display the *Sign Document* button in the link:https://help.customertimes.com
 * with *Sign Document* button to sign on the mobile device (*Signature Place*: _Device_) or by email (*Signature Place*: _Email_);
 * xref:ref-guide/ct-sign-custom-settings-and-objects/content-version-field-reference.adoc[available for the offline object, and, optionally, for its specific record type];
 +
-If necessary, create a new template and then link:https://help.customertimes.com/smart/project-ct-mobile-en/synchronization-launch[launch synchronization] in the CT Mobile app.
+If necessary, create a new template and then xref:ctmobile:ios/mobile-application/synchronization/synchronization-launch/index.adoc[launch synchronization] in the CT Mobile app.
 
 To override the translation of the *Sign Document* button, link:https://help.salesforce.com/s/articleView?id=sf.cl_edit.htm&type=5[create a new custom label] for the [.apiobject]#CTM_Layout_Button_SignDocument# name.
 

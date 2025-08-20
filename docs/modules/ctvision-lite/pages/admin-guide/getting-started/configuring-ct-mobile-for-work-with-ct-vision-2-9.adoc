@@ -14,7 +14,7 @@ Not in use in case of the integration with the CG Cloud solution.
 
 Create the [.apiobject]#MobileId__c# field on the required [.object]#Vision# object in order to identify whether a record has been created on a mobile device or in Salesforce. Photos taken on a mobile device will be attached only to the records with the specified Mobile Id, and the taken photos will be stored on a mobile device up to 7 days.
 
-For more information, go to the link:https://help.customertimes.com/articles/ct-mobile-ios-en/system-label[System Label] article.
+For more information, go to the xref:ctmobile:ios/admin-guide/system-label.adoc[System Label] article.
 
 [[h2_242242597]]
 == JSON Web Token
@@ -34,26 +34,25 @@ Specify the following to enable CT Vision Lite logic within the CT Mobile app:
 In CT Mobile Control Panel::
 +
 --
-. Go to link:https://help.customertimes.com/articles/ct-mobile-ios-en/ct-mobile-control-panel-general[CT Mobile Control Panel: General] tab.
+. Go to xref:ctmobile:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc[CT Mobile Control Panel: General] tab.
 . Under the *Object Mappings* section, specify the API name of the [.object]#Product# object used by CT Vision Lite in the *Product Object API Name* field.
 . Click *Save*.
-. Go to link:https://help.customertimes.com/articles/ct-mobile-ios-en/ct-mobile-control-panel-offline-objects[CT Mobile Control Panel: Offline Objects] tab.
+. Go to xref:ctmobile:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects.adoc[CT Mobile Control Panel: Offline Objects] tab.
 . Add the objects used by the CT Vision Lite module to the *Selected* field.
 . Click *Save*.
 . (Optional) to filter photos by date in the xref:admin-guide/working-with-ct-vision-lite-in-salesforce-2-9.adoc#h2_1552458132[Feedback Loop] tab, create an *Activity Setting* for each of the API names of the [.object]#Activity# object used by CT Vision Lite and specified in the *Activity Object API Name* field.
-. Go to link:https://help.customertimes.com/articles/ct-mobile-ios-en/ct-mobile-control-panel-calendar[CT Mobile Control Panel: Calendar] tab.
+. Go to xref:ctmobile:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc[CT Mobile Control Panel: Calendar] tab.
 --
 In CT Mobile Control Panel 2.0::
 +
 --
-. Go to https://help.customertimes.com/smart/project-ct-mobile-en/ct-mobile-control-panel-app-menu-new[CT Mobile Control Panel 2.0: App Menu].
+. Go to xref:ctmobile:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-app-menu-new.adoc[CT Mobile Control Panel 2.0: App Menu].
 . Select the required profile in the *Profile* picklist. To apply settings to all the profiles, select *General Settings*.
-. If the *Orders* module has not been added to the app menu, link:https://help.customertimes.com/smart/project-order-module/adding-ct-orders-to-the-ct-mobile-app-4-0/a/h2_827845120[add
-it].
+. If the *Orders* module has not been added to the app menu, xref:ctorders:admin-guide/workshops/workshop-4-0-working-with-offline-orders/adding-ct-orders-to-the-ct-mobile-app-4-0.adoc#h2_827845120[add it].
 . Select the *Orders* module in the *Selected* list.
 . Select [.object]#Product# object used by CT Vision Lite in the *Product Object* picklist.
 . Click *Save*.
-. Go to link:https://help.customertimes.com/smart/project-ct-mobile-en/ct-mobile-control-panel-offline-objects-new[CT Mobile Control Panel 2.0: Offline Objects] tab.
+. Go to xref:ctmobile:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc[CT Mobile Control Panel 2.0: Offline Objects] tab.
 . Add the objects used by the CT Vision Lite module to the *Selected* field.
 . Click *Save*.
 
@@ -65,14 +64,14 @@ The setup is complete.
 [[h2_1130295568]]
 == Add CT Vision to CT Mobile app
 
-To add the CT Vision Lite module to the https://help.customertimes.com/articles/ct-mobile-ios-en/app-menu[application menu]:
+To add the CT Vision Lite module to the xref:ctmobile:ios/admin-guide/app-menu/index.adoc[application menu]:
 
 [tabs]
 ====
 In CT Mobile Control Panel::
 +
 --
-. Go to https://help.customertimes.com/articles/ct-mobile-ios-en/ct-mobile-control-panel-app-menu[CT Mobile Control Panel: App Menu] tab.
+. Go to xref:ctmobile:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-app-menu.adoc[CT Mobile Control Panel: App Menu] tab.
 . Select the required profile in the *Location* picklist.
 +
 [TIP]
@@ -88,7 +87,7 @@ In CT Mobile Control Panel::
 In CT Mobile Control Panel 2.0::
 +
 --
-. Go to link:https://help.customertimes.com/articles/project-ct-mobile-en/ct-mobile-control-panel-app-menu-new[CT Mobile Control Panel 2.0: App Menu] tab.
+. Go to xref:ctmobile:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-app-menu-new.adoc[CT Mobile Control Panel 2.0: App Menu] tab.
 . Select the required profile in the *Profile* picklist. To apply settings to all the profiles, select *General Settings*.
 . Click *Show Module Menu*.
 . On the *All* or *Integrations* tab, select the *Vision* item.

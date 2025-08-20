@@ -2,7 +2,7 @@
 
 The [.object]#Pharma Product# object is intended to store detailed information regarding company and competitor products, including their physical parameters, quantity per delivery settings, and specific attributes that define the price calculation procedure.
 
-For the link:https://help.customertimes.com/articles/project-order-module/ct-orders-solution[CT Orders] functionality, it also stores Quantity per delivery settings and specific attributes that define the price calculation procedure.
+For the xref:ctorders:ct-orders-solution/index.adoc[CT Orders] functionality, it also stores Quantity per delivery settings and specific attributes that define the price calculation procedure.
 
 '''''
 
@@ -30,7 +30,7 @@ Defines the source for a price in the order:
 * Components
 
 |Default Availability Type |[.apiobject]#CTPHARMA\__DefaultAvailabilityType__c# |Picklist a|
-It defines link:https://help.customertimes.com/articles/project-order-module/product-availability[whether a product is available] by default. Available values:
+It defines xref:ctorders:admin-guide/managing-ct-orders/product-validation-in-order/product-availability/index.adoc[whether a product is available] by default. Available values:
 
 * Available. The value will be set by default during the CT Orders package installation or update.
 * Not Available.
@@ -78,7 +78,7 @@ Defines the source for products quantity in the order:
 
 |Units in Package |[.apiobject]#CTPHARMA\__UnitsInPackage__c# |Number(18, 0)  |The ratio of adding a product.
 
-For example, if this number is 5, that means 5 units of this product will be added when clicking the "plus"({plus}) button on link:https://help.customertimes.com/articles/project-order-module/order-line-item-field-reference[the order quantity field].
+For example, if this number is 5, that means 5 units of this product will be added when clicking the "plus"({plus}) button on xref:ctorders:admin-guide/managing-ct-orders/order-management/ref-guide/ct-order-data-model/order-line-item-field-reference.adoc[the order quantity field].
 
 |Use Freebie Multiplier |[.apiobject]#CTPHARMA\__IsUseFreebieMultiplier__c#
 |Checkbox |If selected, the freebies will be added with the specified multiplicity to the product amount.
