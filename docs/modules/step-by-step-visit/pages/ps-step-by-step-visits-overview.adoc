@@ -1,38 +1,28 @@
 = Step By Step Visit: Overview
 
-Use the snippet to divide the entire visit into separate steps to be
-done during the visit.
+Use the snippet to divide the entire visit into separate steps to be done during the visit.
 
 * The exact steps and their order are configured for each project.
 * You can skip these steps during your visit, or they may be required.
 
-
-
-Customization is carried out in the following order. Each *Visit* type
-is defined in a separate Dialog Layout setting.
+Customization is carried out in the following order. Each *Visit* type is defined in a separate Dialog Layout setting.
 
 * Link to Snippet 1 page;
 * Functional design;
 * Estimation of the implementation.
 
-image:The-order-of-the-settings.png[]
+image::The-order-of-the-settings.png[]
 
-
-
-[width="100%",cols="^20%,^20%,^20%,^20%,^20%",]
+[width="100%",cols="20%,20%,20%,20%,20%",]
 |===
-|*Snippet Configuration* |*Snippet Developer Team* |*Projects with
-Snippets* |*Product Roadmap* |*Improvement Backlog*
+^|*Snippet Configuration* ^|*Snippet Developer Team* ^|*Projects with Snippets* ^|*Product Roadmap* ^|*Improvement Backlog*
 
 a|
 * List of components for deployment;
 * Admin guide;
 * Test cases for implementation.
 
-|List of people with names and roles. |List of projects done with the
-snippets. |Some expectations regarding when the snippet is to be
-included in the scope of the product. |List of JIRA tasks related to
-the snippet improvement.
+|List of people with names and roles. |List of projects done with the snippets. |Some expectations regarding when the snippet is to be included in the scope of the product. |List of JIRA tasks related to the snippet improvement.
 |===
 
 

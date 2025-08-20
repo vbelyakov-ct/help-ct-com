@@ -1,47 +1,40 @@
 = Dialog Layout: Settings
 
+include::partial$header-warning.adoc[]
+
 [[h2__1205444491]]
-=== Dialog Layout Setting Detail
+== Dialog Layout Setting Detail
 
 [width="100%",cols="20%,20%,20%,20%,20%",]
 |===
 |*Field* |*Description* |*Comments* |*Field* |*Description*
 
-|Label |Label of the Dialog Layout setting. |Protected Component
-| |
+|Label |Label of the Dialog Layout setting. |Protected Component| |
 
 |Dialog Layout Setting Name |API name of the Dialog Layout setting.  |
 |Namespace prefix |
 
-|Layout Header Label |Label of the Dialog Layout setting that is
-displayed in the header of the layout.
-|https://help.salesforce.com/articleView?id=cl_about.htm&type=5[Custom
-labels] can be used for multilanguage projects. | |
+|Layout Header Label |Label of the Dialog Layout setting that is displayed in the header of the layout.
+|https://help.salesforce.com/articleView?id=cl_about.htm&type=5[Custom labels] can be used for multilanguage projects. | |
 
-|Object |API name of the object, for which the layout should
-be overridden. | | |
+|Object |API name of the object, for which the layout should be overridden. | | |
 
-|Step Status |API name of a field with the *Picklist* type that stores
-object statuses. |Each step must be associated with the status. | |
+|Step Status |API name of a field with the *Picklist* type that stores object statuses. |Each step must be associated with the status. | |
 
-|Steps Passed Counter |API name of a field to count the passed steps.
-| | |
+|Steps Passed Counter |API name of a field to count the passed steps.| | |
 
-|Last Status API Value |The last status. |For example, *Realized*. |
-|
+|Last Status API Value |The last status. |For example, *Realized*. ||
 |===
 
 [[h2_745991314]]
 === Dialog Layout Setting Example
 
-image:82314484.png[]
+image::82314484.png[]
 
 [[h2__1585244923]]
-=== Dialog Tabs Settings
+== Dialog Tabs Settings
 
 Each tab corresponds to one separate step of the visit.
 
-* The order of the steps is defined by the *Tab Order* field at
-the link:ps-dialog-tabs-settings[Dialog Tabs Settings] metadata
-type.
+* The order of the steps is defined by the *Tab Order* field at the xref:./ps-dialog-tabs-settings.adoc[Dialog Tabs Settings] metadata type.
 * The number of the steps starts with 1.
