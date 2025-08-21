@@ -11,8 +11,8 @@ To add a new record of *Division Target Frequency Settings*:
 click *Manage* next to *Division Target Frequency Settings*.
 . On the next page, click *New* to create a new record:
 * In the *Name* section, specify the related division name, for example, _Gamma_, _Delta_, etc.
-* In the *Account Target Category field*, add the API Name field of xref:admin-guide/application-settings-management/account-field-reference.adoc[the _Account_ record], that responsible for the new division, for example, `Division_Gamma_Category__c`;
-* In the *Account Target Flag field*, add the API Name field of the _Account_ record, that responsible for the selection of the new division, for example, `Division_Gamma_Target_Check__c`;
+* In the *Account Target Category field*, add the API Name field of xref:admin-guide/application-settings-management/account-field-reference.adoc[the _Account_ record], that responsible for the new division, for example, [.apiobject]#Division_Gamma_Category__c#;
+* In the *Account Target Flag field*, add the API Name field of the _Account_ record, that responsible for the selection of the new division, for example, [.apiobject]#Division_Gamma_Target_Check__c#;
 * Specify the same division fields of xref:admin-guide/application-settings-management/contact-field-reference.adoc[the _Contact_ record] in the *Contact Target Category field* and *Contact Target Flag field*.
 * Set a flag next to *Enable Category Selection* if you want to add the
 division's categories to xref:image$588320221.png[available values of mass targeting], accounts, and contacts.
