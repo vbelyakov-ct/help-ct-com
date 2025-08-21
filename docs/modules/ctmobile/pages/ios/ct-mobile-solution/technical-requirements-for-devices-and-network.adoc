@@ -1,11 +1,6 @@
-//tag::main[]
 = Technical Requirements for Devices and Network
 
-NOTE: We strongly recommend upgrading the CT Mobile app at least once every 12  months to prevent incompatibility with the cumulated OS or core CT Mobile changes.
-
-//end::main[]
-
-//tag::ios[]
+NOTE: We strongly recommend upgrading the CT Mobile app at least once every 12 months to prevent incompatibility with the cumulated OS or core CT Mobile changes.
 
 [[h2_326998836]]
 == iOS Devices
@@ -87,54 +82,6 @@ Starting from:
 * Since version 2.6, CT Mobile supports *Split View* and *Slide Over* multitasking types. Note the following:
 ** We do not guarantee that screens adapted for landscape orientation will display correctly in portrait orientation. In future releases, we will add a warning to prevent such screens from being used in portrait orientation.
 ** We cannot limit the minimum percentage of screen area in *Split View* mode and recommend using at least 75% of the screen to work with CT Mobile.
-//end::ios[]
-
-//tag::win[]
-
-[[h2_118091408]]
-== Windows Devices
-
-=== CT Mobile is available for Windows PC and tablets:
-
-* Windows 10 Version 1903
-* Windows 11 Version 21H2
-* x86, x64
-* 16 GB RAM
-* The recommended size for downloaded images, for example, in _Attachments_ or the *Libraries* module, should not exceed 1500 x 1500. The recommended format of images is [.apiobject]#.png#.
-
-TIP: Read more about the Windows lifecycle link:https://support.microsoft.com/en-us/help/13853/windows-lifecycle-fact-sheet[here].
-//end::win[]
-
-//tag::andr[]
-
-[[h2_289410970]]
-== Android Devices
-
-=== CT Mobile is currently available for Android tablets:
-
-* Android 7.0 or higher
-* 2 GB RAM
-* 1 GB free disk space.
-
-Due to the variability of Android devices from various vendors, we do not guarantee the flawless operation of CT Mobile on different device models. CT Mobile must be tested on every targeted device family and generation.
-//end::andr[]
-
-//tag::kotlin[]
-== Android Devices
-
-=== CT Mobile is currently available for Android tablets:
-
-* Android 7.0 or higher
-* Pre-installed Google Mobile Services
-* Display size at least 10"
-* 3 GB RAM
-* 10 GB free disk space
-* at least 8x ARM Cortex-A53, 1,6 GHz.
-
-Due to the variability of Android devices from various vendors, we do not guarantee the flawless operation of CT Mobile on different device models. CT Mobile must be tested on every targeted device family and generation.
-//end::kotlin[]
-
-//tag::main[]
 
 [[h2_1498128754]]
 == Requirements for Internet Connection
@@ -142,4 +89,3 @@ Due to the variability of Android devices from various vendors, we do not guaran
 * Synchronization is possible on very slow lines (9,600kbs) but takes more time. The communication line must not have interruptions of high packet loss as it may result in timeouts of Salesforce API.
 
 * More content increases the synchronization time and responsiveness of the application. We recommend limiting the number of offline records to 30,000 records on devices.
-//end::main[]

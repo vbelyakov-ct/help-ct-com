@@ -1,5 +1,3 @@
-:current-module: {page-module}
-//tag::main[]
 = CT Mobile Description and Deployment
 :toc:
 
@@ -18,15 +16,6 @@ for most of the standard and custom objects.
 available modules differs depending on the device platform and the CT
 Mobile app version.
 * AWS for the CT Presenter functionality.
-//end::main[]
-+
-//tag::kotlin[]
-+
-include::partial$not-in-use-kotlin.adoc[]
-
-//end::kotlin[]
-
-//tag::main[]
 
 image::CT-Mobile-Architecture.png[align="center"]
 
@@ -77,49 +66,16 @@ a|
 *Salesforce Metadata*
 
 * xref:ios/admin-guide/metadata-checker/metadata-archive/index.adoc#h2_1854953360[Salesforce metadata] is responsible for the correct operation of CT Mobile workflows, lookup filters, and dashboards in offline mode.
-//end::main[]
-
-//tag::andr[]
-
-* The CT Mobile app requests metadata using the link:https://developer.salesforce.com/docs/atlas.en-us.api_meta.meta/api_meta/meta_intro.htm[Metadata API] and other APIs with valid administrator credentials.
-
-//end::andr[]
-
-//tag::ios[]
-//tag::win[]
-//tag::kotlin[]
-
 * The CT Mobile app requests metadata using the link:https://developer.salesforce.com/docs/atlas.en-us.api_meta.meta/api_meta/meta_intro.htm[Metadata API] and xref:ios/admin-guide/metadata-checker/index.adoc#h2_1036043893[the metadata archive] and other APIs.
 
-//end::kotlin[]
-//end::win[]
-//end::ios[]
-
-//tag::main[]
 [[h4_1504347972]]
 *Mobile App Settings*
-//end::main[]
-
-//tag::andr[]
-//tag::kotlin[]
-
-* xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/index.adoc[Custom settings and custom metadata types] are used to store profile and list type settings for CT Mobile app customization specified on the tabs of the CT Mobile Control Panel.
-
-//end::kotlin[]
-//end::andr[]
-
-//tag::ios[]
-//tag::win[]
 
 * xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/index.adoc[Custom settings, custom metadata types], and the xref:ios/admin-guide/ct-mobile-control-panel/ctm-settings/index.adoc[CTM Settings] object are used to store profile and list type settings for CT Mobile app customization specified on the tabs of the CT Mobile Control Panel.
 +
 TIP: Use the
 xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc#h3_1658362952[Refresh CTM Settings] button to align consistency between CTM Settings and Custom Settings in case of errors.
 
-//end::win[]
-//end::ios[]
-
-//tag::main[]
 [[h4_789622594]]
 *Components*
 
@@ -142,15 +98,8 @@ To create a relationship between CT Mobile package components and a client syste
 * Fill out the xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_2141706831[Product Object API Name] and xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_494016929[Reference Object API Name] fields on *CT Mobile Control Panel: General*, or xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-general-new.adoc#h3_351797814[Relate Contact to Multiple Accounts by Junction Object] in *CT Mobile Control Panel 2.0: General*.
 * Create the lookup field to the required [.object]#Activity# object on the xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-applicationstats.adoc[Application Stats] object. In the case of using several [.object]#Activity# objects, the relationship field has to be created for each of them. A field with the lookup type for the [.object]#Activity# object will be automatically created for each [.object]#Activity# object specified on the xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc[CT Mobile Control Panel: Calendar] (or xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-activities-new.adoc[CT Mobile Control Panel 2.0: Activities]).
 * Create the lookup field to the specified _Product_ object on the xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-application.adoc[Application] object.
-//end::main[]
-
-//tag::ios[]
 
 TIP: CT mobile allows identifying xref:ios/admin-guide/system-label.adoc[the records created or edited in the CT Mobile app].
-
-//end::ios[]
-
-//tag::main[]
 
 [[h2_1575473858]]
 == CT Mobile Solution Configuration
@@ -169,9 +118,6 @@ The CT Mobile solution provides offline record management and customized screen 
 * Add objects and modules to xref:ios/admin-guide/app-menu/index.adoc[the main menu].
 
 * Specify available offline objects (refer to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects.adoc[CT Mobile Control Panel: Offline Objects] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc[CT Mobile Control Panel 2.0: Offline Objects]), xref:ios/admin-guide/related-lists/custom-related-lists.adoc[custom related lists], xref:ios/mobile-application/ui/list-views.adoc[list views], xref:ios/admin-guide/managing-offline-objects/index.adoc#h2_879469097[SOQL filters], lookup filters, and xref:ios/mobile-application/ui/actions.adoc[actions]. xref:ios/admin-guide/person-accounts.adoc[Person Accounts] are supported.
-//end::main[]
-
-//tag::ios[]
 
 * Specify screen forms, such as xref:ios/mobile-application/ui/compact-layout.adoc[compact layouts], xref:ios/admin-guide/mini-layouts.adoc[mini layouts], xref:ios/admin-guide/mobile-layouts/index.adoc[mobile layouts], xref:ios/mobile-application/ui/mobile-application-field-types/index.adoc[custom fields display], xref:ios/admin-guide/custom-color-settings.adoc[custom color settings], add xref:ios/admin-guide/app-menu/index.adoc#h2_312093935[the custom icon for the main tab] of the record screen, and xref:ios/admin-guide/app-menu/renaming-menu-items-and-modules.adoc[rename menu items].
 
@@ -181,39 +127,8 @@ The CT Mobile solution provides offline record management and customized screen 
 
 * Configure Geolocation Center and Notification Center.
 
-//end::ios[]
-
-//tag::andr[]
-//tag::kotlin[]
-//tag::win[]
-
-* Specify screen forms, such as xref:ios/mobile-application/ui/compact-layout.adoc[compact layouts], xref:ios/admin-guide/mini-layouts.adoc[mini layouts], xref:ios/admin-guide/mobile-layouts/index.adoc[mobile layouts], and xref:ios/admin-guide/custom-color-settings.adoc[custom color settings].
-
-//end::win[]
-//end::kotlin[]
-//end::andr[]
-
-//tag::kotlin[]
-
-* Configure xref:ios/admin-guide/ct-mobile-replication-use-cases-and-steps.adoc[CT Mobile Replication].
-
-//end::kotlin[]
-
-//tag::ios[]
-//tag::win[]
-
 * Implement xref:ios/ct-presenter/js-bridge-api/index.adoc[JS Bridge methods] in CLM presentations and set up xref:ios/ct-presenter/the-remote-detailing-functionality/index.adoc[the Remote Detailing functionality].
 
-//end::win[]
-//end::ios[]
-
-//tag::andr[]
-
-* Implement xref:ios/ct-presenter/js-bridge-api/index.adoc[JS Bridge methods] in CLM presentations.
-
-//end::andr[]
-
-//tag::main[]
 [[h2_501372078]]
 == CT Mobile App Installation
 
@@ -233,21 +148,13 @@ a| The core version consists of all main functionality and a set of modules inte
 
 * Go to xref:ios/ct-mobile-solution/ct-mobile-os-comparison.adoc[CT Mobile OS Comparison] to view the core functionalities and learn about the difference between the CT Mobile app on iOS, Windows, or Android devices.
 
-//end::main[]
-
-//tag::ios[]
-
 * xref:ios/mobile-application/ui/home-screen/index.adoc[Status Indicator] suggests to a user to perform a synchronization. Depending on the number of modified records, added attachments or the date of the last synchronization, the color of the indicator as well as the frequency of its flashing will change.
 
-//end::ios[]
-
-//tag::main[]
 * xref:ios/mobile-application/synchronization/synchronization-launch/sync-logs.adoc[Specify the logging level] for saving sync logs of the CT Mobile app, which can be useful for the Customertimes Support team in case of issues with the mobile app.
 
 * xref:ios/mobile-application/application-settings/index.adoc[Application Settings] are intended to manage additional functions and control individual options.
 
-a|
-image:App-Structure.png[]
+a|image:App-Structure.png[]
 
 2+a|
 [[h4_1840437629]]
@@ -269,23 +176,9 @@ The customization impacts the maintainability and evolution of the solution.
 == Logging in to the CT Mobile app
 
 xref:ios/getting-started/logging-in/index.adoc[Log in to the CT Mobile app] using your Salesforce credentials to a production environment, sandbox instance, or custom domain.
-//end::main[]
-
-//tag::ios[]
 
 CT Mobile is implemented with xref:ios/getting-started/logging-in/oauth-2-0.adoc[OAuth 2.0] and supports xref:ios/getting-started/logging-in/logging-in-with-single-sign-on.adoc[Single Sign-On].
 
-//end::ios[]
-
-//tag::kotlin[]
-//tag::win[]
-
-CT Mobile is implemented with the xref:ios/getting-started/logging-in/oauth-2-0.adoc[OAuth 2.0] protocol.
-
-//end::win[]
-//end::kotlin[]
-
-//tag::main[]
 For the full functionality of CT Mobile on devices, it is necessary to allow CT Mobile access to certain data, e.g., geolocation data or access to the device gallery.
 
 [[h2_1500017970]]
@@ -297,5 +190,3 @@ After the first logging in, perform the first synchronization to download all da
 * All uploaded data is stored in separate temporary storage. The current database will be replaced after the synchronization is complete to avoid data discard if synchronization is interrupted.
 
 To learn more about the sync process and sync modes, refer to xref:ios/mobile-application/synchronization/index.adoc[Synchronization].
-
-//end::main[]
