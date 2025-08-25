@@ -4,8 +4,7 @@ The [.object]#Vision Photo# object is used to store data for photos taken in CT 
 
 [NOTE]
 ====
-Do not edit or delete _Vision Photo_ records manually. To delete a photo, do it in
-xref:admin-guide/working-with-ct-vision-lite-in-salesforce-2-9.adoc#h2_1552458132[Picture Gallery] or xref:admin-guide/working-with-ct-vision-lite-in-salesforce-2-9.adoc#h2_787411710[Photo Carousel], and its _Vision Photo_ record will be deleted automatically.
+Do not edit or delete _Vision Photo_ records manually. To delete a photo, do it in xref:admin-guide/working-with-ct-vision-lite-in-salesforce-2-9.adoc#h2_1552458132[Picture Gallery] or xref:admin-guide/working-with-ct-vision-lite-in-salesforce-2-9.adoc#h2_787411710[Photo Carousel], and its _Vision Photo_ record will be deleted automatically.
 ====
 
 '''''
@@ -20,30 +19,26 @@ The following fields must be created on the [.object]#Vision Photo# object:
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|External ID |[.apiobject]#ctv\__ExternalID__c# |Text(255)
-|ID of the taken photo.
+|External ID |[.apiobject]#ctv\__ExternalID__c# |Text(255) |ID of the taken photo.
 
-|File extension |[.apiobject]#ctv\__FileExtension__c# |Text(255)
-|File format of the taken photo.
+|File extension |[.apiobject]#ctv\__FileExtension__c# |Text(255) |File format of the taken photo.
 
-|Original URL |[.apiobject]#ctv\__OriginalURL__c# |Text(500)
-|URL to the taken photo.
+|Original URL |[.apiobject]#ctv\__OriginalURL__c# |Text(500) |URL to the taken photo.
 
-|Photo Name |[.apiobject]#ctv\__PhotoName__c# |Text(255)
-|Name of the taken photo.
+|Photo Name |[.apiobject]#ctv\__PhotoName__c# |Text(255) |Name of the taken photo.
 
-|Provider |[.apiobject]#ctv\__Provider__c# |Text(255) a|
-Available values:
+|Provider |[.apiobject]#ctv\__Provider__c# |Text(255) a|Available values:
 
 * _vision_light_
 
-|Related Object ID |[.apiobject]#ctv\__RelatedObjectId__c# |Text(255)
-|Salesforce or mobile ID of the record that was used to take the photo.
+|Related Object ID |[.apiobject]#ctv\__RelatedObjectId__c# |Text(255)|Salesforce or mobile ID of the record that was used to take the photo.
 
-|(Vision Object ID) |[.apiobject]#\{VisionObjectid}# |Lookup
-a|Salesforce ID of the record that was used to take the photo.
+|Shelf|[.apiobject]#ctv\__Shelf__c#|Text(255)|Shelf name after its photo has been taken. Corresponds to the value of the [.apiobject]#ctv\__Label__c# field in the xref:./vision-settings-ref/vision-shelf-field-reference-2-9.adoc[Vision Shelf] object.
 
-Must be manually created for each
-xref:./vision-settings-ref/vision-object-field-reference.adoc[Vision Object] record.
+If the there are no shelf settings, the _Master_ name is used.
+
+|(Vision Object ID) |[.apiobject]#\{VisionObjectid}# |Lookup a|Salesforce ID of the record that was used to take the photo.
+
+Must be manually created for each xref:./vision-settings-ref/vision-object-field-reference.adoc[Vision Object] record.
 
 |===

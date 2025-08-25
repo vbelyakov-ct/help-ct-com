@@ -35,7 +35,12 @@ The following fields must be created on the [.object]#Vision Photo#  object:
 
 |Related Object ID |[.apiobject]#ctv\__RelatedObjectId__c# |Text(255) |Salesforce or mobile ID of the record that was used to take the photo.
 
+|Shelf|[.apiobject]#ctv\__Shelf__c#|Text(255)|Shelf name after its photo has been taken. Corresponds to the value of the [.apiobject]#ctv\__Label__c# field in the xref:./vision-settings-ref/vision-shelf-field-reference-ir-2-9.adoc[Vision Shelf] object.
+
+If the there are no shelf settings, the _Master_ name is used.
+
 |(Vision Object ID) |[.apiobject]#\{VisionObjectid}# |Lookup a| Salesforce ID of the record that was used to take the photo.
 
 Must be manually created for each xref:./vision-settings-ref/vision-object-field-reference-ir-2-9.adoc[Vision Object] record.
 |===
+
