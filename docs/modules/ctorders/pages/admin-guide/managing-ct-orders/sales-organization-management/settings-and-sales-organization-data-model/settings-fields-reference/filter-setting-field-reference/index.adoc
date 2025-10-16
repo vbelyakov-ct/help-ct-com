@@ -1,5 +1,7 @@
 = Filter Setting Field Reference
 
+NOTE: The filtering is performed based on [.object]#Product# object records. Attempting to filter out [.object]#Order Line Item# objects with an advanced filter may result in unexpected behavior.
+
 The _Filter Setting_ record type is intended for storing  fields that are used to adjust filters in the order cart.
 
 '''''

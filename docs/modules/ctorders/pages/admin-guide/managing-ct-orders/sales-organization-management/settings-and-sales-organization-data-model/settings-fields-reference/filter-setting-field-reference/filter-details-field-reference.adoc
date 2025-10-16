@@ -1,5 +1,7 @@
 = Filter Details Field Reference
 
+NOTE: The filtering is performed based on [.object]#Product# object records. Attempting to filter out [.object]#Order Line Item# objects with an advanced filter may result in unexpected behavior.
+
 The *Filter Details* field contains JSON with filter setting for the order cart. Each object in *Filter Details* array can have the following keys:
 
 '''''
