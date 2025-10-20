@@ -16,7 +16,7 @@ Configure xref:admin-guide/managing-ct-orders/sales-organization-management/sett
 ** The *SKU Field* setting is required for the proper operation of the xref:admin-guide/managing-ct-orders/catalog-management/index.adoc[Catalog] and xref:admin-guide/managing-ct-orders/discount-management/promotions.adoc[Promotions] pages. The *SKU* attribute defines whether the product record can be added to an order. It distinguishes the product SKU record from other product records used to create hierarchy, such as brands, families, etc.
 ** If the *SKU Field* is set to [.apiobject]#CTCPG\__IsSKU__c#, then it will correspond with the *SKU* checkbox on the [.object]#Product# object. If the *SKU* checkbox is unchecked, the product cannot be added to an order, but will be displayed in the product hierarchy.
 +
-TIP: You may create a custom field of the corresponding [.object]#Product object to use as the *SKU Field*.
+TIP: You may create a custom field of the corresponding [.object]#Product# object to use as the *SKU Field*.
 +
 image:ObjectSettings.png[]
 . Click *Save*.
