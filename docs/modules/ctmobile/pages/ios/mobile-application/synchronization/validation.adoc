@@ -64,3 +64,19 @@ NOTE: Please, use only 18-character ID fields in validation rules.
 ----
 AND($User.Id = '005b1230000000bKWH',TEXT(Status__c)='Cancelled')
 ----
+
+To ensure validation rules function correctly in the mobile app, when comparing fields of the reference type (ID), you must specify the exact ID field rather than a link to the record.
+
+For example, instead of this rule:
+
+[source]
+----
+AND((ISCHANGED(Description)),$User.Id <> OwnerId
+----
+
+use this rule:
+
+[source]
+----
+AND((ISCHANGED(Description)),$User.Id <> Owner.Id
+----
