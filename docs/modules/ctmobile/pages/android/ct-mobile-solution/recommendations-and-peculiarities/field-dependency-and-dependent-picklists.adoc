@@ -1,1 +1,21 @@
-include::../../../ios/ct-mobile-solution/recommendations-and-peculiarities/field-dependency-and-dependent-picklists.adoc[]
+= Field Dependency and Dependent Picklists
+
+A dependent picklist is a custom or multi-select picklist for which the valid values depend on the value of another field, called the controlling field. Controlling fields can be any picklist (with at least one and fewer than 300 values) or checkbox field on the same record.
+
+To create a dependent picklist, refer to https://help.salesforce.com/articleView?id=sf.fields_about_dependent_fields.htm&type=5[Salesforce Help].
+
+The dependent fields are not supported in the CT Mobile Android and Android 2.0 apps.
+
+[[h2_1106274213]]
+== Conditions to Display the None Value in the Picklists
+
+On the layout, mini-layout, and custom related list:
+
+* the field with the *Picklist* type has no value by default and this field is *Required*:
+** when a user creates a record, the field with the *Picklist* type has the *None* value and the record cannot be saved due to the validation rule. Set up a value to save the record.
+* the field with the *Picklist* type has a value by default and this field is not *Required*:
+** when a user creates a record, the default value is set in the field with the *Picklist* type. The user can select the *None* value.
+* the field with the *Picklist* type has no value by default and this field is not *Required*:
+** when a user creates a record, the field with the *Picklist* type has the *None* value. The record will be saved whether the user remains the *None* value or selects another one.
+* the field with the *Picklist* type has a value by default and this field is *Required*:
+** when a user creates a record, the default value is set in the field with the *Picklist* type. The *None* value is absent.
