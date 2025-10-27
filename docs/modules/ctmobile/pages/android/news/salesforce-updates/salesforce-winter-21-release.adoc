@@ -1,0 +1,13 @@
+= Salesforce Winter '21 Release
+
+Due to https://help.salesforce.com/articleView?id=release-notes.getstart_browsers_sfx.htm&type=5&release=228[Salesforce does not support] the Private Browsing mode (Incognito) in Lightning Experience, do not use this mode in any browser when working with the following:
+
+* xref:ios/admin-guide/ct-mobile-control-panel/index.adoc[CT Mobile Control Panel]
+* xref:ios/admin-guide/geolocation-center/index.adoc[Geolocation Center]
+* xref:ios/admin-guide/notification-center.adoc[Notification Center]
+* xref:ios/ct-presenter/creating-clm-presentation/creating-clm-presentation-with-the-application-record-type/index.adoc[Application Editor] (including custom scenario editing)
+* xref:ios/mobile-application/mobile-application-modules/quizzes.adoc[The Quiz page layout].
+
+Otherwise, set up third-party cookies to use the CT Mobile package features in Lightning Experience via the incognito mode. For example, if you are using Google Chrome, follow the instructions https://support.google.com/chrome/answer/95647?co=GENIE.Platform%3DDesktop&hl=en#zippy=%2Callow-or-block-cookies[here].
+
+
