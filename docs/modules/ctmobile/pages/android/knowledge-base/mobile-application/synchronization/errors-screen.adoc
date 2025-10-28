@@ -1,0 +1,47 @@
+= Errors Screen
+
+Errors occur due to violation of link:android/knowledge-base/mobile-application/synchronization/validation[the validation
+rules] and
+https://help.salesforce.com/articleView?id=security_about_sharing_rules.htm&language=en&r=https%3A%2F%2Fwww.google.com%2F&type=5[sharing
+rules] or due to insufficient profile access. The *Errors* menu item is
+intended to manage errors in one place and will be displayed:
+
+* if the user postponed fixing errors on the record screen.
+** The validation rule is violated on a record, and the user leaves the
+record screen.
+** The start date of an activity record is later than the end date, and
+the user leaves the record screen.
+** The required field is blank on a record or within the custom related
+list, and the user leaves the record screen.
+* if you launched the sync process and sending changes to some records
+fails due to:
+** Revoked access to some records.
+** Insufficient access to a record or a field of the record, the
+required field is empty, etc.
+
+The list of error records is grouped by the object type. Each error
+record displays the text of the error.
+
+
+
+[[h2_647782618]]
+=== Actions with Error Records 
+
+To view a record that was not synchronized and fix the issue, tap the
+error record.
+
+* The record layout opens.
+* The Custom Related List tab with an error on the parent record opens.
+
+
+
+To delete error records from the list:
+
+* select one or several records and tap the *Delete selected* button.
+* tap the *Delete all* button to delete all error records.
+
+All the changes made by the user are canceled. The previously synced
+records will be rollbacked to the state after the last successful
+synchronization.
+
+[NOTE] ==== Unsynchronized records will be deleted. ====

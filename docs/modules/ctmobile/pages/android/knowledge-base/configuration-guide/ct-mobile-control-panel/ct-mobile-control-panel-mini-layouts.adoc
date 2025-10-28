@@ -1,0 +1,55 @@
+= CT Mobile Control Panel: Mini Layouts
+
+The *Mini Layouts* tab is intended to configure and manage special forms
+that simplify the creation of a new record in the CT Mobile app.
+
+[TIP] ==== According to the selected profile, settings on this
+tab will be saved in the corresponding fields of the
+link:android/mobile-mini-layout-settings[Mobile Mini Layout Settings]
+record. ====
+
+* link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-mini-layouts#h2__1969690579[Location]
+* link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-mini-layouts#h2__632328267[Mini
+Layout Options]
+
+*Click to view the interface*
+
+.Click to hide[%collapsible] ====
+
+image:ctm_control_panel_mini_layouts.png[]
+
+====
+
+[[h2__1969690579]]
+=== Location 
+
+*Location* is a picklist containing all configured and unconfigured
+profiles available in your Salesforce org.
+
+*General Settings* will be applied to all the profiles without
+individual settings.
+
+
+
+To get started, select the desired profile in the *Location* field to
+configure it. To delete the configuration for the selected profile,
+click the
+image:delete-icon.png[]
+icon.
+
+[[h2__632328267]]
+=== Mini Layout Options 
+
+Click the *Create layout* button to add a new mini layout.
+
+* Follow the steps link:android/mini-layouts[here] to configure a mini
+layout for link:android/managing-offline-objects[the desired offline
+object].
+* Mini layouts are grouped into categories according to the offline
+object.
+* Click
+image:66356101.png[]
+next to the desired mini layout to edit it.
+* Click
+image:66356102.png[]
+next to the desired mini layout to delete it.

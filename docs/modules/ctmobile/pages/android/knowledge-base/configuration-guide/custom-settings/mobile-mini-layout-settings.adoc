@@ -1,0 +1,70 @@
+= Mobile Mini Layout Settings
+
+*Mobile Mini Layout Settings* is a custom setting that is used to set up
+link:android/mini-layouts[a mini-layout] to create a new record in the CT
+Mobile app.
+
+[TIP] ==== For easy setup, go to
+link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-mini-layouts[CT Mobile Control Panel:
+Mini Layouts]. ====
+
+'''''
+
+Custom setting API name:
+[.apiobject]#clm__MobileLayoutSettings__c#
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Action |[.apiobject]#clm__Action__c# |Text(255) |System
+Event ID: New
+
+|Fields |[.apiobject]#clm__Fields__c# |Text(255) |List
+of API names (separated by a comma, without blank space) of object
+fields to be displayed in the record creation window.
+
+|Read Only |[.apiobject]#clm__ReadAttribute__c#
+|Text(255) a|
+The attribute defines whether a field must be read-only. Specify a list
+of[.apiobject]#true# and[.apiobject]#false# values
+(separated by a comma, without blank space) for every field specified in
+[.apiobject]#clm__Fields__c#.
+
+[NOTE] ==== The attribute is not in use. ====
+
+|Recordtype Developer Name
+|[.apiobject]#clm__RecordTypeDeveloperName__c#
+|Text(255) |API-name of the object record type to which this parameter
+will be applied.
+
+|Required |[.apiobject]#clm__RequiredAttribute__c#
+|Text(255) |The attribute defines whether a field must be filled out.
+Specify a list of[.apiobject]#true# and
+[.apiobject]#false# values (separated by a comma, without blank
+space) for every field specified in
+[.apiobject]#clm__Fields__c#.
+
+|SObject |[.apiobject]#clm__SObject__c# |Text(255)
+|API-name of the object on which a record is being created
+
+|Sort |[.apiobject]#clm__Sort__c# |Text(255) a|
+SOQL-criteria of sorting records.
+
+[.confluence-information-macro-information]# The Attribute is not
+applied anymore. #
+
+|Org ID/Profile ID |[.apiobject]#clm__OrgProfileId__c#
+|Text(255) a|
+link:android/application-permission-settings[Organization ID/Profile ID] to
+which this setting is applicable:
+
+* if Profile ID is set, the setting is applied only to the profile;
+* if Organization ID is set, the setting is applied to all
+non-configured profiles.
+* if Profile ID and Organization ID are not set, the setting is applied
+to all non-configured profiles. 
+
+|===

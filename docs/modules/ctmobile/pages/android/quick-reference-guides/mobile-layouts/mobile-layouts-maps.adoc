@@ -1,0 +1,98 @@
+= Mobile Layouts: Maps
+
+The *Maps* widget allows you to display a map fragment with an object
+location.
+
+[[h2_1790847128]]
+=== Specify Google Maps API Key 
+
+To specify the Google Maps API key.
+
+. Generate link:android/knowledge-base/configuration-guide/google-maps-api-key/google-maps-api-key[the Google Maps API key].
+. Go to link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-general#h3_375370096[CT Mobile
+Control Panel: General] and insert the API key in the *Google Maps
+Android API Key* field.
+. Click *Save*.
+
+The setup is complete.
+
+[[h2_1795365318]]
+=== Specify Account Address 
+
+The *Maps* widget can display[.object]#Accounts# on the map
+using address information from the specific field:
+
+[NOTE] ==== CT Mobile checks if there is geolocation data in the
+field with the geolocation type. If the geolocation data is empty, the
+location will be set according to the address in the field with the
+formula type. ====
+
+* field with the *Geolocation* type to store geolocation data such as
+account coordinates.
+* field with the *Formula* type to store an account address as text and
+geocoding.
+
+
+
+To set an account address:
+
+. Go to *Setup → Object Manager →* the[.object]#Account#
+object.
+. Click *Fields & Relationships*.
+. Create a new field.
+* To use account coordinates, create a field with the *Geolocation*
+type.
+* To use geocoding, create a field with the *Formula* type.
+. Go to link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-general[CT Mobile Control
+Panel: General]:
+.. In the *Account Geolocation Field field* picklist, select the field
+with the *Geolocation* type.
+.. In the *Account Full Address Field field* picklist, select the field
+with the *Formula* type.
+. Click *Save*.
+
+The setup is complete.
+
+[[h2__1309855414]]
+=== Add Accounts to the Menu 
+
+To add the[.object]#Account# to the link:android/app-menu[app
+menu]:
+
+. Go to link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-app-menu[CT Mobile Control
+Panel: App Menu] tab.
+. Select the required profile in the *Location* picklist.
+
+[TIP] ==== *General Settings* will be applied to all the
+profiles without individual settings. ====
+. Drag and drop[.object]#Accounts# from the *Available* column
+to the *Selected*.
+. Click *Save*.
+
+The setup is complete.
+
+[[h2_913548954]]
+=== Add Maps to the Mobile Layout 
+
+To add the *Maps* widget to the mobile layout:
+
+. Go to *Setup → Object Manager →* select the[.object]#Account#
+object.
+. Click *Page Layouts* and select the mobile layout.
+. Drag and drop the *Section* element to the area below the *Address*
+section.
+. In the *Section Properties* window, enter *MAPS* in the *Section Name*
+field, and select the *1-Column* layout. Ensure that the *Display
+Section Header On* checkbox is enabled.
+
+[NOTE] ==== Do not translate the *MAPS* section name. It is
+responsible for displaying *Dashboards* on the mobile layout and should
+be left intact. ====
+image:47746934.png[]
+. Click *OK*.
+. Drag and drop the *Blank Space* element below the *MAPS* element.
+. Click *Save*.
+
+The *Maps* widget is configured.
+
+image:62561481.png[]

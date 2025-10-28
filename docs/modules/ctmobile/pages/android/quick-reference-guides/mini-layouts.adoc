@@ -1,0 +1,41 @@
+= Mini Layouts
+
+*Mini Layouts* are special forms with a preconfigured set of fields that
+are used to create a record in a more convenient way. A mini layout will
+appear, for example, when tapping the plus button to create a new
+*Account* record or creating a new *Activity* record on the calendar
+grid. A mini layout can be assigned per each active record type of
+link:android/quick-reference-guides/managing-offline-objects[the offline object].
+
+[NOTE] ==== If a mini layout for an offline object or its record
+type is not configured, the default page layout will be open when
+creating a record. ====
+image:66356065.png[]
+
+[[h2__684572466]]
+=== Create a Mini Layout 
+
+To create a mini layout:
+
+. Go to link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-mini-layouts[CT Mobile Control
+Panel: Mini Layouts].
+. Click *Create layout*.
+
+image:47745554.png[]
+. Enter the name of the mini layout.
+
+[NOTE] ==== There cannot be two layouts with the same name. ====
+. Select the *Object* from the drop-down list.
+. Select the *Record Type* from the drop-down list.
+
+[NOTE] ==== Make sure that the target profile has the proper
+link:android/quick-reference-guides/application-permission-settings[permissions for the selected
+record type]. You can review the profile permissions in *Setup → Users →
+Profiles*. ====
+. Click *Add new field* and select a field from the drop-down list,
+which will be displayed on the mini layout.
+. Enable the *Required* setting to add a required field.
+. Click *Create*.
+
+The mini layout is configured. Perform a synchronization to apply the
+changes.

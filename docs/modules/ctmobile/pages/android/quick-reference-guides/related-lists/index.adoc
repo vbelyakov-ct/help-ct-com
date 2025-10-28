@@ -1,0 +1,85 @@
+= Related Lists
+
+Related lists are tabular forms for displaying records related to
+another record if one object has a link to another object in
+https://help.customertimes.com/smart/project-ct-mobile-en/reference-fields[the
+reference field]. In the CT Mobile app, two types of related lists are
+available:
+
+* link:android/quick-reference-guides/related-lists/custom-related-lists[Custom Related Lists]
+* link:android/quick-reference-guides/related-lists/standard-related-lists[Standard Related Lists]
+
+[[h2_384095523]]
+=== Related List Features Comparison 
+
+Here is a table to help you understand the difference between standard
+and custom related lists: how to set up related lists in Salesforce and
+what features could be available in the CT Mobile app.
+
+
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Feature* |*Standard Related List* |*Custom Related List* |*Notes*
+
+|Set up a related list with the page layout editor |{plus} |– a|
+* https://help.salesforce.com/articleView?id=customizing_related_lists.htm&type=5[Add
+and customize a standard related list] on the page layout of the
+required object.
+* Not applicable for a custom related list.
+
+|Set up a related list on CT Mobile Control Panel |{plus} |{plus} a|
+* Go to link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects[CT Mobile
+Control Panel: Offline Objects] to customize a standard related list;
+* Go to link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-custom-details[CT Mobile
+Control Panel: Custom details] to customize a custom related list.
+
+|Create a record |{plus} |{plus} a|
+Grant permission:
+
+* on link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects[CT Mobile Control
+Panel: Offline Objects] for a standard related list;
+* on link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-custom-details[CT Mobile Control
+Panel: Custom details] for a custom related list.
+
+[NOTE] ==== Object permissions restrict common access
+permissions defined by the user profile. The current user profile should
+have permission to edit the selected offline objects. ====
+
+|Delete a record |{plus} |{plus} a|
+Grant permission:
+
+* on link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects[CT Mobile Control
+Panel: Offline Objects] for a standard related list;
+* in link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-custom-details[CT Mobile Control
+Panel: Custom details] for a custom related list.
+
+[NOTE] ==== Object permissions restrict common access
+permissions defined by the user profile. The current user profile should
+have permission to delete the selected offline objects. ====
+
+|Edit field values |– |{plus} a|
+* Not applicable for a standard related list;
+* Go to link:android/quick-reference-guides/related-lists/custom-related-lists#h2__773495381[Custom Related
+Lists] to add the ability for editing fields of a custom related list.
+
+|Drilldown to record details screen |{plus} |{plus} a|
+* Available by default and cannot be disabled for a standard related
+list;
+* Grant permission on
+link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-custom-details[CT Mobile Control
+Panel: Custom details] for custom related list.
+
+|Control columns' width |{plus} |{plus} |[NOTE] ==== Not in
+use. ====
+
+|Filter records by using a SOQL query |{plus} |{plus} |In the CT
+Mobile app, switch between the display of all records or only records
+that match filter criteria.
+
+|Timeline view |{plus} |– |[NOTE] ==== Not in use. ====
+
+|The sort order by the specific field |{plus} |{plus} |Tap the column
+title to sort records by this field. For more information, go to
+link:android/quick-reference-guides/related-lists/filters-in-related-lists[Filters in Related Lists].
+|===

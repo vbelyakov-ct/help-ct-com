@@ -1,0 +1,81 @@
+= ctm.sync
+
+The method of link:android/knowledge-base/ct-presenter/js-bridge-api/js-bridge-api[JS Bridge] functionality is
+intended to launch the fast or mixed synchronization without the CLM
+presentation interruption.
+
+[[h2__905713055]]
+=== Query Format 
+
+[width="100%",cols="100%",]
+|===
+a|
+link:javascript:void(0)[Copy Code]
+
+JavaScript
+
+a|
+....
+ctm.sync(handler)
+....
+
+|===
+
+[[h2_442663712]]
+=== Handler 
+
+Use a handler function to describe the output format of the query
+results, e.g., to display the results of operations or method errors for
+debugging purposes.
+
+[width="100%",cols="100%",]
+|===
+a|
+link:javascript:void(0)[Copy Code]
+
+JavaScript
+
+a|
+....
+ctm.sync(handler)
+....
+
+|===
+
+
+
+[width="100%",cols="100%",]
+|===
+a|
+link:javascript:void(0)[Copy Code]
+
+JavaScript
+
+a|
+....
+ctm.sync( function(response){ 
+    console.log('Result', response); 
+})
+....
+
+|===
+
+
+
+The result:
+
+[width="100%",cols="100%",]
+|===
+a|
+link:javascript:void(0)[Copy Code]
+
+JavaScript
+
+a|
+....
+{
+    "success": true,
+}
+....
+
+|===

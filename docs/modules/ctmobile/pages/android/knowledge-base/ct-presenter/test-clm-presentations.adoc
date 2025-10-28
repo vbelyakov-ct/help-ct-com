@@ -1,0 +1,46 @@
+= Test CLM Presentations
+
+Create test CLM presentations to get familiar with how to implement the
+JS Bridge methods and media into a slide markup.
+
+[TIP] ==== Go to 
+Bridge Methods Availability] to see which JS Bridge methods are
+available for use based on the device platform. ====
+
+
+
+To add test CLM-presentations:
+
+. Go to link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-general[CT Mobile Control
+Panel: General].
+. In the top right corner, click the *Create Demo App* button.
+
+image:Test-CLM-presentations-en.png[]
+
+
+
+CLM presentations are added. Go to *Applications* to view the created
+CLM presentations.
+
+* *CT Mobile JS API*
+
+Use this CLM-presentation as an example of how to implement the
+following JS Bridge methods:
+
+** link:android/ctm-create[ctm.create]
+** link:android/ctm-update[ctm.update]
+** link:android/ctm-delete[ctm.delete]
+** link:android/ctm-query[ctm.query]
+** https://help.customertimes.com/smart/project-ct-mobile-en/ctm-opendatatablebyparentrecord[ctm.openDataTableByParentRecord]
+** https://help.customertimes.com/smart/project-ct-mobile-en/ctm-opendatatablebyquery[ctm.openDataTableByQuery]
+** https://help.customertimes.com/smart/project-ct-mobile-en/ctm-openqrscanner[ctm.openQRScanner]
+** https://help.customertimes.com/smart/project-ct-mobile-en/ctm-openquiz[ctm.openQuiz]
+** https://help.customertimes.com/smart/project-ct-mobile-en/ctm-getfile[ctm.getFile]
+** https://help.customertimes.com/smart/project-ct-mobile-en/ctm-storefile[ctm.storeFile]
+* *Demo Presentation*
+
+Use this CLM-presentation as an example of how to interact with the
+elements, such as video or link:android/creating-a-widget[widgets], and how
+to
+https://help.customertimes.com/smart/project-ct-mobile-en/ctm-generatepdf[create
+a PDF] based on a slide.

@@ -1,0 +1,86 @@
+= Nearby Accounts
+
+The *Nearby Accounts* module allows you to observe the nearest accounts
+on the map.
+
+* ​You can view the contacts and activities related to an account, and
+create activities.
+* By default, records are grouped by the start date in decreasing order.
+You can select the appropriate list view.
+
+[[h2_1037365166]]
+=== Requirements 
+
+Add the *Nearby Accounts* module to link:android/app-menu[the app menu].
+
+* To use Google Maps, specify the link:android/knowledge-base/configuration-guide/google-maps-api-key/google-maps-api-key[Google
+Maps API key] on the
+link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-general#h3_604215198[CT Mobile Control
+Panel: General] tab.
+
+* A field to store an address for the[.object]#Account# object
+should be specified on the *CT Mobile Control Panel: General* tab.
+* An[.object]#Activity# object should be specified on
+link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar#h3_1397263211[CT Mobile
+Control Panel: Calendar] tab. Create a field with the *Lookup* type from
+the[.object]#Activity# object to the[.object]#Account#
+object.
+
+image:62562526.png[]
+
+[[h2_163800537]]
+=== Adding Nearby Accounts to the Menu 
+
+To add the *Nearby Accounts* module to the link:android/app-menu[app menu]:
+
+. Go to link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-app-menu[CT Mobile Control
+Panel: App Menu] tab.
+. Select the required profile in the *Location* picklist.
+
+[TIP] ==== *General Settings* will be applied to all the
+profiles without individual settings. ====
+. Click the
+image:62562609.png[]
+button to open the *Add menu item* tool.
+. Select the *Nearby Accounts* item.
+. Click *Add* to close the *Add menu item* tool.
+. Click *Save*.
+
+The setup is complete.
+
+[[h2_511018746]]
+=== Working with Nearby Accounts 
+
+[[h3_908267922]]
+==== Left Menu 
+
+List of *Accounts*, *Contacts*, or *Activity* records with the specified
+geolocation. By default, records are grouped by the start date in
+decreasing order. You can select the appropriate list view.
+
+[TIP] ==== To view related contacts, specify the API name of the
+required object on the *CT Mobile Control Panel: General* tab and add
+this object to link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects[offline
+objects]. There should be a field with the *Lookup* type from the
+specified[.object]#Contact ==== object to the
+[.object]#Account# object. # [[h3__449942769]] ==== Main Screen 
+
+Based or not on the current location, view the location of the selected
+record on the map.
+
+[[h3_1243841833]]
+==== Available Options 
+
+* Tap *Nearby Accounts* in the main menu to open a map centered on your
+current location (if enabled in the device settings).
+
+* Tap a record in the left menu to open a record and center the map
+around the selected record.
+** The record details from the compact layout will be displayed at the
+top of the mark.
+** The alert will be shown if you tap an activity without specified
+geolocation.
+
+* Tap on the map marker to open a list of related records. Tap
+image:62562530.png[]
+to create an activity.

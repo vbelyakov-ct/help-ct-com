@@ -1,0 +1,76 @@
+= Activity
+
+The[.object]#Activity# object of the target system is intended
+to store details of users’ field activities, such as visits, events, and
+meetings.
+
+It is possible to work with several[.object]#Activity# objects
+that must be set in link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar[CT Mobile
+Control Panel: Calendar].
+
+[NOTE] ==== The availability of functionality depends on the
+platform of the mobile device. For more information, refer to
+link:android/ct-mobile-os-comparison[CT Mobile OS Comparison]. ====
+
+'''''
+
+Object API name: d__epends on the target-system data model__
+
+'''''
+
+In case of their lack, the following fields should be created on the
+object:
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Application Ids |[.apiobject]#ApplicationIds__c# a|
+Lookup(Application) / Text(255) / Long Text Area(131072)
+
+[TIP] ==== Consider
+https://help.salesforce.com/s/articleView?id=sf.custom_field_types.htm&type=5[Salesforce
+description] for the fields of the *Text* type. ====
+
+a|
+For *Remote Detailing*, create a field that stores CLM presentations
+IDs:
+
+[NOTE] ==== The field to store[.object]#Application
+==== IDs should have the same API name on any [.object]#Activity# object for the Remote Detailing session.#[TIP] ==== You can specify a
+process, for example, create a trigger to autocomplete this field with
+values from the pre-configured picklist. ====
+
+* a field with the Lookup type to put only one CLM-presentation ID in
+* a field with the Text type to store a few IDs (separated by a comma,
+without blank space).
+
+|Geolocation |[.apiobject]#Geolocation__c# |Geolocation
+|Create a field to store the geolocation data on the place of editing
+(opening) activity
+
+|Identifier |[.apiobject]#MobileId__c# |Text(255) a|
+Create a field to store
+https://help.customertimes.com/smart/project-ct-mobile-en/system-label[the
+system label] in a case where the record was created/edited in the CT
+Mobile app.
+
+[NOTE] ==== The use of another API name is not possible. ====
+
+|RD Link |[.apiobject]#RDLink__c# |URL a|
+For *Remote Detailing*, create a field to fill it out with an invite
+link.
+
+[NOTE] ==== The field to store an invite 
+same API name on any[.object]#Activity ==== object for the
+Remote Detailing session.#
+
+|Email Required |[.apiobject]#IsEmailRequired__c# |Checkbox
+a|
+[NOTE] ==== Available since the CT Mobile package v.3.65. ====
+
+If enabled, the user is required to provide an email on
+https://help.customertimes.com/smart/project-ct-mobile-en/remote-detailing-2-0-ui-for-participants/a/h2__555694282[the
+Welcome screen] to access the *Remote Detailing* meeting.
+
+|===

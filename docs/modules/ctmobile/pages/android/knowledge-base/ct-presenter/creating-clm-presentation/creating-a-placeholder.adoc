@@ -1,0 +1,44 @@
+= Creating a Placeholder
+
+A[.object]#Placeholder# is an HTML layout field that indicates
+a place for interactive widget content storage. It is possible to set up
+the type of supported link:android/knowledge-base/ct-presenter/creating-clm-presentation/creating-a-widget[widgets] in the
+placeholder.
+
+
+
+To create a new placeholder:
+
+. Go to *Applications* and select a CLM presentation.
+. In the *Templates* section, click the template name.
+. Go to the *Related* tab.
+. In the *Placeholders* section, click *New*.
+
+image:CreatePlaceholder.png[]
+
+
+. Fill out the necessary fields.
+
+[TIP] ==== The full description of placeholder attributes is
+available link:android/knowledge-base/ct-presenter/clm-scheme/clm-placeholder[here]. ====
+
+* The *placeholder name* should include the CLM presentation name, e.g.,
+_e-Detailing2: Test Template_, where _e-Detailing2_ is the name of the
+CLM presentation.
+* The placeholder position number is a required parameter.
+
+On the template markup, placeholders are marked as
+[.apiobject]#{!POSITION_n}#, where
+[.apiobject]#n# is a position number. A widget that is
+associated with this placeholder and that has the corresponding position
+number in[.apiobject]#{! POSITION_n}# will be added to
+the slide layout by the *Renew Slides* button on the CLM presentation
+page.
+* Specify a type of placeholder.
+
+image:NewPlaceholder.png[]
+
+
+. Click *Save* or *Save & New* to create another placeholder.
+
+The placeholder is created.

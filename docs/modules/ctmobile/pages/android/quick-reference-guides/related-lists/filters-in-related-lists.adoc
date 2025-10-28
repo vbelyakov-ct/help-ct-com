@@ -1,0 +1,75 @@
+= Filters in Related Lists
+
+link:android/managing-offline-objects#ManagingOfflineObjects-SOQLFilters[Set
+up a SOQL filter] for the related lists. The toggle in the CT Mobile
+allows a user to display all downloaded records or only records that
+matched the filter criteria.
+
+[[h2__1316422583]]
+=== Standard Related Lists 
+
+The sorting order for
+https://help.salesforce.com/articleView?id=customizing_related_lists.htm&type=5[a
+standard related list] is stored in
+https://help.customertimes.com/articles/ct-mobile-ios-en/related-list-filters[Related
+List Filters].
+
+. If the *Order By* request is set in the
+[.apiobject]#clm__SOQL__c# field:
+* if the value is ASC or not set in the
+[.apiobject]#clm__SortOrder__c# field, the sorting will
+be performed in ascending order;
+* if the value is DESC in the
+[.apiobject]#clm__SortOrder__c# field, the sorting will
+be performed in descending order;
+. If the *Order By* request is not set in the
+[.apiobject]#clm__SOQL__c# field, the sorting will be
+performed according to the specified parameter in the *Sort by* field in
+the *Related List Properties* window on the layout of the corresponding
+record type of the parent object:
+* if the value is ASC or not set in the
+[.apiobject]#clm__SortOrder__c# field, the sorting will
+be performed in ascending order;
+* if the value is DESC in the
+[.apiobject]#clm__SortOrder__c# field, the sorting will
+be performed in descending order;
+. In other cases, the sorting is carried out by the first column.
+
+[[h2__1047667523]]
+=== Custom Related Lists 
+
+The sorting order for link:android/quick-reference-guides/related-lists/custom-related-lists[a custom related
+list] is stored in link:android/knowledge-base/configuration-guide/custom-settings/mobile-custom-details-settings[Mobile
+Custom Details Settings].
+
+. If the *Order By* request is set in the
+[.apiobject]#clm__RecordCondition__c# field:
+
+[NOTE] ==== If there is more than one field in the condition,
+the records are sorted by the first field. If the first field contains
+two identical values, the records are sorted by the second field, and so
+on. ====
+
+* if the value is ASC or not set in the
+[.apiobject]#clm__RecordCondition__c# field, the sorting
+will be performed in ascending order;
+* if the value is DESC in the
+[.apiobject]#clm__RecordCondition__c# field, the sorting
+will be performed in descending order;
+. If the *Order By* request is not set in the
+[.apiobject]#clm__RecordCondition__c# field, the sorting
+will be performed according to the value in the
+[.apiobject]#clm__SortingFieldName__c# field. Records
+are sorted in ascending order.
+* if the value is ASC or not set in the
+[.apiobject]#clm__RecordCondition__c# field, the sorting
+will be performed in ascending order;
+* if the value is DESC in the
+[.apiobject]#clm__RecordCondition__c# field, the sorting
+will be performed in descending order;
+. In other cases, the sorting is carried out by the first column.
+
+[.confluence-information-macro-information]#In the CT Mobile app, it is
+also possible to rearrange records in custom and standard related lists
+by tapping on the name of any displayed list column. On the second tap,
+the ascending and descending sorting order changes.#

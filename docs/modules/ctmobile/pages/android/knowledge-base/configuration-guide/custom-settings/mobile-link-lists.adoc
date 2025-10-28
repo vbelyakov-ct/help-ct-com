@@ -1,0 +1,44 @@
+= Mobile Link Lists
+
+*Mobile Link Lists* is a custom setting to store custom links for
+https://help.customertimes.com/smart/project-ct-mobile-en/links-list[the
+Links module].
+
+[TIP] ==== For easy setup, go to
+link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-app-menu[CT Mobile Control Panel: App
+Menu]. ====[NOTE] ==== The availability of functionality
+depends on the platform of the mobile device. For more information,
+refer to link:android/ct-mobile-os-comparison[CT Mobile OS Comparison].
+====
+
+'''''
+
+Custom setting API name:
+[.apiobject]#clm__MobileLinkLists__c#
+
+'''''
+
+[cols=",,,",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Category |[.apiobject]#clm__Category__c# |Text(255)
+|The specific category for a link.
+
+|Description |[.apiobject]#clm__Description__c#
+|Text(255) |The specific description for a link.
+
+|Navigation enabled
+|[.apiobject]#clm__IsNavigationEnabled__c# |Checkbox |If
+enabled, the user could navigate through a site within the CT Mobile
+app.
+
+|Order |[.apiobject]#clm__Order__c# |Number(18,0) |The
+order number of a link.
+
+|Profile |[.apiobject]#clm__Profile__c# |Text(255) |The
+profile for which link was specified.
+
+|URL |[.apiobject]#clm__URL__c# |URL(255) |The URL
+address of the link.
+|===

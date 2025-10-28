@@ -1,0 +1,70 @@
+= Libraries
+
+The *Libraries* module allows viewing files and documents uploaded to
+Salesforce CRM Content.
+
+* For the full module operation,
+https://help.salesforce.com/articleView?id=content_initialsetup.htm&type=5[follow
+the link] to enable *Salesforce CRM Content* in your Salesforce org and
+set up permissions for users.
+* Upload documents to
+https://help.salesforce.com/articleView?id=collab_salesforce_files_parent.htm&type=5[Files]
+and grant user access to documents. Documents can be stored by folder.
+
+[[h2__480837523]]
+=== Adding Libraries to the Menu 
+
+If [.object]#ContentDocument#, [.object]#ContentVersion#,
+[.object]#ContentDocumentLink# objects are added as
+link:android/managing-offline-objects[offline objects], the *Libraries*
+module will not work correctly.
+
+To add the *Libraries* module to the link:android/app-menu[app menu]:
+
+. Go to link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-app-menu[CT Mobile Control
+Panel: App Menu] tab.
+. Select the required profile in the *Location* picklist. To apply
+settings to all the profiles, select *General Settings*. 
+. Click the
+image:62562609.png[]
+button to open the *Add menu item* tool.
+. Select the *Salesforce Content* item.
+. Click *Add* to close the *Add menu item* tool.
+. Click *Save*.
+
+The setup is complete.
+
+[[h2_1939800943]]
+=== Using Libraries 
+
+Libraries include two main sections:
+
+* *Left menu*
+
+The list of available for the current user workspaces and folders.
+* *Main screen*
+
+The screenshots of available documents. Documents are grouped by content
+type.
+
+[NOTE] ==== For files larger than 20MB, the screenshots are not
+displayed. ====
+
+
+
+Available content types:
+
+* *All*
+
+The general list of all the documents and folders in the workspace.
+* *Documents*
+
+Files of MS Office, text documents, etc.
+* *Media*
+
+Audio and video files.
+* *Other*
+
+Other file formats.
+
+Supported files:

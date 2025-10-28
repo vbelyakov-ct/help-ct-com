@@ -1,0 +1,110 @@
+= CLM Presentation Components
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+[[h2__582050190]]
+=== 
+
+[[h3_14400000]]
+==== 
+
+A set of HTML slides representing the logic of the CLM presentation.
+Slides are formed on templates and have a variable area for multiple use
+cases. Users can create custom scenarios based on the default scenario.
+
+[[h3__145801861]]
+==== 
+
+A CLM presentation page ;with a unique index number.
+
+[NOTE] ==== The existence of two slides with equal index numbers
+within one CLM presentation is not permitted. ====
+
+* The *Required* attribute prevents mobile users from displacing or
+removing the slide from the scenario.
+* The *Fixed* attribute disables slide scrolling
+link:android/knowledge-base/mobile-application/mobile-application-modules/applications/gestures-in-clm-presentations[using a double swipe].
+
+[.confluence-information-macro-information]# The attribute use is
+recommended to be set to the slides that represent the menu. #
+
+[[h3__261292728]]
+==== 
+
+An HTML layout with placeholders. Templates support an unlimited number
+of placeholders. Multiple slides of the same CLM presentation can use
+the same template.
+
+[[h3__1019358273]]
+==== 
+
+An HTML layout field that indicates a place for interactive widget
+content storage. It is possible to set up the type of supported widgets
+in the placeholder. The placeholder position number is a required
+parameter. Placeholders are marked as
+[.apiobject]#{!POSITION_n}#, where
+[.apiobject]#n# is an ordinal integer.
+
+[[h3__306512626]]
+==== 
+
+A separate editable template element. The following types of widgets are
+currently supported:
+
+* *Rich Text*
+
+For changes to the HTML layout, text blocks places, and images
+* *Slider*
+
+An interactive customizable widget that can aggregate numerical values
+* *Chart*
+
+An interactive diagram widget
+* *Sortable*
+
+An interactive sorting widget
+* *Video*
+
+A widget for inserting a video into a slide
+
+[.confluence-information-macro-information]# YouTube video is currently
+supported. The video can be downloaded to the iPad to be available in
+offline mode. #
+
+All types are managed using the Application Editor, excluding the
+*Video* type.
+
+[[h2__1899601929]]
+=== Additional objects 
+
+[[h3__1467219969]]
+==== 
+
+The object is intended to store the CLM presentation statistics from
+link:android/knowledge-base/mobile-application/mobile-application-modules/applications/applications[the Application module],
+link:android/home-screen[Home Screen], and
+link:android/mobile-layouts-applications[a record's mobile layout].
+
+[[h3_877574013]]
+==== 
+
+The object is intended to store user scenarios for CLM presentations.
+
+[[h3__2064980083]]
+==== 
+
+The object is intended to record all details, e.g., the company's
+link:android/knowledge-base/ct-presenter/clm-scheme/clm-product[products], of different types of
+link:android/knowledge-base/ct-presenter/clm-scheme/clm-user[user] visits.
+
+[[h3__1775407813]]
+==== 
+
+The object is intended to log entries of each action during
+synchronization.
+
+a|
+image:57215781.png[]
+
+|===

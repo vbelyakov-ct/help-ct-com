@@ -1,0 +1,39 @@
+= Applications
+
+The *Application* module is intended to store and display CLM
+presentations and custom scenarios.
+
+You can add CLM presentations to the
+link:android/mobile-layouts-applications[mobile layout] and manage CLM
+presentations by
+https://help.customertimes.com/smart/project-ct-mobile-en/clm-presentation-controls[the
+control buttons], link:android/knowledge-base/mobile-application/mobile-application-modules/applications/gestures-in-clm-presentations[gestures], or
+link:android/js-bridge-api[JS methods and links] on the slides. For each
+CLM presentation, it is possible to set up statistical data to collect.
+
+* link:android/knowledge-base/mobile-application/mobile-application-modules/applications/applications#h2__1510760474[Add Applications to the Menu]
+
+[NOTE] ==== The profile must be granted access to
+[.object]#Application ==== , [.object]#Slide#,[.object]#Custom Scenario#, and[.object]#Application
+Stats# objects for the correct functioning. #
+image:62562482.png[]
+
+[[h2__1510760474]]
+=== Add Applications to the Menu 
+
+To add the *Applications* module to the link:android/app-menu[app menu]:
+
+. Go to link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-app-menu[CT Mobile Control
+Panel: App Menu] tab.
+. Select the required profile in the *Location* picklist.
+
+[TIP] ==== *General Settings* will be applied to all the
+profiles without individual settings. ====
+. Click the
+image:62562609.png[]
+button to open the *Add menu item* tool.
+. Select the *Applications* item.
+. Click *Add* to close the *Add menu item* tool.
+. Click *Save*.
+
+The setup is complete.

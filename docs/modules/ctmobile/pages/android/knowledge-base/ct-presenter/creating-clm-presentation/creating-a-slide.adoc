@@ -1,0 +1,52 @@
+= Creating a Slide
+
+To create a slide:
+
+. Go to *Applications* and select a CLM presentation.
+. Click *New* in the *Slides* section.
+
+image:CreateSlide.png[]
+
+
+. Fill out the necessary fields.
+
+[TIP] ==== The full description of slide attributes is available
+link:android/knowledge-base/ct-presenter/clm-scheme/clm-slide[here]. ====
+
+* Enter the *Slide* name.
+* Specify the slide content using one of the options below:
+** Select link:android/knowledge-base/ct-presenter/clm-scheme/clm-template[the template] with placeholders and
+widgets.
+** In the *Markup* field, specify a markup for a slide.
+* Specify link:android/clm-navigation-in-clm-presentations[the order and
+branch].
+* Set the *Required* attribute prevents mobile users from displacing or
+removing the slide from the scenario.
+* Set the *Fixed* attribute to disable slide scrolling
+link:android/knowledge-base/mobile-application/mobile-application-modules/applications/gestures-in-clm-presentations[using a double swipe].
+
+{empty}[.confluence-information-macro-information]# The attribute use is
+recommended to be set to the slides that represent the menu. #
+image:57216956.png[]
+
+
+. Click *Save* or *Save & New* to create another slide.
+
+The slide is created.
+
+
+
+It is also possible to add link:android/knowledge-base/ct-presenter/clm-scheme/attachments-and-files[attachment
+files or notes] to the slide.
+
+. Go to *Applications* and select a CLM presentation.
+. In the *Slides* section, click the slide name.
+. Go to the *Related* tab.
+. In the *Notes & Attachment* section, click the *Upload Files* button.
+. Select a file or drop it in the section.
+
+image:SlideRelated.png[]
+
+
+
+The side attachment is uploaded.

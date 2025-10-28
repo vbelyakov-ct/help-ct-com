@@ -1,0 +1,43 @@
+= Actions
+
+The *Actions* combo menu allows additional actions to be performed on a
+record details screen.
+
+* link:android/knowledge-base/mobile-application/actions#h2_62618674[Photo]
+* link:android/knowledge-base/mobile-application/actions#h2_785802245[Add Post]
+
+[[h2_62618674]]
+=== Photo 
+
+Add pictures to a record. Tap the *Photo* button to select one or
+several photos from the device gallery, or take a new one. View photos
+on the link:android/attachments-and-files[Notes & Attachments] tab of the
+record.
+The *Photo* button is available on any object—the records of
+[.object]#Accounts#,[.object]#Contacts#, and
+[.object]#Activity# objects:
+
+* When a mobile user has permission to edit records.
+* When a record is available for a mobile user according to
+https://help.salesforce.com/articleView?id=sharing_model_fields.htm&type=5[Sharing
+Settings], for example, with *Public Read/Write* access, if there is
+https://help.salesforce.com/articleView?id=security_sharing_rules_create.htm&type=5[a
+sharing rule], or if the access was granted
+https://help.salesforce.com/articleView?id=security_sharing_owd_user_manual.htm&type=5[manually].
+
+[[h2_785802245]]
+=== Add Post 
+
+Add a post in the link:android/mobile-layouts-chatter-feed[Chatter feed].
+Click *Add Post*. In the open modal window:
+
+[NOTE] ==== The user profile should have permission to edit
+records of the object to which the *Chatter* tab is added. ====
+
+* Tap
+image:58836467.png[]
+to add a link.
+* Tap
+image:58836469.png[]
+to add a photo or audio message from the device. You can also take
+another photo or audio message.

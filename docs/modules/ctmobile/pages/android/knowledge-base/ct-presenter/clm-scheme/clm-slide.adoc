@@ -1,0 +1,78 @@
+= Slide
+
+The[.object]#Slide# object is intended to store an individual
+page of a CLM presentation with a unique index number.
+
+'''''
+
+Object API name:[.apiobject]#clm__Slide__c#
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Active |[.apiobject]#clm__isActive__c# |Checkbox |If
+enabled, the slide will be downloaded on the mobile device.
+
+|Application |[.apiobject]#clm__ApplicationId__c#
+|Master-Detail(Application) |The CLM presentation to which the slide is
+related. Only slides with reference to the current CLM presentation will
+be displayed via demonstration.
+
+|Branch |[.apiobject]#clm__Branch__c# |Picklist |A
+branch is a path with the appropriate order of slides specified by the
+user. Each slide can contain links to several branches. Depending on the
+user's choice (via JS Bridge, link, etc.) on the current slide, the CLM
+presentation will continue along the selected branch. During the CLM
+presentation, slides of the current branch and the slide, from which the
+branch was started, are shown.
+
+|Category |[.apiobject]#clm__Category__c# |Picklist |The
+slide sorting for easy search of a slide.
+
+|Contains Key Message
+|[.apiobject]#clm__ContainsKeyMessage__c# |Checkbox |Use
+to mark slides for the user's logic.
+
+|Description |[.apiobject]#clm__Description__c# |Long
+Text(32768) |The slide description.
+
+|Fixed |[.apiobject]#clm__isFixed__c# |Checkbox |The
+slide cannot be switched to the next one using a scrolling gesture;
+switching to the next slide is available only through following the
+links.
+
+|Markup |[.apiobject]#clm__Code__c# |Long Text(131072)
+|The HTML5 code for the slide. It can be manually added or created by
+using link:android/knowledge-base/ct-presenter/clm-scheme/clm-template[templates], link:android/knowledge-base/ct-presenter/clm-scheme/clm-widget[widgets],
+and link:android/knowledge-base/ct-presenter/clm-scheme/clm-placeholder[placeholders].
+
+|Order |[.apiobject]#clm__Order__c# |Number(18,0) |The
+number of the slide order on a branch.
+
+|Preview |[.apiobject]#clm__Preview__c# |Formula(Text)
+|The link for the preview image will be shown in Salesforce.
+
+|Required |[.apiobject]#clm__isRequired__c# |Checkbox
+|Not in use.
+
+|Screenshot |[.apiobject]#clm__Screenshot__c#
+|Formula(Text) |The link for the slide screenshot. The screenshot is
+stored in Salesforce.
+
+|Share Allowed |[.apiobject]#clm__isShareAlowed__c#
+|Checkbox |The slide can be selected and sent by email.
+
+|Slide Animation |[.apiobject]#clm__SlideAnimation__c#
+|Picklist |Not in use.
+
+|Slide Name |[.apiobject]#Name# |Text(80) |The slide label.
+
+|Tags |[.apiobject]#clm__Tags__c# |LongTextArea(32768)
+|Not in use.
+
+|Template |[.apiobject]#clm__TemplateId__c#
+|Lookup(Template) |The template that is used for the slide.
+|===

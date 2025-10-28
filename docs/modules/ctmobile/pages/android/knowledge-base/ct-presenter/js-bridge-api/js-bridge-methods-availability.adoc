@@ -1,0 +1,165 @@
+= JS Bridge Methods Availability
+
+Here you can find JS Bridge methods that you can use in CLM
+presentations.
+
+
+
+When you open a CLM presentation in the *Application* module, from the
+carousel of CLM presentations on the Home screen or mobile layout in the
+CT Mobile app, CRM data captured by JS Bridge will be saved to the
+mobile device. In this case, the corresponding object should be
+available offline, and a user should have permission to edit its
+records. To upload data to Salesforce, perform the fast synchronization.
+
+[width="99%",cols="16%,14%,^14%,^14%,^14%,^14%,^14%",]
+|===
+|*Feature* | |*Applications (on a tablet)* | | |*Remote Detailing*
+|*Comment*
+
+| | |*iOS* |*Android* |*Windows* | |
+
+|Methods for interaction with CRM data |link:android/crm-data-display[CRM
+data display] |Yes |Yes |Yes |Yes |
+
+| |link:android/opening-attached-files[Opening attached files] |Yes |Yes
+|Yes |No |
+
+| |Query records: link:android/ctm-query[ctm.query] |Yes |Yes |Yes |Yes
+|These methods are forbidden during the *Self Detailing* and *Self
+Detailing 2.0* meetings.
+
+| |Create records: link:android/ctm-create[ctm.create] |Yes |Yes |Yes |Yes
+|
+
+| |Update records: link:android/ctm-update[ctm.update] |Yes |Yes |Yes |Yes
+|
+
+| |Delete records: link:android/ctm-delete[ctm.delete] |Yes |Yes |Yes |Yes
+|
+
+| |Start fast sync: link:android/ctm-sync[ctm.sync] |Yes |Yes |No |No |
+
+| |Obtain the path to the file:
+https://help.customertimes.com/smart/project-ct-mobile-en/ctm-getfile[ctm.getFile]
+|Yes |No |Yes |No |
+
+| |Save attachments:
+https://help.customertimes.com/smart/project-ct-mobile-en/ctm-storefile[ctm.storeFile]
+|Yes |No |Yes |No |
+
+| |Custom data tables according to related record:
+https://help.customertimes.com/smart/project-ct-mobile-en/ctm-opendatatablebyparentrecord[ctm.openDataTableByParentRecord]
+|Yes |No |No |No |
+
+| |Custom data tables according to SOQL query:
+https://help.customertimes.com/smart/project-ct-mobile-en/ctm-opendatatablebyquery[ctm.openDataTableByQuery]
+|Yes |No |No |No |
+
+|Methods for Accessing External Functionality |Camera access:
+link:android/ctm-photo[ctm.photo] |Yes |Yes |No |No |
+
+| |Open QR Code:
+https://help.customertimes.com/smart/project-ct-mobile-en/ctm-openqrscanner[ctm.openQRScanner]
+|Yes |No |No |No |
+
+| |Quiz launch:
+https://help.customertimes.com/smart/project-ct-mobile-en/ctm-openquiz[ctm.openQuiz]
+|Yes |No |No |No |
+
+| |PDF generation:
+https://help.customertimes.com/smart/project-ct-mobile-en/ctm-generatepdf[ctm.generatePDF]
+|Yes |No |No |No |
+
+| |Sound recording:
+https://help.customertimes.com/smart/project-ct-mobile-en/ctappstoprecordingaudio[CTAPPstopRecordingAudio]
+|Yes |No |No |No |
+
+| |Sound recording:
+https://help.customertimes.com/smart/project-ct-mobile-en/ctappstartrecordingaudio[CTAPPstartRecordingAudio]
+|Yes |No |No |No |
+
+| |The transition from Animation to Sales Order:
+https://help.customertimes.com/smart/project-ct-mobile-en/ctm-createsalesorderwithanimations[ctm.createSalesOrderWithAnimations]
+|Yes |No |No |No |
+
+| |Exit from presentation:
+https://help.customertimes.com/smart/project-ct-mobile-en/ctm-autoexitpresenter[ctm.autoExitPresenter]
+|Yes |No |Yes |No |
+
+|Methods for CLM presentation control |Like:
+link:android/ctm-like[ctm.like] |Yes |Yes |Yes |No |
+
+| |Dislike: link:android/ctm-dislike[ctm.dislike] |Yes |Yes |Yes |No |
+
+| |Disable slide scroll:
+https://help.customertimes.com/smart/project-ct-mobile-en/ctm-disableslidescroll[ctm.disableSlideScroll]
+|Yes |No |No |No |
+
+| |Enable slide scroll:
+https://help.customertimes.com/smart/project-ct-mobile-en/ctm-enableslidescroll[ctm.enableSlideScroll]
+|Yes |No |No |No |
+
+| |Activate gathering statistics of presentation:
+https://help.customertimes.com/smart/project-ct-mobile-en/ctm-customstats[ctm.customStats]
+|Yes |No |No |No |
+
+|
+|https://help.customertimes.com/smart/project-ct-mobile-en/ctm-setoptions[ctm.setOptions]
+|No |No |Yes |No |
+
+|Methods for CLM presentation navigation
+|https://help.customertimes.com/smart/project-ct-mobile-en/ctappgotoslide[CTAPPgoToSlide]
+|Yes |No |Yes |Yes |
+
+|
+|https://help.customertimes.com/smart/project-ct-mobile-en/ctappgotofirst[CTAPPgoToFirst]
+|Yes |No |Yes |Yes |
+
+|
+|https://help.customertimes.com/smart/project-ct-mobile-en/ctappgotoprevious[CTAPPgoToPrevious]
+|Yes |No |Yes |Yes |
+
+|
+|https://help.customertimes.com/smart/project-ct-mobile-en/ctappgotonext[CTAPPgoToNext]
+|Yes |No |Yes |Yes |
+
+|
+|https://help.customertimes.com/smart/project-ct-mobile-en/changing-slides[Switch
+between slides using the href attribute] |Yes |Yes |Yes |No |
+
+|Methods for Remote Detailing 2.0 |Define the meeting type:
+https://help.customertimes.com/smart/project-ct-mobile-en/ctm-getappenv[ctm.getAppEnv]
+|No |No |No |Yes |These methods are used during the Remote Detailing 2.0
+or Self Detailing 2.0 meeting.
+
+| |Define the Id of the Activity record:
+https://help.customertimes.com/smart/project-ct-mobile-en/ctm-getvisitid[ctm.getVisitId]
+|No |No |No |Yes |
+
+| |Define the user role:
+https://help.customertimes.com/smart/project-ct-mobile-en/ctm-getusertype[ctm.getUserType]
+|No |No |No |Yes |
+
+| |Secure query records:
+https://help.customertimes.com/smart/project-ct-mobile-en/ctm-securequery[ctm.secureQuery]
+|No |No |No |Yes |This method is used during the *Self Detailing 2.0*
+meeting instead of[.apiobject]#ctm.query#.
+
+| |CTAPPturnOnAudio |No |No |No |Yes |These methods affect only the
+presenter's audio and video stream even if called by the participant.
+
+| |CTAPPturnOffAudio |No |No |No |Yes |
+
+| |CTAPPturnOnVideo |No |No |No |Yes |
+
+| |CTAPPturnOffVideo |No |No |No |Yes |
+
+|Outdated methods |skipTenPercent |Yes |No |No |No |
+
+| |playVideo |Yes |No |No |No |
+
+| |getJSValues |Yes |No |No |No |
+
+| |CTAPPNewRecord |Yes |No |No |No |
+|===

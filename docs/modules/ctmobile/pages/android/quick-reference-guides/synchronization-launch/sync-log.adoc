@@ -1,0 +1,134 @@
+= Sync Log
+
+The[.object]#Sync Log# object is intended to store the details
+of the sync process and operations performed in the course of the
+link:android/knowledge-base/mobile-application/synchronization/synchronization[synchronization] depending on the value in the
+link:android/quick-reference-guides/synchronization-launch/sync-logs#h2__272409891[Debug Level] option on the *CT Mobile
+Control Panel: General* tab.
+
+[WARNING] ==== The *Debug Level* option should be specified for
+each profile separately. Each profile should have the *Edit* permission
+for all fields of the[.object]#Sync Log ==== object. #
+
+'''''
+
+Salesforce API-name:[.apiobject]#clm__SyncLog__c#
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API* |*Type* |*Description*
+
+|Date |[.apiobject]#clm__Date__c# |Date/Time |Date and
+time of the operation or the synchronization completion/interruption.
+
+|Description |[.apiobject]#clm__Description__c# |Long
+Text(32768) a|
+Description of the operation.
+
+* for sending only sync logs:[.apiobject]#Part 1 from 1#
+* for sending logs, data dump, and all/unsynchronized/no photos:
+[.apiobject]#Part n from m#.
+
+[WARNING] ==== If a mobile user
+link:android/quick-reference-guides/application-settings/send-application-data-dump[sends an application data dump],
+the field contains[.apiobject]#Part n from m ==== , where *n*
+is the number of an attachment and *m* is the total number of
+attachments. #
+
+|Duration |[.apiobject]#clm__Duration__c# |Number(18,0)
+a|
+Synchronization duration in seconds:
+
+* if the application was stopped due to some issues, the value in this
+field is zero.
+* if the synchronization is interrupted due to the connection failure,
+the value in this field is the actual time before the interruption.
+
+|Errors count |[.apiobject]#clm__ErrorsCount__c#
+|Number(18,0) |The number of records with errors when the
+[.apiobject]#clm__Operation__c# contains *Create*,
+*Update*, *Delete*, *Insert*.
+
+|Failed IDs |[.apiobject]#clm__FailedIds__c# |Long Text
+Area(131072) a|
+The IDs of records containing errors when the
+[.apiobject]#clm__Operation__c# contains *Create*,
+*Update*, *Delete*, *Insert*.
+
+[NOTE] ==== The record IDs for the *Insert* value will not be
+written as these records only have temporary IDs. ====
+
+|Failed Messages |[.apiobject]#clm__FailedMessages__c#
+|Long Text Area(131072) |Error texts for each failed record when the
+[.apiobject]#clm__Operation__c# contains *Create*,
+*Update*, *Delete*, *Insert*.
+
+|Geolocation |[.apiobject]#clm__Geolocation__c#
+|Geolocation |The current user's geolocation if the type of operation is
+Geolocation.
+
+|Geo Timing |[.apiobject]#clm__GeoTiming__c# |Long Text
+Area(131072) |The current user's local time if the type of operation is
+Geo Tracing.
+
+|Geo Tracing |[.apiobject]#clm__GeoTracing__c# |Long
+Text(131072) a|
+The user coordinates (separated by a semicolon, without blank spaces)
+that will be captured if the user has moved 50 or more meters from the
+previous location.
+
+[NOTE] ==== If
+link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-general#h3__1808523151[the tracking
+interval] is 0, the user's coordinates will not be captured. ====
+
+|Has Recovery Data
+|[.apiobject]#clm__HasRecoveryData__c# |Checkbox |Not in
+use.
+
+|Object name |[.apiobject]#clm__ObjectName__c#
+|Text(255) |Name of the operation object when the
+[.apiobject]#clm__Operation__c# contains *Create*,
+*Update*, *Delete*, *Insert*.
+
+|Operation |[.apiobject]#clm__Operation__c# |Text(255)
+a|
+The type of synchronization:
+
+* Full Sync
+* Fast Sync
+* Mixed Sync
+* Quick Record Sync.
+
+
+
+Or the type of operation:
+
+* Create
+* Update
+* Delete
+* Login
+* Insert
+* Geo Tracing
+* Geolocation
+* Sync Log
+* Sync Log History (for sending only send logs to Salesforce)
+* Export Data (for sending data from the CT Mobile app)
+
+|Records Count |[.apiobject]#clm__RecordsCount__c#
+|Text(255) |The total number of records transmitted in the course of the
+operation when the[.apiobject]#clm__Operation__c#
+contains *Create*, *Update*, *Delete*, *Insert*.
+
+|Status |[.apiobject]#clm__Status__c# |Picklist a|
+Synchronization status:
+
+* *Success*. The synchronization is completed.
+* *Partially Success*. If some errors occur during the synchronization,
+but the synchronization is completed.
+* *Failed*. If any error occurred during the full synchronization. The
+*Sync Log* record of the failed synchronization is sent to Salesforce
+after the next synchronization is finished.
+
+|===

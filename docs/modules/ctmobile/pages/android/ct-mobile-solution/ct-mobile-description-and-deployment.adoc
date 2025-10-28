@@ -1,0 +1,307 @@
+= CT Mobile Description and Deployment
+
+* link:android/ct-mobile-solution/ct-mobile-description-and-deployment#h2_1981964373[CT Mobile
+Description]
+* link:android/ct-mobile-solution/ct-mobile-description-and-deployment#h2__426184834[Deployment
+Steps]
+* link:android/ct-mobile-solution/ct-mobile-description-and-deployment#h2_1760736937[CT Mobile
+Package Installation]
+* link:android/ct-mobile-solution/ct-mobile-description-and-deployment#h3__273727017[CT Mobile
+Package Description]
+* link:android/ct-mobile-solution/ct-mobile-description-and-deployment#h2_720612721[Integration
+of CT Mobile with the Target System]
+* link:android/ct-mobile-solution/ct-mobile-description-and-deployment#h2_1575473858[CT Mobile
+Solution Configuration]
+* link:android/ct-mobile-solution/ct-mobile-description-and-deployment#h2__501372078[CT Mobile
+App Installation]
+* link:android/ct-mobile-solution/ct-mobile-description-and-deployment#h3_2054069844[CT Mobile
+app description]
+* link:android/ct-mobile-solution/ct-mobile-description-and-deployment#h2_586849428[Logging in
+to the CT Mobile app]
+* link:android/ct-mobile-solution/ct-mobile-description-and-deployment#h2_1500017970[Synchronization
+in the CT Mobile app]
+
+[[h2_1981964373]]
+=== CT Mobile Description 
+
+CT Mobile is provided as two connected components:​
+
+. The managed package is available
+https://appexchange.salesforce.com/appxListingDetail?listingId=a0N3000000B52vkEAB[on
+Salesforce’s AppExchange platform].
+. The native CT Mobile app.
+* The core of the CT Mobile app is designed to ensure offline operation
+for most of the standard and custom objects.
+* The additional modules enhance the functionality.
+
+[NOTE] ==== The set of available modules differs depending on
+the device platform and the CT Mobile app version. ====
+. AWS for the CT Presenter functionality.
+
+image:CT-Mobile-Architecture.png[]
+
+[[h2__426184834]]
+=== Deployment Steps 
+
+CT Mobile deployment is performed in the following order:
+
+. link:android/ct-mobile-solution/ct-mobile-description-and-deployment#h2_1760736937[Install
+the CT Mobile package] in your Salesforce organization.
+. link:android/ct-mobile-solution/ct-mobile-description-and-deployment#h2_720612721[Integrate
+the CT Mobile package] with the target system.
+. link:android/ct-mobile-solution/ct-mobile-description-and-deployment#h2_1575473858[Configure
+the CT Mobile solution].
+. link:android/ct-mobile-solution/ct-mobile-description-and-deployment#h2__501372078[Install
+the CT Mobile app] on your mobile device.
+. link:android/ct-mobile-solution/ct-mobile-description-and-deployment#h2_586849428[Log in to
+the CT Mobile app] and
+link:android/ct-mobile-solution/ct-mobile-description-and-deployment#h2_1500017970[perform the
+first synchronization].
+. Set up desired integrations, for example, with CT Orders, CT Sign, CG
+Cloud, etc.
+
+[TIP] ==== To find out more about integrations, go to
+link:android/ct-mobile-os-comparison#h3_839939660[Other modules
+availability] and
+link:android/ct-mobile-os-comparison#h2__303479492[Integrations]. ====
+
+[[h2_1760736937]]
+=== CT Mobile Package Installation 
+
+[TIP] ==== Available for the following Salesforce editions:
+Enterprise, Unlimited, Force.com, Developer, Performance. ====
+
+CT Mobile is an add-on to Salesforce that is provided as an Appexchange
+ISV product and allows users to work with Salesforce offline.
+
+
+
+link:android/quick-reference-guides/installing-ct-mobile-package/installing-ct-mobile-package[Follow the guide] to install the
+CT Mobile package.
+
+[NOTE] ==== After installation, it is necessary
+link:android/knowledge-base/configuration-guide/remote-site-settings[to set up remote site settings]. ====
+
+[[h3__273727017]]
+==== CT Mobile Package Description 
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+[[h4_1423918535]]
+===== UI Tools 
+
+* link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel[CT Mobile Control Panel]​ is a tool
+to provide a clear and convenient UI for CT Mobile settings. It is based
+on Angular and REST API.
+* link:android/knowledge-base/ct-presenter/application-editor/application-editor[Application Editor]​ is a tool to edit
+basic CLM presentations.
+
+[TIP] ==== For plain CLM presentations, the
+link:android/knowledge-base/ct-presenter/plain-application-editor/plain-application-editor[Plain Application Editor] is in use.
+It is located on Azure infrastructure with
+[.apiobject]#Node.JS/Mongo DB. ==== #
+* **Geolocation Center**​ is the core functionality to work with
+geolocation data. The administrator can view account geolocation,
+activity geolocation, and activity record details, and geo-trace mobile
+users in real-time in Salesforce.
+* *Notification Center* is the core functionality for personal or mass
+sending PUSH messages to mobile users.
+
+
+
+[[h4__559203458]]
+===== Salesforce Metadata 
+
+* link:android/knowledge-base/configuration-guide/metadata-archive/metadata-archive#h2_1854953360[Salesforce metadata] is
+responsible for the correct operation of CT Mobile workflows, lookup
+filters, and dashboards in offline mode.
+* The CT Mobile app requests metadata using the
+https://developer.salesforce.com/docs/atlas.en-us.api_meta.meta/api_meta/meta_intro.htm[Metadata
+API] and other APIs with valid administrator credentials.
+
+
+
+[[h4_1504347972]]
+===== Mobile App Settings 
+
+* link:android/knowledge-base/configuration-guide/custom-settings/custom-settings[Custom settings and custom metadata types]
+are used to store profile and list type settings for CT Mobile app
+customization specified on the tabs of the CT Mobile Control Panel.
+
+
+
+[[h4_789622594]]
+===== Components 
+
+* Apex classes and link:android/knowledge-base/configuration-guide/custom-settings/trigger-settings[triggers] are used for
+managing CLM presentations and the content publishing routine.
+* Visualforce and Lightning components for UI Tools.
+* https://help.salesforce.com/articleView?id=sf.cl_about.htm&type=5[Custom
+labels] to provide multilingual support.
+
+a|
+image:Managed-Package-Structure.png[]
+
+|===
+
+[[h2_720612721]]
+=== Integration of CT Mobile with the Target System 
+
+The CT Mobile app is a solution that allows users to operate with the
+target system data in offline mode. The target system is a client
+Salesforce organization with the installed
+https://help.customertimes.com/smart/project-ct-cpg/ct-cpg-solution[CT
+CPG] or
+https://help.customertimes.com/smart/project-ct-pharma/ct-pharma-solution[CT
+Pharma] package.
+
+
+
+To create a relationship between CT Mobile package components and a
+client system:
+
+* Fill out the
+link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-general#h3__2141706831[Product Object
+API Name] and
+link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-general#h3_494016929[Reference Object
+API Name] fields on CT Mobile Control Panel: General.
+* Create the lookup field to the required _Activity_ object on the
+link:android/knowledge-base/ct-presenter/clm-scheme/clm-applicationstats[Application Stats] object. In the case of
+using several _Activity_ objects, the relationship field has to be
+created for each of them.
+[TIP] ==== A field with the lookup type for the Activity object
+will be automatically created for each Activity object specified on the
+link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar[CT Mobile Control Panel:
+Calendar]. ====
+* Create the lookup field to the specified _Product_ object on the
+link:android/knowledge-base/ct-presenter/clm-scheme/clm-application[Application] object.
+
+[[h2_1575473858]]
+=== CT Mobile Solution Configuration 
+
+We kindly ask you to perform all customization via
+link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel[CT Mobile Control Panel] and set up a
+separate profile for a user who configures the system.
+
+* The user should have the _Modify All Data_ and _Modify Metadata
+Through Metadata API Functions_ permission and access to all fields and
+objects.
+* Assign the
+_link:application-permission-settings.html#h2__1046081510[CT Mobile
+Administrator]_ permission set that contains all required permissions
+listed above and access to all required Apex classes for the correct
+operation of the CT Mobile package and CT Mobile app.
+
+Assign the _CT Mobile User_ permission set to all profiles of users who
+will work with the CT Mobile app.
+
+
+
+The CT Mobile solution provides offline record management and customized
+screen forms for the CT Mobile app to simplify and upscale the field
+sales force teams' work. In your Salesforce organization:
+
+* customize the link:android/quick-reference-guides/home-screen[Home Screen]
+* add objects and modules to link:android/quick-reference-guides/app-menu[the main menu]
+* specify available link:android/quick-reference-guides/managing-offline-objects[offline objects],
+link:android/quick-reference-guides/related-lists/custom-related-lists[custom related lists],
+https://help.customertimes.com/smart/project-ct-mobile-en/list-views[list
+views],
+link:android/quick-reference-guides/managing-offline-objects#ManagingOfflineObjects-SOQLFilters[SOQL
+filters], lookup filters, and link:android/knowledge-base/mobile-application/actions[actions]
+[TIP] ==== 
+supported. ====
+* specify screen forms, such as link:android/knowledge-base/mobile-application/compact-layout[compact
+layouts], link:android/quick-reference-guides/mini-layouts[mini layouts],
+link:android/quick-reference-guides/mobile-layouts/mobile-layouts[mobile layouts], and
+link:android/quick-reference-guides/custom-color-settings[custom color settings]
+* implement link:android/knowledge-base/ct-presenter/js-bridge-api/js-bridge-api[JS Bridge methods] in CLM
+presentations.
+
+[[h2__501372078]]
+=== CT Mobile App Installation 
+
+Before installation, read
+link:technical-requirements-for-devices-and-network.html[the technical
+requirements]. To install the CT Mobile app, go to
+link:android/quick-reference-guides/installing-the-ct-mobile-app[the article].
+
+[TIP] ==== Contact the Customertimes team if you want to use the
+custom CT Mobile build. ====
+
+[[h3_2054069844]]
+==== CT Mobile app description 
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+
+The core version consists of all main functionality and a set of modules
+interacting with each other via the application interface.
+
+
+
+[[h4__1887042366]]
+===== Core and Modules 
+
+* Go to link:android/ct-mobile-os-comparison[CT Mobile OS Comparison] to
+view the core functionalities and learn about the difference between the
+CT Mobile app on iOS, Windows, or Android devices.
+* link:android/quick-reference-guides/synchronization-launch/sync-logs[Specify the logging level] for saving sync logs of
+the CT Mobile app which can be useful for the Customertimes Support team
+in case of issues with the mobile app.
+* link:android/quick-reference-guides/application-settings/application-settings[Application Settings] are intended to
+manage additional functions and control individual options.
+
+a|
+image:App-Structure.png[]
+
+a|
+[[h4_1840437629]]
+===== Customization 
+
+It is possible to implement a custom process with a code in the CT
+Mobile app. For Enterprise clients, the following options are available.
+
+The customization impacts the maintainability and evolution of the
+solution.
+
+* changing the code of the existing core functionalities or any modules,
+provided in a standard CT Mobile package;
+* implementing new functionalities and modules.
+
+
+
+The custom builds can be released as public or corporate applications.
+
+|
+|===
+
+[[h2_586849428]]
+=== Logging in to the CT Mobile app 
+
+link:android/quick-reference-guides/logging-in[Log in to the CT Mobile app] using your Salesforce
+credentials to a production environment, sandbox instance, or custom
+domain.
+
+For the full functionality of CT Mobile on devices, it is necessary to
+allow CT Mobile access to certain data, e.g., geolocation data or access
+to the device gallery.
+
+[[h2_1500017970]]
+=== Synchronization in the CT Mobile app 
+
+[TIP] ==== To learn more about the sync process and sync modes,
+read link:android/knowledge-base/mobile-application/synchronization/synchronization[the synchronization articles]. ====
+
+After the first logging in, perform the first synchronization to
+download all data and metadata to the mobile device.
+
+* The exchange of data between the CT Mobile app and Salesforce servers
+is performed via Salesforce API with no intermediate proxies or
+infrastructure. All data exchange is performed via 256-bit SSL connect,
+TLS1.2
+* All uploaded data is stored in separate temporary storage. The current
+database will be replaced after the synchronization is complete to avoid
+data discard if synchronization is interrupted.

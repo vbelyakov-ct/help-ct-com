@@ -1,0 +1,82 @@
+= ctm.photo
+
+The method of link:android/knowledge-base/ct-presenter/js-bridge-api/js-bridge-api[JS Bridge] functionality is
+intended to enable the device camera. Use the
+https://help.customertimes.com/smart/project-ct-mobile-en/ctm-getfile[ctm.getFile]
+method to attach a photo to a record.
+
+[[h2__905713055]]
+=== Query format 
+
+[width="100%",cols="100%",]
+|===
+a|
+link:javascript:void(0)[Copy Code]
+
+JavaScript
+
+a|
+....
+ctm.photo(handler)
+....
+
+|===
+
+[[h2_442663712]]
+=== Handler 
+
+Use a handler function to describe the output format of the query
+results, e.g., to display the results of operations or method errors for
+debugging purposes.
+
+[width="100%",cols="100%",]
+|===
+a|
+link:javascript:void(0)[Copy Code]
+
+JavaScript
+
+a|
+....
+ctm.photo(handler)
+....
+
+|===
+
+
+
+[width="100%",cols="100%",]
+|===
+a|
+link:javascript:void(0)[Copy Code]
+
+JavaScript
+
+a|
+....
+ctm.photo( function(response){ 
+    console.log('Result', response); 
+})
+....
+
+|===
+
+
+
+The result:
+
+[width="100%",cols="100%",]
+|===
+a|
+link:javascript:void(0)[Copy Code]
+
+JavaScript
+
+a|
+....
+{
+    "response": "/private/var/mobile/Containers/Data/Application/6404F6A1-0A03-434A-A1C9-CB189141BC45/tmp/photo (Monday, 15 July 2019 at 15:11:55 Moscow Standard Time).png"
+}
+....
+
+|===

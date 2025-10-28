@@ -1,0 +1,205 @@
+= Application
+
+The[.object]#Application# object is intended to store CLM
+presentations.
+
+The availability of functionality depends on the platform of the mobile
+device. For more information, refer
+to link:android/ct-mobile-os-comparison[CT Mobile OS Comparison].
+
+'''''
+
+Object API name:[.apiobject]#clm__Application__c#
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Active |[.apiobject]#clm__isActive__c# |Checkbox a|
+If enabled, the CLM presentation is active and will be downloaded on the
+mobile device during synchronization.
+
+* A CLM presentation should be available for the current user.
+* The [.apiobject]#clm__IsAvailableOffline__c# field
+should be selected to download the CLM presentation on a mobile device.
+
+|Application |[.apiobject]#Name# |Text(80) |The CLM presentation
+label.
+
+|Application ID |[.apiobject]#clm__APPID__c# |Text(255)
+(Unique Case Insensitive) |The unique label of the CLM presentation. It
+may be used
+https://help.customertimes.com/smart/project-ct-mobile-en/changing-slides[in
+the navigation] for switching from the current slide to a slide in
+another CLM presentation.
+
+|Available for Download
+|[.apiobject]#clm__IsAvailableForDownload__c# |Checkbox
+|If enabled, the CLM presentation is available for download.
+
+|Available for Remote Detailing
+|[.apiobject]#clm__IsAvailableForRD__c# |Checkbox a|
+If enabled, the CLM presentation can be used in Remote Detailing.
+
+The [.apiobject]#clm__isActive__c# field should be
+checked.
+
+|Available Offline
+|[.apiobject]#clm__IsAvailableOffline__c# |Checkbox a|
+If enabled, the CLM presentation will be downloaded on the mobile device
+during synchronization.
+
+The [.apiobject]#clm__isActive__c# field should be
+checked.
+
+|Description |[.apiobject]#clm__Description__c# |Long
+Text(32768) |The description of the CLM presentation is specified by the
+administrator.
+
+|Device Orientation
+|[.apiobject]#clm__DeviceOrientation__c# |Picklist a|
+The device orientation. Available values:
+
+* Horizontal
+* Vertical
+
+If not specified, the horizontal orientation is used as the default.
+
+|Feedback Comments are allowed
+|[.apiobject]#clm__IsFeedbackCommentsEnabled__c#
+|Checkbox a|
+If enabled, the current user can leave a comment on a slide during the
+demonstration of the CLM presentation.
+
+For each slide, comments will be stored in the
+[.apiobject]#clm__Description__c# field of the record of
+the link:android/knowledge-base/ct-presenter/clm-scheme/clm-applicationstats[Application Stats] object.
+
+|Forced Load Date |[.apiobject]#clm__ForcedLoadDate__c#
+|Date a|
+During the fast synchronization, the CT Mobile app compares the current
+version of the CLM presentation in the
+[.apiobject]#clm__Version__c# field with the one
+previously saved:
+
+* If the value is not set or is the past date, the CLM presentation will
+be downloaded;
+* If the value is the future date, the current user should pick whether
+to download the CLM presentation or not. For example, set the future
+date for the CLM presentation that contains info about the future promo.
+
+|Preview |[.apiobject]#clm__Preview__c# |Formula |The
+field stores a URL link of the first slide screenshot to display on the
+custom Visualforce page.
+
+|Product |[.apiobject]#ProductId__c# |Lookup(Product)
+|Create a field with the lookup to store the target Product records.
+
+|Record Type |[.apiobject]#RecordTypeId# |Record Type a|
+* *Application*
+
+The CLM presentation is based on HTML5 by manually creating or uploading
+link:android/creating-clm-presentation-from-powerpoint[PowerPoint],
+link:android/creating-clm-presentation-from-pdf[PDF], or
+link:android/creating-clm-presentation-from-jpeg-jpg[ZIP archives with the
+JPEG/JPG files] on the link:android/application-editor[Application Editor]
+tab.
+* *Plain Application*
+
+In the built-in link:android/plain-application-editor[Plain Application
+Editor], CLM presentations can be created based on
+link:android/knowledge-base/ct-presenter/clm-scheme/clm-template[templates],
+link:android/knowledge-base/ct-presenter/clm-scheme/clm-placeholder[placeholders], link:android/knowledge-base/ct-presenter/clm-scheme/clm-widget[widgets],
+PowerPoint, and other content. Markups for all slides are stored in the
+first slide. The slides' effects are available.
+
+|Screenshot ID |[.apiobject]#clm__ScreenshotID__c#
+|Text(255) a|
+The slide ID for displaying a slide preview.
+
+[NOTE] ==== Not in use. ====
+
+|Slide Effect |[.apiobject]#clm__SlideEffect__c#
+|Picklist |Not in use.
+
+|Slide reordering enabled
+|[.apiobject]#clm__IsSlideReorderEnabled__c# |Checkbox
+|If enabled, users can create and edit
+link:android/knowledge-base/ct-presenter/clm-scheme/clm-customscenario[custom scenarios].
+
+|Slide Zoom Enabled |[.apiobject]#clm__IsZoomEnabled__c#
+|Checkbox |If enabled, zoom in and out slides if
+link:android/knowledge-base/configuration-guide/custom-settings/mobile-application-setup#h2_993073976[the display mode is
+*wk*].
+
+|Swipe gesture type
+|[.apiobject]#clm__SwipeGestureType__c# |Picklist
+|Specify a gesture to switch slides in the CT Mobile app.
+
+|Track clicks on slide
+|[.apiobject]#clm__IsSlideClicksTrackingEnabled__c#
+|Checkbox a|
+Per slide,
+
+* it counts taps or clicks and stores as an *Application Stats* record
+of the *Slide Stats* record type.
+* https://help.customertimes.com/smart/project-ct-mobile-en/the-remote-detailing-functionality[For
+Remote Detailing]
+
+Per each slide, counting taps/clicks of the presenter and participants
+will be stored as an *Application Stats* record of the *Global Stats*
+record type.
+
+|Track slide duration
+|[.apiobject]#clm__IsSlideDurationTrackingEnabled__c#
+|Checkbox |If enabled, it counts the view time per slide and stores it
+as an *Application Stats* record of the *Slide Stats* record type.
+
+|Track slide likes/dislikes
+|[.apiobject]#clm__IsSlideLikesTrackingEnabled__c#
+|Checkbox a|
+If enabled, it counts likes and dislikes and stores them as an
+*Application Stats* record of the *Slide Stats* record type.
+
+* The presenter can use the hidden double-finger swipe gesture to
+like/dislike slides.
+* For *Remote Detailing*
+
+If enabled by the presenter, participants can like/dislike slides.
+
+|Track slide navigation
+|[.apiobject]#clm__IsSlideNavigationTrackingEnabled__c#
+|Checkbox a|
+If enabled, the slide labels will be recorded in the navigation order:
+
+* An *Application Stats* record of the *Global Stats* record type.
+* For *Remote Detailing
+*
+
+|Track slide views
+|[.apiobject]#clm__IsSlideViewsTrackingEnabled__c#
+|Checkbox a|
+If enabled,
+
+* counting the number of slide views and stores as an *Application
+Stats* record of the *Slide Stats* record type.
+* For *Remote Detailing*
+
+counting the number of slide views by the presenter and participants and
+stores as an *Application Stats* record of the *Global Stats* record
+type.
+
+|Track total duration of a presentation
+|[.apiobject]#clm__IsTotalDurationTrackingEnabled__c#
+|Checkbox |Counting the total view time of all slides and stores as an
+*Application Stats* record of the *Global Stats* record type.
+
+|Version |[.apiobject]#clm__Version__c# |Number(16,2) a|
+The version of the CLM presentation.
+
+Click *Publish* on the *Application* record or in Application Editor to
+update the version.
+
+|===

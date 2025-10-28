@@ -1,0 +1,58 @@
+= Synchronization Launch
+
+Synchronization involves several stages of aligning CT Mobile with
+Salesforce, during which updated records are sent from CT Mobile to
+Salesforce and vice versa.
+
+* link:android/quick-reference-guides/synchronization-launch/synchronization-launch#h2__966867633[Synchronization Modes]
+* link:android/quick-reference-guides/synchronization-launch/synchronization-launch#h3__21591833[First Full
+Synchronization]
+* link:android/quick-reference-guides/synchronization-launch/synchronization-launch#h3__1369866827[Full Synchronization]
+* link:android/quick-reference-guides/synchronization-launch/synchronization-launch#h3__116633872[Fast Synchronization]
+
+[[h2__966867633]]
+=== Synchronization Modes 
+
+For information about settings for tracking and gathering the
+synchronization statistics, refer to link:android/quick-reference-guides/synchronization-launch/sync-logs[Sync Logs].
+
+[[h3__21591833]]
+==== First Full Synchronization 
+
+The entire database of the CT Mobile app,
+link:android/knowledge-base/configuration-guide/metadata-archive/metadata-archive[metadata components], and app settings will
+be downloaded from Salesforce to the mobile device.
+
+* This synchronization should be used after link:android/logging-in[the
+authorization] of the current user.
+* The first full synchronization may take a lot of time according to the
+database size.
+
+For more information, go to link:android/knowledge-base/mobile-application/synchronization/full-synchronization[First Full
+and Full Synchronization].
+
+[[h3__1369866827]]
+==== Full Synchronization 
+
+The entire database of the CT Mobile app, metadata components, and app
+settings will be replaced on the mobile device based on changes in
+Salesforce.
+
+Full synchronization may take a lot of time according to the database
+size.
+
+For more information, go to link:android/knowledge-base/mobile-application/synchronization/full-synchronization[First Full
+and Full Synchronization].
+
+[[h3__116633872]]
+==== Fast Synchronization 
+
+Data changes, such as deletions, insertions, and updates of records,
+will be sent from CT Mobile to Salesforce and vice versa.
+
+* This type is intended to align the records' main information, for
+example, to send new records from CT mobile app to Salesforce.
+* The CT Mobile app will not be locked during the fast synchronization.
+
+For more information, go to link:android/knowledge-base/mobile-application/synchronization/fast-synchronization[Fast and
+Mixed Synchronization].

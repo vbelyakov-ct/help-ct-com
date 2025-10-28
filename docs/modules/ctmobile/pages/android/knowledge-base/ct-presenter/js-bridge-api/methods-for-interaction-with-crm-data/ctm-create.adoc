@@ -1,0 +1,127 @@
+= ctm.create
+
+The method of link:android/knowledge-base/ct-presenter/js-bridge-api/js-bridge-api[JS Bridge] functionality is
+intended to bulk create records of offline objects:
+
+* link:android/application-permission-settings[the user profile] should
+have permission to create records of the required object;
+* link:android/managing-offline-objects#h2_1534686659[permission to
+create] the required offline object is allowed.
+
+[[h2__905713055]]
+=== Query Format 
+
+[width="100%",cols="100%",]
+|===
+a|
+link:javascript:void(0)[Copy Code]
+
+JavaScript
+
+a|
+....
+ctm.create([SObject], handler)
+....
+
+|===
+
+
+
+[.apiobject]#SObject# is the JS object that indicates the API
+name of the offline object and a list of fields with values.
+
+[[h2_442663712]]
+=== Handler 
+
+Use a handler function to describe the output format of the query
+results, e.g., to display the results of operations or method errors for
+debugging purposes.
+
+[width="100%",cols="100%",]
+|===
+a|
+link:javascript:void(0)[Copy Code]
+
+JavaScript
+
+a|
+....
+ctm.create([{"SObject": "Account", "Name": "Google, Inc"}])
+....
+
+|===
+
+
+
+[width="100%",cols="100%",]
+|===
+a|
+link:javascript:void(0)[Copy Code]
+
+JavaScript
+
+a|
+....
+var sObjArray = [];
+var sObj = {
+SObject: "Account",
+Name: "Test Account",
+Phone: "123-45-67",
+Type: "Prospect"
+};
+sObjArray.push(sObj);
+
+ctm.create(sObjArray, function(createResponse){ 
+console.log('New record Id', createResponse.result[0].Id); 
+})
+....
+
+|===
+
+
+
+[width="100%",cols="100%",]
+|===
+a|
+link:javascript:void(0)[Copy Code]
+
+JavaScript
+
+a|
+....
+var createString = '[{"SObject":"Account", "Name":"Test Account"}, {"SObject":"Account", "Name":"Sample Account"}]';
+
+var createObject = JSON.parse(createString); 
+
+ctm.create(createObject, function(response){ 
+console.log('Create result', response); 
+})
+....
+
+|===
+
+
+
+The result:
+
+[width="100%",cols="100%",]
+|===
+a|
+link:javascript:void(0)[Copy Code]
+
+JavaScript
+
+a|
+....
+{
+    "result": [
+        {
+            "Id": "DSFS-2342-TYRE-ADSFBA374Q8RQ8",
+            "Name": "Google, Inc"
+        }
+    ],
+    "success": true,
+}
+....
+
+|===

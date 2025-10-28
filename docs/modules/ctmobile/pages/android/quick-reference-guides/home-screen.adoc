@@ -1,0 +1,94 @@
+= Home Screen
+
+The Home Screen is the customizable starting page. By default, the
+customization is turned off and the Home Screen contains the logo, the
+carousel of CLM presentations if available due to proper permission
+settings, and the calendar widget. You can add, remove, and resize the
+elements on the Home Screen for each profile separately.
+
+* link:android/quick-reference-guides/home-screen#h2__281191636[Customize Home Screen]
+* link:android/quick-reference-guides/home-screen#h2__617918582[Widgets on the Home Screen]
+* link:android/quick-reference-guides/home-screen#h3__1361691321[Logo]
+* link:android/quick-reference-guides/home-screen#h3_1292798904[Calendar]
+* link:android/quick-reference-guides/home-screen#h3_1523913535[Carousel of CLM-presentations]
+
+image:65471156.png[]
+
+[[h2__281191636]]
+=== Customize Home Screen 
+
+To customize the Home Screen:
+
+. Go to link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-app-menu[CT Mobile Control
+Panel: App Menu].
+. Select the required profile in the *Location* picklist.
+
+[TIP] ==== *General Settings* will be applied to all the
+profiles without individual settings. ====
+. Click the *Home* item in the *SELECTED* list.
+. Enable the *Customizable home screen* setting,
+. Click *Add Element*.
+. Select the element type from the drop-down list.
+. Resize the element and define its position.
+. Click *Save*.
+image:customize_home_screen.png[]
+
+The Home Screen customization is completed.
+
+* The new record of *CT Mobile Homepage Settings* will be created. To
+view the file in Salesforce, switch Lightning Experience to Salesforce
+Classic, go to *Documents* and open the *CT CLM* folder.
+* If some changes were made to the customizable Home Screen, a mobile
+user can quickly update it by four times tapping.
+
+[[h2__617918582]]
+=== Widgets on the Home Screen 
+
+[[h3__1361691321]]
+==== Logo 
+
+A logo can be specified per profile. Select a profile on
+link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-general#h3_1354766135[CT Mobile
+Control Panel: General] and add a new logo.
+
+[[h3_1292798904]]
+==== Calendar 
+
+Starting from today, the widget shows activities of the two last and two
+next weeks.
+
+* When a user taps a day, all _Activity_ records started on the selected
+day will be displayed in the left record list.
+** Tap the filter icon to select the _Activity_ object and display its
+records.
+* If
+https://help.customertimes.com/smart/project-ct-mobile-en/start-finish-functionality[the
+Start/Finish functionality] is enabled, on activity is unfinished when
+the[.apiobject]#IsDone__c# checkbox on the _Activity_
+object is not activated. If the user of the mobile device taps the
+*Finish* button on the activity screen, the
+[.apiobject]#IsDone__c# checkbox will automatically be
+selected.
+[NOTE] ==== The API names of the checkboxes on the _Activity_
+objects, for example, the[.apiobject]#IsDone__c ==== field,
+should be specified (separated by a comma, without blank space) in the
+[.apiobject]#clm__ActivityDoneAPI__c# field on the link:android/knowledge-base/configuration-guide/custom-settings/mobile-application-setup[Mobile Application Setup].#
+* Tap the icon to view and manage all activities of that day if
+link:android/quick-reference-guides/application-permission-settings[permission to create and
+delete records is granted].
+
+image:app_menu_android_home_calendar.png[]
+
+[[h3_1523913535]]
+==== Carousel of CLM-presentations 
+
+Display the standard scenario and favorite custom scenarios of CLM
+presentations.
+
+* In the Applications module, link:android/knowledge-base/mobile-application/mobile-application-modules/applications/applications#h3__1557359819[add
+CLM-presentation(s) or scenario(s) to favorites]. The favorite CLM
+presentations will be displayed in the carousel.
+* Scroll the carousel and tap on the CLM presentation to open it. In the
+presentation mode, use link:android/knowledge-base/mobile-application/mobile-application-modules/applications/gestures-in-clm-presentations[gestures]
+and
+https://help.customertimes.com/smart/project-ct-mobile-en/clm-presentation-controls[buttons].

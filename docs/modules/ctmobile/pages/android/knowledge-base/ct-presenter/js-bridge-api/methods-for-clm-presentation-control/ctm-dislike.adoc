@@ -1,0 +1,81 @@
+= ctm.dislike
+
+The method of the link:android/knowledge-base/ct-presenter/js-bridge-api/js-bridge-api[JS Bridge] functionality is
+intended to add a dislike to the current slide. Likes are stored in the
+record of the link:android/knowledge-base/ct-presenter/clm-scheme/clm-applicationstats[Application Stats] object.
+
+[[h2__905713055]]
+=== Query Format 
+
+[width="100%",cols="100%",]
+|===
+a|
+link:javascript:void(0)[Copy Code]
+
+JavaScript
+
+a|
+....
+ctm.dislike()
+....
+
+|===
+
+[[h2_442663712]]
+=== Handler 
+
+Use a handler function to describe the output format of the query
+results, e.g., to display the results of operations or method errors for
+debugging purposes.
+
+[width="100%",cols="100%",]
+|===
+a|
+link:javascript:void(0)[Copy Code]
+
+JavaScript
+
+a|
+....
+ctm.dislike()
+....
+
+|===
+
+
+
+[width="100%",cols="100%",]
+|===
+a|
+link:javascript:void(0)[Copy Code]
+
+JavaScript
+
+a|
+....
+ctm.dislike( function(response){ 
+    console.log('Result', response); 
+})
+....
+
+|===
+
+
+
+The results:
+
+[width="100%",cols="100%",]
+|===
+a|
+link:javascript:void(0)[Copy Code]
+
+JavaScript
+
+a|
+....
+{
+    "success": true"
+}
+....
+
+|===

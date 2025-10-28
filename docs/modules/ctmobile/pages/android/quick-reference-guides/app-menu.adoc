@@ -1,0 +1,40 @@
+= App Menu
+
+Configure the main menu items and their order:
+
+. Go to link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-app-menu[CT Mobile Control
+Panel: App Menu].
+. Select the required profile in the *Location* picklist.
+
+[TIP] ==== *General Settings* will be applied to all the
+profiles without individual settings. ====
+. Using drag-and-drop add the desired objects from the *Available* list
+to the *Selected* list.
+* The *Available* list contains all
+link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects[offline objects]. You
+can drag and drop objects between the lists. All objects in the
+*Selected* list will be available in the main menu in the same order.
+
+[NOTE] ==== Please make sure that the current profile has at
+least _View_ permissions for the selected objects. You can review the
+profile’s permissions in *Setup → Users → Profiles*. ====
+* Use the search to find the objects in the *Available* list by typing
+in the label or API name of the desired object.
+. Click the
+image:47745273.png[]
+button to open the *Add menu item* tool and select
+link:android/knowledge-base/mobile-application/mobile-application-modules/mobile-application-modules[the desired additional modules].
+
+
+
+image:47745270.png[]
+
+
+. Arrange menu items in the *Selected* section.
+. Click *Save*.
+. Perform the full synchronization on the mobile device to apply
+settings.
+
+The setup is complete.
+
+image:65471053.png[]

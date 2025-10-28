@@ -1,0 +1,25 @@
+= API Key
+
+*API Key* is a protected hierarchic custom setting to store the cloud
+token.
+
+[TIP] ==== For easy setup, go to
+link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools[CT Mobile Control Panel: Tools].
+====[WARNING] ==== We highly recommend getting familiar with
+the link:android/ct-mobile-managed-package-update-to-v-3-54[CT Mobile
+Managed Package Update to v. 3.54] article to understand changes when
+using the cloud token. ====
+
+'''''
+
+Custom setting API name:[.apiobject]#clm__APIKey__c#
+
+'''''
+
+[cols=",,,",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Cloud Token |[.apiobject]#clm__CLMCloudToken__c#
+|Text(255) |The cloud token value.
+|===

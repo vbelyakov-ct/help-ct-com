@@ -1,0 +1,109 @@
+= Standard Related List
+
+[NOTE] ==== Not available. ====
+
+The *Standard Related List* record type is intended to store settings
+for a standard related list of a specific
+link:android/managing-offline-objects[offline object] as well as
+permissions and available actions with records of the standard related
+list for a specific profile.
+
+[TIP] ==== To create or update the settings for the standard
+related lists,, go to
+link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects[CT Mobile Control
+Panel: Offline Objects]. ====
+
+The following system variables can be used as a criterion:
+
+*[.apiobject]#$User#
+*[.apiobject]#$UserRole#
+*[.apiobject]#$Profile#
+
+For example, the[.apiobject]#{$User.Id}# criterion
+specified in parameters will automatically be set to a current user ID.
+Using such system variables will dynamically query the data relevant to
+the current user.
+
+'''''
+
+Record Type API name:[.apiobject]#StandardRelatedList#
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Creating Allowed |[.apiobject]#clm__isCreateAllowed__c#
+|Checkbox a|
+Enables creation of related objects' records in the standard related
+list.
+
+[NOTE] ==== The permission to create a record cannot overcome
+the same profile permission. ====
+
+|Criteria |[.apiobject]#clm__Criteria__c# |Long Text
+Area(32768) a|
+Stores link:android/filters-in-related-lists[a SOQL query] to filter
+related objects' records in the standard related list to display. Tap
+the switch button on the *Related* tab in the mobile application to
+display all records or only records that are eligible for criteria.
+
+[NOTE] ==== The criteria line should start with the
+[.apiobject]#'WHERE' ==== keyword. #
+
+|Default View |[.apiobject]#clm__View__c# |Text(255)
+|Stores the *Timeline* value to display records in
+https://help.customertimes.com/smart/project-ct-mobile-en/timeline-view[Timeline]
+view. In other cases, left blank.
+
+|Deleting Allowed |[.apiobject]#clm__isDeleteAllowed__c#
+|Checkbox a|
+Enables deletion of related objects' records in the standard related
+list.
+
+[NOTE] ==== The permission to delete a record cannot overcome
+the same profile permission. ====[NOTE] ==== The records which
+have not been synchronized may always be deleted no matter what access
+the profile is granted. ====
+
+|External Id |[.apiobject]#clm__ExternalId__c#
+|Text(255) |Contains the ID of the corresponding record of custom
+settings.
+
+|Object |[.apiobject]#clm__Object__c# |Text(255) |Stores
+an API Name of an offline object that is a parent object for the related
+object.
+
+|Object Record Type
+|[.apiobject]#clm__ObjectRecordType__c# |Text(255)
+|Stores an API Name of a record type of the offline object that is
+specified in the[.apiobject]#clm__Object__c# field.
+
+|Org ID/Profile ID |[.apiobject]#clm__OrgProfileId__c#
+|Text(255) |Stores a profile's ID. Left blank or specify an Organization
+ID to apply for all non-configured profiles.
+
+|Reference Field |[.apiobject]#clm__ReferenceField__c#
+|Text(255) |Stores an API Name of the field of the related object with a
+reference to the record of the parent object specified in the
+[.apiobject]#clm__Object__c# field.
+
+|Related Object |[.apiobject]#clm__RelatedObject__c#
+|Text(255) |Stores an API Name of the related object, which records are
+added to a standard related list.
+
+|Sorting Criteria |[.apiobject]#clm__SortingCriteria__c#
+|Text(255) |Stores a field to sort records in Timeline view if the
+*Timeline* value is set in the
+[.apiobject]#clm__View__c# field.
+
+|Sorting Order |[.apiobject]#clm__SortingOrder__c#
+|Text(255) a|
+Stores an ascendent (ASC) or descendant (DESC) sorting order for records
+of a standard related list.
+
+[NOTE] ==== Do not specify the field if the *Timeline* value is
+set in the[.apiobject]#clm__View__c ==== field. #
+
+|===

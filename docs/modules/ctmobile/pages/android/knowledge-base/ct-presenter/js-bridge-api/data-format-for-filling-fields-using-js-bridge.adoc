@@ -1,0 +1,14 @@
+= Data Format for Filling Fields using JS Bridge
+
+The appropriate format:
+
+[width="100%",cols="50%,^50%",]
+|===
+| |*The CT Mobile app*
+
+|*The CT Mobile package v. 3.66.6 and above* |YYYY-MM-DD,
+[.apiobject]#string#
+
+|*The CT Mobile package below v. 3.66.6* |dd-MM-yyyy-HH-mm,
+[.apiobject]#string#
+|===

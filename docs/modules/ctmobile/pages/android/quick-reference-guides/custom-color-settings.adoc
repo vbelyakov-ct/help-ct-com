@@ -1,0 +1,47 @@
+= Custom Color Settings
+
+Use color settings to distinguish records of
+link:android/quick-reference-guides/managing-offline-objects[an offline object] by the specific
+criterion, for example, records in the left menu, activities in the
+link:android/knowledge-base/mobile-application/mobile-application-modules/calendar/calendar[Calendar] module, and records in the
+link:android/knowledge-base/mobile-application/mobile-application-modules/nearby-accounts[Nearby Accounts] module. Each offline object
+can have only one coloring criterion.
+
+[[h2_686863387]]
+=== Set up a Color for an Offline Object 
+
+To set up colors for the records:
+
+. Go to link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-color-settings[CT Mobile
+Control Panel: Color Settings].
+. Select a profile from the *Location* picklist.
+
+[TIP] ==== *General Settings* value will be applied to all the
+profiles without individual settings. ====
+. Click *Create*.
+. Select an offline object in the *SObject* drop-down list.
+. Select a criterion in the *Field* drop-down list.
+
+[NOTE] ==== Only fields with the *Picklist* type or record types
+of the selected offline object can be used as the criterion. ====
+. Click the field in the *Color* column to open the color picker.
+. Select the colors for each record type or type in the color code.
+
+image:47747428.png[]
+. Click *Create*.
+
+image:66369390.png[]
+
+
+
+The setup is complete. Perform a synchronization to apply the changes.
+
+* Click
+image:66356250.png[]
+next to an offline object to edit color settings.
+* Click
+image:66356251.png[]
+next to an offline object to remove color settings for the offline
+object.
+
+image:62561518.png[]

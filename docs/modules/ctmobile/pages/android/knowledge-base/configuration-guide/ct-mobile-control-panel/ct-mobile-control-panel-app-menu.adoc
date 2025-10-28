@@ -1,0 +1,83 @@
+= CT Mobile Control Panel: App Menu
+
+The *App Menu* tab is intended to set up menu items and their order in
+link:android/app-menu[the main menu].
+
+* link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-app-menu#h2__1969690579[Location]
+* link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-app-menu#h2__738493971[Application
+Menu]
+* link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-app-menu#h2_1511584348[Options]
+
+*Click to view the interface*
+
+.Click to hide[%collapsible] ====
+
+image:ctm_control_panel_appmenu.png[]
+
+====
+
+[[h2__1969690579]]
+=== Location 
+
+*Location* is a picklist containing all configured and unconfigured
+profiles available in your Salesforce org. To apply settings to all the
+profiles, select *General Settings*.  
+
+To get started, select the desired profile in the *Location* field to
+configure it. To delete the configuration for the selected profile,
+click the
+image:delete-icon.png[]
+icon.
+
+[[h2__738493971]]
+=== Application Menu 
+
+In the *Search* box, find the object that should be added to the main
+menu.
+
+* Use the *Advanced List* option to display all available objects in the
+*Available* list.
+* Click the object name in the *Selected* list to set up options for the
+object.
+
+[[h3__259736469]]
+==== Add menu item 
+
+Click
+image:65471061.png[]
+to view the icons of the modules that can be added to the CT Mobile
+app. The modules' availability depends on the device platform. 
+
+Hover the cursor over a module to see its short description.
+
+* Click the icon to select the module and click *Add*.
+* Rearrange the menu items in the *Selected* list in the desired order.
+
+image:add_module_en.png[]
+
+[[h3_1872780512]]
+==== Add Custom 
+
+At a customer's request, complementary functional modules can be added
+to custom application builds. Click the *Add Custom* form to specify the
+significant word of the custom module.
+
+[[h2_1511584348]]
+=== Options 
+
+According to the selected menu item in the *Selected* list, the
+available options are displayed on the right:
+
+* For the link:android/home-screen[Home screen], enable the *Customizable
+Home screen* option. Add, size, and arrange widgets.
+* For link:android/managing-offline-objects[offline objects],
+https://help.customertimes.com/smart/project-ct-mobile-en/grouping-records[group
+records] by the criterion.
+* For the link:android/applications[Applications] module,
+https://help.customertimes.com/smart/project-ct-mobile-en/grouping-records[group
+records] by the criterion.
+* For the
+https://help.customertimes.com/smart/project-ct-mobile-en/links-list[Links]
+module, specify resources and web pages.
+* For the link:android/routes[Routes] module, specify the ascending or
+descending order of records.

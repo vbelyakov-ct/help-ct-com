@@ -1,0 +1,85 @@
+= Calendar
+
+The *Calendar* module allows you to create and manage multiple activity
+objects, viz.[.object]#Activity#,[.object]#Task#, and
+[.object]#Event#. Configure the *Calendar* view and apply
+link:android/custom-color-settings[custom color settings] to different
+activity types.
+
+* link:android/knowledge-base/mobile-application/mobile-application-modules/calendar/calendar#h2__88456521[Calendar Interface]
+* link:android/knowledge-base/mobile-application/mobile-application-modules/calendar/calendar#h3_645629234[Left menu]
+* link:android/knowledge-base/mobile-application/mobile-application-modules/calendar/calendar#h3__194347409[Main screen]
+* link:android/knowledge-base/mobile-application/mobile-application-modules/calendar/calendar#h2__447958262[Adding Calendar to the Menu]
+* link:android/knowledge-base/mobile-application/mobile-application-modules/calendar/calendar#h2_648338572[Configuring the Calendar]
+
+[[h2__88456521]]
+=== Calendar Interface 
+
+To learn how to work with the Calendar module, go to the
+link:android/knowledge-base/mobile-application/mobile-application-modules/calendar/using-calendar[Using Calendar] article.
+
+The calendar includes two main sections.
+
+[[h3_645629234]]
+==== Left menu 
+
+Select the appropriate list view with accounts, contacts/references, or
+the hierarchical view.
+
+* If the[.object]#Reference# object is not selected in the
+link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-general#h3_494016929[Reference Object
+API Name] field, records of the [.object]#Contact# object will
+be displayed in the *Calendar* left menu. Otherwise, records of the
+[.object]#Reference# object are displayed.
+
+[[h3__194347409]]
+==== Main screen 
+
+Drag-and-drop one or several records simultaneously from the left menu
+to plan new activities.
+
+* link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-mini-layouts[If configured], fill in
+the required fields in the mini layout.
+* The title of the activity in the calendar grid is the value of the
+first field in link:android/compact-layout[the compact layout], and the
+subtitle is the value of the second field in the compact layout.
+
+image:62562443.png[]
+
+[[h2__447958262]]
+=== Adding Calendar to the Menu 
+
+To add the *Calendar* module to the link:android/app-menu[app menu]:
+
+. Go to link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-app-menu[CT Mobile Control
+Panel: App Menu] tab.
+. Select the required profile in the *Location* picklist.
+
+[TIP] ==== *General Settings* will be applied to all the
+profiles without individual settings. ====
+. Click the
+image:62562609.png[]
+button to open the *Add menu item* tool.
+. Select the *Calendar* item.
+. Click *Add* to close the *Add menu item* tool.
+. Click *Save*.
+
+The setup is complete.
+
+[[h2_648338572]]
+=== Configuring the Calendar 
+
+To configure Calendar:
+
+. Go to link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar[CT Mobile Control
+Panel: Calendar] tab.
+. Select the required profile in the *Location* picklist.
+
+[TIP] ==== *General Settings* will be applied to all the
+profiles without individual settings. ====
+. Turn on the *Enable Activity Planning*.
+. Customize the calendar and specify[.object]#Activity#
+objects.
+. Click *Save*.
+
+The setup is complete.

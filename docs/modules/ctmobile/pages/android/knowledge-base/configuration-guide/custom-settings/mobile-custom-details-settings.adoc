@@ -1,0 +1,146 @@
+= Mobile Custom Details Settings
+
+*Mobile Custom Details Settings* is a setting of the list type that is
+responsible for the display and layout of the *Detailing* tab on the
+record screen of any object.
+
+[TIP] ==== For easy setup, go to
+link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-custom-details[CT Mobile Control
+Panel: Custom Details]. ====[NOTE] ==== The availability of
+functionality depends on the platform of the mobile device. For more
+information, refer to link:android/ct-mobile-os-comparison[CT Mobile OS
+Comparison]. ====
+
+'''''
+
+Custom setting API name:
+[.apiobject]#clm__MobileActivityDataCustomization__c#
+
+'''''
+
+[width="100%",cols="25%,25%,25%,25%",]
+|===
+|*Field* |*API Name* |*Type* |*Description*
+
+|Column Width |[.apiobject]#clm__ColumnWidth__c#
+|Text(255) a|
+List of values (separated by a comma, without blank space) to define
+each column's percentage width.
+
+* The 0 value means that the column is not affected by width setting,
+i.e., it will occupy the rest of the working area.
+* The 100 value means that the column will squeeze out all the other
+columns from the working area.
+
+|Custom Fields Layout
+|[.apiobject]#clm__CustomFieldsLayout__c# |Text(255)
+|List of API names (separated by a comma, without blank space) of object
+fields for the display in the table row.
+
+|Data Object Name |[.apiobject]#clm__DataObjectName__c#
+|Text(255) |The API name of the object of displayed/created records.
+
+|Data Record Type
+|[.apiobject]#clm__DataRecordType__c# |Text(255) |The
+API name of the record type of displayed or created records.
+
+|Drilldown enabled
+|[.apiobject]#clm__IsDrilldownEnabled__c# |Checkbox
+|Whether drilling down to record details when taping on a record in the
+table is allowed.
+
+|Is Record Addition Allowed
+|[.apiobject]#clm__IsRecordAdditionAllowed__c# |Checkbox
+a|
+Whether the creation of new records is allowed.
+
+[NOTE] ==== If a profile is granted access to create records in
+the mobile app, it is not granted access to create records of the
+related object by default. ====
+
+|Is Record Delete Allowed
+|[.apiobject]#clm__IsRecordDeleteAllowed__c# |Checkbox
+a|
+Whether deleting of records is allowed.
+
+[NOTE] ==== If a profile is granted access to delete records in
+the mobile app, it is not granted access to delete records of the
+related object by default. The records which have not been synced may be
+always deleted no matter what access the profile is granted. ====
+
+|Is Related List Layout
+|[.apiobject]#clm__IsRelatedListLayout__c# |Checkbox |If
+enabled, the table's columns are created according to the settings in
+the related list's layout.
+
+|Lookup Field API name
+|[.apiobject]#clm__LookupFieldAPI__c# |Text(255) a|
+The API name of the relationship field through which child records are
+related to the parent record.
+
+[NOTE] ==== For standard[.object]#Event ==== or
+[.object]#Task# objects, the lookup field cannot be created due to Salesforce limitations. In this case, create and specify an[.apiobject]#EventId__c# field with the text type to store
+the Event Id on the object that stands for the[.object]#Event
+Data# object. #
+
+|Org ID/Profile ID |[.apiobject]#clm__OrgProfileId__c#
+|Text(255) a|
+link:android/application-permission-settings[Organization ID/Profile ID] to
+which this setting is applicable:
+
+* if Profile ID is set, the setting is applied only to the profile;
+* if Organization ID is set, the setting is applied to all
+non-configured profiles.
+* if Profile ID and Organization ID are not set, the setting is applied
+to all non-configured profiles. 
+
+|Parent Object |[.apiobject]#clm__ParentObject__c#
+|Text(255) |The object on which the Detailing tab will be displayed.
+
+|Parent Object Record Type
+|[.apiobject]#clm__ParentObjectRecordType__c# |Text(255)
+|The record type of the object, on which the *Detailing tab* will be
+displayed.
+
+|Read Only Attribute
+|[.apiobject]#clm__ReadonlyAttribute__c# |Text(255) |The
+attribute defines whether a field must be read-only. Specify a list of
+[.apiobject]#true# and[.apiobject]#false# values
+(separated by a comma, without blank space) for every field specified in
+[.apiobject]#clm__CustomFieldsLayout__c#.
+
+|Record Condition |[.apiobject]#clm__RecordCondition__c#
+|Text Area(255) a|
+The criterion is to sort records and display only matching ones.
+
+[TIP] ==== When two or more records are applied, fields are
+sorted by column one. If the first column has several identical values,
+these lines are sorted by column two. ====
+
+|Required Attribute
+|[.apiobject]#clm__RequiredAttribute__c# |Text(255) |The
+attribute defines whether a field must be filled out. Specify a list of
+[.apiobject]#true# and[.apiobject]#false# values
+(separated by a comma, without blank space) for every field specified in
+[.apiobject]#clm__CustomFieldsLayout__c#.
+
+|Show Application Launcher
+|[.apiobject]#clm__isApplicationLaunchEnabled__c#
+|Checkbox |Reserved.
+
+|Sorting Field Name
+|[.apiobject]#clm__SortingFieldName__c# |Text(50) |The
+API name of the field for sorting records in the list.
+
+|Tab Label |[.apiobject]#clm__TabLabel__c# |Text(50)
+|The name of the Detailing tab.
+
+|Tab Order |[.apiobject]#clm__Order__c# |Number(3,0) a|
+The tab sequence number for the display on the *Detailing* tab.
+
+[NOTE] ==== If several records have the same ordinal number, the
+tabs will be arranged alphabetically according to the value in the
+[.apiobject]#clm__TabLabel__c ==== field or the
+corresponding custom label. #
+
+|===

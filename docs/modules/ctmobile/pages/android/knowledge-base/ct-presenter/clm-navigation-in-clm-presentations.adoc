@@ -1,0 +1,51 @@
+= Navigation in CLM Presentations
+
+There is a list of management tools to control CLM presentations:
+
+. The link:android/knowledge-base/mobile-application/mobile-application-modules/applications/applications[Application] module, Carousel of CLM
+presentations link:android/mobile-layouts-applications[on the mobile
+layout] and link:android/home-screen[Home Screen].
+* link:android/knowledge-base/mobile-application/mobile-application-modules/applications/gestures-in-clm-presentations[Gestures]
+* https://help.customertimes.com/smart/project-ct-mobile-en/clm-presentation-controls[Button
+controls]
+* link:android/opening-attached-files[Opening Attached files]
+* https://help.customertimes.com/smart/project-ct-mobile-en/changing-slides[Changing
+Slides]
+
+[[h2__21685430]]
+=== Branches 
+
+Slides from one or several CLM presentation(s) may be organized in the
+branches, and each branch will be launched depending on the choice of
+the user.
+
+[TIP] ==== Double tap on the bottom of the screen to display
+slides in a branch for rapid switching between the slides. To jump to
+another branch, use one of
+https://help.customertimes.com/smart/project-ct-mobile-en/methods-for-clm-presentation-navigation[the
+JS Bridge methods for navigation]. ====
+
+For example, the presentation may include a home page that contains
+buttons for navigating through the presentation. On this slide, a user
+can choose what path of the presentation to take by tapping one of the
+headers.
+
+image:Branch.png[]
+
+
+
+Each slide should have a unique order number.
+
+
+
+image:57218546.png[]
+
+
+
+It is recommended to number branches as 0, 1, 2, etc., and number slides
+as 01, 02, …, 11, 12, etc., where a first number is a branch number, and
+a second is an order slide number in this branch.
+
+
+
+image:Branches.png[]

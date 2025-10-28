@@ -1,0 +1,80 @@
+= Mobile Layouts: Chatter Feed
+
+The *Chatter* feed is a widget to display user messages on
+link:android/knowledge-base/mobile-application/mobile-application-modules/chatter[the Chatter module] or in the *Chatter* tab of the
+selected record screen. Users can create posts and comments, and add
+attachments.
+
+[[h2__868831931]]
+=== Important Notes 
+
+To use the *Chatter* widget:
+
+. Enable
+https://help.salesforce.com/articleView?id=collab_feed_tracking.htm&type=5[Chatter
+Feed tracking] to allow users to see feed updates, such as new records,
+comments on them, and likes, they follow.
+
+[TIP] ==== Some
+https://help.salesforce.com/articleView?id=collab_feed_tracking_overview.htm&type=5[standard
+objects&#44; e.g.&#44; Account or Contact&#44; are tracked] regardless
+of whether feed tracking is enabled or not.  ====[NOTE] ==== To
+display *Chatter* on the mobile layout of the custom object record,
+e.g., custom activity or custom meeting, feed tracking should be enabled
+for the corresponding custom object. ====
+. Enable
+https://help.customertimes.com/smart/project-ct-mobile-en/chatter-push-notifications[push
+notifications] if needed.
+
+[[h2__1510760474]]
+=== Add Chatter to the Menu 
+
+To add the *Chatter* module to the link:android/app-menu[app menu]:
+
+. Go to link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-app-menu[CT Mobile Control
+Panel: App Menu] tab.
+. Select the required profile in the *Location* picklist.
+
+[TIP] ==== *General Settings* will be applied to all the
+profiles without individual settings. ====
+. Click the
+image:62562609.png[]
+button to open the *Add menu item* tool.
+. Select the *Chatter* item.
+. Click *Add* to close the *Add menu item* tool.
+. Click *Save*.
+
+The setup is complete.
+
+[[h3_96344064]]
+=== Add Chatter to the Mobile Layout 
+
+To add the *Chatter* widget to the mobile layout:
+
+. Go to *Setup → Object Manager →* select the[.object]#Account#
+or[.object]#Contact# object.
+. Click *Page Layouts* and select the mobile layout.
+. Drag and drop the *Section* element to the *Account* or *Contact
+Detail* area.
+. In the *Section Properties* window, enter *CHATTER* in the *Section
+Name* field, and select the *1-Column* layout. Ensure that the *Display
+Section Header On* checkbox is enabled.
+
+[NOTE] ==== Do not translate the *CHATTER* section name. It is
+responsible for displaying *Chatter* on the mobile layout and should be
+left intact. ====
+. Click *OK*.
+. Drag and drop the *Blank Space* element below the *CHATTER* element.
+. Click *Save*.
+
+The *Chatter* widget is configured.
+
+image:62560428.jpg[]
+
+[[h2_393538135]]
+=== Posts and Comments 
+
+Tap image:post_chatter.png[]
+to create a new message for the record.
+
+Tap *Add comment* under the post to comment on it.

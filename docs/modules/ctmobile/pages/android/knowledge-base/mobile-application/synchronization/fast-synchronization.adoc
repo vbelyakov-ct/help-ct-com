@@ -1,0 +1,44 @@
+= Fast Synchronization
+
+To run fast synchronization, tap the *Sync* button in the top right
+corner of the link:android/home-screen[Home Screen] or long tap the *Sync*
+button and select *Fast synchronization* from the picklist.
+
+* The mixed synchronization will be launched if certain conditions are
+met.
+* The fast and mixed synchronization processes are not interrupted in
+case of errors with records. The unsynchronized records containing
+errors can be synchronized after the errors are corrected.
+* During the fast or mixed synchronization, the application is available
+for work except for the *Applications* module.
+
+[[h2_266746590]]
+=== Sync Steps 
+
+. Data changes in the application, such as deletions, insertions, and
+updates, are sent to Salesforce.
+. The changes in link:android/clm-user[the audit fields] of the current
+user's record are sent to Salesforce.
+
+[NOTE] ==== The
+[.apiobject]#clm__LastSyncDate__c ==== field will be
+updated only if the previous synchronization was successful, but has
+been interrupted before the field sync date was updated. #
+. Records of link:android/knowledge-base/configuration-guide/custom-settings/custom-settings[the custom settings&#44; custom
+metadata types], link:android/managing-offline-objects[offline objects],
+and objects, which are necessary for activated
+link:android/mobile-application-modules[modules], are downloaded if the
+value in the[.apiobject]#SystemModstamp# field is a date later
+than the date of the last successful synchronization and a record
+matches the conditions set in link:android/knowledge-base/configuration-guide/custom-settings/related-list-filters[related
+list filters].
+. link:android/clm-user[The audit fields] of the current user record are
+updated.
+
+[NOTE] ==== The
+[.apiobject]#clm__LastSyncDate__c ==== field will be
+updated only if fast/mixed synchronization was successful or partially
+successful. This field shows that the actual information is downloaded
+on the device. #
+
+image:fastmixsync_andr.png[]
