@@ -2,12 +2,12 @@
 
 [NOTE] ==== Not available. ====
 
-The *Menu* record type is intended to store settings for the main menu
+The *Menu* record type is intended to store settings for the main menu
 for a specific profile, such as the order of menu items, offline
 objects, and modules, the order of modules.
 
 [TIP] ==== To create or update the main menu settings, go to
-link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-app-menu[CT Mobile Control Panel: App
+xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-app-menu[CT Mobile Control Panel: App
 Menu]. ====
 
 '''''
@@ -22,11 +22,11 @@ Record Type API Name:[.apiobject]#Menu#
 
 |Component |[.apiobject]#clm__Component__c# |Text(255)
 a|
-Stores an API Name of link:android/managing-offline-objects[an offline
-object], link:android/mobile-application-modules[module's name], or name of
-a menu item, e.g., link:android/home-screen[Home] and
-link:android/application-settings[Settings], that will be available in
-link:android/app-menu[the main menu].
+Stores an API Name of xref:android/managing-offline-objects[an offline
+object], xref:android/mobile-application-modules[module's name], or name of
+a menu item, e.g., xref:android/home-screen[Home] and
+xref:android/application-settings[Settings], that will be available in
+xref:android/app-menu[the main menu].
 
 [NOTE] ==== A record of the *Menu* record type should be created
 per each component. ====
@@ -39,7 +39,7 @@ settings.
 |Text(255) a|
 Stores an API Name of a field for
 https://help.customertimes.com/smart/project-ct-mobile-en/grouping-records[grouping
-records] in link:android/app-menu[the main menu].
+records] in xref:android/app-menu[the main menu].
 
 [NOTE] ==== Specify only if an offline object is set in the
 [.apiobject]#clm__Component__c ==== field. #
@@ -49,7 +49,7 @@ Stores the position of a component in the main menu.
 
 [NOTE] ==== The order of menu items should be specified in the
 [.apiobject]#clm__MenuSettings__c ==== field of
-link:android/menu-settings-and-offline-objects[Menu Settings and Offline
+xref:android/menu-settings-and-offline-objects[Menu Settings and Offline
 Objects]. А menu item should be listed in the
 [.apiobject]#clm__Component__c# field, and its position should be set in the[.apiobject]#clm__Order__c# field, for the
 mobile application on iOS devices. #

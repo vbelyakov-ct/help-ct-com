@@ -11,17 +11,17 @@ You can select the appropriate list view.
 [[h2_1037365166]]
 === Requirements 
 
-Add the *Nearby Accounts* module to link:android/app-menu[the app menu].
+Add the *Nearby Accounts* module to xref:android/app-menu[the app menu].
 
-* To use Google Maps, specify the link:android/knowledge-base/configuration-guide/google-maps-api-key/google-maps-api-key[Google
+* To use Google Maps, specify the xref:android/knowledge-base/configuration-guide/google-maps-api-key/google-maps-api-key[Google
 Maps API key] on the
-link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-general#h3_604215198[CT Mobile Control
+xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_604215198[CT Mobile Control
 Panel: General] tab.
 
 * A field to store an address for the[.object]#Account# object
 should be specified on the *CT Mobile Control Panel: General* tab.
 * An[.object]#Activity# object should be specified on
-link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar#h3_1397263211[CT Mobile
+xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc#h3_1397263211[CT Mobile
 Control Panel: Calendar] tab. Create a field with the *Lookup* type from
 the[.object]#Activity# object to the[.object]#Account#
 object.
@@ -31,9 +31,9 @@ image:62562526.png[]
 [[h2_163800537]]
 === Adding Nearby Accounts to the Menu 
 
-To add the *Nearby Accounts* module to the link:android/app-menu[app menu]:
+To add the *Nearby Accounts* module to the xref:android/app-menu[app menu]:
 
-. Go to link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-app-menu[CT Mobile Control
+. Go to xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-app-menu[CT Mobile Control
 Panel: App Menu] tab.
 . Select the required profile in the *Location* picklist.
 
@@ -60,10 +60,10 @@ decreasing order. You can select the appropriate list view.
 
 [TIP] ==== To view related contacts, specify the API name of the
 required object on the *CT Mobile Control Panel: General* tab and add
-this object to link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects[offline
+this object to xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-offline-objects[offline
 objects]. There should be a field with the *Lookup* type from the
 specified[.object]#Contact ==== object to the
-[.object]#Account# object. # [[h3__449942769]] ==== Main Screen 
+[.object]#Account# object. # [[h3_449942769]] ==== Main Screen
 
 Based or not on the current location, view the location of the selected
 record on the map.

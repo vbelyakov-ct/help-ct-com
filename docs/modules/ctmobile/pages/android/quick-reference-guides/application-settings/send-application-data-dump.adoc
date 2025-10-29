@@ -3,15 +3,15 @@
 The CT Mobile app allows sending a dump with the current user's data of
 the application to the Salesforce or support service.
 
-* link:android/quick-reference-guides/application-settings/send-application-data-dump#h2_1804362546[Configure Data Dump
+* xref:android/quick-reference-guides/application-settings/send-application-data-dump#h2_1804362546[Configure Data Dump
 Sending]
-* link:android/quick-reference-guides/application-settings/send-application-data-dump#h2_432975122[Sending Data Dump]
-* link:android/quick-reference-guides/application-settings/send-application-data-dump#h2__2052130687[A Sync Log Record
+* xref:android/quick-reference-guides/application-settings/send-application-data-dump#h2_432975122[Sending Data Dump]
+* xref:android/quick-reference-guides/application-settings/send-application-data-dump#h2_2052130687[A Sync Log Record
 with Data Dump]
-* link:android/quick-reference-guides/application-settings/send-application-data-dump#h3__919032680[Sync Logs]
-* link:android/quick-reference-guides/application-settings/send-application-data-dump#h3__2033790185[Data Dump without
+* xref:android/quick-reference-guides/application-settings/send-application-data-dump#h3_919032680[Sync Logs]
+* xref:android/quick-reference-guides/application-settings/send-application-data-dump#h3_2033790185[Data Dump without
 Photos]
-* link:android/quick-reference-guides/application-settings/send-application-data-dump#h3_882527141[Data Dump with
+* xref:android/quick-reference-guides/application-settings/send-application-data-dump#h3_882527141[Data Dump with
 Photos or Unsynchronized Photos]
 
 [[h2_1804362546]]
@@ -19,7 +19,7 @@ Photos or Unsynchronized Photos]
 
 To configure data dump sending:
 
-. Go to link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-general[CT Mobile Control
+. Go to xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc[CT Mobile Control
 Panel: General].
 . Select the required profile in the *Location* picklist.
 
@@ -32,15 +32,15 @@ send the database dump.
 * *Salesforce.com*
 
 The ZIP archive with the data will be transferred as an attachment to
-the link:android/sync-log[Sync Log] record. The size of the ZIP archive
+the xref:android/sync-log[Sync Log] record. The size of the ZIP archive
 cannot be larger than 25 MB. In case of exceeding the limit, the
 database dump will be split into a few ZIP archives and each one will be
 attached to its own *Sync Log* record.
 
 [TIP] ==== To use this option,
-link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools#h3_2011978[the cloud token]
+xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-tools#h3_2011978[the cloud token]
 should be valid. In the case the cloud token is not specified, the
-password will be[.apiobject]#ctmobile ==== . #
+password will be[.apiobject]#ctmobile ==== . #
 * *E-mail*
 
 Selecting this option, specify the email to send the data logs and
@@ -57,8 +57,8 @@ The setup is complete.
 
 To send a data dump from the CT Mobile app:
 
-. Go to link:android/quick-reference-guides/application-settings/application-settings[Settings] from
-link:android/app-menu[the main menu].
+. Go to xref:android/quick-reference-guides/application-settings/index.adoc[Settings] from
+xref:android/app-menu[the main menu].
 . Tap *Send application data*.
 . In the open window, select which data you want to send.
 * Send sync logs
@@ -73,10 +73,10 @@ increases the duration of sending. ====
 
 The data has been sent.
 
-[[h2__2052130687]]
+[[h2_2052130687]]
 === A Sync Log Record with Data Dump 
 
-[[h3__919032680]]
+[[h3_919032680]]
 ==== Sync Logs 
 
 When sending sync logs in Salesforce, the *Sync Log* record with an
@@ -112,7 +112,7 @@ Parameters of an *Attachment* record:
 |Description |[.apiobject]#Part 1 from 1#
 |===
 
-[[h3__2033790185]]
+[[h3_2033790185]]
 ==== Data Dump without Photos 
 
 When sending a data dump without photos in Salesforce, the *Sync Log*
@@ -134,7 +134,7 @@ sending.
 
 |Description |[.apiobject]#clm__Description__c#
 |[.apiobject]#Part n from m#, where[.apiobject]#n# is
-the order number of an attachment, and [.apiobject]#m# is the
+the order number of an attachment, and [.apiobject]#m# is the
 number of attachments.
 
 |Operation |[.apiobject]#clm__Operation__c# |Export Data
@@ -160,7 +160,7 @@ In case of several *Attachment* records:
 
 |Description |[.apiobject]#Part n from m#, where
 [.apiobject]#n# is the order number of an attachment,
-and [.apiobject]#m# is the number of attachments.
+and [.apiobject]#m# is the number of attachments.
 |===
 
 [[h3_882527141]]
@@ -186,7 +186,7 @@ sending.
 
 |Description |[.apiobject]#clm__Description__c#
 |[.apiobject]#Part n from m#, where[.apiobject]#n# is
-the order number of an attachment, and [.apiobject]#m# is the
+the order number of an attachment, and [.apiobject]#m# is the
 number of attachments.
 
 |Operation |[.apiobject]#clm__Operation__c#
@@ -213,5 +213,5 @@ In case of several *Attachment* records:
 
 |Description |[.apiobject]#Part n from m#, where
 [.apiobject]#n# is the order number of an attachment,
-and [.apiobject]#m# is the number of attachments.
+and [.apiobject]#m# is the number of attachments.
 |===

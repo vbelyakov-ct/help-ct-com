@@ -2,20 +2,20 @@
 
 The *Calendar* tab is intended to enable planning activities, manage
 [.object]#Activity# objects, and specify the view of the
-link:android/calendar[Calendar] module.
+xref:android/calendar[Calendar] module.
 
 According to the selected profile, settings on this tab will be saved in
 the corresponding fields of the
-link:android/mobile-application-setup[Mobile Application Setup] record.
+xref:android/mobile-application-setup[Mobile Application Setup] record.
 
-* link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar#h2__1969690579[Location]
-* link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar#h2_751776964[Activity
+* xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc#h2_1969690579[Location]
+* xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc#h2_751776964[Activity
 Planning]
-* link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar#h2__81679169[Calendar
+* xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc#h2_81679169[Calendar
 Settings]
-* link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar#h2_1397981345[Additional
+* xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc#h2_1397981345[Additional
 Activity Settings]
-* link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar#h2_70500171[Activity
+* xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc#h2_70500171[Activity
 Settings]
 
 *Click to view the interface*
@@ -26,7 +26,7 @@ image:ctm_control-panel_calendar.png[]
 
 ====
 
-[[h2__1969690579]]
+[[h2_1969690579]]
 === Location 
 
 *Location* is a picklist containing all configured and unconfigured
@@ -49,16 +49,16 @@ icon.
 If enabled, a user can create and manage activities in the *Calendar*,
 *Nearby Accounts*, and *Routes* modules.
 
-[[h2__81679169]]
+[[h2_81679169]]
 === Calendar Settings 
 
 Specify the view of the Calendar module.
 
-[[h3__1974887345]]
+[[h3_1974887345]]
 ==== Calendar View 
 
 From the *Calendar View* picklist, select
-link:android/using-calendar#h2__1759778354[the default calendar view]. The
+xref:android/using-calendar#h2_1759778354[the default calendar view]. The
 available options:
 
 * Month
@@ -74,7 +74,7 @@ activities. Hover over the slider to see the value:
 * 5 minutes – the leftmost position, the maximum default duration.
 * 1 hour – the rightmost position, the maximum default duration.
 
-[[h3__2140284324]]
+[[h3_2140284324]]
 ==== Show Week Type Switch 
 
 If enabled, mobile users can use the toggle to display or hide weekends
@@ -96,7 +96,7 @@ is the latest hour to show on the calendar grid.
 
 Not available.
 
-[[h3__1301025041]]
+[[h3_1301025041]]
 ==== Start/Finish Functionality 
 
 If enabled, the mobile user can
@@ -104,19 +104,19 @@ https://help.customertimes.com/smart/project-ct-mobile-en/start-finish-functiona
 and finish an activity] using the additional logic that may be applied
 to a started activity.
 
-[[h3__1036133099]]
+[[h3_1036133099]]
 ==== Lock/Unlock Record 
 
 If enabled, a record of the _Activity_ object will be available for
 editing only after tapping the *Start* button. Tapping the *Finish*
 button will lock the record for any modifications.
 
-[[h3__684502934]]
+[[h3_684502934]]
 ==== Capture Geoposition 
 
 If enabled, tapping the *Start* button will record the current
 geolocation of the *Activity* record in the
-link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar#h3__717585460[Activity
+xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc#h3_717585460[Activity
 Geolocation Field API Name] field.
 
 [[h3_276361556]]
@@ -147,7 +147,7 @@ required[.object]#Activity# object, such as
 [.object]#Event#, and custom[.object]#Activity#
 objects. Each object has a title in the[.apiobject]#Activity
 Settings Number# format, where the[.apiobject]#Number# is the
-order number of the added[.object]#Activity# objects.
+order number of the added[.object]#Activity# objects.
 * Click the *Delete activity object* button to remove the required
 [.object]#Activity# object and its settings.
 
@@ -180,9 +180,9 @@ responsible for the status of the *Activity* record.
 Specify the API name of the field with the *Text* type that will be used
 to store the description of the *Activity* record.
 
-[[h3__717585460]]
+[[h3_717585460]]
 ==== Activity Geolocation Field API Name 
 
 Specify the API name of the field with the *Geolocation* type where
-link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-general[the geolocation data] of the
+xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc[the geolocation data] of the
 *Activity* record will be written.

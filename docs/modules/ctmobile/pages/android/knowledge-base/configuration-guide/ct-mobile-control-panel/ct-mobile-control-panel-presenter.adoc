@@ -6,15 +6,15 @@ Detailing] functionality.
 
 [TIP] ==== According to the selected profile, several settings
 on this tab will be saved in the corresponding fields of
-the link:android/clm-settings[CLM Settings] record. ====
+the xref:android/clm-settings[CLM Settings] record. ====
 
-* link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-presenter#h2__1969690579[Location]
-* link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-presenter#h2_985373192[Remote
+* xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-presenter#h2_1969690579[Location]
+* xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-presenter#h2_985373192[Remote
 Detailing Settings]
-* link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-presenter#h2__891805269[Refresh
+* xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-presenter#h2_891805269[Refresh
 CLM-presentations]
 
-*Click to view the interface*link:javascript:void(0)[]
+*Click to view the interface*xref:javascript:void(0)[]
 
 .Click to hide[%collapsible] ====
 
@@ -22,7 +22,7 @@ image:CTM_Panel_Presenter_new_en.png[]
 
 ====
 
-[[h2__1969690579]]
+[[h2_1969690579]]
 === Location 
 
 *Location* is a picklist containing all configured and unconfigured
@@ -51,13 +51,13 @@ available options.
 If enabled, the participants are allowed to stream video and audio
 during the Remote Detailing meeting.
 
-[[h3__1970573228]]
+[[h3_1970573228]]
 ==== Text Chat Enabled 
 
 If enabled, the participants are allowed to communicate with each other
 on the *Chat* tab during the Remote Detailing meeting.
 
-[[h3__743522332]]
+[[h3_743522332]]
 ==== Text Chat History Enabled 
 
 If enabled, the chat history of the Remote Detailing meeting will be
@@ -69,7 +69,7 @@ section of the *Activity* record.
 
 If enabled, certain JS Bridge methods will be available on the CLM
 presentation slides during the Remote Detailing meeting. Please, refer
-to link:android/js-bridge-methods-availability[JS Bridge Methods
+to xref:android/js-bridge-methods-availability[JS Bridge Methods
 Availability].
 
 [[h3_856955672]]
@@ -87,7 +87,7 @@ If enabled, the presenter
 https://help.customertimes.com/smart/project-ct-mobile-en/remote-detailing-1-0-ui-for-presenter[can
 resume] the finished Remote Detailing session. The statistics will be
 collected for the resuming meeting too. Use
-https://help.customertimes.com/smart/project-ct-mobile-en/remote-detailing-f-a-q/a/h2__106650128[the
+https://help.customertimes.com/smart/project-ct-mobile-en/remote-detailing-f-a-q/a/h2_106650128[the
 same link] to enter the previously finished meeting.
 
 [[h3_912321036]]
@@ -102,7 +102,7 @@ Detailing 2.0: Audio Recording]. ====
 
 * The presenter should receive the participant's permission to record
 audio using the
-link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-presenter#h3_1019207818[Terms of Use
+xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-presenter#h3_1019207818[Terms of Use
 on the Welcome Screen].
 * If a guest didn't accept, she cannot participate in the Remote
 Detailing meeting.
@@ -115,14 +115,14 @@ exceeds available space and cannot be saved.
 If enabled, the audio of the Remote Detailing meeting will be
 automatically deleted from the *Activity* record according to the
 expiration date in the
-link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-presenter#h3_1157844415[Delete After
+xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-presenter#h3_1157844415[Delete After
 (days)] field.
 
 [[h3_1157844415]]
 ==== Delete After (days) 
 
 The number of days to keep an audio recording in Salesforce if the
-link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-presenter#h3_1230065320[Scheduled
+xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-presenter#h3_1230065320[Scheduled
 Activity Audio Cleanup] attribute is enabled.
 
 * The default value is 30 days.
@@ -155,7 +155,7 @@ By default, there is a draft agreement in English.
 
 
 
-[[h4__826226552]]
+[[h4_826226552]]
 ===== Language of Terms of Use 
 
 Add another language and text to the agreement, if necessary.
@@ -169,7 +169,7 @@ language.
 image:Terms-of-Use_en.png[]
 ====
 
-[[h3__1123335710]]
+[[h3_1123335710]]
 ==== Session Timeout (in seconds) 
 
 For the *Remote Detailing* meeting, the session timeout is the time
@@ -183,10 +183,10 @@ timeout is reached, the inactive participant session expires, a
 participant is automatically logged out, and their statistics at the
 meeting are sent to Salesforce.
 
-[[h3__201439959]]
+[[h3_201439959]]
 ==== Applications List Field 
 
-The field API name of the link:android/clm-activity[Activity] object for
+The field API name of the xref:android/clm-activity[Activity] object for
 the Application IDs storing, for example,
 [.apiobject]#ApplicationIds__c#.
 
@@ -196,10 +196,10 @@ Detailing session.
 * The same field will be automatically entered for all available
 profiles.
 
-[[h3__1311451422]]
+[[h3_1311451422]]
 ==== 
 
-The field API name of the link:android/clm-activity[Activity] object for
+The field API name of the xref:android/clm-activity[Activity] object for
 the invite link storing, for example,[.object]#RDLink__c#.
 
 * The field to store an invite link should have the same API name on any
@@ -208,7 +208,7 @@ Detailing session.
 * The same field will be automatically entered for all available
 profiles.
 
-[[h3__608996078]]
+[[h3_608996078]]
 ==== Endpoint URL 
 
 Not applied since CT Mobile package v. 3.63.
@@ -219,18 +219,18 @@ active site URL] for logging in, viewing the CLM presentation, and
 collecting the statistics of the CLM presentation via the Self Detailing
 functionality.
 
-[[h3__868233337]]
+[[h3_868233337]]
 ==== Email Required Field 
 
 Available since CT Mobile package v. 3.66.
 
-Enter the API name of a checkbox of the link:android/clm-activity[Activity]
+Enter the API name of a checkbox of the xref:android/clm-activity[Activity]
 object, for example,[.apiobject]#IsRequiredEmail__c#. If
 the checkbox is active, the participant should fill out an email on
-https://help.customertimes.com/smart/project-ct-mobile-en/remote-detailing-2-0-ui-for-participants/a/h2__555694282[the
+https://help.customertimes.com/smart/project-ct-mobile-en/remote-detailing-2-0-ui-for-participants/a/h2_555694282[the
 Welcome screen] to access the Remote Detailing meeting.
 
-[[h3__193092178]]
+[[h3_193092178]]
 ==== Login URL 
 
 In the *Available* section, there are domains, for example, the instance
@@ -239,7 +239,7 @@ Detailing* session. If several URLs are added in the *Selected* section,
 the presenter should select the appropriate URL to launch the Remote
 Detailing session.
 
-[[h3__53846510]]
+[[h3_53846510]]
 ==== Self-Detailed User 
 
 Available since CT Mobile package v. 3.63.
@@ -254,7 +254,7 @@ the integration user].
 All statistics for participants of the Self-Detailing meeting will now
 be collected for the connected integration user.
 
-[[h2__891805269]]
+[[h2_891805269]]
 === Refresh CLM-presentations 
 
 For the Self Detailing mode, click the *Refresh CLM-presentations*
@@ -269,7 +269,7 @@ Select CLM presentations to send, for example, only active CLM
 presentations or only available for the Remote Detailing session, click
 the *Send data* button, wait for the confirmation, and click *Close*.
 
-*Click to view the interface*link:javascript:void(0)[]
+*Click to view the interface*xref:javascript:void(0)[]
 
 .Click to hide[%collapsible] ====
 

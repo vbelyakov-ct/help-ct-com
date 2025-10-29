@@ -6,9 +6,9 @@ created without HTML programming. Import a PowerPoint file or create a
 CLM presentation using templates, slides with images, texts, videos,
 etc.
 
-* link:android/knowledge-base/ct-presenter/plain-application-editor/plain-application-editor#h2__1040598226[Create a
+* xref:android/knowledge-base/ct-presenter/plain-application-editor/index.adoc#h2_1040598226[Create a
 CLM-presentation]
-* link:android/knowledge-base/ct-presenter/plain-application-editor/plain-application-editor#h2_1226060150[Add Slides to the CLM
+* xref:android/knowledge-base/ct-presenter/plain-application-editor/index.adoc#h2_1226060150[Add Slides to the CLM
 Presentation]
 
 [.confluence-information-macro-information]# Markups for all slides will
@@ -16,13 +16,13 @@ be stored in the first slide record. We recommended creating no more
 than 25 slides. #
 
 [TIP] ==== Before the CLM presentation creation, read
-link:android/knowledge-base/ct-presenter/requirements-and-media-file-formats[Requirements and Media
-File Formats] and link:android/knowledge-base/configuration-guide/remote-site-settings[set up remote sites].
+xref:android/knowledge-base/ct-presenter/requirements-and-media-file-formats[Requirements and Media
+File Formats] and xref:android/knowledge-base/configuration-guide/remote-site-settings.adoc[set up remote sites].
 ====
 
 image:plain_editor.png[]
 
-[[h2__1040598226]]
+[[h2_1040598226]]
 === Create a CLM-presentation 
 
 To create the new CLM presentation with the *Plain Application* record
@@ -37,10 +37,10 @@ type.
 * Select the *Slide reordering enabled* checkbox if you plan to create a
 custom scenario.
 * Check the required boxes to track actions and collect statistics in
-the link:android/knowledge-base/ct-presenter/clm-scheme/clm-applicationstats[ApplicationStats] record.
+the xref:android/knowledge-base/ct-presenter/clm-scheme/clm-applicationstats.adoc[ApplicationStats] record.
 
 [TIP] ==== Read the description of each parameter
-link:android/knowledge-base/ct-presenter/clm-scheme/clm-application[here]. ====
+xref:android/knowledge-base/ct-presenter/clm-scheme/clm-application.adoc[here]. ====
 
 image:Plain-Application.png[]
 . Click *OK*.
@@ -63,12 +63,12 @@ image:Plain-Editor-Types.png[]
 After the CLM presentation creation, it is needed to fill it out with
 the slides.
 
-* link:android/creating-plain-clm-presentation[Create] a CLM presentation
+* xref:android/creating-plain-clm-presentation[Create] a CLM presentation
 by adding slide by slide, and configure template placeholders and
 widgets.
-* link:android/creating-plain-clm-presentation-using-templates[Create a CLM
-presentation based on the template]link:android/knowledge-base/ct-presenter/creating-clm-presentation/creating-a-widget[].
-* link:android/creating-plain-clm-presentation-from-powerpoint[Create a CLM
+* xref:android/creating-plain-clm-presentation-using-templates[Create a CLM
+presentation based on the template]xref:android/knowledge-base/ct-presenter/creating-clm-presentation/creating-a-widget[].
+* xref:android/creating-plain-clm-presentation-from-powerpoint[Create a CLM
 presentation based on PowerPoint].
 
 [NOTE] ====
@@ -82,6 +82,6 @@ If a
 and links, they will not be available in the converted CLM presentation.
 
 CLM presentation should be activated.
-link:android/publishing-clm-presentations[Renew slides&#44; wait 2-3
+xref:android/publishing-clm-presentations[Renew slides&#44; wait 2-3
 minutes&#44; and publish] the CLM presentation. Perform fast or mixed
 synchronization on the mobile device to download the CLM presentation.

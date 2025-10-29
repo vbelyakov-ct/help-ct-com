@@ -4,26 +4,26 @@ The *Application* module is intended to store and display CLM
 presentations and custom scenarios.
 
 You can add CLM presentations to the
-link:android/mobile-layouts-applications[mobile layout] and manage CLM
+xref:android/mobile-layouts-applications[mobile layout] and manage CLM
 presentations by
 https://help.customertimes.com/smart/project-ct-mobile-en/clm-presentation-controls[the
-control buttons], link:android/knowledge-base/mobile-application/mobile-application-modules/applications/gestures-in-clm-presentations[gestures], or
-link:android/js-bridge-api[JS methods and links] on the slides. For each
+control buttons], xref:android/knowledge-base/mobile-application/mobile-application-modules/applications/gestures-in-clm-presentations[gestures], or
+xref:android/js-bridge-api[JS methods and links] on the slides. For each
 CLM presentation, it is possible to set up statistical data to collect.
 
-* link:android/knowledge-base/mobile-application/mobile-application-modules/applications/applications#h2__1510760474[Add Applications to the Menu]
+* xref:android/knowledge-base/mobile-application/mobile-application-modules/applications/applications#h2_1510760474[Add Applications to the Menu]
 
 [NOTE] ==== The profile must be granted access to
 [.object]#Application ==== , [.object]#Slide#,[.object]#Custom Scenario#, and[.object]#Application
 Stats# objects for the correct functioning. #
 image:62562482.png[]
 
-[[h2__1510760474]]
+[[h2_1510760474]]
 === Add Applications to the Menu 
 
-To add the *Applications* module to the link:android/app-menu[app menu]:
+To add the *Applications* module to the xref:android/app-menu[app menu]:
 
-. Go to link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-app-menu[CT Mobile Control
+. Go to xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-app-menu[CT Mobile Control
 Panel: App Menu] tab.
 . Select the required profile in the *Location* picklist.
 

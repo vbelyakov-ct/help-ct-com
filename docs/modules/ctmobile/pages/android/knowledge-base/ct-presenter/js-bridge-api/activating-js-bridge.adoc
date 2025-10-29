@@ -11,7 +11,7 @@ To activate JS Bridge, enable the JS Bridge library in the
 [width="100%",cols="100%",]
 |===
 a|
-link:javascript:void(0)[Copy Code]
+xref:javascript:void(0)[Copy Code]
 
 HTML
 
@@ -28,7 +28,7 @@ The source code of the JS Bridge library can be downloaded from the
 static resource of Salesforce. The file name is
 [.apiobject]#JsLibrary.zip#.
 
-[[h2__1614277225]]
+[[h2_1614277225]]
 === Event of functional readiness of JS Bridge: 
 
 To check JS Bridge availability for use it is recommended to perform the
@@ -39,7 +39,7 @@ entire logic of interaction through addEventListener.
 [width="100%",cols="100%",]
 |===
 a|
-link:javascript:void(0)[Copy Code]
+xref:javascript:void(0)[Copy Code]
 
 HTML
 
@@ -52,16 +52,16 @@ document.addEventListener('WebViewJavascriptBridgeReady', function(event){
 
 |===
 
-[[h2__1136353801]]
+[[h2_1136353801]]
 === Available JS Bridge Methods 
 
 The following methods are outdated:[.apiobject]#getUSValues#,
 [.apiobject]#playVideo#,[.apiobject]#skipTenPercent#,
 [.apiobject]#CTAPPNewRecord#.
 
-* link:android/methods-for-interaction-with-crm-data[Methods for
+* xref:android/methods-for-interaction-with-crm-data[Methods for
 Interaction with CRM data]
-* link:android/methods-for-accessing-external-functionality[Methods for
+* xref:android/methods-for-accessing-external-functionality[Methods for
 Accessing External Functionality]
-* link:android/methods-for-clm-presentation-control[Methods for CLM
+* xref:android/methods-for-clm-presentation-control[Methods for CLM
 Presentation Control]

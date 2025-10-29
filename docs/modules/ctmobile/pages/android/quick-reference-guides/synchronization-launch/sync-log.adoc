@@ -2,8 +2,8 @@
 
 The[.object]#Sync Log# object is intended to store the details
 of the sync process and operations performed in the course of the
-link:android/knowledge-base/mobile-application/synchronization/synchronization[synchronization] depending on the value in the
-link:android/quick-reference-guides/synchronization-launch/sync-logs#h2__272409891[Debug Level] option on the *CT Mobile
+xref:android/knowledge-base/mobile-application/synchronization/index.adoc[synchronization] depending on the value in the
+xref:android/quick-reference-guides/synchronization-launch/sync-logs#h2_272409891[Debug Level] option on the *CT Mobile
 Control Panel: General* tab.
 
 [WARNING] ==== The *Debug Level* option should be specified for
@@ -32,7 +32,7 @@ Description of the operation.
 [.apiobject]#Part n from m#.
 
 [WARNING] ==== If a mobile user
-link:android/quick-reference-guides/application-settings/send-application-data-dump[sends an application data dump],
+xref:android/quick-reference-guides/application-settings/send-application-data-dump[sends an application data dump],
 the field contains[.apiobject]#Part n from m ==== , where *n*
 is the number of an attachment and *m* is the total number of
 attachments. #
@@ -80,7 +80,7 @@ that will be captured if the user has moved 50 or more meters from the
 previous location.
 
 [NOTE] ==== If
-link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-general#h3__1808523151[the tracking
+xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_1808523151[the tracking
 interval] is 0, the user's coordinates will not be captured. ====
 
 |Has Recovery Data

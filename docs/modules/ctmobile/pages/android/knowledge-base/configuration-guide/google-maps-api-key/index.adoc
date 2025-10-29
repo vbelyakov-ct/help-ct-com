@@ -5,21 +5,21 @@ project making a call to the enabled API or SDK.
 
 
 
-For building link:android/routes[routes] and displaying
-link:android/nearby-accounts[nearby accounts] in the CT Mobile app, specify
+For building xref:android/routes[routes] and displaying
+xref:android/nearby-accounts[nearby accounts] in the CT Mobile app, specify
 the Google Maps API key according to your device platform on the
-link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-general[CT Mobile Control Panel:
+xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc[CT Mobile Control Panel:
 General] tab. To obtain the Google Maps API key go to
 https://console.cloud.google.com/getting-started[Google Cloud Platform
 Console]:
 
-* link:android/knowledge-base/configuration-guide/google-maps-api-key/google-maps-api-key#h2__1247614733[Create a Billing Account]
-* link:android/knowledge-base/configuration-guide/google-maps-api-key/google-maps-api-key#h2_1591767480[Create a Project]
-* link:android/knowledge-base/configuration-guide/google-maps-api-key/google-maps-api-key#h2__131855740[Enable APIs and SDKs]
-* link:android/knowledge-base/configuration-guide/google-maps-api-key/google-maps-api-key#h3__1529349083[Waypoint Limits]
-* link:android/knowledge-base/configuration-guide/google-maps-api-key/google-maps-api-key#h2__1263049274[Get an API Key]
+* xref:android/knowledge-base/configuration-guide/google-maps-api-key/google-maps-api-key#h2_1247614733[Create a Billing Account]
+* xref:android/knowledge-base/configuration-guide/google-maps-api-key/google-maps-api-key#h2_1591767480[Create a Project]
+* xref:android/knowledge-base/configuration-guide/google-maps-api-key/google-maps-api-key#h2_131855740[Enable APIs and SDKs]
+* xref:android/knowledge-base/configuration-guide/google-maps-api-key/google-maps-api-key#h3_1529349083[Waypoint Limits]
+* xref:android/knowledge-base/configuration-guide/google-maps-api-key/google-maps-api-key#h2_1263049274[Get an API Key]
 
-[[h2__1247614733]]
+[[h2_1247614733]]
 === Create a Billing Account 
 
 Before you start using the Google Maps Platform APIs and SDKs:
@@ -55,7 +55,7 @@ https://cloud.google.com/resource-manager/docs/creating-managing-projects[here].
 https://cloud.google.com/billing/docs/how-to/modify-project[to assign or
 remove a billing account for the existing project].#
 
-[[h2__131855740]]
+[[h2_131855740]]
 === Enable APIs and SDKs 
 
 To use Google Maps Platform, the APIs or SDKs you plan to use with your
@@ -77,7 +77,7 @@ The following are required for using Google Maps on Android devices:
 * Maps SDK for Android
 * Places SDK for Android
 
-[[h3__1529349083]]
+[[h3_1529349083]]
 ==== Waypoint Limits 
 
 * Maximum allowed number of
@@ -95,7 +95,7 @@ CT Mobile apps only. ====
 https://developers.google.com/maps/documentation/javascript/directions[client-side]
 and server-side queries.
 
-[[h2__1263049274]]
+[[h2_1263049274]]
 === Get an API Key 
 
 For using APIs and SDKs, it is necessary to obtain a Google Maps API
@@ -126,7 +126,7 @@ the list of web server IP addresses that you supply.
 * *Android apps*. Require package name and SHA-1 signing certificate
 fingerprint to restrict usage to Android applications.
 * *iOS apps*. Accept requests from the iOS applications with
-link:android/knowledge-base/configuration-guide/google-maps-api-key/mobile-application-bundle-id[the bundle identifier] that is
+xref:android/knowledge-base/configuration-guide/google-maps-api-key/mobile-application-bundle-id[the bundle identifier] that is
 supplied.
 
 [.onfluence-information-macro-information]# If you need to enforce more

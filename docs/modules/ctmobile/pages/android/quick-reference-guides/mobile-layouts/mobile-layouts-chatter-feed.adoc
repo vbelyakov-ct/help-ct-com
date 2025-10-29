@@ -1,11 +1,11 @@
 = Mobile Layouts: Chatter Feed
 
 The *Chatter* feed is a widget to display user messages on
-link:android/knowledge-base/mobile-application/mobile-application-modules/chatter[the Chatter module] or in the *Chatter* tab of the
+xref:android/knowledge-base/mobile-application/mobile-application-modules/chatter[the Chatter module] or in the *Chatter* tab of the
 selected record screen. Users can create posts and comments, and add
 attachments.
 
-[[h2__868831931]]
+[[h2_868831931]]
 === Important Notes 
 
 To use the *Chatter* widget:
@@ -18,7 +18,7 @@ comments on them, and likes, they follow.
 [TIP] ==== Some
 https://help.salesforce.com/articleView?id=collab_feed_tracking_overview.htm&type=5[standard
 objects&#44; e.g.&#44; Account or Contact&#44; are tracked] regardless
-of whether feed tracking is enabled or not.  ====[NOTE] ==== To
+of whether feed tracking is enabled or not.  ====[NOTE] ==== To
 display *Chatter* on the mobile layout of the custom object record,
 e.g., custom activity or custom meeting, feed tracking should be enabled
 for the corresponding custom object. ====
@@ -26,12 +26,12 @@ for the corresponding custom object. ====
 https://help.customertimes.com/smart/project-ct-mobile-en/chatter-push-notifications[push
 notifications] if needed.
 
-[[h2__1510760474]]
+[[h2_1510760474]]
 === Add Chatter to the Menu 
 
-To add the *Chatter* module to the link:android/app-menu[app menu]:
+To add the *Chatter* module to the xref:android/app-menu[app menu]:
 
-. Go to link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-app-menu[CT Mobile Control
+. Go to xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-app-menu[CT Mobile Control
 Panel: App Menu] tab.
 . Select the required profile in the *Location* picklist.
 
@@ -58,7 +58,7 @@ or[.object]#Contact# object.
 Detail* area.
 . In the *Section Properties* window, enter *CHATTER* in the *Section
 Name* field, and select the *1-Column* layout. Ensure that the *Display
-Section Header On* checkbox is enabled.
+Section Header On* checkbox is enabled.
 
 [NOTE] ==== Do not translate the *CHATTER* section name. It is
 responsible for displaying *Chatter* on the mobile layout and should be
@@ -74,7 +74,7 @@ image:62560428.jpg[]
 [[h2_393538135]]
 === Posts and Comments 
 
-Tap image:post_chatter.png[]
+Tap image:post_chatter.png[]
 to create a new message for the record.
 
 Tap *Add comment* under the post to comment on it.

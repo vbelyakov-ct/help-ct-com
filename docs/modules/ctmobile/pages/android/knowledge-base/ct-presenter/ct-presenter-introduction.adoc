@@ -4,15 +4,15 @@ The *CT Presenter* is intended to create CLM presentations for
 demonstrating them offline and online on the PC, tablets, and mobile
 phones.
 
-* link:android/knowledge-base/ct-presenter/ct-presenter-introduction#h2_1251281241[Required
+* xref:android/knowledge-base/ct-presenter/ct-presenter-introduction#h2_1251281241[Required
 Permissions]
-* link:android/knowledge-base/ct-presenter/ct-presenter-introduction#h2__2019207216[CLM Presentation
+* xref:android/knowledge-base/ct-presenter/ct-presenter-introduction#h2_2019207216[CLM Presentation
 Creation]
-* link:android/knowledge-base/ct-presenter/ct-presenter-introduction#h2_1250107167[Publication of CLM
+* xref:android/knowledge-base/ct-presenter/ct-presenter-introduction#h2_1250107167[Publication of CLM
 Presentations]
-* link:android/knowledge-base/ct-presenter/ct-presenter-introduction#h2_1781171346[Displaying and
+* xref:android/knowledge-base/ct-presenter/ct-presenter-introduction#h2_1781171346[Displaying and
 Management of CLM Presentations]
-* link:android/knowledge-base/ct-presenter/ct-presenter-introduction#h3__1603252651[CT Mobile app
+* xref:android/knowledge-base/ct-presenter/ct-presenter-introduction#h3_1603252651[CT Mobile app
 (offline mode)]
 
 [[h2_1251281241]]
@@ -29,44 +29,44 @@ make sure that the following records are created and active:
 *[.apiobject]#SlideProcess#
 *[.apiobject]#TemplateProcess#
 *[.apiobject]#WidgetProcess#
-. Go to link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools#h3_2011978[CT Mobile
+. Go to xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-tools#h3_2011978[CT Mobile
 Control Panel: Tools] and check the cloud token is specified.
-. Assign link:android/application-permission-settings#h3_2115044027[the
+. Assign xref:android/application-permission-settings#h3_2115044027[the
 preconfigured permission set] to a user according to their role.
-. Check link:android/user-permissions[user permissions] to CLM objects.
-. Get familiar with link:android/knowledge-base/ct-presenter/requirements-and-media-file-formats[the
+. Check xref:android/user-permissions[user permissions] to CLM objects.
+. Get familiar with xref:android/knowledge-base/ct-presenter/requirements-and-media-file-formats[the
 requirements for CLM presentations].
 
-[[h2__2019207216]]
+[[h2_2019207216]]
 === CLM Presentation Creation 
 
-CT Presenter provides the link:android/application-editor[Application
+CT Presenter provides the xref:android/application-editor[Application
 Editor]:
 
 * Manually create CLM presentations using one of the options:
 ** Add slides based on templates with placeholders and widgets;
 ** Add slides with the specified markup.
-* Add link:android/creating-clm-presentation-from-powerpoint[PowerPoint],
-link:android/creating-clm-presentation-from-pdf[PDF], or
-link:android/creating-clm-presentation-from-jpeg-jpg[JPEG/JPG] files to
+* Add xref:android/creating-clm-presentation-from-powerpoint[PowerPoint],
+xref:android/creating-clm-presentation-from-pdf[PDF], or
+xref:android/creating-clm-presentation-from-jpeg-jpg[JPEG/JPG] files to
 convert into a CLM presentation.
 
 
 
-CT Presenter provides the link:android/plain-application-editor[Plain
+CT Presenter provides the xref:android/plain-application-editor[Plain
 Application Editor]:
 
 * Create and edit CLM presentations
-link:android/creating-plain-clm-presentation[using the web interface].
-* link:android/creating-plain-clm-presentation-using-templates[Create your
+xref:android/creating-plain-clm-presentation[using the web interface].
+* xref:android/creating-plain-clm-presentation-using-templates[Create your
 templates], and slides with images, texts, videos, etc.
-* link:android/creating-plain-clm-presentation-from-powerpoint[Import
+* xref:android/creating-plain-clm-presentation-from-powerpoint[Import
 PowerPoint] into an existing template and convert it to a CLM
 presentation.
 
 
 
-Use link:android/custom-scenario-editor[the custom scenario editor] to
+Use xref:android/custom-scenario-editor[the custom scenario editor] to
 create, edit and delete custom scenarios.
 
 [[h2_1250107167]]
@@ -74,53 +74,53 @@ create, edit and delete custom scenarios.
 
 To use a CLM presentation, it is necessary to publish it:
 
-* link:android/publishing-clm-presentations#h3_1098755975[Renew slides] of
-the current CLM presentation to view slides in the navigation feed
+* xref:android/publishing-clm-presentations#h3_1098755975[Renew slides] of
+the current CLM presentation to view slides in the navigation feed
 during the display of the CLM presentation.
 * Publish a CLM presentation by selecting it
-link:android/publishing-clm-presentations#h2_1149854286[on the Applications
+xref:android/publishing-clm-presentations#h2_1149854286[on the Applications
 tab].
 * Publish a CLM presentation by using
-link:android/publishing-clm-presentations#h2_104022594[the Application
+xref:android/publishing-clm-presentations#h2_104022594[the Application
 Editor].
 
 [[h2_1781171346]]
 === Displaying and Management of CLM Presentations 
 
-[[h3__1603252651]]
+[[h3_1603252651]]
 ==== CT Mobile app (offline mode) 
 
 During the synchronization process, CLM presentations will be downloaded
 on the mobile device and available for use:
 
-* The link:android/clm-application[CLM presentation] should be active and
+* The xref:android/clm-application[CLM presentation] should be active and
 available offline.
 [NOTE] ==== The *Available Offline* attribute is available since
-the CT Mobile managed package v. 3.54. The administrator should activate
+the CT Mobile managed package v. 3.54. The administrator should activate
 this checkbox for the required CLM presentations. ====
-* link:android/knowledge-base/mobile-application/mobile-application-modules/applications/applications[The Application module] allows reviewing CLM
+* xref:android/knowledge-base/mobile-application/mobile-application-modules/applications/applications[The Application module] allows reviewing CLM
 presentations uploaded from Salesforce.
-* You can configure link:android/mobile-layouts-applications[the mobile
+* You can configure xref:android/mobile-layouts-applications[the mobile
 layout] of the _Activity_ object to launch a CLM presentation from the
 carousel of CLM presentations on the activity record.
 * Also, you can launch a CLM presentation from the
-link:android/home-screen[Home Screen].
+xref:android/home-screen[Home Screen].
 
 
 
 For each CLM presentation:
 
-* Use pre-configured link:android/knowledge-base/mobile-application/mobile-application-modules/applications/gestures-in-clm-presentations[gestures].
+* Use pre-configured xref:android/knowledge-base/mobile-application/mobile-application-modules/applications/gestures-in-clm-presentations[gestures].
 * Double-tap the left or right side of the screen to view the
 https://help.customertimes.com/smart/project-ct-mobile-en/clm-presentation-controls[control
 buttons].
 * Double-tap the bottom of the screen to display the selected scenario
-and slide in link:android/clm-navigation-in-clm-presentations[a branch] for
+and slide in xref:android/clm-navigation-in-clm-presentations[a branch] for
 rapid switching between the slides.
-* link:android/js-bridge-api[JS Bridge methods] are available from within
+* xref:android/js-bridge-api[JS Bridge methods] are available from within
 the CLM presentation if specified on the slide markup.
 * During the CLM presentation, specific user actions are captured and
-collected in the link:android/clm-applicationstats[Application Stats]
+collected in the xref:android/clm-applicationstats[Application Stats]
 record. Tracking button clicks, likes, dislikes, slide duration, and
 slide navigation are specified for each CLM presentation. The statistics
 will be linked to the activity record from which it was started. The CT

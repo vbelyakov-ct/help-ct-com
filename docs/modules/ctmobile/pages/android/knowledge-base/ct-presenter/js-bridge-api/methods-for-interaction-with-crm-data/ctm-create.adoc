@@ -1,20 +1,20 @@
 = ctm.create
 
-The method of link:android/knowledge-base/ct-presenter/js-bridge-api/js-bridge-api[JS Bridge] functionality is
+The method of xref:android/knowledge-base/ct-presenter/js-bridge-api/index.adoc[JS Bridge] functionality is
 intended to bulk create records of offline objects:
 
-* link:android/application-permission-settings[the user profile] should
+* xref:android/application-permission-settings[the user profile] should
 have permission to create records of the required object;
-* link:android/managing-offline-objects#h2_1534686659[permission to
-create] the required offline object is allowed.
+* xref:android/managing-offline-objects#h2_1534686659[permission to
+create] the required offline object is allowed.
 
-[[h2__905713055]]
+[[h2_905713055]]
 === Query Format 
 
 [width="100%",cols="100%",]
 |===
 a|
-link:javascript:void(0)[Copy Code]
+xref:javascript:void(0)[Copy Code]
 
 JavaScript
 
@@ -40,7 +40,7 @@ debugging purposes.
 [width="100%",cols="100%",]
 |===
 a|
-link:javascript:void(0)[Copy Code]
+xref:javascript:void(0)[Copy Code]
 
 JavaScript
 
@@ -56,7 +56,7 @@ ctm.create([{"SObject": "Account", "Name": "Google, Inc"}])
 [width="100%",cols="100%",]
 |===
 a|
-link:javascript:void(0)[Copy Code]
+xref:javascript:void(0)[Copy Code]
 
 JavaScript
 
@@ -83,7 +83,7 @@ console.log('New record Id', createResponse.result[0].Id);
 [width="100%",cols="100%",]
 |===
 a|
-link:javascript:void(0)[Copy Code]
+xref:javascript:void(0)[Copy Code]
 
 JavaScript
 
@@ -107,7 +107,7 @@ The result:
 [width="100%",cols="100%",]
 |===
 a|
-link:javascript:void(0)[Copy Code]
+xref:javascript:void(0)[Copy Code]
 
 JavaScript
 

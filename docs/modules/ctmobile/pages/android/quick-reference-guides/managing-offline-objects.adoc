@@ -5,17 +5,17 @@ permissions, and add and configure standard related lists.
 
 This article describes how to configure offline objects and standard
 related lists. To configure a custom related list, refer to
-link:android/quick-reference-guides/related-lists/custom-related-lists[Custom Related Lists].
+xref:android/quick-reference-guides/related-lists/custom-related-lists.adoc[Custom Related Lists].
 
-link:android/knowledge-base/configuration-guide/remote-site-settings[Remote site settings] should be
+xref:android/knowledge-base/configuration-guide/remote-site-settings.adoc[Remote site settings] should be
 specified.
 
-* link:android/quick-reference-guides/managing-offline-objects#h2_1551357854[Add Offline Objects]
-* link:android/quick-reference-guides/managing-offline-objects#h2__1747811907[Set up Permissions
+* xref:android/quick-reference-guides/managing-offline-objects#h2_1551357854[Add Offline Objects]
+* xref:android/quick-reference-guides/managing-offline-objects#h2_1747811907[Set up Permissions
 to Offline Objects and Standard Related Lists]
-* link:android/quick-reference-guides/managing-offline-objects#h2_879469097[Set up SOQL Filters]
-* link:android/quick-reference-guides/managing-offline-objects#h3_1468985423[Offline Objects]
-* link:android/quick-reference-guides/managing-offline-objects#h3__264512811[Standard Related
+* xref:android/quick-reference-guides/managing-offline-objects#h2_879469097[Set up SOQL Filters]
+* xref:android/quick-reference-guides/managing-offline-objects#h3_1468985423[Offline Objects]
+* xref:android/quick-reference-guides/managing-offline-objects#h3_264512811[Standard Related
 Lists]
 
 [[h2_1551357854]]
@@ -23,7 +23,7 @@ Lists]
 
 To add an object to work with it in the CT Mobile app:
 
-. Go to link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects[CT Mobile
+. Go to xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-offline-objects[CT Mobile
 Control Panel: Offline Objects].
 . Select the required profile in the *Location* picklist.
 [TIP] ==== *General Settings* will be applied to all profiles
@@ -48,7 +48,7 @@ image:62556079.png[]
 
 The setup is complete.
 
-[[h2__1747811907]]
+[[h2_1747811907]]
 === Set up Permissions to Offline Objects and Standard Related Lists 
 
 [NOTE] ==== These settings cannot overcome the user's profile
@@ -70,7 +70,7 @@ record in the *Object Permission* section, you may allow creating the
 . In the *Related Lists* section:
 
 [TIP] ==== For more information, refer to
-link:android/quick-reference-guides/related-lists/standard-related-lists[Standard Related Lists]. ====
+xref:android/quick-reference-guides/related-lists/standard-related-lists[Standard Related Lists]. ====
 
 .. Select the record type of the offline object from the drop-down list
 of record types available for the user profile.
@@ -125,7 +125,7 @@ subquery.
 [width="100%",cols="100%",]
 |===
 a|
-link:javascript:void(0)[Copy Code]
+xref:javascript:void(0)[Copy Code]
 
 Code
 
@@ -136,7 +136,7 @@ WHERE AccountId__c IN (SELECT Id FROM Account WHERE isActive__c = true)
 
 |===
 
-[[h3__264512811]]
+[[h3_264512811]]
 ==== Standard Related Lists 
 
 Set up SOQL filters and use the toggle in the CT Mobile app to switch
@@ -167,7 +167,7 @@ The SOQL filter is configured. Here are some examples:
 [width="100%",cols="100%",]
 |===
 a|
-link:javascript:void(0)[Copy Code]
+xref:javascript:void(0)[Copy Code]
 
 Code
 
@@ -183,7 +183,7 @@ WHERE Boolean__c = true limit 10
 [width="100%",cols="100%",]
 |===
 a|
-link:javascript:void(0)[Copy Code]
+xref:javascript:void(0)[Copy Code]
 
 Code
 

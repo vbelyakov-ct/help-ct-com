@@ -11,19 +11,19 @@ various user types and assign permission sets or use permission set
 groups to extend user access. Also, manage sharing rules to define
 access exceptions.
 
-* link:android/quick-reference-guides/application-permission-settings#h2__104944228[Profiles]
-* link:android/quick-reference-guides/application-permission-settings#h3__1485360783[Set Up a New
+* xref:android/quick-reference-guides/application-permission-settings#h2_104944228[Profiles]
+* xref:android/quick-reference-guides/application-permission-settings#h3_1485360783[Set Up a New
 Profile]
-* link:android/quick-reference-guides/application-permission-settings#h2_939760070[Permission Sets
+* xref:android/quick-reference-guides/application-permission-settings#h2_939760070[Permission Sets
 and Permission Set Groups]
-* link:android/quick-reference-guides/application-permission-settings#h3_2115044027[Required
+* xref:android/quick-reference-guides/application-permission-settings#h3_2115044027[Required
 Permission Sets]
-* link:android/quick-reference-guides/application-permission-settings#h2__1133416231[Sharing
+* xref:android/quick-reference-guides/application-permission-settings#h2_1133416231[Sharing
 Rules]
-* link:android/quick-reference-guides/application-permission-settings#h2_631577805[Restriction
+* xref:android/quick-reference-guides/application-permission-settings#h2_631577805[Restriction
 Rules]
 
-[[h2__104944228]]
+[[h2_104944228]]
 === Profiles 
 
 [WARNING] ==== We kindly ask you to set up a separate profile
@@ -31,7 +31,7 @@ for a user who configures the system. The user should have the _Modify
 All Data_ and _Modify Metadata Through Metadata API Functions_
 permission and access to all fields and objects. ====
 
-To use link:android/quick-reference-guides/home-screen#h3__1361691321[the mobile logo], a mobile
+To use xref:android/quick-reference-guides/home-screen#h3_1361691321[the mobile logo], a mobile
 user should have access to the *Documents* folder. Please check the
 following:
 
@@ -54,7 +54,7 @@ ranges.
 * A profile can be assigned to many users, but a user can be assigned to
 a single profile at a time.
 * A user's profile should be specified on some
-link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel[CT Mobile Control Panel] tabs to
+xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc[CT Mobile Control Panel] tabs to
 define the required user's permissions.
 
 
@@ -66,7 +66,7 @@ deleted.
 * *Custom profiles* are user-defined profiles. These profiles can be
 deleted if no users are assigned to them.
 
-[[h3__1485360783]]
+[[h3_1485360783]]
 ==== Set Up a New Profile 
 
 Define profiles by the user’s function. You can create and assign a new
@@ -139,7 +139,7 @@ correct operation of the CT Mobile package and CT Mobile app.
 Mobile app as field forces, supervisors, etc. according to your business
 purposes.
 
-[[h2__1133416231]]
+[[h2_1133416231]]
 === Sharing Rules 
 
 https://help.salesforce.com/articleView?id=sf.managing_the_sharing_model.htm&type=5[Sharing

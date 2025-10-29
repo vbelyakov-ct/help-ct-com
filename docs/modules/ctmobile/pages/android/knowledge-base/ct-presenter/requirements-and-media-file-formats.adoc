@@ -3,17 +3,17 @@
 There is a list of requirements and media file formats for CLM
 presentations[#ListofRequirements]####
 
-* link:android/knowledge-base/ct-presenter/requirements-and-media-file-formats#h2_1563031520[Common
+* xref:android/knowledge-base/ct-presenter/requirements-and-media-file-formats#h2_1563031520[Common
 Recommendations]
-* link:android/knowledge-base/ct-presenter/requirements-and-media-file-formats#h3__682202319[Recommended
+* xref:android/knowledge-base/ct-presenter/requirements-and-media-file-formats#h3_682202319[Recommended
 Media Formats]
-* link:android/knowledge-base/ct-presenter/requirements-and-media-file-formats#h2_1593603134[PDF and
+* xref:android/knowledge-base/ct-presenter/requirements-and-media-file-formats#h2_1593603134[PDF and
 PowerPoint Requirements]
-* link:android/knowledge-base/ct-presenter/requirements-and-media-file-formats#h2_1549430477[Video in
+* xref:android/knowledge-base/ct-presenter/requirements-and-media-file-formats#h2_1549430477[Video in
 CLM presentations]
-* link:android/knowledge-base/ct-presenter/requirements-and-media-file-formats#h2_2044220847[Links in
+* xref:android/knowledge-base/ct-presenter/requirements-and-media-file-formats#h2_2044220847[Links in
 CLM presentations]
-* link:android/knowledge-base/ct-presenter/requirements-and-media-file-formats#h2_1169375241[Required
+* xref:android/knowledge-base/ct-presenter/requirements-and-media-file-formats#h2_1169375241[Required
 JS Resources]
 
 [[h2_1563031520]]
@@ -21,7 +21,7 @@ JS Resources]
 
 Consider the quantity and image quality of the media assets to ensure
 the CT Mobile app responds quickly, and the user does not wait
-long link:android/knowledge-base/mobile-application/synchronization/synchronization[during the synchronization].
+long xref:android/knowledge-base/mobile-application/synchronization/index.adoc[during the synchronization].
 
 * The CLM presentation aspect ratio should depend on the screens of the
 mobile device to display, mostly it is 16:9 or 4:3.
@@ -41,7 +41,7 @@ with it repeatedly to ensure memory issues will not occur. However,
 memory warnings may appear in the device log to identify possible memory
 issues, although not every time.
 * For long-format, like reports and articles, we recommend using PDF
-that may be link:android/creating-clm-presentation-from-pdf[converted into
+that may be xref:android/creating-clm-presentation-from-pdf[converted into
 HTML5 code].
 * For short-format media, HTML5 will provide a better navigation
 experience, more accurate reporting, and interactivity.
@@ -63,7 +63,7 @@ navigation bar or the standard action menu.
 markup, the[.apiobject]#classname.to# will be interpreted as
 the link.
 
-[[h3__682202319]]
+[[h3_682202319]]
 ==== Recommended Media Formats 
 
 [width="100%",cols="20%,20%,20%,20%,20%",]
@@ -85,7 +85,7 @@ multiple folders.
 * Media included with the HTML should be referenced using relative
 paths, like[.apiobject]#/css/styles.css# rather than
 [.apiobject]#http://server.com/css/styles.css#.
-* link:android/knowledge-base/mobile-application/mobile-application-modules/applications/gestures-in-clm-presentations[Default gestures] to switch
+* xref:android/knowledge-base/mobile-application/mobile-application-modules/applications/gestures-in-clm-presentations[Default gestures] to switch
 and interact with slides are supported.
 
 |Video a|
@@ -131,7 +131,7 @@ attachments on mobile devices.
 * Do not insert any fields or forms in PDF files.
 * If a PDF file contains any interactive elements, such as videos, gifs,
 and links, they will not be available in the converted CLM presentation.
-* Do not use the *&* symbol in the PDF file name, otherwise the
+* Do not use the *&* symbol in the PDF file name, otherwise the
 presentation will not be loaded.
 
 |PPT a|
@@ -146,14 +146,14 @@ not more than 75 MB
 
 | a|
 * https://support.office.com/en-us/article/embed-fonts-in-word-or-powerpoint-cb3982aa-ea76-4323-b008-86670f222dbc?omkt=en-US&ui=en-US&rs=en-US&ad=US#OfficeVersion=macOS[Embed
-fonts] in a CLM presentation to be sure that the fonts, special
+fonts] in a CLM presentation to be sure that the fonts, special
 characters, layout, and styling of the document won't change while
 sharing.
 
-* If a [.apiobject]#.ppt(x)# file contains any interactive
+* If a [.apiobject]#.ppt(x)# file contains any interactive
 elements, such as videos, gifs, and links, they will not be available in
 the converted CLM presentation.
-* ​Slides animation from converted [.apiobject]#.ppt# files is
+* ​Slides animation from converted [.apiobject]#.ppt# files is
 not supported.
 * Violation of converted slides' proportion is possible when other than
 iPad format slides are used in the source document.
@@ -169,7 +169,7 @@ more than 200 slides#
 | a|
 * The ZIP file structure must not contain subdirectories.
 * Slides must be located in the root directory.
-* Do not use the *&* symbol in the ZIP file name, otherwise the
+* Do not use the *&* symbol in the ZIP file name, otherwise the
 presentation will not be loaded.
 
 |===
@@ -177,7 +177,7 @@ presentation will not be loaded.
 
 
 Go back to
-link:android/knowledge-base/ct-presenter/requirements-and-media-file-formats#ListofRequirements[the
+xref:android/knowledge-base/ct-presenter/requirements-and-media-file-formats#ListofRequirements[the
 list of requirements].
 
 [[h2_1593603134]]
@@ -208,17 +208,17 @@ Consider these parameters when converting CLM presentation based on
 
 
 
-For the[.apiobject]#.ppt(x)# format, these parameters mean the
+For the[.apiobject]#.ppt(x)# format, these parameters mean the
 slide size:
 
 image:pptx-size.png[]
 
-The slide size for the [.apiobject]#.ppt(x)# format was tested
+The slide size for the [.apiobject]#.ppt(x)# format was tested
 and is recommended as a workable value. Presentations with other sizes
-of .ppt(x) slides may not work properly. 
+of .ppt(x) slides may not work properly.
 
 Go back to
-link:android/knowledge-base/ct-presenter/requirements-and-media-file-formats#ListofRequirements[the
+xref:android/knowledge-base/ct-presenter/requirements-and-media-file-formats#ListofRequirements[the
 list of requirements].
 
 [[h2_1549430477]]
@@ -227,8 +227,8 @@ list of requirements].
 * The link should have the following
 format https://www.youtube.com/embed/GhpE_7cBu44[**https://**www.youtube.com**/embed/**GhpE_7cBu44].
 * We suggest you upload videos to YouTube by selecting
-the *Unlisted* value in
-the *Visibility* option https://support.google.com/youtube/answer/157177[to
+the *Unlisted* value in
+the *Visibility* option https://support.google.com/youtube/answer/157177[to
 avoid public dissemination].
 * During synchronization, the CT Mobile app downloads the video into its
 local repository for offline access. The code for correct video
@@ -239,7 +239,7 @@ insertion in slide markup:
 [width="100%",cols="100%",]
 |===
 a|
-link:javascript:void(0)[Copy Code]
+xref:javascript:void(0)[Copy Code]
 
 HTML
 
@@ -254,7 +254,7 @@ a|
 
 
 Go back to
-link:android/knowledge-base/ct-presenter/requirements-and-media-file-formats#ListofRequirements[the
+xref:android/knowledge-base/ct-presenter/requirements-and-media-file-formats#ListofRequirements[the
 list of requirements].
 
 [[h2_2044220847]]
@@ -268,7 +268,7 @@ https://www.google.com/, for example:
 [width="100%",cols="100%",]
 |===
 a|
-link:javascript:void(0)[Copy Code]
+xref:javascript:void(0)[Copy Code]
 
 HTML
 
@@ -282,8 +282,8 @@ a|
 
 
 Go back to
-link:android/knowledge-base/ct-presenter/requirements-and-media-file-formats#ListofRequirements[the
-list of requirements]. 
+xref:android/knowledge-base/ct-presenter/requirements-and-media-file-formats#ListofRequirements[the
+list of requirements].
 
 [[h2_1169375241]]
 === Required JS Resources 
@@ -296,7 +296,7 @@ The following JS library should be represented in the
 [width="100%",cols="100%",]
 |===
 a|
-link:javascript:void(0)[Copy Code]
+xref:javascript:void(0)[Copy Code]
 
 HTML
 
@@ -310,15 +310,15 @@ a|
 
 
 The following scripts and styles should also be specified in the
-[.apiobject]#<head># tag of a slide for editing via
-link:android/application-editor[Application Editor].
+[.apiobject]#<head># tag of a slide for editing via
+xref:android/application-editor[Application Editor].
 
 
 
 [width="100%",cols="100%",]
 |===
 a|
-link:javascript:void(0)[Copy Code]
+xref:javascript:void(0)[Copy Code]
 
 HTML
 
@@ -341,5 +341,5 @@ a|
 
 
 Go back to
-link:android/knowledge-base/ct-presenter/requirements-and-media-file-formats#ListofRequirements[the
+xref:android/knowledge-base/ct-presenter/requirements-and-media-file-formats#ListofRequirements[the
 list of requirements].

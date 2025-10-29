@@ -6,27 +6,27 @@ activities.
 [[h2_1037365166]]
 === Requirements 
 
-Add the *Routes* module to link:android/app-menu[the app menu].
+Add the *Routes* module to xref:android/app-menu[the app menu].
 
-* To use Google Maps, specify the link:android/knowledge-base/configuration-guide/google-maps-api-key/google-maps-api-key[Google
+* To use Google Maps, specify the xref:android/knowledge-base/configuration-guide/google-maps-api-key/google-maps-api-key[Google
 Maps API key] on the
-link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-general#h3_604215198[CT Mobile Control
+xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_604215198[CT Mobile Control
 Panel: General] tab.
 
 * A field to store an address for the[.object]#Account# object
 should be specified on the *CT Mobile Control Panel: General* tab.
 * The[.object]#Activity# object should be specified on
-link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar#h3_1397263211[CT Mobile
+xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc#h3_1397263211[CT Mobile
 Control Panel: Calendar] tab. Add a field with the *Lookup* type from
 the[.object]#Activity# object to the[.object]#Account#
 object.
 
-[[h2__724838406]]
+[[h2_724838406]]
 === Adding Routes to the Menu 
 
-To add the *Routes* module to the link:android/app-menu[app menu]:
+To add the *Routes* module to the xref:android/app-menu[app menu]:
 
-. Go to link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-app-menu[CT Mobile Control
+. Go to xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-app-menu[CT Mobile Control
 Panel: App Menu] tab.
 . Select the required profile in the *Location* picklist.
 
@@ -58,7 +58,7 @@ The available list views:
 * All {plus} name of the[.object]#Activity# object for objects
 without custom list views, e.g., _All Events_.
 
-[[h3__449942769]]
+[[h3_449942769]]
 ==== Main Screen 
 
 Based or not on the current location, view the location of the selected

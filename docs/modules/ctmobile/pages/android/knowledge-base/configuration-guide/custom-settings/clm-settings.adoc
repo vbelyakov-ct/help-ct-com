@@ -31,7 +31,7 @@ The expiration date, after which the audio record should be deleted from the *Ac
 * The default value is 30.
 
 |Detailed Stats Enabled |[.apiobject]#clm__IsRDDetailedStatsEnabled__c# |Checkbox |If enabled, https://help.customertimes.com/smart/project-ct-mobile-en/remote-detailing-statistics[the statistics] per slide will be gathered for each participant at the meeting.
-|Email Required Field |[.apiobject]#clm__EmailRequiredField__c# |Text(255) |The field API name of the *https://help.customertimes.com/articles/ct-mobile-android-en/clm-activity[Activity]* object, for example, [.apiobject]#IsEmailRequired__c#. It indicates if the user is required to provide an email on https://help.customertimes.com/smart/project-ct-mobile-en/remote-detailing-2-0-ui-for-participants/a/h2__555694282[the Welcome screen] to access the Remote Detailing meeting.
+|Email Required Field |[.apiobject]#clm__EmailRequiredField__c# |Text(255) |The field API name of the *https://help.customertimes.com/articles/ct-mobile-android-en/clm-activity[Activity]* object, for example, [.apiobject]#IsEmailRequired__c#. It indicates if the user is required to provide an email on https://help.customertimes.com/smart/project-ct-mobile-en/remote-detailing-2-0-ui-for-participants/a/h2_555694282[the Welcome screen] to access the Remote Detailing meeting.
 |Endpoint URL |[.apiobject]#clm__RestServicePrefix__c# |Text(255) a|
 [.confluence-information-macro-note]#Not applied since CT Mobile package v. 3.63.#
 

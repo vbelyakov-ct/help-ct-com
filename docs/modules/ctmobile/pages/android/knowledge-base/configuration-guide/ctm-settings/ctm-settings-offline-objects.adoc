@@ -7,7 +7,7 @@ offline object as well as permissions and available actions with records
 of the offline object for a specific profile.
 
 [TIP] ==== To create or update the settings of offline objects,
-go to link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects[CT Mobile
+go to xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-offline-objects[CT Mobile
 Control Panel: Offline Objects]. ====
 
 '''''
@@ -30,7 +30,7 @@ on the Salesforce side.
 
 |Creating Allowed
 |[.apiobject]#clm__IsCreatingAllowed__c# |Checkbox a|
-Enables the creation of records of the offline object.
+Enables the creation of records of the offline object.
 
 [NOTE] ==== The permission to create a record cannot overcome
 the same profile permission. ====
@@ -57,7 +57,7 @@ the profile is granted. ====
 settings.
 
 |Object |[.apiobject]#clm__Object__c# |Text(255) |Stores
-an API Name of link:android/managing-offline-objects[an offline object].
+an API Name of xref:android/managing-offline-objects[an offline object].
 
 |Online Fetching
 |[.apiobject]#clm__IsOnlineFetchingEnabled__c# |Checkbox
@@ -75,7 +75,7 @@ specified in the[.apiobject]#clm__Criteria__c# field.
 ID to apply for all non-configured profiles.
 
 |Quick Sync |[.apiobject]#clm__IsQuickSyncEnabled__c#
-|Checkbox |Allows link:android/synchronization-launch[Quick Record
+|Checkbox |Allows xref:android/synchronization-launch[Quick Record
 Synchronization] for records of the offline object.
 
 |Sync Recovery |[.apiobject]#clm__SyncRecovery__c#
@@ -91,6 +91,6 @@ through it.
 * *Direct access* means the pushing of the record changes directly to an
 object via the additional web service.
 * *Proxy object* means the pushing of the record changes as a modifiable
-JSON file in the link:android/sync-log[Sync Log] object attachments.
+JSON file in the xref:android/sync-log[Sync Log] object attachments.
 
 |===

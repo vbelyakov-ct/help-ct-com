@@ -6,11 +6,11 @@ different CLM presentations.
 
 During the first full synchronization, the application requests the list
 of users and shared scenarios for all the
-link:android/knowledge-base/ct-presenter/clm-scheme/clm-application[Applications] available to the user.
+xref:android/knowledge-base/ct-presenter/clm-scheme/clm-application.adoc[Applications] available to the user.
 
 [NOTE] ==== The availability of functionality depends on the
 platform of the mobile device. For more information, refer to
-link:android/ct-mobile-os-comparison[CT Mobile OS Comparison]. ====
+xref:android/ct-mobile-solution/ct-mobile-os-comparison.adoc[CT Mobile OS Comparison]. ====
 
 '''''
 
@@ -46,8 +46,8 @@ scenario. Slides will be displayed according to the
 
 |Favorite |[.apiobject]#clm__isFavorite__c# |Checkbox
 |If enabled, the custom scenario is a favorite and will be displayed in
-link:android/home-screen[the Carousel of CLM presentations on the Home
-Screen] or link:android/mobile-layouts-applications[in the widget on the
+xref:android/home-screen[the Carousel of CLM presentations on the Home
+Screen] or xref:android/mobile-layouts-applications[in the widget on the
 record's mobile layout].
 
 |Scenario Editor |[.apiobject]#clm__ScenarioEditor__c#

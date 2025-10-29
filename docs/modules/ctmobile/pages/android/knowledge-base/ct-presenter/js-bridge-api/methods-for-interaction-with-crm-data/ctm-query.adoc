@@ -1,16 +1,16 @@
 = ctm.query
 
-The method of link:android/knowledge-base/ct-presenter/js-bridge-api/js-bridge-api[JS Bridge] functionality is
+The method of xref:android/knowledge-base/ct-presenter/js-bridge-api/index.adoc[JS Bridge] functionality is
 intended to make requests to data tables and receive records by
 criteria.
 
-[[h2__905713055]]
+[[h2_905713055]]
 === Query Format 
 
 [width="100%",cols="100%",]
 |===
 a|
-link:javascript:void(0)[Copy Code]
+xref:javascript:void(0)[Copy Code]
 
 JavaScript
 
@@ -35,7 +35,7 @@ debugging purposes.
 [width="100%",cols="100%",]
 |===
 a|
-link:javascript:void(0)[Copy Code]
+xref:javascript:void(0)[Copy Code]
 
 JavaScript
 
@@ -51,7 +51,7 @@ ctm.query('SELECT Id, Name FROM Account WHERE Name = "Google, Inc"')
 [width="100%",cols="100%",]
 |===
 a|
-link:javascript:void(0)[Copy Code]
+xref:javascript:void(0)[Copy Code]
 
 JavaScript
 
@@ -71,7 +71,7 @@ The result:
 [width="100%",cols="100%",]
 |===
 a|
-link:javascript:void(0)[Copy Code]
+xref:javascript:void(0)[Copy Code]
 
 JavaScript
 

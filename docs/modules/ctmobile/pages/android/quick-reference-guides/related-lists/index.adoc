@@ -6,8 +6,8 @@ https://help.customertimes.com/smart/project-ct-mobile-en/reference-fields[the
 reference field]. In the CT Mobile app, two types of related lists are
 available:
 
-* link:android/quick-reference-guides/related-lists/custom-related-lists[Custom Related Lists]
-* link:android/quick-reference-guides/related-lists/standard-related-lists[Standard Related Lists]
+* xref:android/quick-reference-guides/related-lists/custom-related-lists.adoc[Custom Related Lists]
+* xref:android/quick-reference-guides/related-lists/standard-related-lists[Standard Related Lists]
 
 [[h2_384095523]]
 === Related List Features Comparison 
@@ -29,17 +29,17 @@ required object.
 * Not applicable for a custom related list.
 
 |Set up a related list on CT Mobile Control Panel |{plus} |{plus} a|
-* Go to link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects[CT Mobile
+* Go to xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-offline-objects[CT Mobile
 Control Panel: Offline Objects] to customize a standard related list;
-* Go to link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-custom-details[CT Mobile
+* Go to xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-custom-details[CT Mobile
 Control Panel: Custom details] to customize a custom related list.
 
 |Create a record |{plus} |{plus} a|
 Grant permission:
 
-* on link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects[CT Mobile Control
+* on xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-offline-objects[CT Mobile Control
 Panel: Offline Objects] for a standard related list;
-* on link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-custom-details[CT Mobile Control
+* on xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-custom-details[CT Mobile Control
 Panel: Custom details] for a custom related list.
 
 [NOTE] ==== Object permissions restrict common access
@@ -49,9 +49,9 @@ have permission to edit the selected offline objects. ====
 |Delete a record |{plus} |{plus} a|
 Grant permission:
 
-* on link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects[CT Mobile Control
+* on xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-offline-objects[CT Mobile Control
 Panel: Offline Objects] for a standard related list;
-* in link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-custom-details[CT Mobile Control
+* in xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-custom-details[CT Mobile Control
 Panel: Custom details] for a custom related list.
 
 [NOTE] ==== Object permissions restrict common access
@@ -60,14 +60,14 @@ have permission to delete the selected offline objects. ====
 
 |Edit field values |– |{plus} a|
 * Not applicable for a standard related list;
-* Go to link:android/quick-reference-guides/related-lists/custom-related-lists#h2__773495381[Custom Related
+* Go to xref:android/quick-reference-guides/related-lists/custom-related-lists#h2_773495381[Custom Related
 Lists] to add the ability for editing fields of a custom related list.
 
 |Drilldown to record details screen |{plus} |{plus} a|
 * Available by default and cannot be disabled for a standard related
 list;
 * Grant permission on
-link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-custom-details[CT Mobile Control
+xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-custom-details[CT Mobile Control
 Panel: Custom details] for custom related list.
 
 |Control columns' width |{plus} |{plus} |[NOTE] ==== Not in
@@ -81,5 +81,5 @@ that match filter criteria.
 
 |The sort order by the specific field |{plus} |{plus} |Tap the column
 title to sort records by this field. For more information, go to
-link:android/quick-reference-guides/related-lists/filters-in-related-lists[Filters in Related Lists].
+xref:android/quick-reference-guides/related-lists/filters-in-related-lists[Filters in Related Lists].
 |===

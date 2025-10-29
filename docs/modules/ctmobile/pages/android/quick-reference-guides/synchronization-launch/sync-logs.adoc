@@ -5,11 +5,11 @@ management of synchronization statistics: average synchronization
 duration, the ratio of succeeded synchronizations to failed, and many
 more.
 
-* link:android/quick-reference-guides/synchronization-launch/sync-logs#h2__1487877011[Sync Log Records]
-* link:android/quick-reference-guides/synchronization-launch/sync-logs#h2__272409891[Enable Sync Logs]
-* link:android/quick-reference-guides/synchronization-launch/sync-logs#h2__1454825892[Sync Log Reports]
+* xref:android/quick-reference-guides/synchronization-launch/sync-logs#h2_1487877011[Sync Log Records]
+* xref:android/quick-reference-guides/synchronization-launch/sync-logs#h2_272409891[Enable Sync Logs]
+* xref:android/quick-reference-guides/synchronization-launch/sync-logs#h2_1454825892[Sync Log Reports]
 
-[[h2__1487877011]]
+[[h2_1487877011]]
 === Sync Log Records 
 
 The *Sync Log* record is created for each synchronization and each
@@ -17,7 +17,7 @@ operation, such as login, create, etc., after the synchronization
 completion or interruption due to sync errors.
 
 [TIP] ==== For more information, refer to
-link:android/quick-reference-guides/synchronization-launch/sync-log[Sync Log]. ====
+xref:android/quick-reference-guides/synchronization-launch/sync-log[Sync Log]. ====
 
 For example, if you performed the successful fast synchronization with
 the insert operation of *Account* and *Contact* records and the update
@@ -53,14 +53,14 @@ file with the sync logs:
 record.
 * ​The *Sync Log* record with the update operation of the *User* record.
 
-[[h2__272409891]]
+[[h2_272409891]]
 === Enable Sync Logs 
 
 To enable and configure Sync Logs:
 
-. Go to link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-general[CT Mobile Control
+. Go to xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc[CT Mobile Control
 Panel: General].
-. Select the required profile in the **Location **picklist.
+. Select the required profile in the **Location **picklist.
 
 [TIP] ==== *General Settings* will be applied to all profiles
 without individual settings. ====
@@ -82,7 +82,7 @@ image:52802816.png[]
 
 The sync log functionality is enabled.
 
-[[h2__1454825892]]
+[[h2_1454825892]]
 === Sync Log Reports 
 
 CT Mobile package is preconfigured with reports _Average Synchronization
@@ -92,7 +92,7 @@ reports are stored in the _Sync Log Reports_ folder.
 To open a Sync Log report:
 
 . Click the
-image:62573302.png[] button
+image:62573302.png[] button
 in the upper left corner and select *Reports*.
 . Select the *All Folders* filter (or any other suitable filter) to
 display the folder list.

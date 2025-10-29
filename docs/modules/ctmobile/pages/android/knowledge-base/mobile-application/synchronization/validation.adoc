@@ -7,23 +7,23 @@ rule can contain a formula or expression that evaluates the data in one
 or more fields and returns a value of[.apiobject]#true# or
 [.apiobject]#false#.
 
-* link:android/knowledge-base/mobile-application/synchronization/validation#h2_1260268493[Validation Logic for Records]
-* link:android/knowledge-base/mobile-application/synchronization/validation#h2_383652875[Validation Logic for Custom Related
+* xref:android/knowledge-base/mobile-application/synchronization/validation#h2_1260268493[Validation Logic for Records]
+* xref:android/knowledge-base/mobile-application/synchronization/validation#h2_383652875[Validation Logic for Custom Related
 Lists]
-* link:android/knowledge-base/mobile-application/synchronization/validation#h2__549128247[User Permissions]
-* link:android/knowledge-base/mobile-application/synchronization/validation#h2_1647137905[Example of a Validation Rule]
+* xref:android/knowledge-base/mobile-application/synchronization/validation#h2_549128247[User Permissions]
+* xref:android/knowledge-base/mobile-application/synchronization/validation#h2_1647137905[Example of a Validation Rule]
 
 
 
 Validation rules are retrieved by the CT Mobile app during
-synchronization as part of the link:android/knowledge-base/configuration-guide/metadata-archive/metadata-archive[metadata
+synchronization as part of the xref:android/knowledge-base/configuration-guide/metadata-archive/index.adoc[metadata
 archive] and then are applied offline. There are several limitations and
 conditions for validations applied on mobile devices that consider a
 correlation between synchronized records and the validation process:
 
 * Synchronized records cannot be validated before the changes are
 introduced (on the record layout and
-link:android/custom-related-lists[custom related list]).
+xref:android/custom-related-lists[custom related list]).
 * If changes are made in an already synchronized record, this record
 becomes unsynced.
 
@@ -36,7 +36,7 @@ in the *Calendar* or *Nearby Accounts* modules.
 [NOTE] ==== The
 https://help.customertimes.com/smart/project-ct-mobile-en/start-finish-functionality[Start/Finish
 functionality] and
-link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar[Lock/Unlock Record] must be
+xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc[Lock/Unlock Record] must be
 disabled. ====
 
 * After you create a record and open its layout (an unsynchronized
@@ -67,7 +67,7 @@ record layout will not be validated.
 
 * Validation is performed on the *Activity* record and records of custom
 related lists when you tap the *Finish* button on the *Activity* record.
-* If link:android/knowledge-base/mobile-application/synchronization/errors-screen[an error occurs] during validation, the
+* If xref:android/knowledge-base/mobile-application/synchronization/errors-screen[an error occurs] during validation, the
 system displays a warning message: _"Something went wrong on the tab(s):
 (tab name). Do you want to leave the record or fix it now?"_ After
 confirming, the layout or the first custom related list with errors
@@ -88,10 +88,10 @@ in a custom related list.
 occurs on a custom related list.
 
 Errors that occur on a record of custom related lists are displayed in a
-separate section on link:android/knowledge-base/mobile-application/synchronization/errors-screen#h2__479754125[the Errors
+separate section on xref:android/knowledge-base/mobile-application/synchronization/errors-screen#h2_479754125[the Errors
 screen].
 
-[[h2__549128247]]
+[[h2_549128247]]
 === User Permissions 
 
 The mobile user should have the following permissions:
@@ -129,7 +129,7 @@ validation rules. ====
 [width="100%",cols="100%",]
 |===
 a|
-link:javascript:void(0)[Copy Code]
+xref:javascript:void(0)[Copy Code]
 
 JavaScript
 

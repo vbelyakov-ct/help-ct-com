@@ -5,13 +5,13 @@ filters applied to the corresponding
 https://help.salesforce.com/articleView?id=customizing_related_lists.htm&type=5[related
 lists] of records while displaying them in the mobile application. This
 parameter is also responsible for selection criteria that are used for
-link:android/managing-offline-objects[offline object] data upload.
+xref:android/managing-offline-objects[offline object] data upload.
 
 [TIP] ==== For easy setup, go to
-link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-offline-objects[CT Mobile Control
+xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-offline-objects[CT Mobile Control
 Panel: Offline Objects]. ====[NOTE] ==== The availability of
 functionality depends on the platform of the mobile device. For more
-information, refer to link:android/ct-mobile-os-comparison[CT Mobile OS
+information, refer to xref:android/ct-mobile-solution/ct-mobile-os-comparison.adoc[CT Mobile OS
 Comparison]. ====
 
 The following system variables can be used as criteria:
@@ -91,18 +91,18 @@ related list's object is set in the
 [.apiobject]#clm_sObjectRelated__c# field.
 
 |Profile |[.apiobject]#clm__Profile__c# |Text(255) a|
-link:android/application-permission-settings[Organization ID/Profile ID] to
+xref:android/application-permission-settings[Organization ID/Profile ID] to
 which this setting is applicable:
 
 * if Profile ID is set, the setting is applied only to the profile;
 * if Organization ID is set, the setting is applied to all
 non-configured profiles.
-* if Profile ID and Organization ID are not set, the setting is applied
-to all non-configured profiles. 
+* if Profile ID and Organization ID are not set, the setting is applied
+to all non-configured profiles.
 
 |Quick Record Sync
 |[.apiobject]#clm__IsQuickSyncEnabled__c# |Checkbox
-|Enable link:android/synchronization-launch[Quick Record Synchronization]
+|Enable xref:android/synchronization-launch[Quick Record Synchronization]
 for records of the offline object.
 
 |RecordType |[.apiobject]#clm__RecordType__c# |Text(255)
@@ -132,7 +132,7 @@ applicable for the records of the related list.
 [.apiobject]#clm_sObjectRelated__c# field.
 
 |SOQL Filter |[.apiobject]#clm__SOQL__c# |Text(255) a|
-link:android/filters-in-related-lists[The SOQL query to filter]:
+xref:android/filters-in-related-lists[The SOQL query to filter]:
 
 * records of the offline object for displaying in the mobile
 application, if the API Name of this object is set in the
@@ -143,7 +143,7 @@ if the API Name of the related list's object is set in the
 
 |Sort Order |[.apiobject]#clm__SortOrder__c# |Text(255)
 |The parameter defines the ascending (ASC) or descending
-(DESC) link:android/filters-in-related-lists[sorting order of records in
+(DESC) xref:android/filters-in-related-lists[sorting order of records in
 the list].
 
 |Sort Tree by Field
@@ -151,7 +151,7 @@ the list].
 |The API name of a field with the date or date/time type to display the
 related list records in the
 https://help.customertimes.com/smart/project-ct-mobile-en/timeline-view[timeline
-view] if the API Name of the related list's object is set in the
+view] if the API Name of the related list's object is set in the
 [.apiobject]#clm_sObjectRelated__c# field.
 
 |Sync Recovery |[.apiobject]#clm__SyncRecovery__c#

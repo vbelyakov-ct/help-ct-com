@@ -1,11 +1,11 @@
 = Mobile Mini Layout Settings
 
 *Mobile Mini Layout Settings* is a custom setting that is used to set up
-link:android/mini-layouts[a mini-layout] to create a new record in the CT
+xref:android/mini-layouts[a mini-layout] to create a new record in the CT
 Mobile app.
 
 [TIP] ==== For easy setup, go to
-link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-mini-layouts[CT Mobile Control Panel:
+xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-mini-layouts[CT Mobile Control Panel:
 Mini Layouts]. ====
 
 '''''
@@ -58,13 +58,13 @@ applied anymore. #
 
 |Org ID/Profile ID |[.apiobject]#clm__OrgProfileId__c#
 |Text(255) a|
-link:android/application-permission-settings[Organization ID/Profile ID] to
+xref:android/application-permission-settings[Organization ID/Profile ID] to
 which this setting is applicable:
 
 * if Profile ID is set, the setting is applied only to the profile;
 * if Organization ID is set, the setting is applied to all
 non-configured profiles.
-* if Profile ID and Organization ID are not set, the setting is applied
-to all non-configured profiles. 
+* if Profile ID and Organization ID are not set, the setting is applied
+to all non-configured profiles.
 
 |===

@@ -7,33 +7,33 @@ package v. 3.54:
 during the synchronization.
 * User access to the cloud token is restricted.
 ** Now, the cloud token is written to the protected
-link:android/knowledge-base/configuration-guide/custom-settings/api-key[API Key] custom setting and retrieved by the web
+xref:android/knowledge-base/configuration-guide/custom-settings/api-key[API Key] custom setting and retrieved by the web
 service.
-** As before, link:android/application-permission-settings[administrators]
+** As before, xref:android/application-permission-settings[administrators]
 could view and refresh the cloud token value on the
-link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools[CT Mobile Control Panel: Tools].
+xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-tools[CT Mobile Control Panel: Tools].
 
 
 
 Consider the following while working with the CT Mobile package v. 3.54
 and higher:
 
-* link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools#h2__203730205[The
+* xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-tools#h2_203730205[The
 administrator credentials] are no more available on the CT Mobile
 Control Panel: Tools tab and are no more in use to download metadata on
 the user's device.
-* link:android/knowledge-base/configuration-guide/metadata-archive/metadata-archive[The metadata archive] should be built. This
+* xref:android/knowledge-base/configuration-guide/metadata-archive/index.adoc[The metadata archive] should be built. This
 allows all the necessary metadata to be downloaded to the user's device
 for the CT Mobile app to work properly offline.
 
 [TIP] ==== Enable
 https://help.customertimes.com/smart/project-ct-mobile-en/metadata-checker[Metadata
 Checker] or click the
-link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools#h3_1003786176[Refresh metadata
+xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-tools#h3_1003786176[Refresh metadata
 archive] button to build the metadata archive. Please note that the
-process will take some time.  ====
+process will take some time.  ====
 
-* link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools#h3_2011978[The cloud token] is
+* xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-tools#h3_2011978[The cloud token] is
 required to download the metadata archive during the synchronization on
 the user's device.
 * If the cloud token is invalid or there is no metadata archive, the CT

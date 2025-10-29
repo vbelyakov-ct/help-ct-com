@@ -5,10 +5,10 @@ data related to the target system model and the global settings of the
 mobile application are stored.
 
 [TIP] ==== For easy setup, go to
-link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-general[CT Mobile Control Panel:
+xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc[CT Mobile Control Panel:
 General]. ====[NOTE] ==== The availability of functionality
 depends on the platform of the mobile device. For more information,
-refer to link:android/ct-mobile-os-comparison[CT Mobile OS Comparison].
+refer to xref:android/ct-mobile-solution/ct-mobile-os-comparison.adoc[CT Mobile OS Comparison].
 ====
 
 '''''
@@ -27,7 +27,7 @@ Custom setting API name:
 |Text(255) |The API name of the field on the[.object]#Account#
 object is used to store the address of the organization, e.g., country,
 city, building. etc. The value in this field is used in
-link:android/mobile-layouts-maps[the Maps widget] if the value is not set
+xref:android/mobile-layouts-maps[the Maps widget] if the value is not set
 in the[.apiobject]#clm__AccountGeolocationAPIField__c#
 field or this field is absent.
 
@@ -39,46 +39,46 @@ Location type] or
 https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/compound_fields_address.htm[the
 Address type] on the[.object]#Account# object is used to store
 the geolocation of the organization. The value in this field is used to
-get the location in the link:android/routes[Routes] and
-link:android/nearby-accounts[Nearby Accounts] modules.
+get the location in the xref:android/routes[Routes] and
+xref:android/nearby-accounts[Nearby Accounts] modules.
 
 |Activity "IsDone" field API name
 |[.apiobject]#clm__ActivityDoneAPI__c# |Text(255) a|
-The API name of the field on the[.object]#Activity# object is
+The API name of the field on the[.object]#Activity# object is
 used as an additional attribute showing that the *Activity* is
-finished. The field is used when
+finished. The field is used when
 the https://help.customertimes.com/smart/project-ct-mobile-en/start-finish-functionality[Start/Finish
-functionality] is enabled. 
+functionality] is enabled.
 
-If several [.object]#Activity# objects are used, the API names
-should be specified separated by a comma, without blank space. 
+If several [.object]#Activity# objects are used, the API names
+should be specified separated by a comma, without blank space.
 
 |Activity "IsLocked" field API name
 |[.apiobject]#clm__ActivityIsLockedAPI__c# |Text(255) a|
-The API name of the field on the object[.object]#Activity# is
+The API name of the field on the object[.object]#Activity# is
 used as an additional attribute showing that the *Activity* is locked
-for editing. The field is used when
-both *Start/Finish* and *Lock/Unlock* functionalities are enabled. 
+for editing. The field is used when
+both *Start/Finish* and *Lock/Unlock* functionalities are enabled.
 
-If several [.object]#Activity# objects are used, the API names
-should be specified separated by a comma, without blank space. 
+If several [.object]#Activity# objects are used, the API names
+should be specified separated by a comma, without blank space.
 
 |Activity Description field API Name
 |[.apiobject]#clm__ActivityDescriptionAPI__c# |Text(255)
 a|
-The API name of the field on the[.object]#Activity# object is
+The API name of the field on the[.object]#Activity# object is
 used to store the description of the activity.
 
-If several [.object]#Activity# objects are used, the API names
-should be specified separated by a comma, without blank space. 
+If several [.object]#Activity# objects are used, the API names
+should be specified separated by a comma, without blank space.
 
 |Activity End Date field API name
 |[.apiobject]#clm__ActivityEndDateAPI__c# |Text(255) a|
-The API name of the field on the[.object]#Activity# object is
+The API name of the field on the[.object]#Activity# object is
 used to store the end date of the activity.
 
-If several [.object]#Activity# objects are used, the API names
-should be specified separated by a comma, without blank space. 
+If several [.object]#Activity# objects are used, the API names
+should be specified separated by a comma, without blank space.
 
 |Activity Geolocation field API name
 |[.apiobject]#clm__ActivityGeolocationAPIField__c#
@@ -86,54 +86,54 @@ should be specified separated by a comma, without blank space. 
 The API name of the field with the geolocation type on the
 [.object]#Activity# object.
 
-If several [.object]#Activity# objects are used, the API names
-should be specified separated by a comma, without blank space. 
+If several [.object]#Activity# objects are used, the API names
+should be specified separated by a comma, without blank space.
 
 |Activity Lookup Field API name
 |[.apiobject]#clm__ActivityFieldAPI__c# |Text(255) a|
 The API name of the field with the lookup type from
-link:android/clm-applicationstats[the Application Stats object] to the
+xref:android/clm-applicationstats[the Application Stats object] to the
 [.object]#Activity# object.
 
-If several [.object]#Activity# objects are used, the API names
-should be specified separated by a comma, without blank space. 
+If several [.object]#Activity# objects are used, the API names
+should be specified separated by a comma, without blank space.
 
 |Activity Object API Name
 |[.apiobject]#clm__ActivityObjectAPIName__c# |Text(255)
 a|
 API-name of the[.object]#Activity# object.
 
-If several [.object]#Activity# objects are used, the API names
-should be specified separated by a comma, without blank space. 
+If several [.object]#Activity# objects are used, the API names
+should be specified separated by a comma, without blank space.
 
 |Activity Start Date API name
 |[.apiobject]#clm__ActivityDateAPI__c# |Text(255) a|
 The API name of the field on the[.object]#Activity# object used
 to store the start date of the activity.
 
-If several [.object]#Activity# objects are used, the API names
-should be specified separated by a comma, without blank space. 
+If several [.object]#Activity# objects are used, the API names
+should be specified separated by a comma, without blank space.
 
 |Activity Status field API name
 |[.apiobject]#clm__ActivityStatusAPI__c# |Text(255) a|
 The API name of the field on the[.object]#Activity# object with
 the picklist type displays the activity status.
 
-If several [.object]#Activity# objects are used, the API names
-should be specified separated by a comma, without blank space. 
+If several [.object]#Activity# objects are used, the API names
+should be specified separated by a comma, without blank space.
 
 |Allow Web Sharing
 |[.apiobject]#clm__AllowWebSharing__c# |Checkbox a|
 If enabled, add the *Web Share* button to the CLM presentation record
 that allows you to embed the CLM presentation on the website page. Click
-the *Web Share* button,
-link:../Storage/ct-mobile-android-en/WebShare-Button.png[set up] the
+the *Web Share* button,
+xref:../Storage/ct-mobile-android-en/WebShare-Button.png[set up] the
 height and width of the CLM presentation window, and click *Generate*.
 Copy and paste the code into the website page markup. Use the arrows to
 navigate on the slide carousel.
 
 [NOTE] ==== 
-CTAPPGoTo functionality] are not available.  ====
+CTAPPGoTo functionality] are not available.  ====
 
 |App Install URL |[.apiobject]#clm__AppInstallURL__c#
 |Text(255) |The direct link to CT Mobile app in the App Store.
@@ -141,13 +141,13 @@ CTAPPGoTo functionality] are not available.  ====
 |Bing Maps Windows API key
 |[.apiobject]#clm__BingMapsWindowsAPIKey__c# |Text(255)
 |https://docs.microsoft.com/en-us/bingmaps/getting-started/bing-maps-dev-center-help/getting-a-bing-maps-key[Access
-key to Bing Maps services] for CT Mobile Windows users that allows using
+key to Bing Maps services] for CT Mobile Windows users that allows using
 Bing Maps in the *Routes* and *Nearby Accounts* modules and the *Maps*
 widget.
 
 |Calendar View |[.apiobject]#clm__CalendarView__c#
 |Text(255) a|
-The default view in the link:android/calendar[Calendar] module. Available
+The default view in the xref:android/calendar[Calendar] module. Available
 values:
 
 * Day
@@ -165,20 +165,20 @@ enabled.
 The CT Mobile services access token.
 
 [WARNING] ====
-link:android/ct-mobile-managed-package-update-to-v-3-54[Depending on the CT
+xref:android/ct-mobile-managed-package-update-to-v-3-54[Depending on the CT
 Mobile package and CT Mobile app version], the cloud token may be stored
-in the link:android/knowledge-base/configuration-guide/custom-settings/api-key[API Key] custom setting. ====
+in the xref:android/knowledge-base/configuration-guide/custom-settings/api-key[API Key] custom setting. ====
 
 |Debug Level |[.apiobject]#clm__DebugLevel__c#
 |Text(255) a|
-Defines link:android/sync-logs[sync logs] must be stored Available values:
+Defines xref:android/sync-logs[sync logs] must be stored Available values:
 
 * *None*. Logging is disabled.
 * *Error*. The *Sync Log* record is created when an error occurred.
 * *All*. The *Sync Log* record is created for each synchronization.
 [WARNING] ==== Enabling the All option for a long time will
 result in an overflow of the data storage
-at http://salesforce.com/[Salesforce] and a significant increase in the
+at http://salesforce.com/[Salesforce] and a significant increase in the
 mobile application sync time. ====
 
 |Event Duration
@@ -196,13 +196,13 @@ value. ====
 
 |Google Maps Android API Key
 |[.apiobject]#clm__GoogleMapsAndroidAPIKey__c#
-|Text(255) |link:android/google-maps-api-key[Access key to Google Maps
+|Text(255) |xref:android/google-maps-api-key[Access key to Google Maps
 services] allows CT Mobile Android users to work with Google Maps in the
 *Routes* and *Nearby Accounts* modules and the *Maps* widget.
 
 |Google Maps iOS API Key
 |[.apiobject]#clm__GoogleMapsAPIKey__c# |Text(255)
-|link:android/google-maps-api-key[Access key to Google Maps services]
+|xref:android/google-maps-api-key[Access key to Google Maps services]
 allows CT Mobile iOS users to work with Google Maps in the *Routes* and
 *Nearby Accounts* modules and the *Maps* widget.
 
@@ -215,13 +215,13 @@ Geolocation center].
 
 |Image Quality |[.apiobject]#clm__ImageQuality__c#
 |Number(3,0)
-|link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-general#h3__377059502[Image
+|xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_377059502[Image
 compression functionality]. The attached images and taken photos may be
 compressed to reduce the amount of data.
 
 |Lock/Unlock Record
 |[.apiobject]#clm__EnableLockUnlock__c# |Checkbox |Lock
-*Activities* for editing after finishing and unlock for editing when
+*Activities* for editing after finishing and unlock for editing when
 starting and when both *Start/Finish* and *Lock/Unlock* functionalities
 are enabled.
 
@@ -236,14 +236,14 @@ enabled, the PIN code is required to access the CT Mobile app.
 
 |Person Account Enabled
 |[.apiobject]#clm__IsPersonAccountsEnabled__c# |Checkbox
-|If enabled, link:android/knowledge-base/configuration-guide/person-accounts[Person Accounts] are used in the
+|If enabled, xref:android/knowledge-base/configuration-guide/person-accounts[Person Accounts] are used in the
 CT Mobile app.
 
 |Product lookup field API name
 |[.apiobject]#clm__ProductFieldAPI__c# |Text(255) |The
 API name of the field with the lookup type from the
-link:android/clm-application[Application] object to the
-link:android/clm-product[Product] object.
+xref:android/clm-application[Application] object to the
+xref:android/clm-product[Product] object.
 
 |Product Object API Name
 |[.apiobject]#clm__ProductObjectAPIName__c# |Text(255)
@@ -254,7 +254,7 @@ link:android/clm-product[Product] object.
 
 |Reference Object API Name
 |[.apiobject]#clm__ReferenceObjectAPIName__c# |Text(255)
-|The API name of the link:android/knowledge-base/configuration-guide/reference-object[Reference] object.
+|The API name of the xref:android/knowledge-base/configuration-guide/reference-object[Reference] object.
 
 |Show week switch
 |[.apiobject]#clm__IsWeekSwitchShowed__c# |Checkbox |The
@@ -273,7 +273,7 @@ color code in the RGB color model of the application theme.
 
 |Unfinished Activity Allowed
 |[.apiobject]#clm__IsUnfinishedActivityAllowed__c#
-|Checkbox |If enabled along with the *Start/Finish functionality*,
+|Checkbox |If enabled along with the *Start/Finish functionality*,
 mobile users can leave the started *Activity* record to work with other
 CT Mobile app functionalities.
 
@@ -284,7 +284,7 @@ opening/closing and when the *Start/Finish functionality* is enabled.
 
 |Visible Hour Range
 |[.apiobject]#clm__VisibleHourRange__c# |Text(255) |The
-hour range is displayed in the *Day* and *Week* calendar view in the
+hour range is displayed in the *Day* and *Week* calendar view in the
 *Calendar* module.
 
 |Week Format |[.apiobject]#clm__WeekFormat__c#

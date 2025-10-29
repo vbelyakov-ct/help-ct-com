@@ -6,9 +6,9 @@ presentation is a confirmation for all changes to be visible to the
 users of the CT Mobile app and a command for the CT Mobile app to upload
 an updated CLM presentation.
 
-* link:android/knowledge-base/ct-presenter/publishing-clm-presentations#h2_1149854286[Applications Tab]
-* link:android/knowledge-base/ct-presenter/publishing-clm-presentations#h3_1098755975[Renew Slides]
-* link:android/knowledge-base/ct-presenter/publishing-clm-presentations#h2_104022594[Application Editor
+* xref:android/knowledge-base/ct-presenter/publishing-clm-presentations#h2_1149854286[Applications Tab]
+* xref:android/knowledge-base/ct-presenter/publishing-clm-presentations#h3_1098755975[Renew Slides]
+* xref:android/knowledge-base/ct-presenter/publishing-clm-presentations#h2_104022594[Application Editor
 Tab]
 
 [[h2_1149854286]]
@@ -37,7 +37,7 @@ If any discrepancies are found, only those slides and attachments will
 be loaded that have been updated after the last synchronization.
 
 * In case of the future date is set in the *Forced Load Date* field
-link:android/knowledge-base/ct-presenter/clm-scheme/clm-application[on the CLM presentation record], the CT mobile
+xref:android/knowledge-base/ct-presenter/clm-scheme/clm-application.adoc[on the CLM presentation record], the CT mobile
 app asks the current user to download the CLM presentation or not.
 * In the case of the past date or an empty value being set in the
 *Forced Load Date* field the CLM presentation will be downloaded.
@@ -46,9 +46,9 @@ app asks the current user to download the CLM presentation or not.
 ==== Renew Slides 
 
 To view slides in the navigation feed on the
-link:android/knowledge-base/mobile-application/mobile-application-modules/applications/applications[Applications] module, on
-link:android/mobile-layouts-applications[the mobile layout] of a record,
-and link:android/home-screen[Home Screen], it is necessary to take slide
+xref:android/knowledge-base/mobile-application/mobile-application-modules/applications/applications[Applications] module, on
+xref:android/mobile-layouts-applications[the mobile layout] of a record,
+and xref:android/home-screen[Home Screen], it is necessary to take slide
 screenshots. The *Renew Slides* functionality creates or replaces the
 screenshots, for example, if some information was changed or the
 animation was added. Taking a slide screenshot with a delay helps to
@@ -74,7 +74,7 @@ depending on the current service load.
 To renew slide screenshots:
 
 [NOTE] ==== If
-link:android/knowledge-base/ct-presenter/ct-presenter-introduction#h2_1251281241[the required remote
+xref:android/knowledge-base/ct-presenter/ct-presenter-introduction#h2_1251281241[the required remote
 sites] are not activated, slides will not be updated and the error
 message will be shown. ====
 
@@ -120,7 +120,7 @@ If any discrepancies are found, only those slides and attachments will
 be loaded that have been updated after the last synchronization.
 
 * In case of the future date in the *Forced Load Date* field
-link:android/knowledge-base/ct-presenter/clm-scheme/clm-application[on the CLM presentation record], the CT mobile
+xref:android/knowledge-base/ct-presenter/clm-scheme/clm-application.adoc[on the CLM presentation record], the CT mobile
 app asks the current user to download the CLM presentation or not.
 * In the case of the past date or an empty value being set in the
 *Forced Load Date* field, the CLM presentation will be downloaded.

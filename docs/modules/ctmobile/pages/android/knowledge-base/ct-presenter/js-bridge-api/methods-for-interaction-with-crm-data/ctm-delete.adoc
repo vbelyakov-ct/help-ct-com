@@ -1,20 +1,20 @@
 = ctm.delete
 
-The method of the link:android/knowledge-base/ct-presenter/js-bridge-api/js-bridge-api[JS Bridge] functionality is
+The method of the xref:android/knowledge-base/ct-presenter/js-bridge-api/index.adoc[JS Bridge] functionality is
 intended to bulk delete fields of records of offline objects:
 
-* link:android/application-permission-settings[the user profile] should
+* xref:android/application-permission-settings[the user profile] should
 have permission to delete records of the required object.
-* link:android/managing-offline-objects#h2_1534686659[permission to delete]
+* xref:android/managing-offline-objects#h2_1534686659[permission to delete]
 the required offline object is allowed.
 
-[[h2__905713055]]
+[[h2_905713055]]
 === Query Format 
 
 [width="100%",cols="100%",]
 |===
 a|
-link:javascript:void(0)[Copy Code]
+xref:javascript:void(0)[Copy Code]
 
 JavaScript
 
@@ -40,7 +40,7 @@ debugging purposes.
 [width="100%",cols="100%",]
 |===
 a|
-link:javascript:void(0)[Copy Code]
+xref:javascript:void(0)[Copy Code]
 
 JavaScript
 
@@ -56,7 +56,7 @@ ctm.delete([{"SObject": "Account", "Id":"a0y1w000000Ck4x"}])
 [width="100%",cols="100%",]
 |===
 a|
-link:javascript:void(0)[Copy Code]
+xref:javascript:void(0)[Copy Code]
 
 JavaScript
 
@@ -80,7 +80,7 @@ The result:
 [width="100%",cols="100%",]
 |===
 a|
-link:javascript:void(0)[Copy Code]
+xref:javascript:void(0)[Copy Code]
 
 JavaScript
 

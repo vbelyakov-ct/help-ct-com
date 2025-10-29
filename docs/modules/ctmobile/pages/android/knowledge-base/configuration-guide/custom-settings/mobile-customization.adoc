@@ -1,11 +1,11 @@
 = Mobile Customization
 
 *Mobile Customization* is a custom setting to store
-link:android/custom-color-settings[custom color settings] for statuses,
+xref:android/custom-color-settings[custom color settings] for statuses,
 types, or other attributes of selected objects.
 
 [TIP] ==== For easy setup, go to
-link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-color-settings[CT Mobile Control
+xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-color-settings[CT Mobile Control
 Panel: Color Settings]. ====
 
 '''''
@@ -31,14 +31,14 @@ RGB-code for each value of the criteria filed, for example,
 
 |Org ID/Profile ID |[.apiobject]#clm__OrgProfileId__c#
 |Text(255) a|
-link:android/application-permission-settings[Organization ID/Profile ID] to
+xref:android/application-permission-settings[Organization ID/Profile ID] to
 which this setting is applicable:
 
 * if Profile ID is set, the setting is applied only to the profile;
 * if Organization ID is set, the setting is applied to all
 non-configured profiles.
-* if Profile ID and Organization ID are not set, the setting is applied
-to all non-configured profiles. 
+* if Profile ID and Organization ID are not set, the setting is applied
+to all non-configured profiles.
 
 |Values |[.apiobject]#clm__Values__c# |Text(255) |The
 list of picklist values of the criteria field.

@@ -5,7 +5,7 @@ presentations.
 
 The availability of functionality depends on the platform of the mobile
 device. For more information, refer
-to link:android/ct-mobile-os-comparison[CT Mobile OS Comparison].
+to xref:android/ct-mobile-solution/ct-mobile-os-comparison.adoc[CT Mobile OS Comparison].
 
 '''''
 
@@ -22,7 +22,7 @@ If enabled, the CLM presentation is active and will be downloaded on the
 mobile device during synchronization.
 
 * A CLM presentation should be available for the current user.
-* The [.apiobject]#clm__IsAvailableOffline__c# field
+* The [.apiobject]#clm__IsAvailableOffline__c# field
 should be selected to download the CLM presentation on a mobile device.
 
 |Application |[.apiobject]#Name# |Text(80) |The CLM presentation
@@ -43,7 +43,7 @@ another CLM presentation.
 |[.apiobject]#clm__IsAvailableForRD__c# |Checkbox a|
 If enabled, the CLM presentation can be used in Remote Detailing.
 
-The [.apiobject]#clm__isActive__c# field should be
+The [.apiobject]#clm__isActive__c# field should be
 checked.
 
 |Available Offline
@@ -51,7 +51,7 @@ checked.
 If enabled, the CLM presentation will be downloaded on the mobile device
 during synchronization.
 
-The [.apiobject]#clm__isActive__c# field should be
+The [.apiobject]#clm__isActive__c# field should be
 checked.
 
 |Description |[.apiobject]#clm__Description__c# |Long
@@ -75,7 +75,7 @@ demonstration of the CLM presentation.
 
 For each slide, comments will be stored in the
 [.apiobject]#clm__Description__c# field of the record of
-the link:android/knowledge-base/ct-presenter/clm-scheme/clm-applicationstats[Application Stats] object.
+the xref:android/knowledge-base/ct-presenter/clm-scheme/clm-applicationstats.adoc[Application Stats] object.
 
 |Forced Load Date |[.apiobject]#clm__ForcedLoadDate__c#
 |Date a|
@@ -101,17 +101,17 @@ custom Visualforce page.
 * *Application*
 
 The CLM presentation is based on HTML5 by manually creating or uploading
-link:android/creating-clm-presentation-from-powerpoint[PowerPoint],
-link:android/creating-clm-presentation-from-pdf[PDF], or
-link:android/creating-clm-presentation-from-jpeg-jpg[ZIP archives with the
-JPEG/JPG files] on the link:android/application-editor[Application Editor]
+xref:android/creating-clm-presentation-from-powerpoint[PowerPoint],
+xref:android/creating-clm-presentation-from-pdf[PDF], or
+xref:android/creating-clm-presentation-from-jpeg-jpg[ZIP archives with the
+JPEG/JPG files] on the xref:android/application-editor[Application Editor]
 tab.
 * *Plain Application*
 
-In the built-in link:android/plain-application-editor[Plain Application
+In the built-in xref:android/plain-application-editor[Plain Application
 Editor], CLM presentations can be created based on
-link:android/knowledge-base/ct-presenter/clm-scheme/clm-template[templates],
-link:android/knowledge-base/ct-presenter/clm-scheme/clm-placeholder[placeholders], link:android/knowledge-base/ct-presenter/clm-scheme/clm-widget[widgets],
+xref:android/knowledge-base/ct-presenter/clm-scheme/clm-template[templates],
+xref:android/knowledge-base/ct-presenter/clm-scheme/clm-placeholder[placeholders], xref:android/knowledge-base/ct-presenter/clm-scheme/clm-widget[widgets],
 PowerPoint, and other content. Markups for all slides are stored in the
 first slide. The slides' effects are available.
 
@@ -127,11 +127,11 @@ The slide ID for displaying a slide preview.
 |Slide reordering enabled
 |[.apiobject]#clm__IsSlideReorderEnabled__c# |Checkbox
 |If enabled, users can create and edit
-link:android/knowledge-base/ct-presenter/clm-scheme/clm-customscenario[custom scenarios].
+xref:android/knowledge-base/ct-presenter/clm-scheme/clm-customscenario[custom scenarios].
 
 |Slide Zoom Enabled |[.apiobject]#clm__IsZoomEnabled__c#
 |Checkbox |If enabled, zoom in and out slides if
-link:android/knowledge-base/configuration-guide/custom-settings/mobile-application-setup#h2_993073976[the display mode is
+xref:android/knowledge-base/configuration-guide/custom-settings/mobile-application-setup#h2_993073976[the display mode is
 *wk*].
 
 |Swipe gesture type
@@ -155,7 +155,7 @@ record type.
 |Track slide duration
 |[.apiobject]#clm__IsSlideDurationTrackingEnabled__c#
 |Checkbox |If enabled, it counts the view time per slide and stores it
-as an *Application Stats* record of the *Slide Stats* record type.
+as an *Application Stats* record of the *Slide Stats* record type.
 
 |Track slide likes/dislikes
 |[.apiobject]#clm__IsSlideLikesTrackingEnabled__c#
@@ -199,7 +199,7 @@ type.
 |Version |[.apiobject]#clm__Version__c# |Number(16,2) a|
 The version of the CLM presentation.
 
-Click *Publish* on the *Application* record or in Application Editor to
+Click *Publish* on the *Application* record or in Application Editor to
 update the version.
 
 |===

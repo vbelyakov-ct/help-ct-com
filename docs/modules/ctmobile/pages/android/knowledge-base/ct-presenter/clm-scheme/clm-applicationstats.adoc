@@ -5,14 +5,14 @@ statistics of every time the CLM presentation is viewed whether the
 current preview is attached to the *Activity* record or not.
 
 * Statistics of one CLM presentation can be linked to multiple
-link:android/knowledge-base/ct-presenter/clm-scheme/clm-activity[activity] records.
+xref:android/knowledge-base/ct-presenter/clm-scheme/clm-activity[activity] records.
 * A list of monitored parameters is set up for each CLM presentation
 separately.
 * Statistics collection stops when a user exits the CLM presentation.
 
 [NOTE] ==== The availability of functionality depends on the
 platform of the mobile device. For more information, refer to
-link:android/ct-mobile-os-comparison[CT Mobile OS Comparison]. ====
+xref:android/ct-mobile-solution/ct-mobile-os-comparison.adoc[CT Mobile OS Comparison]. ====
 
 '''''
 
@@ -22,7 +22,7 @@ Object API name:[.apiobject]#clm__ApplicationStats__c#
 
 [NOTE] ==== To collect certain parameters of statistics, it is
 necessary to use preconfigured
-link:android/knowledge-base/mobile-application/mobile-application-modules/applications/gestures-in-clm-presentations[gestures].  ====
+xref:android/knowledge-base/mobile-application/mobile-application-modules/applications/gestures-in-clm-presentations[gestures].  ====
 
 [width="100%",cols="25%,25%,25%,25%",]
 |===
@@ -34,7 +34,7 @@ Text for the standard[.object]#Task# and
 [.object]#Event# objects a|
 A field with the lookup type for the[.object]#Activity# object
 will be automatically created for each[.object]#Activity#
-object specified on link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar[CT Mobile
+object specified on xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc[CT Mobile
 Control Panel: Calendar], for example,
 [.apiobject]#ActivityId__c# or
 [.apiobject]#TaskId__c#.
@@ -66,14 +66,14 @@ The total number of taps/clicks for all slides.
 
 For the *Remote Detailing* meeting, the total number of taps/clicks on
 all slides for each participant, if the *Remote Detailing: Detailed
-Stats Enabled* field of the link:android/knowledge-base/configuration-guide/ctm-settings/clm-settings[CLM Settings] record
+Stats Enabled* field of the xref:android/knowledge-base/configuration-guide/ctm-settings/clm-settings[CLM Settings] record
 is not active.
 
 |Custom Scenario |[.apiobject]#clm__CustomScenarioId__c#
 |Lookup(Custom Scenario) a|
 *Slide Stats*
 
-The link:android/knowledge-base/ct-presenter/clm-scheme/clm-customscenario[custom scenario] record in which a
+The xref:android/knowledge-base/ct-presenter/clm-scheme/clm-customscenario[custom scenario] record in which a
 slide was shown.
 
 |Description |[.apiobject]#clm__Description__c# |Long
@@ -109,7 +109,7 @@ For the *Self-Detailing* meeting.
 
 * If enabled, the statistics will be pulled into Salesforce after a
 certain time (timeout of the participant's session), and the field
-switches to the[.apiobject]#true# value.
+switches to the[.apiobject]#true# value.
 
 |Guest Stats |[.apiobject]#clm__IsGuestStats__c#
 |Checkbox a|
@@ -165,7 +165,7 @@ slide.
 visits to an organization performed.
 * *Web Detailing* – statistics for a participant collected on the views
 of CLM presentations on the web or through the *Remote
-Detailing* meeting. 
+Detailing* meeting.
 * *File Stats* – statistics on CLM presentation attachments views.
 
 |Slide |[.apiobject]#clm__SlideId__c# |Lookup(Slide)
@@ -203,7 +203,7 @@ Settings* record is not active.
 For a record of the *Slide Stats* type:
 
 *[.apiobject]#true# if the participant accepted the
-link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-presenter#h3_1019207818[Terms of Use]
+xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-presenter#h3_1019207818[Terms of Use]
 *[.apiobject]#false# if the participant did not accept the
 Terms of Use
 

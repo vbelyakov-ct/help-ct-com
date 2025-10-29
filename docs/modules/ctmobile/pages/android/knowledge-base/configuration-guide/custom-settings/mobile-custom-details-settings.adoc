@@ -5,10 +5,10 @@ responsible for the display and layout of the *Detailing* tab on the
 record screen of any object.
 
 [TIP] ==== For easy setup, go to
-link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-custom-details[CT Mobile Control
+xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-custom-details[CT Mobile Control
 Panel: Custom Details]. ====[NOTE] ==== The availability of
 functionality depends on the platform of the mobile device. For more
-information, refer to link:android/ct-mobile-os-comparison[CT Mobile OS
+information, refer to xref:android/ct-mobile-solution/ct-mobile-os-comparison.adoc[CT Mobile OS
 Comparison]. ====
 
 '''''
@@ -85,14 +85,14 @@ Data# object. #
 
 |Org ID/Profile ID |[.apiobject]#clm__OrgProfileId__c#
 |Text(255) a|
-link:android/application-permission-settings[Organization ID/Profile ID] to
+xref:android/application-permission-settings[Organization ID/Profile ID] to
 which this setting is applicable:
 
 * if Profile ID is set, the setting is applied only to the profile;
 * if Organization ID is set, the setting is applied to all
 non-configured profiles.
-* if Profile ID and Organization ID are not set, the setting is applied
-to all non-configured profiles. 
+* if Profile ID and Organization ID are not set, the setting is applied
+to all non-configured profiles.
 
 |Parent Object |[.apiobject]#clm__ParentObject__c#
 |Text(255) |The object on which the Detailing tab will be displayed.

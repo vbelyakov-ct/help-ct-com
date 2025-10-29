@@ -12,26 +12,26 @@ This guide is intended for UI/UX and content designers, CLM-, CRM-,
 brand managers, and technical teams, who are responsible for selecting,
 managing, and creating visual aids and CLM presentations.
 
-* link:android/ct-presenter-introduction[CT Presenter Introduction]
-* link:android/requirements-and-media-file-formats[Requirements and Media
+* xref:android/ct-presenter-introduction[CT Presenter Introduction]
+* xref:android/requirements-and-media-file-formats[Requirements and Media
 File Formats]
-* link:android/clm-scheme[CLM Scheme]
-* link:android/clm-presentation-components[CLM Presentation Components]
-* link:android/test-clm-presentations[Test CLM Presentations]
-* link:android/application-editor[Application Editor]
-* link:android/creating-clm-presentation[Creating CLM Presentation]
-* link:android/plain-application-editor[Plain Application Editor]
-* link:android/custom-scenario-editor[Custom Scenario Editor]
-* link:android/attach-files-to-clm-presentation[Attach Files to CLM
+* xref:android/clm-scheme[CLM Scheme]
+* xref:android/clm-presentation-components[CLM Presentation Components]
+* xref:android/test-clm-presentations[Test CLM Presentations]
+* xref:android/application-editor[Application Editor]
+* xref:android/creating-clm-presentation[Creating CLM Presentation]
+* xref:android/plain-application-editor[Plain Application Editor]
+* xref:android/custom-scenario-editor[Custom Scenario Editor]
+* xref:android/attach-files-to-clm-presentation[Attach Files to CLM
 Presentation]
-* link:android/publishing-clm-presentations[Publishing CLM Presentations]
-* link:android/clm-navigation-in-clm-presentations[Navigation in CLM
+* xref:android/publishing-clm-presentations[Publishing CLM Presentations]
+* xref:android/clm-navigation-in-clm-presentations[Navigation in CLM
 Presentations]
-* link:android/download-clm-presentations-as-pdf[Download CLM Presentations
+* xref:android/download-clm-presentations-as-pdf[Download CLM Presentations
 as PDF]
-* link:android/js-bridge-api[JS Bridge API]
+* xref:android/js-bridge-api[JS Bridge API]
 
-[[h2__741641000]]
+[[h2_741641000]]
 === Integrated CLM and CRM 
 
 CT Presenter enables client-facing interactions using CLM presentations
@@ -46,7 +46,7 @@ visualization, etc.
 
 As CT Presenter is tightly integrated with CT Mobile, CLM presentations
 can interact with the mobile offline database of the CT Mobile app using
-link:android/js-bridge-api[read/write access to CRM data]. In CLM
+xref:android/js-bridge-api[read/write access to CRM data]. In CLM
 presentations, images, videos, and attached PDFs can be used from the
 existing media libraries. For example, it is possible to develop complex
 CLM presentations based on HTML5 for product presentation along with
@@ -60,7 +60,7 @@ take during the call.
 CLM presentations are structured within the Salesforce data model and
 store HTML5 content and related resources in the Salesforce database. CT
 Presenter provides the data model and tools for
-link:android/clm-applicationstats[CLM-presentations tracking and usage
+xref:android/clm-applicationstats[CLM-presentations tracking and usage
 analysis for further improvement], e.g., shown slides, duration of every
 slide shown, clicks, etc. As all the statistics of content usage are
 stored in the Salesforce database, it is easy to run reports and develop

@@ -11,20 +11,20 @@ set up permissions for users.
 https://help.salesforce.com/articleView?id=collab_salesforce_files_parent.htm&type=5[Files]
 and grant user access to documents. Documents can be stored by folder.
 
-[[h2__480837523]]
+[[h2_480837523]]
 === Adding Libraries to the Menu 
 
-If [.object]#ContentDocument#, [.object]#ContentVersion#,
+If [.object]#ContentDocument#, [.object]#ContentVersion#,
 [.object]#ContentDocumentLink# objects are added as
-link:android/managing-offline-objects[offline objects], the *Libraries*
+xref:android/managing-offline-objects[offline objects], the *Libraries*
 module will not work correctly.
 
-To add the *Libraries* module to the link:android/app-menu[app menu]:
+To add the *Libraries* module to the xref:android/app-menu[app menu]:
 
-. Go to link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-app-menu[CT Mobile Control
+. Go to xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-app-menu[CT Mobile Control
 Panel: App Menu] tab.
-. Select the required profile in the *Location* picklist. To apply
-settings to all the profiles, select *General Settings*. 
+. Select the required profile in the *Location* picklist. To apply
+settings to all the profiles, select *General Settings*.
 . Click the
 image:62562609.png[]
 button to open the *Add menu item* tool.

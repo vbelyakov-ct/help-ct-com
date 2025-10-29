@@ -6,7 +6,7 @@ https://help.customertimes.com/smart/project-ct-mobile-en/metadata-checker[]
 
 Sometimes a request to create a new metadata archive exceeds the 12 MB
 limit, which means that the transaction will fail due to the heap size
-being too large. Use *Archive Component* to specify which additional
+being too large. Use *Archive Component* to specify which additional
 components to track and collect in the metadata archive.
 
 [[h2_1608419557]]
@@ -82,16 +82,16 @@ The setup is complete. Next, create the metadata archive.
 After creating *Archive Component* records, the metadata archive must be
 rebuilt to include component(s) or use requests of a specific size.
 
-* Go to the link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools#h3_1003786176[CT
+* Go to the xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-tools#h3_1003786176[CT
 Mobile Control Panel: Tools] tab and click the *Refresh metadata
 archive* button to update the metadata archive.
 * When the metadata archive is ready, go to the *CT Mobile Control
-Panel: Tools* tab and click the *Download metadata archive* button to
+Panel: Tools* tab and click the *Download metadata archive* button to
 verify if the desired component(s) have been added. If the component(s)
 have been added, you see the corresponding folder in the metadata
 archive.
 
-[[h2__152061858]]
+[[h2_152061858]]
 === Limits 
 
 Salesforce doesn't allow making more than 101 callouts. If this case

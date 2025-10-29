@@ -1,26 +1,26 @@
 = Mobile Layouts: Applications
 
 The Applications widget allows you to display a carousel with favorite
-link:android/knowledge-base/ct-presenter/ct-presenter-introduction[CLM presentations] and
-link:android/knowledge-base/ct-presenter/clm-scheme/clm-customscenario[custom scenarios] on the record details
+xref:android/knowledge-base/ct-presenter/ct-presenter-introduction[CLM presentations] and
+xref:android/knowledge-base/ct-presenter/clm-scheme/clm-customscenario[custom scenarios] on the record details
 screen. The carousel becomes scrollable if it contains more than two
 screenshots.
 
 To learn more about CLM presentation controls, refer to
-link:android/knowledge-base/mobile-application/mobile-application-modules/applications/gestures-in-clm-presentations[Gestures in CLM presentations]
+xref:android/knowledge-base/mobile-application/mobile-application-modules/applications/gestures-in-clm-presentations[Gestures in CLM presentations]
 and
 https://help.customertimes.com/smart/project-ct-mobile-en/clm-presentation-controls[CLM
 presentation Controls].
 
 The *Applications* widget is also available on the
-link:android/home-screen[Home screen].
+xref:android/home-screen[Home screen].
 
-[[h2__1510760474]]
+[[h2_1510760474]]
 === Add Applications to the Menu 
 
-To add the *Applications* module to the link:android/app-menu[app menu]:
+To add the *Applications* module to the xref:android/app-menu[app menu]:
 
-. Go to link:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-app-menu[CT Mobile Control
+. Go to xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-app-menu[CT Mobile Control
 Panel: App Menu] tab.
 . Select the required profile in the *Location* picklist.
 
@@ -46,7 +46,7 @@ To add the *Applications* widget to the mobile layout:
 on which you want to display the carousel.
 . In the *Section Properties* window, enter *APPS* in the *Section Name*
 field, and select the *1-Column* layout. Ensure that the *Display
-Section Header On* checkbox is enabled.
+Section Header On* checkbox is enabled.
 
 [NOTE] ==== Do not translate the *APPS* section name. It is
 responsible for displaying *Applications* on the mobile layout and
@@ -62,7 +62,7 @@ The *Applications* widget is configured.
 *Activity* record from which the CLM presentation was started.
 * If
 https://help.customertimes.com/smart/project-ct-mobile-en/start-finish-functionality[Start/Finish
-functionality] with the *Lock/Unlock Record* option is applied, any CLM
+functionality] with the *Lock/Unlock Record* option is applied, any CLM
 presentation from the carousel on the record details screen can be
 launched only after the start of the activity.
 

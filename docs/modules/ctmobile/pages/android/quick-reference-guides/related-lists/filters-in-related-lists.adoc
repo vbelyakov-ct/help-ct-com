@@ -1,11 +1,11 @@
 = Filters in Related Lists
 
-link:android/managing-offline-objects#ManagingOfflineObjects-SOQLFilters[Set
+xref:android/managing-offline-objects#ManagingOfflineObjects-SOQLFilters[Set
 up a SOQL filter] for the related lists. The toggle in the CT Mobile
 allows a user to display all downloaded records or only records that
 matched the filter criteria.
 
-[[h2__1316422583]]
+[[h2_1316422583]]
 === Standard Related Lists 
 
 The sorting order for
@@ -29,17 +29,17 @@ the *Related List Properties* window on the layout of the corresponding
 record type of the parent object:
 * if the value is ASC or not set in the
 [.apiobject]#clm__SortOrder__c# field, the sorting will
-be performed in ascending order;
+be performed in ascending order;
 * if the value is DESC in the
 [.apiobject]#clm__SortOrder__c# field, the sorting will
 be performed in descending order;
 . In other cases, the sorting is carried out by the first column.
 
-[[h2__1047667523]]
+[[h2_1047667523]]
 === Custom Related Lists 
 
-The sorting order for link:android/quick-reference-guides/related-lists/custom-related-lists[a custom related
-list] is stored in link:android/knowledge-base/configuration-guide/custom-settings/mobile-custom-details-settings[Mobile
+The sorting order for xref:android/quick-reference-guides/related-lists/custom-related-lists.adoc[a custom related
+list] is stored in xref:android/knowledge-base/configuration-guide/custom-settings/mobile-custom-details-settings[Mobile
 Custom Details Settings].
 
 . If the *Order By* request is set in the
