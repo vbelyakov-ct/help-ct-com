@@ -1,45 +1,31 @@
 = Security Token
 
-[WARNING] ==== For users of CT Mobile package version below
-3.54. ====
+WARNING: For users of CT Mobile package version below 3.54.
 
-When you access Salesforce from an IP address that’s outside your
-company’s trusted IP range using a desktop client or the API, you need a
-security token to log in. A security token is a case-sensitive
-alphanumeric code that you append to your password or enter in a
-separate field in a client application.
+When you access Salesforce from an IP address that’s outside your company’s trusted IP range using a desktop client or the API, you need a security token to log in. A security token is a case-sensitive alphanumeric code that you append to your password or enter in a separate field in a client application.
 
-[TIP] ==== In case the security token is expired, some
-application functionality may be unavailable. The log will contain the
-following message: «_Administrator credentials are not valid. Validation
-rules and dashboards may work not properly in offline mode_». ====
+TIP: In case the security token is expired, some application functionality may be unavailable. The log will contain the following message: «_Administrator credentials are not valid. Validation rules and dashboards may work not properly in offline mode_».
 
 [[h2_597823325]]
-=== Updating Security Token 
+== Updating Security Token
 
 To update the security token:
 
-. Go to *Setup → Users → Profiles* and click
-xref:android/application-permission-settings#ApplicationPermissionSettings-PermissionSets[the
-profile of your org administrator].
-. Look for the *Login IP Ranges* section and back up all the settings
-for further use.
+. Go to *Setup → Users → Profiles* and click xref:android/quick-reference-guides/application-permission-settings.adoc#h3_2115044027[the profile of your org administrator].
+. Look for the *Login IP Ranges* section and back up all the settings for further use.
 . Delete all the settings from the *Login IP Ranges* section.
-
++
 image:58831974.png[]
 . Go to *Profile Settings*.
-. In the *Reset My Security Token* section, click *Reset Security Token*
-to send
-https://help.salesforce.com/articleView?id=user_security_token.htm&type=5[the
-new security token] to your email address.
+. In the *Reset My Security Token* section, click *Reset Security Token* to send https://help.salesforce.com/articleView?id=user_security_token.htm&type=5[the new security token] to your email address.
++
 image:58831973.png[]
 . Go to the *CT Mobile Control Panel: Tools* tab.
 . Insert your new security token in the *Token* field.
 . Click *Save*.
++
 image:58831972.png[]
-. Go to *Setup → Users → Profiles* and click the profile of your org
-administrator.
+. Go to *Setup → Users → Profiles* and click the profile of your org administrator.
 . In the *Login IP Ranges* section, restore all the settings.
 
-The security token is updated, and the application is ready for use. Run
-the full synchronization of the mobile app to apply the changes.
+The security token is updated, and the application is ready for use. Run the full synchronization of the mobile app to apply the changes.
