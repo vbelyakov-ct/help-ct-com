@@ -1,32 +1,22 @@
 = Technical Requirements for Devices and Network
 
-We strongly advise performing the upgrade of the CT Mobile app at least
-once every 12 months to prevent incompatibility with the cumulated OS or
-core CT Mobile changes.
+NOTE: We strongly advise performing the upgrade of the CT Mobile app at least once every 12 months to prevent incompatibility with the cumulated OS or core CT Mobile changes.
 
 CT Mobile is currently available for Android tablets.
 
 [[h2_289410970]]
-=== Android Devices 
+== Android Devices
 
-[TIP] ==== Due to the variability of Android devices from
-various vendors, we do not guarantee the flawless operation of CT Mobile
-on different device models. CT Mobile must be tested on every targeted
-device family and generation. ====
+TIP: Due to the variability of Android devices from various vendors, we do not guarantee the flawless operation of CT Mobile on different device models. CT Mobile must be tested on every targeted device family and generation.
 
 * Android 7.0 or higher
 * 2 GB RAM
 * 1 GB free disk space.
 
 [[h2_1498128754]]
-=== Requirements for Internet Connection 
+== Requirements for Internet Connection
 
-Synchronization is possible on very slow lines (9,600kbs) but takes more
-time. The communication line must not have interruptions of high packet
+Synchronization is possible on very slow lines (9,600kbs) but takes more time. The communication line must not have interruptions of high packet
 loss as it may result in timeouts of Salesforce API.
 
-
-
-More content increases the synchronization time and responsiveness of
-the application. We recommend limiting the number of offline records to
-30,000 records on devices.
+More content increases the synchronization time and responsiveness of the application. We recommend limiting the number of offline records to 30,000 records on devices.
