@@ -1,245 +1,127 @@
 = CT Mobile Control Panel: Tools
+:toc:
 
-The *Tools* tab is intended to set up the security parameters for the
-proper operation of the CT Mobile app.
+The *Tools* tab is intended to set up the security parameters for the proper operation of the CT Mobile app.
 
-* xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-tools#h2_203730205[Administrator
-Credentials]
-* xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-tools#h2_1555872262[Reset Settings]
-* xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-tools#h2_682569336[Additional
-Settings]
-* xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-tools#h2_682665167[Content Restore]
+Since CT Mobile package version 3.54, the administrator credentials are not used. We strongly recommend that you read the changes in the xref:android/quick-reference-guides/installing-ct-mobile-package/ct-mobile-managed-package-update-to-v-3-54.adoc[CT Mobile Managed Package Update to v. 3.54] article.
 
-Since CT Mobile package version 3.54, the administrator credentials are
-not used. We strongly recommend that you read the changes in the
-xref:android/ct-mobile-managed-package-update-to-v-3-54[CT Mobile Managed
-Package Update to v. 3.54] article.
-
-.Click to view[%collapsible] ==== *Click to view the interface*
-==== .Click to hide[%collapsible] ====
-
-The interface may vary according to the CT Mobile package version and
-environments. The current interface is related to the production
-environment.
+NOTE: The interface may vary according to the CT Mobile package version and environments. The current interface is related to the production environment.
 
 image:Tools_new_settings_only.png[]
-====
+
 
 [[h2_203730205]]
-=== Administrator Credentials 
+== Administrator Credentials
 
-[WARNING] ==== For users of CT Mobile package version below
-3.54. ====
+WARNING: For users of CT Mobile package version below 3.54.
 
-Specify the *Login*, *Password*, and *Token* fields. Please refer to the
-xref:android/security-token[Security Token] article for additional
-information.
+Specify the *Login*, *Password*, and *Token* fields. Please refer to the xref:./security-token.adoc[Security Token] article for additional information.
 
+CT Mobile receives xref:android/knowledge-base/configuration-guide/metadata-archive/index.adoc#h2_1854953360[metadata components] within a ZIP archive. Administrator credentials should be valid to retrieve metadata components from ZIP-archive.
 
+* If the mobile user is the administrator, all data and metadata will be downloaded directly.
+* The synchronization process can proceed without using administrator credentials and ZIP-archive with metadata components. In that case, some functionality, for example, validation rules, will not operate properly.
 
-CT Mobile receives xref:android/metadata-archive#h2_1854953360[metadata
-components] within a ZIP archive. Administrator credentials should be
-valid to retrieve metadata components from ZIP-archive.
+The Administrator profile must have the _Modify All_ and _Modify Metadata Through Metadata API Functions_ permission, the assigned xref:android/quick-reference-guides/application-permission-settings.adoc#h3_2115044027[CT Mobile Administrator] permission set, and access to all fields and objects.
 
-* If the mobile user is the administrator, all data and metadata will be
-downloaded directly.
-* The synchronization process can proceed without using administrator
-credentials and ZIP-archive with metadata components. In that case, some
-functionality, for example, validation rules, will not operate properly.
-
-
-
-The Administrator profile must have the _Modify All_ and _Modify
-Metadata Through Metadata API Functions_ permission, the assigned
-_xref:application-permission-settings.html#ApplicationPermissionSettings-PermissionSets[CT
-Mobile Administrator]_ permission set, and access to all fields and
-objects.
-
-* It is highly recommended to set up a separate Administrator account
-that would not be used elsewhere by anyone else. This will help to avoid
+* It is highly recommended to set up a separate Administrator account that would not be used elsewhere by anyone else. This will help to avoid
 account lock-out in the future.
-* It is recommended to turn off password expiration for the
-Administrator profile, go to *Setup → Users → Profiles →* select the
-required profile *→ Administrative Permissions →* set a flag next to
-*Password Never Expires*.
+* It is recommended to turn off password expiration for the Administrator profile, go to *Setup → Users → Profiles →* select the required profile *→ Administrative Permissions →* set a flag next to *Password Never Expires*.
 
-
-
-Administrator credentials are stored encrypted in Salesforce. The
-downloading of metadata during xref:android/synchronization[the
-synchronization process] includes the following steps:
+Administrator credentials are stored encrypted in Salesforce. The downloading of metadata during xref:android/knowledge-base/mobile-application/synchronization/index.adoc[the synchronization process] includes the following steps:
 
 . User authorization, uploading the general settings.
-. The _Modify All_ permission verification. If the user has the _Modify
-All_ permission, all further requests are made on behalf of this user.
-Otherwise, the system proceeds to the steps described below.
-. If ZIP-archive with metadata components has been generated, the
-application downloads it. Otherwise, the system proceeds to the next
-step.
+. The _Modify All_ permission verification. If the user has the _Modify All_ permission, all further requests are made on behalf of this user. Otherwise, the system proceeds to the steps described below.
+. If ZIP-archive with metadata components has been generated, the application downloads it. Otherwise, the system proceeds to the next step.
 . Requesting the encrypted administrator credentials.
-. Receiving the encrypted administrator credentials. The system attempts
-to decrypt credentials and log in.
-. If the authorization is successful, the system sends requests for
-validation rules metadata and UserRole guide data. After that, the
-session completes, and all further requests are sent on behalf of the
-current user.
+. Receiving the encrypted administrator credentials. The system attempts to decrypt credentials and log in.
+. If the authorization is successful, the system sends requests for validation rules metadata and UserRole guide data. After that, the session completes, and all further requests are sent on behalf of the current user.
 
 [[h2_1555872262]]
-=== Reset Settings 
+== Reset Settings
 
 [[h3_89412886]]
-==== Reset the CT Mobile Settings to default 
+=== Reset the CT Mobile Settings to default
 
-Settings can be reset to those configured when
-xref:android/installing-ct-mobile-package[the CT Mobile package was
-installed] for the first time.
+Settings can be reset to those configured when xref:android/quick-reference-guides/installing-ct-mobile-package/index.adoc[the CT Mobile package was installed] for the first time.
 
 This action is irreversible.
 
 [[h3_847464003]]
-==== Download metadata archive 
+=== Download metadata archive
 
-Use the *Download metadata archive* button to download the metadata
-archive on the device. It can be useful for QA support in case of any
-issues with CT Mobile.
+Use the *Download metadata archive* button to download the metadata archive on the device. It can be useful for QA support in case of any issues with CT Mobile.
 
 [[h3_1003786176]]
-==== Refresh metadata archive 
+=== Refresh metadata archive
 
-Use the *Refresh metadata archive* button to refresh the metadata
-archive instead of the manual metadata archive collecting.
+Use the *Refresh metadata archive* button to refresh the metadata archive instead of the manual metadata archive collecting.
 
-
-
-This button is displayed only for users with the _Modify All_ permission
-or who have been assigned the
-_xref:application-permission-settings.html#h2_1046081510[CT Mobile
-Administrator]_ permission set.
+This button is displayed only for users with the _Modify All_ permission or who have been assigned the xref:android/quick-reference-guides/application-permission-settings.adoc#h3_2115044027[CT Mobile Administrator] permission set.
 
 [[h3_1658362952]]
-==== Refresh CTM Settings 
+=== Refresh CTM Settings
 
-Use the *Refresh CTM Settings* button to correct consistency errors
-between CTM Settings and xref:android/custom-settings[Custom Settings]. All
-records of xref:android/ctm-settings[CTM Settings] will be deleted and
-re-created according to the corresponding records of
-xref:android/custom-settings[custom settings].
+Use the *Refresh CTM Settings* button to correct consistency errors between CTM Settings and xref:android/knowledge-base/configuration-guide/custom-settings/index.adoc[Custom Settings]. All records of xref:android/knowledge-base/configuration-guide/ctm-settings/index.adoc[CTM Settings] will be deleted and re-created according to the corresponding records of xref:android/knowledge-base/configuration-guide/custom-settings/index.adoc[custom settings].
 
+Click four times on the *Administrator Credentials* inscription to display the hidden setting.
 
-
-Click four times on the *Administrator Credentials* inscription to
-display the hidden setting.
-[NOTE] ==== CTM Settings record with the custom record types
-will not be deleted. ====
+NOTE: CTM Settings record with the custom record types will not be deleted.
 
 [[h3_1380764274]]
-==== Remove metadata archive from the server 
+=== Remove metadata archive from the server
 
-Use the *Remove metadata archive from the server* button to remove the
-metadata archive from the server. This option is useful for QA purposes.
-Click four times on the *Administrator Credentials* inscription to
-display the hidden setting.
+Use the *Remove metadata archive from the server* button to remove the metadata archive from the server. This option is useful for QA purposes.
+Click four times on the *Administrator Credentials* inscription to display the hidden setting.
 
 [[h2_682569336]]
-=== Additional Settings 
+== Additional Settings
 
 [[h3_840249901]]
-==== New Settings Only 
+=== New Settings Only
 
 When enabling the setting:
 
-* Records of *Menu Settings and Offline Objects* and *Related List
-Filters* corresponding to the *CTM Settings* records will be deleted and
-will not be created when new settings are saved in the CT Mobile Control
-Panel.
-* The *CTM Settings* record with the *Offline Object* record type and
-the *New Settings Only* value in the *Description* field is created.
-* The *Refresh CTM Settings* button will be hidden after the page is
-refreshed.
-
-
+* Records of *Menu Settings and Offline Objects* and *Related List Filters* corresponding to the *CTM Settings* records will be deleted and will not be created when new settings are saved in the CT Mobile Control Panel.
+* The *CTM Settings* record with the *Offline Object* record type and the *New Settings Only* value in the *Description* field is created.
+* The *Refresh CTM Settings* button will be hidden after the page is refreshed.
 
 When turning off the setting:
 
-* Records of *Menu Settings and Offline Objects* and *Related List
-Filters* are created based on the CTM Settings records. New settings in
-the CT Mobile Control Panel will be saved as CTM Settings and
-corresponding custom parameter records.
-* The CTM Settings record with the *Offline Object* record type and the
-*New Settings Only* value in the *Description* field will be deleted.
+* Records of *Menu Settings and Offline Objects* and *Related List Filters* are created based on the CTM Settings records. New settings in the CT Mobile Control Panel will be saved as CTM Settings and corresponding custom parameter records.
+* The CTM Settings record with the *Offline Object* record type and the *New Settings Only* value in the *Description* field will be deleted.
 * On CTM Settings records, the *External Id* field will be filled in.
-* The *Refresh CTM Settings* button will be available after refreshing
-the page.
-
-[[h3_1876917838]]
-==== Scheduled metadata check 
-
-https://help.customertimes.com/smart/project-ct-mobile-en/metadata-checker[Metadata
-Checker] is intended to track any changes in the metadata components
-used in the CT Mobile app. This option helps maintain metadata
-consistency by rebuilding the metadata archive to reduce sync times and
-API calls.
-
-
-
-This toggle is displayed only for users with the _Modify All_ permission
-or who have been assigned the
-_xref:application-permission-settings.html#h2_1046081510[CT Mobile
-Administrator]_ permission set.
+* The *Refresh CTM Settings* button will be available after refreshing the page.
 
 [[h3_2011978]]
-==== Cloud Token 
+=== Cloud Token
 
-[NOTE] ==== To use cloud token, check
-xref:android/knowledge-base/configuration-guide/remote-site-settings.adoc[remote site settings]. ====
+NOTE: To use cloud token, check xref:android/knowledge-base/configuration-guide/remote-site-settings.adoc[remote site settings].
 
-Click *Show* to view the cloud token value. Click the *Refresh* button
-to update a cloud token.
+Click *Show* to view the cloud token value. Click the *Refresh* button to update a cloud token.
 
-* The cloud token update is necessary in case of
-https://help.salesforce.com/articleView?id=data_sandbox_clone.htm&type=5[a
-cloned sandbox]. Also, the corresponding record should be activated
-again in *Remote Site Settings*.
-* When the current token is changed, the previous one is stored in the
-_Cloud-token-history_ document in the _CT СLM_ folder. To view the
-history of token modifications, switch to Salesforce Classic, then go to
-the *Documents → CT CLM →* open the *cloud-token-history* document.
-
-
+* The cloud token update is necessary in case of https://help.salesforce.com/articleView?id=data_sandbox_clone.htm&type=5[a cloned sandbox]. Also, the corresponding record should be activated again in *Remote Site Settings*.
+* When the current token is changed, the previous one is stored in the _Cloud-token-history_ document in the _CT СLM_ folder. To view the history of token modifications, switch to Salesforce Classic, then go to the *Documents → CT CLM →* open the *cloud-token-history* document.
 
 Cloud token:
 
-* is a password, which encrypts xref:android/send-application-data-dump[a
-data dump] before sending it to the support via e-mail or to Salesforce,
-depending on settings in xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc[CT
-Mobile Control Panel: General].
-* is a part of the salt key that is used for encrypting administrator
-credentials.
+* is a password, which encrypts xref:android/quick-reference-guides/application-settings/send-application-data-dump.adoc[a data dump] before sending it to the support via e-mail or to Salesforce, depending on settings in xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc[CT Mobile Control Panel: General].
+* is a part of the salt key that is used for encrypting administrator credentials.
 * is used when sending requests to external CT CLM services, such as:
-** creating and updating slides in xref:android/application-editor[the
-Application Editor], including
-xref:android/creating-clm-presentation-from-powerpoint[PowerPoint] and
-xref:android/creating-clm-presentation-from-pdf[PDF] files converting.
-** xref:android/plain-application-editor[the Plain Applications Editor],
-including PowerPoint files converting.
+** creating and updating slides in xref:android/knowledge-base/ct-presenter/application-editor/index.adoc[the Application Editor], including xref:android/knowledge-base/ct-presenter/application-editor/creating-clm-presentation-from-powerpoint.adoc[PowerPoint] and xref:android/knowledge-base/ct-presenter/application-editor/creating-clm-presentation-from-pdf.adoc[PDF] files converting.
+** xref:android/knowledge-base/ct-presenter/plain-application-editor/index.adoc[the Plain Applications Editor], including PowerPoint files converting.
 
 [[h2_682665167]]
-=== Content Restore
+== Content Restore
 
-[NOTE] ==== Available only in the Sandbox environments. ====
+NOTE: Available only in the Sandbox environments.
 
 [[h3_964087610]]
-==== Production ID 
+=== Production ID
 
-This option helps you keep data consistent and make CLM presentations on
-the Customertimes server available to your Sandbox environment.
+This option helps you keep data consistent and make CLM presentations on the Customertimes server available to your Sandbox environment.
 
-* All slide screenshots, attachments, and sources of CLM presentations
-available in your Production org are stored on the Customertimes server
+* All slide screenshots, attachments, and sources of CLM presentations available in your Production org are stored on the Customertimes server
 in the folder named the Org ID of this Production org.
-* When you created the Sandbox, enter the *Org ID* of the Production org
-and click *Copy* to copy all sources of all
-xref:android/clm-application[active CLM presentations] from this folder to
-the folder named the Org ID of the Sandbox environment.
-** CLM presentations will be available for the Remote Detailing and Self
-Detailing meetings launched from the Sandbox environment.
+* When you created the Sandbox, enter the *Org ID* of the Production org and click *Copy* to copy all sources of all xref:android/knowledge-base/ct-presenter/clm-scheme/clm-application.adoc[active CLM presentations] from this folder to the folder named the Org ID of the Sandbox environment.
+** CLM presentations will be available for the Remote Detailing and Self Detailing meetings launched from the Sandbox environment.
