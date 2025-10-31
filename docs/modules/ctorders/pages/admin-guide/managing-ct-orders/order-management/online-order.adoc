@@ -90,7 +90,8 @@ By default, there are only two available split criteria: date and address. You c
 ** Click *Save Draft* to save newly created order or changes in the editing one. xref:admin-guide/managing-ct-orders/order-management/index.adoc#h2_158967301[By default], the *On Hold* stage will be set. Price calculations based on values in the formula fields will be performed after clicking *Save Draft*.
 ** Click *Exit* if you do not want to save the current order or changes made in the existing order.
 ** Click *Finalize* to restrict editing the current order. If xref:admin-guide/workshops/workshop-5-0-implementing-additional-features/5-2-setting-up-the-delivery-summary.adoc[the Delivery Summary window] is set up, you can review and edit the delivery details after clicking *Finalize*. For more information, refer to xref:admin-guide/managing-ct-orders/delivery-management/index.adoc#h2_1374863314[Delivery Summary].
-* *(4)* xref:admin-guide/workshops/workshop-1-0-creating-basic-order/complete-workshop-1-0-checkpoint/creating-a-delivery-1-0.adoc[The added delivery dates] with the product quantity per delivery.
+* *(4)* xref:admin-guide/workshops/workshop-1-0-creating-basic-order/complete-workshop-1-0-checkpoint/creating-a-delivery-1-0.adoc[The added delivery dates] with the product quantity per delivery. Click image:quantity-arrow-down.png[] or image:quantity-arrow-up.png[] on the delivery column header to sort by product quantity.
+
 * To delete deliveries, click the drop-down arrow and select *Delete delivery*.
 +
 If a _Delivery_ record was created for the order, you cannot delete all deliveries from the order, at least one delivery should exist.

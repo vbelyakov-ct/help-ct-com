@@ -22,6 +22,16 @@ Specify the field API name of the [.object]#Address# object that contains the de
 +
 NOTE: The custom [.object]#Address# object should be created by the administrator.
 
+|Default Address Field
+|[.apiobject]#orders\__DefaultAddressField__с# |Text(255) a|
+Specify API name of the field on the [.object]#Address# object that determines which address record is used as default when multiple delivery addresses are available. Only _checkbox_ type fields are supported.
+
+* Account
+* RetailStore
+* the API name of the custom [.object]#Address# object
++
+NOTE: The custom [.object]#Address# object should be created by the administrator.
+
 |Sales Organization
 |[.apiobject]#orders\__SalesOrganizationId__c#
 |Lookup(Sales Organization) a|include::partial$sales-org-field.adoc[]

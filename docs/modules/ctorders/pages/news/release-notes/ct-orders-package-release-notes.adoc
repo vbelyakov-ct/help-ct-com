@@ -4,13 +4,22 @@
 
 Here you could find a feature, the link to the corresponding article, and the version of the CT Orders package since which the feature is available.
 
-////
 [[h2_1836106951]]
 == The CT Orders Package 25 R1
 
+* xref:admin-guide/managing-ct-orders/order-management/smart-order-assistant.adoc[Smart Order Assistant]: AI-powered tool for the order cart, including features:
+** Create orders from a photo or screenshot
+** Clone orders
+** Use voice commands
+** Apply smart order templates
++
+image:ct-agent-main.png[500,345]
+
+* If the *Enable Fast Product Adding* checkbox is enabled in the xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/left-panel-setting-field-reference.adoc[Left Panel Setting], press *Enter* key to add searched products to the xref:admin-guide/managing-ct-orders/order-management/online-order.adoc#h2_915453080[order cart].
+* Sorting items by quantity in the order cart.
+* xref:admin-guide/managing-ct-orders/sales-organization-management/settings-and-sales-organization-data-model/settings-fields-reference/address-setting-field-reference.adoc[Default Address] field for fast delivery creation.
 * xref:admin-guide/managing-ct-orders/web-service/ref-guide/sync-transaction-field-reference.adoc[Sync Transaction] records are now deleted automatically after disconnecting from the xref:admin-guide/managing-ct-orders/web-service/index.adoc[Web Service].
-* xref:admin-guide/getting-started/required-permissions-for-a-specific-role/index.adoc#h2_260496953[orders.Allow Management of AuthData] custom permission added to manually manage xref:admin-guide/managing-ct-orders/web-service/ref-guide/auth-data-field-reference.adoc[Auth Data] records.
-////
+* New custom permission: xref:admin-guide/getting-started/required-permissions-for-a-specific-role/index.adoc#h2_260496953[orders.Allow Management of AuthData] – manually manage xref:admin-guide/managing-ct-orders/web-service/ref-guide/auth-data-field-reference.adoc[Auth Data] records.
 
 [[h2_290225989]]
 == The CT Orders Package 24 R2

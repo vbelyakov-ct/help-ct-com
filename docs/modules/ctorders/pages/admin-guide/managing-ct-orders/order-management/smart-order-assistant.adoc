@@ -1,0 +1,75 @@
+= Smart Order Assistant
+:toc:
+
+NOTE: This feature is available starting from CT Orders 25 R1 package version and requires a subscription.
+
+Smart Order Assistant is an AI-powered tool designed to automate routine tasks with your CT Order workflow. Once enabled, it allows you to perform the following actions:
+
+* Create orders from a photo or screenshot
+* Clone orders
+* Use voice commands
+* Apply smart order templates
+
+[[h2__714485025]]
+== Enabling Custom Permissions
+
+https://help.salesforce.com/s/articleView?id=xcloud.assign_permission_set_to_user.htm&type=5[Assign the following permission sets] for your user profile:
+
+* Access Smart Order Assistant
+* Manage Smart Order Assistant
+
+[[h2_13534664]]
+== Enabling Smart Order Assistant
+
+. Go to *CT Orders Control Panel* and open the *CT Agent* tab.
+. Click the *Activate CT Agent* button.
++
+image:ct-agent-not-activated.png[]
+. In the pop-up window, enter your *License/Org Access Key* and click *Activate*.
++
+image:ct-agent-activate.png[]
+. The CT Orders Agent status will be set to *Active*.
++
+image:ct-agent-activated.png[]
+
+[[h2_1721788314]]
+== Adding CT Agent Component to an Object's Details Page
+
+To start using Smart Order Assistant add its component to the *Details* page of the desired object. The following example uses the [.object]#Account# object:
+
+. Open any [.object]#Account# object record and switch to the *Details* tab.
+. In the upper-right corner, click the image:settings-icon.png[] icon and select *Edit Page*.
+. In the opened Lightning App Builder, click the *Details* tab.
+. In the *Search* field, type _CT Agent_, then drag and drop the component onto the *Details* page (e.g., at the bottom).
++
+image:ct-agent-component-app-builder.png[]
+. Click *Save* in the upper-right corner.
+. Open any [.object]#Account# object record and verify that the image:ct-agent-icon.png[] icon appeared in the lower-right corner and is clickable.
++
+image:ct-agent-icon-location.png[ct-agent-icon-location]
+
+[[h2__1321139680]]
+== Using Smart Order Assistant
+
+To start using the Smart Order Assistant, click the image:ct-agent-icon.png[] icon on a record of an object, for which the CT Agent component has been added.
+
+image::ct-agent-main.png[]
+
+You can start chatting with Smart Order Assistant right away, or:
+
+* You can choose from three quick actions:
+* *Repeat last order*
+* *Create order from a file*
+* *Show what agent can do*
+
+* To configure the sales organization and order type for the current chat, click the image:ct-agent-options-icon.png[ct-agent-options-icon] icon in the *Order Configuration* section.
++
+image:ct-agent-options.png[ct-agent-options]
+
+* Click image:ct-agent-plus-icon.png[] to add a file (image or PDF).
+* Click image:ct-agent-mic-icon.png[] to start voice input.
+* Click image:ct-agent-3-dot-menu.png[] to:
+** Open *Settings*
+** Clear chat history
+** *Show guide*
+** *End chat*

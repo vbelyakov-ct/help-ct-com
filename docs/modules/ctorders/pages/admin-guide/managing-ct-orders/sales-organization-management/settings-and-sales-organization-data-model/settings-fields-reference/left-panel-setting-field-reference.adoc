@@ -12,6 +12,8 @@ Object record type API name: [.apiobject]#LeftPanelSetting#
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
+|Enable Fast Product Adding|[.apiobject]#orders\__IsFastProductAddingEnabled__c#|Checkbox|Enables quick adding of a searched product to the xref:admin-guide/managing-ct-orders/order-management/online-order.adoc#h2_915453080[order cart] for an online order.
+
 |Fields To Display
 |[.apiobject]#orders\__FieldsToDisplay__c# |Long Text Area(1000) a| Specify the order of *Catalogs* and *Promotion* tabs to be displayed in the order cart. Example:
 
