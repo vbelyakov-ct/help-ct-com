@@ -33,6 +33,7 @@ TIP: Get familiar with link:https://help.salesforce.com/articleView?id=email_tem
 * You can send an email using a third-party mail client (like Microsoft Outlook), if it is set as default in your iOS settings. In this case:
 ** The recipient's address will not be inserted automatically. Please copy and paste it manually.
 ** The subject string will be duplicated in the message body.
+** If your email template includes HTML tags, they may not render correctly in Gmail client.
 * It may be needed to add the sender's email to the trusted list of the mail service. For example, if you view the following:
 
 image::outlook-trusted-email.png[]
