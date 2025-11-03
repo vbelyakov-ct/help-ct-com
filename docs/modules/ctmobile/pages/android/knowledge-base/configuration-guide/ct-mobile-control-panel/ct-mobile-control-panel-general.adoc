@@ -1,130 +1,75 @@
 = CT Mobile Control Panel: General
+:toc:
+:toclevels:
 
-The *General* tab is intended to specify the main settings which are
-responsible for the CT Mobile app interface and the CLM package
-integration with the target system, such as CT Pharma or CT CPG. The tab
-has the following sections:
+The *General* tab is intended to specify the main settings which are responsible for the CT Mobile app interface and the CLM package integration with the target system, such as CT Pharma or CT CPG. The tab has the following sections:
 
-[TIP] ==== According to the selected profile, settings on this
-tab will be saved in the corresponding fields of
-the xref:android/mobile-application-setup[Mobile Application Setup] record.
+TIP: According to the selected profile, settings on this tab will be saved in the corresponding fields of the xref:android/knowledge-base/configuration-guide/custom-settings/mobile-application-setup.adoc[Mobile Application Setup] record.
+
+.*Click to view the interface*
+[%collapsible]
 ====
-
-* xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h2_1969690579[Location]
-* xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h2_389408561[Global]
-* xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h2_1037766202[User
-Interface]
-* xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h2_670774632[Geolocation]
-* xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h2_1687169837[Support and
-logs]
-* xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h2_479934482[Object
-mappings]
-
-*Click to view the interface*
-
-.Click to hide[%collapsible] ====
 image:control_panel_general.png[]
 ====
 
-[[h2_1969690579]]
-=== Location 
-
-*Location* is a picklist containing all configured and unconfigured
-profiles available in your Salesforce org. To apply settings to all the
-profiles, select *General Settings*.
-
-To get started, select the desired profile in the *Location* field to
-configure it. To delete the configuration for the selected profile,
-click the
-image:delete-icon.png[]
-icon.
+include::partial$control-panel-location.adoc[]
 
 [[h3_1877182756]]
-==== Copy Settings 
+=== Copy Settings
 
 You can copy all profile settings to another profile:
 
 . Select the profile in the *Location* field to copy its settings.
-. Click the
-image:66366763.png[]
-button next to the *Location* field.
+. Click the image:66366763.png[] button next to the *Location* field.
 . In the pop-up, select a required profile and click *Copy setting*.
 
 The main settings are copied.
 
 [[h2_389408561]]
-=== Global 
+== Global
 
 [[h3_471160840]]
-==== Person Accounts Enabled 
+=== Person Accounts Enabled
 
-This attribute must be set if the client system uses the
-xref:android/knowledge-base/configuration-guide/person-accounts[Person Accounts] functionality. If enabled:
+This attribute must be set if the client system uses the xref:android/knowledge-base/configuration-guide/person-accounts.adoc[Person Accounts] functionality. If enabled:
 
-*[.object]#Person Accounts# are displayed in the *Contacts*
-menu item and on the *Contacts* tab of the modules, except for the cases
-if the _Reference_ object is selected in
-the xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_494016929[Reference
-Object API Name] field.
-*[.object]#Accounts# are displayed in the *Accounts* menu item
-and on the *Accounts* tab of the modules.
-
-[[h3_643998525]]
-==== Passcode Enabled 
-
-If enabled, the first time the user launches the CT Mobile app, the app
-will ask the user
-https://help.customertimes.com/smart/project-ct-mobile-en/application-pin-code[to
-set a personal passcode]. Then, every time the user opens the app, a
-password will be required to access the app. When you enter the wrong
-passcode three times in a row, xref:android/log-out[the database will be
-reset].
+* [.object]#Person Accounts# are displayed in the *Contacts* menu item and on the *Contacts* tab of the modules, except for the cases if the _Reference_ object is selected in the <<Reference Object API Name>> field.
+* [.object]#Accounts# are displayed in the *Accounts* menu item and on the *Accounts* tab of the modules.
 
 [[h3_377059502]]
-==== Image Quality 
+=== Image Quality
 
 The ability to compress images used in the CT Mobile app.
 
-[TIP] ==== The quality of the original image depends on the
-device type and its settings. ====
+TIP: The quality of the original image depends on the device type and its settings.
 
-The attached images and taken photos may be compressed to reduce the
-amount of data sent to Salesforce. Hover over the slider to see the
-value:
+The attached images and taken photos may be compressed to reduce the amount of data sent to Salesforce. Hover over the slider to see the value:
 
-* 0% – the leftmost position, the maximum amount of compression, and
-minimum image size.
-* 100% – the rightmost position, no image compression, the functionality
-is disabled.
+* 0% – the leftmost position, the maximum amount of compression, and minimum image size.
+* 100% – the rightmost position, no image compression, the functionality is disabled.
 * The default value is 50%.
 
 [[h2_1037766202]]
-=== User Interface 
+== User Interface
 
-This section is intended to xref:android/application-theme[personalize the
-CT Mobile interface].
+This section is intended to xref:android/quick-reference-guides/application-theme.adoc[personalize the CT Mobile interface].
 
 . Click *Customize* next to *Set App Color, Patterns, and Logo*.
-. In the *App Customization* window, the settings are located on the
-left side, and the tablet view with applied settings is on the right
-side.
+. In the *App Customization* window, the settings are located on the left side, and the tablet view with applied settings is on the right side.
 . After customizing, click *Save*.
 
 The setup is complete.
 
-.Click to view[%collapsible] ==== *Click to view the App
-Customization window* ==== .Click to hide[%collapsible] ====
-
+.*Click to view the App Customization window*
+[%collapsible]
+====
 image:app_interface.png[]
-
 ====
 
 [[h3_1718046162]]
-==== Title Pattern 
+=== Title Pattern
 
-Manage the title pattern of the application screen. Select one of the
-configured patterns or upload your pattern by selecting the _Own_ value
-from the picklist.
+Manage the title pattern of the application screen. Select one of the configured patterns or upload your pattern by selecting the _Own_ value from the picklist.
 
 * The file size limit is 2 MB.
 * The file format is limited to PNG.
@@ -132,11 +77,9 @@ from the picklist.
 * To remove any pattern, select _None_.
 
 [[h3_1108618695]]
-==== Home Pattern 
+=== Home Pattern
 
-Manage the home pattern for the application screen background. Select
-one of the configured patterns or upload your pattern by selecting the
-_Own_ value from the picklist.
+Manage the home pattern for the application screen background. Select one of the configured patterns or upload your pattern by selecting the _Own_ value from the picklist.
 
 * The file size limit is 2 MB.
 * The file format is limited to PNG.
@@ -144,101 +87,61 @@ _Own_ value from the picklist.
 * To remove any pattern, select _None_.
 
 [[h3_1461860777]]
-==== Device Background Color 
+=== Device Background Color
 
-Select the background color for the CT Mobile screens. Click on the
-field to select a color from the drop-down palette or enter the color
-code.
+Select the background color for the CT Mobile screens. Click on the field to select a color from the drop-down palette or enter the color code.
 
 [[h3_1354766135]]
-==== Homepage Logo 
+=== Homepage Logo
 
-Select the homepage logo to display when
-xref:android/home-screen#h3_1361691321[the Logo widget] is added on the
-*Home Screen*. Click *Choose file* to add a new logo.
+Select the homepage logo to display when xref:android/quick-reference-guides/home-screen.adoc#h3_1361691321[the Logo widget] is added on the *Home Screen*. Click *Choose file* to add a new logo.
 
 * The logo file size limit is 4 MB.
-* The file format is limited to PNG. The logo will be saved in the
-following format:
-** For _General Settings_ profile:
-[.apiobject]#Mobile.Logo.png#.
-** For a user
-profile: [.apiobject]#Mobile.Logo_{profile.id}.png#.
+* The file format is limited to PNG. The logo will be saved in the following format:
+** For _General Settings_ profile: [.apiobject]#Mobile.Logo.png#.
+** For a user profile: [.apiobject]#Mobile.Logo_{profile.id}.png#.
 
 * Large images will be automatically resized.
-* To view the logo in Salesforce, switch Lightning Experience to
-Salesforce Classic, go to *Documents* and open the *CT CLM* folder.
+* To view the logo in Salesforce, switch Lightning Experience to Salesforce Classic, go to *Documents* and open the *CT CLM* folder.
 
 [[h2_670774632]]
-=== Geolocation 
+== Geolocation
 
-Geolocation data may be used for xref:android/mobile-layouts-maps[the Maps
-widget] on a record, in the xref:android/routes[Routes] and
-xref:android/nearby-accounts[Nearby Accounts] modules.
+Geolocation data may be used for xref:android/quick-reference-guides/mobile-layouts/mobile-layouts-maps.adoc[the Maps widget] on a record, in the xref:android/knowledge-base/mobile-application/mobile-application-modules/routes.adoc[Routes] and xref:android/knowledge-base/mobile-application/mobile-application-modules/nearby-accounts.adoc[Nearby Accounts] modules.
 
 [[h3_335024009]]
-==== Enable Location Tracking 
+=== Enable Location Tracking
 
-If enabled, geolocation data on the[.object]#Account# and
-[.object]#Activity# objects will be collected in the
-xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_612123135[Account
-Geolocation] or
-xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_1092547330[Account Full
-Address] field according to selection and in the
-xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc#h3_717585460[Activity
-Geolocation Field API Name] field.
+If enabled, geolocation data on the [.object]#Account# and [.object]#Activity# objects will be collected in the xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_612123135[Account Geolocation] or xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_1092547330[Account Full Address] field according to selection and in the xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc[Activity Geolocation Field API Name] field.
 
 [[h3_1567195273]]
-==== Enable Background Location Tracking 
+=== Enable Background Location Tracking
 
-If enabled, geolocation data continues to collect even if the CT Mobile
-app runs in background mode.
+If enabled, geolocation data continues to collect even if the CT Mobile app runs in background mode.
 
 [[h3_1808523151]]
-==== Tracking Interval (in seconds) 
+=== Tracking Interval (in seconds)
 
-Set up the tracking interval of the geolocation data in seconds. If set
-to 0, the user's current location will not be captured.
+Set up the tracking interval of the geolocation data in seconds. If set to 0, the user's current location will not be captured.
 
 [[h3_612123135]]
-==== Account Geolocation Field 
+=== Account Geolocation Field
 
-To use geolocation, create a field with the
-[.apiobject]#Geolocation__c# API name and with the
-*Geolocation* type on the[.object]#Account# object. Then select
-this field in the *Account Geolocation Field* picklist.
+To use geolocation, create a field with the [.apiobject]#Geolocation__c# API name and with the *Geolocation* type on the [.object]#Account# object. Then select this field in the *Account Geolocation Field* picklist.
 
-[NOTE] ==== If geolocation data is not specified, the account
-location will be retrieved from the
-xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_1092547330[Account Full
-Address] field. ====
+NOTE: If geolocation data is not specified, the account location will be retrieved from the xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_1092547330[Account Full Address] field.
 
 [[h3_1092547330]]
-==== Account Full Address Field 
+=== Account Full Address Field
 
-Specify a field with the formula type to view the full address of the
-*Account* record. Create a new field with the *Formula(Text)* type on
-the[.object]#Account# object to contain *City*, *Street*, and
-other address info in one line. This field will be used to track
-geolocation data and build routes.
+Specify a field with the formula type to view the full address of the *Account* record. Create a new field with the *Formula(Text)* type on the [.object]#Account# object to contain *City*, *Street*, and other address info in one line. This field will be used to track geolocation data and build routes.
 
-[TIP] ==== To correctly track geolocation data, a formula should
-not return any symbols, for example, in a case, if one of the mentioned
-in the formula fields is blank. ====
+TIP: To correctly track geolocation data, a formula should not return any symbols, for example, in a case, if one of the mentioned in the formula fields is blank.
 
-For example, to view the shipping city and shipping street, enter the
-following:
+For example, to view the shipping city and shipping street, enter the following:
 
-
-
-[width="100%",cols="100%",]
-|===
-a|
-xref:javascript:void(0)[Copy Code]
-
-Code
-
-a|
+[source]
+----
 ....
 IF(
     NOT(
@@ -249,115 +152,61 @@ IF(
 )
 & ShippingStreet
 ....
-
-|===
-
-
-
-[[h3_604215198]]
-==== Google Maps iOS API Key 
-
-Obtain and enter your xref:android/google-maps-api-key[Google Maps API key]
-for using Google Maps in the CT Mobile iOS app.
-
-[[h3_1990058335]]
-==== Bing Maps Windows API Key 
-
-Obtain and enter your
-https://docs.microsoft.com/en-us/bingmaps/getting-started/bing-maps-dev-center-help/getting-a-bing-maps-key[Bing
-Maps Windows API Key] on this tab for using Bing Maps in the CT Mobile
-Windows app.
+----
 
 [[h3_375370096]]
-==== Google Maps Android API Key 
+=== Google Maps Android API Key
 
-Obtain and enter your
-https://docs.microsoft.com/en-us/bingmaps/getting-started/bing-maps-dev-center-help/getting-a-bing-maps-key[]xref:android/google-maps-api-key[Google
-Maps API key] on this tab for using Google Maps in the CT Mobile Android
-apps.
-
-[[h3_1631921024]]
-==== Google Maps JavaScript API Key 
-
-Obtain and enter your xref:android/google-maps-api-key[Google Maps
-JavaScript API Key] to track the geolocation of CT Mobile iOS users in
-real-time via the
-https://help.customertimes.com/smart/project-ct-mobile-en/geolocation-center[Geolocation
-Centre] in Salesforce.
+Obtain and enter your xref:android/knowledge-base/configuration-guide/google-maps-api-key/index.adoc[Google Maps API key] on this tab for using Google Maps in the CT Mobile Android apps.
 
 [[h2_1687169837]]
-=== Support and logs 
+== Support and logs
 
 [[h3_272409891]]
-==== Enable Sync Logs 
+=== Enable Sync Logs
 
-If enabled, the xref:android/sync-logs[Sync Log] records will be created
-during the sync process on the mobile device.
+If enabled, the xref:android/quick-reference-guides/synchronization-launch/sync-logs.adoc[Sync Log] records will be created during the sync process on the mobile device.
 
 [[h3_1226274811]]
-==== Debug Level 
+=== Debug Level
 
-This attribute defines whether a _Sync Log_ record should be created or
-not. Select an option:
+This attribute defines whether a _Sync Log_ record should be created or not. Select an option:
 
 * *None* – sync log record is not created;
 * *Error* – sync log record is created only in case of a sync error;
-* *All* – sync log record is created for each synchronization regardless
-of whether it was successful or not.
+* *All* – sync log record is created for each synchronization regardless of whether it was successful or not.
 
-[.confluence-information-macro-note]#In this case, data storage can be
-overloaded. #
+NOTE: In this case, data storage can be overloaded.
 
 [[h3_813073278]]
-==== Send database dump to 
+=== Send database dump to
 
-Choose where to xref:android/quick-reference-guides/application-settings/send-application-data-dump.adoc[send the customer's
-database dump] of the CT Mobile app. Select an option:
+Choose where to xref:android/quick-reference-guides/application-settings/send-application-data-dump.adoc[send the customer's database dump] of the CT Mobile app. Select an option:
 
 * http://Salesforce.com[Salesforce.com]
-
-The database dump will be attached to one or more Sync Log records in
-case of exceeding the size of 20MB.
++
+The database dump will be attached to one or more Sync Log records in case of exceeding the size of 20MB.
 * *E-mail*
-
-In the *Support Email* field, specify the email to send the data logs
-and screenshots of synchronization errors.
++
+In the *Support Email* field, specify the email to send the data logs and screenshots of synchronization errors.
 
 [[h2_479934482]]
-=== Object mappings 
+== Object mappings
 
 [[h3_2141706831]]
-==== Product Object API Name 
+=== Product Object API Name
 
-Select an object that will be used as a product. The *Product Object API
-Name* field of the xref:android/mobile-application-setup[Mobile Application
-Setup] should be correctly specified for each
-[.object]#Activity# object in the
-xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc#h3_1397263211[Activity Object
-API Name] field.
+Select an object that will be used as a product. The *Product Object API Name* field of the xref:android/knowledge-base/configuration-guide/custom-settings/mobile-application-setup.adoc[Mobile Application Setup] should be correctly specified for each [.object]#Activity# object in the xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc[Activity Object API Name] field.
 
 [[h3_494016929]]
-==== Reference Object API Name 
+=== Reference Object API Name
 
-Records of the selected object will be displayed on the *Contacts* menu
-item, on the *Contacts* tab in the Nearby Accounts module, and on the
-*Contacts* and *Hierarchy View* tabs in the Calendar module.
+Records of the selected object will be displayed on the *Contacts* menu item, on the *Contacts* tab in the Nearby Accounts module, and on the *Contacts* and *Hierarchy View* tabs in the Calendar module.
 
-As the[.object]#Reference# object, use the junction object
-between the[.object]#Account# and[.object]#Contact#
-objects, for example:
+As the [.object]#Reference# object, use the junction object between the [.object]#Account# and [.object]#Contact# objects, for example:
 
-* the standard _Account Contact Relationship_ object if
-https://help.salesforce.com/s/articleView?id=sf.shared_contacts_set_up.htm&type=5[a
-single contact may be related to multiple contacts]
-*[.apiobject]#CTPHARMA__Reference__c# if using CT
-Pharma solution as the target system,
-* any custom object with the field of the lookup type to the _Account_
-and _Contact_ objects
+* the standard _Account Contact Relationship_ object if https://help.salesforce.com/s/articleView?id=sf.shared_contacts_set_up.htm&type=5[a single contact may be related to multiple contacts]
+* [.apiobject]#CTPHARMA\__Reference__c# if using CT Pharma solution as the target system,
+* any custom object with the field of the lookup type to the [.object]#Account# and [.object]#Contact# objects
 
-
-
-If the many-to-many relationship between the Account and Contact objects
-is not used in the system, please leave this field blank.
-For more information, refer to xref:android/knowledge-base/configuration-guide/reference-object[Reference
-Object].
+If the many-to-many relationship between the [.object]#Account# and [.object]#Contact# objects is not used in the system, please leave this field blank. For more information, refer to xref:android/knowledge-base/configuration-guide/reference-object.adoc[Reference Object].

@@ -1,0 +1,113 @@
+= Renaming UI Elements
+
+CT Mobile allows using link:https://help.salesforce.com/articleView?id=cl_about.htm&type=5[custom labels] to rename its interface elements, including menu items, xref:ios/mobile-application/mobile-application-modules/index.adoc[modules], some buttons and labels. If the [.apiobject]#label# attribute is set for a menu item or a module, the mobile application will use it.
+
+Labels may contain the following format specifiers:
+
+* [.apiobject]#%d# is a number, for example, in the [.apiobject]#Errors(%d)# label;
+* [.apiobject]#%@# is a string;
+* [.apiobject]#\n# is newline.
+
+Do not remove them from labels.
+
+[[h2_455187194]]
+== Rename Interface Element in Custom Labels
+
+To rename a custom label:
+
+. Go to *Setup → User Interface → Custom Labels →* click the *Name* of the menu item or module mentioned in the tables below.
+. Create or override translation:
+* In the *Local Translations / Overrides* section, click the *New Local Translations / Overrides* button to create a new translation.
+* In the *Package Translations* section, click *Override* next to the required language to override translation.
+. Click *Save*.
+
+The selected label is renamed.
+
+The table of available menu items:
+
+[width=70%, cols="~,~"]
+|===
+|*Menu Item* |*Name*
+
+|xref:ios/mobile-application/synchronization/errors-screen.adoc[Errors]
+|[.apiobject]#CTM_MainMenu_Tab_Errors#
+
+|xref:ios/mobile-application/ui/home-screen/index.adoc[Home]
+|[.apiobject]#CTM_MainMenu_Tab_Home#
+
+|xref:ios/mobile-application/ui/home-screen/search.adoc[Global Search]
+|[.apiobject]#CTM_MainMenu_Tab_GlobalSearch#
+
+|xref:ios/mobile-application/application-settings/index.adoc[Settings]
+|[.apiobject]#CTM_MainMenu_Tab_Settings#
+|===
+
+The table of available modules:
+
+[width=70%, cols="~,~"]
+|===
+|*Menu Item* |*Name*
+
+|xref:ios/mobile-application/mobile-application-modules/calendar/index.adoc[Calendar]
+|[.apiobject]#CTM_MainMenu_Tab_Calendar#
+
+|xref:ios/mobile-application/mobile-application-modules/chatter/index.adoc[Chatter]
+|[.apiobject]#CTM_MainMenu_Tab_Chatter#
+
+|xref:ios/mobile-application/mobile-application-modules/links.adoc[Links List]
+|[.apiobject]#CTM_MainMenu_Tab_LinkList#
+
+|xref:ios/mobile-application/mobile-application-modules/nearby-accounts.adoc[Nearby Accounts]
+|[.apiobject]#CTM_MainMenu_Tab_NearbyAccounts#
+
+|xref:ios/mobile-application/mobile-application-modules/recent-items.adoc[Recent Items]
+|[.apiobject]#CTM_MainMenu_Tab_RecentItems#
+
+|xref:ios/mobile-application/mobile-application-modules/routes.adoc[Routes]
+|[.apiobject]#CTM_MainMenu_Tab_Routes#
+|===
+
+The table of available buttons and labels:
+
+[cols="~,~",options="header",]
+|===
+|*Button/Label* |*Name*
+|xref:ios/admin-guide/start-finish-functionality.adoc[Start] button (on a record layout) |[.apiobject]#CTM_Layout_Button_StartActivity#
+|xref:ios/admin-guide/start-finish-functionality.adoc[Finish] button (on a record layout) |[.apiobject]#CTM_Layout_Button_FinishActivity#
+|xref:ios/mobile-application/ui/actions.adoc#h2_1355154294[Determine Location] item (in the *Actions* combo menu) |[.apiobject]#CTM_Layout_Button_GetGeoposition#
+|xref:ios/mobile-application/ui/actions.adoc#h2_62618674[Photo] item (in the *Actions* combo menu) |[.apiobject]#CTM_Layout_Button_TakePhoto#
+|*Send* button (while sending an email)  a|[.apiobject]#CTM_Layout_Button_SendEmail#
+|*Share* button (while sharing a file)  a|
+[.apiobject]#CTMobile.FileShare.Mail# (for sharing by mail)
+
+[.apiobject]#CTMobile.FileShare.Apps# (for sharing by other apps)
+
+|*All Activities per day* label for the xref:ios/mobile-application/ui/home-screen/index.adoc#h3_1292798904[Calendar widget]  |[.apiobject]#CalendarWidget#
+|===
+
+The table of available UI elements on mobile layouts:
+
+[cols="~,~",options="header",]
+|===
+|*Mobile Layout UI Element* |*Name*
+|*Detailing* tab in custom related list  |[.apiobject]#CTM_Layout_Tab_CustomRelatedList#
+|*Main* tab of mobile layout  |[.apiobject]#CTM_Layout_Tab_GeneralTab#
+|xref:ios/admin-guide/mobile-layouts/mobile-layouts-maps.adoc[Mobile Layouts: Maps]  |[.apiobject]#CTM_Layout_Section_MAPS#
+|xref:ios/admin-guide/mobile-layouts/mobile-layouts-chatter-feed.adoc[Mobile Layouts: Chatter Feed]  |[.apiobject]#CTM_Layout_Section_CHATTER#
+|xref:ios/admin-guide/mobile-layouts/mobile-layouts-applications.adoc[Mobile Layouts: Applications]  |[.apiobject]#CTM_Layout_Section_APPS#
+|xref:ios/admin-guide/mobile-layouts/mobile-layouts-qr-code.adoc[Mobile Layouts: QR Code]  |[.apiobject]#CTM_Layout_Section_QRCODE#
+|xref:ios/admin-guide/mobile-layouts/mobile-layouts-dashboards.adoc[Mobile Layouts: Dashboards], the *Chart* section  |[.apiobject]#CTM_Layout_Section_CHARTS#
+|xref:image$current-activities-tab.png[Current Activities] section in the Timeline view of the  activities list |[.apiobject]#CTM_Layout_TimelineHeader_CurrentActivities#
+|xref:image$past-activities-tab.png[Past Activities] section in the Timeline view of the activities list |[.apiobject]#CTM_Layout_TimelineHeader_PastActivities#
+|===
+
+[[h2_1059364362]]
+=== Rename Modules in Rename Tabs and Labels
+
+To rename xref:ios/mobile-application/mobile-application-modules/applications/index.adoc[Applications], xref:ios/mobile-application/mobile-application-modules/libraries.adoc[Libraries], and xref:ios/mobile-application/mobile-application-modules/quizzes.adoc[Quizzes] modules:
+
+. Go to *Setup → User Interface →* link:https://help.salesforce.com/articleView?id=customize_rename.htm&type=5[Rename Tabs and Labels] → click *Edit* next to *Applications*, *Libraries*, or *Quizzes*.
+. In the *Plural* field, enter a name.
+. Click *Save*.
+
+The selected module is renamed.

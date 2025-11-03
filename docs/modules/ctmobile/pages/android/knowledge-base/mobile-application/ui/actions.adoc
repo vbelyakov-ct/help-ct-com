@@ -1,0 +1,107 @@
+= Actions
+:toc:
+
+The *Actions* combo menu allows additional actions to be performed on a record details screen.
+
+[tabs]
+====
+On the Account record::
++
+--
+image::account_actions_en.png[]
+--
+On the Activity record::
++
+--
+image::activity_actions_en.png[]
+--
+====
+
+[[h2_1355154294]]
+== Determine Location
+
+Tap the *Determine Location* button to determine the current device location data for an *Account* or _Activity_ record and write them into the specific field.
+
+* When a mobile user has permission to edit records (refer to xref:ios/admin-guide/managing-offline-objects/index.adoc[Managing Offline Objects in CT Mobile Control Panel] or xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc[CT Mobile Control Panel 2.0: Offline Objects]).
+* When the mobile user has permission to edit the geolocation type field.
+** A geolocation type field on the [.object]#Account# object used to store the geolocation of the organization.
+** A geolocation type field on the [.object]#Activity# objects used to store the geolocation of the activities.
+* If xref:ios/admin-guide/start-finish-functionality.adoc[the Start/Finish functionality] is on *Capture Geoposition* is enabled, and a mobile user has forenamed permissions for a record of an [.object]#Activity# object, the geolocation is automatically captured and the *Determine Location* button is hidden.
+
+The *Determine Location* button is available on the records of other objects:
+
+* When xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h2_670774632[a geolocation type field on the Account object] is specified (refer to xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_612123135[CT Mobile Control Panel: General → Account Geolocation Field] or xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-general-new.adoc#h3_612123135[CT Mobile Control Panel 2.0: General → Account Geolocation Field]).
+* The API name of the geolocation type field on the required object is the same as the API name of the geolocation type field on the [.object]#Account# object.
+* The mobile user has permission to edit the geolocation type field.
+
+[[h2_62618674]]
+== File
+
+Add files to a record. Tap the *File* button to select one or several files from the device storage. View files on the *Files* tab of the record.
+
+The *File* button is available on any object—the records of [.object]#Accounts#, [.object]#Contacts#, and [.object]#Activity# objects:
+
+* When a mobile user has permission to edit records.
+* When a record is available for a mobile user according to link:https://help.salesforce.com/articleView?id=sharing_model_fields.htm&type=5[Sharing Settings], for example, with *Public Read/Write* access, if there is https://help.salesforce.com/articleView?id=security_sharing_rules_create.htm&type=5[a sharing rule], or if the access was granted link:https://help.salesforce.com/articleView?id=security_sharing_owd_user_manual.htm&type=5[manually].
+
+To know more about attaching and viewing files in the *Files* section, refer to xref:ios/mobile-application/attaching-files-in-the-files-section.adoc[Attachments in the Files Section].
+
+== Photo
+
+Add pictures to a record. Tap the *Photo* button to select one or several photos from the device gallery, or take a new one. View photos on the *Files* tab of the record.
+
+The *Photo* button is available on any object—the records of [.object]#Accounts#,[.object]#Contacts#, and [.object]#Activity# objects:
+
+* When a mobile user has permission to edit records.
+* When a record is available for a mobile user according to link:https://help.salesforce.com/articleView?id=sharing_model_fields.htm&type=5[Sharing Settings], for example, with *Public Read/Write* access, if there is link:https://help.salesforce.com/articleView?id=security_sharing_rules_create.htm&type=5[a sharing rule], or if the access was granted link:https://help.salesforce.com/articleView?id=security_sharing_owd_user_manual.htm&type=5[manually].
+
+If xref:ios/admin-guide/start-finish-functionality.adoc[the Start/Finish functionality] is on and a mobile user has fore-named permissions for a record of an [.object]#Activity# object:
+
+* When the activity was not started, a mobile user can view photos, but cannot take photos or choose photos from the device gallery.
+* When the activity was started, a mobile user can take photos or choose photos from the device gallery.
+
+[[h2_785802245]]
+== Add Post
+
+Add a post in the xref:ios/admin-guide/mobile-layouts/mobile-layouts-chatter-feed.adoc[Chatter feed]. Click *Add Post*. In the open modal window:
+
+NOTE: The user profile should have permission to edit records of the object to which the *Chatter* tab is added.
+
+* Tap image:58836467.png[25,25] to add a link.
+* Tap image:58836469.png[25,25] to add a photo or audio message from the device. You can also take another photo or audio message.
+
+== Signature
+
+Add a signature on records of the [.object]#Activity# objects. View the signature on the *Files* tab of the record.
+
+NOTE: Since CT Mobile 2.2, this action is hidden, but you can add it by code.
+
+[[h2_1173923582]]
+== Export to File
+
+Tap to export selected fields to a CSV file.
+
+* The menu item is displayed on related records, if the *Export Allowed* checkbox is set to _true_ (refer to xref:ios/admin-guide/ct-mobile-control-panel/ctm-settings/ctm-settings-offline-objects.adoc[Offline Objects → Export Allowed] or xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc#h3_290156637[CT Mobile Control Panel 2.0: Offline Objects → Export to CSV]).
+* Default fields should be specified in the *Default Columns* field of the xref:ios/admin-guide/ct-mobile-control-panel/ctm-settings/ctm-settings-offline-objects.adoc[Offline Object] or in xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc#h4_912917703[CT Mobile Control Panel 2.0: Offline Objects → Export Columns Selection].
+* Custom fields can be selected for export if the xref:ios/admin-guide/ct-mobile-control-panel/ctm-settings/ctm-settings-offline-objects.adoc[Select Export Columns] checkbox is set to _true_ or xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc#h4_912917703[Export Columns Selection] is set to *User-Selected Columns* or *Predefined and User-Selected Columns*.
+
+TIP: To export selected fields to file for the main object, switch to xref:ios/mobile-application/ui/list-views.adoc#h2_1248088428[detailed list view].
+
+image::ctmi-export-csv-2.9.png[]
+
+[[h2_13678918]]
+== Sign document
+
+To sign a document offline, follow the steps in xref:ctsign:admin-guide/sign-a-document-the-ct-mobile-app/add-the-ct-sign-to-the-ct-mobile-app.adoc[the CT Sign guide].
+
+////
+[[h2_1289864329]]
+== Form Document
+
+Tap to generate a PDF file based on a template with data from the
+selected record and its related records. View the file on
+the *Files* tab of the record.
+
+To use this feature, install and set up
+the xref:ctsign:/about-ct-sign/index.adoc[CT Sign package].
+////
