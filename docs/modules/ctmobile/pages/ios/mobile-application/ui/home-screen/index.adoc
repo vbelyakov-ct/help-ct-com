@@ -99,6 +99,7 @@ NOTE: After creating or editing a dashboard or report, xref:ios/admin-guide/ct-m
 A mobile user can view dynamic report charts and dashboards:
 
 * The charts and dashboards should be available for the mobile user.
+* Since CT Mobile package version 4.8, we recommend creating dashboards and reports in Salesforce Lightning.
 * Reports, which are used for creating offline dashboards, should be located in custom folders, not in default package folders. If a report is based on an offline dashboard, the dashboard also should be located in a custom folder.
 * Objects used for chart building should be added to the list of the objects available offline (refer to xref:ios/admin-guide/managing-offline-objects/index.adoc[CT Mobile Control Panel: Managing Offline Objects] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-offline-objects-new.adoc[CT Mobile Control Panel 2.0: Offline Objects]).
 +
