@@ -1,138 +1,41 @@
 = CT Mobile Control Panel: Offline Objects
+:toc:
 
-The *Offline Objects* tab is intended for managing offline objects and
-standard related lists.
+The *Offline Objects* tab is intended for managing offline objects andstandar d related lists.
 
-* xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-offline-objects#h2_1969690579[Location]
-* xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-offline-objects#h2_1468985423[Offline
-Objects]
-* xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-offline-objects#h2_70757812[Options]
-* xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-offline-objects#h3_1442227750[Enable
-Conflict Manager]
-* xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-offline-objects#h3_202390671[Quick
-Record Sync]
-* xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-offline-objects#h3_37043680[Sync
-Recovery]
-* xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-offline-objects#h2_263612775[Object
-Permissions]
-* xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-offline-objects#h2_946326628[Related
-Lists]
-
-*Click to view the interface*xref:javascript:void(0)[]
-
-.Click to hide[%collapsible] ====
-
+.*Click to view the interface*
+[%collapsible]
+====
 image:cmcp_offline_obj.png[]
-
 ====
 
-[[h2_1969690579]]
-=== Location 
-
-*Location* is a picklist containing all configured and unconfigured
-profiles available in your Salesforce org.
-
-*General Settings* will be applied to all the profiles without
-individual settings.
-
-
-
-To get started, select the desired profile in the *Location* field to
-configure it. To delete the configuration for the selected profile,
-click the
-image:delete-icon.png[]
-icon.
+include::partial$control-panel-location.adoc[]
 
 [[h2_1468985423]]
-=== Offline Objects 
+== Offline Objects
 
-Enter the object label or API name in the *Search* box to find it in the
-*Available* list and add it to the *Selected* list if this object should
-be available offline.
+Enter the object label or API name in the *Search* box to find it in the *Available* list and add it to the *Selected* list if this object should be available offline.
 
-[TIP] ==== If an object is added to the *Selected* list, it is
-will be available in the *Selected* list on the
-xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-app-menu[CT Mobile Control Panel: App
-Menu] tab.  ====
+TIP: If an object is added to the *Selected* list, it will be available in the *Selected* list on the xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-app-menu.adoc[CT Mobile Control Panel: App
+Menu] tab.
 
-* Use the *Advanced List* option to display all objects in the
-*Available* list regardless of whether the object has a page layout.
+* Use the *Advanced List* option to display all objects in the *Available* list regardless of whether the object has a page layout.
 
-* Click the object name in the *Selected* list to set up the user's
-permissions to work with this object and standard related lists.
-
-[[h2_70757812]]
-=== Options 
-
-Not available.
-
-[[h3_1442227750]]
-==== Enable Conflict Manager 
-
-If enabled, the
-https://help.customertimes.com/smart/project-ct-mobile-en/conflict-manager-control[Conflict
-Manager] will track changes made to the same record in CT Mobile and
-Salesforce. In the event of a conflict, the mobile user can choose which
-change to save.
-
-[[h3_202390671]]
-==== Quick Record Sync 
-
-If enabled, a mobile user with the corresponding profile can
-https://help.customertimes.com/smart/project-ct-mobile-en/other-synchronization-modes/a/h2_1958232390[sync
-a single record] and its child records by applying the pull-to-refresh
-gesture on the record's layout.
-
-[[h3_37043680]]
-==== Sync Recovery 
-
-If enabled, records with errors will still be sent to Salesforce.
-Available values:
-
-* *Empty value* is set by default—Sync Recovery is disabled.
-* Use *Direct access* for pushing the changes directly to an object via
-the additional web service.
-* Use *Proxy object* for pushing the changes as a JSON file attached to
-the *Sync Log* record via the additional web service. In Salesforce, you
-can apply the custom logic for JSON files.
-
-
-
-For more information, refer to
-https://help.customertimes.com/smart/project-ct-mobile-en/sync-recovery[Sync
-Recovery].
+* Click the object name in the *Selected* list to set up the user's permissions to work with this object and standard related lists.
 
 [[h2_263612775]]
-=== Object Permissions 
+== Object Permissions
 
-Restrict the profile permissions to create or delete records of the
-desired offline object. Set up SOQL filters to download only the
-required records.
+Restrict the profile permissions to create or delete records of the desired offline object. Set up SOQL filters to download only the required records.
 
-
-
-For more information, refer to
-xref:android/managing-offline-objects[Managing Offline Objects].
+For more information, refer to xref:android/quick-reference-guides/managing-offline-objects.adoc[Managing Offline Objects].
 
 [[h2_946326628]]
-=== Related Lists 
+== Related Lists
 
-Restrict the profile permissions to create or delete records of the
-standard related lists that are added to the page layout of an offline
-object and available for the selected record type. Set up SOQL filters
-for using a toggle in the CT Mobile app to display all or only records
-that match the criteria. Enable
-https://help.customertimes.com/smart/project-ct-mobile-en/timeline-view[the
-timeline view] instead of the standard view of standard related lists if
-needed.
+Restrict the profile permissions to create or delete records of the standard related lists that are added to the page layout of an offline object and available for the selected record type. Set up SOQL filters for using a toggle in the CT Mobile app to display all or only records
+that match the criteria.
 
+For more information, refer to xref:android/quick-reference-guides/managing-offline-objects.adoc[Managing Offline Objects]. Also, get familiar with the information in the xref:android/quick-reference-guides/related-lists/standard-related-lists.adoc[Standard Related Lists] article.
 
-
-For more information, refer to
-xref:android/managing-offline-objects[Managing Offline Objects]. Also, get
-familiar with the information in the
-xref:android/standard-related-lists[Standard Related Lists] article.
-
-[TIP] ==== To set up custom related lists of an offline object,
-go to xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-custom-details[CT Mobile Control
-Panel: Custom details]. ====
+TIP: To set up custom related lists of an offline object, go to xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-custom-details.adoc[CT Mobile Control Panel: Custom details].

@@ -1,46 +1,19 @@
 = CT Mobile Control Panel
 
-*CT Mobile Control Panel* is a Salesforce interface for connecting the
-CT Mobile solution to the customer's target system and for specifying
-all the necessary settings to personalize the CT Mobile app.
+*CT Mobile Control Panel* is a Salesforce interface for connecting the CT Mobile solution to the customer's target system and for specifying  all the necessary settings to personalize the CT Mobile app.
 
-A user configuring a CT Mobile solution must have a separate profile and
-an assigned xref:android/quick-reference-guides/application-permission-settings.adoc#h2_1046081510[CT
-Mobile Administrator]_ permission set.
+WARNING: A user configuring a CT Mobile solution must have a separate profile and an assigned xref:android/quick-reference-guides/application-permission-settings.adoc[CT Mobile Administrator] permission set.
 
-* All customizations for the selected profile will be saved in
-xref:android/knowledge-base/configuration-guide/custom-settings/index.adoc[custom settings] or as
-xref:android/knowledge-base/configuration-guide/ctm-settings/index.adoc[CTM Settings] records.
-* Settings for xref:android/ctm-settings-menu[menu],
-xref:android/ctm-settings-offline-objects[offline objects], and
-xref:android/ctm-settings-standard-related-list[standard related lists] on
-the *CT Mobile Control Panel* are displayed based on the *CTM Settings*
-records. Other settings are displayed according to the records of the
-custom settings.
-
-
+* All customizations for the selected profile will be saved in xref:android/knowledge-base/configuration-guide/custom-settings/index.adoc[custom settings] or as xref:android/knowledge-base/configuration-guide/ctm-settings/index.adoc[CTM Settings] records.
+* Settings for xref:android/knowledge-base/configuration-guide/ctm-settings/ctm-settings-menu.adoc[menu], xref:android/knowledge-base/configuration-guide/ctm-settings/ctm-settings-offline-objects.adoc[offline objects], and xref:android/knowledge-base/configuration-guide/ctm-settings/ctm-settings-standard-related-list.adoc[standard related lists] on the *CT Mobile Control Panel* are displayed based on the *CTM Settings* records. Other settings are displayed according to the records of the custom settings.
 
 The *CT Mobile Control Panel* is divided into the following tabs:
 
-* xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc[CT Mobile Control Panel:
-General]
-* xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-offline-objects[CT Mobile Control
-Panel: Offline Objects]
-* xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-app-menu[CT Mobile Control Panel:
-App Menu]
-* xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc[CT Mobile Control Panel:
-Calendar]
-* xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-mini-layouts[CT Mobile Control
-Panel: Mini Layouts]
-* xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-color-settings[CT Mobile Control
-Panel: Color Settings]
-* xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-custom-details[CT Mobile Control
-Panel: Custom Details]
-* xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-workflows[CT Mobile Control Panel:
-Workflows]
-* xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-tools[CT Mobile Control Panel:
-Tools]
-* xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-presenter[CT Mobile Control Panel:
-Presenter]
-* xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-custom-tab[CT Mobile Control Panel:
-Custom Tab]
+* xref:./ct-mobile-control-panel-app-menu.adoc[]
+* xref:./ct-mobile-control-panel-calendar.adoc[]
+* xref:./ct-mobile-control-panel-color-settings.adoc[]
+* xref:./ct-mobile-control-panel-custom-details.adoc[]
+* xref:./ct-mobile-control-panel-custom-tab.adoc[]
+* xref:./ct-mobile-control-panel-general.adoc[]
+* xref:./ct-mobile-control-panel-mini-layouts.adoc[]
+* xref:./ct-mobile-control-panel-offline-objects.adoc[]
