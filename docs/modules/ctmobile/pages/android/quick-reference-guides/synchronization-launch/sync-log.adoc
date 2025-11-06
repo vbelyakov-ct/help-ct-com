@@ -1,6 +1,6 @@
 = Sync Log
 
-The[.object]#Sync Log# object is intended to store the details
+The [.object]#Sync Log# object is intended to store the details
 of the sync process and operations performed in the course of the
 xref:android/knowledge-base/mobile-application/synchronization/index.adoc[synchronization] depending on the value in the
 xref:android/quick-reference-guides/synchronization-launch/sync-logs#h2_272409891[Debug Level] option on the *CT Mobile
@@ -8,7 +8,7 @@ Control Panel: General* tab.
 
 [WARNING] ==== The *Debug Level* option should be specified for
 each profile separately. Each profile should have the *Edit* permission
-for all fields of the[.object]#Sync Log ==== object. #
+for all fields of the [.object]#Sync Log ==== object. #
 
 '''''
 
@@ -118,7 +118,7 @@ Or the type of operation:
 
 |Records Count |[.apiobject]#clm__RecordsCount__c#
 |Text(255) |The total number of records transmitted in the course of the
-operation when the[.apiobject]#clm__Operation__c#
+operation when the [.apiobject]#clm__Operation__c#
 contains *Create*, *Update*, *Delete*, *Insert*.
 
 |Status |[.apiobject]#clm__Status__c# |Picklist a|

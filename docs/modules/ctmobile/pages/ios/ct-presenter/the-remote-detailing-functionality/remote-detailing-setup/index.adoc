@@ -33,7 +33,7 @@ xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.ad
 for the Activity Start Date field].
 . xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-setup/remote-detailing-apex-trigger-classes-and-quick-action.adoc#h2_249047963[Add
 the Apex trigger and classes] to provide statistics collecting and
-generate the invite link. For the Apex trigger, specify the API name of
+generate the invitation link. For the Apex trigger, specify the API name of
 the [.object]#Activity# object from step 4.
 . On the *CT Mobile Control Panel: Presenter* tab,
 xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-presenter.adoc#h2_985373192[enable the
@@ -55,7 +55,7 @@ In CT Mobile Control Panel 2.0::
 . Check that the records per each trigger are active in xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/trigger-settings.adoc[Trigger Settings].
 . Specify access to the CLM presentation(s) for Remote Detailing users.
 . On the *CT Mobile Control Panel: Activities* tab, specify the xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-activities-new.adoc#h2_2014841429[Activity object] and its xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-activities-new.adoc#h4_1766544266[Start Date field].
-. xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-setup/remote-detailing-apex-trigger-classes-and-quick-action.adoc#h2_249047963[Add the Apex trigger and classes] to provide statistics collecting and generate the invite link. For the Apex trigger, specify the API name of the [.object]#Activity# object from step 4.
+. xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-setup/remote-detailing-apex-trigger-classes-and-quick-action.adoc#h2_249047963[Add the Apex trigger and classes] to provide statistics collecting and generate the invitation link. For the Apex trigger, specify the API name of the [.object]#Activity# object from step 4.
 . On the xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-remote-detailing-new.adoc[CT Mobile Control Panel: Remote Detailing] tab, enable the Remote Detailing functionality and specify its options.
 . xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-setup/remote-detailing-apex-trigger-classes-and-quick-action.adoc#h3_848494787[Add the Applications button] to create the CLM presentation set for an [.object]#Activity# object in Lightning Experience.
 . xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-setup/index.adoc#h2_1821657178[Specify a logo] for the participant's *Waiting...* screen.
@@ -77,7 +77,7 @@ In CT Mobile Control Panel::
 . Check that the records per each trigger are active in xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/trigger-settings.adoc[Trigger Settings].
 . Specify access to the CLM presentation(s) for Self Detailing users.
 . On the *CT Mobile Control Panel: Calendar* tab, specify xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc#h3_1397263211[the API name of the Activity object] and xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc#h3_1674628596[the API name for the Activity Start Date field].
-. xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-setup/remote-detailing-apex-trigger-classes-and-quick-action.adoc#h2_249047963[Add the Apex trigger and classes] to provide statistics collecting and generate the invite link. For the Apex trigger, specify the API name of the [.object]#Activity# object from step 3.
+. xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-setup/remote-detailing-apex-trigger-classes-and-quick-action.adoc#h2_249047963[Add the Apex trigger and classes] to provide statistics collecting and generate the invitation link. For the Apex trigger, specify the API name of the [.object]#Activity# object from step 3.
 . According to the CT Mobile package version:
 +
 [width="100%",cols="50%,50%",separator=!]
@@ -94,7 +94,7 @@ a! * link:https://help.salesforce.com/articleView?id=000331470&mode=1&type=1[Cre
 . xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-setup/remote-detailing-apex-trigger-classes-and-quick-action.adoc#h3_848494787[Set up a quick action] to create the CLM presentation set for an [.object]#Activity# object in Lightning Experience.
 . xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-setup/index.adoc#h2_1821657178[Specify a logo] for the participant's *Waiting...* screen.
 . Specify the ways xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-launch/index.adoc[to launch the Self Detailing meeting] in Salesforce and the CT Mobile app.
-. Additionally, create a process to send the invite link to participants by SMS, e-mail, etc.
+. Additionally, create a process to send the invitation link to participants by SMS, e-mail, etc.
 --
 In CT Mobile Control Panel 2.0::
 +
@@ -103,12 +103,12 @@ In CT Mobile Control Panel 2.0::
 . Check that the records per each trigger are active in xref:ios/admin-guide/ct-mobile-control-panel/custom-settings/trigger-settings.adoc[Trigger Settings].
 . Specify access to the CLM presentation(s) for Self Detailing users.
 . On the *CT Mobile Control Panel: Activities* tab, specify the xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-activities-new.adoc#h2_2014841429[Activity object] and its xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-activities-new.adoc#h4_1766544266[Start Date field].
-. xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-setup/remote-detailing-apex-trigger-classes-and-quick-action.adoc#h2_249047963[Add the Apex trigger and classes] to provide statistics collecting and generate the invite link. For the Apex trigger, specify the API name of the [.object]#Activity# object from step 3.
+. xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-setup/remote-detailing-apex-trigger-classes-and-quick-action.adoc#h2_249047963[Add the Apex trigger and classes] to provide statistics collecting and generate the invitation link. For the Apex trigger, specify the API name of the [.object]#Activity# object from step 3.
 . On the xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-remote-detailing-new.adoc[CT Mobile Control Panel: Remote Detailing] tab, enable the Remote Detailing functionality and specify its options.
 . xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-setup/remote-detailing-apex-trigger-classes-and-quick-action.adoc#h3_848494787[Set up a quick action] to create the CLM presentation set for an [.object]#Activity# object in Lightning Experience.
 . xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-setup/index.adoc#h2_1821657178[Specify a logo] for the participant's *Waiting...* screen.
 . Specify the ways xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-launch/index.adoc[to launch the Self Detailing meeting] in Salesforce and the CT Mobile app.
-. Additionally, create a process to send the invite link to participants by SMS, e-mail, etc.
+. Additionally, create a process to send the invitation link to participants by SMS, e-mail, etc.
 --
 ====
 

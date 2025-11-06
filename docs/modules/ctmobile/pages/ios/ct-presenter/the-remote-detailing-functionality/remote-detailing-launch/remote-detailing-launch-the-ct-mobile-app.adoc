@@ -1,14 +1,14 @@
 = Remote Detailing Launch: the CT Mobile app
 
-A presenter can start a remote CLM presentation for participants by tapping the invite link that is stored in the specified field on the xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-activity.adoc[Activity] record screen in the CT Mobile app.
+A presenter can start a remote CLM presentation for participants by tapping the invitation link that is stored in the specified field on the xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-activity.adoc[Activity] record screen in the CT Mobile app.
 
-* The invite link for *Remote Detailing* can be created for PC, tablets, and mobile phones.
-* The invite link for *Self Detailing* can be created for tablets and mobile phones.
+* The invitation link for *Remote Detailing* can be created for PC, tablets, and mobile phones.
+* The invitation link for *Self Detailing* can be created for tablets and mobile phones.
 
 Optionally, specify a Salesforce workflow to send an email/SMS/etc. to the [.object]#Contact# of the _Activity_ record after generating an invitation link for this record.
 
 [[h3_2144641458]]
-== Add the custom field for the invite link
+== Add the custom field for the invitation link
 
 To add a custom field on the Activity page layout:
 
@@ -30,9 +30,9 @@ The field is created.
 
 If the activity was created on the mobile device and has not been synchronized yet, the presenter should perform quick record synchronization or fast synchronization.
 
-For the *Remote Detailing* meeting, click the invite link in the specific field:
+For the *Remote Detailing* meeting, click the invitation link in the specific field:
 
 * As the presenter, the CLM presentation window opens and the remote CLM presentation starts with no need to enter credentials.
-* To join as a participant, tap the invite link. In the CLM presentation window, tap the *Log out* button. On the *Welcome* screen, enter your username and an e-mail (optionally) and tap *Join* to enter the meeting.
+* To join as a participant, tap the invitation link. In the CLM presentation window, tap the *Log out* button. On the *Welcome* screen, enter your username and an e-mail (optionally) and tap *Join* to enter the meeting.
 
-For the *Self Detailing* meeting, copy the invite link and send it to the participant.
+For the *Self Detailing* meeting, copy the invitation link and send it to the participant.

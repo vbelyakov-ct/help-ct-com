@@ -16,44 +16,60 @@ Custom setting API name: [.apiobject]#clm\__ApplicationSetup__c#
 
 |Account Full Address Field
 |[.apiobject]#clm\__AccountFullAddressAPIField__c#
-|Text(255) |The API name of the field on the [.object]#Account# object is used to store the address of the organization, e.g., country, city, building. etc. The value in this field is used in xref:ios/admin-guide/mobile-layouts/mobile-layouts-maps.adoc[the Maps widget] if the value is not set in the [.apiobject]#clm\__AccountGeolocationAPIField__c#
-field or this field is absent.
+|Text(255) |The API name of the field on the [.object]#Account# object is used to store the address of the organization, e.g., country, city, building. etc. The value in this field is used in xref:ios/admin-guide/mobile-layouts/mobile-layouts-maps.adoc[the Maps widget] if the value is not set in the [.apiobject]#clm\__AccountGeolocationAPIField__c# field or this field is absent.
 |Account Geolocation Field
 |[.apiobject]#clm\__AccountGeolocationAPIField__c#
-|Text(255) |The API name of the field with link:https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/compound_fields_geolocation.htm[the Location type] or link:https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/compound_fields_address.htm[the Address type] on the [.object]#Account# object is used to store the geolocation of the organization. The value in this field is used to
-get the location in the xref:ios/mobile-application/mobile-application-modules/routes.adoc[Routes] and xref:ios/mobile-application/mobile-application-modules/nearby-accounts.adoc[Nearby Accounts] modules.
+|Text(255) |The API name of the field with link:https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/compound_fields_geolocation.htm[the Location type] or link:https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/compound_fields_address.htm[the Address type] on the [.object]#Account# object is used to store the geolocation of the organization. The value in this field is used to get the location in the xref:ios/mobile-application/mobile-application-modules/routes.adoc[Routes] and xref:ios/mobile-application/mobile-application-modules/nearby-accounts.adoc[Nearby Accounts] modules.
 
 |Activity "IsDone" field API name
-|[.apiobject]#clm\__ActivityDoneAPI__c# |Text(255) |The API name of the field on the [.object]#Activity# object is used as an additional attribute showing that the *Activity* is finished. The field is used when the xref:ios/admin-guide/start-finish-functionality.adoc[Start/Finish functionality] is enabled.
+|[.apiobject]#clm\__ActivityDoneAPI__c# |Text(255) a|The API name of the field on the [.object]#Activity# object is used as an additional attribute showing that the *Activity* is finished. The field is used when the xref:ios/admin-guide/start-finish-functionality.adoc[Start/Finish functionality] is enabled.
+
+include::partial$custom-setting-several-activity.adoc[]
 
 |Activity "IsLocked" field API name
 |[.apiobject]#clm\__ActivityIsLockedAPI__c# |Text(255)
-|The API name of the field on the [.object]#Activity# object is used as an additional attribute showing that the _Activity_ is locked for editing. The field is used when both *Start/Finish* and *Lock/Unlock* functionalities are enabled.
+a|The API name of the field on the [.object]#Activity# object is used as an additional attribute showing that the _Activity_ is locked for editing. The field is used when both *Start/Finish* and *Lock/Unlock* functionalities are enabled.
+
+include::partial$custom-setting-several-activity.adoc[]
 
 |Activity Description field API Name
 |[.apiobject]#clm\__ActivityDescriptionAPI__c# |Text(255)
-|The API name of the field on the [.object]#Activity# object is used to store the description of the activity.
+a|The API name of the field on the [.object]#Activity# object is used to store the description of the activity.
+
+include::partial$custom-setting-several-activity.adoc[]
 
 |Activity End Date field API name
 |[.apiobject]#clm\__ActivityEndDateAPI__c# |Text(255)
-|The API name of the field on the [.object]#Activity# object is used to store the end date of the activity.
+a|The API name of the field on the [.object]#Activity# object is used to store the end date of the activity.
+
+include::partial$custom-setting-several-activity.adoc[]
 
 |Activity Geolocation field API name
 |[.apiobject]#clm\__ActivityGeolocationAPIField__c#
-|Text(255) |The API name of the field with the geolocation type on the [.object]#Activity# object.
+|Text(255) a|The API name of the field with the geolocation type on the [.object]#Activity# object.
+
+include::partial$custom-setting-several-activity.adoc[]
 
 |Activity Lookup Field API name
-|[.apiobject]#clm\__ActivityFieldAPI__c# |Text(255) |The API name of the field with the lookup type from xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-applicationstats.adoc[the Application Stats object] to the [.object]#Activity# object.
+|[.apiobject]#clm\__ActivityFieldAPI__c# |Text(255) a|The API name of the field with the lookup type from xref:ios/ct-presenter/about-ct-presenter/clm-scheme/clm-applicationstats.adoc[the Application Stats object] to the [.object]#Activity# object.
+
+include::partial$custom-setting-several-activity.adoc[]
 
 |Activity Object API Name
 |[.apiobject]#clm\__ActivityObjectAPIName__c# |Text(255)
-|API-name of the [.object]#Activity# object.
+a|API-name of the [.object]#Activity# object.
+
+include::partial$custom-setting-several-activity.adoc[]
 
 |Activity Start Date API name
-|[.apiobject]#clm\__ActivityDateAPI__c# |Text(255) |The API name of the field on the [.object]#Activity# object used to store the start date of the activity.
+|[.apiobject]#clm\__ActivityDateAPI__c# |Text(255) a|The API name of the field on the [.object]#Activity# object used to store the start date of the activity.
+
+include::partial$custom-setting-several-activity.adoc[]
 
 |Activity Status field API name
-|[.apiobject]#clm\__ActivityStatusAPI__c# |Text(255) |The API name of the field on the [.object]#Activity# object with the picklist type displays the activity status.
+|[.apiobject]#clm\__ActivityStatusAPI__c# |Text(255) a|The API name of the field on the [.object]#Activity# object with the picklist type displays the activity status.
+
+include::partial$custom-setting-several-activity.adoc[]
 
 |Allow Web Sharing
 |[.apiobject]#clm\__AllowWebSharing__c# |Checkbox a| If enabled, add the *Web Share* button to the _CLM presentation_ record that allows you to embed the CLM presentation on the website page. Click the *Web Share* button, xref:image$WebShare-Button.png[set up] the height and width of the CLM presentation window, and click *Generate*. Copy and paste the code into the website page markup. Use the arrows to navigate on the slide carousel.

@@ -78,7 +78,7 @@ and errors during the synchronization.
 
 For example, access to an object has been withdrawn from the mobile
 user's profile after the last full synchronization. During the next fast
-synchronization, the[.apiobject]#INVALID_TYPE# error may
+synchronization, the [.apiobject]#INVALID_TYPE# error may
 occur because some records are no more available.
 
 
@@ -151,7 +151,7 @@ Read-Only* access.
 
 For example, the *Public Read-Only* access is specified for the
 [.object]#Account# object, and the mobile user's profile has
-permission to edit and delete records of the[.object]#Account#
+permission to edit and delete records of the [.object]#Account#
 object. In the CT Mobile app, the mobile user can edit and delete all
 downloaded _Account_ records, but errors will occur during the
 synchronization if the mobile user has deleted or edited records that

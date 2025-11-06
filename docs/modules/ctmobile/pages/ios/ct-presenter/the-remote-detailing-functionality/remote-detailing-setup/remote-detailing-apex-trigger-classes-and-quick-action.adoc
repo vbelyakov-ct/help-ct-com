@@ -13,7 +13,7 @@ Add Apex trigger and classes:
 * link:https://github.com/ctsf/CLM-RemoteDetailing-Public/blob/master/source/remoteDetailing/tests/classes/Test_ApexRestHelper.cls[Test_ApexRestHelper.cls]
 . Go to *Setup → Custom Code → Apex Classes →* click *New* and add each of the Apex classes separately.
 . Go to *Setup → Object Manager →* click an [.object]#Activity# object.
-. In the *Triggers* section, click *New* and add link:https://github.com/ctsf/CLM-RemoteDetailing-Public/blob/master/source/remoteDetailing/src/triggers/ActivitySetLinkProcess.trigger[ActivitySetLinkProcess.trigger] to generate invite links on the _Activity_ record for *Remote Detailing* or *Self Detailing* meetings.
+. In the *Triggers* section, click *New* and add link:https://github.com/ctsf/CLM-RemoteDetailing-Public/blob/master/source/remoteDetailing/src/triggers/ActivitySetLinkProcess.trigger[ActivitySetLinkProcess.trigger] to generate invitation links on the _Activity_ record for *Remote Detailing* or *Self Detailing* meetings.
 * Check that the object selected for the Apex trigger is specified as the [.object]#Activity# object on xref:ios/admin-guide/ct-mobile-control-panel/ct-mobile-control-panel-calendar.adoc#h2_70500171[CT Mobile Control Panel: Calendar] / xref:ios/admin-guide/ct-mobile-control-panel-new/ct-mobile-control-panel-activities-new.adoc[CT Mobile Control Panel 2.0: Activities].
 * Please beware that API names of objects and fields in this trigger should be aligned with API names of objects and fields used in your Salesforce org for the *Remote Detailing* functionality. Replace API names in the code if needed:
 +

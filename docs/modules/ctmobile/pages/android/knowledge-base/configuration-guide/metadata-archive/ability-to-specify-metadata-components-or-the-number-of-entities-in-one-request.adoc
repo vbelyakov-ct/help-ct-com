@@ -24,7 +24,7 @@ Help] to create the custom metadata type with the following fields.
 |*Field* |*API Name* |*Type* |*Description*
 
 |Member |[.apiobject]#Member__c# |Text(255) a|
-Specify the[.apiobject]#fullName# of the desired component. For
+Specify the [.apiobject]#fullName# of the desired component. For
 more information, refer to
 https://developer.salesforce.com/docs/atlas.en-us.api_meta.meta/api_meta/metadata.htm[Salesforce
 Developer: Metadata].
@@ -32,7 +32,7 @@ Developer: Metadata].
 * for users of CT Mobile package v. 3.63–3.65, specify components or the
 character[.apiobject]#*# (asterisk) instead of listing each
 member when there are many metadata components for the selected metadata
-type in the[.apiobject]#Name__c# field.
+type in the [.apiobject]#Name__c# field.
 * for users of CT Mobile package v. 3.66 and higher, specify the
 character[.apiobject]#*# (asterisk) when the
 [.apiobject]#PackageSize__c# field is filled out.

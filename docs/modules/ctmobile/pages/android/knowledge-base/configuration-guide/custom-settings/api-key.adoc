@@ -1,18 +1,15 @@
 = API Key
 
-*API Key* is a protected hierarchic custom setting to store the cloud
-token.
+*API Key* is a protected hierarchic custom setting to store the cloud token.
 
-[TIP] ==== For easy setup, go to
-xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/index.adoc-tools[CT Mobile Control Panel: Tools].
-====[WARNING] ==== We highly recommend getting familiar with
-the xref:android/quick-reference-guides/installing-ct-mobile-package/ct-mobile-managed-package-update-to-v-3-54.adoc[CT Mobile
-Managed Package Update to v. 3.54] article to understand changes when
-using the cloud token. ====
+TIP: For easy setup, go to xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-tools/index.adoc[CT Mobile Control Panel: Tools].
+
+WARNING: We highly recommend getting familiar with the xref:android/quick-reference-guides/installing-ct-mobile-package/ct-mobile-managed-package-update-to-v-3-54.adoc[CT Mobile
+Managed Package Update to v. 3.54] article to understand changes when using the cloud token.
 
 '''''
 
-Custom setting API name:[.apiobject]#clm__APIKey__c#
+Custom setting API name: [.apiobject]#clm\__APIKey__c#
 
 '''''
 
@@ -20,6 +17,6 @@ Custom setting API name:[.apiobject]#clm__APIKey__c#
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Cloud Token |[.apiobject]#clm__CLMCloudToken__c#
+|Cloud Token |[.apiobject]#clm\__CLMCloudToken__c#
 |Text(255) |The cloud token value.
 |===

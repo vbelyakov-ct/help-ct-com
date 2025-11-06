@@ -40,7 +40,7 @@ To launch the *Remote Detailing* meeting:
 image::RD_launch_en.png[]
 . In the next stages:
 * *Activity Creation*: the new _Activity_ record of the selected record type will be created.
-* *Requesting RD Session*: the invite link generation.
+* *Requesting RD Session*: the invitation link generation.
 * *Starting RD Session*: launch of the *Remote Detailing* meeting.
 +
 In case of any errors, the error message will be displayed at the appropriate stage.
@@ -53,12 +53,12 @@ After all stages, the *Remote Detailing* meeting opens in the new tab.
 [[h2_1956969773]]
 == On Activity Record
 
-A presenter can invite participants by sending the invite link that is stored in the specified custom field on the _Activity_ record in Salesforce.
+A presenter can invite participants by sending the invitation link that is stored in the specified custom field on the _Activity_ record in Salesforce.
 
 Specify the desired record type of the [.object]#Activity# object in the xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-setup/remote-detailing-apex-trigger-classes-and-quick-action.adoc#h2_249047963[Apex trigger] to launch the *Remote Detailing* or *Self Detailing* meeting. Optionally, specify a Salesforce workflow to send an email/SMS/etc. to the contact of the _Activity_ record after generating an invitation link for this record.
 
 [[h3_2144641458]]
-=== Add the custom field for the invite link
+=== Add the custom field for the invitation link
 
 To add a custom field on the *Activity* page layout:
 
@@ -85,15 +85,15 @@ To launch the *Remote Detailing* meeting:
 . In the *Applications* window, select the available CLM presentations for the *Remote Detailing* meetings.
 +
 TIP: You can specify the IDs of CLM presentation(s) as a default value for the [.apiobject]#ApplicationIds\__c# field, or create your custom process to populate the [.apiobject]#ApplicationIds__c# field.
-. After a while, xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-launch/remote-detailing-launch-salesforce-side.adoc#h3_2144641458[the specific field] will be populated with the invite link, for the *Remote Detailing* or *Self Detailing* meeting, according to
+. After a while, xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-launch/remote-detailing-launch-salesforce-side.adoc#h3_2144641458[the specific field] will be populated with the invitation link, for the *Remote Detailing* or *Self Detailing* meeting, according to
 xref:ios/ct-presenter/the-remote-detailing-functionality/remote-detailing-setup/index.adoc[Remote Detailing Setup].
 
-For the *Remote Detailing* meeting, click the invite link in the specific field:
+For the *Remote Detailing* meeting, click the invitation link in the specific field:
 
 * Click the *Presenter Login* button to join as a presenter. If you logged in as a guest, click the *Log out* button.
-* Click the invite link. Enter your username and an e-mail (optionally) and click *Join* to enter as a participant.
+* Click the invitation link. Enter your username and an e-mail (optionally) and click *Join* to enter as a participant.
 
-For the *Self Detailing* meeting, copy the invite link and send it to the participant.
+For the *Self Detailing* meeting, copy the invitation link and send it to the participant.
 
 [[h3_135274013]]
 === Error Handling

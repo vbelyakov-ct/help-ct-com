@@ -1,20 +1,14 @@
 = Mobile Link Lists
 
-*Mobile Link Lists* is a custom setting to store custom links for
-https://help.customertimes.com/smart/project-ct-mobile-en/links-list[the
-Links module].
+*Mobile Link Lists* is a custom setting to store custom links for xref:ios/mobile-application/mobile-application-modules/links.adoc[the Links module].
 
-[TIP] ==== For easy setup, go to
-xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-app-menu.adoc[CT Mobile Control Panel: App
-Menu]. ====[NOTE] ==== The availability of functionality
-depends on the platform of the mobile device. For more information,
-refer to xref:android/ct-mobile-solution/ct-mobile-os-comparison.adoc[CT Mobile OS Comparison].
-====
+TIP: For easy setup, go to xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-app-menu.adoc[CT Mobile Control Panel: App Menu]. 
+
+include::partial$func-availability.adoc[]
 
 '''''
 
-Custom setting API name:
-[.apiobject]#clm__MobileLinkLists__c#
+Custom setting API name: [.apiobject]#clm\__MobileLinkLists__c#
 
 '''''
 
@@ -22,23 +16,18 @@ Custom setting API name:
 |===
 |*Field* |*API Name* |*Type* |*Description*
 
-|Category |[.apiobject]#clm__Category__c# |Text(255)
+|Category |[.apiobject]#clm\__Category__c# |Text(255)
 |The specific category for a link.
 
-|Description |[.apiobject]#clm__Description__c#
+|Description |[.apiobject]#clm\__Description__c#
 |Text(255) |The specific description for a link.
 
 |Navigation enabled
-|[.apiobject]#clm__IsNavigationEnabled__c# |Checkbox |If
-enabled, the user could navigate through a site within the CT Mobile
-app.
+|[.apiobject]#clm\__IsNavigationEnabled__c# |Checkbox |If enabled, the user could navigate through a site within the CT Mobile app.
 
-|Order |[.apiobject]#clm__Order__c# |Number(18,0) |The
-order number of a link.
+|Order |[.apiobject]#clm\__Order__c# |Number(18,0) |The order number of a link.
 
-|Profile |[.apiobject]#clm__Profile__c# |Text(255) |The
-profile for which link was specified.
+|Profile |[.apiobject]#clm\__Profile__c# |Text(255) |The profile for which link was specified.
 
-|URL |[.apiobject]#clm__URL__c# |URL(255) |The URL
-address of the link.
+|URL |[.apiobject]#clm\__URL__c# |URL(255) |The URL address of the link.
 |===
