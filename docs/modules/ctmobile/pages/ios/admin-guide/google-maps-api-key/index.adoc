@@ -76,7 +76,7 @@ Select the condition and APIs to restrict the Google Maps API key.
 * *HTTP referrers (websites)*. Accept requests from the list of websites that you supply.
 * *IP Addresses (web services, cron jobs, etc.)*. Accept requests from the list of web server IP addresses that you supply.
 * *Android apps*. Require package name and SHA-1 signing certificate fingerprint to restrict usage to Android applications.
-* *iOS apps*. Accept requests from the iOS applications with xref:./mobile-application-bundle-id.adoc[the bundle identifier] that is supplied.
+* *iOS apps*. Accept requests from the iOS applications with xref:ios/admin-guide/google-maps-api-key/mobile-application-bundle-id.adoc[the bundle identifier] that is supplied.
 +
 TIP: If you need to enforce more than one restriction, add a separate key with the required restriction.
 . API restrictions

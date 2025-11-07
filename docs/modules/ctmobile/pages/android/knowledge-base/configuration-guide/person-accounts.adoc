@@ -1,52 +1,29 @@
 = Person Accounts
 
-CT Mobile app allows working with
-https://help.salesforce.com/articleView?id=account_person.htm&r=https%3A%2F%2Fwww.google.com%2F&type=5[Person
-Accounts]. *Person Accounts* store information about individual people
-by combining certain[.object]#Account# and
-[.object]#Contact# fields into a single record.
+CT Mobile app allows working with https://help.salesforce.com/articleView?id=account_person.htm&r=https%3A%2F%2Fwww.google.com%2F&type=5[Person Accounts]. *Person Accounts* store information about individual people by combining certain [.object]#Account# and [.object]#Contact# fields into a single record.
 
 [[h2_693098374]]
-=== Enable Person Accounts 
+== Enable Person Accounts
 
 To enable *Person Accounts* functionality:
 
-. https://help.salesforce.com/articleView?id=account_person_enable.htm&type=5[Enable
-Person Accounts] for the Salesforce org.​
-After Person Accounts is enabled, a *Person Account* record type is
-created.
-https://help.salesforce.com/articleView?id=users_profiles_record_types.htm&type=5&language=en_US[Assign
-the person account record type to user profiles].
-. Go to *CT Mobile Control Panel: General* and
-xref:android/ct-mobile-control-panel-general#h3_471160840[enable Person
-Accounts] for the appropriate user profile.
-. ​Go to xref:android/ct-mobile-control-panel-app-menu[CT Mobile Control
-Panel: App Menu] and add *Account* and *Contact* to the *Selected* list
-in the required order.
+. https://help.salesforce.com/articleView?id=account_person_enable.htm&type=5[Enable Person Accounts] for the Salesforce org.
++
+After Person Accounts is enabled, a *Person Account* record type is created. https://help.salesforce.com/articleView?id=users_profiles_record_types.htm&type=5&language=en_US[Assign the person account record type to user profiles].
+. Go to *CT Mobile Control Panel: General* and xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_471160840[enable Person Accounts] for the appropriate user profile.
+. Go to xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-app-menu.adoc[CT Mobile Control Panel: App Menu] and add *Account* and *Contact* to the *Selected* list in the required order.
 
 The setup is complete.
 
-To view only appropriate records on the *Related Accounts* tab in the CT
-Mobile app, it is necessary to specify the [.topBar .object]#Account
-Contact Relation# object in the
-xref:android/ct-mobile-control-panel-general#h3_494016929[Reference Object
-API Name] field.
+To view only appropriate records on the *Related Accounts* tab in the CT Mobile app, it is necessary to specify the [.object]#Account Contact Relation# object in the xref:android/knowledge-base/configuration-guide/ct-mobile-control-panel/ct-mobile-control-panel-general.adoc#h3_494016929[Reference Object API Name] field.
 
 [[h2_1162752891]]
 === Using Person Accounts in the CT Mobile app 
 
 The *Person Accounts* records are listed in the *Contacts* menu item.
 
-* Configure and assign xref:android/quick-reference-guides/mini-layouts.adoc[a mini-layout] for the
-Person Account record type to create new records;
-* Configure list views for *Person Accounts* by including the *Is Person
-Account* field in the filter criteria.
+* Configure and assign xref:android/quick-reference-guides/mini-layouts.adoc[a mini-layout] for the Person Account record type to create new records;
+* Configure list views for *Person Accounts* by including the *Is Person Account* field in the filter criteria.
 
-
-
-For activity management, correct operation of the
-xref:android/knowledge-base/mobile-application/mobile-application-modules/calendar/index.adoc[Calendar] module, the
-xref:android/applications[Applications] module, and the CT Mobile app in
-general, the [.object]#Activity# objects must contain the
-relationships with the [.object]#Contact# object, available to a
-user.
+For activity management, correct operation of the xref:android/knowledge-base/mobile-application/mobile-application-modules/calendar/index.adoc[Calendar] module, the
+xref:android/knowledge-base/mobile-application/mobile-application-modules/applications/index.adoc[Applications] module, and the CT Mobile app in general, the [.object]#Activity# objects must contain the relationships with the [.object]#Contact# object, available to a user.
