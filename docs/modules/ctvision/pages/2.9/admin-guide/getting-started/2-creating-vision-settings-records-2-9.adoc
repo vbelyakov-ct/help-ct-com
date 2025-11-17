@@ -1,23 +1,21 @@
 = 2. Creating Vision Settings Records
 
-After installing the CT Vision package, create required _Vision
-Settings_ records:
+After installing the CT Vision package, create required _Vision Settings_ records:
 
+. On the xref:2.9/ref-guide/vision-photo-field-reference-ir-2-9.adoc[Vision Photo] object, create a lookup field to each object, on which you will make photos (the xref:2.9/ref-guide/vision-settings-ref/vision-object-field-reference-ir-2-9.adoc[Vision Object]).
 . Go to the *Vision Settings* tab → click *New*.
 +
 [TIP]
 ====
-If the tab is missing, link:https://help.salesforce.com/s/articleView?id=sf.creating_custom_object_tabs.htm&type=5[create a custom tab] for the [.object]#Vision Settings# object.
+If the tab is missing, https://help.salesforce.com/s/articleView?id=sf.creating_custom_object_tabs.htm&type=5[create a custom tab] for the [.object]#Vision Settings# object.
 ====
-
 . In the *New Vision Setting* window, select the record type and click *Next*.
-+
-The xref:2.9/ref-guide/vision-settings-ref/vision-object-field-reference-ir-2-9.adoc[Vision Object] record is required for CT Vision IR operation. The following records extend the CT Vision IR functionality:
-
+. Create the xref:2.9/ref-guide/vision-settings-ref/vision-object-field-reference-ir-2-9.adoc[Vision Object] record, it is required for CT Vision Lite operation. On the *Vision Photo Lookup* field on the [.object]#Vision Object#, specify API name of the lookup field created on the step 1.
+. Create the [.apiobject]#MobileId__c# (Text 255) field on the required [.object]#Vision# object in order to identify whether a record has been created on a mobile device or in Salesforce. Photos taken on a mobile device will be attached only to the records with the specified Mobile Id, and the taken photos will be stored on a mobile device up to 7 days.
+. If necessary, create the following records which extend the CT Vision Lite functionality:
 * xref:2.9/ref-guide/vision-settings-ref/vision-shelf-field-reference-ir-2-9.adoc[Vision Shelf]
 * xref:2.9/ref-guide/vision-settings-ref/vision-hint-field-reference-ir-2-9.adoc[Vision Hint]
 . Specify parameters and click *Save*.
 . Repeat steps 2–3 to create all required and, if needed, additional _Vision Settings_ records.
-. On the xref:2.9/ref-guide/vision-photo-field-reference-ir-2-9.adoc[Vision Photo] object, create **Vision Object ID **field for each xref:2.9/ref-guide/vision-settings-ref/vision-object-field-reference-ir-2-9.adoc[Vision Object] record and then specify its API name on the *Vision Photo Lookup* field on the [.object]#Vision Object#.
 
 The setup is complete.

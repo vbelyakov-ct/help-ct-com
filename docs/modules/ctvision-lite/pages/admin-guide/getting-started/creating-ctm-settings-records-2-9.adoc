@@ -11,6 +11,7 @@ If the tab is missing, https://help.salesforce.com/s/articleView?id=sf.creating_
 ====
 . In the *New Vision Setting* window, select the record type and click *Next*.
 . Create the xref:ref-guide/vision-settings-ref/vision-object-field-reference.adoc[Vision Object] record, it is required for CT Vision Lite operation. On the *Vision Photo Lookup* field on the [.object]#Vision Object#, specify API name of the lookup field created on the step 1.
+. Create the [.apiobject]#MobileId__c# (Text 255) field on the required [.object]#Vision# object in order to identify whether a record has been created on a mobile device or in Salesforce. Photos taken on a mobile device will be attached only to the records with the specified Mobile Id, and the taken photos will be stored on a mobile device up to 7 days.
 . If necessary, create the following records which extend the CT Vision Lite functionality:
 * xref:ref-guide/vision-settings-ref/vision-shelf-field-reference-2-9.adoc[Vision Shelf]
 * xref:ref-guide/vision-settings-ref/vision-hint-field-reference-2-9.adoc[Vision Hint]
